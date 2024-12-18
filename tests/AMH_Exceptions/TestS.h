@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_TESTS_GZ7QDK_H_
-#define _TAO_IDL_TESTS_GZ7QDK_H_
+#ifndef _TAO_IDL_TESTS_JSUCIW_H_
+#define _TAO_IDL_TESTS_JSUCIW_H_
 
 #include /**/ "ace/pre.h"
 
@@ -206,7 +206,7 @@ public:
   typedef ::Test::Roundtrip_ptr _stub_ptr_type;
   typedef ::Test::Roundtrip_var _stub_var_type;
 
-  Roundtrip (const Roundtrip& rhs);
+  Roundtrip (const Roundtrip& rhs) = default;
   virtual ~Roundtrip () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

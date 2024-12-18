@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_OLD_ARRAYS_ULJLZH_H_
-#define _TAO_IDL_OLD_ARRAYS_ULJLZH_H_
+#ifndef _TAO_IDL_OLD_ARRAYS_QJXBZR_H_
+#define _TAO_IDL_OLD_ARRAYS_QJXBZR_H_
 
 #include /**/ "ace/pre.h"
 
@@ -405,7 +405,7 @@ public:
   typedef ::OldArray::A_i_ptr _stub_ptr_type;
   typedef ::OldArray::A_i_var _stub_var_type;
 
-  A_i (const A_i& rhs);
+  A_i (const A_i& rhs) = default;
   virtual ~A_i () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -621,7 +621,7 @@ public:
   typedef ::OldArray::AMI_A_iHandler_ptr _stub_ptr_type;
   typedef ::OldArray::AMI_A_iHandler_var _stub_var_type;
 
-  AMI_A_iHandler (const AMI_A_iHandler& rhs);
+  AMI_A_iHandler (const AMI_A_iHandler& rhs) = default;
   virtual ~AMI_A_iHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

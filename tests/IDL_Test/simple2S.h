@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_SIMPLE2S_5KOFXD_H_
-#define _TAO_IDL_SIMPLE2S_5KOFXD_H_
+#ifndef _TAO_IDL_SIMPLE2S_Q2F42J_H_
+#define _TAO_IDL_SIMPLE2S_Q2F42J_H_
 
 #include /**/ "ace/pre.h"
 
@@ -229,7 +229,7 @@ public:
   typedef ::simple3_ptr _stub_ptr_type;
   typedef ::simple3_var _stub_var_type;
 
-  POA_simple3 (const POA_simple3& rhs);
+  POA_simple3 (const POA_simple3& rhs) = default;
   virtual ~POA_simple3 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -365,7 +365,7 @@ public:
   typedef ::AMI_simple3Handler_ptr _stub_ptr_type;
   typedef ::AMI_simple3Handler_var _stub_var_type;
 
-  POA_AMI_simple3Handler (const POA_AMI_simple3Handler& rhs);
+  POA_AMI_simple3Handler (const POA_AMI_simple3Handler& rhs) = default;
   virtual ~POA_AMI_simple3Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

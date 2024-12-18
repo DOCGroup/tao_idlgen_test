@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_OLD_STRUCTS_JHLG9R_H_
-#define _TAO_IDL_OLD_STRUCTS_JHLG9R_H_
+#ifndef _TAO_IDL_OLD_STRUCTS_BDAOBU_H_
+#define _TAO_IDL_OLD_STRUCTS_BDAOBU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -383,7 +383,7 @@ public:
   typedef ::foo1_ptr _stub_ptr_type;
   typedef ::foo1_var _stub_var_type;
 
-  POA_foo1 (const POA_foo1& rhs);
+  POA_foo1 (const POA_foo1& rhs) = default;
   virtual ~POA_foo1 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -483,7 +483,7 @@ public:
   typedef ::AMI_foo1Handler_ptr _stub_ptr_type;
   typedef ::AMI_foo1Handler_var _stub_var_type;
 
-  POA_AMI_foo1Handler (const POA_AMI_foo1Handler& rhs);
+  POA_AMI_foo1Handler (const POA_AMI_foo1Handler& rhs) = default;
   virtual ~POA_AMI_foo1Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -630,7 +630,7 @@ public:
   typedef ::foo2_ptr _stub_ptr_type;
   typedef ::foo2_var _stub_var_type;
 
-  POA_foo2 (const POA_foo2& rhs);
+  POA_foo2 (const POA_foo2& rhs) = default;
   virtual ~POA_foo2 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -758,7 +758,7 @@ public:
   typedef ::AMI_foo2Handler_ptr _stub_ptr_type;
   typedef ::AMI_foo2Handler_var _stub_var_type;
 
-  POA_AMI_foo2Handler (const POA_AMI_foo2Handler& rhs);
+  POA_AMI_foo2Handler (const POA_AMI_foo2Handler& rhs) = default;
   virtual ~POA_AMI_foo2Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

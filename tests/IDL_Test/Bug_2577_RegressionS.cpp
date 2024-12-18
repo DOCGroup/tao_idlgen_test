@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_CQP3AR_CPP_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_CQP3AR_CPP_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_RB6ADE_CPP_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_RB6ADE_CPP_
 
 
 #include "Bug_2577_RegressionS.h"
@@ -145,15 +145,8 @@ static TAO_AMH_User_T_Perfect_Hash_OpTable tao_AMH_User_T_optable;
 
 
 POA_AMH_User_T::POA_AMH_User_T ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_AMH_User_T_optable);
-}
-
-POA_AMH_User_T::POA_AMH_User_T (const POA_AMH_User_T& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_AMH_User_T_optable);
 }
 
 
@@ -199,7 +192,7 @@ POA_AMH_User_T::getLoginTime_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -372,15 +365,8 @@ _TAO_User_T_Direct_Proxy_Impl::getLoginTime (
 
 
 POA_User_T::POA_User_T ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_User_T_optable);
-}
-
-POA_User_T::POA_User_T (const POA_User_T& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_User_T_optable);
 }
 
 
@@ -461,7 +447,7 @@ void POA_User_T::getLoginTime_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -483,7 +469,7 @@ const char* POA_User_T::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -496,7 +482,7 @@ void POA_User_T::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 
@@ -701,16 +687,8 @@ _TAO_AMI_User_THandler_Direct_Proxy_Impl::getLoginTime_excep (
 
 
 POA_AMI_User_THandler::POA_AMI_User_THandler ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_AMI_User_THandler_optable);
-}
-
-POA_AMI_User_THandler::POA_AMI_User_THandler (const POA_AMI_User_THandler& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs),
-    ::POA_Messaging::ReplyHandler (rhs)
-{
+  this->optable_ = std::addressof (tao_AMI_User_THandler_optable);
 }
 
 
@@ -871,7 +849,7 @@ void POA_AMI_User_THandler::getLoginTime_excep_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -894,7 +872,7 @@ const char* POA_AMI_User_THandler::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -907,7 +885,7 @@ void POA_AMI_User_THandler::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_PARAMSS_3ZPUER_H_
-#define _TAO_IDL_PARAMSS_3ZPUER_H_
+#ifndef _TAO_IDL_PARAMSS_UTWMUC_H_
+#define _TAO_IDL_PARAMSS_UTWMUC_H_
 
 #include /**/ "ace/pre.h"
 
@@ -253,7 +253,7 @@ namespace POA_foo
     typedef ::foo::bar::fooBar_ptr _stub_ptr_type;
     typedef ::foo::bar::fooBar_var _stub_var_type;
 
-    fooBar (const fooBar& rhs);
+    fooBar (const fooBar& rhs) = default;
     virtual ~fooBar () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -355,7 +355,7 @@ namespace POA_foo
     typedef ::foo::bar::AMI_fooBarHandler_ptr _stub_ptr_type;
     typedef ::foo::bar::AMI_fooBarHandler_var _stub_var_type;
 
-    AMI_fooBarHandler (const AMI_fooBarHandler& rhs);
+    AMI_fooBarHandler (const AMI_fooBarHandler& rhs) = default;
     virtual ~AMI_fooBarHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

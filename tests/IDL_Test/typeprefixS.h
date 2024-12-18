@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_TYPEPREFIXS_2LYJXK_H_
-#define _TAO_IDL_TYPEPREFIXS_2LYJXK_H_
+#ifndef _TAO_IDL_TYPEPREFIXS_7PPZ1N_H_
+#define _TAO_IDL_TYPEPREFIXS_7PPZ1N_H_
 
 #include /**/ "ace/pre.h"
 
@@ -264,7 +264,7 @@ public:
   typedef ::A::B_ptr _stub_ptr_type;
   typedef ::A::B_var _stub_var_type;
 
-  B (const B& rhs);
+  B (const B& rhs) = default;
   virtual ~B () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -335,7 +335,7 @@ public:
   typedef ::A::AMI_BHandler_ptr _stub_ptr_type;
   typedef ::A::AMI_BHandler_var _stub_var_type;
 
-  AMI_BHandler (const AMI_BHandler& rhs);
+  AMI_BHandler (const AMI_BHandler& rhs) = default;
   virtual ~AMI_BHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -433,7 +433,7 @@ public:
   typedef ::A::C_ptr _stub_ptr_type;
   typedef ::A::C_var _stub_var_type;
 
-  C (const C& rhs);
+  C (const C& rhs) = default;
   virtual ~C () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -530,7 +530,7 @@ public:
   typedef ::A::AMI_CHandler_ptr _stub_ptr_type;
   typedef ::A::AMI_CHandler_var _stub_var_type;
 
-  AMI_CHandler (const AMI_CHandler& rhs);
+  AMI_CHandler (const AMI_CHandler& rhs) = default;
   virtual ~AMI_CHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

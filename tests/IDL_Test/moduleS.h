@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_MODULES_GZJBXD_H_
-#define _TAO_IDL_MODULES_GZJBXD_H_
+#ifndef _TAO_IDL_MODULES_JRHHG0_H_
+#define _TAO_IDL_MODULES_JRHHG0_H_
 
 #include /**/ "ace/pre.h"
 
@@ -320,7 +320,7 @@ namespace POA_mod1
     typedef ::mod1::mod2::ex1_ptr _stub_ptr_type;
     typedef ::mod1::mod2::ex1_var _stub_var_type;
 
-    ex1 (const ex1& rhs);
+    ex1 (const ex1& rhs) = default;
     virtual ~ex1 () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -496,7 +496,7 @@ namespace POA_mod1
     typedef ::mod1::mod2::AMI_ex1Handler_ptr _stub_ptr_type;
     typedef ::mod1::mod2::AMI_ex1Handler_var _stub_var_type;
 
-    AMI_ex1Handler (const AMI_ex1Handler& rhs);
+    AMI_ex1Handler (const AMI_ex1Handler& rhs) = default;
     virtual ~AMI_ex1Handler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -755,7 +755,7 @@ public:
   typedef ::mod1::mod2::ex2_ptr _stub_ptr_type;
   typedef ::mod1::mod2::ex2_var _stub_var_type;
 
-  ex2 (const ex2& rhs);
+  ex2 (const ex2& rhs) = default;
   virtual ~ex2 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -908,7 +908,7 @@ public:
   typedef ::mod1::mod2::AMI_ex2Handler_ptr _stub_ptr_type;
   typedef ::mod1::mod2::AMI_ex2Handler_var _stub_var_type;
 
-  AMI_ex2Handler (const AMI_ex2Handler& rhs);
+  AMI_ex2Handler (const AMI_ex2Handler& rhs) = default;
   virtual ~AMI_ex2Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

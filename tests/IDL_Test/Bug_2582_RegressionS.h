@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_2HN2TC_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_2HN2TC_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_5Z6G43_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_5Z6G43_H_
 
 #include /**/ "ace/pre.h"
 
@@ -251,7 +251,7 @@ public:
   typedef ::FieldDevice_T_ptr _stub_ptr_type;
   typedef ::FieldDevice_T_var _stub_var_type;
 
-  POA_FieldDevice_T (const POA_FieldDevice_T& rhs);
+  POA_FieldDevice_T (const POA_FieldDevice_T& rhs) = default;
   virtual ~POA_FieldDevice_T () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -374,7 +374,7 @@ public:
   typedef ::AMI_FieldDevice_THandler_ptr _stub_ptr_type;
   typedef ::AMI_FieldDevice_THandler_var _stub_var_type;
 
-  POA_AMI_FieldDevice_THandler (const POA_AMI_FieldDevice_THandler& rhs);
+  POA_AMI_FieldDevice_THandler (const POA_AMI_FieldDevice_THandler& rhs) = default;
   virtual ~POA_AMI_FieldDevice_THandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

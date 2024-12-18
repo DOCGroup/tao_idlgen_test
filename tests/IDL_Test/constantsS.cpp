@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_CONSTANTSS_AEMP9C_CPP_
-#define _TAO_IDL_CONSTANTSS_AEMP9C_CPP_
+#ifndef _TAO_IDL_CONSTANTSS_8LQJZA_CPP_
+#define _TAO_IDL_CONSTANTSS_8LQJZA_CPP_
 
 
 #include "constantsS.h"
@@ -143,22 +143,15 @@ static TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable tao_ClassConstants_AMH_
 
 
 POA_ClassConstants::AMH_Iface::AMH_Iface ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_ClassConstants_AMH_Iface_optable);
-}
-
-POA_ClassConstants::AMH_Iface::AMH_Iface (const AMH_Iface& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_ClassConstants_AMH_Iface_optable);
 }
 
 
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -307,22 +300,15 @@ POA_ClassConstants::_TAO_Iface_Direct_Proxy_Impl::~_TAO_Iface_Direct_Proxy_Impl 
 
 
 POA_ClassConstants::Iface::Iface ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_ClassConstants_Iface_optable);
-}
-
-POA_ClassConstants::Iface::Iface (const Iface& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_ClassConstants_Iface_optable);
 }
 
 
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -344,7 +330,7 @@ const char* POA_ClassConstants::Iface::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -357,7 +343,7 @@ void POA_ClassConstants::Iface::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 
@@ -483,21 +469,14 @@ POA_ClassConstants::_TAO_AMI_IfaceHandler_Direct_Proxy_Impl::~_TAO_AMI_IfaceHand
 POA_ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler ()
   : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_ClassConstants_AMI_IfaceHandler_optable);
-}
-
-POA_ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler (const AMI_IfaceHandler& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs),
-    ::POA_Messaging::ReplyHandler (rhs)
-{
+  this->optable_ = std::addressof (tao_ClassConstants_AMI_IfaceHandler_optable);
 }
 
 
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -520,7 +499,7 @@ const char* POA_ClassConstants::AMI_IfaceHandler::_interface_repository_id () co
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -533,7 +512,7 @@ void POA_ClassConstants::AMI_IfaceHandler::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

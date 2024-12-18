@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_8ASC7A_CPP_
-#define _TAO_IDL_SIMPLE_TESTS_8ASC7A_CPP_
+#ifndef _TAO_IDL_SIMPLE_TESTS_UEJDXV_CPP_
+#define _TAO_IDL_SIMPLE_TESTS_UEJDXV_CPP_
 
 
 #include "simple_testS.h"
@@ -139,15 +139,8 @@ static TAO_Simple_Server_Perfect_Hash_OpTable tao_Simple_Server_optable;
 
 
 POA_Simple_Server::POA_Simple_Server ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_Simple_Server_optable);
-}
-
-POA_Simple_Server::POA_Simple_Server (const POA_Simple_Server& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_Simple_Server_optable);
 }
 
 
@@ -288,7 +281,7 @@ void POA_Simple_Server::shutdown_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -310,7 +303,7 @@ const char* POA_Simple_Server::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -323,7 +316,7 @@ void POA_Simple_Server::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

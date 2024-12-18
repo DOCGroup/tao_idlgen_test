@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_TESTS_JEBU0I_H_
-#define _TAO_IDL_TESTS_JEBU0I_H_
+#ifndef _TAO_IDL_TESTS_3BYG5H_H_
+#define _TAO_IDL_TESTS_3BYG5H_H_
 
 #include /**/ "ace/pre.h"
 
@@ -107,7 +107,7 @@ namespace POA_Test
     typedef ::Test::Hello_ptr _stub_ptr_type;
     typedef ::Test::Hello_var _stub_var_type;
 
-    Hello (const Hello& rhs);
+    Hello (const Hello& rhs) = default;
     virtual ~Hello () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

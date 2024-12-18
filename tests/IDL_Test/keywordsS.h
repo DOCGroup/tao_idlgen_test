@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_KEYWORDSS_SKN4SF_H_
-#define _TAO_IDL_KEYWORDSS_SKN4SF_H_
+#ifndef _TAO_IDL_KEYWORDSS_ARIBVS_H_
+#define _TAO_IDL_KEYWORDSS_ARIBVS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -281,7 +281,7 @@ public:
   typedef ::Testing_ptr _stub_ptr_type;
   typedef ::Testing_var _stub_var_type;
 
-  POA_Testing (const POA_Testing& rhs);
+  POA_Testing (const POA_Testing& rhs) = default;
   virtual ~POA_Testing () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -404,7 +404,7 @@ public:
   typedef ::AMI_TestingHandler_ptr _stub_ptr_type;
   typedef ::AMI_TestingHandler_var _stub_var_type;
 
-  POA_AMI_TestingHandler (const POA_AMI_TestingHandler& rhs);
+  POA_AMI_TestingHandler (const POA_AMI_TestingHandler& rhs) = default;
   virtual ~POA_AMI_TestingHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

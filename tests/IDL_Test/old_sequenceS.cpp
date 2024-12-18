@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_F0AFK7_CPP_
-#define _TAO_IDL_OLD_SEQUENCES_F0AFK7_CPP_
+#ifndef _TAO_IDL_OLD_SEQUENCES_TLLC9D_CPP_
+#define _TAO_IDL_OLD_SEQUENCES_TLLC9D_CPP_
 
 
 #include "old_sequenceS.h"
@@ -166,15 +166,8 @@ static TAO_AMH_TestSeq_Perfect_Hash_OpTable tao_AMH_TestSeq_optable;
 
 
 POA_AMH_TestSeq::POA_AMH_TestSeq ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_AMH_TestSeq_optable);
-}
-
-POA_AMH_TestSeq::POA_AMH_TestSeq (const POA_AMH_TestSeq& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_AMH_TestSeq_optable);
 }
 
 
@@ -270,7 +263,7 @@ POA_AMH_TestSeq::_set_fattr_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -486,15 +479,8 @@ _TAO_TestSeq_Direct_Proxy_Impl::_set_fattr (
 
 
 POA_TestSeq::POA_TestSeq ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_TestSeq_optable);
-}
-
-POA_TestSeq::POA_TestSeq (const POA_TestSeq& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_TestSeq_optable);
 }
 
 
@@ -652,7 +638,7 @@ void POA_TestSeq::_set_fattr_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -674,7 +660,7 @@ const char* POA_TestSeq::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -687,7 +673,7 @@ void POA_TestSeq::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 
@@ -965,16 +951,8 @@ _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::set_fattr_excep (
 
 
 POA_AMI_TestSeqHandler::POA_AMI_TestSeqHandler ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_AMI_TestSeqHandler_optable);
-}
-
-POA_AMI_TestSeqHandler::POA_AMI_TestSeqHandler (const POA_AMI_TestSeqHandler& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs),
-    ::POA_Messaging::ReplyHandler (rhs)
-{
+  this->optable_ = std::addressof (tao_AMI_TestSeqHandler_optable);
 }
 
 
@@ -1272,7 +1250,7 @@ void POA_AMI_TestSeqHandler::set_fattr_excep_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -1295,7 +1273,7 @@ const char* POA_AMI_TestSeqHandler::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -1308,7 +1286,7 @@ void POA_AMI_TestSeqHandler::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

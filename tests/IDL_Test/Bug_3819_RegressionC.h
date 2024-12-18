@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:148
 
-#ifndef _TAO_IDL_BUG_3819_REGRESSIONC_YIIMGR_H_
-#define _TAO_IDL_BUG_3819_REGRESSIONC_YIIMGR_H_
+#ifndef _TAO_IDL_BUG_3819_REGRESSIONC_MYTMWP_H_
+#define _TAO_IDL_BUG_3819_REGRESSIONC_MYTMWP_H_
 
 #include /**/ "ace/pre.h"
 

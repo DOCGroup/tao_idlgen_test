@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE1S_JBYRBC_H_
-#define _TAO_IDL_REOPEN_INCLUDE1S_JBYRBC_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE1S_0Q89V0_H_
+#define _TAO_IDL_REOPEN_INCLUDE1S_0Q89V0_H_
 
 #include /**/ "ace/pre.h"
 
@@ -249,7 +249,7 @@ namespace POA_A
     typedef ::A::B::X1_ptr _stub_ptr_type;
     typedef ::A::B::X1_var _stub_var_type;
 
-    X1 (const X1& rhs);
+    X1 (const X1& rhs) = default;
     virtual ~X1 () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -346,7 +346,7 @@ namespace POA_A
     typedef ::A::B::AMI_X1Handler_ptr _stub_ptr_type;
     typedef ::A::B::AMI_X1Handler_var _stub_var_type;
 
-    AMI_X1Handler (const AMI_X1Handler& rhs);
+    AMI_X1Handler (const AMI_X1Handler& rhs) = default;
     virtual ~AMI_X1Handler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_ANONYMOUSS_UBANTV_CPP_
-#define _TAO_IDL_ANONYMOUSS_UBANTV_CPP_
+#ifndef _TAO_IDL_ANONYMOUSS_GM0QKU_CPP_
+#define _TAO_IDL_ANONYMOUSS_GM0QKU_CPP_
 
 
 #include "anonymousS.h"
@@ -173,15 +173,8 @@ static TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable tao_All_Anon_AM
 
 
 POA_All_Anon::AMH_anon_bd_string_test::AMH_anon_bd_string_test ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_All_Anon_AMH_anon_bd_string_test_optable);
-}
-
-POA_All_Anon::AMH_anon_bd_string_test::AMH_anon_bd_string_test (const AMH_anon_bd_string_test& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_All_Anon_AMH_anon_bd_string_test_optable);
 }
 
 
@@ -536,7 +529,7 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc43_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -891,15 +884,8 @@ POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc43 (
 
 
 POA_All_Anon::anon_bd_string_test::anon_bd_string_test ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_All_Anon_anon_bd_string_test_optable);
-}
-
-POA_All_Anon::anon_bd_string_test::anon_bd_string_test (const anon_bd_string_test& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_All_Anon_anon_bd_string_test_optable);
 }
 
 
@@ -1542,7 +1528,7 @@ void POA_All_Anon::anon_bd_string_test::TestFunc43_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -1564,7 +1550,7 @@ const char* POA_All_Anon::anon_bd_string_test::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -1577,7 +1563,7 @@ void POA_All_Anon::anon_bd_string_test::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 
@@ -2331,16 +2317,8 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43_
 
 
 POA_All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_All_Anon_AMI_anon_bd_string_testHandler_optable);
-}
-
-POA_All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler (const AMI_anon_bd_string_testHandler& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs),
-    ::POA_Messaging::ReplyHandler (rhs)
-{
+  this->optable_ = std::addressof (tao_All_Anon_AMI_anon_bd_string_testHandler_optable);
 }
 
 
@@ -3575,7 +3553,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_excep_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -3598,7 +3576,7 @@ const char* POA_All_Anon::AMI_anon_bd_string_testHandler::_interface_repository_
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -3611,7 +3589,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_ARRAYS_DUMV8E_H_
-#define _TAO_IDL_ARRAYS_DUMV8E_H_
+#ifndef _TAO_IDL_ARRAYS_GWCI5O_H_
+#define _TAO_IDL_ARRAYS_GWCI5O_H_
 
 #include /**/ "ace/pre.h"
 
@@ -688,7 +688,7 @@ public:
   typedef ::array_args_ptr _stub_ptr_type;
   typedef ::array_args_var _stub_var_type;
 
-  POA_array_args (const POA_array_args& rhs);
+  POA_array_args (const POA_array_args& rhs) = default;
   virtual ~POA_array_args () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -786,7 +786,7 @@ public:
   typedef ::AMI_array_argsHandler_ptr _stub_ptr_type;
   typedef ::AMI_array_argsHandler_var _stub_var_type;
 
-  POA_AMI_array_argsHandler (const POA_AMI_array_argsHandler& rhs);
+  POA_AMI_array_argsHandler (const POA_AMI_array_argsHandler& rhs) = default;
   virtual ~POA_AMI_array_argsHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -916,7 +916,7 @@ public:
   typedef ::testdata_ptr _stub_ptr_type;
   typedef ::testdata_var _stub_var_type;
 
-  POA_testdata (const POA_testdata& rhs);
+  POA_testdata (const POA_testdata& rhs) = default;
   virtual ~POA_testdata () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -987,7 +987,7 @@ public:
   typedef ::AMI_testdataHandler_ptr _stub_ptr_type;
   typedef ::AMI_testdataHandler_var _stub_var_type;
 
-  POA_AMI_testdataHandler (const POA_AMI_testdataHandler& rhs);
+  POA_AMI_testdataHandler (const POA_AMI_testdataHandler& rhs) = default;
   virtual ~POA_AMI_testdataHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1090,7 +1090,7 @@ public:
   typedef ::arraytest::MyTest_ptr _stub_ptr_type;
   typedef ::arraytest::MyTest_var _stub_var_type;
 
-  MyTest (const MyTest& rhs);
+  MyTest (const MyTest& rhs) = default;
   virtual ~MyTest () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1188,7 +1188,7 @@ public:
   typedef ::arraytest::AMI_MyTestHandler_ptr _stub_ptr_type;
   typedef ::arraytest::AMI_MyTestHandler_var _stub_var_type;
 
-  AMI_MyTestHandler (const AMI_MyTestHandler& rhs);
+  AMI_MyTestHandler (const AMI_MyTestHandler& rhs) = default;
   virtual ~AMI_MyTestHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

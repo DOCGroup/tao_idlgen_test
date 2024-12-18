@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_GPERFS_OBHD71_H_
-#define _TAO_IDL_GPERFS_OBHD71_H_
+#ifndef _TAO_IDL_GPERFS_FNYFQH_H_
+#define _TAO_IDL_GPERFS_FNYFQH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -343,7 +343,7 @@ public:
   typedef ::testlistitem_ptr _stub_ptr_type;
   typedef ::testlistitem_var _stub_var_type;
 
-  POA_testlistitem (const POA_testlistitem& rhs);
+  POA_testlistitem (const POA_testlistitem& rhs) = default;
   virtual ~POA_testlistitem () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -440,7 +440,7 @@ public:
   typedef ::AMI_testlistitemHandler_ptr _stub_ptr_type;
   typedef ::AMI_testlistitemHandler_var _stub_var_type;
 
-  POA_AMI_testlistitemHandler (const POA_AMI_testlistitemHandler& rhs);
+  POA_AMI_testlistitemHandler (const POA_AMI_testlistitemHandler& rhs) = default;
   virtual ~POA_AMI_testlistitemHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -747,7 +747,7 @@ public:
   typedef ::test_ptr _stub_ptr_type;
   typedef ::test_var _stub_var_type;
 
-  POA_test (const POA_test& rhs);
+  POA_test (const POA_test& rhs) = default;
   virtual ~POA_test () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1209,7 +1209,7 @@ public:
   typedef ::AMI_testHandler_ptr _stub_ptr_type;
   typedef ::AMI_testHandler_var _stub_var_type;
 
-  POA_AMI_testHandler (const POA_AMI_testHandler& rhs);
+  POA_AMI_testHandler (const POA_AMI_testHandler& rhs) = default;
   virtual ~POA_AMI_testHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2013,7 +2013,7 @@ public:
   typedef ::Simple_Server_ptr _stub_ptr_type;
   typedef ::Simple_Server_var _stub_var_type;
 
-  POA_Simple_Server (const POA_Simple_Server& rhs);
+  POA_Simple_Server (const POA_Simple_Server& rhs) = default;
   virtual ~POA_Simple_Server () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2534,7 +2534,7 @@ public:
   typedef ::AMI_Simple_ServerHandler_ptr _stub_ptr_type;
   typedef ::AMI_Simple_ServerHandler_var _stub_var_type;
 
-  POA_AMI_Simple_ServerHandler (const POA_AMI_Simple_ServerHandler& rhs);
+  POA_AMI_Simple_ServerHandler (const POA_AMI_Simple_ServerHandler& rhs) = default;
   virtual ~POA_AMI_Simple_ServerHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

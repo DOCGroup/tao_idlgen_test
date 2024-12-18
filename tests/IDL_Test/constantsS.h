@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_CONSTANTSS_EDFB13_H_
-#define _TAO_IDL_CONSTANTSS_EDFB13_H_
+#ifndef _TAO_IDL_CONSTANTSS_8LQJZA_H_
+#define _TAO_IDL_CONSTANTSS_8LQJZA_H_
 
 #include /**/ "ace/pre.h"
 
@@ -275,7 +275,7 @@ public:
   typedef ::ClassConstants::Iface_ptr _stub_ptr_type;
   typedef ::ClassConstants::Iface_var _stub_var_type;
 
-  Iface (const Iface& rhs);
+  Iface (const Iface& rhs) = default;
   virtual ~Iface () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -346,7 +346,7 @@ public:
   typedef ::ClassConstants::AMI_IfaceHandler_ptr _stub_ptr_type;
   typedef ::ClassConstants::AMI_IfaceHandler_var _stub_var_type;
 
-  AMI_IfaceHandler (const AMI_IfaceHandler& rhs);
+  AMI_IfaceHandler (const AMI_IfaceHandler& rhs) = default;
   virtual ~AMI_IfaceHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

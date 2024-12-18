@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_OLD_UNIONS_33RY42_H_
-#define _TAO_IDL_OLD_UNIONS_33RY42_H_
+#ifndef _TAO_IDL_OLD_UNIONS_PHIPSF_H_
+#define _TAO_IDL_OLD_UNIONS_PHIPSF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -274,7 +274,7 @@ public:
   typedef ::OldUnion::a_ptr _stub_ptr_type;
   typedef ::OldUnion::a_var _stub_var_type;
 
-  a (const a& rhs);
+  a (const a& rhs) = default;
   virtual ~a () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -372,7 +372,7 @@ public:
   typedef ::OldUnion::AMI_aHandler_ptr _stub_ptr_type;
   typedef ::OldUnion::AMI_aHandler_var _stub_var_type;
 
-  AMI_aHandler (const AMI_aHandler& rhs);
+  AMI_aHandler (const AMI_aHandler& rhs) = default;
   virtual ~AMI_aHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

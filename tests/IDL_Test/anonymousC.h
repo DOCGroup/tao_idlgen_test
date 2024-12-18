@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:148
 
-#ifndef _TAO_IDL_ANONYMOUSC_NZVJPT_H_
-#define _TAO_IDL_ANONYMOUSC_NZVJPT_H_
+#ifndef _TAO_IDL_ANONYMOUSC_MOJFAK_H_
+#define _TAO_IDL_ANONYMOUSC_MOJFAK_H_
 
 #include /**/ "ace/pre.h"
 

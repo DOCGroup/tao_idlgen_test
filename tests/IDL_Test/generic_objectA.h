@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:767
 
-#ifndef _TAO_IDL_GENERIC_OBJECTA_Q4Y3UB_H_
-#define _TAO_IDL_GENERIC_OBJECTA_Q4Y3UB_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTA_PG0CZH_H_
+#define _TAO_IDL_GENERIC_OBJECTA_PG0CZH_H_
 
 #include /**/ "ace/pre.h"
 

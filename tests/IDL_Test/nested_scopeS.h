@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_NESTED_SCOPES_FWGQFV_H_
-#define _TAO_IDL_NESTED_SCOPES_FWGQFV_H_
+#ifndef _TAO_IDL_NESTED_SCOPES_KKIBCL_H_
+#define _TAO_IDL_NESTED_SCOPES_KKIBCL_H_
 
 #include /**/ "ace/pre.h"
 
@@ -805,7 +805,7 @@ namespace POA_i_skip
     typedef ::i_skip::i_hump::i_skip_ptr _stub_ptr_type;
     typedef ::i_skip::i_hump::i_skip_var _stub_var_type;
 
-    i_skip (const i_skip& rhs);
+    i_skip (const i_skip& rhs) = default;
     virtual ~i_skip () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -876,7 +876,7 @@ namespace POA_i_skip
     typedef ::i_skip::i_hump::AMI_i_skipHandler_ptr _stub_ptr_type;
     typedef ::i_skip::i_hump::AMI_i_skipHandler_var _stub_var_type;
 
-    AMI_i_skipHandler (const AMI_i_skipHandler& rhs);
+    AMI_i_skipHandler (const AMI_i_skipHandler& rhs) = default;
     virtual ~AMI_i_skipHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1117,7 +1117,7 @@ public:
   typedef ::bloo_ptr _stub_ptr_type;
   typedef ::bloo_var _stub_var_type;
 
-  POA_bloo (const POA_bloo& rhs);
+  POA_bloo (const POA_bloo& rhs) = default;
   virtual ~POA_bloo () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1188,7 +1188,7 @@ public:
   typedef ::AMI_blooHandler_ptr _stub_ptr_type;
   typedef ::AMI_blooHandler_var _stub_var_type;
 
-  POA_AMI_blooHandler (const POA_AMI_blooHandler& rhs);
+  POA_AMI_blooHandler (const POA_AMI_blooHandler& rhs) = default;
   virtual ~POA_AMI_blooHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1333,7 +1333,7 @@ namespace POA_bug_1985_a
     typedef ::bug_1985_a::b::something_ptr _stub_ptr_type;
     typedef ::bug_1985_a::b::something_var _stub_var_type;
 
-    something (const something& rhs);
+    something (const something& rhs) = default;
     virtual ~something () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1404,7 +1404,7 @@ namespace POA_bug_1985_a
     typedef ::bug_1985_a::b::AMI_somethingHandler_ptr _stub_ptr_type;
     typedef ::bug_1985_a::b::AMI_somethingHandler_var _stub_var_type;
 
-    AMI_somethingHandler (const AMI_somethingHandler& rhs);
+    AMI_somethingHandler (const AMI_somethingHandler& rhs) = default;
     virtual ~AMI_somethingHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1514,7 +1514,7 @@ namespace POA_bug_1985_c
     typedef ::bug_1985_c::d::something_ptr _stub_ptr_type;
     typedef ::bug_1985_c::d::something_var _stub_var_type;
 
-    something (const something& rhs);
+    something (const something& rhs) = default;
     virtual ~something () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1586,7 +1586,7 @@ namespace POA_bug_1985_c
     typedef ::bug_1985_c::d::AMI_somethingHandler_ptr _stub_ptr_type;
     typedef ::bug_1985_c::d::AMI_somethingHandler_var _stub_var_type;
 
-    AMI_somethingHandler (const AMI_somethingHandler& rhs);
+    AMI_somethingHandler (const AMI_somethingHandler& rhs) = default;
     virtual ~AMI_somethingHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1689,7 +1689,7 @@ public:
   typedef ::Negotiator::UAV_Negotiator_ptr _stub_ptr_type;
   typedef ::Negotiator::UAV_Negotiator_var _stub_var_type;
 
-  UAV_Negotiator (const UAV_Negotiator& rhs);
+  UAV_Negotiator (const UAV_Negotiator& rhs) = default;
   virtual ~UAV_Negotiator () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1760,7 +1760,7 @@ public:
   typedef ::Negotiator::AMI_UAV_NegotiatorHandler_ptr _stub_ptr_type;
   typedef ::Negotiator::AMI_UAV_NegotiatorHandler_var _stub_var_type;
 
-  AMI_UAV_NegotiatorHandler (const AMI_UAV_NegotiatorHandler& rhs);
+  AMI_UAV_NegotiatorHandler (const AMI_UAV_NegotiatorHandler& rhs) = default;
   virtual ~AMI_UAV_NegotiatorHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1859,7 +1859,7 @@ public:
   typedef ::Negotiator::UAV_Negotiator_Factory_ptr _stub_ptr_type;
   typedef ::Negotiator::UAV_Negotiator_Factory_var _stub_var_type;
 
-  UAV_Negotiator_Factory (const UAV_Negotiator_Factory& rhs);
+  UAV_Negotiator_Factory (const UAV_Negotiator_Factory& rhs) = default;
   virtual ~UAV_Negotiator_Factory () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1958,7 +1958,7 @@ public:
   typedef ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr _stub_ptr_type;
   typedef ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_var _stub_var_type;
 
-  AMI_UAV_Negotiator_FactoryHandler (const AMI_UAV_Negotiator_FactoryHandler& rhs);
+  AMI_UAV_Negotiator_FactoryHandler (const AMI_UAV_Negotiator_FactoryHandler& rhs) = default;
   virtual ~AMI_UAV_Negotiator_FactoryHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2132,7 +2132,7 @@ namespace POA_Wow
     typedef ::Wow::bug_2125::MyInterface_ptr _stub_ptr_type;
     typedef ::Wow::bug_2125::MyInterface_var _stub_var_type;
 
-    MyInterface (const MyInterface& rhs);
+    MyInterface (const MyInterface& rhs) = default;
     virtual ~MyInterface () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2229,7 +2229,7 @@ namespace POA_Wow
     typedef ::Wow::bug_2125::AMI_MyInterfaceHandler_ptr _stub_ptr_type;
     typedef ::Wow::bug_2125::AMI_MyInterfaceHandler_var _stub_var_type;
 
-    AMI_MyInterfaceHandler (const AMI_MyInterfaceHandler& rhs);
+    AMI_MyInterfaceHandler (const AMI_MyInterfaceHandler& rhs) = default;
     virtual ~AMI_MyInterfaceHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

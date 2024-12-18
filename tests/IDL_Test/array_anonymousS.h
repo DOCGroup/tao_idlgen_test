@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_SIWABV_H_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_SIWABV_H_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_KPVZPL_H_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_KPVZPL_H_
 
 #include /**/ "ace/pre.h"
 
@@ -253,7 +253,7 @@ public:
   typedef ::tdef_ptr _stub_ptr_type;
   typedef ::tdef_var _stub_var_type;
 
-  POA_tdef (const POA_tdef& rhs);
+  POA_tdef (const POA_tdef& rhs) = default;
   virtual ~POA_tdef () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -324,7 +324,7 @@ public:
   typedef ::AMI_tdefHandler_ptr _stub_ptr_type;
   typedef ::AMI_tdefHandler_var _stub_var_type;
 
-  POA_AMI_tdefHandler (const POA_AMI_tdefHandler& rhs);
+  POA_AMI_tdefHandler (const POA_AMI_tdefHandler& rhs) = default;
   virtual ~POA_AMI_tdefHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_REPO_ID_MODS_J2TZEI_CPP_
-#define _TAO_IDL_REPO_ID_MODS_J2TZEI_CPP_
+#ifndef _TAO_IDL_REPO_ID_MODS_ZTJNQ1_CPP_
+#define _TAO_IDL_REPO_ID_MODS_ZTJNQ1_CPP_
 
 
 #include "repo_id_modS.h"

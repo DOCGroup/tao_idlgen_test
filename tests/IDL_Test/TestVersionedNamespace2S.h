@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_5K3RBW_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_5K3RBW_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_8TMWZU_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_8TMWZU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -438,7 +438,7 @@ public:
   typedef ::M1::LI_ptr _stub_ptr_type;
   typedef ::M1::LI_var _stub_var_type;
 
-  LI (const LI& rhs);
+  LI (const LI& rhs) = default;
   virtual ~LI () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -546,7 +546,7 @@ public:
   typedef ::M1::L2_ptr _stub_ptr_type;
   typedef ::M1::L2_var _stub_var_type;
 
-  L2 (const L2& rhs);
+  L2 (const L2& rhs) = default;
   virtual ~L2 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -672,7 +672,7 @@ namespace POA_M2
     typedef ::M2::M3::L3_ptr _stub_ptr_type;
     typedef ::M2::M3::L3_var _stub_var_type;
 
-    L3 (const L3& rhs);
+    L3 (const L3& rhs) = default;
     virtual ~L3 () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -780,7 +780,7 @@ public:
   typedef ::M2::M3::L4_ptr _stub_ptr_type;
   typedef ::M2::M3::L4_var _stub_var_type;
 
-  L4 (const L4& rhs);
+  L4 (const L4& rhs) = default;
   virtual ~L4 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

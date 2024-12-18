@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_INTERFACES_FQKJMG_H_
-#define _TAO_IDL_INTERFACES_FQKJMG_H_
+#ifndef _TAO_IDL_INTERFACES_QI1KM0_H_
+#define _TAO_IDL_INTERFACES_QI1KM0_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1883,7 +1883,7 @@ public:
   typedef ::Base_ptr _stub_ptr_type;
   typedef ::Base_var _stub_var_type;
 
-  POA_Base (const POA_Base& rhs);
+  POA_Base (const POA_Base& rhs) = default;
   virtual ~POA_Base () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2006,7 +2006,7 @@ public:
   typedef ::AMI_BaseHandler_ptr _stub_ptr_type;
   typedef ::AMI_BaseHandler_var _stub_var_type;
 
-  POA_AMI_BaseHandler (const POA_AMI_BaseHandler& rhs);
+  POA_AMI_BaseHandler (const POA_AMI_BaseHandler& rhs) = default;
   virtual ~POA_AMI_BaseHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2159,7 +2159,7 @@ public:
   typedef ::Derived_ptr _stub_ptr_type;
   typedef ::Derived_var _stub_var_type;
 
-  POA_Derived (const POA_Derived& rhs);
+  POA_Derived (const POA_Derived& rhs) = default;
   virtual ~POA_Derived () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2231,7 +2231,7 @@ public:
   typedef ::AMI_DerivedHandler_ptr _stub_ptr_type;
   typedef ::AMI_DerivedHandler_var _stub_var_type;
 
-  POA_AMI_DerivedHandler (const POA_AMI_DerivedHandler& rhs);
+  POA_AMI_DerivedHandler (const POA_AMI_DerivedHandler& rhs) = default;
   virtual ~POA_AMI_DerivedHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2340,7 +2340,7 @@ public:
   typedef ::foostep_ptr _stub_ptr_type;
   typedef ::foostep_var _stub_var_type;
 
-  POA_foostep (const POA_foostep& rhs);
+  POA_foostep (const POA_foostep& rhs) = default;
   virtual ~POA_foostep () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2437,7 +2437,7 @@ public:
   typedef ::AMI_foostepHandler_ptr _stub_ptr_type;
   typedef ::AMI_foostepHandler_var _stub_var_type;
 
-  POA_AMI_foostepHandler (const POA_AMI_foostepHandler& rhs);
+  POA_AMI_foostepHandler (const POA_AMI_foostepHandler& rhs) = default;
   virtual ~POA_AMI_foostepHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2556,7 +2556,7 @@ public:
   typedef ::mother_ptr _stub_ptr_type;
   typedef ::mother_var _stub_var_type;
 
-  POA_mother (const POA_mother& rhs);
+  POA_mother (const POA_mother& rhs) = default;
   virtual ~POA_mother () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2627,7 +2627,7 @@ public:
   typedef ::AMI_motherHandler_ptr _stub_ptr_type;
   typedef ::AMI_motherHandler_var _stub_var_type;
 
-  POA_AMI_motherHandler (const POA_AMI_motherHandler& rhs);
+  POA_AMI_motherHandler (const POA_AMI_motherHandler& rhs) = default;
   virtual ~POA_AMI_motherHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2712,7 +2712,7 @@ public:
   typedef ::father_ptr _stub_ptr_type;
   typedef ::father_var _stub_var_type;
 
-  POA_father (const POA_father& rhs);
+  POA_father (const POA_father& rhs) = default;
   virtual ~POA_father () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2783,7 +2783,7 @@ public:
   typedef ::AMI_fatherHandler_ptr _stub_ptr_type;
   typedef ::AMI_fatherHandler_var _stub_var_type;
 
-  POA_AMI_fatherHandler (const POA_AMI_fatherHandler& rhs);
+  POA_AMI_fatherHandler (const POA_AMI_fatherHandler& rhs) = default;
   virtual ~POA_AMI_fatherHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2871,7 +2871,7 @@ public:
   typedef ::child_ptr _stub_ptr_type;
   typedef ::child_var _stub_var_type;
 
-  POA_child (const POA_child& rhs);
+  POA_child (const POA_child& rhs) = default;
   virtual ~POA_child () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2945,7 +2945,7 @@ public:
   typedef ::AMI_childHandler_ptr _stub_ptr_type;
   typedef ::AMI_childHandler_var _stub_var_type;
 
-  POA_AMI_childHandler (const POA_AMI_childHandler& rhs);
+  POA_AMI_childHandler (const POA_AMI_childHandler& rhs) = default;
   virtual ~POA_AMI_childHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3031,7 +3031,7 @@ public:
   typedef ::_cxx_try_ptr _stub_ptr_type;
   typedef ::_cxx_try_var _stub_var_type;
 
-  POA__cxx_try (const POA__cxx_try& rhs);
+  POA__cxx_try (const POA__cxx_try& rhs) = default;
   virtual ~POA__cxx_try () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3102,7 +3102,7 @@ public:
   typedef ::AMI__cxx_tryHandler_ptr _stub_ptr_type;
   typedef ::AMI__cxx_tryHandler_var _stub_var_type;
 
-  POA_AMI__cxx_tryHandler (const POA_AMI__cxx_tryHandler& rhs);
+  POA_AMI__cxx_tryHandler (const POA_AMI__cxx_tryHandler& rhs) = default;
   virtual ~POA_AMI__cxx_tryHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3214,7 +3214,7 @@ public:
   typedef ::later_user_ptr _stub_ptr_type;
   typedef ::later_user_var _stub_var_type;
 
-  POA_later_user (const POA_later_user& rhs);
+  POA_later_user (const POA_later_user& rhs) = default;
   virtual ~POA_later_user () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3342,7 +3342,7 @@ public:
   typedef ::AMI_later_userHandler_ptr _stub_ptr_type;
   typedef ::AMI_later_userHandler_var _stub_var_type;
 
-  POA_AMI_later_userHandler (const POA_AMI_later_userHandler& rhs);
+  POA_AMI_later_userHandler (const POA_AMI_later_userHandler& rhs) = default;
   virtual ~POA_AMI_later_userHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3496,7 +3496,7 @@ public:
   typedef ::later_ptr _stub_ptr_type;
   typedef ::later_var _stub_var_type;
 
-  POA_later (const POA_later& rhs);
+  POA_later (const POA_later& rhs) = default;
   virtual ~POA_later () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3567,7 +3567,7 @@ public:
   typedef ::AMI_laterHandler_ptr _stub_ptr_type;
   typedef ::AMI_laterHandler_var _stub_var_type;
 
-  POA_AMI_laterHandler (const POA_AMI_laterHandler& rhs);
+  POA_AMI_laterHandler (const POA_AMI_laterHandler& rhs) = default;
   virtual ~POA_AMI_laterHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3652,7 +3652,7 @@ public:
   typedef ::Begin_ptr _stub_ptr_type;
   typedef ::Begin_var _stub_var_type;
 
-  POA_Begin (const POA_Begin& rhs);
+  POA_Begin (const POA_Begin& rhs) = default;
   virtual ~POA_Begin () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3723,7 +3723,7 @@ public:
   typedef ::AMI_BeginHandler_ptr _stub_ptr_type;
   typedef ::AMI_BeginHandler_var _stub_var_type;
 
-  POA_AMI_BeginHandler (const POA_AMI_BeginHandler& rhs);
+  POA_AMI_BeginHandler (const POA_AMI_BeginHandler& rhs) = default;
   virtual ~POA_AMI_BeginHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3809,7 +3809,7 @@ public:
   typedef ::Middle_ptr _stub_ptr_type;
   typedef ::Middle_var _stub_var_type;
 
-  POA_Middle (const POA_Middle& rhs);
+  POA_Middle (const POA_Middle& rhs) = default;
   virtual ~POA_Middle () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3881,7 +3881,7 @@ public:
   typedef ::AMI_MiddleHandler_ptr _stub_ptr_type;
   typedef ::AMI_MiddleHandler_var _stub_var_type;
 
-  POA_AMI_MiddleHandler (const POA_AMI_MiddleHandler& rhs);
+  POA_AMI_MiddleHandler (const POA_AMI_MiddleHandler& rhs) = default;
   virtual ~POA_AMI_MiddleHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3967,7 +3967,7 @@ public:
   typedef ::End_ptr _stub_ptr_type;
   typedef ::End_var _stub_var_type;
 
-  POA_End (const POA_End& rhs);
+  POA_End (const POA_End& rhs) = default;
   virtual ~POA_End () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -4039,7 +4039,7 @@ public:
   typedef ::AMI_EndHandler_ptr _stub_ptr_type;
   typedef ::AMI_EndHandler_var _stub_var_type;
 
-  POA_AMI_EndHandler (const POA_AMI_EndHandler& rhs);
+  POA_AMI_EndHandler (const POA_AMI_EndHandler& rhs) = default;
   virtual ~POA_AMI_EndHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -4149,7 +4149,7 @@ public:
   typedef ::Client_ptr _stub_ptr_type;
   typedef ::Client_var _stub_var_type;
 
-  POA_Client (const POA_Client& rhs);
+  POA_Client (const POA_Client& rhs) = default;
   virtual ~POA_Client () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -4272,7 +4272,7 @@ public:
   typedef ::AMI_ClientHandler_ptr _stub_ptr_type;
   typedef ::AMI_ClientHandler_var _stub_var_type;
 
-  POA_AMI_ClientHandler (const POA_AMI_ClientHandler& rhs);
+  POA_AMI_ClientHandler (const POA_AMI_ClientHandler& rhs) = default;
   virtual ~POA_AMI_ClientHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -4474,7 +4474,7 @@ public:
   typedef ::AttributeTester_ptr _stub_ptr_type;
   typedef ::AttributeTester_var _stub_var_type;
 
-  POA_AttributeTester (const POA_AttributeTester& rhs);
+  POA_AttributeTester (const POA_AttributeTester& rhs) = default;
   virtual ~POA_AttributeTester () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -4649,7 +4649,7 @@ public:
   typedef ::AMI_AttributeTesterHandler_ptr _stub_ptr_type;
   typedef ::AMI_AttributeTesterHandler_var _stub_var_type;
 
-  POA_AMI_AttributeTesterHandler (const POA_AMI_AttributeTesterHandler& rhs);
+  POA_AMI_AttributeTesterHandler (const POA_AMI_AttributeTesterHandler& rhs) = default;
   virtual ~POA_AMI_AttributeTesterHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -4888,7 +4888,7 @@ public:
   typedef ::ParamMod::ParameterTester_ptr _stub_ptr_type;
   typedef ::ParamMod::ParameterTester_var _stub_var_type;
 
-  ParameterTester (const ParameterTester& rhs);
+  ParameterTester (const ParameterTester& rhs) = default;
   virtual ~ParameterTester () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -4990,7 +4990,7 @@ public:
   typedef ::ParamMod::AMI_ParameterTesterHandler_ptr _stub_ptr_type;
   typedef ::ParamMod::AMI_ParameterTesterHandler_var _stub_var_type;
 
-  AMI_ParameterTesterHandler (const AMI_ParameterTesterHandler& rhs);
+  AMI_ParameterTesterHandler (const AMI_ParameterTesterHandler& rhs) = default;
   virtual ~AMI_ParameterTesterHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -5117,7 +5117,7 @@ public:
   typedef ::A_ptr _stub_ptr_type;
   typedef ::A_var _stub_var_type;
 
-  POA_A (const POA_A& rhs);
+  POA_A (const POA_A& rhs) = default;
   virtual ~POA_A () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -5188,7 +5188,7 @@ public:
   typedef ::AMI_AHandler_ptr _stub_ptr_type;
   typedef ::AMI_AHandler_var _stub_var_type;
 
-  POA_AMI_AHandler (const POA_AMI_AHandler& rhs);
+  POA_AMI_AHandler (const POA_AMI_AHandler& rhs) = default;
   virtual ~POA_AMI_AHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -5291,7 +5291,7 @@ public:
   typedef ::M::A_ptr _stub_ptr_type;
   typedef ::M::A_var _stub_var_type;
 
-  A (const A& rhs);
+  A (const A& rhs) = default;
   virtual ~A () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -5362,7 +5362,7 @@ public:
   typedef ::M::AMI_AHandler_ptr _stub_ptr_type;
   typedef ::M::AMI_AHandler_var _stub_var_type;
 
-  AMI_AHandler (const AMI_AHandler& rhs);
+  AMI_AHandler (const AMI_AHandler& rhs) = default;
   virtual ~AMI_AHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -5471,7 +5471,7 @@ public:
   typedef ::i1::if1_ptr _stub_ptr_type;
   typedef ::i1::if1_var _stub_var_type;
 
-  if1 (const if1& rhs);
+  if1 (const if1& rhs) = default;
   virtual ~if1 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -5568,7 +5568,7 @@ public:
   typedef ::i1::AMI_if1Handler_ptr _stub_ptr_type;
   typedef ::i1::AMI_if1Handler_var _stub_var_type;
 
-  AMI_if1Handler (const AMI_if1Handler& rhs);
+  AMI_if1Handler (const AMI_if1Handler& rhs) = default;
   virtual ~AMI_if1Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -5712,7 +5712,7 @@ public:
   typedef ::i2::if2_ptr _stub_ptr_type;
   typedef ::i2::if2_var _stub_var_type;
 
-  if2 (const if2& rhs);
+  if2 (const if2& rhs) = default;
   virtual ~if2 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -5810,7 +5810,7 @@ public:
   typedef ::i2::AMI_if2Handler_ptr _stub_ptr_type;
   typedef ::i2::AMI_if2Handler_var _stub_var_type;
 
-  AMI_if2Handler (const AMI_if2Handler& rhs);
+  AMI_if2Handler (const AMI_if2Handler& rhs) = default;
   virtual ~AMI_if2Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -5942,7 +5942,7 @@ public:
   typedef ::i2::if3_ptr _stub_ptr_type;
   typedef ::i2::if3_var _stub_var_type;
 
-  if3 (const if3& rhs);
+  if3 (const if3& rhs) = default;
   virtual ~if3 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -6040,7 +6040,7 @@ public:
   typedef ::i2::AMI_if3Handler_ptr _stub_ptr_type;
   typedef ::i2::AMI_if3Handler_var _stub_var_type;
 
-  AMI_if3Handler (const AMI_if3Handler& rhs);
+  AMI_if3Handler (const AMI_if3Handler& rhs) = default;
   virtual ~AMI_if3Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -6171,7 +6171,7 @@ public:
   typedef ::redefs::base_ptr _stub_ptr_type;
   typedef ::redefs::base_var _stub_var_type;
 
-  base (const base& rhs);
+  base (const base& rhs) = default;
   virtual ~base () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -6242,7 +6242,7 @@ public:
   typedef ::redefs::AMI_baseHandler_ptr _stub_ptr_type;
   typedef ::redefs::AMI_baseHandler_var _stub_var_type;
 
-  AMI_baseHandler (const AMI_baseHandler& rhs);
+  AMI_baseHandler (const AMI_baseHandler& rhs) = default;
   virtual ~AMI_baseHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -6328,7 +6328,7 @@ public:
   typedef ::redefs::derived_ptr _stub_ptr_type;
   typedef ::redefs::derived_var _stub_var_type;
 
-  derived (const derived& rhs);
+  derived (const derived& rhs) = default;
   virtual ~derived () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -6400,7 +6400,7 @@ public:
   typedef ::redefs::AMI_derivedHandler_ptr _stub_ptr_type;
   typedef ::redefs::AMI_derivedHandler_var _stub_var_type;
 
-  AMI_derivedHandler (const AMI_derivedHandler& rhs);
+  AMI_derivedHandler (const AMI_derivedHandler& rhs) = default;
   virtual ~AMI_derivedHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -6497,7 +6497,7 @@ public:
   typedef ::Rec_Arg_Traits::base_ptr _stub_ptr_type;
   typedef ::Rec_Arg_Traits::base_var _stub_var_type;
 
-  base (const base& rhs);
+  base (const base& rhs) = default;
   virtual ~base () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -6568,7 +6568,7 @@ public:
   typedef ::Rec_Arg_Traits::AMI_baseHandler_ptr _stub_ptr_type;
   typedef ::Rec_Arg_Traits::AMI_baseHandler_var _stub_var_type;
 
-  AMI_baseHandler (const AMI_baseHandler& rhs);
+  AMI_baseHandler (const AMI_baseHandler& rhs) = default;
   virtual ~AMI_baseHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -6667,7 +6667,7 @@ public:
   typedef ::Rec_Arg_Traits::derived_ptr _stub_ptr_type;
   typedef ::Rec_Arg_Traits::derived_var _stub_var_type;
 
-  derived (const derived& rhs);
+  derived (const derived& rhs) = default;
   virtual ~derived () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -6765,7 +6765,7 @@ public:
   typedef ::Rec_Arg_Traits::AMI_derivedHandler_ptr _stub_ptr_type;
   typedef ::Rec_Arg_Traits::AMI_derivedHandler_var _stub_var_type;
 
-  AMI_derivedHandler (const AMI_derivedHandler& rhs);
+  AMI_derivedHandler (const AMI_derivedHandler& rhs) = default;
   virtual ~AMI_derivedHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -6908,7 +6908,7 @@ public:
   typedef ::call_test::iTest_ptr _stub_ptr_type;
   typedef ::call_test::iTest_var _stub_var_type;
 
-  iTest (const iTest& rhs);
+  iTest (const iTest& rhs) = default;
   virtual ~iTest () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -7005,7 +7005,7 @@ public:
   typedef ::call_test::AMI_iTestHandler_ptr _stub_ptr_type;
   typedef ::call_test::AMI_iTestHandler_var _stub_var_type;
 
-  AMI_iTestHandler (const AMI_iTestHandler& rhs);
+  AMI_iTestHandler (const AMI_iTestHandler& rhs) = default;
   virtual ~AMI_iTestHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -7160,7 +7160,7 @@ public:
   typedef ::call_attribute::iBar_ptr _stub_ptr_type;
   typedef ::call_attribute::iBar_var _stub_var_type;
 
-  iBar (const iBar& rhs);
+  iBar (const iBar& rhs) = default;
   virtual ~iBar () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -7283,7 +7283,7 @@ public:
   typedef ::call_attribute::AMI_iBarHandler_ptr _stub_ptr_type;
   typedef ::call_attribute::AMI_iBarHandler_var _stub_var_type;
 
-  AMI_iBarHandler (const AMI_iBarHandler& rhs);
+  AMI_iBarHandler (const AMI_iBarHandler& rhs) = default;
   virtual ~AMI_iBarHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

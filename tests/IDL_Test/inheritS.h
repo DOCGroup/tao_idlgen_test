@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_INHERITS_ZC9XBC_H_
-#define _TAO_IDL_INHERITS_ZC9XBC_H_
+#ifndef _TAO_IDL_INHERITS_QADOXZ_H_
+#define _TAO_IDL_INHERITS_QADOXZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -453,7 +453,7 @@ public:
   typedef ::OldInherit::one_ptr _stub_ptr_type;
   typedef ::OldInherit::one_var _stub_var_type;
 
-  one (const one& rhs);
+  one (const one& rhs) = default;
   virtual ~one () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -549,7 +549,7 @@ public:
   typedef ::OldInherit::AMI_oneHandler_ptr _stub_ptr_type;
   typedef ::OldInherit::AMI_oneHandler_var _stub_var_type;
 
-  AMI_oneHandler (const AMI_oneHandler& rhs);
+  AMI_oneHandler (const AMI_oneHandler& rhs) = default;
   virtual ~AMI_oneHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -680,7 +680,7 @@ public:
   typedef ::OldInherit::two_ptr _stub_ptr_type;
   typedef ::OldInherit::two_var _stub_var_type;
 
-  two (const two& rhs);
+  two (const two& rhs) = default;
   virtual ~two () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -777,7 +777,7 @@ public:
   typedef ::OldInherit::AMI_twoHandler_ptr _stub_ptr_type;
   typedef ::OldInherit::AMI_twoHandler_var _stub_var_type;
 
-  AMI_twoHandler (const AMI_twoHandler& rhs);
+  AMI_twoHandler (const AMI_twoHandler& rhs) = default;
   virtual ~AMI_twoHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -908,7 +908,7 @@ public:
   typedef ::OldInherit::three_ptr _stub_ptr_type;
   typedef ::OldInherit::three_var _stub_var_type;
 
-  three (const three& rhs);
+  three (const three& rhs) = default;
   virtual ~three () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1005,7 +1005,7 @@ public:
   typedef ::OldInherit::AMI_threeHandler_ptr _stub_ptr_type;
   typedef ::OldInherit::AMI_threeHandler_var _stub_var_type;
 
-  AMI_threeHandler (const AMI_threeHandler& rhs);
+  AMI_threeHandler (const AMI_threeHandler& rhs) = default;
   virtual ~AMI_threeHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1138,7 +1138,7 @@ public:
   typedef ::OldInherit::four_ptr _stub_ptr_type;
   typedef ::OldInherit::four_var _stub_var_type;
 
-  four (const four& rhs);
+  four (const four& rhs) = default;
   virtual ~four () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1237,7 +1237,7 @@ public:
   typedef ::OldInherit::AMI_fourHandler_ptr _stub_ptr_type;
   typedef ::OldInherit::AMI_fourHandler_var _stub_var_type;
 
-  AMI_fourHandler (const AMI_fourHandler& rhs);
+  AMI_fourHandler (const AMI_fourHandler& rhs) = default;
   virtual ~AMI_fourHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1373,7 +1373,7 @@ public:
   typedef ::OldInherit::five_ptr _stub_ptr_type;
   typedef ::OldInherit::five_var _stub_var_type;
 
-  five (const five& rhs);
+  five (const five& rhs) = default;
   virtual ~five () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1474,7 +1474,7 @@ public:
   typedef ::OldInherit::AMI_fiveHandler_ptr _stub_ptr_type;
   typedef ::OldInherit::AMI_fiveHandler_var _stub_var_type;
 
-  AMI_fiveHandler (const AMI_fiveHandler& rhs);
+  AMI_fiveHandler (const AMI_fiveHandler& rhs) = default;
   virtual ~AMI_fiveHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

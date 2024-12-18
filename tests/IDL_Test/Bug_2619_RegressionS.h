@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_MGX5TN_H_
-#define _TAO_IDL_BUG_2619_REGRESSIONS_MGX5TN_H_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_VQYBU5_H_
+#define _TAO_IDL_BUG_2619_REGRESSIONS_VQYBU5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -246,7 +246,7 @@ public:
   typedef ::Test_ptr _stub_ptr_type;
   typedef ::Test_var _stub_var_type;
 
-  POA_Test (const POA_Test& rhs);
+  POA_Test (const POA_Test& rhs) = default;
   virtual ~POA_Test () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -343,7 +343,7 @@ public:
   typedef ::AMI_TestHandler_ptr _stub_ptr_type;
   typedef ::AMI_TestHandler_var _stub_var_type;
 
-  POA_AMI_TestHandler (const POA_AMI_TestHandler& rhs);
+  POA_AMI_TestHandler (const POA_AMI_TestHandler& rhs) = default;
   virtual ~POA_AMI_TestHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_INCLUDINGS_TMPMDY_H_
-#define _TAO_IDL_INCLUDINGS_TMPMDY_H_
+#ifndef _TAO_IDL_INCLUDINGS_QBLUFH_H_
+#define _TAO_IDL_INCLUDINGS_QBLUFH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -503,7 +503,7 @@ public:
   typedef ::iface_ptr _stub_ptr_type;
   typedef ::iface_var _stub_var_type;
 
-  POA_iface (const POA_iface& rhs);
+  POA_iface (const POA_iface& rhs) = default;
   virtual ~POA_iface () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -574,7 +574,7 @@ public:
   typedef ::AMI_ifaceHandler_ptr _stub_ptr_type;
   typedef ::AMI_ifaceHandler_var _stub_var_type;
 
-  POA_AMI_ifaceHandler (const POA_AMI_ifaceHandler& rhs);
+  POA_AMI_ifaceHandler (const POA_AMI_ifaceHandler& rhs) = default;
   virtual ~POA_AMI_ifaceHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -696,7 +696,7 @@ public:
   typedef ::MyInt_ptr _stub_ptr_type;
   typedef ::MyInt_var _stub_var_type;
 
-  POA_MyInt (const POA_MyInt& rhs);
+  POA_MyInt (const POA_MyInt& rhs) = default;
   virtual ~POA_MyInt () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -794,7 +794,7 @@ public:
   typedef ::AMI_MyIntHandler_ptr _stub_ptr_type;
   typedef ::AMI_MyIntHandler_var _stub_var_type;
 
-  POA_AMI_MyIntHandler (const POA_AMI_MyIntHandler& rhs);
+  POA_AMI_MyIntHandler (const POA_AMI_MyIntHandler& rhs) = default;
   virtual ~POA_AMI_MyIntHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -926,7 +926,7 @@ namespace POA_RootModule
     typedef ::RootModule::SUBMODULE1::ChildIF_ptr _stub_ptr_type;
     typedef ::RootModule::SUBMODULE1::ChildIF_var _stub_var_type;
 
-    ChildIF (const ChildIF& rhs);
+    ChildIF (const ChildIF& rhs) = default;
     virtual ~ChildIF () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -998,7 +998,7 @@ namespace POA_RootModule
     typedef ::RootModule::SUBMODULE1::AMI_ChildIFHandler_ptr _stub_ptr_type;
     typedef ::RootModule::SUBMODULE1::AMI_ChildIFHandler_var _stub_var_type;
 
-    AMI_ChildIFHandler (const AMI_ChildIFHandler& rhs);
+    AMI_ChildIFHandler (const AMI_ChildIFHandler& rhs) = default;
     virtual ~AMI_ChildIFHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1095,7 +1095,7 @@ public:
   typedef ::B_ptr _stub_ptr_type;
   typedef ::B_var _stub_var_type;
 
-  POA_B (const POA_B& rhs);
+  POA_B (const POA_B& rhs) = default;
   virtual ~POA_B () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1166,7 +1166,7 @@ public:
   typedef ::AMI_BHandler_ptr _stub_ptr_type;
   typedef ::AMI_BHandler_var _stub_var_type;
 
-  POA_AMI_BHandler (const POA_AMI_BHandler& rhs);
+  POA_AMI_BHandler (const POA_AMI_BHandler& rhs) = default;
   virtual ~POA_AMI_BHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

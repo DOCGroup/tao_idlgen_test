@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_FWDS_DR8FAT_H_
-#define _TAO_IDL_FWDS_DR8FAT_H_
+#ifndef _TAO_IDL_FWDS_ZDIFK2_H_
+#define _TAO_IDL_FWDS_ZDIFK2_H_
 
 #include /**/ "ace/pre.h"
 
@@ -578,7 +578,7 @@ public:
   typedef ::mod2::full_ptr _stub_ptr_type;
   typedef ::mod2::full_var _stub_var_type;
 
-  full (const full& rhs);
+  full (const full& rhs) = default;
   virtual ~full () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -680,7 +680,7 @@ public:
   typedef ::mod2::AMI_fullHandler_ptr _stub_ptr_type;
   typedef ::mod2::AMI_fullHandler_var _stub_var_type;
 
-  AMI_fullHandler (const AMI_fullHandler& rhs);
+  AMI_fullHandler (const AMI_fullHandler& rhs) = default;
   virtual ~AMI_fullHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -813,7 +813,7 @@ public:
   typedef ::fwd_mixed_intf::concrete_parent_ptr _stub_ptr_type;
   typedef ::fwd_mixed_intf::concrete_parent_var _stub_var_type;
 
-  concrete_parent (const concrete_parent& rhs);
+  concrete_parent (const concrete_parent& rhs) = default;
   virtual ~concrete_parent () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -884,7 +884,7 @@ public:
   typedef ::fwd_mixed_intf::AMI_concrete_parentHandler_ptr _stub_ptr_type;
   typedef ::fwd_mixed_intf::AMI_concrete_parentHandler_var _stub_var_type;
 
-  AMI_concrete_parentHandler (const AMI_concrete_parentHandler& rhs);
+  AMI_concrete_parentHandler (const AMI_concrete_parentHandler& rhs) = default;
   virtual ~AMI_concrete_parentHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -942,7 +942,7 @@ public:
   typedef ::fwd_mixed_intf::mixed_abs_first_ptr _stub_ptr_type;
   typedef ::fwd_mixed_intf::mixed_abs_first_var _stub_var_type;
 
-  mixed_abs_first (const mixed_abs_first& rhs);
+  mixed_abs_first (const mixed_abs_first& rhs) = default;
   virtual ~mixed_abs_first () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1000,7 +1000,7 @@ public:
   typedef ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr _stub_ptr_type;
   typedef ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_var _stub_var_type;
 
-  AMI_mixed_abs_firstHandler (const AMI_mixed_abs_firstHandler& rhs);
+  AMI_mixed_abs_firstHandler (const AMI_mixed_abs_firstHandler& rhs) = default;
   virtual ~AMI_mixed_abs_firstHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1058,7 +1058,7 @@ public:
   typedef ::fwd_mixed_intf::mixed_conc_first_ptr _stub_ptr_type;
   typedef ::fwd_mixed_intf::mixed_conc_first_var _stub_var_type;
 
-  mixed_conc_first (const mixed_conc_first& rhs);
+  mixed_conc_first (const mixed_conc_first& rhs) = default;
   virtual ~mixed_conc_first () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1116,7 +1116,7 @@ public:
   typedef ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr _stub_ptr_type;
   typedef ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_var _stub_var_type;
 
-  AMI_mixed_conc_firstHandler (const AMI_mixed_conc_firstHandler& rhs);
+  AMI_mixed_conc_firstHandler (const AMI_mixed_conc_firstHandler& rhs) = default;
   virtual ~AMI_mixed_conc_firstHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

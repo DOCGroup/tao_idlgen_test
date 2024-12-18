@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_GNFMK3_H_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_GNFMK3_H_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_RB6ADE_H_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_RB6ADE_H_
 
 #include /**/ "ace/pre.h"
 
@@ -246,7 +246,7 @@ public:
   typedef ::User_T_ptr _stub_ptr_type;
   typedef ::User_T_var _stub_var_type;
 
-  POA_User_T (const POA_User_T& rhs);
+  POA_User_T (const POA_User_T& rhs) = default;
   virtual ~POA_User_T () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -343,7 +343,7 @@ public:
   typedef ::AMI_User_THandler_ptr _stub_ptr_type;
   typedef ::AMI_User_THandler_var _stub_var_type;
 
-  POA_AMI_User_THandler (const POA_AMI_User_THandler& rhs);
+  POA_AMI_User_THandler (const POA_AMI_User_THandler& rhs) = default;
   virtual ~POA_AMI_User_THandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

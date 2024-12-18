@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_YPATHP_H_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_YPATHP_H_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_AX18YX_H_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_AX18YX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -226,7 +226,7 @@ public:
   typedef ::Bug_2350_Regression_ptr _stub_ptr_type;
   typedef ::Bug_2350_Regression_var _stub_var_type;
 
-  POA_Bug_2350_Regression (const POA_Bug_2350_Regression& rhs);
+  POA_Bug_2350_Regression (const POA_Bug_2350_Regression& rhs) = default;
   virtual ~POA_Bug_2350_Regression () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -323,7 +323,7 @@ public:
   typedef ::AMI_Bug_2350_RegressionHandler_ptr _stub_ptr_type;
   typedef ::AMI_Bug_2350_RegressionHandler_var _stub_var_type;
 
-  POA_AMI_Bug_2350_RegressionHandler (const POA_AMI_Bug_2350_RegressionHandler& rhs);
+  POA_AMI_Bug_2350_RegressionHandler (const POA_AMI_Bug_2350_RegressionHandler& rhs) = default;
   virtual ~POA_AMI_Bug_2350_RegressionHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

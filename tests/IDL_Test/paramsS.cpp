@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_PARAMSS_3ZPUER_CPP_
-#define _TAO_IDL_PARAMSS_3ZPUER_CPP_
+#ifndef _TAO_IDL_PARAMSS_UTWMUC_CPP_
+#define _TAO_IDL_PARAMSS_UTWMUC_CPP_
 
 
 #include "paramsS.h"
@@ -144,15 +144,8 @@ static TAO_foo_bar_AMH_fooBar_Perfect_Hash_OpTable tao_foo_bar_AMH_fooBar_optabl
 
 
 POA_foo::bar::AMH_fooBar::AMH_fooBar ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_foo_bar_AMH_fooBar_optable);
-}
-
-POA_foo::bar::AMH_fooBar::AMH_fooBar (const AMH_fooBar& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_foo_bar_AMH_fooBar_optable);
 }
 
 
@@ -210,7 +203,7 @@ POA_foo::bar::AMH_fooBar::getDate_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -385,15 +378,8 @@ POA_foo::bar::_TAO_fooBar_Direct_Proxy_Impl::getDate (
 
 
 POA_foo::bar::fooBar::fooBar ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_foo_bar_fooBar_optable);
-}
-
-POA_foo::bar::fooBar::fooBar (const fooBar& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_foo_bar_fooBar_optable);
 }
 
 
@@ -509,7 +495,7 @@ void POA_foo::bar::fooBar::getDate_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -531,7 +517,7 @@ const char* POA_foo::bar::fooBar::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -544,7 +530,7 @@ void POA_foo::bar::fooBar::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 
@@ -755,16 +741,8 @@ POA_foo::bar::_TAO_AMI_fooBarHandler_Direct_Proxy_Impl::getDate_excep (
 
 
 POA_foo::bar::AMI_fooBarHandler::AMI_fooBarHandler ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_foo_bar_AMI_fooBarHandler_optable);
-}
-
-POA_foo::bar::AMI_fooBarHandler::AMI_fooBarHandler (const AMI_fooBarHandler& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs),
-    ::POA_Messaging::ReplyHandler (rhs)
-{
+  this->optable_ = std::addressof (tao_foo_bar_AMI_fooBarHandler_optable);
 }
 
 
@@ -959,7 +937,7 @@ void POA_foo::bar::AMI_fooBarHandler::getDate_excep_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -982,7 +960,7 @@ const char* POA_foo::bar::AMI_fooBarHandler::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -995,7 +973,7 @@ void POA_foo::bar::AMI_fooBarHandler::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

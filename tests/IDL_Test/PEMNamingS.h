@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_PEMNAMINGS_3TX3PT_H_
-#define _TAO_IDL_PEMNAMINGS_3TX3PT_H_
+#ifndef _TAO_IDL_PEMNAMINGS_J6B3KM_H_
+#define _TAO_IDL_PEMNAMINGS_J6B3KM_H_
 
 #include /**/ "ace/pre.h"
 
@@ -275,7 +275,7 @@ namespace POA_Plesk
     typedef ::Plesk::Naming::ObjectResolver_ptr _stub_ptr_type;
     typedef ::Plesk::Naming::ObjectResolver_var _stub_var_type;
 
-    ObjectResolver (const ObjectResolver& rhs);
+    ObjectResolver (const ObjectResolver& rhs) = default;
     virtual ~ObjectResolver () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -405,7 +405,7 @@ namespace POA_Plesk
     typedef ::Plesk::Naming::AMI_ObjectResolverHandler_ptr _stub_ptr_type;
     typedef ::Plesk::Naming::AMI_ObjectResolverHandler_var _stub_var_type;
 
-    AMI_ObjectResolverHandler (const AMI_ObjectResolverHandler& rhs);
+    AMI_ObjectResolverHandler (const AMI_ObjectResolverHandler& rhs) = default;
     virtual ~AMI_ObjectResolverHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

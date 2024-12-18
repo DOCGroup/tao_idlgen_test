@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_8ASC7A_H_
-#define _TAO_IDL_SIMPLE_TESTS_8ASC7A_H_
+#ifndef _TAO_IDL_SIMPLE_TESTS_UEJDXV_H_
+#define _TAO_IDL_SIMPLE_TESTS_UEJDXV_H_
 
 #include /**/ "ace/pre.h"
 
@@ -105,7 +105,7 @@ public:
   typedef ::Simple_Server_ptr _stub_ptr_type;
   typedef ::Simple_Server_var _stub_var_type;
 
-  POA_Simple_Server (const POA_Simple_Server& rhs);
+  POA_Simple_Server (const POA_Simple_Server& rhs) = default;
   virtual ~POA_Simple_Server () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

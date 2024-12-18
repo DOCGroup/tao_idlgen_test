@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:148
 
-#ifndef _TAO_IDL_ARRAY_ONLYC_OMRIPB_H_
-#define _TAO_IDL_ARRAY_ONLYC_OMRIPB_H_
+#ifndef _TAO_IDL_ARRAY_ONLYC_2PIQL5_H_
+#define _TAO_IDL_ARRAY_ONLYC_2PIQL5_H_
 
 #include /**/ "ace/pre.h"
 

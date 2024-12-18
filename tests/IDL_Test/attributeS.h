@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_ATTRIBUTES_VGTMAA_H_
-#define _TAO_IDL_ATTRIBUTES_VGTMAA_H_
+#ifndef _TAO_IDL_ATTRIBUTES_DWICJH_H_
+#define _TAO_IDL_ATTRIBUTES_DWICJH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -317,7 +317,7 @@ public:
   typedef ::Hello::MyFoo_ptr _stub_ptr_type;
   typedef ::Hello::MyFoo_var _stub_var_type;
 
-  MyFoo (const MyFoo& rhs);
+  MyFoo (const MyFoo& rhs) = default;
   virtual ~MyFoo () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -622,7 +622,7 @@ public:
   typedef ::Hello::AMI_MyFooHandler_ptr _stub_ptr_type;
   typedef ::Hello::AMI_MyFooHandler_var _stub_var_type;
 
-  AMI_MyFooHandler (const AMI_MyFooHandler& rhs);
+  AMI_MyFooHandler (const AMI_MyFooHandler& rhs) = default;
   virtual ~AMI_MyFooHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

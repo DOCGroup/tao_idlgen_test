@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_PRAGMAS_U4M6H4_H_
-#define _TAO_IDL_PRAGMAS_U4M6H4_H_
+#ifndef _TAO_IDL_PRAGMAS_NZNUBS_H_
+#define _TAO_IDL_PRAGMAS_NZNUBS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -448,7 +448,7 @@ public:
   typedef ::hello_ptr _stub_ptr_type;
   typedef ::hello_var _stub_var_type;
 
-  POA_hello (const POA_hello& rhs);
+  POA_hello (const POA_hello& rhs) = default;
   virtual ~POA_hello () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -519,7 +519,7 @@ public:
   typedef ::AMI_helloHandler_ptr _stub_ptr_type;
   typedef ::AMI_helloHandler_var _stub_var_type;
 
-  POA_AMI_helloHandler (const POA_AMI_helloHandler& rhs);
+  POA_AMI_helloHandler (const POA_AMI_helloHandler& rhs) = default;
   virtual ~POA_AMI_helloHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -604,7 +604,7 @@ public:
   typedef ::goodbye_ptr _stub_ptr_type;
   typedef ::goodbye_var _stub_var_type;
 
-  POA_goodbye (const POA_goodbye& rhs);
+  POA_goodbye (const POA_goodbye& rhs) = default;
   virtual ~POA_goodbye () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -675,7 +675,7 @@ public:
   typedef ::AMI_goodbyeHandler_ptr _stub_ptr_type;
   typedef ::AMI_goodbyeHandler_var _stub_var_type;
 
-  POA_AMI_goodbyeHandler (const POA_AMI_goodbyeHandler& rhs);
+  POA_AMI_goodbyeHandler (const POA_AMI_goodbyeHandler& rhs) = default;
   virtual ~POA_AMI_goodbyeHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -778,7 +778,7 @@ public:
   typedef ::salutation::sayonara_ptr _stub_ptr_type;
   typedef ::salutation::sayonara_var _stub_var_type;
 
-  sayonara (const sayonara& rhs);
+  sayonara (const sayonara& rhs) = default;
   virtual ~sayonara () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -849,7 +849,7 @@ public:
   typedef ::salutation::AMI_sayonaraHandler_ptr _stub_ptr_type;
   typedef ::salutation::AMI_sayonaraHandler_var _stub_var_type;
 
-  AMI_sayonaraHandler (const AMI_sayonaraHandler& rhs);
+  AMI_sayonaraHandler (const AMI_sayonaraHandler& rhs) = default;
   virtual ~AMI_sayonaraHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -940,7 +940,7 @@ public:
   typedef ::ciao_ptr _stub_ptr_type;
   typedef ::ciao_var _stub_var_type;
 
-  POA_ciao (const POA_ciao& rhs);
+  POA_ciao (const POA_ciao& rhs) = default;
   virtual ~POA_ciao () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1011,7 +1011,7 @@ public:
   typedef ::AMI_ciaoHandler_ptr _stub_ptr_type;
   typedef ::AMI_ciaoHandler_var _stub_var_type;
 
-  POA_AMI_ciaoHandler (const POA_AMI_ciaoHandler& rhs);
+  POA_AMI_ciaoHandler (const POA_AMI_ciaoHandler& rhs) = default;
   virtual ~POA_AMI_ciaoHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1096,7 +1096,7 @@ public:
   typedef ::aloha_ptr _stub_ptr_type;
   typedef ::aloha_var _stub_var_type;
 
-  POA_aloha (const POA_aloha& rhs);
+  POA_aloha (const POA_aloha& rhs) = default;
   virtual ~POA_aloha () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1167,7 +1167,7 @@ public:
   typedef ::AMI_alohaHandler_ptr _stub_ptr_type;
   typedef ::AMI_alohaHandler_var _stub_var_type;
 
-  POA_AMI_alohaHandler (const POA_AMI_alohaHandler& rhs);
+  POA_AMI_alohaHandler (const POA_AMI_alohaHandler& rhs) = default;
   virtual ~POA_AMI_alohaHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

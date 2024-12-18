@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_AMI_TESTS_YBOHFQ_H_
-#define _TAO_IDL_AMI_TESTS_YBOHFQ_H_
+#ifndef _TAO_IDL_AMI_TESTS_DTYKC7_H_
+#define _TAO_IDL_AMI_TESTS_DTYKC7_H_
 
 #include /**/ "ace/pre.h"
 
@@ -190,7 +190,7 @@ namespace POA_A
     typedef ::A::AMI_Test_ptr _stub_ptr_type;
     typedef ::A::AMI_Test_var _stub_var_type;
 
-    AMI_Test (const AMI_Test& rhs);
+    AMI_Test (const AMI_Test& rhs) = default;
     virtual ~AMI_Test () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -275,7 +275,7 @@ namespace POA_A
     typedef ::A::AMI_AMI_TestHandler_ptr _stub_ptr_type;
     typedef ::A::AMI_AMI_TestHandler_var _stub_var_type;
 
-    AMI_AMI_TestHandler (const AMI_AMI_TestHandler& rhs);
+    AMI_AMI_TestHandler (const AMI_AMI_TestHandler& rhs) = default;
     virtual ~AMI_AMI_TestHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -390,7 +390,7 @@ namespace POA_A
     typedef ::A::Test_Child_ptr _stub_ptr_type;
     typedef ::A::Test_Child_var _stub_var_type;
 
-    Test_Child (const Test_Child& rhs);
+    Test_Child (const Test_Child& rhs) = default;
     virtual ~Test_Child () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -434,7 +434,7 @@ namespace POA_A
     typedef ::A::AMI_Test_ChildHandler_ptr _stub_ptr_type;
     typedef ::A::AMI_Test_ChildHandler_var _stub_var_type;
 
-    AMI_Test_ChildHandler (const AMI_Test_ChildHandler& rhs);
+    AMI_Test_ChildHandler (const AMI_Test_ChildHandler& rhs) = default;
     virtual ~AMI_Test_ChildHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

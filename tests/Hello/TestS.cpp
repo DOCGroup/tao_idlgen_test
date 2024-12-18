@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_TESTS_JEBU0I_CPP_
-#define _TAO_IDL_TESTS_JEBU0I_CPP_
+#ifndef _TAO_IDL_TESTS_DUKXKD_CPP_
+#define _TAO_IDL_TESTS_DUKXKD_CPP_
 
 
 #include "TestS.h"
@@ -140,15 +140,8 @@ static TAO_Test_Hello_Perfect_Hash_OpTable tao_Test_Hello_optable;
 
 
 POA_Test::Hello::Hello ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_Test_Hello_optable);
-}
-
-POA_Test::Hello::Hello (const Hello& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_Test_Hello_optable);
 }
 
 
@@ -291,7 +284,7 @@ void POA_Test::Hello::shutdown_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -313,7 +306,7 @@ const char* POA_Test::Hello::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -326,7 +319,7 @@ void POA_Test::Hello::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

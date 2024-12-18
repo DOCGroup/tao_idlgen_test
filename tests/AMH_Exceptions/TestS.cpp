@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_TESTS_GZ7QDK_CPP_
-#define _TAO_IDL_TESTS_GZ7QDK_CPP_
+#ifndef _TAO_IDL_TESTS_JSUCIW_CPP_
+#define _TAO_IDL_TESTS_JSUCIW_CPP_
 
 
 #include "TestS.h"
@@ -143,15 +143,8 @@ static TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable tao_Test_AMH_Roundtrip_optabl
 
 
 POA_Test::AMH_Roundtrip::AMH_Roundtrip ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_Test_AMH_Roundtrip_optable);
-}
-
-POA_Test::AMH_Roundtrip::AMH_Roundtrip (const AMH_Roundtrip& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_Test_AMH_Roundtrip_optable);
 }
 
 
@@ -245,7 +238,7 @@ POA_Test::AMH_Roundtrip::shutdown_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -383,15 +376,8 @@ static TAO_Test_Roundtrip_Perfect_Hash_OpTable tao_Test_Roundtrip_optable;
 
 
 POA_Test::Roundtrip::Roundtrip ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_Test_Roundtrip_optable);
-}
-
-POA_Test::Roundtrip::Roundtrip (const Roundtrip& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_Test_Roundtrip_optable);
 }
 
 
@@ -559,7 +545,7 @@ void POA_Test::Roundtrip::shutdown_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -581,7 +567,7 @@ const char* POA_Test::Roundtrip::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -594,7 +580,7 @@ void POA_Test::Roundtrip::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

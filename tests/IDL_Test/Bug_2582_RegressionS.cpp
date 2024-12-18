@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_2HN2TC_CPP_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_2HN2TC_CPP_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_5Z6G43_CPP_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_5Z6G43_CPP_
 
 
 #include "Bug_2582_RegressionS.h"
@@ -146,15 +146,8 @@ static TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable tao_AMH_FieldDevice_T_optable;
 
 
 POA_AMH_FieldDevice_T::POA_AMH_FieldDevice_T ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_AMH_FieldDevice_T_optable);
-}
-
-POA_AMH_FieldDevice_T::POA_AMH_FieldDevice_T (const POA_AMH_FieldDevice_T& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_AMH_FieldDevice_T_optable);
 }
 
 
@@ -239,7 +232,7 @@ POA_AMH_FieldDevice_T::getEncoding_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -435,15 +428,8 @@ _TAO_FieldDevice_T_Direct_Proxy_Impl::getEncoding (
 
 
 POA_FieldDevice_T::POA_FieldDevice_T ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_FieldDevice_T_optable);
-}
-
-POA_FieldDevice_T::POA_FieldDevice_T (const POA_FieldDevice_T& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_FieldDevice_T_optable);
 }
 
 
@@ -598,7 +584,7 @@ void POA_FieldDevice_T::getEncoding_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -620,7 +606,7 @@ const char* POA_FieldDevice_T::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -633,7 +619,7 @@ void POA_FieldDevice_T::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 
@@ -918,16 +904,8 @@ _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncoding_excep (
 
 
 POA_AMI_FieldDevice_THandler::POA_AMI_FieldDevice_THandler ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_AMI_FieldDevice_THandler_optable);
-}
-
-POA_AMI_FieldDevice_THandler::POA_AMI_FieldDevice_THandler (const POA_AMI_FieldDevice_THandler& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs),
-    ::POA_Messaging::ReplyHandler (rhs)
-{
+  this->optable_ = std::addressof (tao_AMI_FieldDevice_THandler_optable);
 }
 
 
@@ -1242,7 +1220,7 @@ void POA_AMI_FieldDevice_THandler::getEncoding_excep_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -1265,7 +1243,7 @@ const char* POA_AMI_FieldDevice_THandler::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -1278,7 +1256,7 @@ void POA_AMI_FieldDevice_THandler::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

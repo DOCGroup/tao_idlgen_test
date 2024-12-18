@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_INCLUDEDS_25VSNJ_H_
-#define _TAO_IDL_INCLUDEDS_25VSNJ_H_
+#ifndef _TAO_IDL_INCLUDEDS_BAFOYA_H_
+#define _TAO_IDL_INCLUDEDS_BAFOYA_H_
 
 #include /**/ "ace/pre.h"
 
@@ -417,7 +417,7 @@ namespace POA_RootModule
     typedef ::RootModule::SUBMODULE1::ParentIF_ptr _stub_ptr_type;
     typedef ::RootModule::SUBMODULE1::ParentIF_var _stub_var_type;
 
-    ParentIF (const ParentIF& rhs);
+    ParentIF (const ParentIF& rhs) = default;
     virtual ~ParentIF () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -488,7 +488,7 @@ namespace POA_RootModule
     typedef ::RootModule::SUBMODULE1::AMI_ParentIFHandler_ptr _stub_ptr_type;
     typedef ::RootModule::SUBMODULE1::AMI_ParentIFHandler_var _stub_var_type;
 
-    AMI_ParentIFHandler (const AMI_ParentIFHandler& rhs);
+    AMI_ParentIFHandler (const AMI_ParentIFHandler& rhs) = default;
     virtual ~AMI_ParentIFHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -585,7 +585,7 @@ public:
   typedef ::AAA_ptr _stub_ptr_type;
   typedef ::AAA_var _stub_var_type;
 
-  POA_AAA (const POA_AAA& rhs);
+  POA_AAA (const POA_AAA& rhs) = default;
   virtual ~POA_AAA () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -656,7 +656,7 @@ public:
   typedef ::AMI_AAAHandler_ptr _stub_ptr_type;
   typedef ::AMI_AAAHandler_var _stub_var_type;
 
-  POA_AMI_AAAHandler (const POA_AMI_AAAHandler& rhs);
+  POA_AMI_AAAHandler (const POA_AMI_AAAHandler& rhs) = default;
   virtual ~POA_AMI_AAAHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

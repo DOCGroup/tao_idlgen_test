@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_Q4Y3UB_H_
-#define _TAO_IDL_GENERIC_OBJECTS_Q4Y3UB_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_LZOK3K_H_
+#define _TAO_IDL_GENERIC_OBJECTS_LZOK3K_H_
 
 #include /**/ "ace/pre.h"
 
@@ -241,7 +241,7 @@ public:
   typedef ::generic_ptr _stub_ptr_type;
   typedef ::generic_var _stub_var_type;
 
-  POA_generic (const POA_generic& rhs);
+  POA_generic (const POA_generic& rhs) = default;
   virtual ~POA_generic () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -343,7 +343,7 @@ public:
   typedef ::AMI_genericHandler_ptr _stub_ptr_type;
   typedef ::AMI_genericHandler_var _stub_var_type;
 
-  POA_AMI_genericHandler (const POA_AMI_genericHandler& rhs);
+  POA_AMI_genericHandler (const POA_AMI_genericHandler& rhs) = default;
   virtual ~POA_AMI_genericHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

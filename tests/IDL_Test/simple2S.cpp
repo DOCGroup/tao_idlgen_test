@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_SIMPLE2S_5KOFXD_CPP_
-#define _TAO_IDL_SIMPLE2S_5KOFXD_CPP_
+#ifndef _TAO_IDL_SIMPLE2S_Q2F42J_CPP_
+#define _TAO_IDL_SIMPLE2S_Q2F42J_CPP_
 
 
 #include "simple2S.h"
@@ -150,17 +150,8 @@ static TAO_AMH_simple3_Perfect_Hash_OpTable tao_AMH_simple3_optable;
 
 
 POA_AMH_simple3::POA_AMH_simple3 ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_AMH_simple3_optable);
-}
-
-POA_AMH_simple3::POA_AMH_simple3 (const POA_AMH_simple3& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs),
-    POA_AMH_simple (rhs),
-    POA_AMH_simple2 (rhs)
-{
+  this->optable_ = std::addressof (tao_AMH_simple3_optable);
 }
 
 
@@ -266,7 +257,7 @@ POA_AMH_simple3::op4_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -475,17 +466,8 @@ _TAO_simple3_Direct_Proxy_Impl::op4 (
 
 
 POA_simple3::POA_simple3 ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_simple3_optable);
-}
-
-POA_simple3::POA_simple3 (const POA_simple3& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs),
-    POA_simple (rhs),
-    POA_simple2 (rhs)
-{
+  this->optable_ = std::addressof (tao_simple3_optable);
 }
 
 
@@ -723,7 +705,7 @@ void POA_simple3::op4_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -747,7 +729,7 @@ const char* POA_simple3::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -760,7 +742,7 @@ void POA_simple3::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 
@@ -1084,18 +1066,8 @@ _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op4_excep (
 
 
 POA_AMI_simple3Handler::POA_AMI_simple3Handler ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_AMI_simple3Handler_optable);
-}
-
-POA_AMI_simple3Handler::POA_AMI_simple3Handler (const POA_AMI_simple3Handler& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs),
-    ::POA_Messaging::ReplyHandler (rhs),
-    POA_AMI_simpleHandler (rhs),
-    POA_AMI_simple2Handler (rhs)
-{
+  this->optable_ = std::addressof (tao_AMI_simple3Handler_optable);
 }
 
 
@@ -1549,7 +1521,7 @@ void POA_AMI_simple3Handler::op4_excep_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -1574,7 +1546,7 @@ const char* POA_AMI_simple3Handler::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -1587,7 +1559,7 @@ void POA_AMI_simple3Handler::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

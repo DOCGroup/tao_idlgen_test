@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_FULLS_ZEUNUL_H_
-#define _TAO_IDL_FULLS_ZEUNUL_H_
+#ifndef _TAO_IDL_FULLS_QV0WQU_H_
+#define _TAO_IDL_FULLS_QV0WQU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -330,7 +330,7 @@ public:
   typedef ::scope_test::i_scope_test_ptr _stub_ptr_type;
   typedef ::scope_test::i_scope_test_var _stub_var_type;
 
-  i_scope_test (const i_scope_test& rhs);
+  i_scope_test (const i_scope_test& rhs) = default;
   virtual ~i_scope_test () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -401,7 +401,7 @@ public:
   typedef ::scope_test::AMI_i_scope_testHandler_ptr _stub_ptr_type;
   typedef ::scope_test::AMI_i_scope_testHandler_var _stub_var_type;
 
-  AMI_i_scope_testHandler (const AMI_i_scope_testHandler& rhs);
+  AMI_i_scope_testHandler (const AMI_i_scope_testHandler& rhs) = default;
   virtual ~AMI_i_scope_testHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -538,7 +538,7 @@ public:
   typedef ::mod2::fwd_ptr _stub_ptr_type;
   typedef ::mod2::fwd_var _stub_var_type;
 
-  fwd (const fwd& rhs);
+  fwd (const fwd& rhs) = default;
   virtual ~fwd () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -693,7 +693,7 @@ public:
   typedef ::mod2::AMI_fwdHandler_ptr _stub_ptr_type;
   typedef ::mod2::AMI_fwdHandler_var _stub_var_type;
 
-  AMI_fwdHandler (const AMI_fwdHandler& rhs);
+  AMI_fwdHandler (const AMI_fwdHandler& rhs) = default;
   virtual ~AMI_fwdHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

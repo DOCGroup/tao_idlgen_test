@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_TYPEDEFS_RBYUFY_H_
-#define _TAO_IDL_TYPEDEFS_RBYUFY_H_
+#ifndef _TAO_IDL_TYPEDEFS_G0ARHF_H_
+#define _TAO_IDL_TYPEDEFS_G0ARHF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -660,7 +660,7 @@ public:
   typedef ::TestModule::TestInterface_ptr _stub_ptr_type;
   typedef ::TestModule::TestInterface_var _stub_var_type;
 
-  TestInterface (const TestInterface& rhs);
+  TestInterface (const TestInterface& rhs) = default;
   virtual ~TestInterface () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -783,7 +783,7 @@ public:
   typedef ::TestModule::AMI_TestInterfaceHandler_ptr _stub_ptr_type;
   typedef ::TestModule::AMI_TestInterfaceHandler_var _stub_var_type;
 
-  AMI_TestInterfaceHandler (const AMI_TestInterfaceHandler& rhs);
+  AMI_TestInterfaceHandler (const AMI_TestInterfaceHandler& rhs) = default;
   virtual ~AMI_TestInterfaceHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -972,7 +972,7 @@ public:
   typedef ::bug_2124::Foo_ptr _stub_ptr_type;
   typedef ::bug_2124::Foo_var _stub_var_type;
 
-  Foo (const Foo& rhs);
+  Foo (const Foo& rhs) = default;
   virtual ~Foo () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1095,7 +1095,7 @@ public:
   typedef ::bug_2124::AMI_FooHandler_ptr _stub_ptr_type;
   typedef ::bug_2124::AMI_FooHandler_var _stub_var_type;
 
-  AMI_FooHandler (const AMI_FooHandler& rhs);
+  AMI_FooHandler (const AMI_FooHandler& rhs) = default;
   virtual ~AMI_FooHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1277,7 +1277,7 @@ namespace POA_bug_2122
     typedef ::bug_2122::One::Whatever_ptr _stub_ptr_type;
     typedef ::bug_2122::One::Whatever_var _stub_var_type;
 
-    Whatever (const Whatever& rhs);
+    Whatever (const Whatever& rhs) = default;
     virtual ~Whatever () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1374,7 +1374,7 @@ namespace POA_bug_2122
     typedef ::bug_2122::One::AMI_WhateverHandler_ptr _stub_ptr_type;
     typedef ::bug_2122::One::AMI_WhateverHandler_var _stub_var_type;
 
-    AMI_WhateverHandler (const AMI_WhateverHandler& rhs);
+    AMI_WhateverHandler (const AMI_WhateverHandler& rhs) = default;
     virtual ~AMI_WhateverHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1517,7 +1517,7 @@ public:
   typedef ::bug_2122::Two::WhoCares_ptr _stub_ptr_type;
   typedef ::bug_2122::Two::WhoCares_var _stub_var_type;
 
-  WhoCares (const WhoCares& rhs);
+  WhoCares (const WhoCares& rhs) = default;
   virtual ~WhoCares () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1614,7 +1614,7 @@ public:
   typedef ::bug_2122::Two::AMI_WhoCaresHandler_ptr _stub_ptr_type;
   typedef ::bug_2122::Two::AMI_WhoCaresHandler_var _stub_var_type;
 
-  AMI_WhoCaresHandler (const AMI_WhoCaresHandler& rhs);
+  AMI_WhoCaresHandler (const AMI_WhoCaresHandler& rhs) = default;
   virtual ~AMI_WhoCaresHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1757,7 +1757,7 @@ public:
   typedef ::bug_2122::Three::WhoCares_ptr _stub_ptr_type;
   typedef ::bug_2122::Three::WhoCares_var _stub_var_type;
 
-  WhoCares (const WhoCares& rhs);
+  WhoCares (const WhoCares& rhs) = default;
   virtual ~WhoCares () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1854,7 +1854,7 @@ public:
   typedef ::bug_2122::Three::AMI_WhoCaresHandler_ptr _stub_ptr_type;
   typedef ::bug_2122::Three::AMI_WhoCaresHandler_var _stub_var_type;
 
-  AMI_WhoCaresHandler (const AMI_WhoCaresHandler& rhs);
+  AMI_WhoCaresHandler (const AMI_WhoCaresHandler& rhs) = default;
   virtual ~AMI_WhoCaresHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

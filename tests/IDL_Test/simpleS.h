@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_SIMPLES_GCEHOZ_H_
-#define _TAO_IDL_SIMPLES_GCEHOZ_H_
+#ifndef _TAO_IDL_SIMPLES_8DTDO9_H_
+#define _TAO_IDL_SIMPLES_8DTDO9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -286,7 +286,7 @@ public:
   typedef ::simple_ptr _stub_ptr_type;
   typedef ::simple_var _stub_var_type;
 
-  POA_simple (const POA_simple& rhs);
+  POA_simple (const POA_simple& rhs) = default;
   virtual ~POA_simple () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -388,7 +388,7 @@ public:
   typedef ::AMI_simpleHandler_ptr _stub_ptr_type;
   typedef ::AMI_simpleHandler_var _stub_var_type;
 
-  POA_AMI_simpleHandler (const POA_AMI_simpleHandler& rhs);
+  POA_AMI_simpleHandler (const POA_AMI_simpleHandler& rhs) = default;
   virtual ~POA_AMI_simpleHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -524,7 +524,7 @@ public:
   typedef ::simple2_ptr _stub_ptr_type;
   typedef ::simple2_var _stub_var_type;
 
-  POA_simple2 (const POA_simple2& rhs);
+  POA_simple2 (const POA_simple2& rhs) = default;
   virtual ~POA_simple2 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -626,7 +626,7 @@ public:
   typedef ::AMI_simple2Handler_ptr _stub_ptr_type;
   typedef ::AMI_simple2Handler_var _stub_var_type;
 
-  POA_AMI_simple2Handler (const POA_AMI_simple2Handler& rhs);
+  POA_AMI_simple2Handler (const POA_AMI_simple2Handler& rhs) = default;
   virtual ~POA_AMI_simple2Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

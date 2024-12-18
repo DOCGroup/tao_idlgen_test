@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_ITHLRL_H_
-#define _TAO_IDL_BUG_2616_REGRESSIONS_ITHLRL_H_
+#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_DXGDZH_H_
+#define _TAO_IDL_BUG_2616_REGRESSIONS_DXGDZH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -299,7 +299,7 @@ public:
   typedef ::Interface1_ptr _stub_ptr_type;
   typedef ::Interface1_var _stub_var_type;
 
-  POA_Interface1 (const POA_Interface1& rhs);
+  POA_Interface1 (const POA_Interface1& rhs) = default;
   virtual ~POA_Interface1 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -396,7 +396,7 @@ public:
   typedef ::AMI_Interface1Handler_ptr _stub_ptr_type;
   typedef ::AMI_Interface1Handler_var _stub_var_type;
 
-  POA_AMI_Interface1Handler (const POA_AMI_Interface1Handler& rhs);
+  POA_AMI_Interface1Handler (const POA_AMI_Interface1Handler& rhs) = default;
   virtual ~POA_AMI_Interface1Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -527,7 +527,7 @@ public:
   typedef ::Interface2_ptr _stub_ptr_type;
   typedef ::Interface2_var _stub_var_type;
 
-  POA_Interface2 (const POA_Interface2& rhs);
+  POA_Interface2 (const POA_Interface2& rhs) = default;
   virtual ~POA_Interface2 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -624,7 +624,7 @@ public:
   typedef ::AMI_Interface2Handler_ptr _stub_ptr_type;
   typedef ::AMI_Interface2Handler_var _stub_var_type;
 
-  POA_AMI_Interface2Handler (const POA_AMI_Interface2Handler& rhs);
+  POA_AMI_Interface2Handler (const POA_AMI_Interface2Handler& rhs) = default;
   virtual ~POA_AMI_Interface2Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

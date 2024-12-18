@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_PEMNAMINGS_3TX3PT_CPP_
-#define _TAO_IDL_PEMNAMINGS_3TX3PT_CPP_
+#ifndef _TAO_IDL_PEMNAMINGS_J6B3KM_CPP_
+#define _TAO_IDL_PEMNAMINGS_J6B3KM_CPP_
 
 
 #include "PEMNamingS.h"
@@ -146,15 +146,8 @@ static TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable tao_Plesk_Naming
 
 
 POA_Plesk::Naming::AMH_ObjectResolver::AMH_ObjectResolver ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_Plesk_Naming_AMH_ObjectResolver_optable);
-}
-
-POA_Plesk::Naming::AMH_ObjectResolver::AMH_ObjectResolver (const AMH_ObjectResolver& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_Plesk_Naming_AMH_ObjectResolver_optable);
 }
 
 
@@ -266,7 +259,7 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -467,15 +460,8 @@ POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve_sc (
 
 
 POA_Plesk::Naming::ObjectResolver::ObjectResolver ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_Plesk_Naming_ObjectResolver_optable);
-}
-
-POA_Plesk::Naming::ObjectResolver::ObjectResolver (const ObjectResolver& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_Plesk_Naming_ObjectResolver_optable);
 }
 
 
@@ -709,7 +695,7 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -731,7 +717,7 @@ const char* POA_Plesk::Naming::ObjectResolver::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -744,7 +730,7 @@ void POA_Plesk::Naming::ObjectResolver::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 
@@ -1036,16 +1022,8 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc_
 
 
 POA_Plesk::Naming::AMI_ObjectResolverHandler::AMI_ObjectResolverHandler ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_Plesk_Naming_AMI_ObjectResolverHandler_optable);
-}
-
-POA_Plesk::Naming::AMI_ObjectResolverHandler::AMI_ObjectResolverHandler (const AMI_ObjectResolverHandler& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs),
-    ::POA_Messaging::ReplyHandler (rhs)
-{
+  this->optable_ = std::addressof (tao_Plesk_Naming_AMI_ObjectResolverHandler_optable);
 }
 
 
@@ -1484,7 +1462,7 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -1507,7 +1485,7 @@ const char* POA_Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -1520,7 +1498,7 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

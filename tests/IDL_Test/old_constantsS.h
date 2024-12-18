@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_OLD_CONSTANTSS_7JW5LT_H_
-#define _TAO_IDL_OLD_CONSTANTSS_7JW5LT_H_
+#ifndef _TAO_IDL_OLD_CONSTANTSS_BWAXPF_H_
+#define _TAO_IDL_OLD_CONSTANTSS_BWAXPF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -267,7 +267,7 @@ namespace POA_OldConstants
     typedef ::OldConstants::M::A_ptr _stub_ptr_type;
     typedef ::OldConstants::M::A_var _stub_var_type;
 
-    A (const A& rhs);
+    A (const A& rhs) = default;
     virtual ~A () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -369,7 +369,7 @@ namespace POA_OldConstants
     typedef ::OldConstants::M::AMI_AHandler_ptr _stub_ptr_type;
     typedef ::OldConstants::M::AMI_AHandler_var _stub_var_type;
 
-    AMI_AHandler (const AMI_AHandler& rhs);
+    AMI_AHandler (const AMI_AHandler& rhs) = default;
     virtual ~AMI_AHandler () = default;
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

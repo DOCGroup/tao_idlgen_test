@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_DIF2S_47UQKC_H_
-#define _TAO_IDL_DIF2S_47UQKC_H_
+#ifndef _TAO_IDL_DIF2S_GSCRTY_H_
+#define _TAO_IDL_DIF2S_GSCRTY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -698,7 +698,7 @@ public:
   typedef ::OldDif2::ex1_ptr _stub_ptr_type;
   typedef ::OldDif2::ex1_var _stub_var_type;
 
-  ex1 (const ex1& rhs);
+  ex1 (const ex1& rhs) = default;
   virtual ~ex1 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -980,7 +980,7 @@ public:
   typedef ::OldDif2::AMI_ex1Handler_ptr _stub_ptr_type;
   typedef ::OldDif2::AMI_ex1Handler_var _stub_var_type;
 
-  AMI_ex1Handler (const AMI_ex1Handler& rhs);
+  AMI_ex1Handler (const AMI_ex1Handler& rhs) = default;
   virtual ~AMI_ex1Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1396,7 +1396,7 @@ public:
   typedef ::OldDif2::ex2_ptr _stub_ptr_type;
   typedef ::OldDif2::ex2_var _stub_var_type;
 
-  ex2 (const ex2& rhs);
+  ex2 (const ex2& rhs) = default;
   virtual ~ex2 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1647,7 +1647,7 @@ public:
   typedef ::OldDif2::AMI_ex2Handler_ptr _stub_ptr_type;
   typedef ::OldDif2::AMI_ex2Handler_var _stub_var_type;
 
-  AMI_ex2Handler (const AMI_ex2Handler& rhs);
+  AMI_ex2Handler (const AMI_ex2Handler& rhs) = default;
   virtual ~AMI_ex2Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2032,7 +2032,7 @@ public:
   typedef ::OldDif2::ex3_ptr _stub_ptr_type;
   typedef ::OldDif2::ex3_var _stub_var_type;
 
-  ex3 (const ex3& rhs);
+  ex3 (const ex3& rhs) = default;
   virtual ~ex3 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2286,7 +2286,7 @@ public:
   typedef ::OldDif2::AMI_ex3Handler_ptr _stub_ptr_type;
   typedef ::OldDif2::AMI_ex3Handler_var _stub_var_type;
 
-  AMI_ex3Handler (const AMI_ex3Handler& rhs);
+  AMI_ex3Handler (const AMI_ex3Handler& rhs) = default;
   virtual ~AMI_ex3Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -2733,7 +2733,7 @@ public:
   typedef ::OldDif2::ex4_ptr _stub_ptr_type;
   typedef ::OldDif2::ex4_var _stub_var_type;
 
-  ex4 (const ex4& rhs);
+  ex4 (const ex4& rhs) = default;
   virtual ~ex4 () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -3067,7 +3067,7 @@ public:
   typedef ::OldDif2::AMI_ex4Handler_ptr _stub_ptr_type;
   typedef ::OldDif2::AMI_ex4Handler_var _stub_var_type;
 
-  AMI_ex4Handler (const AMI_ex4Handler& rhs);
+  AMI_ex4Handler (const AMI_ex4Handler& rhs) = default;
   virtual ~AMI_ex4Handler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

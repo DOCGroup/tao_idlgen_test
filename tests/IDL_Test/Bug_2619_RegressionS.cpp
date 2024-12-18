@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_MGX5TN_CPP_
-#define _TAO_IDL_BUG_2619_REGRESSIONS_MGX5TN_CPP_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_VQYBU5_CPP_
+#define _TAO_IDL_BUG_2619_REGRESSIONS_VQYBU5_CPP_
 
 
 #include "Bug_2619_RegressionS.h"
@@ -145,15 +145,8 @@ static TAO_AMH_Test_Perfect_Hash_OpTable tao_AMH_Test_optable;
 
 
 POA_AMH_Test::POA_AMH_Test ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_AMH_Test_optable);
-}
-
-POA_AMH_Test::POA_AMH_Test (const POA_AMH_Test& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_AMH_Test_optable);
 }
 
 
@@ -199,7 +192,7 @@ POA_AMH_Test::getGroup_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -372,15 +365,8 @@ _TAO_Test_Direct_Proxy_Impl::getGroup (
 
 
 POA_Test::POA_Test ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_Test_optable);
-}
-
-POA_Test::POA_Test (const POA_Test& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs)
-{
+  this->optable_ = std::addressof (tao_Test_optable);
 }
 
 
@@ -461,7 +447,7 @@ void POA_Test::getGroup_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -483,7 +469,7 @@ const char* POA_Test::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -496,7 +482,7 @@ void POA_Test::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 
@@ -702,16 +688,8 @@ _TAO_AMI_TestHandler_Direct_Proxy_Impl::getGroup_excep (
 
 
 POA_AMI_TestHandler::POA_AMI_TestHandler ()
-  : TAO_ServantBase ()
 {
-  this->optable_ = std::addressof(tao_AMI_TestHandler_optable);
-}
-
-POA_AMI_TestHandler::POA_AMI_TestHandler (const POA_AMI_TestHandler& rhs)
-  : TAO_Abstract_ServantBase (rhs),
-    TAO_ServantBase (rhs),
-    ::POA_Messaging::ReplyHandler (rhs)
-{
+  this->optable_ = std::addressof (tao_AMI_TestHandler_optable);
 }
 
 
@@ -872,7 +850,7 @@ void POA_AMI_TestHandler::getGroup_excep_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:155
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -895,7 +873,7 @@ const char* POA_AMI_TestHandler::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:394
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -908,7 +886,7 @@ void POA_AMI_TestHandler::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:354
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

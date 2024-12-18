@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:767
 
-#ifndef _TAO_IDL_REPO_ID_MODA_Q5GCTR_H_
-#define _TAO_IDL_REPO_ID_MODA_Q5GCTR_H_
+#ifndef _TAO_IDL_REPO_ID_MODA_NA8F8L_H_
+#define _TAO_IDL_REPO_ID_MODA_NA8F8L_H_
 
 #include /**/ "ace/pre.h"
 

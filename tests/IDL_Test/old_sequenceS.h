@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_F0AFK7_H_
-#define _TAO_IDL_OLD_SEQUENCES_F0AFK7_H_
+#ifndef _TAO_IDL_OLD_SEQUENCES_TLLC9D_H_
+#define _TAO_IDL_OLD_SEQUENCES_TLLC9D_H_
 
 #include /**/ "ace/pre.h"
 
@@ -378,7 +378,7 @@ public:
   typedef ::TestSeq_ptr _stub_ptr_type;
   typedef ::TestSeq_var _stub_var_type;
 
-  POA_TestSeq (const POA_TestSeq& rhs);
+  POA_TestSeq (const POA_TestSeq& rhs) = default;
   virtual ~POA_TestSeq () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -501,7 +501,7 @@ public:
   typedef ::AMI_TestSeqHandler_ptr _stub_ptr_type;
   typedef ::AMI_TestSeqHandler_var _stub_var_type;
 
-  POA_AMI_TestSeqHandler (const POA_AMI_TestSeqHandler& rhs);
+  POA_AMI_TestSeqHandler (const POA_AMI_TestSeqHandler& rhs) = default;
   virtual ~POA_AMI_TestSeqHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);

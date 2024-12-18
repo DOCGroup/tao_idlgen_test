@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_ANONYMOUSS_GQCXJO_H_
-#define _TAO_IDL_ANONYMOUSS_GQCXJO_H_
+#ifndef _TAO_IDL_ANONYMOUSS_GM0QKU_H_
+#define _TAO_IDL_ANONYMOUSS_GM0QKU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -723,7 +723,7 @@ public:
   typedef ::All_Anon::anon_bd_string_test_ptr _stub_ptr_type;
   typedef ::All_Anon::anon_bd_string_test_var _stub_var_type;
 
-  anon_bd_string_test (const anon_bd_string_test& rhs);
+  anon_bd_string_test (const anon_bd_string_test& rhs) = default;
   virtual ~anon_bd_string_test () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
@@ -1002,7 +1002,7 @@ public:
   typedef ::All_Anon::AMI_anon_bd_string_testHandler_ptr _stub_ptr_type;
   typedef ::All_Anon::AMI_anon_bd_string_testHandler_var _stub_var_type;
 
-  AMI_anon_bd_string_testHandler (const AMI_anon_bd_string_testHandler& rhs);
+  AMI_anon_bd_string_testHandler (const AMI_anon_bd_string_testHandler& rhs) = default;
   virtual ~AMI_anon_bd_string_testHandler () = default;
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
