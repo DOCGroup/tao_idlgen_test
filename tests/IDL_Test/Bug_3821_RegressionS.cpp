@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_BUG_3821_REGRESSIONS_H4B9HD_CPP_
-#define _TAO_IDL_BUG_3821_REGRESSIONS_H4B9HD_CPP_
+#ifndef _TAO_IDL_BUG_3821_REGRESSIONS_4B7H8Z_CPP_
+#define _TAO_IDL_BUG_3821_REGRESSIONS_4B7H8Z_CPP_
 
 
 #include "Bug_3821_RegressionS.h"

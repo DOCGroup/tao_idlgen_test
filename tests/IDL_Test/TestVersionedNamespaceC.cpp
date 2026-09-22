@@ -23,7 +23,7 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "TestVersionedNamespaceC.h"
@@ -37,7 +37,7 @@
 #include "tao/AnyTypeCode/Value_TypeCode_Static.h"
 #include "tao/AnyTypeCode/TypeCode_Value_Field.h"
 #include "tao/CDR.h"
-#include "cstring"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "TestVersionedNamespaceC.inl"

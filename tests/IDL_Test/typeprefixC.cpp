@@ -23,7 +23,7 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "typeprefixC.h"
@@ -42,8 +42,8 @@
 #include "tao/CDR.h"
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
+#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "typeprefixC.inl"

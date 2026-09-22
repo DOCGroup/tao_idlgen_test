@@ -23,7 +23,7 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "array_onlyC.h"
@@ -31,7 +31,7 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Valuetype/ValueFactory.h"
-#include "memory"
+#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "array_onlyC.inl"

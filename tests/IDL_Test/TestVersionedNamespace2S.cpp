@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_6Y5R7P_CPP_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_6Y5R7P_CPP_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_1W7590_CPP_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_1W7590_CPP_
 
 
 #include "TestVersionedNamespace2S.h"
@@ -50,7 +50,7 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "cstring"
+#include <cstring>
 
 BEGIN_USER_VERSIONED_NAMESPACE
 

@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_UNION_ANONYMOUSS_KUX9JL_CPP_
-#define _TAO_IDL_UNION_ANONYMOUSS_KUX9JL_CPP_
+#ifndef _TAO_IDL_UNION_ANONYMOUSS_DC2NGS_CPP_
+#define _TAO_IDL_UNION_ANONYMOUSS_DC2NGS_CPP_
 
 
 #include "union_anonymousS.h"

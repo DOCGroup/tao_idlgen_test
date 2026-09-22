@@ -23,12 +23,12 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "old_union2C.h"
-#include "memory"
-#include "new"
+#include <memory>
+#include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -49,8 +49,8 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
+#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "old_union2C.inl"

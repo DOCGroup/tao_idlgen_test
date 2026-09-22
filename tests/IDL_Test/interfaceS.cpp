@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_INTERFACES_YXMW25_CPP_
-#define _TAO_IDL_INTERFACES_YXMW25_CPP_
+#ifndef _TAO_IDL_INTERFACES_MFJV4H_CPP_
+#define _TAO_IDL_INTERFACES_MFJV4H_CPP_
 
 
 #include "interfaceS.h"
@@ -53,7 +53,7 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "cstring"
+#include <cstring>
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1853
 

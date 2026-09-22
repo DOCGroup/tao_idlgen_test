@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#include "memory"
-#include "new"
+#include <memory>
+#include <new>
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
 

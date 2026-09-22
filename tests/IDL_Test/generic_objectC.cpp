@@ -23,20 +23,20 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "generic_objectC.h"
-#include "memory"
-#include "new"
+#include <memory>
+#include <new>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
+#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "generic_objectC.inl"

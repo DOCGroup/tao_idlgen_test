@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_ARRAY_ONLYS_LSV0YK_CPP_
-#define _TAO_IDL_ARRAY_ONLYS_LSV0YK_CPP_
+#ifndef _TAO_IDL_ARRAY_ONLYS_V6R5S8_CPP_
+#define _TAO_IDL_ARRAY_ONLYS_V6R5S8_CPP_
 
 
 #include "array_onlyS.h"

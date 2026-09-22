@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_OLD_SEQUENCEC_KZMIE8_H_
-#define _TAO_IDL_OLD_SEQUENCEC_KZMIE8_H_
+#ifndef _TAO_IDL_OLD_SEQUENCEC_3ID3XV_H_
+#define _TAO_IDL_OLD_SEQUENCEC_3ID3XV_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1928,7 +1928,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1643
 
 #if defined (__ACE_INLINE__)
 #include "old_sequenceC.inl"

@@ -23,7 +23,7 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "Bug_2350_RegressionC.h"
@@ -46,8 +46,8 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
+#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_2350_RegressionC.inl"

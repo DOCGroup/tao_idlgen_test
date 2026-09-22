@@ -23,7 +23,7 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "simple_testC.h"
@@ -31,7 +31,7 @@
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Object_T.h"
-#include "cstring"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "simple_testC.inl"

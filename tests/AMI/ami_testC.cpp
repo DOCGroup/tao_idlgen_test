@@ -23,7 +23,7 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "ami_testC.h"
@@ -48,7 +48,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include "cstring"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "ami_testC.inl"
