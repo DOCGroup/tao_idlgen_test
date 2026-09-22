@@ -27,6 +27,7 @@
 
 
 #include "simple2C.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -135,9 +136,8 @@ simple3::OverFlow::operator= (const ::simple3::OverFlow &_tao_excp)
 
 void simple3::OverFlow::_tao_any_destructor (void *_tao_void_pointer)
 {
-  OverFlow *_tao_tmp_pointer =
-    static_cast<OverFlow *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  OverFlow *tmp = static_cast<OverFlow *> (_tao_void_pointer);
+  delete tmp;
 }
 
 simple3::OverFlow *
@@ -219,8 +219,7 @@ _tao_tc_simple3_OverFlow (
   _tao_fields_simple3_OverFlow,
   2);
 
-::CORBA::TypeCode_ptr const simple3::_tc_OverFlow =
-  &_tao_tc_simple3_OverFlow;
+::CORBA::TypeCode_ptr const simple3::_tc_OverFlow = std::addressof(_tao_tc_simple3_OverFlow);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_ctor.cpp:50
 
@@ -268,9 +267,8 @@ simple3::UnderFlow::operator= (const ::simple3::UnderFlow &_tao_excp)
 
 void simple3::UnderFlow::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnderFlow *_tao_tmp_pointer =
-    static_cast<UnderFlow *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  UnderFlow *tmp = static_cast<UnderFlow *> (_tao_void_pointer);
+  delete tmp;
 }
 
 simple3::UnderFlow *
@@ -352,8 +350,7 @@ _tao_tc_simple3_UnderFlow (
   _tao_fields_simple3_UnderFlow,
   2);
 
-::CORBA::TypeCode_ptr const simple3::_tc_UnderFlow =
-  &_tao_tc_simple3_UnderFlow;
+::CORBA::TypeCode_ptr const simple3::_tc_UnderFlow = std::addressof(_tao_tc_simple3_UnderFlow);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_ctor.cpp:50
 
@@ -397,9 +394,8 @@ simple3::BadNum::operator= (const ::simple3::BadNum &_tao_excp)
 
 void simple3::BadNum::_tao_any_destructor (void *_tao_void_pointer)
 {
-  BadNum *_tao_tmp_pointer =
-    static_cast<BadNum *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  BadNum *tmp = static_cast<BadNum *> (_tao_void_pointer);
+  delete tmp;
 }
 
 simple3::BadNum *
@@ -460,7 +456,7 @@ void simple3::BadNum::_tao_decode (TAO_InputCDR &cdr)
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -484,8 +480,7 @@ _tao_tc_simple3_BadNum (
   _tao_fields_simple3_BadNum,
   1);
 
-::CORBA::TypeCode_ptr const simple3::_tc_BadNum =
-  &_tao_tc_simple3_BadNum;
+::CORBA::TypeCode_ptr const simple3::_tc_BadNum = std::addressof(_tao_tc_simple3_BadNum);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_ctor.cpp:50
 
@@ -529,9 +524,8 @@ simple3::UserError::operator= (const ::simple3::UserError &_tao_excp)
 
 void simple3::UserError::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UserError *_tao_tmp_pointer =
-    static_cast<UserError *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  UserError *tmp = static_cast<UserError *> (_tao_void_pointer);
+  delete tmp;
 }
 
 simple3::UserError *
@@ -612,8 +606,7 @@ _tao_tc_simple3_UserError (
   _tao_fields_simple3_UserError,
   1);
 
-::CORBA::TypeCode_ptr const simple3::_tc_UserError =
-  &_tao_tc_simple3_UserError;
+::CORBA::TypeCode_ptr const simple3::_tc_UserError = std::addressof(_tao_tc_simple3_UserError);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
@@ -835,9 +828,8 @@ simple3::simple3 ()
 void
 simple3::_tao_any_destructor (void *_tao_void_pointer)
 {
-  simple3 *_tao_tmp_pointer =
-    static_cast<simple3 *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  simple3 *tmp = static_cast<simple3 *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 simple3_ptr
@@ -922,8 +914,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:simple3:1.0",
     "simple3");
   
-::CORBA::TypeCode_ptr const _tc_simple3 =
-  &_tao_tc_simple3;
+::CORBA::TypeCode_ptr const _tc_simple3 = std::addressof(_tao_tc_simple3);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
 
@@ -941,8 +932,7 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_AMH_simple3ExceptionHolder,
     0);
   
-::CORBA::TypeCode_ptr const _tc_AMH_simple3ExceptionHolder =
-  &_tao_tc_AMH_simple3ExceptionHolder;
+::CORBA::TypeCode_ptr const _tc_AMH_simple3ExceptionHolder = std::addressof(_tao_tc_AMH_simple3ExceptionHolder);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
@@ -994,9 +984,8 @@ AMH_simple3ExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_List& i
 void
 AMH_simple3ExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_simple3ExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_simple3ExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_simple3ExceptionHolder *tmp = static_cast<AMH_simple3ExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -1090,7 +1079,7 @@ AMH_simple3ExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_simple3ExceptionHolder::raise_op3 ()
@@ -1100,7 +1089,7 @@ AMH_simple3ExceptionHolder::raise_op3 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_simple3ExceptionHolder::raise_op4 ()
@@ -1110,7 +1099,7 @@ AMH_simple3ExceptionHolder::raise_op4 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_simple3ExceptionHolder::raise_sendc_op3 ()
@@ -1120,7 +1109,7 @@ AMH_simple3ExceptionHolder::raise_sendc_op3 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_simple3ExceptionHolder::raise_sendc_op4 ()
@@ -1169,9 +1158,8 @@ AMH_simple3ResponseHandler::AMH_simple3ResponseHandler ()
 {}void
 AMH_simple3ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_simple3ResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_simple3ResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_simple3ResponseHandler *tmp = static_cast<AMH_simple3ResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMH_simple3ResponseHandler_ptr
@@ -1257,8 +1245,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMH_simple3ResponseHandler:1.0",
     "AMH_simple3ResponseHandler");
   
-::CORBA::TypeCode_ptr const _tc_AMH_simple3ResponseHandler =
-  &_tao_tc_AMH_simple3ResponseHandler;
+::CORBA::TypeCode_ptr const _tc_AMH_simple3ResponseHandler = std::addressof(_tao_tc_AMH_simple3ResponseHandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
 
@@ -1724,9 +1711,8 @@ AMI_simple3Handler::AMI_simple3Handler ()
 void
 AMI_simple3Handler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_simple3Handler *_tao_tmp_pointer =
-    static_cast<AMI_simple3Handler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_simple3Handler *tmp = static_cast<AMI_simple3Handler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMI_simple3Handler_ptr
@@ -1812,8 +1798,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMI_simple3Handler:1.0",
     "AMI_simple3Handler");
   
-::CORBA::TypeCode_ptr const _tc_AMI_simple3Handler =
-  &_tao_tc_AMI_simple3Handler;
+::CORBA::TypeCode_ptr const _tc_AMI_simple3Handler = std::addressof(_tao_tc_AMI_simple3Handler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43
 

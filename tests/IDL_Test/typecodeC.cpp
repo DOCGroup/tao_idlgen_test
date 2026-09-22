@@ -73,9 +73,8 @@ MyModule::TypeCodeList::TypeCodeList (
 void MyModule::TypeCodeList::_tao_any_destructor (
     void * _tao_void_pointer)
 {
-  TypeCodeList * _tao_tmp_pointer =
-    static_cast<TypeCodeList *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  TypeCodeList *tmp = static_cast<TypeCodeList *> (_tao_void_pointer);
+  delete tmp;
 }
 
 #endif /* end #if !defined */

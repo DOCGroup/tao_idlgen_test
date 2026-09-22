@@ -60,7 +60,6 @@
 static char const * const _tao_enumerators_AnyUnionEnum[] =
   {
     "ANYUNIONENUM2"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -72,8 +71,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_AnyUnionEnum,
     1);
   
-::CORBA::TypeCode_ptr const _tc_AnyUnionEnum =
-  &_tao_tc_AnyUnionEnum;
+::CORBA::TypeCode_ptr const _tc_AnyUnionEnum = std::addressof(_tao_tc_AnyUnionEnum);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
 
@@ -118,43 +116,38 @@ MyAnyUnion::~MyAnyUnion ()
 
 void MyAnyUnion::_tao_any_destructor (void *_tao_void_pointer)
 {
-  MyAnyUnion *tmp =
-    static_cast<MyAnyUnion *> (_tao_void_pointer);
+  MyAnyUnion *tmp = static_cast<MyAnyUnion *> (_tao_void_pointer);
   delete tmp;
 }
 
 MyAnyUnion &
 MyAnyUnion::operator= (const ::MyAnyUnion &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
-    }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case ::ANYUNIONENUM2:
-    {
-      if (!u.u_.my_any_)
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case ::ANYUNIONENUM2:
         {
-          this->u_.my_any_ = nullptr;
+          if (!u.u_.my_any_)
+            {
+              this->u_.my_any_ = nullptr;
+            }
+          else
+            {
+              ACE_NEW_RETURN (
+                  this->u_.my_any_,
+                  CORBA::Any (*u.u_.my_any_),
+                  *this);
+            }
         }
-      else
-        {
-          ACE_NEW_RETURN (
-              this->u_.my_any_,
-              CORBA::Any (*u.u_.my_any_),
-              *this);
-        }
+        break;
+        default:
+        break;
+      }
     }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
@@ -163,13 +156,10 @@ void MyAnyUnion::_reset ()
 {
   switch (this->disc_)
   {
-    
     case ::ANYUNIONENUM2:
       delete this->u_.my_any_;
       this->u_.my_any_ = nullptr;
-      
     break;
-    
     default:
     break;
   }
@@ -196,8 +186,7 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_MyAnyUnion)/sizeof (_tao_cases_MyAnyUnion[0]),
     -1);
   
-::CORBA::TypeCode_ptr const _tc_MyAnyUnion =
-  &_tao_tc_MyAnyUnion;
+::CORBA::TypeCode_ptr const _tc_MyAnyUnion = std::addressof(_tao_tc_MyAnyUnion);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:34
 

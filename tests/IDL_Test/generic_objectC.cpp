@@ -88,46 +88,41 @@ Selecter::~Selecter ()
 
 void Selecter::_tao_any_destructor (void *_tao_void_pointer)
 {
-  Selecter *tmp =
-    static_cast<Selecter *> (_tao_void_pointer);
+  Selecter *tmp = static_cast<Selecter *> (_tao_void_pointer);
   delete tmp;
 }
 
 Selecter &
 Selecter::operator= (const ::Selecter &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case ::OT_THIS:
+        {
+          typedef ::CORBA::Object_var OBJECT_FIELD;
+          ACE_NEW_RETURN (
+              this->u_.this_object_,
+              OBJECT_FIELD (::CORBA::Object::_duplicate (u.u_.this_object_->in ())),
+              *this);
+        }
+        break;
+        case ::OT_THAT:
+        {
+          typedef ::CORBA::Object_var OBJECT_FIELD;
+          ACE_NEW_RETURN (
+              this->u_.that_object_,
+              OBJECT_FIELD (::CORBA::Object::_duplicate (u.u_.that_object_->in ())),
+              *this);
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case ::OT_THIS:
-    {
-      typedef ::CORBA::Object_var OBJECT_FIELD;
-      ACE_NEW_RETURN (
-          this->u_.this_object_,
-          OBJECT_FIELD (::CORBA::Object::_duplicate (u.u_.this_object_->in ())),
-          *this);
-    }
-    break;
-    case ::OT_THAT:
-    {
-      typedef ::CORBA::Object_var OBJECT_FIELD;
-      ACE_NEW_RETURN (
-          this->u_.that_object_,
-          OBJECT_FIELD (::CORBA::Object::_duplicate (u.u_.that_object_->in ())),
-          *this);
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
@@ -136,19 +131,14 @@ void Selecter::_reset ()
 {
   switch (this->disc_)
   {
-    
     case ::OT_THIS:
       delete this->u_.this_object_;
       this->u_.this_object_ = nullptr;
-      
     break;
-    
     case ::OT_THAT:
       delete this->u_.that_object_;
       this->u_.that_object_ = nullptr;
-      
     break;
-    
     default:
     break;
   }
@@ -279,9 +269,8 @@ generic::generic ()
 void
 generic::_tao_any_destructor (void *_tao_void_pointer)
 {
-  generic *_tao_tmp_pointer =
-    static_cast<generic *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  generic *tmp = static_cast<generic *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 generic_ptr
@@ -405,9 +394,8 @@ AMH_genericExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_List& i
 void
 AMH_genericExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_genericExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_genericExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_genericExceptionHolder *tmp = static_cast<AMH_genericExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 AMH_genericExceptionHolder::~AMH_genericExceptionHolder ()
@@ -495,7 +483,7 @@ AMH_genericExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_genericExceptionHolder::raise_op ()
@@ -505,7 +493,7 @@ AMH_genericExceptionHolder::raise_op ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_genericExceptionHolder::raise_sendc_op ()
@@ -554,9 +542,8 @@ AMH_genericResponseHandler::AMH_genericResponseHandler ()
 {}void
 AMH_genericResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_genericResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_genericResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_genericResponseHandler *tmp = static_cast<AMH_genericResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMH_genericResponseHandler_ptr
@@ -817,9 +804,8 @@ AMI_genericHandler::AMI_genericHandler ()
 void
 AMI_genericHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_genericHandler *_tao_tmp_pointer =
-    static_cast<AMI_genericHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_genericHandler *tmp = static_cast<AMI_genericHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMI_genericHandler_ptr

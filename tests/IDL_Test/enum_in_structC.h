@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_ENUM_IN_STRUCTC_JC4AMW_H_
-#define _TAO_IDL_ENUM_IN_STRUCTC_JC4AMW_H_
+#ifndef _TAO_IDL_ENUM_IN_STRUCTC_IWAQM8_H_
+#define _TAO_IDL_ENUM_IN_STRUCTC_IWAQM8_H_
 
 #include /**/ "ace/pre.h"
 
@@ -840,7 +840,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1643
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "enum_in_structC.inl"

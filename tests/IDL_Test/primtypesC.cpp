@@ -470,9 +470,8 @@ OldPrimTypes::ex1::ex1 ()
 void
 OldPrimTypes::ex1::_tao_any_destructor (void *_tao_void_pointer)
 {
-  ex1 *_tao_tmp_pointer =
-    static_cast<ex1 *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  ex1 *tmp = static_cast<ex1 *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldPrimTypes::ex1_ptr
@@ -596,9 +595,8 @@ OldPrimTypes::AMH_ex1ExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_
 void
 OldPrimTypes::AMH_ex1ExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_ex1ExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_ex1ExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_ex1ExceptionHolder *tmp = static_cast<AMH_ex1ExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 OldPrimTypes::AMH_ex1ExceptionHolder::~AMH_ex1ExceptionHolder ()
@@ -686,7 +684,7 @@ OldPrimTypes::AMH_ex1ExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex1ExceptionHolder::raise_get_l1 ()
@@ -696,7 +694,7 @@ OldPrimTypes::AMH_ex1ExceptionHolder::raise_get_l1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex1ExceptionHolder::raise_set_l1 ()
@@ -706,7 +704,7 @@ OldPrimTypes::AMH_ex1ExceptionHolder::raise_set_l1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex1ExceptionHolder::raise_m1 ()
@@ -716,7 +714,7 @@ OldPrimTypes::AMH_ex1ExceptionHolder::raise_m1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex1ExceptionHolder::raise_mtypes ()
@@ -726,7 +724,7 @@ OldPrimTypes::AMH_ex1ExceptionHolder::raise_mtypes ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex1ExceptionHolder::raise_sendc_set_l1 ()
@@ -736,7 +734,7 @@ OldPrimTypes::AMH_ex1ExceptionHolder::raise_sendc_set_l1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex1ExceptionHolder::raise_sendc_get_l1 ()
@@ -746,7 +744,7 @@ OldPrimTypes::AMH_ex1ExceptionHolder::raise_sendc_get_l1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex1ExceptionHolder::raise_sendc_m1 ()
@@ -756,7 +754,7 @@ OldPrimTypes::AMH_ex1ExceptionHolder::raise_sendc_m1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex1ExceptionHolder::raise_sendc_mtypes ()
@@ -805,9 +803,8 @@ OldPrimTypes::AMH_ex1ResponseHandler::AMH_ex1ResponseHandler ()
 {}void
 OldPrimTypes::AMH_ex1ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_ex1ResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_ex1ResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_ex1ResponseHandler *tmp = static_cast<AMH_ex1ResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldPrimTypes::AMH_ex1ResponseHandler_ptr
@@ -1531,9 +1528,8 @@ OldPrimTypes::AMI_ex1Handler::AMI_ex1Handler ()
 void
 OldPrimTypes::AMI_ex1Handler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_ex1Handler *_tao_tmp_pointer =
-    static_cast<AMI_ex1Handler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_ex1Handler *tmp = static_cast<AMI_ex1Handler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldPrimTypes::AMI_ex1Handler_ptr
@@ -1859,9 +1855,8 @@ OldPrimTypes::ex2::ex2 ()
 void
 OldPrimTypes::ex2::_tao_any_destructor (void *_tao_void_pointer)
 {
-  ex2 *_tao_tmp_pointer =
-    static_cast<ex2 *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  ex2 *tmp = static_cast<ex2 *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldPrimTypes::ex2_ptr
@@ -1986,9 +1981,8 @@ OldPrimTypes::AMH_ex2ExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_
 void
 OldPrimTypes::AMH_ex2ExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_ex2ExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_ex2ExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_ex2ExceptionHolder *tmp = static_cast<AMH_ex2ExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 OldPrimTypes::AMH_ex2ExceptionHolder::~AMH_ex2ExceptionHolder ()
@@ -2076,7 +2070,7 @@ OldPrimTypes::AMH_ex2ExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex2ExceptionHolder::raise_get_l2 ()
@@ -2086,7 +2080,7 @@ OldPrimTypes::AMH_ex2ExceptionHolder::raise_get_l2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex2ExceptionHolder::raise_m2 ()
@@ -2096,7 +2090,7 @@ OldPrimTypes::AMH_ex2ExceptionHolder::raise_m2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex2ExceptionHolder::raise_mv ()
@@ -2106,7 +2100,7 @@ OldPrimTypes::AMH_ex2ExceptionHolder::raise_mv ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex2ExceptionHolder::raise_sendc_get_l2 ()
@@ -2116,7 +2110,7 @@ OldPrimTypes::AMH_ex2ExceptionHolder::raise_sendc_get_l2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex2ExceptionHolder::raise_sendc_m2 ()
@@ -2126,7 +2120,7 @@ OldPrimTypes::AMH_ex2ExceptionHolder::raise_sendc_m2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldPrimTypes::AMH_ex2ExceptionHolder::raise_sendc_mv ()
@@ -2175,9 +2169,8 @@ OldPrimTypes::AMH_ex2ResponseHandler::AMH_ex2ResponseHandler ()
 {}void
 OldPrimTypes::AMH_ex2ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_ex2ResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_ex2ResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_ex2ResponseHandler *tmp = static_cast<AMH_ex2ResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldPrimTypes::AMH_ex2ResponseHandler_ptr
@@ -2681,9 +2674,8 @@ OldPrimTypes::AMI_ex2Handler::AMI_ex2Handler ()
 void
 OldPrimTypes::AMI_ex2Handler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_ex2Handler *_tao_tmp_pointer =
-    static_cast<AMI_ex2Handler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_ex2Handler *tmp = static_cast<AMI_ex2Handler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldPrimTypes::AMI_ex2Handler_ptr

@@ -27,6 +27,7 @@
 
 
 #include "Bug_2619_RegressionC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -77,8 +78,7 @@ _tao_tc_Type_T (
   _tao_fields_Type_T,
   1);
 
-::CORBA::TypeCode_ptr const _tc_Type_T =
-  &_tao_tc_Type_T;
+::CORBA::TypeCode_ptr const _tc_Type_T = std::addressof(_tao_tc_Type_T);
 
 
 // TAO_IDL - Generated from
@@ -88,9 +88,8 @@ void
 Type_T::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  Type_T *_tao_tmp_pointer =
-    static_cast<Type_T *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  Type_T *tmp = static_cast<Type_T *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -113,8 +112,7 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_T_Data_T,
     1);
   
-::CORBA::TypeCode_ptr const _tc_T_Data_T =
-  &_tao_tc_T_Data_T;
+::CORBA::TypeCode_ptr const _tc_T_Data_T = std::addressof(_tao_tc_T_Data_T);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
@@ -166,9 +164,8 @@ T_Data_T::_tao_obv_truncatable_repo_ids (Repository_Id_List& ids) const
 void
 T_Data_T::_tao_any_destructor (void *_tao_void_pointer)
 {
-  T_Data_T *_tao_tmp_pointer =
-    static_cast<T_Data_T *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  T_Data_T *tmp = static_cast<T_Data_T *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -322,8 +319,7 @@ static TAO::TypeCode::Alias<char const *,
     "Group",
     &_tc_Type_T);
   
-::CORBA::TypeCode_ptr const Test::_tc_Group =
-  &_tao_tc_Test_Group;
+::CORBA::TypeCode_ptr const Test::_tc_Group = std::addressof(_tao_tc_Test_Group);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
@@ -398,9 +394,8 @@ Test::Test ()
 void
 Test::_tao_any_destructor (void *_tao_void_pointer)
 {
-  Test *_tao_tmp_pointer =
-    static_cast<Test *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  Test *tmp = static_cast<Test *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 Test_ptr
@@ -483,8 +478,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:Test:1.0",
     "Test");
   
-::CORBA::TypeCode_ptr const _tc_Test =
-  &_tao_tc_Test;
+::CORBA::TypeCode_ptr const _tc_Test = std::addressof(_tao_tc_Test);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
 
@@ -502,8 +496,7 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_AMH_TestExceptionHolder,
     0);
   
-::CORBA::TypeCode_ptr const _tc_AMH_TestExceptionHolder =
-  &_tao_tc_AMH_TestExceptionHolder;
+::CORBA::TypeCode_ptr const _tc_AMH_TestExceptionHolder = std::addressof(_tao_tc_AMH_TestExceptionHolder);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
@@ -555,9 +548,8 @@ AMH_TestExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_List& ids)
 void
 AMH_TestExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_TestExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_TestExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_TestExceptionHolder *tmp = static_cast<AMH_TestExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -651,7 +643,7 @@ AMH_TestExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_TestExceptionHolder::raise_getGroup ()
@@ -661,7 +653,7 @@ AMH_TestExceptionHolder::raise_getGroup ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_TestExceptionHolder::raise_sendc_getGroup ()
@@ -710,9 +702,8 @@ AMH_TestResponseHandler::AMH_TestResponseHandler ()
 {}void
 AMH_TestResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_TestResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_TestResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_TestResponseHandler *tmp = static_cast<AMH_TestResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMH_TestResponseHandler_ptr
@@ -798,8 +789,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMH_TestResponseHandler:1.0",
     "AMH_TestResponseHandler");
   
-::CORBA::TypeCode_ptr const _tc_AMH_TestResponseHandler =
-  &_tao_tc_AMH_TestResponseHandler;
+::CORBA::TypeCode_ptr const _tc_AMH_TestResponseHandler = std::addressof(_tao_tc_AMH_TestResponseHandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
 
@@ -971,9 +961,8 @@ AMI_TestHandler::AMI_TestHandler ()
 void
 AMI_TestHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_TestHandler *_tao_tmp_pointer =
-    static_cast<AMI_TestHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_TestHandler *tmp = static_cast<AMI_TestHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMI_TestHandler_ptr
@@ -1057,8 +1046,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMI_TestHandler:1.0",
     "AMI_TestHandler");
   
-::CORBA::TypeCode_ptr const _tc_AMI_TestHandler =
-  &_tao_tc_AMI_TestHandler;
+::CORBA::TypeCode_ptr const _tc_AMI_TestHandler = std::addressof(_tao_tc_AMI_TestHandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43
 

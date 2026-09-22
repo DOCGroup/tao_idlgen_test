@@ -62,7 +62,6 @@ static char const * const _tao_enumerators_test_Enumeration[] =
     "Enum1",
     "Enum2",
     "Enum3"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -77,8 +76,7 @@ static TAO::TypeCode::Enum<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_Enumeration =
-    &_tao_tc_test_Enumeration;
+  ::CORBA::TypeCode_ptr const _tc_Enumeration = std::addressof(_tao_tc_test_Enumeration);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -124,67 +122,44 @@ test::UnionAllCovered_EnumerationDiscriminant::~UnionAllCovered_EnumerationDiscr
 
 void test::UnionAllCovered_EnumerationDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionAllCovered_EnumerationDiscriminant *tmp =
-    static_cast<UnionAllCovered_EnumerationDiscriminant *> (_tao_void_pointer);
+  UnionAllCovered_EnumerationDiscriminant *tmp = static_cast<UnionAllCovered_EnumerationDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionAllCovered_EnumerationDiscriminant &
 test::UnionAllCovered_EnumerationDiscriminant::operator= (const ::test::UnionAllCovered_EnumerationDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case test::Enum1:
+        {
+          this->u_.e_enum1_ = u.u_.e_enum1_;
+        }
+        break;
+        case test::Enum2:
+        {
+          this->u_.e_enum2_ = u.u_.e_enum2_;
+        }
+        break;
+        case test::Enum3:
+        {
+          this->u_.e_enum3_ = u.u_.e_enum3_;
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case test::Enum1:
-    {
-      this->u_.e_enum1_ = u.u_.e_enum1_;
-    }
-    break;
-    case test::Enum2:
-    {
-      this->u_.e_enum2_ = u.u_.e_enum2_;
-    }
-    break;
-    case test::Enum3:
-    {
-      this->u_.e_enum3_ = u.u_.e_enum3_;
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionAllCovered_EnumerationDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case test::Enum1:
-      
-    break;
-    
-    case test::Enum2:
-      
-    break;
-    
-    case test::Enum3:
-      
-    break;
-    
-    default:
-    break;
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -215,8 +190,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_EnumerationDiscriminant =
-    &_tao_tc_test_UnionAllCovered_EnumerationDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCovered_EnumerationDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -261,65 +235,43 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::~UnionAllCoveredWithDe
 
 void test::UnionAllCoveredWithDefault_EnumerationDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionAllCoveredWithDefault_EnumerationDiscriminant *tmp =
-    static_cast<UnionAllCoveredWithDefault_EnumerationDiscriminant *> (_tao_void_pointer);
+  UnionAllCoveredWithDefault_EnumerationDiscriminant *tmp = static_cast<UnionAllCoveredWithDefault_EnumerationDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionAllCoveredWithDefault_EnumerationDiscriminant &
 test::UnionAllCoveredWithDefault_EnumerationDiscriminant::operator= (const ::test::UnionAllCoveredWithDefault_EnumerationDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case test::Enum1:
+        {
+          this->u_.e_enum1_ = u.u_.e_enum1_;
+        }
+        break;
+        case test::Enum2:
+        {
+          this->u_.e_enum2_ = u.u_.e_enum2_;
+        }
+        break;
+        case test::Enum3:
+        default:
+        {
+          this->u_.e_def_ = u.u_.e_def_;
+        }
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case test::Enum1:
-    {
-      this->u_.e_enum1_ = u.u_.e_enum1_;
-    }
-    break;
-    case test::Enum2:
-    {
-      this->u_.e_enum2_ = u.u_.e_enum2_;
-    }
-    break;
-    case test::Enum3:
-    default:
-    {
-      this->u_.e_def_ = u.u_.e_def_;
-    }
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionAllCoveredWithDefault_EnumerationDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case test::Enum1:
-      
-    break;
-    
-    case test::Enum2:
-      
-    break;
-    
-    case test::Enum3:
-    default:
-      
-    break;
-    
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -350,8 +302,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionAllCoveredWithDefault_EnumerationDiscriminant =
-    &_tao_tc_test_UnionAllCoveredWithDefault_EnumerationDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionAllCoveredWithDefault_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCoveredWithDefault_EnumerationDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -395,63 +346,42 @@ test::UnionWithDefault_EnumerationDiscriminant::~UnionWithDefault_EnumerationDis
 
 void test::UnionWithDefault_EnumerationDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionWithDefault_EnumerationDiscriminant *tmp =
-    static_cast<UnionWithDefault_EnumerationDiscriminant *> (_tao_void_pointer);
+  UnionWithDefault_EnumerationDiscriminant *tmp = static_cast<UnionWithDefault_EnumerationDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionWithDefault_EnumerationDiscriminant &
 test::UnionWithDefault_EnumerationDiscriminant::operator= (const ::test::UnionWithDefault_EnumerationDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case test::Enum1:
+        {
+          this->u_.e_enum1_ = u.u_.e_enum1_;
+        }
+        break;
+        case test::Enum2:
+        {
+          this->u_.e_enum2_ = u.u_.e_enum2_;
+        }
+        break;
+        default:
+        {
+          this->u_.e_def_ = u.u_.e_def_;
+        }
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case test::Enum1:
-    {
-      this->u_.e_enum1_ = u.u_.e_enum1_;
-    }
-    break;
-    case test::Enum2:
-    {
-      this->u_.e_enum2_ = u.u_.e_enum2_;
-    }
-    break;
-    default:
-    {
-      this->u_.e_def_ = u.u_.e_def_;
-    }
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionWithDefault_EnumerationDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case test::Enum1:
-      
-    break;
-    
-    case test::Enum2:
-      
-    break;
-    
-    default:
-      
-    break;
-    
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -482,8 +412,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_EnumerationDiscriminant =
-    &_tao_tc_test_UnionWithDefault_EnumerationDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_EnumerationDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -524,58 +453,39 @@ test::UnionWithImplicitDefault_EnumerationDiscriminant::~UnionWithImplicitDefaul
 
 void test::UnionWithImplicitDefault_EnumerationDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionWithImplicitDefault_EnumerationDiscriminant *tmp =
-    static_cast<UnionWithImplicitDefault_EnumerationDiscriminant *> (_tao_void_pointer);
+  UnionWithImplicitDefault_EnumerationDiscriminant *tmp = static_cast<UnionWithImplicitDefault_EnumerationDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionWithImplicitDefault_EnumerationDiscriminant &
 test::UnionWithImplicitDefault_EnumerationDiscriminant::operator= (const ::test::UnionWithImplicitDefault_EnumerationDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case test::Enum1:
+        {
+          this->u_.e_enum1_ = u.u_.e_enum1_;
+        }
+        break;
+        case test::Enum2:
+        {
+          this->u_.e_enum2_ = u.u_.e_enum2_;
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case test::Enum1:
-    {
-      this->u_.e_enum1_ = u.u_.e_enum1_;
-    }
-    break;
-    case test::Enum2:
-    {
-      this->u_.e_enum2_ = u.u_.e_enum2_;
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionWithImplicitDefault_EnumerationDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case test::Enum1:
-      
-    break;
-    
-    case test::Enum2:
-      
-    break;
-    
-    default:
-    break;
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -604,8 +514,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_EnumerationDiscriminant =
-    &_tao_tc_test_UnionWithImplicitDefault_EnumerationDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_EnumerationDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
@@ -622,8 +531,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_TypedefedEnumeration =
-    &_tao_tc_test_TypedefedEnumeration;
+  ::CORBA::TypeCode_ptr const _tc_TypedefedEnumeration = std::addressof(_tao_tc_test_TypedefedEnumeration);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -669,67 +577,44 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::~UnionAllCovered_Typedef
 
 void test::UnionAllCovered_TypedefedEnumerationDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionAllCovered_TypedefedEnumerationDiscriminant *tmp =
-    static_cast<UnionAllCovered_TypedefedEnumerationDiscriminant *> (_tao_void_pointer);
+  UnionAllCovered_TypedefedEnumerationDiscriminant *tmp = static_cast<UnionAllCovered_TypedefedEnumerationDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionAllCovered_TypedefedEnumerationDiscriminant &
 test::UnionAllCovered_TypedefedEnumerationDiscriminant::operator= (const ::test::UnionAllCovered_TypedefedEnumerationDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case test::Enum1:
+        {
+          this->u_.e_enum1_ = u.u_.e_enum1_;
+        }
+        break;
+        case test::Enum2:
+        {
+          this->u_.e_enum2_ = u.u_.e_enum2_;
+        }
+        break;
+        case test::Enum3:
+        {
+          this->u_.e_enum3_ = u.u_.e_enum3_;
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case test::Enum1:
-    {
-      this->u_.e_enum1_ = u.u_.e_enum1_;
-    }
-    break;
-    case test::Enum2:
-    {
-      this->u_.e_enum2_ = u.u_.e_enum2_;
-    }
-    break;
-    case test::Enum3:
-    {
-      this->u_.e_enum3_ = u.u_.e_enum3_;
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionAllCovered_TypedefedEnumerationDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case test::Enum1:
-      
-    break;
-    
-    case test::Enum2:
-      
-    break;
-    
-    case test::Enum3:
-      
-    break;
-    
-    default:
-    break;
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -760,8 +645,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_TypedefedEnumerationDiscriminant =
-    &_tao_tc_test_UnionAllCovered_TypedefedEnumerationDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCovered_TypedefedEnumerationDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -806,65 +690,43 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::~UnionAllCove
 
 void test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant *tmp =
-    static_cast<UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant *> (_tao_void_pointer);
+  UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant *tmp = static_cast<UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant &
 test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::operator= (const ::test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case test::Enum1:
+        {
+          this->u_.e_enum1_ = u.u_.e_enum1_;
+        }
+        break;
+        case test::Enum2:
+        {
+          this->u_.e_enum2_ = u.u_.e_enum2_;
+        }
+        break;
+        case test::Enum3:
+        default:
+        {
+          this->u_.e_def_ = u.u_.e_def_;
+        }
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case test::Enum1:
-    {
-      this->u_.e_enum1_ = u.u_.e_enum1_;
-    }
-    break;
-    case test::Enum2:
-    {
-      this->u_.e_enum2_ = u.u_.e_enum2_;
-    }
-    break;
-    case test::Enum3:
-    default:
-    {
-      this->u_.e_def_ = u.u_.e_def_;
-    }
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case test::Enum1:
-      
-    break;
-    
-    case test::Enum2:
-      
-    break;
-    
-    case test::Enum3:
-    default:
-      
-    break;
-    
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -895,8 +757,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant =
-    &_tao_tc_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -940,63 +801,42 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::~UnionWithDefault_Typed
 
 void test::UnionWithDefault_TypedefedEnumerationDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionWithDefault_TypedefedEnumerationDiscriminant *tmp =
-    static_cast<UnionWithDefault_TypedefedEnumerationDiscriminant *> (_tao_void_pointer);
+  UnionWithDefault_TypedefedEnumerationDiscriminant *tmp = static_cast<UnionWithDefault_TypedefedEnumerationDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionWithDefault_TypedefedEnumerationDiscriminant &
 test::UnionWithDefault_TypedefedEnumerationDiscriminant::operator= (const ::test::UnionWithDefault_TypedefedEnumerationDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case test::Enum1:
+        {
+          this->u_.e_enum1_ = u.u_.e_enum1_;
+        }
+        break;
+        case test::Enum2:
+        {
+          this->u_.e_enum2_ = u.u_.e_enum2_;
+        }
+        break;
+        default:
+        {
+          this->u_.e_def_ = u.u_.e_def_;
+        }
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case test::Enum1:
-    {
-      this->u_.e_enum1_ = u.u_.e_enum1_;
-    }
-    break;
-    case test::Enum2:
-    {
-      this->u_.e_enum2_ = u.u_.e_enum2_;
-    }
-    break;
-    default:
-    {
-      this->u_.e_def_ = u.u_.e_def_;
-    }
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionWithDefault_TypedefedEnumerationDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case test::Enum1:
-      
-    break;
-    
-    case test::Enum2:
-      
-    break;
-    
-    default:
-      
-    break;
-    
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -1027,8 +867,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_TypedefedEnumerationDiscriminant =
-    &_tao_tc_test_UnionWithDefault_TypedefedEnumerationDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_TypedefedEnumerationDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -1069,58 +908,39 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::~UnionWithImpli
 
 void test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionWithImplicitDefault_TypedefedEnumerationDiscriminant *tmp =
-    static_cast<UnionWithImplicitDefault_TypedefedEnumerationDiscriminant *> (_tao_void_pointer);
+  UnionWithImplicitDefault_TypedefedEnumerationDiscriminant *tmp = static_cast<UnionWithImplicitDefault_TypedefedEnumerationDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant &
 test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::operator= (const ::test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case test::Enum1:
+        {
+          this->u_.e_enum1_ = u.u_.e_enum1_;
+        }
+        break;
+        case test::Enum2:
+        {
+          this->u_.e_enum2_ = u.u_.e_enum2_;
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case test::Enum1:
-    {
-      this->u_.e_enum1_ = u.u_.e_enum1_;
-    }
-    break;
-    case test::Enum2:
-    {
-      this->u_.e_enum2_ = u.u_.e_enum2_;
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case test::Enum1:
-      
-    break;
-    
-    case test::Enum2:
-      
-    break;
-    
-    default:
-    break;
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -1149,8 +969,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant =
-    &_tao_tc_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -1167,17 +986,14 @@ test::UnionAllCovered_BooleanDiscriminant::UnionAllCovered_BooleanDiscriminant (
 test::UnionAllCovered_BooleanDiscriminant::UnionAllCovered_BooleanDiscriminant (const ::test::UnionAllCovered_BooleanDiscriminant &u)
 {
   this->disc_ = u.disc_;
-  
   if (this->disc_)
     {
       this->u_.e_true_ = u.u_.e_true_;
     }
-  
   if (!this->disc_)
     {
       this->u_.e_false_ = u.u_.e_false_;
     }
-  
 }
 
 test::UnionAllCovered_BooleanDiscriminant::~UnionAllCovered_BooleanDiscriminant ()
@@ -1188,50 +1004,32 @@ test::UnionAllCovered_BooleanDiscriminant::~UnionAllCovered_BooleanDiscriminant 
 
 void test::UnionAllCovered_BooleanDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionAllCovered_BooleanDiscriminant *tmp =
-    static_cast<UnionAllCovered_BooleanDiscriminant *> (_tao_void_pointer);
+  UnionAllCovered_BooleanDiscriminant *tmp = static_cast<UnionAllCovered_BooleanDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionAllCovered_BooleanDiscriminant &
 test::UnionAllCovered_BooleanDiscriminant::operator= (const ::test::UnionAllCovered_BooleanDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      if (this->disc_)
+        {
+          this->u_.e_true_ = u.u_.e_true_;
+        }
+      if (!this->disc_)
+        {
+          this->u_.e_false_ = u.u_.e_false_;
+        }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  
-  if (this->disc_)
-    {
-      this->u_.e_true_ = u.u_.e_true_;
-    }
-  
-  if (!this->disc_)
-    {
-      this->u_.e_false_ = u.u_.e_false_;
-    }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionAllCovered_BooleanDiscriminant::_reset ()
 {
-  
-  if (this->disc_)
-    {
-      
-    }
-  
-  if (!this->disc_)
-    {
-      
-    }
-  
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -1260,8 +1058,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_BooleanDiscriminant =
-    &_tao_tc_test_UnionAllCovered_BooleanDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_BooleanDiscriminant = std::addressof(_tao_tc_test_UnionAllCovered_BooleanDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -1277,17 +1074,14 @@ test::UnionWithDefault_BooleanDiscriminant::UnionWithDefault_BooleanDiscriminant
 test::UnionWithDefault_BooleanDiscriminant::UnionWithDefault_BooleanDiscriminant (const ::test::UnionWithDefault_BooleanDiscriminant &u)
 {
   this->disc_ = u.disc_;
-  
   if (this->disc_)
     {
       this->u_.e_true_ = u.u_.e_true_;
     }
-  
   if (!this->disc_)
     {
       this->u_.e_def_ = u.u_.e_def_;
     }
-  
 }
 
 test::UnionWithDefault_BooleanDiscriminant::~UnionWithDefault_BooleanDiscriminant ()
@@ -1298,50 +1092,32 @@ test::UnionWithDefault_BooleanDiscriminant::~UnionWithDefault_BooleanDiscriminan
 
 void test::UnionWithDefault_BooleanDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionWithDefault_BooleanDiscriminant *tmp =
-    static_cast<UnionWithDefault_BooleanDiscriminant *> (_tao_void_pointer);
+  UnionWithDefault_BooleanDiscriminant *tmp = static_cast<UnionWithDefault_BooleanDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionWithDefault_BooleanDiscriminant &
 test::UnionWithDefault_BooleanDiscriminant::operator= (const ::test::UnionWithDefault_BooleanDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      if (this->disc_)
+        {
+          this->u_.e_true_ = u.u_.e_true_;
+        }
+      if (!this->disc_)
+        {
+          this->u_.e_def_ = u.u_.e_def_;
+        }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  
-  if (this->disc_)
-    {
-      this->u_.e_true_ = u.u_.e_true_;
-    }
-  
-  if (!this->disc_)
-    {
-      this->u_.e_def_ = u.u_.e_def_;
-    }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionWithDefault_BooleanDiscriminant::_reset ()
 {
-  
-  if (this->disc_)
-    {
-      
-    }
-  
-  if (!this->disc_)
-    {
-      
-    }
-  
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -1370,8 +1146,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_BooleanDiscriminant =
-    &_tao_tc_test_UnionWithDefault_BooleanDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_BooleanDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_BooleanDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -1387,12 +1162,10 @@ test::UnionWithImplicitDefault_BooleanDiscriminant::UnionWithImplicitDefault_Boo
 test::UnionWithImplicitDefault_BooleanDiscriminant::UnionWithImplicitDefault_BooleanDiscriminant (const ::test::UnionWithImplicitDefault_BooleanDiscriminant &u)
 {
   this->disc_ = u.disc_;
-  
   if (this->disc_)
     {
       this->u_.e_true_ = u.u_.e_true_;
     }
-  
 }
 
 test::UnionWithImplicitDefault_BooleanDiscriminant::~UnionWithImplicitDefault_BooleanDiscriminant ()
@@ -1403,40 +1176,28 @@ test::UnionWithImplicitDefault_BooleanDiscriminant::~UnionWithImplicitDefault_Bo
 
 void test::UnionWithImplicitDefault_BooleanDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionWithImplicitDefault_BooleanDiscriminant *tmp =
-    static_cast<UnionWithImplicitDefault_BooleanDiscriminant *> (_tao_void_pointer);
+  UnionWithImplicitDefault_BooleanDiscriminant *tmp = static_cast<UnionWithImplicitDefault_BooleanDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionWithImplicitDefault_BooleanDiscriminant &
 test::UnionWithImplicitDefault_BooleanDiscriminant::operator= (const ::test::UnionWithImplicitDefault_BooleanDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      if (this->disc_)
+        {
+          this->u_.e_true_ = u.u_.e_true_;
+        }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  
-  if (this->disc_)
-    {
-      this->u_.e_true_ = u.u_.e_true_;
-    }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionWithImplicitDefault_BooleanDiscriminant::_reset ()
 {
-  
-  if (this->disc_)
-    {
-      
-    }
-  
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -1463,8 +1224,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_BooleanDiscriminant =
-    &_tao_tc_test_UnionWithImplicitDefault_BooleanDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_BooleanDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_BooleanDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -1754,555 +1514,287 @@ test::UnionAllCovered_CharDiscriminant::~UnionAllCovered_CharDiscriminant ()
 
 void test::UnionAllCovered_CharDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionAllCovered_CharDiscriminant *tmp =
-    static_cast<UnionAllCovered_CharDiscriminant *> (_tao_void_pointer);
+  UnionAllCovered_CharDiscriminant *tmp = static_cast<UnionAllCovered_CharDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionAllCovered_CharDiscriminant &
 test::UnionAllCovered_CharDiscriminant::operator= (const ::test::UnionAllCovered_CharDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case '\x0':
+        case '\x1':
+        case '\x2':
+        case '\x3':
+        case '\x4':
+        case '\x5':
+        case '\x6':
+        case '\a':
+        case '\b':
+        case '\t':
+        case '\n':
+        case '\v':
+        case '\f':
+        case '\r':
+        case '\xe':
+        case '\xf':
+        case '\x10':
+        case '\x11':
+        case '\x12':
+        case '\x13':
+        case '\x14':
+        case '\x15':
+        case '\x16':
+        case '\x17':
+        case '\x18':
+        case '\x19':
+        case '\x1a':
+        case '\x1b':
+        case '\x1c':
+        case '\x1d':
+        case '\x1e':
+        case '\x1f':
+        case ' ':
+        case '!':
+        case '"':
+        case '#':
+        case '$':
+        case '%':
+        case '&':
+        case '\'':
+        case '(':
+        case ')':
+        case '*':
+        case '+':
+        case ',':
+        case '-':
+        case '.':
+        case '/':
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+        case ':':
+        case ';':
+        case '<':
+        case '=':
+        case '>':
+        case '?':
+        case '@':
+        case 'A':
+        case 'B':
+        case 'C':
+        case 'D':
+        case 'E':
+        case 'F':
+        case 'G':
+        case 'H':
+        case 'I':
+        case 'J':
+        case 'K':
+        case 'L':
+        case 'M':
+        case 'N':
+        case 'O':
+        case 'P':
+        case 'Q':
+        case 'R':
+        case 'S':
+        case 'T':
+        case 'U':
+        case 'V':
+        case 'W':
+        case 'X':
+        case 'Y':
+        case 'Z':
+        case '[':
+        case '\\':
+        case ']':
+        case '^':
+        case '_':
+        case '`':
+        case 'a':
+        case 'b':
+        case 'c':
+        case 'd':
+        case 'e':
+        case 'f':
+        case 'g':
+        case 'h':
+        case 'i':
+        case 'j':
+        case 'k':
+        case 'l':
+        case 'm':
+        case 'n':
+        case 'o':
+        case 'p':
+        case 'q':
+        case 'r':
+        case 's':
+        case 't':
+        case 'u':
+        case 'v':
+        case 'w':
+        case 'x':
+        case 'y':
+        case 'z':
+        case '{':
+        case '|':
+        case '}':
+        case '~':
+        case '\x7f':
+        case '\x80':
+        case '\x81':
+        case '\x82':
+        case '\x83':
+        case '\x84':
+        case '\x85':
+        case '\x86':
+        case '\x87':
+        case '\x88':
+        case '\x89':
+        case '\x8a':
+        case '\x8b':
+        case '\x8c':
+        case '\x8d':
+        case '\x8e':
+        case '\x8f':
+        case '\x90':
+        case '\x91':
+        case '\x92':
+        case '\x93':
+        case '\x94':
+        case '\x95':
+        case '\x96':
+        case '\x97':
+        case '\x98':
+        case '\x99':
+        case '\x9a':
+        case '\x9b':
+        case '\x9c':
+        case '\x9d':
+        case '\x9e':
+        case '\x9f':
+        case '\xa0':
+        case '\xa1':
+        case '\xa2':
+        case '\xa3':
+        case '\xa4':
+        case '\xa5':
+        case '\xa6':
+        case '\xa7':
+        case '\xa8':
+        case '\xa9':
+        case '\xaa':
+        case '\xab':
+        case '\xac':
+        case '\xad':
+        case '\xae':
+        case '\xaf':
+        case '\xb0':
+        case '\xb1':
+        case '\xb2':
+        case '\xb3':
+        case '\xb4':
+        case '\xb5':
+        case '\xb6':
+        case '\xb7':
+        case '\xb8':
+        case '\xb9':
+        case '\xba':
+        case '\xbb':
+        case '\xbc':
+        case '\xbd':
+        case '\xbe':
+        case '\xbf':
+        case '\xc0':
+        case '\xc1':
+        case '\xc2':
+        case '\xc3':
+        case '\xc4':
+        case '\xc5':
+        case '\xc6':
+        case '\xc7':
+        case '\xc8':
+        case '\xc9':
+        case '\xca':
+        case '\xcb':
+        case '\xcc':
+        case '\xcd':
+        case '\xce':
+        case '\xcf':
+        case '\xd0':
+        case '\xd1':
+        case '\xd2':
+        case '\xd3':
+        case '\xd4':
+        case '\xd5':
+        case '\xd6':
+        case '\xd7':
+        case '\xd8':
+        case '\xd9':
+        case '\xda':
+        case '\xdb':
+        case '\xdc':
+        case '\xdd':
+        case '\xde':
+        case '\xdf':
+        case '\xe0':
+        case '\xe1':
+        case '\xe2':
+        case '\xe3':
+        case '\xe4':
+        case '\xe5':
+        case '\xe6':
+        case '\xe7':
+        case '\xe8':
+        case '\xe9':
+        case '\xea':
+        case '\xeb':
+        case '\xec':
+        case '\xed':
+        case '\xee':
+        case '\xef':
+        case '\xf0':
+        case '\xf1':
+        case '\xf2':
+        case '\xf3':
+        case '\xf4':
+        case '\xf5':
+        case '\xf6':
+        case '\xf7':
+        case '\xf8':
+        case '\xf9':
+        case '\xfa':
+        case '\xfb':
+        case '\xfc':
+        case '\xfd':
+        case '\xfe':
+        case '\xff':
+        {
+          this->u_.e_chars_ = u.u_.e_chars_;
+        }
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case '\x0':
-    case '\x1':
-    case '\x2':
-    case '\x3':
-    case '\x4':
-    case '\x5':
-    case '\x6':
-    case '\a':
-    case '\b':
-    case '\t':
-    case '\n':
-    case '\v':
-    case '\f':
-    case '\r':
-    case '\xe':
-    case '\xf':
-    case '\x10':
-    case '\x11':
-    case '\x12':
-    case '\x13':
-    case '\x14':
-    case '\x15':
-    case '\x16':
-    case '\x17':
-    case '\x18':
-    case '\x19':
-    case '\x1a':
-    case '\x1b':
-    case '\x1c':
-    case '\x1d':
-    case '\x1e':
-    case '\x1f':
-    case ' ':
-    case '!':
-    case '"':
-    case '#':
-    case '$':
-    case '%':
-    case '&':
-    case '\'':
-    case '(':
-    case ')':
-    case '*':
-    case '+':
-    case ',':
-    case '-':
-    case '.':
-    case '/':
-    case '0':
-    case '1':
-    case '2':
-    case '3':
-    case '4':
-    case '5':
-    case '6':
-    case '7':
-    case '8':
-    case '9':
-    case ':':
-    case ';':
-    case '<':
-    case '=':
-    case '>':
-    case '?':
-    case '@':
-    case 'A':
-    case 'B':
-    case 'C':
-    case 'D':
-    case 'E':
-    case 'F':
-    case 'G':
-    case 'H':
-    case 'I':
-    case 'J':
-    case 'K':
-    case 'L':
-    case 'M':
-    case 'N':
-    case 'O':
-    case 'P':
-    case 'Q':
-    case 'R':
-    case 'S':
-    case 'T':
-    case 'U':
-    case 'V':
-    case 'W':
-    case 'X':
-    case 'Y':
-    case 'Z':
-    case '[':
-    case '\\':
-    case ']':
-    case '^':
-    case '_':
-    case '`':
-    case 'a':
-    case 'b':
-    case 'c':
-    case 'd':
-    case 'e':
-    case 'f':
-    case 'g':
-    case 'h':
-    case 'i':
-    case 'j':
-    case 'k':
-    case 'l':
-    case 'm':
-    case 'n':
-    case 'o':
-    case 'p':
-    case 'q':
-    case 'r':
-    case 's':
-    case 't':
-    case 'u':
-    case 'v':
-    case 'w':
-    case 'x':
-    case 'y':
-    case 'z':
-    case '{':
-    case '|':
-    case '}':
-    case '~':
-    case '\x7f':
-    case '\x80':
-    case '\x81':
-    case '\x82':
-    case '\x83':
-    case '\x84':
-    case '\x85':
-    case '\x86':
-    case '\x87':
-    case '\x88':
-    case '\x89':
-    case '\x8a':
-    case '\x8b':
-    case '\x8c':
-    case '\x8d':
-    case '\x8e':
-    case '\x8f':
-    case '\x90':
-    case '\x91':
-    case '\x92':
-    case '\x93':
-    case '\x94':
-    case '\x95':
-    case '\x96':
-    case '\x97':
-    case '\x98':
-    case '\x99':
-    case '\x9a':
-    case '\x9b':
-    case '\x9c':
-    case '\x9d':
-    case '\x9e':
-    case '\x9f':
-    case '\xa0':
-    case '\xa1':
-    case '\xa2':
-    case '\xa3':
-    case '\xa4':
-    case '\xa5':
-    case '\xa6':
-    case '\xa7':
-    case '\xa8':
-    case '\xa9':
-    case '\xaa':
-    case '\xab':
-    case '\xac':
-    case '\xad':
-    case '\xae':
-    case '\xaf':
-    case '\xb0':
-    case '\xb1':
-    case '\xb2':
-    case '\xb3':
-    case '\xb4':
-    case '\xb5':
-    case '\xb6':
-    case '\xb7':
-    case '\xb8':
-    case '\xb9':
-    case '\xba':
-    case '\xbb':
-    case '\xbc':
-    case '\xbd':
-    case '\xbe':
-    case '\xbf':
-    case '\xc0':
-    case '\xc1':
-    case '\xc2':
-    case '\xc3':
-    case '\xc4':
-    case '\xc5':
-    case '\xc6':
-    case '\xc7':
-    case '\xc8':
-    case '\xc9':
-    case '\xca':
-    case '\xcb':
-    case '\xcc':
-    case '\xcd':
-    case '\xce':
-    case '\xcf':
-    case '\xd0':
-    case '\xd1':
-    case '\xd2':
-    case '\xd3':
-    case '\xd4':
-    case '\xd5':
-    case '\xd6':
-    case '\xd7':
-    case '\xd8':
-    case '\xd9':
-    case '\xda':
-    case '\xdb':
-    case '\xdc':
-    case '\xdd':
-    case '\xde':
-    case '\xdf':
-    case '\xe0':
-    case '\xe1':
-    case '\xe2':
-    case '\xe3':
-    case '\xe4':
-    case '\xe5':
-    case '\xe6':
-    case '\xe7':
-    case '\xe8':
-    case '\xe9':
-    case '\xea':
-    case '\xeb':
-    case '\xec':
-    case '\xed':
-    case '\xee':
-    case '\xef':
-    case '\xf0':
-    case '\xf1':
-    case '\xf2':
-    case '\xf3':
-    case '\xf4':
-    case '\xf5':
-    case '\xf6':
-    case '\xf7':
-    case '\xf8':
-    case '\xf9':
-    case '\xfa':
-    case '\xfb':
-    case '\xfc':
-    case '\xfd':
-    case '\xfe':
-    case '\xff':
-    {
-      this->u_.e_chars_ = u.u_.e_chars_;
-    }
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionAllCovered_CharDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case '\x0':
-    case '\x1':
-    case '\x2':
-    case '\x3':
-    case '\x4':
-    case '\x5':
-    case '\x6':
-    case '\a':
-    case '\b':
-    case '\t':
-    case '\n':
-    case '\v':
-    case '\f':
-    case '\r':
-    case '\xe':
-    case '\xf':
-    case '\x10':
-    case '\x11':
-    case '\x12':
-    case '\x13':
-    case '\x14':
-    case '\x15':
-    case '\x16':
-    case '\x17':
-    case '\x18':
-    case '\x19':
-    case '\x1a':
-    case '\x1b':
-    case '\x1c':
-    case '\x1d':
-    case '\x1e':
-    case '\x1f':
-    case ' ':
-    case '!':
-    case '"':
-    case '#':
-    case '$':
-    case '%':
-    case '&':
-    case '\'':
-    case '(':
-    case ')':
-    case '*':
-    case '+':
-    case ',':
-    case '-':
-    case '.':
-    case '/':
-    case '0':
-    case '1':
-    case '2':
-    case '3':
-    case '4':
-    case '5':
-    case '6':
-    case '7':
-    case '8':
-    case '9':
-    case ':':
-    case ';':
-    case '<':
-    case '=':
-    case '>':
-    case '?':
-    case '@':
-    case 'A':
-    case 'B':
-    case 'C':
-    case 'D':
-    case 'E':
-    case 'F':
-    case 'G':
-    case 'H':
-    case 'I':
-    case 'J':
-    case 'K':
-    case 'L':
-    case 'M':
-    case 'N':
-    case 'O':
-    case 'P':
-    case 'Q':
-    case 'R':
-    case 'S':
-    case 'T':
-    case 'U':
-    case 'V':
-    case 'W':
-    case 'X':
-    case 'Y':
-    case 'Z':
-    case '[':
-    case '\\':
-    case ']':
-    case '^':
-    case '_':
-    case '`':
-    case 'a':
-    case 'b':
-    case 'c':
-    case 'd':
-    case 'e':
-    case 'f':
-    case 'g':
-    case 'h':
-    case 'i':
-    case 'j':
-    case 'k':
-    case 'l':
-    case 'm':
-    case 'n':
-    case 'o':
-    case 'p':
-    case 'q':
-    case 'r':
-    case 's':
-    case 't':
-    case 'u':
-    case 'v':
-    case 'w':
-    case 'x':
-    case 'y':
-    case 'z':
-    case '{':
-    case '|':
-    case '}':
-    case '~':
-    case '\x7f':
-    case '\x80':
-    case '\x81':
-    case '\x82':
-    case '\x83':
-    case '\x84':
-    case '\x85':
-    case '\x86':
-    case '\x87':
-    case '\x88':
-    case '\x89':
-    case '\x8a':
-    case '\x8b':
-    case '\x8c':
-    case '\x8d':
-    case '\x8e':
-    case '\x8f':
-    case '\x90':
-    case '\x91':
-    case '\x92':
-    case '\x93':
-    case '\x94':
-    case '\x95':
-    case '\x96':
-    case '\x97':
-    case '\x98':
-    case '\x99':
-    case '\x9a':
-    case '\x9b':
-    case '\x9c':
-    case '\x9d':
-    case '\x9e':
-    case '\x9f':
-    case '\xa0':
-    case '\xa1':
-    case '\xa2':
-    case '\xa3':
-    case '\xa4':
-    case '\xa5':
-    case '\xa6':
-    case '\xa7':
-    case '\xa8':
-    case '\xa9':
-    case '\xaa':
-    case '\xab':
-    case '\xac':
-    case '\xad':
-    case '\xae':
-    case '\xaf':
-    case '\xb0':
-    case '\xb1':
-    case '\xb2':
-    case '\xb3':
-    case '\xb4':
-    case '\xb5':
-    case '\xb6':
-    case '\xb7':
-    case '\xb8':
-    case '\xb9':
-    case '\xba':
-    case '\xbb':
-    case '\xbc':
-    case '\xbd':
-    case '\xbe':
-    case '\xbf':
-    case '\xc0':
-    case '\xc1':
-    case '\xc2':
-    case '\xc3':
-    case '\xc4':
-    case '\xc5':
-    case '\xc6':
-    case '\xc7':
-    case '\xc8':
-    case '\xc9':
-    case '\xca':
-    case '\xcb':
-    case '\xcc':
-    case '\xcd':
-    case '\xce':
-    case '\xcf':
-    case '\xd0':
-    case '\xd1':
-    case '\xd2':
-    case '\xd3':
-    case '\xd4':
-    case '\xd5':
-    case '\xd6':
-    case '\xd7':
-    case '\xd8':
-    case '\xd9':
-    case '\xda':
-    case '\xdb':
-    case '\xdc':
-    case '\xdd':
-    case '\xde':
-    case '\xdf':
-    case '\xe0':
-    case '\xe1':
-    case '\xe2':
-    case '\xe3':
-    case '\xe4':
-    case '\xe5':
-    case '\xe6':
-    case '\xe7':
-    case '\xe8':
-    case '\xe9':
-    case '\xea':
-    case '\xeb':
-    case '\xec':
-    case '\xed':
-    case '\xee':
-    case '\xef':
-    case '\xf0':
-    case '\xf1':
-    case '\xf2':
-    case '\xf3':
-    case '\xf4':
-    case '\xf5':
-    case '\xf6':
-    case '\xf7':
-    case '\xf8':
-    case '\xf9':
-    case '\xfa':
-    case '\xfb':
-    case '\xfc':
-    case '\xfd':
-    case '\xfe':
-    case '\xff':
-      
-    break;
-    
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -2839,8 +2331,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_CharDiscriminant =
-    &_tao_tc_test_UnionAllCovered_CharDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_CharDiscriminant = std::addressof(_tao_tc_test_UnionAllCovered_CharDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -2886,68 +2377,44 @@ test::UnionWithDefault_CharDiscriminant::~UnionWithDefault_CharDiscriminant ()
 
 void test::UnionWithDefault_CharDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionWithDefault_CharDiscriminant *tmp =
-    static_cast<UnionWithDefault_CharDiscriminant *> (_tao_void_pointer);
+  UnionWithDefault_CharDiscriminant *tmp = static_cast<UnionWithDefault_CharDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionWithDefault_CharDiscriminant &
 test::UnionWithDefault_CharDiscriminant::operator= (const ::test::UnionWithDefault_CharDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case '\x0':
+        case '\x1':
+        case '\x2':
+        case '\x3':
+        case '\x4':
+        case '\x5':
+        case '\x6':
+        case '\a':
+        {
+          this->u_.e_chars_ = u.u_.e_chars_;
+        }
+        break;
+        default:
+        {
+          this->u_.e_def_ = u.u_.e_def_;
+        }
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case '\x0':
-    case '\x1':
-    case '\x2':
-    case '\x3':
-    case '\x4':
-    case '\x5':
-    case '\x6':
-    case '\a':
-    {
-      this->u_.e_chars_ = u.u_.e_chars_;
-    }
-    break;
-    default:
-    {
-      this->u_.e_def_ = u.u_.e_def_;
-    }
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionWithDefault_CharDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case '\x0':
-    case '\x1':
-    case '\x2':
-    case '\x3':
-    case '\x4':
-    case '\x5':
-    case '\x6':
-    case '\a':
-      
-    break;
-    
-    default:
-      
-    break;
-    
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -2990,8 +2457,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_CharDiscriminant =
-    &_tao_tc_test_UnionWithDefault_CharDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_CharDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_CharDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -3034,63 +2500,41 @@ test::UnionWithImplicitDefault_CharDiscriminant::~UnionWithImplicitDefault_CharD
 
 void test::UnionWithImplicitDefault_CharDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionWithImplicitDefault_CharDiscriminant *tmp =
-    static_cast<UnionWithImplicitDefault_CharDiscriminant *> (_tao_void_pointer);
+  UnionWithImplicitDefault_CharDiscriminant *tmp = static_cast<UnionWithImplicitDefault_CharDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionWithImplicitDefault_CharDiscriminant &
 test::UnionWithImplicitDefault_CharDiscriminant::operator= (const ::test::UnionWithImplicitDefault_CharDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case '\x0':
+        case '\x1':
+        case '\x2':
+        case '\x3':
+        case '\x4':
+        case '\x5':
+        case '\x6':
+        case '\a':
+        {
+          this->u_.e_chars_ = u.u_.e_chars_;
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case '\x0':
-    case '\x1':
-    case '\x2':
-    case '\x3':
-    case '\x4':
-    case '\x5':
-    case '\x6':
-    case '\a':
-    {
-      this->u_.e_chars_ = u.u_.e_chars_;
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionWithImplicitDefault_CharDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case '\x0':
-    case '\x1':
-    case '\x2':
-    case '\x3':
-    case '\x4':
-    case '\x5':
-    case '\x6':
-    case '\a':
-      
-    break;
-    
-    default:
-    break;
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -3131,8 +2575,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_CharDiscriminant =
-    &_tao_tc_test_UnionWithImplicitDefault_CharDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_CharDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_CharDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -3181,72 +2624,47 @@ test::UnionWithDefault_LongDiscriminant::~UnionWithDefault_LongDiscriminant ()
 
 void test::UnionWithDefault_LongDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionWithDefault_LongDiscriminant *tmp =
-    static_cast<UnionWithDefault_LongDiscriminant *> (_tao_void_pointer);
+  UnionWithDefault_LongDiscriminant *tmp = static_cast<UnionWithDefault_LongDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionWithDefault_LongDiscriminant &
 test::UnionWithDefault_LongDiscriminant::operator= (const ::test::UnionWithDefault_LongDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case 1:
+        {
+          this->u_.e_case1_ = u.u_.e_case1_;
+        }
+        break;
+        case 2:
+        {
+          this->u_.e_case2_ = u.u_.e_case2_;
+        }
+        break;
+        case 3:
+        {
+          this->u_.e_case3_ = u.u_.e_case3_;
+        }
+        break;
+        default:
+        {
+          this->u_.e_def_ = u.u_.e_def_;
+        }
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case 1:
-    {
-      this->u_.e_case1_ = u.u_.e_case1_;
-    }
-    break;
-    case 2:
-    {
-      this->u_.e_case2_ = u.u_.e_case2_;
-    }
-    break;
-    case 3:
-    {
-      this->u_.e_case3_ = u.u_.e_case3_;
-    }
-    break;
-    default:
-    {
-      this->u_.e_def_ = u.u_.e_def_;
-    }
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionWithDefault_LongDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case 1:
-      
-    break;
-    
-    case 2:
-      
-    break;
-    
-    case 3:
-      
-    break;
-    
-    default:
-      
-    break;
-    
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -3279,8 +2697,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_LongDiscriminant =
-    &_tao_tc_test_UnionWithDefault_LongDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_LongDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_LongDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
@@ -3326,67 +2743,44 @@ test::UnionWithImplicitDefault_LongDiscriminant::~UnionWithImplicitDefault_LongD
 
 void test::UnionWithImplicitDefault_LongDiscriminant::_tao_any_destructor (void *_tao_void_pointer)
 {
-  UnionWithImplicitDefault_LongDiscriminant *tmp =
-    static_cast<UnionWithImplicitDefault_LongDiscriminant *> (_tao_void_pointer);
+  UnionWithImplicitDefault_LongDiscriminant *tmp = static_cast<UnionWithImplicitDefault_LongDiscriminant *> (_tao_void_pointer);
   delete tmp;
 }
 
 test::UnionWithImplicitDefault_LongDiscriminant &
 test::UnionWithImplicitDefault_LongDiscriminant::operator= (const ::test::UnionWithImplicitDefault_LongDiscriminant &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case 1:
+        {
+          this->u_.e_case1_ = u.u_.e_case1_;
+        }
+        break;
+        case 2:
+        {
+          this->u_.e_case2_ = u.u_.e_case2_;
+        }
+        break;
+        case 3:
+        {
+          this->u_.e_case3_ = u.u_.e_case3_;
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case 1:
-    {
-      this->u_.e_case1_ = u.u_.e_case1_;
-    }
-    break;
-    case 2:
-    {
-      this->u_.e_case2_ = u.u_.e_case2_;
-    }
-    break;
-    case 3:
-    {
-      this->u_.e_case3_ = u.u_.e_case3_;
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void test::UnionWithImplicitDefault_LongDiscriminant::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case 1:
-      
-    break;
-    
-    case 2:
-      
-    break;
-    
-    case 3:
-      
-    break;
-    
-    default:
-    break;
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -3417,8 +2811,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace test
 {
-  ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_LongDiscriminant =
-    &_tao_tc_test_UnionWithImplicitDefault_LongDiscriminant;
+  ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_LongDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_LongDiscriminant);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:34

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_CONSTANTSS_3KQSCD_CPP_
-#define _TAO_IDL_CONSTANTSS_3KQSCD_CPP_
+#ifndef _TAO_IDL_CONSTANTSS_CO6GIL_CPP_
+#define _TAO_IDL_CONSTANTSS_CO6GIL_CPP_
 
 
 #include "constantsS.h"

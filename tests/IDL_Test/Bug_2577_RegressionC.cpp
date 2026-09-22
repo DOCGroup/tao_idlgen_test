@@ -27,6 +27,7 @@
 
 
 #include "Bug_2577_RegressionC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -76,8 +77,7 @@ _tao_tc_DateTime_T (
   _tao_fields_DateTime_T,
   1);
 
-::CORBA::TypeCode_ptr const _tc_DateTime_T =
-  &_tao_tc_DateTime_T;
+::CORBA::TypeCode_ptr const _tc_DateTime_T = std::addressof(_tao_tc_DateTime_T);
 
 
 // TAO_IDL - Generated from
@@ -87,9 +87,8 @@ void
 DateTime_T::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  DateTime_T *_tao_tmp_pointer =
-    static_cast<DateTime_T *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  DateTime_T *tmp = static_cast<DateTime_T *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
@@ -103,8 +102,7 @@ static TAO::TypeCode::Alias<char const *,
     "WhenLastUpdated_T",
     &_tc_DateTime_T);
   
-::CORBA::TypeCode_ptr const _tc_WhenLastUpdated_T =
-  &_tao_tc_WhenLastUpdated_T;
+::CORBA::TypeCode_ptr const _tc_WhenLastUpdated_T = std::addressof(_tao_tc_WhenLastUpdated_T);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
 
@@ -126,8 +124,7 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_Data_T,
     1);
   
-::CORBA::TypeCode_ptr const _tc_Data_T =
-  &_tao_tc_Data_T;
+::CORBA::TypeCode_ptr const _tc_Data_T = std::addressof(_tao_tc_Data_T);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
@@ -179,9 +176,8 @@ Data_T::_tao_obv_truncatable_repo_ids (Repository_Id_List& ids) const
 void
 Data_T::_tao_any_destructor (void *_tao_void_pointer)
 {
-  Data_T *_tao_tmp_pointer =
-    static_cast<Data_T *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  Data_T *tmp = static_cast<Data_T *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -397,9 +393,8 @@ User_T::User_T ()
 void
 User_T::_tao_any_destructor (void *_tao_void_pointer)
 {
-  User_T *_tao_tmp_pointer =
-    static_cast<User_T *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  User_T *tmp = static_cast<User_T *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 User_T_ptr
@@ -482,8 +477,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:User_T:1.0",
     "User_T");
   
-::CORBA::TypeCode_ptr const _tc_User_T =
-  &_tao_tc_User_T;
+::CORBA::TypeCode_ptr const _tc_User_T = std::addressof(_tao_tc_User_T);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
 
@@ -501,8 +495,7 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_AMH_User_TExceptionHolder,
     0);
   
-::CORBA::TypeCode_ptr const _tc_AMH_User_TExceptionHolder =
-  &_tao_tc_AMH_User_TExceptionHolder;
+::CORBA::TypeCode_ptr const _tc_AMH_User_TExceptionHolder = std::addressof(_tao_tc_AMH_User_TExceptionHolder);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
@@ -554,9 +547,8 @@ AMH_User_TExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_List& id
 void
 AMH_User_TExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_User_TExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_User_TExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_User_TExceptionHolder *tmp = static_cast<AMH_User_TExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -650,7 +642,7 @@ AMH_User_TExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_User_TExceptionHolder::raise_getLoginTime ()
@@ -660,7 +652,7 @@ AMH_User_TExceptionHolder::raise_getLoginTime ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_User_TExceptionHolder::raise_sendc_getLoginTime ()
@@ -709,9 +701,8 @@ AMH_User_TResponseHandler::AMH_User_TResponseHandler ()
 {}void
 AMH_User_TResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_User_TResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_User_TResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_User_TResponseHandler *tmp = static_cast<AMH_User_TResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMH_User_TResponseHandler_ptr
@@ -797,8 +788,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMH_User_TResponseHandler:1.0",
     "AMH_User_TResponseHandler");
   
-::CORBA::TypeCode_ptr const _tc_AMH_User_TResponseHandler =
-  &_tao_tc_AMH_User_TResponseHandler;
+::CORBA::TypeCode_ptr const _tc_AMH_User_TResponseHandler = std::addressof(_tao_tc_AMH_User_TResponseHandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
 
@@ -970,9 +960,8 @@ AMI_User_THandler::AMI_User_THandler ()
 void
 AMI_User_THandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_User_THandler *_tao_tmp_pointer =
-    static_cast<AMI_User_THandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_User_THandler *tmp = static_cast<AMI_User_THandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMI_User_THandler_ptr
@@ -1056,8 +1045,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMI_User_THandler:1.0",
     "AMI_User_THandler");
   
-::CORBA::TypeCode_ptr const _tc_AMI_User_THandler =
-  &_tao_tc_AMI_User_THandler;
+::CORBA::TypeCode_ptr const _tc_AMI_User_THandler = std::addressof(_tao_tc_AMI_User_THandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43
 

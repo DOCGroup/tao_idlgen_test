@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:767
 
-#ifndef _TAO_IDL_PRIMTYPESA_Z2Z1WY_H_
-#define _TAO_IDL_PRIMTYPESA_Z2Z1WY_H_
+#ifndef _TAO_IDL_PRIMTYPESA_6O1DGP_H_
+#define _TAO_IDL_PRIMTYPESA_6O1DGP_H_
 
 #include /**/ "ace/pre.h"
 

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_BUG_3821_REGRESSIONC_X8TCE4_H_
-#define _TAO_IDL_BUG_3821_REGRESSIONC_X8TCE4_H_
+#ifndef _TAO_IDL_BUG_3821_REGRESSIONC_PFDM3W_H_
+#define _TAO_IDL_BUG_3821_REGRESSIONC_PFDM3W_H_
 
 #include /**/ "ace/pre.h"
 
@@ -2079,7 +2079,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1643
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "Bug_3821_RegressionC.inl"

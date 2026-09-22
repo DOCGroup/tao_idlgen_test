@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_TIHNMR_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSC_TIHNMR_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_WJS35Q_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSC_WJS35Q_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1521,7 +1521,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_nestedSeqStruct__tao_seq__tao_seq_outside__inside_7_H_ */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1643
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "sequence_anonymousC.inl"

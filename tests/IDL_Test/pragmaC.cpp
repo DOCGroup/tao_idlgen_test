@@ -80,9 +80,8 @@ hello::hello ()
 void
 hello::_tao_any_destructor (void *_tao_void_pointer)
 {
-  hello *_tao_tmp_pointer =
-    static_cast<hello *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  hello *tmp = static_cast<hello *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 hello_ptr
@@ -206,9 +205,8 @@ AMH_helloExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_List& ids
 void
 AMH_helloExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_helloExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_helloExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_helloExceptionHolder *tmp = static_cast<AMH_helloExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 AMH_helloExceptionHolder::~AMH_helloExceptionHolder ()
@@ -370,9 +368,8 @@ AMH_helloResponseHandler::AMH_helloResponseHandler ()
 {}void
 AMH_helloResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_helloResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_helloResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_helloResponseHandler *tmp = static_cast<AMH_helloResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMH_helloResponseHandler_ptr
@@ -490,9 +487,8 @@ AMI_helloHandler::AMI_helloHandler ()
 void
 AMI_helloHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_helloHandler *_tao_tmp_pointer =
-    static_cast<AMI_helloHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_helloHandler *tmp = static_cast<AMI_helloHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMI_helloHandler_ptr
@@ -592,9 +588,8 @@ Riot::operator= (const ::Riot &_tao_excp)
 
 void Riot::_tao_any_destructor (void *_tao_void_pointer)
 {
-  Riot *_tao_tmp_pointer =
-    static_cast<Riot *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  Riot *tmp = static_cast<Riot *> (_tao_void_pointer);
+  delete tmp;
 }
 
 Riot *
@@ -688,9 +683,8 @@ goodbye::goodbye ()
 void
 goodbye::_tao_any_destructor (void *_tao_void_pointer)
 {
-  goodbye *_tao_tmp_pointer =
-    static_cast<goodbye *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  goodbye *tmp = static_cast<goodbye *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 goodbye_ptr
@@ -814,9 +808,8 @@ AMH_goodbyeExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_List& i
 void
 AMH_goodbyeExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_goodbyeExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_goodbyeExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_goodbyeExceptionHolder *tmp = static_cast<AMH_goodbyeExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 AMH_goodbyeExceptionHolder::~AMH_goodbyeExceptionHolder ()
@@ -978,9 +971,8 @@ AMH_goodbyeResponseHandler::AMH_goodbyeResponseHandler ()
 {}void
 AMH_goodbyeResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_goodbyeResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_goodbyeResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_goodbyeResponseHandler *tmp = static_cast<AMH_goodbyeResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMH_goodbyeResponseHandler_ptr
@@ -1098,9 +1090,8 @@ AMI_goodbyeHandler::AMI_goodbyeHandler ()
 void
 AMI_goodbyeHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_goodbyeHandler *_tao_tmp_pointer =
-    static_cast<AMI_goodbyeHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_goodbyeHandler *tmp = static_cast<AMI_goodbyeHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMI_goodbyeHandler_ptr
@@ -1200,9 +1191,8 @@ A::my_exception::operator= (const ::A::my_exception &_tao_excp)
 
 void A::my_exception::_tao_any_destructor (void *_tao_void_pointer)
 {
-  my_exception *_tao_tmp_pointer =
-    static_cast<my_exception *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  my_exception *tmp = static_cast<my_exception *> (_tao_void_pointer);
+  delete tmp;
 }
 
 A::my_exception *
@@ -1296,9 +1286,8 @@ salutation::sayonara::sayonara ()
 void
 salutation::sayonara::_tao_any_destructor (void *_tao_void_pointer)
 {
-  sayonara *_tao_tmp_pointer =
-    static_cast<sayonara *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  sayonara *tmp = static_cast<sayonara *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 salutation::sayonara_ptr
@@ -1422,9 +1411,8 @@ salutation::AMH_sayonaraExceptionHolder::_tao_obv_truncatable_repo_ids (Reposito
 void
 salutation::AMH_sayonaraExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_sayonaraExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_sayonaraExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_sayonaraExceptionHolder *tmp = static_cast<AMH_sayonaraExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 salutation::AMH_sayonaraExceptionHolder::~AMH_sayonaraExceptionHolder ()
@@ -1586,9 +1574,8 @@ salutation::AMH_sayonaraResponseHandler::AMH_sayonaraResponseHandler ()
 {}void
 salutation::AMH_sayonaraResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_sayonaraResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_sayonaraResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_sayonaraResponseHandler *tmp = static_cast<AMH_sayonaraResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 salutation::AMH_sayonaraResponseHandler_ptr
@@ -1706,9 +1693,8 @@ salutation::AMI_sayonaraHandler::AMI_sayonaraHandler ()
 void
 salutation::AMI_sayonaraHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_sayonaraHandler *_tao_tmp_pointer =
-    static_cast<AMI_sayonaraHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_sayonaraHandler *tmp = static_cast<AMI_sayonaraHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 salutation::AMI_sayonaraHandler_ptr
@@ -1824,9 +1810,8 @@ ciao::ciao ()
 void
 ciao::_tao_any_destructor (void *_tao_void_pointer)
 {
-  ciao *_tao_tmp_pointer =
-    static_cast<ciao *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  ciao *tmp = static_cast<ciao *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 ciao_ptr
@@ -1950,9 +1935,8 @@ AMH_ciaoExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_List& ids)
 void
 AMH_ciaoExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_ciaoExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_ciaoExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_ciaoExceptionHolder *tmp = static_cast<AMH_ciaoExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 AMH_ciaoExceptionHolder::~AMH_ciaoExceptionHolder ()
@@ -2114,9 +2098,8 @@ AMH_ciaoResponseHandler::AMH_ciaoResponseHandler ()
 {}void
 AMH_ciaoResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_ciaoResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_ciaoResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_ciaoResponseHandler *tmp = static_cast<AMH_ciaoResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMH_ciaoResponseHandler_ptr
@@ -2234,9 +2217,8 @@ AMI_ciaoHandler::AMI_ciaoHandler ()
 void
 AMI_ciaoHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_ciaoHandler *_tao_tmp_pointer =
-    static_cast<AMI_ciaoHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_ciaoHandler *tmp = static_cast<AMI_ciaoHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMI_ciaoHandler_ptr
@@ -2352,9 +2334,8 @@ aloha::aloha ()
 void
 aloha::_tao_any_destructor (void *_tao_void_pointer)
 {
-  aloha *_tao_tmp_pointer =
-    static_cast<aloha *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  aloha *tmp = static_cast<aloha *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 aloha_ptr
@@ -2478,9 +2459,8 @@ AMH_alohaExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_List& ids
 void
 AMH_alohaExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_alohaExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_alohaExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_alohaExceptionHolder *tmp = static_cast<AMH_alohaExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 AMH_alohaExceptionHolder::~AMH_alohaExceptionHolder ()
@@ -2642,9 +2622,8 @@ AMH_alohaResponseHandler::AMH_alohaResponseHandler ()
 {}void
 AMH_alohaResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_alohaResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_alohaResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_alohaResponseHandler *tmp = static_cast<AMH_alohaResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMH_alohaResponseHandler_ptr
@@ -2762,9 +2741,8 @@ AMI_alohaHandler::AMI_alohaHandler ()
 void
 AMI_alohaHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_alohaHandler *_tao_tmp_pointer =
-    static_cast<AMI_alohaHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_alohaHandler *tmp = static_cast<AMI_alohaHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMI_alohaHandler_ptr

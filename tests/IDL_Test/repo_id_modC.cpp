@@ -77,9 +77,8 @@ gleep::schmooze::schmooze ()
 {}void
 gleep::schmooze::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schmooze *_tao_tmp_pointer =
-    static_cast<schmooze *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schmooze *tmp = static_cast<schmooze *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::schmooze_ptr
@@ -195,9 +194,8 @@ gleep::schmeer::schmeer ()
 {}void
 gleep::schmeer::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schmeer *_tao_tmp_pointer =
-    static_cast<schmeer *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schmeer *tmp = static_cast<schmeer *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::schmeer_ptr
@@ -313,9 +311,8 @@ gleep::schlemiel::schlemiel ()
 {}void
 gleep::schlemiel::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schlemiel *_tao_tmp_pointer =
-    static_cast<schlemiel *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schlemiel *tmp = static_cast<schlemiel *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::schlemiel_ptr
@@ -431,9 +428,8 @@ gleep::spilkis::spilkis ()
 {}void
 gleep::spilkis::_tao_any_destructor (void *_tao_void_pointer)
 {
-  spilkis *_tao_tmp_pointer =
-    static_cast<spilkis *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  spilkis *tmp = static_cast<spilkis *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::spilkis_ptr
@@ -549,9 +545,8 @@ gleep::floop::schmuck::schmuck ()
 {}void
 gleep::floop::schmuck::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schmuck *_tao_tmp_pointer =
-    static_cast<schmuck *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schmuck *tmp = static_cast<schmuck *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::floop::schmuck_ptr
@@ -667,9 +662,8 @@ gleep::floop::schmendrick::schmendrick ()
 {}void
 gleep::floop::schmendrick::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schmendrick *_tao_tmp_pointer =
-    static_cast<schmendrick *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schmendrick *tmp = static_cast<schmendrick *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::floop::schmendrick_ptr
@@ -785,9 +779,8 @@ gleep::floop::verklempt::schlemazel::schlemazel ()
 {}void
 gleep::floop::verklempt::schlemazel::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schlemazel *_tao_tmp_pointer =
-    static_cast<schlemazel *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schlemazel *tmp = static_cast<schlemazel *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::floop::verklempt::schlemazel_ptr
@@ -903,9 +896,8 @@ gleep::schmegegging::schmegegging ()
 {}void
 gleep::schmegegging::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schmegegging *_tao_tmp_pointer =
-    static_cast<schmegegging *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schmegegging *tmp = static_cast<schmegegging *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::schmegegging_ptr

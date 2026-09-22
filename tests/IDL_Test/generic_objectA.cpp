@@ -23,6 +23,7 @@
  **/
 
 #include "generic_objectA.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -46,7 +47,6 @@ static char const * const _tao_enumerators_ObjectType[] =
   {
     "OT_THIS",
     "OT_THAT"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -58,8 +58,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_ObjectType,
     2);
   
-::CORBA::TypeCode_ptr const _tc_ObjectType =
-  &_tao_tc_ObjectType;
+::CORBA::TypeCode_ptr const _tc_ObjectType = std::addressof(_tao_tc_ObjectType);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
 
@@ -84,8 +83,7 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_Selecter)/sizeof (_tao_cases_Selecter[0]),
     -1);
   
-::CORBA::TypeCode_ptr const _tc_Selecter =
-  &_tao_tc_Selecter;
+::CORBA::TypeCode_ptr const _tc_Selecter = std::addressof(_tao_tc_Selecter);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
 
@@ -96,8 +94,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:generic:1.0",
     "generic");
   
-::CORBA::TypeCode_ptr const _tc_generic =
-  &_tao_tc_generic;
+::CORBA::TypeCode_ptr const _tc_generic = std::addressof(_tao_tc_generic);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
 
@@ -115,8 +112,7 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_AMH_genericExceptionHolder,
     0);
   
-::CORBA::TypeCode_ptr const _tc_AMH_genericExceptionHolder =
-  &_tao_tc_AMH_genericExceptionHolder;// TAO extension - the virtual _type method.
+::CORBA::TypeCode_ptr const _tc_AMH_genericExceptionHolder = std::addressof(_tao_tc_AMH_genericExceptionHolder);// TAO extension - the virtual _type method.
 ::CORBA::TypeCode_ptr AMH_genericExceptionHolder::_tao_type () const
 {
   return ::_tc_AMH_genericExceptionHolder;
@@ -133,8 +129,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMH_genericResponseHandler:1.0",
     "AMH_genericResponseHandler");
   
-::CORBA::TypeCode_ptr const _tc_AMH_genericResponseHandler =
-  &_tao_tc_AMH_genericResponseHandler;
+::CORBA::TypeCode_ptr const _tc_AMH_genericResponseHandler = std::addressof(_tao_tc_AMH_genericResponseHandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
 
@@ -145,8 +140,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMI_genericHandler:1.0",
     "AMI_genericHandler");
   
-::CORBA::TypeCode_ptr const _tc_AMI_genericHandler =
-  &_tao_tc_AMI_genericHandler;
+::CORBA::TypeCode_ptr const _tc_AMI_genericHandler = std::addressof(_tao_tc_AMI_genericHandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:34
 

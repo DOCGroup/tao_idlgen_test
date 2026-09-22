@@ -27,6 +27,7 @@
 
 
 #include "string_valueC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -67,8 +68,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace include_test
 {
-  ::CORBA::TypeCode_ptr const _tc_StringTest =
-    &_tao_tc_include_test_StringTest;
+  ::CORBA::TypeCode_ptr const _tc_StringTest = std::addressof(_tao_tc_include_test_StringTest);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
@@ -121,9 +121,8 @@ include_test::StringTest::_tao_obv_truncatable_repo_ids (Repository_Id_List& ids
 void
 include_test::StringTest::_tao_any_destructor (void *_tao_void_pointer)
 {
-  StringTest *_tao_tmp_pointer =
-    static_cast<StringTest *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  StringTest *tmp = static_cast<StringTest *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.

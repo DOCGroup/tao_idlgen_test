@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_94DIYF_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_94DIYF_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_5Q5IDN_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_5Q5IDN_H_
 
 #include /**/ "ace/pre.h"
 
@@ -470,7 +470,7 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1643
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 
 

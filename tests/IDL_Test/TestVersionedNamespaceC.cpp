@@ -27,6 +27,7 @@
 
 
 #include "TestVersionedNamespaceC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -74,8 +75,7 @@ _tao_tc_M1_S1 (
 
 namespace M1
 {
-  ::CORBA::TypeCode_ptr const _tc_S1 =
-    &_tao_tc_M1_S1;
+  ::CORBA::TypeCode_ptr const _tc_S1 = std::addressof(_tao_tc_M1_S1);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
@@ -198,8 +198,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace M1
 {
-  ::CORBA::TypeCode_ptr const _tc_LI =
-    &_tao_tc_M1_LI;
+  ::CORBA::TypeCode_ptr const _tc_LI = std::addressof(_tao_tc_M1_LI);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -227,8 +226,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace M1
 {
-  ::CORBA::TypeCode_ptr const _tc_V =
-    &_tao_tc_M1_V;
+  ::CORBA::TypeCode_ptr const _tc_V = std::addressof(_tao_tc_M1_V);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52

@@ -27,6 +27,7 @@
 
 
 #include "Bug_2582_RegressionC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -59,7 +60,6 @@
 static char const * const _tao_enumerators_EncodingID_T[] =
   {
     "ENCODING_XML"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -71,8 +71,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_EncodingID_T,
     1);
   
-::CORBA::TypeCode_ptr const _tc_EncodingID_T =
-  &_tao_tc_EncodingID_T;
+::CORBA::TypeCode_ptr const _tc_EncodingID_T = std::addressof(_tao_tc_EncodingID_T);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
 
@@ -98,8 +97,7 @@ _tao_tc_Encoding_T (
   _tao_fields_Encoding_T,
   1);
 
-::CORBA::TypeCode_ptr const _tc_Encoding_T =
-  &_tao_tc_Encoding_T;
+::CORBA::TypeCode_ptr const _tc_Encoding_T = std::addressof(_tao_tc_Encoding_T);
 
 
 // TAO_IDL - Generated from
@@ -109,9 +107,8 @@ void
 Encoding_T::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  Encoding_T *_tao_tmp_pointer =
-    static_cast<Encoding_T *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  Encoding_T *tmp = static_cast<Encoding_T *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
@@ -125,8 +122,7 @@ static TAO::TypeCode::Alias<char const *,
     "EncodingID2_T",
     &_tc_EncodingID_T);
   
-::CORBA::TypeCode_ptr const _tc_EncodingID2_T =
-  &_tao_tc_EncodingID2_T;
+::CORBA::TypeCode_ptr const _tc_EncodingID2_T = std::addressof(_tao_tc_EncodingID2_T);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
 
@@ -303,9 +299,8 @@ FieldDevice_T::FieldDevice_T ()
 void
 FieldDevice_T::_tao_any_destructor (void *_tao_void_pointer)
 {
-  FieldDevice_T *_tao_tmp_pointer =
-    static_cast<FieldDevice_T *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  FieldDevice_T *tmp = static_cast<FieldDevice_T *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 FieldDevice_T_ptr
@@ -388,8 +383,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:FieldDevice_T:1.0",
     "FieldDevice_T");
   
-::CORBA::TypeCode_ptr const _tc_FieldDevice_T =
-  &_tao_tc_FieldDevice_T;
+::CORBA::TypeCode_ptr const _tc_FieldDevice_T = std::addressof(_tao_tc_FieldDevice_T);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
 
@@ -407,8 +401,7 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_AMH_FieldDevice_TExceptionHolder,
     0);
   
-::CORBA::TypeCode_ptr const _tc_AMH_FieldDevice_TExceptionHolder =
-  &_tao_tc_AMH_FieldDevice_TExceptionHolder;
+::CORBA::TypeCode_ptr const _tc_AMH_FieldDevice_TExceptionHolder = std::addressof(_tao_tc_AMH_FieldDevice_TExceptionHolder);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
@@ -460,9 +453,8 @@ AMH_FieldDevice_TExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_L
 void
 AMH_FieldDevice_TExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_FieldDevice_TExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_FieldDevice_TExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_FieldDevice_TExceptionHolder *tmp = static_cast<AMH_FieldDevice_TExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -556,7 +548,7 @@ AMH_FieldDevice_TExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_FieldDevice_TExceptionHolder::raise_getEncodingID ()
@@ -566,7 +558,7 @@ AMH_FieldDevice_TExceptionHolder::raise_getEncodingID ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_FieldDevice_TExceptionHolder::raise_getEncoding ()
@@ -576,7 +568,7 @@ AMH_FieldDevice_TExceptionHolder::raise_getEncoding ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_FieldDevice_TExceptionHolder::raise_sendc_getEncodingID ()
@@ -586,7 +578,7 @@ AMH_FieldDevice_TExceptionHolder::raise_sendc_getEncodingID ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_FieldDevice_TExceptionHolder::raise_sendc_getEncoding ()
@@ -635,9 +627,8 @@ AMH_FieldDevice_TResponseHandler::AMH_FieldDevice_TResponseHandler ()
 {}void
 AMH_FieldDevice_TResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_FieldDevice_TResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_FieldDevice_TResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_FieldDevice_TResponseHandler *tmp = static_cast<AMH_FieldDevice_TResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMH_FieldDevice_TResponseHandler_ptr
@@ -723,8 +714,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMH_FieldDevice_TResponseHandler:1.0",
     "AMH_FieldDevice_TResponseHandler");
   
-::CORBA::TypeCode_ptr const _tc_AMH_FieldDevice_TResponseHandler =
-  &_tao_tc_AMH_FieldDevice_TResponseHandler;
+::CORBA::TypeCode_ptr const _tc_AMH_FieldDevice_TResponseHandler = std::addressof(_tao_tc_AMH_FieldDevice_TResponseHandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
 
@@ -1025,9 +1015,8 @@ AMI_FieldDevice_THandler::AMI_FieldDevice_THandler ()
 void
 AMI_FieldDevice_THandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_FieldDevice_THandler *_tao_tmp_pointer =
-    static_cast<AMI_FieldDevice_THandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_FieldDevice_THandler *tmp = static_cast<AMI_FieldDevice_THandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMI_FieldDevice_THandler_ptr
@@ -1111,8 +1100,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMI_FieldDevice_THandler:1.0",
     "AMI_FieldDevice_THandler");
   
-::CORBA::TypeCode_ptr const _tc_AMI_FieldDevice_THandler =
-  &_tao_tc_AMI_FieldDevice_THandler;
+::CORBA::TypeCode_ptr const _tc_AMI_FieldDevice_THandler = std::addressof(_tao_tc_AMI_FieldDevice_THandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43
 

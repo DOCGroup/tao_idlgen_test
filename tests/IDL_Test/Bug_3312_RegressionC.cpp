@@ -62,7 +62,6 @@ static char const * const _tao_enumerators_CallMe_Colors[] =
     "Red",
     "Green",
     "Blue"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -77,8 +76,7 @@ static TAO::TypeCode::Enum<char const *,
 
 namespace CallMe
 {
-  ::CORBA::TypeCode_ptr const _tc_Colors =
-    &_tao_tc_CallMe_Colors;
+  ::CORBA::TypeCode_ptr const _tc_Colors = std::addressof(_tao_tc_CallMe_Colors);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
@@ -87,7 +85,6 @@ static char const * const _tao_enumerators_CallMe_YourColorBaby_ColorMe[] =
   {
     "Red",
     "Blue"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -99,8 +96,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_CallMe_YourColorBaby_ColorMe,
     2);
   
-::CORBA::TypeCode_ptr const CallMe::YourColorBaby::_tc_ColorMe =
-  &_tao_tc_CallMe_YourColorBaby_ColorMe;
+::CORBA::TypeCode_ptr const CallMe::YourColorBaby::_tc_ColorMe = std::addressof(_tao_tc_CallMe_YourColorBaby_ColorMe);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
@@ -108,7 +104,6 @@ static char const * const _tao_enumerators_CallMe_YourColorBaby_Val[] =
   {
     "one",
     "two"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -120,8 +115,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_CallMe_YourColorBaby_Val,
     2);
   
-::CORBA::TypeCode_ptr const CallMe::YourColorBaby::_tc_Val =
-  &_tao_tc_CallMe_YourColorBaby_Val;
+::CORBA::TypeCode_ptr const CallMe::YourColorBaby::_tc_Val = std::addressof(_tao_tc_CallMe_YourColorBaby_Val);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
 
@@ -162,59 +156,40 @@ CallMe::YourColorBaby::~YourColorBaby ()
 
 void CallMe::YourColorBaby::_tao_any_destructor (void *_tao_void_pointer)
 {
-  YourColorBaby *tmp =
-    static_cast<YourColorBaby *> (_tao_void_pointer);
+  YourColorBaby *tmp = static_cast<YourColorBaby *> (_tao_void_pointer);
   delete tmp;
 }
 
 CallMe::YourColorBaby &
 CallMe::YourColorBaby::operator= (const ::CallMe::YourColorBaby &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case CallMe::YourColorBaby::Red:
+        {
+          this->u_.c_1_ = 
+            u.u_.c_1_;
+        }
+        break;
+        case CallMe::YourColorBaby::Blue:
+        {
+          this->u_.c_2_ = u.u_.c_2_;
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case CallMe::YourColorBaby::Red:
-    {
-      this->u_.c_1_ = 
-        u.u_.c_1_;
-    }
-    break;
-    case CallMe::YourColorBaby::Blue:
-    {
-      this->u_.c_2_ = u.u_.c_2_;
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void CallMe::YourColorBaby::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case CallMe::YourColorBaby::Red:
-      
-    break;
-    
-    case CallMe::YourColorBaby::Blue:
-      
-    break;
-    
-    default:
-    break;
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -243,8 +218,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace CallMe
 {
-  ::CORBA::TypeCode_ptr const _tc_YourColorBaby =
-    &_tao_tc_CallMe_YourColorBaby;
+  ::CORBA::TypeCode_ptr const _tc_YourColorBaby = std::addressof(_tao_tc_CallMe_YourColorBaby);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
@@ -253,7 +227,6 @@ static char const * const _tao_enumerators_CallMe_YourCar_ColorMe[] =
   {
     "Green",
     "Pink"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -265,8 +238,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_CallMe_YourCar_ColorMe,
     2);
   
-::CORBA::TypeCode_ptr const CallMe::YourCar::_tc_ColorMe =
-  &_tao_tc_CallMe_YourCar_ColorMe;
+::CORBA::TypeCode_ptr const CallMe::YourCar::_tc_ColorMe = std::addressof(_tao_tc_CallMe_YourCar_ColorMe);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
 
@@ -306,58 +278,39 @@ CallMe::YourCar::~YourCar ()
 
 void CallMe::YourCar::_tao_any_destructor (void *_tao_void_pointer)
 {
-  YourCar *tmp =
-    static_cast<YourCar *> (_tao_void_pointer);
+  YourCar *tmp = static_cast<YourCar *> (_tao_void_pointer);
   delete tmp;
 }
 
 CallMe::YourCar &
 CallMe::YourCar::operator= (const ::CallMe::YourCar &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case CallMe::YourCar::Green:
+        {
+          this->u_.c_1_ = u.u_.c_1_;
+        }
+        break;
+        case CallMe::YourCar::Pink:
+        {
+          this->u_.c_2_ = u.u_.c_2_;
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case CallMe::YourCar::Green:
-    {
-      this->u_.c_1_ = u.u_.c_1_;
-    }
-    break;
-    case CallMe::YourCar::Pink:
-    {
-      this->u_.c_2_ = u.u_.c_2_;
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void CallMe::YourCar::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case CallMe::YourCar::Green:
-      
-    break;
-    
-    case CallMe::YourCar::Pink:
-      
-    break;
-    
-    default:
-    break;
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -386,8 +339,7 @@ static TAO::TypeCode::Union<char const *,
 
 namespace CallMe
 {
-  ::CORBA::TypeCode_ptr const _tc_YourCar =
-    &_tao_tc_CallMe_YourCar;
+  ::CORBA::TypeCode_ptr const _tc_YourCar = std::addressof(_tao_tc_CallMe_YourCar);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:34
