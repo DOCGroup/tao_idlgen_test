@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_DIF2S_DGKKJ7_CPP_
-#define _TAO_IDL_DIF2S_DGKKJ7_CPP_
+#ifndef _TAO_IDL_DIF2S_S8P6EN_CPP_
+#define _TAO_IDL_DIF2S_S8P6EN_CPP_
 
 
 #include "dif2S.h"

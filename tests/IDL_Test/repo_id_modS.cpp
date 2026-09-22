@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_REPO_ID_MODS_KN0I5I_CPP_
-#define _TAO_IDL_REPO_ID_MODS_KN0I5I_CPP_
+#ifndef _TAO_IDL_REPO_ID_MODS_8CBCH1_CPP_
+#define _TAO_IDL_REPO_ID_MODS_8CBCH1_CPP_
 
 
 #include "repo_id_modS.h"

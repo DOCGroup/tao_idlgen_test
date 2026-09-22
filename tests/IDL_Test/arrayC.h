@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_ARRAYC_RLBGZW_H_
-#define _TAO_IDL_ARRAYC_RLBGZW_H_
+#ifndef _TAO_IDL_ARRAYC_Z2ZJ7S_H_
+#define _TAO_IDL_ARRAYC_Z2ZJ7S_H_
 
 #include /**/ "ace/pre.h"
 
@@ -311,7 +311,7 @@ struct TAO_IDL_TEST_STUB_Export wrap
 
   static void _tao_any_destructor (void *);
   
-  inside_array member;
+  inside_array member {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1114,8 +1114,8 @@ public:
 
     static void _tao_any_destructor (void *);
     
-    testdata::Arraychar field_1;
-    testdata::ArrayDeChar field_2;
+    testdata::Arraychar field_1 {};
+    testdata::ArrayDeChar field_2 {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -2169,8 +2169,9 @@ namespace bug_2126
   private:
     ::CORBA::Boolean disc_;
 
-    union
+    union _tao_union_storage
     {
+      _tao_union_storage () {}
       // TAO_IDL - Generated from
       // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:369
 
@@ -2265,7 +2266,7 @@ namespace bug_2126
 
     static void _tao_any_destructor (void *);
     
-    bug_2126::FirstUnionArray my_struct_foo;
+    bug_2126::FirstUnionArray my_struct_foo {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -2321,8 +2322,9 @@ namespace bug_2126
   private:
     ::CORBA::Boolean disc_;
 
-    union
+    union _tao_union_storage
     {
+      _tao_union_storage () {}
       // TAO_IDL - Generated from
       // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:520
 
@@ -2417,7 +2419,7 @@ namespace bug_2126
 
     static void _tao_any_destructor (void *);
     
-    bug_2126::BdFirstUnionArray my_struct_foo;
+    bug_2126::BdFirstUnionArray my_struct_foo {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -2473,8 +2475,9 @@ namespace bug_2126
   private:
     ::CORBA::Boolean disc_;
 
-    union
+    union _tao_union_storage
     {
+      _tao_union_storage () {}
       // TAO_IDL - Generated from
       // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:520
 
@@ -2710,8 +2713,9 @@ public:
 private:
   ::CORBA::Long disc_;
 
-  union
+  union _tao_union_storage
   {
+    _tao_union_storage () {}
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:89
 
@@ -5009,7 +5013,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "arrayC.inl"

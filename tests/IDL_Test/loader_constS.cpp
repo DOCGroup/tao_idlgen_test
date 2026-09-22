@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_LOADER_CONSTS_YPHOOR_CPP_
-#define _TAO_IDL_LOADER_CONSTS_YPHOOR_CPP_
+#ifndef _TAO_IDL_LOADER_CONSTS_VKD57Y_CPP_
+#define _TAO_IDL_LOADER_CONSTS_VKD57Y_CPP_
 
 
 #include "loader_constS.h"

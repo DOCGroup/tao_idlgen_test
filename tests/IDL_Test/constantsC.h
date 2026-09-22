@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_CONSTANTSC_ID93Y1_H_
-#define _TAO_IDL_CONSTANTSC_ID93Y1_H_
+#ifndef _TAO_IDL_CONSTANTSC_W7E25R_H_
+#define _TAO_IDL_CONSTANTSC_W7E25R_H_
 
 #include /**/ "ace/pre.h"
 
@@ -193,7 +193,7 @@ const CORBA::ULong max_ulong_hex = 4294967295U;
 
 
 
-const CORBA::ULongLong AAA = ACE_UINT64_LITERAL (122192928000000000);
+const CORBA::ULongLong AAAX = ACE_UINT64_LITERAL (122192928000000000);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_constant/constant_ch.cpp:34
 
@@ -1323,7 +1323,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "constantsC.inl"

@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:453
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:455
 
-#ifndef _TAO_IDL_OLD_UNION2S_D8D8ZB_H_
-#define _TAO_IDL_OLD_UNION2S_D8D8ZB_H_
+#ifndef _TAO_IDL_OLD_UNION2S_3QNWR8_H_
+#define _TAO_IDL_OLD_UNION2S_3QNWR8_H_
 
 #include /**/ "ace/pre.h"
 

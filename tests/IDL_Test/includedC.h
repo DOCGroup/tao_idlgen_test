@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_INCLUDEDC_TCV9LV_H_
-#define _TAO_IDL_INCLUDEDC_TCV9LV_H_
+#ifndef _TAO_IDL_INCLUDEDC_VONYJ7_H_
+#define _TAO_IDL_INCLUDEDC_VONYJ7_H_
 
 #include /**/ "ace/pre.h"
 
@@ -492,8 +492,8 @@ namespace A
 
     static void _tao_any_destructor (void *);
     
-    ::TAO::String_Manager str;
-    A::MySeqA recursive_member;
+    ::TAO::String_Manager str {};
+    A::MySeqA recursive_member {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1603,7 +1603,7 @@ protected:
   virtual void truncation_hook ();
 
 private:
-  _tao_seq_CORBA_Long_ _pd_DeprecatedMember;
+  _tao_seq_CORBA_Long_ _pd_DeprecatedMember {};
   CORBA::Boolean require_truncation_ {false};
 };
 // TAO_IDL - Generated from
@@ -2343,7 +2343,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "includedC.inl"

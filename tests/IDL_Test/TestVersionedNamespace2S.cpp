@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_EKTHX1_CPP_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_EKTHX1_CPP_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_6Y5R7P_CPP_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_6Y5R7P_CPP_
 
 
 #include "TestVersionedNamespace2S.h"

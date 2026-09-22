@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_TYPEPREFIXS_LR1X9M_CPP_
-#define _TAO_IDL_TYPEPREFIXS_LR1X9M_CPP_
+#ifndef _TAO_IDL_TYPEPREFIXS_VOP89J_CPP_
+#define _TAO_IDL_TYPEPREFIXS_VOP89J_CPP_
 
 
 #include "typeprefixS.h"

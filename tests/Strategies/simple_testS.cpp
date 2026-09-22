@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_N8E0MS_CPP_
-#define _TAO_IDL_SIMPLE_TESTS_N8E0MS_CPP_
+#ifndef _TAO_IDL_SIMPLE_TESTS_E084UP_CPP_
+#define _TAO_IDL_SIMPLE_TESTS_E084UP_CPP_
 
 
 #include "simple_testS.h"

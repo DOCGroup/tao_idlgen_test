@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_ANONYMOUSC_YL05E9_H_
-#define _TAO_IDL_ANONYMOUSC_YL05E9_H_
+#ifndef _TAO_IDL_ANONYMOUSC_OFNN9S_H_
+#define _TAO_IDL_ANONYMOUSC_OFNN9S_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1194,7 +1194,7 @@ public:
       _float_seq_array_slice *_tao_to,
       const _float_seq_array_slice *_tao_from);
 
-  _float_seq_array float_seq_array;
+  _float_seq_array float_seq_array {};
   
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ch.cpp:47
@@ -1263,7 +1263,7 @@ public:
       _another_fsa_slice *_tao_to,
       const _another_fsa_slice *_tao_from);
 
-  _another_fsa another_fsa;
+  _another_fsa another_fsa {};
   
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ch.cpp:47
@@ -1299,7 +1299,7 @@ public:
       _long_array_1_slice *_tao_to,
       const _long_array_1_slice *_tao_from);
 
-  _long_array_1 long_array_1;
+  _long_array_1 long_array_1 {};
   
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ch.cpp:47
@@ -1335,7 +1335,7 @@ public:
       _long_array_2_slice *_tao_to,
       const _long_array_2_slice *_tao_from);
 
-  _long_array_2 long_array_2;
+  _long_array_2 long_array_2 {};
 
   Nested_Anon ();
   Nested_Anon (const Nested_Anon &);
@@ -2462,7 +2462,7 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "anonymousC.inl"

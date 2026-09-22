@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:453
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:455
 
-#ifndef _TAO_IDL_VALUETYPES_5BWGEO_H_
-#define _TAO_IDL_VALUETYPES_5BWGEO_H_
+#ifndef _TAO_IDL_VALUETYPES_6JFSVT_H_
+#define _TAO_IDL_VALUETYPES_6JFSVT_H_
 
 #include /**/ "ace/pre.h"
 
@@ -37,6 +37,7 @@
 #include "tao/PortableServer/Fixed_Size_SArgument_T.h"
 #include "tao/PortableServer/Var_Size_SArgument_T.h"
 #include "tao/PortableServer/Object_SArg_Traits.h"
+#include "tao/PortableServer/Special_Basic_SArguments.h"
 #include "tao/PortableServer/UB_String_SArguments.h"
 #include "tao/PortableServer/Object_SArg_Traits.h"
 #include "tao/PortableServer/get_arg.h"
@@ -100,6 +101,27 @@ namespace TAO
             ::MyValueType *,
             ::MyValueType_var,
             ::MyValueType_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+  // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
+
+  
+
+#if !defined (_DEFAULTINITIALIZEDVALUE__SARG_TRAITS_)
+#define _DEFAULTINITIALIZEDVALUE__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits< ::DefaultInitializedValue>
+    : public
+        Object_SArg_Traits_T<
+            ::DefaultInitializedValue *,
+            ::DefaultInitializedValue_var,
+            ::DefaultInitializedValue_out,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -181,16 +203,16 @@ namespace TAO
 
   
 
-#if !defined (_X_AXXX__SARG_TRAITS_)
-#define _X_AXXX__SARG_TRAITS_
+#if !defined (_X_VALUETYPE_AXXX__SARG_TRAITS_)
+#define _X_VALUETYPE_AXXX__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::X::AXXX>
+  class SArg_Traits< ::X_VALUETYPE::AXXX>
     : public
         Object_SArg_Traits_T<
-            ::X::AXXX *,
-            ::X::AXXX_var,
-            ::X::AXXX_out,
+            ::X_VALUETYPE::AXXX *,
+            ::X_VALUETYPE::AXXX_var,
+            ::X_VALUETYPE::AXXX_out,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -202,16 +224,16 @@ namespace TAO
 
   
 
-#if !defined (_X_BXXX__SARG_TRAITS_)
-#define _X_BXXX__SARG_TRAITS_
+#if !defined (_X_VALUETYPE_BXXX__SARG_TRAITS_)
+#define _X_VALUETYPE_BXXX__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::X::BXXX>
+  class SArg_Traits< ::X_VALUETYPE::BXXX>
     : public
         Object_SArg_Traits_T<
-            ::X::BXXX *,
-            ::X::BXXX_var,
-            ::X::BXXX_out,
+            ::X_VALUETYPE::BXXX *,
+            ::X_VALUETYPE::BXXX_var,
+            ::X_VALUETYPE::BXXX_out,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -224,10 +246,10 @@ namespace TAO
   
 
   template<>
-  class SArg_Traits< ::X::BSeq>
+  class SArg_Traits< ::X_VALUETYPE::BSeq>
     : public
         Var_Size_SArg_Traits_T<
-            ::X::BSeq,
+            ::X_VALUETYPE::BSeq,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -310,7 +332,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
 
-namespace POA_X
+namespace POA_X_VALUETYPE
 {
   
 
@@ -318,7 +340,7 @@ namespace POA_X
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
-} // module X
+} // module X_VALUETYPE
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
 

@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_OLD_STRUCTS_IB49NV_CPP_
-#define _TAO_IDL_OLD_STRUCTS_IB49NV_CPP_
+#ifndef _TAO_IDL_OLD_STRUCTS_Q8XIRT_CPP_
+#define _TAO_IDL_OLD_STRUCTS_Q8XIRT_CPP_
 
 
 #include "old_structS.h"

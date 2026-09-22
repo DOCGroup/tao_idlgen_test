@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSC_AXEYEP_H_
-#define _TAO_IDL_ARRAY_ANONYMOUSC_AXEYEP_H_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSC_PJPLWR_H_
+#define _TAO_IDL_ARRAY_ANONYMOUSC_PJPLWR_H_
 
 #include /**/ "ace/pre.h"
 
@@ -211,7 +211,7 @@ public:
 
     static void _tao_any_destructor (void *);
     
-    tdef::Bytes the_bytes;
+    tdef::Bytes the_bytes {};
     
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ch.cpp:47
@@ -247,7 +247,7 @@ public:
         _Longs_slice *_tao_to,
         const _Longs_slice *_tao_from);
 
-    _Longs Longs;
+    _Longs Longs {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -620,7 +620,7 @@ namespace ABCModule
         _rmtNodeId_slice *_tao_to,
         const _rmtNodeId_slice *_tao_from);
 
-    _rmtNodeId rmtNodeId;
+    _rmtNodeId rmtNodeId {};
     
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ch.cpp:47
@@ -656,7 +656,7 @@ namespace ABCModule
         _rmtDetails_slice *_tao_to,
         const _rmtDetails_slice *_tao_from);
 
-    _rmtDetails rmtDetails;
+    _rmtDetails rmtDetails {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -723,7 +723,7 @@ namespace ABCModule
         _rmtNodeId_slice *_tao_to,
         const _rmtNodeId_slice *_tao_from);
 
-    _rmtNodeId rmtNodeId;
+    _rmtNodeId rmtNodeId {};
     
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ch.cpp:47
@@ -759,7 +759,7 @@ namespace ABCModule
         _rmtDetails_slice *_tao_to,
         const _rmtDetails_slice *_tao_from);
 
-    _rmtDetails rmtDetails;
+    _rmtDetails rmtDetails {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1404,7 +1404,7 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ABCModule:
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "array_anonymousC.inl"

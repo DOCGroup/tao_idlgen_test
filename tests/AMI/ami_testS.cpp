@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_AMI_TESTS_T2W735_CPP_
-#define _TAO_IDL_AMI_TESTS_T2W735_CPP_
+#ifndef _TAO_IDL_AMI_TESTS_4BUHKB_CPP_
+#define _TAO_IDL_AMI_TESTS_4BUHKB_CPP_
 
 
 #include "ami_testS.h"

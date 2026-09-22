@@ -27,6 +27,8 @@
 
 
 #include "TestVersionedNamespace2C.h"
+#include "memory"
+#include "new"
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -1120,7 +1122,7 @@ M1::X::_tao_any_destructor (
 
 M1::BooleanUnion1::BooleanUnion1 ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
 }
 
@@ -1245,7 +1247,7 @@ namespace M1
 
 M1::BooleanUnion2::BooleanUnion2 ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
 }
 

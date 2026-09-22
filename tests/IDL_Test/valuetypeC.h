@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_VALUETYPEC_23NQLT_H_
-#define _TAO_IDL_VALUETYPEC_23NQLT_H_
+#ifndef _TAO_IDL_VALUETYPEC_FS6FSF_H_
+#define _TAO_IDL_VALUETYPEC_FS6FSF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -197,6 +197,113 @@ protected:
 
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_MyValueType;
 // TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:563
+
+
+
+#if !defined (_DEFAULTINITIALIZEDVALUE__VAR_OUT_CH_)
+#define _DEFAULTINITIALIZEDVALUE__VAR_OUT_CH_
+
+class DefaultInitializedValue;
+using DefaultInitializedValue_var = TAO_Value_Var_T<DefaultInitializedValue>;
+using DefaultInitializedValue_out = TAO_Value_Out_T<DefaultInitializedValue>;
+
+#endif /* end #if !defined */
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
+
+
+
+class TAO_IDL_TEST_STUB_Export DefaultInitializedValue
+  : public virtual ::CORBA::ValueBase
+{
+public:
+  // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:297
+
+  using _ptr_type = DefaultInitializedValue*;
+  using _var_type = DefaultInitializedValue_var;
+  using _out_type = DefaultInitializedValue_out;
+
+  static void _tao_any_destructor (void *);
+
+  static DefaultInitializedValue* _downcast (::CORBA::ValueBase *v);
+  
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      DefaultInitializedValue *&new_object);
+  
+  virtual const char* _tao_obv_repository_id () const;
+
+  virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+
+  static const char* _tao_obv_static_repository_id ();
+
+  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+
+public:
+  // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:451
+
+  virtual void boolean_value (const ::CORBA::Boolean) = 0;
+  virtual ::CORBA::Boolean boolean_value () const = 0;
+
+public:
+  // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:451
+
+  virtual void long_value (const ::CORBA::Long) = 0;
+  virtual ::CORBA::Long long_value () const = 0;
+  // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
+
+  
+
+protected:
+  DefaultInitializedValue ();
+  virtual ~DefaultInitializedValue ();
+
+  virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
+  virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
+  virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+  
+private:
+  DefaultInitializedValue (const DefaultInitializedValue &);
+  void operator= (const DefaultInitializedValue &);
+  
+protected:
+  virtual ::CORBA::Boolean
+  _tao_marshal__DefaultInitializedValue (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
+
+  virtual ::CORBA::Boolean
+  _tao_unmarshal__DefaultInitializedValue (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
+};
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_init_ch.cpp:56
+
+class TAO_IDL_TEST_STUB_Export DefaultInitializedValue_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+  DefaultInitializedValue_init ();
+
+  static DefaultInitializedValue_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  virtual ::CORBA::ValueBase *create_for_unmarshal ();
+
+  // TAO-specific extensions
+public:
+  virtual const char* tao_repository_id ();
+
+protected:
+  virtual ~DefaultInitializedValue_init ();
+};
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
+
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedValue;
+// TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/enum_ch.cpp:39
 
 enum ValueSort2
@@ -257,8 +364,9 @@ public:
 private:
   ValueSort2 disc_;
 
-  union
+  union _tao_union_storage
   {
+    _tao_union_storage () {}
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:290
 
@@ -572,15 +680,15 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_GetsDeprecatedMe
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:34
 
-namespace X
+namespace X_VALUETYPE
 {
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:563
 
   
 
-#if !defined (_X_AXXX__VAR_OUT_CH_)
-#define _X_AXXX__VAR_OUT_CH_
+#if !defined (_X_VALUETYPE_AXXX__VAR_OUT_CH_)
+#define _X_VALUETYPE_AXXX__VAR_OUT_CH_
 
   class AXXX;
   using AXXX_var = TAO_Value_Var_T<AXXX>;
@@ -651,8 +759,8 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AXXX;
 
 
 
-#if !defined (_X_BXXX__VAR_OUT_CH_)
-#define _X_BXXX__VAR_OUT_CH_
+#if !defined (_X_VALUETYPE_BXXX__VAR_OUT_CH_)
+#define _X_VALUETYPE_BXXX__VAR_OUT_CH_
 
 class BXXX;
 using BXXX_var = TAO_Value_Var_T<BXXX>;
@@ -717,8 +825,8 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_BXXX;
 
 
 
-#if !defined (_X_BSEQ_CH_)
-#define _X_BSEQ_CH_
+#if !defined (_X_VALUETYPE_BSEQ_CH_)
+#define _X_VALUETYPE_BSEQ_CH_
 
 class BSeq;
 typedef ::TAO_VarSeq_Var_T<BSeq> BSeq_var;
@@ -767,7 +875,7 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_BSeq;
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:62
 
 
-} // module X
+} // module X_VALUETYPE
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:34
 
@@ -935,8 +1043,8 @@ namespace ModSelection
 
         static void _tao_any_destructor (void *);
         
-        ::CORBA::Long theCriterionId;
-        ModSelection::SelectionDefns::CriterionExpr_var theRightExpr;
+        ::CORBA::Long theCriterionId {};
+        ModSelection::SelectionDefns::CriterionExpr_var theRightExpr {};
       };
       // TAO_IDL - Generated from
       // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -994,8 +1102,9 @@ namespace ModSelection
       private:
         ::CORBA::Boolean disc_;
 
-        union
+        union _tao_union_storage
         {
+          _tao_union_storage () {}
           // TAO_IDL - Generated from
           // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:476
 
@@ -1155,6 +1264,28 @@ namespace TAO
 
 #endif /* end #if !defined */
   // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
+
+  
+
+#if !defined (_DEFAULTINITIALIZEDVALUE__ARG_TRAITS_)
+#define _DEFAULTINITIALIZEDVALUE__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits< ::DefaultInitializedValue>
+    : public
+        Object_Arg_Traits_T<
+            ::DefaultInitializedValue *,
+            ::DefaultInitializedValue_var,
+            ::DefaultInitializedValue_out,
+            TAO::Value_Traits<DefaultInitializedValue>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+  // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
 
   
@@ -1231,17 +1362,17 @@ namespace TAO
 
   
 
-#if !defined (_X_AXXX__ARG_TRAITS_)
-#define _X_AXXX__ARG_TRAITS_
+#if !defined (_X_VALUETYPE_AXXX__ARG_TRAITS_)
+#define _X_VALUETYPE_AXXX__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::X::AXXX>
+  class Arg_Traits< ::X_VALUETYPE::AXXX>
     : public
         Object_Arg_Traits_T<
-            ::X::AXXX *,
-            ::X::AXXX_var,
-            ::X::AXXX_out,
-            TAO::Value_Traits<X::AXXX>,
+            ::X_VALUETYPE::AXXX *,
+            ::X_VALUETYPE::AXXX_var,
+            ::X_VALUETYPE::AXXX_out,
+            TAO::Value_Traits<X_VALUETYPE::AXXX>,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -1253,17 +1384,17 @@ namespace TAO
 
   
 
-#if !defined (_X_BXXX__ARG_TRAITS_)
-#define _X_BXXX__ARG_TRAITS_
+#if !defined (_X_VALUETYPE_BXXX__ARG_TRAITS_)
+#define _X_VALUETYPE_BXXX__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::X::BXXX>
+  class Arg_Traits< ::X_VALUETYPE::BXXX>
     : public
         Object_Arg_Traits_T<
-            ::X::BXXX *,
-            ::X::BXXX_var,
-            ::X::BXXX_out,
-            TAO::Value_Traits<X::BXXX>,
+            ::X_VALUETYPE::BXXX *,
+            ::X_VALUETYPE::BXXX_var,
+            ::X_VALUETYPE::BXXX_out,
+            TAO::Value_Traits<X_VALUETYPE::BXXX>,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -1276,10 +1407,10 @@ namespace TAO
   
 
   template<>
-  class Arg_Traits< ::X::BSeq>
+  class Arg_Traits< ::X_VALUETYPE::BSeq>
     : public
         Var_Size_Arg_Traits_T<
-            ::X::BSeq,
+            ::X_VALUETYPE::BSeq,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -1401,7 +1532,59 @@ protected:
   virtual void truncation_hook ();
 
 private:
-  ::TAO::String_Manager _pd_my_string_value;
+  ::TAO::String_Manager _pd_my_string_value {};
+  CORBA::Boolean require_truncation_ {false};
+};
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_ch.cpp:43
+
+
+
+// OBV_ class
+class TAO_IDL_TEST_STUB_Export OBV_DefaultInitializedValue
+  : public virtual DefaultInitializedValue,
+    public virtual ::CORBA::DefaultValueRefCountBase
+{
+
+public:
+  // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:451
+
+  virtual void boolean_value (const ::CORBA::Boolean);
+  virtual ::CORBA::Boolean boolean_value () const;
+
+public:
+  // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:451
+
+  virtual void long_value (const ::CORBA::Long);
+  virtual ::CORBA::Long long_value () const;
+
+public:
+  OBV_DefaultInitializedValue () = default;
+  OBV_DefaultInitializedValue (
+      ::CORBA::Boolean _tao_init_boolean_value,
+      ::CORBA::Long _tao_init_long_value
+    );
+  virtual ~OBV_DefaultInitializedValue ();
+
+public:
+  virtual ::CORBA::ValueBase *_copy_value ();
+  
+protected:
+  virtual ::CORBA::Boolean
+  _tao_marshal__DefaultInitializedValue (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+
+  virtual ::CORBA::Boolean
+  _tao_unmarshal__DefaultInitializedValue (TAO_InputCDR &, TAO_ChunkInfo &);
+
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  virtual void truncation_hook ();
+
+private:
+  ::CORBA::Boolean _pd_boolean_value {};
+  ::CORBA::Long _pd_long_value {};
   CORBA::Boolean require_truncation_ {false};
 };
 // TAO_IDL - Generated from
@@ -1454,8 +1637,8 @@ protected:
   virtual void truncation_hook ();
 
 private:
-  _tao_seq_RecValueType_ _pd_rec_value_types;
-  _tao_seq_RecValueType__2 _pd_rec_value_types2;
+  _tao_seq_RecValueType_ _pd_rec_value_types {};
+  _tao_seq_RecValueType__2 _pd_rec_value_types2 {};
   CORBA::Boolean require_truncation_ {false};
 };
 // TAO_IDL - Generated from
@@ -1498,13 +1681,13 @@ protected:
   virtual void truncation_hook ();
 
 private:
-  ::TAO::String_Manager _pd_StringMember;
+  ::TAO::String_Manager _pd_StringMember {};
   CORBA::Boolean require_truncation_ {false};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/obv_module.cpp:43
 
-namespace OBV_X
+namespace OBV_X_VALUETYPE
 {
 }
 // TAO_IDL - Generated from
@@ -1570,10 +1753,10 @@ namespace OBV_ModSelection
     virtual void truncation_hook ();
   
   private:
-    ModSelection::SelectionDefns::Criterion_var _pd_theLeftCriterion;
+    ModSelection::SelectionDefns::Criterion_var _pd_theLeftCriterion {};
     
 
-    ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr _pd_theRightCriterionExpr;
+    ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr _pd_theRightCriterionExpr {};
     CORBA::Boolean require_truncation_ {false};
   };
 }
@@ -1598,6 +1781,19 @@ namespace TAO
     static void add_ref (MyValueType *);
     static void remove_ref (MyValueType *);
     static void release (MyValueType *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_DEFAULTINITIALIZEDVALUE__TRAITS_)
+#define _DEFAULTINITIALIZEDVALUE__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<DefaultInitializedValue>
+  {
+    static void add_ref (DefaultInitializedValue *);
+    static void remove_ref (DefaultInitializedValue *);
+    static void release (DefaultInitializedValue *);
   };
 
 #endif /* end #if !defined */
@@ -1628,28 +1824,28 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-#if !defined (_X_AXXX__TRAITS_)
-#define _X_AXXX__TRAITS_
+#if !defined (_X_VALUETYPE_AXXX__TRAITS_)
+#define _X_VALUETYPE_AXXX__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Value_Traits<X::AXXX>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<X_VALUETYPE::AXXX>
   {
-    static void add_ref (X::AXXX *);
-    static void remove_ref (X::AXXX *);
-    static void release (X::AXXX *);
+    static void add_ref (X_VALUETYPE::AXXX *);
+    static void remove_ref (X_VALUETYPE::AXXX *);
+    static void release (X_VALUETYPE::AXXX *);
   };
 
 #endif /* end #if !defined */
 
-#if !defined (_X_BXXX__TRAITS_)
-#define _X_BXXX__TRAITS_
+#if !defined (_X_VALUETYPE_BXXX__TRAITS_)
+#define _X_VALUETYPE_BXXX__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Value_Traits<X::BXXX>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<X_VALUETYPE::BXXX>
   {
-    static void add_ref (X::BXXX *);
-    static void remove_ref (X::BXXX *);
-    static void release (X::BXXX *);
+    static void add_ref (X_VALUETYPE::BXXX *);
+    static void remove_ref (X_VALUETYPE::BXXX *);
+    static void release (X_VALUETYPE::BXXX *);
   };
 
 #endif /* end #if !defined */
@@ -1693,6 +1889,20 @@ namespace CORBA {
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, MyValueType *); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, MyValueType **); // non-copying
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, MyValueType *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/any_op_ch.cpp:42
+
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedValue *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedValue **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, DefaultInitializedValue *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1761,9 +1971,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X::AXXX *); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X::AXXX **); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, X::AXXX *&);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X_VALUETYPE::AXXX *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X_VALUETYPE::AXXX **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, X_VALUETYPE::AXXX *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1775,9 +1985,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X::BXXX *); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X::BXXX **); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, X::BXXX *&);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X_VALUETYPE::BXXX *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X_VALUETYPE::BXXX **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, X_VALUETYPE::BXXX *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1793,9 +2003,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const ::X::BSeq &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::X::BSeq*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const ::X::BSeq *&);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const ::X_VALUETYPE::BSeq &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::X_VALUETYPE::BSeq*); // noncopying version
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const ::X_VALUETYPE::BSeq *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1850,6 +2060,32 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const MyValueType *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, MyValueType *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:452
+
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (DefaultInitializedValue *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (DefaultInitializedValue *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_ch.cpp:47
+
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const DefaultInitializedValue *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedValue *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1982,8 +2218,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 namespace CORBA
 {
-  extern TAO_IDL_TEST_STUB_Export void add_ref (X::AXXX *);
-  extern TAO_IDL_TEST_STUB_Export void remove_ref (X::AXXX *);
+  extern TAO_IDL_TEST_STUB_Export void add_ref (X_VALUETYPE::AXXX *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (X_VALUETYPE::AXXX *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1994,8 +2230,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const X::AXXX *);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X::AXXX *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const X_VALUETYPE::AXXX *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X_VALUETYPE::AXXX *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2008,8 +2244,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 namespace CORBA
 {
-  extern TAO_IDL_TEST_STUB_Export void add_ref (X::BXXX *);
-  extern TAO_IDL_TEST_STUB_Export void remove_ref (X::BXXX *);
+  extern TAO_IDL_TEST_STUB_Export void add_ref (X_VALUETYPE::BXXX *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (X_VALUETYPE::BXXX *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2020,8 +2256,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const X::BXXX *);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X::BXXX *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const X_VALUETYPE::BXXX *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X_VALUETYPE::BXXX *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2031,23 +2267,23 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-#if !defined _TAO_CDR_OP_X_BSeq_H_
-#define _TAO_CDR_OP_X_BSeq_H_
+#if !defined _TAO_CDR_OP_X_VALUETYPE_BSeq_H_
+#define _TAO_CDR_OP_X_VALUETYPE_BSeq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const X::BSeq &_tao_sequence);
+    const X_VALUETYPE::BSeq &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
     TAO_InputCDR &strm,
-    X::BSeq &_tao_sequence);
+    X_VALUETYPE::BSeq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-#endif /* _TAO_CDR_OP_X_BSeq_H_ */
+#endif /* _TAO_CDR_OP_X_VALUETYPE_BSeq_H_ */
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:452
 
@@ -2125,7 +2361,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "valuetypeC.inl"

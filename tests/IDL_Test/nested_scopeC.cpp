@@ -27,6 +27,8 @@
 
 
 #include "nested_scopeC.h"
+#include "memory"
+#include "new"
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -113,7 +115,7 @@ skip::hump::skip::_tao_any_destructor (
 
 u_skip::u_hump::u_skip::u_skip ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -32768;
 }
 

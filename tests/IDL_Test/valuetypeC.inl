@@ -22,6 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
+#include "memory"
+#include "new"
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
 
@@ -33,6 +35,18 @@ ACE_INLINE const char*
 MyValueType::_tao_obv_static_repository_id ()
 {
   return "IDL:MyValueType:1.0";
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
+
+ACE_INLINE
+DefaultInitializedValue::DefaultInitializedValue ()
+{}
+
+ACE_INLINE const char*
+DefaultInitializedValue::_tao_obv_static_repository_id ()
+{
+  return "IDL:DefaultInitializedValue:1.0";
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
@@ -120,25 +134,25 @@ GetsDeprecatedMember::_tao_obv_static_repository_id ()
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
 
 ACE_INLINE
-X::AXXX::AXXX ()
+X_VALUETYPE::AXXX::AXXX ()
 {}
 
 ACE_INLINE const char*
-X::AXXX::_tao_obv_static_repository_id ()
+X_VALUETYPE::AXXX::_tao_obv_static_repository_id ()
 {
-  return "IDL:X/AXXX:1.0";
+  return "IDL:X_VALUETYPE/AXXX:1.0";
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
 
 ACE_INLINE
-X::BXXX::BXXX ()
+X_VALUETYPE::BXXX::BXXX ()
 {}
 
 ACE_INLINE const char*
-X::BXXX::_tao_obv_static_repository_id ()
+X_VALUETYPE::BXXX::_tao_obv_static_repository_id ()
 {
-  return "IDL:X/BXXX:1.0";
+  return "IDL:X_VALUETYPE/BXXX:1.0";
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43

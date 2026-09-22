@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONC_6Q8TOG_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONC_6Q8TOG_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONC_DALJ00_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONC_DALJ00_H_
 
 #include /**/ "ace/pre.h"
 
@@ -121,7 +121,7 @@ struct TAO_IDL_TEST_STUB_Export Encoding_T
 
   static void _tao_any_destructor (void *);
   
-  EncodingID_T id;
+  EncodingID_T id {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -944,7 +944,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "Bug_2582_RegressionC.inl"

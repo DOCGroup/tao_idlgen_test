@@ -22,6 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
+#include "memory"
+#include "new"
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
@@ -1484,7 +1486,7 @@ outer::_d () const
   return this->disc_;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1235
 
 // Accessor to set the member.
 ACE_INLINE
@@ -1516,7 +1518,7 @@ outer::first ()
   return *this->u_.first_;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1235
 
 // Accessor to set the member.
 ACE_INLINE
@@ -2544,7 +2546,7 @@ U87::b_87_1 (const UBar &val)
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = 1;
-  this->u_.b_87_1_ = val;
+  ::new (std::addressof(this->u_.b_87_1_)) UBar (val);
 }
 
 // Readonly get method.
@@ -2828,7 +2830,7 @@ U92::b_92_1 (const UBar &val)
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = 1;
-  this->u_.b_92_1_ = val;
+  ::new (std::addressof(this->u_.b_92_1_)) UBar (val);
 }
 
 // Readonly get method.
@@ -2879,7 +2881,7 @@ U92::b_92_3 (const UBar &val)
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = -2147483647;
-  this->u_.b_92_3_ = val;
+  ::new (std::addressof(this->u_.b_92_3_)) UBar (val);
 }
 
 // Readonly get method.

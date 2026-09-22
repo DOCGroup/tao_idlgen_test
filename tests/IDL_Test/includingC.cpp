@@ -27,6 +27,8 @@
 
 
 #include "includingC.h"
+#include "memory"
+#include "new"
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -85,7 +87,7 @@ static TAO::TypeCode::Enum<char const *,
 
 myUnion::myUnion ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (choice) -1;
 }
 
@@ -213,7 +215,7 @@ static TAO::TypeCode::Union<char const *,
 
 Bog::Bog ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (Agog) -1;
 }
 
@@ -1255,7 +1257,7 @@ TestStr::_tao_any_destructor (
 
 TestUn::TestUn ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 

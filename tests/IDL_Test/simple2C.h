@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_SIMPLE2C_KQNQ3X_H_
-#define _TAO_IDL_SIMPLE2C_KQNQ3X_H_
+#ifndef _TAO_IDL_SIMPLE2C_1DPNZE_H_
+#define _TAO_IDL_SIMPLE2C_1DPNZE_H_
 
 #include /**/ "ace/pre.h"
 
@@ -145,8 +145,8 @@ public:
   class TAO_IDL_TEST_STUB_Export OverFlow : public ::CORBA::UserException
   {
   public:
-    ::CORBA::Long a;
-    ::TAO::String_Manager msg;
+    ::CORBA::Long a {};
+    ::TAO::String_Manager msg {};
 
     OverFlow ();
     OverFlow (const OverFlow &);
@@ -190,8 +190,8 @@ public:
   class TAO_IDL_TEST_STUB_Export UnderFlow : public ::CORBA::UserException
   {
   public:
-    ::CORBA::Long b;
-    ::TAO::String_Manager msg;
+    ::CORBA::Long b {};
+    ::TAO::String_Manager msg {};
 
     UnderFlow ();
     UnderFlow (const UnderFlow &);
@@ -235,7 +235,7 @@ public:
   class TAO_IDL_TEST_STUB_Export BadNum : public ::CORBA::UserException
   {
   public:
-    vec10 c;
+    vec10 c {};
 
     BadNum ();
     BadNum (const BadNum &);
@@ -278,7 +278,7 @@ public:
   class TAO_IDL_TEST_STUB_Export UserError : public ::CORBA::UserException
   {
   public:
-    ::CORBA::Any reason;
+    ::CORBA::Any reason {};
 
     UserError ();
     UserError (const UserError &);
@@ -1134,7 +1134,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "simple2C.inl"

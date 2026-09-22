@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_OLD_SEQUENCEC_K06PCX_H_
-#define _TAO_IDL_OLD_SEQUENCEC_K06PCX_H_
+#ifndef _TAO_IDL_OLD_SEQUENCEC_KZMIE8_H_
+#define _TAO_IDL_OLD_SEQUENCEC_KZMIE8_H_
 
 #include /**/ "ace/pre.h"
 
@@ -380,9 +380,9 @@ struct TAO_IDL_TEST_STUB_Export TProgram
 
   static void _tao_any_destructor (void *);
   
-  ::TAO::String_Manager path;
-  cstring argv;
-  cstring envp;
+  ::TAO::String_Manager path {};
+  cstring argv {};
+  cstring envp {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -414,8 +414,8 @@ struct TAO_IDL_TEST_STUB_Export sfoo
 
   static void _tao_any_destructor (void *);
   
-  ::CORBA::Long f1;
-  ::CORBA::Char f2;
+  ::CORBA::Long f1 {};
+  ::CORBA::Char f2 {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1928,7 +1928,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "old_sequenceC.inl"

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_GENERIC_OBJECTC_NAW672_H_
-#define _TAO_IDL_GENERIC_OBJECTC_NAW672_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTC_YM69PX_H_
+#define _TAO_IDL_GENERIC_OBJECTC_YM69PX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -145,8 +145,9 @@ public:
 private:
   ObjectType disc_;
 
-  union
+  union _tao_union_storage
   {
+    _tao_union_storage () {}
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:369
 
@@ -827,7 +828,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "generic_objectC.inl"

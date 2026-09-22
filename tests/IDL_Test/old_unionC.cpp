@@ -27,6 +27,8 @@
 
 
 #include "old_unionC.h"
+#include "memory"
+#include "new"
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -105,7 +107,7 @@ OldUnion::Bar::_tao_any_destructor (
 
 OldUnion::Foo::Foo ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
@@ -121,7 +123,7 @@ OldUnion::Foo::Foo (const ::OldUnion::Foo &u)
     break;
     case 2:
     {
-      this->u_.y_ = u.u_.y_;
+      ::new (std::addressof(this->u_.y_)) OldUnion::Bar (u.u_.y_);
     }
     break;
     default:
@@ -165,7 +167,7 @@ OldUnion::Foo::operator= (const ::OldUnion::Foo &u)
     break;
     case 2:
     {
-      this->u_.y_ = u.u_.y_;
+      ::new (std::addressof(this->u_.y_)) OldUnion::Bar (u.u_.y_);
     }
     break;
     default:
@@ -237,7 +239,7 @@ namespace OldUnion
 
 OldUnion::Foo2::Foo2 ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = '\0';
 }
 

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_OLD_UNION2C_8022EB_H_
-#define _TAO_IDL_OLD_UNION2C_8022EB_H_
+#ifndef _TAO_IDL_OLD_UNION2C_4OCGSZ_H_
+#define _TAO_IDL_OLD_UNION2C_4OCGSZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -137,8 +137,9 @@ namespace OldUnion2
   private:
     OldUnion2::FooDisc disc_;
 
-    union
+    union _tao_union_storage
     {
+      _tao_union_storage () {}
       // TAO_IDL - Generated from
       // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:369
 
@@ -198,7 +199,7 @@ namespace OldUnion2
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
-    static ::CORBA::TypeCode_ptr const _tc_BarDisc;OldUnion2::Bar::BarDisc kind;
+    static ::CORBA::TypeCode_ptr const _tc_BarDisc;OldUnion2::Bar::BarDisc kind {};
     
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:258
@@ -255,8 +256,9 @@ namespace OldUnion2
     private:
       OldUnion2::Bar::BarDisc disc_;
 
-      union
+      union _tao_union_storage
       {
+        _tao_union_storage () {}
         // TAO_IDL - Generated from
         // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:369
 
@@ -277,7 +279,7 @@ namespace OldUnion2
 
     static ::CORBA::TypeCode_ptr const _tc_Foo;
 
-    OldUnion2::Bar::Foo addr;
+    OldUnion2::Bar::Foo addr {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -545,7 +547,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "old_union2C.inl"

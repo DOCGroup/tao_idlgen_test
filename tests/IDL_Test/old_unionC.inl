@@ -22,6 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
+#include "memory"
+#include "new"
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
@@ -81,7 +83,7 @@ OldUnion::Foo::y (const OldUnion::Bar &val)
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = 2;
-  this->u_.y_ = val;
+  ::new (std::addressof(this->u_.y_)) OldUnion::Bar (val);
 }
 
 // Readonly get method.
@@ -176,7 +178,7 @@ OldUnion::Foo2::x () const
   return this->u_.x_;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1235
 
 // Accessor to set the member.
 ACE_INLINE

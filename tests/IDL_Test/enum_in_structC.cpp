@@ -27,6 +27,8 @@
 
 
 #include "enum_in_structC.h"
+#include "memory"
+#include "new"
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -471,7 +473,7 @@ decl_heavy_struct::_m_un_copy (
 
 decl_heavy_struct::un::un ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 

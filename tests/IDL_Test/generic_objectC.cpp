@@ -27,6 +27,8 @@
 
 
 #include "generic_objectC.h"
+#include "memory"
+#include "new"
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
@@ -46,7 +48,7 @@
 
 Selecter::Selecter ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (ObjectType) -1;
 }
 

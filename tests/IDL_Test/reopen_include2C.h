@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2C_1E7L9Y_H_
-#define _TAO_IDL_REOPEN_INCLUDE2C_1E7L9Y_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2C_G0SH2G_H_
+#define _TAO_IDL_REOPEN_INCLUDE2C_G0SH2G_H_
 
 #include /**/ "ace/pre.h"
 
@@ -115,7 +115,7 @@ namespace frag
 
     static void _tao_any_destructor (void *);
     
-    ::CORBA::Short leash;
+    ::CORBA::Short leash {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -913,7 +913,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "reopen_include2C.inl"

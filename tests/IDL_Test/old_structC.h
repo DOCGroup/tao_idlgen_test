@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_OLD_STRUCTC_XKP7I5_H_
-#define _TAO_IDL_OLD_STRUCTC_XKP7I5_H_
+#ifndef _TAO_IDL_OLD_STRUCTC_USVHNQ_H_
+#define _TAO_IDL_OLD_STRUCTC_USVHNQ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -167,9 +167,9 @@ struct TAO_IDL_TEST_STUB_Export bar1
 
   static void _tao_any_destructor (void *);
   
-  ::CORBA::Long b1;
-  ::CORBA::Long b2;
-  string_20 b3;
+  ::CORBA::Long b1 {};
+  ::CORBA::Long b2 {};
+  string_20 b3 {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -201,8 +201,8 @@ struct TAO_IDL_TEST_STUB_Export bar2
 
   static void _tao_any_destructor (void *);
   
-  ::CORBA::Long b3;
-  bar1 b4;
+  ::CORBA::Long b3 {};
+  bar1 b4 {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -234,9 +234,9 @@ struct TAO_IDL_TEST_STUB_Export bar3
 
   static void _tao_any_destructor (void *);
   
-  ::CORBA::Long b1;
-  ::CORBA::Long b2;
-  ::CORBA::Long b3;
+  ::CORBA::Long b1 {};
+  ::CORBA::Long b2 {};
+  ::CORBA::Long b3 {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -268,11 +268,11 @@ struct TAO_IDL_TEST_STUB_Export bar4
 
   static void _tao_any_destructor (void *);
   
-  ::CORBA::Long b1;
-  bar2 b2;
-  ::CORBA::Long b3;
-  bar3 b4;
-  ::CORBA::Long b5;
+  ::CORBA::Long b1 {};
+  bar2 b2 {};
+  ::CORBA::Long b3 {};
+  bar3 b4 {};
+  ::CORBA::Long b5 {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1097,8 +1097,8 @@ struct TAO_IDL_TEST_STUB_Export CellPos
 
   static void _tao_any_destructor (void *);
   
-  Coord row;
-  Coord col;
+  Coord row {};
+  Coord col {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1130,8 +1130,8 @@ struct TAO_IDL_TEST_STUB_Export CellPos2
 
   static void _tao_any_destructor (void *);
   
-  ::CORBA::UShort row;
-  ::CORBA::UShort col;
+  ::CORBA::UShort row {};
+  ::CORBA::UShort col {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1163,9 +1163,9 @@ struct TAO_IDL_TEST_STUB_Export CellPos3
 
   static void _tao_any_destructor (void *);
   
-  Coord row;
-  Coord col;
-  ::CORBA::UShort col2;
+  Coord row {};
+  Coord col {};
+  ::CORBA::UShort col2 {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -2093,7 +2093,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "old_structC.inl"

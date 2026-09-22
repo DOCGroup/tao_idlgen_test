@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_PARAMSS_NPC40I_CPP_
-#define _TAO_IDL_PARAMSS_NPC40I_CPP_
+#ifndef _TAO_IDL_PARAMSS_PPCNZK_CPP_
+#define _TAO_IDL_PARAMSS_PPCNZK_CPP_
 
 
 #include "paramsS.h"

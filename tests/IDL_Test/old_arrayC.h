@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_OLD_ARRAYC_BJVNW2_H_
-#define _TAO_IDL_OLD_ARRAYC_BJVNW2_H_
+#ifndef _TAO_IDL_OLD_ARRAYC_7VWAYC_H_
+#define _TAO_IDL_OLD_ARRAYC_7VWAYC_H_
 
 #include /**/ "ace/pre.h"
 
@@ -313,9 +313,9 @@ namespace OldArray
 
     static void _tao_any_destructor (void *);
     
-    ::CORBA::Long a1;
-    OldArray::char_17 a2;
-    OldArray::char_10_2 a3;
+    ::CORBA::Long a1 {};
+    OldArray::char_17 a2 {};
+    OldArray::char_10_2 a3 {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -347,8 +347,8 @@ namespace OldArray
 
     static void _tao_any_destructor (void *);
     
-    ::CORBA::Long b1;
-    OldArray::A b2;
+    ::CORBA::Long b1 {};
+    OldArray::A b2 {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -380,8 +380,8 @@ namespace OldArray
 
     static void _tao_any_destructor (void *);
     
-    ::CORBA::Long c1;
-    ::CORBA::Long c2;
+    ::CORBA::Long c1 {};
+    ::CORBA::Long c2 {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1995,7 +1995,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "old_arrayC.inl"

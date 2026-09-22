@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_FWDC_3QMTVX_H_
-#define _TAO_IDL_FWDC_3QMTVX_H_
+#ifndef _TAO_IDL_FWDC_SC91KB_H_
+#define _TAO_IDL_FWDC_SC91KB_H_
 
 #include /**/ "ace/pre.h"
 
@@ -147,7 +147,7 @@ namespace scope_test
 
     static void _tao_any_destructor (void *);
     
-    scope_test::i_scope_test_var same_scope_member;
+    scope_test::i_scope_test_var same_scope_member {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -191,7 +191,7 @@ namespace mod2
 
     static void _tao_any_destructor (void *);
     
-    scope_test::i_scope_test_var ss_member;
+    scope_test::i_scope_test_var ss_member {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -222,7 +222,7 @@ namespace mod2
   class TAO_IDL_TEST_STUB_Export exp : public ::CORBA::UserException
   {
   public:
-    mod2::fwd_var fwd_mem;
+    mod2::fwd_var fwd_mem {};
 
     exp ();
     exp (const exp &);
@@ -2367,7 +2367,7 @@ protected:
   virtual void truncation_hook ();
 
 private:
-  obv_fwd::ForwardedType_var _pd_forwarded;
+  obv_fwd::ForwardedType_var _pd_forwarded {};
   CORBA::Boolean require_truncation_ {false};
 };
 }
@@ -2416,7 +2416,7 @@ protected:
   virtual void truncation_hook ();
 
 private:
-  ::CORBA::Long _pd_number;
+  ::CORBA::Long _pd_number {};
   CORBA::Boolean require_truncation_ {false};
 };
 }
@@ -3469,7 +3469,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "fwdC.inl"

@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_MODULES_TX94XB_CPP_
-#define _TAO_IDL_MODULES_TX94XB_CPP_
+#ifndef _TAO_IDL_MODULES_MWEP8M_CPP_
+#define _TAO_IDL_MODULES_MWEP8M_CPP_
 
 
 #include "moduleS.h"

@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_GPERFS_DC2XEL_CPP_
-#define _TAO_IDL_GPERFS_DC2XEL_CPP_
+#ifndef _TAO_IDL_GPERFS_Z0Z6KO_CPP_
+#define _TAO_IDL_GPERFS_Z0Z6KO_CPP_
 
 
 #include "gperfS.h"

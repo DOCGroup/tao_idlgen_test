@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_TYPECODEC_W7B4VT_H_
-#define _TAO_IDL_TYPECODEC_W7B4VT_H_
+#ifndef _TAO_IDL_TYPECODEC_N86CWB_H_
+#define _TAO_IDL_TYPECODEC_N86CWB_H_
 
 #include /**/ "ace/pre.h"
 
@@ -255,7 +255,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_MyModule_TypeCodeList_H_ */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "typecodeC.inl"

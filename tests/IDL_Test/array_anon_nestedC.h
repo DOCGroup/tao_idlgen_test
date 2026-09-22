@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_ARRAY_ANON_NESTEDC_5EQJE4_H_
-#define _TAO_IDL_ARRAY_ANON_NESTEDC_5EQJE4_H_
+#ifndef _TAO_IDL_ARRAY_ANON_NESTEDC_V242T3_H_
+#define _TAO_IDL_ARRAY_ANON_NESTEDC_V242T3_H_
 
 #include /**/ "ace/pre.h"
 
@@ -122,7 +122,7 @@ struct TAO_IDL_TEST_STUB_Export teststruct
       _b_slice *_tao_to,
       const _b_slice *_tao_from);
 
-  _b b;
+  _b b {};
   
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:258
@@ -185,12 +185,12 @@ struct TAO_IDL_TEST_STUB_Export teststruct
         _a_slice *_tao_to,
         const _a_slice *_tao_from);
 
-    _a a;
+    _a a {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
-  static ::CORBA::TypeCode_ptr const _tc_embeddedstruct;embeddedstruct estruct;
+  static ::CORBA::TypeCode_ptr const _tc_embeddedstruct;embeddedstruct estruct {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -393,7 +393,7 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, teststruct
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1649
 
 #if defined (__ACE_INLINE__)
 #include "array_anon_nestedC.inl"

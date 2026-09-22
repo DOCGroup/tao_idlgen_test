@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:632
 
-#ifndef _TAO_IDL_INHERITS_C0GYK9_CPP_
-#define _TAO_IDL_INHERITS_C0GYK9_CPP_
+#ifndef _TAO_IDL_INHERITS_8MK085_CPP_
+#define _TAO_IDL_INHERITS_8MK085_CPP_
 
 
 #include "inheritS.h"

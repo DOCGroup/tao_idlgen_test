@@ -27,6 +27,8 @@
 
 
 #include "interfaceC.h"
+#include "memory"
+#include "new"
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -11204,7 +11206,7 @@ ParamMod::ParameterTester::object_struct_type::_tao_any_destructor (
 
 ParamMod::ParameterTester::object_union_type::object_union_type ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
@@ -12363,7 +12365,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 A::U::U ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
 }
 
