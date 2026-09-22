@@ -52,7 +52,6 @@
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "union_anonymousC.inl"
@@ -215,8 +214,10 @@ void Element::ValueUnion::_reset ()
   switch (this->disc_)
   {
     case 1:
+    {
       delete this->u_.VUValue_;
       this->u_.VUValue_ = nullptr;
+    }
     break;
     default:
     break;
@@ -848,24 +849,34 @@ void decl_heavy_union::_reset ()
   switch (this->disc_)
   {
     case 2:
+    {
       decl_heavy_union::_m_en_arr_free (this->u_.m_en_arr_);
       this->u_.m_en_arr_ = nullptr;
+    }
     break;
     case 3:
+    {
       decl_heavy_union::_m_st_arr_free (this->u_.m_st_arr_);
       this->u_.m_st_arr_ = nullptr;
+    }
     break;
     case 4:
+    {
       decl_heavy_union::_m_un_arr_free (this->u_.m_un_arr_);
       this->u_.m_un_arr_ = nullptr;
+    }
     break;
     case 5:
+    {
       NamedLongArray_free (this->u_.m_named_long_array_);
       this->u_.m_named_long_array_ = nullptr;
+    }
     break;
     case 6:
+    {
       decl_heavy_union::_m_anon_long_array_free (this->u_.m_anon_long_array_);
       this->u_.m_anon_long_array_ = nullptr;
+    }
     break;
     default:
     break;

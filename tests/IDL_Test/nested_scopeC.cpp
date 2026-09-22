@@ -55,7 +55,6 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "nested_scopeC.inl"

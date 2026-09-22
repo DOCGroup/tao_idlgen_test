@@ -27,6 +27,7 @@
 
 
 #include "anonymousC.h"
+#include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
@@ -35,7 +36,6 @@
 #include "tao/Object_T.h"
 #include "tao/SystemException.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "anonymousC.inl"

@@ -27,12 +27,12 @@
 
 
 #include "repo_id_modC.h"
+#include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Valuetype/ValueFactory.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "repo_id_modC.inl"

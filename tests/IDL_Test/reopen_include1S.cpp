@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE1S_5RAZ9E_CPP_
-#define _TAO_IDL_REOPEN_INCLUDE1S_5RAZ9E_CPP_
+#ifndef _TAO_IDL_REOPEN_INCLUDE1S_UN0SDK_CPP_
+#define _TAO_IDL_REOPEN_INCLUDE1S_UN0SDK_CPP_
 
 
 #include "reopen_include1S.h"

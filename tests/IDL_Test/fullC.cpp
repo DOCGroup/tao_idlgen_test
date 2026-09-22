@@ -53,7 +53,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "fullC.inl"
@@ -853,8 +852,10 @@ void mod2::fwd::un::_reset ()
   switch (this->disc_)
   {
     case 0:
+    {
       delete this->u_.full_mem_;
       this->u_.full_mem_ = nullptr;
+    }
     break;
     default:
     break;

@@ -50,7 +50,6 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "old_union2C.inl"
@@ -153,8 +152,10 @@ void OldUnion2::Foo::_reset ()
   switch (this->disc_)
   {
     case OldUnion2::FOO2:
+    {
       ::CORBA::string_free (this->u_.y_);
       this->u_.y_ = nullptr;
+    }
     break;
     default:
     break;

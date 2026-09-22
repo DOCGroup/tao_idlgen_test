@@ -36,7 +36,6 @@
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "generic_objectC.inl"
@@ -132,12 +131,16 @@ void Selecter::_reset ()
   switch (this->disc_)
   {
     case ::OT_THIS:
+    {
       delete this->u_.this_object_;
       this->u_.this_object_ = nullptr;
+    }
     break;
     case ::OT_THAT:
+    {
       delete this->u_.that_object_;
       this->u_.that_object_ = nullptr;
+    }
     break;
     default:
     break;

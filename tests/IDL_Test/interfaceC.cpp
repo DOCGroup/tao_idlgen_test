@@ -54,7 +54,6 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "interfaceC.inl"
@@ -11174,12 +11173,16 @@ void ParamMod::ParameterTester::object_union_type::_reset ()
   switch (this->disc_)
   {
     case 0:
+    {
       ::CORBA::string_free (this->u_.str_);
       this->u_.str_ = nullptr;
+    }
     break;
     case 1:
+    {
       delete this->u_.pt_;
       this->u_.pt_ = nullptr;
+    }
     break;
     default:
     break;

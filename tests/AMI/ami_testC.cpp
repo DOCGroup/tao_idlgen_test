@@ -163,13 +163,13 @@ void A::DidTheRightThing::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_A_DidTheRightThing[] =
       {
         { "id", &CORBA::_tc_long },
         { "whatDidTheRightThing", &CORBA::_tc_string }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,

@@ -49,7 +49,6 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "anyunionC.inl"
@@ -157,8 +156,10 @@ void MyAnyUnion::_reset ()
   switch (this->disc_)
   {
     case ::ANYUNIONENUM2:
+    {
       delete this->u_.my_any_;
       this->u_.my_any_ = nullptr;
+    }
     break;
     default:
     break;

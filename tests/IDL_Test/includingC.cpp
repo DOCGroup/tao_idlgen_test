@@ -55,7 +55,6 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "includingC.inl"
@@ -163,8 +162,10 @@ void myUnion::_reset ()
   switch (this->disc_)
   {
     case ::dog:
+    {
       delete this->u_.cat_;
       this->u_.cat_ = nullptr;
+    }
     break;
     default:
     break;
@@ -1292,8 +1293,10 @@ void TestUn::_reset ()
   switch (this->disc_)
   {
     case 1:
+    {
       ::CORBA::string_free (this->u_.value2_);
       this->u_.value2_ = nullptr;
+    }
     break;
     default:
     break;

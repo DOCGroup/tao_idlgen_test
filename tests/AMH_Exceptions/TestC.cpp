@@ -46,7 +46,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "TestC.inl"
@@ -139,9 +138,9 @@ void Test::InvalidTimestamp::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const * const 
+  ::CORBA::TypeCode_ptr const *> const * const
     _tao_fields_Test_InvalidTimestamp = nullptr;
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -249,9 +248,9 @@ void Test::ServerOverload::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const * const 
+  ::CORBA::TypeCode_ptr const *> const * const
     _tao_fields_Test_ServerOverload = nullptr;
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -869,7 +868,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 Test::AMH_RoundtripResponseHandler::AMH_RoundtripResponseHandler ()
-{}void
+{}
+
+void
 Test::AMH_RoundtripResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_RoundtripResponseHandler *tmp = static_cast<AMH_RoundtripResponseHandler *> (_tao_void_pointer);

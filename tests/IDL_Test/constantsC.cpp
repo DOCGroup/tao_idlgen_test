@@ -27,12 +27,12 @@
 
 
 #include "constantsC.h"
+#include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "constantsC.inl"

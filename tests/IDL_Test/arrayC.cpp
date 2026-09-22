@@ -53,7 +53,6 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "arrayC.inl"
@@ -4721,16 +4720,22 @@ void B85::_reset ()
   switch (this->disc_)
   {
     case 1:
+    {
       B42_free (this->u_.b_85_1_);
       this->u_.b_85_1_ = nullptr;
+    }
     break;
     case 2:
+    {
       B43_free (this->u_.b_85_2_);
       this->u_.b_85_2_ = nullptr;
+    }
     break;
     case 3:
+    {
       B41_free (this->u_.b_85_3_);
       this->u_.b_85_3_ = nullptr;
+    }
     break;
     default:
     break;

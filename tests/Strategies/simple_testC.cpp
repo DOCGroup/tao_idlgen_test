@@ -27,6 +27,7 @@
 
 
 #include "simple_testC.h"
+#include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"

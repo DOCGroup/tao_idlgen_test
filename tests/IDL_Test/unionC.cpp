@@ -52,7 +52,6 @@
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "unionC.inl"
@@ -400,8 +399,10 @@ void foo::_reset ()
     case -3:
     case 4:
     case -1:
+    {
       ::CORBA::string_free (this->u_.foo_str_member_);
       this->u_.foo_str_member_ = nullptr;
+    }
     break;
   }
 }
@@ -585,8 +586,10 @@ void UnionDiscTest::CharUnion::_reset ()
   switch (this->disc_)
   {
     case 'a':
+    {
       ::CORBA::string_free (this->u_.value_);
       this->u_.value_ = nullptr;
+    }
     break;
     default:
     break;
@@ -2183,12 +2186,16 @@ void outer::_reset ()
   switch (this->disc_)
   {
     case ::out1:
+    {
       delete this->u_.first_;
       this->u_.first_ = nullptr;
+    }
     break;
     case ::out2:
+    {
       delete this->u_.second_;
       this->u_.second_ = nullptr;
+    }
     break;
     default:
     break;
@@ -2568,12 +2575,16 @@ void UnionTest3::IndType::_reset ()
   switch (this->disc_)
   {
     case UnionTest3::up_Level:
+    {
       delete this->u_.up_;
       this->u_.up_ = nullptr;
+    }
     break;
     case UnionTest3::down_Level:
+    {
       delete this->u_.down_;
       this->u_.down_ = nullptr;
+    }
     break;
     default:
     break;
@@ -2853,8 +2864,10 @@ void X::_reset ()
   switch (this->disc_)
   {
     case ::X_A:
+    {
       delete this->u_.a_;
       this->u_.a_ = nullptr;
+    }
     break;
     default:
     break;
@@ -2977,12 +2990,16 @@ void FieldValue::_reset ()
   {
     case ::FTYPE_CHAR:
     case ::FTYPE_VARCHAR:
+    {
       ::CORBA::string_free (this->u_.strValue_);
       this->u_.strValue_ = nullptr;
+    }
     break;
     default:
+    {
       ::CORBA::string_free (this->u_.defstr_);
       this->u_.defstr_ = nullptr;
+    }
     break;
   }
 }
@@ -3459,12 +3476,16 @@ void U85::_reset ()
   switch (this->disc_)
   {
     case 1:
+    {
       U41_free (this->u_.b_85_1_);
       this->u_.b_85_1_ = nullptr;
+    }
     break;
     case 2:
+    {
       U42_free (this->u_.b_85_2_);
       this->u_.b_85_2_ = nullptr;
+    }
     break;
     default:
     break;
@@ -3664,8 +3685,10 @@ void U86::_reset ()
   switch (this->disc_)
   {
     case 1:
+    {
       ::CORBA::string_free (this->u_.b_86_1_);
       this->u_.b_86_1_ = nullptr;
+    }
     break;
     default:
     break;
@@ -3775,8 +3798,10 @@ void U88::_reset ()
   switch (this->disc_)
   {
     case 1:
+    {
       UString_free (this->u_.b_86_1_);
       this->u_.b_86_1_ = nullptr;
+    }
     break;
     default:
     break;
@@ -4112,8 +4137,10 @@ void U89::_reset ()
   switch (this->disc_)
   {
     case 1:
+    {
       UBarArray_free (this->u_.b_87_1_);
       this->u_.b_87_1_ = nullptr;
+    }
     break;
     default:
     break;
@@ -4332,8 +4359,10 @@ void U91::_reset ()
   switch (this->disc_)
   {
     case 1:
+    {
       U90Array_free (this->u_.b_91_1_);
       this->u_.b_91_1_ = nullptr;
+    }
     break;
     default:
     break;
@@ -4563,12 +4592,16 @@ void U93::_reset ()
   switch (this->disc_)
   {
     case 1:
+    {
       UBarArray_free (this->u_.b_93_1_);
       this->u_.b_93_1_ = nullptr;
+    }
     break;
     default:
+    {
       UBarArray_free (this->u_.b_93_3_);
       this->u_.b_93_3_ = nullptr;
+    }
     break;
   }
 }
@@ -4696,12 +4729,16 @@ void U94::_reset ()
   switch (this->disc_)
   {
     case 1:
+    {
       U90Array_free (this->u_.b_94_1_);
       this->u_.b_94_1_ = nullptr;
+    }
     break;
     default:
+    {
       U90Array_free (this->u_.b_94_3_);
       this->u_.b_94_3_ = nullptr;
+    }
     break;
   }
 }
@@ -5241,8 +5278,10 @@ void DefaultInitializedArrayUnion::_reset ()
   switch (this->disc_)
   {
     case 0:
+    {
       DefaultInitializedLongArray_free (this->u_.value_);
       this->u_.value_ = nullptr;
+    }
     break;
     default:
     break;
@@ -5340,8 +5379,10 @@ void DefaultInitializedStringUnion::_reset ()
   switch (this->disc_)
   {
     case 0:
+    {
       ::CORBA::string_free (this->u_.value_);
       this->u_.value_ = nullptr;
+    }
     break;
     default:
     break;

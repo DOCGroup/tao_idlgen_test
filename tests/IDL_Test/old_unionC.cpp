@@ -50,7 +50,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include <cstring>
-#include <memory>
 
 #if !defined (__ACE_INLINE__)
 #include "old_unionC.inl"
@@ -303,8 +302,10 @@ void OldUnion::Foo2::_reset ()
   switch (this->disc_)
   {
     case 'b':
+    {
       delete this->u_.y_;
       this->u_.y_ = nullptr;
+    }
     break;
     default:
     break;
