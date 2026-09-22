@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_INTERFACEC_QDVK7E_H_
-#define _TAO_IDL_INTERFACEC_QDVK7E_H_
+#ifndef _TAO_IDL_INTERFACEC_VN75MN_H_
+#define _TAO_IDL_INTERFACEC_VN75MN_H_
 
 #include /**/ "ace/pre.h"
 
@@ -5041,29 +5041,15 @@ public:
       >
     string_1_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        string_1,
-        string_1_slice,
-        string_1_tag
-      >
-    string_1_forany;
+  typedef TAO_Array_Forany_T<string_1, string_1_slice, string_1_tag> string_1_forany;
 
-  static string_1_slice *
-  string_1_alloc ();
+  static string_1_slice *string_1_alloc ();
 
-  static void
-  string_1_free (
-      string_1_slice *_tao_slice);
-  
-  static string_1_slice *
-  string_1_dup (
-      const string_1_slice *_tao_slice);
-  
-  static void
-  string_1_copy (
-      string_1_slice *_tao_to,
-      const string_1_slice *_tao_from);
+  static void string_1_free (string_1_slice *_tao_slice);
+
+  static string_1_slice *string_1_dup (const string_1_slice *_tao_slice);
+
+  static void string_1_copy (string_1_slice *_tao_to, const string_1_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -5677,29 +5663,15 @@ namespace ParamMod
         >
       object_array_type_out;
 
-    typedef
-      TAO_Array_Forany_T<
-          object_array_type,
-          object_array_type_slice,
-          object_array_type_tag
-        >
-      object_array_type_forany;
+    typedef TAO_Array_Forany_T<object_array_type, object_array_type_slice, object_array_type_tag> object_array_type_forany;
 
-    static object_array_type_slice *
-    object_array_type_alloc ();
+    static object_array_type_slice *object_array_type_alloc ();
 
-    static void
-    object_array_type_free (
-        object_array_type_slice *_tao_slice);
-    
-    static object_array_type_slice *
-    object_array_type_dup (
-        const object_array_type_slice *_tao_slice);
-    
-    static void
-    object_array_type_copy (
-        object_array_type_slice *_tao_to,
-        const object_array_type_slice *_tao_from);
+    static void object_array_type_free (object_array_type_slice *_tao_slice);
+
+    static object_array_type_slice *object_array_type_dup (const object_array_type_slice *_tao_slice);
+
+    static void object_array_type_copy (object_array_type_slice *_tao_to, const object_array_type_slice *_tao_from);
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 

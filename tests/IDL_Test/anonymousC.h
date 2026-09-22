@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_ANONYMOUSC_EA5S8P_H_
-#define _TAO_IDL_ANONYMOUSC_EA5S8P_H_
+#ifndef _TAO_IDL_ANONYMOUSC_K25DAS_H_
+#define _TAO_IDL_ANONYMOUSC_K25DAS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -209,29 +209,15 @@ namespace Half_Anon
       >
     char_seq_array_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        char_seq_array,
-        char_seq_array_slice,
-        char_seq_array_tag
-      >
-    char_seq_array_forany;
+  typedef TAO_Array_Forany_T<char_seq_array, char_seq_array_slice, char_seq_array_tag> char_seq_array_forany;
 
-  extern TAO_IDL_TEST_STUB_Export char_seq_array_slice *
-  char_seq_array_alloc ();
+  extern TAO_IDL_TEST_STUB_Export char_seq_array_slice *char_seq_array_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  char_seq_array_free (
-      char_seq_array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export char_seq_array_slice *
-  char_seq_array_dup (
-      const char_seq_array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  char_seq_array_copy (
-      char_seq_array_slice *_tao_to,
-      const char_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void char_seq_array_free (char_seq_array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export char_seq_array_slice *char_seq_array_dup (const char_seq_array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void char_seq_array_copy (char_seq_array_slice *_tao_to, const char_seq_array_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ch.cpp:47
 
@@ -290,29 +276,15 @@ namespace Half_Anon
       >
     bd_ulong_seq_array_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        bd_ulong_seq_array,
-        bd_ulong_seq_array_slice,
-        bd_ulong_seq_array_tag
-      >
-    bd_ulong_seq_array_forany;
+  typedef TAO_Array_Forany_T<bd_ulong_seq_array, bd_ulong_seq_array_slice, bd_ulong_seq_array_tag> bd_ulong_seq_array_forany;
 
-  extern TAO_IDL_TEST_STUB_Export bd_ulong_seq_array_slice *
-  bd_ulong_seq_array_alloc ();
+  extern TAO_IDL_TEST_STUB_Export bd_ulong_seq_array_slice *bd_ulong_seq_array_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  bd_ulong_seq_array_free (
-      bd_ulong_seq_array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export bd_ulong_seq_array_slice *
-  bd_ulong_seq_array_dup (
-      const bd_ulong_seq_array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  bd_ulong_seq_array_copy (
-      bd_ulong_seq_array_slice *_tao_to,
-      const bd_ulong_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void bd_ulong_seq_array_free (bd_ulong_seq_array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export bd_ulong_seq_array_slice *bd_ulong_seq_array_dup (const bd_ulong_seq_array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void bd_ulong_seq_array_copy (bd_ulong_seq_array_slice *_tao_to, const bd_ulong_seq_array_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ch.cpp:47
 
@@ -373,29 +345,15 @@ namespace Half_Anon
       >
     ushort_seq_array_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        ushort_seq_array,
-        ushort_seq_array_slice,
-        ushort_seq_array_tag
-      >
-    ushort_seq_array_forany;
+  typedef TAO_Array_Forany_T<ushort_seq_array, ushort_seq_array_slice, ushort_seq_array_tag> ushort_seq_array_forany;
 
-  extern TAO_IDL_TEST_STUB_Export ushort_seq_array_slice *
-  ushort_seq_array_alloc ();
+  extern TAO_IDL_TEST_STUB_Export ushort_seq_array_slice *ushort_seq_array_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  ushort_seq_array_free (
-      ushort_seq_array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export ushort_seq_array_slice *
-  ushort_seq_array_dup (
-      const ushort_seq_array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  ushort_seq_array_copy (
-      ushort_seq_array_slice *_tao_to,
-      const ushort_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void ushort_seq_array_free (ushort_seq_array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export ushort_seq_array_slice *ushort_seq_array_dup (const ushort_seq_array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void ushort_seq_array_copy (ushort_seq_array_slice *_tao_to, const ushort_seq_array_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ch.cpp:47
 
@@ -454,29 +412,15 @@ namespace Half_Anon
       >
     bd_ushort_seq_array_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        bd_ushort_seq_array,
-        bd_ushort_seq_array_slice,
-        bd_ushort_seq_array_tag
-      >
-    bd_ushort_seq_array_forany;
+  typedef TAO_Array_Forany_T<bd_ushort_seq_array, bd_ushort_seq_array_slice, bd_ushort_seq_array_tag> bd_ushort_seq_array_forany;
 
-  extern TAO_IDL_TEST_STUB_Export bd_ushort_seq_array_slice *
-  bd_ushort_seq_array_alloc ();
+  extern TAO_IDL_TEST_STUB_Export bd_ushort_seq_array_slice *bd_ushort_seq_array_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  bd_ushort_seq_array_free (
-      bd_ushort_seq_array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export bd_ushort_seq_array_slice *
-  bd_ushort_seq_array_dup (
-      const bd_ushort_seq_array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  bd_ushort_seq_array_copy (
-      bd_ushort_seq_array_slice *_tao_to,
-      const bd_ushort_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void bd_ushort_seq_array_free (bd_ushort_seq_array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export bd_ushort_seq_array_slice *bd_ushort_seq_array_dup (const bd_ushort_seq_array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void bd_ushort_seq_array_copy (bd_ushort_seq_array_slice *_tao_to, const bd_ushort_seq_array_slice *_tao_from);
 
 
 // TAO_IDL - Generated from
@@ -1170,29 +1114,15 @@ public:
   struct _float_seq_array_tag {};
   
 
-  typedef
-    TAO_Array_Forany_T<
-        _float_seq_array,
-        _float_seq_array_slice,
-        _float_seq_array_tag
-      >
-    _float_seq_array_forany;
+  typedef TAO_Array_Forany_T<_float_seq_array, _float_seq_array_slice, _float_seq_array_tag> _float_seq_array_forany;
 
-  static _float_seq_array_slice *
-  _float_seq_array_alloc ();
+  static _float_seq_array_slice *_float_seq_array_alloc ();
 
-  static void
-  _float_seq_array_free (
-      _float_seq_array_slice *_tao_slice);
-  
-  static _float_seq_array_slice *
-  _float_seq_array_dup (
-      const _float_seq_array_slice *_tao_slice);
-  
-  static void
-  _float_seq_array_copy (
-      _float_seq_array_slice *_tao_to,
-      const _float_seq_array_slice *_tao_from);
+  static void _float_seq_array_free (_float_seq_array_slice *_tao_slice);
+
+  static _float_seq_array_slice *_float_seq_array_dup (const _float_seq_array_slice *_tao_slice);
+
+  static void _float_seq_array_copy (_float_seq_array_slice *_tao_to, const _float_seq_array_slice *_tao_from);
 
   _float_seq_array float_seq_array {};
   
@@ -1239,29 +1169,15 @@ public:
   struct _another_fsa_tag {};
   
 
-  typedef
-    TAO_Array_Forany_T<
-        _another_fsa,
-        _another_fsa_slice,
-        _another_fsa_tag
-      >
-    _another_fsa_forany;
+  typedef TAO_Array_Forany_T<_another_fsa, _another_fsa_slice, _another_fsa_tag> _another_fsa_forany;
 
-  static _another_fsa_slice *
-  _another_fsa_alloc ();
+  static _another_fsa_slice *_another_fsa_alloc ();
 
-  static void
-  _another_fsa_free (
-      _another_fsa_slice *_tao_slice);
-  
-  static _another_fsa_slice *
-  _another_fsa_dup (
-      const _another_fsa_slice *_tao_slice);
-  
-  static void
-  _another_fsa_copy (
-      _another_fsa_slice *_tao_to,
-      const _another_fsa_slice *_tao_from);
+  static void _another_fsa_free (_another_fsa_slice *_tao_slice);
+
+  static _another_fsa_slice *_another_fsa_dup (const _another_fsa_slice *_tao_slice);
+
+  static void _another_fsa_copy (_another_fsa_slice *_tao_to, const _another_fsa_slice *_tao_from);
 
   _another_fsa another_fsa {};
   
@@ -1275,29 +1191,15 @@ public:
   struct _long_array_1_tag {};
   
 
-  typedef
-    TAO_Array_Forany_T<
-        _long_array_1,
-        _long_array_1_slice,
-        _long_array_1_tag
-      >
-    _long_array_1_forany;
+  typedef TAO_Array_Forany_T<_long_array_1, _long_array_1_slice, _long_array_1_tag> _long_array_1_forany;
 
-  static _long_array_1_slice *
-  _long_array_1_alloc ();
+  static _long_array_1_slice *_long_array_1_alloc ();
 
-  static void
-  _long_array_1_free (
-      _long_array_1_slice *_tao_slice);
-  
-  static _long_array_1_slice *
-  _long_array_1_dup (
-      const _long_array_1_slice *_tao_slice);
-  
-  static void
-  _long_array_1_copy (
-      _long_array_1_slice *_tao_to,
-      const _long_array_1_slice *_tao_from);
+  static void _long_array_1_free (_long_array_1_slice *_tao_slice);
+
+  static _long_array_1_slice *_long_array_1_dup (const _long_array_1_slice *_tao_slice);
+
+  static void _long_array_1_copy (_long_array_1_slice *_tao_to, const _long_array_1_slice *_tao_from);
 
   _long_array_1 long_array_1 {};
   
@@ -1311,29 +1213,15 @@ public:
   struct _long_array_2_tag {};
   
 
-  typedef
-    TAO_Array_Forany_T<
-        _long_array_2,
-        _long_array_2_slice,
-        _long_array_2_tag
-      >
-    _long_array_2_forany;
+  typedef TAO_Array_Forany_T<_long_array_2, _long_array_2_slice, _long_array_2_tag> _long_array_2_forany;
 
-  static _long_array_2_slice *
-  _long_array_2_alloc ();
+  static _long_array_2_slice *_long_array_2_alloc ();
 
-  static void
-  _long_array_2_free (
-      _long_array_2_slice *_tao_slice);
-  
-  static _long_array_2_slice *
-  _long_array_2_dup (
-      const _long_array_2_slice *_tao_slice);
-  
-  static void
-  _long_array_2_copy (
-      _long_array_2_slice *_tao_to,
-      const _long_array_2_slice *_tao_from);
+  static void _long_array_2_free (_long_array_2_slice *_tao_slice);
+
+  static _long_array_2_slice *_long_array_2_dup (const _long_array_2_slice *_tao_slice);
+
+  static void _long_array_2_copy (_long_array_2_slice *_tao_to, const _long_array_2_slice *_tao_from);
 
   _long_array_2 long_array_2 {};
 

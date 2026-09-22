@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_UNIONC_SAER8O_H_
-#define _TAO_IDL_UNIONC_SAER8O_H_
+#ifndef _TAO_IDL_UNIONC_M33EXQ_H_
+#define _TAO_IDL_UNIONC_M33EXQ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -2461,29 +2461,15 @@ typedef
   U41
   U41_out;
 
-typedef
-  TAO_Array_Forany_T<
-      U41,
-      U41_slice,
-      U41_tag
-    >
-  U41_forany;
+typedef TAO_Array_Forany_T<U41, U41_slice, U41_tag> U41_forany;
 
-TAO_IDL_TEST_STUB_Export U41_slice *
-U41_alloc ();
+TAO_IDL_TEST_STUB_Export U41_slice *U41_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-U41_free (
-    U41_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void U41_free (U41_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export U41_slice *
-U41_dup (
-    const U41_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export U41_slice *U41_dup (const U41_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-U41_copy (
-    U41_slice *_tao_to,
-    const U41_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void U41_copy (U41_slice *_tao_to, const U41_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -2510,29 +2496,15 @@ typedef
   U42
   U42_out;
 
-typedef
-  TAO_Array_Forany_T<
-      U42,
-      U42_slice,
-      U42_tag
-    >
-  U42_forany;
+typedef TAO_Array_Forany_T<U42, U42_slice, U42_tag> U42_forany;
 
-TAO_IDL_TEST_STUB_Export U42_slice *
-U42_alloc ();
+TAO_IDL_TEST_STUB_Export U42_slice *U42_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-U42_free (
-    U42_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void U42_free (U42_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export U42_slice *
-U42_dup (
-    const U42_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export U42_slice *U42_dup (const U42_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-U42_copy (
-    U42_slice *_tao_to,
-    const U42_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void U42_copy (U42_slice *_tao_to, const U42_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -2641,29 +2613,15 @@ typedef
     >
   UString_out;
 
-typedef
-  TAO_Array_Forany_T<
-      UString,
-      UString_slice,
-      UString_tag
-    >
-  UString_forany;
+typedef TAO_Array_Forany_T<UString, UString_slice, UString_tag> UString_forany;
 
-TAO_IDL_TEST_STUB_Export UString_slice *
-UString_alloc ();
+TAO_IDL_TEST_STUB_Export UString_slice *UString_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-UString_free (
-    UString_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void UString_free (UString_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export UString_slice *
-UString_dup (
-    const UString_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export UString_slice *UString_dup (const UString_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-UString_copy (
-    UString_slice *_tao_to,
-    const UString_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void UString_copy (UString_slice *_tao_to, const UString_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -2878,29 +2836,15 @@ typedef
   UBarArray
   UBarArray_out;
 
-typedef
-  TAO_Array_Forany_T<
-      UBarArray,
-      UBarArray_slice,
-      UBarArray_tag
-    >
-  UBarArray_forany;
+typedef TAO_Array_Forany_T<UBarArray, UBarArray_slice, UBarArray_tag> UBarArray_forany;
 
-TAO_IDL_TEST_STUB_Export UBarArray_slice *
-UBarArray_alloc ();
+TAO_IDL_TEST_STUB_Export UBarArray_slice *UBarArray_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-UBarArray_free (
-    UBarArray_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void UBarArray_free (UBarArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export UBarArray_slice *
-UBarArray_dup (
-    const UBarArray_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export UBarArray_slice *UBarArray_dup (const UBarArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-UBarArray_copy (
-    UBarArray_slice *_tao_to,
-    const UBarArray_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void UBarArray_copy (UBarArray_slice *_tao_to, const UBarArray_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -3096,29 +3040,15 @@ typedef
   U90Array
   U90Array_out;
 
-typedef
-  TAO_Array_Forany_T<
-      U90Array,
-      U90Array_slice,
-      U90Array_tag
-    >
-  U90Array_forany;
+typedef TAO_Array_Forany_T<U90Array, U90Array_slice, U90Array_tag> U90Array_forany;
 
-TAO_IDL_TEST_STUB_Export U90Array_slice *
-U90Array_alloc ();
+TAO_IDL_TEST_STUB_Export U90Array_slice *U90Array_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-U90Array_free (
-    U90Array_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void U90Array_free (U90Array_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export U90Array_slice *
-U90Array_dup (
-    const U90Array_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export U90Array_slice *U90Array_dup (const U90Array_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-U90Array_copy (
-    U90Array_slice *_tao_to,
-    const U90Array_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void U90Array_copy (U90Array_slice *_tao_to, const U90Array_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -3473,29 +3403,15 @@ typedef
   DefaultInitializedLongArray
   DefaultInitializedLongArray_out;
 
-typedef
-  TAO_Array_Forany_T<
-      DefaultInitializedLongArray,
-      DefaultInitializedLongArray_slice,
-      DefaultInitializedLongArray_tag
-    >
-  DefaultInitializedLongArray_forany;
+typedef TAO_Array_Forany_T<DefaultInitializedLongArray, DefaultInitializedLongArray_slice, DefaultInitializedLongArray_tag> DefaultInitializedLongArray_forany;
 
-TAO_IDL_TEST_STUB_Export DefaultInitializedLongArray_slice *
-DefaultInitializedLongArray_alloc ();
+TAO_IDL_TEST_STUB_Export DefaultInitializedLongArray_slice *DefaultInitializedLongArray_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-DefaultInitializedLongArray_free (
-    DefaultInitializedLongArray_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void DefaultInitializedLongArray_free (DefaultInitializedLongArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export DefaultInitializedLongArray_slice *
-DefaultInitializedLongArray_dup (
-    const DefaultInitializedLongArray_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export DefaultInitializedLongArray_slice *DefaultInitializedLongArray_dup (const DefaultInitializedLongArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-DefaultInitializedLongArray_copy (
-    DefaultInitializedLongArray_slice *_tao_to,
-    const DefaultInitializedLongArray_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void DefaultInitializedLongArray_copy (DefaultInitializedLongArray_slice *_tao_to, const DefaultInitializedLongArray_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_OLD_SEQUENCEC_A03UTF_H_
-#define _TAO_IDL_OLD_SEQUENCEC_A03UTF_H_
+#ifndef _TAO_IDL_OLD_SEQUENCEC_BQORNL_H_
+#define _TAO_IDL_OLD_SEQUENCEC_BQORNL_H_
 
 #include /**/ "ace/pre.h"
 
@@ -443,29 +443,15 @@ typedef
   sfoo_ar
   sfoo_ar_out;
 
-typedef
-  TAO_Array_Forany_T<
-      sfoo_ar,
-      sfoo_ar_slice,
-      sfoo_ar_tag
-    >
-  sfoo_ar_forany;
+typedef TAO_Array_Forany_T<sfoo_ar, sfoo_ar_slice, sfoo_ar_tag> sfoo_ar_forany;
 
-TAO_IDL_TEST_STUB_Export sfoo_ar_slice *
-sfoo_ar_alloc ();
+TAO_IDL_TEST_STUB_Export sfoo_ar_slice *sfoo_ar_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-sfoo_ar_free (
-    sfoo_ar_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void sfoo_ar_free (sfoo_ar_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export sfoo_ar_slice *
-sfoo_ar_dup (
-    const sfoo_ar_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export sfoo_ar_slice *sfoo_ar_dup (const sfoo_ar_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-sfoo_ar_copy (
-    sfoo_ar_slice *_tao_to,
-    const sfoo_ar_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void sfoo_ar_copy (sfoo_ar_slice *_tao_to, const sfoo_ar_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 

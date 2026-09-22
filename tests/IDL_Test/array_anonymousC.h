@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSC_3D271M_H_
-#define _TAO_IDL_ARRAY_ANONYMOUSC_3D271M_H_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSC_FOGMCA_H_
+#define _TAO_IDL_ARRAY_ANONYMOUSC_FOGMCA_H_
 
 #include /**/ "ace/pre.h"
 
@@ -158,29 +158,15 @@ public:
     Bytes
     Bytes_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        Bytes,
-        Bytes_slice,
-        Bytes_tag
-      >
-    Bytes_forany;
+  typedef TAO_Array_Forany_T<Bytes, Bytes_slice, Bytes_tag> Bytes_forany;
 
-  static Bytes_slice *
-  Bytes_alloc ();
+  static Bytes_slice *Bytes_alloc ();
 
-  static void
-  Bytes_free (
-      Bytes_slice *_tao_slice);
-  
-  static Bytes_slice *
-  Bytes_dup (
-      const Bytes_slice *_tao_slice);
-  
-  static void
-  Bytes_copy (
-      Bytes_slice *_tao_to,
-      const Bytes_slice *_tao_from);
+  static void Bytes_free (Bytes_slice *_tao_slice);
+
+  static Bytes_slice *Bytes_dup (const Bytes_slice *_tao_slice);
+
+  static void Bytes_copy (Bytes_slice *_tao_to, const Bytes_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -223,29 +209,15 @@ public:
     struct _Longs_tag {};
     
 
-    typedef
-      TAO_Array_Forany_T<
-          _Longs,
-          _Longs_slice,
-          _Longs_tag
-        >
-      _Longs_forany;
+    typedef TAO_Array_Forany_T<_Longs, _Longs_slice, _Longs_tag> _Longs_forany;
 
-    static _Longs_slice *
-    _Longs_alloc ();
+    static _Longs_slice *_Longs_alloc ();
 
-    static void
-    _Longs_free (
-        _Longs_slice *_tao_slice);
-    
-    static _Longs_slice *
-    _Longs_dup (
-        const _Longs_slice *_tao_slice);
-    
-    static void
-    _Longs_copy (
-        _Longs_slice *_tao_to,
-        const _Longs_slice *_tao_from);
+    static void _Longs_free (_Longs_slice *_tao_slice);
+
+    static _Longs_slice *_Longs_dup (const _Longs_slice *_tao_slice);
+
+    static void _Longs_copy (_Longs_slice *_tao_to, const _Longs_slice *_tao_from);
 
     _Longs Longs {};
   };
@@ -596,29 +568,15 @@ namespace ABCModule
     struct _rmtNodeId_tag {};
     
 
-    typedef
-      TAO_Array_Forany_T<
-          _rmtNodeId,
-          _rmtNodeId_slice,
-          _rmtNodeId_tag
-        >
-      _rmtNodeId_forany;
+    typedef TAO_Array_Forany_T<_rmtNodeId, _rmtNodeId_slice, _rmtNodeId_tag> _rmtNodeId_forany;
 
-    static _rmtNodeId_slice *
-    _rmtNodeId_alloc ();
+    static _rmtNodeId_slice *_rmtNodeId_alloc ();
 
-    static void
-    _rmtNodeId_free (
-        _rmtNodeId_slice *_tao_slice);
-    
-    static _rmtNodeId_slice *
-    _rmtNodeId_dup (
-        const _rmtNodeId_slice *_tao_slice);
-    
-    static void
-    _rmtNodeId_copy (
-        _rmtNodeId_slice *_tao_to,
-        const _rmtNodeId_slice *_tao_from);
+    static void _rmtNodeId_free (_rmtNodeId_slice *_tao_slice);
+
+    static _rmtNodeId_slice *_rmtNodeId_dup (const _rmtNodeId_slice *_tao_slice);
+
+    static void _rmtNodeId_copy (_rmtNodeId_slice *_tao_to, const _rmtNodeId_slice *_tao_from);
 
     _rmtNodeId rmtNodeId {};
     
@@ -632,29 +590,15 @@ namespace ABCModule
     struct _rmtDetails_tag {};
     
 
-    typedef
-      TAO_Array_Forany_T<
-          _rmtDetails,
-          _rmtDetails_slice,
-          _rmtDetails_tag
-        >
-      _rmtDetails_forany;
+    typedef TAO_Array_Forany_T<_rmtDetails, _rmtDetails_slice, _rmtDetails_tag> _rmtDetails_forany;
 
-    static _rmtDetails_slice *
-    _rmtDetails_alloc ();
+    static _rmtDetails_slice *_rmtDetails_alloc ();
 
-    static void
-    _rmtDetails_free (
-        _rmtDetails_slice *_tao_slice);
-    
-    static _rmtDetails_slice *
-    _rmtDetails_dup (
-        const _rmtDetails_slice *_tao_slice);
-    
-    static void
-    _rmtDetails_copy (
-        _rmtDetails_slice *_tao_to,
-        const _rmtDetails_slice *_tao_from);
+    static void _rmtDetails_free (_rmtDetails_slice *_tao_slice);
+
+    static _rmtDetails_slice *_rmtDetails_dup (const _rmtDetails_slice *_tao_slice);
+
+    static void _rmtDetails_copy (_rmtDetails_slice *_tao_to, const _rmtDetails_slice *_tao_from);
 
     _rmtDetails rmtDetails {};
   };
@@ -699,29 +643,15 @@ namespace ABCModule
     struct _rmtNodeId_tag {};
     
 
-    typedef
-      TAO_Array_Forany_T<
-          _rmtNodeId,
-          _rmtNodeId_slice,
-          _rmtNodeId_tag
-        >
-      _rmtNodeId_forany;
+    typedef TAO_Array_Forany_T<_rmtNodeId, _rmtNodeId_slice, _rmtNodeId_tag> _rmtNodeId_forany;
 
-    static _rmtNodeId_slice *
-    _rmtNodeId_alloc ();
+    static _rmtNodeId_slice *_rmtNodeId_alloc ();
 
-    static void
-    _rmtNodeId_free (
-        _rmtNodeId_slice *_tao_slice);
-    
-    static _rmtNodeId_slice *
-    _rmtNodeId_dup (
-        const _rmtNodeId_slice *_tao_slice);
-    
-    static void
-    _rmtNodeId_copy (
-        _rmtNodeId_slice *_tao_to,
-        const _rmtNodeId_slice *_tao_from);
+    static void _rmtNodeId_free (_rmtNodeId_slice *_tao_slice);
+
+    static _rmtNodeId_slice *_rmtNodeId_dup (const _rmtNodeId_slice *_tao_slice);
+
+    static void _rmtNodeId_copy (_rmtNodeId_slice *_tao_to, const _rmtNodeId_slice *_tao_from);
 
     _rmtNodeId rmtNodeId {};
     
@@ -735,29 +665,15 @@ namespace ABCModule
     struct _rmtDetails_tag {};
     
 
-    typedef
-      TAO_Array_Forany_T<
-          _rmtDetails,
-          _rmtDetails_slice,
-          _rmtDetails_tag
-        >
-      _rmtDetails_forany;
+    typedef TAO_Array_Forany_T<_rmtDetails, _rmtDetails_slice, _rmtDetails_tag> _rmtDetails_forany;
 
-    static _rmtDetails_slice *
-    _rmtDetails_alloc ();
+    static _rmtDetails_slice *_rmtDetails_alloc ();
 
-    static void
-    _rmtDetails_free (
-        _rmtDetails_slice *_tao_slice);
-    
-    static _rmtDetails_slice *
-    _rmtDetails_dup (
-        const _rmtDetails_slice *_tao_slice);
-    
-    static void
-    _rmtDetails_copy (
-        _rmtDetails_slice *_tao_to,
-        const _rmtDetails_slice *_tao_from);
+    static void _rmtDetails_free (_rmtDetails_slice *_tao_slice);
+
+    static _rmtDetails_slice *_rmtDetails_dup (const _rmtDetails_slice *_tao_slice);
+
+    static void _rmtDetails_copy (_rmtDetails_slice *_tao_to, const _rmtDetails_slice *_tao_from);
 
     _rmtDetails rmtDetails {};
   };

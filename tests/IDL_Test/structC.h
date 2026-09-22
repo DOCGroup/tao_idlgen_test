@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_STRUCTC_O4XOOK_H_
-#define _TAO_IDL_STRUCTC_O4XOOK_H_
+#ifndef _TAO_IDL_STRUCTC_JUUH1W_H_
+#define _TAO_IDL_STRUCTC_JUUH1W_H_
 
 #include /**/ "ace/pre.h"
 
@@ -424,29 +424,15 @@ namespace Test
     S90Array
     S90Array_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        S90Array,
-        S90Array_slice,
-        S90Array_tag
-      >
-    S90Array_forany;
+  typedef TAO_Array_Forany_T<S90Array, S90Array_slice, S90Array_tag> S90Array_forany;
 
-  extern TAO_IDL_TEST_STUB_Export S90Array_slice *
-  S90Array_alloc ();
+  extern TAO_IDL_TEST_STUB_Export S90Array_slice *S90Array_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  S90Array_free (
-      S90Array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export S90Array_slice *
-  S90Array_dup (
-      const S90Array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  S90Array_copy (
-      S90Array_slice *_tao_to,
-      const S90Array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void S90Array_free (S90Array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export S90Array_slice *S90Array_dup (const S90Array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void S90Array_copy (S90Array_slice *_tao_to, const S90Array_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -473,29 +459,15 @@ namespace Test
     S42
     S42_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        S42,
-        S42_slice,
-        S42_tag
-      >
-    S42_forany;
+  typedef TAO_Array_Forany_T<S42, S42_slice, S42_tag> S42_forany;
 
-  extern TAO_IDL_TEST_STUB_Export S42_slice *
-  S42_alloc ();
+  extern TAO_IDL_TEST_STUB_Export S42_slice *S42_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  S42_free (
-      S42_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export S42_slice *
-  S42_dup (
-      const S42_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  S42_copy (
-      S42_slice *_tao_to,
-      const S42_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void S42_free (S42_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export S42_slice *S42_dup (const S42_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void S42_copy (S42_slice *_tao_to, const S42_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -527,29 +499,15 @@ namespace Test
       >
     SString43_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        SString43,
-        SString43_slice,
-        SString43_tag
-      >
-    SString43_forany;
+  typedef TAO_Array_Forany_T<SString43, SString43_slice, SString43_tag> SString43_forany;
 
-  extern TAO_IDL_TEST_STUB_Export SString43_slice *
-  SString43_alloc ();
+  extern TAO_IDL_TEST_STUB_Export SString43_slice *SString43_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  SString43_free (
-      SString43_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export SString43_slice *
-  SString43_dup (
-      const SString43_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  SString43_copy (
-      SString43_slice *_tao_to,
-      const SString43_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void SString43_free (SString43_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export SString43_slice *SString43_dup (const SString43_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void SString43_copy (SString43_slice *_tao_to, const SString43_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -576,29 +534,15 @@ namespace Test
     S4Array
     S4Array_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        S4Array,
-        S4Array_slice,
-        S4Array_tag
-      >
-    S4Array_forany;
+  typedef TAO_Array_Forany_T<S4Array, S4Array_slice, S4Array_tag> S4Array_forany;
 
-  extern TAO_IDL_TEST_STUB_Export S4Array_slice *
-  S4Array_alloc ();
+  extern TAO_IDL_TEST_STUB_Export S4Array_slice *S4Array_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  S4Array_free (
-      S4Array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export S4Array_slice *
-  S4Array_dup (
-      const S4Array_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  S4Array_copy (
-      S4Array_slice *_tao_to,
-      const S4Array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void S4Array_free (S4Array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export S4Array_slice *S4Array_dup (const S4Array_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void S4Array_copy (S4Array_slice *_tao_to, const S4Array_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 

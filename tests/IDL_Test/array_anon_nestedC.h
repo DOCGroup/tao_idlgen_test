@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_ARRAY_ANON_NESTEDC_138RI9_H_
-#define _TAO_IDL_ARRAY_ANON_NESTEDC_138RI9_H_
+#ifndef _TAO_IDL_ARRAY_ANON_NESTEDC_G92S4P_H_
+#define _TAO_IDL_ARRAY_ANON_NESTEDC_G92S4P_H_
 
 #include /**/ "ace/pre.h"
 
@@ -98,29 +98,15 @@ struct TAO_IDL_TEST_STUB_Export teststruct
   struct _b_tag {};
   
 
-  typedef
-    TAO_Array_Forany_T<
-        _b,
-        _b_slice,
-        _b_tag
-      >
-    _b_forany;
+  typedef TAO_Array_Forany_T<_b, _b_slice, _b_tag> _b_forany;
 
-  static _b_slice *
-  _b_alloc ();
+  static _b_slice *_b_alloc ();
 
-  static void
-  _b_free (
-      _b_slice *_tao_slice);
-  
-  static _b_slice *
-  _b_dup (
-      const _b_slice *_tao_slice);
-  
-  static void
-  _b_copy (
-      _b_slice *_tao_to,
-      const _b_slice *_tao_from);
+  static void _b_free (_b_slice *_tao_slice);
+
+  static _b_slice *_b_dup (const _b_slice *_tao_slice);
+
+  static void _b_copy (_b_slice *_tao_to, const _b_slice *_tao_from);
 
   _b b {};
   
@@ -161,29 +147,15 @@ struct TAO_IDL_TEST_STUB_Export teststruct
     struct _a_tag {};
     
 
-    typedef
-      TAO_Array_Forany_T<
-          _a,
-          _a_slice,
-          _a_tag
-        >
-      _a_forany;
+    typedef TAO_Array_Forany_T<_a, _a_slice, _a_tag> _a_forany;
 
-    static _a_slice *
-    _a_alloc ();
+    static _a_slice *_a_alloc ();
 
-    static void
-    _a_free (
-        _a_slice *_tao_slice);
-    
-    static _a_slice *
-    _a_dup (
-        const _a_slice *_tao_slice);
-    
-    static void
-    _a_copy (
-        _a_slice *_tao_to,
-        const _a_slice *_tao_from);
+    static void _a_free (_a_slice *_tao_slice);
+
+    static _a_slice *_a_dup (const _a_slice *_tao_slice);
+
+    static void _a_copy (_a_slice *_tao_to, const _a_slice *_tao_from);
 
     _a a {};
   };

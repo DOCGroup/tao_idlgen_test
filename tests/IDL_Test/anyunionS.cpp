@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_ANYUNIONS_OBPOYO_CPP_
-#define _TAO_IDL_ANYUNIONS_OBPOYO_CPP_
+#ifndef _TAO_IDL_ANYUNIONS_7ELTOP_CPP_
+#define _TAO_IDL_ANYUNIONS_7ELTOP_CPP_
 
 
 #include "anyunionS.h"

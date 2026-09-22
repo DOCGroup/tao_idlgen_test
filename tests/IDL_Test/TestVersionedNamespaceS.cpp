@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_BX1U0N_CPP_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACES_BX1U0N_CPP_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_BKQP7K_CPP_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACES_BKQP7K_CPP_
 
 
 #include "TestVersionedNamespaceS.h"

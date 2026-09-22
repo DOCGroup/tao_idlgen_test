@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_TYPEDEFC_PMQRWR_H_
-#define _TAO_IDL_TYPEDEFC_PMQRWR_H_
+#ifndef _TAO_IDL_TYPEDEFC_5BQZSD_H_
+#define _TAO_IDL_TYPEDEFC_5BQZSD_H_
 
 #include /**/ "ace/pre.h"
 
@@ -108,29 +108,15 @@ typedef
   TAO_A5
   TAO_A5_out;
 
-typedef
-  TAO_Array_Forany_T<
-      TAO_A5,
-      TAO_A5_slice,
-      TAO_A5_tag
-    >
-  TAO_A5_forany;
+typedef TAO_Array_Forany_T<TAO_A5, TAO_A5_slice, TAO_A5_tag> TAO_A5_forany;
 
-TAO_IDL_TEST_STUB_Export TAO_A5_slice *
-TAO_A5_alloc ();
+TAO_IDL_TEST_STUB_Export TAO_A5_slice *TAO_A5_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-TAO_A5_free (
-    TAO_A5_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void TAO_A5_free (TAO_A5_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export TAO_A5_slice *
-TAO_A5_dup (
-    const TAO_A5_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export TAO_A5_slice *TAO_A5_dup (const TAO_A5_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-TAO_A5_copy (
-    TAO_A5_slice *_tao_to,
-    const TAO_A5_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void TAO_A5_copy (TAO_A5_slice *_tao_to, const TAO_A5_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typedef/typedef_ch.cpp:178
 
@@ -234,29 +220,15 @@ typedef
   TAO_M5
   TAO_M5_out;
 
-typedef
-  TAO_Array_Forany_T<
-      TAO_M5,
-      TAO_M5_slice,
-      TAO_M5_tag
-    >
-  TAO_M5_forany;
+typedef TAO_Array_Forany_T<TAO_M5, TAO_M5_slice, TAO_M5_tag> TAO_M5_forany;
 
-TAO_IDL_TEST_STUB_Export TAO_M5_slice *
-TAO_M5_alloc ();
+TAO_IDL_TEST_STUB_Export TAO_M5_slice *TAO_M5_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-TAO_M5_free (
-    TAO_M5_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void TAO_M5_free (TAO_M5_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export TAO_M5_slice *
-TAO_M5_dup (
-    const TAO_M5_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export TAO_M5_slice *TAO_M5_dup (const TAO_M5_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-TAO_M5_copy (
-    TAO_M5_slice *_tao_to,
-    const TAO_M5_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void TAO_M5_copy (TAO_M5_slice *_tao_to, const TAO_M5_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typedef/typedef_ch.cpp:178
 
@@ -333,29 +305,15 @@ typedef
   TAO_Z5
   TAO_Z5_out;
 
-typedef
-  TAO_Array_Forany_T<
-      TAO_Z5,
-      TAO_Z5_slice,
-      TAO_Z5_tag
-    >
-  TAO_Z5_forany;
+typedef TAO_Array_Forany_T<TAO_Z5, TAO_Z5_slice, TAO_Z5_tag> TAO_Z5_forany;
 
-TAO_IDL_TEST_STUB_Export TAO_Z5_slice *
-TAO_Z5_alloc ();
+TAO_IDL_TEST_STUB_Export TAO_Z5_slice *TAO_Z5_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-TAO_Z5_free (
-    TAO_Z5_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void TAO_Z5_free (TAO_Z5_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export TAO_Z5_slice *
-TAO_Z5_dup (
-    const TAO_Z5_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export TAO_Z5_slice *TAO_Z5_dup (const TAO_Z5_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-TAO_Z5_copy (
-    TAO_Z5_slice *_tao_to,
-    const TAO_Z5_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void TAO_Z5_copy (TAO_Z5_slice *_tao_to, const TAO_Z5_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:34
 

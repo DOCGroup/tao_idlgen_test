@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_INCLUDEDS_GSN259_CPP_
-#define _TAO_IDL_INCLUDEDS_GSN259_CPP_
+#ifndef _TAO_IDL_INCLUDEDS_ZHG62M_CPP_
+#define _TAO_IDL_INCLUDEDS_ZHG62M_CPP_
 
 
 #include "includedS.h"

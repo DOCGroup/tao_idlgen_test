@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_OLD_ARRAYC_WHZC5A_H_
-#define _TAO_IDL_OLD_ARRAYC_WHZC5A_H_
+#ifndef _TAO_IDL_OLD_ARRAYC_GLZYLV_H_
+#define _TAO_IDL_OLD_ARRAYC_GLZYLV_H_
 
 #include /**/ "ace/pre.h"
 
@@ -113,29 +113,15 @@ namespace OldArray
     str22
     str22_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        str22,
-        str22_slice,
-        str22_tag
-      >
-    str22_forany;
+  typedef TAO_Array_Forany_T<str22, str22_slice, str22_tag> str22_forany;
 
-  extern TAO_IDL_TEST_STUB_Export str22_slice *
-  str22_alloc ();
+  extern TAO_IDL_TEST_STUB_Export str22_slice *str22_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  str22_free (
-      str22_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export str22_slice *
-  str22_dup (
-      const str22_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  str22_copy (
-      str22_slice *_tao_to,
-      const str22_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void str22_free (str22_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export str22_slice *str22_dup (const str22_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void str22_copy (str22_slice *_tao_to, const str22_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -162,29 +148,15 @@ namespace OldArray
     boolarray
     boolarray_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        boolarray,
-        boolarray_slice,
-        boolarray_tag
-      >
-    boolarray_forany;
+  typedef TAO_Array_Forany_T<boolarray, boolarray_slice, boolarray_tag> boolarray_forany;
 
-  extern TAO_IDL_TEST_STUB_Export boolarray_slice *
-  boolarray_alloc ();
+  extern TAO_IDL_TEST_STUB_Export boolarray_slice *boolarray_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  boolarray_free (
-      boolarray_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export boolarray_slice *
-  boolarray_dup (
-      const boolarray_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  boolarray_copy (
-      boolarray_slice *_tao_to,
-      const boolarray_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void boolarray_free (boolarray_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export boolarray_slice *boolarray_dup (const boolarray_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void boolarray_copy (boolarray_slice *_tao_to, const boolarray_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -211,29 +183,15 @@ namespace OldArray
     char_17
     char_17_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        char_17,
-        char_17_slice,
-        char_17_tag
-      >
-    char_17_forany;
+  typedef TAO_Array_Forany_T<char_17, char_17_slice, char_17_tag> char_17_forany;
 
-  extern TAO_IDL_TEST_STUB_Export char_17_slice *
-  char_17_alloc ();
+  extern TAO_IDL_TEST_STUB_Export char_17_slice *char_17_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  char_17_free (
-      char_17_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export char_17_slice *
-  char_17_dup (
-      const char_17_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  char_17_copy (
-      char_17_slice *_tao_to,
-      const char_17_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void char_17_free (char_17_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export char_17_slice *char_17_dup (const char_17_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void char_17_copy (char_17_slice *_tao_to, const char_17_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -260,29 +218,15 @@ namespace OldArray
     char_10_2
     char_10_2_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        char_10_2,
-        char_10_2_slice,
-        char_10_2_tag
-      >
-    char_10_2_forany;
+  typedef TAO_Array_Forany_T<char_10_2, char_10_2_slice, char_10_2_tag> char_10_2_forany;
 
-  extern TAO_IDL_TEST_STUB_Export char_10_2_slice *
-  char_10_2_alloc ();
+  extern TAO_IDL_TEST_STUB_Export char_10_2_slice *char_10_2_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  char_10_2_free (
-      char_10_2_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export char_10_2_slice *
-  char_10_2_dup (
-      const char_10_2_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  char_10_2_copy (
-      char_10_2_slice *_tao_to,
-      const char_10_2_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void char_10_2_free (char_10_2_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export char_10_2_slice *char_10_2_dup (const char_10_2_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void char_10_2_copy (char_10_2_slice *_tao_to, const char_10_2_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -409,29 +353,15 @@ namespace OldArray
     A_matrix
     A_matrix_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        A_matrix,
-        A_matrix_slice,
-        A_matrix_tag
-      >
-    A_matrix_forany;
+  typedef TAO_Array_Forany_T<A_matrix, A_matrix_slice, A_matrix_tag> A_matrix_forany;
 
-  extern TAO_IDL_TEST_STUB_Export A_matrix_slice *
-  A_matrix_alloc ();
+  extern TAO_IDL_TEST_STUB_Export A_matrix_slice *A_matrix_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  A_matrix_free (
-      A_matrix_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export A_matrix_slice *
-  A_matrix_dup (
-      const A_matrix_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  A_matrix_copy (
-      A_matrix_slice *_tao_to,
-      const A_matrix_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void A_matrix_free (A_matrix_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export A_matrix_slice *A_matrix_dup (const A_matrix_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void A_matrix_copy (A_matrix_slice *_tao_to, const A_matrix_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -458,29 +388,15 @@ namespace OldArray
     B_matrix
     B_matrix_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        B_matrix,
-        B_matrix_slice,
-        B_matrix_tag
-      >
-    B_matrix_forany;
+  typedef TAO_Array_Forany_T<B_matrix, B_matrix_slice, B_matrix_tag> B_matrix_forany;
 
-  extern TAO_IDL_TEST_STUB_Export B_matrix_slice *
-  B_matrix_alloc ();
+  extern TAO_IDL_TEST_STUB_Export B_matrix_slice *B_matrix_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  B_matrix_free (
-      B_matrix_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export B_matrix_slice *
-  B_matrix_dup (
-      const B_matrix_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  B_matrix_copy (
-      B_matrix_slice *_tao_to,
-      const B_matrix_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void B_matrix_free (B_matrix_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export B_matrix_slice *B_matrix_dup (const B_matrix_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void B_matrix_copy (B_matrix_slice *_tao_to, const B_matrix_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -507,29 +423,15 @@ namespace OldArray
     C_matrix
     C_matrix_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        C_matrix,
-        C_matrix_slice,
-        C_matrix_tag
-      >
-    C_matrix_forany;
+  typedef TAO_Array_Forany_T<C_matrix, C_matrix_slice, C_matrix_tag> C_matrix_forany;
 
-  extern TAO_IDL_TEST_STUB_Export C_matrix_slice *
-  C_matrix_alloc ();
+  extern TAO_IDL_TEST_STUB_Export C_matrix_slice *C_matrix_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  C_matrix_free (
-      C_matrix_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export C_matrix_slice *
-  C_matrix_dup (
-      const C_matrix_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  C_matrix_copy (
-      C_matrix_slice *_tao_to,
-      const C_matrix_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void C_matrix_free (C_matrix_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export C_matrix_slice *C_matrix_dup (const C_matrix_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void C_matrix_copy (C_matrix_slice *_tao_to, const C_matrix_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -556,29 +458,15 @@ namespace OldArray
     A_rmatrix
     A_rmatrix_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        A_rmatrix,
-        A_rmatrix_slice,
-        A_rmatrix_tag
-      >
-    A_rmatrix_forany;
+  typedef TAO_Array_Forany_T<A_rmatrix, A_rmatrix_slice, A_rmatrix_tag> A_rmatrix_forany;
 
-  extern TAO_IDL_TEST_STUB_Export A_rmatrix_slice *
-  A_rmatrix_alloc ();
+  extern TAO_IDL_TEST_STUB_Export A_rmatrix_slice *A_rmatrix_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void
-  A_rmatrix_free (
-      A_rmatrix_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export A_rmatrix_slice *
-  A_rmatrix_dup (
-      const A_rmatrix_slice *_tao_slice);
-  
-  extern TAO_IDL_TEST_STUB_Export void
-  A_rmatrix_copy (
-      A_rmatrix_slice *_tao_to,
-      const A_rmatrix_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void A_rmatrix_free (A_rmatrix_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export A_rmatrix_slice *A_rmatrix_dup (const A_rmatrix_slice *_tao_slice);
+
+  extern TAO_IDL_TEST_STUB_Export void A_rmatrix_copy (A_rmatrix_slice *_tao_to, const A_rmatrix_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 

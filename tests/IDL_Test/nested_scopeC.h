@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_NESTED_SCOPEC_QW3T6H_H_
-#define _TAO_IDL_NESTED_SCOPEC_QW3T6H_H_
+#ifndef _TAO_IDL_NESTED_SCOPEC_6QLTZB_H_
+#define _TAO_IDL_NESTED_SCOPEC_6QLTZB_H_
 
 #include /**/ "ace/pre.h"
 

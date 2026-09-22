@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_EXPRESSIONSS_KPQ577_CPP_
-#define _TAO_IDL_EXPRESSIONSS_KPQ577_CPP_
+#ifndef _TAO_IDL_EXPRESSIONSS_N2RI2Y_CPP_
+#define _TAO_IDL_EXPRESSIONSS_N2RI2Y_CPP_
 
 
 #include "expressionsS.h"

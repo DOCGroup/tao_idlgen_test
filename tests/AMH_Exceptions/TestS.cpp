@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_TESTS_VRII40_CPP_
-#define _TAO_IDL_TESTS_VRII40_CPP_
+#ifndef _TAO_IDL_TESTS_MMVI16_CPP_
+#define _TAO_IDL_TESTS_MMVI16_CPP_
 
 
 #include "TestS.h"

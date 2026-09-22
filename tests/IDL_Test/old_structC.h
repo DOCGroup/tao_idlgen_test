@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_OLD_STRUCTC_BFFC4V_H_
-#define _TAO_IDL_OLD_STRUCTC_BFFC4V_H_
+#ifndef _TAO_IDL_OLD_STRUCTC_SEM81R_H_
+#define _TAO_IDL_OLD_STRUCTC_SEM81R_H_
 
 #include /**/ "ace/pre.h"
 
@@ -114,29 +114,15 @@ typedef
     >
   string_20_out;
 
-typedef
-  TAO_Array_Forany_T<
-      string_20,
-      string_20_slice,
-      string_20_tag
-    >
-  string_20_forany;
+typedef TAO_Array_Forany_T<string_20, string_20_slice, string_20_tag> string_20_forany;
 
-TAO_IDL_TEST_STUB_Export string_20_slice *
-string_20_alloc ();
+TAO_IDL_TEST_STUB_Export string_20_slice *string_20_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-string_20_free (
-    string_20_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void string_20_free (string_20_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export string_20_slice *
-string_20_dup (
-    const string_20_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export string_20_slice *string_20_dup (const string_20_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-string_20_copy (
-    string_20_slice *_tao_to,
-    const string_20_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void string_20_copy (string_20_slice *_tao_to, const string_20_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 

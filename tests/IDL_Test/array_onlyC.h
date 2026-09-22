@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_ARRAY_ONLYC_3W4LVL_H_
-#define _TAO_IDL_ARRAY_ONLYC_3W4LVL_H_
+#ifndef _TAO_IDL_ARRAY_ONLYC_EZPREL_H_
+#define _TAO_IDL_ARRAY_ONLYC_EZPREL_H_
 
 #include /**/ "ace/pre.h"
 
@@ -80,29 +80,15 @@ typedef
   TEST_TYPE
   TEST_TYPE_out;
 
-typedef
-  TAO_Array_Forany_T<
-      TEST_TYPE,
-      TEST_TYPE_slice,
-      TEST_TYPE_tag
-    >
-  TEST_TYPE_forany;
+typedef TAO_Array_Forany_T<TEST_TYPE, TEST_TYPE_slice, TEST_TYPE_tag> TEST_TYPE_forany;
 
-TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *
-TEST_TYPE_alloc ();
+TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *TEST_TYPE_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-TEST_TYPE_free (
-    TEST_TYPE_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void TEST_TYPE_free (TEST_TYPE_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *
-TEST_TYPE_dup (
-    const TEST_TYPE_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *TEST_TYPE_dup (const TEST_TYPE_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-TEST_TYPE_copy (
-    TEST_TYPE_slice *_tao_to,
-    const TEST_TYPE_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void TEST_TYPE_copy (TEST_TYPE_slice *_tao_to, const TEST_TYPE_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
 

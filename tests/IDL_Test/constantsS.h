@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_CONSTANTSS_LYBIEU_H_
-#define _TAO_IDL_CONSTANTSS_LYBIEU_H_
+#ifndef _TAO_IDL_CONSTANTSS_B94N3Q_H_
+#define _TAO_IDL_CONSTANTSS_B94N3Q_H_
 
 #include /**/ "ace/pre.h"
 

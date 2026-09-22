@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_VALUETYPES_U7TZQP_CPP_
-#define _TAO_IDL_VALUETYPES_U7TZQP_CPP_
+#ifndef _TAO_IDL_VALUETYPES_GODMQZ_CPP_
+#define _TAO_IDL_VALUETYPES_GODMQZ_CPP_
 
 
 #include "valuetypeS.h"
