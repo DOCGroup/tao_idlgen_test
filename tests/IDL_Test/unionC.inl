@@ -3083,4 +3083,406 @@ U94::b_94_3 () const
 {
   return this->u_.b_94_3_;
 }
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
+
+
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+
+ACE_INLINE
+void
+TAO::Array_Traits<DefaultInitializedLongArray_forany>::free (
+    DefaultInitializedLongArray_slice * _tao_slice)
+{
+  DefaultInitializedLongArray_free (_tao_slice);
+}
+
+ACE_INLINE
+DefaultInitializedLongArray_slice *
+TAO::Array_Traits<DefaultInitializedLongArray_forany>::dup (
+    const DefaultInitializedLongArray_slice * _tao_slice)
+{
+  return DefaultInitializedLongArray_dup (_tao_slice);
+}
+
+ACE_INLINE
+void
+TAO::Array_Traits<DefaultInitializedLongArray_forany>::copy (
+    DefaultInitializedLongArray_slice * _tao_to,
+    const DefaultInitializedLongArray_slice * _tao_from)
+{
+  DefaultInitializedLongArray_copy (_tao_to, _tao_from);
+}
+
+ACE_INLINE
+void
+TAO::Array_Traits<DefaultInitializedLongArray_forany>::zero (
+    DefaultInitializedLongArray_slice * _tao_slice)
+{
+  // Zero each individual element.
+  for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
+    {
+      _tao_slice[i0] = ::CORBA::Long ();
+    }
+}
+
+ACE_INLINE
+DefaultInitializedLongArray_slice *
+TAO::Array_Traits<DefaultInitializedLongArray_forany>::alloc ()
+{
+  return DefaultInitializedLongArray_alloc ();
+}
+
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedBooleanUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+ACE_INLINE
+void
+DefaultInitializedBooleanUnion::_default ()
+{
+  this->_reset ();
+  this->disc_ = -2147483647;
+}
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedBooleanUnion::_d (::CORBA::Long discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Long
+DefaultInitializedBooleanUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:571
+
+// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedBooleanUnion::value (CORBA::Boolean val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = 0;
+  // Set the value.
+  this->u_.value_ = val;
+}
+
+/// Retrieve the member.
+ACE_INLINE
+::CORBA::Boolean
+DefaultInitializedBooleanUnion::value () const
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedLongUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+ACE_INLINE
+void
+DefaultInitializedLongUnion::_default ()
+{
+  this->_reset ();
+  this->disc_ = -2147483647;
+}
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedLongUnion::_d (::CORBA::Long discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Long
+DefaultInitializedLongUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:571
+
+// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedLongUnion::value (CORBA::Long val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = 0;
+  // Set the value.
+  this->u_.value_ = val;
+}
+
+/// Retrieve the member.
+ACE_INLINE
+::CORBA::Long
+DefaultInitializedLongUnion::value () const
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedDoubleUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+ACE_INLINE
+void
+DefaultInitializedDoubleUnion::_default ()
+{
+  this->_reset ();
+  this->disc_ = -2147483647;
+}
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedDoubleUnion::_d (::CORBA::Long discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Long
+DefaultInitializedDoubleUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:571
+
+// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedDoubleUnion::value (CORBA::Double val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = 0;
+  // Set the value.
+  this->u_.value_ = val;
+}
+
+/// Retrieve the member.
+ACE_INLINE
+::CORBA::Double
+DefaultInitializedDoubleUnion::value () const
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedEnumUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+ACE_INLINE
+void
+DefaultInitializedEnumUnion::_default ()
+{
+  this->_reset ();
+  this->disc_ = -2147483647;
+}
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedEnumUnion::_d (::CORBA::Long discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Long
+DefaultInitializedEnumUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:227
+
+/// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedEnumUnion::value (U90 val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = 0;
+  // Set the value.
+  this->u_.value_ = val;
+}
+
+/// Retrieve the member.
+ACE_INLINE
+U90
+DefaultInitializedEnumUnion::value () const
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedArrayUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+ACE_INLINE
+void
+DefaultInitializedArrayUnion::_default ()
+{
+  this->_reset ();
+  this->disc_ = -2147483647;
+}
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedArrayUnion::_d (::CORBA::Long discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Long
+DefaultInitializedArrayUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:156
+
+// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedArrayUnion::value (DefaultInitializedLongArray val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = 0;
+  // Set the value.
+  this->u_.value_ = DefaultInitializedLongArray_dup (val);
+}
+
+/// Retrieve the member.
+ACE_INLINE
+DefaultInitializedLongArray_slice *
+DefaultInitializedArrayUnion::value () const
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedStringUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+ACE_INLINE
+void
+DefaultInitializedStringUnion::_default ()
+{
+  this->_reset ();
+  this->disc_ = -2147483647;
+}
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedStringUnion::_d (::CORBA::Long discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Long
+DefaultInitializedStringUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:866
+
+/// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedStringUnion::value (char *val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = 0;
+  this->u_.value_ = val;
+}
+
+// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedStringUnion::value (const char *val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = 0;
+  // Set the value.
+  this->u_.value_ = ::CORBA::string_dup (val);
+}
+
+/// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedStringUnion::value (const ::CORBA::String_var &val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = 0;
+  // Set the value.
+  ::CORBA::String_var value_var = val;
+  this->u_.value_ = value_var._retn ();
+}
+
+ACE_INLINE
+const char *
+DefaultInitializedStringUnion::value () const // get method
+{
+  return this->u_.value_;
+}
 

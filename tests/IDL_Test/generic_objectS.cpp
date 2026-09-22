@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_YN1MH6_CPP_
-#define _TAO_IDL_GENERIC_OBJECTS_YN1MH6_CPP_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_RHJQZW_CPP_
+#define _TAO_IDL_GENERIC_OBJECTS_RHJQZW_CPP_
 
 
 #include "generic_objectS.h"

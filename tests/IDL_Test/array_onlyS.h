@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_ARRAY_ONLYS_6A9THQ_H_
-#define _TAO_IDL_ARRAY_ONLYS_6A9THQ_H_
+#ifndef _TAO_IDL_ARRAY_ONLYS_RZ6GUP_H_
+#define _TAO_IDL_ARRAY_ONLYS_RZ6GUP_H_
 
 #include /**/ "ace/pre.h"
 

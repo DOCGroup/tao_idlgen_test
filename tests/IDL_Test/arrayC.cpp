@@ -3817,7 +3817,7 @@ bug_2126::FirstUnion::FirstUnion ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
-  
+  this->u_.first_union_foo_ = {};
 }
 
 bug_2126::FirstUnion::FirstUnion (const ::bug_2126::FirstUnion &u)

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_SIMPLES_4ZPXW7_CPP_
-#define _TAO_IDL_SIMPLES_4ZPXW7_CPP_
+#ifndef _TAO_IDL_SIMPLES_JB7EIU_CPP_
+#define _TAO_IDL_SIMPLES_JB7EIU_CPP_
 
 
 #include "simpleS.h"

@@ -1161,7 +1161,7 @@ test::UnionAllCovered_BooleanDiscriminant::UnionAllCovered_BooleanDiscriminant (
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
-  
+  this->u_.e_true_ = {};
 }
 
 test::UnionAllCovered_BooleanDiscriminant::UnionAllCovered_BooleanDiscriminant (const ::test::UnionAllCovered_BooleanDiscriminant &u)
@@ -1475,7 +1475,7 @@ test::UnionAllCovered_CharDiscriminant::UnionAllCovered_CharDiscriminant ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = '\x0';
-  
+  this->u_.e_chars_ = {};
 }
 
 test::UnionAllCovered_CharDiscriminant::UnionAllCovered_CharDiscriminant (const ::test::UnionAllCovered_CharDiscriminant &u)

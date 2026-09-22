@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_NESTED_SCOPES_MG3MO8_CPP_
-#define _TAO_IDL_NESTED_SCOPES_MG3MO8_CPP_
+#ifndef _TAO_IDL_NESTED_SCOPES_EO442C_CPP_
+#define _TAO_IDL_NESTED_SCOPES_EO442C_CPP_
 
 
 #include "nested_scopeS.h"

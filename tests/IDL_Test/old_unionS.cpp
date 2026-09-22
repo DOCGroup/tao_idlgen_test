@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_OLD_UNIONS_ZWEK7B_CPP_
-#define _TAO_IDL_OLD_UNIONS_ZWEK7B_CPP_
+#ifndef _TAO_IDL_OLD_UNIONS_E2H2HY_CPP_
+#define _TAO_IDL_OLD_UNIONS_E2H2HY_CPP_
 
 
 #include "old_unionS.h"

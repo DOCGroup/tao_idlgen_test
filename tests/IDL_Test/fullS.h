@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_FULLS_TZ9IR7_H_
-#define _TAO_IDL_FULLS_TZ9IR7_H_
+#ifndef _TAO_IDL_FULLS_O9N8BT_H_
+#define _TAO_IDL_FULLS_O9N8BT_H_
 
 #include /**/ "ace/pre.h"
 

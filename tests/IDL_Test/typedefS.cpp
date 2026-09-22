@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_TYPEDEFS_4P2IA8_CPP_
-#define _TAO_IDL_TYPEDEFS_4P2IA8_CPP_
+#ifndef _TAO_IDL_TYPEDEFS_ISA03V_CPP_
+#define _TAO_IDL_TYPEDEFS_ISA03V_CPP_
 
 
 #include "typedefS.h"
