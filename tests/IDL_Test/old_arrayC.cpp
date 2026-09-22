@@ -465,14 +465,14 @@ namespace OldArray
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldArray_A[] =
       {
         { "a1", &CORBA::_tc_long },
         { "a2", &OldArray::_tc_char_17 },
         { "a3", &OldArray::_tc_char_10_2 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -509,13 +509,13 @@ OldArray::A::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldArray_B[] =
       {
         { "b1", &CORBA::_tc_long },
         { "b2", &OldArray::_tc_A }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -552,13 +552,13 @@ OldArray::B::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldArray_C[] =
       {
         { "c1", &CORBA::_tc_long },
         { "c2", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1895,7 +1895,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldArray::AMH_A_iResponseHandler::AMH_A_iResponseHandler ()
-{}void
+{}
+
+void
 OldArray::AMH_A_iResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_A_iResponseHandler *tmp = static_cast<AMH_A_iResponseHandler *> (_tao_void_pointer);

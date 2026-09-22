@@ -57,12 +57,12 @@
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_frag_pug[] =
       {
         { "leash", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -541,7 +541,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 A::B::AMH_X2ResponseHandler::AMH_X2ResponseHandler ()
-{}void
+{}
+
+void
 A::B::AMH_X2ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_X2ResponseHandler *tmp = static_cast<AMH_X2ResponseHandler *> (_tao_void_pointer);

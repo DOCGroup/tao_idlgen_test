@@ -59,13 +59,13 @@
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldUnion_Bar[] =
       {
         { "b1", &CORBA::_tc_long },
         { "b2", &CORBA::_tc_char }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -380,14 +380,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldUnion_a_astruct[] =
       {
         { "a1", &OldUnion::_tc_Foo2 },
         { "a2", &OldUnion::_tc_Foo },
         { "a3", &OldUnion::_tc_Bar }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -810,7 +810,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldUnion::AMH_aResponseHandler::AMH_aResponseHandler ()
-{}void
+{}
+
+void
 OldUnion::AMH_aResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_aResponseHandler *tmp = static_cast<AMH_aResponseHandler *> (_tao_void_pointer);

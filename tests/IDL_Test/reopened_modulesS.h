@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_REOPENED_MODULESS_HO1F50_H_
-#define _TAO_IDL_REOPENED_MODULESS_HO1F50_H_
+#ifndef _TAO_IDL_REOPENED_MODULESS_TT0TGM_H_
+#define _TAO_IDL_REOPENED_MODULESS_TT0TGM_H_
 
 #include /**/ "ace/pre.h"
 

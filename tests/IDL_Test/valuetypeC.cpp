@@ -1611,13 +1611,13 @@ ModSelection::SelectionDefns::CriterionExpr::_tao_unmarshal (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_ModSelection_SelectionDefns_CriterionExpr_RightCriterionInfos[] =
       {
         { "theCriterionId", &CORBA::_tc_long },
         { "theRightExpr", &ModSelection::SelectionDefns::_tc_CriterionExpr }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -2951,15 +2951,15 @@ OBV_MyValueType::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) con
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_my_string_value.in ());
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -2968,18 +2968,18 @@ OBV_MyValueType::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_my_string_value.out ());
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 
@@ -3055,16 +3055,16 @@ OBV_DefaultInitializedValue::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkI
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << ::ACE_OutputCDR::from_boolean (_pd_boolean_value)) &&
       (strm << _pd_long_value);
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -3073,19 +3073,19 @@ OBV_DefaultInitializedValue::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_Chunk
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> ::ACE_InputCDR::to_boolean (_pd_boolean_value)) &&
       (strm >> _pd_long_value);
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 
@@ -3309,16 +3309,16 @@ OBV_RecValueType::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) co
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_rec_value_types) &&
       (strm << _pd_rec_value_types2);
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -3327,19 +3327,19 @@ OBV_RecValueType::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_rec_value_types) &&
       (strm >> _pd_rec_value_types2);
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 
@@ -3423,18 +3423,18 @@ OBV_GetsDeprecatedMember::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo
   
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_StringMember.in ());
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -3443,26 +3443,26 @@ OBV_GetsDeprecatedMember::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInf
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
+
   if (!this->_tao_unmarshal__IncludedBase (strm, ci))
     {
       return false;
     }
-  
+
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_StringMember.out ());
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 
@@ -3822,16 +3822,16 @@ OBV_ModSelection::SelectionDefns::CriterionExpr::_tao_marshal_state (TAO_OutputC
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_theLeftCriterion.in ()) &&
       (strm << _pd_theRightCriterionExpr);
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -3840,19 +3840,19 @@ OBV_ModSelection::SelectionDefns::CriterionExpr::_tao_unmarshal_state (TAO_Input
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_theLeftCriterion.out ()) &&
       (strm >> _pd_theRightCriterionExpr);
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 

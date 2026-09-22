@@ -418,7 +418,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 A::AMH_BResponseHandler::AMH_BResponseHandler ()
-{}void
+{}
+
+void
 A::AMH_BResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_BResponseHandler *tmp = static_cast<AMH_BResponseHandler *> (_tao_void_pointer);
@@ -1073,7 +1075,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 A::AMH_CResponseHandler::AMH_CResponseHandler ()
-{}void
+{}
+
+void
 A::AMH_CResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_CResponseHandler *tmp = static_cast<AMH_CResponseHandler *> (_tao_void_pointer);

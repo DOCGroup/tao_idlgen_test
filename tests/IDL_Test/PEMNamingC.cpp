@@ -102,13 +102,13 @@ namespace Plesk
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Plesk_TProperty[] =
       {
         { "name", &CORBA::_tc_string },
         { "value", &CORBA::_tc_string }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -355,7 +355,7 @@ void Plesk::ExSystem::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Plesk_ExSystem[] =
       {
         { "module_id", &CORBA::_tc_string },
@@ -366,7 +366,7 @@ static TAO::TypeCode::Struct_Field<
         { "props", &Plesk::_tc_TPropertyList },
         { "transient", &Plesk::_tc_TBool }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -391,12 +391,12 @@ namespace Plesk
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Plesk_Naming_NamingContext[] =
       {
         { "kernel_resolver_ior", &CORBA::_tc_string }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1013,7 +1013,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 Plesk::Naming::AMH_ObjectResolverResponseHandler::AMH_ObjectResolverResponseHandler ()
-{}void
+{}
+
+void
 Plesk::Naming::AMH_ObjectResolverResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ObjectResolverResponseHandler *tmp = static_cast<AMH_ObjectResolverResponseHandler *> (_tao_void_pointer);

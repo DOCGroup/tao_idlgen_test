@@ -219,13 +219,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_tdef_bytes_or_longs_Longs_GUARD */
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_tdef_bytes_or_longs[] =
       {
         { "the_bytes", &tdef::_tc_Bytes },
         { "Longs", &TAO::TypeCode::tc_tdef_bytes_or_longs_Longs }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -621,7 +621,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_tdefResponseHandler::AMH_tdefResponseHandler ()
-{}void
+{}
+
+void
 AMH_tdefResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_tdefResponseHandler *tmp = static_cast<AMH_tdefResponseHandler *> (_tao_void_pointer);
@@ -909,13 +911,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_ABCModule_RmtPhysicalInfo_rmtDetails_GUARD */
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_ABCModule_RmtPhysicalInfo[] =
       {
         { "rmtNodeId", &TAO::TypeCode::tc_ABCModule_RmtPhysicalInfo_rmtNodeId },
         { "rmtDetails", &TAO::TypeCode::tc_ABCModule_RmtPhysicalInfo_rmtDetails }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1098,13 +1100,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_ABCModule_bbbBubBubBubBaby_rmtDetails_GUARD */
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_ABCModule_bbbBubBubBubBaby[] =
       {
         { "rmtNodeId", &TAO::TypeCode::tc_ABCModule_bbbBubBubBubBaby_rmtNodeId },
         { "rmtDetails", &TAO::TypeCode::tc_ABCModule_bbbBubBubBubBaby_rmtDetails }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,

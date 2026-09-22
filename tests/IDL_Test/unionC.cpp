@@ -2356,13 +2356,13 @@ namespace UnionTest3
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_UnionTest3_UpType[] =
       {
         { "high", &UnionTest3::_tc_ValType },
         { "low", &UnionTest3::_tc_ValType }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -2399,13 +2399,13 @@ UnionTest3::UpType::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_UnionTest3_DownType[] =
       {
         { "high", &UnionTest3::_tc_ValType },
         { "low", &UnionTest3::_tc_ValType }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -2660,12 +2660,12 @@ static TAO::TypeCode::Enum<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_X_Y[] =
       {
         { "u", &X::Y::_tc_Z }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -3035,12 +3035,12 @@ static TAO::TypeCode::Union<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Field[] =
       {
         { "value", &_tc_FieldValue }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -3124,13 +3124,13 @@ TestUnion::TestUnion (const ::TestUnion &u)
   {
     case 1:
     {
-      this->u_.oneEnum_ = 
+      this->u_.oneEnum_ =
         u.u_.oneEnum_;
     }
     break;
     case 2:
     {
-      this->u_.twoEnum_ = 
+      this->u_.twoEnum_ =
         u.u_.twoEnum_;
     }
     break;
@@ -3162,13 +3162,13 @@ TestUnion::operator= (const ::TestUnion &u)
       {
         case 1:
         {
-          this->u_.oneEnum_ = 
+          this->u_.oneEnum_ =
             u.u_.oneEnum_;
         }
         break;
         case 2:
         {
-          this->u_.twoEnum_ = 
+          this->u_.twoEnum_ =
             u.u_.twoEnum_;
         }
         break;
@@ -3412,14 +3412,14 @@ U85::U85 (const ::U85 &u)
     case 1:
     {
       // Make a deep copy.
-      this->u_.b_85_1_ = 
+      this->u_.b_85_1_ =
         U41_dup (u.u_.b_85_1_);
     }
     break;
     case 2:
     {
       // Make a deep copy.
-      this->u_.b_85_2_ = 
+      this->u_.b_85_2_ =
         U42_dup (u.u_.b_85_2_);
     }
     break;
@@ -3452,14 +3452,14 @@ U85::operator= (const ::U85 &u)
         case 1:
         {
           // Make a deep copy.
-          this->u_.b_85_1_ = 
+          this->u_.b_85_1_ =
             U41_dup (u.u_.b_85_1_);
         }
         break;
         case 2:
         {
           // Make a deep copy.
-          this->u_.b_85_2_ = 
+          this->u_.b_85_2_ =
             U42_dup (u.u_.b_85_2_);
         }
         break;
@@ -3738,7 +3738,7 @@ U88::U88 (const ::U88 &u)
     case 1:
     {
       // Make a deep copy.
-      this->u_.b_86_1_ = 
+      this->u_.b_86_1_ =
         UString_dup (u.u_.b_86_1_);
     }
     break;
@@ -3776,7 +3776,7 @@ U88::operator= (const ::U88 &u)
         case 1:
         {
           // Make a deep copy.
-          this->u_.b_86_1_ = 
+          this->u_.b_86_1_ =
             UString_dup (u.u_.b_86_1_);
         }
         break;
@@ -3841,12 +3841,12 @@ static TAO::TypeCode::Union<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_UBar[] =
       {
         { "foo", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -4077,7 +4077,7 @@ U89::U89 (const ::U89 &u)
     case 1:
     {
       // Make a deep copy.
-      this->u_.b_87_1_ = 
+      this->u_.b_87_1_ =
         UBarArray_dup (u.u_.b_87_1_);
     }
     break;
@@ -4115,7 +4115,7 @@ U89::operator= (const ::U89 &u)
         case 1:
         {
           // Make a deep copy.
-          this->u_.b_87_1_ = 
+          this->u_.b_87_1_ =
             UBarArray_dup (u.u_.b_87_1_);
         }
         break;
@@ -4299,7 +4299,7 @@ U91::U91 (const ::U91 &u)
     case 1:
     {
       // Make a deep copy.
-      this->u_.b_91_1_ = 
+      this->u_.b_91_1_ =
         U90Array_dup (u.u_.b_91_1_);
     }
     break;
@@ -4337,7 +4337,7 @@ U91::operator= (const ::U91 &u)
         case 1:
         {
           // Make a deep copy.
-          this->u_.b_91_1_ = 
+          this->u_.b_91_1_ =
             U90Array_dup (u.u_.b_91_1_);
         }
         break;
@@ -4522,7 +4522,7 @@ U93::U93 (const ::U93 &u)
     case 1:
     {
       // Make a deep copy.
-      this->u_.b_93_1_ = 
+      this->u_.b_93_1_ =
         UBarArray_dup (u.u_.b_93_1_);
     }
     break;
@@ -4534,7 +4534,7 @@ U93::U93 (const ::U93 &u)
     default:
     {
       // Make a deep copy.
-      this->u_.b_93_3_ = 
+      this->u_.b_93_3_ =
         UBarArray_dup (u.u_.b_93_3_);
     }
     break;
@@ -4565,7 +4565,7 @@ U93::operator= (const ::U93 &u)
         case 1:
         {
           // Make a deep copy.
-          this->u_.b_93_1_ = 
+          this->u_.b_93_1_ =
             UBarArray_dup (u.u_.b_93_1_);
         }
         break;
@@ -4577,7 +4577,7 @@ U93::operator= (const ::U93 &u)
         default:
         {
           // Make a deep copy.
-          this->u_.b_93_3_ = 
+          this->u_.b_93_3_ =
             UBarArray_dup (u.u_.b_93_3_);
         }
         break;
@@ -4659,7 +4659,7 @@ U94::U94 (const ::U94 &u)
     case 1:
     {
       // Make a deep copy.
-      this->u_.b_94_1_ = 
+      this->u_.b_94_1_ =
         U90Array_dup (u.u_.b_94_1_);
     }
     break;
@@ -4671,7 +4671,7 @@ U94::U94 (const ::U94 &u)
     default:
     {
       // Make a deep copy.
-      this->u_.b_94_3_ = 
+      this->u_.b_94_3_ =
         U90Array_dup (u.u_.b_94_3_);
     }
     break;
@@ -4702,7 +4702,7 @@ U94::operator= (const ::U94 &u)
         case 1:
         {
           // Make a deep copy.
-          this->u_.b_94_1_ = 
+          this->u_.b_94_1_ =
             U90Array_dup (u.u_.b_94_1_);
         }
         break;
@@ -4714,7 +4714,7 @@ U94::operator= (const ::U94 &u)
         default:
         {
           // Make a deep copy.
-          this->u_.b_94_3_ = 
+          this->u_.b_94_3_ =
             U90Array_dup (u.u_.b_94_3_);
         }
         break;
@@ -5139,7 +5139,7 @@ DefaultInitializedEnumUnion::DefaultInitializedEnumUnion (const ::DefaultInitial
   {
     case 0:
     {
-      this->u_.value_ = 
+      this->u_.value_ =
         u.u_.value_;
     }
     break;
@@ -5171,7 +5171,7 @@ DefaultInitializedEnumUnion::operator= (const ::DefaultInitializedEnumUnion &u)
       {
         case 0:
         {
-          this->u_.value_ = 
+          this->u_.value_ =
             u.u_.value_;
         }
         break;
@@ -5228,7 +5228,7 @@ DefaultInitializedArrayUnion::DefaultInitializedArrayUnion (const ::DefaultIniti
     case 0:
     {
       // Make a deep copy.
-      this->u_.value_ = 
+      this->u_.value_ =
         DefaultInitializedLongArray_dup (u.u_.value_);
     }
     break;
@@ -5261,7 +5261,7 @@ DefaultInitializedArrayUnion::operator= (const ::DefaultInitializedArrayUnion &u
         case 0:
         {
           // Make a deep copy.
-          this->u_.value_ = 
+          this->u_.value_ =
             DefaultInitializedLongArray_dup (u.u_.value_);
         }
         break;

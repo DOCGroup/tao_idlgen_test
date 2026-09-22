@@ -149,14 +149,14 @@ static TAO::TypeCode::Alias<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_bar1[] =
       {
         { "b1", &CORBA::_tc_long },
         { "b2", &CORBA::_tc_long },
         { "b3", &_tc_string_20 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -189,13 +189,13 @@ bar1::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_bar2[] =
       {
         { "b3", &CORBA::_tc_long },
         { "b4", &_tc_bar1 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -228,14 +228,14 @@ bar2::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_bar3[] =
       {
         { "b1", &CORBA::_tc_long },
         { "b2", &CORBA::_tc_long },
         { "b3", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -268,7 +268,7 @@ bar3::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_bar4[] =
       {
         { "b1", &CORBA::_tc_long },
@@ -277,7 +277,7 @@ static TAO::TypeCode::Struct_Field<
         { "b4", &_tc_bar3 },
         { "b5", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -730,7 +730,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_foo1ResponseHandler::AMH_foo1ResponseHandler ()
-{}void
+{}
+
+void
 AMH_foo1ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_foo1ResponseHandler *tmp = static_cast<AMH_foo1ResponseHandler *> (_tao_void_pointer);
@@ -1606,7 +1608,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_foo2ResponseHandler::AMH_foo2ResponseHandler ()
-{}void
+{}
+
+void
 AMH_foo2ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_foo2ResponseHandler *tmp = static_cast<AMH_foo2ResponseHandler *> (_tao_void_pointer);
@@ -2109,13 +2113,13 @@ static TAO::TypeCode::Alias<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_CellPos[] =
       {
         { "row", &_tc_Coord },
         { "col", &_tc_Coord }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -2148,13 +2152,13 @@ CellPos::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_CellPos2[] =
       {
         { "row", &CORBA::_tc_ushort },
         { "col", &CORBA::_tc_ushort }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -2187,14 +2191,14 @@ CellPos2::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_CellPos3[] =
       {
         { "row", &_tc_Coord },
         { "col", &_tc_Coord },
         { "col2", &CORBA::_tc_ushort }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,

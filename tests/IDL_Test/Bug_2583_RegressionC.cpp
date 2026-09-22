@@ -88,7 +88,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 Test::DynAny::DynAny ()
-{}void
+{}
+
+void
 Test::DynAny::_tao_any_destructor (void *_tao_void_pointer)
 {
   DynAny *tmp = static_cast<DynAny *> (_tao_void_pointer);
@@ -188,13 +190,13 @@ namespace Test
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_NameDynAnyPair[] =
       {
         { "id", &CORBA::_tc_string },
         { "value", &Test::_tc_DynAny }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,

@@ -425,15 +425,15 @@ OBV_include_test::StringTest::_tao_marshal_state (TAO_OutputCDR &strm, TAO_Chunk
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_my_string_value.in ());
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -442,18 +442,18 @@ OBV_include_test::StringTest::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_Chun
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_my_string_value.out ());
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 

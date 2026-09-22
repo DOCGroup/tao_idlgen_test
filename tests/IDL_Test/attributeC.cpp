@@ -140,9 +140,9 @@ void Hello::InternalErrorA::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const * const 
+  ::CORBA::TypeCode_ptr const *> const * const
     _tao_fields_Hello_InternalErrorA = nullptr;
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -250,9 +250,9 @@ void Hello::InternalErrorB::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const * const 
+  ::CORBA::TypeCode_ptr const *> const * const
     _tao_fields_Hello_InternalErrorB = nullptr;
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1551,7 +1551,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 Hello::AMH_MyFooResponseHandler::AMH_MyFooResponseHandler ()
-{}void
+{}
+
+void
 Hello::AMH_MyFooResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_MyFooResponseHandler *tmp = static_cast<AMH_MyFooResponseHandler *> (_tao_void_pointer);

@@ -140,13 +140,13 @@ static TAO::TypeCode::Alias<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_myfoostruct[] =
       {
         { "str_mem", &CORBA::_tc_string },
         { "rec_mem", &_tc_myfoostructseq }
       };
-  
+
 static TAO::TypeCode::Recursive_Type<
   TAO::TypeCode::Struct<
     char const *,
@@ -288,13 +288,13 @@ void nasty::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_nasty[] =
       {
         { "id", &CORBA::_tc_string },
         { "rec_info", &_tc_myfoostruct }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -425,7 +425,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 seqLocal::seqLocal ()
-{}void
+{}
+
+void
 seqLocal::_tao_any_destructor (void *_tao_void_pointer)
 {
   seqLocal *tmp = static_cast<seqLocal *> (_tao_void_pointer);
@@ -691,12 +693,12 @@ namespace Deployment
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_ComponentAssemblyDescription[] =
       {
         { "instance", &Deployment::_tc_ComponentPackageDescriptions }
       };
-  
+
 static TAO::TypeCode::Recursive_Type<
   TAO::TypeCode::Struct<
     char const *,
@@ -906,13 +908,13 @@ namespace Deployment
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_NamedImplementationArtifact[] =
       {
         { "str", &CORBA::_tc_string },
         { "dependsOn", &Deployment::_tc_NamedImplementationArtifacts }
       };
-  
+
 static TAO::TypeCode::Recursive_Type<
   TAO::TypeCode::Struct<
     char const *,
@@ -958,12 +960,12 @@ Deployment::NamedImplementationArtifact::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_MonolithicImplementationDescription[] =
       {
         { "primaryArtifact", &Deployment::_tc_NamedImplementationArtifacts }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1090,13 +1092,13 @@ namespace Deployment
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_PackagedComponentImplementation[] =
       {
         { "assemblyImpl", &Deployment::_tc_ComponentAssemblyDescriptions },
         { "monolithicImpl", &Deployment::_tc_MonolithicImplementationDescriptions }
       };
-  
+
 static TAO::TypeCode::Recursive_Type<
   TAO::TypeCode::Struct<
     char const *,
@@ -1224,13 +1226,13 @@ namespace Deployment
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_ComponentPackageDescription[] =
       {
         { "str", &CORBA::_tc_string },
         { "implementation", &Deployment::_tc_PackagedComponentImplementations }
       };
-  
+
 static TAO::TypeCode::Recursive_Type<
   TAO::TypeCode::Struct<
     char const *,

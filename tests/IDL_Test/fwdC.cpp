@@ -65,12 +65,12 @@ namespace scope_test
 }
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_scope_test_same_scope_struct[] =
       {
         { "same_scope_member", &scope_test::_tc_i_scope_test }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -112,12 +112,12 @@ namespace scope_test
 }
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_mod2_scope_struct[] =
       {
         { "ss_member", &scope_test::_tc_i_scope_test }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -259,12 +259,12 @@ namespace mod2
 }
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_mod2_exp[] =
       {
         { "fwd_mem", &mod2::_tc_fwd }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -745,7 +745,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 mod2::AMH_fullResponseHandler::AMH_fullResponseHandler ()
-{}void
+{}
+
+void
 mod2::AMH_fullResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_fullResponseHandler *tmp = static_cast<AMH_fullResponseHandler *> (_tao_void_pointer);
@@ -1565,7 +1567,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 fwd_mixed_intf::AMH_concrete_parentResponseHandler::AMH_concrete_parentResponseHandler ()
-{}void
+{}
+
+void
 fwd_mixed_intf::AMH_concrete_parentResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_concrete_parentResponseHandler *tmp = static_cast<AMH_concrete_parentResponseHandler *> (_tao_void_pointer);
@@ -5007,15 +5011,15 @@ OBV_obv_fwd::EnclosingType::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkIn
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_forwarded.in ());
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -5024,18 +5028,18 @@ OBV_obv_fwd::EnclosingType::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkI
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_forwarded.out ());
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 
@@ -5111,15 +5115,15 @@ OBV_obv_fwd::ForwardedType::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkIn
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_number);
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -5128,18 +5132,18 @@ OBV_obv_fwd::ForwardedType::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkI
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_number);
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 

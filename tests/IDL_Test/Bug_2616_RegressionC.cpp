@@ -56,12 +56,12 @@
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_AA[] =
       {
         { "x", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -94,12 +94,12 @@ AA::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_BB[] =
       {
         { "data", &_tc_AA }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -560,7 +560,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_Interface1ResponseHandler::AMH_Interface1ResponseHandler ()
-{}void
+{}
+
+void
 AMH_Interface1ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_Interface1ResponseHandler *tmp = static_cast<AMH_Interface1ResponseHandler *> (_tao_void_pointer);
@@ -1333,7 +1335,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_Interface2ResponseHandler::AMH_Interface2ResponseHandler ()
-{}void
+{}
+
+void
 AMH_Interface2ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_Interface2ResponseHandler *tmp = static_cast<AMH_Interface2ResponseHandler *> (_tao_void_pointer);

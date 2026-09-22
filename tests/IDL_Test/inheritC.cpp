@@ -416,7 +416,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldInherit::AMH_oneResponseHandler::AMH_oneResponseHandler ()
-{}void
+{}
+
+void
 OldInherit::AMH_oneResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_oneResponseHandler *tmp = static_cast<AMH_oneResponseHandler *> (_tao_void_pointer);
@@ -1112,7 +1114,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldInherit::AMH_twoResponseHandler::AMH_twoResponseHandler ()
-{}void
+{}
+
+void
 OldInherit::AMH_twoResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_twoResponseHandler *tmp = static_cast<AMH_twoResponseHandler *> (_tao_void_pointer);
@@ -1809,7 +1813,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldInherit::AMH_threeResponseHandler::AMH_threeResponseHandler ()
-{}void
+{}
+
+void
 OldInherit::AMH_threeResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_threeResponseHandler *tmp = static_cast<AMH_threeResponseHandler *> (_tao_void_pointer);
@@ -2508,7 +2514,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldInherit::AMH_fourResponseHandler::AMH_fourResponseHandler ()
-{}void
+{}
+
+void
 OldInherit::AMH_fourResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_fourResponseHandler *tmp = static_cast<AMH_fourResponseHandler *> (_tao_void_pointer);
@@ -3210,7 +3218,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldInherit::AMH_fiveResponseHandler::AMH_fiveResponseHandler ()
-{}void
+{}
+
+void
 OldInherit::AMH_fiveResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_fiveResponseHandler *tmp = static_cast<AMH_fiveResponseHandler *> (_tao_void_pointer);

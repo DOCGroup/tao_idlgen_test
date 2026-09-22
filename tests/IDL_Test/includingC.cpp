@@ -367,12 +367,12 @@ static TAO::TypeCode::Enum<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_iface_using_incl[] =
       {
         { "field1", &Aok::_tc_Me }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -727,7 +727,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_ifaceResponseHandler::AMH_ifaceResponseHandler ()
-{}void
+{}
+
+void
 AMH_ifaceResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ifaceResponseHandler *tmp = static_cast<AMH_ifaceResponseHandler *> (_tao_void_pointer);
@@ -1139,12 +1141,12 @@ void MyException::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_MyException[] =
       {
         { "exField", &A::_tc_MyStructA }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1165,12 +1167,12 @@ _tao_tc_MyException (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_TestStr[] =
       {
         { "field", &A::_tc_MyStructA }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1749,7 +1751,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_MyIntResponseHandler::AMH_MyIntResponseHandler ()
-{}void
+{}
+
+void
 AMH_MyIntResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_MyIntResponseHandler *tmp = static_cast<AMH_MyIntResponseHandler *> (_tao_void_pointer);
@@ -2496,7 +2500,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 RootModule::SUBMODULE1::AMH_ChildIFResponseHandler::AMH_ChildIFResponseHandler ()
-{}void
+{}
+
+void
 RootModule::SUBMODULE1::AMH_ChildIFResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ChildIFResponseHandler *tmp = static_cast<AMH_ChildIFResponseHandler *> (_tao_void_pointer);
@@ -3107,7 +3113,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_BResponseHandler::AMH_BResponseHandler ()
-{}void
+{}
+
+void
 AMH_BResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_BResponseHandler *tmp = static_cast<AMH_BResponseHandler *> (_tao_void_pointer);

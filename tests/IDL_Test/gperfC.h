@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_GPERFC_D5JAMJ_H_
-#define _TAO_IDL_GPERFC_D5JAMJ_H_
+#ifndef _TAO_IDL_GPERFC_BJFQ3J_H_
+#define _TAO_IDL_GPERFC_BJFQ3J_H_
 
 #include /**/ "ace/pre.h"
 

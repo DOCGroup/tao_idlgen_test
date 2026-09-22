@@ -64,12 +64,12 @@
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_skip_hump_skip[] =
       {
         { "s", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -287,9 +287,9 @@ void e_skip::e_hump::e_skip::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const * const 
+  ::CORBA::TypeCode_ptr const *> const * const
     _tao_fields_e_skip_e_hump_e_skip = nullptr;
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -691,7 +691,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 i_skip::i_hump::AMH_i_skipResponseHandler::AMH_i_skipResponseHandler ()
-{}void
+{}
+
+void
 i_skip::i_hump::AMH_i_skipResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_i_skipResponseHandler *tmp = static_cast<AMH_i_skipResponseHandler *> (_tao_void_pointer);
@@ -1786,7 +1788,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_blooResponseHandler::AMH_blooResponseHandler ()
-{}void
+{}
+
+void
 AMH_blooResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_blooResponseHandler *tmp = static_cast<AMH_blooResponseHandler *> (_tao_void_pointer);
@@ -2567,7 +2571,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 bug_1985_a::b::AMH_somethingResponseHandler::AMH_somethingResponseHandler ()
-{}void
+{}
+
+void
 bug_1985_a::b::AMH_somethingResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_somethingResponseHandler *tmp = static_cast<AMH_somethingResponseHandler *> (_tao_void_pointer);
@@ -3181,7 +3187,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 bug_1985_c::d::AMH_somethingResponseHandler::AMH_somethingResponseHandler ()
-{}void
+{}
+
+void
 bug_1985_c::d::AMH_somethingResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_somethingResponseHandler *tmp = static_cast<AMH_somethingResponseHandler *> (_tao_void_pointer);
@@ -3787,7 +3795,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 Negotiator::AMH_UAV_NegotiatorResponseHandler::AMH_UAV_NegotiatorResponseHandler ()
-{}void
+{}
+
+void
 Negotiator::AMH_UAV_NegotiatorResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_UAV_NegotiatorResponseHandler *tmp = static_cast<AMH_UAV_NegotiatorResponseHandler *> (_tao_void_pointer);
@@ -4445,7 +4455,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 Negotiator::AMH_UAV_Negotiator_FactoryResponseHandler::AMH_UAV_Negotiator_FactoryResponseHandler ()
-{}void
+{}
+
+void
 Negotiator::AMH_UAV_Negotiator_FactoryResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_UAV_Negotiator_FactoryResponseHandler *tmp = static_cast<AMH_UAV_Negotiator_FactoryResponseHandler *> (_tao_void_pointer);
@@ -5265,7 +5277,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 Wow::bug_2125::AMH_MyInterfaceResponseHandler::AMH_MyInterfaceResponseHandler ()
-{}void
+{}
+
+void
 Wow::bug_2125::AMH_MyInterfaceResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_MyInterfaceResponseHandler *tmp = static_cast<AMH_MyInterfaceResponseHandler *> (_tao_void_pointer);
@@ -5647,12 +5661,12 @@ namespace Company
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Company_CORBA_Inner_Foo[] =
       {
         { "x", &CORBA::_tc_boolean }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,

@@ -52,12 +52,12 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M1_S1[] =
       {
         { "o", &CORBA::_tc_octet }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -122,7 +122,9 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 M1::LI::LI ()
-{}M1::LI_ptr
+{}
+
+M1::LI_ptr
 M1::LI::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return LI::_duplicate (

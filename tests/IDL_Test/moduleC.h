@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_MODULEC_DNZ4AG_H_
-#define _TAO_IDL_MODULEC_DNZ4AG_H_
+#ifndef _TAO_IDL_MODULEC_ZJUE24_H_
+#define _TAO_IDL_MODULEC_ZJUE24_H_
 
 #include /**/ "ace/pre.h"
 

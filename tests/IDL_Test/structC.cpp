@@ -60,12 +60,12 @@
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S1[] =
       {
         { "hello", &CORBA::_tc_string }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -188,13 +188,13 @@ namespace Test
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S3[] =
       {
         { "m_seq", &Test::_tc_TS3Seq },
         { "m_has_more", &CORBA::_tc_boolean }
       };
-  
+
 static TAO::TypeCode::Recursive_Type<
   TAO::TypeCode::Struct<
     char const *,
@@ -400,12 +400,12 @@ namespace Test
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S4[] =
       {
         { "a", &CORBA::_tc_boolean }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -442,12 +442,12 @@ Test::S4::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S5[] =
       {
         { "b", &CORBA::_tc_boolean }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -501,13 +501,13 @@ namespace Test
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_FooStruct[] =
       {
         { "Foo1", &Test::_tc_FooType },
         { "Foo2", &Test::_tc_FooType }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -935,7 +935,7 @@ namespace Test
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S10[] =
       {
         { "s10_1", &Test::_tc_S90 },
@@ -943,7 +943,7 @@ static TAO::TypeCode::Struct_Field<
         { "s10_3", &Test::_tc_SString43 },
         { "s10_4", &Test::_tc_S4 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -984,7 +984,7 @@ Test::S10::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_DefaultInitialized[] =
       {
         { "boolean_value", &CORBA::_tc_boolean },
@@ -994,7 +994,7 @@ static TAO::TypeCode::Struct_Field<
         { "array_value", &Test::_tc_S42 },
         { "nested_value", &Test::_tc_S4 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1135,13 +1135,13 @@ void Test::DefaultInitializedException::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_DefaultInitializedException[] =
       {
         { "boolean_value", &CORBA::_tc_boolean },
         { "long_value", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,

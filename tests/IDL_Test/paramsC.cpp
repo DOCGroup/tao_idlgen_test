@@ -56,14 +56,14 @@
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_foo_theDate[] =
       {
         { "year", &CORBA::_tc_short },
         { "month", &CORBA::_tc_short },
         { "day", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -100,12 +100,12 @@ foo::theDate::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_foo_bar_theDate[] =
       {
         { "x", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -588,7 +588,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 foo::bar::AMH_fooBarResponseHandler::AMH_fooBarResponseHandler ()
-{}void
+{}
+
+void
 foo::bar::AMH_fooBarResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_fooBarResponseHandler *tmp = static_cast<AMH_fooBarResponseHandler *> (_tao_void_pointer);

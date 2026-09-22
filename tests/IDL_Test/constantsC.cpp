@@ -382,7 +382,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 ClassConstants::AMH_IfaceResponseHandler::AMH_IfaceResponseHandler ()
-{}void
+{}
+
+void
 ClassConstants::AMH_IfaceResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_IfaceResponseHandler *tmp = static_cast<AMH_IfaceResponseHandler *> (_tao_void_pointer);

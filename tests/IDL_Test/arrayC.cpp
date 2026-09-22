@@ -488,12 +488,12 @@ static TAO::TypeCode::Alias<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_wrap[] =
       {
         { "member", &_tc_inside_array }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1205,7 +1205,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_array_argsResponseHandler::AMH_array_argsResponseHandler ()
-{}void
+{}
+
+void
 AMH_array_argsResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_array_argsResponseHandler *tmp = static_cast<AMH_array_argsResponseHandler *> (_tao_void_pointer);
@@ -1889,13 +1891,13 @@ static TAO::TypeCode::Alias<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_testdata_struct2[] =
       {
         { "field_1", &testdata::_tc_Arraychar },
         { "field_2", &testdata::_tc_ArrayDeChar }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -2576,7 +2578,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_testdataResponseHandler::AMH_testdataResponseHandler ()
-{}void
+{}
+
+void
 AMH_testdataResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_testdataResponseHandler *tmp = static_cast<AMH_testdataResponseHandler *> (_tao_void_pointer);
@@ -3398,7 +3402,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 arraytest::AMH_MyTestResponseHandler::AMH_MyTestResponseHandler ()
-{}void
+{}
+
+void
 arraytest::AMH_MyTestResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_MyTestResponseHandler *tmp = static_cast<AMH_MyTestResponseHandler *> (_tao_void_pointer);
@@ -3945,12 +3951,12 @@ namespace bug_2126
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_bug_2126_MyStruct[] =
       {
         { "my_struct_foo", &bug_2126::_tc_FirstUnionArray }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -4198,12 +4204,12 @@ namespace bug_2126
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_bug_2126_BdMyStruct[] =
       {
         { "my_struct_foo", &bug_2126::_tc_BdFirstUnionArray }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -4642,21 +4648,21 @@ B85::B85 (const ::B85 &u)
     case 1:
     {
       // Make a deep copy.
-      this->u_.b_85_1_ = 
+      this->u_.b_85_1_ =
         B42_dup (u.u_.b_85_1_);
     }
     break;
     case 2:
     {
       // Make a deep copy.
-      this->u_.b_85_2_ = 
+      this->u_.b_85_2_ =
         B43_dup (u.u_.b_85_2_);
     }
     break;
     case 3:
     {
       // Make a deep copy.
-      this->u_.b_85_3_ = 
+      this->u_.b_85_3_ =
         B41_dup (u.u_.b_85_3_);
     }
     break;
@@ -4689,21 +4695,21 @@ B85::operator= (const ::B85 &u)
         case 1:
         {
           // Make a deep copy.
-          this->u_.b_85_1_ = 
+          this->u_.b_85_1_ =
             B42_dup (u.u_.b_85_1_);
         }
         break;
         case 2:
         {
           // Make a deep copy.
-          this->u_.b_85_2_ = 
+          this->u_.b_85_2_ =
             B43_dup (u.u_.b_85_2_);
         }
         break;
         case 3:
         {
           // Make a deep copy.
-          this->u_.b_85_3_ = 
+          this->u_.b_85_3_ =
             B41_dup (u.u_.b_85_3_);
         }
         break;

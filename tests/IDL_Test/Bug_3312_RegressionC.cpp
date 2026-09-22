@@ -133,7 +133,7 @@ CallMe::YourColorBaby::YourColorBaby (const ::CallMe::YourColorBaby &u)
   {
     case CallMe::YourColorBaby::Red:
     {
-      this->u_.c_1_ = 
+      this->u_.c_1_ =
         u.u_.c_1_;
     }
     break;
@@ -170,7 +170,7 @@ CallMe::YourColorBaby::operator= (const ::CallMe::YourColorBaby &u)
       {
         case CallMe::YourColorBaby::Red:
         {
-          this->u_.c_1_ = 
+          this->u_.c_1_ =
             u.u_.c_1_;
         }
         break;

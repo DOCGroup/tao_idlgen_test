@@ -140,9 +140,9 @@ void something::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const * const 
+  ::CORBA::TypeCode_ptr const *> const * const
     _tao_fields_something = nullptr;
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -163,12 +163,12 @@ _tao_tc_something (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_user_ExceptionHolder[] =
       {
         { "a", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -631,7 +631,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_Bug_2350_RegressionResponseHandler::AMH_Bug_2350_RegressionResponseHandler ()
-{}void
+{}
+
+void
 AMH_Bug_2350_RegressionResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_Bug_2350_RegressionResponseHandler *tmp = static_cast<AMH_Bug_2350_RegressionResponseHandler *> (_tao_void_pointer);

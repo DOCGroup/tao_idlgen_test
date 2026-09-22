@@ -1040,7 +1040,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldDif2::AMH_ex1ResponseHandler::AMH_ex1ResponseHandler ()
-{}void
+{}
+
+void
 OldDif2::AMH_ex1ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ex1ResponseHandler *tmp = static_cast<AMH_ex1ResponseHandler *> (_tao_void_pointer);
@@ -3112,7 +3114,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldDif2::AMH_ex2ResponseHandler::AMH_ex2ResponseHandler ()
-{}void
+{}
+
+void
 OldDif2::AMH_ex2ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ex2ResponseHandler *tmp = static_cast<AMH_ex2ResponseHandler *> (_tao_void_pointer);
@@ -5061,7 +5065,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldDif2::AMH_ex3ResponseHandler::AMH_ex3ResponseHandler ()
-{}void
+{}
+
+void
 OldDif2::AMH_ex3ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ex3ResponseHandler *tmp = static_cast<AMH_ex3ResponseHandler *> (_tao_void_pointer);
@@ -7329,7 +7335,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldDif2::AMH_ex4ResponseHandler::AMH_ex4ResponseHandler ()
-{}void
+{}
+
+void
 OldDif2::AMH_ex4ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ex4ResponseHandler *tmp = static_cast<AMH_ex4ResponseHandler *> (_tao_void_pointer);

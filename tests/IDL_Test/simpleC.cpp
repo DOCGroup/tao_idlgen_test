@@ -230,12 +230,12 @@ void simple_error::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple_error[] =
       {
         { "reason", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -697,7 +697,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_simpleResponseHandler::AMH_simpleResponseHandler ()
-{}void
+{}
+
+void
 AMH_simpleResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_simpleResponseHandler *tmp = static_cast<AMH_simpleResponseHandler *> (_tao_void_pointer);
@@ -1241,12 +1243,12 @@ void simple2::simple2_error::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple2_simple2_error[] =
       {
         { "reason2", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1674,7 +1676,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_simple2ResponseHandler::AMH_simple2ResponseHandler ()
-{}void
+{}
+
+void
 AMH_simple2ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_simple2ResponseHandler *tmp = static_cast<AMH_simple2ResponseHandler *> (_tao_void_pointer);

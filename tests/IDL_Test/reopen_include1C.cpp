@@ -563,7 +563,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 A::B::AMH_X1ResponseHandler::AMH_X1ResponseHandler ()
-{}void
+{}
+
+void
 A::B::AMH_X1ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_X1ResponseHandler *tmp = static_cast<AMH_X1ResponseHandler *> (_tao_void_pointer);

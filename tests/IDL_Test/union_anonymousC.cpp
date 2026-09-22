@@ -61,12 +61,12 @@
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Element[] =
       {
         { "Value", &Element::_tc_ValueUnion }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -498,13 +498,13 @@ decl_heavy_union::_m_st_arr_copy (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_decl_heavy_union_st[] =
       {
         { "a", &CORBA::_tc_long },
         { "b", &CORBA::_tc_char }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -730,42 +730,42 @@ decl_heavy_union::decl_heavy_union (const ::decl_heavy_union &u)
   {
     case 1:
     {
-      this->u_.m_which_ = 
+      this->u_.m_which_ =
         u.u_.m_which_;
     }
     break;
     case 2:
     {
       // Make a deep copy.
-      this->u_.m_en_arr_ = 
+      this->u_.m_en_arr_ =
         decl_heavy_union::_m_en_arr_dup (u.u_.m_en_arr_);
     }
     break;
     case 3:
     {
       // Make a deep copy.
-      this->u_.m_st_arr_ = 
+      this->u_.m_st_arr_ =
         decl_heavy_union::_m_st_arr_dup (u.u_.m_st_arr_);
     }
     break;
     case 4:
     {
       // Make a deep copy.
-      this->u_.m_un_arr_ = 
+      this->u_.m_un_arr_ =
         decl_heavy_union::_m_un_arr_dup (u.u_.m_un_arr_);
     }
     break;
     case 5:
     {
       // Make a deep copy.
-      this->u_.m_named_long_array_ = 
+      this->u_.m_named_long_array_ =
         NamedLongArray_dup (u.u_.m_named_long_array_);
     }
     break;
     case 6:
     {
       // Make a deep copy.
-      this->u_.m_anon_long_array_ = 
+      this->u_.m_anon_long_array_ =
         decl_heavy_union::_m_anon_long_array_dup (u.u_.m_anon_long_array_);
     }
     break;
@@ -797,42 +797,42 @@ decl_heavy_union::operator= (const ::decl_heavy_union &u)
       {
         case 1:
         {
-          this->u_.m_which_ = 
+          this->u_.m_which_ =
             u.u_.m_which_;
         }
         break;
         case 2:
         {
           // Make a deep copy.
-          this->u_.m_en_arr_ = 
+          this->u_.m_en_arr_ =
             decl_heavy_union::_m_en_arr_dup (u.u_.m_en_arr_);
         }
         break;
         case 3:
         {
           // Make a deep copy.
-          this->u_.m_st_arr_ = 
+          this->u_.m_st_arr_ =
             decl_heavy_union::_m_st_arr_dup (u.u_.m_st_arr_);
         }
         break;
         case 4:
         {
           // Make a deep copy.
-          this->u_.m_un_arr_ = 
+          this->u_.m_un_arr_ =
             decl_heavy_union::_m_un_arr_dup (u.u_.m_un_arr_);
         }
         break;
         case 5:
         {
           // Make a deep copy.
-          this->u_.m_named_long_array_ = 
+          this->u_.m_named_long_array_ =
             NamedLongArray_dup (u.u_.m_named_long_array_);
         }
         break;
         case 6:
         {
           // Make a deep copy.
-          this->u_.m_anon_long_array_ = 
+          this->u_.m_anon_long_array_ =
             decl_heavy_union::_m_anon_long_array_dup (u.u_.m_anon_long_array_);
         }
         break;

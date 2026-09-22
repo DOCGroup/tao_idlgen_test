@@ -81,13 +81,13 @@ static TAO::TypeCode::Enum<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_HoldsEnum[] =
       {
         { "named_enum", &HoldsEnum::_tc_Named },
         { "unnamed_enum", &_tc_UnNamed }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -236,14 +236,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_decl_heavy_struct_m_un_GUARD */
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_decl_heavy_struct[] =
       {
         { "m_en", &TAO::TypeCode::tc_decl_heavy_struct_m_en },
         { "m_st", &TAO::TypeCode::tc_decl_heavy_struct_m_st },
         { "m_un", &TAO::TypeCode::tc_decl_heavy_struct_m_un }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -378,13 +378,13 @@ decl_heavy_struct::_m_st_copy (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_decl_heavy_struct_st[] =
       {
         { "a", &CORBA::_tc_long },
         { "b", &CORBA::_tc_char }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -679,12 +679,12 @@ void ErrorException::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_ErrorException[] =
       {
         { "reason", &ErrorException::_tc_ReasonCode }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,

@@ -642,7 +642,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 TestModule::AMH_TestInterfaceResponseHandler::AMH_TestInterfaceResponseHandler ()
-{}void
+{}
+
+void
 TestModule::AMH_TestInterfaceResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_TestInterfaceResponseHandler *tmp = static_cast<AMH_TestInterfaceResponseHandler *> (_tao_void_pointer);
@@ -1559,7 +1561,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 bug_2124::AMH_FooResponseHandler::AMH_FooResponseHandler ()
-{}void
+{}
+
+void
 bug_2124::AMH_FooResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_FooResponseHandler *tmp = static_cast<AMH_FooResponseHandler *> (_tao_void_pointer);
@@ -2383,7 +2387,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 bug_2122::One::AMH_WhateverResponseHandler::AMH_WhateverResponseHandler ()
-{}void
+{}
+
+void
 bug_2122::One::AMH_WhateverResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_WhateverResponseHandler *tmp = static_cast<AMH_WhateverResponseHandler *> (_tao_void_pointer);
@@ -3086,7 +3092,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 bug_2122::Two::AMH_WhoCaresResponseHandler::AMH_WhoCaresResponseHandler ()
-{}void
+{}
+
+void
 bug_2122::Two::AMH_WhoCaresResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_WhoCaresResponseHandler *tmp = static_cast<AMH_WhoCaresResponseHandler *> (_tao_void_pointer);
@@ -3789,7 +3797,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 bug_2122::Three::AMH_WhoCaresResponseHandler::AMH_WhoCaresResponseHandler ()
-{}void
+{}
+
+void
 bug_2122::Three::AMH_WhoCaresResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_WhoCaresResponseHandler *tmp = static_cast<AMH_WhoCaresResponseHandler *> (_tao_void_pointer);

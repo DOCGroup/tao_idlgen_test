@@ -197,13 +197,13 @@ void simple3::OverFlow::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple3_OverFlow[] =
       {
         { "a", &CORBA::_tc_long },
         { "msg", &CORBA::_tc_string }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -328,13 +328,13 @@ void simple3::UnderFlow::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple3_UnderFlow[] =
       {
         { "b", &CORBA::_tc_long },
         { "msg", &CORBA::_tc_string }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -459,12 +459,12 @@ void simple3::BadNum::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple3_BadNum[] =
       {
         { "c", &_tc_vec10 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -585,12 +585,12 @@ void simple3::UserError::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple3_UserError[] =
       {
         { "reason", &CORBA::_tc_any }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1154,7 +1154,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_simple3ResponseHandler::AMH_simple3ResponseHandler ()
-{}void
+{}
+
+void
 AMH_simple3ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_simple3ResponseHandler *tmp = static_cast<AMH_simple3ResponseHandler *> (_tao_void_pointer);

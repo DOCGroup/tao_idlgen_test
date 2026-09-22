@@ -485,7 +485,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_testlistitemResponseHandler::AMH_testlistitemResponseHandler ()
-{}void
+{}
+
+void
 AMH_testlistitemResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_testlistitemResponseHandler *tmp = static_cast<AMH_testlistitemResponseHandler *> (_tao_void_pointer);
@@ -2515,7 +2517,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_testResponseHandler::AMH_testResponseHandler ()
-{}void
+{}
+
+void
 AMH_testResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_testResponseHandler *tmp = static_cast<AMH_testResponseHandler *> (_tao_void_pointer);
@@ -5696,7 +5700,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_Simple_ServerResponseHandler::AMH_Simple_ServerResponseHandler ()
-{}void
+{}
+
+void
 AMH_Simple_ServerResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_Simple_ServerResponseHandler *tmp = static_cast<AMH_Simple_ServerResponseHandler *> (_tao_void_pointer);

@@ -58,7 +58,7 @@
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Keywords[] =
       {
         { "or", &CORBA::_tc_ushort },
@@ -68,7 +68,7 @@ static TAO::TypeCode::Struct_Field<
         { "public", &CORBA::_tc_float },
         { "int", &CORBA::_tc_double }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -101,12 +101,12 @@ Keywords::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Object[] =
       {
         { "id", &CORBA::_tc_longlong }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -221,12 +221,12 @@ static TAO::TypeCode::Alias<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Objects[] =
       {
         { "objs", &_tc_ObjectSeq }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -767,7 +767,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_TestingResponseHandler::AMH_TestingResponseHandler ()
-{}void
+{}
+
+void
 AMH_TestingResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_TestingResponseHandler *tmp = static_cast<AMH_TestingResponseHandler *> (_tao_void_pointer);

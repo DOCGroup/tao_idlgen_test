@@ -485,14 +485,14 @@ static TAO::TypeCode::Alias<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_TProgram[] =
       {
         { "path", &CORBA::_tc_string },
         { "argv", &_tc_cstring },
         { "envp", &_tc_cstring }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -525,13 +525,13 @@ TProgram::_tao_any_destructor (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_sfoo[] =
       {
         { "f1", &CORBA::_tc_long },
         { "f2", &CORBA::_tc_char }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1388,7 +1388,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_TestSeqResponseHandler::AMH_TestSeqResponseHandler ()
-{}void
+{}
+
+void
 AMH_TestSeqResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_TestSeqResponseHandler *tmp = static_cast<AMH_TestSeqResponseHandler *> (_tao_void_pointer);

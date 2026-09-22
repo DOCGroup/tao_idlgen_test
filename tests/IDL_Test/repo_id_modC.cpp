@@ -74,7 +74,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::schmooze::schmooze ()
-{}void
+{}
+
+void
 gleep::schmooze::_tao_any_destructor (void *_tao_void_pointer)
 {
   schmooze *tmp = static_cast<schmooze *> (_tao_void_pointer);
@@ -191,7 +193,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::schmeer::schmeer ()
-{}void
+{}
+
+void
 gleep::schmeer::_tao_any_destructor (void *_tao_void_pointer)
 {
   schmeer *tmp = static_cast<schmeer *> (_tao_void_pointer);
@@ -308,7 +312,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::schlemiel::schlemiel ()
-{}void
+{}
+
+void
 gleep::schlemiel::_tao_any_destructor (void *_tao_void_pointer)
 {
   schlemiel *tmp = static_cast<schlemiel *> (_tao_void_pointer);
@@ -425,7 +431,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::spilkis::spilkis ()
-{}void
+{}
+
+void
 gleep::spilkis::_tao_any_destructor (void *_tao_void_pointer)
 {
   spilkis *tmp = static_cast<spilkis *> (_tao_void_pointer);
@@ -542,7 +550,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::floop::schmuck::schmuck ()
-{}void
+{}
+
+void
 gleep::floop::schmuck::_tao_any_destructor (void *_tao_void_pointer)
 {
   schmuck *tmp = static_cast<schmuck *> (_tao_void_pointer);
@@ -659,7 +669,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::floop::schmendrick::schmendrick ()
-{}void
+{}
+
+void
 gleep::floop::schmendrick::_tao_any_destructor (void *_tao_void_pointer)
 {
   schmendrick *tmp = static_cast<schmendrick *> (_tao_void_pointer);
@@ -776,7 +788,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::floop::verklempt::schlemazel::schlemazel ()
-{}void
+{}
+
+void
 gleep::floop::verklempt::schlemazel::_tao_any_destructor (void *_tao_void_pointer)
 {
   schlemazel *tmp = static_cast<schlemazel *> (_tao_void_pointer);
@@ -893,7 +907,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::schmegegging::schmegegging ()
-{}void
+{}
+
+void
 gleep::schmegegging::_tao_any_destructor (void *_tao_void_pointer)
 {
   schmegegging *tmp = static_cast<schmegegging *> (_tao_void_pointer);

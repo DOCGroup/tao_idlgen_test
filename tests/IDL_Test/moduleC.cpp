@@ -693,7 +693,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 mod1::mod2::AMH_ex1ResponseHandler::AMH_ex1ResponseHandler ()
-{}void
+{}
+
+void
 mod1::mod2::AMH_ex1ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ex1ResponseHandler *tmp = static_cast<AMH_ex1ResponseHandler *> (_tao_void_pointer);
@@ -1969,7 +1971,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 mod1::mod2::AMH_ex2ResponseHandler::AMH_ex2ResponseHandler ()
-{}void
+{}
+
+void
 mod1::mod2::AMH_ex2ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ex2ResponseHandler *tmp = static_cast<AMH_ex2ResponseHandler *> (_tao_void_pointer);

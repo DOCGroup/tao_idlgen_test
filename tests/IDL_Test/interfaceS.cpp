@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_INTERFACES_T86F2I_CPP_
-#define _TAO_IDL_INTERFACES_T86F2I_CPP_
+#ifndef _TAO_IDL_INTERFACES_SZB4BM_CPP_
+#define _TAO_IDL_INTERFACES_SZB4BM_CPP_
 
 
 #include "interfaceS.h"

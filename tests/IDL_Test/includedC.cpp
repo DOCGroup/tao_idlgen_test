@@ -659,13 +659,13 @@ namespace A
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_A_MyStructA[] =
       {
         { "str", &CORBA::_tc_string },
         { "recursive_member", &A::_tc_MySeqA }
       };
-  
+
 static TAO::TypeCode::Recursive_Type<
   TAO::TypeCode::Struct<
     char const *,
@@ -1100,7 +1100,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 RootModule::SUBMODULE1::AMH_ParentIFResponseHandler::AMH_ParentIFResponseHandler ()
-{}void
+{}
+
+void
 RootModule::SUBMODULE1::AMH_ParentIFResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ParentIFResponseHandler *tmp = static_cast<AMH_ParentIFResponseHandler *> (_tao_void_pointer);
@@ -1710,7 +1712,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_AAAResponseHandler::AMH_AAAResponseHandler ()
-{}void
+{}
+
+void
 AMH_AAAResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_AAAResponseHandler *tmp = static_cast<AMH_AAAResponseHandler *> (_tao_void_pointer);
@@ -3284,15 +3288,15 @@ OBV_IncludedBase::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) co
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_DeprecatedMember);
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -3301,18 +3305,18 @@ OBV_IncludedBase::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_DeprecatedMember);
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 

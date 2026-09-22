@@ -1342,7 +1342,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 All_Anon::AMH_anon_bd_string_testResponseHandler::AMH_anon_bd_string_testResponseHandler ()
-{}void
+{}
+
+void
 All_Anon::AMH_anon_bd_string_testResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_anon_bd_string_testResponseHandler *tmp = static_cast<AMH_anon_bd_string_testResponseHandler *> (_tao_void_pointer);

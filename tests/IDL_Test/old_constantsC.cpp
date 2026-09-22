@@ -184,12 +184,12 @@ void OldConstants::E::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldConstants_E[] =
       {
         { "cause", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -343,12 +343,12 @@ void OldConstants::M::E::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldConstants_M_E[] =
       {
         { "cause", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -539,12 +539,12 @@ void OldConstants::M::A::E::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldConstants_M_A_E[] =
       {
         { "cause", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -972,7 +972,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldConstants::M::AMH_AResponseHandler::AMH_AResponseHandler ()
-{}void
+{}
+
+void
 OldConstants::M::AMH_AResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_AResponseHandler *tmp = static_cast<AMH_AResponseHandler *> (_tao_void_pointer);

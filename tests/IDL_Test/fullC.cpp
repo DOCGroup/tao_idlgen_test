@@ -427,7 +427,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 scope_test::AMH_i_scope_testResponseHandler::AMH_i_scope_testResponseHandler ()
-{}void
+{}
+
+void
 scope_test::AMH_i_scope_testResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_i_scope_testResponseHandler *tmp = static_cast<AMH_i_scope_testResponseHandler *> (_tao_void_pointer);
@@ -1066,9 +1068,9 @@ void mod2::fwd::bar::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const * const 
+  ::CORBA::TypeCode_ptr const *> const * const
     _tao_fields_mod2_fwd_bar = nullptr;
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1618,7 +1620,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 mod2::AMH_fwdResponseHandler::AMH_fwdResponseHandler ()
-{}void
+{}
+
+void
 mod2::AMH_fwdResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_fwdResponseHandler *tmp = static_cast<AMH_fwdResponseHandler *> (_tao_void_pointer);

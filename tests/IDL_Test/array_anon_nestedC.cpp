@@ -86,13 +86,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_teststruct_b_GUARD */
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_teststruct[] =
       {
         { "b", &TAO::TypeCode::tc_teststruct_b },
         { "estruct", &teststruct::_tc_embeddedstruct }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -198,12 +198,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_teststruct_embeddedstruct_a_GUARD */
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_teststruct_embeddedstruct[] =
       {
         { "a", &TAO::TypeCode::tc_teststruct_embeddedstruct_a }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,

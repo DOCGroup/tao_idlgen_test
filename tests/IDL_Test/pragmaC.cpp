@@ -365,7 +365,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_helloResponseHandler::AMH_helloResponseHandler ()
-{}void
+{}
+
+void
 AMH_helloResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_helloResponseHandler *tmp = static_cast<AMH_helloResponseHandler *> (_tao_void_pointer);
@@ -968,7 +970,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_goodbyeResponseHandler::AMH_goodbyeResponseHandler ()
-{}void
+{}
+
+void
 AMH_goodbyeResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_goodbyeResponseHandler *tmp = static_cast<AMH_goodbyeResponseHandler *> (_tao_void_pointer);
@@ -1571,7 +1575,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 salutation::AMH_sayonaraResponseHandler::AMH_sayonaraResponseHandler ()
-{}void
+{}
+
+void
 salutation::AMH_sayonaraResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_sayonaraResponseHandler *tmp = static_cast<AMH_sayonaraResponseHandler *> (_tao_void_pointer);
@@ -2095,7 +2101,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_ciaoResponseHandler::AMH_ciaoResponseHandler ()
-{}void
+{}
+
+void
 AMH_ciaoResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ciaoResponseHandler *tmp = static_cast<AMH_ciaoResponseHandler *> (_tao_void_pointer);
@@ -2619,7 +2627,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_alohaResponseHandler::AMH_alohaResponseHandler ()
-{}void
+{}
+
+void
 AMH_alohaResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_alohaResponseHandler *tmp = static_cast<AMH_alohaResponseHandler *> (_tao_void_pointer);

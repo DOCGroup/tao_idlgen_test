@@ -582,7 +582,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_seqTestResponseHandler::AMH_seqTestResponseHandler ()
-{}void
+{}
+
+void
 AMH_seqTestResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_seqTestResponseHandler *tmp = static_cast<AMH_seqTestResponseHandler *> (_tao_void_pointer);
@@ -1067,13 +1069,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_twinStruct[] =
       {
         { "and_", &TAO::TypeCode::tc_twinStruct__tao_seq__tao_seq_CORBA_Short__and__0 },
         { "or_", &TAO::TypeCode::tc_twinStruct__tao_seq__tao_seq_CORBA_Short__or__0 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1402,12 +1404,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_nestedSeqStruct[] =
       {
         { "inside", &TAO::TypeCode::tc_nestedSeqStruct__tao_seq__tao_seq_outside__inside_7_7 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,

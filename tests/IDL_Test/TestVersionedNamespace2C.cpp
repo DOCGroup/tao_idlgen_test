@@ -63,12 +63,12 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M1_S1[] =
       {
         { "o", &CORBA::_tc_octet }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -492,7 +492,9 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 M1::AMH_LIResponseHandler::AMH_LIResponseHandler ()
-{}void
+{}
+
+void
 M1::AMH_LIResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_LIResponseHandler *tmp = static_cast<AMH_LIResponseHandler *> (_tao_void_pointer);
@@ -969,7 +971,9 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 M1::AMH_L2ResponseHandler::AMH_L2ResponseHandler ()
-{}void
+{}
+
+void
 M1::AMH_L2ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_L2ResponseHandler *tmp = static_cast<AMH_L2ResponseHandler *> (_tao_void_pointer);
@@ -1059,14 +1063,14 @@ namespace M1
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M1_X[] =
       {
         { "valString", &CORBA::_tc_string },
         { "valStruct", &M1::_tc_S1 },
         { "valLocalIface", &M1::_tc_L2 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1499,12 +1503,12 @@ M1::V_init::create_for_unmarshal ()
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M2_M3_S2[] =
       {
         { "o", &CORBA::_tc_octet }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1940,7 +1944,9 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 M2::M3::AMH_L3ResponseHandler::AMH_L3ResponseHandler ()
-{}void
+{}
+
+void
 M2::M3::AMH_L3ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_L3ResponseHandler *tmp = static_cast<AMH_L3ResponseHandler *> (_tao_void_pointer);
@@ -2142,14 +2148,14 @@ void M2::M3::E1::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M2_M3_E1[] =
       {
         { "val2", &M2::M3::_tc_L3 },
         { "bool1", &M1::_tc_BooleanUnion1 },
         { "bool2", &M1::_tc_BooleanUnion2 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -2588,7 +2594,9 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 M2::M3::AMH_L4ResponseHandler::AMH_L4ResponseHandler ()
-{}void
+{}
+
+void
 M2::M3::AMH_L4ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_L4ResponseHandler *tmp = static_cast<AMH_L4ResponseHandler *> (_tao_void_pointer);
@@ -5922,8 +5930,8 @@ OBV_M1::V::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_valString.in ()) &&
       (strm << _pd_valStruct) &&
       TAO::Objref_Traits< ::M1::LI>::marshal (
@@ -5933,12 +5941,12 @@ OBV_M1::V::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
       (strm << _pd_valBoolUnion1) &&
       (strm << _pd_valBoolUnion2) &&
       (strm << _pd_valX);
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -5947,23 +5955,23 @@ OBV_M1::V::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_valString.out ()) &&
       (strm >> _pd_valStruct) &&
       (strm >> _pd_valLocalIface.out ()) &&
       (strm >> _pd_valBoolUnion1) &&
       (strm >> _pd_valBoolUnion2) &&
       (strm >> _pd_valX);
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 
@@ -6418,8 +6426,8 @@ OBV_M2::M3::V2::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) cons
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_valString.in ()) &&
       (strm << _pd_valStruct) &&
       TAO::Objref_Traits< ::M2::M3::L3>::marshal (
@@ -6430,12 +6438,12 @@ OBV_M2::M3::V2::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) cons
           _pd_valLocalIface3.in (),
           strm
         );
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -6444,21 +6452,21 @@ OBV_M2::M3::V2::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_valString.out ()) &&
       (strm >> _pd_valStruct) &&
       (strm >> _pd_valLocalIface.out ()) &&
       (strm >> _pd_valLocalIface3.out ());
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 
@@ -6550,20 +6558,20 @@ OBV_M2::M3::V3::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) cons
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_valString.in ()) &&
       (strm << _pd_valStruct) &&
       TAO::Objref_Traits< ::M1::L2>::marshal (
           _pd_valLocalIface.in (),
           strm
         );
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -6572,20 +6580,20 @@ OBV_M2::M3::V3::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_valString.out ()) &&
       (strm >> _pd_valStruct) &&
       (strm >> _pd_valLocalIface.out ());
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 

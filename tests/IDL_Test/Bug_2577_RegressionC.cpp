@@ -56,12 +56,12 @@
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_DateTime_T[] =
       {
         { "t", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -697,7 +697,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_User_TResponseHandler::AMH_User_TResponseHandler ()
-{}void
+{}
+
+void
 AMH_User_TResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_User_TResponseHandler *tmp = static_cast<AMH_User_TResponseHandler *> (_tao_void_pointer);
@@ -1632,15 +1634,15 @@ OBV_Data_T::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_whenLastUpdated);
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -1649,18 +1651,18 @@ OBV_Data_T::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_whenLastUpdated);
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 

@@ -76,12 +76,12 @@ static TAO::TypeCode::Enum<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Encoding_T[] =
       {
         { "id", &_tc_EncodingID_T }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -623,7 +623,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_FieldDevice_TResponseHandler::AMH_FieldDevice_TResponseHandler ()
-{}void
+{}
+
+void
 AMH_FieldDevice_TResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_FieldDevice_TResponseHandler *tmp = static_cast<AMH_FieldDevice_TResponseHandler *> (_tao_void_pointer);

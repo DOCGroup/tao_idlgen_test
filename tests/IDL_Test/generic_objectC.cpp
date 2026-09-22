@@ -542,7 +542,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_genericResponseHandler::AMH_genericResponseHandler ()
-{}void
+{}
+
+void
 AMH_genericResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_genericResponseHandler *tmp = static_cast<AMH_genericResponseHandler *> (_tao_void_pointer);

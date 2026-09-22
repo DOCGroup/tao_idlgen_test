@@ -565,7 +565,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_BaseResponseHandler::AMH_BaseResponseHandler ()
-{}void
+{}
+
+void
 AMH_BaseResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_BaseResponseHandler *tmp = static_cast<AMH_BaseResponseHandler *> (_tao_void_pointer);
@@ -1397,7 +1399,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_DerivedResponseHandler::AMH_DerivedResponseHandler ()
-{}void
+{}
+
+void
 AMH_DerivedResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_DerivedResponseHandler *tmp = static_cast<AMH_DerivedResponseHandler *> (_tao_void_pointer);
@@ -1622,12 +1626,12 @@ static TAO::TypeCode::Objref<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_foo_mod_date[] =
       {
         { "month", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -2073,7 +2077,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_foostepResponseHandler::AMH_foostepResponseHandler ()
-{}void
+{}
+
+void
 AMH_foostepResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_foostepResponseHandler *tmp = static_cast<AMH_foostepResponseHandler *> (_tao_void_pointer);
@@ -2461,12 +2467,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_mother_member[] =
       {
         { "val", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -2821,7 +2827,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_motherResponseHandler::AMH_motherResponseHandler ()
-{}void
+{}
+
+void
 AMH_motherResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_motherResponseHandler *tmp = static_cast<AMH_motherResponseHandler *> (_tao_void_pointer);
@@ -3080,12 +3088,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_father_member[] =
       {
         { "ident", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -3440,7 +3448,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_fatherResponseHandler::AMH_fatherResponseHandler ()
-{}void
+{}
+
+void
 AMH_fatherResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_fatherResponseHandler *tmp = static_cast<AMH_fatherResponseHandler *> (_tao_void_pointer);
@@ -4023,7 +4033,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_childResponseHandler::AMH_childResponseHandler ()
-{}void
+{}
+
+void
 AMH_childResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_childResponseHandler *tmp = static_cast<AMH_childResponseHandler *> (_tao_void_pointer);
@@ -4606,7 +4618,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH__cxx_tryResponseHandler::AMH__cxx_tryResponseHandler ()
-{}void
+{}
+
+void
 AMH__cxx_tryResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH__cxx_tryResponseHandler *tmp = static_cast<AMH__cxx_tryResponseHandler *> (_tao_void_pointer);
@@ -5362,7 +5376,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_later_userResponseHandler::AMH_later_userResponseHandler ()
-{}void
+{}
+
+void
 AMH_later_userResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_later_userResponseHandler *tmp = static_cast<AMH_later_userResponseHandler *> (_tao_void_pointer);
@@ -5850,12 +5866,12 @@ static TAO::TypeCode::Objref<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_later_holder[] =
       {
         { "member", &_tc_later }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -6245,7 +6261,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_laterResponseHandler::AMH_laterResponseHandler ()
-{}void
+{}
+
+void
 AMH_laterResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_laterResponseHandler *tmp = static_cast<AMH_laterResponseHandler *> (_tao_void_pointer);
@@ -6839,7 +6857,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_BeginResponseHandler::AMH_BeginResponseHandler ()
-{}void
+{}
+
+void
 AMH_BeginResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_BeginResponseHandler *tmp = static_cast<AMH_BeginResponseHandler *> (_tao_void_pointer);
@@ -7421,7 +7441,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_MiddleResponseHandler::AMH_MiddleResponseHandler ()
-{}void
+{}
+
+void
 AMH_MiddleResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_MiddleResponseHandler *tmp = static_cast<AMH_MiddleResponseHandler *> (_tao_void_pointer);
@@ -8005,7 +8027,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_EndResponseHandler::AMH_EndResponseHandler ()
-{}void
+{}
+
+void
 AMH_EndResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_EndResponseHandler *tmp = static_cast<AMH_EndResponseHandler *> (_tao_void_pointer);
@@ -8733,7 +8757,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_ClientResponseHandler::AMH_ClientResponseHandler ()
-{}void
+{}
+
+void
 AMH_ClientResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ClientResponseHandler *tmp = static_cast<AMH_ClientResponseHandler *> (_tao_void_pointer);
@@ -9975,7 +10001,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_AttributeTesterResponseHandler::AMH_AttributeTesterResponseHandler ()
-{}void
+{}
+
+void
 AMH_AttributeTesterResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_AttributeTesterResponseHandler *tmp = static_cast<AMH_AttributeTesterResponseHandler *> (_tao_void_pointer);
@@ -10837,12 +10865,12 @@ void ParamMod::ParameterTester::object_excep_type::_tao_decode (TAO_InputCDR &cd
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_ParamMod_ParameterTester_object_excep_type[] =
       {
         { "objref", &ParamMod::_tc_ParameterTester }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -11033,14 +11061,14 @@ static TAO::TypeCode::Alias<char const *,
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_ParamMod_ParameterTester_object_struct_type[] =
       {
         { "o1", &CORBA::_tc_octet },
         { "p1", &ParamMod::_tc_ParameterTester },
         { "l1", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -11632,7 +11660,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 ParamMod::AMH_ParameterTesterResponseHandler::AMH_ParameterTesterResponseHandler ()
-{}void
+{}
+
+void
 ParamMod::AMH_ParameterTesterResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_ParameterTesterResponseHandler *tmp = static_cast<AMH_ParameterTesterResponseHandler *> (_tao_void_pointer);
@@ -12084,7 +12114,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 testlocal::testlocal ()
-{}void
+{}
+
+void
 testlocal::_tao_any_destructor (void *_tao_void_pointer)
 {
   testlocal *tmp = static_cast<testlocal *> (_tao_void_pointer);
@@ -12647,7 +12679,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_AResponseHandler::AMH_AResponseHandler ()
-{}void
+{}
+
+void
 AMH_AResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_AResponseHandler *tmp = static_cast<AMH_AResponseHandler *> (_tao_void_pointer);
@@ -13236,7 +13270,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 M::AMH_AResponseHandler::AMH_AResponseHandler ()
-{}void
+{}
+
+void
 M::AMH_AResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_AResponseHandler *tmp = static_cast<AMH_AResponseHandler *> (_tao_void_pointer);
@@ -13885,7 +13921,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 i1::AMH_if1ResponseHandler::AMH_if1ResponseHandler ()
-{}void
+{}
+
+void
 i1::AMH_if1ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_if1ResponseHandler *tmp = static_cast<AMH_if1ResponseHandler *> (_tao_void_pointer);
@@ -14664,7 +14702,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 i2::AMH_if2ResponseHandler::AMH_if2ResponseHandler ()
-{}void
+{}
+
+void
 i2::AMH_if2ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_if2ResponseHandler *tmp = static_cast<AMH_if2ResponseHandler *> (_tao_void_pointer);
@@ -15445,7 +15485,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 i2::AMH_if3ResponseHandler::AMH_if3ResponseHandler ()
-{}void
+{}
+
+void
 i2::AMH_if3ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_if3ResponseHandler *tmp = static_cast<AMH_if3ResponseHandler *> (_tao_void_pointer);
@@ -15949,12 +15991,12 @@ void redefs::base::ex::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_redefs_base_ex[] =
       {
         { "info", &CORBA::_tc_string }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -15975,12 +16017,12 @@ _tao_tc_redefs_base_ex (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_redefs_base_foo[] =
       {
         { "index", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -16343,7 +16385,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 redefs::AMH_baseResponseHandler::AMH_baseResponseHandler ()
-{}void
+{}
+
+void
 redefs::AMH_baseResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_baseResponseHandler *tmp = static_cast<AMH_baseResponseHandler *> (_tao_void_pointer);
@@ -16716,12 +16760,12 @@ void redefs::derived::ex::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_redefs_derived_ex[] =
       {
         { "serial", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -16742,12 +16786,12 @@ _tao_tc_redefs_derived_ex (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_redefs_derived_foo[] =
       {
         { "str", &CORBA::_tc_string }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -17111,7 +17155,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 redefs::AMH_derivedResponseHandler::AMH_derivedResponseHandler ()
-{}void
+{}
+
+void
 redefs::AMH_derivedResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_derivedResponseHandler *tmp = static_cast<AMH_derivedResponseHandler *> (_tao_void_pointer);
@@ -17722,7 +17768,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 Rec_Arg_Traits::AMH_baseResponseHandler::AMH_baseResponseHandler ()
-{}void
+{}
+
+void
 Rec_Arg_Traits::AMH_baseResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_baseResponseHandler *tmp = static_cast<AMH_baseResponseHandler *> (_tao_void_pointer);
@@ -18378,7 +18426,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 Rec_Arg_Traits::AMH_derivedResponseHandler::AMH_derivedResponseHandler ()
-{}void
+{}
+
+void
 Rec_Arg_Traits::AMH_derivedResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_derivedResponseHandler *tmp = static_cast<AMH_derivedResponseHandler *> (_tao_void_pointer);
@@ -19155,7 +19205,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 call_test::AMH_iTestResponseHandler::AMH_iTestResponseHandler ()
-{}void
+{}
+
+void
 call_test::AMH_iTestResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_iTestResponseHandler *tmp = static_cast<AMH_iTestResponseHandler *> (_tao_void_pointer);
@@ -20018,7 +20070,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 call_attribute::AMH_iBarResponseHandler::AMH_iBarResponseHandler ()
-{}void
+{}
+
+void
 call_attribute::AMH_iBarResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
   AMH_iBarResponseHandler *tmp = static_cast<AMH_iBarResponseHandler *> (_tao_void_pointer);

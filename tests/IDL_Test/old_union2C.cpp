@@ -195,13 +195,13 @@ namespace OldUnion2
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldUnion2_Bar[] =
       {
         { "kind", &OldUnion2::Bar::_tc_BarDisc },
         { "addr", &OldUnion2::Bar::_tc_Foo }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
