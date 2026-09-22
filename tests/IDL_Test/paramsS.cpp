@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_PARAMSS_PH3QH8_CPP_
-#define _TAO_IDL_PARAMSS_PH3QH8_CPP_
+#ifndef _TAO_IDL_PARAMSS_EDP8QG_CPP_
+#define _TAO_IDL_PARAMSS_EDP8QG_CPP_
 
 
 #include "paramsS.h"

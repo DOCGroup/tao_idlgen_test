@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_GPERFS_7KQMRR_CPP_
-#define _TAO_IDL_GPERFS_7KQMRR_CPP_
+#ifndef _TAO_IDL_GPERFS_2NU2EK_CPP_
+#define _TAO_IDL_GPERFS_2NU2EK_CPP_
 
 
 #include "gperfS.h"

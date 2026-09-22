@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_PRIMTYPESS_5IL33W_H_
-#define _TAO_IDL_PRIMTYPESS_5IL33W_H_
+#ifndef _TAO_IDL_PRIMTYPESS_RRF5ZS_H_
+#define _TAO_IDL_PRIMTYPESS_RRF5ZS_H_
 
 #include /**/ "ace/pre.h"
 

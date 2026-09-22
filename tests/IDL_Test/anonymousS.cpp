@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_ANONYMOUSS_F1E0HM_CPP_
-#define _TAO_IDL_ANONYMOUSS_F1E0HM_CPP_
+#ifndef _TAO_IDL_ANONYMOUSS_16OJ7F_CPP_
+#define _TAO_IDL_ANONYMOUSS_16OJ7F_CPP_
 
 
 #include "anonymousS.h"
