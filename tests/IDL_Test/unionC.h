@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_UNIONC_MEZNN0_H_
-#define _TAO_IDL_UNIONC_MEZNN0_H_
+#ifndef _TAO_IDL_UNIONC_Z5NXS1_H_
+#define _TAO_IDL_UNIONC_Z5NXS1_H_
 
 #include /**/ "ace/pre.h"
 
@@ -3896,12 +3896,13 @@ public:
   void long_value ( ::CORBA::Long);
   ::CORBA::Long long_value () const;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ch.cpp:440
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ch.cpp:681
 
   
 
-  void boolean_value ( ::CORBA::Boolean);
-  ::CORBA::Boolean boolean_value () const;
+  void struct_value (const UBar &);
+  const UBar &struct_value () const;
+  UBar &struct_value ();
 private:
   ResetDiscriminator disc_;
 
@@ -3919,10 +3920,10 @@ private:
     
     ::CORBA::Long long_value_;
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:369
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:520
 
     
-    ::CORBA::Boolean boolean_value_;
+    UBar struct_value_;
   } u_;
 
   /// TAO extension - frees any allocated storage.

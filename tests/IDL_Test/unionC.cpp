@@ -223,6 +223,7 @@ Necessary::WhichResult::WhichResult ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = Necessary::e_Unused;
+  this->u_.m_Unused_ = {};
 }
 
 Necessary::WhichResult::WhichResult (const ::Necessary::WhichResult &u)
@@ -321,6 +322,7 @@ foo::foo ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -32768;
+  this->u_.foo_iface_member_ = {};
 }
 
 foo::foo (const ::foo &u)
@@ -791,6 +793,7 @@ AllBoolUnions::OneBranchD::OneBranchD ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
+  this->u_.val_ = {};
 }
 
 AllBoolUnions::OneBranchD::OneBranchD (const ::AllBoolUnions::OneBranchD &u)
@@ -1013,6 +1016,7 @@ AllBoolUnions::OneBranchTD::OneBranchTD ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
+  this->u_.val_ = {};
 }
 
 AllBoolUnions::OneBranchTD::OneBranchTD (const ::AllBoolUnions::OneBranchTD &u)
@@ -1085,6 +1089,7 @@ AllBoolUnions::OneBranchDT::OneBranchDT ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
+  this->u_.val_ = {};
 }
 
 AllBoolUnions::OneBranchDT::OneBranchDT (const ::AllBoolUnions::OneBranchDT &u)
@@ -1157,6 +1162,7 @@ AllBoolUnions::OneBranchFD::OneBranchFD ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
+  this->u_.val_ = {};
 }
 
 AllBoolUnions::OneBranchFD::OneBranchFD (const ::AllBoolUnions::OneBranchFD &u)
@@ -1229,6 +1235,7 @@ AllBoolUnions::OneBranchDF::OneBranchDF ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
+  this->u_.val_ = {};
 }
 
 AllBoolUnions::OneBranchDF::OneBranchDF (const ::AllBoolUnions::OneBranchDF &u)
@@ -1479,6 +1486,7 @@ AllBoolUnions::TwoBranchesTD::TwoBranchesTD ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
+  this->u_.val2_ = {};
 }
 
 AllBoolUnions::TwoBranchesTD::TwoBranchesTD (const ::AllBoolUnions::TwoBranchesTD &u)
@@ -1567,6 +1575,7 @@ AllBoolUnions::TwoBranchesDT::TwoBranchesDT ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
+  this->u_.val1_ = {};
 }
 
 AllBoolUnions::TwoBranchesDT::TwoBranchesDT (const ::AllBoolUnions::TwoBranchesDT &u)
@@ -1655,6 +1664,7 @@ AllBoolUnions::TwoBranchesFD::TwoBranchesFD ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
+  this->u_.val2_ = {};
 }
 
 AllBoolUnions::TwoBranchesFD::TwoBranchesFD (const ::AllBoolUnions::TwoBranchesFD &u)
@@ -1743,6 +1753,7 @@ AllBoolUnions::TwoBranchesDF::TwoBranchesDF ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
+  this->u_.val1_ = {};
 }
 
 AllBoolUnions::TwoBranchesDF::TwoBranchesDF (const ::AllBoolUnions::TwoBranchesDF &u)
@@ -2929,6 +2940,7 @@ FieldValue::FieldValue ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = FTYPE_DEFCHAR;
+  this->u_.defstr_ = {};
 }
 
 FieldValue::FieldValue (const ::FieldValue &u)
@@ -4418,6 +4430,7 @@ U92::U92 ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
+  ::new (std::addressof(this->u_.b_92_3_)) UBar;
 }
 
 U92::U92 (const ::U92 &u)
@@ -4524,6 +4537,11 @@ U93::U93 ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
+  this->u_.b_93_3_ = UBarArray_alloc ();
+  if (this->u_.b_93_3_)
+  {
+    TAO::Array_Traits<UBarArray_forany>::zero (this->u_.b_93_3_);
+  }
 }
 
 U93::U93 (const ::U93 &u)
@@ -4663,6 +4681,11 @@ U94::U94 ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
+  this->u_.b_94_3_ = U90Array_alloc ();
+  if (this->u_.b_94_3_)
+  {
+    TAO::Array_Traits<U90Array_forany>::zero (this->u_.b_94_3_);
+  }
 }
 
 U94::U94 (const ::U94 &u)
@@ -5245,13 +5268,11 @@ DefaultInitializedArrayUnion::DefaultInitializedArrayUnion ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
-  this->u_.value_ =
-    DefaultInitializedLongArray_alloc ();
+  this->u_.value_ = DefaultInitializedLongArray_alloc ();
   if (this->u_.value_)
   {
-    TAO::Array_Traits<DefaultInitializedLongArray_forany>::zero (
-        this->u_.value_);
-    }
+    TAO::Array_Traits<DefaultInitializedLongArray_forany>::zero (this->u_.value_);
+  }
 }
 
 DefaultInitializedArrayUnion::DefaultInitializedArrayUnion (const ::DefaultInitializedArrayUnion &u)
@@ -5425,6 +5446,7 @@ ResetWithNoopBranches::ResetWithNoopBranches ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = RESET_DEFAULT;
+  ::new (std::addressof(this->u_.struct_value_)) UBar;
 }
 
 ResetWithNoopBranches::ResetWithNoopBranches (const ::ResetWithNoopBranches &u)
@@ -5444,7 +5466,7 @@ ResetWithNoopBranches::ResetWithNoopBranches (const ::ResetWithNoopBranches &u)
     break;
     default:
     {
-      this->u_.boolean_value_ = u.u_.boolean_value_;
+      ::new (std::addressof(this->u_.struct_value_)) UBar (u.u_.struct_value_);
     }
     break;
   }
@@ -5483,7 +5505,7 @@ ResetWithNoopBranches::operator= (const ::ResetWithNoopBranches &u)
         break;
         default:
         {
-          this->u_.boolean_value_ = u.u_.boolean_value_;
+          ::new (std::addressof(this->u_.struct_value_)) UBar (u.u_.struct_value_);
         }
         break;
       }
@@ -5513,7 +5535,7 @@ void ResetWithNoopBranches::_reset ()
 
 static TAO::TypeCode::Case_T<ResetDiscriminator, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_ResetWithNoopBranches__0 (::RESET_STRING, "string_value", &CORBA::_tc_string);
 static TAO::TypeCode::Case_T<ResetDiscriminator, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_ResetWithNoopBranches__1 (::RESET_LONG, "long_value", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<ResetDiscriminator, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_ResetWithNoopBranches__2 (RESET_DEFAULT, "boolean_value", &CORBA::_tc_boolean);
+static TAO::TypeCode::Case_T<ResetDiscriminator, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_ResetWithNoopBranches__2 (RESET_DEFAULT, "struct_value", &_tc_UBar);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_ResetWithNoopBranches[] =
   {
@@ -12799,7 +12821,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       break;
     default:
       {
-        result = strm << ::ACE_OutputCDR::from_boolean (_tao_union.boolean_value ());
+        result = strm << _tao_union.struct_value ();
       }
       break;
   }
@@ -12845,12 +12867,11 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       break;
     default:
       {
-        ::CORBA::Boolean _tao_union_tmp;
-        ::ACE_InputCDR::to_boolean _tao_union_helper (_tao_union_tmp);
-        result = strm >> _tao_union_helper;
+        UBar _tao_union_tmp;
+        result = strm >> _tao_union_tmp;
         if (result)
           {
-            _tao_union.boolean_value (_tao_union_tmp);
+            _tao_union.struct_value (_tao_union_tmp);
             _tao_union._d (_tao_discriminant);
           }
       }

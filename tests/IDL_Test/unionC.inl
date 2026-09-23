@@ -3596,25 +3596,32 @@ ResetWithNoopBranches::long_value () const
   return this->u_.long_value_;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:571
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1068
 
-// Accessor to set the member.
+/// Accessor to set the member.
 ACE_INLINE
 void
-ResetWithNoopBranches::boolean_value (CORBA::Boolean val)
+ResetWithNoopBranches::struct_value (const UBar &val)
 {
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = RESET_DEFAULT;
-  // Set the value.
-  this->u_.boolean_value_ = val;
+  ::new (std::addressof(this->u_.struct_value_)) UBar (val);
 }
 
-/// Retrieve the member.
+// Readonly get method.
 ACE_INLINE
-::CORBA::Boolean
-ResetWithNoopBranches::boolean_value () const
+const UBar &
+ResetWithNoopBranches::struct_value () const
 {
-  return this->u_.boolean_value_;
+  return this->u_.struct_value_;
+}
+
+// Read/write get method.
+ACE_INLINE
+UBar &
+ResetWithNoopBranches::struct_value ()
+{
+  return this->u_.struct_value_;
 }
 

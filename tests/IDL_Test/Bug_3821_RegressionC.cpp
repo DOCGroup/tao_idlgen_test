@@ -200,6 +200,7 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::UnionAllCoveredWithDef
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (test::Enumeration) -1;
+  this->u_.e_def_ = {};
 }
 
 test::UnionAllCoveredWithDefault_EnumerationDiscriminant::UnionAllCoveredWithDefault_EnumerationDiscriminant (const ::test::UnionAllCoveredWithDefault_EnumerationDiscriminant &u)
@@ -312,6 +313,7 @@ test::UnionWithDefault_EnumerationDiscriminant::UnionWithDefault_EnumerationDisc
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = test::Enum3;
+  this->u_.e_def_ = {};
 }
 
 test::UnionWithDefault_EnumerationDiscriminant::UnionWithDefault_EnumerationDiscriminant (const ::test::UnionWithDefault_EnumerationDiscriminant &u)
@@ -655,6 +657,7 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::UnionAllCover
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (test::Enumeration) -1;
+  this->u_.e_def_ = {};
 }
 
 test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant (const ::test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant &u)
@@ -767,6 +770,7 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::UnionWithDefault_Typede
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = test::Enum3;
+  this->u_.e_def_ = {};
 }
 
 test::UnionWithDefault_TypedefedEnumerationDiscriminant::UnionWithDefault_TypedefedEnumerationDiscriminant (const ::test::UnionWithDefault_TypedefedEnumerationDiscriminant &u)
@@ -1068,6 +1072,7 @@ test::UnionWithDefault_BooleanDiscriminant::UnionWithDefault_BooleanDiscriminant
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
+  this->u_.e_def_ = {};
 }
 
 test::UnionWithDefault_BooleanDiscriminant::UnionWithDefault_BooleanDiscriminant (const ::test::UnionWithDefault_BooleanDiscriminant &u)
@@ -2341,6 +2346,7 @@ test::UnionWithDefault_CharDiscriminant::UnionWithDefault_CharDiscriminant ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = '\10';
+  this->u_.e_def_ = {};
 }
 
 test::UnionWithDefault_CharDiscriminant::UnionWithDefault_CharDiscriminant (const ::test::UnionWithDefault_CharDiscriminant &u)
@@ -2585,6 +2591,7 @@ test::UnionWithDefault_LongDiscriminant::UnionWithDefault_LongDiscriminant ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
+  this->u_.e_def_ = {};
 }
 
 test::UnionWithDefault_LongDiscriminant::UnionWithDefault_LongDiscriminant (const ::test::UnionWithDefault_LongDiscriminant &u)

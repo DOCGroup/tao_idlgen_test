@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_AMI_TESTS_6WFCVM_CPP_
-#define _TAO_IDL_AMI_TESTS_6WFCVM_CPP_
+#ifndef _TAO_IDL_AMI_TESTS_BKOURE_CPP_
+#define _TAO_IDL_AMI_TESTS_BKOURE_CPP_
 
 
 #include "ami_testS.h"

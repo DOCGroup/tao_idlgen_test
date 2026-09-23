@@ -106,6 +106,7 @@ OldUnion::Foo::Foo ()
 {
   ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
+  this->u_.z_ = {};
 }
 
 OldUnion::Foo::Foo (const ::OldUnion::Foo &u)
