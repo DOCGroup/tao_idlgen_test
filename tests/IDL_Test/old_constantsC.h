@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_OLD_CONSTANTSC_WPCIYU_H_
-#define _TAO_IDL_OLD_CONSTANTSC_WPCIYU_H_
+#ifndef _TAO_IDL_OLD_CONSTANTSC_U2G613_H_
+#define _TAO_IDL_OLD_CONSTANTSC_U2G613_H_
 
 #include /**/ "ace/pre.h"
 
@@ -118,7 +118,7 @@ namespace OldConstants
   class TAO_IDL_TEST_STUB_Export E : public ::CORBA::UserException
   {
   public:
-    ::CORBA::Short cause;
+    ::CORBA::Short cause {};
 
     E ();
     E (const E &);
@@ -188,7 +188,7 @@ namespace OldConstants
     class TAO_IDL_TEST_STUB_Export E : public ::CORBA::UserException
     {
     public:
-      ::CORBA::Short cause;
+      ::CORBA::Short cause {};
 
       E ();
       E (const E &);
@@ -299,7 +299,7 @@ namespace OldConstants
       class TAO_IDL_TEST_STUB_Export E : public ::CORBA::UserException
       {
       public:
-        ::CORBA::Short cause;
+        ::CORBA::Short cause {};
 
         E ();
         E (const E &);
@@ -1224,7 +1224,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "old_constantsC.inl"

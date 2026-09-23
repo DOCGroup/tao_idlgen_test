@@ -23,6 +23,7 @@
  **/
 
 #include "inheritA.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -45,8 +46,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_one =
-    &_tao_tc_OldInherit_one;
+  ::CORBA::TypeCode_ptr const _tc_one = std::addressof(_tao_tc_OldInherit_one);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -68,8 +68,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_oneExceptionHolder =
-    &_tao_tc_OldInherit_AMH_oneExceptionHolder;
+  ::CORBA::TypeCode_ptr const _tc_AMH_oneExceptionHolder = std::addressof(_tao_tc_OldInherit_AMH_oneExceptionHolder);
 }// TAO extension - the virtual _type method.
 ::CORBA::TypeCode_ptr OldInherit::AMH_oneExceptionHolder::_tao_type () const
 {
@@ -90,8 +89,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_oneResponseHandler =
-    &_tao_tc_OldInherit_AMH_oneResponseHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMH_oneResponseHandler = std::addressof(_tao_tc_OldInherit_AMH_oneResponseHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -106,8 +104,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMI_oneHandler =
-    &_tao_tc_OldInherit_AMI_oneHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMI_oneHandler = std::addressof(_tao_tc_OldInherit_AMI_oneHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -122,8 +119,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_two =
-    &_tao_tc_OldInherit_two;
+  ::CORBA::TypeCode_ptr const _tc_two = std::addressof(_tao_tc_OldInherit_two);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -145,8 +141,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_twoExceptionHolder =
-    &_tao_tc_OldInherit_AMH_twoExceptionHolder;
+  ::CORBA::TypeCode_ptr const _tc_AMH_twoExceptionHolder = std::addressof(_tao_tc_OldInherit_AMH_twoExceptionHolder);
 }// TAO extension - the virtual _type method.
 ::CORBA::TypeCode_ptr OldInherit::AMH_twoExceptionHolder::_tao_type () const
 {
@@ -167,8 +162,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_twoResponseHandler =
-    &_tao_tc_OldInherit_AMH_twoResponseHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMH_twoResponseHandler = std::addressof(_tao_tc_OldInherit_AMH_twoResponseHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -183,8 +177,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMI_twoHandler =
-    &_tao_tc_OldInherit_AMI_twoHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMI_twoHandler = std::addressof(_tao_tc_OldInherit_AMI_twoHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -199,8 +192,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_three =
-    &_tao_tc_OldInherit_three;
+  ::CORBA::TypeCode_ptr const _tc_three = std::addressof(_tao_tc_OldInherit_three);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -222,8 +214,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_threeExceptionHolder =
-    &_tao_tc_OldInherit_AMH_threeExceptionHolder;
+  ::CORBA::TypeCode_ptr const _tc_AMH_threeExceptionHolder = std::addressof(_tao_tc_OldInherit_AMH_threeExceptionHolder);
 }// TAO extension - the virtual _type method.
 ::CORBA::TypeCode_ptr OldInherit::AMH_threeExceptionHolder::_tao_type () const
 {
@@ -244,8 +235,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_threeResponseHandler =
-    &_tao_tc_OldInherit_AMH_threeResponseHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMH_threeResponseHandler = std::addressof(_tao_tc_OldInherit_AMH_threeResponseHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -260,8 +250,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMI_threeHandler =
-    &_tao_tc_OldInherit_AMI_threeHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMI_threeHandler = std::addressof(_tao_tc_OldInherit_AMI_threeHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -276,8 +265,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_four =
-    &_tao_tc_OldInherit_four;
+  ::CORBA::TypeCode_ptr const _tc_four = std::addressof(_tao_tc_OldInherit_four);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -299,8 +287,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_fourExceptionHolder =
-    &_tao_tc_OldInherit_AMH_fourExceptionHolder;
+  ::CORBA::TypeCode_ptr const _tc_AMH_fourExceptionHolder = std::addressof(_tao_tc_OldInherit_AMH_fourExceptionHolder);
 }// TAO extension - the virtual _type method.
 ::CORBA::TypeCode_ptr OldInherit::AMH_fourExceptionHolder::_tao_type () const
 {
@@ -321,8 +308,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_fourResponseHandler =
-    &_tao_tc_OldInherit_AMH_fourResponseHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMH_fourResponseHandler = std::addressof(_tao_tc_OldInherit_AMH_fourResponseHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -337,8 +323,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMI_fourHandler =
-    &_tao_tc_OldInherit_AMI_fourHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMI_fourHandler = std::addressof(_tao_tc_OldInherit_AMI_fourHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -353,8 +338,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_five =
-    &_tao_tc_OldInherit_five;
+  ::CORBA::TypeCode_ptr const _tc_five = std::addressof(_tao_tc_OldInherit_five);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -376,8 +360,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_fiveExceptionHolder =
-    &_tao_tc_OldInherit_AMH_fiveExceptionHolder;
+  ::CORBA::TypeCode_ptr const _tc_AMH_fiveExceptionHolder = std::addressof(_tao_tc_OldInherit_AMH_fiveExceptionHolder);
 }// TAO extension - the virtual _type method.
 ::CORBA::TypeCode_ptr OldInherit::AMH_fiveExceptionHolder::_tao_type () const
 {
@@ -398,8 +381,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_fiveResponseHandler =
-    &_tao_tc_OldInherit_AMH_fiveResponseHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMH_fiveResponseHandler = std::addressof(_tao_tc_OldInherit_AMH_fiveResponseHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -414,8 +396,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldInherit
 {
-  ::CORBA::TypeCode_ptr const _tc_AMI_fiveHandler =
-    &_tao_tc_OldInherit_AMI_fiveHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMI_fiveHandler = std::addressof(_tao_tc_OldInherit_AMI_fiveHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_cs.cpp:37

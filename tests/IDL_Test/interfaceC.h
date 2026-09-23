@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_INTERFACEC_QNS5B7_H_
-#define _TAO_IDL_INTERFACEC_QNS5B7_H_
+#ifndef _TAO_IDL_INTERFACEC_PAAGCZ_H_
+#define _TAO_IDL_INTERFACEC_PAAGCZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -875,7 +875,7 @@ namespace foo_mod
 
     static void _tao_any_destructor (void *);
     
-    ::CORBA::Short month;
+    ::CORBA::Short month {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1326,7 +1326,7 @@ public:
 
     static void _tao_any_destructor (void *);
     
-    ::CORBA::Long val;
+    ::CORBA::Long val {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1705,7 +1705,7 @@ public:
 
     static void _tao_any_destructor (void *);
     
-    ::CORBA::Short ident;
+    ::CORBA::Short ident {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -3175,7 +3175,7 @@ struct TAO_IDL_TEST_STUB_Export later_holder
 
   static void _tao_any_destructor (void *);
   
-  later_var member;
+  later_var member {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -5041,29 +5041,15 @@ public:
       >
     string_1_out;
 
-  typedef
-    TAO_Array_Forany_T<
-        string_1,
-        string_1_slice,
-        string_1_tag
-      >
-    string_1_forany;
+  typedef TAO_Array_Forany_T<string_1, string_1_slice, string_1_tag> string_1_forany;
 
-  static string_1_slice *
-  string_1_alloc ();
+  static string_1_slice *string_1_alloc ();
 
-  static void
-  string_1_free (
-      string_1_slice *_tao_slice);
-  
-  static string_1_slice *
-  string_1_dup (
-      const string_1_slice *_tao_slice);
-  
-  static void
-  string_1_copy (
-      string_1_slice *_tao_to,
-      const string_1_slice *_tao_from);
+  static void string_1_free (string_1_slice *_tao_slice);
+
+  static string_1_slice *string_1_dup (const string_1_slice *_tao_slice);
+
+  static void string_1_copy (string_1_slice *_tao_to, const string_1_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -5564,7 +5550,7 @@ namespace ParamMod
     class TAO_IDL_TEST_STUB_Export object_excep_type : public ::CORBA::UserException
     {
     public:
-      ParamMod::ParameterTester_var objref;
+      ParamMod::ParameterTester_var objref {};
 
       object_excep_type ();
       object_excep_type (const object_excep_type &);
@@ -5677,29 +5663,15 @@ namespace ParamMod
         >
       object_array_type_out;
 
-    typedef
-      TAO_Array_Forany_T<
-          object_array_type,
-          object_array_type_slice,
-          object_array_type_tag
-        >
-      object_array_type_forany;
+    typedef TAO_Array_Forany_T<object_array_type, object_array_type_slice, object_array_type_tag> object_array_type_forany;
 
-    static object_array_type_slice *
-    object_array_type_alloc ();
+    static object_array_type_slice *object_array_type_alloc ();
 
-    static void
-    object_array_type_free (
-        object_array_type_slice *_tao_slice);
-    
-    static object_array_type_slice *
-    object_array_type_dup (
-        const object_array_type_slice *_tao_slice);
-    
-    static void
-    object_array_type_copy (
-        object_array_type_slice *_tao_to,
-        const object_array_type_slice *_tao_from);
+    static void object_array_type_free (object_array_type_slice *_tao_slice);
+
+    static object_array_type_slice *object_array_type_dup (const object_array_type_slice *_tao_slice);
+
+    static void object_array_type_copy (object_array_type_slice *_tao_to, const object_array_type_slice *_tao_from);
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -5730,9 +5702,9 @@ namespace ParamMod
 
       static void _tao_any_destructor (void *);
       
-      ::CORBA::Octet o1;
-      ParamMod::ParameterTester_var p1;
-      ::CORBA::Long l1;
+      ::CORBA::Octet o1 {};
+      ParamMod::ParameterTester_var p1 {};
+      ::CORBA::Long l1 {};
     };
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -5795,8 +5767,9 @@ namespace ParamMod
     private:
       ::CORBA::Long disc_;
 
-      union
+      union _tao_union_storage
       {
+        _tao_union_storage () {}
         // TAO_IDL - Generated from
         // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:476
 
@@ -6323,8 +6296,9 @@ public:
   private:
     ::CORBA::Boolean disc_;
 
-    union
+    union _tao_union_storage
     {
+      _tao_union_storage () {}
       // TAO_IDL - Generated from
       // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:176
 
@@ -8217,7 +8191,7 @@ namespace redefs
     class TAO_IDL_TEST_STUB_Export ex : public ::CORBA::UserException
     {
     public:
-      ::TAO::String_Manager info;
+      ::TAO::String_Manager info {};
 
       ex ();
       ex (const ex &);
@@ -8278,7 +8252,7 @@ namespace redefs
 
       static void _tao_any_destructor (void *);
       
-      ::CORBA::Short index;
+      ::CORBA::Short index {};
     };
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -8646,7 +8620,7 @@ namespace redefs
     class TAO_IDL_TEST_STUB_Export ex : public ::CORBA::UserException
     {
     public:
-      ::CORBA::Long serial;
+      ::CORBA::Long serial {};
 
       ex ();
       ex (const ex &);
@@ -8707,7 +8681,7 @@ namespace redefs
 
       static void _tao_any_destructor (void *);
       
-      ::TAO::String_Manager str;
+      ::TAO::String_Manager str {};
     };
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -18403,7 +18377,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "interfaceC.inl"

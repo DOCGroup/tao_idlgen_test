@@ -23,18 +23,18 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "typedefC.h"
+#include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "typedefC.inl"
@@ -352,9 +352,8 @@ TestModule::TestInterface::TestInterface ()
 void
 TestModule::TestInterface::_tao_any_destructor (void *_tao_void_pointer)
 {
-  TestInterface *_tao_tmp_pointer =
-    static_cast<TestInterface *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  TestInterface *tmp = static_cast<TestInterface *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 TestModule::TestInterface_ptr
@@ -478,9 +477,8 @@ TestModule::AMH_TestInterfaceExceptionHolder::_tao_obv_truncatable_repo_ids (Rep
 void
 TestModule::AMH_TestInterfaceExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_TestInterfaceExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_TestInterfaceExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_TestInterfaceExceptionHolder *tmp = static_cast<AMH_TestInterfaceExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 TestModule::AMH_TestInterfaceExceptionHolder::~AMH_TestInterfaceExceptionHolder ()
@@ -568,7 +566,7 @@ TestModule::AMH_TestInterfaceExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_set_typedef_1 ()
@@ -578,7 +576,7 @@ TestModule::AMH_TestInterfaceExceptionHolder::raise_set_typedef_1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_set_typedef_2 ()
@@ -588,7 +586,7 @@ TestModule::AMH_TestInterfaceExceptionHolder::raise_set_typedef_2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_sendc_set_typedef_1 ()
@@ -598,7 +596,7 @@ TestModule::AMH_TestInterfaceExceptionHolder::raise_sendc_set_typedef_1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_sendc_set_typedef_2 ()
@@ -644,12 +642,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 TestModule::AMH_TestInterfaceResponseHandler::AMH_TestInterfaceResponseHandler ()
-{}void
+{}
+
+void
 TestModule::AMH_TestInterfaceResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_TestInterfaceResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_TestInterfaceResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_TestInterfaceResponseHandler *tmp = static_cast<AMH_TestInterfaceResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 TestModule::AMH_TestInterfaceResponseHandler_ptr
@@ -1009,9 +1008,8 @@ TestModule::AMI_TestInterfaceHandler::AMI_TestInterfaceHandler ()
 void
 TestModule::AMI_TestInterfaceHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_TestInterfaceHandler *_tao_tmp_pointer =
-    static_cast<AMI_TestInterfaceHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_TestInterfaceHandler *tmp = static_cast<AMI_TestInterfaceHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 TestModule::AMI_TestInterfaceHandler_ptr
@@ -1273,9 +1271,8 @@ bug_2124::Foo::Foo ()
 void
 bug_2124::Foo::_tao_any_destructor (void *_tao_void_pointer)
 {
-  Foo *_tao_tmp_pointer =
-    static_cast<Foo *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  Foo *tmp = static_cast<Foo *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2124::Foo_ptr
@@ -1399,9 +1396,8 @@ bug_2124::AMH_FooExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_L
 void
 bug_2124::AMH_FooExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_FooExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_FooExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_FooExceptionHolder *tmp = static_cast<AMH_FooExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 bug_2124::AMH_FooExceptionHolder::~AMH_FooExceptionHolder ()
@@ -1489,7 +1485,7 @@ bug_2124::AMH_FooExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 bug_2124::AMH_FooExceptionHolder::raise_op1 ()
@@ -1499,7 +1495,7 @@ bug_2124::AMH_FooExceptionHolder::raise_op1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 bug_2124::AMH_FooExceptionHolder::raise_op2 ()
@@ -1509,7 +1505,7 @@ bug_2124::AMH_FooExceptionHolder::raise_op2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 bug_2124::AMH_FooExceptionHolder::raise_sendc_op1 ()
@@ -1519,7 +1515,7 @@ bug_2124::AMH_FooExceptionHolder::raise_sendc_op1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 bug_2124::AMH_FooExceptionHolder::raise_sendc_op2 ()
@@ -1565,12 +1561,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 bug_2124::AMH_FooResponseHandler::AMH_FooResponseHandler ()
-{}void
+{}
+
+void
 bug_2124::AMH_FooResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_FooResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_FooResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_FooResponseHandler *tmp = static_cast<AMH_FooResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2124::AMH_FooResponseHandler_ptr
@@ -1930,9 +1927,8 @@ bug_2124::AMI_FooHandler::AMI_FooHandler ()
 void
 bug_2124::AMI_FooHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_FooHandler *_tao_tmp_pointer =
-    static_cast<AMI_FooHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_FooHandler *tmp = static_cast<AMI_FooHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2124::AMI_FooHandler_ptr
@@ -2121,9 +2117,8 @@ bug_2122::One::Whatever::Whatever ()
 void
 bug_2122::One::Whatever::_tao_any_destructor (void *_tao_void_pointer)
 {
-  Whatever *_tao_tmp_pointer =
-    static_cast<Whatever *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  Whatever *tmp = static_cast<Whatever *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2122::One::Whatever_ptr
@@ -2247,9 +2242,8 @@ bug_2122::One::AMH_WhateverExceptionHolder::_tao_obv_truncatable_repo_ids (Repos
 void
 bug_2122::One::AMH_WhateverExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_WhateverExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_WhateverExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_WhateverExceptionHolder *tmp = static_cast<AMH_WhateverExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 bug_2122::One::AMH_WhateverExceptionHolder::~AMH_WhateverExceptionHolder ()
@@ -2337,7 +2331,7 @@ bug_2122::One::AMH_WhateverExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 bug_2122::One::AMH_WhateverExceptionHolder::raise_someOp ()
@@ -2347,7 +2341,7 @@ bug_2122::One::AMH_WhateverExceptionHolder::raise_someOp ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 bug_2122::One::AMH_WhateverExceptionHolder::raise_sendc_someOp ()
@@ -2393,12 +2387,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 bug_2122::One::AMH_WhateverResponseHandler::AMH_WhateverResponseHandler ()
-{}void
+{}
+
+void
 bug_2122::One::AMH_WhateverResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_WhateverResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_WhateverResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_WhateverResponseHandler *tmp = static_cast<AMH_WhateverResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2122::One::AMH_WhateverResponseHandler_ptr
@@ -2637,9 +2632,8 @@ bug_2122::One::AMI_WhateverHandler::AMI_WhateverHandler ()
 void
 bug_2122::One::AMI_WhateverHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_WhateverHandler *_tao_tmp_pointer =
-    static_cast<AMI_WhateverHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_WhateverHandler *tmp = static_cast<AMI_WhateverHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2122::One::AMI_WhateverHandler_ptr
@@ -2828,9 +2822,8 @@ bug_2122::Two::WhoCares::WhoCares ()
 void
 bug_2122::Two::WhoCares::_tao_any_destructor (void *_tao_void_pointer)
 {
-  WhoCares *_tao_tmp_pointer =
-    static_cast<WhoCares *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  WhoCares *tmp = static_cast<WhoCares *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2122::Two::WhoCares_ptr
@@ -2954,9 +2947,8 @@ bug_2122::Two::AMH_WhoCaresExceptionHolder::_tao_obv_truncatable_repo_ids (Repos
 void
 bug_2122::Two::AMH_WhoCaresExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_WhoCaresExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_WhoCaresExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_WhoCaresExceptionHolder *tmp = static_cast<AMH_WhoCaresExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 bug_2122::Two::AMH_WhoCaresExceptionHolder::~AMH_WhoCaresExceptionHolder ()
@@ -3044,7 +3036,7 @@ bug_2122::Two::AMH_WhoCaresExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 bug_2122::Two::AMH_WhoCaresExceptionHolder::raise_someOp ()
@@ -3054,7 +3046,7 @@ bug_2122::Two::AMH_WhoCaresExceptionHolder::raise_someOp ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 bug_2122::Two::AMH_WhoCaresExceptionHolder::raise_sendc_someOp ()
@@ -3100,12 +3092,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 bug_2122::Two::AMH_WhoCaresResponseHandler::AMH_WhoCaresResponseHandler ()
-{}void
+{}
+
+void
 bug_2122::Two::AMH_WhoCaresResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_WhoCaresResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_WhoCaresResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_WhoCaresResponseHandler *tmp = static_cast<AMH_WhoCaresResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2122::Two::AMH_WhoCaresResponseHandler_ptr
@@ -3344,9 +3337,8 @@ bug_2122::Two::AMI_WhoCaresHandler::AMI_WhoCaresHandler ()
 void
 bug_2122::Two::AMI_WhoCaresHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_WhoCaresHandler *_tao_tmp_pointer =
-    static_cast<AMI_WhoCaresHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_WhoCaresHandler *tmp = static_cast<AMI_WhoCaresHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2122::Two::AMI_WhoCaresHandler_ptr
@@ -3535,9 +3527,8 @@ bug_2122::Three::WhoCares::WhoCares ()
 void
 bug_2122::Three::WhoCares::_tao_any_destructor (void *_tao_void_pointer)
 {
-  WhoCares *_tao_tmp_pointer =
-    static_cast<WhoCares *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  WhoCares *tmp = static_cast<WhoCares *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2122::Three::WhoCares_ptr
@@ -3661,9 +3652,8 @@ bug_2122::Three::AMH_WhoCaresExceptionHolder::_tao_obv_truncatable_repo_ids (Rep
 void
 bug_2122::Three::AMH_WhoCaresExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_WhoCaresExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_WhoCaresExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_WhoCaresExceptionHolder *tmp = static_cast<AMH_WhoCaresExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 bug_2122::Three::AMH_WhoCaresExceptionHolder::~AMH_WhoCaresExceptionHolder ()
@@ -3751,7 +3741,7 @@ bug_2122::Three::AMH_WhoCaresExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 bug_2122::Three::AMH_WhoCaresExceptionHolder::raise_someOp ()
@@ -3761,7 +3751,7 @@ bug_2122::Three::AMH_WhoCaresExceptionHolder::raise_someOp ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 bug_2122::Three::AMH_WhoCaresExceptionHolder::raise_sendc_someOp ()
@@ -3807,12 +3797,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 bug_2122::Three::AMH_WhoCaresResponseHandler::AMH_WhoCaresResponseHandler ()
-{}void
+{}
+
+void
 bug_2122::Three::AMH_WhoCaresResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_WhoCaresResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_WhoCaresResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_WhoCaresResponseHandler *tmp = static_cast<AMH_WhoCaresResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2122::Three::AMH_WhoCaresResponseHandler_ptr
@@ -4051,9 +4042,8 @@ bug_2122::Three::AMI_WhoCaresHandler::AMI_WhoCaresHandler ()
 void
 bug_2122::Three::AMI_WhoCaresHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_WhoCaresHandler *_tao_tmp_pointer =
-    static_cast<AMI_WhoCaresHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_WhoCaresHandler *tmp = static_cast<AMI_WhoCaresHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 bug_2122::Three::AMI_WhoCaresHandler_ptr
@@ -4154,9 +4144,8 @@ CommaList::Foo::Foo (
 void CommaList::Foo::_tao_any_destructor (
     void * _tao_void_pointer)
 {
-  Foo * _tao_tmp_pointer =
-    static_cast<Foo *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  Foo *tmp = static_cast<Foo *> (_tao_void_pointer);
+  delete tmp;
 }
 
 #endif /* end #if !defined */
@@ -4187,9 +4176,8 @@ CommaList::Dubble::Dubble (
 void CommaList::Dubble::_tao_any_destructor (
     void * _tao_void_pointer)
 {
-  Dubble * _tao_tmp_pointer =
-    static_cast<Dubble *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  Dubble *tmp = static_cast<Dubble *> (_tao_void_pointer);
+  delete tmp;
 }
 
 #endif /* end #if !defined */
@@ -4220,9 +4208,8 @@ CommaList::Dubbel::Dubbel (
 void CommaList::Dubbel::_tao_any_destructor (
     void * _tao_void_pointer)
 {
-  Dubbel * _tao_tmp_pointer =
-    static_cast<Dubbel *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  Dubbel *tmp = static_cast<Dubbel *> (_tao_void_pointer);
+  delete tmp;
 }
 
 #endif /* end #if !defined */
@@ -4253,9 +4240,8 @@ CommaList::Toil::Toil (
 void CommaList::Toil::_tao_any_destructor (
     void * _tao_void_pointer)
 {
-  Toil * _tao_tmp_pointer =
-    static_cast<Toil *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  Toil *tmp = static_cast<Toil *> (_tao_void_pointer);
+  delete tmp;
 }
 
 #endif /* end #if !defined */
@@ -4286,9 +4272,8 @@ CommaList::Trouble::Trouble (
 void CommaList::Trouble::_tao_any_destructor (
     void * _tao_void_pointer)
 {
-  Trouble * _tao_tmp_pointer =
-    static_cast<Trouble *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  Trouble *tmp = static_cast<Trouble *> (_tao_void_pointer);
+  delete tmp;
 }
 
 #endif /* end #if !defined */

@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_N8E0MS_CPP_
-#define _TAO_IDL_SIMPLE_TESTS_N8E0MS_CPP_
+#ifndef _TAO_IDL_SIMPLE_TESTS_ZPB0H1_CPP_
+#define _TAO_IDL_SIMPLE_TESTS_ZPB0H1_CPP_
 
 
 #include "simple_testS.h"
@@ -46,7 +46,7 @@
 #include "tao/PortableInterceptor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "cstring"
+#include <cstring>
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1853
 

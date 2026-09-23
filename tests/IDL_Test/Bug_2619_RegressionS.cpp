@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_7T5VIL_CPP_
-#define _TAO_IDL_BUG_2619_REGRESSIONS_7T5VIL_CPP_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_TOW6QL_CPP_
+#define _TAO_IDL_BUG_2619_REGRESSIONS_TOW6QL_CPP_
 
 
 #include "Bug_2619_RegressionS.h"
@@ -53,7 +53,7 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "cstring"
+#include <cstring>
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1853
 

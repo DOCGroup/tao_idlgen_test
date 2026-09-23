@@ -23,6 +23,7 @@
  **/
 
 #include "moduleA.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -48,8 +49,7 @@ namespace mod1
   
   namespace mod2
   {
-    ::CORBA::TypeCode_ptr const _tc_ex1 =
-      &_tao_tc_mod1_mod2_ex1;
+    ::CORBA::TypeCode_ptr const _tc_ex1 = std::addressof(_tao_tc_mod1_mod2_ex1);
   }
 }
 // TAO_IDL - Generated from
@@ -75,8 +75,7 @@ namespace mod1
   
   namespace mod2
   {
-    ::CORBA::TypeCode_ptr const _tc_AMH_ex1ExceptionHolder =
-      &_tao_tc_mod1_mod2_AMH_ex1ExceptionHolder;
+    ::CORBA::TypeCode_ptr const _tc_AMH_ex1ExceptionHolder = std::addressof(_tao_tc_mod1_mod2_AMH_ex1ExceptionHolder);
   }
 }// TAO extension - the virtual _type method.
 ::CORBA::TypeCode_ptr mod1::mod2::AMH_ex1ExceptionHolder::_tao_type () const
@@ -101,8 +100,7 @@ namespace mod1
   
   namespace mod2
   {
-    ::CORBA::TypeCode_ptr const _tc_AMH_ex1ResponseHandler =
-      &_tao_tc_mod1_mod2_AMH_ex1ResponseHandler;
+    ::CORBA::TypeCode_ptr const _tc_AMH_ex1ResponseHandler = std::addressof(_tao_tc_mod1_mod2_AMH_ex1ResponseHandler);
   }
 }
 // TAO_IDL - Generated from
@@ -121,8 +119,7 @@ namespace mod1
   
   namespace mod2
   {
-    ::CORBA::TypeCode_ptr const _tc_AMI_ex1Handler =
-      &_tao_tc_mod1_mod2_AMI_ex1Handler;
+    ::CORBA::TypeCode_ptr const _tc_AMI_ex1Handler = std::addressof(_tao_tc_mod1_mod2_AMI_ex1Handler);
   }
 }
 // TAO_IDL - Generated from
@@ -141,8 +138,7 @@ namespace mod1
   
   namespace mod2
   {
-    ::CORBA::TypeCode_ptr const _tc_ex2 =
-      &_tao_tc_mod1_mod2_ex2;
+    ::CORBA::TypeCode_ptr const _tc_ex2 = std::addressof(_tao_tc_mod1_mod2_ex2);
   }
 }
 // TAO_IDL - Generated from
@@ -168,8 +164,7 @@ namespace mod1
   
   namespace mod2
   {
-    ::CORBA::TypeCode_ptr const _tc_AMH_ex2ExceptionHolder =
-      &_tao_tc_mod1_mod2_AMH_ex2ExceptionHolder;
+    ::CORBA::TypeCode_ptr const _tc_AMH_ex2ExceptionHolder = std::addressof(_tao_tc_mod1_mod2_AMH_ex2ExceptionHolder);
   }
 }// TAO extension - the virtual _type method.
 ::CORBA::TypeCode_ptr mod1::mod2::AMH_ex2ExceptionHolder::_tao_type () const
@@ -194,8 +189,7 @@ namespace mod1
   
   namespace mod2
   {
-    ::CORBA::TypeCode_ptr const _tc_AMH_ex2ResponseHandler =
-      &_tao_tc_mod1_mod2_AMH_ex2ResponseHandler;
+    ::CORBA::TypeCode_ptr const _tc_AMH_ex2ResponseHandler = std::addressof(_tao_tc_mod1_mod2_AMH_ex2ResponseHandler);
   }
 }
 // TAO_IDL - Generated from
@@ -214,8 +208,7 @@ namespace mod1
   
   namespace mod2
   {
-    ::CORBA::TypeCode_ptr const _tc_AMI_ex2Handler =
-      &_tao_tc_mod1_mod2_AMI_ex2Handler;
+    ::CORBA::TypeCode_ptr const _tc_AMI_ex2Handler = std::addressof(_tao_tc_mod1_mod2_AMI_ex2Handler);
   }
 }
 // TAO_IDL - Generated from

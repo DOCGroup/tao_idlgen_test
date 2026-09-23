@@ -23,10 +23,11 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "array_anon_nestedC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -44,7 +45,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
-#include "memory"
 
 #if !defined (__ACE_INLINE__)
 #include "array_anon_nestedC.inl"
@@ -54,7 +54,7 @@
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_teststruct_b_GUARD
@@ -86,13 +86,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_teststruct_b_GUARD */
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_teststruct[] =
       {
         { "b", &TAO::TypeCode::tc_teststruct_b },
         { "estruct", &teststruct::_tc_embeddedstruct }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -107,8 +107,7 @@ _tao_tc_teststruct (
   _tao_fields_teststruct,
   2);
 
-::CORBA::TypeCode_ptr const _tc_teststruct =
-  &_tao_tc_teststruct;
+::CORBA::TypeCode_ptr const _tc_teststruct = std::addressof(_tao_tc_teststruct);
 
 
 // TAO_IDL - Generated from
@@ -118,9 +117,8 @@ void
 teststruct::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  teststruct *_tao_tmp_pointer =
-    static_cast<teststruct *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  teststruct *tmp = static_cast<teststruct *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -168,7 +166,7 @@ teststruct::_b_copy (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_teststruct_embeddedstruct_a_GUARD
@@ -200,12 +198,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_teststruct_embeddedstruct_a_GUARD */
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_teststruct_embeddedstruct[] =
       {
         { "a", &TAO::TypeCode::tc_teststruct_embeddedstruct_a }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -220,8 +218,7 @@ _tao_tc_teststruct_embeddedstruct (
   _tao_fields_teststruct_embeddedstruct,
   1);
 
-::CORBA::TypeCode_ptr const teststruct::_tc_embeddedstruct =
-  &_tao_tc_teststruct_embeddedstruct;
+::CORBA::TypeCode_ptr const teststruct::_tc_embeddedstruct = std::addressof(_tao_tc_teststruct_embeddedstruct);
 
 
 // TAO_IDL - Generated from
@@ -231,9 +228,8 @@ void
 teststruct::embeddedstruct::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  embeddedstruct *_tao_tmp_pointer =
-    static_cast<embeddedstruct *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  embeddedstruct *tmp = static_cast<embeddedstruct *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -288,8 +284,7 @@ static TAO::TypeCode::Alias<char const *,
     "tstruct",
     &_tc_teststruct);
   
-::CORBA::TypeCode_ptr const _tc_tstruct =
-  &_tao_tc_tstruct;
+::CORBA::TypeCode_ptr const _tc_tstruct = std::addressof(_tao_tc_tstruct);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
 

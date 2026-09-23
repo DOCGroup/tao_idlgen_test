@@ -23,10 +23,11 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "reopen_include1C.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -45,8 +46,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "reopen_include1C.inl"
@@ -78,9 +78,8 @@ frag::dub_seq::dub_seq (
 void frag::dub_seq::_tao_any_destructor (
     void * _tao_void_pointer)
 {
-  dub_seq * _tao_tmp_pointer =
-    static_cast<dub_seq *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  dub_seq *tmp = static_cast<dub_seq *> (_tao_void_pointer);
+  delete tmp;
 }
 
 #endif /* end #if !defined */
@@ -89,7 +88,7 @@ void frag::dub_seq::_tao_any_destructor (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 
 #ifndef _TAO_TYPECODE_frag_dub_seq_GUARD
@@ -132,8 +131,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace frag
 {
-  ::CORBA::TypeCode_ptr const _tc_dub_seq =
-    &_tao_tc_frag_dub_seq;
+  ::CORBA::TypeCode_ptr const _tc_dub_seq = std::addressof(_tao_tc_frag_dub_seq);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
@@ -244,9 +242,8 @@ A::B::X1::X1 ()
 void
 A::B::X1::_tao_any_destructor (void *_tao_void_pointer)
 {
-  X1 *_tao_tmp_pointer =
-    static_cast<X1 *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  X1 *tmp = static_cast<X1 *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 A::B::X1_ptr
@@ -335,8 +332,7 @@ namespace A
   
   namespace B
   {
-    ::CORBA::TypeCode_ptr const _tc_X1 =
-      &_tao_tc_A_B_X1;
+    ::CORBA::TypeCode_ptr const _tc_X1 = std::addressof(_tao_tc_A_B_X1);
   }
 }
 // TAO_IDL - Generated from
@@ -362,8 +358,7 @@ namespace A
   
   namespace B
   {
-    ::CORBA::TypeCode_ptr const _tc_AMH_X1ExceptionHolder =
-      &_tao_tc_A_B_AMH_X1ExceptionHolder;
+    ::CORBA::TypeCode_ptr const _tc_AMH_X1ExceptionHolder = std::addressof(_tao_tc_A_B_AMH_X1ExceptionHolder);
   }
 }
 // TAO_IDL - Generated from
@@ -417,9 +412,8 @@ A::B::AMH_X1ExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_List& 
 void
 A::B::AMH_X1ExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_X1ExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_X1ExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_X1ExceptionHolder *tmp = static_cast<AMH_X1ExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -513,7 +507,7 @@ A::B::AMH_X1ExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 A::B::AMH_X1ExceptionHolder::raise_getX1 ()
@@ -523,7 +517,7 @@ A::B::AMH_X1ExceptionHolder::raise_getX1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 A::B::AMH_X1ExceptionHolder::raise_sendc_getX1 ()
@@ -569,12 +563,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 A::B::AMH_X1ResponseHandler::AMH_X1ResponseHandler ()
-{}void
+{}
+
+void
 A::B::AMH_X1ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_X1ResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_X1ResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_X1ResponseHandler *tmp = static_cast<AMH_X1ResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 A::B::AMH_X1ResponseHandler_ptr
@@ -666,8 +661,7 @@ namespace A
   
   namespace B
   {
-    ::CORBA::TypeCode_ptr const _tc_AMH_X1ResponseHandler =
-      &_tao_tc_A_B_AMH_X1ResponseHandler;
+    ::CORBA::TypeCode_ptr const _tc_AMH_X1ResponseHandler = std::addressof(_tao_tc_A_B_AMH_X1ResponseHandler);
   }
 }
 // TAO_IDL - Generated from
@@ -841,9 +835,8 @@ A::B::AMI_X1Handler::AMI_X1Handler ()
 void
 A::B::AMI_X1Handler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_X1Handler *_tao_tmp_pointer =
-    static_cast<AMI_X1Handler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_X1Handler *tmp = static_cast<AMI_X1Handler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 A::B::AMI_X1Handler_ptr
@@ -933,8 +926,7 @@ namespace A
   
   namespace B
   {
-    ::CORBA::TypeCode_ptr const _tc_AMI_X1Handler =
-      &_tao_tc_A_B_AMI_X1Handler;
+    ::CORBA::TypeCode_ptr const _tc_AMI_X1Handler = std::addressof(_tao_tc_A_B_AMI_X1Handler);
   }
 }
 // TAO_IDL - Generated from

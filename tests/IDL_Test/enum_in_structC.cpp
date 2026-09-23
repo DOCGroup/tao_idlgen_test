@@ -23,10 +23,12 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "enum_in_structC.h"
+#include <memory>
+#include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -49,8 +51,7 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "enum_in_structC.inl"
@@ -63,7 +64,6 @@ static char const * const _tao_enumerators_UnNamed[] =
     "UNNAMED_FIRST",
     "UNNAMED_SECOND",
     "UNNAMED_THIRD"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -75,20 +75,19 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_UnNamed,
     3);
   
-::CORBA::TypeCode_ptr const _tc_UnNamed =
-  &_tao_tc_UnNamed;
+::CORBA::TypeCode_ptr const _tc_UnNamed = std::addressof(_tao_tc_UnNamed);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_HoldsEnum[] =
       {
         { "named_enum", &HoldsEnum::_tc_Named },
         { "unnamed_enum", &_tc_UnNamed }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -103,8 +102,7 @@ _tao_tc_HoldsEnum (
   _tao_fields_HoldsEnum,
   2);
 
-::CORBA::TypeCode_ptr const _tc_HoldsEnum =
-  &_tao_tc_HoldsEnum;
+::CORBA::TypeCode_ptr const _tc_HoldsEnum = std::addressof(_tao_tc_HoldsEnum);
 
 
 // TAO_IDL - Generated from
@@ -114,9 +112,8 @@ void
 HoldsEnum::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  HoldsEnum *_tao_tmp_pointer =
-    static_cast<HoldsEnum *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  HoldsEnum *tmp = static_cast<HoldsEnum *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
@@ -126,7 +123,6 @@ static char const * const _tao_enumerators_HoldsEnum_Named[] =
     "NAMED_FIRST",
     "NAMED_SECOND",
     "NAMED_THIRD"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -138,14 +134,13 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_HoldsEnum_Named,
     3);
   
-::CORBA::TypeCode_ptr const HoldsEnum::_tc_Named =
-  &_tao_tc_HoldsEnum_Named;
+::CORBA::TypeCode_ptr const HoldsEnum::_tc_Named = std::addressof(_tao_tc_HoldsEnum_Named);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_en_GUARD
@@ -177,7 +172,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_decl_heavy_struct_m_en_GUARD */
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_st_GUARD
@@ -209,7 +204,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_decl_heavy_struct_m_st_GUARD */
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_un_GUARD
@@ -241,14 +236,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_decl_heavy_struct_m_un_GUARD */
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_decl_heavy_struct[] =
       {
         { "m_en", &TAO::TypeCode::tc_decl_heavy_struct_m_en },
         { "m_st", &TAO::TypeCode::tc_decl_heavy_struct_m_st },
         { "m_un", &TAO::TypeCode::tc_decl_heavy_struct_m_un }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -263,8 +258,7 @@ _tao_tc_decl_heavy_struct (
   _tao_fields_decl_heavy_struct,
   3);
 
-::CORBA::TypeCode_ptr const _tc_decl_heavy_struct =
-  &_tao_tc_decl_heavy_struct;
+::CORBA::TypeCode_ptr const _tc_decl_heavy_struct = std::addressof(_tao_tc_decl_heavy_struct);
 
 
 // TAO_IDL - Generated from
@@ -274,9 +268,8 @@ void
 decl_heavy_struct::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  decl_heavy_struct *_tao_tmp_pointer =
-    static_cast<decl_heavy_struct *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  decl_heavy_struct *tmp = static_cast<decl_heavy_struct *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -327,7 +320,6 @@ static char const * const _tao_enumerators_decl_heavy_struct_str_en[] =
     "a",
     "b",
     "c"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -339,8 +331,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_decl_heavy_struct_str_en,
     3);
   
-::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_str_en =
-  &_tao_tc_decl_heavy_struct_str_en;
+::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_str_en = std::addressof(_tao_tc_decl_heavy_struct_str_en);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
 
@@ -387,13 +378,13 @@ decl_heavy_struct::_m_st_copy (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_decl_heavy_struct_st[] =
       {
         { "a", &CORBA::_tc_long },
         { "b", &CORBA::_tc_char }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -408,8 +399,7 @@ _tao_tc_decl_heavy_struct_st (
   _tao_fields_decl_heavy_struct_st,
   2);
 
-::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_st =
-  &_tao_tc_decl_heavy_struct_st;
+::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_st = std::addressof(_tao_tc_decl_heavy_struct_st);
 
 
 // TAO_IDL - Generated from
@@ -419,9 +409,8 @@ void
 decl_heavy_struct::st::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  st *_tao_tmp_pointer =
-    static_cast<st *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  st *tmp = static_cast<st *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -471,7 +460,7 @@ decl_heavy_struct::_m_un_copy (
 
 decl_heavy_struct::un::un ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
@@ -503,58 +492,39 @@ decl_heavy_struct::un::~un ()
 
 void decl_heavy_struct::un::_tao_any_destructor (void *_tao_void_pointer)
 {
-  un *tmp =
-    static_cast<un *> (_tao_void_pointer);
+  un *tmp = static_cast<un *> (_tao_void_pointer);
   delete tmp;
 }
 
 decl_heavy_struct::un &
 decl_heavy_struct::un::operator= (const ::decl_heavy_struct::un &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case 1:
+        {
+          this->u_.a_ = u.u_.a_;
+        }
+        break;
+        case 2:
+        {
+          this->u_.b_ = u.u_.b_;
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case 1:
-    {
-      this->u_.a_ = u.u_.a_;
-    }
-    break;
-    case 2:
-    {
-      this->u_.b_ = u.u_.b_;
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void decl_heavy_struct::un::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case 1:
-      
-    break;
-    
-    case 2:
-      
-    break;
-    
-    default:
-    break;
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -580,8 +550,7 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_decl_heavy_struct_un)/sizeof (_tao_cases_decl_heavy_struct_un[0]),
     -1);
   
-::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_un =
-  &_tao_tc_decl_heavy_struct_un;
+::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_un = std::addressof(_tao_tc_decl_heavy_struct_un);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
@@ -593,7 +562,6 @@ static char const * const _tao_enumerators_ErrorException_ReasonCode[] =
     "STATE",
     "ALREADY",
     "OTHER"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -605,8 +573,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_ErrorException_ReasonCode,
     6);
   
-::CORBA::TypeCode_ptr const ErrorException::_tc_ReasonCode =
-  &_tao_tc_ErrorException_ReasonCode;
+::CORBA::TypeCode_ptr const ErrorException::_tc_ReasonCode = std::addressof(_tao_tc_ErrorException_ReasonCode);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_ctor.cpp:50
 
@@ -650,9 +617,8 @@ ErrorException::operator= (const ::ErrorException &_tao_excp)
 
 void ErrorException::_tao_any_destructor (void *_tao_void_pointer)
 {
-  ErrorException *_tao_tmp_pointer =
-    static_cast<ErrorException *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  ErrorException *tmp = static_cast<ErrorException *> (_tao_void_pointer);
+  delete tmp;
 }
 
 ErrorException *
@@ -713,12 +679,12 @@ void ErrorException::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_ErrorException[] =
       {
         { "reason", &ErrorException::_tc_ReasonCode }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -733,8 +699,7 @@ _tao_tc_ErrorException (
   _tao_fields_ErrorException,
   1);
 
-::CORBA::TypeCode_ptr const _tc_ErrorException =
-  &_tao_tc_ErrorException;
+::CORBA::TypeCode_ptr const _tc_ErrorException = std::addressof(_tao_tc_ErrorException);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:34
 

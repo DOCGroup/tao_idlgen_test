@@ -23,6 +23,7 @@
  **/
 
 #include "anonymousA.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -43,7 +44,7 @@
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 
 #ifndef _TAO_TYPECODE_Not_Anon_short_seq_GUARD
@@ -86,19 +87,18 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace Not_Anon
 {
-  ::CORBA::TypeCode_ptr const _tc_short_seq =
-    &_tao_tc_Not_Anon_short_seq;
+  ::CORBA::TypeCode_ptr const _tc_short_seq = std::addressof(_tao_tc_Not_Anon_short_seq);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_Char__GUARD
@@ -169,19 +169,18 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace Half_Anon
 {
-  ::CORBA::TypeCode_ptr const _tc_char_seq_array =
-    &_tao_tc_Half_Anon_char_seq_array;
+  ::CORBA::TypeCode_ptr const _tc_char_seq_array = std::addressof(_tao_tc_Half_Anon_char_seq_array);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_ULong__18_GUARD
@@ -252,19 +251,18 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace Half_Anon
 {
-  ::CORBA::TypeCode_ptr const _tc_bd_ulong_seq_array =
-    &_tao_tc_Half_Anon_bd_ulong_seq_array;
+  ::CORBA::TypeCode_ptr const _tc_bd_ulong_seq_array = std::addressof(_tao_tc_Half_Anon_bd_ulong_seq_array);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__GUARD
@@ -335,19 +333,18 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace Half_Anon
 {
-  ::CORBA::TypeCode_ptr const _tc_ushort_seq_array =
-    &_tao_tc_Half_Anon_ushort_seq_array;
+  ::CORBA::TypeCode_ptr const _tc_ushort_seq_array = std::addressof(_tao_tc_Half_Anon_ushort_seq_array);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__7_GUARD
@@ -418,8 +415,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace Half_Anon
 {
-  ::CORBA::TypeCode_ptr const _tc_bd_ushort_seq_array =
-    &_tao_tc_Half_Anon_bd_ushort_seq_array;
+  ::CORBA::TypeCode_ptr const _tc_bd_ushort_seq_array = std::addressof(_tao_tc_Half_Anon_bd_ushort_seq_array);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -434,8 +430,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace All_Anon
 {
-  ::CORBA::TypeCode_ptr const _tc_anon_bd_string_test =
-    &_tao_tc_All_Anon_anon_bd_string_test;
+  ::CORBA::TypeCode_ptr const _tc_anon_bd_string_test = std::addressof(_tao_tc_All_Anon_anon_bd_string_test);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -457,8 +452,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace All_Anon
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_anon_bd_string_testExceptionHolder =
-    &_tao_tc_All_Anon_AMH_anon_bd_string_testExceptionHolder;
+  ::CORBA::TypeCode_ptr const _tc_AMH_anon_bd_string_testExceptionHolder = std::addressof(_tao_tc_All_Anon_AMH_anon_bd_string_testExceptionHolder);
 }// TAO extension - the virtual _type method.
 ::CORBA::TypeCode_ptr All_Anon::AMH_anon_bd_string_testExceptionHolder::_tao_type () const
 {
@@ -479,8 +473,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace All_Anon
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_anon_bd_string_testResponseHandler =
-    &_tao_tc_All_Anon_AMH_anon_bd_string_testResponseHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMH_anon_bd_string_testResponseHandler = std::addressof(_tao_tc_All_Anon_AMH_anon_bd_string_testResponseHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -495,8 +488,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace All_Anon
 {
-  ::CORBA::TypeCode_ptr const _tc_AMI_anon_bd_string_testHandler =
-    &_tao_tc_All_Anon_AMI_anon_bd_string_testHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMI_anon_bd_string_testHandler = std::addressof(_tao_tc_All_Anon_AMI_anon_bd_string_testHandler);
 }
 
 // TAO extension - the virtual _type method.
@@ -509,11 +501,11 @@ namespace All_Anon
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon__tao_seq_CORBA_Float__GUARD
@@ -574,11 +566,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon_float_seq_array_GUARD */
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon__tao_seq_CORBA_Float__GUARD
@@ -639,7 +631,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon_another_fsa_GUARD */
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_1_GUARD
@@ -671,7 +663,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_1_GUARD */
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_2_GUARD
@@ -703,7 +695,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_2_GUARD */
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_All_Anon_Nested_Anon[] =
       {
         { "float_seq_array", &TAO::TypeCode::tc_All_Anon_Nested_Anon_float_seq_array },
@@ -711,7 +703,7 @@ static TAO::TypeCode::Struct_Field<
         { "long_array_1", &TAO::TypeCode::tc_All_Anon_Nested_Anon_long_array_1 },
         { "long_array_2", &TAO::TypeCode::tc_All_Anon_Nested_Anon_long_array_2 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -729,15 +721,14 @@ _tao_tc_All_Anon_Nested_Anon (
 
 namespace All_Anon
 {
-  ::CORBA::TypeCode_ptr const _tc_Nested_Anon =
-    &_tao_tc_All_Anon_Nested_Anon;
+  ::CORBA::TypeCode_ptr const _tc_Nested_Anon = std::addressof(_tao_tc_All_Anon_Nested_Anon);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:550
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:547
 
 
 #ifndef _TAO_TYPECODE_CORBA_STRING_32_GUARD
@@ -778,8 +769,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace Second
 {
-  ::CORBA::TypeCode_ptr const _tc_SecondString =
-    &_tao_tc_Second_SecondString;
+  ::CORBA::TypeCode_ptr const _tc_SecondString = std::addressof(_tao_tc_Second_SecondString);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/any_op_cs.cpp:43

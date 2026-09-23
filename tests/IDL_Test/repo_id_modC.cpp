@@ -23,16 +23,16 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "repo_id_modC.h"
+#include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Valuetype/ValueFactory.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "repo_id_modC.inl"
@@ -74,12 +74,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::schmooze::schmooze ()
-{}void
+{}
+
+void
 gleep::schmooze::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schmooze *_tao_tmp_pointer =
-    static_cast<schmooze *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schmooze *tmp = static_cast<schmooze *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::schmooze_ptr
@@ -192,12 +193,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::schmeer::schmeer ()
-{}void
+{}
+
+void
 gleep::schmeer::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schmeer *_tao_tmp_pointer =
-    static_cast<schmeer *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schmeer *tmp = static_cast<schmeer *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::schmeer_ptr
@@ -310,12 +312,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::schlemiel::schlemiel ()
-{}void
+{}
+
+void
 gleep::schlemiel::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schlemiel *_tao_tmp_pointer =
-    static_cast<schlemiel *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schlemiel *tmp = static_cast<schlemiel *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::schlemiel_ptr
@@ -428,12 +431,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::spilkis::spilkis ()
-{}void
+{}
+
+void
 gleep::spilkis::_tao_any_destructor (void *_tao_void_pointer)
 {
-  spilkis *_tao_tmp_pointer =
-    static_cast<spilkis *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  spilkis *tmp = static_cast<spilkis *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::spilkis_ptr
@@ -546,12 +550,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::floop::schmuck::schmuck ()
-{}void
+{}
+
+void
 gleep::floop::schmuck::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schmuck *_tao_tmp_pointer =
-    static_cast<schmuck *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schmuck *tmp = static_cast<schmuck *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::floop::schmuck_ptr
@@ -664,12 +669,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::floop::schmendrick::schmendrick ()
-{}void
+{}
+
+void
 gleep::floop::schmendrick::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schmendrick *_tao_tmp_pointer =
-    static_cast<schmendrick *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schmendrick *tmp = static_cast<schmendrick *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::floop::schmendrick_ptr
@@ -782,12 +788,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::floop::verklempt::schlemazel::schlemazel ()
-{}void
+{}
+
+void
 gleep::floop::verklempt::schlemazel::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schlemazel *_tao_tmp_pointer =
-    static_cast<schlemazel *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schlemazel *tmp = static_cast<schlemazel *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::floop::verklempt::schlemazel_ptr
@@ -900,12 +907,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 gleep::schmegegging::schmegegging ()
-{}void
+{}
+
+void
 gleep::schmegegging::_tao_any_destructor (void *_tao_void_pointer)
 {
-  schmegegging *_tao_tmp_pointer =
-    static_cast<schmegegging *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  schmegegging *tmp = static_cast<schmegegging *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 gleep::schmegegging_ptr

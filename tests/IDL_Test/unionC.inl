@@ -22,6 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
+#include <memory>
+#include <new>
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
@@ -1484,7 +1486,7 @@ outer::_d () const
   return this->disc_;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1235
 
 // Accessor to set the member.
 ACE_INLINE
@@ -1516,7 +1518,7 @@ outer::first ()
   return *this->u_.first_;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1235
 
 // Accessor to set the member.
 ACE_INLINE
@@ -2544,7 +2546,7 @@ U87::b_87_1 (const UBar &val)
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = 1;
-  this->u_.b_87_1_ = val;
+  ::new (std::addressof(this->u_.b_87_1_)) UBar (val);
 }
 
 // Readonly get method.
@@ -2828,7 +2830,7 @@ U92::b_92_1 (const UBar &val)
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = 1;
-  this->u_.b_92_1_ = val;
+  ::new (std::addressof(this->u_.b_92_1_)) UBar (val);
 }
 
 // Readonly get method.
@@ -2879,7 +2881,7 @@ U92::b_92_3 (const UBar &val)
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = -2147483647;
-  this->u_.b_92_3_ = val;
+  ::new (std::addressof(this->u_.b_92_3_)) UBar (val);
 }
 
 // Readonly get method.
@@ -3080,5 +3082,546 @@ U90Array_slice *
 U94::b_94_3 () const
 {
   return this->u_.b_94_3_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
+
+
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+
+ACE_INLINE
+void
+TAO::Array_Traits<DefaultInitializedLongArray_forany>::free (
+    DefaultInitializedLongArray_slice * _tao_slice)
+{
+  DefaultInitializedLongArray_free (_tao_slice);
+}
+
+ACE_INLINE
+DefaultInitializedLongArray_slice *
+TAO::Array_Traits<DefaultInitializedLongArray_forany>::dup (
+    const DefaultInitializedLongArray_slice * _tao_slice)
+{
+  return DefaultInitializedLongArray_dup (_tao_slice);
+}
+
+ACE_INLINE
+void
+TAO::Array_Traits<DefaultInitializedLongArray_forany>::copy (
+    DefaultInitializedLongArray_slice * _tao_to,
+    const DefaultInitializedLongArray_slice * _tao_from)
+{
+  DefaultInitializedLongArray_copy (_tao_to, _tao_from);
+}
+
+ACE_INLINE
+void
+TAO::Array_Traits<DefaultInitializedLongArray_forany>::zero (
+    DefaultInitializedLongArray_slice * _tao_slice)
+{
+  // Zero each individual element.
+  for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
+    {
+      _tao_slice[i0] = ::CORBA::Long ();
+    }
+}
+
+ACE_INLINE
+DefaultInitializedLongArray_slice *
+TAO::Array_Traits<DefaultInitializedLongArray_forany>::alloc ()
+{
+  return DefaultInitializedLongArray_alloc ();
+}
+
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedStructUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedStructUnion::_d (::CORBA::Boolean discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Boolean
+DefaultInitializedStructUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1068
+
+/// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedStructUnion::value (const UBar &val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = false;
+  ::new (std::addressof(this->u_.value_)) UBar (val);
+}
+
+// Readonly get method.
+ACE_INLINE
+const UBar &
+DefaultInitializedStructUnion::value () const
+{
+  return this->u_.value_;
+}
+
+// Read/write get method.
+ACE_INLINE
+UBar &
+DefaultInitializedStructUnion::value ()
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedBooleanUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedBooleanUnion::_d (::CORBA::Boolean discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Boolean
+DefaultInitializedBooleanUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:571
+
+// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedBooleanUnion::value (CORBA::Boolean val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = false;
+  // Set the value.
+  this->u_.value_ = val;
+}
+
+/// Retrieve the member.
+ACE_INLINE
+::CORBA::Boolean
+DefaultInitializedBooleanUnion::value () const
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedLongUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedLongUnion::_d (::CORBA::Boolean discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Boolean
+DefaultInitializedLongUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:571
+
+// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedLongUnion::value (CORBA::Long val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = false;
+  // Set the value.
+  this->u_.value_ = val;
+}
+
+/// Retrieve the member.
+ACE_INLINE
+::CORBA::Long
+DefaultInitializedLongUnion::value () const
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedDoubleUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedDoubleUnion::_d (::CORBA::Boolean discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Boolean
+DefaultInitializedDoubleUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:571
+
+// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedDoubleUnion::value (CORBA::Double val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = false;
+  // Set the value.
+  this->u_.value_ = val;
+}
+
+/// Retrieve the member.
+ACE_INLINE
+::CORBA::Double
+DefaultInitializedDoubleUnion::value () const
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedEnumUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedEnumUnion::_d (::CORBA::Boolean discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Boolean
+DefaultInitializedEnumUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:227
+
+/// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedEnumUnion::value (U90 val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = false;
+  // Set the value.
+  this->u_.value_ = val;
+}
+
+/// Retrieve the member.
+ACE_INLINE
+U90
+DefaultInitializedEnumUnion::value () const
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedArrayUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedArrayUnion::_d (::CORBA::Boolean discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Boolean
+DefaultInitializedArrayUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:156
+
+// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedArrayUnion::value (DefaultInitializedLongArray val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = false;
+  // Set the value.
+  this->u_.value_ = DefaultInitializedLongArray_dup (val);
+}
+
+/// Retrieve the member.
+ACE_INLINE
+DefaultInitializedLongArray_slice *
+DefaultInitializedArrayUnion::value () const
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union DefaultInitializedStringUnion
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:143
+
+
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+DefaultInitializedStringUnion::_d (::CORBA::Boolean discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Boolean
+DefaultInitializedStringUnion::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:866
+
+/// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedStringUnion::value (char *val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = false;
+  this->u_.value_ = val;
+}
+
+// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedStringUnion::value (const char *val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = false;
+  // Set the value.
+  this->u_.value_ = ::CORBA::string_dup (val);
+}
+
+/// Accessor to set the member.
+ACE_INLINE
+void
+DefaultInitializedStringUnion::value (const ::CORBA::String_var &val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = false;
+  // Set the value.
+  ::CORBA::String_var value_var = val;
+  this->u_.value_ = value_var._retn ();
+}
+
+ACE_INLINE
+const char *
+DefaultInitializedStringUnion::value () const // get method
+{
+  return this->u_.value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
+
+// *************************************************************
+// Inline operations for union ResetWithNoopBranches
+// *************************************************************
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:54
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+ResetWithNoopBranches::_d (ResetDiscriminator discval)
+{
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+ResetDiscriminator
+ResetWithNoopBranches::_d () const
+{
+  return this->disc_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:866
+
+/// Accessor to set the member.
+ACE_INLINE
+void
+ResetWithNoopBranches::string_value (char *val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = ::RESET_STRING;
+  this->u_.string_value_ = val;
+}
+
+// Accessor to set the member.
+ACE_INLINE
+void
+ResetWithNoopBranches::string_value (const char *val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = ::RESET_STRING;
+  // Set the value.
+  this->u_.string_value_ = ::CORBA::string_dup (val);
+}
+
+/// Accessor to set the member.
+ACE_INLINE
+void
+ResetWithNoopBranches::string_value (const ::CORBA::String_var &val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = ::RESET_STRING;
+  // Set the value.
+  ::CORBA::String_var string_value_var = val;
+  this->u_.string_value_ = string_value_var._retn ();
+}
+
+ACE_INLINE
+const char *
+ResetWithNoopBranches::string_value () const // get method
+{
+  return this->u_.string_value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:571
+
+// Accessor to set the member.
+ACE_INLINE
+void
+ResetWithNoopBranches::long_value (CORBA::Long val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = ::RESET_LONG;
+  // Set the value.
+  this->u_.long_value_ = val;
+}
+
+/// Retrieve the member.
+ACE_INLINE
+::CORBA::Long
+ResetWithNoopBranches::long_value () const
+{
+  return this->u_.long_value_;
+}
+// TAO_IDL - Generated from
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1068
+
+/// Accessor to set the member.
+ACE_INLINE
+void
+ResetWithNoopBranches::struct_value (const UBar &val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = RESET_DEFAULT;
+  ::new (std::addressof(this->u_.struct_value_)) UBar (val);
+}
+
+// Readonly get method.
+ACE_INLINE
+const UBar &
+ResetWithNoopBranches::struct_value () const
+{
+  return this->u_.struct_value_;
+}
+
+// Read/write get method.
+ACE_INLINE
+UBar &
+ResetWithNoopBranches::struct_value ()
+{
+  return this->u_.struct_value_;
 }
 

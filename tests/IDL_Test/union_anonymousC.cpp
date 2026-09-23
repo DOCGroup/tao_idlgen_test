@@ -23,10 +23,12 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "union_anonymousC.h"
+#include <memory>
+#include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -49,8 +51,7 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "union_anonymousC.inl"
@@ -60,12 +61,12 @@
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Element[] =
       {
         { "Value", &Element::_tc_ValueUnion }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -80,8 +81,7 @@ _tao_tc_Element (
   _tao_fields_Element,
   1);
 
-::CORBA::TypeCode_ptr const _tc_Element =
-  &_tao_tc_Element;
+::CORBA::TypeCode_ptr const _tc_Element = std::addressof(_tao_tc_Element);
 
 
 // TAO_IDL - Generated from
@@ -91,9 +91,8 @@ void
 Element::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  Element *_tao_tmp_pointer =
-    static_cast<Element *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  Element *tmp = static_cast<Element *> (_tao_void_pointer);
+  delete tmp;
 }
 
 
@@ -127,7 +126,7 @@ Element::ValueUnion::_tao_seq_Element_ValueUnion_::_tao_seq_Element_ValueUnion_ 
 
 Element::ValueUnion::ValueUnion ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -32768;
 }
 
@@ -169,48 +168,43 @@ Element::ValueUnion::~ValueUnion ()
 
 void Element::ValueUnion::_tao_any_destructor (void *_tao_void_pointer)
 {
-  ValueUnion *tmp =
-    static_cast<ValueUnion *> (_tao_void_pointer);
+  ValueUnion *tmp = static_cast<ValueUnion *> (_tao_void_pointer);
   delete tmp;
 }
 
 Element::ValueUnion &
 Element::ValueUnion::operator= (const ::Element::ValueUnion &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
-    }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case 0:
-    {
-      this->u_.lvalue_ = u.u_.lvalue_;
-    }
-    break;
-    case 1:
-    {
-      if (!u.u_.VUValue_)
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case 0:
         {
-          this->u_.VUValue_ = nullptr;
+          this->u_.lvalue_ = u.u_.lvalue_;
         }
-      else
+        break;
+        case 1:
         {
-          ACE_NEW_RETURN (
-              this->u_.VUValue_,
-              Element::ValueUnion::_tao_seq_Element_ValueUnion_ (*u.u_.VUValue_),
-              *this);
+          if (!u.u_.VUValue_)
+            {
+              this->u_.VUValue_ = nullptr;
+            }
+          else
+            {
+              ACE_NEW_RETURN (
+                  this->u_.VUValue_,
+                  Element::ValueUnion::_tao_seq_Element_ValueUnion_ (*u.u_.VUValue_),
+                  *this);
+            }
         }
+        break;
+        default:
+        break;
+      }
     }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
@@ -219,17 +213,14 @@ void Element::ValueUnion::_reset ()
 {
   switch (this->disc_)
   {
-    
     case 0:
-      
     break;
-    
     case 1:
+    {
       delete this->u_.VUValue_;
       this->u_.VUValue_ = nullptr;
-      
+    }
     break;
-    
     default:
     break;
   }
@@ -239,7 +230,7 @@ void Element::ValueUnion::_reset ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 
 #ifndef _TAO_TYPECODE_Element_ValueUnion__tao_seq_Element_ValueUnion__GUARD
@@ -295,8 +286,7 @@ static TAO::TypeCode::Recursive_Type<
     sizeof (_tao_cases_Element_ValueUnion)/sizeof (_tao_cases_Element_ValueUnion[0]),
     -1);
   
-::CORBA::TypeCode_ptr const Element::_tc_ValueUnion =
-  &_tao_tc_Element_ValueUnion;
+::CORBA::TypeCode_ptr const Element::_tc_ValueUnion = std::addressof(_tao_tc_Element_ValueUnion);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
 
@@ -343,7 +333,7 @@ NamedLongArray_copy (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_NamedLongArray_GUARD
@@ -382,8 +372,7 @@ static TAO::TypeCode::Alias<char const *,
     "NamedLongArray",
     &TAO::TypeCode::tc_NamedLongArray);
   
-::CORBA::TypeCode_ptr const _tc_NamedLongArray =
-  &_tao_tc_NamedLongArray;
+::CORBA::TypeCode_ptr const _tc_NamedLongArray = std::addressof(_tao_tc_NamedLongArray);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
@@ -392,7 +381,6 @@ static char const * const _tao_enumerators_decl_heavy_union_which[] =
     "ZERO",
     "ONE",
     "TWO"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -404,8 +392,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_decl_heavy_union_which,
     3);
   
-::CORBA::TypeCode_ptr const decl_heavy_union::_tc_which =
-  &_tao_tc_decl_heavy_union_which;
+::CORBA::TypeCode_ptr const decl_heavy_union::_tc_which = std::addressof(_tao_tc_decl_heavy_union_which);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
 
@@ -455,7 +442,6 @@ static char const * const _tao_enumerators_decl_heavy_union_en[] =
     "a",
     "b",
     "c"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -467,8 +453,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_decl_heavy_union_en,
     3);
   
-::CORBA::TypeCode_ptr const decl_heavy_union::_tc_en =
-  &_tao_tc_decl_heavy_union_en;
+::CORBA::TypeCode_ptr const decl_heavy_union::_tc_en = std::addressof(_tao_tc_decl_heavy_union_en);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
 
@@ -515,13 +500,13 @@ decl_heavy_union::_m_st_arr_copy (
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_decl_heavy_union_st[] =
       {
         { "a", &CORBA::_tc_long },
         { "b", &CORBA::_tc_char }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -536,8 +521,7 @@ _tao_tc_decl_heavy_union_st (
   _tao_fields_decl_heavy_union_st,
   2);
 
-::CORBA::TypeCode_ptr const decl_heavy_union::_tc_st =
-  &_tao_tc_decl_heavy_union_st;
+::CORBA::TypeCode_ptr const decl_heavy_union::_tc_st = std::addressof(_tao_tc_decl_heavy_union_st);
 
 
 // TAO_IDL - Generated from
@@ -547,9 +531,8 @@ void
 decl_heavy_union::st::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  st *_tao_tmp_pointer =
-    static_cast<st *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  st *tmp = static_cast<st *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -599,7 +582,7 @@ decl_heavy_union::_m_un_arr_copy (
 
 decl_heavy_union::un::un ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
@@ -631,58 +614,39 @@ decl_heavy_union::un::~un ()
 
 void decl_heavy_union::un::_tao_any_destructor (void *_tao_void_pointer)
 {
-  un *tmp =
-    static_cast<un *> (_tao_void_pointer);
+  un *tmp = static_cast<un *> (_tao_void_pointer);
   delete tmp;
 }
 
 decl_heavy_union::un &
 decl_heavy_union::un::operator= (const ::decl_heavy_union::un &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case 1:
+        {
+          this->u_.a_ = u.u_.a_;
+        }
+        break;
+        case 2:
+        {
+          this->u_.b_ = u.u_.b_;
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case 1:
-    {
-      this->u_.a_ = u.u_.a_;
-    }
-    break;
-    case 2:
-    {
-      this->u_.b_ = u.u_.b_;
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
 /// Reset method to reset old values of a union.
 void decl_heavy_union::un::_reset ()
 {
-  switch (this->disc_)
-  {
-    
-    case 1:
-      
-    break;
-    
-    case 2:
-      
-    break;
-    
-    default:
-    break;
-  }
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:63
@@ -708,8 +672,7 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_decl_heavy_union_un)/sizeof (_tao_cases_decl_heavy_union_un[0]),
     -1);
   
-::CORBA::TypeCode_ptr const decl_heavy_union::_tc_un =
-  &_tao_tc_decl_heavy_union_un;
+::CORBA::TypeCode_ptr const decl_heavy_union::_tc_un = std::addressof(_tao_tc_decl_heavy_union_un);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
 
@@ -758,7 +721,7 @@ decl_heavy_union::_m_anon_long_array_copy (
 
 decl_heavy_union::decl_heavy_union ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -32768;
 }
 
@@ -769,42 +732,42 @@ decl_heavy_union::decl_heavy_union (const ::decl_heavy_union &u)
   {
     case 1:
     {
-      this->u_.m_which_ = 
+      this->u_.m_which_ =
         u.u_.m_which_;
     }
     break;
     case 2:
     {
       // Make a deep copy.
-      this->u_.m_en_arr_ = 
+      this->u_.m_en_arr_ =
         decl_heavy_union::_m_en_arr_dup (u.u_.m_en_arr_);
     }
     break;
     case 3:
     {
       // Make a deep copy.
-      this->u_.m_st_arr_ = 
+      this->u_.m_st_arr_ =
         decl_heavy_union::_m_st_arr_dup (u.u_.m_st_arr_);
     }
     break;
     case 4:
     {
       // Make a deep copy.
-      this->u_.m_un_arr_ = 
+      this->u_.m_un_arr_ =
         decl_heavy_union::_m_un_arr_dup (u.u_.m_un_arr_);
     }
     break;
     case 5:
     {
       // Make a deep copy.
-      this->u_.m_named_long_array_ = 
+      this->u_.m_named_long_array_ =
         NamedLongArray_dup (u.u_.m_named_long_array_);
     }
     break;
     case 6:
     {
       // Make a deep copy.
-      this->u_.m_anon_long_array_ = 
+      this->u_.m_anon_long_array_ =
         decl_heavy_union::_m_anon_long_array_dup (u.u_.m_anon_long_array_);
     }
     break;
@@ -821,69 +784,64 @@ decl_heavy_union::~decl_heavy_union ()
 
 void decl_heavy_union::_tao_any_destructor (void *_tao_void_pointer)
 {
-  decl_heavy_union *tmp =
-    static_cast<decl_heavy_union *> (_tao_void_pointer);
+  decl_heavy_union *tmp = static_cast<decl_heavy_union *> (_tao_void_pointer);
   delete tmp;
 }
 
 decl_heavy_union &
 decl_heavy_union::operator= (const ::decl_heavy_union &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case 1:
+        {
+          this->u_.m_which_ =
+            u.u_.m_which_;
+        }
+        break;
+        case 2:
+        {
+          // Make a deep copy.
+          this->u_.m_en_arr_ =
+            decl_heavy_union::_m_en_arr_dup (u.u_.m_en_arr_);
+        }
+        break;
+        case 3:
+        {
+          // Make a deep copy.
+          this->u_.m_st_arr_ =
+            decl_heavy_union::_m_st_arr_dup (u.u_.m_st_arr_);
+        }
+        break;
+        case 4:
+        {
+          // Make a deep copy.
+          this->u_.m_un_arr_ =
+            decl_heavy_union::_m_un_arr_dup (u.u_.m_un_arr_);
+        }
+        break;
+        case 5:
+        {
+          // Make a deep copy.
+          this->u_.m_named_long_array_ =
+            NamedLongArray_dup (u.u_.m_named_long_array_);
+        }
+        break;
+        case 6:
+        {
+          // Make a deep copy.
+          this->u_.m_anon_long_array_ =
+            decl_heavy_union::_m_anon_long_array_dup (u.u_.m_anon_long_array_);
+        }
+        break;
+        default:
+        break;
+      }
     }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case 1:
-    {
-      this->u_.m_which_ = 
-        u.u_.m_which_;
-    }
-    break;
-    case 2:
-    {
-      // Make a deep copy.
-      this->u_.m_en_arr_ = 
-        decl_heavy_union::_m_en_arr_dup (u.u_.m_en_arr_);
-    }
-    break;
-    case 3:
-    {
-      // Make a deep copy.
-      this->u_.m_st_arr_ = 
-        decl_heavy_union::_m_st_arr_dup (u.u_.m_st_arr_);
-    }
-    break;
-    case 4:
-    {
-      // Make a deep copy.
-      this->u_.m_un_arr_ = 
-        decl_heavy_union::_m_un_arr_dup (u.u_.m_un_arr_);
-    }
-    break;
-    case 5:
-    {
-      // Make a deep copy.
-      this->u_.m_named_long_array_ = 
-        NamedLongArray_dup (u.u_.m_named_long_array_);
-    }
-    break;
-    case 6:
-    {
-      // Make a deep copy.
-      this->u_.m_anon_long_array_ = 
-        decl_heavy_union::_m_anon_long_array_dup (u.u_.m_anon_long_array_);
-    }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
@@ -892,41 +850,38 @@ void decl_heavy_union::_reset ()
 {
   switch (this->disc_)
   {
-    
     case 1:
-      
     break;
-    
     case 2:
+    {
       decl_heavy_union::_m_en_arr_free (this->u_.m_en_arr_);
       this->u_.m_en_arr_ = nullptr;
-      
+    }
     break;
-    
     case 3:
+    {
       decl_heavy_union::_m_st_arr_free (this->u_.m_st_arr_);
       this->u_.m_st_arr_ = nullptr;
-      
+    }
     break;
-    
     case 4:
+    {
       decl_heavy_union::_m_un_arr_free (this->u_.m_un_arr_);
       this->u_.m_un_arr_ = nullptr;
-      
+    }
     break;
-    
     case 5:
+    {
       NamedLongArray_free (this->u_.m_named_long_array_);
       this->u_.m_named_long_array_ = nullptr;
-      
+    }
     break;
-    
     case 6:
+    {
       decl_heavy_union::_m_anon_long_array_free (this->u_.m_anon_long_array_);
       this->u_.m_anon_long_array_ = nullptr;
-      
+    }
     break;
-    
     default:
     break;
   }
@@ -936,7 +891,7 @@ void decl_heavy_union::_reset ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_union_m_en_arr_GUARD
@@ -968,7 +923,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_decl_heavy_union_m_en_arr_GUARD */
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_union_m_st_arr_GUARD
@@ -1000,7 +955,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_decl_heavy_union_m_st_arr_GUARD */
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_union_m_un_arr_GUARD
@@ -1032,11 +987,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_TYPECODE_decl_heavy_union_m_un_arr_GUARD */
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_union_m_anon_long_array_GUARD
@@ -1095,8 +1050,7 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_decl_heavy_union)/sizeof (_tao_cases_decl_heavy_union[0]),
     -1);
   
-::CORBA::TypeCode_ptr const _tc_decl_heavy_union =
-  &_tao_tc_decl_heavy_union;
+::CORBA::TypeCode_ptr const _tc_decl_heavy_union = std::addressof(_tao_tc_decl_heavy_union);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
 

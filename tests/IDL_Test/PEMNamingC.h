@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_PEMNAMINGC_TDE4HW_H_
-#define _TAO_IDL_PEMNAMINGC_TDE4HW_H_
+#ifndef _TAO_IDL_PEMNAMINGC_7MJASL_H_
+#define _TAO_IDL_PEMNAMINGC_7MJASL_H_
 
 #include /**/ "ace/pre.h"
 
@@ -143,8 +143,8 @@ namespace Plesk
 
     static void _tao_any_destructor (void *);
     
-    ::TAO::String_Manager name;
-    ::TAO::String_Manager value;
+    ::TAO::String_Manager name {};
+    ::TAO::String_Manager value {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -206,13 +206,13 @@ namespace Plesk
   class TAO_IDL_TEST_STUB_Export ExSystem : public ::CORBA::UserException
   {
   public:
-    ::TAO::String_Manager module_id;
-    ::CORBA::Long extype_id;
-    ::CORBA::Long errcode;
-    ::CORBA::Long errcode_minor;
-    ::TAO::String_Manager errmsg;
-    Plesk::TPropertyList props;
-    Plesk::TBool transient;
+    ::TAO::String_Manager module_id {};
+    ::CORBA::Long extype_id {};
+    ::CORBA::Long errcode {};
+    ::CORBA::Long errcode_minor {};
+    ::TAO::String_Manager errmsg {};
+    Plesk::TPropertyList props {};
+    Plesk::TBool transient {};
 
     ExSystem ();
     ExSystem (const ExSystem &);
@@ -284,7 +284,7 @@ namespace Plesk
 
       static void _tao_any_destructor (void *);
       
-      ::TAO::String_Manager kernel_resolver_ior;
+      ::TAO::String_Manager kernel_resolver_ior {};
     };
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1246,7 +1246,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "PEMNamingC.inl"

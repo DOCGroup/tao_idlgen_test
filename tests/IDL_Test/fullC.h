@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_FULLC_GIQ57E_H_
-#define _TAO_IDL_FULLC_GIQ57E_H_
+#ifndef _TAO_IDL_FULLC_JHEJTZ_H_
+#define _TAO_IDL_FULLC_JHEJTZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -567,8 +567,9 @@ namespace mod2
     private:
       ::CORBA::Short disc_;
 
-      union
+      union _tao_union_storage
       {
+        _tao_union_storage () {}
         // TAO_IDL - Generated from
         // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:176
 
@@ -1949,7 +1950,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "fullC.inl"

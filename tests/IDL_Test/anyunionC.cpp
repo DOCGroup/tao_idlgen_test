@@ -23,10 +23,12 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "anyunionC.h"
+#include <memory>
+#include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -46,8 +48,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "anyunionC.inl"
@@ -58,7 +59,6 @@
 static char const * const _tao_enumerators_AnyUnionEnum[] =
   {
     "ANYUNIONENUM2"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -70,8 +70,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_AnyUnionEnum,
     1);
   
-::CORBA::TypeCode_ptr const _tc_AnyUnionEnum =
-  &_tao_tc_AnyUnionEnum;
+::CORBA::TypeCode_ptr const _tc_AnyUnionEnum = std::addressof(_tao_tc_AnyUnionEnum);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:75
 
@@ -79,7 +78,7 @@ static TAO::TypeCode::Enum<char const *,
 
 MyAnyUnion::MyAnyUnion ()
 {
-  ACE_OS::memset (&this->u_, 0, sizeof (this->u_));
+  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (AnyUnionEnum) -1;
 }
 
@@ -116,43 +115,38 @@ MyAnyUnion::~MyAnyUnion ()
 
 void MyAnyUnion::_tao_any_destructor (void *_tao_void_pointer)
 {
-  MyAnyUnion *tmp =
-    static_cast<MyAnyUnion *> (_tao_void_pointer);
+  MyAnyUnion *tmp = static_cast<MyAnyUnion *> (_tao_void_pointer);
   delete tmp;
 }
 
 MyAnyUnion &
 MyAnyUnion::operator= (const ::MyAnyUnion &u)
 {
-  if (std::addressof(u) == this)
+  if (std::addressof(u) != this)
     {
-      return *this;
-    }
-  
-  this->_reset ();
-  this->disc_ = u.disc_;
-
-  switch (this->disc_)
-  {
-    case ::ANYUNIONENUM2:
-    {
-      if (!u.u_.my_any_)
+      this->_reset ();
+      this->disc_ = u.disc_;
+      switch (this->disc_)
+      {
+        case ::ANYUNIONENUM2:
         {
-          this->u_.my_any_ = nullptr;
+          if (!u.u_.my_any_)
+            {
+              this->u_.my_any_ = nullptr;
+            }
+          else
+            {
+              ACE_NEW_RETURN (
+                  this->u_.my_any_,
+                  CORBA::Any (*u.u_.my_any_),
+                  *this);
+            }
         }
-      else
-        {
-          ACE_NEW_RETURN (
-              this->u_.my_any_,
-              CORBA::Any (*u.u_.my_any_),
-              *this);
-        }
+        break;
+        default:
+        break;
+      }
     }
-    break;
-    default:
-    break;
-  }
-  
   return *this;
 }
 
@@ -161,13 +155,12 @@ void MyAnyUnion::_reset ()
 {
   switch (this->disc_)
   {
-    
     case ::ANYUNIONENUM2:
+    {
       delete this->u_.my_any_;
       this->u_.my_any_ = nullptr;
-      
+    }
     break;
-    
     default:
     break;
   }
@@ -194,8 +187,7 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_MyAnyUnion)/sizeof (_tao_cases_MyAnyUnion[0]),
     -1);
   
-::CORBA::TypeCode_ptr const _tc_MyAnyUnion =
-  &_tao_tc_MyAnyUnion;
+::CORBA::TypeCode_ptr const _tc_MyAnyUnion = std::addressof(_tao_tc_MyAnyUnion);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:34
 

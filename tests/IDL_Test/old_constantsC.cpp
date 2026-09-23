@@ -23,10 +23,11 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "old_constantsC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -48,8 +49,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "old_constantsC.inl"
@@ -63,7 +63,6 @@ static char const * const _tao_enumerators_OldConstants_N[] =
     "un",
     "deux",
     "trois"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -78,8 +77,7 @@ static TAO::TypeCode::Enum<char const *,
 
 namespace OldConstants
 {
-  ::CORBA::TypeCode_ptr const _tc_N =
-    &_tao_tc_OldConstants_N;
+  ::CORBA::TypeCode_ptr const _tc_N = std::addressof(_tao_tc_OldConstants_N);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_ctor.cpp:50
@@ -124,9 +122,8 @@ OldConstants::E::operator= (const ::OldConstants::E &_tao_excp)
 
 void OldConstants::E::_tao_any_destructor (void *_tao_void_pointer)
 {
-  E *_tao_tmp_pointer =
-    static_cast<E *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  E *tmp = static_cast<E *> (_tao_void_pointer);
+  delete tmp;
 }
 
 OldConstants::E *
@@ -187,12 +184,12 @@ void OldConstants::E::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldConstants_E[] =
       {
         { "cause", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -210,8 +207,7 @@ _tao_tc_OldConstants_E (
 
 namespace OldConstants
 {
-  ::CORBA::TypeCode_ptr const _tc_E =
-    &_tao_tc_OldConstants_E;
+  ::CORBA::TypeCode_ptr const _tc_E = std::addressof(_tao_tc_OldConstants_E);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
@@ -222,7 +218,6 @@ static char const * const _tao_enumerators_OldConstants_M_N[] =
     "un",
     "deux",
     "trois"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -240,8 +235,7 @@ namespace OldConstants
   
   namespace M
   {
-    ::CORBA::TypeCode_ptr const _tc_N =
-      &_tao_tc_OldConstants_M_N;
+    ::CORBA::TypeCode_ptr const _tc_N = std::addressof(_tao_tc_OldConstants_M_N);
   }
 }
 // TAO_IDL - Generated from
@@ -287,9 +281,8 @@ OldConstants::M::E::operator= (const ::OldConstants::M::E &_tao_excp)
 
 void OldConstants::M::E::_tao_any_destructor (void *_tao_void_pointer)
 {
-  E *_tao_tmp_pointer =
-    static_cast<E *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  E *tmp = static_cast<E *> (_tao_void_pointer);
+  delete tmp;
 }
 
 OldConstants::M::E *
@@ -350,12 +343,12 @@ void OldConstants::M::E::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldConstants_M_E[] =
       {
         { "cause", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -376,8 +369,7 @@ namespace OldConstants
   
   namespace M
   {
-    ::CORBA::TypeCode_ptr const _tc_E =
-      &_tao_tc_OldConstants_M_E;
+    ::CORBA::TypeCode_ptr const _tc_E = std::addressof(_tao_tc_OldConstants_M_E);
   }
 }
 // TAO_IDL - Generated from
@@ -430,7 +422,6 @@ static char const * const _tao_enumerators_OldConstants_M_A_N[] =
     "un",
     "deux",
     "trois"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -442,8 +433,7 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_OldConstants_M_A_N,
     4);
   
-::CORBA::TypeCode_ptr const OldConstants::M::A::_tc_N =
-  &_tao_tc_OldConstants_M_A_N;
+::CORBA::TypeCode_ptr const OldConstants::M::A::_tc_N = std::addressof(_tao_tc_OldConstants_M_A_N);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_ctor.cpp:50
 
@@ -487,9 +477,8 @@ OldConstants::M::A::E::operator= (const ::OldConstants::M::A::E &_tao_excp)
 
 void OldConstants::M::A::E::_tao_any_destructor (void *_tao_void_pointer)
 {
-  E *_tao_tmp_pointer =
-    static_cast<E *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  E *tmp = static_cast<E *> (_tao_void_pointer);
+  delete tmp;
 }
 
 OldConstants::M::A::E *
@@ -550,12 +539,12 @@ void OldConstants::M::A::E::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldConstants_M_A_E[] =
       {
         { "cause", &CORBA::_tc_short }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -570,8 +559,7 @@ _tao_tc_OldConstants_M_A_E (
   _tao_fields_OldConstants_M_A_E,
   1);
 
-::CORBA::TypeCode_ptr const OldConstants::M::A::_tc_E =
-  &_tao_tc_OldConstants_M_A_E;
+::CORBA::TypeCode_ptr const OldConstants::M::A::_tc_E = std::addressof(_tao_tc_OldConstants_M_A_E);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
@@ -663,9 +651,8 @@ OldConstants::M::A::A ()
 void
 OldConstants::M::A::_tao_any_destructor (void *_tao_void_pointer)
 {
-  A *_tao_tmp_pointer =
-    static_cast<A *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  A *tmp = static_cast<A *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldConstants::M::A_ptr
@@ -754,8 +741,7 @@ namespace OldConstants
   
   namespace M
   {
-    ::CORBA::TypeCode_ptr const _tc_A =
-      &_tao_tc_OldConstants_M_A;
+    ::CORBA::TypeCode_ptr const _tc_A = std::addressof(_tao_tc_OldConstants_M_A);
   }
 }
 // TAO_IDL - Generated from
@@ -781,8 +767,7 @@ namespace OldConstants
   
   namespace M
   {
-    ::CORBA::TypeCode_ptr const _tc_AMH_AExceptionHolder =
-      &_tao_tc_OldConstants_M_AMH_AExceptionHolder;
+    ::CORBA::TypeCode_ptr const _tc_AMH_AExceptionHolder = std::addressof(_tao_tc_OldConstants_M_AMH_AExceptionHolder);
   }
 }
 // TAO_IDL - Generated from
@@ -836,9 +821,8 @@ OldConstants::M::AMH_AExceptionHolder::_tao_obv_truncatable_repo_ids (Repository
 void
 OldConstants::M::AMH_AExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_AExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_AExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_AExceptionHolder *tmp = static_cast<AMH_AExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -932,7 +916,7 @@ OldConstants::M::AMH_AExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldConstants::M::AMH_AExceptionHolder::raise_foo ()
@@ -942,7 +926,7 @@ OldConstants::M::AMH_AExceptionHolder::raise_foo ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldConstants::M::AMH_AExceptionHolder::raise_sendc_foo ()
@@ -988,12 +972,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldConstants::M::AMH_AResponseHandler::AMH_AResponseHandler ()
-{}void
+{}
+
+void
 OldConstants::M::AMH_AResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_AResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_AResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_AResponseHandler *tmp = static_cast<AMH_AResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldConstants::M::AMH_AResponseHandler_ptr
@@ -1085,8 +1070,7 @@ namespace OldConstants
   
   namespace M
   {
-    ::CORBA::TypeCode_ptr const _tc_AMH_AResponseHandler =
-      &_tao_tc_OldConstants_M_AMH_AResponseHandler;
+    ::CORBA::TypeCode_ptr const _tc_AMH_AResponseHandler = std::addressof(_tao_tc_OldConstants_M_AMH_AResponseHandler);
   }
 }
 // TAO_IDL - Generated from
@@ -1274,9 +1258,8 @@ OldConstants::M::AMI_AHandler::AMI_AHandler ()
 void
 OldConstants::M::AMI_AHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_AHandler *_tao_tmp_pointer =
-    static_cast<AMI_AHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_AHandler *tmp = static_cast<AMI_AHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldConstants::M::AMI_AHandler_ptr
@@ -1366,8 +1349,7 @@ namespace OldConstants
   
   namespace M
   {
-    ::CORBA::TypeCode_ptr const _tc_AMI_AHandler =
-      &_tao_tc_OldConstants_M_AMI_AHandler;
+    ::CORBA::TypeCode_ptr const _tc_AMI_AHandler = std::addressof(_tao_tc_OldConstants_M_AMI_AHandler);
   }
 }
 // TAO_IDL - Generated from

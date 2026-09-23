@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_SIMPLEC_IP3NC0_H_
-#define _TAO_IDL_SIMPLEC_IP3NC0_H_
+#ifndef _TAO_IDL_SIMPLEC_FTXMKZ_H_
+#define _TAO_IDL_SIMPLEC_FTXMKZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -139,7 +139,7 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_vec10;
 class TAO_IDL_TEST_STUB_Export simple_error : public ::CORBA::UserException
 {
 public:
-  ::CORBA::Long reason;
+  ::CORBA::Long reason {};
 
   simple_error ();
   simple_error (const simple_error &);
@@ -604,7 +604,7 @@ public:
   class TAO_IDL_TEST_STUB_Export simple2_error : public ::CORBA::UserException
   {
   public:
-    ::CORBA::Long reason2;
+    ::CORBA::Long reason2 {};
 
     simple2_error ();
     simple2_error (const simple2_error &);
@@ -1671,7 +1671,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "simpleC.inl"

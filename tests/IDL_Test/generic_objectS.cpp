@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_E6258X_CPP_
-#define _TAO_IDL_GENERIC_OBJECTS_E6258X_CPP_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_L5SKY8_CPP_
+#define _TAO_IDL_GENERIC_OBJECTS_L5SKY8_CPP_
 
 
 #include "generic_objectS.h"
@@ -53,7 +53,7 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "cstring"
+#include <cstring>
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1853
 

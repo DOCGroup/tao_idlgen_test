@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_LNC12R_CPP_
-#define _TAO_IDL_OLD_SEQUENCES_LNC12R_CPP_
+#ifndef _TAO_IDL_OLD_SEQUENCES_SG8JO1_CPP_
+#define _TAO_IDL_OLD_SEQUENCES_SG8JO1_CPP_
 
 
 #include "old_sequenceS.h"
@@ -53,7 +53,7 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "cstring"
+#include <cstring>
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1853
 

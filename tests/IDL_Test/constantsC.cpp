@@ -23,16 +23,16 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "constantsC.h"
+#include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "constantsC.inl"
@@ -97,9 +97,8 @@ ClassConstants::Iface::Iface ()
 void
 ClassConstants::Iface::_tao_any_destructor (void *_tao_void_pointer)
 {
-  Iface *_tao_tmp_pointer =
-    static_cast<Iface *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  Iface *tmp = static_cast<Iface *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 ClassConstants::Iface_ptr
@@ -223,9 +222,8 @@ ClassConstants::AMH_IfaceExceptionHolder::_tao_obv_truncatable_repo_ids (Reposit
 void
 ClassConstants::AMH_IfaceExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_IfaceExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_IfaceExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_IfaceExceptionHolder *tmp = static_cast<AMH_IfaceExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 ClassConstants::AMH_IfaceExceptionHolder::~AMH_IfaceExceptionHolder ()
@@ -384,12 +382,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 ClassConstants::AMH_IfaceResponseHandler::AMH_IfaceResponseHandler ()
-{}void
+{}
+
+void
 ClassConstants::AMH_IfaceResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_IfaceResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_IfaceResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_IfaceResponseHandler *tmp = static_cast<AMH_IfaceResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 ClassConstants::AMH_IfaceResponseHandler_ptr
@@ -507,9 +506,8 @@ ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler ()
 void
 ClassConstants::AMI_IfaceHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_IfaceHandler *_tao_tmp_pointer =
-    static_cast<AMI_IfaceHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_IfaceHandler *tmp = static_cast<AMI_IfaceHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 ClassConstants::AMI_IfaceHandler_ptr
@@ -634,9 +632,8 @@ ClassConstants::Vt::_tao_obv_truncatable_repo_ids (Repository_Id_List& ids) cons
 void
 ClassConstants::Vt::_tao_any_destructor (void *_tao_void_pointer)
 {
-  Vt *_tao_tmp_pointer =
-    static_cast<Vt *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  Vt *tmp = static_cast<Vt *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 ClassConstants::Vt::~Vt ()

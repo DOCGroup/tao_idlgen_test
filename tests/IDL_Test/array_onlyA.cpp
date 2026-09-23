@@ -23,6 +23,7 @@
  **/
 
 #include "array_onlyA.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -38,7 +39,7 @@
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_TEST_TYPE_GUARD
@@ -77,8 +78,7 @@ static TAO::TypeCode::Alias<char const *,
     "TEST_TYPE",
     &TAO::TypeCode::tc_TEST_TYPE);
   
-::CORBA::TypeCode_ptr const _tc_TEST_TYPE =
-  &_tao_tc_TEST_TYPE;
+::CORBA::TypeCode_ptr const _tc_TEST_TYPE = std::addressof(_tao_tc_TEST_TYPE);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/any_op_cs.cpp:31
 

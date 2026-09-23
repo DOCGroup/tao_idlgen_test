@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_REOPENED_MODULESC_AWMR7V_H_
-#define _TAO_IDL_REOPENED_MODULESC_AWMR7V_H_
+#ifndef _TAO_IDL_REOPENED_MODULESC_5A9E60_H_
+#define _TAO_IDL_REOPENED_MODULESC_5A9E60_H_
 
 #include /**/ "ace/pre.h"
 
@@ -4963,7 +4963,7 @@ struct TAO_IDL_TEST_STUB_Export bar
 
   static void _tao_any_destructor (void *);
   
-  ::CORBA::Short s;
+  ::CORBA::Short s {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -5000,8 +5000,8 @@ namespace foo
 
     static void _tao_any_destructor (void *);
     
-    foo::longdef longval;
-    longdef2 longval2;
+    foo::longdef longval {};
+    longdef2 longval2 {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -7499,7 +7499,7 @@ namespace Schmoik
 
     static void _tao_any_destructor (void *);
     
-    ::TAO::String_Manager member;
+    ::TAO::String_Manager member {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -15346,7 +15346,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "reopened_modulesC.inl"

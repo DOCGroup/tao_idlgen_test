@@ -23,18 +23,18 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "inheritC.h"
+#include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "inheritC.inl"
@@ -146,9 +146,8 @@ OldInherit::one::one ()
 void
 OldInherit::one::_tao_any_destructor (void *_tao_void_pointer)
 {
-  one *_tao_tmp_pointer =
-    static_cast<one *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  one *tmp = static_cast<one *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::one_ptr
@@ -272,9 +271,8 @@ OldInherit::AMH_oneExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id
 void
 OldInherit::AMH_oneExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_oneExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_oneExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_oneExceptionHolder *tmp = static_cast<AMH_oneExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 OldInherit::AMH_oneExceptionHolder::~AMH_oneExceptionHolder ()
@@ -362,7 +360,7 @@ OldInherit::AMH_oneExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldInherit::AMH_oneExceptionHolder::raise_op_one ()
@@ -372,7 +370,7 @@ OldInherit::AMH_oneExceptionHolder::raise_op_one ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldInherit::AMH_oneExceptionHolder::raise_sendc_op_one ()
@@ -418,12 +416,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldInherit::AMH_oneResponseHandler::AMH_oneResponseHandler ()
-{}void
+{}
+
+void
 OldInherit::AMH_oneResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_oneResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_oneResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_oneResponseHandler *tmp = static_cast<AMH_oneResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::AMH_oneResponseHandler_ptr
@@ -662,9 +661,8 @@ OldInherit::AMI_oneHandler::AMI_oneHandler ()
 void
 OldInherit::AMI_oneHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_oneHandler *_tao_tmp_pointer =
-    static_cast<AMI_oneHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_oneHandler *tmp = static_cast<AMI_oneHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::AMI_oneHandler_ptr
@@ -845,9 +843,8 @@ OldInherit::two::two ()
 void
 OldInherit::two::_tao_any_destructor (void *_tao_void_pointer)
 {
-  two *_tao_tmp_pointer =
-    static_cast<two *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  two *tmp = static_cast<two *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::two_ptr
@@ -972,9 +969,8 @@ OldInherit::AMH_twoExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id
 void
 OldInherit::AMH_twoExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_twoExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_twoExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_twoExceptionHolder *tmp = static_cast<AMH_twoExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 OldInherit::AMH_twoExceptionHolder::~AMH_twoExceptionHolder ()
@@ -1062,7 +1058,7 @@ OldInherit::AMH_twoExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldInherit::AMH_twoExceptionHolder::raise_op_two ()
@@ -1072,7 +1068,7 @@ OldInherit::AMH_twoExceptionHolder::raise_op_two ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldInherit::AMH_twoExceptionHolder::raise_sendc_op_two ()
@@ -1118,12 +1114,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldInherit::AMH_twoResponseHandler::AMH_twoResponseHandler ()
-{}void
+{}
+
+void
 OldInherit::AMH_twoResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_twoResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_twoResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_twoResponseHandler *tmp = static_cast<AMH_twoResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::AMH_twoResponseHandler_ptr
@@ -1362,9 +1359,8 @@ OldInherit::AMI_twoHandler::AMI_twoHandler ()
 void
 OldInherit::AMI_twoHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_twoHandler *_tao_tmp_pointer =
-    static_cast<AMI_twoHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_twoHandler *tmp = static_cast<AMI_twoHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::AMI_twoHandler_ptr
@@ -1546,9 +1542,8 @@ OldInherit::three::three ()
 void
 OldInherit::three::_tao_any_destructor (void *_tao_void_pointer)
 {
-  three *_tao_tmp_pointer =
-    static_cast<three *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  three *tmp = static_cast<three *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::three_ptr
@@ -1673,9 +1668,8 @@ OldInherit::AMH_threeExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_
 void
 OldInherit::AMH_threeExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_threeExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_threeExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_threeExceptionHolder *tmp = static_cast<AMH_threeExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 OldInherit::AMH_threeExceptionHolder::~AMH_threeExceptionHolder ()
@@ -1763,7 +1757,7 @@ OldInherit::AMH_threeExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldInherit::AMH_threeExceptionHolder::raise_op_three ()
@@ -1773,7 +1767,7 @@ OldInherit::AMH_threeExceptionHolder::raise_op_three ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldInherit::AMH_threeExceptionHolder::raise_sendc_op_three ()
@@ -1819,12 +1813,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldInherit::AMH_threeResponseHandler::AMH_threeResponseHandler ()
-{}void
+{}
+
+void
 OldInherit::AMH_threeResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_threeResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_threeResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_threeResponseHandler *tmp = static_cast<AMH_threeResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::AMH_threeResponseHandler_ptr
@@ -2063,9 +2058,8 @@ OldInherit::AMI_threeHandler::AMI_threeHandler ()
 void
 OldInherit::AMI_threeHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_threeHandler *_tao_tmp_pointer =
-    static_cast<AMI_threeHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_threeHandler *tmp = static_cast<AMI_threeHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::AMI_threeHandler_ptr
@@ -2247,9 +2241,8 @@ OldInherit::four::four ()
 void
 OldInherit::four::_tao_any_destructor (void *_tao_void_pointer)
 {
-  four *_tao_tmp_pointer =
-    static_cast<four *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  four *tmp = static_cast<four *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::four_ptr
@@ -2376,9 +2369,8 @@ OldInherit::AMH_fourExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_I
 void
 OldInherit::AMH_fourExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_fourExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_fourExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_fourExceptionHolder *tmp = static_cast<AMH_fourExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 OldInherit::AMH_fourExceptionHolder::~AMH_fourExceptionHolder ()
@@ -2466,7 +2458,7 @@ OldInherit::AMH_fourExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldInherit::AMH_fourExceptionHolder::raise_op_four ()
@@ -2476,7 +2468,7 @@ OldInherit::AMH_fourExceptionHolder::raise_op_four ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldInherit::AMH_fourExceptionHolder::raise_sendc_op_four ()
@@ -2522,12 +2514,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldInherit::AMH_fourResponseHandler::AMH_fourResponseHandler ()
-{}void
+{}
+
+void
 OldInherit::AMH_fourResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_fourResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_fourResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_fourResponseHandler *tmp = static_cast<AMH_fourResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::AMH_fourResponseHandler_ptr
@@ -2766,9 +2759,8 @@ OldInherit::AMI_fourHandler::AMI_fourHandler ()
 void
 OldInherit::AMI_fourHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_fourHandler *_tao_tmp_pointer =
-    static_cast<AMI_fourHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_fourHandler *tmp = static_cast<AMI_fourHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::AMI_fourHandler_ptr
@@ -2952,9 +2944,8 @@ OldInherit::five::five ()
 void
 OldInherit::five::_tao_any_destructor (void *_tao_void_pointer)
 {
-  five *_tao_tmp_pointer =
-    static_cast<five *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  five *tmp = static_cast<five *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::five_ptr
@@ -3082,9 +3073,8 @@ OldInherit::AMH_fiveExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_I
 void
 OldInherit::AMH_fiveExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_fiveExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_fiveExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_fiveExceptionHolder *tmp = static_cast<AMH_fiveExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 OldInherit::AMH_fiveExceptionHolder::~AMH_fiveExceptionHolder ()
@@ -3172,7 +3162,7 @@ OldInherit::AMH_fiveExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldInherit::AMH_fiveExceptionHolder::raise_op_five ()
@@ -3182,7 +3172,7 @@ OldInherit::AMH_fiveExceptionHolder::raise_op_five ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldInherit::AMH_fiveExceptionHolder::raise_sendc_op_five ()
@@ -3228,12 +3218,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldInherit::AMH_fiveResponseHandler::AMH_fiveResponseHandler ()
-{}void
+{}
+
+void
 OldInherit::AMH_fiveResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_fiveResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_fiveResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_fiveResponseHandler *tmp = static_cast<AMH_fiveResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::AMH_fiveResponseHandler_ptr
@@ -3472,9 +3463,8 @@ OldInherit::AMI_fiveHandler::AMI_fiveHandler ()
 void
 OldInherit::AMI_fiveHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_fiveHandler *_tao_tmp_pointer =
-    static_cast<AMI_fiveHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_fiveHandler *tmp = static_cast<AMI_fiveHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldInherit::AMI_fiveHandler_ptr

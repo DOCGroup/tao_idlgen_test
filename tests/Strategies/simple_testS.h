@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:453
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_5VZIX2_H_
-#define _TAO_IDL_SIMPLE_TESTS_5VZIX2_H_
+#ifndef _TAO_IDL_SIMPLE_TESTS_B6MHPV_H_
+#define _TAO_IDL_SIMPLE_TESTS_B6MHPV_H_
 
 #include /**/ "ace/pre.h"
 

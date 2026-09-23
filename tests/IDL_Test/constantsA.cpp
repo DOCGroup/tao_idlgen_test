@@ -23,6 +23,7 @@
  **/
 
 #include "constantsA.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -45,7 +46,6 @@ static char const * const _tao_enumerators_m_a_enum_a[] =
     "value_3",
     "value_4",
     "value_5"
-    
   };
 
 static TAO::TypeCode::Enum<char const *,
@@ -60,8 +60,7 @@ static TAO::TypeCode::Enum<char const *,
 
 namespace m_a
 {
-  ::CORBA::TypeCode_ptr const _tc_enum_a =
-    &_tao_tc_m_a_enum_a;
+  ::CORBA::TypeCode_ptr const _tc_enum_a = std::addressof(_tao_tc_m_a_enum_a);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
@@ -78,8 +77,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace m_b
 {
-  ::CORBA::TypeCode_ptr const _tc_enum_b =
-    &_tao_tc_m_b_enum_b;
+  ::CORBA::TypeCode_ptr const _tc_enum_b = std::addressof(_tao_tc_m_b_enum_b);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -94,8 +92,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace ClassConstants
 {
-  ::CORBA::TypeCode_ptr const _tc_Iface =
-    &_tao_tc_ClassConstants_Iface;
+  ::CORBA::TypeCode_ptr const _tc_Iface = std::addressof(_tao_tc_ClassConstants_Iface);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -117,8 +114,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace ClassConstants
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_IfaceExceptionHolder =
-    &_tao_tc_ClassConstants_AMH_IfaceExceptionHolder;
+  ::CORBA::TypeCode_ptr const _tc_AMH_IfaceExceptionHolder = std::addressof(_tao_tc_ClassConstants_AMH_IfaceExceptionHolder);
 }// TAO extension - the virtual _type method.
 ::CORBA::TypeCode_ptr ClassConstants::AMH_IfaceExceptionHolder::_tao_type () const
 {
@@ -139,8 +135,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace ClassConstants
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_IfaceResponseHandler =
-    &_tao_tc_ClassConstants_AMH_IfaceResponseHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMH_IfaceResponseHandler = std::addressof(_tao_tc_ClassConstants_AMH_IfaceResponseHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
@@ -155,8 +150,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace ClassConstants
 {
-  ::CORBA::TypeCode_ptr const _tc_AMI_IfaceHandler =
-    &_tao_tc_ClassConstants_AMI_IfaceHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMI_IfaceHandler = std::addressof(_tao_tc_ClassConstants_AMI_IfaceHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -178,8 +172,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace ClassConstants
 {
-  ::CORBA::TypeCode_ptr const _tc_Vt =
-    &_tao_tc_ClassConstants_Vt;
+  ::CORBA::TypeCode_ptr const _tc_Vt = std::addressof(_tao_tc_ClassConstants_Vt);
 }// TAO extension - the virtual _type method.
 ::CORBA::TypeCode_ptr ClassConstants::Vt::_tao_type () const
 {
@@ -202,8 +195,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace CoercionBug
 {
-  ::CORBA::TypeCode_ptr const _tc_UInt16 =
-    &_tao_tc_CoercionBug_UInt16;
+  ::CORBA::TypeCode_ptr const _tc_UInt16 = std::addressof(_tao_tc_CoercionBug_UInt16);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
@@ -220,8 +212,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace CoercionBug
 {
-  ::CORBA::TypeCode_ptr const _tc_CellFlags =
-    &_tao_tc_CoercionBug_CellFlags;
+  ::CORBA::TypeCode_ptr const _tc_CellFlags = std::addressof(_tao_tc_CoercionBug_CellFlags);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
@@ -238,8 +229,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace SignedGen
 {
-  ::CORBA::TypeCode_ptr const _tc_LongType =
-    &_tao_tc_SignedGen_LongType;
+  ::CORBA::TypeCode_ptr const _tc_LongType = std::addressof(_tao_tc_SignedGen_LongType);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
@@ -256,8 +246,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace SignedGen
 {
-  ::CORBA::TypeCode_ptr const _tc_ShortType =
-    &_tao_tc_SignedGen_ShortType;
+  ::CORBA::TypeCode_ptr const _tc_ShortType = std::addressof(_tao_tc_SignedGen_ShortType);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:34

@@ -23,10 +23,11 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "string_valueC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -38,7 +39,6 @@
 #include "tao/CDR.h"
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
-#include "memory"
 
 #if !defined (__ACE_INLINE__)
 #include "string_valueC.inl"
@@ -67,8 +67,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace include_test
 {
-  ::CORBA::TypeCode_ptr const _tc_StringTest =
-    &_tao_tc_include_test_StringTest;
+  ::CORBA::TypeCode_ptr const _tc_StringTest = std::addressof(_tao_tc_include_test_StringTest);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
@@ -121,9 +120,8 @@ include_test::StringTest::_tao_obv_truncatable_repo_ids (Repository_Id_List& ids
 void
 include_test::StringTest::_tao_any_destructor (void *_tao_void_pointer)
 {
-  StringTest *_tao_tmp_pointer =
-    static_cast<StringTest *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  StringTest *tmp = static_cast<StringTest *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -427,15 +425,15 @@ OBV_include_test::StringTest::_tao_marshal_state (TAO_OutputCDR &strm, TAO_Chunk
 {
   if (! ci.start_chunk (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm << _pd_my_string_value.in ());
-  if ( ! ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (! ci.end_chunk (strm))
     return false;
-  
+
   return true;
 }
 
@@ -444,18 +442,18 @@ OBV_include_test::StringTest::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_Chun
 {
   if (!ci.handle_chunking (strm))
     return false;
-  
-  CORBA::Boolean const ret = 
+
+  CORBA::Boolean const ret =
       (strm >> _pd_my_string_value.out ());
-  if (!ret) 
-    return false; 
-  
+  if (!ret)
+    return false;
+
   if (this->require_truncation_)
     return ci.skip_chunks (strm);
-  
+
   else
     return ci.handle_chunking (strm);
-  
+
   
 }
 

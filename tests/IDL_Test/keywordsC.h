@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_KEYWORDSC_D20DVJ_H_
-#define _TAO_IDL_KEYWORDSC_D20DVJ_H_
+#ifndef _TAO_IDL_KEYWORDSC_WAXL2G_H_
+#define _TAO_IDL_KEYWORDSC_WAXL2G_H_
 
 #include /**/ "ace/pre.h"
 
@@ -111,12 +111,12 @@ struct TAO_IDL_TEST_STUB_Export Keywords
 
   static void _tao_any_destructor (void *);
   
-  ::CORBA::UShort _cxx_or;
-  ::CORBA::Char _cxx_or_eq;
-  ::CORBA::Octet _cxx_private;
-  ::CORBA::Boolean _cxx_protected;
-  ::CORBA::Float _cxx_public;
-  ::CORBA::Double _cxx_int;
+  ::CORBA::UShort _cxx_or {};
+  ::CORBA::Char _cxx_or_eq {};
+  ::CORBA::Octet _cxx_private {};
+  ::CORBA::Boolean _cxx_protected {};
+  ::CORBA::Float _cxx_public {};
+  ::CORBA::Double _cxx_int {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -148,7 +148,7 @@ struct TAO_IDL_TEST_STUB_Export Object
 
   static void _tao_any_destructor (void *);
   
-  ::CORBA::LongLong id;
+  ::CORBA::LongLong id {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -228,7 +228,7 @@ struct TAO_IDL_TEST_STUB_Export Objects
 
   static void _tao_any_destructor (void *);
   
-  ObjectSeq objs;
+  ObjectSeq objs {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1135,7 +1135,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "keywordsC.inl"

@@ -23,18 +23,18 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "moduleC.h"
+#include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "moduleC.inl"
@@ -363,9 +363,8 @@ mod1::mod2::ex1::ex1 ()
 void
 mod1::mod2::ex1::_tao_any_destructor (void *_tao_void_pointer)
 {
-  ex1 *_tao_tmp_pointer =
-    static_cast<ex1 *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  ex1 *tmp = static_cast<ex1 *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 mod1::mod2::ex1_ptr
@@ -489,9 +488,8 @@ mod1::mod2::AMH_ex1ExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id
 void
 mod1::mod2::AMH_ex1ExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_ex1ExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_ex1ExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_ex1ExceptionHolder *tmp = static_cast<AMH_ex1ExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 mod1::mod2::AMH_ex1ExceptionHolder::~AMH_ex1ExceptionHolder ()
@@ -579,7 +577,7 @@ mod1::mod2::AMH_ex1ExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_get_l1 ()
@@ -589,7 +587,7 @@ mod1::mod2::AMH_ex1ExceptionHolder::raise_get_l1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_set_l1 ()
@@ -599,7 +597,7 @@ mod1::mod2::AMH_ex1ExceptionHolder::raise_set_l1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_get_l2 ()
@@ -609,7 +607,7 @@ mod1::mod2::AMH_ex1ExceptionHolder::raise_get_l2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_m1 ()
@@ -619,7 +617,7 @@ mod1::mod2::AMH_ex1ExceptionHolder::raise_m1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_set_l1 ()
@@ -629,7 +627,7 @@ mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_set_l1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_get_l1 ()
@@ -639,7 +637,7 @@ mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_get_l1 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_get_l2 ()
@@ -649,7 +647,7 @@ mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_get_l2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_m1 ()
@@ -695,12 +693,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 mod1::mod2::AMH_ex1ResponseHandler::AMH_ex1ResponseHandler ()
-{}void
+{}
+
+void
 mod1::mod2::AMH_ex1ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_ex1ResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_ex1ResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_ex1ResponseHandler *tmp = static_cast<AMH_ex1ResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 mod1::mod2::AMH_ex1ResponseHandler_ptr
@@ -1326,9 +1325,8 @@ mod1::mod2::AMI_ex1Handler::AMI_ex1Handler ()
 void
 mod1::mod2::AMI_ex1Handler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_ex1Handler *_tao_tmp_pointer =
-    static_cast<AMI_ex1Handler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_ex1Handler *tmp = static_cast<AMI_ex1Handler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 mod1::mod2::AMI_ex1Handler_ptr
@@ -1662,9 +1660,8 @@ mod1::mod2::ex2::ex2 ()
 void
 mod1::mod2::ex2::_tao_any_destructor (void *_tao_void_pointer)
 {
-  ex2 *_tao_tmp_pointer =
-    static_cast<ex2 *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  ex2 *tmp = static_cast<ex2 *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 mod1::mod2::ex2_ptr
@@ -1789,9 +1786,8 @@ mod1::mod2::AMH_ex2ExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id
 void
 mod1::mod2::AMH_ex2ExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_ex2ExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_ex2ExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_ex2ExceptionHolder *tmp = static_cast<AMH_ex2ExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 mod1::mod2::AMH_ex2ExceptionHolder::~AMH_ex2ExceptionHolder ()
@@ -1879,7 +1875,7 @@ mod1::mod2::AMH_ex2ExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_get_l3 ()
@@ -1889,7 +1885,7 @@ mod1::mod2::AMH_ex2ExceptionHolder::raise_get_l3 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_set_l3 ()
@@ -1899,7 +1895,7 @@ mod1::mod2::AMH_ex2ExceptionHolder::raise_set_l3 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_m2 ()
@@ -1909,7 +1905,7 @@ mod1::mod2::AMH_ex2ExceptionHolder::raise_m2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_sendc_set_l3 ()
@@ -1919,7 +1915,7 @@ mod1::mod2::AMH_ex2ExceptionHolder::raise_sendc_set_l3 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_sendc_get_l3 ()
@@ -1929,7 +1925,7 @@ mod1::mod2::AMH_ex2ExceptionHolder::raise_sendc_get_l3 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_sendc_m2 ()
@@ -1975,12 +1971,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 mod1::mod2::AMH_ex2ResponseHandler::AMH_ex2ResponseHandler ()
-{}void
+{}
+
+void
 mod1::mod2::AMH_ex2ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_ex2ResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_ex2ResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_ex2ResponseHandler *tmp = static_cast<AMH_ex2ResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 mod1::mod2::AMH_ex2ResponseHandler_ptr
@@ -2484,9 +2481,8 @@ mod1::mod2::AMI_ex2Handler::AMI_ex2Handler ()
 void
 mod1::mod2::AMI_ex2Handler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_ex2Handler *_tao_tmp_pointer =
-    static_cast<AMI_ex2Handler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_ex2Handler *tmp = static_cast<AMI_ex2Handler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 mod1::mod2::AMI_ex2Handler_ptr

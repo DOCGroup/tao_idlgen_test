@@ -23,10 +23,11 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "simpleC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -47,8 +48,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "simpleC.inl"
@@ -74,9 +74,8 @@ vec10::vec10 (
 void vec10::_tao_any_destructor (
     void * _tao_void_pointer)
 {
-  vec10 * _tao_tmp_pointer =
-    static_cast<vec10 *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  vec10 *tmp = static_cast<vec10 *> (_tao_void_pointer);
+  delete tmp;
 }
 
 #endif /* end #if !defined */
@@ -85,7 +84,7 @@ void vec10::_tao_any_destructor (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 
 #ifndef _TAO_TYPECODE_vec10_GUARD
@@ -125,8 +124,7 @@ static TAO::TypeCode::Alias<char const *,
     "vec10",
     &TAO::TypeCode::tc_vec10_10);
   
-::CORBA::TypeCode_ptr const _tc_vec10 =
-  &_tao_tc_vec10;
+::CORBA::TypeCode_ptr const _tc_vec10 = std::addressof(_tao_tc_vec10);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_ctor.cpp:50
 
@@ -170,9 +168,8 @@ simple_error::operator= (const ::simple_error &_tao_excp)
 
 void simple_error::_tao_any_destructor (void *_tao_void_pointer)
 {
-  simple_error *_tao_tmp_pointer =
-    static_cast<simple_error *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  simple_error *tmp = static_cast<simple_error *> (_tao_void_pointer);
+  delete tmp;
 }
 
 simple_error *
@@ -233,12 +230,12 @@ void simple_error::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple_error[] =
       {
         { "reason", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -253,8 +250,7 @@ _tao_tc_simple_error (
   _tao_fields_simple_error,
   1);
 
-::CORBA::TypeCode_ptr const _tc_simple_error =
-  &_tao_tc_simple_error;
+::CORBA::TypeCode_ptr const _tc_simple_error = std::addressof(_tao_tc_simple_error);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
 
@@ -396,9 +392,8 @@ simple::simple ()
 void
 simple::_tao_any_destructor (void *_tao_void_pointer)
 {
-  simple *_tao_tmp_pointer =
-    static_cast<simple *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  simple *tmp = static_cast<simple *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 simple_ptr
@@ -481,8 +476,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:simple:1.0",
     "simple");
   
-::CORBA::TypeCode_ptr const _tc_simple =
-  &_tao_tc_simple;
+::CORBA::TypeCode_ptr const _tc_simple = std::addressof(_tao_tc_simple);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
 
@@ -500,8 +494,7 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_AMH_simpleExceptionHolder,
     0);
   
-::CORBA::TypeCode_ptr const _tc_AMH_simpleExceptionHolder =
-  &_tao_tc_AMH_simpleExceptionHolder;
+::CORBA::TypeCode_ptr const _tc_AMH_simpleExceptionHolder = std::addressof(_tao_tc_AMH_simpleExceptionHolder);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
@@ -553,9 +546,8 @@ AMH_simpleExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_List& id
 void
 AMH_simpleExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_simpleExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_simpleExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_simpleExceptionHolder *tmp = static_cast<AMH_simpleExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -649,7 +641,7 @@ AMH_simpleExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_simpleExceptionHolder::raise_op ()
@@ -659,7 +651,7 @@ AMH_simpleExceptionHolder::raise_op ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_simpleExceptionHolder::raise_sendc_op ()
@@ -705,12 +697,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_simpleResponseHandler::AMH_simpleResponseHandler ()
-{}void
+{}
+
+void
 AMH_simpleResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_simpleResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_simpleResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_simpleResponseHandler *tmp = static_cast<AMH_simpleResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMH_simpleResponseHandler_ptr
@@ -796,8 +789,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMH_simpleResponseHandler:1.0",
     "AMH_simpleResponseHandler");
   
-::CORBA::TypeCode_ptr const _tc_AMH_simpleResponseHandler =
-  &_tao_tc_AMH_simpleResponseHandler;
+::CORBA::TypeCode_ptr const _tc_AMH_simpleResponseHandler = std::addressof(_tao_tc_AMH_simpleResponseHandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
 
@@ -1025,9 +1017,8 @@ AMI_simpleHandler::AMI_simpleHandler ()
 void
 AMI_simpleHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_simpleHandler *_tao_tmp_pointer =
-    static_cast<AMI_simpleHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_simpleHandler *tmp = static_cast<AMI_simpleHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMI_simpleHandler_ptr
@@ -1111,8 +1102,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMI_simpleHandler:1.0",
     "AMI_simpleHandler");
   
-::CORBA::TypeCode_ptr const _tc_AMI_simpleHandler =
-  &_tao_tc_AMI_simpleHandler;
+::CORBA::TypeCode_ptr const _tc_AMI_simpleHandler = std::addressof(_tao_tc_AMI_simpleHandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
 
@@ -1191,9 +1181,8 @@ simple2::simple2_error::operator= (const ::simple2::simple2_error &_tao_excp)
 
 void simple2::simple2_error::_tao_any_destructor (void *_tao_void_pointer)
 {
-  simple2_error *_tao_tmp_pointer =
-    static_cast<simple2_error *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  simple2_error *tmp = static_cast<simple2_error *> (_tao_void_pointer);
+  delete tmp;
 }
 
 simple2::simple2_error *
@@ -1254,12 +1243,12 @@ void simple2::simple2_error::_tao_decode (TAO_InputCDR &cdr)
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple2_simple2_error[] =
       {
         { "reason2", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -1274,8 +1263,7 @@ _tao_tc_simple2_simple2_error (
   _tao_fields_simple2_simple2_error,
   1);
 
-::CORBA::TypeCode_ptr const simple2::_tc_simple2_error =
-  &_tao_tc_simple2_simple2_error;
+::CORBA::TypeCode_ptr const simple2::_tc_simple2_error = std::addressof(_tao_tc_simple2_simple2_error);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
@@ -1382,9 +1370,8 @@ simple2::simple2 ()
 void
 simple2::_tao_any_destructor (void *_tao_void_pointer)
 {
-  simple2 *_tao_tmp_pointer =
-    static_cast<simple2 *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  simple2 *tmp = static_cast<simple2 *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 simple2_ptr
@@ -1468,8 +1455,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:simple2:1.0",
     "simple2");
   
-::CORBA::TypeCode_ptr const _tc_simple2 =
-  &_tao_tc_simple2;
+::CORBA::TypeCode_ptr const _tc_simple2 = std::addressof(_tao_tc_simple2);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
 
@@ -1487,8 +1473,7 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_AMH_simple2ExceptionHolder,
     0);
   
-::CORBA::TypeCode_ptr const _tc_AMH_simple2ExceptionHolder =
-  &_tao_tc_AMH_simple2ExceptionHolder;
+::CORBA::TypeCode_ptr const _tc_AMH_simple2ExceptionHolder = std::addressof(_tao_tc_AMH_simple2ExceptionHolder);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
@@ -1540,9 +1525,8 @@ AMH_simple2ExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_List& i
 void
 AMH_simple2ExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_simple2ExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_simple2ExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_simple2ExceptionHolder *tmp = static_cast<AMH_simple2ExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -1636,7 +1620,7 @@ AMH_simple2ExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_simple2ExceptionHolder::raise_op2 ()
@@ -1646,7 +1630,7 @@ AMH_simple2ExceptionHolder::raise_op2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 AMH_simple2ExceptionHolder::raise_sendc_op2 ()
@@ -1692,12 +1676,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 AMH_simple2ResponseHandler::AMH_simple2ResponseHandler ()
-{}void
+{}
+
+void
 AMH_simple2ResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_simple2ResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_simple2ResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_simple2ResponseHandler *tmp = static_cast<AMH_simple2ResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMH_simple2ResponseHandler_ptr
@@ -1783,8 +1768,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMH_simple2ResponseHandler:1.0",
     "AMH_simple2ResponseHandler");
   
-::CORBA::TypeCode_ptr const _tc_AMH_simple2ResponseHandler =
-  &_tao_tc_AMH_simple2ResponseHandler;
+::CORBA::TypeCode_ptr const _tc_AMH_simple2ResponseHandler = std::addressof(_tao_tc_AMH_simple2ResponseHandler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
 
@@ -2005,9 +1989,8 @@ AMI_simple2Handler::AMI_simple2Handler ()
 void
 AMI_simple2Handler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_simple2Handler *_tao_tmp_pointer =
-    static_cast<AMI_simple2Handler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_simple2Handler *tmp = static_cast<AMI_simple2Handler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 AMI_simple2Handler_ptr
@@ -2092,8 +2075,7 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:AMI_simple2Handler:1.0",
     "AMI_simple2Handler");
   
-::CORBA::TypeCode_ptr const _tc_AMI_simple2Handler =
-  &_tao_tc_AMI_simple2Handler;
+::CORBA::TypeCode_ptr const _tc_AMI_simple2Handler = std::addressof(_tao_tc_AMI_simple2Handler);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43
 

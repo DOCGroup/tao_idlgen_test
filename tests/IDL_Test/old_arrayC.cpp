@@ -23,10 +23,11 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "old_arrayC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -47,8 +48,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "old_arrayC.inl"
@@ -102,7 +102,7 @@ OldArray::str22_copy (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_OldArray_str22_GUARD
@@ -154,8 +154,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_str22 =
-    &_tao_tc_OldArray_str22;
+  ::CORBA::TypeCode_ptr const _tc_str22 = std::addressof(_tao_tc_OldArray_str22);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -206,7 +205,7 @@ OldArray::boolarray_copy (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_OldArray_boolarray_GUARD
@@ -258,8 +257,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_boolarray =
-    &_tao_tc_OldArray_boolarray;
+  ::CORBA::TypeCode_ptr const _tc_boolarray = std::addressof(_tao_tc_OldArray_boolarray);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -307,7 +305,7 @@ OldArray::char_17_copy (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_OldArray_char_17_GUARD
@@ -349,8 +347,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_char_17 =
-    &_tao_tc_OldArray_char_17;
+  ::CORBA::TypeCode_ptr const _tc_char_17 = std::addressof(_tao_tc_OldArray_char_17);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -401,7 +398,7 @@ OldArray::char_10_2_copy (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_OldArray_char_10_2_GUARD
@@ -453,30 +450,29 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_char_10_2 =
-    &_tao_tc_OldArray_char_10_2;
+  ::CORBA::TypeCode_ptr const _tc_char_10_2 = std::addressof(_tao_tc_OldArray_char_10_2);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldArray_A[] =
       {
         { "a1", &CORBA::_tc_long },
         { "a2", &OldArray::_tc_char_17 },
         { "a3", &OldArray::_tc_char_10_2 }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -494,8 +490,7 @@ _tao_tc_OldArray_A (
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_A =
-    &_tao_tc_OldArray_A;
+  ::CORBA::TypeCode_ptr const _tc_A = std::addressof(_tao_tc_OldArray_A);
 }
 
 
@@ -506,22 +501,21 @@ void
 OldArray::A::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  A *_tao_tmp_pointer =
-    static_cast<A *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  A *tmp = static_cast<A *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldArray_B[] =
       {
         { "b1", &CORBA::_tc_long },
         { "b2", &OldArray::_tc_A }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -539,8 +533,7 @@ _tao_tc_OldArray_B (
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_B =
-    &_tao_tc_OldArray_B;
+  ::CORBA::TypeCode_ptr const _tc_B = std::addressof(_tao_tc_OldArray_B);
 }
 
 
@@ -551,22 +544,21 @@ void
 OldArray::B::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  B *_tao_tmp_pointer =
-    static_cast<B *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  B *tmp = static_cast<B *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldArray_C[] =
       {
         { "c1", &CORBA::_tc_long },
         { "c2", &CORBA::_tc_long }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -584,8 +576,7 @@ _tao_tc_OldArray_C (
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_C =
-    &_tao_tc_OldArray_C;
+  ::CORBA::TypeCode_ptr const _tc_C = std::addressof(_tao_tc_OldArray_C);
 }
 
 
@@ -596,9 +587,8 @@ void
 OldArray::C::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  C *_tao_tmp_pointer =
-    static_cast<C *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  C *tmp = static_cast<C *> (_tao_void_pointer);
+  delete tmp;
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -652,7 +642,7 @@ OldArray::A_matrix_copy (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_OldArray_A_matrix_GUARD
@@ -714,8 +704,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_A_matrix =
-    &_tao_tc_OldArray_A_matrix;
+  ::CORBA::TypeCode_ptr const _tc_A_matrix = std::addressof(_tao_tc_OldArray_A_matrix);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -769,7 +758,7 @@ OldArray::B_matrix_copy (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_OldArray_B_matrix_GUARD
@@ -831,8 +820,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_B_matrix =
-    &_tao_tc_OldArray_B_matrix;
+  ::CORBA::TypeCode_ptr const _tc_B_matrix = std::addressof(_tao_tc_OldArray_B_matrix);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -886,7 +874,7 @@ OldArray::C_matrix_copy (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_OldArray_C_matrix_GUARD
@@ -948,8 +936,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_C_matrix =
-    &_tao_tc_OldArray_C_matrix;
+  ::CORBA::TypeCode_ptr const _tc_C_matrix = std::addressof(_tao_tc_OldArray_C_matrix);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
@@ -1007,7 +994,7 @@ OldArray::A_rmatrix_copy (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:296
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 
 #ifndef _TAO_TYPECODE_OldArray_A_rmatrix_GUARD
@@ -1079,8 +1066,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_A_rmatrix =
-    &_tao_tc_OldArray_A_rmatrix;
+  ::CORBA::TypeCode_ptr const _tc_A_rmatrix = std::addressof(_tao_tc_OldArray_A_rmatrix);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
@@ -1516,9 +1502,8 @@ OldArray::A_i::A_i ()
 void
 OldArray::A_i::_tao_any_destructor (void *_tao_void_pointer)
 {
-  A_i *_tao_tmp_pointer =
-    static_cast<A_i *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  A_i *tmp = static_cast<A_i *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldArray::A_i_ptr
@@ -1604,8 +1589,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_A_i =
-    &_tao_tc_OldArray_A_i;
+  ::CORBA::TypeCode_ptr const _tc_A_i = std::addressof(_tao_tc_OldArray_A_i);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -1627,8 +1611,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_A_iExceptionHolder =
-    &_tao_tc_OldArray_AMH_A_iExceptionHolder;
+  ::CORBA::TypeCode_ptr const _tc_AMH_A_iExceptionHolder = std::addressof(_tao_tc_OldArray_AMH_A_iExceptionHolder);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
@@ -1681,9 +1664,8 @@ OldArray::AMH_A_iExceptionHolder::_tao_obv_truncatable_repo_ids (Repository_Id_L
 void
 OldArray::AMH_A_iExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_A_iExceptionHolder *_tao_tmp_pointer =
-    static_cast<AMH_A_iExceptionHolder *> (_tao_void_pointer);
-  ::CORBA::remove_ref (_tao_tmp_pointer);
+  AMH_A_iExceptionHolder *tmp = static_cast<AMH_A_iExceptionHolder *> (_tao_void_pointer);
+  ::CORBA::remove_ref (tmp);
 }
 
 // TAO extension - the virtual _type method.
@@ -1777,7 +1759,7 @@ OldArray::AMH_A_iExceptionHolder::_tao_unmarshal (
   return true;
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldArray::AMH_A_iExceptionHolder::raise_op ()
@@ -1787,7 +1769,7 @@ OldArray::AMH_A_iExceptionHolder::raise_op ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldArray::AMH_A_iExceptionHolder::raise_op2 ()
@@ -1797,7 +1779,7 @@ OldArray::AMH_A_iExceptionHolder::raise_op2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldArray::AMH_A_iExceptionHolder::raise_op4 ()
@@ -1807,7 +1789,7 @@ OldArray::AMH_A_iExceptionHolder::raise_op4 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldArray::AMH_A_iExceptionHolder::raise_get_attribute_array ()
@@ -1817,7 +1799,7 @@ OldArray::AMH_A_iExceptionHolder::raise_get_attribute_array ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldArray::AMH_A_iExceptionHolder::raise_set_attribute_array ()
@@ -1827,7 +1809,7 @@ OldArray::AMH_A_iExceptionHolder::raise_set_attribute_array ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldArray::AMH_A_iExceptionHolder::raise_sendc_op ()
@@ -1837,7 +1819,7 @@ OldArray::AMH_A_iExceptionHolder::raise_sendc_op ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldArray::AMH_A_iExceptionHolder::raise_sendc_op2 ()
@@ -1847,7 +1829,7 @@ OldArray::AMH_A_iExceptionHolder::raise_sendc_op2 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldArray::AMH_A_iExceptionHolder::raise_sendc_op4 ()
@@ -1857,7 +1839,7 @@ OldArray::AMH_A_iExceptionHolder::raise_sendc_op4 ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldArray::AMH_A_iExceptionHolder::raise_sendc_set_attribute_array ()
@@ -1867,7 +1849,7 @@ OldArray::AMH_A_iExceptionHolder::raise_sendc_set_attribute_array ()
 }
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:442
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldArray::AMH_A_iExceptionHolder::raise_sendc_get_attribute_array ()
@@ -1913,12 +1895,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 OldArray::AMH_A_iResponseHandler::AMH_A_iResponseHandler ()
-{}void
+{}
+
+void
 OldArray::AMH_A_iResponseHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMH_A_iResponseHandler *_tao_tmp_pointer =
-    static_cast<AMH_A_iResponseHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMH_A_iResponseHandler *tmp = static_cast<AMH_A_iResponseHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldArray::AMH_A_iResponseHandler_ptr
@@ -2007,8 +1990,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_AMH_A_iResponseHandler =
-    &_tao_tc_OldArray_AMH_A_iResponseHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMH_A_iResponseHandler = std::addressof(_tao_tc_OldArray_AMH_A_iResponseHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
@@ -2746,9 +2728,8 @@ OldArray::AMI_A_iHandler::AMI_A_iHandler ()
 void
 OldArray::AMI_A_iHandler::_tao_any_destructor (void *_tao_void_pointer)
 {
-  AMI_A_iHandler *_tao_tmp_pointer =
-    static_cast<AMI_A_iHandler *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  AMI_A_iHandler *tmp = static_cast<AMI_A_iHandler *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 OldArray::AMI_A_iHandler_ptr
@@ -2835,8 +2816,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace OldArray
 {
-  ::CORBA::TypeCode_ptr const _tc_AMI_A_iHandler =
-    &_tao_tc_OldArray_AMI_A_iHandler;
+  ::CORBA::TypeCode_ptr const _tc_AMI_A_iHandler = std::addressof(_tao_tc_OldArray_AMI_A_iHandler);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43

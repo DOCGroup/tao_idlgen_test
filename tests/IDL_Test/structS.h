@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:453
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_STRUCTS_NQTVI5_H_
-#define _TAO_IDL_STRUCTS_NQTVI5_H_
+#ifndef _TAO_IDL_STRUCTS_11HVXJ_H_
+#define _TAO_IDL_STRUCTS_11HVXJ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -258,6 +258,20 @@ namespace TAO
     : public
         Var_Size_SArg_Traits_T<
             ::Test::S10,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+  // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
+
+  
+
+  template<>
+  class SArg_Traits< ::Test::DefaultInitialized>
+    : public
+        Fixed_Size_SArg_Traits_T<
+            ::Test::DefaultInitialized,
             TAO::Any_Insert_Policy_Stream
           >
   {

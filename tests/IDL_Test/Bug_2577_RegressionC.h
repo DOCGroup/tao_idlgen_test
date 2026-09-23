@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONC_0WRW4Z_H_
-#define _TAO_IDL_BUG_2577_REGRESSIONC_0WRW4Z_H_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONC_GRLZIF_H_
+#define _TAO_IDL_BUG_2577_REGRESSIONC_GRLZIF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -107,7 +107,7 @@ struct TAO_IDL_TEST_STUB_Export DateTime_T
 
   static void _tao_any_destructor (void *);
   
-  ::CORBA::Short t;
+  ::CORBA::Short t {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -767,7 +767,7 @@ protected:
   virtual void truncation_hook ();
 
 private:
-  WhenLastUpdated_T _pd_whenLastUpdated;
+  WhenLastUpdated_T _pd_whenLastUpdated {};
   CORBA::Boolean require_truncation_ {false};
 };
 // TAO_IDL - Generated from
@@ -1071,7 +1071,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "Bug_2577_RegressionC.inl"

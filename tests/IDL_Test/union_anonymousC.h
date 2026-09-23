@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_UNION_ANONYMOUSC_CBKC5A_H_
-#define _TAO_IDL_UNION_ANONYMOUSC_CBKC5A_H_
+#ifndef _TAO_IDL_UNION_ANONYMOUSC_AL68QC_H_
+#define _TAO_IDL_UNION_ANONYMOUSC_AL68QC_H_
 
 #include /**/ "ace/pre.h"
 
@@ -187,8 +187,9 @@ struct TAO_IDL_TEST_STUB_Export Element
   private:
     ::CORBA::Short disc_;
 
-    union
+    union _tao_union_storage
     {
+      _tao_union_storage () {}
       // TAO_IDL - Generated from
       // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:369
 
@@ -209,7 +210,7 @@ struct TAO_IDL_TEST_STUB_Export Element
 
   static ::CORBA::TypeCode_ptr const _tc_ValueUnion;
 
-  ValueUnion Value;
+  ValueUnion Value {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -237,29 +238,15 @@ typedef
   NamedLongArray
   NamedLongArray_out;
 
-typedef
-  TAO_Array_Forany_T<
-      NamedLongArray,
-      NamedLongArray_slice,
-      NamedLongArray_tag
-    >
-  NamedLongArray_forany;
+typedef TAO_Array_Forany_T<NamedLongArray, NamedLongArray_slice, NamedLongArray_tag> NamedLongArray_forany;
 
-TAO_IDL_TEST_STUB_Export NamedLongArray_slice *
-NamedLongArray_alloc ();
+TAO_IDL_TEST_STUB_Export NamedLongArray_slice *NamedLongArray_alloc ();
 
-TAO_IDL_TEST_STUB_Export void
-NamedLongArray_free (
-    NamedLongArray_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export void NamedLongArray_free (NamedLongArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export NamedLongArray_slice *
-NamedLongArray_dup (
-    const NamedLongArray_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export NamedLongArray_slice *NamedLongArray_dup (const NamedLongArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void
-NamedLongArray_copy (
-    NamedLongArray_slice *_tao_to,
-    const NamedLongArray_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void NamedLongArray_copy (NamedLongArray_slice *_tao_to, const NamedLongArray_slice *_tao_from);
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
@@ -343,29 +330,15 @@ public:
   struct _m_en_arr_tag {};
   
 
-  typedef
-    TAO_Array_Forany_T<
-        _m_en_arr,
-        _m_en_arr_slice,
-        _m_en_arr_tag
-      >
-    _m_en_arr_forany;
+  typedef TAO_Array_Forany_T<_m_en_arr, _m_en_arr_slice, _m_en_arr_tag> _m_en_arr_forany;
 
-  static _m_en_arr_slice *
-  _m_en_arr_alloc ();
+  static _m_en_arr_slice *_m_en_arr_alloc ();
 
-  static void
-  _m_en_arr_free (
-      _m_en_arr_slice *_tao_slice);
-  
-  static _m_en_arr_slice *
-  _m_en_arr_dup (
-      const _m_en_arr_slice *_tao_slice);
-  
-  static void
-  _m_en_arr_copy (
-      _m_en_arr_slice *_tao_to,
-      const _m_en_arr_slice *_tao_from);
+  static void _m_en_arr_free (_m_en_arr_slice *_tao_slice);
+
+  static _m_en_arr_slice *_m_en_arr_dup (const _m_en_arr_slice *_tao_slice);
+
+  static void _m_en_arr_copy (_m_en_arr_slice *_tao_to, const _m_en_arr_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ch.cpp:111
 
@@ -403,8 +376,8 @@ public:
 
     static void _tao_any_destructor (void *);
     
-    ::CORBA::Long a;
-    ::CORBA::Char b;
+    ::CORBA::Long a {};
+    ::CORBA::Char b {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -416,29 +389,15 @@ public:
   struct _m_st_arr_tag {};
   
 
-  typedef
-    TAO_Array_Forany_T<
-        _m_st_arr,
-        _m_st_arr_slice,
-        _m_st_arr_tag
-      >
-    _m_st_arr_forany;
+  typedef TAO_Array_Forany_T<_m_st_arr, _m_st_arr_slice, _m_st_arr_tag> _m_st_arr_forany;
 
-  static _m_st_arr_slice *
-  _m_st_arr_alloc ();
+  static _m_st_arr_slice *_m_st_arr_alloc ();
 
-  static void
-  _m_st_arr_free (
-      _m_st_arr_slice *_tao_slice);
-  
-  static _m_st_arr_slice *
-  _m_st_arr_dup (
-      const _m_st_arr_slice *_tao_slice);
-  
-  static void
-  _m_st_arr_copy (
-      _m_st_arr_slice *_tao_to,
-      const _m_st_arr_slice *_tao_from);
+  static void _m_st_arr_free (_m_st_arr_slice *_tao_slice);
+
+  static _m_st_arr_slice *_m_st_arr_dup (const _m_st_arr_slice *_tao_slice);
+
+  static void _m_st_arr_copy (_m_st_arr_slice *_tao_to, const _m_st_arr_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ch.cpp:111
 
@@ -505,8 +464,9 @@ public:
   private:
     ::CORBA::Long disc_;
 
-    union
+    union _tao_union_storage
     {
+      _tao_union_storage () {}
       // TAO_IDL - Generated from
       // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:369
 
@@ -532,29 +492,15 @@ public:
   struct _m_un_arr_tag {};
   
 
-  typedef
-    TAO_Array_Forany_T<
-        _m_un_arr,
-        _m_un_arr_slice,
-        _m_un_arr_tag
-      >
-    _m_un_arr_forany;
+  typedef TAO_Array_Forany_T<_m_un_arr, _m_un_arr_slice, _m_un_arr_tag> _m_un_arr_forany;
 
-  static _m_un_arr_slice *
-  _m_un_arr_alloc ();
+  static _m_un_arr_slice *_m_un_arr_alloc ();
 
-  static void
-  _m_un_arr_free (
-      _m_un_arr_slice *_tao_slice);
-  
-  static _m_un_arr_slice *
-  _m_un_arr_dup (
-      const _m_un_arr_slice *_tao_slice);
-  
-  static void
-  _m_un_arr_copy (
-      _m_un_arr_slice *_tao_to,
-      const _m_un_arr_slice *_tao_from);
+  static void _m_un_arr_free (_m_un_arr_slice *_tao_slice);
+
+  static _m_un_arr_slice *_m_un_arr_dup (const _m_un_arr_slice *_tao_slice);
+
+  static void _m_un_arr_copy (_m_un_arr_slice *_tao_to, const _m_un_arr_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ch.cpp:111
 
@@ -579,29 +525,15 @@ public:
   struct _m_anon_long_array_tag {};
   
 
-  typedef
-    TAO_Array_Forany_T<
-        _m_anon_long_array,
-        _m_anon_long_array_slice,
-        _m_anon_long_array_tag
-      >
-    _m_anon_long_array_forany;
+  typedef TAO_Array_Forany_T<_m_anon_long_array, _m_anon_long_array_slice, _m_anon_long_array_tag> _m_anon_long_array_forany;
 
-  static _m_anon_long_array_slice *
-  _m_anon_long_array_alloc ();
+  static _m_anon_long_array_slice *_m_anon_long_array_alloc ();
 
-  static void
-  _m_anon_long_array_free (
-      _m_anon_long_array_slice *_tao_slice);
-  
-  static _m_anon_long_array_slice *
-  _m_anon_long_array_dup (
-      const _m_anon_long_array_slice *_tao_slice);
-  
-  static void
-  _m_anon_long_array_copy (
-      _m_anon_long_array_slice *_tao_to,
-      const _m_anon_long_array_slice *_tao_from);
+  static void _m_anon_long_array_free (_m_anon_long_array_slice *_tao_slice);
+
+  static _m_anon_long_array_slice *_m_anon_long_array_dup (const _m_anon_long_array_slice *_tao_slice);
+
+  static void _m_anon_long_array_copy (_m_anon_long_array_slice *_tao_to, const _m_anon_long_array_slice *_tao_from);
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ch.cpp:111
 
@@ -618,8 +550,9 @@ public:
 private:
   ::CORBA::Short disc_;
 
-  union
+  union _tao_union_storage
   {
+    _tao_union_storage () {}
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:138
 
@@ -1105,7 +1038,7 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "union_anonymousC.inl"

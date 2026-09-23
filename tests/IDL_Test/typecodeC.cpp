@@ -23,10 +23,11 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "typecodeC.h"
+#include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
@@ -34,8 +35,7 @@
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Valuetype/ValueFactory.h"
 #include "tao/Object_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "typecodeC.inl"
@@ -73,9 +73,8 @@ MyModule::TypeCodeList::TypeCodeList (
 void MyModule::TypeCodeList::_tao_any_destructor (
     void * _tao_void_pointer)
 {
-  TypeCodeList * _tao_tmp_pointer =
-    static_cast<TypeCodeList *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  TypeCodeList *tmp = static_cast<TypeCodeList *> (_tao_void_pointer);
+  delete tmp;
 }
 
 #endif /* end #if !defined */

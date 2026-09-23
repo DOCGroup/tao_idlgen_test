@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_J0FMCT_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSC_J0FMCT_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_ZAMIWD_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSC_ZAMIWD_H_
 
 #include /**/ "ace/pre.h"
 
@@ -596,10 +596,10 @@ struct TAO_IDL_TEST_STUB_Export twinStruct
 
 #endif /* end #if !defined */
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_field/field_ch.cpp:338
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_field/field_ch.cpp:340
 
   typedef _tao_seq__tao_seq_CORBA_Short__and_ _and__seq;
-  _tao_seq__tao_seq_CORBA_Short__and_ and_;
+  _tao_seq__tao_seq_CORBA_Short__and_ and_ {};
   
 
   
@@ -668,10 +668,10 @@ struct TAO_IDL_TEST_STUB_Export twinStruct
 
 #endif /* end #if !defined */
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_field/field_ch.cpp:338
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_field/field_ch.cpp:340
 
   typedef _tao_seq__tao_seq_CORBA_Short__or_ _or__seq;
-  _tao_seq__tao_seq_CORBA_Short__or_ or_;
+  _tao_seq__tao_seq_CORBA_Short__or_ or_ {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -848,10 +848,10 @@ struct TAO_IDL_TEST_STUB_Export nestedSeqStruct
 
 #endif /* end #if !defined */
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_field/field_ch.cpp:338
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_field/field_ch.cpp:340
 
   typedef _tao_seq__tao_seq_outside__inside_7 _inside_seq;
-  _tao_seq__tao_seq_outside__inside_7 inside;
+  _tao_seq__tao_seq_outside__inside_7 inside {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1521,7 +1521,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_nestedSeqStruct__tao_seq__tao_seq_outside__inside_7_H_ */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "sequence_anonymousC.inl"

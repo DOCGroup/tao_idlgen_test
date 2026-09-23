@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:630
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_UNIONS_AIZAJO_CPP_
-#define _TAO_IDL_UNIONS_AIZAJO_CPP_
+#ifndef _TAO_IDL_UNIONS_TDWN4K_CPP_
+#define _TAO_IDL_UNIONS_TDWN4K_CPP_
 
 
 #include "unionS.h"

@@ -23,10 +23,11 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "Bug_2583_RegressionC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -45,8 +46,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include "cstring"
-#include "memory"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_2583_RegressionC.inl"
@@ -88,12 +88,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 Test::DynAny::DynAny ()
-{}void
+{}
+
+void
 Test::DynAny::_tao_any_destructor (void *_tao_void_pointer)
 {
-  DynAny *_tao_tmp_pointer =
-    static_cast<DynAny *> (_tao_void_pointer);
-  ::CORBA::release (_tao_tmp_pointer);
+  DynAny *tmp = static_cast<DynAny *> (_tao_void_pointer);
+  ::CORBA::release (tmp);
 }
 
 Test::DynAny_ptr
@@ -182,21 +183,20 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace Test
 {
-  ::CORBA::TypeCode_ptr const _tc_DynAny =
-    &_tao_tc_Test_DynAny;
+  ::CORBA::TypeCode_ptr const _tc_DynAny = std::addressof(_tao_tc_Test_DynAny);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_NameDynAnyPair[] =
       {
         { "id", &CORBA::_tc_string },
         { "value", &Test::_tc_DynAny }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -214,8 +214,7 @@ _tao_tc_Test_NameDynAnyPair (
 
 namespace Test
 {
-  ::CORBA::TypeCode_ptr const _tc_NameDynAnyPair =
-    &_tao_tc_Test_NameDynAnyPair;
+  ::CORBA::TypeCode_ptr const _tc_NameDynAnyPair = std::addressof(_tao_tc_Test_NameDynAnyPair);
 }
 
 
@@ -226,9 +225,8 @@ void
 Test::NameDynAnyPair::_tao_any_destructor (
     void *_tao_void_pointer)
 {
-  NameDynAnyPair *_tao_tmp_pointer =
-    static_cast<NameDynAnyPair *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  NameDynAnyPair *tmp = static_cast<NameDynAnyPair *> (_tao_void_pointer);
+  delete tmp;
 }
 
 
@@ -257,9 +255,8 @@ Test::NameDynAnyPairSeq::NameDynAnyPairSeq (
 void Test::NameDynAnyPairSeq::_tao_any_destructor (
     void * _tao_void_pointer)
 {
-  NameDynAnyPairSeq * _tao_tmp_pointer =
-    static_cast<NameDynAnyPairSeq *> (_tao_void_pointer);
-  delete _tao_tmp_pointer;
+  NameDynAnyPairSeq *tmp = static_cast<NameDynAnyPairSeq *> (_tao_void_pointer);
+  delete tmp;
 }
 
 #endif /* end #if !defined */
@@ -268,7 +265,7 @@ void Test::NameDynAnyPairSeq::_tao_any_destructor (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:457
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 
 #ifndef _TAO_TYPECODE_Test_NameDynAnyPairSeq_GUARD
@@ -311,8 +308,7 @@ static TAO::TypeCode::Alias<char const *,
 
 namespace Test
 {
-  ::CORBA::TypeCode_ptr const _tc_NameDynAnyPairSeq =
-    &_tao_tc_Test_NameDynAnyPairSeq;
+  ::CORBA::TypeCode_ptr const _tc_NameDynAnyPairSeq = std::addressof(_tao_tc_Test_NameDynAnyPairSeq);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_cs.cpp:37

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_ZXW5CB_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_ZXW5CB_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_JPFICE_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_JPFICE_H_
 
 #include /**/ "ace/pre.h"
 
@@ -134,7 +134,7 @@ namespace M1
 
     static void _tao_any_destructor (void *);
     
-    ::CORBA::Octet o;
+    ::CORBA::Octet o {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -664,9 +664,9 @@ struct  X
 
   static void _tao_any_destructor (void *);
   
-  ::TAO::String_Manager valString;
-  M1::S1 valStruct;
-  M1::L2_var valLocalIface;
+  ::TAO::String_Manager valString {};
+  M1::S1 valStruct {};
+  M1::L2_var valLocalIface {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -720,8 +720,9 @@ public:
 private:
   ::CORBA::Boolean disc_;
 
-  union
+  union _tao_union_storage
   {
+    _tao_union_storage () {}
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:176
 
@@ -786,8 +787,9 @@ public:
 private:
   ::CORBA::Boolean disc_;
 
-  union
+  union _tao_union_storage
   {
+    _tao_union_storage () {}
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:476
 
@@ -986,7 +988,7 @@ namespace M2
 
       static void _tao_any_destructor (void *);
       
-      ::CORBA::Octet o;
+      ::CORBA::Octet o {};
     };
     // TAO_IDL - Generated from
     // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1249,13 +1251,13 @@ namespace M2
   class  E1 : public ::CORBA::UserException
   {
   public:
-    M2::M3::L3_var val2;
+    M2::M3::L3_var val2 {};
     
 
-    M1::BooleanUnion1 bool1;
+    M1::BooleanUnion1 bool1 {};
     
 
-    M1::BooleanUnion2 bool2;
+    M1::BooleanUnion2 bool2 {};
 
     E1 ();
     E1 (const E1 &);
@@ -2271,16 +2273,16 @@ protected:
   virtual void truncation_hook ();
 
 private:
-  ::TAO::String_Manager _pd_valString;
-  M1::S1 _pd_valStruct;
-  M1::LI_var _pd_valLocalIface;
+  ::TAO::String_Manager _pd_valString {};
+  M1::S1 _pd_valStruct {};
+  M1::LI_var _pd_valLocalIface {};
   
 
-  M1::BooleanUnion1 _pd_valBoolUnion1;
+  M1::BooleanUnion1 _pd_valBoolUnion1 {};
   
 
-  M1::BooleanUnion2 _pd_valBoolUnion2;
-  M1::X _pd_valX;
+  M1::BooleanUnion2 _pd_valBoolUnion2 {};
+  M1::X _pd_valX {};
   CORBA::Boolean require_truncation_ {false};
 };
 }
@@ -2417,10 +2419,10 @@ protected:
   virtual void truncation_hook ();
 
 private:
-  ::TAO::String_Manager _pd_valString;
-  M2::M3::S2 _pd_valStruct;
-  M2::M3::L3_var _pd_valLocalIface;
-  M2::M3::L4_var _pd_valLocalIface3;
+  ::TAO::String_Manager _pd_valString {};
+  M2::M3::S2 _pd_valStruct {};
+  M2::M3::L3_var _pd_valLocalIface {};
+  M2::M3::L4_var _pd_valLocalIface3 {};
   CORBA::Boolean require_truncation_ {false};
 };
 // TAO_IDL - Generated from
@@ -2482,9 +2484,9 @@ protected:
   virtual void truncation_hook ();
 
 private:
-  ::TAO::String_Manager _pd_valString;
-  M1::S1 _pd_valStruct;
-  M1::L2_var _pd_valLocalIface;
+  ::TAO::String_Manager _pd_valString {};
+  M1::S1 _pd_valStruct {};
+  M1::L2_var _pd_valLocalIface {};
   CORBA::Boolean require_truncation_ {false};
 };
 }
@@ -3719,7 +3721,7 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 
 

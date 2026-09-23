@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
 
-#ifndef _TAO_IDL_SEQUENCEC_OAM1YF_H_
-#define _TAO_IDL_SEQUENCEC_OAM1YF_H_
+#ifndef _TAO_IDL_SEQUENCEC_R8JZDG_H_
+#define _TAO_IDL_SEQUENCEC_R8JZDG_H_
 
 #include /**/ "ace/pre.h"
 
@@ -143,8 +143,8 @@ struct TAO_IDL_TEST_STUB_Export myfoostruct
 
   static void _tao_any_destructor (void *);
   
-  ::TAO::String_Manager str_mem;
-  myfoostructseq rec_mem;
+  ::TAO::String_Manager str_mem {};
+  myfoostructseq rec_mem {};
 };
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -158,8 +158,8 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_myfoostruct;
 class TAO_IDL_TEST_STUB_Export nasty : public ::CORBA::UserException
 {
 public:
-  ::TAO::String_Manager id;
-  myfoostruct rec_info;
+  ::TAO::String_Manager id {};
+  myfoostruct rec_info {};
 
   nasty ();
   nasty (const nasty &);
@@ -458,7 +458,7 @@ namespace Deployment
 
     static void _tao_any_destructor (void *);
     
-    Deployment::ComponentPackageDescriptions instance;
+    Deployment::ComponentPackageDescriptions instance {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -586,8 +586,8 @@ namespace Deployment
 
     static void _tao_any_destructor (void *);
     
-    ::TAO::String_Manager str;
-    Deployment::NamedImplementationArtifacts dependsOn;
+    ::TAO::String_Manager str {};
+    Deployment::NamedImplementationArtifacts dependsOn {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -619,7 +619,7 @@ namespace Deployment
 
     static void _tao_any_destructor (void *);
     
-    Deployment::NamedImplementationArtifacts primaryArtifact;
+    Deployment::NamedImplementationArtifacts primaryArtifact {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -699,8 +699,8 @@ namespace Deployment
 
     static void _tao_any_destructor (void *);
     
-    Deployment::ComponentAssemblyDescriptions assemblyImpl;
-    Deployment::MonolithicImplementationDescriptions monolithicImpl;
+    Deployment::ComponentAssemblyDescriptions assemblyImpl {};
+    Deployment::MonolithicImplementationDescriptions monolithicImpl {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -772,8 +772,8 @@ namespace Deployment
 
     static void _tao_any_destructor (void *);
     
-    ::TAO::String_Manager str;
-    Deployment::PackagedComponentImplementations implementation;
+    ::TAO::String_Manager str {};
+    Deployment::PackagedComponentImplementations implementation {};
   };
   // TAO_IDL - Generated from
   // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
@@ -1551,7 +1551,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1647
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "sequenceC.inl"

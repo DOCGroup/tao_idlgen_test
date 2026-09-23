@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:766
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:767
 
-#ifndef _TAO_IDL_TYPECODEA_S9EXI3_H_
-#define _TAO_IDL_TYPECODEA_S9EXI3_H_
+#ifndef _TAO_IDL_TYPECODEA_RSB7W8_H_
+#define _TAO_IDL_TYPECODEA_RSB7W8_H_
 
 #include /**/ "ace/pre.h"
 

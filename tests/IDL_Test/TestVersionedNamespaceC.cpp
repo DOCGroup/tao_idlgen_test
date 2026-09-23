@@ -23,10 +23,11 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:371
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
 
 
 #include "TestVersionedNamespaceC.h"
+#include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
@@ -37,7 +38,7 @@
 #include "tao/AnyTypeCode/Value_TypeCode_Static.h"
 #include "tao/AnyTypeCode/TypeCode_Value_Field.h"
 #include "tao/CDR.h"
-#include "cstring"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "TestVersionedNamespaceC.inl"
@@ -51,12 +52,12 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 static TAO::TypeCode::Struct_Field<
   char const *,
-  ::CORBA::TypeCode_ptr const *> const 
+  ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M1_S1[] =
       {
         { "o", &CORBA::_tc_octet }
       };
-  
+
 static TAO::TypeCode::Struct<
   char const *,
   ::CORBA::TypeCode_ptr const *,
@@ -74,8 +75,7 @@ _tao_tc_M1_S1 (
 
 namespace M1
 {
-  ::CORBA::TypeCode_ptr const _tc_S1 =
-    &_tao_tc_M1_S1;
+  ::CORBA::TypeCode_ptr const _tc_S1 = std::addressof(_tao_tc_M1_S1);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
@@ -122,7 +122,9 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 M1::LI::LI ()
-{}M1::LI_ptr
+{}
+
+M1::LI_ptr
 M1::LI::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return LI::_duplicate (
@@ -198,8 +200,7 @@ static TAO::TypeCode::Objref<char const *,
 
 namespace M1
 {
-  ::CORBA::TypeCode_ptr const _tc_LI =
-    &_tao_tc_M1_LI;
+  ::CORBA::TypeCode_ptr const _tc_LI = std::addressof(_tao_tc_M1_LI);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
@@ -227,8 +228,7 @@ static TAO::TypeCode::Value<char const *,
 
 namespace M1
 {
-  ::CORBA::TypeCode_ptr const _tc_V =
-    &_tao_tc_M1_V;
+  ::CORBA::TypeCode_ptr const _tc_V = std::addressof(_tao_tc_M1_V);
 }
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
