@@ -1294,6 +1294,8 @@ void TestUn::_reset ()
 {
   switch (this->disc_)
   {
+    case 0:
+    break;
     case 1:
     {
       ::CORBA::string_free (this->u_.value2_);

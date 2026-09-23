@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_UNIONS_7ZQMJD_H_
-#define _TAO_IDL_UNIONS_7ZQMJD_H_
+#ifndef _TAO_IDL_UNIONS_1SWDNS_H_
+#define _TAO_IDL_UNIONS_1SWDNS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -934,6 +934,20 @@ namespace TAO
   
 
   template<>
+  class SArg_Traits< ::DefaultInitializedStructUnion>
+    : public
+        Fixed_Size_SArg_Traits_T<
+            ::DefaultInitializedStructUnion,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+  // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
+
+  
+
+  template<>
   class SArg_Traits< ::DefaultInitializedBooleanUnion>
     : public
         Fixed_Size_SArg_Traits_T<
@@ -1008,6 +1022,34 @@ namespace TAO
     : public
         Var_Size_SArg_Traits_T<
             ::DefaultInitializedStringUnion,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+  // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
+
+  
+
+  template<>
+  class SArg_Traits< ::ResetDiscriminator>
+    : public
+        Basic_SArg_Traits_T<
+            ::ResetDiscriminator,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+  // TAO_IDL - Generated from
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
+
+  
+
+  template<>
+  class SArg_Traits< ::ResetWithNoopBranches>
+    : public
+        Var_Size_SArg_Traits_T<
+            ::ResetWithNoopBranches,
             TAO::Any_Insert_Policy_Stream
           >
   {

@@ -151,6 +151,8 @@ void OldUnion2::Foo::_reset ()
 {
   switch (this->disc_)
   {
+    case OldUnion2::FOO1:
+    break;
     case OldUnion2::FOO2:
     {
       ::CORBA::string_free (this->u_.y_);

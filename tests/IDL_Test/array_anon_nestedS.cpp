@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_ARRAY_ANON_NESTEDS_FGTDRB_CPP_
-#define _TAO_IDL_ARRAY_ANON_NESTEDS_FGTDRB_CPP_
+#ifndef _TAO_IDL_ARRAY_ANON_NESTEDS_O9AJ84_CPP_
+#define _TAO_IDL_ARRAY_ANON_NESTEDS_O9AJ84_CPP_
 
 
 #include "array_anon_nestedS.h"

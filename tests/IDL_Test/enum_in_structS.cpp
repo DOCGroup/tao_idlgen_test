@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
 
-#ifndef _TAO_IDL_ENUM_IN_STRUCTS_ZT4OKU_CPP_
-#define _TAO_IDL_ENUM_IN_STRUCTS_ZT4OKU_CPP_
+#ifndef _TAO_IDL_ENUM_IN_STRUCTS_LO0BJT_CPP_
+#define _TAO_IDL_ENUM_IN_STRUCTS_LO0BJT_CPP_
 
 
 #include "enum_in_structS.h"

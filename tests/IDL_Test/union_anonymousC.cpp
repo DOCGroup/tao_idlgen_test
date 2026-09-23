@@ -213,6 +213,8 @@ void Element::ValueUnion::_reset ()
 {
   switch (this->disc_)
   {
+    case 0:
+    break;
     case 1:
     {
       delete this->u_.VUValue_;
@@ -848,6 +850,8 @@ void decl_heavy_union::_reset ()
 {
   switch (this->disc_)
   {
+    case 1:
+    break;
     case 2:
     {
       decl_heavy_union::_m_en_arr_free (this->u_.m_en_arr_);

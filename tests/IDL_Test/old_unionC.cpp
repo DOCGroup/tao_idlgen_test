@@ -301,6 +301,8 @@ void OldUnion::Foo2::_reset ()
 {
   switch (this->disc_)
   {
+    case 'a':
+    break;
     case 'b':
     {
       delete this->u_.y_;
