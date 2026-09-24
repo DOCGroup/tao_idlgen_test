@@ -126,7 +126,6 @@ Element::ValueUnion::_tao_seq_Element_ValueUnion_::_tao_seq_Element_ValueUnion_ 
 
 Element::ValueUnion::ValueUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -32768;
 }
 
@@ -582,7 +581,6 @@ decl_heavy_union::_m_un_arr_copy (
 
 decl_heavy_union::un::un ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
@@ -721,7 +719,6 @@ decl_heavy_union::_m_anon_long_array_copy (
 
 decl_heavy_union::decl_heavy_union ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -32768;
 }
 

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:767
 
-#ifndef _TAO_IDL_INHERITA_RTD7W5_H_
-#define _TAO_IDL_INHERITA_RTD7W5_H_
+#ifndef _TAO_IDL_INHERITA_7XNE75_H_
+#define _TAO_IDL_INHERITA_7XNE75_H_
 
 #include /**/ "ace/pre.h"
 

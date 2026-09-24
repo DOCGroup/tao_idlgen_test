@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_GPERFS_HGNK1L_H_
-#define _TAO_IDL_GPERFS_HGNK1L_H_
+#ifndef _TAO_IDL_GPERFS_Y7FXZR_H_
+#define _TAO_IDL_GPERFS_Y7FXZR_H_
 
 #include /**/ "ace/pre.h"
 

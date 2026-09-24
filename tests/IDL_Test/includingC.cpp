@@ -84,7 +84,6 @@ static TAO::TypeCode::Enum<char const *,
 
 myUnion::myUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (choice) -1;
 }
 
@@ -205,7 +204,6 @@ static TAO::TypeCode::Union<char const *,
 
 Bog::Bog ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (Agog) -1;
 }
 
@@ -1207,7 +1205,6 @@ TestStr::_tao_any_destructor (
 
 TestUn::TestUn ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 

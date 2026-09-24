@@ -47,7 +47,6 @@
 
 Selecter::Selecter ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (ObjectType) -1;
 }
 

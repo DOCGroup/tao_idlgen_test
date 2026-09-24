@@ -78,7 +78,6 @@ static TAO::TypeCode::Enum<char const *,
 
 MyAnyUnion::MyAnyUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (AnyUnionEnum) -1;
 }
 

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_OLD_UNION2S_K1OSNO_H_
-#define _TAO_IDL_OLD_UNION2S_K1OSNO_H_
+#ifndef _TAO_IDL_OLD_UNION2S_W34MDS_H_
+#define _TAO_IDL_OLD_UNION2S_W34MDS_H_
 
 #include /**/ "ace/pre.h"
 

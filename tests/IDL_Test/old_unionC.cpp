@@ -104,7 +104,6 @@ OldUnion::Bar::_tao_any_destructor (
 
 OldUnion::Foo::Foo ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
   this->u_.z_ = {};
 }
@@ -215,7 +214,6 @@ namespace OldUnion
 
 OldUnion::Foo2::Foo2 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = '\0';
 }
 

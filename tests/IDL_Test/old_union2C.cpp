@@ -84,7 +84,6 @@ namespace OldUnion2
 
 OldUnion2::Foo::Foo ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (OldUnion2::FooDisc) -1;
 }
 
@@ -261,7 +260,6 @@ static TAO::TypeCode::Enum<char const *,
 
 OldUnion2::Bar::Foo::Foo ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (OldUnion2::Bar::BarDisc) -1;
 }
 

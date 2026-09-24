@@ -434,7 +434,6 @@ static TAO::TypeCode::Enum<char const *,
 
 MyValueTypeUnion::MyValueTypeUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (ValueSort2) -1;
 }
 
@@ -1652,7 +1651,6 @@ ModSelection::SelectionDefns::CriterionExpr::RightCriterionInfos::_tao_any_destr
 
 ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr::RightCriterionExpr ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
 }
 

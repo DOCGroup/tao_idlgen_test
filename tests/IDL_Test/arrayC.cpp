@@ -3770,7 +3770,6 @@ namespace arraytest
 
 bug_2126::FirstUnion::FirstUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
   this->u_.first_union_foo_ = {};
 }
@@ -3995,7 +3994,6 @@ bug_2126::MyStruct::_tao_any_destructor (
 
 bug_2126::SecondUnion::SecondUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
   ACE_NEW (
     this->u_.second_union_struct_member_,
@@ -4248,7 +4246,6 @@ bug_2126::BdMyStruct::_tao_any_destructor (
 
 bug_2126::BdSecondUnion::BdSecondUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
   ACE_NEW (
     this->u_.second_union_struct_member_,
@@ -4636,7 +4633,6 @@ static TAO::TypeCode::Alias<char const *,
 
 B85::B85 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 

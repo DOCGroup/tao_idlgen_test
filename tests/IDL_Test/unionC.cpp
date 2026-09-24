@@ -83,7 +83,6 @@ static TAO::TypeCode::Enum<char const *,
 
 Data::Data ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = dtEmpty;
 }
 
@@ -221,7 +220,6 @@ namespace Necessary
 
 Necessary::WhichResult::WhichResult ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = Necessary::e_Unused;
   this->u_.m_Unused_ = {};
 }
@@ -320,7 +318,6 @@ namespace Necessary
 
 foo::foo ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -32768;
   this->u_.foo_iface_member_ = {};
 }
@@ -450,7 +447,6 @@ static TAO::TypeCode::Union<char const *,
 
 UnionDiscTest::BooleanUnion::BooleanUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
 }
 
@@ -534,7 +530,6 @@ namespace UnionDiscTest
 
 UnionDiscTest::CharUnion::CharUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = '\0';
 }
 
@@ -635,7 +630,6 @@ namespace UnionDiscTest
 
 AllBoolUnions::OneBranchT::OneBranchT ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
 }
 
@@ -713,7 +707,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::OneBranchF::OneBranchF ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
 }
 
@@ -791,7 +784,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::OneBranchD::OneBranchD ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.val_ = {};
 }
@@ -864,7 +856,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::OneBranchTF::OneBranchTF ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
   this->u_.val_ = {};
 }
@@ -939,7 +930,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::OneBranchFT::OneBranchFT ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.val_ = {};
 }
@@ -1014,7 +1004,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::OneBranchTD::OneBranchTD ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.val_ = {};
 }
@@ -1087,7 +1076,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::OneBranchDT::OneBranchDT ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.val_ = {};
 }
@@ -1160,7 +1148,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::OneBranchFD::OneBranchFD ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
   this->u_.val_ = {};
 }
@@ -1233,7 +1220,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::OneBranchDF::OneBranchDF ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
   this->u_.val_ = {};
 }
@@ -1306,7 +1292,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::TwoBranchesTF::TwoBranchesTF ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
   this->u_.val1_ = {};
 }
@@ -1395,7 +1380,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::TwoBranchesFT::TwoBranchesFT ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.val1_ = {};
 }
@@ -1484,7 +1468,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::TwoBranchesTD::TwoBranchesTD ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.val2_ = {};
 }
@@ -1573,7 +1556,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::TwoBranchesDT::TwoBranchesDT ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.val1_ = {};
 }
@@ -1662,7 +1644,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::TwoBranchesFD::TwoBranchesFD ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
   this->u_.val2_ = {};
 }
@@ -1751,7 +1732,6 @@ namespace AllBoolUnions
 
 AllBoolUnions::TwoBranchesDF::TwoBranchesDF ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
   this->u_.val1_ = {};
 }
@@ -1897,7 +1877,6 @@ static TAO::TypeCode::Enum<char const *,
 
 inner1::inner1 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (disc1) -1;
 }
 
@@ -1995,7 +1974,6 @@ static TAO::TypeCode::Union<char const *,
 
 inner2::inner2 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (disc2) -1;
 }
 
@@ -2093,7 +2071,6 @@ static TAO::TypeCode::Union<char const *,
 
 outer::outer ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (disc_outer) -1;
 }
 
@@ -2271,7 +2248,6 @@ namespace UnionTest3
 
 UnionTest3::ValType::ValType ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (UnionTest3::ValChoice) -1;
 }
 
@@ -2482,7 +2458,6 @@ namespace UnionTest3
 
 UnionTest3::IndType::IndType ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (UnionTest3::IndChoice) -1;
 }
 
@@ -2715,7 +2690,6 @@ X::Y::_tao_any_destructor (
 
 X::Y::Z::Z ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (ZType) -1;
 }
 
@@ -2801,7 +2775,6 @@ static TAO::TypeCode::Union<char const *,
 
 X::X ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (XType) -1;
 }
 
@@ -2938,7 +2911,6 @@ static TAO::TypeCode::Enum<char const *,
 
 FieldValue::FieldValue ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = FTYPE_DEFCHAR;
   this->u_.defstr_ = {};
 }
@@ -3129,7 +3101,6 @@ static TAO::TypeCode::Enum<char const *,
 
 TestUnion::TestUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -32768;
 }
 
@@ -3416,7 +3387,6 @@ static TAO::TypeCode::Alias<char const *,
 
 U85::U85 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
@@ -3633,7 +3603,6 @@ static TAO::TypeCode::Alias<char const *,
 
 U86::U86 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
@@ -3744,7 +3713,6 @@ static TAO::TypeCode::Union<char const *,
 
 U88::U88 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
@@ -3987,7 +3955,6 @@ static TAO::TypeCode::Alias<char const *,
 
 U87::U87 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
@@ -4085,7 +4052,6 @@ static TAO::TypeCode::Union<char const *,
 
 U89::U89 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
@@ -4309,7 +4275,6 @@ static TAO::TypeCode::Alias<char const *,
 
 U91::U91 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
@@ -4428,7 +4393,6 @@ static TAO::TypeCode::Union<char const *,
 
 U92::U92 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
   ::new (std::addressof(this->u_.b_92_3_)) UBar;
 }
@@ -4535,7 +4499,6 @@ static TAO::TypeCode::Union<char const *,
 
 U93::U93 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
   this->u_.b_93_3_ = UBarArray_alloc ();
   if (this->u_.b_93_3_)
@@ -4679,7 +4642,6 @@ static TAO::TypeCode::Union<char const *,
 
 U94::U94 ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
   this->u_.b_94_3_ = U90Array_alloc ();
   if (this->u_.b_94_3_)
@@ -4909,7 +4871,6 @@ static TAO::TypeCode::Alias<char const *,
 
 DefaultInitializedStructUnion::DefaultInitializedStructUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   ::new (std::addressof(this->u_.value_)) UBar;
 }
@@ -4980,7 +4941,6 @@ static TAO::TypeCode::Union<char const *,
 
 DefaultInitializedBooleanUnion::DefaultInitializedBooleanUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.value_ = {};
 }
@@ -5051,7 +5011,6 @@ static TAO::TypeCode::Union<char const *,
 
 DefaultInitializedLongUnion::DefaultInitializedLongUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.value_ = {};
 }
@@ -5122,7 +5081,6 @@ static TAO::TypeCode::Union<char const *,
 
 DefaultInitializedDoubleUnion::DefaultInitializedDoubleUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.value_ = {};
 }
@@ -5193,7 +5151,6 @@ static TAO::TypeCode::Union<char const *,
 
 DefaultInitializedEnumUnion::DefaultInitializedEnumUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.value_ = {};
 }
@@ -5266,7 +5223,6 @@ static TAO::TypeCode::Union<char const *,
 
 DefaultInitializedArrayUnion::DefaultInitializedArrayUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.value_ = DefaultInitializedLongArray_alloc ();
   if (this->u_.value_)
@@ -5351,7 +5307,6 @@ static TAO::TypeCode::Union<char const *,
 
 DefaultInitializedStringUnion::DefaultInitializedStringUnion ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.value_ = {};
 }
@@ -5444,7 +5399,6 @@ static TAO::TypeCode::Enum<char const *,
 
 ResetWithNoopBranches::ResetWithNoopBranches ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = RESET_DEFAULT;
   ::new (std::addressof(this->u_.struct_value_)) UBar;
 }
