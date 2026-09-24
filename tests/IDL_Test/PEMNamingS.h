@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
 
-#ifndef _TAO_IDL_PEMNAMINGS_8EK1XZ_H_
-#define _TAO_IDL_PEMNAMINGS_8EK1XZ_H_
+#ifndef _TAO_IDL_PEMNAMINGS_LVBE8R_H_
+#define _TAO_IDL_PEMNAMINGS_LVBE8R_H_
 
 #include /**/ "ace/pre.h"
 

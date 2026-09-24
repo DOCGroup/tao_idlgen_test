@@ -766,7 +766,6 @@ mod2::fwd::attr (
 
 mod2::fwd::un::un ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -32768;
 }
 

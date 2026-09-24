@@ -122,7 +122,6 @@ static TAO::TypeCode::Enum<char const *,
 
 CallMe::YourColorBaby::YourColorBaby ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (CallMe::YourColorBaby::ColorMe) -1;
 }
 
@@ -245,7 +244,6 @@ static TAO::TypeCode::Enum<char const *,
 
 CallMe::YourCar::YourCar ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (CallMe::YourCar::ColorMe) -1;
 }
 

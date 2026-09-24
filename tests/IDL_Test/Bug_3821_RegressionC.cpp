@@ -84,7 +84,6 @@ namespace test
 
 test::UnionAllCovered_EnumerationDiscriminant::UnionAllCovered_EnumerationDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (test::Enumeration) -1;
 }
 
@@ -198,7 +197,6 @@ namespace test
 
 test::UnionAllCoveredWithDefault_EnumerationDiscriminant::UnionAllCoveredWithDefault_EnumerationDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (test::Enumeration) -1;
   this->u_.e_def_ = {};
 }
@@ -311,7 +309,6 @@ namespace test
 
 test::UnionWithDefault_EnumerationDiscriminant::UnionWithDefault_EnumerationDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = test::Enum3;
   this->u_.e_def_ = {};
 }
@@ -422,7 +419,6 @@ namespace test
 
 test::UnionWithImplicitDefault_EnumerationDiscriminant::UnionWithImplicitDefault_EnumerationDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = test::Enum3;
 }
 
@@ -541,7 +537,6 @@ namespace test
 
 test::UnionAllCovered_TypedefedEnumerationDiscriminant::UnionAllCovered_TypedefedEnumerationDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (test::Enumeration) -1;
 }
 
@@ -655,7 +650,6 @@ namespace test
 
 test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = (test::Enumeration) -1;
   this->u_.e_def_ = {};
 }
@@ -768,7 +762,6 @@ namespace test
 
 test::UnionWithDefault_TypedefedEnumerationDiscriminant::UnionWithDefault_TypedefedEnumerationDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = test::Enum3;
   this->u_.e_def_ = {};
 }
@@ -879,7 +872,6 @@ namespace test
 
 test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = test::Enum3;
 }
 
@@ -981,7 +973,6 @@ namespace test
 
 test::UnionAllCovered_BooleanDiscriminant::UnionAllCovered_BooleanDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = true;
   this->u_.e_true_ = {};
 }
@@ -1070,7 +1061,6 @@ namespace test
 
 test::UnionWithDefault_BooleanDiscriminant::UnionWithDefault_BooleanDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
   this->u_.e_def_ = {};
 }
@@ -1159,7 +1149,6 @@ namespace test
 
 test::UnionWithImplicitDefault_BooleanDiscriminant::UnionWithImplicitDefault_BooleanDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = false;
 }
 
@@ -1237,7 +1226,6 @@ namespace test
 
 test::UnionAllCovered_CharDiscriminant::UnionAllCovered_CharDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = '\x0';
   this->u_.e_chars_ = {};
 }
@@ -2344,7 +2332,6 @@ namespace test
 
 test::UnionWithDefault_CharDiscriminant::UnionWithDefault_CharDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = '\10';
   this->u_.e_def_ = {};
 }
@@ -2471,7 +2458,6 @@ namespace test
 
 test::UnionWithImplicitDefault_CharDiscriminant::UnionWithImplicitDefault_CharDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = '\10';
 }
 
@@ -2589,7 +2575,6 @@ namespace test
 
 test::UnionWithDefault_LongDiscriminant::UnionWithDefault_LongDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
   this->u_.e_def_ = {};
 }
@@ -2712,7 +2697,6 @@ namespace test
 
 test::UnionWithImplicitDefault_LongDiscriminant::UnionWithImplicitDefault_LongDiscriminant ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 

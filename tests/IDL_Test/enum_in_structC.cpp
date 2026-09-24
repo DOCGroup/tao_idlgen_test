@@ -460,7 +460,6 @@ decl_heavy_struct::_m_un_copy (
 
 decl_heavy_struct::un::un ()
 {
-  ACE_OS::memset (std::addressof(this->u_), 0, sizeof (this->u_));
   this->disc_ = -2147483647;
 }
 
