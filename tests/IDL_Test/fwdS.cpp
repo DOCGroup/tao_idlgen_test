@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_FWDS_JCKQ7R_CPP_
-#define _TAO_IDL_FWDS_JCKQ7R_CPP_
+#ifndef _TAO_IDL_FWDS_19YIEI_CPP_
+#define _TAO_IDL_FWDS_19YIEI_CPP_
 
 
 #include "fwdS.h"
@@ -225,7 +225,7 @@ const char* POA_mod2::AMH_full::_interface_repository_id () const
   return "IDL:mod2/full:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_mod2::AMH_full::_dispatch (
@@ -235,7 +235,7 @@ POA_mod2::AMH_full::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 mod2::full*
 POA_mod2::AMH_full::_this ()
@@ -1103,7 +1103,7 @@ const char* POA_fwd_mixed_intf::AMH_concrete_parent::_interface_repository_id ()
   return "IDL:fwd_mixed_intf/concrete_parent:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_fwd_mixed_intf::AMH_concrete_parent::_dispatch (
@@ -1113,7 +1113,7 @@ POA_fwd_mixed_intf::AMH_concrete_parent::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 fwd_mixed_intf::concrete_parent*
 POA_fwd_mixed_intf::AMH_concrete_parent::_this ()

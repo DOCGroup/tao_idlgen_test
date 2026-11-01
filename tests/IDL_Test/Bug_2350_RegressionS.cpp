@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_NNM2NL_CPP_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_NNM2NL_CPP_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_GO4U5Y_CPP_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_GO4U5Y_CPP_
 
 
 #include "Bug_2350_RegressionS.h"
@@ -222,7 +222,7 @@ const char* POA_AMH_Bug_2350_Regression::_interface_repository_id () const
   return "IDL:Bug_2350_Regression:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_AMH_Bug_2350_Regression::_dispatch (
@@ -232,7 +232,7 @@ POA_AMH_Bug_2350_Regression::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 Bug_2350_Regression*
 POA_AMH_Bug_2350_Regression::_this ()

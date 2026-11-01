@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_INHERITS_TKAFPW_CPP_
-#define _TAO_IDL_INHERITS_TKAFPW_CPP_
+#ifndef _TAO_IDL_INHERITS_E3JCYV_CPP_
+#define _TAO_IDL_INHERITS_E3JCYV_CPP_
 
 
 #include "inheritS.h"
@@ -212,7 +212,7 @@ const char* POA_OldInherit::AMH_one::_interface_repository_id () const
   return "IDL:OldInherit/one:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_OldInherit::AMH_one::_dispatch (
@@ -222,7 +222,7 @@ POA_OldInherit::AMH_one::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OldInherit::one*
 POA_OldInherit::AMH_one::_this ()
@@ -1033,7 +1033,7 @@ const char* POA_OldInherit::AMH_two::_interface_repository_id () const
   return "IDL:OldInherit/two:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_OldInherit::AMH_two::_dispatch (
@@ -1043,7 +1043,7 @@ POA_OldInherit::AMH_two::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OldInherit::two*
 POA_OldInherit::AMH_two::_this ()
@@ -1883,7 +1883,7 @@ const char* POA_OldInherit::AMH_three::_interface_repository_id () const
   return "IDL:OldInherit/three:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_OldInherit::AMH_three::_dispatch (
@@ -1893,7 +1893,7 @@ POA_OldInherit::AMH_three::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OldInherit::three*
 POA_OldInherit::AMH_three::_this ()
@@ -2721,7 +2721,7 @@ const char* POA_OldInherit::AMH_four::_interface_repository_id () const
   return "IDL:OldInherit/four:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_OldInherit::AMH_four::_dispatch (
@@ -2731,7 +2731,7 @@ POA_OldInherit::AMH_four::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OldInherit::four*
 POA_OldInherit::AMH_four::_this ()
@@ -3589,7 +3589,7 @@ const char* POA_OldInherit::AMH_five::_interface_repository_id () const
   return "IDL:OldInherit/five:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_OldInherit::AMH_five::_dispatch (
@@ -3599,7 +3599,7 @@ POA_OldInherit::AMH_five::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OldInherit::five*
 POA_OldInherit::AMH_five::_this ()

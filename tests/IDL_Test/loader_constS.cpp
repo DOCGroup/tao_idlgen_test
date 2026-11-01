@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_LOADER_CONSTS_7WMH0Q_CPP_
-#define _TAO_IDL_LOADER_CONSTS_7WMH0Q_CPP_
+#ifndef _TAO_IDL_LOADER_CONSTS_I65R22_CPP_
+#define _TAO_IDL_LOADER_CONSTS_I65R22_CPP_
 
 
 #include "loader_constS.h"

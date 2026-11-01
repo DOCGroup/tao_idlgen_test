@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_CONSTANTSS_AX3DA1_CPP_
-#define _TAO_IDL_CONSTANTSS_AX3DA1_CPP_
+#ifndef _TAO_IDL_CONSTANTSS_XMS7FK_CPP_
+#define _TAO_IDL_CONSTANTSS_XMS7FK_CPP_
 
 
 #include "constantsS.h"
@@ -172,7 +172,7 @@ const char* POA_ClassConstants::AMH_Iface::_interface_repository_id () const
   return "IDL:ClassConstants/Iface:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_ClassConstants::AMH_Iface::_dispatch (
@@ -182,7 +182,7 @@ POA_ClassConstants::AMH_Iface::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 ClassConstants::Iface*
 POA_ClassConstants::AMH_Iface::_this ()

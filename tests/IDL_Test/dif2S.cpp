@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_DIF2S_U2AUQE_CPP_
-#define _TAO_IDL_DIF2S_U2AUQE_CPP_
+#ifndef _TAO_IDL_DIF2S_CQRB14_CPP_
+#define _TAO_IDL_DIF2S_CQRB14_CPP_
 
 
 #include "dif2S.h"
@@ -526,7 +526,7 @@ const char* POA_OldDif2::AMH_ex1::_interface_repository_id () const
   return "IDL:OldDif2/ex1:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_OldDif2::AMH_ex1::_dispatch (
@@ -536,7 +536,7 @@ POA_OldDif2::AMH_ex1::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OldDif2::ex1*
 POA_OldDif2::AMH_ex1::_this ()
@@ -4026,7 +4026,7 @@ const char* POA_OldDif2::AMH_ex2::_interface_repository_id () const
   return "IDL:OldDif2/ex2:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_OldDif2::AMH_ex2::_dispatch (
@@ -4036,7 +4036,7 @@ POA_OldDif2::AMH_ex2::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OldDif2::ex2*
 POA_OldDif2::AMH_ex2::_this ()
@@ -7190,7 +7190,7 @@ const char* POA_OldDif2::AMH_ex3::_interface_repository_id () const
   return "IDL:OldDif2/ex3:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_OldDif2::AMH_ex3::_dispatch (
@@ -7200,7 +7200,7 @@ POA_OldDif2::AMH_ex3::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OldDif2::ex3*
 POA_OldDif2::AMH_ex3::_this ()
@@ -10633,7 +10633,7 @@ const char* POA_OldDif2::AMH_ex4::_interface_repository_id () const
   return "IDL:OldDif2/ex4:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_OldDif2::AMH_ex4::_dispatch (
@@ -10643,7 +10643,7 @@ POA_OldDif2::AMH_ex4::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OldDif2::ex4*
 POA_OldDif2::AMH_ex4::_this ()

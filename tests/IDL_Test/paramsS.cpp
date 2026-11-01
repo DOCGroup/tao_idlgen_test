@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_PARAMSS_CJ9VVH_CPP_
-#define _TAO_IDL_PARAMSS_CJ9VVH_CPP_
+#ifndef _TAO_IDL_PARAMSS_N42QO1_CPP_
+#define _TAO_IDL_PARAMSS_N42QO1_CPP_
 
 
 #include "paramsS.h"
@@ -224,7 +224,7 @@ const char* POA_foo::bar::AMH_fooBar::_interface_repository_id () const
   return "IDL:foo/bar/fooBar:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_foo::bar::AMH_fooBar::_dispatch (
@@ -234,7 +234,7 @@ POA_foo::bar::AMH_fooBar::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 foo::bar::fooBar*
 POA_foo::bar::AMH_fooBar::_this ()

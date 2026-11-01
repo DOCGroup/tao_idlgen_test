@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_OLD_ARRAYS_GV319C_CPP_
-#define _TAO_IDL_OLD_ARRAYS_GV319C_CPP_
+#ifndef _TAO_IDL_OLD_ARRAYS_JCITH1_CPP_
+#define _TAO_IDL_OLD_ARRAYS_JCITH1_CPP_
 
 
 #include "old_arrayS.h"
@@ -449,7 +449,7 @@ const char* POA_OldArray::AMH_A_i::_interface_repository_id () const
   return "IDL:OldArray/A_i:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_OldArray::AMH_A_i::_dispatch (
@@ -459,7 +459,7 @@ POA_OldArray::AMH_A_i::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OldArray::A_i*
 POA_OldArray::AMH_A_i::_this ()

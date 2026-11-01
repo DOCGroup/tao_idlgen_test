@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_ARRAYS_ENZVT9_CPP_
-#define _TAO_IDL_ARRAYS_ENZVT9_CPP_
+#ifndef _TAO_IDL_ARRAYS_NJW34O_CPP_
+#define _TAO_IDL_ARRAYS_NJW34O_CPP_
 
 
 #include "arrayS.h"
@@ -230,7 +230,7 @@ const char* POA_AMH_array_args::_interface_repository_id () const
   return "IDL:array_args:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_AMH_array_args::_dispatch (
@@ -240,7 +240,7 @@ POA_AMH_array_args::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 array_args*
 POA_AMH_array_args::_this ()
@@ -1026,7 +1026,7 @@ const char* POA_AMH_testdata::_interface_repository_id () const
   return "IDL:testdata:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_AMH_testdata::_dispatch (
@@ -1036,7 +1036,7 @@ POA_AMH_testdata::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 testdata*
 POA_AMH_testdata::_this ()
@@ -1544,7 +1544,7 @@ const char* POA_arraytest::AMH_MyTest::_interface_repository_id () const
   return "IDL:arraytest/MyTest:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_arraytest::AMH_MyTest::_dispatch (
@@ -1554,7 +1554,7 @@ POA_arraytest::AMH_MyTest::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 arraytest::MyTest*
 POA_arraytest::AMH_MyTest::_this ()

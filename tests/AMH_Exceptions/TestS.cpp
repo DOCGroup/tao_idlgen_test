@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_TESTS_Z25H5W_CPP_
-#define _TAO_IDL_TESTS_Z25H5W_CPP_
+#ifndef _TAO_IDL_TESTS_KMD3GB_CPP_
+#define _TAO_IDL_TESTS_KMD3GB_CPP_
 
 
 #include "TestS.h"
@@ -259,7 +259,7 @@ const char* POA_Test::AMH_Roundtrip::_interface_repository_id () const
   return "IDL:Test/Roundtrip:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_Test::AMH_Roundtrip::_dispatch (
@@ -269,7 +269,7 @@ POA_Test::AMH_Roundtrip::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 Test::Roundtrip*
 POA_Test::AMH_Roundtrip::_this ()

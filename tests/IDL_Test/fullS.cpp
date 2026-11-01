@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_FULLS_A36XMW_CPP_
-#define _TAO_IDL_FULLS_A36XMW_CPP_
+#ifndef _TAO_IDL_FULLS_I6ELPM_CPP_
+#define _TAO_IDL_FULLS_I6ELPM_CPP_
 
 
 #include "fullS.h"
@@ -173,7 +173,7 @@ const char* POA_scope_test::AMH_i_scope_test::_interface_repository_id () const
   return "IDL:scope_test/i_scope_test:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_scope_test::AMH_i_scope_test::_dispatch (
@@ -183,7 +183,7 @@ POA_scope_test::AMH_i_scope_test::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 scope_test::i_scope_test*
 POA_scope_test::AMH_i_scope_test::_this ()
@@ -819,7 +819,7 @@ const char* POA_mod2::AMH_fwd::_interface_repository_id () const
   return "IDL:mod2/fwd:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_mod2::AMH_fwd::_dispatch (
@@ -829,7 +829,7 @@ POA_mod2::AMH_fwd::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 mod2::fwd*
 POA_mod2::AMH_fwd::_this ()

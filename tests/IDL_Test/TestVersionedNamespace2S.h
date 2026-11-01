@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:397
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_LYLIO6_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_LYLIO6_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_06Z2EG_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_06Z2EG_H_
 
 #include /**/ "ace/pre.h"
 

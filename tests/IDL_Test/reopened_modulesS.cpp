@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_REOPENED_MODULESS_AYYRIA_CPP_
-#define _TAO_IDL_REOPENED_MODULESS_AYYRIA_CPP_
+#ifndef _TAO_IDL_REOPENED_MODULESS_7EXGU5_CPP_
+#define _TAO_IDL_REOPENED_MODULESS_7EXGU5_CPP_
 
 
 #include "reopened_modulesS.h"
@@ -173,7 +173,7 @@ const char* POA_AA::BB::AMH_x1::_interface_repository_id () const
   return "IDL:AA/BB/x1:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_AA::BB::AMH_x1::_dispatch (
@@ -183,7 +183,7 @@ POA_AA::BB::AMH_x1::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 AA::BB::x1*
 POA_AA::BB::AMH_x1::_this ()
@@ -801,7 +801,7 @@ const char* POA_AA::BB::CC::AMH_x2::_interface_repository_id () const
   return "IDL:AA/BB/CC/x2:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_AA::BB::CC::AMH_x2::_dispatch (
@@ -811,7 +811,7 @@ POA_AA::BB::CC::AMH_x2::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 AA::BB::CC::x2*
 POA_AA::BB::CC::AMH_x2::_this ()
@@ -2448,7 +2448,7 @@ const char* POA_dot::AMH_Person::_interface_repository_id () const
   return "IDL:dot/Person:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_dot::AMH_Person::_dispatch (
@@ -2458,7 +2458,7 @@ POA_dot::AMH_Person::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 dot::Person*
 POA_dot::AMH_Person::_this ()
@@ -3725,7 +3725,7 @@ const char* POA_dot::AMH_Party::_interface_repository_id () const
   return "IDL:dot/Party:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_dot::AMH_Party::_dispatch (
@@ -3735,7 +3735,7 @@ POA_dot::AMH_Party::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 dot::Party*
 POA_dot::AMH_Party::_this ()
@@ -4942,7 +4942,7 @@ const char* POA_AMH_OpHolder::_interface_repository_id () const
   return "IDL:OpHolder:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_AMH_OpHolder::_dispatch (
@@ -4952,7 +4952,7 @@ POA_AMH_OpHolder::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OpHolder*
 POA_AMH_OpHolder::_this ()
@@ -5826,7 +5826,7 @@ const char* POA_com::AMH_IFace::_interface_repository_id () const
   return "IDL:com/IFace:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_com::AMH_IFace::_dispatch (
@@ -5836,7 +5836,7 @@ POA_com::AMH_IFace::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 com::IFace*
 POA_com::AMH_IFace::_this ()
@@ -6650,7 +6650,7 @@ const char* POA_Y::AMH_Z::_interface_repository_id () const
   return "IDL:Y/Z:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_Y::AMH_Z::_dispatch (
@@ -6660,7 +6660,7 @@ POA_Y::AMH_Z::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 Y::Z*
 POA_Y::AMH_Z::_this ()
@@ -7170,7 +7170,7 @@ const char* POA_X::AMH_BI::_interface_repository_id () const
   return "IDL:X/BI:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_X::AMH_BI::_dispatch (
@@ -7180,7 +7180,7 @@ POA_X::AMH_BI::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 X::BI*
 POA_X::AMH_BI::_this ()
@@ -8039,7 +8039,7 @@ const char* POA_XX::AMH_blah_intfc::_interface_repository_id () const
   return "IDL:XX/blah_intfc:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_XX::AMH_blah_intfc::_dispatch (
@@ -8049,7 +8049,7 @@ POA_XX::AMH_blah_intfc::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 XX::blah_intfc*
 POA_XX::AMH_blah_intfc::_this ()
@@ -8865,7 +8865,7 @@ const char* POA_XX::AMH_blah0::_interface_repository_id () const
   return "IDL:XX/blah0:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_XX::AMH_blah0::_dispatch (
@@ -8875,7 +8875,7 @@ POA_XX::AMH_blah0::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 XX::blah0*
 POA_XX::AMH_blah0::_this ()
@@ -9674,7 +9674,7 @@ const char* POA_frag::AMH_frag_iface::_interface_repository_id () const
   return "IDL:frag/frag_iface:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_frag::AMH_frag_iface::_dispatch (
@@ -9684,7 +9684,7 @@ POA_frag::AMH_frag_iface::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 frag::frag_iface*
 POA_frag::AMH_frag_iface::_this ()
@@ -10206,7 +10206,7 @@ const char* POA_AMH_gather::_interface_repository_id () const
   return "IDL:gather:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_AMH_gather::_dispatch (
@@ -10216,7 +10216,7 @@ POA_AMH_gather::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 gather*
 POA_AMH_gather::_this ()
@@ -11121,7 +11121,7 @@ const char* POA_foo::AMH_obj::_interface_repository_id () const
   return "IDL:foo/obj:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_foo::AMH_obj::_dispatch (
@@ -11131,7 +11131,7 @@ POA_foo::AMH_obj::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 foo::obj*
 POA_foo::AMH_obj::_this ()
@@ -12008,7 +12008,7 @@ const char* POA_A::B::AMH_X3::_interface_repository_id () const
   return "IDL:A/B/X3:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_A::B::AMH_X3::_dispatch (
@@ -12018,7 +12018,7 @@ POA_A::B::AMH_X3::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 A::B::X3*
 POA_A::B::AMH_X3::_this ()
@@ -13340,7 +13340,7 @@ const char* POA_mA::AMH_A::_interface_repository_id () const
   return "IDL:mA/A:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_mA::AMH_A::_dispatch (
@@ -13350,7 +13350,7 @@ POA_mA::AMH_A::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 mA::A*
 POA_mA::AMH_A::_this ()
@@ -14620,7 +14620,7 @@ const char* POA_mB::AMH_B::_interface_repository_id () const
   return "IDL:mB/B:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_mB::AMH_B::_dispatch (
@@ -14630,7 +14630,7 @@ POA_mB::AMH_B::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 mB::B*
 POA_mB::AMH_B::_this ()
@@ -15840,7 +15840,7 @@ const char* POA_mC::AMH_C::_interface_repository_id () const
   return "IDL:mC/C:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_mC::AMH_C::_dispatch (
@@ -15850,7 +15850,7 @@ POA_mC::AMH_C::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 mC::C*
 POA_mC::AMH_C::_this ()
@@ -16378,7 +16378,7 @@ const char* POA_Schmoik::AMH_foo::_interface_repository_id () const
   return "IDL:Schmoik/foo:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_Schmoik::AMH_foo::_dispatch (
@@ -16388,7 +16388,7 @@ POA_Schmoik::AMH_foo::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 Schmoik::foo*
 POA_Schmoik::AMH_foo::_this ()
@@ -16857,7 +16857,7 @@ const char* POA_Thwoik::AMH_TestType::_interface_repository_id () const
   return "IDL:Thwoik/TestType:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_Thwoik::AMH_TestType::_dispatch (
@@ -16867,7 +16867,7 @@ POA_Thwoik::AMH_TestType::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 Thwoik::TestType*
 POA_Thwoik::AMH_TestType::_this ()
@@ -17337,7 +17337,7 @@ const char* POA_A_mod::AMH_Foo::_interface_repository_id () const
   return "IDL:A_mod/Foo:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_A_mod::AMH_Foo::_dispatch (
@@ -17347,7 +17347,7 @@ POA_A_mod::AMH_Foo::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 A_mod::Foo*
 POA_A_mod::AMH_Foo::_this ()
@@ -17818,7 +17818,7 @@ const char* POA_A_mod::B_mod::AMH_Foo::_interface_repository_id () const
   return "IDL:A_mod/B_mod/Foo:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_A_mod::B_mod::AMH_Foo::_dispatch (
@@ -17828,7 +17828,7 @@ POA_A_mod::B_mod::AMH_Foo::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 A_mod::B_mod::Foo*
 POA_A_mod::B_mod::AMH_Foo::_this ()

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_PEMNAMINGS_Z849ME_CPP_
-#define _TAO_IDL_PEMNAMINGS_Z849ME_CPP_
+#ifndef _TAO_IDL_PEMNAMINGS_983IUH_CPP_
+#define _TAO_IDL_PEMNAMINGS_983IUH_CPP_
 
 
 #include "PEMNamingS.h"
@@ -280,7 +280,7 @@ const char* POA_Plesk::Naming::AMH_ObjectResolver::_interface_repository_id () c
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_Plesk::Naming::AMH_ObjectResolver::_dispatch (
@@ -290,7 +290,7 @@ POA_Plesk::Naming::AMH_ObjectResolver::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 Plesk::Naming::ObjectResolver*
 POA_Plesk::Naming::AMH_ObjectResolver::_this ()

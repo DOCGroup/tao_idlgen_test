@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_8EZZJB_CPP_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_8EZZJB_CPP_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_DYP3YV_CPP_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_DYP3YV_CPP_
 
 
 #include "Bug_2577_RegressionS.h"
@@ -213,7 +213,7 @@ const char* POA_AMH_User_T::_interface_repository_id () const
   return "IDL:User_T:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_AMH_User_T::_dispatch (
@@ -223,7 +223,7 @@ POA_AMH_User_T::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 User_T*
 POA_AMH_User_T::_this ()
