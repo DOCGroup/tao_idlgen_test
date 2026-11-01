@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_TESTS_JKCMF9_CPP_
-#define _TAO_IDL_TESTS_JKCMF9_CPP_
+#ifndef _TAO_IDL_TESTS_I3DWFH_CPP_
+#define _TAO_IDL_TESTS_I3DWFH_CPP_
 
 
 #include "TestS.h"
@@ -52,7 +52,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -286,7 +286,7 @@ POA_Test::AMH_Roundtrip::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Test_Roundtrip_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

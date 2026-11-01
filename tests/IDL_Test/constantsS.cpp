@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_CONSTANTSS_EVQZJM_CPP_
-#define _TAO_IDL_CONSTANTSS_EVQZJM_CPP_
+#ifndef _TAO_IDL_CONSTANTSS_7FRFNH_CPP_
+#define _TAO_IDL_CONSTANTSS_7FRFNH_CPP_
 
 
 #include "constantsS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -199,7 +199,7 @@ POA_ClassConstants::AMH_Iface::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_ClassConstants_Iface_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -367,7 +367,7 @@ POA_ClassConstants::Iface::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_KEYWORDSS_DLUMZK_CPP_
-#define _TAO_IDL_KEYWORDSS_DLUMZK_CPP_
+#ifndef _TAO_IDL_KEYWORDSS_K06YDO_CPP_
+#define _TAO_IDL_KEYWORDSS_K06YDO_CPP_
 
 
 #include "keywordsS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMH_Testing_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -299,7 +299,7 @@ POA_AMH_Testing::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Testing_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -723,7 +723,7 @@ POA_TAO_AMH_TestingResponseHandler::bar_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMI_TestingHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

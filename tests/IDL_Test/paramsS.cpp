@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_PARAMSS_H9AHNR_CPP_
-#define _TAO_IDL_PARAMSS_H9AHNR_CPP_
+#ifndef _TAO_IDL_PARAMSS_I49FIG_CPP_
+#define _TAO_IDL_PARAMSS_I49FIG_CPP_
 
 
 #include "paramsS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_foo_bar_AMH_fooBar_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -251,7 +251,7 @@ POA_foo::bar::AMH_fooBar::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_foo_bar_fooBar_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -592,7 +592,7 @@ POA_foo::bar::TAO_AMH_fooBarResponseHandler::getDate_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_foo_bar_AMI_fooBarHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

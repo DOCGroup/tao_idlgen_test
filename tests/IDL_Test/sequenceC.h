@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_SEQUENCEC_JQN49J_H_
-#define _TAO_IDL_SEQUENCEC_JQN49J_H_
+#ifndef _TAO_IDL_SEQUENCEC_DCZ8QZ_H_
+#define _TAO_IDL_SEQUENCEC_DCZ8QZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -244,7 +244,7 @@ public:
 
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_OctetSeqSeq;
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 

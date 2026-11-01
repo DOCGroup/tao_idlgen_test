@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_TYPEPREFIXS_2L56ZC_CPP_
-#define _TAO_IDL_TYPEPREFIXS_2L56ZC_CPP_
+#ifndef _TAO_IDL_TYPEPREFIXS_W881GO_CPP_
+#define _TAO_IDL_TYPEPREFIXS_W881GO_CPP_
 
 
 #include "typeprefixS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_AMH_B_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -200,7 +200,7 @@ POA_A::AMH_B::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_B_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -369,7 +369,7 @@ POA_A::B::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_AMI_BHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -535,7 +535,7 @@ POA_A::AMI_BHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_AMH_C_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -729,7 +729,7 @@ POA_A::AMH_C::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_C_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1029,7 +1029,7 @@ POA_A::TAO_AMH_CResponseHandler::op_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_AMI_CHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

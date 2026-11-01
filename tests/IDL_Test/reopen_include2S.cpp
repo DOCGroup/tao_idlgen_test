@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2S_K3IW1C_CPP_
-#define _TAO_IDL_REOPEN_INCLUDE2S_K3IW1C_CPP_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2S_NM7JUN_CPP_
+#define _TAO_IDL_REOPEN_INCLUDE2S_NM7JUN_CPP_
 
 
 #include "reopen_include2S.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_B_AMH_X2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -240,7 +240,7 @@ POA_A::B::AMH_X2::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_B_X2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -548,7 +548,7 @@ POA_A::B::TAO_AMH_X2ResponseHandler::getX2_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_B_AMI_X2Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

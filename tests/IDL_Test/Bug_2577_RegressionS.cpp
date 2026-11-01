@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_32ADRD_CPP_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_32ADRD_CPP_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_A99684_CPP_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_A99684_CPP_
 
 
 #include "Bug_2577_RegressionS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMH_User_T_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -240,7 +240,7 @@ POA_AMH_User_T::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_User_T_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -540,7 +540,7 @@ POA_TAO_AMH_User_TResponseHandler::getLoginTime_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMI_User_THandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

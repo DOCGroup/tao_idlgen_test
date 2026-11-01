@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_ACC5GN_CPP_
-#define _TAO_IDL_SIMPLE_TESTS_ACC5GN_CPP_
+#ifndef _TAO_IDL_SIMPLE_TESTS_75CO4I_CPP_
+#define _TAO_IDL_SIMPLE_TESTS_75CO4I_CPP_
 
 
 #include "simple_testS.h"
@@ -48,7 +48,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Simple_Server_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

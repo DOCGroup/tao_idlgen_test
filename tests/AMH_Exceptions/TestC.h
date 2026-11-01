@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_TESTC_L28PYS_H_
-#define _TAO_IDL_TESTC_L28PYS_H_
+#ifndef _TAO_IDL_TESTC_9GLT26_H_
+#define _TAO_IDL_TESTC_9GLT26_H_
 
 #include /**/ "ace/pre.h"
 
@@ -248,7 +248,7 @@ namespace Test
 
   extern  ::CORBA::TypeCode_ptr const _tc_Red_Herring;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -430,7 +430,7 @@ protected:
 
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_RoundtripExceptionHolder;
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 

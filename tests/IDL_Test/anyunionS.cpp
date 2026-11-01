@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_ANYUNIONS_E97DRY_CPP_
-#define _TAO_IDL_ANYUNIONS_E97DRY_CPP_
+#ifndef _TAO_IDL_ANYUNIONS_XFSCHI_CPP_
+#define _TAO_IDL_ANYUNIONS_XFSCHI_CPP_
 
 
 #include "anyunionS.h"

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_SIMPLES_S5PB57_CPP_
-#define _TAO_IDL_SIMPLES_S5PB57_CPP_
+#ifndef _TAO_IDL_SIMPLES_KWRLIS_CPP_
+#define _TAO_IDL_SIMPLES_KWRLIS_CPP_
 
 
 #include "simpleS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMH_simple_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -252,7 +252,7 @@ POA_AMH_simple::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_simple_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -595,7 +595,7 @@ POA_TAO_AMH_simpleResponseHandler::op_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMI_simpleHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1019,7 +1019,7 @@ POA_AMI_simpleHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMH_simple2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1218,7 +1218,7 @@ POA_AMH_simple2::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_simple2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1561,7 +1561,7 @@ POA_TAO_AMH_simple2ResponseHandler::op2_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMI_simple2Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

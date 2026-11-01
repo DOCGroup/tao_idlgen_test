@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_DIF2S_7KJ507_CPP_
-#define _TAO_IDL_DIF2S_7KJ507_CPP_
+#ifndef _TAO_IDL_DIF2S_LG0Z0W_CPP_
+#define _TAO_IDL_DIF2S_LG0Z0W_CPP_
 
 
 #include "dif2S.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -553,7 +553,7 @@ POA_OldDif2::AMH_ex1::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_ex1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1850,7 +1850,7 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op6_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -3594,7 +3594,7 @@ POA_OldDif2::AMI_ex1Handler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -4053,7 +4053,7 @@ POA_OldDif2::AMH_ex2::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_ex2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -5201,7 +5201,7 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op12_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -6741,7 +6741,7 @@ POA_OldDif2::AMI_ex2Handler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -7217,7 +7217,7 @@ POA_OldDif2::AMH_ex3::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_ex3_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -8352,7 +8352,7 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_unsigned_long_attribute_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -9975,7 +9975,7 @@ POA_OldDif2::AMI_ex3Handler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -10660,7 +10660,7 @@ POA_OldDif2::AMH_ex4::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_ex4_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -12274,7 +12274,7 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_an_object_attribute_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

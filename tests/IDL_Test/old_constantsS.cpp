@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_OLD_CONSTANTSS_US2M2O_CPP_
-#define _TAO_IDL_OLD_CONSTANTSS_US2M2O_CPP_
+#ifndef _TAO_IDL_OLD_CONSTANTSS_ZDPRTW_CPP_
+#define _TAO_IDL_OLD_CONSTANTSS_ZDPRTW_CPP_
 
 
 #include "old_constantsS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldConstants_M_AMH_A_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -252,7 +252,7 @@ POA_OldConstants::M::AMH_A::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldConstants_M_A_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -594,7 +594,7 @@ POA_OldConstants::M::TAO_AMH_AResponseHandler::foo_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldConstants_M_AMI_AHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

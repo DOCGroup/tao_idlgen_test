@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_GENERIC_OBJECTC_0E9THT_H_
-#define _TAO_IDL_GENERIC_OBJECTC_0E9THT_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTC_Y69FFS_H_
+#define _TAO_IDL_GENERIC_OBJECTC_Y69FFS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -165,7 +165,7 @@ private:
   void _reset ();
 };
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -349,7 +349,7 @@ protected:
   _tao_unmarshal__AMH_genericExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -430,7 +430,7 @@ private:
   AMH_genericResponseHandler &operator= (AMH_genericResponseHandler &&) = delete;
 };
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_REOPENED_MODULESS_SV5OXH_CPP_
-#define _TAO_IDL_REOPENED_MODULESS_SV5OXH_CPP_
+#ifndef _TAO_IDL_REOPENED_MODULESS_ZSBVRX_CPP_
+#define _TAO_IDL_REOPENED_MODULESS_ZSBVRX_CPP_
 
 
 #include "reopened_modulesS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AA_BB_AMH_x1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -200,7 +200,7 @@ POA_AA::BB::AMH_x1::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AA_BB_x1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -369,7 +369,7 @@ POA_AA::BB::x1::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AA_BB_AMI_x1Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -535,7 +535,7 @@ POA_AA::BB::AMI_x1Handler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AA_BB_CC_AMH_x2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -828,7 +828,7 @@ POA_AA::BB::CC::AMH_x2::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AA_BB_CC_x2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1415,7 +1415,7 @@ POA_AA::BB::CC::TAO_AMH_x2ResponseHandler::op3_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AA_BB_CC_AMI_x2Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -2219,7 +2219,7 @@ POA_AA::BB::CC::AMI_x2Handler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_dot_AMH_Person_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -2475,7 +2475,7 @@ POA_dot::AMH_Person::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_dot_Person_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -2930,7 +2930,7 @@ POA_dot::TAO_AMH_PersonResponseHandler::set_someParty_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_dot_AMI_PersonHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -3496,7 +3496,7 @@ POA_dot::AMI_PersonHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_dot_AMH_Party_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -3752,7 +3752,7 @@ POA_dot::AMH_Party::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_dot_Party_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -4207,7 +4207,7 @@ POA_dot::TAO_AMH_PartyResponseHandler::set_somePerson_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_dot_AMI_PartyHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -4773,7 +4773,7 @@ POA_dot::AMI_PartyHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMH_OpHolder_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -4969,7 +4969,7 @@ POA_AMH_OpHolder::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OpHolder_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -5293,7 +5293,7 @@ POA_TAO_AMH_OpHolderResponseHandler::Operation_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMI_OpHolderHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -5668,7 +5668,7 @@ POA_AMI_OpHolderHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_com_AMH_IFace_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -5853,7 +5853,7 @@ POA_com::AMH_IFace::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_com_IFace_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -6157,7 +6157,7 @@ POA_com::TAO_AMH_IFaceResponseHandler::getInfo_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_com_AMI_IFaceHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -6532,7 +6532,7 @@ POA_com::AMI_IFaceHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Y_AMH_Z_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -6677,7 +6677,7 @@ POA_Y::AMH_Z::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Y_Z_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -6846,7 +6846,7 @@ POA_Y::Z::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Y_AMI_ZHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -7012,7 +7012,7 @@ POA_Y::AMI_ZHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_X_AMH_BI_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -7197,7 +7197,7 @@ POA_X::AMH_BI::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_X_BI_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -7488,7 +7488,7 @@ POA_X::TAO_AMH_BIResponseHandler::method_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_X_AMI_BIHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -7881,7 +7881,7 @@ POA_X::AMI_BIHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_XX_AMH_blah_intfc_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -8066,7 +8066,7 @@ POA_XX::AMH_blah_intfc::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_XX_blah_intfc_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -8348,7 +8348,7 @@ POA_XX::TAO_AMH_blah_intfcResponseHandler::op1_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_XX_AMI_blah_intfcHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -8704,7 +8704,7 @@ POA_XX::AMI_blah_intfcHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_XX_AMH_blah0_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -8892,7 +8892,7 @@ POA_XX::AMH_blah0::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_XX_blah0_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -9177,7 +9177,7 @@ POA_XX::TAO_AMH_blah0ResponseHandler::op0_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_XX_AMI_blah0Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -9556,7 +9556,7 @@ POA_XX::AMI_blah0Handler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_frag_AMH_frag_iface_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -9701,7 +9701,7 @@ POA_frag::AMH_frag_iface::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_frag_frag_iface_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -9870,7 +9870,7 @@ POA_frag::frag_iface::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_frag_AMI_frag_ifaceHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -10036,7 +10036,7 @@ POA_frag::AMI_frag_ifaceHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMH_gather_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -10233,7 +10233,7 @@ POA_AMH_gather::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_gather_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -10567,7 +10567,7 @@ POA_TAO_AMH_gatherResponseHandler::op_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMI_gatherHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -10954,7 +10954,7 @@ POA_AMI_gatherHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_foo_AMH_obj_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -11148,7 +11148,7 @@ POA_foo::AMH_obj::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_foo_obj_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -11448,7 +11448,7 @@ POA_foo::TAO_AMH_objResponseHandler::op_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_foo_AMI_objHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -11805,7 +11805,7 @@ POA_foo::AMI_objHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_B_AMH_X3_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -12035,7 +12035,7 @@ POA_A::B::AMH_X3::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_B_X3_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -12487,7 +12487,7 @@ POA_A::B::TAO_AMH_X3ResponseHandler::getX3_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_B_AMI_X3Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -13111,7 +13111,7 @@ POA_A::B::AMI_X3Handler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mA_AMH_A_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -13367,7 +13367,7 @@ POA_mA::AMH_A::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mA_A_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -13822,7 +13822,7 @@ POA_mA::TAO_AMH_AResponseHandler::set_theB_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mA_AMI_AHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -14388,7 +14388,7 @@ POA_mA::AMI_AHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mB_AMH_B_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -14647,7 +14647,7 @@ POA_mB::AMH_B::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mB_B_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -15105,7 +15105,7 @@ POA_mB::TAO_AMH_BResponseHandler::set_theA_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mB_AMI_BHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -15695,7 +15695,7 @@ POA_mB::AMI_BHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mC_AMH_C_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -15867,7 +15867,7 @@ POA_mC::AMH_C::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mC_C_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -16063,7 +16063,7 @@ POA_mC::C::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mC_AMI_CHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -16261,7 +16261,7 @@ POA_mC::AMI_CHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Schmoik_AMH_foo_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -16405,7 +16405,7 @@ POA_Schmoik::AMH_foo::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Schmoik_foo_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -16573,7 +16573,7 @@ POA_Schmoik::foo::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Schmoik_AMI_fooHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -16739,7 +16739,7 @@ POA_Schmoik::AMI_fooHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Thwoik_AMH_TestType_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -16884,7 +16884,7 @@ POA_Thwoik::AMH_TestType::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Thwoik_TestType_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -17053,7 +17053,7 @@ POA_Thwoik::TestType::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Thwoik_AMI_TestTypeHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -17219,7 +17219,7 @@ POA_Thwoik::AMI_TestTypeHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_mod_AMH_Foo_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -17364,7 +17364,7 @@ POA_A_mod::AMH_Foo::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_mod_Foo_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -17533,7 +17533,7 @@ POA_A_mod::Foo::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_mod_AMI_FooHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -17699,7 +17699,7 @@ POA_A_mod::AMI_FooHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_mod_B_mod_AMH_Foo_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -17845,7 +17845,7 @@ POA_A_mod::B_mod::AMH_Foo::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_mod_B_mod_Foo_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -18015,7 +18015,7 @@ POA_A_mod::B_mod::Foo::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_mod_B_mod_AMI_FooHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

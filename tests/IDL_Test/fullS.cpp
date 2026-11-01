@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_FULLS_JYWCZ7_CPP_
-#define _TAO_IDL_FULLS_JYWCZ7_CPP_
+#ifndef _TAO_IDL_FULLS_HKSNUT_CPP_
+#define _TAO_IDL_FULLS_HKSNUT_CPP_
 
 
 #include "fullS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_scope_test_AMH_i_scope_test_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -200,7 +200,7 @@ POA_scope_test::AMH_i_scope_test::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_scope_test_i_scope_test_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -369,7 +369,7 @@ POA_scope_test::i_scope_test::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_scope_test_AMI_i_scope_testHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -535,7 +535,7 @@ POA_scope_test::AMI_i_scope_testHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mod2_AMH_fwd_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -846,7 +846,7 @@ POA_mod2::AMH_fwd::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mod2_fwd_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1481,7 +1481,7 @@ POA_mod2::TAO_AMH_fwdResponseHandler::op_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_mod2_AMI_fwdHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

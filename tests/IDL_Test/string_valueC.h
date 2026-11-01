@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_STRING_VALUEC_DIR2DF_H_
-#define _TAO_IDL_STRING_VALUEC_DIR2DF_H_
+#ifndef _TAO_IDL_STRING_VALUEC_KF9Y4T_H_
+#define _TAO_IDL_STRING_VALUEC_KF9Y4T_H_
 
 #include /**/ "ace/pre.h"
 

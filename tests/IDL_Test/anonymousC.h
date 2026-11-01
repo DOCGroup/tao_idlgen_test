@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_ANONYMOUSC_RRJU73_H_
-#define _TAO_IDL_ANONYMOUSC_RRJU73_H_
+#ifndef _TAO_IDL_ANONYMOUSC_SO1JXY_H_
+#define _TAO_IDL_ANONYMOUSC_SO1JXY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -426,7 +426,7 @@ namespace Half_Anon
                 namespace All_Anon
                 {
                   // TAO_IDL - Generated from
-                  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+                  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -766,7 +766,7 @@ protected:
   _tao_unmarshal__All_Anon_AMH_anon_bd_string_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -883,7 +883,7 @@ private:
   AMH_anon_bd_string_testResponseHandler &operator= (AMH_anon_bd_string_testResponseHandler &&) = delete;
 };
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 

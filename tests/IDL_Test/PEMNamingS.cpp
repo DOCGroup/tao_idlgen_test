@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_PEMNAMINGS_CEVN1M_CPP_
-#define _TAO_IDL_PEMNAMINGS_CEVN1M_CPP_
+#ifndef _TAO_IDL_PEMNAMINGS_TST81W_CPP_
+#define _TAO_IDL_PEMNAMINGS_TST81W_CPP_
 
 
 #include "PEMNamingS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -307,7 +307,7 @@ POA_Plesk::Naming::AMH_ObjectResolver::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -826,7 +826,7 @@ POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_sc_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

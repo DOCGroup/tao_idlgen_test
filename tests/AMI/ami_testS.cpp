@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_AMI_TESTS_K586XG_CPP_
-#define _TAO_IDL_AMI_TESTS_K586XG_CPP_
+#ifndef _TAO_IDL_AMI_TESTS_QGOHZT_CPP_
+#define _TAO_IDL_AMI_TESTS_QGOHZT_CPP_
 
 
 #include "ami_testS.h"
@@ -50,7 +50,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_AMI_Test_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -644,7 +644,7 @@ POA_A::AMI_Test::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_AMI_AMI_TestHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1483,7 +1483,7 @@ POA_A::AMI_AMI_TestHandler::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_Test_Child_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1725,7 +1725,7 @@ POA_A::Test_Child::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_A_AMI_Test_ChildHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

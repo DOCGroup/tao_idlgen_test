@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_ZRMNK9_CPP_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_ZRMNK9_CPP_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_SPAOFU_CPP_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_SPAOFU_CPP_
 
 
 #include "Bug_2582_RegressionS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -280,7 +280,7 @@ POA_AMH_FieldDevice_T::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_FieldDevice_T_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -711,7 +711,7 @@ POA_TAO_AMH_FieldDevice_TResponseHandler::getEncoding_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

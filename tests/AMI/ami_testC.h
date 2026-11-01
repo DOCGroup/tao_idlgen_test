@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_AMI_TESTC_NZ7GV5_H_
-#define _TAO_IDL_AMI_TESTC_NZ7GV5_H_
+#ifndef _TAO_IDL_AMI_TESTC_JCELRT_H_
+#define _TAO_IDL_AMI_TESTC_JCELRT_H_
 
 #include /**/ "ace/pre.h"
 
@@ -133,7 +133,7 @@ namespace A
 
   extern  ::CORBA::TypeCode_ptr const _tc_DidTheRightThing;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -248,7 +248,7 @@ namespace A
 
   extern  ::CORBA::TypeCode_ptr const _tc_AMI_Test;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -378,7 +378,7 @@ namespace A
 
   extern  ::CORBA::TypeCode_ptr const _tc_AMI_AMI_TestHandler;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -468,7 +468,7 @@ namespace A
 
   extern  ::CORBA::TypeCode_ptr const _tc_Test_Child;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 

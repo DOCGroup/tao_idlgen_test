@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_OLD_UNIONS_N3K4NO_CPP_
-#define _TAO_IDL_OLD_UNIONS_N3K4NO_CPP_
+#ifndef _TAO_IDL_OLD_UNIONS_LCFPJ1_CPP_
+#define _TAO_IDL_OLD_UNIONS_LCFPJ1_CPP_
 
 
 #include "old_unionS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldUnion_AMH_a_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -249,7 +249,7 @@ POA_OldUnion::AMH_a::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldUnion_a_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -563,7 +563,7 @@ POA_OldUnion::TAO_AMH_aResponseHandler::opA_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldUnion_AMI_aHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

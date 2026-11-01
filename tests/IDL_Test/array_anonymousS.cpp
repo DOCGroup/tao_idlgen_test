@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_2E1QUL_CPP_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_2E1QUL_CPP_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_IEGBH6_CPP_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_IEGBH6_CPP_
 
 
 #include "array_anonymousS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMH_tdef_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -199,7 +199,7 @@ POA_AMH_tdef::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_tdef_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -367,7 +367,7 @@ POA_tdef::_this ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMI_tdefHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

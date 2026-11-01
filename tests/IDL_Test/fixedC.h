@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_FIXEDC_SKQVTF_H_
-#define _TAO_IDL_FIXEDC_SKQVTF_H_
+#ifndef _TAO_IDL_FIXEDC_ILUA1C_H_
+#define _TAO_IDL_FIXEDC_ILUA1C_H_
 
 #include /**/ "ace/pre.h"
 
@@ -137,7 +137,7 @@ namespace FixedPoint
     FixedPoint::MaximumScale maximum_scale_value {};
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -339,7 +339,7 @@ protected:
   _tao_unmarshal__FixedPoint_AMH_FixedOperationsExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -423,7 +423,7 @@ private:
   AMH_FixedOperationsResponseHandler &operator= (AMH_FixedOperationsResponseHandler &&) = delete;
 };
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 

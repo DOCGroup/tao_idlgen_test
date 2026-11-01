@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_CONSTANTSC_MYS1PP_H_
-#define _TAO_IDL_CONSTANTSC_MYS1PP_H_
+#ifndef _TAO_IDL_CONSTANTSC_99PTSK_H_
+#define _TAO_IDL_CONSTANTSC_99PTSK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -392,7 +392,7 @@ namespace problems
 namespace ClassConstants
 {
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -600,7 +600,7 @@ namespace ClassConstants
     virtual ~AMH_IfaceExceptionHolder_init ();
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 
@@ -673,7 +673,7 @@ namespace ClassConstants
     AMH_IfaceResponseHandler &operator= (AMH_IfaceResponseHandler &&) = delete;
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:512
 
 
 

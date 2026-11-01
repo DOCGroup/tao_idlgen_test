@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_2VWEEF_CPP_
-#define _TAO_IDL_GENERIC_OBJECTS_2VWEEF_CPP_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_ZL5UYL_CPP_
+#define _TAO_IDL_GENERIC_OBJECTS_ZL5UYL_CPP_
 
 
 #include "generic_objectS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMH_generic_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -252,7 +252,7 @@ POA_AMH_generic::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_generic_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -586,7 +586,7 @@ POA_TAO_AMH_genericResponseHandler::op_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMI_genericHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

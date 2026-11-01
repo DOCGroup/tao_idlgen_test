@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_NCGG14_CPP_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_NCGG14_CPP_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_VZRRHF_CPP_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_VZRRHF_CPP_
 
 
 #include "Bug_2350_RegressionS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -249,7 +249,7 @@ POA_AMH_Bug_2350_Regression::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Bug_2350_Regression_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -554,7 +554,7 @@ POA_TAO_AMH_Bug_2350_RegressionResponseHandler::Bug_2350_Regression_excep_excep 
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

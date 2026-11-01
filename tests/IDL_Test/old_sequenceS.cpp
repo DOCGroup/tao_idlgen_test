@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_VVLMIR_CPP_
-#define _TAO_IDL_OLD_SEQUENCES_VVLMIR_CPP_
+#ifndef _TAO_IDL_OLD_SEQUENCES_XHPEFG_CPP_
+#define _TAO_IDL_OLD_SEQUENCES_XHPEFG_CPP_
 
 
 #include "old_sequenceS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMH_TestSeq_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -311,7 +311,7 @@ POA_AMH_TestSeq::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_TestSeq_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -758,7 +758,7 @@ POA_TAO_AMH_TestSeqResponseHandler::set_fattr_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_AMI_TestSeqHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

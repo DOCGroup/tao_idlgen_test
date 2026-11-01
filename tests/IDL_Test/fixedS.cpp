@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_FIXEDS_0D54MA_CPP_
-#define _TAO_IDL_FIXEDS_0D54MA_CPP_
+#ifndef _TAO_IDL_FIXEDS_EBEFJE_CPP_
+#define _TAO_IDL_FIXEDS_EBEFJE_CPP_
 
 
 #include "fixedS.h"
@@ -55,7 +55,7 @@
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -311,7 +311,7 @@ POA_FixedPoint::AMH_FixedOperations::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -766,7 +766,7 @@ POA_FixedPoint::TAO_AMH_FixedOperationsResponseHandler::set_rate_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
