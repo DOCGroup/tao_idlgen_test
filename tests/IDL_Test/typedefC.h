@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_TYPEDEFC_IUMQI6_H_
-#define _TAO_IDL_TYPEDEFC_IUMQI6_H_
+#ifndef _TAO_IDL_TYPEDEFC_HMSKWJ_H_
+#define _TAO_IDL_TYPEDEFC_HMSKWJ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -419,7 +419,7 @@ namespace TestModule
     TestInterface &operator= (TestInterface &&) = delete;
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -432,7 +432,7 @@ namespace TestModule
 
 #endif /* end #if !defined */
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -473,7 +473,7 @@ namespace TestModule
 
   public:
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
   public:
@@ -481,7 +481,7 @@ namespace TestModule
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -489,7 +489,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -497,13 +497,13 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
   virtual void raise_sendc_set_typedef_2 ();
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -832,7 +832,7 @@ namespace bug_2124
     Foo &operator= (Foo &&) = delete;
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -845,7 +845,7 @@ namespace bug_2124
 
 #endif /* end #if !defined */
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -886,7 +886,7 @@ namespace bug_2124
 
   public:
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
   public:
@@ -894,7 +894,7 @@ namespace bug_2124
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -902,7 +902,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -910,13 +910,13 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
   virtual void raise_sendc_op2 ();
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -1237,7 +1237,7 @@ namespace bug_2122
       Whatever &operator= (Whatever &&) = delete;
     };
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -1250,7 +1250,7 @@ namespace bug_2122
 
 #endif /* end #if !defined */
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -1291,7 +1291,7 @@ namespace bug_2122
 
     public:
       // TAO_IDL - Generated from
-      // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+      // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
     public:
@@ -1299,13 +1299,13 @@ namespace bug_2122
 
   public:
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
   public:
     virtual void raise_sendc_someOp ();
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -1605,7 +1605,7 @@ namespace Two
     WhoCares &operator= (WhoCares &&) = delete;
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -1618,7 +1618,7 @@ namespace Two
 
 #endif /* end #if !defined */
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -1659,7 +1659,7 @@ namespace Two
 
   public:
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
   public:
@@ -1667,13 +1667,13 @@ namespace Two
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
   virtual void raise_sendc_someOp ();
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -1973,7 +1973,7 @@ namespace Three
     WhoCares &operator= (WhoCares &&) = delete;
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -1986,7 +1986,7 @@ namespace Three
 
 #endif /* end #if !defined */
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -2027,7 +2027,7 @@ namespace Three
 
   public:
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
   public:
@@ -2035,13 +2035,13 @@ namespace Three
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
   virtual void raise_sendc_someOp ();
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -3921,7 +3921,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_CommaList_Trouble_H_ */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1573
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1576
 
 #if defined (__ACE_INLINE__)
 #include "typedefC.inl"

@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_GPERFC_M3EQVX_H_
-#define _TAO_IDL_GPERFC_M3EQVX_H_
+#ifndef _TAO_IDL_GPERFC_JEQP5K_H_
+#define _TAO_IDL_GPERFC_JEQP5K_H_
 
 #include /**/ "ace/pre.h"
 
@@ -190,7 +190,7 @@ private:
 
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_testlistitem;
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -203,7 +203,7 @@ using AMH_testlistitemExceptionHolder_out = TAO_Value_Out_T<AMH_testlistitemExce
 
 #endif /* end #if !defined */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -244,7 +244,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -252,13 +252,13 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
   virtual void raise_sendc_get_name ();
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -642,7 +642,7 @@ private:
 
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_test;
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -655,7 +655,7 @@ using AMH_testExceptionHolder_out = TAO_Value_Out_T<AMH_testExceptionHolder>;
 
 #endif /* end #if !defined */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -696,7 +696,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -704,7 +704,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -712,7 +712,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -720,7 +720,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -728,7 +728,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -736,7 +736,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -744,7 +744,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -752,7 +752,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -760,7 +760,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -768,7 +768,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -776,7 +776,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -784,7 +784,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -792,7 +792,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -800,7 +800,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -808,7 +808,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -816,7 +816,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -824,7 +824,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -832,7 +832,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -840,7 +840,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -848,7 +848,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -856,7 +856,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -864,7 +864,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -872,7 +872,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -880,7 +880,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -888,7 +888,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -896,7 +896,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -904,7 +904,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -912,7 +912,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -920,7 +920,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -928,13 +928,13 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
   virtual void raise_sendc_new_testlistitem ();
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -1501,7 +1501,7 @@ private:
 
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Simple_Server;
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -1514,7 +1514,7 @@ using AMH_Simple_ServerExceptionHolder_out = TAO_Value_Out_T<AMH_Simple_ServerEx
 
 #endif /* end #if !defined */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -1555,7 +1555,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1563,7 +1563,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1571,7 +1571,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1579,7 +1579,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1587,7 +1587,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1595,7 +1595,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1603,7 +1603,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1611,7 +1611,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1619,7 +1619,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1627,7 +1627,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1635,7 +1635,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1643,7 +1643,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1651,7 +1651,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1659,7 +1659,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1667,7 +1667,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1675,7 +1675,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1683,7 +1683,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -1691,13 +1691,13 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
   virtual void raise_transferTriggerTdc ();
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -2876,7 +2876,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1573
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1576
 
 #if defined (__ACE_INLINE__)
 #include "gperfC.inl"

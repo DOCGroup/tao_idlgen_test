@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_OLD_UNION2S_F3ZD28_CPP_
-#define _TAO_IDL_OLD_UNION2S_F3ZD28_CPP_
+#ifndef _TAO_IDL_OLD_UNION2S_OOFXXE_CPP_
+#define _TAO_IDL_OLD_UNION2S_OOFXXE_CPP_
 
 
 #include "old_union2S.h"

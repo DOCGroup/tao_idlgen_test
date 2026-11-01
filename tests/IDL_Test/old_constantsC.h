@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_OLD_CONSTANTSC_YRYRZX_H_
-#define _TAO_IDL_OLD_CONSTANTSC_YRYRZX_H_
+#ifndef _TAO_IDL_OLD_CONSTANTSC_YSES7I_H_
+#define _TAO_IDL_OLD_CONSTANTSC_YSES7I_H_
 
 #include /**/ "ace/pre.h"
 
@@ -385,7 +385,7 @@ namespace OldConstants
 
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_A;
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -398,7 +398,7 @@ namespace OldConstants
 
 #endif /* end #if !defined */
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -439,7 +439,7 @@ namespace OldConstants
 
     public:
       // TAO_IDL - Generated from
-      // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+      // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
     public:
@@ -447,13 +447,13 @@ namespace OldConstants
 
   public:
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
   public:
     virtual void raise_sendc_foo ();
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -1224,7 +1224,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1573
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1576
 
 #if defined (__ACE_INLINE__)
 #include "old_constantsC.inl"

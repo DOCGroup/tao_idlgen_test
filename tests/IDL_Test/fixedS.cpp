@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_FIXEDS_BHAKW2_CPP_
-#define _TAO_IDL_FIXEDS_BHAKW2_CPP_
+#ifndef _TAO_IDL_FIXEDS_0D54MA_CPP_
+#define _TAO_IDL_FIXEDS_0D54MA_CPP_
 
 
 #include "fixedS.h"

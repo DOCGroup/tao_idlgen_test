@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_PRAGMAC_8PO7Q3_H_
-#define _TAO_IDL_PRAGMAC_8PO7Q3_H_
+#ifndef _TAO_IDL_PRAGMAC_V5LCK3_H_
+#define _TAO_IDL_PRAGMAC_V5LCK3_H_
 
 #include /**/ "ace/pre.h"
 
@@ -165,7 +165,7 @@ private:
   hello &operator= (hello &&) = delete;
 };
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -178,7 +178,7 @@ using AMH_helloExceptionHolder_out = TAO_Value_Out_T<AMH_helloExceptionHolder>;
 
 #endif /* end #if !defined */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -217,7 +217,7 @@ public:
 
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -566,7 +566,7 @@ private:
   goodbye &operator= (goodbye &&) = delete;
 };
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -579,7 +579,7 @@ using AMH_goodbyeExceptionHolder_out = TAO_Value_Out_T<AMH_goodbyeExceptionHolde
 
 #endif /* end #if !defined */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -618,7 +618,7 @@ public:
 
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -945,7 +945,7 @@ namespace salutation
     sayonara &operator= (sayonara &&) = delete;
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -958,7 +958,7 @@ namespace salutation
 
 #endif /* end #if !defined */
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -997,7 +997,7 @@ namespace salutation
 
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -1283,7 +1283,7 @@ private:
   ciao &operator= (ciao &&) = delete;
 };
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -1296,7 +1296,7 @@ using AMH_ciaoExceptionHolder_out = TAO_Value_Out_T<AMH_ciaoExceptionHolder>;
 
 #endif /* end #if !defined */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -1335,7 +1335,7 @@ public:
 
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -1597,7 +1597,7 @@ private:
   aloha &operator= (aloha &&) = delete;
 };
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -1610,7 +1610,7 @@ using AMH_alohaExceptionHolder_out = TAO_Value_Out_T<AMH_alohaExceptionHolder>;
 
 #endif /* end #if !defined */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -1649,7 +1649,7 @@ public:
 
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -3049,7 +3049,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1573
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1576
 
 #if defined (__ACE_INLINE__)
 #include "pragmaC.inl"

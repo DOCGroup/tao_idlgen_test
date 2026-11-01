@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONC_58A9DJ_H_
-#define _TAO_IDL_BUG_2619_REGRESSIONC_58A9DJ_H_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONC_FSN6MJ_H_
+#define _TAO_IDL_BUG_2619_REGRESSIONC_FSN6MJ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -116,7 +116,7 @@ struct TAO_IDL_TEST_STUB_Export Type_T
 
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Type_T;
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -129,7 +129,7 @@ using T_Data_T_out = TAO_Value_Out_T<T_Data_T>;
 
 #endif /* end #if !defined */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -169,7 +169,7 @@ public:
   virtual const Type_T &type () const = 0;
   virtual Type_T &type () = 0;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -318,7 +318,7 @@ private:
 
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Test;
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -331,7 +331,7 @@ using AMH_TestExceptionHolder_out = TAO_Value_Out_T<AMH_TestExceptionHolder>;
 
 #endif /* end #if !defined */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -372,7 +372,7 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
@@ -380,13 +380,13 @@ public:
 
 public:
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:397
 
 
 public:
   virtual void raise_sendc_getGroup ();
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -1073,7 +1073,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1573
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1576
 
 #if defined (__ACE_INLINE__)
 #include "Bug_2619_RegressionC.inl"

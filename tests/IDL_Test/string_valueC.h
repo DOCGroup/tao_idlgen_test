@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_STRING_VALUEC_16OI18_H_
-#define _TAO_IDL_STRING_VALUEC_16OI18_H_
+#ifndef _TAO_IDL_STRING_VALUEC_DIR2DF_H_
+#define _TAO_IDL_STRING_VALUEC_DIR2DF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -72,7 +72,7 @@
 namespace include_test
 {
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -85,7 +85,7 @@ namespace include_test
 
 #endif /* end #if !defined */
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -124,7 +124,7 @@ namespace include_test
     virtual void my_string_value (CORBA::StringValue *) = 0;
     virtual CORBA::StringValue *my_string_value () const = 0;
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -355,7 +355,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1573
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1576
 
 #if defined (__ACE_INLINE__)
 #include "string_valueC.inl"

@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:111
 
-#ifndef _TAO_IDL_INCLUDEDC_MQAKVO_H_
-#define _TAO_IDL_INCLUDEDC_MQAKVO_H_
+#ifndef _TAO_IDL_INCLUDEDC_OBNTF9_H_
+#define _TAO_IDL_INCLUDEDC_OBNTF9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -177,7 +177,7 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Agog;
 namespace VT_Def
 {
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -190,7 +190,7 @@ namespace VT_Def
 
 #endif /* end #if !defined */
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -222,7 +222,7 @@ namespace VT_Def
 
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -277,7 +277,7 @@ namespace VT_Def
 
 } // module VT_Def
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -290,7 +290,7 @@ using IncludedBase_out = TAO_Value_Out_T<IncludedBase>;
 
 #endif /* end #if !defined */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -366,7 +366,7 @@ public:
   virtual const IncludedBase::_tao_seq_CORBA_Long_ &DeprecatedMember () const = 0;
   virtual IncludedBase::_tao_seq_CORBA_Long_ &DeprecatedMember () = 0;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -618,7 +618,7 @@ namespace RootModule
 
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ParentIF;
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -631,7 +631,7 @@ namespace RootModule
 
 #endif /* end #if !defined */
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -670,7 +670,7 @@ namespace RootModule
 
       virtual ::CORBA::TypeCode_ptr _tao_type () const;
       // TAO_IDL - Generated from
-      // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+      // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -988,7 +988,7 @@ private:
 
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AAA;
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:527
 
 
 
@@ -1001,7 +1001,7 @@ using AMH_AAAExceptionHolder_out = TAO_Value_Out_T<AMH_AAAExceptionHolder>;
 
 #endif /* end #if !defined */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
 
 
 
@@ -1040,7 +1040,7 @@ public:
 
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
 
 
@@ -2343,7 +2343,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1573
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1576
 
 #if defined (__ACE_INLINE__)
 #include "includedC.inl"

@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_QM34C6_CPP_
-#define _TAO_IDL_OLD_SEQUENCES_QM34C6_CPP_
+#ifndef _TAO_IDL_OLD_SEQUENCES_VVLMIR_CPP_
+#define _TAO_IDL_OLD_SEQUENCES_VVLMIR_CPP_
 
 
 #include "old_sequenceS.h"

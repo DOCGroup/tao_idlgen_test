@@ -23,7 +23,7 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:313
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:316
 
 
 #include "sequenceC.h"
@@ -2136,7 +2136,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_myfoostructseq_CPP_ */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:45
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2258,7 +2258,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Deployment_ComponentPackageDescriptions_CPP_ */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:45
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2337,7 +2337,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Deployment_NamedImplementationArtifacts_CPP_ */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:45
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2366,7 +2366,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:45
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2419,7 +2419,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Deployment_MonolithicImplementationDescriptions_CPP_ */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:45
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2474,7 +2474,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Deployment_PackagedComponentImplementations_CPP_ */
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:45
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL

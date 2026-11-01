@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_REOPENED_MODULESS_V96JXD_CPP_
-#define _TAO_IDL_REOPENED_MODULESS_V96JXD_CPP_
+#ifndef _TAO_IDL_REOPENED_MODULESS_SV5OXH_CPP_
+#define _TAO_IDL_REOPENED_MODULESS_SV5OXH_CPP_
 
 
 #include "reopened_modulesS.h"

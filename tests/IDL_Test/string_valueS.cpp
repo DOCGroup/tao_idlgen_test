@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_STRING_VALUES_LFF23A_CPP_
-#define _TAO_IDL_STRING_VALUES_LFF23A_CPP_
+#ifndef _TAO_IDL_STRING_VALUES_3RO187_CPP_
+#define _TAO_IDL_STRING_VALUES_3RO187_CPP_
 
 
 #include "string_valueS.h"

@@ -23,7 +23,7 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:313
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:316
 
 
 #include "inheritC.h"
@@ -3662,7 +3662,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:499
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -3809,7 +3809,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:499
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -3956,7 +3956,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:499
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -4103,7 +4103,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:499
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -4250,7 +4250,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:499
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 

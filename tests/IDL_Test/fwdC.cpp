@@ -23,7 +23,7 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:313
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:316
 
 
 #include "fwdC.h"
@@ -4356,7 +4356,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:45
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -4386,7 +4386,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:45
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -4492,7 +4492,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:499
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -4665,7 +4665,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:499
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -4948,7 +4948,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:499
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -5052,7 +5052,7 @@ OBV_obv_fwd::EnclosingType::truncation_hook ()
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:499
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 

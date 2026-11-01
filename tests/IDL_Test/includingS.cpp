@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_INCLUDINGS_6W1U4D_CPP_
-#define _TAO_IDL_INCLUDINGS_6W1U4D_CPP_
+#ifndef _TAO_IDL_INCLUDINGS_2TY9H5_CPP_
+#define _TAO_IDL_INCLUDINGS_2TY9H5_CPP_
 
 
 #include "includingS.h"

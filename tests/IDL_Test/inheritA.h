@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:704
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:707
 
-#ifndef _TAO_IDL_INHERITA_MKPAAN_H_
-#define _TAO_IDL_INHERITA_MKPAAN_H_
+#ifndef _TAO_IDL_INHERITA_ZY9NPV_H_
+#define _TAO_IDL_INHERITA_ZY9NPV_H_
 
 #include /**/ "ace/pre.h"
 

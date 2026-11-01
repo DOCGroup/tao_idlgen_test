@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2S_R3MD94_CPP_
-#define _TAO_IDL_REOPEN_INCLUDE2S_R3MD94_CPP_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2S_K3IW1C_CPP_
+#define _TAO_IDL_REOPEN_INCLUDE2S_K3IW1C_CPP_
 
 
 #include "reopen_include2S.h"

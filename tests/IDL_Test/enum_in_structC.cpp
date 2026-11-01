@@ -23,7 +23,7 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:313
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:316
 
 
 #include "enum_in_structC.h"
@@ -1001,7 +1001,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:45
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1094,7 +1094,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:45
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1283,7 +1283,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:45
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL

@@ -23,7 +23,7 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:313
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:316
 
 
 #include "expressionsC.h"

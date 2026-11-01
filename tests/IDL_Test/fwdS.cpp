@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
-#ifndef _TAO_IDL_FWDS_W12WHG_CPP_
-#define _TAO_IDL_FWDS_W12WHG_CPP_
+#ifndef _TAO_IDL_FWDS_BPSZ5L_CPP_
+#define _TAO_IDL_FWDS_BPSZ5L_CPP_
 
 
 #include "fwdS.h"
