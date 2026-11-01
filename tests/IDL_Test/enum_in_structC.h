@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
 
-#ifndef _TAO_IDL_ENUM_IN_STRUCTC_1QB805_H_
-#define _TAO_IDL_ENUM_IN_STRUCTC_1QB805_H_
+#ifndef _TAO_IDL_ENUM_IN_STRUCTC_LE5HJV_H_
+#define _TAO_IDL_ENUM_IN_STRUCTC_LE5HJV_H_
 
 #include /**/ "ace/pre.h"
 

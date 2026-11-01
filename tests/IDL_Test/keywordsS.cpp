@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_KEYWORDSS_MLS5LZ_CPP_
-#define _TAO_IDL_KEYWORDSS_MLS5LZ_CPP_
+#ifndef _TAO_IDL_KEYWORDSS_IQNS65_CPP_
+#define _TAO_IDL_KEYWORDSS_IQNS65_CPP_
 
 
 #include "keywordsS.h"

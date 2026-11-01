@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_REOPENED_MODULESS_VFNONF_CPP_
-#define _TAO_IDL_REOPENED_MODULESS_VFNONF_CPP_
+#ifndef _TAO_IDL_REOPENED_MODULESS_V96JXD_CPP_
+#define _TAO_IDL_REOPENED_MODULESS_V96JXD_CPP_
 
 
 #include "reopened_modulesS.h"
