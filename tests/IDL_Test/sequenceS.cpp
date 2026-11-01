@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_SEQUENCES_DIW2VR_CPP_
-#define _TAO_IDL_SEQUENCES_DIW2VR_CPP_
+#ifndef _TAO_IDL_SEQUENCES_2L0JWQ_CPP_
+#define _TAO_IDL_SEQUENCES_2L0JWQ_CPP_
 
 
 #include "sequenceS.h"

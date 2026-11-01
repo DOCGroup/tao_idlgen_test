@@ -23,10 +23,10 @@
  **/
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:577
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_97XZ3Y_CPP_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_97XZ3Y_CPP_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_CIDR38_CPP_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_CIDR38_CPP_
 
 
 #include "TestVersionedNamespace2S.h"
@@ -56,7 +56,7 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1624
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
 
 class TAO_M1_AMH_LI_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -71,6 +71,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_M1_AMH_LI_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_M1_AMH_LI_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -130,7 +131,7 @@ TAO_M1_AMH_LI_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -141,7 +142,7 @@ static TAO_M1_AMH_LI_Perfect_Hash_OpTable tao_M1_AMH_LI_optable;
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:81
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -202,7 +203,7 @@ POA_M1::AMH_LI::op_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:128
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -222,7 +223,7 @@ const char* POA_M1::AMH_LI::_interface_repository_id () const
   return "IDL:M1/LI:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
 
 void
 POA_M1::AMH_LI::_dispatch (
@@ -232,7 +233,7 @@ POA_M1::AMH_LI::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
 
 M1::LI*
 POA_M1::AMH_LI::_this ()
@@ -249,7 +250,7 @@ POA_M1::AMH_LI::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1624
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
 
 class TAO_M1_LI_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -264,6 +265,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_M1_LI_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_M1_LI_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -323,7 +325,7 @@ TAO_M1_LI_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -334,7 +336,7 @@ static TAO_M1_LI_Perfect_Hash_OpTable tao_M1_LI_optable;
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:81
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -428,7 +430,7 @@ void POA_M1::LI::op_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:128
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -450,7 +452,7 @@ const char* POA_M1::LI::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:367
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:370
 
 
 
@@ -463,7 +465,7 @@ void POA_M1::LI::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:327
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:330
 
 
 
@@ -481,7 +483,7 @@ POA_M1::LI::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_ss.cpp:39
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_ss.cpp:61
 
 
 // TAO_IDL - Generated from
@@ -512,7 +514,7 @@ POA_M1::TAO_AMH_LIResponseHandler::op_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1624
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
 
 class TAO_M1_AMH_L2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -527,6 +529,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_M1_AMH_L2_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_M1_AMH_L2_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -586,7 +589,7 @@ TAO_M1_AMH_L2_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -597,7 +600,7 @@ static TAO_M1_AMH_L2_Perfect_Hash_OpTable tao_M1_AMH_L2_optable;
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:81
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -658,7 +661,7 @@ POA_M1::AMH_L2::op_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:128
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -678,7 +681,7 @@ const char* POA_M1::AMH_L2::_interface_repository_id () const
   return "IDL:M1/L2:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
 
 void
 POA_M1::AMH_L2::_dispatch (
@@ -688,7 +691,7 @@ POA_M1::AMH_L2::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
 
 M1::L2*
 POA_M1::AMH_L2::_this ()
@@ -705,7 +708,7 @@ POA_M1::AMH_L2::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1624
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
 
 class TAO_M1_L2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -720,6 +723,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_M1_L2_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_M1_L2_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -779,7 +783,7 @@ TAO_M1_L2_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -790,7 +794,7 @@ static TAO_M1_L2_Perfect_Hash_OpTable tao_M1_L2_optable;
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:81
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -884,7 +888,7 @@ void POA_M1::L2::op_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:128
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -906,7 +910,7 @@ const char* POA_M1::L2::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:367
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:370
 
 
 
@@ -919,7 +923,7 @@ void POA_M1::L2::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:327
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:330
 
 
 
@@ -937,7 +941,7 @@ POA_M1::L2::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_ss.cpp:39
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_ss.cpp:61
 
 
 // TAO_IDL - Generated from
@@ -968,7 +972,7 @@ POA_M1::TAO_AMH_L2ResponseHandler::op_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1624
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
 
 class TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -983,6 +987,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1042,7 +1047,7 @@ TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -1053,7 +1058,7 @@ static TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable tao_M2_M3_AMH_L3_optable;
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:81
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -1114,7 +1119,7 @@ POA_M2::M3::AMH_L3::op_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:128
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -1134,7 +1139,7 @@ const char* POA_M2::M3::AMH_L3::_interface_repository_id () const
   return "IDL:M2/M3/L3:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
 
 void
 POA_M2::M3::AMH_L3::_dispatch (
@@ -1144,7 +1149,7 @@ POA_M2::M3::AMH_L3::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
 
 M2::M3::L3*
 POA_M2::M3::AMH_L3::_this ()
@@ -1161,7 +1166,7 @@ POA_M2::M3::AMH_L3::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1624
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
 
 class TAO_M2_M3_L3_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1176,6 +1181,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_M2_M3_L3_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_M2_M3_L3_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1235,7 +1241,7 @@ TAO_M2_M3_L3_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -1246,7 +1252,7 @@ static TAO_M2_M3_L3_Perfect_Hash_OpTable tao_M2_M3_L3_optable;
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:81
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -1344,7 +1350,7 @@ void POA_M2::M3::L3::op_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:128
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -1366,7 +1372,7 @@ const char* POA_M2::M3::L3::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:367
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:370
 
 
 
@@ -1379,7 +1385,7 @@ void POA_M2::M3::L3::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:327
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:330
 
 
 
@@ -1397,7 +1403,7 @@ POA_M2::M3::L3::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_ss.cpp:39
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_ss.cpp:61
 
 
 // TAO_IDL - Generated from
@@ -1428,7 +1434,7 @@ POA_M2::M3::TAO_AMH_L3ResponseHandler::op_excep (
   }
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1624
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
 
 class TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1443,6 +1449,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1502,7 +1509,7 @@ TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -1513,7 +1520,7 @@ static TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable tao_M2_M3_AMH_L4_optable;
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:81
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -1574,7 +1581,7 @@ POA_M2::M3::AMH_L4::op_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:128
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -1594,7 +1601,7 @@ const char* POA_M2::M3::AMH_L4::_interface_repository_id () const
   return "IDL:M2/M3/L4:1.0";
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
 
 void
 POA_M2::M3::AMH_L4::_dispatch (
@@ -1604,7 +1611,7 @@ POA_M2::M3::AMH_L4::_dispatch (
   this->asynchronous_upcall_dispatch (req,context,this);
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
 
 M2::M3::L4*
 POA_M2::M3::AMH_L4::_this ()
@@ -1621,7 +1628,7 @@ POA_M2::M3::AMH_L4::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1624
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1576
 
 class TAO_M2_M3_L4_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1636,6 +1643,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_M2_M3_L4_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_M2_M3_L4_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1695,7 +1703,7 @@ TAO_M2_M3_L4_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -1706,7 +1714,7 @@ static TAO_M2_M3_L4_Perfect_Hash_OpTable tao_M2_M3_L4_optable;
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:81
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -1813,7 +1821,7 @@ void POA_M2::M3::L4::op_skel (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:128
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -1835,7 +1843,7 @@ const char* POA_M2::M3::L4::_interface_repository_id () const
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:367
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:370
 
 
 
@@ -1848,7 +1856,7 @@ void POA_M2::M3::L4::_dispatch (
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:327
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:330
 
 
 
@@ -1866,7 +1874,7 @@ POA_M2::M3::L4::_this ()
   return {};
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_ss.cpp:39
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_ss.cpp:61
 
 
 // TAO_IDL - Generated from

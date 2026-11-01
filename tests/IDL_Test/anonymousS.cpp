@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_ANONYMOUSS_8040Z5_CPP_
-#define _TAO_IDL_ANONYMOUSS_8040Z5_CPP_
+#ifndef _TAO_IDL_ANONYMOUSS_0HY8RI_CPP_
+#define _TAO_IDL_ANONYMOUSS_0HY8RI_CPP_
 
 
 #include "anonymousS.h"
@@ -70,6 +70,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -144,7 +145,7 @@ TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *s
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -156,7 +157,7 @@ TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *s
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }
@@ -591,6 +592,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -665,7 +667,7 @@ TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, 
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -677,7 +679,7 @@ TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, 
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }
@@ -1844,6 +1846,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1926,7 +1929,7 @@ TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (const 
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -1938,7 +1941,7 @@ TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (const 
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }

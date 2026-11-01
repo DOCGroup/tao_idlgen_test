@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:397
 
-#ifndef _TAO_IDL_CONSTANTSS_P1ST4M_H_
-#define _TAO_IDL_CONSTANTSS_P1ST4M_H_
+#ifndef _TAO_IDL_CONSTANTSS_9A5POM_H_
+#define _TAO_IDL_CONSTANTSS_9A5POM_H_
 
 #include /**/ "ace/pre.h"
 

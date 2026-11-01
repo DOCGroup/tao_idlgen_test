@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_GPERFS_2L5UMA_CPP_
-#define _TAO_IDL_GPERFS_2L5UMA_CPP_
+#ifndef _TAO_IDL_GPERFS_CU7KA5_CPP_
+#define _TAO_IDL_GPERFS_CU7KA5_CPP_
 
 
 #include "gperfS.h"
@@ -70,6 +70,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMH_testlistitem_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_AMH_testlistitem_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -129,7 +130,7 @@ TAO_AMH_testlistitem_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -254,6 +255,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_testlistitem_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_testlistitem_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -313,7 +315,7 @@ TAO_testlistitem_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -553,6 +555,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -614,7 +617,7 @@ TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable::lookup (const char *str, unsig
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -919,6 +922,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMH_test_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_AMH_test_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -999,7 +1003,7 @@ TAO_AMH_test_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -1011,7 +1015,7 @@ TAO_AMH_test_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }
@@ -1769,6 +1773,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_test_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_test_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1849,7 +1854,7 @@ TAO_test_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -1861,7 +1866,7 @@ TAO_test_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }
@@ -3904,6 +3909,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMI_testHandler_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_AMI_testHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -3994,41 +4000,41 @@ TAO_AMI_testHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
                 {
                 case   9:
                   resword = &wordlist[9];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[10];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[11];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   return 0;
                 case  10:
                   resword = &wordlist[12];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[13];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[14];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[15];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   return 0;
                 case  14:
                   resword = &wordlist[16]; break;
                 case  15:
                   resword = &wordlist[17];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[18];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[19];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   return 0;
                 case  16:
                   resword = &wordlist[20];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[21];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[22];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[23];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   return 0;
                 case  17:
                   resword = &wordlist[24]; break;
@@ -4036,21 +4042,21 @@ TAO_AMI_testHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
                   resword = &wordlist[25]; break;
                 case  19:
                   resword = &wordlist[26];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[27];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[28];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   return 0;
                 case  20:
                   resword = &wordlist[29];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[30];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[31];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[32];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   return 0;
                 case  21:
                   resword = &wordlist[33]; break;
@@ -4060,27 +4066,27 @@ TAO_AMI_testHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
                   resword = &wordlist[35]; break;
                 case  25:
                   resword = &wordlist[36];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[37];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[38];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   return 0;
                 case  26:
                   resword = &wordlist[39];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[40];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[41];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   resword = &wordlist[42];
-                  if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
                   return 0;
                 case  29:
                   resword = &wordlist[43]; break;
                 default: return 0;
                 }
-              if (*str == *resword->opname && !ACE_OS::strncmp (str + 1, resword->opname + 1, len - 1))
+              if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                 return resword;
               return 0;
             }
@@ -7033,6 +7039,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMH_Simple_Server_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_AMH_Simple_Server_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -7117,7 +7124,7 @@ TAO_AMH_Simple_Server_Perfect_Hash_OpTable::lookup (const char *str, unsigned in
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -7129,7 +7136,7 @@ TAO_AMH_Simple_Server_Perfect_Hash_OpTable::lookup (const char *str, unsigned in
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }
@@ -7918,6 +7925,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Simple_Server_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_Simple_Server_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -8002,7 +8010,7 @@ TAO_Simple_Server_Perfect_Hash_OpTable::lookup (const char *str, unsigned int le
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -8014,7 +8022,7 @@ TAO_Simple_Server_Perfect_Hash_OpTable::lookup (const char *str, unsigned int le
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }
@@ -10069,6 +10077,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -10126,7 +10135,7 @@ TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable::lookup (const char *str, unsi
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }

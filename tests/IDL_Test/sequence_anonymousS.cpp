@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_VIGZE1_CPP_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_VIGZE1_CPP_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_9PV2D9_CPP_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_9PV2D9_CPP_
 
 
 #include "sequence_anonymousS.h"
@@ -70,6 +70,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMH_seqTest_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_AMH_seqTest_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -128,7 +129,7 @@ TAO_AMH_seqTest_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -262,6 +263,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_seqTest_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_seqTest_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -320,7 +322,7 @@ TAO_seqTest_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }
@@ -563,6 +565,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMI_seqTestHandler_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_AMI_seqTestHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -622,7 +625,7 @@ TAO_AMI_seqTestHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned i
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }

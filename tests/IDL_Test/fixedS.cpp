@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_FIXEDS_NYHR13_CPP_
-#define _TAO_IDL_FIXEDS_NYHR13_CPP_
+#ifndef _TAO_IDL_FIXEDS_W506RQ_CPP_
+#define _TAO_IDL_FIXEDS_W506RQ_CPP_
 
 
 #include "fixedS.h"
@@ -70,6 +70,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -137,7 +138,7 @@ TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::lookup (const char *str
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -149,7 +150,7 @@ TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::lookup (const char *str
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }
@@ -325,6 +326,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -392,7 +394,7 @@ TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (const char *str, un
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -404,7 +406,7 @@ TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (const char *str, un
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }
@@ -779,6 +781,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -843,7 +846,7 @@ TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::lookup (const ch
         {
           const char *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return &wordlist[key];
         }
     }

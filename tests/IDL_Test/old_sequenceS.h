@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:397
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_5G5PER_H_
-#define _TAO_IDL_OLD_SEQUENCES_5G5PER_H_
+#ifndef _TAO_IDL_OLD_SEQUENCES_8YO3XP_H_
+#define _TAO_IDL_OLD_SEQUENCES_8YO3XP_H_
 
 #include /**/ "ace/pre.h"
 

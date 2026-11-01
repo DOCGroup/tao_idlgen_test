@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_OLD_ARRAYS_JZ7F26_CPP_
-#define _TAO_IDL_OLD_ARRAYS_JZ7F26_CPP_
+#ifndef _TAO_IDL_OLD_ARRAYS_GV319C_CPP_
+#define _TAO_IDL_OLD_ARRAYS_GV319C_CPP_
 
 
 #include "old_arrayS.h"
@@ -70,6 +70,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -140,7 +141,7 @@ TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -152,7 +153,7 @@ TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }
@@ -490,6 +491,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_OldArray_A_i_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_OldArray_A_i_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -560,7 +562,7 @@ TAO_OldArray_A_i_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -572,7 +574,7 @@ TAO_OldArray_A_i_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }
@@ -1451,6 +1453,7 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable -N lookup */
 
+#include <cstring>
 unsigned int
 TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1527,7 +1530,7 @@ TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::lookup (const char *str, unsig
             {
               const char *s = wordlist[slot].opname;
 
-              if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return &wordlist[slot];
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
@@ -1539,7 +1542,7 @@ TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::lookup (const char *str, unsig
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !ACE_OS::strncmp (str + 1, ptr->opname + 1, len - 1))
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   return ptr;
             }
         }

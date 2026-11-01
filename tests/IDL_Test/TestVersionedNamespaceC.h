@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_VA6UVS_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_VA6UVS_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_IB5RPI_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_IB5RPI_H_
 
 #include /**/ "ace/pre.h"
 
@@ -84,7 +84,7 @@ BEGIN_USER_VERSIONED_NAMESPACE
 namespace M1
 {
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:236
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:235
 
 
 
@@ -94,14 +94,14 @@ namespace M1
 
 
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_ch.cpp:45
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_ch.cpp:44
 
 
 
   struct  S1
   {
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:275
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
 
     using _var_type = S1_var;
@@ -110,11 +110,11 @@ namespace M1
     ::CORBA::Octet o {};
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:31
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
   extern  ::CORBA::TypeCode_ptr const _tc_S1;
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:523
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
 
 
 
@@ -130,7 +130,7 @@ namespace M1
 
 
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:39
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:37
 
 
 
@@ -139,7 +139,7 @@ namespace M1
   {
   public:
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:275
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
     using _ptr_type = LI_ptr;
     using _var_type = LI_var;
@@ -159,7 +159,7 @@ namespace M1
 
 
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:135
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:133
 
 
 
@@ -183,7 +183,7 @@ namespace M1
     LI &operator= (LI &&) = delete;
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:31
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
   extern  ::CORBA::TypeCode_ptr const _tc_LI;
   // TAO_IDL - Generated from
@@ -209,7 +209,7 @@ namespace M1
   {
   public:
     // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:275
+    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
     using _ptr_type = V*;
     using _var_type = V_var;
@@ -294,7 +294,7 @@ namespace M1
     virtual ~V_init ();
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:31
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
   extern  ::CORBA::TypeCode_ptr const _tc_V;
 
@@ -305,7 +305,7 @@ namespace M1
 
 } // module M1
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:63
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:62
 
 
 
@@ -320,7 +320,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace TAO
 {
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:903
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:902
 
 
 
@@ -334,7 +334,7 @@ namespace TAO
   {
   };
   // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:296
+  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -421,7 +421,7 @@ public:
   };
 }
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_traits.cpp:59
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_traits.cpp:58
 
 
 
@@ -470,7 +470,7 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 // TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1585
+// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1573
 
 
 
