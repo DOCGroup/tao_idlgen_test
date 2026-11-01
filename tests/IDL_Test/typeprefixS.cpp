@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_TYPEPREFIXS_Z1PRG4_CPP_
-#define _TAO_IDL_TYPEPREFIXS_Z1PRG4_CPP_
+#ifndef _TAO_IDL_TYPEPREFIXS_GX4YRM_CPP_
+#define _TAO_IDL_TYPEPREFIXS_GX4YRM_CPP_
 
 
 #include "typeprefixS.h"

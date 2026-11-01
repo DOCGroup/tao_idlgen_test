@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_OLD_ARRAYS_302H3S_CPP_
-#define _TAO_IDL_OLD_ARRAYS_302H3S_CPP_
+#ifndef _TAO_IDL_OLD_ARRAYS_65HEHP_CPP_
+#define _TAO_IDL_OLD_ARRAYS_65HEHP_CPP_
 
 
 #include "old_arrayS.h"

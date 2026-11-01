@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:397
 
-#ifndef _TAO_IDL_REPO_ID_MODS_GC81KC_H_
-#define _TAO_IDL_REPO_ID_MODS_GC81KC_H_
+#ifndef _TAO_IDL_REPO_ID_MODS_NW0NUY_H_
+#define _TAO_IDL_REPO_ID_MODS_NW0NUY_H_
 
 #include /**/ "ace/pre.h"
 

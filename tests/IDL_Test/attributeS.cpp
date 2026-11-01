@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_ATTRIBUTES_6C5I5B_CPP_
-#define _TAO_IDL_ATTRIBUTES_6C5I5B_CPP_
+#ifndef _TAO_IDL_ATTRIBUTES_6G8U3Q_CPP_
+#define _TAO_IDL_ATTRIBUTES_6G8U3Q_CPP_
 
 
 #include "attributeS.h"

@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_STRUCTS_XMXU3G_CPP_
-#define _TAO_IDL_STRUCTS_XMXU3G_CPP_
+#ifndef _TAO_IDL_STRUCTS_KEXS1I_CPP_
+#define _TAO_IDL_STRUCTS_KEXS1I_CPP_
 
 
 #include "structS.h"

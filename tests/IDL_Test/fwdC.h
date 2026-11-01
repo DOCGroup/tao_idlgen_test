@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
 
-#ifndef _TAO_IDL_FWDC_39EIGT_H_
-#define _TAO_IDL_FWDC_39EIGT_H_
+#ifndef _TAO_IDL_FWDC_KEHPMI_H_
+#define _TAO_IDL_FWDC_KEHPMI_H_
 
 #include /**/ "ace/pre.h"
 

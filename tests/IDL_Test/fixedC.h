@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
 
-#ifndef _TAO_IDL_FIXEDC_U6U100_H_
-#define _TAO_IDL_FIXEDC_U6U100_H_
+#ifndef _TAO_IDL_FIXEDC_A3HIQ6_H_
+#define _TAO_IDL_FIXEDC_A3HIQ6_H_
 
 #include /**/ "ace/pre.h"
 

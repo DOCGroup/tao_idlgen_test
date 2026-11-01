@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_Z30AIJ_CPP_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_Z30AIJ_CPP_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_OTXUR5_CPP_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_OTXUR5_CPP_
 
 
 #include "array_anonymousS.h"

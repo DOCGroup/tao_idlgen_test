@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:397
 
-#ifndef _TAO_IDL_TESTS_ESYBUO_H_
-#define _TAO_IDL_TESTS_ESYBUO_H_
+#ifndef _TAO_IDL_TESTS_LS3NET_H_
+#define _TAO_IDL_TESTS_LS3NET_H_
 
 #include /**/ "ace/pre.h"
 
