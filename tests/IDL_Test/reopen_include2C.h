@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2C_94UWHA_H_
-#define _TAO_IDL_REOPEN_INCLUDE2C_94UWHA_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2C_1WVATA_H_
+#define _TAO_IDL_REOPEN_INCLUDE2C_1WVATA_H_
 
 #include /**/ "ace/pre.h"
 

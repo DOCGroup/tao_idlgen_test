@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_INHERITS_E3JCYV_CPP_
-#define _TAO_IDL_INHERITS_E3JCYV_CPP_
+#ifndef _TAO_IDL_INHERITS_GY7P9M_CPP_
+#define _TAO_IDL_INHERITS_GY7P9M_CPP_
 
 
 #include "inheritS.h"

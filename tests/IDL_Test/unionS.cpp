@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:568
 
-#ifndef _TAO_IDL_UNIONS_IHHF8N_CPP_
-#define _TAO_IDL_UNIONS_IHHF8N_CPP_
+#ifndef _TAO_IDL_UNIONS_1CP2RX_CPP_
+#define _TAO_IDL_UNIONS_1CP2RX_CPP_
 
 
 #include "unionS.h"

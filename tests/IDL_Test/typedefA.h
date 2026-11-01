@@ -25,8 +25,8 @@
 // TAO_IDL - Generated from
 // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:704
 
-#ifndef _TAO_IDL_TYPEDEFA_SGMIHB_H_
-#define _TAO_IDL_TYPEDEFA_SGMIHB_H_
+#ifndef _TAO_IDL_TYPEDEFA_BMXAVX_H_
+#define _TAO_IDL_TYPEDEFA_BMXAVX_H_
 
 #include /**/ "ace/pre.h"
 
