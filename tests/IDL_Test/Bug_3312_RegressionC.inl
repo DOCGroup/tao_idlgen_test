@@ -24,11 +24,9 @@
 
 #include <memory>
 #include <new>
-
 // *************************************************************
 // Inline operations for union CallMe::YourColorBaby
 // *************************************************************
-
 ACE_INLINE
 void
 CallMe::YourColorBaby::_default ()
@@ -76,7 +74,6 @@ CallMe::YourColorBaby::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -100,7 +97,6 @@ CallMe::YourColorBaby::c_1 () const
     }
   return this->u_.c_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -124,11 +120,9 @@ CallMe::YourColorBaby::c_2 () const
     }
   return this->u_.c_2_;
 }
-
 // *************************************************************
 // Inline operations for union CallMe::YourCar
 // *************************************************************
-
 ACE_INLINE
 void
 CallMe::YourCar::_default ()
@@ -176,7 +170,6 @@ CallMe::YourCar::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -200,7 +193,6 @@ CallMe::YourCar::c_1 () const
     }
   return this->u_.c_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void

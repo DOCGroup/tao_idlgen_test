@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_GENERIC_OBJECTC_Y69FFS_H_
-#define _TAO_IDL_GENERIC_OBJECTC_Y69FFS_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTC_KL4QU4_H_
+#define _TAO_IDL_GENERIC_OBJECTC_KL4QU4_H_
 
 #include /**/ "ace/pre.h"
 
@@ -64,7 +63,6 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -76,7 +74,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 enum ObjectType
 {
   OT_THIS,
@@ -84,7 +81,6 @@ enum ObjectType
 };
 
 using ObjectType_out = ObjectType &;
-
 
 
 class Selecter;
@@ -101,10 +97,8 @@ public:
   Selecter &operator= (Selecter const &);
 
 
-
   void _d (ObjectType);
   ObjectType _d () const;
-
 
   using _var_type = Selecter_var;
   using _out_type = Selecter_out;
@@ -112,15 +106,12 @@ public:
   static void _tao_any_destructor (void *);
 
 
-
   void this_object (::CORBA::Object_ptr);
   ::CORBA::Object_ptr this_object () const;
 
 
-
   void that_object (::CORBA::Object_ptr);
   ::CORBA::Object_ptr that_object () const;
-
 
 
   void _default ();
@@ -132,9 +123,7 @@ private:
   {
     _tao_union_storage () {}
 
-
     CORBA::Object_var *this_object_;
-
 
     CORBA::Object_var *that_object_;
   } u_;
@@ -142,7 +131,6 @@ private:
   /// TAO extension - frees any allocated storage.
   void _reset ();
 };
-
 
 
 #if !defined (_GENERIC__VAR_OUT_CH_)
@@ -161,13 +149,11 @@ using generic_out = TAO_Objref_Out_T<generic>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export generic
   : public virtual ::CORBA::Object
 {
 public:
   friend class TAO::Narrow_Utils<generic>;
-
   using _ptr_type = generic_ptr;
   using _var_type = generic_var;
   using _out_type = generic_out;
@@ -192,7 +178,6 @@ public:
     ::AMI_genericHandler_ptr ami_handler,
     ::CORBA::Object_ptr inarg,
     ::CORBA::Object_ptr inoutarg);
-
 
 
 
@@ -228,7 +213,6 @@ private:
 };
 
 
-
 #if !defined (_AMH_GENERICEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _AMH_GENERICEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -239,12 +223,10 @@ using AMH_genericExceptionHolder_out = TAO_Value_Out_T<AMH_genericExceptionHolde
 #endif /* end #if !defined */
 
 
-
 class TAO_IDL_TEST_STUB_Export AMH_genericExceptionHolder
   : public virtual ::CORBA::DefaultValueRefCountBase
 {
 public:
-
   using _ptr_type = AMH_genericExceptionHolder*;
   using _var_type = AMH_genericExceptionHolder_var;
   using _out_type = AMH_genericExceptionHolder_out;
@@ -275,16 +257,13 @@ public:
 
 public:
 
-
 public:
   virtual void raise_op ();
 
 public:
 
-
 public:
   virtual void raise_sendc_op ();
-
 
 
 protected:
@@ -308,7 +287,6 @@ protected:
 };
 
 
-
 #if !defined (_AMH_GENERICRESPONSEHANDLER__VAR_OUT_CH_)
 #define _AMH_GENERICRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -325,12 +303,10 @@ using AMH_genericResponseHandler_out = TAO_Objref_Out_T<AMH_genericResponseHandl
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMH_genericResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-
   using _ptr_type = AMH_genericResponseHandler_ptr;
   using _var_type = AMH_genericResponseHandler_var;
   using _out_type = AMH_genericResponseHandler_out;
@@ -353,7 +329,6 @@ public:
 
   virtual void op_excep (
     ::AMH_genericExceptionHolder * holder) = 0;
-
 
 
 
@@ -381,7 +356,6 @@ private:
 };
 
 
-
 #if !defined (_AMI_GENERICHANDLER__VAR_OUT_CH_)
 #define _AMI_GENERICHANDLER__VAR_OUT_CH_
 
@@ -395,14 +369,12 @@ using AMI_genericHandler_out = TAO_Objref_Out_T<AMI_genericHandler>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMI_genericHandler
   : public virtual ::Messaging::ReplyHandler
 
 {
 public:
   friend class TAO::Narrow_Utils<AMI_genericHandler>;
-
   using _ptr_type = AMI_genericHandler_ptr;
   using _var_type = AMI_genericHandler_var;
   using _out_type = AMI_genericHandler_out;
@@ -431,7 +403,6 @@ public:
 
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder);
-
 
 
 
@@ -467,14 +438,12 @@ private:
 };
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -496,7 +465,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::ObjectType>
     : public
@@ -508,7 +476,6 @@ namespace TAO
   };
 
 
-
   template<>
   class Arg_Traits< ::Selecter>
     : public
@@ -518,7 +485,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_GENERIC__ARG_TRAITS_)
@@ -536,7 +502,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_GENERICEXCEPTIONHOLDER__ARG_TRAITS_)
@@ -558,7 +523,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_GENERICHANDLER__ARG_TRAITS_)
 #define _AMI_GENERICHANDLER__ARG_TRAITS_
 
@@ -577,7 +541,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -605,7 +568,6 @@ protected:
 private:
   CORBA::Boolean require_truncation_ {false};
 };
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -673,14 +635,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ObjectType _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ObjectType &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -696,14 +656,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const generic_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, generic_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -715,7 +673,6 @@ namespace CORBA
   extern TAO_IDL_TEST_STUB_Export void remove_ref (AMH_genericExceptionHolder *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -731,14 +688,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_genericHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_genericHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

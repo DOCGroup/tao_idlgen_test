@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_PEMNAMINGC_WZFU4T_H_
-#define _TAO_IDL_PEMNAMINGC_WZFU4T_H_
+#ifndef _TAO_IDL_PEMNAMINGC_MM3CAT_H_
+#define _TAO_IDL_PEMNAMINGC_MM3CAT_H_
 
 #include /**/ "ace/pre.h"
 
@@ -72,7 +71,6 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -84,15 +82,11 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace Plesk
 {
-
   using TObjectID = ::CORBA::Long;
   using TObjectID_out = ::CORBA::Long_out;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TObjectID;
-
   enum TBool
   {
     TB_NO,
@@ -101,9 +95,7 @@ namespace Plesk
   };
 
   using TBool_out = TBool &;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TBool;
-
 
 
   struct TProperty;
@@ -113,10 +105,8 @@ namespace Plesk
 
 
 
-
   struct TAO_IDL_TEST_STUB_Export TProperty
   {
-
 
     using _var_type = TProperty_var;
     using _out_type = TProperty_out;
@@ -126,9 +116,7 @@ namespace Plesk
     ::TAO::String_Manager name {};
     ::TAO::String_Manager value {};
   };
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TProperty;
-
 
 
 
@@ -160,7 +148,6 @@ namespace Plesk
     virtual ~TPropertyList () = default;
 
 
-
     using _var_type = TPropertyList_var;
     using _out_type = TPropertyList_out;
 
@@ -168,9 +155,7 @@ namespace Plesk
   };
 
 #endif /* end #if !defined */
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TPropertyList;
-
 
 
   class TAO_IDL_TEST_STUB_Export ExSystem : public ::CORBA::UserException
@@ -205,7 +190,6 @@ namespace Plesk
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
 
-
     ExSystem (
         const char * _tao_module_id,
         ::CORBA::Long _tao_extype_id,
@@ -217,12 +201,9 @@ namespace Plesk
 
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
   };
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ExSystem;
-
   namespace Naming
   {
-
 
 
     struct NamingContext;
@@ -232,10 +213,8 @@ namespace Plesk
 
 
 
-
     struct TAO_IDL_TEST_STUB_Export NamingContext
     {
-
 
       using _var_type = NamingContext_var;
       using _out_type = NamingContext_out;
@@ -244,13 +223,10 @@ namespace Plesk
 
       ::TAO::String_Manager kernel_resolver_ior {};
     };
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_NamingContext;
 
 
-
     const CORBA::Long ERR_NO_SUCH_OBJ = 6;
-
 
 
 #if !defined (_PLESK_NAMING_OBJECTRESOLVER__VAR_OUT_CH_)
@@ -269,13 +245,11 @@ namespace Plesk
 
 
 
-
     class TAO_IDL_TEST_STUB_Export ObjectResolver
       : public virtual ::CORBA::Object
     {
     public:
       friend class TAO::Narrow_Utils<ObjectResolver>;
-
       using _ptr_type = ObjectResolver_ptr;
       using _var_type = ObjectResolver_var;
       using _out_type = ObjectResolver_out;
@@ -314,7 +288,6 @@ namespace Plesk
 
 
 
-
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
       static const char* _desc_repository_id ();
@@ -344,9 +317,7 @@ namespace Plesk
       ObjectResolver &operator= (const ObjectResolver &) = delete;
       ObjectResolver &operator= (ObjectResolver &&) = delete;
     };
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ObjectResolver;
-
 
 
 #if !defined (_PLESK_NAMING_AMH_OBJECTRESOLVEREXCEPTIONHOLDER__VAR_OUT_CH_)
@@ -359,12 +330,10 @@ namespace Plesk
 #endif /* end #if !defined */
 
 
-
     class TAO_IDL_TEST_STUB_Export AMH_ObjectResolverExceptionHolder
       : public virtual ::CORBA::DefaultValueRefCountBase
     {
     public:
-
       using _ptr_type = AMH_ObjectResolverExceptionHolder*;
       using _var_type = AMH_ObjectResolverExceptionHolder_var;
       using _out_type = AMH_ObjectResolverExceptionHolder_out;
@@ -395,28 +364,23 @@ namespace Plesk
 
     public:
 
-
     public:
       virtual void raise_resolve ();
 
   public:
-
 
   public:
     virtual void raise_resolve_sc ();
 
 public:
 
-
 public:
   virtual void raise_sendc_resolve ();
 
 public:
 
-
 public:
   virtual void raise_sendc_resolve_sc ();
-
 
 
 protected:
@@ -438,9 +402,7 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__Plesk_Naming_AMH_ObjectResolverExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ObjectResolverExceptionHolder;
-
 
 
 #if !defined (_PLESK_NAMING_AMH_OBJECTRESOLVERRESPONSEHANDLER__VAR_OUT_CH_)
@@ -459,12 +421,10 @@ using AMH_ObjectResolverResponseHandler_out = TAO_Objref_Out_T<AMH_ObjectResolve
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMH_ObjectResolverResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-
   using _ptr_type = AMH_ObjectResolverResponseHandler_ptr;
   using _var_type = AMH_ObjectResolverResponseHandler_var;
   using _out_type = AMH_ObjectResolverResponseHandler_out;
@@ -497,7 +457,6 @@ public:
 
 
 
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -519,9 +478,7 @@ private:
   AMH_ObjectResolverResponseHandler &operator= (const AMH_ObjectResolverResponseHandler &) = delete;
   AMH_ObjectResolverResponseHandler &operator= (AMH_ObjectResolverResponseHandler &&) = delete;
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ObjectResolverResponseHandler;
-
 
 
 #if !defined (_PLESK_NAMING_AMI_OBJECTRESOLVERHANDLER__VAR_OUT_CH_)
@@ -537,14 +494,12 @@ using AMI_ObjectResolverHandler_out = TAO_Objref_Out_T<AMI_ObjectResolverHandler
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMI_ObjectResolverHandler
   : public virtual ::Messaging::ReplyHandler
 
 {
 public:
   friend class TAO::Narrow_Utils<AMI_ObjectResolverHandler>;
-
   using _ptr_type = AMI_ObjectResolverHandler_ptr;
   using _var_type = AMI_ObjectResolverHandler_var;
   using _out_type = AMI_ObjectResolverHandler_out;
@@ -589,7 +544,6 @@ public:
 
 
 
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -619,9 +573,7 @@ private:
   AMI_ObjectResolverHandler &operator= (const AMI_ObjectResolverHandler &) = delete;
   AMI_ObjectResolverHandler &operator= (AMI_ObjectResolverHandler &&) = delete;
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_ObjectResolverHandler;
-
 
 
 
@@ -629,9 +581,7 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_ObjectResolv
 
 
 
-
 } // module Plesk
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -640,7 +590,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
   template<>
@@ -654,7 +603,6 @@ namespace TAO
   };
 
 
-
   template<>
   class Arg_Traits< ::Plesk::TProperty>
     : public
@@ -664,7 +612,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -678,7 +625,6 @@ namespace TAO
   };
 
 
-
   template<>
   class Arg_Traits< ::Plesk::Naming::NamingContext>
     : public
@@ -688,7 +634,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_PLESK_NAMING_OBJECTRESOLVER__ARG_TRAITS_)
@@ -708,7 +653,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_PLESK_NAMING_AMH_OBJECTRESOLVEREXCEPTIONHOLDER__ARG_TRAITS_)
 #define _PLESK_NAMING_AMH_OBJECTRESOLVEREXCEPTIONHOLDER__ARG_TRAITS_
 
@@ -726,7 +670,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_PLESK_NAMING_AMI_OBJECTRESOLVERHANDLER__ARG_TRAITS_)
@@ -749,13 +692,10 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace OBV_Plesk
 {
-
   namespace Naming
   {
-
 
 
     // OBV_ class
@@ -783,7 +723,6 @@ namespace OBV_Plesk
   };
 }
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -851,7 +790,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -861,7 +799,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::TBool);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Plesk::TBool &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -880,7 +817,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -889,7 +825,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Plesk::TPropertyLis
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Plesk::TPropertyList const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -903,7 +838,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::ExSystem*); //
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const Plesk::ExSystem *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -922,7 +856,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -934,7 +867,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -943,7 +875,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::Naming::AMH_Ob
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Plesk::Naming::AMH_ObjectResolverExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -966,7 +897,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -975,7 +905,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::Naming::AMI_Ob
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Plesk::Naming::AMI_ObjectResolverHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -988,14 +917,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Plesk::TProperty const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Plesk::TProperty &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1018,7 +945,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Plesk_TPropertyList_H_ */
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1027,7 +953,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Ple
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Plesk::ExSystem &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1043,14 +968,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Plesk::Naming::ObjectResolver_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Plesk::Naming::ObjectResolver_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1062,7 +985,6 @@ namespace CORBA
   extern TAO_IDL_TEST_STUB_Export void remove_ref (Plesk::Naming::AMH_ObjectResolverExceptionHolder *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1078,14 +1000,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Plesk::Naming::AMI_ObjectResolverHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Plesk::Naming::AMI_ObjectResolverHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

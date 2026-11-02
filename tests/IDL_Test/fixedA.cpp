@@ -37,7 +37,6 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-
 #ifndef _TAO_TYPECODE_FIXED_3_0_GUARD
 #define _TAO_TYPECODE_FIXED_3_0_GUARD
 static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
@@ -70,7 +69,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
     {
       ::CORBA::TypeCode_ptr const _tc_WholeNumber = std::addressof(_tao_tc_FixedPoint_WholeNumber);
     }
-
     #ifndef _TAO_TYPECODE_FIXED_3_3_GUARD
     #define _TAO_TYPECODE_FIXED_3_3_GUARD
     static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
@@ -103,7 +101,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
         {
           ::CORBA::TypeCode_ptr const _tc_Fraction = std::addressof(_tao_tc_FixedPoint_Fraction);
         }
-
         #ifndef _TAO_TYPECODE_FIXED_10_3_GUARD
         #define _TAO_TYPECODE_FIXED_10_3_GUARD
         static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
@@ -136,7 +133,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
             {
               ::CORBA::TypeCode_ptr const _tc_Amount = std::addressof(_tao_tc_FixedPoint_Amount);
             }
-
             #ifndef _TAO_TYPECODE_FIXED_31_0_GUARD
             #define _TAO_TYPECODE_FIXED_31_0_GUARD
             static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
@@ -169,7 +165,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                 {
                   ::CORBA::TypeCode_ptr const _tc_MaximumDigits = std::addressof(_tao_tc_FixedPoint_MaximumDigits);
                 }
-
                 #ifndef _TAO_TYPECODE_FIXED_31_31_GUARD
                 #define _TAO_TYPECODE_FIXED_31_31_GUARD
                 static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
@@ -202,7 +197,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                     {
                       ::CORBA::TypeCode_ptr const _tc_MaximumScale = std::addressof(_tao_tc_FixedPoint_MaximumScale);
                     }
-
                     #ifndef _TAO_TYPECODE_FIXED_3_0_GUARD
                     #define _TAO_TYPECODE_FIXED_3_0_GUARD
                     static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
@@ -279,7 +273,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_FixedValues = std::addressof(_tao_tc_FixedPoint_FixedValues);
                               }
-
                               static TAO::TypeCode::Objref<char const *,
                                                            TAO::Null_RefCount_Policy>
                                 _tao_tc_FixedPoint_FixedOperations (
@@ -292,7 +285,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_FixedOperations = std::addressof(_tao_tc_FixedPoint_FixedOperations);
                               }
-
                               static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_FixedPoint_AMH_FixedOperationsExceptionHolder = nullptr;
                               static TAO::TypeCode::Value<char const *,
                                                    ::CORBA::TypeCode_ptr const *,
@@ -318,7 +310,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               }
 
 
-
                               static TAO::TypeCode::Objref<char const *,
                                                            TAO::Null_RefCount_Policy>
                                 _tao_tc_FixedPoint_AMH_FixedOperationsResponseHandler (
@@ -331,7 +322,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_AMH_FixedOperationsResponseHandler = std::addressof(_tao_tc_FixedPoint_AMH_FixedOperationsResponseHandler);
                               }
-
                               static TAO::TypeCode::Objref<char const *,
                                                            TAO::Null_RefCount_Policy>
                                 _tao_tc_FixedPoint_AMI_FixedOperationsHandler (
@@ -344,7 +334,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_AMI_FixedOperationsHandler = std::addressof(_tao_tc_FixedPoint_AMI_FixedOperationsHandler);
                               }
-
                               static TAO::TypeCode::Alias<char const *,
                                                           ::CORBA::TypeCode_ptr const *,
                                                           TAO::Null_RefCount_Policy>
@@ -359,7 +348,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_AmountAlias = std::addressof(_tao_tc_FixedPoint_AmountAlias);
                               }
-
                               static TAO::TypeCode::Alias<char const *,
                                                           ::CORBA::TypeCode_ptr const *,
                                                           TAO::Null_RefCount_Policy>
@@ -374,7 +362,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_AmountAlias2 = std::addressof(_tao_tc_FixedPoint_AmountAlias2);
                               }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -416,7 +403,6 @@ namespace CORBA {
                               }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -482,7 +468,6 @@ namespace CORBA {
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -557,7 +542,6 @@ namespace CORBA {
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -640,7 +624,6 @@ namespace CORBA {
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

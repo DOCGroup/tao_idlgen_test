@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_PARAMSS_C2SM96_H_
-#define _TAO_IDL_PARAMSS_C2SM96_H_
+#ifndef _TAO_IDL_PARAMSS_FD1WEN_H_
+#define _TAO_IDL_PARAMSS_FD1WEN_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::foo::theDate>
     : public
@@ -92,7 +88,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::foo::bar::theDate>
     : public
@@ -102,7 +97,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_FOO_BAR_FOOBAR__SARG_TRAITS_)
@@ -121,7 +115,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__SARG_TRAITS_
 
@@ -138,7 +131,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_FOO_BAR_AMI_FOOBARHANDLER__SARG_TRAITS_)
@@ -160,14 +152,11 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_foo
 {
 
-
   namespace bar
   {
-
 
     class AMH_fooBar;
     using AMH_fooBar_ptr = AMH_fooBar *;
@@ -192,7 +181,6 @@ namespace POA_foo
       foo::bar::fooBar *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     static void getDate_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -205,7 +193,6 @@ namespace POA_foo
       ) = 0;
 
   };
-
 
 
 
@@ -239,7 +226,6 @@ namespace POA_foo
     ::foo::bar::fooBar *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual ::foo::theDate getDate (
       const ::foo::theDate & a,
       ::foo::theDate & b,
@@ -252,7 +238,6 @@ namespace POA_foo
   };
 
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -261,7 +246,6 @@ namespace POA_foo
   {
   public:
     virtual ~_TAO_fooBar_Direct_Proxy_Impl ();
-
     static void
     getDate (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -271,7 +255,6 @@ namespace POA_foo
   //
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
-
 
 
   class TAO_AMH_fooBarResponseHandler;
@@ -284,16 +267,13 @@ namespace POA_foo
   public:
     TAO_AMH_fooBarResponseHandler () = default;
     virtual ~TAO_AMH_fooBarResponseHandler () = default;
-
     void getDate (
       const ::foo::theDate & return_value,
       const ::foo::theDate & b,
       const ::foo::theDate & c) override;
-
     void getDate_excep (
       ::foo::bar::AMH_fooBarExceptionHolder * holder) override;
   };
-
 
 
 
@@ -327,7 +307,6 @@ namespace POA_foo
     ::foo::bar::AMI_fooBarHandler *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual void getDate (
       const ::foo::theDate & ami_return_val,
       const ::foo::theDate & b,
@@ -337,7 +316,6 @@ namespace POA_foo
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void getDate_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -346,7 +324,6 @@ namespace POA_foo
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
   ///////////////////////////////////////////////////////////////////////
@@ -358,11 +335,9 @@ namespace POA_foo
   {
   public:
     virtual ~_TAO_AMI_fooBarHandler_Direct_Proxy_Impl ();
-
     static void
     getDate (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
     static void
     getDate_excep (
@@ -377,9 +352,7 @@ namespace POA_foo
 
 
 
-
 } // module foo::bar
-
 
 
 } // module foo

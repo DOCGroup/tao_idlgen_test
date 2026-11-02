@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "old_unionC.h"
 #include <memory>
 #include <new>
@@ -48,12 +47,11 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "old_unionC.inl"
 #endif /* !defined INLINE */
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -84,7 +82,6 @@ namespace OldUnion
 }
 
 
-
 void
 OldUnion::Bar::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -92,7 +89,6 @@ OldUnion::Bar::_tao_any_destructor (
   Bar *tmp = static_cast<Bar *> (_tao_void_pointer);
   delete tmp;
 }
-
 
 
 OldUnion::Foo::Foo ()
@@ -173,7 +169,6 @@ OldUnion::Foo::operator= (::OldUnion::Foo const &u)
 void OldUnion::Foo::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo__0 (1, "x", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo__1 (2, "y", &OldUnion::_tc_Bar);
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo__2 (-2147483647, "z", &CORBA::_tc_char);
@@ -202,7 +197,6 @@ namespace OldUnion
 {
   ::CORBA::TypeCode_ptr const _tc_Foo = std::addressof(_tao_tc_OldUnion_Foo);
 }
-
 
 
 OldUnion::Foo2::Foo2 ()
@@ -306,7 +300,6 @@ void OldUnion::Foo2::_reset ()
     break;
   }
 }
-
 static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo2__0 ('a', "x", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo2__1 ('b', "y", &OldUnion::_tc_Foo);
 
@@ -333,7 +326,6 @@ namespace OldUnion
 {
   ::CORBA::TypeCode_ptr const _tc_Foo2 = std::addressof(_tao_tc_OldUnion_Foo2);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -366,7 +358,6 @@ TAO::Objref_Traits<OldUnion::a>::marshal (const OldUnion::a_ptr p,TAO_OutputCDR 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -394,7 +385,6 @@ _tao_tc_OldUnion_a_astruct (
 ::CORBA::TypeCode_ptr const OldUnion::a::_tc_astruct = std::addressof(_tao_tc_OldUnion_a_astruct);
 
 
-
 void
 OldUnion::a::astruct::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -402,7 +392,6 @@ OldUnion::a::astruct::_tao_any_destructor (
   astruct *tmp = static_cast<astruct *> (_tao_void_pointer);
   delete tmp;
 }
-
 ::OldUnion::Foo2
 OldUnion::a::opA (
   const ::OldUnion::a::astruct & b)
@@ -435,7 +424,6 @@ OldUnion::a::opA (
 
   return _tao_retval.retn ();
 }
-
 
 
 void
@@ -554,7 +542,6 @@ OldUnion::a::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldUnion_a (
@@ -567,7 +554,6 @@ namespace OldUnion
 {
   ::CORBA::TypeCode_ptr const _tc_a = std::addressof(_tao_tc_OldUnion_a);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldUnion_AMH_aExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -587,7 +573,6 @@ namespace OldUnion
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_aExceptionHolder = std::addressof(_tao_tc_OldUnion_AMH_aExceptionHolder);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -730,7 +715,6 @@ OldUnion::AMH_aExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 OldUnion::AMH_aExceptionHolder::raise_opA ()
 {
@@ -738,14 +722,12 @@ OldUnion::AMH_aExceptionHolder::raise_opA ()
   this->exception->_raise ();
 }
 
-
 void
 OldUnion::AMH_aExceptionHolder::raise_sendc_opA ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -863,7 +845,6 @@ OldUnion::AMH_aResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldUnion_AMH_aResponseHandler (
@@ -876,7 +857,6 @@ namespace OldUnion
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_aResponseHandler = std::addressof(_tao_tc_OldUnion_AMH_aResponseHandler);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -907,7 +887,6 @@ TAO::Objref_Traits<OldUnion::AMI_aHandler>::marshal (const OldUnion::AMI_aHandle
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -1003,7 +982,6 @@ OldUnion::AMI_aHandler::opA_reply_stub (
       break;
   }
 }
-
 void
 OldUnion::AMI_aHandler::opA_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1116,7 +1094,6 @@ OldUnion::AMI_aHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldUnion_AMI_aHandler (
@@ -1129,7 +1106,6 @@ namespace OldUnion
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_aHandler = std::addressof(_tao_tc_OldUnion_AMI_aHandler);
 }
-
 OBV_OldUnion::AMH_aExceptionHolder::~AMH_aExceptionHolder ()
 {}
 
@@ -1144,7 +1120,6 @@ OBV_OldUnion::AMH_aExceptionHolder::_tao_unmarshal__OldUnion_AMH_aExceptionHolde
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1186,7 +1161,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1239,7 +1213,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1286,7 +1259,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1355,7 +1327,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1396,7 +1367,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1471,7 +1441,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1557,7 +1526,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1623,7 +1591,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1647,7 +1614,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1743,7 +1709,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1829,7 +1794,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1855,7 +1819,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1891,7 +1854,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldUnion::AMH_aExceptionHolder * vt)
@@ -1912,7 +1874,6 @@ CORBA::remove_ref (OldUnion::AMH_aExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1942,7 +1903,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_OldUnion::AMH_aExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -1960,7 +1920,6 @@ OBV_OldUnion::AMH_aExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

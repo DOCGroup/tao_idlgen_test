@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_EXPRESSIONSS_735XUH_H_
-#define _TAO_IDL_EXPRESSIONSS_735XUH_H_
+#ifndef _TAO_IDL_EXPRESSIONSS_72E8FJ_H_
+#define _TAO_IDL_EXPRESSIONSS_72E8FJ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -43,14 +42,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -74,50 +71,38 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_ShortValues
 {
 
 
 
-
 } // module ShortValues
-
 namespace POA_LongValues
 {
 
 
 
-
 } // module LongValues
-
 namespace POA_MixedIntValues
 {
 
 
 
-
 } // module MixedIntValues
-
 namespace POA_FloatValues
 {
 
 
 
-
 } // module FloatValues
-
 namespace POA_DoubleValues
 {
 
 
 
-
 } // module DoubleValues
-
 namespace POA_MixedFloatValues
 {
-
 
 
 

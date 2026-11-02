@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_AMI_TESTS_6612VW_H_
-#define _TAO_IDL_AMI_TESTS_6612VW_H_
+#ifndef _TAO_IDL_AMI_TESTS_8N6ZRT_H_
+#define _TAO_IDL_AMI_TESTS_8N6ZRT_H_
 
 #include /**/ "ace/pre.h"
 
@@ -49,14 +48,12 @@
 #include "tao/PortableServer/Servant_Base.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -77,7 +74,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_A_AMI_TEST__SARG_TRAITS_)
 #define _A_AMI_TEST__SARG_TRAITS_
 
@@ -92,7 +88,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_A_AMI_AMI_TESTHANDLER__SARG_TRAITS_)
@@ -111,7 +106,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_A_TEST_CHILD__SARG_TRAITS_)
 #define _A_TEST_CHILD__SARG_TRAITS_
 
@@ -126,7 +120,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_A_AMI_TEST_CHILDHANDLER__SARG_TRAITS_)
@@ -148,10 +141,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_A
 {
-
 
 
 
@@ -184,7 +175,6 @@ namespace POA_A
     ::A::AMI_Test *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual ::CORBA::Long foo (
       ::CORBA::Long_out out_l,
       ::CORBA::Long in_l,
@@ -194,14 +184,12 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual ::CORBA::Long yadda () = 0;
 
     static void _get_yadda_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void yadda (
       ::CORBA::Long yadda) = 0;
 
@@ -209,14 +197,12 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void shutdown () = 0;
 
     static void shutdown_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void inout_arg_test (
       char *& str) = 0;
 
@@ -225,7 +211,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
 
@@ -257,7 +242,6 @@ namespace POA_A
     ::A::AMI_AMI_TestHandler *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual void foo (
       ::CORBA::Long ami_return_val,
       ::CORBA::Long out_l) = 0;
@@ -266,7 +250,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void foo_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -274,7 +257,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void get_yadda (
       ::CORBA::Long ami_return_val) = 0;
 
@@ -282,7 +264,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void get_yadda_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -290,14 +271,12 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void set_yadda () = 0;
 
     static void set_yadda_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void set_yadda_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -305,7 +284,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void inout_arg_test (
       const char * str) = 0;
 
@@ -313,7 +291,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void inout_arg_test_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -322,7 +299,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
 
@@ -354,7 +330,6 @@ namespace POA_A
     ::A::Test_Child *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual void child_op () = 0;
 
     static void child_op_skel (
@@ -362,7 +337,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
 
@@ -394,14 +368,12 @@ namespace POA_A
     ::A::AMI_Test_ChildHandler *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual void child_op () = 0;
 
     static void child_op_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void child_op_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -410,7 +382,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
 } // module A

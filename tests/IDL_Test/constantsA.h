@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_CONSTANTSA_246MNZ_H_
-#define _TAO_IDL_CONSTANTSA_246MNZ_H_
+#ifndef _TAO_IDL_CONSTANTSA_GS4AIF_H_
+#define _TAO_IDL_CONSTANTSA_GS4AIF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -33,82 +32,58 @@
 
 #include "constantsC.h"
 
-
 namespace m_a
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_enum_a;
-
 
 
 
 } // module m_a
 
-
 namespace m_b
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_enum_b;
 
 
 
-
 } // module m_b
-
 
 namespace problems
 {
 
 
 
-
 } // module problems
-
 
 namespace ClassConstants
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Iface;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_IfaceExceptionHolder;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_IfaceResponseHandler;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_IfaceHandler;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Vt;
-
 
 
 
 } // module ClassConstants
 
-
 namespace CoercionBug
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UInt16;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_CellFlags;
-
 
 
 
 } // module CoercionBug
 
-
 namespace SignedGen
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_LongType;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ShortType;
 
 
 
-
 } // module SignedGen
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -127,7 +102,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -139,7 +113,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -148,7 +121,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ClassConstants::AMH_I
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ClassConstants::AMH_IfaceExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -171,7 +143,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -180,7 +151,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ClassConstants::AMI_I
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ClassConstants::AMI_IfaceHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

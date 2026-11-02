@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_SIMPLE_TESTS_OEBSZC_H_
-#define _TAO_IDL_SIMPLE_TESTS_OEBSZC_H_
+#ifndef _TAO_IDL_SIMPLE_TESTS_CFAWTW_H_
+#define _TAO_IDL_SIMPLE_TESTS_CFAWTW_H_
 
 #include /**/ "ace/pre.h"
 
@@ -48,14 +47,12 @@
 #include "tao/PortableServer/Servant_Base.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_SIMPLE_SERVER__SARG_TRAITS_)
@@ -75,7 +72,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -109,14 +105,12 @@ public:
   ::Simple_Server *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::CORBA::Boolean print_status () = 0;
 
   static void print_status_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void shutdown () = 0;
 
   static void shutdown_skel (

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ARRAY_ONLYA_HVGF4U_H_
-#define _TAO_IDL_ARRAY_ONLYA_HVGF4U_H_
+#ifndef _TAO_IDL_ARRAY_ONLYA_RMXL9I_H_
+#define _TAO_IDL_ARRAY_ONLYA_RMXL9I_H_
 
 #include /**/ "ace/pre.h"
 
@@ -33,9 +32,7 @@
 
 #include "array_onlyC.h"
 
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TEST_TYPE;
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {

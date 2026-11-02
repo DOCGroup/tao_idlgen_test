@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_STRING_VALUES_YHVZAH_H_
-#define _TAO_IDL_STRING_VALUES_YHVZAH_H_
+#ifndef _TAO_IDL_STRING_VALUES_P07EFR_H_
+#define _TAO_IDL_STRING_VALUES_P07EFR_H_
 
 #include /**/ "ace/pre.h"
 
@@ -44,14 +43,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -70,7 +67,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_INCLUDE_TEST_STRINGTEST__SARG_TRAITS_)
@@ -94,10 +90,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_include_test
 {
-
 
 
 

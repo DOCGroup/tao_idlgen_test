@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "dif2C.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -32,12 +31,11 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "dif2C.inl"
 #endif /* !defined INLINE */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -70,7 +68,6 @@ TAO::Objref_Traits<OldDif2::ex1>::marshal (const OldDif2::ex1_ptr p,TAO_OutputCD
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 void
 OldDif2::ex1::op0 ()
 {
@@ -101,7 +98,6 @@ OldDif2::ex1::op0 ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::Float
 OldDif2::ex1::op1 (
   ::CORBA::Float f,
@@ -140,7 +136,6 @@ OldDif2::ex1::op1 (
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::Double
 OldDif2::ex1::op2 (
   ::CORBA::Double d,
@@ -179,7 +174,6 @@ OldDif2::ex1::op2 (
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::Long
 OldDif2::ex1::op3 (
   ::CORBA::Long l,
@@ -218,7 +212,6 @@ OldDif2::ex1::op3 (
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::Short
 OldDif2::ex1::op4 (
   ::CORBA::Short s,
@@ -257,7 +250,6 @@ OldDif2::ex1::op4 (
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::ULong
 OldDif2::ex1::op5 (
   ::CORBA::ULong & ul,
@@ -299,7 +291,6 @@ OldDif2::ex1::op5 (
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::UShort
 OldDif2::ex1::op6 (
   ::CORBA::UShort_out us,
@@ -337,7 +328,6 @@ OldDif2::ex1::op6 (
 }
 
 
-
 void
 OldDif2::ex1::sendc_op0 (
   ::OldDif2::AMI_ex1Handler_ptr ami_handler)
@@ -365,7 +355,6 @@ OldDif2::ex1::sendc_op0 (
       &OldDif2::AMI_ex1Handler::op0_reply_stub
     );
 }
-
 
 
 void
@@ -408,7 +397,6 @@ OldDif2::ex1::sendc_op1 (
 }
 
 
-
 void
 OldDif2::ex1::sendc_op2 (
   ::OldDif2::AMI_ex1Handler_ptr ami_handler,
@@ -447,7 +435,6 @@ OldDif2::ex1::sendc_op2 (
       &OldDif2::AMI_ex1Handler::op2_reply_stub
     );
 }
-
 
 
 void
@@ -490,7 +477,6 @@ OldDif2::ex1::sendc_op3 (
 }
 
 
-
 void
 OldDif2::ex1::sendc_op4 (
   ::OldDif2::AMI_ex1Handler_ptr ami_handler,
@@ -529,7 +515,6 @@ OldDif2::ex1::sendc_op4 (
       &OldDif2::AMI_ex1Handler::op4_reply_stub
     );
 }
-
 
 
 void
@@ -573,7 +558,6 @@ OldDif2::ex1::sendc_op5 (
       &OldDif2::AMI_ex1Handler::op5_reply_stub
     );
 }
-
 
 
 void
@@ -692,7 +676,6 @@ OldDif2::ex1::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -829,14 +812,12 @@ OldDif2::AMH_ex1ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op0 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op1 ()
@@ -845,14 +826,12 @@ OldDif2::AMH_ex1ExceptionHolder::raise_op1 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op2 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op3 ()
@@ -861,14 +840,12 @@ OldDif2::AMH_ex1ExceptionHolder::raise_op3 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op4 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op5 ()
@@ -877,14 +854,12 @@ OldDif2::AMH_ex1ExceptionHolder::raise_op5 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op6 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op0 ()
@@ -893,14 +868,12 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op0 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op1 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op2 ()
@@ -909,14 +882,12 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op2 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op3 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op4 ()
@@ -925,7 +896,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op4 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op5 ()
 {
@@ -933,14 +903,12 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op5 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op6 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1059,7 +1027,6 @@ OldDif2::AMH_ex1ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldDif2::AMI_ex1Handler.
@@ -1089,7 +1056,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::marshal (const OldDif2::AMI_ex1Hand
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -1177,7 +1143,6 @@ OldDif2::AMI_ex1Handler::op0_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex1Handler::op0_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1208,7 +1173,6 @@ OldDif2::AMI_ex1Handler::op0_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex1Handler::op1 (
   ::CORBA::Float ami_return_val,
@@ -1316,7 +1280,6 @@ OldDif2::AMI_ex1Handler::op1_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex1Handler::op1_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1347,7 +1310,6 @@ OldDif2::AMI_ex1Handler::op1_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex1Handler::op2 (
   ::CORBA::Double ami_return_val,
@@ -1455,7 +1417,6 @@ OldDif2::AMI_ex1Handler::op2_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex1Handler::op2_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1486,7 +1447,6 @@ OldDif2::AMI_ex1Handler::op2_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex1Handler::op3 (
   ::CORBA::Long ami_return_val,
@@ -1594,7 +1554,6 @@ OldDif2::AMI_ex1Handler::op3_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex1Handler::op3_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1625,7 +1584,6 @@ OldDif2::AMI_ex1Handler::op3_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex1Handler::op4 (
   ::CORBA::Short ami_return_val,
@@ -1733,7 +1691,6 @@ OldDif2::AMI_ex1Handler::op4_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex1Handler::op4_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1764,7 +1721,6 @@ OldDif2::AMI_ex1Handler::op4_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex1Handler::op5 (
   ::CORBA::ULong ami_return_val,
@@ -1872,7 +1828,6 @@ OldDif2::AMI_ex1Handler::op5_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex1Handler::op5_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1903,7 +1858,6 @@ OldDif2::AMI_ex1Handler::op5_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex1Handler::op6 (
   ::CORBA::UShort ami_return_val,
@@ -2011,7 +1965,6 @@ OldDif2::AMI_ex1Handler::op6_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex1Handler::op6_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2125,7 +2078,6 @@ OldDif2::AMI_ex1Handler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldDif2::ex2.
@@ -2155,7 +2107,6 @@ TAO::Objref_Traits<OldDif2::ex2>::marshal (const OldDif2::ex2_ptr p,TAO_OutputCD
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::CORBA::Char
@@ -2196,7 +2147,6 @@ OldDif2::ex2::op7 (
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::Boolean
 OldDif2::ex2::op8 (
   ::CORBA::Boolean_out b,
@@ -2232,7 +2182,6 @@ OldDif2::ex2::op8 (
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::Octet
 OldDif2::ex2::op9 (
   ::CORBA::Octet & o,
@@ -2274,7 +2223,6 @@ OldDif2::ex2::op9 (
 
   return _tao_retval.retn ();
 }
-
 char *
 OldDif2::ex2::op10 (
   const char * s,
@@ -2310,7 +2258,6 @@ OldDif2::ex2::op10 (
 
   return _tao_retval.retn ();
 }
-
 char *
 OldDif2::ex2::op11 (
   char *& ls,
@@ -2346,7 +2293,6 @@ OldDif2::ex2::op11 (
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::Long
 OldDif2::ex2::op12 (
   ::CORBA::Long l)
@@ -2379,7 +2325,6 @@ OldDif2::ex2::op12 (
 
   return _tao_retval.retn ();
 }
-
 
 
 void
@@ -2422,7 +2367,6 @@ OldDif2::ex2::sendc_op7 (
 }
 
 
-
 void
 OldDif2::ex2::sendc_op8 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
@@ -2458,7 +2402,6 @@ OldDif2::ex2::sendc_op8 (
       &OldDif2::AMI_ex2Handler::op8_reply_stub
     );
 }
-
 
 
 void
@@ -2504,7 +2447,6 @@ OldDif2::ex2::sendc_op9 (
 }
 
 
-
 void
 OldDif2::ex2::sendc_op10 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
@@ -2542,7 +2484,6 @@ OldDif2::ex2::sendc_op10 (
 }
 
 
-
 void
 OldDif2::ex2::sendc_op11 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
@@ -2578,7 +2519,6 @@ OldDif2::ex2::sendc_op11 (
       &OldDif2::AMI_ex2Handler::op11_reply_stub
     );
 }
-
 
 
 void
@@ -2698,7 +2638,6 @@ OldDif2::ex2::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2835,14 +2774,12 @@ OldDif2::AMH_ex2ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op7 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op8 ()
@@ -2851,14 +2788,12 @@ OldDif2::AMH_ex2ExceptionHolder::raise_op8 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op9 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op10 ()
@@ -2867,14 +2802,12 @@ OldDif2::AMH_ex2ExceptionHolder::raise_op10 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op11 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op12 ()
@@ -2883,14 +2816,12 @@ OldDif2::AMH_ex2ExceptionHolder::raise_op12 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op7 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op8 ()
@@ -2899,14 +2830,12 @@ OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op8 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op9 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op10 ()
@@ -2915,7 +2844,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op10 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op11 ()
 {
@@ -2923,14 +2851,12 @@ OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op11 ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op12 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -3049,7 +2975,6 @@ OldDif2::AMH_ex2ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldDif2::AMI_ex2Handler.
@@ -3079,7 +3004,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::marshal (const OldDif2::AMI_ex2Hand
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -3189,7 +3113,6 @@ OldDif2::AMI_ex2Handler::op7_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex2Handler::op7_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3220,7 +3143,6 @@ OldDif2::AMI_ex2Handler::op7_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex2Handler::op8 (
   ::CORBA::Boolean ami_return_val,
@@ -3321,7 +3243,6 @@ OldDif2::AMI_ex2Handler::op8_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex2Handler::op8_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3352,7 +3273,6 @@ OldDif2::AMI_ex2Handler::op8_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex2Handler::op9 (
   ::CORBA::Octet ami_return_val,
@@ -3467,7 +3387,6 @@ OldDif2::AMI_ex2Handler::op9_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex2Handler::op9_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3498,7 +3417,6 @@ OldDif2::AMI_ex2Handler::op9_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex2Handler::op10 (
   const char * ami_return_val,
@@ -3599,7 +3517,6 @@ OldDif2::AMI_ex2Handler::op10_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex2Handler::op10_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3630,7 +3547,6 @@ OldDif2::AMI_ex2Handler::op10_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex2Handler::op11 (
   const char * ami_return_val,
@@ -3738,7 +3654,6 @@ OldDif2::AMI_ex2Handler::op11_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex2Handler::op11_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3769,7 +3684,6 @@ OldDif2::AMI_ex2Handler::op11_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex2Handler::op12 (
   ::CORBA::Long ami_return_val)
@@ -3863,7 +3777,6 @@ OldDif2::AMI_ex2Handler::op12_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex2Handler::op12_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3978,7 +3891,6 @@ OldDif2::AMI_ex2Handler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldDif2::ex3.
@@ -4008,7 +3920,6 @@ TAO::Objref_Traits<OldDif2::ex3>::marshal (const OldDif2::ex3_ptr p,TAO_OutputCD
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::CORBA::Float
@@ -4043,7 +3954,6 @@ OldDif2::ex3::float_attribute ()
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::Double
 OldDif2::ex3::double_attribute ()
 {
@@ -4076,7 +3986,6 @@ OldDif2::ex3::double_attribute ()
 
   return _tao_retval.retn ();
 }
-
 void
 OldDif2::ex3::double_attribute (
   ::CORBA::Double double_attribute)
@@ -4107,7 +4016,6 @@ OldDif2::ex3::double_attribute (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::Long
 OldDif2::ex3::long_attribute ()
 {
@@ -4140,7 +4048,6 @@ OldDif2::ex3::long_attribute ()
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::Short
 OldDif2::ex3::short_attribute ()
 {
@@ -4173,7 +4080,6 @@ OldDif2::ex3::short_attribute ()
 
   return _tao_retval.retn ();
 }
-
 void
 OldDif2::ex3::short_attribute (
   ::CORBA::Short short_attribute)
@@ -4204,7 +4110,6 @@ OldDif2::ex3::short_attribute (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::ULong
 OldDif2::ex3::unsigned_long_attribute ()
 {
@@ -4239,7 +4144,6 @@ OldDif2::ex3::unsigned_long_attribute ()
 }
 
 
-
 void
 OldDif2::ex3::sendc_get_float_attribute (
   ::OldDif2::AMI_ex3Handler_ptr ami_handler)
@@ -4267,7 +4171,6 @@ OldDif2::ex3::sendc_get_float_attribute (
       &OldDif2::AMI_ex3Handler::get_float_attribute_reply_stub
     );
 }
-
 
 
 void
@@ -4307,7 +4210,6 @@ OldDif2::ex3::sendc_set_double_attribute (
 }
 
 
-
 void
 OldDif2::ex3::sendc_get_double_attribute (
   ::OldDif2::AMI_ex3Handler_ptr ami_handler)
@@ -4337,7 +4239,6 @@ OldDif2::ex3::sendc_get_double_attribute (
 }
 
 
-
 void
 OldDif2::ex3::sendc_get_long_attribute (
   ::OldDif2::AMI_ex3Handler_ptr ami_handler)
@@ -4365,7 +4266,6 @@ OldDif2::ex3::sendc_get_long_attribute (
       &OldDif2::AMI_ex3Handler::get_long_attribute_reply_stub
     );
 }
-
 
 
 void
@@ -4405,7 +4305,6 @@ OldDif2::ex3::sendc_set_short_attribute (
 }
 
 
-
 void
 OldDif2::ex3::sendc_get_short_attribute (
   ::OldDif2::AMI_ex3Handler_ptr ami_handler)
@@ -4433,7 +4332,6 @@ OldDif2::ex3::sendc_get_short_attribute (
       &OldDif2::AMI_ex3Handler::get_short_attribute_reply_stub
     );
 }
-
 
 
 void
@@ -4545,7 +4443,6 @@ OldDif2::ex3::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -4682,14 +4579,12 @@ OldDif2::AMH_ex3ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_float_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_double_attribute ()
@@ -4698,14 +4593,12 @@ OldDif2::AMH_ex3ExceptionHolder::raise_get_double_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_set_double_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_long_attribute ()
@@ -4714,14 +4607,12 @@ OldDif2::AMH_ex3ExceptionHolder::raise_get_long_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_short_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_set_short_attribute ()
@@ -4730,14 +4621,12 @@ OldDif2::AMH_ex3ExceptionHolder::raise_set_short_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_unsigned_long_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_float_attribute ()
@@ -4746,14 +4635,12 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_float_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_set_double_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_double_attribute ()
@@ -4762,14 +4649,12 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_double_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_long_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_set_short_attribute ()
@@ -4778,7 +4663,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_set_short_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_short_attribute ()
 {
@@ -4786,14 +4670,12 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_short_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_unsigned_long_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -4912,7 +4794,6 @@ OldDif2::AMH_ex3ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldDif2::AMI_ex3Handler.
@@ -4942,7 +4823,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::marshal (const OldDif2::AMI_ex3Hand
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -5038,7 +4918,6 @@ OldDif2::AMI_ex3Handler::get_float_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex3Handler::get_float_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5069,7 +4948,6 @@ OldDif2::AMI_ex3Handler::get_float_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex3Handler::get_double_attribute (
   ::CORBA::Double ami_return_val)
@@ -5163,7 +5041,6 @@ OldDif2::AMI_ex3Handler::get_double_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex3Handler::get_double_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5194,7 +5071,6 @@ OldDif2::AMI_ex3Handler::get_double_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex3Handler::set_double_attribute ()
 {
@@ -5280,7 +5156,6 @@ OldDif2::AMI_ex3Handler::set_double_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex3Handler::set_double_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5311,7 +5186,6 @@ OldDif2::AMI_ex3Handler::set_double_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex3Handler::get_long_attribute (
   ::CORBA::Long ami_return_val)
@@ -5405,7 +5279,6 @@ OldDif2::AMI_ex3Handler::get_long_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex3Handler::get_long_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5436,7 +5309,6 @@ OldDif2::AMI_ex3Handler::get_long_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex3Handler::get_short_attribute (
   ::CORBA::Short ami_return_val)
@@ -5530,7 +5402,6 @@ OldDif2::AMI_ex3Handler::get_short_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex3Handler::get_short_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5561,7 +5432,6 @@ OldDif2::AMI_ex3Handler::get_short_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex3Handler::set_short_attribute ()
 {
@@ -5647,7 +5517,6 @@ OldDif2::AMI_ex3Handler::set_short_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex3Handler::set_short_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5678,7 +5547,6 @@ OldDif2::AMI_ex3Handler::set_short_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex3Handler::get_unsigned_long_attribute (
   ::CORBA::ULong ami_return_val)
@@ -5772,7 +5640,6 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5887,7 +5754,6 @@ OldDif2::AMI_ex3Handler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldDif2::ex4.
@@ -5917,7 +5783,6 @@ TAO::Objref_Traits<OldDif2::ex4>::marshal (const OldDif2::ex4_ptr p,TAO_OutputCD
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::CORBA::UShort
@@ -5952,7 +5817,6 @@ OldDif2::ex4::unsigned_short_attribute ()
 
   return _tao_retval.retn ();
 }
-
 void
 OldDif2::ex4::unsigned_short_attribute (
   ::CORBA::UShort unsigned_short_attribute)
@@ -5983,7 +5847,6 @@ OldDif2::ex4::unsigned_short_attribute (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::Char
 OldDif2::ex4::char_attribute ()
 {
@@ -6016,7 +5879,6 @@ OldDif2::ex4::char_attribute ()
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::Boolean
 OldDif2::ex4::boolean_attribute ()
 {
@@ -6049,7 +5911,6 @@ OldDif2::ex4::boolean_attribute ()
 
   return _tao_retval.retn ();
 }
-
 void
 OldDif2::ex4::boolean_attribute (
   ::CORBA::Boolean boolean_attribute)
@@ -6080,7 +5941,6 @@ OldDif2::ex4::boolean_attribute (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::Octet
 OldDif2::ex4::octet_attribute ()
 {
@@ -6113,7 +5973,6 @@ OldDif2::ex4::octet_attribute ()
 
   return _tao_retval.retn ();
 }
-
 char *
 OldDif2::ex4::string_attribute ()
 {
@@ -6146,7 +6005,6 @@ OldDif2::ex4::string_attribute ()
 
   return _tao_retval.retn ();
 }
-
 void
 OldDif2::ex4::string_attribute (
   const char * string_attribute)
@@ -6177,7 +6035,6 @@ OldDif2::ex4::string_attribute (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 char *
 OldDif2::ex4::limited_string_attribute ()
 {
@@ -6210,7 +6067,6 @@ OldDif2::ex4::limited_string_attribute ()
 
   return _tao_retval.retn ();
 }
-
 ::OldDif2::ex4_ptr
 OldDif2::ex4::an_object_attribute ()
 {
@@ -6243,7 +6099,6 @@ OldDif2::ex4::an_object_attribute ()
 
   return _tao_retval.retn ();
 }
-
 
 
 void
@@ -6283,7 +6138,6 @@ OldDif2::ex4::sendc_set_unsigned_short_attribute (
 }
 
 
-
 void
 OldDif2::ex4::sendc_get_unsigned_short_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6313,7 +6167,6 @@ OldDif2::ex4::sendc_get_unsigned_short_attribute (
 }
 
 
-
 void
 OldDif2::ex4::sendc_get_char_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6341,7 +6194,6 @@ OldDif2::ex4::sendc_get_char_attribute (
       &OldDif2::AMI_ex4Handler::get_char_attribute_reply_stub
     );
 }
-
 
 
 void
@@ -6381,7 +6233,6 @@ OldDif2::ex4::sendc_set_boolean_attribute (
 }
 
 
-
 void
 OldDif2::ex4::sendc_get_boolean_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6411,7 +6262,6 @@ OldDif2::ex4::sendc_get_boolean_attribute (
 }
 
 
-
 void
 OldDif2::ex4::sendc_get_octet_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6439,7 +6289,6 @@ OldDif2::ex4::sendc_get_octet_attribute (
       &OldDif2::AMI_ex4Handler::get_octet_attribute_reply_stub
     );
 }
-
 
 
 void
@@ -6479,7 +6328,6 @@ OldDif2::ex4::sendc_set_string_attribute (
 }
 
 
-
 void
 OldDif2::ex4::sendc_get_string_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6509,7 +6357,6 @@ OldDif2::ex4::sendc_get_string_attribute (
 }
 
 
-
 void
 OldDif2::ex4::sendc_get_limited_string_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6537,7 +6384,6 @@ OldDif2::ex4::sendc_get_limited_string_attribute (
       &OldDif2::AMI_ex4Handler::get_limited_string_attribute_reply_stub
     );
 }
-
 
 
 void
@@ -6651,7 +6497,6 @@ OldDif2::ex4::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -6788,14 +6633,12 @@ OldDif2::AMH_ex4ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_unsigned_short_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_set_unsigned_short_attribute ()
@@ -6804,14 +6647,12 @@ OldDif2::AMH_ex4ExceptionHolder::raise_set_unsigned_short_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_char_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_boolean_attribute ()
@@ -6820,14 +6661,12 @@ OldDif2::AMH_ex4ExceptionHolder::raise_get_boolean_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_set_boolean_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_octet_attribute ()
@@ -6836,14 +6675,12 @@ OldDif2::AMH_ex4ExceptionHolder::raise_get_octet_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_string_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_set_string_attribute ()
@@ -6852,14 +6689,12 @@ OldDif2::AMH_ex4ExceptionHolder::raise_set_string_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_limited_string_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_an_object_attribute ()
@@ -6868,14 +6703,12 @@ OldDif2::AMH_ex4ExceptionHolder::raise_get_an_object_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_unsigned_short_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_unsigned_short_attribute ()
@@ -6884,14 +6717,12 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_unsigned_short_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_char_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_boolean_attribute ()
@@ -6900,14 +6731,12 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_boolean_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_boolean_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_octet_attribute ()
@@ -6916,14 +6745,12 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_octet_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_string_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_string_attribute ()
@@ -6932,7 +6759,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_string_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_limited_string_attribute ()
 {
@@ -6940,14 +6766,12 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_limited_string_attribute ()
   this->exception->_raise ();
 }
 
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_an_object_attribute ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -7066,7 +6890,6 @@ OldDif2::AMH_ex4ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldDif2::AMI_ex4Handler.
@@ -7096,7 +6919,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::marshal (const OldDif2::AMI_ex4Hand
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -7192,7 +7014,6 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -7223,7 +7044,6 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex4Handler::set_unsigned_short_attribute ()
 {
@@ -7309,7 +7129,6 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -7340,7 +7159,6 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex4Handler::get_char_attribute (
   ::CORBA::Char ami_return_val)
@@ -7434,7 +7252,6 @@ OldDif2::AMI_ex4Handler::get_char_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex4Handler::get_char_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -7465,7 +7282,6 @@ OldDif2::AMI_ex4Handler::get_char_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex4Handler::get_boolean_attribute (
   ::CORBA::Boolean ami_return_val)
@@ -7559,7 +7375,6 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex4Handler::get_boolean_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -7590,7 +7405,6 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex4Handler::set_boolean_attribute ()
 {
@@ -7676,7 +7490,6 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex4Handler::set_boolean_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -7707,7 +7520,6 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex4Handler::get_octet_attribute (
   ::CORBA::Octet ami_return_val)
@@ -7801,7 +7613,6 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex4Handler::get_octet_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -7832,7 +7643,6 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex4Handler::get_string_attribute (
   const char * ami_return_val)
@@ -7926,7 +7736,6 @@ OldDif2::AMI_ex4Handler::get_string_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex4Handler::get_string_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -7957,7 +7766,6 @@ OldDif2::AMI_ex4Handler::get_string_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex4Handler::set_string_attribute ()
 {
@@ -8043,7 +7851,6 @@ OldDif2::AMI_ex4Handler::set_string_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex4Handler::set_string_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -8074,7 +7881,6 @@ OldDif2::AMI_ex4Handler::set_string_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex4Handler::get_limited_string_attribute (
   const char * ami_return_val)
@@ -8168,7 +7974,6 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -8199,7 +8004,6 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 OldDif2::AMI_ex4Handler::get_an_object_attribute (
   ::OldDif2::ex4_ptr ami_return_val)
@@ -8293,7 +8097,6 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute_reply_stub (
       break;
   }
 }
-
 void
 OldDif2::AMI_ex4Handler::get_an_object_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -8409,7 +8212,6 @@ OldDif2::AMI_ex4Handler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 OBV_OldDif2::AMH_ex1ExceptionHolder::~AMH_ex1ExceptionHolder ()
 {}
 
@@ -8424,7 +8226,6 @@ OBV_OldDif2::AMH_ex1ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex1ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_OldDif2::AMH_ex2ExceptionHolder::~AMH_ex2ExceptionHolder ()
 {}
 
@@ -8439,7 +8240,6 @@ OBV_OldDif2::AMH_ex2ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex2ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_OldDif2::AMH_ex3ExceptionHolder::~AMH_ex3ExceptionHolder ()
 {}
 
@@ -8454,7 +8254,6 @@ OBV_OldDif2::AMH_ex3ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex3ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_OldDif2::AMH_ex4ExceptionHolder::~AMH_ex4ExceptionHolder ()
 {}
 
@@ -8469,7 +8268,6 @@ OBV_OldDif2::AMH_ex4ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex4ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -8503,7 +8301,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex1ExceptionHolder * vt)
@@ -8524,7 +8321,6 @@ CORBA::remove_ref (OldDif2::AMH_ex1ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -8554,7 +8350,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex1ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -8572,7 +8367,6 @@ OBV_OldDif2::AMH_ex1ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -8604,7 +8398,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -8640,7 +8433,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex2ExceptionHolder * vt)
@@ -8661,7 +8453,6 @@ CORBA::remove_ref (OldDif2::AMH_ex2ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -8691,7 +8482,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex2ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -8709,7 +8499,6 @@ OBV_OldDif2::AMH_ex2ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -8741,7 +8530,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -8777,7 +8565,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex3ExceptionHolder * vt)
@@ -8798,7 +8585,6 @@ CORBA::remove_ref (OldDif2::AMH_ex3ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -8828,7 +8614,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex3ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -8846,7 +8631,6 @@ OBV_OldDif2::AMH_ex3ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -8878,7 +8662,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -8914,7 +8697,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex4ExceptionHolder * vt)
@@ -8935,7 +8717,6 @@ CORBA::remove_ref (OldDif2::AMH_ex4ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -8965,7 +8746,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex4ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -8983,7 +8763,6 @@ OBV_OldDif2::AMH_ex4ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

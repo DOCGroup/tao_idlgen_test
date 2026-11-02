@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_KEYWORDSS_SO221D_H_
-#define _TAO_IDL_KEYWORDSS_SO221D_H_
+#ifndef _TAO_IDL_KEYWORDSS_W2UK5C_H_
+#define _TAO_IDL_KEYWORDSS_W2UK5C_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::Keywords>
     : public
@@ -90,7 +86,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -104,7 +99,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::ObjectSeq>
     : public
@@ -116,7 +110,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Objects>
     : public
@@ -126,7 +119,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_TESTING__SARG_TRAITS_)
@@ -143,7 +135,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_TESTINGEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -164,7 +155,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_TESTINGHANDLER__SARG_TRAITS_)
 #define _AMI_TESTINGHANDLER__SARG_TRAITS_
 
@@ -182,7 +172,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 class POA_AMH_Testing;
@@ -208,7 +197,6 @@ public:
   Testing *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void foo_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -218,7 +206,6 @@ virtual void foo (
     AMH_TestingResponseHandler_ptr _tao_rh,
     const char * _cxx_namespace
   ) = 0;
-
 
 static void bar_skel (
     TAO_ServerRequest &_tao_req,
@@ -231,7 +218,6 @@ virtual void bar (
   ) = 0;
 
 };
-
 
 
 
@@ -265,7 +251,6 @@ public:
   ::Testing *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void foo (
     const char * _cxx_namespace) = 0;
 
@@ -273,7 +258,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void bar (
     const ::Objects & foo) = 0;
 
@@ -284,7 +268,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -293,11 +276,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_Testing_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_Testing_Direct_Proxy_Impl ();
-
   static void
   foo (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   bar (
@@ -310,7 +291,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_TestingResponseHandler;
 using POA_TAO_AMH_TestingResponseHandler_ptr = POA_TAO_AMH_TestingResponseHandler *;
 
@@ -321,18 +301,13 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_TestingResponseHandler
 public:
   POA_TAO_AMH_TestingResponseHandler () = default;
   virtual ~POA_TAO_AMH_TestingResponseHandler () = default;
-
   void foo () override;
-
   void foo_excep (
     ::AMH_TestingExceptionHolder * holder) override;
-
   void bar () override;
-
   void bar_excep (
     ::AMH_TestingExceptionHolder * holder) override;
 };
-
 
 
 
@@ -366,14 +341,12 @@ public:
   ::AMI_TestingHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void foo () = 0;
 
   static void foo_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void foo_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -381,14 +354,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void bar () = 0;
 
   static void bar_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void bar_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -397,7 +368,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -409,21 +379,17 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_TestingHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_TestingHandler_Direct_Proxy_Impl ();
-
   static void
   foo (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   foo_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   bar (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   bar_excep (

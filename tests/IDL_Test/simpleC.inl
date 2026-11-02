@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 simple::simple (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ simple::simple (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_simpleExceptionHolder::AMH_simpleExceptionHolder ()
   : exception (nullptr)
@@ -55,7 +53,6 @@ AMH_simpleExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_simpleHandler::AMI_simpleHandler (
     TAO_Stub *objref,
@@ -75,7 +72,6 @@ AMI_simpleHandler::AMI_simpleHandler (
 }
 
 
-
 ACE_INLINE
 simple2::simple2 (
     TAO_Stub *objref,
@@ -93,7 +89,6 @@ simple2::simple2 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_simple2ExceptionHolder::AMH_simple2ExceptionHolder ()
   : exception (nullptr)
@@ -104,7 +99,6 @@ AMH_simple2ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_simple2ExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

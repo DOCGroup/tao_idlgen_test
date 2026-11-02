@@ -34,7 +34,6 @@
 #include "tao/CDR.h"
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldPrimTypes_ex1 (
@@ -47,7 +46,6 @@ namespace OldPrimTypes
 {
   ::CORBA::TypeCode_ptr const _tc_ex1 = std::addressof(_tao_tc_OldPrimTypes_ex1);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldPrimTypes_AMH_ex1ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -73,7 +71,6 @@ namespace OldPrimTypes
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldPrimTypes_AMH_ex1ResponseHandler (
@@ -86,7 +83,6 @@ namespace OldPrimTypes
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_ex1ResponseHandler = std::addressof(_tao_tc_OldPrimTypes_AMH_ex1ResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldPrimTypes_AMI_ex1Handler (
@@ -99,7 +95,6 @@ namespace OldPrimTypes
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_ex1Handler = std::addressof(_tao_tc_OldPrimTypes_AMI_ex1Handler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldPrimTypes_ex2 (
@@ -112,7 +107,6 @@ namespace OldPrimTypes
 {
   ::CORBA::TypeCode_ptr const _tc_ex2 = std::addressof(_tao_tc_OldPrimTypes_ex2);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldPrimTypes_AMH_ex2ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -138,7 +132,6 @@ namespace OldPrimTypes
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldPrimTypes_AMH_ex2ResponseHandler (
@@ -151,7 +144,6 @@ namespace OldPrimTypes
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_ex2ResponseHandler = std::addressof(_tao_tc_OldPrimTypes_AMH_ex2ResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldPrimTypes_AMI_ex2Handler (
@@ -164,7 +156,6 @@ namespace OldPrimTypes
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_ex2Handler = std::addressof(_tao_tc_OldPrimTypes_AMI_ex2Handler);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -228,7 +219,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -303,7 +293,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -389,7 +378,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -455,7 +443,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -518,7 +505,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -593,7 +579,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -676,7 +661,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

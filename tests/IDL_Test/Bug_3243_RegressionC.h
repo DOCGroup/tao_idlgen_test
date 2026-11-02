@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_BUG_3243_REGRESSIONC_MIDPUO_H_
-#define _TAO_IDL_BUG_3243_REGRESSIONC_MIDPUO_H_
+#ifndef _TAO_IDL_BUG_3243_REGRESSIONC_7G2AR2_H_
+#define _TAO_IDL_BUG_3243_REGRESSIONC_7G2AR2_H_
 
 #include /**/ "ace/pre.h"
 
@@ -57,9 +56,7 @@
 #endif
 
 
-
 const CORBA::LongLong NptNow = ACE_INT64_LITERAL (2147483648);
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -68,7 +65,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -95,7 +91,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -103,7 +98,6 @@ namespace TAO
 {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

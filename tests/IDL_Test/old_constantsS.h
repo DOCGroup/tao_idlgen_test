@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_OLD_CONSTANTSS_KISO77_H_
-#define _TAO_IDL_OLD_CONSTANTSS_KISO77_H_
+#ifndef _TAO_IDL_OLD_CONSTANTSS_HLU91D_H_
+#define _TAO_IDL_OLD_CONSTANTSS_HLU91D_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::OldConstants::N>
     : public
@@ -92,7 +88,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::OldConstants::M::N>
     : public
@@ -102,7 +97,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_OLDCONSTANTS_M_A__SARG_TRAITS_)
@@ -121,7 +115,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::OldConstants::M::A::N>
     : public
@@ -131,7 +124,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_OLDCONSTANTS_M_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -150,7 +142,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDCONSTANTS_M_AMI_AHANDLER__SARG_TRAITS_)
@@ -172,14 +163,11 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_OldConstants
 {
 
-
   namespace M
   {
-
 
     class AMH_A;
     using AMH_A_ptr = AMH_A *;
@@ -204,7 +192,6 @@ namespace POA_OldConstants
       OldConstants::M::A *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     static void foo_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -217,7 +204,6 @@ namespace POA_OldConstants
       ) = 0;
 
   };
-
 
 
 
@@ -251,7 +237,6 @@ namespace POA_OldConstants
     ::OldConstants::M::A *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual ::OldConstants::M::A::N foo (
       ::OldConstants::M::A::N x,
       ::OldConstants::M::A::N_out y,
@@ -264,7 +249,6 @@ namespace POA_OldConstants
   };
 
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -273,7 +257,6 @@ namespace POA_OldConstants
   {
   public:
     virtual ~_TAO_A_Direct_Proxy_Impl ();
-
     static void
     foo (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -283,7 +266,6 @@ namespace POA_OldConstants
   //
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
-
 
 
   class TAO_AMH_AResponseHandler;
@@ -296,16 +278,13 @@ namespace POA_OldConstants
   public:
     TAO_AMH_AResponseHandler () = default;
     virtual ~TAO_AMH_AResponseHandler () = default;
-
     void foo (
       ::OldConstants::M::A::N return_value,
       ::OldConstants::M::A::N y,
       ::OldConstants::M::A::N z) override;
-
     void foo_excep (
       ::OldConstants::M::AMH_AExceptionHolder * holder) override;
   };
-
 
 
 
@@ -339,7 +318,6 @@ namespace POA_OldConstants
     ::OldConstants::M::AMI_AHandler *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual void foo (
       ::OldConstants::M::A::N ami_return_val,
       ::OldConstants::M::A::N y,
@@ -349,7 +327,6 @@ namespace POA_OldConstants
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void foo_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -358,7 +335,6 @@ namespace POA_OldConstants
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
   ///////////////////////////////////////////////////////////////////////
@@ -370,11 +346,9 @@ namespace POA_OldConstants
   {
   public:
     virtual ~_TAO_AMI_AHandler_Direct_Proxy_Impl ();
-
     static void
     foo (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
     static void
     foo_excep (
@@ -389,9 +363,7 @@ namespace POA_OldConstants
 
 
 
-
 } // module OldConstants::M
-
 
 
 } // module OldConstants

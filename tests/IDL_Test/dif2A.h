@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_DIF2A_N7MBYO_H_
-#define _TAO_IDL_DIF2A_N7MBYO_H_
+#ifndef _TAO_IDL_DIF2A_XH99NK_H_
+#define _TAO_IDL_DIF2A_XH99NK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -33,47 +32,28 @@
 
 #include "dif2C.h"
 
-
 namespace OldDif2
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ex1;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex1ExceptionHolder;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex1ResponseHandler;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_ex1Handler;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ex2;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex2ExceptionHolder;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex2ResponseHandler;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_ex2Handler;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ex3;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex3ExceptionHolder;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex3ResponseHandler;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_ex3Handler;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ex4;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex4ExceptionHolder;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex4ResponseHandler;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_ex4Handler;
 
 
 
-
 } // module OldDif2
-
 
 
 
@@ -91,7 +71,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -100,7 +79,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldDif2::AMH_ex1Excep
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldDif2::AMH_ex1ExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -123,7 +101,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -132,7 +109,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldDif2::AMI_ex1Handl
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldDif2::AMI_ex1Handler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -151,7 +127,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -160,7 +135,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldDif2::AMH_ex2Excep
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldDif2::AMH_ex2ExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -183,7 +157,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -192,7 +165,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldDif2::AMI_ex2Handl
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldDif2::AMI_ex2Handler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -211,7 +183,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -220,7 +191,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldDif2::AMH_ex3Excep
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldDif2::AMH_ex3ExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -243,7 +213,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -252,7 +221,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldDif2::AMI_ex3Handl
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldDif2::AMI_ex3Handler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -271,7 +239,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -287,7 +254,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -296,7 +262,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldDif2::AMH_ex4Respo
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldDif2::AMH_ex4ResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

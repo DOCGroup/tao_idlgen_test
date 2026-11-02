@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 simple3::simple3 (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ simple3::simple3 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_simple3ExceptionHolder::AMH_simple3ExceptionHolder ()
   : exception (nullptr)
@@ -53,7 +51,6 @@ AMH_simple3ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_simple3ExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

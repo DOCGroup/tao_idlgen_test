@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 Plesk::Naming::ObjectResolver::ObjectResolver (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ Plesk::Naming::ObjectResolver::ObjectResolver (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 Plesk::Naming::AMH_ObjectResolverExceptionHolder::AMH_ObjectResolverExceptionHolder ()
   : exception (nullptr)
@@ -53,7 +51,6 @@ Plesk::Naming::AMH_ObjectResolverExceptionHolder::_tao_obv_static_repository_id 
 {
   return "IDL:Plesk/Naming/AMH_ObjectResolverExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

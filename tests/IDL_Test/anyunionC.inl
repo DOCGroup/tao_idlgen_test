@@ -24,11 +24,9 @@
 
 #include <memory>
 #include <new>
-
 // *************************************************************
 // Inline operations for union MyAnyUnion
 // *************************************************************
-
 ACE_INLINE
 void
 MyAnyUnion::_default ()
@@ -74,7 +72,6 @@ MyAnyUnion::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void

@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 Interface1::Interface1 (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ Interface1::Interface1 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_Interface1ExceptionHolder::AMH_Interface1ExceptionHolder ()
   : exception (nullptr)
@@ -55,7 +53,6 @@ AMH_Interface1ExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_Interface1Handler::AMI_Interface1Handler (
     TAO_Stub *objref,
@@ -75,7 +72,6 @@ AMI_Interface1Handler::AMI_Interface1Handler (
 }
 
 
-
 ACE_INLINE
 Interface2::Interface2 (
     TAO_Stub *objref,
@@ -93,7 +89,6 @@ Interface2::Interface2 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_Interface2ExceptionHolder::AMH_Interface2ExceptionHolder ()
   : exception (nullptr)
@@ -104,7 +99,6 @@ AMH_Interface2ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_Interface2ExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

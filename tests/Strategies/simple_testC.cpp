@@ -23,19 +23,17 @@
  **/
 
 
-
 #include "simple_testC.h"
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "simple_testC.inl"
 #endif /* !defined INLINE */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -66,7 +64,6 @@ TAO::Objref_Traits<Simple_Server>::marshal (const Simple_Server_ptr p,TAO_Output
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::CORBA::Boolean
@@ -101,7 +98,6 @@ Simple_Server::print_status ()
 
   return _tao_retval.retn ();
 }
-
 void
 Simple_Server::shutdown ()
 {
@@ -195,7 +191,6 @@ Simple_Server::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 

@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 hello::hello (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ hello::hello (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_helloExceptionHolder::AMH_helloExceptionHolder ()
   : exception (nullptr)
@@ -55,7 +53,6 @@ AMH_helloExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_helloHandler::AMI_helloHandler (
     TAO_Stub *objref,
@@ -75,7 +72,6 @@ AMI_helloHandler::AMI_helloHandler (
 }
 
 
-
 ACE_INLINE
 goodbye::goodbye (
     TAO_Stub *objref,
@@ -93,7 +89,6 @@ goodbye::goodbye (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_goodbyeExceptionHolder::AMH_goodbyeExceptionHolder ()
   : exception (nullptr)
@@ -106,7 +101,6 @@ AMH_goodbyeExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_goodbyeHandler::AMI_goodbyeHandler (
     TAO_Stub *objref,
@@ -126,7 +120,6 @@ AMI_goodbyeHandler::AMI_goodbyeHandler (
 }
 
 
-
 ACE_INLINE
 salutation::sayonara::sayonara (
     TAO_Stub *objref,
@@ -144,7 +137,6 @@ salutation::sayonara::sayonara (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 salutation::AMH_sayonaraExceptionHolder::AMH_sayonaraExceptionHolder ()
   : exception (nullptr)
@@ -157,7 +149,6 @@ salutation::AMH_sayonaraExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 salutation::AMI_sayonaraHandler::AMI_sayonaraHandler (
     TAO_Stub *objref,
@@ -177,7 +168,6 @@ salutation::AMI_sayonaraHandler::AMI_sayonaraHandler (
 }
 
 
-
 ACE_INLINE
 ciao::ciao (
     TAO_Stub *objref,
@@ -195,7 +185,6 @@ ciao::ciao (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_ciaoExceptionHolder::AMH_ciaoExceptionHolder ()
   : exception (nullptr)
@@ -208,7 +197,6 @@ AMH_ciaoExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_ciaoHandler::AMI_ciaoHandler (
     TAO_Stub *objref,
@@ -228,7 +216,6 @@ AMI_ciaoHandler::AMI_ciaoHandler (
 }
 
 
-
 ACE_INLINE
 aloha::aloha (
     TAO_Stub *objref,
@@ -246,7 +233,6 @@ aloha::aloha (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_alohaExceptionHolder::AMH_alohaExceptionHolder ()
   : exception (nullptr)
@@ -257,7 +243,6 @@ AMH_alohaExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:anvil.com/AMH_alohaExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

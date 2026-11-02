@@ -40,7 +40,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_hello (
@@ -49,7 +48,6 @@ static TAO::TypeCode::Objref<char const *,
     "hello");
 
 ::CORBA::TypeCode_ptr const _tc_hello = std::addressof(_tao_tc_hello);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_helloExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -71,7 +69,6 @@ static TAO::TypeCode::Value<char const *,
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_helloResponseHandler (
@@ -80,7 +77,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_helloResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_helloResponseHandler = std::addressof(_tao_tc_AMH_helloResponseHandler);
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_helloHandler (
@@ -89,7 +85,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMI_helloHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMI_helloHandler = std::addressof(_tao_tc_AMI_helloHandler);
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -100,7 +95,6 @@ static TAO::TypeCode::Alias<char const *,
     &CORBA::_tc_string);
 
 ::CORBA::TypeCode_ptr const _tc_FuBar = std::addressof(_tao_tc_FuBar);
-
 static char const * const _tao_enumerators_ClusterFu[] =
   {
     "CHAOS",
@@ -123,7 +117,6 @@ static TAO::TypeCode::Enum<char const *,
 {
   return ::_tc_Riot;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
@@ -144,7 +137,6 @@ _tao_tc_Riot (
   0);
 
 ::CORBA::TypeCode_ptr const _tc_Riot = std::addressof(_tao_tc_Riot);
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_goodbye (
@@ -153,7 +145,6 @@ static TAO::TypeCode::Objref<char const *,
     "goodbye");
 
 ::CORBA::TypeCode_ptr const _tc_goodbye = std::addressof(_tao_tc_goodbye);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_goodbyeExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -175,7 +166,6 @@ static TAO::TypeCode::Value<char const *,
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_goodbyeResponseHandler (
@@ -184,7 +174,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_goodbyeResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_goodbyeResponseHandler = std::addressof(_tao_tc_AMH_goodbyeResponseHandler);
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_goodbyeHandler (
@@ -199,7 +188,6 @@ static TAO::TypeCode::Objref<char const *,
 {
   return ::A::_tc_my_exception;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
@@ -224,7 +212,6 @@ namespace A
 {
   ::CORBA::TypeCode_ptr const _tc_my_exception = std::addressof(_tao_tc_A_my_exception);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_salutation_sayonara (
@@ -237,7 +224,6 @@ namespace salutation
 {
   ::CORBA::TypeCode_ptr const _tc_sayonara = std::addressof(_tao_tc_salutation_sayonara);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_salutation_AMH_sayonaraExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -263,7 +249,6 @@ namespace salutation
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_salutation_AMH_sayonaraResponseHandler (
@@ -276,7 +261,6 @@ namespace salutation
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_sayonaraResponseHandler = std::addressof(_tao_tc_salutation_AMH_sayonaraResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_salutation_AMI_sayonaraHandler (
@@ -289,7 +273,6 @@ namespace salutation
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_sayonaraHandler = std::addressof(_tao_tc_salutation_AMI_sayonaraHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_ciao (
@@ -298,7 +281,6 @@ static TAO::TypeCode::Objref<char const *,
     "ciao");
 
 ::CORBA::TypeCode_ptr const _tc_ciao = std::addressof(_tao_tc_ciao);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_ciaoExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -320,7 +302,6 @@ static TAO::TypeCode::Value<char const *,
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_ciaoResponseHandler (
@@ -329,7 +310,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_ciaoResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_ciaoResponseHandler = std::addressof(_tao_tc_AMH_ciaoResponseHandler);
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_ciaoHandler (
@@ -338,7 +318,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMI_ciaoHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMI_ciaoHandler = std::addressof(_tao_tc_AMI_ciaoHandler);
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_aloha (
@@ -347,7 +326,6 @@ static TAO::TypeCode::Objref<char const *,
     "aloha");
 
 ::CORBA::TypeCode_ptr const _tc_aloha = std::addressof(_tao_tc_aloha);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_alohaExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -369,7 +347,6 @@ static TAO::TypeCode::Value<char const *,
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_alohaResponseHandler (
@@ -378,7 +355,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_alohaResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_alohaResponseHandler = std::addressof(_tao_tc_AMH_alohaResponseHandler);
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_alohaHandler (
@@ -387,7 +363,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMI_alohaHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMI_alohaHandler = std::addressof(_tao_tc_AMI_alohaHandler);
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -415,7 +390,6 @@ namespace DCPS_Test
 {
   ::CORBA::TypeCode_ptr const _tc_Sample = std::addressof(_tao_tc_DCPS_Test_Sample);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -479,7 +453,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -554,7 +527,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -640,7 +612,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -706,7 +677,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -738,7 +708,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -819,7 +788,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -882,7 +850,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -957,7 +924,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1043,7 +1009,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1106,7 +1071,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1187,7 +1151,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1250,7 +1213,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1325,7 +1287,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1411,7 +1372,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1477,7 +1437,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1540,7 +1499,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1615,7 +1573,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1701,7 +1658,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1767,7 +1723,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1830,7 +1785,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1905,7 +1859,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1991,7 +1944,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2054,7 +2006,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

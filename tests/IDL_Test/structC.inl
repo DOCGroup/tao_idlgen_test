@@ -24,7 +24,6 @@
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -74,7 +73,6 @@ TAO::Array_Traits<Test::S90Array_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -130,7 +128,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -180,7 +177,6 @@ TAO::Array_Traits<Test::SString43_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

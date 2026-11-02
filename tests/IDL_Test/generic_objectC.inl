@@ -24,11 +24,9 @@
 
 #include <memory>
 #include <new>
-
 // *************************************************************
 // Inline operations for union Selecter
 // *************************************************************
-
 ACE_INLINE
 void
 Selecter::_default ()
@@ -76,7 +74,6 @@ Selecter::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -103,7 +100,6 @@ Selecter::this_object () const
     }
   return this->u_.this_object_->in ();
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -132,7 +128,6 @@ Selecter::that_object () const
 }
 
 
-
 ACE_INLINE
 generic::generic (
     TAO_Stub *objref,
@@ -150,7 +145,6 @@ generic::generic (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_genericExceptionHolder::AMH_genericExceptionHolder ()
   : exception (nullptr)
@@ -161,7 +155,6 @@ AMH_genericExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_genericExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_INCLUDEDS_S5GXS6_H_
-#define _TAO_IDL_INCLUDEDS_S5GXS6_H_
+#ifndef _TAO_IDL_INCLUDEDS_HPBPXM_H_
+#define _TAO_IDL_INCLUDEDS_HPBPXM_H_
 
 #include /**/ "ace/pre.h"
 
@@ -51,14 +50,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -79,7 +76,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::Aok::Seq1Type>
     : public
@@ -91,7 +87,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Agog>
     : public
@@ -101,7 +96,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_VT_DEF_VT__SARG_TRAITS_)
@@ -122,7 +116,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_INCLUDEDBASE__SARG_TRAITS_)
 #define _INCLUDEDBASE__SARG_TRAITS_
 
@@ -141,7 +134,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::A::MySeqA>
     : public
@@ -153,7 +145,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::A::MyStructA>
     : public
@@ -163,7 +154,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_ROOTMODULE_SUBMODULE1_PARENTIF__SARG_TRAITS_)
@@ -182,7 +172,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::RootModule::SUBMODULE1::ParentIF::Mode>
     : public
@@ -192,7 +181,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_ROOTMODULE_SUBMODULE1_AMH_PARENTIFEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -213,7 +201,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_ROOTMODULE_SUBMODULE1_AMI_PARENTIFHANDLER__SARG_TRAITS_)
 #define _ROOTMODULE_SUBMODULE1_AMI_PARENTIFHANDLER__SARG_TRAITS_
 
@@ -228,7 +215,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AAA__SARG_TRAITS_)
@@ -247,7 +233,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMH_AAAEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_AAAEXCEPTIONHOLDER__SARG_TRAITS_
 
@@ -264,7 +249,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMI_AAAHANDLER__SARG_TRAITS_)
@@ -286,38 +270,29 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_Aok
 {
 
 
 
-
 } // module Aok
-
 namespace POA_VT_Def
 {
 
 
 
-
 } // module VT_Def
-
 namespace POA_A
 {
 
 
 
-
 } // module A
-
 namespace POA_RootModule
 {
 
-
   namespace SUBMODULE1
   {
-
 
     class AMH_ParentIF;
     using AMH_ParentIF_ptr = AMH_ParentIF *;
@@ -343,7 +318,6 @@ namespace POA_RootModule
 
     virtual const char* _interface_repository_id () const;
   };
-
 
 
 
@@ -380,7 +354,6 @@ namespace POA_RootModule
   };
 
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -396,7 +369,6 @@ namespace POA_RootModule
   ///////////////////////////////////////////////////////////////////////
 
 
-
   class TAO_AMH_ParentIFResponseHandler;
   using TAO_AMH_ParentIFResponseHandler_ptr = TAO_AMH_ParentIFResponseHandler *;
 
@@ -408,7 +380,6 @@ namespace POA_RootModule
     TAO_AMH_ParentIFResponseHandler () = default;
     virtual ~TAO_AMH_ParentIFResponseHandler () = default;
   };
-
 
 
 
@@ -445,7 +416,6 @@ namespace POA_RootModule
   };
 
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -464,13 +434,10 @@ namespace POA_RootModule
 
 
 
-
 } // module RootModule::SUBMODULE1
 
 
-
 } // module RootModule
-
 class POA_AMH_AAA;
 using POA_AMH_AAA_ptr = POA_AMH_AAA *;
 
@@ -495,7 +462,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -532,7 +498,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -548,7 +513,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_AAAResponseHandler;
 using POA_TAO_AMH_AAAResponseHandler_ptr = POA_TAO_AMH_AAAResponseHandler *;
 
@@ -560,7 +524,6 @@ public:
   POA_TAO_AMH_AAAResponseHandler () = default;
   virtual ~POA_TAO_AMH_AAAResponseHandler () = default;
 };
-
 
 
 
@@ -595,7 +558,6 @@ public:
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////

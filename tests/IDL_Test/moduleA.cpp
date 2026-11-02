@@ -34,7 +34,6 @@
 #include "tao/CDR.h"
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_mod1_mod2_ex1 (
@@ -51,7 +50,6 @@ namespace mod1
     ::CORBA::TypeCode_ptr const _tc_ex1 = std::addressof(_tao_tc_mod1_mod2_ex1);
   }
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_mod1_mod2_AMH_ex1ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -81,7 +79,6 @@ namespace mod1
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_mod1_mod2_AMH_ex1ResponseHandler (
@@ -98,7 +95,6 @@ namespace mod1
     ::CORBA::TypeCode_ptr const _tc_AMH_ex1ResponseHandler = std::addressof(_tao_tc_mod1_mod2_AMH_ex1ResponseHandler);
   }
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_mod1_mod2_AMI_ex1Handler (
@@ -115,7 +111,6 @@ namespace mod1
     ::CORBA::TypeCode_ptr const _tc_AMI_ex1Handler = std::addressof(_tao_tc_mod1_mod2_AMI_ex1Handler);
   }
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_mod1_mod2_ex2 (
@@ -132,7 +127,6 @@ namespace mod1
     ::CORBA::TypeCode_ptr const _tc_ex2 = std::addressof(_tao_tc_mod1_mod2_ex2);
   }
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_mod1_mod2_AMH_ex2ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -162,7 +156,6 @@ namespace mod1
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_mod1_mod2_AMH_ex2ResponseHandler (
@@ -179,7 +172,6 @@ namespace mod1
     ::CORBA::TypeCode_ptr const _tc_AMH_ex2ResponseHandler = std::addressof(_tao_tc_mod1_mod2_AMH_ex2ResponseHandler);
   }
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_mod1_mod2_AMI_ex2Handler (
@@ -196,7 +188,6 @@ namespace mod1
     ::CORBA::TypeCode_ptr const _tc_AMI_ex2Handler = std::addressof(_tao_tc_mod1_mod2_AMI_ex2Handler);
   }
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -260,7 +251,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -335,7 +325,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -421,7 +410,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -487,7 +475,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -550,7 +537,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -625,7 +611,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -708,7 +693,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

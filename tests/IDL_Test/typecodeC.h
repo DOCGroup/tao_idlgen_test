@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_TYPECODEC_NE4JPO_H_
-#define _TAO_IDL_TYPECODEC_NE4JPO_H_
+#ifndef _TAO_IDL_TYPECODEC_NCKF1E_H_
+#define _TAO_IDL_TYPECODEC_NCKF1E_H_
 
 #include /**/ "ace/pre.h"
 
@@ -91,7 +90,6 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -103,10 +101,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace MyModule
 {
-
 
 
 
@@ -121,10 +117,7 @@ namespace MyModule
 
   class TAO_IDL_TEST_STUB_Export TypeCodeList
     : public
-        ::TAO::unbounded_object_reference_sequence<
-            ::CORBA::TypeCode,
-            ::CORBA::TypeCode_var
-          >
+        ::TAO::unbounded_object_reference_sequence<::CORBA::TypeCode, ::CORBA::TypeCode_var>
   {
   public:
     TypeCodeList () = default;
@@ -141,7 +134,6 @@ namespace MyModule
     virtual ~TypeCodeList () = default;
 
 
-
     using _var_type = TypeCodeList_var;
     using _out_type = TypeCodeList_out;
 
@@ -152,9 +144,7 @@ namespace MyModule
 
 
 
-
 } // module MyModule
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -163,7 +153,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -185,7 +174,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::MyModule::TypeCodeList>
     : public
@@ -202,7 +190,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -210,7 +197,6 @@ namespace TAO
 {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -232,7 +218,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 #endif /* _TAO_CDR_OP_MyModule_TypeCodeList_H_ */
-
 #if defined (__ACE_INLINE__)
 #include "typecodeC.inl"
 #endif /* defined INLINE */

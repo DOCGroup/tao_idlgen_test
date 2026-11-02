@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_REOPEN_INCLUDE2C_45J88S_H_
-#define _TAO_IDL_REOPEN_INCLUDE2C_45J88S_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2C_E7I3MF_H_
+#define _TAO_IDL_REOPEN_INCLUDE2C_E7I3MF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -68,7 +67,6 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -80,10 +78,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace frag
 {
-
 
 
   struct pug;
@@ -93,10 +89,8 @@ namespace frag
 
 
 
-
   struct TAO_IDL_TEST_STUB_Export pug
   {
-
 
     using _var_type = pug_var;
     using _out_type = pug_out;
@@ -105,33 +99,24 @@ namespace frag
 
     ::CORBA::Short leash {};
   };
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_pug;
 
 
 
-
 } // module frag
-
 namespace XX
 {
-
   using whah = ::CORBA::Long;
   using whah_out = ::CORBA::Long_out;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_whah;
 
 
 
-
 } // module XX
-
 namespace A
 {
-
   namespace B
   {
-
 
 
 #if !defined (_A_B_X2__VAR_OUT_CH_)
@@ -150,13 +135,11 @@ namespace A
 
 
 
-
     class TAO_IDL_TEST_STUB_Export X2
       : public virtual ::CORBA::Object
     {
     public:
       friend class TAO::Narrow_Utils<X2>;
-
       using _ptr_type = X2_ptr;
       using _var_type = X2_var;
       using _out_type = X2_out;
@@ -176,7 +159,6 @@ namespace A
 
       virtual void sendc_getX2 (
         ::A::B::AMI_X2Handler_ptr ami_handler);
-
 
 
 
@@ -210,9 +192,7 @@ namespace A
       X2 &operator= (const X2 &) = delete;
       X2 &operator= (X2 &&) = delete;
     };
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_X2;
-
 
 
 #if !defined (_A_B_AMH_X2EXCEPTIONHOLDER__VAR_OUT_CH_)
@@ -225,12 +205,10 @@ namespace A
 #endif /* end #if !defined */
 
 
-
     class TAO_IDL_TEST_STUB_Export AMH_X2ExceptionHolder
       : public virtual ::CORBA::DefaultValueRefCountBase
     {
     public:
-
       using _ptr_type = AMH_X2ExceptionHolder*;
       using _var_type = AMH_X2ExceptionHolder_var;
       using _out_type = AMH_X2ExceptionHolder_out;
@@ -261,16 +239,13 @@ namespace A
 
     public:
 
-
     public:
       virtual void raise_getX2 ();
 
   public:
 
-
   public:
     virtual void raise_sendc_getX2 ();
-
 
 
 protected:
@@ -292,9 +267,7 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__A_B_AMH_X2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_X2ExceptionHolder;
-
 
 
 #if !defined (_A_B_AMH_X2RESPONSEHANDLER__VAR_OUT_CH_)
@@ -313,12 +286,10 @@ using AMH_X2ResponseHandler_out = TAO_Objref_Out_T<AMH_X2ResponseHandler>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMH_X2ResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-
   using _ptr_type = AMH_X2ResponseHandler_ptr;
   using _var_type = AMH_X2ResponseHandler_var;
   using _out_type = AMH_X2ResponseHandler_out;
@@ -339,7 +310,6 @@ public:
 
   virtual void getX2_excep (
     ::A::B::AMH_X2ExceptionHolder * holder) = 0;
-
 
 
 
@@ -365,9 +335,7 @@ private:
   AMH_X2ResponseHandler &operator= (const AMH_X2ResponseHandler &) = delete;
   AMH_X2ResponseHandler &operator= (AMH_X2ResponseHandler &&) = delete;
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_X2ResponseHandler;
-
 
 
 #if !defined (_A_B_AMI_X2HANDLER__VAR_OUT_CH_)
@@ -383,14 +351,12 @@ using AMI_X2Handler_out = TAO_Objref_Out_T<AMI_X2Handler>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMI_X2Handler
   : public virtual ::Messaging::ReplyHandler
 
 {
 public:
   friend class TAO::Narrow_Utils<AMI_X2Handler>;
-
   using _ptr_type = AMI_X2Handler_ptr;
   using _var_type = AMI_X2Handler_var;
   using _out_type = AMI_X2Handler_out;
@@ -417,7 +383,6 @@ public:
 
   virtual void getX2_excep (
     ::Messaging::ExceptionHolder * excep_holder);
-
 
 
 
@@ -451,9 +416,7 @@ private:
   AMI_X2Handler &operator= (const AMI_X2Handler &) = delete;
   AMI_X2Handler &operator= (AMI_X2Handler &&) = delete;
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_X2Handler;
-
 
 
 
@@ -461,9 +424,7 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_X2Handler;
 
 
 
-
 } // module A
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -472,7 +433,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -494,7 +454,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::frag::pug>
     : public
@@ -504,7 +463,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_A_B_X2__ARG_TRAITS_)
@@ -524,7 +482,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_A_B_AMH_X2EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _A_B_AMH_X2EXCEPTIONHOLDER__ARG_TRAITS_
 
@@ -542,7 +499,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_A_B_AMI_X2HANDLER__ARG_TRAITS_)
@@ -565,13 +521,10 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace OBV_A
 {
-
   namespace B
   {
-
 
 
     // OBV_ class
@@ -599,7 +552,6 @@ namespace OBV_A
   };
 }
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -667,7 +619,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -676,7 +627,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::frag::pug*); // non
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::frag::pug const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -695,7 +645,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -704,7 +653,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, A::B::AMH_X2Exception
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, A::B::AMH_X2ExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -727,7 +675,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -736,7 +683,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, A::B::AMI_X2Handler_p
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, A::B::AMI_X2Handler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -752,14 +698,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::B::X2_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, A::B::X2_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -771,7 +715,6 @@ namespace CORBA
   extern TAO_IDL_TEST_STUB_Export void remove_ref (A::B::AMH_X2ExceptionHolder *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -787,14 +730,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::B::AMI_X2Handler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, A::B::AMI_X2Handler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

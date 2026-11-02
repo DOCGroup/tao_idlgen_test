@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_GENERIC_OBJECTS_RGPHY6_H_
-#define _TAO_IDL_GENERIC_OBJECTS_RGPHY6_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_4G9YDK_H_
+#define _TAO_IDL_GENERIC_OBJECTS_4G9YDK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::ObjectType>
     : public
@@ -92,7 +88,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Selecter>
     : public
@@ -102,7 +97,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_GENERIC__SARG_TRAITS_)
@@ -119,7 +113,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_GENERICEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -140,7 +133,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_GENERICHANDLER__SARG_TRAITS_)
 #define _AMI_GENERICHANDLER__SARG_TRAITS_
 
@@ -158,7 +150,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 class POA_AMH_generic;
@@ -184,7 +175,6 @@ public:
   generic *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -197,7 +187,6 @@ virtual void op (
   ) = 0;
 
 };
-
 
 
 
@@ -231,7 +220,6 @@ public:
   ::generic *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::CORBA::Object_ptr op (
     ::CORBA::Object_ptr inarg,
     ::CORBA::Object_ptr & inoutarg,
@@ -244,7 +232,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -253,7 +240,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_generic_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_generic_Direct_Proxy_Impl ();
-
   static void
   op (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -263,7 +249,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class POA_TAO_AMH_genericResponseHandler;
@@ -276,16 +261,13 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_genericResponseHandler
 public:
   POA_TAO_AMH_genericResponseHandler () = default;
   virtual ~POA_TAO_AMH_genericResponseHandler () = default;
-
   void op (
     ::CORBA::Object_ptr return_value,
     ::CORBA::Object_ptr inoutarg,
     ::CORBA::Object_ptr outarg) override;
-
   void op_excep (
     ::AMH_genericExceptionHolder * holder) override;
 };
-
 
 
 
@@ -319,7 +301,6 @@ public:
   ::AMI_genericHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op (
     ::CORBA::Object_ptr ami_return_val,
     ::CORBA::Object_ptr inoutarg,
@@ -329,7 +310,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -338,7 +318,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -350,11 +329,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_genericHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_genericHandler_Direct_Proxy_Impl ();
-
   static void
   op (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op_excep (

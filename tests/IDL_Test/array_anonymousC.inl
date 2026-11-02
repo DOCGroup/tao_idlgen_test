@@ -24,7 +24,6 @@
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -74,7 +73,6 @@ TAO::Array_Traits<tdef::Bytes_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -130,7 +128,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 ACE_INLINE
 tdef::tdef (
     TAO_Stub *objref,
@@ -148,7 +145,6 @@ tdef::tdef (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_tdefExceptionHolder::AMH_tdefExceptionHolder ()
   : exception (nullptr)
@@ -161,7 +157,6 @@ AMH_tdefExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_tdefHandler::AMI_tdefHandler (
     TAO_Stub *objref,
@@ -179,7 +174,6 @@ AMI_tdefHandler::AMI_tdefHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -231,7 +225,6 @@ TAO::Array_Traits<ABCModule::RmtPhysicalInfo::_rmtNodeId_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -287,7 +280,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -337,7 +329,6 @@ TAO::Array_Traits<ABCModule::bbbBubBubBubBaby::_rmtNodeId_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

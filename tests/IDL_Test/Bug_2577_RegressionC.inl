@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 ACE_INLINE
 Data_T::Data_T ()
 {}
@@ -32,7 +31,6 @@ Data_T::_tao_obv_static_repository_id ()
 {
   return "IDL:Data_T:1.0";
 }
-
 
 
 ACE_INLINE
@@ -52,7 +50,6 @@ User_T::User_T (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_User_TExceptionHolder::AMH_User_TExceptionHolder ()
   : exception (nullptr)
@@ -63,7 +60,6 @@ AMH_User_TExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_User_TExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

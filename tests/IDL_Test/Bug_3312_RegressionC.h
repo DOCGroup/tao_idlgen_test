@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_BUG_3312_REGRESSIONC_EMTA8C_H_
-#define _TAO_IDL_BUG_3312_REGRESSIONC_EMTA8C_H_
+#ifndef _TAO_IDL_BUG_3312_REGRESSIONC_ZFXLKP_H_
+#define _TAO_IDL_BUG_3312_REGRESSIONC_ZFXLKP_H_
 
 #include /**/ "ace/pre.h"
 
@@ -57,10 +56,8 @@
 #if TAO_MAJOR_VERSION != 4 || TAO_MINOR_VERSION != 0 || TAO_MICRO_VERSION != 8
 #error This file should be regenerated with TAO_IDL
 #endif
-
 namespace CallMe
 {
-
   enum Colors
   {
     Red,
@@ -69,9 +66,7 @@ namespace CallMe
   };
 
   using Colors_out = Colors &;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Colors;
-
 
 
   class YourColorBaby;
@@ -86,7 +81,6 @@ namespace CallMe
     ~YourColorBaby ();
 
     YourColorBaby &operator= (YourColorBaby const &);
-
     enum ColorMe
     {
       Red,
@@ -94,20 +88,16 @@ namespace CallMe
     };
 
     using ColorMe_out = ColorMe &;
-
     static ::CORBA::TypeCode_ptr const _tc_ColorMe;
-
 
 
     void _d (ColorMe);
     ColorMe _d () const;
 
-
     using _var_type = YourColorBaby_var;
     using _out_type = YourColorBaby_out;
 
     static void _tao_any_destructor (void *);
-
     enum Val
     {
       one,
@@ -115,19 +105,15 @@ namespace CallMe
     };
 
     using Val_out = Val &;
-
     static ::CORBA::TypeCode_ptr const _tc_Val;
-
 
 
     void c_1 (Val);
     Val c_1 () const;
 
 
-
     void c_2 ( ::CORBA::Long);
     ::CORBA::Long c_2 () const;
-
 
 
     void _default ();
@@ -139,9 +125,7 @@ namespace CallMe
     {
       _tao_union_storage () {}
 
-
       Val c_1_;
-
 
       ::CORBA::Long c_2_;
     } u_;
@@ -149,9 +133,7 @@ namespace CallMe
     /// TAO extension - frees any allocated storage.
     void _reset ();
   };
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_YourColorBaby;
-
 
 
   class YourCar;
@@ -166,7 +148,6 @@ namespace CallMe
     ~YourCar ();
 
     YourCar &operator= (YourCar const &);
-
     enum ColorMe
     {
       Green,
@@ -174,14 +155,11 @@ namespace CallMe
     };
 
     using ColorMe_out = ColorMe &;
-
     static ::CORBA::TypeCode_ptr const _tc_ColorMe;
-
 
 
     void _d (ColorMe);
     ColorMe _d () const;
-
 
     using _var_type = YourCar_var;
     using _out_type = YourCar_out;
@@ -189,15 +167,12 @@ namespace CallMe
     static void _tao_any_destructor (void *);
 
 
-
     void c_1 ( ::CORBA::Short);
     ::CORBA::Short c_1 () const;
 
 
-
     void c_2 ( ::CORBA::Short);
     ::CORBA::Short c_2 () const;
-
 
 
     void _default ();
@@ -209,9 +184,7 @@ namespace CallMe
     {
       _tao_union_storage () {}
 
-
       ::CORBA::Short c_1_;
-
 
       ::CORBA::Short c_2_;
     } u_;
@@ -219,14 +192,11 @@ namespace CallMe
     /// TAO extension - frees any allocated storage.
     void _reset ();
   };
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_YourCar;
 
 
 
-
 } // module CallMe
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -235,7 +205,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -257,7 +226,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::CallMe::Colors>
     : public
@@ -267,7 +235,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -281,7 +248,6 @@ namespace TAO
   };
 
 
-
   template<>
   class Arg_Traits< ::CallMe::YourColorBaby::Val>
     : public
@@ -291,7 +257,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -310,7 +275,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -318,7 +282,6 @@ namespace TAO
 {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -334,7 +297,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -343,7 +305,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, CallMe::YourColorBaby
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, CallMe::YourColorBaby const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -359,7 +320,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -372,7 +332,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -381,7 +340,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, CallMe::YourCar*); //
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, CallMe::YourCar const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -397,14 +355,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, CallMe::Colors _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, CallMe::Colors &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -417,14 +373,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, CallMe::YourColorBaby::ColorMe _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, CallMe::YourColorBaby::ColorMe &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -437,7 +391,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, CallMe::YourCar const &);
@@ -447,14 +400,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, CallMe::YourCar::ColorMe _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, CallMe::YourCar::ColorMe &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

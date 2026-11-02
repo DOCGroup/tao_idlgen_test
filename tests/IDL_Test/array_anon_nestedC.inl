@@ -24,7 +24,6 @@
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -74,7 +73,6 @@ TAO::Array_Traits<teststruct::_b_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_AU6WMY_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSC_AU6WMY_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_9EDDPU_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSC_9EDDPU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -70,7 +69,6 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -80,7 +78,6 @@ namespace TAO
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -101,13 +98,11 @@ using seqTest_out = TAO_Objref_Out_T<seqTest>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export seqTest
   : public virtual ::CORBA::Object
 {
 public:
   friend class TAO::Narrow_Utils<seqTest>;
-
   using _ptr_type = seqTest_ptr;
   using _var_type = seqTest_var;
   using _out_type = seqTest_out;
@@ -122,7 +117,6 @@ public:
   static seqTest_ptr _narrow (::CORBA::Object_ptr obj);
   static seqTest_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static seqTest_ptr _nil ();
-
 
 
 
@@ -154,7 +148,6 @@ public:
     virtual ~dozens () = default;
 
 
-
     using _var_type = dozens_var;
     using _out_type = dozens_out;
 
@@ -162,7 +155,6 @@ public:
   };
 
 #endif /* end #if !defined */
-
   static ::CORBA::TypeCode_ptr const _tc_dozens;
 
   virtual void send_dozen (
@@ -171,7 +163,6 @@ public:
   virtual void sendc_send_dozen (
     ::AMI_seqTestHandler_ptr ami_handler,
     const ::seqTest::dozens & bouquets);
-
 
 
 
@@ -205,9 +196,7 @@ private:
   seqTest &operator= (const seqTest &) = delete;
   seqTest &operator= (seqTest &&) = delete;
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_seqTest;
-
 
 
 #if !defined (_AMH_SEQTESTEXCEPTIONHOLDER__VAR_OUT_CH_)
@@ -220,12 +209,10 @@ using AMH_seqTestExceptionHolder_out = TAO_Value_Out_T<AMH_seqTestExceptionHolde
 #endif /* end #if !defined */
 
 
-
 class TAO_IDL_TEST_STUB_Export AMH_seqTestExceptionHolder
   : public virtual ::CORBA::DefaultValueRefCountBase
 {
 public:
-
   using _ptr_type = AMH_seqTestExceptionHolder*;
   using _var_type = AMH_seqTestExceptionHolder_var;
   using _out_type = AMH_seqTestExceptionHolder_out;
@@ -256,16 +243,13 @@ public:
 
 public:
 
-
 public:
   virtual void raise_send_dozen ();
 
 public:
 
-
 public:
   virtual void raise_sendc_send_dozen ();
-
 
 
 protected:
@@ -287,9 +271,7 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__AMH_seqTestExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_seqTestExceptionHolder;
-
 
 
 #if !defined (_AMH_SEQTESTRESPONSEHANDLER__VAR_OUT_CH_)
@@ -308,12 +290,10 @@ using AMH_seqTestResponseHandler_out = TAO_Objref_Out_T<AMH_seqTestResponseHandl
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMH_seqTestResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-
   using _ptr_type = AMH_seqTestResponseHandler_ptr;
   using _var_type = AMH_seqTestResponseHandler_var;
   using _out_type = AMH_seqTestResponseHandler_out;
@@ -334,7 +314,6 @@ public:
 
   virtual void send_dozen_excep (
     ::AMH_seqTestExceptionHolder * holder) = 0;
-
 
 
 
@@ -360,9 +339,7 @@ private:
   AMH_seqTestResponseHandler &operator= (const AMH_seqTestResponseHandler &) = delete;
   AMH_seqTestResponseHandler &operator= (AMH_seqTestResponseHandler &&) = delete;
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_seqTestResponseHandler;
-
 
 
 #if !defined (_AMI_SEQTESTHANDLER__VAR_OUT_CH_)
@@ -378,14 +355,12 @@ using AMI_seqTestHandler_out = TAO_Objref_Out_T<AMI_seqTestHandler>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMI_seqTestHandler
   : public virtual ::Messaging::ReplyHandler
 
 {
 public:
   friend class TAO::Narrow_Utils<AMI_seqTestHandler>;
-
   using _ptr_type = AMI_seqTestHandler_ptr;
   using _var_type = AMI_seqTestHandler_var;
   using _out_type = AMI_seqTestHandler_out;
@@ -412,7 +387,6 @@ public:
 
   virtual void send_dozen_excep (
     ::Messaging::ExceptionHolder * excep_holder);
-
 
 
 
@@ -446,9 +420,7 @@ private:
   AMI_seqTestHandler &operator= (const AMI_seqTestHandler &) = delete;
   AMI_seqTestHandler &operator= (AMI_seqTestHandler &&) = delete;
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_seqTestHandler;
-
 
 
 struct twinStruct;
@@ -458,16 +430,13 @@ using twinStruct_out = ::TAO_Out_T<twinStruct>;
 
 
 
-
 struct TAO_IDL_TEST_STUB_Export twinStruct
 {
-
 
   using _var_type = twinStruct_var;
   using _out_type = twinStruct_out;
 
   static void _tao_any_destructor (void *);
-
 
 
 
@@ -500,7 +469,6 @@ struct TAO_IDL_TEST_STUB_Export twinStruct
   };
 
 #endif /* end #if !defined */
-
 
 
 
@@ -531,10 +499,8 @@ struct TAO_IDL_TEST_STUB_Export twinStruct
   };
 
 #endif /* end #if !defined */
-
   using _and__seq = _tao_seq__tao_seq_CORBA_Short__and_;
   _tao_seq__tao_seq_CORBA_Short__and_ and_ {};
-
 
 
 
@@ -570,7 +536,6 @@ struct TAO_IDL_TEST_STUB_Export twinStruct
 
 
 
-
 #if !defined (_TWINSTRUCT__TAO_SEQ__TAO_SEQ_CORBA_SHORT__OR__CH_)
 #define _TWINSTRUCT__TAO_SEQ__TAO_SEQ_CORBA_SHORT__OR__CH_
 
@@ -597,13 +562,10 @@ struct TAO_IDL_TEST_STUB_Export twinStruct
   };
 
 #endif /* end #if !defined */
-
   using _or__seq = _tao_seq__tao_seq_CORBA_Short__or_;
   _tao_seq__tao_seq_CORBA_Short__or_ or_ {};
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_twinStruct;
-
 
 
 
@@ -636,7 +598,6 @@ public:
 
 
 
-
 #if !defined (_OUTSIDE_CH_)
 #define _OUTSIDE_CH_
 
@@ -664,7 +625,6 @@ public:
   virtual ~outside () = default;
 
 
-
   using _var_type = outside_var;
   using _out_type = outside_out;
 
@@ -672,9 +632,7 @@ public:
 };
 
 #endif /* end #if !defined */
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_outside;
-
 
 
 struct nestedSeqStruct;
@@ -684,16 +642,13 @@ using nestedSeqStruct_out = ::TAO_Out_T<nestedSeqStruct>;
 
 
 
-
 struct TAO_IDL_TEST_STUB_Export nestedSeqStruct
 {
-
 
   using _var_type = nestedSeqStruct_var;
   using _out_type = nestedSeqStruct_out;
 
   static void _tao_any_destructor (void *);
-
 
 
 
@@ -730,7 +685,6 @@ struct TAO_IDL_TEST_STUB_Export nestedSeqStruct
 
 
 
-
 #if !defined (_NESTEDSEQSTRUCT__TAO_SEQ__TAO_SEQ_OUTSIDE__INSIDE_7_CH_)
 #define _NESTEDSEQSTRUCT__TAO_SEQ__TAO_SEQ_OUTSIDE__INSIDE_7_CH_
 
@@ -755,13 +709,10 @@ struct TAO_IDL_TEST_STUB_Export nestedSeqStruct
   };
 
 #endif /* end #if !defined */
-
   using _inside_seq = _tao_seq__tao_seq_outside__inside_7;
   _tao_seq__tao_seq_outside__inside_7 inside {};
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_nestedSeqStruct;
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -770,7 +721,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -792,7 +742,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_SEQTEST__ARG_TRAITS_)
 #define _SEQTEST__ARG_TRAITS_
 
@@ -810,7 +759,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::seqTest::dozens>
     : public
@@ -820,7 +768,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_AMH_SEQTESTEXCEPTIONHOLDER__ARG_TRAITS_)
@@ -842,7 +789,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_SEQTESTHANDLER__ARG_TRAITS_)
 #define _AMI_SEQTESTHANDLER__ARG_TRAITS_
 
@@ -860,7 +806,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::twinStruct>
     : public
@@ -872,7 +817,6 @@ namespace TAO
   };
 
 
-
   template<>
   class Arg_Traits< ::outside>
     : public
@@ -882,7 +826,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -897,7 +840,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -925,7 +867,6 @@ protected:
 private:
   CORBA::Boolean require_truncation_ {false};
 };
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -997,7 +938,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1006,7 +946,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, seqTest_ptr *); // no
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, seqTest_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1025,7 +964,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1034,7 +972,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_seqTestExceptionH
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMH_seqTestExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1057,7 +994,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1066,7 +1002,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_seqTestHandler_pt
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMI_seqTestHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1085,7 +1020,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1094,7 +1028,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::outside*); // nonco
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::outside const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1112,14 +1045,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const seqTest_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, seqTest_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1142,7 +1073,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_seqTest_dozens_H_ */
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 namespace CORBA
@@ -1151,7 +1081,6 @@ namespace CORBA
   extern TAO_IDL_TEST_STUB_Export void remove_ref (AMH_seqTestExceptionHolder *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1167,7 +1096,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_seqTestHandler_ptr );
@@ -1177,14 +1105,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, twinStruct const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, twinStruct &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1206,7 +1132,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 #endif /* _TAO_CDR_OP_twinStruct__tao_seq_CORBA_Short__H_ */
-
 
 
 #if !defined _TAO_CDR_OP_twinStruct__tao_seq__tao_seq_CORBA_Short__and__H_
@@ -1228,7 +1153,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_CDR_OP_twinStruct__tao_seq__tao_seq_CORBA_Short__and__H_ */
 
 
-
 #if !defined _TAO_CDR_OP_twinStruct__tao_seq_CORBA_Short__H_
 #define _TAO_CDR_OP_twinStruct__tao_seq_CORBA_Short__H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1246,7 +1170,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 #endif /* _TAO_CDR_OP_twinStruct__tao_seq_CORBA_Short__H_ */
-
 
 
 #if !defined _TAO_CDR_OP_twinStruct__tao_seq__tao_seq_CORBA_Short__or__H_
@@ -1268,7 +1191,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_CDR_OP_twinStruct__tao_seq__tao_seq_CORBA_Short__or__H_ */
 
 
-
 #if !defined _TAO_CDR_OP__tao_seq_CORBA_Short__5_H_
 #define _TAO_CDR_OP__tao_seq_CORBA_Short__5_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1286,7 +1208,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 #endif /* _TAO_CDR_OP__tao_seq_CORBA_Short__5_H_ */
-
 
 
 #if !defined _TAO_CDR_OP_outside_H_
@@ -1307,14 +1228,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_outside_H_ */
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, nestedSeqStruct const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, nestedSeqStruct &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1338,7 +1257,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #endif /* _TAO_CDR_OP_nestedSeqStruct__tao_seq_outside__H_ */
 
 
-
 #if !defined _TAO_CDR_OP_nestedSeqStruct__tao_seq__tao_seq_outside__inside_7_H_
 #define _TAO_CDR_OP_nestedSeqStruct__tao_seq__tao_seq_outside__inside_7_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1356,7 +1274,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 #endif /* _TAO_CDR_OP_nestedSeqStruct__tao_seq__tao_seq_outside__inside_7_H_ */
-
 #if defined (__ACE_INLINE__)
 #include "sequence_anonymousC.inl"
 #endif /* defined INLINE */

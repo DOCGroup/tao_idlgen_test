@@ -22,14 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_INHERITS_N2GHT8_CPP_
-#define _TAO_IDL_INHERITS_N2GHT8_CPP_
+#ifndef _TAO_IDL_INHERITS_MLT4UL_CPP_
+#define _TAO_IDL_INHERITS_MLT4UL_CPP_
 
 
 #include "inheritS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <cstddef>
 #include <cstring>
+#include <memory>
 #include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
 #include "tao/Exception_Data.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
@@ -52,22 +53,24 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
 class TAO_OldInherit_AMH_one_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_one_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_AMH_one_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_AMH_one_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -85,23 +88,20 @@ TAO_OldInherit_AMH_one_Perfect_Hash_OpTable::hash (const char *str, unsigned int
      16,  0, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_AMH_one_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_AMH_one_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 6,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 11
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -118,30 +118,25 @@ TAO_OldInherit_AMH_one_Perfect_Hash_OpTable::lookup (const char *str, unsigned i
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_AMH_one_Perfect_Hash_OpTable tao_OldInherit_AMH_one_optable;
-
-
-
-
 
 POA_OldInherit::AMH_one::AMH_one ()
 {
   this->optable_ = std::addressof (tao_OldInherit_AMH_one_optable);
 }
-
 
 
 void
@@ -186,7 +181,6 @@ POA_OldInherit::AMH_one::op_one_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldInherit::AMH_one::_is_a (const char* value)
 {
   return
@@ -200,7 +194,6 @@ const char* POA_OldInherit::AMH_one::_interface_repository_id () const
 {
   return "IDL:OldInherit/one:1.0";
 }
-
 void
 POA_OldInherit::AMH_one::_dispatch (
     TAO_ServerRequest &req,
@@ -208,12 +201,11 @@ POA_OldInherit::AMH_one::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 OldInherit::one*
 POA_OldInherit::AMH_one::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -228,17 +220,18 @@ class TAO_OldInherit_one_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_one_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_one_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_one_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -256,23 +249,20 @@ TAO_OldInherit_one_Perfect_Hash_OpTable::hash (const char *str, unsigned int len
      16,  0, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_one_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_one_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 6,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 11
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -289,17 +279,17 @@ TAO_OldInherit_one_Perfect_Hash_OpTable::lookup (const char *str, unsigned int l
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_one_Perfect_Hash_OpTable tao_OldInherit_one_optable;
@@ -311,7 +301,6 @@ static TAO_OldInherit_one_Perfect_Hash_OpTable tao_OldInherit_one_optable;
 POA_OldInherit::_TAO_one_Direct_Proxy_Impl::~_TAO_one_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -337,10 +326,6 @@ POA_OldInherit::_TAO_one_Direct_Proxy_Impl::op_one (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldInherit::one::one ()
 {
   this->optable_ = std::addressof (tao_OldInherit_one_optable);
@@ -350,16 +335,12 @@ POA_OldInherit::one::one ()
 namespace POA_OldInherit
 {
 
-
   class op_one_one
     : public TAO::Upcall_Command
   {
   public:
-    inline op_one_one (
-      POA_OldInherit::one * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op_one_one (POA_OldInherit::one * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -370,28 +351,26 @@ namespace POA_OldInherit
     POA_OldInherit::one * const servant_;
   };
 }
-
 void POA_OldInherit::one::op_one_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldInherit::one * const impl =
-    dynamic_cast<POA_OldInherit::one *> (servant);
+  POA_OldInherit::one * const impl = dynamic_cast<POA_OldInherit::one *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op_one_one command (
-    impl);
+  op_one_one command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -405,7 +384,6 @@ void POA_OldInherit::one::op_one_skel (
 #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
-
 
 
 
@@ -431,7 +409,6 @@ const char* POA_OldInherit::one::_interface_repository_id () const
 
 
 
-
 void POA_OldInherit::one::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -442,12 +419,11 @@ void POA_OldInherit::one::_dispatch (
 
 
 
-
 OldInherit::one *
 POA_OldInherit::one::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -457,8 +433,6 @@ POA_OldInherit::one::_this ()
   return {};
 }
 
-
-
 void
 POA_OldInherit::TAO_AMH_oneResponseHandler::op_one ()
 {
@@ -467,7 +441,6 @@ POA_OldInherit::TAO_AMH_oneResponseHandler::op_one ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldInherit::TAO_AMH_oneResponseHandler::op_one_excep (
   ::OldInherit::AMH_oneExceptionHolder * holder)
@@ -486,17 +459,18 @@ class TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -514,23 +488,20 @@ TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable::hash (const char *str, unsig
      16,  0,  0, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -547,17 +518,17 @@ TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable::lookup (const char *str, uns
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_oneHandler_optable;
@@ -569,7 +540,6 @@ static TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_one
 POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::~_TAO_AMI_oneHandler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -588,7 +558,6 @@ POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::op_one (
   _tao_ptr->op_one (
       );
 }
-
 
 
 void
@@ -615,10 +584,6 @@ POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::op_one_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldInherit::AMI_oneHandler::AMI_oneHandler ()
 {
   this->optable_ = std::addressof (tao_OldInherit_AMI_oneHandler_optable);
@@ -628,16 +593,12 @@ POA_OldInherit::AMI_oneHandler::AMI_oneHandler ()
 namespace POA_OldInherit
 {
 
-
   class op_one_AMI_oneHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline op_one_AMI_oneHandler (
-      POA_OldInherit::AMI_oneHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op_one_AMI_oneHandler (POA_OldInherit::AMI_oneHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -648,28 +609,26 @@ namespace POA_OldInherit
     POA_OldInherit::AMI_oneHandler * const servant_;
   };
 }
-
 void POA_OldInherit::AMI_oneHandler::op_one_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldInherit::AMI_oneHandler * const impl =
-    dynamic_cast<POA_OldInherit::AMI_oneHandler *> (servant);
+  POA_OldInherit::AMI_oneHandler * const impl = dynamic_cast<POA_OldInherit::AMI_oneHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op_one_AMI_oneHandler command (
-    impl);
+  op_one_AMI_oneHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -688,20 +647,16 @@ void POA_OldInherit::AMI_oneHandler::op_one_skel (
 namespace POA_OldInherit
 {
 
-
   class op_one_excep_AMI_oneHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline op_one_excep_AMI_oneHandler (
-      POA_OldInherit::AMI_oneHandler * servant,
+    inline op_one_excep_AMI_oneHandler (POA_OldInherit::AMI_oneHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -721,12 +676,12 @@ namespace POA_OldInherit
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldInherit::AMI_oneHandler::op_one_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -735,8 +690,7 @@ void POA_OldInherit::AMI_oneHandler::op_one_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldInherit::AMI_oneHandler * const impl =
-    dynamic_cast<POA_OldInherit::AMI_oneHandler *> (servant);
+  POA_OldInherit::AMI_oneHandler * const impl = dynamic_cast<POA_OldInherit::AMI_oneHandler *> (servant);
 
   if (!impl)
     {
@@ -768,7 +722,6 @@ void POA_OldInherit::AMI_oneHandler::op_one_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldInherit::AMI_oneHandler::_is_a (const char* value)
 {
   return
@@ -787,7 +740,6 @@ const char* POA_OldInherit::AMI_oneHandler::_interface_repository_id () const
 
 
 
-
 void POA_OldInherit::AMI_oneHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -798,12 +750,11 @@ void POA_OldInherit::AMI_oneHandler::_dispatch (
 
 
 
-
 OldInherit::AMI_oneHandler *
 POA_OldInherit::AMI_oneHandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -817,17 +768,18 @@ class TAO_OldInherit_AMH_two_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_two_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_AMH_two_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_AMH_two_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -845,23 +797,20 @@ TAO_OldInherit_AMH_two_Perfect_Hash_OpTable::hash (const char *str, unsigned int
      16,  0, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_AMH_two_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_AMH_two_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -879,30 +828,25 @@ TAO_OldInherit_AMH_two_Perfect_Hash_OpTable::lookup (const char *str, unsigned i
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_AMH_two_Perfect_Hash_OpTable tao_OldInherit_AMH_two_optable;
-
-
-
-
 
 POA_OldInherit::AMH_two::AMH_two ()
 {
   this->optable_ = std::addressof (tao_OldInherit_AMH_two_optable);
 }
-
 
 
 void
@@ -947,7 +891,6 @@ POA_OldInherit::AMH_two::op_two_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldInherit::AMH_two::_is_a (const char* value)
 {
   return
@@ -962,7 +905,6 @@ const char* POA_OldInherit::AMH_two::_interface_repository_id () const
 {
   return "IDL:OldInherit/two:1.0";
 }
-
 void
 POA_OldInherit::AMH_two::_dispatch (
     TAO_ServerRequest &req,
@@ -970,12 +912,11 @@ POA_OldInherit::AMH_two::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 OldInherit::two*
 POA_OldInherit::AMH_two::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -990,17 +931,18 @@ class TAO_OldInherit_two_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_two_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_two_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_two_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1018,23 +960,20 @@ TAO_OldInherit_two_Perfect_Hash_OpTable::hash (const char *str, unsigned int len
      16,  0, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_two_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_two_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1052,17 +991,17 @@ TAO_OldInherit_two_Perfect_Hash_OpTable::lookup (const char *str, unsigned int l
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_two_Perfect_Hash_OpTable tao_OldInherit_two_optable;
@@ -1074,7 +1013,6 @@ static TAO_OldInherit_two_Perfect_Hash_OpTable tao_OldInherit_two_optable;
 POA_OldInherit::_TAO_two_Direct_Proxy_Impl::~_TAO_two_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -1100,10 +1038,6 @@ POA_OldInherit::_TAO_two_Direct_Proxy_Impl::op_two (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldInherit::two::two ()
 {
   this->optable_ = std::addressof (tao_OldInherit_two_optable);
@@ -1113,16 +1047,12 @@ POA_OldInherit::two::two ()
 namespace POA_OldInherit
 {
 
-
   class op_two_two
     : public TAO::Upcall_Command
   {
   public:
-    inline op_two_two (
-      POA_OldInherit::two * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op_two_two (POA_OldInherit::two * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -1133,28 +1063,26 @@ namespace POA_OldInherit
     POA_OldInherit::two * const servant_;
   };
 }
-
 void POA_OldInherit::two::op_two_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldInherit::two * const impl =
-    dynamic_cast<POA_OldInherit::two *> (servant);
+  POA_OldInherit::two * const impl = dynamic_cast<POA_OldInherit::two *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op_two_two command (
-    impl);
+  op_two_two command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -1168,7 +1096,6 @@ void POA_OldInherit::two::op_two_skel (
 #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
-
 
 
 
@@ -1195,7 +1122,6 @@ const char* POA_OldInherit::two::_interface_repository_id () const
 
 
 
-
 void POA_OldInherit::two::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1206,12 +1132,11 @@ void POA_OldInherit::two::_dispatch (
 
 
 
-
 OldInherit::two *
 POA_OldInherit::two::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1221,8 +1146,6 @@ POA_OldInherit::two::_this ()
   return {};
 }
 
-
-
 void
 POA_OldInherit::TAO_AMH_twoResponseHandler::op_two ()
 {
@@ -1231,7 +1154,6 @@ POA_OldInherit::TAO_AMH_twoResponseHandler::op_two ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldInherit::TAO_AMH_twoResponseHandler::op_two_excep (
   ::OldInherit::AMH_twoExceptionHolder * holder)
@@ -1250,17 +1172,18 @@ class TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1278,23 +1201,20 @@ TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::hash (const char *str, unsig
      16,  0,  0, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 9,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 2,
-      WORDLIST_SIZE = 14
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1318,7 +1238,7 @@ TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::lookup (const char *str, uns
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -1329,14 +1249,14 @@ TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::lookup (const char *str, uns
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -1345,7 +1265,7 @@ TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::lookup (const char *str, uns
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_twoHandler_optable;
@@ -1357,7 +1277,6 @@ static TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_two
 POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::~_TAO_AMI_twoHandler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -1376,7 +1295,6 @@ POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::op_two (
   _tao_ptr->op_two (
       );
 }
-
 
 
 void
@@ -1403,10 +1321,6 @@ POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::op_two_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldInherit::AMI_twoHandler::AMI_twoHandler ()
 {
   this->optable_ = std::addressof (tao_OldInherit_AMI_twoHandler_optable);
@@ -1416,16 +1330,12 @@ POA_OldInherit::AMI_twoHandler::AMI_twoHandler ()
 namespace POA_OldInherit
 {
 
-
   class op_two_AMI_twoHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline op_two_AMI_twoHandler (
-      POA_OldInherit::AMI_twoHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op_two_AMI_twoHandler (POA_OldInherit::AMI_twoHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -1436,28 +1346,26 @@ namespace POA_OldInherit
     POA_OldInherit::AMI_twoHandler * const servant_;
   };
 }
-
 void POA_OldInherit::AMI_twoHandler::op_two_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldInherit::AMI_twoHandler * const impl =
-    dynamic_cast<POA_OldInherit::AMI_twoHandler *> (servant);
+  POA_OldInherit::AMI_twoHandler * const impl = dynamic_cast<POA_OldInherit::AMI_twoHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op_two_AMI_twoHandler command (
-    impl);
+  op_two_AMI_twoHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -1476,20 +1384,16 @@ void POA_OldInherit::AMI_twoHandler::op_two_skel (
 namespace POA_OldInherit
 {
 
-
   class op_two_excep_AMI_twoHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline op_two_excep_AMI_twoHandler (
-      POA_OldInherit::AMI_twoHandler * servant,
+    inline op_two_excep_AMI_twoHandler (POA_OldInherit::AMI_twoHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1509,12 +1413,12 @@ namespace POA_OldInherit
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldInherit::AMI_twoHandler::op_two_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -1523,8 +1427,7 @@ void POA_OldInherit::AMI_twoHandler::op_two_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldInherit::AMI_twoHandler * const impl =
-    dynamic_cast<POA_OldInherit::AMI_twoHandler *> (servant);
+  POA_OldInherit::AMI_twoHandler * const impl = dynamic_cast<POA_OldInherit::AMI_twoHandler *> (servant);
 
   if (!impl)
     {
@@ -1556,7 +1459,6 @@ void POA_OldInherit::AMI_twoHandler::op_two_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldInherit::AMI_twoHandler::_is_a (const char* value)
 {
   return
@@ -1576,7 +1478,6 @@ const char* POA_OldInherit::AMI_twoHandler::_interface_repository_id () const
 
 
 
-
 void POA_OldInherit::AMI_twoHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1587,12 +1488,11 @@ void POA_OldInherit::AMI_twoHandler::_dispatch (
 
 
 
-
 OldInherit::AMI_twoHandler *
 POA_OldInherit::AMI_twoHandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1606,17 +1506,18 @@ class TAO_OldInherit_AMH_three_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_three_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_AMH_three_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_AMH_three_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1634,23 +1535,20 @@ TAO_OldInherit_AMH_three_Perfect_Hash_OpTable::hash (const char *str, unsigned i
      19,  0, 19, 19, 19, 19,  5, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_AMH_three_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_AMH_three_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 18,
-      HASH_VALUE_RANGE = 14,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1670,30 +1568,25 @@ TAO_OldInherit_AMH_three_Perfect_Hash_OpTable::lookup (const char *str, unsigned
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_AMH_three_Perfect_Hash_OpTable tao_OldInherit_AMH_three_optable;
-
-
-
-
 
 POA_OldInherit::AMH_three::AMH_three ()
 {
   this->optable_ = std::addressof (tao_OldInherit_AMH_three_optable);
 }
-
 
 
 void
@@ -1738,7 +1631,6 @@ POA_OldInherit::AMH_three::op_three_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldInherit::AMH_three::_is_a (const char* value)
 {
   return
@@ -1753,7 +1645,6 @@ const char* POA_OldInherit::AMH_three::_interface_repository_id () const
 {
   return "IDL:OldInherit/three:1.0";
 }
-
 void
 POA_OldInherit::AMH_three::_dispatch (
     TAO_ServerRequest &req,
@@ -1761,12 +1652,11 @@ POA_OldInherit::AMH_three::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 OldInherit::three*
 POA_OldInherit::AMH_three::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1781,17 +1671,18 @@ class TAO_OldInherit_three_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_three_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_three_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_three_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1809,23 +1700,20 @@ TAO_OldInherit_three_Perfect_Hash_OpTable::hash (const char *str, unsigned int l
      19,  0, 19, 19, 19, 19,  5, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_three_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_three_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 18,
-      HASH_VALUE_RANGE = 14,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1845,17 +1733,17 @@ TAO_OldInherit_three_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_three_Perfect_Hash_OpTable tao_OldInherit_three_optable;
@@ -1867,7 +1755,6 @@ static TAO_OldInherit_three_Perfect_Hash_OpTable tao_OldInherit_three_optable;
 POA_OldInherit::_TAO_three_Direct_Proxy_Impl::~_TAO_three_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -1893,10 +1780,6 @@ POA_OldInherit::_TAO_three_Direct_Proxy_Impl::op_three (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldInherit::three::three ()
 {
   this->optable_ = std::addressof (tao_OldInherit_three_optable);
@@ -1906,16 +1789,12 @@ POA_OldInherit::three::three ()
 namespace POA_OldInherit
 {
 
-
   class op_three_three
     : public TAO::Upcall_Command
   {
   public:
-    inline op_three_three (
-      POA_OldInherit::three * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op_three_three (POA_OldInherit::three * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -1926,28 +1805,26 @@ namespace POA_OldInherit
     POA_OldInherit::three * const servant_;
   };
 }
-
 void POA_OldInherit::three::op_three_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldInherit::three * const impl =
-    dynamic_cast<POA_OldInherit::three *> (servant);
+  POA_OldInherit::three * const impl = dynamic_cast<POA_OldInherit::three *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op_three_three command (
-    impl);
+  op_three_three command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -1961,7 +1838,6 @@ void POA_OldInherit::three::op_three_skel (
 #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
-
 
 
 
@@ -1988,7 +1864,6 @@ const char* POA_OldInherit::three::_interface_repository_id () const
 
 
 
-
 void POA_OldInherit::three::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1999,12 +1874,11 @@ void POA_OldInherit::three::_dispatch (
 
 
 
-
 OldInherit::three *
 POA_OldInherit::three::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -2014,8 +1888,6 @@ POA_OldInherit::three::_this ()
   return {};
 }
 
-
-
 void
 POA_OldInherit::TAO_AMH_threeResponseHandler::op_three ()
 {
@@ -2024,7 +1896,6 @@ POA_OldInherit::TAO_AMH_threeResponseHandler::op_three ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldInherit::TAO_AMH_threeResponseHandler::op_three_excep (
   ::OldInherit::AMH_threeExceptionHolder * holder)
@@ -2043,17 +1914,18 @@ class TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2071,23 +1943,20 @@ TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable::hash (const char *str, uns
      20,  0,  0, 20, 20, 20,  5, 20, 20, 20,
      20, 20, 20, 20, 20, 20, 20, 20,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 9,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 19,
-      HASH_VALUE_RANGE = 15,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 14
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {19};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {15};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -2110,17 +1979,17 @@ TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable::lookup (const char *str, u
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_threeHandler_optable;
@@ -2132,7 +2001,6 @@ static TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_t
 POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::~_TAO_AMI_threeHandler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -2151,7 +2019,6 @@ POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::op_three (
   _tao_ptr->op_three (
       );
 }
-
 
 
 void
@@ -2178,10 +2045,6 @@ POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::op_three_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldInherit::AMI_threeHandler::AMI_threeHandler ()
 {
   this->optable_ = std::addressof (tao_OldInherit_AMI_threeHandler_optable);
@@ -2191,16 +2054,12 @@ POA_OldInherit::AMI_threeHandler::AMI_threeHandler ()
 namespace POA_OldInherit
 {
 
-
   class op_three_AMI_threeHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline op_three_AMI_threeHandler (
-      POA_OldInherit::AMI_threeHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op_three_AMI_threeHandler (POA_OldInherit::AMI_threeHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -2211,28 +2070,26 @@ namespace POA_OldInherit
     POA_OldInherit::AMI_threeHandler * const servant_;
   };
 }
-
 void POA_OldInherit::AMI_threeHandler::op_three_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldInherit::AMI_threeHandler * const impl =
-    dynamic_cast<POA_OldInherit::AMI_threeHandler *> (servant);
+  POA_OldInherit::AMI_threeHandler * const impl = dynamic_cast<POA_OldInherit::AMI_threeHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op_three_AMI_threeHandler command (
-    impl);
+  op_three_AMI_threeHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -2251,20 +2108,16 @@ void POA_OldInherit::AMI_threeHandler::op_three_skel (
 namespace POA_OldInherit
 {
 
-
   class op_three_excep_AMI_threeHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline op_three_excep_AMI_threeHandler (
-      POA_OldInherit::AMI_threeHandler * servant,
+    inline op_three_excep_AMI_threeHandler (POA_OldInherit::AMI_threeHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2284,12 +2137,12 @@ namespace POA_OldInherit
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldInherit::AMI_threeHandler::op_three_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2298,8 +2151,7 @@ void POA_OldInherit::AMI_threeHandler::op_three_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldInherit::AMI_threeHandler * const impl =
-    dynamic_cast<POA_OldInherit::AMI_threeHandler *> (servant);
+  POA_OldInherit::AMI_threeHandler * const impl = dynamic_cast<POA_OldInherit::AMI_threeHandler *> (servant);
 
   if (!impl)
     {
@@ -2331,7 +2183,6 @@ void POA_OldInherit::AMI_threeHandler::op_three_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldInherit::AMI_threeHandler::_is_a (const char* value)
 {
   return
@@ -2351,7 +2202,6 @@ const char* POA_OldInherit::AMI_threeHandler::_interface_repository_id () const
 
 
 
-
 void POA_OldInherit::AMI_threeHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -2362,12 +2212,11 @@ void POA_OldInherit::AMI_threeHandler::_dispatch (
 
 
 
-
 OldInherit::AMI_threeHandler *
 POA_OldInherit::AMI_threeHandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -2381,17 +2230,18 @@ class TAO_OldInherit_AMH_four_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_four_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_AMH_four_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_AMH_four_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2409,23 +2259,20 @@ TAO_OldInherit_AMH_four_Perfect_Hash_OpTable::hash (const char *str, unsigned in
      24,  0, 24, 24,  0, 24, 10, 24, 24, 24,
      24, 24, 24, 24, 24, 24, 24, 24,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_AMH_four_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_AMH_four_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 9,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 23,
-      HASH_VALUE_RANGE = 19,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 14
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {23};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {19};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -2447,30 +2294,25 @@ TAO_OldInherit_AMH_four_Perfect_Hash_OpTable::lookup (const char *str, unsigned 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_AMH_four_Perfect_Hash_OpTable tao_OldInherit_AMH_four_optable;
-
-
-
-
 
 POA_OldInherit::AMH_four::AMH_four ()
 {
   this->optable_ = std::addressof (tao_OldInherit_AMH_four_optable);
 }
-
 
 
 void
@@ -2515,7 +2357,6 @@ POA_OldInherit::AMH_four::op_four_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldInherit::AMH_four::_is_a (const char* value)
 {
   return
@@ -2532,7 +2373,6 @@ const char* POA_OldInherit::AMH_four::_interface_repository_id () const
 {
   return "IDL:OldInherit/four:1.0";
 }
-
 void
 POA_OldInherit::AMH_four::_dispatch (
     TAO_ServerRequest &req,
@@ -2540,12 +2380,11 @@ POA_OldInherit::AMH_four::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 OldInherit::four*
 POA_OldInherit::AMH_four::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -2560,17 +2399,18 @@ class TAO_OldInherit_four_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_four_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_four_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_four_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2588,23 +2428,20 @@ TAO_OldInherit_four_Perfect_Hash_OpTable::hash (const char *str, unsigned int le
      24,  0, 24, 24,  0, 24, 10, 24, 24, 24,
      24, 24, 24, 24, 24, 24, 24, 24,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_four_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_four_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 9,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 23,
-      HASH_VALUE_RANGE = 19,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 14
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {23};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {19};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -2626,17 +2463,17 @@ TAO_OldInherit_four_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_four_Perfect_Hash_OpTable tao_OldInherit_four_optable;
@@ -2648,7 +2485,6 @@ static TAO_OldInherit_four_Perfect_Hash_OpTable tao_OldInherit_four_optable;
 POA_OldInherit::_TAO_four_Direct_Proxy_Impl::~_TAO_four_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -2674,10 +2510,6 @@ POA_OldInherit::_TAO_four_Direct_Proxy_Impl::op_four (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldInherit::four::four ()
 {
   this->optable_ = std::addressof (tao_OldInherit_four_optable);
@@ -2687,16 +2519,12 @@ POA_OldInherit::four::four ()
 namespace POA_OldInherit
 {
 
-
   class op_four_four
     : public TAO::Upcall_Command
   {
   public:
-    inline op_four_four (
-      POA_OldInherit::four * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op_four_four (POA_OldInherit::four * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -2707,28 +2535,26 @@ namespace POA_OldInherit
     POA_OldInherit::four * const servant_;
   };
 }
-
 void POA_OldInherit::four::op_four_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldInherit::four * const impl =
-    dynamic_cast<POA_OldInherit::four *> (servant);
+  POA_OldInherit::four * const impl = dynamic_cast<POA_OldInherit::four *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op_four_four command (
-    impl);
+  op_four_four command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -2742,7 +2568,6 @@ void POA_OldInherit::four::op_four_skel (
 #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
-
 
 
 
@@ -2771,7 +2596,6 @@ const char* POA_OldInherit::four::_interface_repository_id () const
 
 
 
-
 void POA_OldInherit::four::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -2782,12 +2606,11 @@ void POA_OldInherit::four::_dispatch (
 
 
 
-
 OldInherit::four *
 POA_OldInherit::four::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -2797,8 +2620,6 @@ POA_OldInherit::four::_this ()
   return {};
 }
 
-
-
 void
 POA_OldInherit::TAO_AMH_fourResponseHandler::op_four ()
 {
@@ -2807,7 +2628,6 @@ POA_OldInherit::TAO_AMH_fourResponseHandler::op_four ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldInherit::TAO_AMH_fourResponseHandler::op_four_excep (
   ::OldInherit::AMH_fourExceptionHolder * holder)
@@ -2826,17 +2646,18 @@ class TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2854,23 +2675,20 @@ TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::hash (const char *str, unsi
      29,  0,  0, 29,  0, 29, 15, 29, 29, 29,
      29, 29, 29, 29, 29, 29, 29, 29,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 13,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 28,
-      HASH_VALUE_RANGE = 24,
-      DUPLICATES = 2,
-      WORDLIST_SIZE = 18
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {13};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {28};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {24};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -2899,7 +2717,7 @@ TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::lookup (const char *str, un
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -2910,14 +2728,14 @@ TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::lookup (const char *str, un
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -2926,7 +2744,7 @@ TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::lookup (const char *str, un
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_fourHandler_optable;
@@ -2938,7 +2756,6 @@ static TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_fo
 POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::~_TAO_AMI_fourHandler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -2957,7 +2774,6 @@ POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::op_four (
   _tao_ptr->op_four (
       );
 }
-
 
 
 void
@@ -2984,10 +2800,6 @@ POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::op_four_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldInherit::AMI_fourHandler::AMI_fourHandler ()
 {
   this->optable_ = std::addressof (tao_OldInherit_AMI_fourHandler_optable);
@@ -2997,16 +2809,12 @@ POA_OldInherit::AMI_fourHandler::AMI_fourHandler ()
 namespace POA_OldInherit
 {
 
-
   class op_four_AMI_fourHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline op_four_AMI_fourHandler (
-      POA_OldInherit::AMI_fourHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op_four_AMI_fourHandler (POA_OldInherit::AMI_fourHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -3017,28 +2825,26 @@ namespace POA_OldInherit
     POA_OldInherit::AMI_fourHandler * const servant_;
   };
 }
-
 void POA_OldInherit::AMI_fourHandler::op_four_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldInherit::AMI_fourHandler * const impl =
-    dynamic_cast<POA_OldInherit::AMI_fourHandler *> (servant);
+  POA_OldInherit::AMI_fourHandler * const impl = dynamic_cast<POA_OldInherit::AMI_fourHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op_four_AMI_fourHandler command (
-    impl);
+  op_four_AMI_fourHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -3057,20 +2863,16 @@ void POA_OldInherit::AMI_fourHandler::op_four_skel (
 namespace POA_OldInherit
 {
 
-
   class op_four_excep_AMI_fourHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline op_four_excep_AMI_fourHandler (
-      POA_OldInherit::AMI_fourHandler * servant,
+    inline op_four_excep_AMI_fourHandler (POA_OldInherit::AMI_fourHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3090,12 +2892,12 @@ namespace POA_OldInherit
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldInherit::AMI_fourHandler::op_four_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -3104,8 +2906,7 @@ void POA_OldInherit::AMI_fourHandler::op_four_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldInherit::AMI_fourHandler * const impl =
-    dynamic_cast<POA_OldInherit::AMI_fourHandler *> (servant);
+  POA_OldInherit::AMI_fourHandler * const impl = dynamic_cast<POA_OldInherit::AMI_fourHandler *> (servant);
 
   if (!impl)
     {
@@ -3137,7 +2938,6 @@ void POA_OldInherit::AMI_fourHandler::op_four_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldInherit::AMI_fourHandler::_is_a (const char* value)
 {
   return
@@ -3159,7 +2959,6 @@ const char* POA_OldInherit::AMI_fourHandler::_interface_repository_id () const
 
 
 
-
 void POA_OldInherit::AMI_fourHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -3170,12 +2969,11 @@ void POA_OldInherit::AMI_fourHandler::_dispatch (
 
 
 
-
 OldInherit::AMI_fourHandler *
 POA_OldInherit::AMI_fourHandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -3189,17 +2987,18 @@ class TAO_OldInherit_AMH_five_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_five_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_AMH_five_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_AMH_five_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3217,23 +3016,20 @@ TAO_OldInherit_AMH_five_Perfect_Hash_OpTable::hash (const char *str, unsigned in
      24,  0, 24, 24,  0, 24, 10, 24, 24, 24,
      24, 24, 24, 24, 24, 24, 24, 24,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_AMH_five_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_AMH_five_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 10,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 23,
-      HASH_VALUE_RANGE = 19,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 15
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {10};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {23};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {19};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -3255,30 +3051,25 @@ TAO_OldInherit_AMH_five_Perfect_Hash_OpTable::lookup (const char *str, unsigned 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_AMH_five_Perfect_Hash_OpTable tao_OldInherit_AMH_five_optable;
-
-
-
-
 
 POA_OldInherit::AMH_five::AMH_five ()
 {
   this->optable_ = std::addressof (tao_OldInherit_AMH_five_optable);
 }
-
 
 
 void
@@ -3323,7 +3114,6 @@ POA_OldInherit::AMH_five::op_five_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldInherit::AMH_five::_is_a (const char* value)
 {
   return
@@ -3341,7 +3131,6 @@ const char* POA_OldInherit::AMH_five::_interface_repository_id () const
 {
   return "IDL:OldInherit/five:1.0";
 }
-
 void
 POA_OldInherit::AMH_five::_dispatch (
     TAO_ServerRequest &req,
@@ -3349,12 +3138,11 @@ POA_OldInherit::AMH_five::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 OldInherit::five*
 POA_OldInherit::AMH_five::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -3369,17 +3157,18 @@ class TAO_OldInherit_five_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_five_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_five_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_five_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3397,23 +3186,20 @@ TAO_OldInherit_five_Perfect_Hash_OpTable::hash (const char *str, unsigned int le
      24,  0, 24, 24,  0, 24, 10, 24, 24, 24,
      24, 24, 24, 24, 24, 24, 24, 24,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_five_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_five_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 10,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 23,
-      HASH_VALUE_RANGE = 19,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 15
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {10};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {23};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {19};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -3435,17 +3221,17 @@ TAO_OldInherit_five_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_five_Perfect_Hash_OpTable tao_OldInherit_five_optable;
@@ -3457,7 +3243,6 @@ static TAO_OldInherit_five_Perfect_Hash_OpTable tao_OldInherit_five_optable;
 POA_OldInherit::_TAO_five_Direct_Proxy_Impl::~_TAO_five_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -3483,10 +3268,6 @@ POA_OldInherit::_TAO_five_Direct_Proxy_Impl::op_five (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldInherit::five::five ()
 {
   this->optable_ = std::addressof (tao_OldInherit_five_optable);
@@ -3496,16 +3277,12 @@ POA_OldInherit::five::five ()
 namespace POA_OldInherit
 {
 
-
   class op_five_five
     : public TAO::Upcall_Command
   {
   public:
-    inline op_five_five (
-      POA_OldInherit::five * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op_five_five (POA_OldInherit::five * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -3516,28 +3293,26 @@ namespace POA_OldInherit
     POA_OldInherit::five * const servant_;
   };
 }
-
 void POA_OldInherit::five::op_five_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldInherit::five * const impl =
-    dynamic_cast<POA_OldInherit::five *> (servant);
+  POA_OldInherit::five * const impl = dynamic_cast<POA_OldInherit::five *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op_five_five command (
-    impl);
+  op_five_five command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -3551,7 +3326,6 @@ void POA_OldInherit::five::op_five_skel (
 #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
-
 
 
 
@@ -3581,7 +3355,6 @@ const char* POA_OldInherit::five::_interface_repository_id () const
 
 
 
-
 void POA_OldInherit::five::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -3592,12 +3365,11 @@ void POA_OldInherit::five::_dispatch (
 
 
 
-
 OldInherit::five *
 POA_OldInherit::five::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -3607,8 +3379,6 @@ POA_OldInherit::five::_this ()
   return {};
 }
 
-
-
 void
 POA_OldInherit::TAO_AMH_fiveResponseHandler::op_five ()
 {
@@ -3617,7 +3387,6 @@ POA_OldInherit::TAO_AMH_fiveResponseHandler::op_five ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldInherit::TAO_AMH_fiveResponseHandler::op_five_excep (
   ::OldInherit::AMH_fiveExceptionHolder * holder)
@@ -3636,17 +3405,18 @@ class TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3664,23 +3434,20 @@ TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::hash (const char *str, unsi
      29,  0,  0, 29,  0, 29, 15, 29, 29, 29,
      29, 29, 29, 29, 29, 29, 29, 29,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 15,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 28,
-      HASH_VALUE_RANGE = 24,
-      DUPLICATES = 3,
-      WORDLIST_SIZE = 20
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {15};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {28};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {24};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {3};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {20};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -3711,7 +3478,7 @@ TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::lookup (const char *str, un
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -3722,14 +3489,14 @@ TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::lookup (const char *str, un
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -3738,7 +3505,7 @@ TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::lookup (const char *str, un
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_fiveHandler_optable;
@@ -3750,7 +3517,6 @@ static TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_fi
 POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::~_TAO_AMI_fiveHandler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -3769,7 +3535,6 @@ POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::op_five (
   _tao_ptr->op_five (
       );
 }
-
 
 
 void
@@ -3796,10 +3561,6 @@ POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::op_five_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldInherit::AMI_fiveHandler::AMI_fiveHandler ()
 {
   this->optable_ = std::addressof (tao_OldInherit_AMI_fiveHandler_optable);
@@ -3809,16 +3570,12 @@ POA_OldInherit::AMI_fiveHandler::AMI_fiveHandler ()
 namespace POA_OldInherit
 {
 
-
   class op_five_AMI_fiveHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline op_five_AMI_fiveHandler (
-      POA_OldInherit::AMI_fiveHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op_five_AMI_fiveHandler (POA_OldInherit::AMI_fiveHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -3829,28 +3586,26 @@ namespace POA_OldInherit
     POA_OldInherit::AMI_fiveHandler * const servant_;
   };
 }
-
 void POA_OldInherit::AMI_fiveHandler::op_five_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldInherit::AMI_fiveHandler * const impl =
-    dynamic_cast<POA_OldInherit::AMI_fiveHandler *> (servant);
+  POA_OldInherit::AMI_fiveHandler * const impl = dynamic_cast<POA_OldInherit::AMI_fiveHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op_five_AMI_fiveHandler command (
-    impl);
+  op_five_AMI_fiveHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -3869,20 +3624,16 @@ void POA_OldInherit::AMI_fiveHandler::op_five_skel (
 namespace POA_OldInherit
 {
 
-
   class op_five_excep_AMI_fiveHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline op_five_excep_AMI_fiveHandler (
-      POA_OldInherit::AMI_fiveHandler * servant,
+    inline op_five_excep_AMI_fiveHandler (POA_OldInherit::AMI_fiveHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3902,12 +3653,12 @@ namespace POA_OldInherit
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldInherit::AMI_fiveHandler::op_five_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -3916,8 +3667,7 @@ void POA_OldInherit::AMI_fiveHandler::op_five_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldInherit::AMI_fiveHandler * const impl =
-    dynamic_cast<POA_OldInherit::AMI_fiveHandler *> (servant);
+  POA_OldInherit::AMI_fiveHandler * const impl = dynamic_cast<POA_OldInherit::AMI_fiveHandler *> (servant);
 
   if (!impl)
     {
@@ -3949,7 +3699,6 @@ void POA_OldInherit::AMI_fiveHandler::op_five_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldInherit::AMI_fiveHandler::_is_a (const char* value)
 {
   return
@@ -3972,7 +3721,6 @@ const char* POA_OldInherit::AMI_fiveHandler::_interface_repository_id () const
 
 
 
-
 void POA_OldInherit::AMI_fiveHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -3983,12 +3731,11 @@ void POA_OldInherit::AMI_fiveHandler::_dispatch (
 
 
 
-
 OldInherit::AMI_fiveHandler *
 POA_OldInherit::AMI_fiveHandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

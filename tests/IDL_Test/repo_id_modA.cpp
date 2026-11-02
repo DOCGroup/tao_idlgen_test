@@ -34,7 +34,6 @@
 #include "tao/CDR.h"
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_gleep_schmooze (
@@ -47,7 +46,6 @@ namespace gleep
 {
   ::CORBA::TypeCode_ptr const _tc_schmooze = std::addressof(_tao_tc_gleep_schmooze);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_gleep_schmeer (
@@ -60,7 +58,6 @@ namespace gleep
 {
   ::CORBA::TypeCode_ptr const _tc_schmeer = std::addressof(_tao_tc_gleep_schmeer);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_gleep_schlemiel (
@@ -73,7 +70,6 @@ namespace gleep
 {
   ::CORBA::TypeCode_ptr const _tc_schlemiel = std::addressof(_tao_tc_gleep_schlemiel);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_gleep_spilkis (
@@ -86,7 +82,6 @@ namespace gleep
 {
   ::CORBA::TypeCode_ptr const _tc_spilkis = std::addressof(_tao_tc_gleep_spilkis);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_gleep_floop_schmuck (
@@ -103,7 +98,6 @@ namespace gleep
     ::CORBA::TypeCode_ptr const _tc_schmuck = std::addressof(_tao_tc_gleep_floop_schmuck);
   }
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_gleep_floop_schmendrick (
@@ -120,7 +114,6 @@ namespace gleep
     ::CORBA::TypeCode_ptr const _tc_schmendrick = std::addressof(_tao_tc_gleep_floop_schmendrick);
   }
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_gleep_floop_verklempt_schlemazel (
@@ -141,7 +134,6 @@ namespace gleep
     }
   }
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_gleep_schmegegging (
@@ -154,7 +146,6 @@ namespace gleep
 {
   ::CORBA::TypeCode_ptr const _tc_schmegegging = std::addressof(_tao_tc_gleep_schmegegging);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -235,7 +226,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -321,7 +311,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -401,7 +390,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -487,7 +475,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -567,7 +554,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -653,7 +639,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -733,7 +718,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

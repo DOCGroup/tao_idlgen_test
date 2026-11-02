@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "old_union2C.h"
 #include <memory>
 #include <new>
@@ -48,12 +47,11 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "old_union2C.inl"
 #endif /* !defined INLINE */
-
 static char const * const _tao_enumerators_OldUnion2_FooDisc[] =
   {
     "FOO1",
@@ -74,7 +72,6 @@ namespace OldUnion2
 {
   ::CORBA::TypeCode_ptr const _tc_FooDisc = std::addressof(_tao_tc_OldUnion2_FooDisc);
 }
-
 
 
 OldUnion2::Foo::Foo ()
@@ -158,7 +155,6 @@ void OldUnion2::Foo::_reset ()
     break;
   }
 }
-
 static TAO::TypeCode::Case_T<OldUnion2::FooDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Foo__0 (OldUnion2::FOO1, "x", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<OldUnion2::FooDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Foo__1 (OldUnion2::FOO2, "y", &CORBA::_tc_string);
 
@@ -185,7 +181,6 @@ namespace OldUnion2
 {
   ::CORBA::TypeCode_ptr const _tc_Foo = std::addressof(_tao_tc_OldUnion2_Foo);
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -216,7 +211,6 @@ namespace OldUnion2
 }
 
 
-
 void
 OldUnion2::Bar::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -224,7 +218,6 @@ OldUnion2::Bar::_tao_any_destructor (
   Bar *tmp = static_cast<Bar *> (_tao_void_pointer);
   delete tmp;
 }
-
 static char const * const _tao_enumerators_OldUnion2_Bar_BarDisc[] =
   {
     "BAR1",
@@ -241,7 +234,6 @@ static TAO::TypeCode::Enum<char const *,
     2);
 
 ::CORBA::TypeCode_ptr const OldUnion2::Bar::_tc_BarDisc = std::addressof(_tao_tc_OldUnion2_Bar_BarDisc);
-
 
 
 OldUnion2::Bar::Foo::Foo ()
@@ -311,7 +303,6 @@ OldUnion2::Bar::Foo::operator= (::OldUnion2::Bar::Foo const &u)
 void OldUnion2::Bar::Foo::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<OldUnion2::Bar::BarDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Bar_Foo__0 (OldUnion2::Bar::BAR1, "x", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<OldUnion2::Bar::BarDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Bar_Foo__1 (OldUnion2::Bar::BAR2, "y", &CORBA::_tc_long);
 
@@ -334,7 +325,6 @@ static TAO::TypeCode::Union<char const *,
     -1);
 
 ::CORBA::TypeCode_ptr const OldUnion2::Bar::_tc_Foo = std::addressof(_tao_tc_OldUnion2_Bar_Foo);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -367,7 +357,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -420,7 +409,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -464,7 +452,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -496,7 +483,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -549,7 +535,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OldUnion2::FooDisc _tao_enumerator)
@@ -571,7 +556,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -657,7 +641,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OldUnion2::Bar::BarDisc _tao_enumerator)
@@ -679,7 +662,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -762,7 +744,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

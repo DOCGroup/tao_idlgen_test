@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 Testing::Testing (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ Testing::Testing (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_TestingExceptionHolder::AMH_TestingExceptionHolder ()
   : exception (nullptr)
@@ -53,7 +51,6 @@ AMH_TestingExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_TestingExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

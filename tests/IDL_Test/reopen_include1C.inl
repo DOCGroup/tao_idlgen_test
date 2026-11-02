@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 A::B::X1::X1 (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ A::B::X1::X1 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 A::B::AMH_X1ExceptionHolder::AMH_X1ExceptionHolder ()
   : exception (nullptr)
@@ -53,7 +51,6 @@ A::B::AMH_X1ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:A/B/AMH_X1ExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

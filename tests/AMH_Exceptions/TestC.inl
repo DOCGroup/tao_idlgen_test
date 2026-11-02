@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 ACE_INLINE
 Test::Red_Herring::Red_Herring ()
 {}
@@ -32,7 +31,6 @@ Test::Red_Herring::_tao_obv_static_repository_id ()
 {
   return "IDL:Test/Red_Herring:1.0";
 }
-
 
 
 ACE_INLINE
@@ -52,7 +50,6 @@ Test::Roundtrip::Roundtrip (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 Test::AMH_RoundtripExceptionHolder::AMH_RoundtripExceptionHolder ()
   : exception (nullptr)

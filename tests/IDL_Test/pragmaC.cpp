@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "pragmaC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -31,12 +30,11 @@
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
 #include "tao/SystemException.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "pragmaC.inl"
 #endif /* !defined INLINE */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -150,7 +148,6 @@ hello::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -289,7 +286,6 @@ AMH_helloExceptionHolder::_tao_unmarshal (
 }
 
 
-
 AMH_helloExceptionHolder_init::AMH_helloExceptionHolder_init ()
 {
 }
@@ -320,7 +316,6 @@ AMH_helloExceptionHolder_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -438,7 +433,6 @@ AMH_helloResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for AMI_helloHandler.
@@ -552,7 +546,6 @@ AMI_helloHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 Riot::Riot ()
   : ::CORBA::UserException (
         "IDL:anvil.com/Riot:1.0",
@@ -627,7 +620,6 @@ void Riot::_tao_decode (TAO_InputCDR &cdr)
       throw ::CORBA::MARSHAL ();
     }
 }
-
 
 
 
@@ -743,7 +735,6 @@ goodbye::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -882,7 +873,6 @@ AMH_goodbyeExceptionHolder::_tao_unmarshal (
 }
 
 
-
 AMH_goodbyeExceptionHolder_init::AMH_goodbyeExceptionHolder_init ()
 {
 }
@@ -913,7 +903,6 @@ AMH_goodbyeExceptionHolder_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1031,7 +1020,6 @@ AMH_goodbyeResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for AMI_goodbyeHandler.
@@ -1145,7 +1133,6 @@ AMI_goodbyeHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 A::my_exception::my_exception ()
   : ::CORBA::UserException (
         "IDL:anvil.com/A/my_exception:1.0",
@@ -1220,7 +1207,6 @@ void A::my_exception::_tao_decode (TAO_InputCDR &cdr)
       throw ::CORBA::MARSHAL ();
     }
 }
-
 
 
 
@@ -1336,7 +1322,6 @@ salutation::sayonara::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1475,7 +1460,6 @@ salutation::AMH_sayonaraExceptionHolder::_tao_unmarshal (
 }
 
 
-
 salutation::AMH_sayonaraExceptionHolder_init::AMH_sayonaraExceptionHolder_init ()
 {
 }
@@ -1506,7 +1490,6 @@ salutation::AMH_sayonaraExceptionHolder_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1624,7 +1607,6 @@ salutation::AMH_sayonaraResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for salutation::AMI_sayonaraHandler.
@@ -1739,7 +1721,6 @@ salutation::AMI_sayonaraHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for ciao.
@@ -1852,7 +1833,6 @@ ciao::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1991,7 +1971,6 @@ AMH_ciaoExceptionHolder::_tao_unmarshal (
 }
 
 
-
 AMH_ciaoExceptionHolder_init::AMH_ciaoExceptionHolder_init ()
 {
 }
@@ -2022,7 +2001,6 @@ AMH_ciaoExceptionHolder_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2140,7 +2118,6 @@ AMH_ciaoResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for AMI_ciaoHandler.
@@ -2255,7 +2232,6 @@ AMI_ciaoHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for aloha.
@@ -2368,7 +2344,6 @@ aloha::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2507,7 +2482,6 @@ AMH_alohaExceptionHolder::_tao_unmarshal (
 }
 
 
-
 AMH_alohaExceptionHolder_init::AMH_alohaExceptionHolder_init ()
 {
 }
@@ -2538,7 +2512,6 @@ AMH_alohaExceptionHolder_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2656,7 +2629,6 @@ AMH_alohaResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for AMI_alohaHandler.
@@ -2772,7 +2744,6 @@ AMI_alohaHandler::marshal (TAO_OutputCDR &cdr)
 }
 
 
-
 void
 DCPS_Test::Sample::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -2780,7 +2751,6 @@ DCPS_Test::Sample::_tao_any_destructor (
   Sample *tmp = static_cast<Sample *> (_tao_void_pointer);
   delete tmp;
 }
-
 OBV_AMH_helloExceptionHolder::~OBV_AMH_helloExceptionHolder ()
 {}
 
@@ -2806,7 +2776,6 @@ OBV_AMH_helloExceptionHolder::_tao_unmarshal__AMH_helloExceptionHolder (TAO_Inpu
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_AMH_goodbyeExceptionHolder::~OBV_AMH_goodbyeExceptionHolder ()
 {}
 
@@ -2832,7 +2801,6 @@ OBV_AMH_goodbyeExceptionHolder::_tao_unmarshal__AMH_goodbyeExceptionHolder (TAO_
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_salutation::AMH_sayonaraExceptionHolder::~AMH_sayonaraExceptionHolder ()
 {}
 
@@ -2858,7 +2826,6 @@ OBV_salutation::AMH_sayonaraExceptionHolder::_tao_unmarshal__salutation_AMH_sayo
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_AMH_ciaoExceptionHolder::~OBV_AMH_ciaoExceptionHolder ()
 {}
 
@@ -2884,7 +2851,6 @@ OBV_AMH_ciaoExceptionHolder::_tao_unmarshal__AMH_ciaoExceptionHolder (TAO_InputC
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_AMH_alohaExceptionHolder::~OBV_AMH_alohaExceptionHolder ()
 {}
 
@@ -2910,7 +2876,6 @@ OBV_AMH_alohaExceptionHolder::_tao_unmarshal__AMH_alohaExceptionHolder (TAO_Inpu
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2944,7 +2909,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_helloExceptionHolder * vt)
@@ -2965,7 +2929,6 @@ CORBA::remove_ref (AMH_helloExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2995,7 +2958,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_helloExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -3013,7 +2975,6 @@ OBV_AMH_helloExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -3048,7 +3009,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ClusterFu _tao_enumerator)
@@ -3073,7 +3033,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -3094,7 +3053,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3130,7 +3088,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_goodbyeExceptionHolder * vt)
@@ -3151,7 +3108,6 @@ CORBA::remove_ref (AMH_goodbyeExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3181,7 +3137,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_goodbyeExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -3199,7 +3154,6 @@ OBV_AMH_goodbyeExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -3234,7 +3188,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -3255,7 +3208,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3291,7 +3243,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (salutation::AMH_sayonaraExceptionHolder * vt)
@@ -3312,7 +3263,6 @@ CORBA::remove_ref (salutation::AMH_sayonaraExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3342,7 +3292,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_salutation::AMH_sayonaraExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -3360,7 +3309,6 @@ OBV_salutation::AMH_sayonaraExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -3392,7 +3340,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3428,7 +3375,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_ciaoExceptionHolder * vt)
@@ -3449,7 +3395,6 @@ CORBA::remove_ref (AMH_ciaoExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3479,7 +3424,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_ciaoExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -3497,7 +3441,6 @@ OBV_AMH_ciaoExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -3529,7 +3472,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3565,7 +3507,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_alohaExceptionHolder * vt)
@@ -3586,7 +3527,6 @@ CORBA::remove_ref (AMH_alohaExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3616,7 +3556,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_alohaExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -3634,7 +3573,6 @@ OBV_AMH_alohaExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -3666,7 +3604,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

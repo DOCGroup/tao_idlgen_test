@@ -24,11 +24,9 @@
 
 #include <memory>
 #include <new>
-
 // *************************************************************
 // Inline operations for union OldUnion2::Foo
 // *************************************************************
-
 ACE_INLINE
 void
 OldUnion2::Foo::_default ()
@@ -76,7 +74,6 @@ OldUnion2::Foo::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -100,7 +97,6 @@ OldUnion2::Foo::x () const
     }
   return this->u_.x_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -147,11 +143,9 @@ OldUnion2::Foo::y () const // get method
     }
   return this->u_.y_;
 }
-
 // *************************************************************
 // Inline operations for union OldUnion2::Bar::Foo
 // *************************************************************
-
 ACE_INLINE
 void
 OldUnion2::Bar::Foo::_default ()
@@ -199,7 +193,6 @@ OldUnion2::Bar::Foo::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -223,7 +216,6 @@ OldUnion2::Bar::Foo::x () const
     }
   return this->u_.x_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void

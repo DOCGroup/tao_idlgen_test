@@ -22,14 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ATTRIBUTES_ND958H_CPP_
-#define _TAO_IDL_ATTRIBUTES_ND958H_CPP_
+#ifndef _TAO_IDL_ATTRIBUTES_80QP9X_CPP_
+#define _TAO_IDL_ATTRIBUTES_80QP9X_CPP_
 
 
 #include "attributeS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <cstddef>
 #include <cstring>
+#include <memory>
 #include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
 #include "tao/Exception_Data.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
@@ -52,22 +53,24 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
 class TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -85,23 +88,20 @@ TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable::hash (const char *str, unsigned int le
      24, 24, 24, 24, 24, 24,  5, 24, 24, 24,
      24, 24, 24, 24, 24, 24, 24, 24,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 14,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 23,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 23,
-      HASH_VALUE_RANGE = 19,
-      DUPLICATES = 6,
-      WORDLIST_SIZE = 19
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {14};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {23};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {23};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {19};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {6};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {19};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -130,7 +130,7 @@ TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -141,14 +141,14 @@ TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -157,20 +157,15 @@ TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable tao_Hello_AMH_MyFoo_optable;
-
-
-
-
 
 POA_Hello::AMH_MyFoo::AMH_MyFoo ()
 {
   this->optable_ = std::addressof (tao_Hello_AMH_MyFoo_optable);
 }
-
 
 
 void
@@ -209,7 +204,6 @@ POA_Hello::AMH_MyFoo::_get_rw_attrib_mytype_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_Hello::AMH_MyFoo::_set_rw_attrib_mytype_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -257,7 +251,6 @@ POA_Hello::AMH_MyFoo::_set_rw_attrib_mytype_skel (
       rw_attrib_mytype
     );
 }
-
 void
 POA_Hello::AMH_MyFoo::_get_rw_attrib_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -294,7 +287,6 @@ POA_Hello::AMH_MyFoo::_get_rw_attrib_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_Hello::AMH_MyFoo::_set_rw_attrib_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -342,7 +334,6 @@ POA_Hello::AMH_MyFoo::_set_rw_attrib_skel (
       rw_attrib
     );
 }
-
 void
 POA_Hello::AMH_MyFoo::_get_rw_attrib_reverted_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -379,7 +370,6 @@ POA_Hello::AMH_MyFoo::_get_rw_attrib_reverted_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_Hello::AMH_MyFoo::_set_rw_attrib_reverted_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -427,7 +417,6 @@ POA_Hello::AMH_MyFoo::_set_rw_attrib_reverted_skel (
       rw_attrib_reverted
     );
 }
-
 void
 POA_Hello::AMH_MyFoo::_get_rw_attribB_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -464,7 +453,6 @@ POA_Hello::AMH_MyFoo::_get_rw_attribB_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_Hello::AMH_MyFoo::_set_rw_attribB_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -512,7 +500,6 @@ POA_Hello::AMH_MyFoo::_set_rw_attribB_skel (
       rw_attribB
     );
 }
-
 void
 POA_Hello::AMH_MyFoo::_get_ro_attrib_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -555,7 +542,6 @@ POA_Hello::AMH_MyFoo::_get_ro_attrib_skel (
 
 
 
-
 ::CORBA::Boolean POA_Hello::AMH_MyFoo::_is_a (const char* value)
 {
   return
@@ -569,7 +555,6 @@ const char* POA_Hello::AMH_MyFoo::_interface_repository_id () const
 {
   return "IDL:Hello/MyFoo:1.0";
 }
-
 void
 POA_Hello::AMH_MyFoo::_dispatch (
     TAO_ServerRequest &req,
@@ -577,12 +562,11 @@ POA_Hello::AMH_MyFoo::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 Hello::MyFoo*
 POA_Hello::AMH_MyFoo::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -597,17 +581,18 @@ class TAO_Hello_MyFoo_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Hello_MyFoo_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_Hello_MyFoo_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_Hello_MyFoo_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -625,23 +610,20 @@ TAO_Hello_MyFoo_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
      24, 24, 24, 24, 24, 24,  5, 24, 24, 24,
      24, 24, 24, 24, 24, 24, 24, 24,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_Hello_MyFoo_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_Hello_MyFoo_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 14,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 23,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 23,
-      HASH_VALUE_RANGE = 19,
-      DUPLICATES = 6,
-      WORDLIST_SIZE = 19
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {14};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {23};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {23};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {19};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {6};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {19};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -670,7 +652,7 @@ TAO_Hello_MyFoo_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -681,14 +663,14 @@ TAO_Hello_MyFoo_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -697,7 +679,7 @@ TAO_Hello_MyFoo_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_Hello_MyFoo_Perfect_Hash_OpTable tao_Hello_MyFoo_optable;
@@ -709,7 +691,6 @@ static TAO_Hello_MyFoo_Perfect_Hash_OpTable tao_Hello_MyFoo_optable;
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::~_TAO_MyFoo_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -731,7 +712,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attrib_mytype (
 }
 
 
-
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib_mytype (
     TAO_Abstract_ServantBase  *servant,
@@ -749,7 +729,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib_mytype (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -771,7 +750,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attrib (
 }
 
 
-
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib (
     TAO_Abstract_ServantBase  *servant,
@@ -789,7 +767,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -811,7 +788,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attrib_reverted (
 }
 
 
-
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib_reverted (
     TAO_Abstract_ServantBase  *servant,
@@ -829,7 +805,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib_reverted (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -851,7 +826,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attribB (
 }
 
 
-
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attribB (
     TAO_Abstract_ServantBase  *servant,
@@ -869,7 +843,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attribB (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -896,10 +869,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_ro_attrib (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_Hello::MyFoo::MyFoo ()
 {
   this->optable_ = std::addressof (tao_Hello_MyFoo_optable);
@@ -909,20 +878,16 @@ POA_Hello::MyFoo::MyFoo ()
 namespace POA_Hello
 {
 
-
   class _get_rw_attrib_mytype_MyFoo
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_rw_attrib_mytype_MyFoo (
-      POA_Hello::MyFoo * servant,
+    inline _get_rw_attrib_mytype_MyFoo (POA_Hello::MyFoo * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -941,12 +906,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::MyFoo::_get_rw_attrib_mytype_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -962,8 +927,7 @@ void POA_Hello::MyFoo::_get_rw_attrib_mytype_skel (
       std::addressof(retval)
     };
 
-  POA_Hello::MyFoo * const impl =
-    dynamic_cast<POA_Hello::MyFoo *> (servant);
+  POA_Hello::MyFoo * const impl = dynamic_cast<POA_Hello::MyFoo *> (servant);
 
   if (!impl)
     {
@@ -992,20 +956,16 @@ void POA_Hello::MyFoo::_get_rw_attrib_mytype_skel (
 namespace POA_Hello
 {
 
-
   class _set_rw_attrib_mytype_MyFoo
     : public TAO::Upcall_Command
   {
   public:
-    inline _set_rw_attrib_mytype_MyFoo (
-      POA_Hello::MyFoo * servant,
+    inline _set_rw_attrib_mytype_MyFoo (POA_Hello::MyFoo * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1025,12 +985,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::MyFoo::_set_rw_attrib_mytype_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1048,8 +1008,7 @@ void POA_Hello::MyFoo::_set_rw_attrib_mytype_skel (
       std::addressof(_tao_rw_attrib_mytype)
     };
 
-  POA_Hello::MyFoo * const impl =
-    dynamic_cast<POA_Hello::MyFoo *> (servant);
+  POA_Hello::MyFoo * const impl = dynamic_cast<POA_Hello::MyFoo *> (servant);
 
   if (!impl)
     {
@@ -1078,20 +1037,16 @@ void POA_Hello::MyFoo::_set_rw_attrib_mytype_skel (
 namespace POA_Hello
 {
 
-
   class _get_rw_attrib_MyFoo
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_rw_attrib_MyFoo (
-      POA_Hello::MyFoo * servant,
+    inline _get_rw_attrib_MyFoo (POA_Hello::MyFoo * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1110,12 +1065,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::MyFoo::_get_rw_attrib_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1131,8 +1086,7 @@ void POA_Hello::MyFoo::_get_rw_attrib_skel (
       std::addressof(retval)
     };
 
-  POA_Hello::MyFoo * const impl =
-    dynamic_cast<POA_Hello::MyFoo *> (servant);
+  POA_Hello::MyFoo * const impl = dynamic_cast<POA_Hello::MyFoo *> (servant);
 
   if (!impl)
     {
@@ -1161,20 +1115,16 @@ void POA_Hello::MyFoo::_get_rw_attrib_skel (
 namespace POA_Hello
 {
 
-
   class _set_rw_attrib_MyFoo
     : public TAO::Upcall_Command
   {
   public:
-    inline _set_rw_attrib_MyFoo (
-      POA_Hello::MyFoo * servant,
+    inline _set_rw_attrib_MyFoo (POA_Hello::MyFoo * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1194,12 +1144,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::MyFoo::_set_rw_attrib_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1217,8 +1167,7 @@ void POA_Hello::MyFoo::_set_rw_attrib_skel (
       std::addressof(_tao_rw_attrib)
     };
 
-  POA_Hello::MyFoo * const impl =
-    dynamic_cast<POA_Hello::MyFoo *> (servant);
+  POA_Hello::MyFoo * const impl = dynamic_cast<POA_Hello::MyFoo *> (servant);
 
   if (!impl)
     {
@@ -1247,20 +1196,16 @@ void POA_Hello::MyFoo::_set_rw_attrib_skel (
 namespace POA_Hello
 {
 
-
   class _get_rw_attrib_reverted_MyFoo
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_rw_attrib_reverted_MyFoo (
-      POA_Hello::MyFoo * servant,
+    inline _get_rw_attrib_reverted_MyFoo (POA_Hello::MyFoo * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1279,12 +1224,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::MyFoo::_get_rw_attrib_reverted_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1300,8 +1245,7 @@ void POA_Hello::MyFoo::_get_rw_attrib_reverted_skel (
       std::addressof(retval)
     };
 
-  POA_Hello::MyFoo * const impl =
-    dynamic_cast<POA_Hello::MyFoo *> (servant);
+  POA_Hello::MyFoo * const impl = dynamic_cast<POA_Hello::MyFoo *> (servant);
 
   if (!impl)
     {
@@ -1330,20 +1274,16 @@ void POA_Hello::MyFoo::_get_rw_attrib_reverted_skel (
 namespace POA_Hello
 {
 
-
   class _set_rw_attrib_reverted_MyFoo
     : public TAO::Upcall_Command
   {
   public:
-    inline _set_rw_attrib_reverted_MyFoo (
-      POA_Hello::MyFoo * servant,
+    inline _set_rw_attrib_reverted_MyFoo (POA_Hello::MyFoo * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1363,12 +1303,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::MyFoo::_set_rw_attrib_reverted_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1386,8 +1326,7 @@ void POA_Hello::MyFoo::_set_rw_attrib_reverted_skel (
       std::addressof(_tao_rw_attrib_reverted)
     };
 
-  POA_Hello::MyFoo * const impl =
-    dynamic_cast<POA_Hello::MyFoo *> (servant);
+  POA_Hello::MyFoo * const impl = dynamic_cast<POA_Hello::MyFoo *> (servant);
 
   if (!impl)
     {
@@ -1416,20 +1355,16 @@ void POA_Hello::MyFoo::_set_rw_attrib_reverted_skel (
 namespace POA_Hello
 {
 
-
   class _get_rw_attribB_MyFoo
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_rw_attribB_MyFoo (
-      POA_Hello::MyFoo * servant,
+    inline _get_rw_attribB_MyFoo (POA_Hello::MyFoo * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1448,12 +1383,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::MyFoo::_get_rw_attribB_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1469,8 +1404,7 @@ void POA_Hello::MyFoo::_get_rw_attribB_skel (
       std::addressof(retval)
     };
 
-  POA_Hello::MyFoo * const impl =
-    dynamic_cast<POA_Hello::MyFoo *> (servant);
+  POA_Hello::MyFoo * const impl = dynamic_cast<POA_Hello::MyFoo *> (servant);
 
   if (!impl)
     {
@@ -1499,20 +1433,16 @@ void POA_Hello::MyFoo::_get_rw_attribB_skel (
 namespace POA_Hello
 {
 
-
   class _set_rw_attribB_MyFoo
     : public TAO::Upcall_Command
   {
   public:
-    inline _set_rw_attribB_MyFoo (
-      POA_Hello::MyFoo * servant,
+    inline _set_rw_attribB_MyFoo (POA_Hello::MyFoo * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1532,12 +1462,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::MyFoo::_set_rw_attribB_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attribB;
 
   TAO::Argument * const args[] =
@@ -1546,8 +1476,7 @@ void POA_Hello::MyFoo::_set_rw_attribB_skel (
       std::addressof(_tao_rw_attribB)
     };
 
-  POA_Hello::MyFoo * const impl =
-    dynamic_cast<POA_Hello::MyFoo *> (servant);
+  POA_Hello::MyFoo * const impl = dynamic_cast<POA_Hello::MyFoo *> (servant);
 
   if (!impl)
     {
@@ -1576,20 +1505,16 @@ void POA_Hello::MyFoo::_set_rw_attribB_skel (
 namespace POA_Hello
 {
 
-
   class _get_ro_attrib_MyFoo
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_ro_attrib_MyFoo (
-      POA_Hello::MyFoo * servant,
+    inline _get_ro_attrib_MyFoo (POA_Hello::MyFoo * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1608,12 +1533,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::MyFoo::_get_ro_attrib_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1629,8 +1554,7 @@ void POA_Hello::MyFoo::_get_ro_attrib_skel (
       std::addressof(retval)
     };
 
-  POA_Hello::MyFoo * const impl =
-    dynamic_cast<POA_Hello::MyFoo *> (servant);
+  POA_Hello::MyFoo * const impl = dynamic_cast<POA_Hello::MyFoo *> (servant);
 
   if (!impl)
     {
@@ -1662,7 +1586,6 @@ void POA_Hello::MyFoo::_get_ro_attrib_skel (
 
 
 
-
 ::CORBA::Boolean POA_Hello::MyFoo::_is_a (const char* value)
 {
   return
@@ -1680,7 +1603,6 @@ const char* POA_Hello::MyFoo::_interface_repository_id () const
 
 
 
-
 void POA_Hello::MyFoo::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1691,12 +1613,11 @@ void POA_Hello::MyFoo::_dispatch (
 
 
 
-
 Hello::MyFoo *
 POA_Hello::MyFoo::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1705,8 +1626,6 @@ POA_Hello::MyFoo::_this ()
     }
   return {};
 }
-
-
 
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib_mytype (
@@ -1723,7 +1642,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib_mytype (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib_mytype_excep (
   ::Hello::AMH_MyFooExceptionHolder * holder)
@@ -1737,7 +1655,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib_mytype_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_mytype ()
 {
@@ -1746,7 +1663,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_mytype ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_mytype_excep (
   ::Hello::AMH_MyFooExceptionHolder * holder)
@@ -1760,7 +1676,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_mytype_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib (
   ::CORBA::Short return_value)
@@ -1776,7 +1691,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib_excep (
   ::Hello::AMH_MyFooExceptionHolder * holder)
@@ -1790,7 +1704,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib ()
 {
@@ -1799,7 +1712,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_excep (
   ::Hello::AMH_MyFooExceptionHolder * holder)
@@ -1813,7 +1725,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib_reverted (
   ::CORBA::Short return_value)
@@ -1829,7 +1740,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib_reverted (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib_reverted_excep (
   ::Hello::AMH_MyFooExceptionHolder * holder)
@@ -1843,7 +1753,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attrib_reverted_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_reverted ()
 {
@@ -1852,7 +1761,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_reverted ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_reverted_excep (
   ::Hello::AMH_MyFooExceptionHolder * holder)
@@ -1866,7 +1774,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_reverted_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attribB (
   ::CORBA::Short return_value)
@@ -1882,7 +1789,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attribB (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attribB_excep (
   ::Hello::AMH_MyFooExceptionHolder * holder)
@@ -1896,7 +1802,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::get_rw_attribB_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attribB ()
 {
@@ -1905,7 +1810,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attribB ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attribB_excep (
   ::Hello::AMH_MyFooExceptionHolder * holder)
@@ -1919,7 +1823,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attribB_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::get_ro_attrib (
   ::CORBA::Short return_value)
@@ -1935,7 +1838,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::get_ro_attrib (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_Hello::TAO_AMH_MyFooResponseHandler::get_ro_attrib_excep (
   ::Hello::AMH_MyFooExceptionHolder * holder)
@@ -1954,17 +1856,18 @@ class TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1982,23 +1885,20 @@ TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned
      46, 46,  0, 46, 46,  5, 25, 46, 46, 46,
      46, 46, 46, 46, 46, 46, 46, 46,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 23,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 28,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 45,
-      HASH_VALUE_RANGE = 41,
-      DUPLICATES = 3,
-      WORDLIST_SIZE = 28
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {23};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {28};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {45};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {41};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {3};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {28};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -2038,7 +1938,7 @@ TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable::lookup (const char *str, unsign
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -2049,14 +1949,14 @@ TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable::lookup (const char *str, unsign
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -2065,7 +1965,7 @@ TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable::lookup (const char *str, unsign
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable tao_Hello_AMI_MyFooHandler_optable;
@@ -2077,7 +1977,6 @@ static TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable tao_Hello_AMI_MyFooHandle
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::~_TAO_AMI_MyFooHandler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -2099,7 +1998,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_mytype (
 }
 
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_mytype_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -2119,7 +2017,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_mytype_excep (
 }
 
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_mytype (
     TAO_Abstract_ServantBase  *servant,
@@ -2136,7 +2033,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_mytype (
   _tao_ptr->set_rw_attrib_mytype (
       );
 }
-
 
 
 void
@@ -2158,7 +2054,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_mytype_excep (
 }
 
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib (
     TAO_Abstract_ServantBase  *servant,
@@ -2176,7 +2071,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -2198,7 +2092,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_excep (
 }
 
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib (
     TAO_Abstract_ServantBase  *servant,
@@ -2215,7 +2108,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib (
   _tao_ptr->set_rw_attrib (
       );
 }
-
 
 
 void
@@ -2237,7 +2129,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_excep (
 }
 
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_reverted (
     TAO_Abstract_ServantBase  *servant,
@@ -2255,7 +2146,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_reverted (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -2277,7 +2167,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_reverted_excep
 }
 
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_reverted (
     TAO_Abstract_ServantBase  *servant,
@@ -2294,7 +2183,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_reverted (
   _tao_ptr->set_rw_attrib_reverted (
       );
 }
-
 
 
 void
@@ -2316,7 +2204,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_reverted_excep
 }
 
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attribB (
     TAO_Abstract_ServantBase  *servant,
@@ -2334,7 +2221,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attribB (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -2356,7 +2242,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attribB_excep (
 }
 
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attribB (
     TAO_Abstract_ServantBase  *servant,
@@ -2373,7 +2258,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attribB (
   _tao_ptr->set_rw_attribB (
       );
 }
-
 
 
 void
@@ -2395,7 +2279,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attribB_excep (
 }
 
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_ro_attrib (
     TAO_Abstract_ServantBase  *servant,
@@ -2413,7 +2296,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_ro_attrib (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -2440,10 +2322,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_ro_attrib_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_Hello::AMI_MyFooHandler::AMI_MyFooHandler ()
 {
   this->optable_ = std::addressof (tao_Hello_AMI_MyFooHandler_optable);
@@ -2453,20 +2331,16 @@ POA_Hello::AMI_MyFooHandler::AMI_MyFooHandler ()
 namespace POA_Hello
 {
 
-
   class get_rw_attrib_mytype_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_rw_attrib_mytype_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline get_rw_attrib_mytype_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2486,12 +2360,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -2509,8 +2383,7 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -2539,20 +2412,16 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_skel (
 namespace POA_Hello
 {
 
-
   class get_rw_attrib_mytype_excep_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_rw_attrib_mytype_excep_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline get_rw_attrib_mytype_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2591,12 +2460,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -2614,8 +2483,7 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -2644,16 +2512,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep_skel (
 namespace POA_Hello
 {
 
-
   class set_rw_attrib_mytype_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_rw_attrib_mytype_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline set_rw_attrib_mytype_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -2664,12 +2528,12 @@ namespace POA_Hello
     POA_Hello::AMI_MyFooHandler * const servant_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -2685,16 +2549,14 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_skel (
       std::addressof(retval)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  set_rw_attrib_mytype_AMI_MyFooHandler command (
-    impl);
+  set_rw_attrib_mytype_AMI_MyFooHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -2713,20 +2575,16 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_skel (
 namespace POA_Hello
 {
 
-
   class set_rw_attrib_mytype_excep_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_rw_attrib_mytype_excep_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline set_rw_attrib_mytype_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2765,12 +2623,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -2788,8 +2646,7 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -2818,20 +2675,16 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep_skel (
 namespace POA_Hello
 {
 
-
   class get_rw_attrib_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_rw_attrib_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline get_rw_attrib_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2851,12 +2704,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::get_rw_attrib_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -2874,8 +2727,7 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -2904,20 +2756,16 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_skel (
 namespace POA_Hello
 {
 
-
   class get_rw_attrib_excep_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_rw_attrib_excep_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline get_rw_attrib_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2956,12 +2804,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::get_rw_attrib_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -2979,8 +2827,7 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -3009,16 +2856,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_excep_skel (
 namespace POA_Hello
 {
 
-
   class set_rw_attrib_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_rw_attrib_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline set_rw_attrib_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -3029,12 +2872,12 @@ namespace POA_Hello
     POA_Hello::AMI_MyFooHandler * const servant_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::set_rw_attrib_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -3050,16 +2893,14 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_skel (
       std::addressof(retval)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  set_rw_attrib_AMI_MyFooHandler command (
-    impl);
+  set_rw_attrib_AMI_MyFooHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -3078,20 +2919,16 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_skel (
 namespace POA_Hello
 {
 
-
   class set_rw_attrib_excep_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_rw_attrib_excep_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline set_rw_attrib_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3130,12 +2967,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::set_rw_attrib_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -3153,8 +2990,7 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -3183,20 +3019,16 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_excep_skel (
 namespace POA_Hello
 {
 
-
   class get_rw_attrib_reverted_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_rw_attrib_reverted_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline get_rw_attrib_reverted_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3216,12 +3048,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -3239,8 +3071,7 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -3269,20 +3100,16 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_skel (
 namespace POA_Hello
 {
 
-
   class get_rw_attrib_reverted_excep_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_rw_attrib_reverted_excep_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline get_rw_attrib_reverted_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3321,12 +3148,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -3344,8 +3171,7 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -3374,16 +3200,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep_skel (
 namespace POA_Hello
 {
 
-
   class set_rw_attrib_reverted_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_rw_attrib_reverted_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline set_rw_attrib_reverted_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -3394,12 +3216,12 @@ namespace POA_Hello
     POA_Hello::AMI_MyFooHandler * const servant_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -3415,16 +3237,14 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_skel (
       std::addressof(retval)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  set_rw_attrib_reverted_AMI_MyFooHandler command (
-    impl);
+  set_rw_attrib_reverted_AMI_MyFooHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -3443,20 +3263,16 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_skel (
 namespace POA_Hello
 {
 
-
   class set_rw_attrib_reverted_excep_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_rw_attrib_reverted_excep_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline set_rw_attrib_reverted_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3495,12 +3311,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -3518,8 +3334,7 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -3548,20 +3363,16 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep_skel (
 namespace POA_Hello
 {
 
-
   class get_rw_attribB_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_rw_attribB_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline get_rw_attribB_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3581,12 +3392,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::get_rw_attribB_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -3604,8 +3415,7 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attribB_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -3634,20 +3444,16 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attribB_skel (
 namespace POA_Hello
 {
 
-
   class get_rw_attribB_excep_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_rw_attribB_excep_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline get_rw_attribB_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3686,12 +3492,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::get_rw_attribB_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -3709,8 +3515,7 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attribB_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -3739,16 +3544,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attribB_excep_skel (
 namespace POA_Hello
 {
 
-
   class set_rw_attribB_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_rw_attribB_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline set_rw_attribB_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -3759,28 +3560,26 @@ namespace POA_Hello
     POA_Hello::AMI_MyFooHandler * const servant_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::set_rw_attribB_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  set_rw_attribB_AMI_MyFooHandler command (
-    impl);
+  set_rw_attribB_AMI_MyFooHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -3799,20 +3598,16 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attribB_skel (
 namespace POA_Hello
 {
 
-
   class set_rw_attribB_excep_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_rw_attribB_excep_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline set_rw_attribB_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3832,12 +3627,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::set_rw_attribB_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -3846,8 +3641,7 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attribB_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -3876,20 +3670,16 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attribB_excep_skel (
 namespace POA_Hello
 {
 
-
   class get_ro_attrib_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_ro_attrib_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline get_ro_attrib_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3909,12 +3699,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::get_ro_attrib_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -3932,8 +3722,7 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -3962,20 +3751,16 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_skel (
 namespace POA_Hello
 {
 
-
   class get_ro_attrib_excep_AMI_MyFooHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_ro_attrib_excep_AMI_MyFooHandler (
-      POA_Hello::AMI_MyFooHandler * servant,
+    inline get_ro_attrib_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -4014,12 +3799,12 @@ namespace POA_Hello
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_Hello::AMI_MyFooHandler::get_ro_attrib_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -4037,8 +3822,7 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_Hello::AMI_MyFooHandler * const impl =
-    dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
+  POA_Hello::AMI_MyFooHandler * const impl = dynamic_cast<POA_Hello::AMI_MyFooHandler *> (servant);
 
   if (!impl)
     {
@@ -4070,7 +3854,6 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_Hello::AMI_MyFooHandler::_is_a (const char* value)
 {
   return
@@ -4089,7 +3872,6 @@ const char* POA_Hello::AMI_MyFooHandler::_interface_repository_id () const
 
 
 
-
 void POA_Hello::AMI_MyFooHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -4100,12 +3882,11 @@ void POA_Hello::AMI_MyFooHandler::_dispatch (
 
 
 
-
 Hello::AMI_MyFooHandler *
 POA_Hello::AMI_MyFooHandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

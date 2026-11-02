@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "sequenceC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -47,7 +46,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "sequenceC.inl"
@@ -56,20 +55,16 @@
 
 
 
-
 #if !defined (_MYFOOSTRUCTSEQ_CS_)
 #define _MYFOOSTRUCTSEQ_CS_
 
-myfoostructseq::myfoostructseq (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< myfoostruct> (max)
-{}
+myfoostructseq::myfoostructseq (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< myfoostruct> (max) {}
 
-myfoostructseq::myfoostructseq (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    myfoostruct * buffer,
-    ::CORBA::Boolean release)
+myfoostructseq::myfoostructseq (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  myfoostruct * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< myfoostruct>
     (max, length, buffer, release)
 {}
@@ -84,8 +79,6 @@ void myfoostructseq::_tao_any_destructor (
 #endif /* end #if !defined */
 
 
-
-
 #ifndef _TAO_TYPECODE_myfoostructseq_GUARD
 #define _TAO_TYPECODE_myfoostructseq_GUARD
 
@@ -97,17 +90,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        myfoostructseq_0 (
-          ::CORBA::tk_sequence,
-          &_tc_myfoostruct,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> myfoostructseq_0 (
+        ::CORBA::tk_sequence, &_tc_myfoostruct, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_myfoostructseq_0 =
-        &myfoostructseq_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_myfoostructseq_0 =
+      &myfoostructseq_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -124,8 +113,6 @@ static TAO::TypeCode::Alias<char const *,
     &TAO::TypeCode::tc_myfoostructseq_0);
 
 ::CORBA::TypeCode_ptr const _tc_myfoostructseq = std::addressof(_tao_tc_myfoostructseq);
-
-
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -158,7 +145,6 @@ _tao_tc_myfoostruct (
 ::CORBA::TypeCode_ptr const _tc_myfoostruct = std::addressof(_tao_tc_myfoostruct);
 
 
-
 void
 myfoostruct::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -166,7 +152,6 @@ myfoostruct::_tao_any_destructor (
   myfoostruct *tmp = static_cast<myfoostruct *> (_tao_void_pointer);
   delete tmp;
 }
-
 
 
 nasty::nasty (
@@ -179,7 +164,6 @@ nasty::nasty (
   this->id = ::CORBA::string_dup (_tao_id);
   this->rec_info = _tao_rec_info;
 }
-
 
 
 nasty::nasty ()
@@ -266,7 +250,6 @@ void nasty::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::_tc_nasty;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -295,20 +278,16 @@ _tao_tc_nasty (
 
 
 
-
 #if !defined (_OCTETSEQSEQ_CS_)
 #define _OCTETSEQSEQ_CS_
 
-OctetSeqSeq::OctetSeqSeq (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< CORBA::OctetSeq> (max)
-{}
+OctetSeqSeq::OctetSeqSeq (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< CORBA::OctetSeq> (max) {}
 
-OctetSeqSeq::OctetSeqSeq (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    CORBA::OctetSeq * buffer,
-    ::CORBA::Boolean release)
+OctetSeqSeq::OctetSeqSeq (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  CORBA::OctetSeq * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< CORBA::OctetSeq>
     (max, length, buffer, release)
 {}
@@ -323,8 +302,6 @@ void OctetSeqSeq::_tao_any_destructor (
 #endif /* end #if !defined */
 
 
-
-
 #ifndef _TAO_TYPECODE_OctetSeqSeq_GUARD
 #define _TAO_TYPECODE_OctetSeqSeq_GUARD
 
@@ -336,17 +313,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        OctetSeqSeq_0 (
-          ::CORBA::tk_sequence,
-          &CORBA::_tc_OctetSeq,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> OctetSeqSeq_0 (
+        ::CORBA::tk_sequence, &CORBA::_tc_OctetSeq, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_OctetSeqSeq_0 =
-        &OctetSeqSeq_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_OctetSeqSeq_0 =
+      &OctetSeqSeq_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -363,7 +336,6 @@ static TAO::TypeCode::Alias<char const *,
     &TAO::TypeCode::tc_OctetSeqSeq_0);
 
 ::CORBA::TypeCode_ptr const _tc_OctetSeqSeq = std::addressof(_tao_tc_OctetSeqSeq);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -480,7 +452,6 @@ seqLocal::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_seqLocal (
@@ -493,27 +464,17 @@ static TAO::TypeCode::Objref<char const *,
 
 
 
-
 #if !defined (_SEQLOCALSEQ_CS_)
 #define _SEQLOCALSEQ_CS_
 
-seqLocalSeq::seqLocalSeq (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_object_reference_sequence<
-        seqLocal,
-        seqLocal_var
-      > (max)
-{}
+seqLocalSeq::seqLocalSeq (::CORBA::ULong max)
+  : ::TAO::unbounded_object_reference_sequence<seqLocal, seqLocal_var> (max) {}
 
-seqLocalSeq::seqLocalSeq (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    seqLocal_ptr * buffer,
-    ::CORBA::Boolean release)
-  : ::TAO::unbounded_object_reference_sequence<
-        seqLocal,
-        seqLocal_var
-      >
+seqLocalSeq::seqLocalSeq (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  seqLocal_ptr * buffer,
+  ::CORBA::Boolean release)
+  : ::TAO::unbounded_object_reference_sequence<seqLocal, seqLocal_var>
     (max, length, buffer, release)
 {}
 
@@ -527,8 +488,6 @@ void seqLocalSeq::_tao_any_destructor (
 #endif /* end #if !defined */
 
 
-
-
 #ifndef _TAO_TYPECODE_seqLocalSeq_GUARD
 #define _TAO_TYPECODE_seqLocalSeq_GUARD
 
@@ -540,17 +499,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        seqLocalSeq_0 (
-          ::CORBA::tk_sequence,
-          &_tc_seqLocal,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> seqLocalSeq_0 (
+        ::CORBA::tk_sequence, &_tc_seqLocal, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_seqLocalSeq_0 =
-        &seqLocalSeq_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_seqLocalSeq_0 =
+      &seqLocalSeq_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -571,20 +526,16 @@ static TAO::TypeCode::Alias<char const *,
 
 
 
-
 #if !defined (_DEPLOYMENT_COMPONENTPACKAGEDESCRIPTIONS_CS_)
 #define _DEPLOYMENT_COMPONENTPACKAGEDESCRIPTIONS_CS_
 
-Deployment::ComponentPackageDescriptions::ComponentPackageDescriptions (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ComponentPackageDescription> (max)
-{}
+Deployment::ComponentPackageDescriptions::ComponentPackageDescriptions (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< ComponentPackageDescription> (max) {}
 
-Deployment::ComponentPackageDescriptions::ComponentPackageDescriptions (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    Deployment::ComponentPackageDescription * buffer,
-    ::CORBA::Boolean release)
+Deployment::ComponentPackageDescriptions::ComponentPackageDescriptions (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  Deployment::ComponentPackageDescription * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< ComponentPackageDescription>
     (max, length, buffer, release)
 {}
@@ -599,8 +550,6 @@ void Deployment::ComponentPackageDescriptions::_tao_any_destructor (
 #endif /* end #if !defined */
 
 
-
-
 #ifndef _TAO_TYPECODE_Deployment_ComponentPackageDescriptions_GUARD
 #define _TAO_TYPECODE_Deployment_ComponentPackageDescriptions_GUARD
 
@@ -612,17 +561,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Deployment_ComponentPackageDescriptions_0 (
-          ::CORBA::tk_sequence,
-          &Deployment::_tc_ComponentPackageDescription,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_ComponentPackageDescriptions_0 (
+        ::CORBA::tk_sequence, &Deployment::_tc_ComponentPackageDescription, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_Deployment_ComponentPackageDescriptions_0 =
-        &Deployment_ComponentPackageDescriptions_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_Deployment_ComponentPackageDescriptions_0 =
+      &Deployment_ComponentPackageDescriptions_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -643,8 +588,6 @@ namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_ComponentPackageDescriptions = std::addressof(_tao_tc_Deployment_ComponentPackageDescriptions);
 }
-
-
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -680,7 +623,6 @@ namespace Deployment
 }
 
 
-
 void
 Deployment::ComponentAssemblyDescription::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -692,20 +634,16 @@ Deployment::ComponentAssemblyDescription::_tao_any_destructor (
 
 
 
-
 #if !defined (_DEPLOYMENT_COMPONENTASSEMBLYDESCRIPTIONS_CS_)
 #define _DEPLOYMENT_COMPONENTASSEMBLYDESCRIPTIONS_CS_
 
-Deployment::ComponentAssemblyDescriptions::ComponentAssemblyDescriptions (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ComponentAssemblyDescription> (max)
-{}
+Deployment::ComponentAssemblyDescriptions::ComponentAssemblyDescriptions (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< ComponentAssemblyDescription> (max) {}
 
-Deployment::ComponentAssemblyDescriptions::ComponentAssemblyDescriptions (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    Deployment::ComponentAssemblyDescription * buffer,
-    ::CORBA::Boolean release)
+Deployment::ComponentAssemblyDescriptions::ComponentAssemblyDescriptions (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  Deployment::ComponentAssemblyDescription * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< ComponentAssemblyDescription>
     (max, length, buffer, release)
 {}
@@ -720,8 +658,6 @@ void Deployment::ComponentAssemblyDescriptions::_tao_any_destructor (
 #endif /* end #if !defined */
 
 
-
-
 #ifndef _TAO_TYPECODE_Deployment_ComponentAssemblyDescriptions_GUARD
 #define _TAO_TYPECODE_Deployment_ComponentAssemblyDescriptions_GUARD
 
@@ -733,17 +669,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Deployment_ComponentAssemblyDescriptions_0 (
-          ::CORBA::tk_sequence,
-          &Deployment::_tc_ComponentAssemblyDescription,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_ComponentAssemblyDescriptions_0 (
+        ::CORBA::tk_sequence, &Deployment::_tc_ComponentAssemblyDescription, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_Deployment_ComponentAssemblyDescriptions_0 =
-        &Deployment_ComponentAssemblyDescriptions_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_Deployment_ComponentAssemblyDescriptions_0 =
+      &Deployment_ComponentAssemblyDescriptions_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -768,20 +700,16 @@ namespace Deployment
 
 
 
-
 #if !defined (_DEPLOYMENT_NAMEDIMPLEMENTATIONARTIFACTS_CS_)
 #define _DEPLOYMENT_NAMEDIMPLEMENTATIONARTIFACTS_CS_
 
-Deployment::NamedImplementationArtifacts::NamedImplementationArtifacts (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< NamedImplementationArtifact> (max)
-{}
+Deployment::NamedImplementationArtifacts::NamedImplementationArtifacts (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< NamedImplementationArtifact> (max) {}
 
-Deployment::NamedImplementationArtifacts::NamedImplementationArtifacts (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    Deployment::NamedImplementationArtifact * buffer,
-    ::CORBA::Boolean release)
+Deployment::NamedImplementationArtifacts::NamedImplementationArtifacts (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  Deployment::NamedImplementationArtifact * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< NamedImplementationArtifact>
     (max, length, buffer, release)
 {}
@@ -796,8 +724,6 @@ void Deployment::NamedImplementationArtifacts::_tao_any_destructor (
 #endif /* end #if !defined */
 
 
-
-
 #ifndef _TAO_TYPECODE_Deployment_NamedImplementationArtifacts_GUARD
 #define _TAO_TYPECODE_Deployment_NamedImplementationArtifacts_GUARD
 
@@ -809,17 +735,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Deployment_NamedImplementationArtifacts_0 (
-          ::CORBA::tk_sequence,
-          &Deployment::_tc_NamedImplementationArtifact,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_NamedImplementationArtifacts_0 (
+        ::CORBA::tk_sequence, &Deployment::_tc_NamedImplementationArtifact, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_Deployment_NamedImplementationArtifacts_0 =
-        &Deployment_NamedImplementationArtifacts_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_Deployment_NamedImplementationArtifacts_0 =
+      &Deployment_NamedImplementationArtifacts_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -840,8 +762,6 @@ namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_NamedImplementationArtifacts = std::addressof(_tao_tc_Deployment_NamedImplementationArtifacts);
 }
-
-
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -878,7 +798,6 @@ namespace Deployment
 }
 
 
-
 void
 Deployment::NamedImplementationArtifact::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -886,8 +805,6 @@ Deployment::NamedImplementationArtifact::_tao_any_destructor (
   NamedImplementationArtifact *tmp = static_cast<NamedImplementationArtifact *> (_tao_void_pointer);
   delete tmp;
 }
-
-
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -918,7 +835,6 @@ namespace Deployment
 }
 
 
-
 void
 Deployment::MonolithicImplementationDescription::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -930,20 +846,16 @@ Deployment::MonolithicImplementationDescription::_tao_any_destructor (
 
 
 
-
 #if !defined (_DEPLOYMENT_MONOLITHICIMPLEMENTATIONDESCRIPTIONS_CS_)
 #define _DEPLOYMENT_MONOLITHICIMPLEMENTATIONDESCRIPTIONS_CS_
 
-Deployment::MonolithicImplementationDescriptions::MonolithicImplementationDescriptions (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< MonolithicImplementationDescription> (max)
-{}
+Deployment::MonolithicImplementationDescriptions::MonolithicImplementationDescriptions (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< MonolithicImplementationDescription> (max) {}
 
-Deployment::MonolithicImplementationDescriptions::MonolithicImplementationDescriptions (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    Deployment::MonolithicImplementationDescription * buffer,
-    ::CORBA::Boolean release)
+Deployment::MonolithicImplementationDescriptions::MonolithicImplementationDescriptions (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  Deployment::MonolithicImplementationDescription * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< MonolithicImplementationDescription>
     (max, length, buffer, release)
 {}
@@ -958,8 +870,6 @@ void Deployment::MonolithicImplementationDescriptions::_tao_any_destructor (
 #endif /* end #if !defined */
 
 
-
-
 #ifndef _TAO_TYPECODE_Deployment_MonolithicImplementationDescriptions_GUARD
 #define _TAO_TYPECODE_Deployment_MonolithicImplementationDescriptions_GUARD
 
@@ -971,17 +881,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Deployment_MonolithicImplementationDescriptions_0 (
-          ::CORBA::tk_sequence,
-          &Deployment::_tc_MonolithicImplementationDescription,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_MonolithicImplementationDescriptions_0 (
+        ::CORBA::tk_sequence, &Deployment::_tc_MonolithicImplementationDescription, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_Deployment_MonolithicImplementationDescriptions_0 =
-        &Deployment_MonolithicImplementationDescriptions_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_Deployment_MonolithicImplementationDescriptions_0 =
+      &Deployment_MonolithicImplementationDescriptions_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1002,9 +908,6 @@ namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_MonolithicImplementationDescriptions = std::addressof(_tao_tc_Deployment_MonolithicImplementationDescriptions);
 }
-
-
-
 
 
 static TAO::TypeCode::Struct_Field<
@@ -1042,7 +945,6 @@ namespace Deployment
 }
 
 
-
 void
 Deployment::PackagedComponentImplementation::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -1054,20 +956,16 @@ Deployment::PackagedComponentImplementation::_tao_any_destructor (
 
 
 
-
 #if !defined (_DEPLOYMENT_PACKAGEDCOMPONENTIMPLEMENTATIONS_CS_)
 #define _DEPLOYMENT_PACKAGEDCOMPONENTIMPLEMENTATIONS_CS_
 
-Deployment::PackagedComponentImplementations::PackagedComponentImplementations (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< PackagedComponentImplementation> (max)
-{}
+Deployment::PackagedComponentImplementations::PackagedComponentImplementations (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< PackagedComponentImplementation> (max) {}
 
-Deployment::PackagedComponentImplementations::PackagedComponentImplementations (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    Deployment::PackagedComponentImplementation * buffer,
-    ::CORBA::Boolean release)
+Deployment::PackagedComponentImplementations::PackagedComponentImplementations (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  Deployment::PackagedComponentImplementation * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< PackagedComponentImplementation>
     (max, length, buffer, release)
 {}
@@ -1082,8 +980,6 @@ void Deployment::PackagedComponentImplementations::_tao_any_destructor (
 #endif /* end #if !defined */
 
 
-
-
 #ifndef _TAO_TYPECODE_Deployment_PackagedComponentImplementations_GUARD
 #define _TAO_TYPECODE_Deployment_PackagedComponentImplementations_GUARD
 
@@ -1095,17 +991,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Deployment_PackagedComponentImplementations_0 (
-          ::CORBA::tk_sequence,
-          &Deployment::_tc_PackagedComponentImplementation,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_PackagedComponentImplementations_0 (
+        ::CORBA::tk_sequence, &Deployment::_tc_PackagedComponentImplementation, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_Deployment_PackagedComponentImplementations_0 =
-        &Deployment_PackagedComponentImplementations_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_Deployment_PackagedComponentImplementations_0 =
+      &Deployment_PackagedComponentImplementations_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1126,8 +1018,6 @@ namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_PackagedComponentImplementations = std::addressof(_tao_tc_Deployment_PackagedComponentImplementations);
 }
-
-
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -1164,7 +1054,6 @@ namespace Deployment
 }
 
 
-
 void
 Deployment::ComponentPackageDescription::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -1172,7 +1061,6 @@ Deployment::ComponentPackageDescription::_tao_any_destructor (
   ComponentPackageDescription *tmp = static_cast<ComponentPackageDescription *> (_tao_void_pointer);
   delete tmp;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1218,7 +1106,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1259,7 +1146,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1340,7 +1226,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1382,7 +1267,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1468,7 +1352,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 namespace TAO
@@ -1535,7 +1418,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1580,7 +1462,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1621,7 +1502,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1669,7 +1549,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1711,7 +1590,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1758,7 +1636,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1799,7 +1676,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1847,7 +1723,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1888,7 +1763,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1936,7 +1810,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1979,7 +1852,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 #if !defined _TAO_CDR_OP_myfoostructseq_CPP_
 #define _TAO_CDR_OP_myfoostructseq_CPP_
 
@@ -2004,7 +1876,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_myfoostructseq_CPP_ */
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -2028,7 +1899,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2069,7 +1939,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 #if !defined _TAO_CDR_OP_OctetSeqSeq_CPP_
 #define _TAO_CDR_OP_OctetSeqSeq_CPP_
 
@@ -2093,7 +1962,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_OctetSeqSeq_CPP_ */
-
 #if !defined _TAO_CDR_OP_Deployment_ComponentPackageDescriptions_CPP_
 #define _TAO_CDR_OP_Deployment_ComponentPackageDescriptions_CPP_
 
@@ -2118,7 +1986,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Deployment_ComponentPackageDescriptions_CPP_ */
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -2140,7 +2007,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if !defined _TAO_CDR_OP_Deployment_ComponentAssemblyDescriptions_CPP_
@@ -2166,7 +2032,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Deployment_ComponentAssemblyDescriptions_CPP_ */
-
 #if !defined _TAO_CDR_OP_Deployment_NamedImplementationArtifacts_CPP_
 #define _TAO_CDR_OP_Deployment_NamedImplementationArtifacts_CPP_
 
@@ -2190,7 +2055,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Deployment_NamedImplementationArtifacts_CPP_ */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2218,7 +2082,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -2240,7 +2103,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if !defined _TAO_CDR_OP_Deployment_MonolithicImplementationDescriptions_CPP_
@@ -2267,7 +2129,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Deployment_MonolithicImplementationDescriptions_CPP_ */
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -2293,7 +2154,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 #if !defined _TAO_CDR_OP_Deployment_PackagedComponentImplementations_CPP_
 #define _TAO_CDR_OP_Deployment_PackagedComponentImplementations_CPP_
 
@@ -2317,7 +2177,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Deployment_PackagedComponentImplementations_CPP_ */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 

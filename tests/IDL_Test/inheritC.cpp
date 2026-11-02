@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "inheritC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -32,12 +31,11 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "inheritC.inl"
 #endif /* !defined INLINE */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -70,7 +68,6 @@ TAO::Objref_Traits<OldInherit::one>::marshal (const OldInherit::one_ptr p,TAO_Ou
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 void
 OldInherit::one::op_one ()
 {
@@ -101,7 +98,6 @@ OldInherit::one::op_one ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 
 
 void
@@ -212,7 +208,6 @@ OldInherit::one::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -349,7 +344,6 @@ OldInherit::AMH_oneExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 OldInherit::AMH_oneExceptionHolder::raise_op_one ()
 {
@@ -357,14 +351,12 @@ OldInherit::AMH_oneExceptionHolder::raise_op_one ()
   this->exception->_raise ();
 }
 
-
 void
 OldInherit::AMH_oneExceptionHolder::raise_sendc_op_one ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -483,7 +475,6 @@ OldInherit::AMH_oneResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldInherit::AMI_oneHandler.
@@ -513,7 +504,6 @@ TAO::Objref_Traits<OldInherit::AMI_oneHandler>::marshal (const OldInherit::AMI_o
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -601,7 +591,6 @@ OldInherit::AMI_oneHandler::op_one_reply_stub (
       break;
   }
 }
-
 void
 OldInherit::AMI_oneHandler::op_one_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -715,7 +704,6 @@ OldInherit::AMI_oneHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldInherit::two.
@@ -745,7 +733,6 @@ TAO::Objref_Traits<OldInherit::two>::marshal (const OldInherit::two_ptr p,TAO_Ou
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -778,7 +765,6 @@ OldInherit::two::op_two ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 
 
 void
@@ -890,7 +876,6 @@ OldInherit::two::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1027,7 +1012,6 @@ OldInherit::AMH_twoExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 OldInherit::AMH_twoExceptionHolder::raise_op_two ()
 {
@@ -1035,14 +1019,12 @@ OldInherit::AMH_twoExceptionHolder::raise_op_two ()
   this->exception->_raise ();
 }
 
-
 void
 OldInherit::AMH_twoExceptionHolder::raise_sendc_op_two ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1161,7 +1143,6 @@ OldInherit::AMH_twoResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldInherit::AMI_twoHandler.
@@ -1191,7 +1172,6 @@ TAO::Objref_Traits<OldInherit::AMI_twoHandler>::marshal (const OldInherit::AMI_t
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -1279,7 +1259,6 @@ OldInherit::AMI_twoHandler::op_two_reply_stub (
       break;
   }
 }
-
 void
 OldInherit::AMI_twoHandler::op_two_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1394,7 +1373,6 @@ OldInherit::AMI_twoHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldInherit::three.
@@ -1424,7 +1402,6 @@ TAO::Objref_Traits<OldInherit::three>::marshal (const OldInherit::three_ptr p,TA
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -1457,7 +1434,6 @@ OldInherit::three::op_three ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 
 
 void
@@ -1569,7 +1545,6 @@ OldInherit::three::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1706,7 +1681,6 @@ OldInherit::AMH_threeExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 OldInherit::AMH_threeExceptionHolder::raise_op_three ()
 {
@@ -1714,14 +1688,12 @@ OldInherit::AMH_threeExceptionHolder::raise_op_three ()
   this->exception->_raise ();
 }
 
-
 void
 OldInherit::AMH_threeExceptionHolder::raise_sendc_op_three ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1840,7 +1812,6 @@ OldInherit::AMH_threeResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldInherit::AMI_threeHandler.
@@ -1870,7 +1841,6 @@ TAO::Objref_Traits<OldInherit::AMI_threeHandler>::marshal (const OldInherit::AMI
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -1958,7 +1928,6 @@ OldInherit::AMI_threeHandler::op_three_reply_stub (
       break;
   }
 }
-
 void
 OldInherit::AMI_threeHandler::op_three_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2073,7 +2042,6 @@ OldInherit::AMI_threeHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldInherit::four.
@@ -2103,7 +2071,6 @@ TAO::Objref_Traits<OldInherit::four>::marshal (const OldInherit::four_ptr p,TAO_
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -2136,7 +2103,6 @@ OldInherit::four::op_four ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 
 
 void
@@ -2250,7 +2216,6 @@ OldInherit::four::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2387,7 +2352,6 @@ OldInherit::AMH_fourExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 OldInherit::AMH_fourExceptionHolder::raise_op_four ()
 {
@@ -2395,14 +2359,12 @@ OldInherit::AMH_fourExceptionHolder::raise_op_four ()
   this->exception->_raise ();
 }
 
-
 void
 OldInherit::AMH_fourExceptionHolder::raise_sendc_op_four ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2521,7 +2483,6 @@ OldInherit::AMH_fourResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldInherit::AMI_fourHandler.
@@ -2551,7 +2512,6 @@ TAO::Objref_Traits<OldInherit::AMI_fourHandler>::marshal (const OldInherit::AMI_
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -2639,7 +2599,6 @@ OldInherit::AMI_fourHandler::op_four_reply_stub (
       break;
   }
 }
-
 void
 OldInherit::AMI_fourHandler::op_four_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2756,7 +2715,6 @@ OldInherit::AMI_fourHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldInherit::five.
@@ -2786,7 +2744,6 @@ TAO::Objref_Traits<OldInherit::five>::marshal (const OldInherit::five_ptr p,TAO_
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -2819,7 +2776,6 @@ OldInherit::five::op_five ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 
 
 void
@@ -2934,7 +2890,6 @@ OldInherit::five::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -3071,7 +3026,6 @@ OldInherit::AMH_fiveExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 OldInherit::AMH_fiveExceptionHolder::raise_op_five ()
 {
@@ -3079,14 +3033,12 @@ OldInherit::AMH_fiveExceptionHolder::raise_op_five ()
   this->exception->_raise ();
 }
 
-
 void
 OldInherit::AMH_fiveExceptionHolder::raise_sendc_op_five ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -3205,7 +3157,6 @@ OldInherit::AMH_fiveResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldInherit::AMI_fiveHandler.
@@ -3235,7 +3186,6 @@ TAO::Objref_Traits<OldInherit::AMI_fiveHandler>::marshal (const OldInherit::AMI_
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -3323,7 +3273,6 @@ OldInherit::AMI_fiveHandler::op_five_reply_stub (
       break;
   }
 }
-
 void
 OldInherit::AMI_fiveHandler::op_five_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3440,7 +3389,6 @@ OldInherit::AMI_fiveHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 OBV_OldInherit::AMH_oneExceptionHolder::~AMH_oneExceptionHolder ()
 {}
 
@@ -3455,7 +3403,6 @@ OBV_OldInherit::AMH_oneExceptionHolder::_tao_unmarshal__OldInherit_AMH_oneExcept
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_OldInherit::AMH_twoExceptionHolder::~AMH_twoExceptionHolder ()
 {}
 
@@ -3470,7 +3417,6 @@ OBV_OldInherit::AMH_twoExceptionHolder::_tao_unmarshal__OldInherit_AMH_twoExcept
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_OldInherit::AMH_threeExceptionHolder::~AMH_threeExceptionHolder ()
 {}
 
@@ -3485,7 +3431,6 @@ OBV_OldInherit::AMH_threeExceptionHolder::_tao_unmarshal__OldInherit_AMH_threeEx
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_OldInherit::AMH_fourExceptionHolder::~AMH_fourExceptionHolder ()
 {}
 
@@ -3500,7 +3445,6 @@ OBV_OldInherit::AMH_fourExceptionHolder::_tao_unmarshal__OldInherit_AMH_fourExce
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_OldInherit::AMH_fiveExceptionHolder::~AMH_fiveExceptionHolder ()
 {}
 
@@ -3515,7 +3459,6 @@ OBV_OldInherit::AMH_fiveExceptionHolder::_tao_unmarshal__OldInherit_AMH_fiveExce
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3549,7 +3492,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldInherit::AMH_oneExceptionHolder * vt)
@@ -3570,7 +3512,6 @@ CORBA::remove_ref (OldInherit::AMH_oneExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3600,7 +3541,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_OldInherit::AMH_oneExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -3618,7 +3558,6 @@ OBV_OldInherit::AMH_oneExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -3650,7 +3589,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3686,7 +3624,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldInherit::AMH_twoExceptionHolder * vt)
@@ -3707,7 +3644,6 @@ CORBA::remove_ref (OldInherit::AMH_twoExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3737,7 +3673,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_OldInherit::AMH_twoExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -3755,7 +3690,6 @@ OBV_OldInherit::AMH_twoExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -3787,7 +3721,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3823,7 +3756,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldInherit::AMH_threeExceptionHolder * vt)
@@ -3844,7 +3776,6 @@ CORBA::remove_ref (OldInherit::AMH_threeExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3874,7 +3805,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_OldInherit::AMH_threeExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -3892,7 +3822,6 @@ OBV_OldInherit::AMH_threeExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -3924,7 +3853,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3960,7 +3888,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldInherit::AMH_fourExceptionHolder * vt)
@@ -3981,7 +3908,6 @@ CORBA::remove_ref (OldInherit::AMH_fourExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4011,7 +3937,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_OldInherit::AMH_fourExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -4029,7 +3954,6 @@ OBV_OldInherit::AMH_fourExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -4061,7 +3985,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4097,7 +4020,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldInherit::AMH_fiveExceptionHolder * vt)
@@ -4118,7 +4040,6 @@ CORBA::remove_ref (OldInherit::AMH_fiveExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4148,7 +4069,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_OldInherit::AMH_fiveExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -4166,7 +4086,6 @@ OBV_OldInherit::AMH_fiveExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

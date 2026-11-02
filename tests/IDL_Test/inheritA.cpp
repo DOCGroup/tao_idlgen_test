@@ -34,7 +34,6 @@
 #include "tao/CDR.h"
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_one (
@@ -47,7 +46,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_one = std::addressof(_tao_tc_OldInherit_one);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_oneExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -73,7 +71,6 @@ namespace OldInherit
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_AMH_oneResponseHandler (
@@ -86,7 +83,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_oneResponseHandler = std::addressof(_tao_tc_OldInherit_AMH_oneResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_AMI_oneHandler (
@@ -99,7 +95,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_oneHandler = std::addressof(_tao_tc_OldInherit_AMI_oneHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_two (
@@ -112,7 +107,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_two = std::addressof(_tao_tc_OldInherit_two);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_twoExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -138,7 +132,6 @@ namespace OldInherit
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_AMH_twoResponseHandler (
@@ -151,7 +144,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_twoResponseHandler = std::addressof(_tao_tc_OldInherit_AMH_twoResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_AMI_twoHandler (
@@ -164,7 +156,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_twoHandler = std::addressof(_tao_tc_OldInherit_AMI_twoHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_three (
@@ -177,7 +168,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_three = std::addressof(_tao_tc_OldInherit_three);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_threeExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -203,7 +193,6 @@ namespace OldInherit
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_AMH_threeResponseHandler (
@@ -216,7 +205,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_threeResponseHandler = std::addressof(_tao_tc_OldInherit_AMH_threeResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_AMI_threeHandler (
@@ -229,7 +217,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_threeHandler = std::addressof(_tao_tc_OldInherit_AMI_threeHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_four (
@@ -242,7 +229,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_four = std::addressof(_tao_tc_OldInherit_four);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_fourExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -268,7 +254,6 @@ namespace OldInherit
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_AMH_fourResponseHandler (
@@ -281,7 +266,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_fourResponseHandler = std::addressof(_tao_tc_OldInherit_AMH_fourResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_AMI_fourHandler (
@@ -294,7 +278,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_fourHandler = std::addressof(_tao_tc_OldInherit_AMI_fourHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_five (
@@ -307,7 +290,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_five = std::addressof(_tao_tc_OldInherit_five);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_fiveExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -333,7 +315,6 @@ namespace OldInherit
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_AMH_fiveResponseHandler (
@@ -346,7 +327,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_fiveResponseHandler = std::addressof(_tao_tc_OldInherit_AMH_fiveResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldInherit_AMI_fiveHandler (
@@ -359,7 +339,6 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_fiveHandler = std::addressof(_tao_tc_OldInherit_AMI_fiveHandler);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -423,7 +402,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -498,7 +476,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -584,7 +561,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -650,7 +626,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -713,7 +688,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -788,7 +762,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -874,7 +847,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -940,7 +912,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1003,7 +974,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1078,7 +1048,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1164,7 +1133,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1230,7 +1198,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1293,7 +1260,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1368,7 +1334,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1454,7 +1419,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1520,7 +1484,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1583,7 +1546,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1658,7 +1620,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1741,7 +1702,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

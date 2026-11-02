@@ -22,14 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_PEMNAMINGS_TST81W_CPP_
-#define _TAO_IDL_PEMNAMINGS_TST81W_CPP_
+#ifndef _TAO_IDL_PEMNAMINGS_DVBQF4_CPP_
+#define _TAO_IDL_PEMNAMINGS_DVBQF4_CPP_
 
 
 #include "PEMNamingS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <cstddef>
 #include <cstring>
+#include <memory>
 #include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
 #include "tao/Exception_Data.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
@@ -52,22 +53,24 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
 class TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -85,23 +88,20 @@ TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable::hash (const char *str,
      18, 18, 18, 18,  0, 18,  0, 18, 18, 18,
      18, 18, 18, 18, 18, 18, 18, 18,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 17,
-      HASH_VALUE_RANGE = 13,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {17};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {13};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -120,30 +120,25 @@ TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable::lookup (const char *st
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable tao_Plesk_Naming_AMH_ObjectResolver_optable;
-
-
-
-
 
 POA_Plesk::Naming::AMH_ObjectResolver::AMH_ObjectResolver ()
 {
   this->optable_ = std::addressof (tao_Plesk_Naming_AMH_ObjectResolver_optable);
 }
-
 
 
 void
@@ -194,7 +189,6 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_skel (
       sc_id
     );
 }
-
 void
 POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -252,7 +246,6 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
 
 
 
-
 ::CORBA::Boolean POA_Plesk::Naming::AMH_ObjectResolver::_is_a (const char* value)
 {
   return
@@ -266,7 +259,6 @@ const char* POA_Plesk::Naming::AMH_ObjectResolver::_interface_repository_id () c
 {
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
-
 void
 POA_Plesk::Naming::AMH_ObjectResolver::_dispatch (
     TAO_ServerRequest &req,
@@ -274,12 +266,11 @@ POA_Plesk::Naming::AMH_ObjectResolver::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 Plesk::Naming::ObjectResolver*
 POA_Plesk::Naming::AMH_ObjectResolver::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -294,17 +285,18 @@ class TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -322,23 +314,20 @@ TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable::hash (const char *str, uns
      18, 18, 18, 18,  0, 18,  0, 18, 18, 18,
      18, 18, 18, 18, 18, 18, 18, 18,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 17,
-      HASH_VALUE_RANGE = 13,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {17};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {13};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -357,17 +346,17 @@ TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable::lookup (const char *str, u
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable tao_Plesk_Naming_ObjectResolver_optable;
@@ -379,7 +368,6 @@ static TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable tao_Plesk_Naming_Obj
 POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::~_TAO_ObjectResolver_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -401,7 +389,6 @@ POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve (
           ((TAO::Arg_Traits< ::CORBA::Long>::inout_arg_val *) args[2])->arg ()
         );
 }
-
 
 
 void
@@ -431,10 +418,6 @@ POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve_sc (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_Plesk::Naming::ObjectResolver::ObjectResolver ()
 {
   this->optable_ = std::addressof (tao_Plesk_Naming_ObjectResolver_optable);
@@ -447,20 +430,16 @@ namespace POA_Plesk
   namespace Naming
   {
 
-
     class resolve_ObjectResolver
       : public TAO::Upcall_Command
     {
     public:
-      inline resolve_ObjectResolver (
-        POA_Plesk::Naming::ObjectResolver * servant,
+      inline resolve_ObjectResolver (POA_Plesk::Naming::ObjectResolver * servant,
         TAO_Operation_Details const * operation_details,
         TAO::Argument * const args[])
         : servant_ (servant)
           , operation_details_ (operation_details)
-          , args_ (args)
-      {
-      }
+          , args_ (args) {}
 
       void execute () override
       {
@@ -494,12 +473,12 @@ namespace POA_Plesk
     };
   }
 }
-
 void POA_Plesk::Naming::ObjectResolver::resolve_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -519,8 +498,7 @@ void POA_Plesk::Naming::ObjectResolver::resolve_skel (
       std::addressof(_tao_sc_id)
     };
 
-  POA_Plesk::Naming::ObjectResolver * const impl =
-    dynamic_cast<POA_Plesk::Naming::ObjectResolver *> (servant);
+  POA_Plesk::Naming::ObjectResolver * const impl = dynamic_cast<POA_Plesk::Naming::ObjectResolver *> (servant);
 
   if (!impl)
     {
@@ -552,20 +530,16 @@ namespace POA_Plesk
   namespace Naming
   {
 
-
     class resolve_sc_ObjectResolver
       : public TAO::Upcall_Command
     {
     public:
-      inline resolve_sc_ObjectResolver (
-        POA_Plesk::Naming::ObjectResolver * servant,
+      inline resolve_sc_ObjectResolver (POA_Plesk::Naming::ObjectResolver * servant,
         TAO_Operation_Details const * operation_details,
         TAO::Argument * const args[])
         : servant_ (servant)
           , operation_details_ (operation_details)
-          , args_ (args)
-      {
-      }
+          , args_ (args) {}
 
       void execute () override
       {
@@ -606,12 +580,12 @@ namespace POA_Plesk
     };
   }
 }
-
 void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -633,8 +607,7 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
       std::addressof(_tao_sc_id)
     };
 
-  POA_Plesk::Naming::ObjectResolver * const impl =
-    dynamic_cast<POA_Plesk::Naming::ObjectResolver *> (servant);
+  POA_Plesk::Naming::ObjectResolver * const impl = dynamic_cast<POA_Plesk::Naming::ObjectResolver *> (servant);
 
   if (!impl)
     {
@@ -666,7 +639,6 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
 
 
 
-
 ::CORBA::Boolean POA_Plesk::Naming::ObjectResolver::_is_a (const char* value)
 {
   return
@@ -684,7 +656,6 @@ const char* POA_Plesk::Naming::ObjectResolver::_interface_repository_id () const
 
 
 
-
 void POA_Plesk::Naming::ObjectResolver::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -695,12 +666,11 @@ void POA_Plesk::Naming::ObjectResolver::_dispatch (
 
 
 
-
 Plesk::Naming::ObjectResolver *
 POA_Plesk::Naming::ObjectResolver::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -709,8 +679,6 @@ POA_Plesk::Naming::ObjectResolver::_this ()
     }
   return {};
 }
-
-
 
 void
 POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve (
@@ -729,7 +697,6 @@ POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_excep (
   ::Plesk::Naming::AMH_ObjectResolverExceptionHolder * holder)
@@ -743,7 +710,6 @@ POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_sc (
   ::CORBA::Object_ptr return_value,
@@ -761,7 +727,6 @@ POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_sc (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_sc_excep (
   ::Plesk::Naming::AMH_ObjectResolverExceptionHolder * holder)
@@ -780,17 +745,18 @@ class TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -808,23 +774,20 @@ TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable::hash (const cha
      22, 22,  5, 22,  0, 22,  0, 22, 22, 22,
      22, 22, 22, 22, 22, 22, 22, 22,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 9,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 16,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 21,
-      HASH_VALUE_RANGE = 17,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 14
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {16};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {21};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {17};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -846,17 +809,17 @@ TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable::lookup (const c
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable tao_Plesk_Naming_AMI_ObjectResolverHandler_optable;
@@ -868,7 +831,6 @@ static TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable tao_Plesk
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::~_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -891,7 +853,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve (
 }
 
 
-
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -909,7 +870,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_exc
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -930,7 +890,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc 
         ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[2])->arg ()
       );
 }
-
 
 
 void
@@ -957,10 +916,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc_
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_Plesk::Naming::AMI_ObjectResolverHandler::AMI_ObjectResolverHandler ()
 {
   this->optable_ = std::addressof (tao_Plesk_Naming_AMI_ObjectResolverHandler_optable);
@@ -973,20 +928,16 @@ namespace POA_Plesk
   namespace Naming
   {
 
-
     class resolve_AMI_ObjectResolverHandler
       : public TAO::Upcall_Command
     {
     public:
-      inline resolve_AMI_ObjectResolverHandler (
-        POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
+      inline resolve_AMI_ObjectResolverHandler (POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
         TAO_Operation_Details const * operation_details,
         TAO::Argument * const args[])
         : servant_ (servant)
           , operation_details_ (operation_details)
-          , args_ (args)
-      {
-      }
+          , args_ (args) {}
 
       void execute () override
       {
@@ -1014,12 +965,12 @@ namespace POA_Plesk
     };
   }
 }
-
 void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1039,8 +990,7 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_skel (
       std::addressof(_tao_sc_id)
     };
 
-  POA_Plesk::Naming::AMI_ObjectResolverHandler * const impl =
-    dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler *> (servant);
+  POA_Plesk::Naming::AMI_ObjectResolverHandler * const impl = dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler *> (servant);
 
   if (!impl)
     {
@@ -1072,20 +1022,16 @@ namespace POA_Plesk
   namespace Naming
   {
 
-
     class resolve_excep_AMI_ObjectResolverHandler
       : public TAO::Upcall_Command
     {
     public:
-      inline resolve_excep_AMI_ObjectResolverHandler (
-        POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
+      inline resolve_excep_AMI_ObjectResolverHandler (POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
         TAO_Operation_Details const * operation_details,
         TAO::Argument * const args[])
         : servant_ (servant)
           , operation_details_ (operation_details)
-          , args_ (args)
-      {
-      }
+          , args_ (args) {}
 
       void execute () override
       {
@@ -1125,12 +1071,12 @@ namespace POA_Plesk
     };
   }
 }
-
 void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1148,8 +1094,7 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_Plesk::Naming::AMI_ObjectResolverHandler * const impl =
-    dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler *> (servant);
+  POA_Plesk::Naming::AMI_ObjectResolverHandler * const impl = dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler *> (servant);
 
   if (!impl)
     {
@@ -1181,20 +1126,16 @@ namespace POA_Plesk
   namespace Naming
   {
 
-
     class resolve_sc_AMI_ObjectResolverHandler
       : public TAO::Upcall_Command
     {
     public:
-      inline resolve_sc_AMI_ObjectResolverHandler (
-        POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
+      inline resolve_sc_AMI_ObjectResolverHandler (POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
         TAO_Operation_Details const * operation_details,
         TAO::Argument * const args[])
         : servant_ (servant)
           , operation_details_ (operation_details)
-          , args_ (args)
-      {
-      }
+          , args_ (args) {}
 
       void execute () override
       {
@@ -1222,12 +1163,12 @@ namespace POA_Plesk
     };
   }
 }
-
 void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1247,8 +1188,7 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_skel (
       std::addressof(_tao_sc_id)
     };
 
-  POA_Plesk::Naming::AMI_ObjectResolverHandler * const impl =
-    dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler *> (servant);
+  POA_Plesk::Naming::AMI_ObjectResolverHandler * const impl = dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler *> (servant);
 
   if (!impl)
     {
@@ -1280,20 +1220,16 @@ namespace POA_Plesk
   namespace Naming
   {
 
-
     class resolve_sc_excep_AMI_ObjectResolverHandler
       : public TAO::Upcall_Command
     {
     public:
-      inline resolve_sc_excep_AMI_ObjectResolverHandler (
-        POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
+      inline resolve_sc_excep_AMI_ObjectResolverHandler (POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
         TAO_Operation_Details const * operation_details,
         TAO::Argument * const args[])
         : servant_ (servant)
           , operation_details_ (operation_details)
-          , args_ (args)
-      {
-      }
+          , args_ (args) {}
 
       void execute () override
       {
@@ -1333,12 +1269,12 @@ namespace POA_Plesk
     };
   }
 }
-
 void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1356,8 +1292,7 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_Plesk::Naming::AMI_ObjectResolverHandler * const impl =
-    dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler *> (servant);
+  POA_Plesk::Naming::AMI_ObjectResolverHandler * const impl = dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler *> (servant);
 
   if (!impl)
     {
@@ -1389,7 +1324,6 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_Plesk::Naming::AMI_ObjectResolverHandler::_is_a (const char* value)
 {
   return
@@ -1408,7 +1342,6 @@ const char* POA_Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_
 
 
 
-
 void POA_Plesk::Naming::AMI_ObjectResolverHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1419,12 +1352,11 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::_dispatch (
 
 
 
-
 Plesk::Naming::AMI_ObjectResolverHandler *
 POA_Plesk::Naming::AMI_ObjectResolverHandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

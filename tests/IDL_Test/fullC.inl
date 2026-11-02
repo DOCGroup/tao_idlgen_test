@@ -26,7 +26,6 @@
 #include <new>
 
 
-
 ACE_INLINE
 scope_test::i_scope_test::i_scope_test (
     TAO_Stub *objref,
@@ -44,7 +43,6 @@ scope_test::i_scope_test::i_scope_test (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 scope_test::AMH_i_scope_testExceptionHolder::AMH_i_scope_testExceptionHolder ()
   : exception (nullptr)
@@ -57,7 +55,6 @@ scope_test::AMH_i_scope_testExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler (
     TAO_Stub *objref,
@@ -75,11 +72,9 @@ scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 // *************************************************************
 // Inline operations for union mod2::fwd::un
 // *************************************************************
-
 ACE_INLINE
 void
 mod2::fwd::un::_default ()
@@ -123,7 +118,6 @@ mod2::fwd::un::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -154,7 +148,6 @@ mod2::fwd::un::full_mem () const
 }
 
 
-
 ACE_INLINE
 mod2::fwd::fwd (
     TAO_Stub *objref,
@@ -172,7 +165,6 @@ mod2::fwd::fwd (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 mod2::AMH_fwdExceptionHolder::AMH_fwdExceptionHolder ()
   : exception (nullptr)
@@ -183,7 +175,6 @@ mod2::AMH_fwdExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:mod2/AMH_fwdExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

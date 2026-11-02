@@ -37,7 +37,6 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-
 static char const * const _tao_enumerators_m_a_enum_a[] =
   {
     "value_1",
@@ -61,7 +60,6 @@ namespace m_a
 {
   ::CORBA::TypeCode_ptr const _tc_enum_a = std::addressof(_tao_tc_m_a_enum_a);
 }
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -76,7 +74,6 @@ namespace m_b
 {
   ::CORBA::TypeCode_ptr const _tc_enum_b = std::addressof(_tao_tc_m_b_enum_b);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_ClassConstants_Iface (
@@ -89,7 +86,6 @@ namespace ClassConstants
 {
   ::CORBA::TypeCode_ptr const _tc_Iface = std::addressof(_tao_tc_ClassConstants_Iface);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_ClassConstants_AMH_IfaceExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -115,7 +111,6 @@ namespace ClassConstants
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_ClassConstants_AMH_IfaceResponseHandler (
@@ -128,7 +123,6 @@ namespace ClassConstants
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_IfaceResponseHandler = std::addressof(_tao_tc_ClassConstants_AMH_IfaceResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_ClassConstants_AMI_IfaceHandler (
@@ -141,7 +135,6 @@ namespace ClassConstants
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_IfaceHandler = std::addressof(_tao_tc_ClassConstants_AMI_IfaceHandler);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_ClassConstants_Vt = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -167,7 +160,6 @@ namespace ClassConstants
 }
 
 
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -182,7 +174,6 @@ namespace CoercionBug
 {
   ::CORBA::TypeCode_ptr const _tc_UInt16 = std::addressof(_tao_tc_CoercionBug_UInt16);
 }
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -197,7 +188,6 @@ namespace CoercionBug
 {
   ::CORBA::TypeCode_ptr const _tc_CellFlags = std::addressof(_tao_tc_CoercionBug_CellFlags);
 }
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -212,7 +202,6 @@ namespace SignedGen
 {
   ::CORBA::TypeCode_ptr const _tc_LongType = std::addressof(_tao_tc_SignedGen_LongType);
 }
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -227,7 +216,6 @@ namespace SignedGen
 {
   ::CORBA::TypeCode_ptr const _tc_ShortType = std::addressof(_tao_tc_SignedGen_ShortType);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -260,7 +248,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -326,7 +313,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -401,7 +387,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -487,7 +472,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -550,7 +534,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

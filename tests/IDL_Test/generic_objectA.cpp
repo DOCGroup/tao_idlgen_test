@@ -41,7 +41,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-
 static char const * const _tao_enumerators_ObjectType[] =
   {
     "OT_THIS",
@@ -58,7 +57,6 @@ static TAO::TypeCode::Enum<char const *,
     2);
 
 ::CORBA::TypeCode_ptr const _tc_ObjectType = std::addressof(_tao_tc_ObjectType);
-
 static TAO::TypeCode::Case_T<ObjectType, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_Selecter__0 (::OT_THIS, "this_object", &CORBA::_tc_Object);
 static TAO::TypeCode::Case_T<ObjectType, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_Selecter__1 (::OT_THAT, "that_object", &CORBA::_tc_Object);
 
@@ -81,7 +79,6 @@ static TAO::TypeCode::Union<char const *,
     -1);
 
 ::CORBA::TypeCode_ptr const _tc_Selecter = std::addressof(_tao_tc_Selecter);
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_generic (
@@ -90,7 +87,6 @@ static TAO::TypeCode::Objref<char const *,
     "generic");
 
 ::CORBA::TypeCode_ptr const _tc_generic = std::addressof(_tao_tc_generic);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_genericExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -112,7 +108,6 @@ static TAO::TypeCode::Value<char const *,
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_genericResponseHandler (
@@ -121,7 +116,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_genericResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_genericResponseHandler = std::addressof(_tao_tc_AMH_genericResponseHandler);
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_genericHandler (
@@ -130,7 +124,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMI_genericHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMI_genericHandler = std::addressof(_tao_tc_AMI_genericHandler);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -163,7 +156,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -213,7 +205,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -279,7 +270,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -354,7 +344,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -437,7 +426,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

@@ -35,7 +35,6 @@
 #include "tao/CDR.h"
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_ex1 (
@@ -48,7 +47,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_ex1 = std::addressof(_tao_tc_OldDif2_ex1);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldDif2_AMH_ex1ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -74,7 +72,6 @@ namespace OldDif2
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_AMH_ex1ResponseHandler (
@@ -87,7 +84,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_ex1ResponseHandler = std::addressof(_tao_tc_OldDif2_AMH_ex1ResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_AMI_ex1Handler (
@@ -100,7 +96,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_ex1Handler = std::addressof(_tao_tc_OldDif2_AMI_ex1Handler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_ex2 (
@@ -113,7 +108,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_ex2 = std::addressof(_tao_tc_OldDif2_ex2);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldDif2_AMH_ex2ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -139,7 +133,6 @@ namespace OldDif2
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_AMH_ex2ResponseHandler (
@@ -152,7 +145,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_ex2ResponseHandler = std::addressof(_tao_tc_OldDif2_AMH_ex2ResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_AMI_ex2Handler (
@@ -165,7 +157,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_ex2Handler = std::addressof(_tao_tc_OldDif2_AMI_ex2Handler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_ex3 (
@@ -178,7 +169,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_ex3 = std::addressof(_tao_tc_OldDif2_ex3);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldDif2_AMH_ex3ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -204,7 +194,6 @@ namespace OldDif2
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_AMH_ex3ResponseHandler (
@@ -217,7 +206,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_ex3ResponseHandler = std::addressof(_tao_tc_OldDif2_AMH_ex3ResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_AMI_ex3Handler (
@@ -230,7 +218,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_ex3Handler = std::addressof(_tao_tc_OldDif2_AMI_ex3Handler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_ex4 (
@@ -243,7 +230,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_ex4 = std::addressof(_tao_tc_OldDif2_ex4);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldDif2_AMH_ex4ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -269,7 +255,6 @@ namespace OldDif2
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_AMH_ex4ResponseHandler (
@@ -282,7 +267,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_ex4ResponseHandler = std::addressof(_tao_tc_OldDif2_AMH_ex4ResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldDif2_AMI_ex4Handler (
@@ -295,7 +279,6 @@ namespace OldDif2
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_ex4Handler = std::addressof(_tao_tc_OldDif2_AMI_ex4Handler);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -359,7 +342,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -434,7 +416,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -520,7 +501,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -586,7 +566,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -649,7 +628,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -724,7 +702,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -810,7 +787,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -876,7 +852,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -939,7 +914,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1014,7 +988,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1100,7 +1073,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1166,7 +1138,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1229,7 +1200,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1304,7 +1274,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1387,7 +1356,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ARRAY_ANON_NESTEDC_8T2FSL_H_
-#define _TAO_IDL_ARRAY_ANON_NESTEDC_8T2FSL_H_
+#ifndef _TAO_IDL_ARRAY_ANON_NESTEDC_RGXBZZ_H_
+#define _TAO_IDL_ARRAY_ANON_NESTEDC_RGXBZZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -61,7 +60,6 @@
 #endif
 
 
-
 struct teststruct;
 using teststruct_var = ::TAO_Fixed_Var_T<teststruct>;
 using teststruct_out = teststruct&;
@@ -69,16 +67,13 @@ using teststruct_out = teststruct&;
 
 
 
-
 struct TAO_IDL_TEST_STUB_Export teststruct
 {
-
 
   using _var_type = teststruct_var;
   using _out_type = teststruct_out;
 
   static void _tao_any_destructor (void *);
-
 
 
 
@@ -102,7 +97,6 @@ struct TAO_IDL_TEST_STUB_Export teststruct
 
 
 
-
   struct embeddedstruct;
   using embeddedstruct_var = ::TAO_Fixed_Var_T<embeddedstruct>;
   using embeddedstruct_out = embeddedstruct&;
@@ -110,16 +104,13 @@ struct TAO_IDL_TEST_STUB_Export teststruct
 
 
 
-
   struct TAO_IDL_TEST_STUB_Export embeddedstruct
   {
-
 
     using _var_type = embeddedstruct_var;
     using _out_type = embeddedstruct_out;
 
     static void _tao_any_destructor (void *);
-
 
 
 
@@ -141,18 +132,13 @@ struct TAO_IDL_TEST_STUB_Export teststruct
 
     _a a {};
   };
-
   static ::CORBA::TypeCode_ptr const _tc_embeddedstruct;embeddedstruct estruct {};
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_teststruct;
-
 using tstruct = teststruct;
 using tstruct_var = teststruct_var;
 using tstruct_out = teststruct_out;
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_tstruct;
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -161,7 +147,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -183,7 +168,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::teststruct>
     : public
@@ -193,7 +177,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -208,7 +191,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -255,7 +237,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -264,7 +245,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::teststruct*); // no
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::teststruct const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -279,14 +259,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, teststruct const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, teststruct &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -298,7 +276,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, teststruct
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, teststruct::embeddedstruct const &);
@@ -308,14 +285,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const teststruct::embeddedstruct::_a_forany &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, teststruct::embeddedstruct::_a_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "array_anon_nestedC.inl"

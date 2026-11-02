@@ -24,11 +24,9 @@
 
 #include <memory>
 #include <new>
-
 // *************************************************************
 // Inline operations for union test::UnionAllCovered_EnumerationDiscriminant
 // *************************************************************
-
 ACE_INLINE
 void
 test::UnionAllCovered_EnumerationDiscriminant::_default ()
@@ -78,7 +76,6 @@ test::UnionAllCovered_EnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -102,7 +99,6 @@ test::UnionAllCovered_EnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -126,7 +122,6 @@ test::UnionAllCovered_EnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -150,11 +145,9 @@ test::UnionAllCovered_EnumerationDiscriminant::e_enum3 () const
     }
   return this->u_.e_enum3_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionAllCoveredWithDefault_EnumerationDiscriminant
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -196,7 +189,6 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -220,7 +212,6 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -244,7 +235,6 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -268,11 +258,9 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_EnumerationDiscriminant
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -312,7 +300,6 @@ test::UnionWithDefault_EnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -336,7 +323,6 @@ test::UnionWithDefault_EnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -360,7 +346,6 @@ test::UnionWithDefault_EnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -384,11 +369,9 @@ test::UnionWithDefault_EnumerationDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionWithImplicitDefault_EnumerationDiscriminant
 // *************************************************************
-
 ACE_INLINE
 void
 test::UnionWithImplicitDefault_EnumerationDiscriminant::_default ()
@@ -436,7 +419,6 @@ test::UnionWithImplicitDefault_EnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -460,7 +442,6 @@ test::UnionWithImplicitDefault_EnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -484,11 +465,9 @@ test::UnionWithImplicitDefault_EnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionAllCovered_TypedefedEnumerationDiscriminant
 // *************************************************************
-
 ACE_INLINE
 void
 test::UnionAllCovered_TypedefedEnumerationDiscriminant::_default ()
@@ -538,7 +517,6 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -562,7 +540,6 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -586,7 +563,6 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -610,11 +586,9 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::e_enum3 () const
     }
   return this->u_.e_enum3_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -656,7 +630,6 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -680,7 +653,6 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::e_enum1 () co
     }
   return this->u_.e_enum1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -704,7 +676,6 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::e_enum2 () co
     }
   return this->u_.e_enum2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -728,11 +699,9 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::e_def () cons
     }
   return this->u_.e_def_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_TypedefedEnumerationDiscriminant
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -772,7 +741,6 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -796,7 +764,6 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -820,7 +787,6 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -844,11 +810,9 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant
 // *************************************************************
-
 ACE_INLINE
 void
 test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::_default ()
@@ -896,7 +860,6 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -920,7 +883,6 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::e_enum1 () cons
     }
   return this->u_.e_enum1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -944,11 +906,9 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::e_enum2 () cons
     }
   return this->u_.e_enum2_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionAllCovered_BooleanDiscriminant
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -980,7 +940,6 @@ test::UnionAllCovered_BooleanDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1004,7 +963,6 @@ test::UnionAllCovered_BooleanDiscriminant::e_true () const
     }
   return this->u_.e_true_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1028,11 +986,9 @@ test::UnionAllCovered_BooleanDiscriminant::e_false () const
     }
   return this->u_.e_false_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_BooleanDiscriminant
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1064,7 +1020,6 @@ test::UnionWithDefault_BooleanDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1088,7 +1043,6 @@ test::UnionWithDefault_BooleanDiscriminant::e_true () const
     }
   return this->u_.e_true_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1112,11 +1066,9 @@ test::UnionWithDefault_BooleanDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionWithImplicitDefault_BooleanDiscriminant
 // *************************************************************
-
 ACE_INLINE
 void
 test::UnionWithImplicitDefault_BooleanDiscriminant::_default ()
@@ -1154,7 +1106,6 @@ test::UnionWithImplicitDefault_BooleanDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1178,11 +1129,9 @@ test::UnionWithImplicitDefault_BooleanDiscriminant::e_true () const
     }
   return this->u_.e_true_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionAllCovered_CharDiscriminant
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1468,7 +1417,6 @@ test::UnionAllCovered_CharDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1492,11 +1440,9 @@ test::UnionAllCovered_CharDiscriminant::e_chars () const
     }
   return this->u_.e_chars_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_CharDiscriminant
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1541,7 +1487,6 @@ test::UnionWithDefault_CharDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1565,7 +1510,6 @@ test::UnionWithDefault_CharDiscriminant::e_chars () const
     }
   return this->u_.e_chars_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1589,11 +1533,9 @@ test::UnionWithDefault_CharDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionWithImplicitDefault_CharDiscriminant
 // *************************************************************
-
 ACE_INLINE
 void
 test::UnionWithImplicitDefault_CharDiscriminant::_default ()
@@ -1644,7 +1586,6 @@ test::UnionWithImplicitDefault_CharDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1668,11 +1609,9 @@ test::UnionWithImplicitDefault_CharDiscriminant::e_chars () const
     }
   return this->u_.e_chars_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_LongDiscriminant
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1714,7 +1653,6 @@ test::UnionWithDefault_LongDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1738,7 +1676,6 @@ test::UnionWithDefault_LongDiscriminant::e_case1 () const
     }
   return this->u_.e_case1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1762,7 +1699,6 @@ test::UnionWithDefault_LongDiscriminant::e_case2 () const
     }
   return this->u_.e_case2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1786,7 +1722,6 @@ test::UnionWithDefault_LongDiscriminant::e_case3 () const
     }
   return this->u_.e_case3_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1810,11 +1745,9 @@ test::UnionWithDefault_LongDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-
 // *************************************************************
 // Inline operations for union test::UnionWithImplicitDefault_LongDiscriminant
 // *************************************************************
-
 ACE_INLINE
 void
 test::UnionWithImplicitDefault_LongDiscriminant::_default ()
@@ -1862,7 +1795,6 @@ test::UnionWithImplicitDefault_LongDiscriminant::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1886,7 +1818,6 @@ test::UnionWithImplicitDefault_LongDiscriminant::e_case1 () const
     }
   return this->u_.e_case1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1910,7 +1841,6 @@ test::UnionWithImplicitDefault_LongDiscriminant::e_case2 () const
     }
   return this->u_.e_case2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void

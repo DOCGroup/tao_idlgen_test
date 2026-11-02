@@ -24,7 +24,6 @@
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -77,7 +76,6 @@ TAO::Array_Traits<OldArray::str22_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -136,7 +134,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -186,7 +183,6 @@ TAO::Array_Traits<OldArray::char_17_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -242,7 +238,6 @@ TAO::Array_Traits<OldArray::char_10_2_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -304,7 +299,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -363,7 +357,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -419,7 +412,6 @@ TAO::Array_Traits<OldArray::C_matrix_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -485,7 +477,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 ACE_INLINE
 OldArray::A_i::A_i (
     TAO_Stub *objref,
@@ -503,7 +494,6 @@ OldArray::A_i::A_i (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldArray::AMH_A_iExceptionHolder::AMH_A_iExceptionHolder ()
   : exception (nullptr)
@@ -514,7 +504,6 @@ OldArray::AMH_A_iExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldArray/AMH_A_iExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

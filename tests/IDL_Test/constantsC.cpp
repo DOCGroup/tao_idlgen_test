@@ -23,19 +23,17 @@
  **/
 
 
-
 #include "constantsC.h"
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "constantsC.inl"
 #endif /* !defined INLINE */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -70,21 +68,16 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 const CORBA::Long ClassConstants::Iface::iface_long;
-
 
 
 const CORBA::Float ClassConstants::Iface::iface_float = 0.200000F;
 
 
-
 const CORBA::Double ClassConstants::Iface::iface_double =                    66.66;
 
 
-
 const char *const ClassConstants::Iface::iface_str = "iface_str";
-
 
 
 const CORBA::WChar *const ClassConstants::Iface::iface_wstr = L"iface_wstr";
@@ -169,7 +162,6 @@ ClassConstants::Iface::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -308,7 +300,6 @@ ClassConstants::AMH_IfaceExceptionHolder::_tao_unmarshal (
 }
 
 
-
 ClassConstants::AMH_IfaceExceptionHolder_init::AMH_IfaceExceptionHolder_init ()
 {
 }
@@ -339,7 +330,6 @@ ClassConstants::AMH_IfaceExceptionHolder_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -457,7 +447,6 @@ ClassConstants::AMH_IfaceResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for ClassConstants::AMI_IfaceHandler.
@@ -571,7 +560,6 @@ ClassConstants::AMI_IfaceHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -689,21 +677,16 @@ ClassConstants::Vt::_tao_unmarshal (
 }
 
 
-
 const CORBA::Float ClassConstants::Vt::vt_float = 0.200000F;
-
 
 
 const CORBA::Double ClassConstants::Vt::vt_long =                    66.66;
 
 
-
 const char *const ClassConstants::Vt::vt_str = "vt_str";
 
 
-
 const CORBA::WChar *const ClassConstants::Vt::vt_wstr = L"vt_wstr";
-
 
 
 ClassConstants::Vt_init::Vt_init ()
@@ -736,7 +719,6 @@ ClassConstants::Vt_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 OBV_ClassConstants::AMH_IfaceExceptionHolder::~AMH_IfaceExceptionHolder ()
 {}
 
@@ -762,7 +744,6 @@ OBV_ClassConstants::AMH_IfaceExceptionHolder::_tao_unmarshal__ClassConstants_AMH
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_ClassConstants::Vt::~Vt ()
 {}
 
@@ -789,7 +770,6 @@ OBV_ClassConstants::Vt::_tao_unmarshal__ClassConstants_Vt (TAO_InputCDR &strm, T
   return _tao_unmarshal_state (strm, ci);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, m_a::enum_a _tao_enumerator)
@@ -811,7 +791,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -847,7 +826,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (ClassConstants::AMH_IfaceExceptionHolder * vt)
@@ -868,7 +846,6 @@ CORBA::remove_ref (ClassConstants::AMH_IfaceExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -898,7 +875,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_ClassConstants::AMH_IfaceExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -916,7 +892,6 @@ OBV_ClassConstants::AMH_IfaceExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -952,7 +927,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (ClassConstants::Vt * vt)
@@ -973,7 +947,6 @@ CORBA::remove_ref (ClassConstants::Vt * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1001,7 +974,6 @@ operator>> (
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::CORBA::Boolean

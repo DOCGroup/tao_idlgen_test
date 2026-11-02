@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_CONSTANTSC_99PTSK_H_
-#define _TAO_IDL_CONSTANTSC_99PTSK_H_
+#ifndef _TAO_IDL_CONSTANTSC_S20FGF_H_
+#define _TAO_IDL_CONSTANTSC_S20FGF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -64,7 +63,6 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -78,172 +76,129 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 const char *const all_escape = "\n\t\v\b\r\f\a\\\?\'\"";
-
 
 
 const CORBA::Char tick = '\'';
 
 
-
 const CORBA::Char backslash = '\\';
-
 
 
 const CORBA::Char oct_nought = '\x0';
 
 
-
 const CORBA::Char lucky = '\a';
-
 
 
 const CORBA::Char square = '4';
 
 
-
 const CORBA::Char blastoff = '\xd1';
-
 
 
 const CORBA::Char max_char_oct = '\xff';
 
 
-
 const CORBA::Char hex_nought = '\x0';
-
 
 
 const CORBA::Char fingers = '\n';
 
 
-
 const CORBA::Char fortnight = '\xe';
-
 
 
 const CORBA::Char fivebits = '2';
 
 
-
 const CORBA::Char maybe_minus = '\xaf';
-
 
 
 const CORBA::Char max_char_hex = '\xff';
 
 
-
 const CORBA::WChar *const wstr = L"wstr";
-
 
 
 const CORBA::ULong in_range = 3222111000U;
 
 
-
 const CORBA::ULong max_ulong_oct = 4294967295U;
-
 
 
 const CORBA::ULong max_ulong_hex = 4294967295U;
 
 
-
 const CORBA::ULongLong AAAX = ACE_UINT64_LITERAL (122192928000000000);
-
 
 
 const CORBA::ULong AA = 3538947897U;
 
 
-
 const CORBA::LongLong NAAA = ACE_INT64_LITERAL (-122192928000000000);
-
 
 
 const CORBA::LongLong PAAA = ACE_INT64_LITERAL (122192928000000000);
 
 
-
 const CORBA::Long NAA = -1538947897;
-
 
 
 const CORBA::Float root_beer = 0.200000F;
 
 
-
 const CORBA::Double bogey =                      0.2;
-
 
 
 const CORBA::Float trip = 2.000000F;
 
 
-
 const CORBA::Double vision =                    2E-05;
-
 
 
 const CORBA::Double take =                     2000;
 
 
-
 const CORBA::Double dip =   1.797693134862315E+308;
-
 
 
 const CORBA::Double trouble =   2.225073858507202E-308;
 
 
-
 const CORBA::Long neg = -8;
-
 
 
 const CORBA::Long sub1 = 15;
 
 
-
 const CORBA::Long sub2 = 15;
-
 
 
 const CORBA::ULong add1 = 17U;
 
 
-
 const CORBA::ULong mul1 = 14336U;
-
 
 
 const CORBA::ULong div1 = 8U;
 
 
-
 const CORBA::UShort stuff = 65535U;
-
 
 
 const CORBA::ULong day = 4294967295U;
 
 
-
 const CORBA::ULong drink = 4000000000U;
-
 
 
 const CORBA::ULong c_l1 = 2U;
 
 
-
 const CORBA::Octet c_o11 = 0x0c;
-
 namespace m_a
 {
-
   enum enum_a
   {
     value_1,
@@ -257,35 +212,26 @@ namespace m_a
 
 
 
-
 } // module m_a
-
 namespace m_b
 {
-
   using enum_b = m_a::enum_a;
   using enum_b_out = m_a::enum_a_out;
 
 
 
-
 } // module m_b
-
 namespace problems
 {
-
 
 
   const m_a::enum_a bconst = m_a::value_2;
 
 
 
-
 } // module problems
-
 namespace ClassConstants
 {
-
 
 
 #if !defined (_CLASSCONSTANTS_IFACE__VAR_OUT_CH_)
@@ -304,13 +250,11 @@ namespace ClassConstants
 
 
 
-
   class TAO_IDL_TEST_STUB_Export Iface
     : public virtual ::CORBA::Object
   {
   public:
     friend class TAO::Narrow_Utils<Iface>;
-
     using _ptr_type = Iface_ptr;
     using _var_type = Iface_var;
     using _out_type = Iface_out;
@@ -327,25 +271,19 @@ namespace ClassConstants
     static Iface_ptr _nil ();
 
 
-
     static const CORBA::Long iface_long = 55;
-
 
 
     static const CORBA::Float iface_float;
 
 
-
     static const CORBA::Double iface_double;
-
 
 
     static const char *const iface_str;
 
 
-
     static const CORBA::WChar *const iface_wstr;
-
 
 
 
@@ -381,7 +319,6 @@ namespace ClassConstants
   };
 
 
-
 #if !defined (_CLASSCONSTANTS_AMH_IFACEEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _CLASSCONSTANTS_AMH_IFACEEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -392,12 +329,10 @@ namespace ClassConstants
 #endif /* end #if !defined */
 
 
-
   class TAO_IDL_TEST_STUB_Export AMH_IfaceExceptionHolder
     : public virtual ::CORBA::DefaultValueRefCountBase
   {
   public:
-
     using _ptr_type = AMH_IfaceExceptionHolder*;
     using _var_type = AMH_IfaceExceptionHolder_var;
     using _out_type = AMH_IfaceExceptionHolder_out;
@@ -427,7 +362,6 @@ namespace ClassConstants
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
 
-
   protected:
     AMH_IfaceExceptionHolder ();
     virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
@@ -447,7 +381,6 @@ namespace ClassConstants
     virtual ::CORBA::Boolean
     _tao_unmarshal__ClassConstants_AMH_IfaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
   };
-
   class TAO_IDL_TEST_STUB_Export AMH_IfaceExceptionHolder_init
     : public virtual ::CORBA::ValueFactoryBase
   {
@@ -467,7 +400,6 @@ namespace ClassConstants
   };
 
 
-
 #if !defined (_CLASSCONSTANTS_AMH_IFACERESPONSEHANDLER__VAR_OUT_CH_)
 #define _CLASSCONSTANTS_AMH_IFACERESPONSEHANDLER__VAR_OUT_CH_
 
@@ -484,12 +416,10 @@ namespace ClassConstants
 
 
 
-
   class TAO_IDL_TEST_STUB_Export AMH_IfaceResponseHandler
     : public virtual ::CORBA::Object
   {
   public:
-
     using _ptr_type = AMH_IfaceResponseHandler_ptr;
     using _var_type = AMH_IfaceResponseHandler_var;
     using _out_type = AMH_IfaceResponseHandler_out;
@@ -504,7 +434,6 @@ namespace ClassConstants
     static AMH_IfaceResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMH_IfaceResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMH_IfaceResponseHandler_ptr _nil ();
-
 
 
 
@@ -532,7 +461,6 @@ namespace ClassConstants
   };
 
 
-
 #if !defined (_CLASSCONSTANTS_AMI_IFACEHANDLER__VAR_OUT_CH_)
 #define _CLASSCONSTANTS_AMI_IFACEHANDLER__VAR_OUT_CH_
 
@@ -546,14 +474,12 @@ namespace ClassConstants
 
 
 
-
   class TAO_IDL_TEST_STUB_Export AMI_IfaceHandler
     : public virtual ::Messaging::ReplyHandler
 
   {
   public:
     friend class TAO::Narrow_Utils<AMI_IfaceHandler>;
-
     using _ptr_type = AMI_IfaceHandler_ptr;
     using _var_type = AMI_IfaceHandler_var;
     using _out_type = AMI_IfaceHandler_out;
@@ -568,7 +494,6 @@ namespace ClassConstants
     static AMI_IfaceHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_IfaceHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_IfaceHandler_ptr _nil ();
-
 
 
 
@@ -604,7 +529,6 @@ namespace ClassConstants
   };
 
 
-
 #if !defined (_CLASSCONSTANTS_VT__VAR_OUT_CH_)
 #define _CLASSCONSTANTS_VT__VAR_OUT_CH_
 
@@ -615,12 +539,10 @@ namespace ClassConstants
 #endif /* end #if !defined */
 
 
-
   class TAO_IDL_TEST_STUB_Export Vt
     : public virtual ::CORBA::ValueBase
   {
   public:
-
     using _ptr_type = Vt*;
     using _var_type = Vt_var;
     using _out_type = Vt_out;
@@ -645,11 +567,9 @@ namespace ClassConstants
   public:
 
 
-
     static const CORBA::Float vt_float;
 
   public:
-
 
 
     static const CORBA::Double vt_long;
@@ -657,15 +577,12 @@ namespace ClassConstants
   public:
 
 
-
     static const char *const vt_str;
 
   public:
 
 
-
     static const CORBA::WChar *const vt_wstr;
-
 
 
   protected:
@@ -687,7 +604,6 @@ namespace ClassConstants
     virtual ::CORBA::Boolean
     _tao_unmarshal__ClassConstants_Vt (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
   };
-
   class TAO_IDL_TEST_STUB_Export Vt_init
     : public virtual ::CORBA::ValueFactoryBase
   {
@@ -708,57 +624,42 @@ namespace ClassConstants
 
 
 
-
 } // module ClassConstants
-
 namespace CoercionBug
 {
-
   using UInt16 = ::CORBA::UShort;
   using UInt16_out = ::CORBA::UShort_out;
-
   using CellFlags = UInt16;
   using CellFlags_out = UInt16_out;
-
 
 
   const CORBA::UShort EXPLICIT_VALUE_LOCK = 1024U;
 
 
-
   const CORBA::UShort EDIT_VALUE_LOCK = 4096U;
-
 
 
   const CORBA::UShort VALUE_LOCK = 5120U;
 
 
 
-
 } // module CoercionBug
-
 namespace SignedGen
 {
-
   using LongType = ::CORBA::Long;
   using LongType_out = ::CORBA::Long_out;
 
 
-
   const CORBA::Long val = -3;
-
   using ShortType = ::CORBA::Short;
   using ShortType_out = ::CORBA::Short_out;
-
 
 
   const CORBA::Short short_val = -3;
 
 
 
-
 } // module SignedGen
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -767,7 +668,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -789,7 +689,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::m_a::enum_a>
     : public
@@ -799,7 +698,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_CLASSCONSTANTS_IFACE__ARG_TRAITS_)
@@ -817,7 +715,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_CLASSCONSTANTS_AMH_IFACEEXCEPTIONHOLDER__ARG_TRAITS_)
@@ -839,7 +736,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_CLASSCONSTANTS_AMI_IFACEHANDLER__ARG_TRAITS_)
 #define _CLASSCONSTANTS_AMI_IFACEHANDLER__ARG_TRAITS_
 
@@ -855,7 +751,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_CLASSCONSTANTS_VT__ARG_TRAITS_)
@@ -880,10 +775,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace OBV_ClassConstants
 {
-
 
 
   // OBV_ class
@@ -913,7 +806,6 @@ protected:
 private:
   CORBA::Boolean require_truncation_ {false};
 };
-
 
 
 // OBV_ class
@@ -952,7 +844,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1033,14 +924,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, m_a::enum_a _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, m_a::enum_a &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1056,7 +945,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 namespace CORBA
@@ -1065,7 +953,6 @@ namespace CORBA
   extern TAO_IDL_TEST_STUB_Export void remove_ref (ClassConstants::AMH_IfaceExceptionHolder *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1081,14 +968,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ClassConstants::AMI_IfaceHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ClassConstants::AMI_IfaceHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1103,14 +988,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ClassConstants::Vt *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ClassConstants::Vt *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

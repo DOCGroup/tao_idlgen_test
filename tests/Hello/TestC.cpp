@@ -23,19 +23,17 @@
  **/
 
 
-
 #include "TestC.h"
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "TestC.inl"
 #endif /* !defined INLINE */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -66,7 +64,6 @@ TAO::Objref_Traits<Test::Hello>::marshal (const Test::Hello_ptr p,TAO_OutputCDR 
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 char *
@@ -101,7 +98,6 @@ Test::Hello::get_string ()
 
   return _tao_retval.retn ();
 }
-
 void
 Test::Hello::shutdown ()
 {
@@ -195,7 +191,6 @@ Test::Hello::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 

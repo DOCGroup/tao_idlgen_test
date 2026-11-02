@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_OLD_ARRAYS_BOO8TH_H_
-#define _TAO_IDL_OLD_ARRAYS_BOO8TH_H_
+#ifndef _TAO_IDL_OLD_ARRAYS_X32VX9_H_
+#define _TAO_IDL_OLD_ARRAYS_X32VX9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -55,14 +54,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -127,7 +124,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::OldArray::A>
     : public
@@ -139,7 +135,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::OldArray::B>
     : public
@@ -149,7 +144,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -207,7 +201,6 @@ namespace TAO
   };
 
 
-
 #if !defined (_OLDARRAY_A_I__SARG_TRAITS_)
 #define _OLDARRAY_A_I__SARG_TRAITS_
 
@@ -222,7 +215,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDARRAY_AMH_A_IEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -241,7 +233,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDARRAY_AMI_A_IHANDLER__SARG_TRAITS_)
@@ -263,10 +254,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_OldArray
 {
-
 
   class AMH_A_i;
   using AMH_A_i_ptr = AMH_A_i *;
@@ -291,7 +280,6 @@ namespace POA_OldArray
     OldArray::A_i *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -302,7 +290,6 @@ namespace POA_OldArray
       const ::OldArray::A & a1,
       const ::OldArray::A & a2
     ) = 0;
-
 
   static void op2_skel (
       TAO_ServerRequest &_tao_req,
@@ -315,7 +302,6 @@ namespace POA_OldArray
       const ::OldArray::str22 a2
     ) = 0;
 
-
   static void op4_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -327,7 +313,6 @@ namespace POA_OldArray
       const ::OldArray::A & a2
     ) = 0;
 
-
   static void _get_attribute_array_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -336,7 +321,6 @@ namespace POA_OldArray
   virtual void attribute_array (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void _set_attribute_array_skel (
       TAO_ServerRequest &_tao_req,
@@ -349,7 +333,6 @@ namespace POA_OldArray
     ) = 0;
 
 };
-
 
 
 
@@ -383,7 +366,6 @@ public:
   ::OldArray::A_i *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::OldArray::A op (
     const ::OldArray::A & a1,
     ::OldArray::A & a2,
@@ -393,7 +375,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::OldArray::str22_slice * op2 (
     const ::OldArray::str22 a1,
     ::OldArray::str22 a2,
@@ -403,7 +384,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::OldArray::A_matrix_slice * op4 (
     const ::OldArray::A & a1,
     ::OldArray::A & a2,
@@ -413,14 +393,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::OldArray::str22_slice * attribute_array () = 0;
 
   static void _get_attribute_array_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void attribute_array (
     const ::OldArray::str22 attribute_array) = 0;
 
@@ -431,7 +409,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -440,26 +417,21 @@ class TAO_IDL_TEST_STUB_Export _TAO_A_i_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_A_i_Direct_Proxy_Impl ();
-
   static void
   op (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op2 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op4 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_attribute_array (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_attribute_array (
@@ -472,7 +444,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_A_iResponseHandler;
 using TAO_AMH_A_iResponseHandler_ptr = TAO_AMH_A_iResponseHandler *;
 
@@ -483,43 +454,32 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_A_iResponseHandler
 public:
   TAO_AMH_A_iResponseHandler () = default;
   virtual ~TAO_AMH_A_iResponseHandler () = default;
-
   void op (
     const ::OldArray::A & return_value,
     const ::OldArray::A & a2,
     const ::OldArray::A & a3) override;
-
   void op_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
-
   void op2 (
     const ::OldArray::str22 return_value,
     const ::OldArray::str22 a2,
     const ::OldArray::str22 a3) override;
-
   void op2_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
-
   void op4 (
     const ::OldArray::A_matrix return_value,
     const ::OldArray::A & a2,
     const ::OldArray::A & a3) override;
-
   void op4_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
-
   void get_attribute_array (
     const ::OldArray::str22 return_value) override;
-
   void get_attribute_array_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
-
   void set_attribute_array () override;
-
   void set_attribute_array_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
 };
-
 
 
 
@@ -553,7 +513,6 @@ public:
   ::OldArray::AMI_A_iHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op (
     const ::OldArray::A & ami_return_val,
     const ::OldArray::A & a2,
@@ -563,7 +522,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -571,7 +529,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op2 (
     const ::OldArray::str22 ami_return_val,
     const ::OldArray::str22 a2,
@@ -581,7 +538,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op2_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -589,7 +545,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op4 (
     const ::OldArray::A_matrix ami_return_val,
     const ::OldArray::A & a2,
@@ -599,7 +554,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op4_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -607,7 +561,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_attribute_array (
     const ::OldArray::str22 ami_return_val) = 0;
 
@@ -615,7 +568,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_attribute_array_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -623,14 +575,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_attribute_array () = 0;
 
   static void set_attribute_array_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_attribute_array_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -639,7 +589,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -651,51 +600,41 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_A_iHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_A_iHandler_Direct_Proxy_Impl ();
-
   static void
   op (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op2 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op2_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op4 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op4_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_attribute_array (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_attribute_array_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_attribute_array (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_attribute_array_excep (
@@ -706,7 +645,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 

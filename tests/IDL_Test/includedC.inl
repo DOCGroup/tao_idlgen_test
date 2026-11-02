@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 ACE_INLINE
 VT_Def::VT::VT ()
 {}
@@ -32,7 +31,6 @@ VT_Def::VT::_tao_obv_static_repository_id ()
 {
   return "IDL:VT_Def/VT:1.0";
 }
-
 ACE_INLINE
 IncludedBase::IncludedBase ()
 {}
@@ -42,7 +40,6 @@ IncludedBase::_tao_obv_static_repository_id ()
 {
   return "IDL:IncludedBase:1.0";
 }
-
 
 
 ACE_INLINE
@@ -62,7 +59,6 @@ RootModule::SUBMODULE1::ParentIF::ParentIF (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder::AMH_ParentIFExceptionHolder ()
   : exception (nullptr)
@@ -75,7 +71,6 @@ RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder::_tao_obv_static_repository_
 }
 
 
-
 ACE_INLINE
 RootModule::SUBMODULE1::AMI_ParentIFHandler::AMI_ParentIFHandler (
     TAO_Stub *objref,
@@ -95,7 +90,6 @@ RootModule::SUBMODULE1::AMI_ParentIFHandler::AMI_ParentIFHandler (
 }
 
 
-
 ACE_INLINE
 AAA::AAA (
     TAO_Stub *objref,
@@ -113,7 +107,6 @@ AAA::AAA (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_AAAExceptionHolder::AMH_AAAExceptionHolder ()
   : exception (nullptr)
@@ -124,7 +117,6 @@ AMH_AAAExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_AAAExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

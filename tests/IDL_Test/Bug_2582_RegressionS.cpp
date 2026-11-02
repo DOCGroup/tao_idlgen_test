@@ -22,14 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_SPAOFU_CPP_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_SPAOFU_CPP_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_5DWRFS_CPP_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_5DWRFS_CPP_
 
 
 #include "Bug_2582_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <cstddef>
 #include <cstring>
+#include <memory>
 #include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
 #include "tao/Exception_Data.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
@@ -52,22 +53,24 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
 class TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -85,23 +88,20 @@ TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable::hash (const char *str, unsigned int 
      19, 19, 19, 19, 19, 19,  0, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 18,
-      HASH_VALUE_RANGE = 14,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -120,30 +120,25 @@ TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable::lookup (const char *str, unsigned in
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable tao_AMH_FieldDevice_T_optable;
-
-
-
-
 
 POA_AMH_FieldDevice_T::POA_AMH_FieldDevice_T ()
 {
   this->optable_ = std::addressof (tao_AMH_FieldDevice_T_optable);
 }
-
 
 
 void
@@ -182,7 +177,6 @@ POA_AMH_FieldDevice_T::getEncodingID_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_AMH_FieldDevice_T::getEncoding_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -225,7 +219,6 @@ POA_AMH_FieldDevice_T::getEncoding_skel (
 
 
 
-
 ::CORBA::Boolean POA_AMH_FieldDevice_T::_is_a (const char* value)
 {
   return
@@ -239,7 +232,6 @@ const char* POA_AMH_FieldDevice_T::_interface_repository_id () const
 {
   return "IDL:FieldDevice_T:1.0";
 }
-
 void
 POA_AMH_FieldDevice_T::_dispatch (
     TAO_ServerRequest &req,
@@ -247,12 +239,11 @@ POA_AMH_FieldDevice_T::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 FieldDevice_T*
 POA_AMH_FieldDevice_T::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -267,17 +258,18 @@ class TAO_FieldDevice_T_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_FieldDevice_T_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_FieldDevice_T_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_FieldDevice_T_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -295,23 +287,20 @@ TAO_FieldDevice_T_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
      19, 19, 19, 19, 19, 19,  0, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_FieldDevice_T_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_FieldDevice_T_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 18,
-      HASH_VALUE_RANGE = 14,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -330,17 +319,17 @@ TAO_FieldDevice_T_Perfect_Hash_OpTable::lookup (const char *str, unsigned int le
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_FieldDevice_T_Perfect_Hash_OpTable tao_FieldDevice_T_optable;
@@ -352,7 +341,6 @@ static TAO_FieldDevice_T_Perfect_Hash_OpTable tao_FieldDevice_T_optable;
 _TAO_FieldDevice_T_Direct_Proxy_Impl::~_TAO_FieldDevice_T_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -372,7 +360,6 @@ _TAO_FieldDevice_T_Direct_Proxy_Impl::getEncodingID (
     _tao_ptr->getEncodingID (
         );
 }
-
 
 
 void
@@ -399,30 +386,22 @@ _TAO_FieldDevice_T_Direct_Proxy_Impl::getEncoding (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_FieldDevice_T::POA_FieldDevice_T ()
 {
   this->optable_ = std::addressof (tao_FieldDevice_T_optable);
 }
 
 
-
 class getEncodingID_FieldDevice_T
   : public TAO::Upcall_Command
 {
 public:
-  inline getEncodingID_FieldDevice_T (
-    POA_FieldDevice_T * servant,
+  inline getEncodingID_FieldDevice_T (POA_FieldDevice_T * servant,
     TAO_Operation_Details const * operation_details,
     TAO::Argument * const args[])
     : servant_ (servant)
       , operation_details_ (operation_details)
-      , args_ (args)
-  {
-  }
+      , args_ (args) {}
 
   void execute () override
   {
@@ -440,20 +419,19 @@ private:
   TAO_Operation_Details const * const operation_details_;
   TAO::Argument * const * const args_;
 };
-
 void POA_FieldDevice_T::getEncodingID_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::EncodingID_T>::ret_val retval;
+{
+  TAO::SArg_Traits< ::EncodingID_T>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_FieldDevice_T * const impl =
-    dynamic_cast<POA_FieldDevice_T *> (servant);
+  POA_FieldDevice_T * const impl = dynamic_cast<POA_FieldDevice_T *> (servant);
 
   if (!impl)
     {
@@ -479,20 +457,16 @@ void POA_FieldDevice_T::getEncodingID_skel (
 }
 
 
-
 class getEncoding_FieldDevice_T
   : public TAO::Upcall_Command
 {
 public:
-  inline getEncoding_FieldDevice_T (
-    POA_FieldDevice_T * servant,
+  inline getEncoding_FieldDevice_T (POA_FieldDevice_T * servant,
     TAO_Operation_Details const * operation_details,
     TAO::Argument * const args[])
     : servant_ (servant)
       , operation_details_ (operation_details)
-      , args_ (args)
-  {
-  }
+      , args_ (args) {}
 
   void execute () override
   {
@@ -510,20 +484,19 @@ private:
   TAO_Operation_Details const * const operation_details_;
   TAO::Argument * const * const args_;
 };
-
 void POA_FieldDevice_T::getEncoding_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::Encoding_T>::ret_val retval;
+{
+  TAO::SArg_Traits< ::Encoding_T>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_FieldDevice_T * const impl =
-    dynamic_cast<POA_FieldDevice_T *> (servant);
+  POA_FieldDevice_T * const impl = dynamic_cast<POA_FieldDevice_T *> (servant);
 
   if (!impl)
     {
@@ -555,7 +528,6 @@ void POA_FieldDevice_T::getEncoding_skel (
 
 
 
-
 ::CORBA::Boolean POA_FieldDevice_T::_is_a (const char* value)
 {
   return
@@ -573,7 +545,6 @@ const char* POA_FieldDevice_T::_interface_repository_id () const
 
 
 
-
 void POA_FieldDevice_T::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -584,12 +555,11 @@ void POA_FieldDevice_T::_dispatch (
 
 
 
-
 FieldDevice_T *
 POA_FieldDevice_T::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -598,8 +568,6 @@ POA_FieldDevice_T::_this ()
     }
   return {};
 }
-
-
 
 void
 POA_TAO_AMH_FieldDevice_TResponseHandler::getEncodingID (
@@ -616,7 +584,6 @@ POA_TAO_AMH_FieldDevice_TResponseHandler::getEncodingID (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_TAO_AMH_FieldDevice_TResponseHandler::getEncodingID_excep (
   ::AMH_FieldDevice_TExceptionHolder * holder)
@@ -630,7 +597,6 @@ POA_TAO_AMH_FieldDevice_TResponseHandler::getEncodingID_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_TAO_AMH_FieldDevice_TResponseHandler::getEncoding (
   const ::Encoding_T & return_value)
@@ -646,7 +612,6 @@ POA_TAO_AMH_FieldDevice_TResponseHandler::getEncoding (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_TAO_AMH_FieldDevice_TResponseHandler::getEncoding_excep (
   ::AMH_FieldDevice_TExceptionHolder * holder)
@@ -665,17 +630,18 @@ class TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -693,23 +659,20 @@ TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable::hash (const char *str, unsign
      20, 20,  0, 20, 20, 20,  0, 20, 20, 20,
      20, 20, 20, 20, 20, 20, 20, 20,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 9,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 19,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 19,
-      HASH_VALUE_RANGE = 15,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 14
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {19};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {19};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {15};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -730,17 +693,17 @@ TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable::lookup (const char *str, unsi
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable tao_AMI_FieldDevice_THandler_optable;
@@ -752,7 +715,6 @@ static TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable tao_AMI_FieldDevice_THa
 _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::~_TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -774,7 +736,6 @@ _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncodingID (
 }
 
 
-
 void
 _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncodingID_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -794,7 +755,6 @@ _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncodingID_excep (
 }
 
 
-
 void
 _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncoding (
     TAO_Abstract_ServantBase  *servant,
@@ -812,7 +772,6 @@ _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncoding (
         ((TAO::Arg_Traits< ::Encoding_T>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -839,30 +798,22 @@ _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncoding_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_AMI_FieldDevice_THandler::POA_AMI_FieldDevice_THandler ()
 {
   this->optable_ = std::addressof (tao_AMI_FieldDevice_THandler_optable);
 }
 
 
-
 class getEncodingID_AMI_FieldDevice_THandler
   : public TAO::Upcall_Command
 {
 public:
-  inline getEncodingID_AMI_FieldDevice_THandler (
-    POA_AMI_FieldDevice_THandler * servant,
+  inline getEncodingID_AMI_FieldDevice_THandler (POA_AMI_FieldDevice_THandler * servant,
     TAO_Operation_Details const * operation_details,
     TAO::Argument * const args[])
     : servant_ (servant)
       , operation_details_ (operation_details)
-      , args_ (args)
-  {
-  }
+      , args_ (args) {}
 
   void execute () override
   {
@@ -881,12 +832,12 @@ private:
   TAO_Operation_Details const * const operation_details_;
   TAO::Argument * const * const args_;
 };
-
 void POA_AMI_FieldDevice_THandler::getEncodingID_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::EncodingID_T>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -895,8 +846,7 @@ void POA_AMI_FieldDevice_THandler::getEncodingID_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_AMI_FieldDevice_THandler * const impl =
-    dynamic_cast<POA_AMI_FieldDevice_THandler *> (servant);
+  POA_AMI_FieldDevice_THandler * const impl = dynamic_cast<POA_AMI_FieldDevice_THandler *> (servant);
 
   if (!impl)
     {
@@ -922,20 +872,16 @@ void POA_AMI_FieldDevice_THandler::getEncodingID_skel (
 }
 
 
-
 class getEncodingID_excep_AMI_FieldDevice_THandler
   : public TAO::Upcall_Command
 {
 public:
-  inline getEncodingID_excep_AMI_FieldDevice_THandler (
-    POA_AMI_FieldDevice_THandler * servant,
+  inline getEncodingID_excep_AMI_FieldDevice_THandler (POA_AMI_FieldDevice_THandler * servant,
     TAO_Operation_Details const * operation_details,
     TAO::Argument * const args[])
     : servant_ (servant)
       , operation_details_ (operation_details)
-      , args_ (args)
-  {
-  }
+      , args_ (args) {}
 
   void execute () override
   {
@@ -954,12 +900,12 @@ private:
   TAO_Operation_Details const * const operation_details_;
   TAO::Argument * const * const args_;
 };
-
 void POA_AMI_FieldDevice_THandler::getEncodingID_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -968,8 +914,7 @@ void POA_AMI_FieldDevice_THandler::getEncodingID_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_AMI_FieldDevice_THandler * const impl =
-    dynamic_cast<POA_AMI_FieldDevice_THandler *> (servant);
+  POA_AMI_FieldDevice_THandler * const impl = dynamic_cast<POA_AMI_FieldDevice_THandler *> (servant);
 
   if (!impl)
     {
@@ -995,20 +940,16 @@ void POA_AMI_FieldDevice_THandler::getEncodingID_excep_skel (
 }
 
 
-
 class getEncoding_AMI_FieldDevice_THandler
   : public TAO::Upcall_Command
 {
 public:
-  inline getEncoding_AMI_FieldDevice_THandler (
-    POA_AMI_FieldDevice_THandler * servant,
+  inline getEncoding_AMI_FieldDevice_THandler (POA_AMI_FieldDevice_THandler * servant,
     TAO_Operation_Details const * operation_details,
     TAO::Argument * const args[])
     : servant_ (servant)
       , operation_details_ (operation_details)
-      , args_ (args)
-  {
-  }
+      , args_ (args) {}
 
   void execute () override
   {
@@ -1027,12 +968,12 @@ private:
   TAO_Operation_Details const * const operation_details_;
   TAO::Argument * const * const args_;
 };
-
 void POA_AMI_FieldDevice_THandler::getEncoding_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Encoding_T>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -1041,8 +982,7 @@ void POA_AMI_FieldDevice_THandler::getEncoding_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_AMI_FieldDevice_THandler * const impl =
-    dynamic_cast<POA_AMI_FieldDevice_THandler *> (servant);
+  POA_AMI_FieldDevice_THandler * const impl = dynamic_cast<POA_AMI_FieldDevice_THandler *> (servant);
 
   if (!impl)
     {
@@ -1068,20 +1008,16 @@ void POA_AMI_FieldDevice_THandler::getEncoding_skel (
 }
 
 
-
 class getEncoding_excep_AMI_FieldDevice_THandler
   : public TAO::Upcall_Command
 {
 public:
-  inline getEncoding_excep_AMI_FieldDevice_THandler (
-    POA_AMI_FieldDevice_THandler * servant,
+  inline getEncoding_excep_AMI_FieldDevice_THandler (POA_AMI_FieldDevice_THandler * servant,
     TAO_Operation_Details const * operation_details,
     TAO::Argument * const args[])
     : servant_ (servant)
       , operation_details_ (operation_details)
-      , args_ (args)
-  {
-  }
+      , args_ (args) {}
 
   void execute () override
   {
@@ -1100,12 +1036,12 @@ private:
   TAO_Operation_Details const * const operation_details_;
   TAO::Argument * const * const args_;
 };
-
 void POA_AMI_FieldDevice_THandler::getEncoding_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -1114,8 +1050,7 @@ void POA_AMI_FieldDevice_THandler::getEncoding_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_AMI_FieldDevice_THandler * const impl =
-    dynamic_cast<POA_AMI_FieldDevice_THandler *> (servant);
+  POA_AMI_FieldDevice_THandler * const impl = dynamic_cast<POA_AMI_FieldDevice_THandler *> (servant);
 
   if (!impl)
     {
@@ -1147,7 +1082,6 @@ void POA_AMI_FieldDevice_THandler::getEncoding_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_AMI_FieldDevice_THandler::_is_a (const char* value)
 {
   return
@@ -1166,7 +1100,6 @@ const char* POA_AMI_FieldDevice_THandler::_interface_repository_id () const
 
 
 
-
 void POA_AMI_FieldDevice_THandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1177,12 +1110,11 @@ void POA_AMI_FieldDevice_THandler::_dispatch (
 
 
 
-
 AMI_FieldDevice_THandler *
 POA_AMI_FieldDevice_THandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

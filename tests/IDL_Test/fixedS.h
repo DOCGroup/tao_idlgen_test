@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_FIXEDS_4UEHLB_H_
-#define _TAO_IDL_FIXEDS_4UEHLB_H_
+#ifndef _TAO_IDL_FIXEDS_H1XPAB_H_
+#define _TAO_IDL_FIXEDS_H1XPAB_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::ACE_CDR::Fixed>
     : public Basic_SArg_Traits_T<
@@ -89,7 +85,6 @@ namespace TAO
     >
   {
   };
-
 
 
   template<>
@@ -101,7 +96,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_FIXEDPOINT_FIXEDOPERATIONS__SARG_TRAITS_)
@@ -120,7 +114,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_FIXEDPOINT_AMH_FIXEDOPERATIONSEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _FIXEDPOINT_AMH_FIXEDOPERATIONSEXCEPTIONHOLDER__SARG_TRAITS_
 
@@ -137,7 +130,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_FIXEDPOINT_AMI_FIXEDOPERATIONSHANDLER__SARG_TRAITS_)
@@ -159,10 +151,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_FixedPoint
 {
-
 
   class AMH_FixedOperations;
   using AMH_FixedOperations_ptr = AMH_FixedOperations *;
@@ -187,7 +177,6 @@ namespace POA_FixedPoint
     FixedPoint::FixedOperations *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void _get_rate_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -196,7 +185,6 @@ namespace POA_FixedPoint
   virtual void rate (
       FixedPoint::AMH_FixedOperationsResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void _set_rate_skel (
       TAO_ServerRequest &_tao_req,
@@ -209,7 +197,6 @@ namespace POA_FixedPoint
     ) = 0;
 
 };
-
 
 
 
@@ -243,14 +230,12 @@ public:
   ::FixedPoint::FixedOperations *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::FixedPoint::Amount rate () = 0;
 
   static void _get_rate_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void rate (
     const ::FixedPoint::Amount & rate) = 0;
 
@@ -261,7 +246,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -270,11 +254,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_FixedOperations_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_FixedOperations_Direct_Proxy_Impl ();
-
   static void
   _get_rate (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_rate (
@@ -287,7 +269,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_FixedOperationsResponseHandler;
 using TAO_AMH_FixedOperationsResponseHandler_ptr = TAO_AMH_FixedOperationsResponseHandler *;
 
@@ -298,19 +279,14 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_FixedOperationsResponseHandler
 public:
   TAO_AMH_FixedOperationsResponseHandler () = default;
   virtual ~TAO_AMH_FixedOperationsResponseHandler () = default;
-
   void get_rate (
     const ::FixedPoint::Amount & return_value) override;
-
   void get_rate_excep (
     ::FixedPoint::AMH_FixedOperationsExceptionHolder * holder) override;
-
   void set_rate () override;
-
   void set_rate_excep (
     ::FixedPoint::AMH_FixedOperationsExceptionHolder * holder) override;
 };
-
 
 
 
@@ -344,7 +320,6 @@ public:
   ::FixedPoint::AMI_FixedOperationsHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_rate (
     const ::FixedPoint::Amount & ami_return_val) = 0;
 
@@ -352,7 +327,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_rate_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -360,14 +334,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_rate () = 0;
 
   static void set_rate_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_rate_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -376,7 +348,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -388,21 +359,17 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl ();
-
   static void
   get_rate (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_rate_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_rate (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_rate_excep (
@@ -413,7 +380,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 

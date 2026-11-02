@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_PEMNAMINGS_CO1YFA_H_
-#define _TAO_IDL_PEMNAMINGS_CO1YFA_H_
+#ifndef _TAO_IDL_PEMNAMINGS_MDJ0H7_H_
+#define _TAO_IDL_PEMNAMINGS_MDJ0H7_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
   template<>
@@ -73,7 +70,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Plesk::TProperty>
     : public
@@ -83,7 +79,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -97,7 +92,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Plesk::Naming::NamingContext>
     : public
@@ -107,7 +101,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_PLESK_NAMING_OBJECTRESOLVER__SARG_TRAITS_)
@@ -126,7 +119,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_PLESK_NAMING_AMH_OBJECTRESOLVEREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _PLESK_NAMING_AMH_OBJECTRESOLVEREXCEPTIONHOLDER__SARG_TRAITS_
 
@@ -143,7 +135,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_PLESK_NAMING_AMI_OBJECTRESOLVERHANDLER__SARG_TRAITS_)
@@ -165,14 +156,11 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_Plesk
 {
 
-
   namespace Naming
   {
-
 
     class AMH_ObjectResolver;
     using AMH_ObjectResolver_ptr = AMH_ObjectResolver *;
@@ -197,7 +185,6 @@ namespace POA_Plesk
       Plesk::Naming::ObjectResolver *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     static void resolve_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -208,7 +195,6 @@ namespace POA_Plesk
         const char * service_type,
         ::Plesk::TObjectID sc_id
       ) = 0;
-
 
     static void resolve_sc_skel (
         TAO_ServerRequest &_tao_req,
@@ -223,7 +209,6 @@ namespace POA_Plesk
       ) = 0;
 
   };
-
 
 
 
@@ -257,7 +242,6 @@ namespace POA_Plesk
     ::Plesk::Naming::ObjectResolver *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual ::CORBA::Object_ptr resolve (
       const char * service_type,
       ::Plesk::TObjectID & sc_id) = 0;
@@ -266,7 +250,6 @@ namespace POA_Plesk
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual ::CORBA::Object_ptr resolve_sc (
       const char * service_type,
       const char * version,
@@ -279,7 +262,6 @@ namespace POA_Plesk
   };
 
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -288,11 +270,9 @@ namespace POA_Plesk
   {
   public:
     virtual ~_TAO_ObjectResolver_Direct_Proxy_Impl ();
-
     static void
     resolve (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
     static void
     resolve_sc (
@@ -305,7 +285,6 @@ namespace POA_Plesk
   ///////////////////////////////////////////////////////////////////////
 
 
-
   class TAO_AMH_ObjectResolverResponseHandler;
   using TAO_AMH_ObjectResolverResponseHandler_ptr = TAO_AMH_ObjectResolverResponseHandler *;
 
@@ -316,22 +295,17 @@ namespace POA_Plesk
   public:
     TAO_AMH_ObjectResolverResponseHandler () = default;
     virtual ~TAO_AMH_ObjectResolverResponseHandler () = default;
-
     void resolve (
       ::CORBA::Object_ptr return_value,
       ::Plesk::TObjectID sc_id) override;
-
     void resolve_excep (
       ::Plesk::Naming::AMH_ObjectResolverExceptionHolder * holder) override;
-
     void resolve_sc (
       ::CORBA::Object_ptr return_value,
       ::Plesk::TObjectID sc_id) override;
-
     void resolve_sc_excep (
       ::Plesk::Naming::AMH_ObjectResolverExceptionHolder * holder) override;
   };
-
 
 
 
@@ -365,7 +339,6 @@ namespace POA_Plesk
     ::Plesk::Naming::AMI_ObjectResolverHandler *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual void resolve (
       ::CORBA::Object_ptr ami_return_val,
       ::Plesk::TObjectID sc_id) = 0;
@@ -374,7 +347,6 @@ namespace POA_Plesk
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void resolve_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -382,7 +354,6 @@ namespace POA_Plesk
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void resolve_sc (
       ::CORBA::Object_ptr ami_return_val,
       ::Plesk::TObjectID sc_id) = 0;
@@ -391,7 +362,6 @@ namespace POA_Plesk
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void resolve_sc_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -400,7 +370,6 @@ namespace POA_Plesk
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
   ///////////////////////////////////////////////////////////////////////
@@ -412,21 +381,17 @@ namespace POA_Plesk
   {
   public:
     virtual ~_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl ();
-
     static void
     resolve (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
     static void
     resolve_excep (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
     static void
     resolve_sc (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
     static void
     resolve_sc_excep (
@@ -441,9 +406,7 @@ namespace POA_Plesk
 
 
 
-
 } // module Plesk::Naming
-
 
 
 } // module Plesk

@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 ClassConstants::Iface::Iface (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ ClassConstants::Iface::Iface (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 ClassConstants::AMH_IfaceExceptionHolder::AMH_IfaceExceptionHolder ()
   : exception (nullptr)
@@ -55,7 +53,6 @@ ClassConstants::AMH_IfaceExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler (
     TAO_Stub *objref,
@@ -73,7 +70,6 @@ ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 ClassConstants::Vt::Vt ()
 {}

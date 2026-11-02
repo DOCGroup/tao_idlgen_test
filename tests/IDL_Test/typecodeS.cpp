@@ -22,13 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_TYPECODES_QBSW01_CPP_
-#define _TAO_IDL_TYPECODES_QBSW01_CPP_
+#ifndef _TAO_IDL_TYPECODES_12PGJ6_CPP_
+#define _TAO_IDL_TYPECODES_12PGJ6_CPP_
 
 
 #include "typecodeS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <cstddef>
+#include <cstring>
+#include <memory>
 #include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
 #include "tao/Exception_Data.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
@@ -51,7 +53,7 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #endif /* ifndef */
 

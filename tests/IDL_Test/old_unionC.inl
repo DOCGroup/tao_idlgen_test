@@ -24,11 +24,9 @@
 
 #include <memory>
 #include <new>
-
 // *************************************************************
 // Inline operations for union OldUnion::Foo
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -68,7 +66,6 @@ OldUnion::Foo::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -92,7 +89,6 @@ OldUnion::Foo::x () const
     }
   return this->u_.x_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -127,7 +123,6 @@ OldUnion::Foo::y ()
     }
   return this->u_.y_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -151,11 +146,9 @@ OldUnion::Foo::z () const
     }
   return this->u_.z_;
 }
-
 // *************************************************************
 // Inline operations for union OldUnion::Foo2
 // *************************************************************
-
 ACE_INLINE
 void
 OldUnion::Foo2::_default ()
@@ -201,7 +194,6 @@ OldUnion::Foo2::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -225,7 +217,6 @@ OldUnion::Foo2::x () const
     }
   return this->u_.x_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -265,7 +256,6 @@ OldUnion::Foo2::y ()
 }
 
 
-
 ACE_INLINE
 OldUnion::a::a (
     TAO_Stub *objref,
@@ -283,7 +273,6 @@ OldUnion::a::a (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldUnion::AMH_aExceptionHolder::AMH_aExceptionHolder ()
   : exception (nullptr)
@@ -294,7 +283,6 @@ OldUnion::AMH_aExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldUnion/AMH_aExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "old_constantsC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -48,12 +47,11 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "old_constantsC.inl"
 #endif /* !defined INLINE */
-
 static char const * const _tao_enumerators_OldConstants_N[] =
   {
     "zero",
@@ -78,7 +76,6 @@ namespace OldConstants
 }
 
 
-
 OldConstants::E::E (
     ::CORBA::Short _tao_cause)
   : ::CORBA::UserException (
@@ -87,7 +84,6 @@ OldConstants::E::E (
 {
   this->cause = _tao_cause;
 }
-
 
 
 OldConstants::E::E ()
@@ -172,7 +168,6 @@ void OldConstants::E::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::OldConstants::_tc_E;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -200,7 +195,6 @@ namespace OldConstants
 {
   ::CORBA::TypeCode_ptr const _tc_E = std::addressof(_tao_tc_OldConstants_E);
 }
-
 static char const * const _tao_enumerators_OldConstants_M_N[] =
   {
     "zero",
@@ -229,7 +223,6 @@ namespace OldConstants
 }
 
 
-
 OldConstants::M::E::E (
     ::CORBA::Short _tao_cause)
   : ::CORBA::UserException (
@@ -238,7 +231,6 @@ OldConstants::M::E::E (
 {
   this->cause = _tao_cause;
 }
-
 
 
 OldConstants::M::E::E ()
@@ -323,7 +315,6 @@ void OldConstants::M::E::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::OldConstants::M::_tc_E;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -355,7 +346,6 @@ namespace OldConstants
     ::CORBA::TypeCode_ptr const _tc_E = std::addressof(_tao_tc_OldConstants_M_E);
   }
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -390,9 +380,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 const CORBA::Short OldConstants::M::A::l;
-
 static char const * const _tao_enumerators_OldConstants_M_A_N[] =
   {
     "zero",
@@ -413,7 +401,6 @@ static TAO::TypeCode::Enum<char const *,
 ::CORBA::TypeCode_ptr const OldConstants::M::A::_tc_N = std::addressof(_tao_tc_OldConstants_M_A_N);
 
 
-
 OldConstants::M::A::E::E (
     ::CORBA::Short _tao_cause)
   : ::CORBA::UserException (
@@ -422,7 +409,6 @@ OldConstants::M::A::E::E (
 {
   this->cause = _tao_cause;
 }
-
 
 
 OldConstants::M::A::E::E ()
@@ -507,7 +493,6 @@ void OldConstants::M::A::E::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::OldConstants::M::A::_tc_E;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -531,7 +516,6 @@ _tao_tc_OldConstants_M_A_E (
   1);
 
 ::CORBA::TypeCode_ptr const OldConstants::M::A::_tc_E = std::addressof(_tao_tc_OldConstants_M_A_E);
-
 ::OldConstants::M::A::N
 OldConstants::M::A::foo (
   ::OldConstants::M::A::N x,
@@ -570,7 +554,6 @@ OldConstants::M::A::foo (
 
   return _tao_retval.retn ();
 }
-
 
 
 void
@@ -692,7 +675,6 @@ OldConstants::M::A::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldConstants_M_A (
@@ -709,7 +691,6 @@ namespace OldConstants
     ::CORBA::TypeCode_ptr const _tc_A = std::addressof(_tao_tc_OldConstants_M_A);
   }
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldConstants_M_AMH_AExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -733,7 +714,6 @@ namespace OldConstants
     ::CORBA::TypeCode_ptr const _tc_AMH_AExceptionHolder = std::addressof(_tao_tc_OldConstants_M_AMH_AExceptionHolder);
   }
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -876,7 +856,6 @@ OldConstants::M::AMH_AExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 OldConstants::M::AMH_AExceptionHolder::raise_foo ()
 {
@@ -884,14 +863,12 @@ OldConstants::M::AMH_AExceptionHolder::raise_foo ()
   this->exception->_raise ();
 }
 
-
 void
 OldConstants::M::AMH_AExceptionHolder::raise_sendc_foo ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1009,7 +986,6 @@ OldConstants::M::AMH_AResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldConstants_M_AMH_AResponseHandler (
@@ -1026,7 +1002,6 @@ namespace OldConstants
     ::CORBA::TypeCode_ptr const _tc_AMH_AResponseHandler = std::addressof(_tao_tc_OldConstants_M_AMH_AResponseHandler);
   }
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1057,7 +1032,6 @@ TAO::Objref_Traits<OldConstants::M::AMI_AHandler>::marshal (const OldConstants::
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -1167,7 +1141,6 @@ OldConstants::M::AMI_AHandler::foo_reply_stub (
       break;
   }
 }
-
 void
 OldConstants::M::AMI_AHandler::foo_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1280,7 +1253,6 @@ OldConstants::M::AMI_AHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldConstants_M_AMI_AHandler (
@@ -1297,7 +1269,6 @@ namespace OldConstants
     ::CORBA::TypeCode_ptr const _tc_AMI_AHandler = std::addressof(_tao_tc_OldConstants_M_AMI_AHandler);
   }
 }
-
 OBV_OldConstants::M::AMH_AExceptionHolder::~AMH_AExceptionHolder ()
 {}
 
@@ -1312,7 +1283,6 @@ OBV_OldConstants::M::AMH_AExceptionHolder::_tao_unmarshal__OldConstants_M_AMH_AE
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1345,7 +1315,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1426,7 +1395,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1458,7 +1426,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1539,7 +1506,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1605,7 +1571,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1637,7 +1602,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1718,7 +1682,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1790,7 +1753,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1876,7 +1838,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1942,7 +1903,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OldConstants::N _tao_enumerator)
@@ -1964,7 +1924,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2004,7 +1963,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OldConstants::M::N _tao_enumerator)
@@ -2026,7 +1984,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2066,7 +2023,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OldConstants::M::A::N _tao_enumerator)
@@ -2088,7 +2044,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2128,7 +2083,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -2161,7 +2115,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldConstants::M::AMH_AExceptionHolder * vt)
@@ -2182,7 +2135,6 @@ CORBA::remove_ref (OldConstants::M::AMH_AExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2212,7 +2164,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_OldConstants::M::AMH_AExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -2230,7 +2181,6 @@ OBV_OldConstants::M::AMH_AExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

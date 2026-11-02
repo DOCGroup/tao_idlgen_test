@@ -22,14 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ANONYMOUSS_KQ1QHP_CPP_
-#define _TAO_IDL_ANONYMOUSS_KQ1QHP_CPP_
+#ifndef _TAO_IDL_ANONYMOUSS_TWYMPF_CPP_
+#define _TAO_IDL_ANONYMOUSS_TWYMPF_CPP_
 
 
 #include "anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <cstddef>
 #include <cstring>
+#include <memory>
 #include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
 #include "tao/Exception_Data.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
@@ -52,22 +53,24 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
 class TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -85,23 +88,20 @@ TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::hash (const char *str
      30, 30, 30, 30, 30, 30, 15, 30, 30, 30,
      30, 30, 30, 30, 30, 30, 30, 30,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 13,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 29,
-      HASH_VALUE_RANGE = 25,
-      DUPLICATES = 2,
-      WORDLIST_SIZE = 18
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {13};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {29};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {25};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -130,7 +130,7 @@ TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *s
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -141,14 +141,14 @@ TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *s
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -157,20 +157,15 @@ TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *s
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable tao_All_Anon_AMH_anon_bd_string_test_optable;
-
-
-
-
 
 POA_All_Anon::AMH_anon_bd_string_test::AMH_anon_bd_string_test ()
 {
   this->optable_ = std::addressof (tao_All_Anon_AMH_anon_bd_string_test_optable);
 }
-
 
 
 void
@@ -209,7 +204,6 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_All_Anon::AMH_anon_bd_string_test::TestFunc2_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -246,7 +240,6 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc2_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_All_Anon::AMH_anon_bd_string_test::TestFunc3_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -283,7 +276,6 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc3_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_All_Anon::AMH_anon_bd_string_test::TestFunc23_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -320,7 +312,6 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc23_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_All_Anon::AMH_anon_bd_string_test::TestFunc4_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -366,7 +357,6 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc4_skel (
       inarg.in ()
     );
 }
-
 void
 POA_All_Anon::AMH_anon_bd_string_test::TestFunc41_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -412,7 +402,6 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc41_skel (
       inarg.in ()
     );
 }
-
 void
 POA_All_Anon::AMH_anon_bd_string_test::TestFunc42_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -458,7 +447,6 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc42_skel (
       inarg.in ()
     );
 }
-
 void
 POA_All_Anon::AMH_anon_bd_string_test::TestFunc43_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -510,7 +498,6 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc43_skel (
 
 
 
-
 ::CORBA::Boolean POA_All_Anon::AMH_anon_bd_string_test::_is_a (const char* value)
 {
   return
@@ -524,7 +511,6 @@ const char* POA_All_Anon::AMH_anon_bd_string_test::_interface_repository_id () c
 {
   return "IDL:All_Anon/anon_bd_string_test:1.0";
 }
-
 void
 POA_All_Anon::AMH_anon_bd_string_test::_dispatch (
     TAO_ServerRequest &req,
@@ -532,12 +518,11 @@ POA_All_Anon::AMH_anon_bd_string_test::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 All_Anon::anon_bd_string_test*
 POA_All_Anon::AMH_anon_bd_string_test::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -552,17 +537,18 @@ class TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -580,23 +566,20 @@ TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::hash (const char *str, un
      30, 30, 30, 30, 30, 30, 15, 30, 30, 30,
      30, 30, 30, 30, 30, 30, 30, 30,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 13,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 29,
-      HASH_VALUE_RANGE = 25,
-      DUPLICATES = 2,
-      WORDLIST_SIZE = 18
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {13};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {29};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {25};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -625,7 +608,7 @@ TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -636,14 +619,14 @@ TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, 
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -652,7 +635,7 @@ TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, 
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable tao_All_Anon_anon_bd_string_test_optable;
@@ -664,7 +647,6 @@ static TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable tao_All_Anon_anon_b
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::~_TAO_anon_bd_string_test_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -686,7 +668,6 @@ POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc (
 }
 
 
-
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc2 (
     TAO_Abstract_ServantBase  *servant,
@@ -704,7 +685,6 @@ POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc2 (
     _tao_ptr->TestFunc2 (
         );
 }
-
 
 
 void
@@ -726,7 +706,6 @@ POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc3 (
 }
 
 
-
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc23 (
     TAO_Abstract_ServantBase  *servant,
@@ -744,7 +723,6 @@ POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc23 (
     _tao_ptr->TestFunc23 (
         );
 }
-
 
 
 void
@@ -766,7 +744,6 @@ POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc4 (
 }
 
 
-
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc41 (
     TAO_Abstract_ServantBase  *servant,
@@ -786,7 +763,6 @@ POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc41 (
 }
 
 
-
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc42 (
     TAO_Abstract_ServantBase  *servant,
@@ -804,7 +780,6 @@ POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc42 (
         ((TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc42_inarg>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -831,10 +806,6 @@ POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc43 (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_All_Anon::anon_bd_string_test::anon_bd_string_test ()
 {
   this->optable_ = std::addressof (tao_All_Anon_anon_bd_string_test_optable);
@@ -844,20 +815,16 @@ POA_All_Anon::anon_bd_string_test::anon_bd_string_test ()
 namespace POA_All_Anon
 {
 
-
   class TestFunc_anon_bd_string_test
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc_anon_bd_string_test (
-      POA_All_Anon::anon_bd_string_test * servant,
+    inline TestFunc_anon_bd_string_test (POA_All_Anon::anon_bd_string_test * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -876,20 +843,19 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::anon_bd_string_test::TestFunc_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc>::ret_val retval;
+{
+  TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_All_Anon::anon_bd_string_test * const impl =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
+  POA_All_Anon::anon_bd_string_test * const impl = dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
 
   if (!impl)
     {
@@ -918,20 +884,16 @@ void POA_All_Anon::anon_bd_string_test::TestFunc_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc2_anon_bd_string_test
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc2_anon_bd_string_test (
-      POA_All_Anon::anon_bd_string_test * servant,
+    inline TestFunc2_anon_bd_string_test (POA_All_Anon::anon_bd_string_test * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -950,20 +912,19 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::anon_bd_string_test::TestFunc2_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc2>::ret_val retval;
+{
+  TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc2>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_All_Anon::anon_bd_string_test * const impl =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
+  POA_All_Anon::anon_bd_string_test * const impl = dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
 
   if (!impl)
     {
@@ -992,20 +953,16 @@ void POA_All_Anon::anon_bd_string_test::TestFunc2_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc3_anon_bd_string_test
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc3_anon_bd_string_test (
-      POA_All_Anon::anon_bd_string_test * servant,
+    inline TestFunc3_anon_bd_string_test (POA_All_Anon::anon_bd_string_test * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1024,20 +981,19 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::anon_bd_string_test::TestFunc3_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc3>::ret_val retval;
+{
+  TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc3>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_All_Anon::anon_bd_string_test * const impl =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
+  POA_All_Anon::anon_bd_string_test * const impl = dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
 
   if (!impl)
     {
@@ -1066,20 +1022,16 @@ void POA_All_Anon::anon_bd_string_test::TestFunc3_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc23_anon_bd_string_test
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc23_anon_bd_string_test (
-      POA_All_Anon::anon_bd_string_test * servant,
+    inline TestFunc23_anon_bd_string_test (POA_All_Anon::anon_bd_string_test * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1098,20 +1050,19 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::anon_bd_string_test::TestFunc23_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc23>::ret_val retval;
+{
+  TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc23>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_All_Anon::anon_bd_string_test * const impl =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
+  POA_All_Anon::anon_bd_string_test * const impl = dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
 
   if (!impl)
     {
@@ -1140,20 +1091,16 @@ void POA_All_Anon::anon_bd_string_test::TestFunc23_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc4_anon_bd_string_test
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc4_anon_bd_string_test (
-      POA_All_Anon::anon_bd_string_test * servant,
+    inline TestFunc4_anon_bd_string_test (POA_All_Anon::anon_bd_string_test * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1173,12 +1120,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::anon_bd_string_test::TestFunc4_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc4_inarg>::in_arg_val _tao_inarg;
 
   TAO::Argument * const args[] =
@@ -1187,8 +1134,7 @@ void POA_All_Anon::anon_bd_string_test::TestFunc4_skel (
       std::addressof(_tao_inarg)
     };
 
-  POA_All_Anon::anon_bd_string_test * const impl =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
+  POA_All_Anon::anon_bd_string_test * const impl = dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
 
   if (!impl)
     {
@@ -1217,20 +1163,16 @@ void POA_All_Anon::anon_bd_string_test::TestFunc4_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc41_anon_bd_string_test
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc41_anon_bd_string_test (
-      POA_All_Anon::anon_bd_string_test * servant,
+    inline TestFunc41_anon_bd_string_test (POA_All_Anon::anon_bd_string_test * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1250,12 +1192,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::anon_bd_string_test::TestFunc41_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc41_inarg>::in_arg_val _tao_inarg;
 
   TAO::Argument * const args[] =
@@ -1264,8 +1206,7 @@ void POA_All_Anon::anon_bd_string_test::TestFunc41_skel (
       std::addressof(_tao_inarg)
     };
 
-  POA_All_Anon::anon_bd_string_test * const impl =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
+  POA_All_Anon::anon_bd_string_test * const impl = dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
 
   if (!impl)
     {
@@ -1294,20 +1235,16 @@ void POA_All_Anon::anon_bd_string_test::TestFunc41_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc42_anon_bd_string_test
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc42_anon_bd_string_test (
-      POA_All_Anon::anon_bd_string_test * servant,
+    inline TestFunc42_anon_bd_string_test (POA_All_Anon::anon_bd_string_test * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1327,12 +1264,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::anon_bd_string_test::TestFunc42_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc42_inarg>::in_arg_val _tao_inarg;
 
   TAO::Argument * const args[] =
@@ -1341,8 +1278,7 @@ void POA_All_Anon::anon_bd_string_test::TestFunc42_skel (
       std::addressof(_tao_inarg)
     };
 
-  POA_All_Anon::anon_bd_string_test * const impl =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
+  POA_All_Anon::anon_bd_string_test * const impl = dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
 
   if (!impl)
     {
@@ -1371,20 +1307,16 @@ void POA_All_Anon::anon_bd_string_test::TestFunc42_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc43_anon_bd_string_test
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc43_anon_bd_string_test (
-      POA_All_Anon::anon_bd_string_test * servant,
+    inline TestFunc43_anon_bd_string_test (POA_All_Anon::anon_bd_string_test * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1404,12 +1336,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::anon_bd_string_test::TestFunc43_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc43_inarg>::in_arg_val _tao_inarg;
 
   TAO::Argument * const args[] =
@@ -1418,8 +1350,7 @@ void POA_All_Anon::anon_bd_string_test::TestFunc43_skel (
       std::addressof(_tao_inarg)
     };
 
-  POA_All_Anon::anon_bd_string_test * const impl =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
+  POA_All_Anon::anon_bd_string_test * const impl = dynamic_cast<POA_All_Anon::anon_bd_string_test *> (servant);
 
   if (!impl)
     {
@@ -1451,7 +1382,6 @@ void POA_All_Anon::anon_bd_string_test::TestFunc43_skel (
 
 
 
-
 ::CORBA::Boolean POA_All_Anon::anon_bd_string_test::_is_a (const char* value)
 {
   return
@@ -1469,7 +1399,6 @@ const char* POA_All_Anon::anon_bd_string_test::_interface_repository_id () const
 
 
 
-
 void POA_All_Anon::anon_bd_string_test::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1480,12 +1409,11 @@ void POA_All_Anon::anon_bd_string_test::_dispatch (
 
 
 
-
 All_Anon::anon_bd_string_test *
 POA_All_Anon::anon_bd_string_test::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1494,8 +1422,6 @@ POA_All_Anon::anon_bd_string_test::_this ()
     }
   return {};
 }
-
-
 
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc (
@@ -1512,7 +1438,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc_excep (
   ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder)
@@ -1526,7 +1451,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc2 (
   const char * return_value)
@@ -1542,7 +1466,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc2 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc2_excep (
   ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder)
@@ -1556,7 +1479,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc2_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc3 (
   const char * return_value)
@@ -1572,7 +1494,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc3 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc3_excep (
   ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder)
@@ -1586,7 +1507,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc3_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc23 (
   const char * return_value)
@@ -1602,7 +1522,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc23 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc23_excep (
   ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder)
@@ -1616,7 +1535,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc23_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc4 ()
 {
@@ -1625,7 +1543,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc4 ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc4_excep (
   ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder)
@@ -1639,7 +1556,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc4_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc41 ()
 {
@@ -1648,7 +1564,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc41 ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc41_excep (
   ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder)
@@ -1662,7 +1577,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc41_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc42 ()
 {
@@ -1671,7 +1585,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc42 ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc42_excep (
   ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder)
@@ -1685,7 +1598,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc42_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc43 ()
 {
@@ -1694,7 +1606,6 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc43 ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc43_excep (
   ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder)
@@ -1713,17 +1624,18 @@ class TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1741,23 +1653,20 @@ TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::hash (const ch
      30, 30,  0, 30, 30, 30,  8, 30, 30, 30,
      30, 30, 30, 30, 30, 30, 30, 30,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 21,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 16,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 29,
-      HASH_VALUE_RANGE = 25,
-      DUPLICATES = 7,
-      WORDLIST_SIZE = 26
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {21};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {16};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {29};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {25};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {7};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {26};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1794,7 +1703,7 @@ TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (const 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -1805,14 +1714,14 @@ TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (const 
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -1821,7 +1730,7 @@ TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (const 
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable tao_All_Anon_AMI_anon_bd_string_testHandler_optable;
@@ -1833,7 +1742,6 @@ static TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable tao_All_
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::~_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -1855,7 +1763,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc (
 }
 
 
-
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1873,7 +1780,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc_ex
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -1895,7 +1801,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc2 (
 }
 
 
-
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc2_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1913,7 +1818,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc2_e
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -1935,7 +1839,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc3 (
 }
 
 
-
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc3_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1953,7 +1856,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc3_e
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -1975,7 +1877,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc23 
 }
 
 
-
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc23_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1995,7 +1896,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc23_
 }
 
 
-
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc4 (
     TAO_Abstract_ServantBase  *servant,
@@ -2012,7 +1912,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc4 (
   _tao_ptr->TestFunc4 (
       );
 }
-
 
 
 void
@@ -2034,7 +1933,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc4_e
 }
 
 
-
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc41 (
     TAO_Abstract_ServantBase  *servant,
@@ -2051,7 +1949,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc41 
   _tao_ptr->TestFunc41 (
       );
 }
-
 
 
 void
@@ -2073,7 +1970,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc41_
 }
 
 
-
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc42 (
     TAO_Abstract_ServantBase  *servant,
@@ -2090,7 +1986,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc42 
   _tao_ptr->TestFunc42 (
       );
 }
-
 
 
 void
@@ -2112,7 +2007,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc42_
 }
 
 
-
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43 (
     TAO_Abstract_ServantBase  *servant,
@@ -2129,7 +2023,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43 
   _tao_ptr->TestFunc43 (
       );
 }
-
 
 
 void
@@ -2156,10 +2049,6 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43_
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler ()
 {
   this->optable_ = std::addressof (tao_All_Anon_AMI_anon_bd_string_testHandler_optable);
@@ -2169,20 +2058,16 @@ POA_All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler ()
 namespace POA_All_Anon
 {
 
-
   class TestFunc_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2202,12 +2087,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc_ami_return_val>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -2216,8 +2101,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -2246,20 +2130,16 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc_excep_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc_excep_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc_excep_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2279,12 +2159,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2293,8 +2173,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -2323,20 +2202,16 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc_excep_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc2_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc2_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc2_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2356,12 +2231,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc2_ami_return_val>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -2370,8 +2245,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -2400,20 +2274,16 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc2_excep_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc2_excep_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc2_excep_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2433,12 +2303,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2447,8 +2317,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -2477,20 +2346,16 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_excep_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc3_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc3_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc3_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2510,12 +2375,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc3_ami_return_val>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -2524,8 +2389,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -2554,20 +2418,16 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc3_excep_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc3_excep_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc3_excep_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2587,12 +2447,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2601,8 +2461,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -2631,20 +2490,16 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_excep_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc23_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc23_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc23_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2664,12 +2519,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc23_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc23_ami_return_val>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -2678,8 +2533,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc23_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -2708,20 +2562,16 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc23_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc23_excep_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc23_excep_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc23_excep_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2741,12 +2591,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc23_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2755,8 +2605,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc23_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -2785,16 +2634,12 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc23_excep_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc4_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc4_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline TestFunc4_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -2805,28 +2650,26 @@ namespace POA_All_Anon
     POA_All_Anon::AMI_anon_bd_string_testHandler * const servant_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc4_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  TestFunc4_AMI_anon_bd_string_testHandler command (
-    impl);
+  TestFunc4_AMI_anon_bd_string_testHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -2845,20 +2688,16 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc4_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc4_excep_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc4_excep_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc4_excep_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2878,12 +2717,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc4_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2892,8 +2731,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc4_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -2922,16 +2760,12 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc4_excep_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc41_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc41_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline TestFunc41_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -2942,28 +2776,26 @@ namespace POA_All_Anon
     POA_All_Anon::AMI_anon_bd_string_testHandler * const servant_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc41_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  TestFunc41_AMI_anon_bd_string_testHandler command (
-    impl);
+  TestFunc41_AMI_anon_bd_string_testHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -2982,20 +2814,16 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc41_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc41_excep_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc41_excep_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc41_excep_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3015,12 +2843,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc41_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -3029,8 +2857,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc41_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -3059,16 +2886,12 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc41_excep_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc42_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc42_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline TestFunc42_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -3079,28 +2902,26 @@ namespace POA_All_Anon
     POA_All_Anon::AMI_anon_bd_string_testHandler * const servant_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc42_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  TestFunc42_AMI_anon_bd_string_testHandler command (
-    impl);
+  TestFunc42_AMI_anon_bd_string_testHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -3119,20 +2940,16 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc42_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc42_excep_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc42_excep_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc42_excep_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3152,12 +2969,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc42_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -3166,8 +2983,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc42_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -3196,16 +3012,12 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc42_excep_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc43_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc43_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline TestFunc43_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -3216,28 +3028,26 @@ namespace POA_All_Anon
     POA_All_Anon::AMI_anon_bd_string_testHandler * const servant_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  TestFunc43_AMI_anon_bd_string_testHandler command (
-    impl);
+  TestFunc43_AMI_anon_bd_string_testHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -3256,20 +3066,16 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_skel (
 namespace POA_All_Anon
 {
 
-
   class TestFunc43_excep_AMI_anon_bd_string_testHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline TestFunc43_excep_AMI_anon_bd_string_testHandler (
-      POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
+    inline TestFunc43_excep_AMI_anon_bd_string_testHandler (POA_All_Anon::AMI_anon_bd_string_testHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3289,12 +3095,12 @@ namespace POA_All_Anon
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -3303,8 +3109,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl =
-    dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
+  POA_All_Anon::AMI_anon_bd_string_testHandler * const impl = dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler *> (servant);
 
   if (!impl)
     {
@@ -3336,7 +3141,6 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_All_Anon::AMI_anon_bd_string_testHandler::_is_a (const char* value)
 {
   return
@@ -3355,7 +3159,6 @@ const char* POA_All_Anon::AMI_anon_bd_string_testHandler::_interface_repository_
 
 
 
-
 void POA_All_Anon::AMI_anon_bd_string_testHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -3366,12 +3169,11 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::_dispatch (
 
 
 
-
 All_Anon::AMI_anon_bd_string_testHandler *
 POA_All_Anon::AMI_anon_bd_string_testHandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

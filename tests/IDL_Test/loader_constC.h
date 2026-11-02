@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_LOADER_CONSTC_VD1AH7_H_
-#define _TAO_IDL_LOADER_CONSTC_VD1AH7_H_
+#ifndef _TAO_IDL_LOADER_CONSTC_8SQJ95_H_
+#define _TAO_IDL_LOADER_CONSTC_8SQJ95_H_
 
 #include /**/ "ace/pre.h"
 
@@ -111,7 +110,6 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -123,19 +121,15 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace Plesk
 {
-
 
 
   const CORBA::ULong PLESK_VENDOR_ID = 40000U;
 
 
 
-
 } // module Plesk
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -144,7 +138,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -171,7 +164,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -179,7 +171,6 @@ namespace TAO
 {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

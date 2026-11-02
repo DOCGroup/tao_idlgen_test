@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "Bug_2350_RegressionC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -46,12 +45,11 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_2350_RegressionC.inl"
 #endif /* !defined INLINE */
-
 something::something ()
   : ::CORBA::UserException (
         "IDL:something:1.0",
@@ -132,7 +130,6 @@ void something::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::_tc_something;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
@@ -153,7 +150,6 @@ _tao_tc_something (
   0);
 
 ::CORBA::TypeCode_ptr const _tc_something = std::addressof(_tao_tc_something);
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -179,7 +175,6 @@ _tao_tc_user_ExceptionHolder (
 ::CORBA::TypeCode_ptr const _tc_user_ExceptionHolder = std::addressof(_tao_tc_user_ExceptionHolder);
 
 
-
 void
 user_ExceptionHolder::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -187,7 +182,6 @@ user_ExceptionHolder::_tao_any_destructor (
   user_ExceptionHolder *tmp = static_cast<user_ExceptionHolder *> (_tao_void_pointer);
   delete tmp;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -218,7 +212,6 @@ TAO::Objref_Traits<Bug_2350_Regression>::marshal (const Bug_2350_Regression_ptr 
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -266,7 +259,6 @@ Bug_2350_Regression::Bug_2350_Regression_excep (
       1
     );
 }
-
 
 
 void
@@ -385,7 +377,6 @@ Bug_2350_Regression::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_Bug_2350_Regression (
@@ -394,7 +385,6 @@ static TAO::TypeCode::Objref<char const *,
     "Bug_2350_Regression");
 
 ::CORBA::TypeCode_ptr const _tc_Bug_2350_Regression = std::addressof(_tao_tc_Bug_2350_Regression);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Bug_2350_RegressionExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -410,7 +400,6 @@ static TAO::TypeCode::Value<char const *,
     0);
 
 ::CORBA::TypeCode_ptr const _tc_AMH_Bug_2350_RegressionExceptionHolder = std::addressof(_tao_tc_AMH_Bug_2350_RegressionExceptionHolder);
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -553,7 +542,6 @@ AMH_Bug_2350_RegressionExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 AMH_Bug_2350_RegressionExceptionHolder::raise_Bug_2350_Regression_excep ()
 {
@@ -561,14 +549,12 @@ AMH_Bug_2350_RegressionExceptionHolder::raise_Bug_2350_Regression_excep ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_Bug_2350_RegressionExceptionHolder::raise_sendc_Bug_2350_Regression_excep ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -686,7 +672,6 @@ AMH_Bug_2350_RegressionResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_Bug_2350_RegressionResponseHandler (
@@ -695,7 +680,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_Bug_2350_RegressionResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_Bug_2350_RegressionResponseHandler = std::addressof(_tao_tc_AMH_Bug_2350_RegressionResponseHandler);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -726,7 +710,6 @@ TAO::Objref_Traits<AMI_Bug_2350_RegressionHandler>::marshal (const AMI_Bug_2350_
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -841,7 +824,6 @@ AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_reply_stub (
       break;
   }
 }
-
 void
 AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -969,7 +951,6 @@ AMI_Bug_2350_RegressionHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_Bug_2350_RegressionHandler (
@@ -978,7 +959,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMI_Bug_2350_RegressionHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMI_Bug_2350_RegressionHandler = std::addressof(_tao_tc_AMI_Bug_2350_RegressionHandler);
-
 OBV_AMH_Bug_2350_RegressionExceptionHolder::~OBV_AMH_Bug_2350_RegressionExceptionHolder ()
 {}
 
@@ -993,7 +973,6 @@ OBV_AMH_Bug_2350_RegressionExceptionHolder::_tao_unmarshal__AMH_Bug_2350_Regress
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1072,7 +1051,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1113,7 +1091,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1179,7 +1156,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1254,7 +1230,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1340,7 +1315,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1406,7 +1380,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1427,7 +1400,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1452,7 +1424,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1488,7 +1459,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_Bug_2350_RegressionExceptionHolder * vt)
@@ -1509,7 +1479,6 @@ CORBA::remove_ref (AMH_Bug_2350_RegressionExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1539,7 +1508,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_Bug_2350_RegressionExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -1557,7 +1525,6 @@ OBV_AMH_Bug_2350_RegressionExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

@@ -24,7 +24,6 @@
 
 #include <memory>
 #include <new>
-
 ACE_INLINE
 MyValueType::MyValueType ()
 {}
@@ -34,7 +33,6 @@ MyValueType::_tao_obv_static_repository_id ()
 {
   return "IDL:MyValueType:1.0";
 }
-
 ACE_INLINE
 DefaultInitializedValue::DefaultInitializedValue ()
 {}
@@ -44,11 +42,9 @@ DefaultInitializedValue::_tao_obv_static_repository_id ()
 {
   return "IDL:DefaultInitializedValue:1.0";
 }
-
 // *************************************************************
 // Inline operations for union MyValueTypeUnion
 // *************************************************************
-
 ACE_INLINE
 void
 MyValueTypeUnion::_default ()
@@ -94,7 +90,6 @@ MyValueTypeUnion::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -122,7 +117,6 @@ MyValueTypeUnion::symbol_val () const
     }
   return this->u_.symbol_val_->in ();
 }
-
 ACE_INLINE
 RecValueType::RecValueType ()
 {}
@@ -132,7 +126,6 @@ RecValueType::_tao_obv_static_repository_id ()
 {
   return "IDL:RecValueType:1.0";
 }
-
 ACE_INLINE
 GetsDeprecatedMember::GetsDeprecatedMember ()
 {}
@@ -142,7 +135,6 @@ GetsDeprecatedMember::_tao_obv_static_repository_id ()
 {
   return "IDL:GetsDeprecatedMember:1.0";
 }
-
 ACE_INLINE
 X_VALUETYPE::AXXX::AXXX ()
 {}
@@ -152,7 +144,6 @@ X_VALUETYPE::AXXX::_tao_obv_static_repository_id ()
 {
   return "IDL:X_VALUETYPE/AXXX:1.0";
 }
-
 ACE_INLINE
 X_VALUETYPE::BXXX::BXXX ()
 {}
@@ -162,7 +153,6 @@ X_VALUETYPE::BXXX::_tao_obv_static_repository_id ()
 {
   return "IDL:X_VALUETYPE/BXXX:1.0";
 }
-
 ACE_INLINE
 ModSelection::SelectionDefns::Criterion::Criterion ()
 {}
@@ -172,7 +162,6 @@ ModSelection::SelectionDefns::Criterion::_tao_obv_static_repository_id ()
 {
   return "IDL:ModSelection/SelectionDefns/Criterion:1.0";
 }
-
 ACE_INLINE
 ModSelection::SelectionDefns::CriterionExpr::CriterionExpr ()
 {}
@@ -182,11 +171,9 @@ ModSelection::SelectionDefns::CriterionExpr::_tao_obv_static_repository_id ()
 {
   return "IDL:ModSelection/SelectionDefns/CriterionExpr:1.0";
 }
-
 // *************************************************************
 // Inline operations for union ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr
 // *************************************************************
-
 ACE_INLINE
 void
 ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr::_default ()
@@ -224,7 +211,6 @@ ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void

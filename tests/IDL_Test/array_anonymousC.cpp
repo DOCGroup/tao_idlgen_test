@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "array_anonymousC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -45,12 +44,11 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "array_anonymousC.inl"
 #endif /* !defined INLINE */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -85,9 +83,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 const CORBA::Short tdef::byteslen;
-
 tdef::Bytes_slice *
 tdef::Bytes_dup (const tdef::Bytes_slice *_tao_src_array)
 {
@@ -128,8 +124,6 @@ tdef::Bytes_copy (
 }
 
 
-
-
 #ifndef _TAO_TYPECODE_tdef_Bytes_GUARD
 #define _TAO_TYPECODE_tdef_Bytes_GUARD
 
@@ -141,17 +135,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        tdef_Bytes_13 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_octet,
-          13U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> tdef_Bytes_13 (
+        ::CORBA::tk_array,
+        &CORBA::_tc_octet,
+        13U);
 
-      ::CORBA::TypeCode_ptr const tc_tdef_Bytes =
-        &tdef_Bytes_13;
-    }
+    ::CORBA::TypeCode_ptr const tc_tdef_Bytes =
+      &tdef_Bytes_13;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -170,9 +162,6 @@ static TAO::TypeCode::Alias<char const *,
 
 
 
-
-
-
 #ifndef _TAO_TYPECODE_tdef_bytes_or_longs_Longs_GUARD
 #define _TAO_TYPECODE_tdef_bytes_or_longs_Longs_GUARD
 
@@ -184,17 +173,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        tdef_bytes_or_longs_Longs_12 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_long,
-          12U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> tdef_bytes_or_longs_Longs_12 (
+        ::CORBA::tk_array,
+        &CORBA::_tc_long,
+        12U);
 
-      ::CORBA::TypeCode_ptr const tc_tdef_bytes_or_longs_Longs =
-        &tdef_bytes_or_longs_Longs_12;
-    }
+    ::CORBA::TypeCode_ptr const tc_tdef_bytes_or_longs_Longs =
+      &tdef_bytes_or_longs_Longs_12;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -226,7 +213,6 @@ _tao_tc_tdef_bytes_or_longs (
 ::CORBA::TypeCode_ptr const tdef::_tc_bytes_or_longs = std::addressof(_tao_tc_tdef_bytes_or_longs);
 
 
-
 void
 tdef::bytes_or_longs::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -234,7 +220,6 @@ tdef::bytes_or_longs::_tao_any_destructor (
   bytes_or_longs *tmp = static_cast<bytes_or_longs *> (_tao_void_pointer);
   delete tmp;
 }
-
 tdef::bytes_or_longs::_Longs_slice *
 tdef::bytes_or_longs::_Longs_dup (const tdef::bytes_or_longs::_Longs_slice *_tao_src_array)
 {
@@ -354,7 +339,6 @@ tdef::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_tdef (
@@ -363,7 +347,6 @@ static TAO::TypeCode::Objref<char const *,
     "tdef");
 
 ::CORBA::TypeCode_ptr const _tc_tdef = std::addressof(_tao_tc_tdef);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_tdefExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -379,7 +362,6 @@ static TAO::TypeCode::Value<char const *,
     0);
 
 ::CORBA::TypeCode_ptr const _tc_AMH_tdefExceptionHolder = std::addressof(_tao_tc_AMH_tdefExceptionHolder);
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -524,7 +506,6 @@ AMH_tdefExceptionHolder::_tao_unmarshal (
 }
 
 
-
 AMH_tdefExceptionHolder_init::AMH_tdefExceptionHolder_init ()
 {
 }
@@ -555,7 +536,6 @@ AMH_tdefExceptionHolder_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -672,7 +652,6 @@ AMH_tdefResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_tdefResponseHandler (
@@ -681,7 +660,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_tdefResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_tdefResponseHandler = std::addressof(_tao_tc_AMH_tdefResponseHandler);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -796,7 +774,6 @@ AMI_tdefHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_tdefHandler (
@@ -805,8 +782,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMI_tdefHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMI_tdefHandler = std::addressof(_tao_tc_AMI_tdefHandler);
-
-
 
 
 #ifndef _TAO_TYPECODE_ABCModule_RmtPhysicalInfo_rmtNodeId_GUARD
@@ -820,23 +795,20 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        ABCModule_RmtPhysicalInfo_rmtNodeId_22 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_octet,
-          22U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_RmtPhysicalInfo_rmtNodeId_22 (
+        ::CORBA::tk_array,
+        &CORBA::_tc_octet,
+        22U);
 
-      ::CORBA::TypeCode_ptr const tc_ABCModule_RmtPhysicalInfo_rmtNodeId =
-        &ABCModule_RmtPhysicalInfo_rmtNodeId_22;
-    }
+    ::CORBA::TypeCode_ptr const tc_ABCModule_RmtPhysicalInfo_rmtNodeId =
+      &ABCModule_RmtPhysicalInfo_rmtNodeId_22;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_ABCModule_RmtPhysicalInfo_rmtNodeId_GUARD */
-
 
 
 #ifndef _TAO_TYPECODE_ABCModule_RmtPhysicalInfo_rmtDetails_GUARD
@@ -850,17 +822,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        ABCModule_RmtPhysicalInfo_rmtDetails_22 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_octet,
-          22U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_RmtPhysicalInfo_rmtDetails_22 (
+        ::CORBA::tk_array,
+        &CORBA::_tc_octet,
+        22U);
 
-      ::CORBA::TypeCode_ptr const tc_ABCModule_RmtPhysicalInfo_rmtDetails =
-        &ABCModule_RmtPhysicalInfo_rmtDetails_22;
-    }
+    ::CORBA::TypeCode_ptr const tc_ABCModule_RmtPhysicalInfo_rmtDetails =
+      &ABCModule_RmtPhysicalInfo_rmtDetails_22;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -896,7 +866,6 @@ namespace ABCModule
 }
 
 
-
 void
 ABCModule::RmtPhysicalInfo::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -904,7 +873,6 @@ ABCModule::RmtPhysicalInfo::_tao_any_destructor (
   RmtPhysicalInfo *tmp = static_cast<RmtPhysicalInfo *> (_tao_void_pointer);
   delete tmp;
 }
-
 ABCModule::RmtPhysicalInfo::_rmtNodeId_slice *
 ABCModule::RmtPhysicalInfo::_rmtNodeId_dup (const ABCModule::RmtPhysicalInfo::_rmtNodeId_slice *_tao_src_array)
 {
@@ -943,7 +911,6 @@ ABCModule::RmtPhysicalInfo::_rmtNodeId_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 ABCModule::RmtPhysicalInfo::_rmtDetails_slice *
 ABCModule::RmtPhysicalInfo::_rmtDetails_dup (const ABCModule::RmtPhysicalInfo::_rmtDetails_slice *_tao_src_array)
 {
@@ -984,8 +951,6 @@ ABCModule::RmtPhysicalInfo::_rmtDetails_copy (
 }
 
 
-
-
 #ifndef _TAO_TYPECODE_ABCModule_bbbBubBubBubBaby_rmtNodeId_GUARD
 #define _TAO_TYPECODE_ABCModule_bbbBubBubBubBaby_rmtNodeId_GUARD
 
@@ -997,23 +962,20 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        ABCModule_bbbBubBubBubBaby_rmtNodeId_22 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_octet,
-          22U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_bbbBubBubBubBaby_rmtNodeId_22 (
+        ::CORBA::tk_array,
+        &CORBA::_tc_octet,
+        22U);
 
-      ::CORBA::TypeCode_ptr const tc_ABCModule_bbbBubBubBubBaby_rmtNodeId =
-        &ABCModule_bbbBubBubBubBaby_rmtNodeId_22;
-    }
+    ::CORBA::TypeCode_ptr const tc_ABCModule_bbbBubBubBubBaby_rmtNodeId =
+      &ABCModule_bbbBubBubBubBaby_rmtNodeId_22;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_ABCModule_bbbBubBubBubBaby_rmtNodeId_GUARD */
-
 
 
 #ifndef _TAO_TYPECODE_ABCModule_bbbBubBubBubBaby_rmtDetails_GUARD
@@ -1027,17 +989,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        ABCModule_bbbBubBubBubBaby_rmtDetails_22 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_octet,
-          22U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_bbbBubBubBubBaby_rmtDetails_22 (
+        ::CORBA::tk_array,
+        &CORBA::_tc_octet,
+        22U);
 
-      ::CORBA::TypeCode_ptr const tc_ABCModule_bbbBubBubBubBaby_rmtDetails =
-        &ABCModule_bbbBubBubBubBaby_rmtDetails_22;
-    }
+    ::CORBA::TypeCode_ptr const tc_ABCModule_bbbBubBubBubBaby_rmtDetails =
+      &ABCModule_bbbBubBubBubBaby_rmtDetails_22;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1073,7 +1033,6 @@ namespace ABCModule
 }
 
 
-
 void
 ABCModule::bbbBubBubBubBaby::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -1081,7 +1040,6 @@ ABCModule::bbbBubBubBubBaby::_tao_any_destructor (
   bbbBubBubBubBaby *tmp = static_cast<bbbBubBubBubBaby *> (_tao_void_pointer);
   delete tmp;
 }
-
 ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice *
 ABCModule::bbbBubBubBubBaby::_rmtNodeId_dup (const ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice *_tao_src_array)
 {
@@ -1120,7 +1078,6 @@ ABCModule::bbbBubBubBubBaby::_rmtNodeId_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 ABCModule::bbbBubBubBubBaby::_rmtDetails_slice *
 ABCModule::bbbBubBubBubBaby::_rmtDetails_dup (const ABCModule::bbbBubBubBubBaby::_rmtDetails_slice *_tao_src_array)
 {
@@ -1159,7 +1116,6 @@ ABCModule::bbbBubBubBubBaby::_rmtDetails_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 OBV_AMH_tdefExceptionHolder::~OBV_AMH_tdefExceptionHolder ()
 {}
 
@@ -1185,7 +1141,6 @@ OBV_AMH_tdefExceptionHolder::_tao_unmarshal__AMH_tdefExceptionHolder (TAO_InputC
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1252,7 +1207,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1291,7 +1245,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1335,7 +1288,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1410,7 +1362,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1496,7 +1447,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1562,7 +1512,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1603,7 +1552,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1650,7 +1598,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1675,7 +1622,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1697,7 +1643,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1739,7 +1684,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1772,7 +1716,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_tdefExceptionHolder * vt)
@@ -1793,7 +1736,6 @@ CORBA::remove_ref (AMH_tdefExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1823,7 +1765,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_tdefExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -1841,7 +1782,6 @@ OBV_AMH_tdefExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -1876,7 +1816,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1901,7 +1840,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1923,7 +1861,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1965,7 +1902,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1990,7 +1926,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -2012,7 +1947,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

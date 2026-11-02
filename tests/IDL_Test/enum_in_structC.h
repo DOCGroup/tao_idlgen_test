@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ENUM_IN_STRUCTC_R3SY9G_H_
-#define _TAO_IDL_ENUM_IN_STRUCTC_R3SY9G_H_
+#ifndef _TAO_IDL_ENUM_IN_STRUCTC_D99VF2_H_
+#define _TAO_IDL_ENUM_IN_STRUCTC_D99VF2_H_
 
 #include /**/ "ace/pre.h"
 
@@ -61,7 +60,6 @@
 #if TAO_MAJOR_VERSION != 4 || TAO_MINOR_VERSION != 0 || TAO_MICRO_VERSION != 8
 #error This file should be regenerated with TAO_IDL
 #endif
-
 enum UnNamed
 {
   UNNAMED_FIRST,
@@ -70,9 +68,7 @@ enum UnNamed
 };
 
 using UnNamed_out = UnNamed &;
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnNamed;
-
 
 
 struct HoldsEnum;
@@ -82,16 +78,13 @@ using HoldsEnum_out = HoldsEnum&;
 
 
 
-
 struct TAO_IDL_TEST_STUB_Export HoldsEnum
 {
-
 
   using _var_type = HoldsEnum_var;
   using _out_type = HoldsEnum_out;
 
   static void _tao_any_destructor (void *);
-
 
 
   enum Named
@@ -102,13 +95,10 @@ struct TAO_IDL_TEST_STUB_Export HoldsEnum
   };
 
   using Named_out = Named &;
-
   static ::CORBA::TypeCode_ptr const _tc_Named;Named named_enum {};
   UnNamed unnamed_enum {};
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_HoldsEnum;
-
 
 
 struct decl_heavy_struct;
@@ -118,17 +108,13 @@ using decl_heavy_struct_out = decl_heavy_struct&;
 
 
 
-
 struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
 {
-
 
   using _var_type = decl_heavy_struct_var;
   using _out_type = decl_heavy_struct_out;
 
   static void _tao_any_destructor (void *);
-
-
 
 
 
@@ -140,7 +126,6 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
   };
 
   using str_en_out = str_en &;
-
   static ::CORBA::TypeCode_ptr const _tc_str_en;
 
   using _m_en = str_en[10];
@@ -163,8 +148,6 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
 
 
 
-
-
   struct st;
   using st_var = ::TAO_Fixed_Var_T<st>;
   using st_out = st&;
@@ -172,10 +155,8 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
 
 
 
-
   struct TAO_IDL_TEST_STUB_Export st
   {
-
 
     using _var_type = st_var;
     using _out_type = st_out;
@@ -185,7 +166,6 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
     ::CORBA::Long a {};
     ::CORBA::Char b {};
   };
-
   static ::CORBA::TypeCode_ptr const _tc_st;
 
   using _m_st = st[10];
@@ -208,8 +188,6 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
 
 
 
-
-
   class un;
   using un_var = ::TAO_Fixed_Var_T<un>;
   using un_out = un&;
@@ -224,10 +202,8 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
     un &operator= (un const &);
 
 
-
     void _d ( ::CORBA::Long);
     ::CORBA::Long _d () const;
-
 
     using _var_type = un_var;
     using _out_type = un_out;
@@ -235,15 +211,12 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
     static void _tao_any_destructor (void *);
 
 
-
     void a ( ::CORBA::Long);
     ::CORBA::Long a () const;
 
 
-
     void b ( ::CORBA::Char);
     ::CORBA::Char b () const;
-
 
 
     void _default ();
@@ -255,9 +228,7 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
     {
       _tao_union_storage () {}
 
-
       ::CORBA::Long a_;
-
 
       ::CORBA::Char b_;
     } u_;
@@ -265,7 +236,6 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
     /// TAO extension - frees any allocated storage.
     void _reset ();
   };
-
   static ::CORBA::TypeCode_ptr const _tc_un;
 
   using _m_un = un[10];
@@ -285,15 +255,12 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
 
   _m_un m_un {};
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_decl_heavy_struct;
-
 
 
 class TAO_IDL_TEST_STUB_Export ErrorException : public ::CORBA::UserException
 {
 public:
-
 
   enum ReasonCode
   {
@@ -306,7 +273,6 @@ public:
   };
 
   using ReasonCode_out = ReasonCode &;
-
   static ::CORBA::TypeCode_ptr const _tc_ReasonCode;ReasonCode reason {};
 
   ErrorException ();
@@ -330,15 +296,12 @@ public:
   virtual void _tao_decode (TAO_InputCDR &cdr);
 
 
-
   ErrorException (
       ReasonCode _tao_reason);
 
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ErrorException;
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -347,7 +310,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -369,7 +331,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::UnNamed>
     : public
@@ -379,7 +340,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -393,7 +353,6 @@ namespace TAO
   };
 
 
-
   template<>
   class Arg_Traits< ::HoldsEnum::Named>
     : public
@@ -403,7 +362,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -418,7 +376,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -481,7 +438,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -494,7 +450,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -503,7 +458,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::HoldsEnum*); // non
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::HoldsEnum const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -519,7 +473,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -528,7 +481,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::decl_heavy_struct*)
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::decl_heavy_struct const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -545,7 +497,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -558,14 +509,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, UnNamed _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, UnNamed &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -578,14 +527,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, HoldsEnum::Named _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, HoldsEnum::Named &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -598,14 +545,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_struct::str_en _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, decl_heavy_struct::str_en &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -617,14 +562,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, decl_heavy_struct::st const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_struct::st &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -636,7 +579,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, decl_heavy_struct::un const &);
@@ -646,14 +588,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_struct::_m_un_forany &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_struct::_m_un_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -667,14 +607,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ErrorException::ReasonCode _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ErrorException::ReasonCode &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

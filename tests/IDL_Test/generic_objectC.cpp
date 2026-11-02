@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "generic_objectC.h"
 #include <memory>
 #include <new>
@@ -33,12 +32,11 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "generic_objectC.inl"
 #endif /* !defined INLINE */
-
 
 
 Selecter::Selecter ()
@@ -143,7 +141,6 @@ void Selecter::_reset ()
   }
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for generic.
@@ -173,7 +170,6 @@ TAO::Objref_Traits<generic>::marshal (const generic_ptr p,TAO_OutputCDR & cdr)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::CORBA::Object_ptr
@@ -214,7 +210,6 @@ generic::op (
 
   return _tao_retval.retn ();
 }
-
 
 
 void
@@ -336,7 +331,6 @@ generic::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -473,7 +467,6 @@ AMH_genericExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 AMH_genericExceptionHolder::raise_op ()
 {
@@ -481,14 +474,12 @@ AMH_genericExceptionHolder::raise_op ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_genericExceptionHolder::raise_sendc_op ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -607,7 +598,6 @@ AMH_genericResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for AMI_genericHandler.
@@ -637,7 +627,6 @@ TAO::Objref_Traits<AMI_genericHandler>::marshal (const AMI_genericHandler_ptr p,
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -747,7 +736,6 @@ AMI_genericHandler::op_reply_stub (
       break;
   }
 }
-
 void
 AMI_genericHandler::op_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -860,7 +848,6 @@ AMI_genericHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 OBV_AMH_genericExceptionHolder::~OBV_AMH_genericExceptionHolder ()
 {}
 
@@ -875,7 +862,6 @@ OBV_AMH_genericExceptionHolder::_tao_unmarshal__AMH_genericExceptionHolder (TAO_
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -898,7 +884,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -984,7 +969,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1017,7 +1001,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_genericExceptionHolder * vt)
@@ -1038,7 +1021,6 @@ CORBA::remove_ref (AMH_genericExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1068,7 +1050,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_genericExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -1086,7 +1067,6 @@ OBV_AMH_genericExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

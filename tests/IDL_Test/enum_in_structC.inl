@@ -26,7 +26,6 @@
 #include <new>
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -76,7 +75,6 @@ TAO::Array_Traits<decl_heavy_struct::_m_en_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -130,11 +128,9 @@ TAO::Array_Traits<decl_heavy_struct::_m_st_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 // *************************************************************
 // Inline operations for union decl_heavy_struct::un
 // *************************************************************
-
 ACE_INLINE
 void
 decl_heavy_struct::un::_default ()
@@ -180,7 +176,6 @@ decl_heavy_struct::un::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -204,7 +199,6 @@ decl_heavy_struct::un::a () const
     }
   return this->u_.a_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -228,7 +222,6 @@ decl_heavy_struct::un::b () const
     }
   return this->u_.b_;
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL

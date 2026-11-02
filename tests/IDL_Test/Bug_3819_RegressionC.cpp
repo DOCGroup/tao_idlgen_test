@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "Bug_3819_RegressionC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"

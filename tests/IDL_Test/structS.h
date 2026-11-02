@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_STRUCTS_MEPOLM_H_
-#define _TAO_IDL_STRUCTS_MEPOLM_H_
+#ifndef _TAO_IDL_STRUCTS_5IKQSP_H_
+#define _TAO_IDL_STRUCTS_5IKQSP_H_
 
 #include /**/ "ace/pre.h"
 
@@ -46,14 +45,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -74,7 +71,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::Test::S1>
     : public
@@ -84,7 +80,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -98,7 +93,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Test::S3>
     : public
@@ -108,7 +102,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -122,7 +115,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Test::TS5Seq>
     : public
@@ -132,7 +124,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -146,7 +137,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Test::S5>
     : public
@@ -158,7 +148,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Test::FooStruct>
     : public
@@ -168,7 +157,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -226,7 +214,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Test::S10>
     : public
@@ -236,7 +223,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -253,10 +239,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_Test
 {
-
 
 
 

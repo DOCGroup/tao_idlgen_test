@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_OLD_UNIONC_R0XI2W_H_
-#define _TAO_IDL_OLD_UNIONC_R0XI2W_H_
+#ifndef _TAO_IDL_OLD_UNIONC_H7HQRG_H_
+#define _TAO_IDL_OLD_UNIONC_H7HQRG_H_
 
 #include /**/ "ace/pre.h"
 
@@ -65,7 +64,6 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -77,10 +75,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace OldUnion
 {
-
 
 
   struct Bar;
@@ -90,10 +86,8 @@ namespace OldUnion
 
 
 
-
   struct TAO_IDL_TEST_STUB_Export Bar
   {
-
 
     using _var_type = Bar_var;
     using _out_type = Bar_out;
@@ -103,9 +97,7 @@ namespace OldUnion
     ::CORBA::Long b1 {};
     ::CORBA::Char b2 {};
   };
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Bar;
-
 
 
   class Foo;
@@ -122,10 +114,8 @@ namespace OldUnion
     Foo &operator= (Foo const &);
 
 
-
     void _d ( ::CORBA::Long);
     ::CORBA::Long _d () const;
-
 
     using _var_type = Foo_var;
     using _out_type = Foo_out;
@@ -133,16 +123,13 @@ namespace OldUnion
     static void _tao_any_destructor (void *);
 
 
-
     void x ( ::CORBA::Long);
     ::CORBA::Long x () const;
-
 
 
     void y (OldUnion::Bar const &);
     OldUnion::Bar const &y () const;
     OldUnion::Bar &y ();
-
 
 
     void z ( ::CORBA::Char);
@@ -155,12 +142,9 @@ namespace OldUnion
     {
       _tao_union_storage () {}
 
-
       ::CORBA::Long x_;
 
-
       OldUnion::Bar y_;
-
 
       ::CORBA::Char z_;
     } u_;
@@ -168,9 +152,7 @@ namespace OldUnion
     /// TAO extension - frees any allocated storage.
     void _reset ();
   };
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Foo;
-
 
 
   class Foo2;
@@ -187,10 +169,8 @@ namespace OldUnion
     Foo2 &operator= (Foo2 const &);
 
 
-
     void _d ( ::CORBA::Char);
     ::CORBA::Char _d () const;
-
 
     using _var_type = Foo2_var;
     using _out_type = Foo2_out;
@@ -198,16 +178,13 @@ namespace OldUnion
     static void _tao_any_destructor (void *);
 
 
-
     void x ( ::CORBA::Long);
     ::CORBA::Long x () const;
-
 
 
     void y (OldUnion::Foo const &);
     OldUnion::Foo const &y () const;
     OldUnion::Foo &y ();
-
 
 
     void _default ();
@@ -219,9 +196,7 @@ namespace OldUnion
     {
       _tao_union_storage () {}
 
-
       ::CORBA::Long x_;
-
 
       OldUnion::Foo *y_;
     } u_;
@@ -229,9 +204,7 @@ namespace OldUnion
     /// TAO extension - frees any allocated storage.
     void _reset ();
   };
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Foo2;
-
 
 
 #if !defined (_OLDUNION_A__VAR_OUT_CH_)
@@ -250,13 +223,11 @@ namespace OldUnion
 
 
 
-
   class TAO_IDL_TEST_STUB_Export a
     : public virtual ::CORBA::Object
   {
   public:
     friend class TAO::Narrow_Utils<a>;
-
     using _ptr_type = a_ptr;
     using _var_type = a_var;
     using _out_type = a_out;
@@ -273,7 +244,6 @@ namespace OldUnion
     static a_ptr _nil ();
 
 
-
     struct astruct;
     using astruct_var = ::TAO_Fixed_Var_T<astruct>;
     using astruct_out = astruct&;
@@ -281,10 +251,8 @@ namespace OldUnion
 
 
 
-
     struct TAO_IDL_TEST_STUB_Export astruct
     {
-
 
       using _var_type = astruct_var;
       using _out_type = astruct_out;
@@ -299,7 +267,6 @@ namespace OldUnion
       OldUnion::Foo a2 {};
       OldUnion::Bar a3 {};
     };
-
     static ::CORBA::TypeCode_ptr const _tc_astruct;
 
     virtual ::OldUnion::Foo2 opA (
@@ -308,7 +275,6 @@ namespace OldUnion
     virtual void sendc_opA (
       ::OldUnion::AMI_aHandler_ptr ami_handler,
       const ::OldUnion::a::astruct & b);
-
 
 
 
@@ -342,9 +308,7 @@ namespace OldUnion
     a &operator= (const a &) = delete;
     a &operator= (a &&) = delete;
   };
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_a;
-
 
 
 #if !defined (_OLDUNION_AMH_AEXCEPTIONHOLDER__VAR_OUT_CH_)
@@ -357,12 +321,10 @@ namespace OldUnion
 #endif /* end #if !defined */
 
 
-
   class TAO_IDL_TEST_STUB_Export AMH_aExceptionHolder
     : public virtual ::CORBA::DefaultValueRefCountBase
   {
   public:
-
     using _ptr_type = AMH_aExceptionHolder*;
     using _var_type = AMH_aExceptionHolder_var;
     using _out_type = AMH_aExceptionHolder_out;
@@ -393,16 +355,13 @@ namespace OldUnion
 
   public:
 
-
   public:
     virtual void raise_opA ();
 
 public:
 
-
 public:
   virtual void raise_sendc_opA ();
-
 
 
 protected:
@@ -424,9 +383,7 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__OldUnion_AMH_aExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_aExceptionHolder;
-
 
 
 #if !defined (_OLDUNION_AMH_ARESPONSEHANDLER__VAR_OUT_CH_)
@@ -445,12 +402,10 @@ using AMH_aResponseHandler_out = TAO_Objref_Out_T<AMH_aResponseHandler>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMH_aResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-
   using _ptr_type = AMH_aResponseHandler_ptr;
   using _var_type = AMH_aResponseHandler_var;
   using _out_type = AMH_aResponseHandler_out;
@@ -471,7 +426,6 @@ public:
 
   virtual void opA_excep (
     ::OldUnion::AMH_aExceptionHolder * holder) = 0;
-
 
 
 
@@ -497,9 +451,7 @@ private:
   AMH_aResponseHandler &operator= (const AMH_aResponseHandler &) = delete;
   AMH_aResponseHandler &operator= (AMH_aResponseHandler &&) = delete;
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_aResponseHandler;
-
 
 
 #if !defined (_OLDUNION_AMI_AHANDLER__VAR_OUT_CH_)
@@ -515,14 +467,12 @@ using AMI_aHandler_out = TAO_Objref_Out_T<AMI_aHandler>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMI_aHandler
   : public virtual ::Messaging::ReplyHandler
 
 {
 public:
   friend class TAO::Narrow_Utils<AMI_aHandler>;
-
   using _ptr_type = AMI_aHandler_ptr;
   using _var_type = AMI_aHandler_var;
   using _out_type = AMI_aHandler_out;
@@ -549,7 +499,6 @@ public:
 
   virtual void opA_excep (
     ::Messaging::ExceptionHolder * excep_holder);
-
 
 
 
@@ -583,14 +532,11 @@ private:
   AMI_aHandler &operator= (const AMI_aHandler &) = delete;
   AMI_aHandler &operator= (AMI_aHandler &&) = delete;
 };
-
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_aHandler;
 
 
 
-
 } // module OldUnion
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -599,7 +545,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -621,7 +566,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::OldUnion::Bar>
     : public
@@ -631,7 +575,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -645,7 +588,6 @@ namespace TAO
   };
 
 
-
   template<>
   class Arg_Traits< ::OldUnion::Foo2>
     : public
@@ -655,7 +597,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_OLDUNION_A__ARG_TRAITS_)
@@ -675,7 +616,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::OldUnion::a::astruct>
     : public
@@ -685,7 +625,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_OLDUNION_AMH_AEXCEPTIONHOLDER__ARG_TRAITS_)
@@ -705,7 +644,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDUNION_AMI_AHANDLER__ARG_TRAITS_)
@@ -728,10 +666,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace OBV_OldUnion
 {
-
 
 
   // OBV_ class
@@ -758,7 +694,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -826,7 +761,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -838,7 +772,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -847,7 +780,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion::Foo*); // n
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldUnion::Foo const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -866,7 +798,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -875,7 +806,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion::a_ptr *); /
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldUnion::a_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -890,7 +820,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -899,7 +828,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion::AMH_aExcept
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldUnion::AMH_aExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -922,7 +850,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -931,7 +858,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion::AMI_aHandle
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldUnion::AMI_aHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -944,14 +870,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldUnion::Foo const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldUnion::Foo &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -967,14 +891,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldUnion::a_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldUnion::a_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -987,7 +909,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 namespace CORBA
@@ -996,7 +917,6 @@ namespace CORBA
   extern TAO_IDL_TEST_STUB_Export void remove_ref (OldUnion::AMH_aExceptionHolder *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1012,14 +932,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldUnion::AMI_aHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldUnion::AMI_aHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

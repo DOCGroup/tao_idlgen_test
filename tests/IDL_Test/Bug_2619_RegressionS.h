@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_1563SU_H_
-#define _TAO_IDL_BUG_2619_REGRESSIONS_1563SU_H_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_AB6IKT_H_
+#define _TAO_IDL_BUG_2619_REGRESSIONS_AB6IKT_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::Type_T>
     : public
@@ -90,7 +86,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_T_DATA_T__SARG_TRAITS_)
@@ -111,7 +106,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_TEST__SARG_TRAITS_)
 #define _TEST__SARG_TRAITS_
 
@@ -126,7 +120,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_TESTEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -147,7 +140,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_TESTHANDLER__SARG_TRAITS_)
 #define _AMI_TESTHANDLER__SARG_TRAITS_
 
@@ -165,7 +157,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 class POA_AMH_Test;
@@ -191,7 +182,6 @@ public:
   Test *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void getGroup_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -202,7 +192,6 @@ virtual void getGroup (
   ) = 0;
 
 };
-
 
 
 
@@ -236,7 +225,6 @@ public:
   ::Test *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::Test::Group * getGroup () = 0;
 
   static void getGroup_skel (
@@ -244,7 +232,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -255,7 +242,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_Test_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_Test_Direct_Proxy_Impl ();
-
   static void
   getGroup (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -265,7 +251,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class POA_TAO_AMH_TestResponseHandler;
@@ -278,14 +263,11 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_TestResponseHandler
 public:
   POA_TAO_AMH_TestResponseHandler () = default;
   virtual ~POA_TAO_AMH_TestResponseHandler () = default;
-
   void getGroup (
     const ::Test::Group & return_value) override;
-
   void getGroup_excep (
     ::AMH_TestExceptionHolder * holder) override;
 };
-
 
 
 
@@ -319,7 +301,6 @@ public:
   ::AMI_TestHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void getGroup (
     const ::Test::Group & ami_return_val) = 0;
 
@@ -327,7 +308,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void getGroup_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -336,7 +316,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -348,11 +327,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_TestHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_TestHandler_Direct_Proxy_Impl ();
-
   static void
   getGroup (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   getGroup_excep (

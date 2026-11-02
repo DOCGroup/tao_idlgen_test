@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "fullC.h"
 #include <memory>
 #include <new>
@@ -51,12 +50,11 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "fullC.inl"
 #endif /* !defined INLINE */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -170,7 +168,6 @@ scope_test::i_scope_test::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_scope_test_i_scope_test (
@@ -183,7 +180,6 @@ namespace scope_test
 {
   ::CORBA::TypeCode_ptr const _tc_i_scope_test = std::addressof(_tao_tc_scope_test_i_scope_test);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_scope_test_AMH_i_scope_testExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -203,7 +199,6 @@ namespace scope_test
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_i_scope_testExceptionHolder = std::addressof(_tao_tc_scope_test_AMH_i_scope_testExceptionHolder);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -348,7 +343,6 @@ scope_test::AMH_i_scope_testExceptionHolder::_tao_unmarshal (
 }
 
 
-
 scope_test::AMH_i_scope_testExceptionHolder_init::AMH_i_scope_testExceptionHolder_init ()
 {
 }
@@ -379,7 +373,6 @@ scope_test::AMH_i_scope_testExceptionHolder_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -496,7 +489,6 @@ scope_test::AMH_i_scope_testResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_scope_test_AMH_i_scope_testResponseHandler (
@@ -509,7 +501,6 @@ namespace scope_test
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_i_scope_testResponseHandler = std::addressof(_tao_tc_scope_test_AMH_i_scope_testResponseHandler);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -624,7 +615,6 @@ scope_test::AMI_i_scope_testHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_scope_test_AMI_i_scope_testHandler (
@@ -637,7 +627,6 @@ namespace scope_test
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_i_scope_testHandler = std::addressof(_tao_tc_scope_test_AMI_i_scope_testHandler);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -668,7 +657,6 @@ TAO::Objref_Traits<mod2::fwd>::marshal (const mod2::fwd_ptr p,TAO_OutputCDR & cd
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 char *
@@ -703,7 +691,6 @@ mod2::fwd::attr ()
 
   return _tao_retval.retn ();
 }
-
 void
 mod2::fwd::attr (
   const char * attr)
@@ -734,7 +721,6 @@ mod2::fwd::attr (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 
 
 mod2::fwd::un::un ()
@@ -837,7 +823,6 @@ void mod2::fwd::un::_reset ()
   }
 }
 
-
 namespace mod2
 {
   extern ::CORBA::TypeCode_ptr const _tc_full;
@@ -866,27 +851,17 @@ static TAO::TypeCode::Union<char const *,
 
 
 
-
 #if !defined (_MOD2_FWD_FULL_SEQ_CS_)
 #define _MOD2_FWD_FULL_SEQ_CS_
 
-mod2::fwd::full_seq::full_seq (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_object_reference_sequence<
-        mod2::full,
-        mod2::full_var
-      > (max)
-{}
+mod2::fwd::full_seq::full_seq (::CORBA::ULong max)
+  : ::TAO::unbounded_object_reference_sequence<mod2::full, mod2::full_var> (max) {}
 
-mod2::fwd::full_seq::full_seq (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    mod2::full_ptr * buffer,
-    ::CORBA::Boolean release)
-  : ::TAO::unbounded_object_reference_sequence<
-        mod2::full,
-        mod2::full_var
-      >
+mod2::fwd::full_seq::full_seq (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  mod2::full_ptr * buffer,
+  ::CORBA::Boolean release)
+  : ::TAO::unbounded_object_reference_sequence<mod2::full, mod2::full_var>
     (max, length, buffer, release)
 {}
 
@@ -898,8 +873,6 @@ void mod2::fwd::full_seq::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
-
 
 
 namespace mod2
@@ -918,17 +891,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        mod2_fwd_full_seq_0 (
-          ::CORBA::tk_sequence,
-          &mod2::_tc_full,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> mod2_fwd_full_seq_0 (
+        ::CORBA::tk_sequence, &mod2::_tc_full, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_mod2_fwd_full_seq_0 =
-        &mod2_fwd_full_seq_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_mod2_fwd_full_seq_0 =
+      &mod2_fwd_full_seq_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -945,7 +914,6 @@ static TAO::TypeCode::Alias<char const *,
     &TAO::TypeCode::tc_mod2_fwd_full_seq_0);
 
 ::CORBA::TypeCode_ptr const mod2::fwd::_tc_full_seq = std::addressof(_tao_tc_mod2_fwd_full_seq);
-
 mod2::fwd::bar::bar ()
   : ::CORBA::UserException (
         "IDL:mod2/fwd/bar:1.0",
@@ -1026,7 +994,6 @@ void mod2::fwd::bar::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::mod2::fwd::_tc_bar;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
@@ -1047,7 +1014,6 @@ _tao_tc_mod2_fwd_bar (
   0);
 
 ::CORBA::TypeCode_ptr const mod2::fwd::_tc_bar = std::addressof(_tao_tc_mod2_fwd_bar);
-
 ::mod2::full_ptr
 mod2::fwd::op (
   ::mod2::full_ptr & full_arg,
@@ -1103,7 +1069,6 @@ mod2::fwd::op (
 }
 
 
-
 void
 mod2::fwd::sendc_set_attr (
   ::mod2::AMI_fwdHandler_ptr ami_handler,
@@ -1141,7 +1106,6 @@ mod2::fwd::sendc_set_attr (
 }
 
 
-
 void
 mod2::fwd::sendc_get_attr (
   ::mod2::AMI_fwdHandler_ptr ami_handler)
@@ -1169,7 +1133,6 @@ mod2::fwd::sendc_get_attr (
       &mod2::AMI_fwdHandler::get_attr_reply_stub
     );
 }
-
 
 
 void
@@ -1294,7 +1257,6 @@ mod2::fwd::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_mod2_fwd (
@@ -1307,7 +1269,6 @@ namespace mod2
 {
   ::CORBA::TypeCode_ptr const _tc_fwd = std::addressof(_tao_tc_mod2_fwd);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_mod2_AMH_fwdExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -1327,7 +1288,6 @@ namespace mod2
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_fwdExceptionHolder = std::addressof(_tao_tc_mod2_AMH_fwdExceptionHolder);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1470,14 +1430,12 @@ mod2::AMH_fwdExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 mod2::AMH_fwdExceptionHolder::raise_get_attr ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 mod2::AMH_fwdExceptionHolder::raise_set_attr ()
@@ -1486,14 +1444,12 @@ mod2::AMH_fwdExceptionHolder::raise_set_attr ()
   this->exception->_raise ();
 }
 
-
 void
 mod2::AMH_fwdExceptionHolder::raise_op ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 mod2::AMH_fwdExceptionHolder::raise_sendc_set_attr ()
@@ -1502,7 +1458,6 @@ mod2::AMH_fwdExceptionHolder::raise_sendc_set_attr ()
   this->exception->_raise ();
 }
 
-
 void
 mod2::AMH_fwdExceptionHolder::raise_sendc_get_attr ()
 {
@@ -1510,14 +1465,12 @@ mod2::AMH_fwdExceptionHolder::raise_sendc_get_attr ()
   this->exception->_raise ();
 }
 
-
 void
 mod2::AMH_fwdExceptionHolder::raise_sendc_op ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1635,7 +1588,6 @@ mod2::AMH_fwdResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_mod2_AMH_fwdResponseHandler (
@@ -1648,7 +1600,6 @@ namespace mod2
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_fwdResponseHandler = std::addressof(_tao_tc_mod2_AMH_fwdResponseHandler);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1679,7 +1630,6 @@ TAO::Objref_Traits<mod2::AMI_fwdHandler>::marshal (const mod2::AMI_fwdHandler_pt
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -1775,7 +1725,6 @@ mod2::AMI_fwdHandler::get_attr_reply_stub (
       break;
   }
 }
-
 void
 mod2::AMI_fwdHandler::get_attr_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1806,7 +1755,6 @@ mod2::AMI_fwdHandler::get_attr_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 mod2::AMI_fwdHandler::set_attr ()
 {
@@ -1892,7 +1840,6 @@ mod2::AMI_fwdHandler::set_attr_reply_stub (
       break;
   }
 }
-
 void
 mod2::AMI_fwdHandler::set_attr_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1923,7 +1870,6 @@ mod2::AMI_fwdHandler::set_attr_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 mod2::AMI_fwdHandler::op (
   ::mod2::full_ptr ami_return_val,
@@ -2065,7 +2011,6 @@ mod2::AMI_fwdHandler::op_reply_stub (
       break;
   }
 }
-
 void
 mod2::AMI_fwdHandler::op_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2193,7 +2138,6 @@ mod2::AMI_fwdHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_mod2_AMI_fwdHandler (
@@ -2206,7 +2150,6 @@ namespace mod2
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_fwdHandler = std::addressof(_tao_tc_mod2_AMI_fwdHandler);
 }
-
 OBV_scope_test::AMH_i_scope_testExceptionHolder::~AMH_i_scope_testExceptionHolder ()
 {}
 
@@ -2232,7 +2175,6 @@ OBV_scope_test::AMH_i_scope_testExceptionHolder::_tao_unmarshal__scope_test_AMH_
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_mod2::AMH_fwdExceptionHolder::~AMH_fwdExceptionHolder ()
 {}
 
@@ -2247,7 +2189,6 @@ OBV_mod2::AMH_fwdExceptionHolder::_tao_unmarshal__mod2_AMH_fwdExceptionHolder (T
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2311,7 +2252,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2386,7 +2326,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2472,7 +2411,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2535,7 +2473,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2604,7 +2541,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2654,7 +2590,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2696,7 +2631,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2777,7 +2711,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2849,7 +2782,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2935,7 +2867,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -3001,7 +2932,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3034,7 +2964,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (scope_test::AMH_i_scope_testExceptionHolder * vt)
@@ -3055,7 +2984,6 @@ CORBA::remove_ref (scope_test::AMH_i_scope_testExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3085,7 +3013,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_scope_test::AMH_i_scope_testExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -3103,7 +3030,6 @@ OBV_scope_test::AMH_i_scope_testExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -3135,7 +3061,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3208,7 +3133,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 #if !defined _TAO_CDR_OP_mod2_fwd_full_seq_CPP_
 #define _TAO_CDR_OP_mod2_fwd_full_seq_CPP_
 
@@ -3233,7 +3157,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_mod2_fwd_full_seq_CPP_ */
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -3254,7 +3177,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3290,7 +3212,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (mod2::AMH_fwdExceptionHolder * vt)
@@ -3311,7 +3232,6 @@ CORBA::remove_ref (mod2::AMH_fwdExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3341,7 +3261,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_mod2::AMH_fwdExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -3359,7 +3278,6 @@ OBV_mod2::AMH_fwdExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ARRAY_ONLYS_X2YNZY_H_
-#define _TAO_IDL_ARRAY_ONLYS_X2YNZY_H_
+#ifndef _TAO_IDL_ARRAY_ONLYS_12FWHY_H_
+#define _TAO_IDL_ARRAY_ONLYS_12FWHY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -45,14 +44,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)

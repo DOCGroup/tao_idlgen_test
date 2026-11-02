@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 OldConstants::M::A::A (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ OldConstants::M::A::A (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldConstants::M::AMH_AExceptionHolder::AMH_AExceptionHolder ()
   : exception (nullptr)
@@ -53,7 +51,6 @@ OldConstants::M::AMH_AExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldConstants/M/AMH_AExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_TESTC_C99A6K_H_
-#define _TAO_IDL_TESTC_C99A6K_H_
+#ifndef _TAO_IDL_TESTC_E75JMU_H_
+#define _TAO_IDL_TESTC_E75JMU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -57,7 +56,6 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -69,10 +67,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace Test
 {
-
 
 
 #if !defined (_TEST_HELLO__VAR_OUT_CH_)
@@ -88,13 +84,11 @@ namespace Test
 
 
 
-
   class  Hello
     : public virtual ::CORBA::Object
   {
   public:
     friend class TAO::Narrow_Utils<Hello>;
-
     using _ptr_type = Hello_ptr;
     using _var_type = Hello_var;
     using _out_type = Hello_out;
@@ -111,7 +105,6 @@ namespace Test
     virtual char * get_string ();
 
     virtual void shutdown ();
-
 
 
 
@@ -146,9 +139,7 @@ namespace Test
 
 
 
-
 } // module Test
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -157,7 +148,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_TEST_HELLO__ARG_TRAITS_)
@@ -178,7 +168,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -210,14 +199,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
  ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::Hello_ptr );
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::Hello_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

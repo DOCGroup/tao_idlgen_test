@@ -26,7 +26,6 @@
 #include <new>
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -79,7 +78,6 @@ TAO::Array_Traits<TwoDArray_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -138,7 +136,6 @@ TAO::Array_Traits<ThreeDArray_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -203,7 +200,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -253,7 +249,6 @@ TAO::Array_Traits<inside_array_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -309,7 +304,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -359,7 +353,6 @@ TAO::Array_Traits<oa1_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -415,7 +408,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 ACE_INLINE
 array_args::array_args (
     TAO_Stub *objref,
@@ -433,7 +425,6 @@ array_args::array_args (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_array_argsExceptionHolder::AMH_array_argsExceptionHolder ()
   : exception (nullptr)
@@ -446,7 +437,6 @@ AMH_array_argsExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_array_argsHandler::AMI_array_argsHandler (
     TAO_Stub *objref,
@@ -464,7 +454,6 @@ AMI_array_argsHandler::AMI_array_argsHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -519,7 +508,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -569,7 +557,6 @@ TAO::Array_Traits<string_array::ArrayOfMyString_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -661,7 +648,6 @@ testdata::ArrayDeChar_free (
 
 
 
-
 ACE_INLINE
 testdata::testdata (
     TAO_Stub *objref,
@@ -679,7 +665,6 @@ testdata::testdata (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_testdataExceptionHolder::AMH_testdataExceptionHolder ()
   : exception (nullptr)
@@ -692,7 +677,6 @@ AMH_testdataExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_testdataHandler::AMI_testdataHandler (
     TAO_Stub *objref,
@@ -710,7 +694,6 @@ AMI_testdataHandler::AMI_testdataHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -762,7 +745,6 @@ TAO::Array_Traits<arraytest::myvec2_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -818,7 +800,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 ACE_INLINE
 arraytest::MyTest::MyTest (
     TAO_Stub *objref,
@@ -836,7 +817,6 @@ arraytest::MyTest::MyTest (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 arraytest::AMH_MyTestExceptionHolder::AMH_MyTestExceptionHolder ()
   : exception (nullptr)
@@ -849,7 +829,6 @@ arraytest::AMH_MyTestExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 arraytest::AMI_MyTestHandler::AMI_MyTestHandler (
     TAO_Stub *objref,
@@ -867,11 +846,9 @@ arraytest::AMI_MyTestHandler::AMI_MyTestHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 // *************************************************************
 // Inline operations for union bug_2126::FirstUnion
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -903,7 +880,6 @@ bug_2126::FirstUnion::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -927,7 +903,6 @@ bug_2126::FirstUnion::first_union_foo () const
     }
   return this->u_.first_union_foo_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -951,7 +926,6 @@ bug_2126::FirstUnion::first_union_bar () const
     }
   return this->u_.first_union_bar_;
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1004,11 +978,9 @@ TAO::Array_Traits<bug_2126::FirstUnionArray_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 // *************************************************************
 // Inline operations for union bug_2126::SecondUnion
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1040,7 +1012,6 @@ bug_2126::SecondUnion::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -1078,7 +1049,6 @@ bug_2126::SecondUnion::second_union_struct_member ()
     }
   return *this->u_.second_union_struct_member_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1102,7 +1072,6 @@ bug_2126::SecondUnion::wibble () const
     }
   return this->u_.wibble_;
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1155,11 +1124,9 @@ TAO::Array_Traits<bug_2126::BdFirstUnionArray_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 // *************************************************************
 // Inline operations for union bug_2126::BdSecondUnion
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1191,7 +1158,6 @@ bug_2126::BdSecondUnion::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -1229,7 +1195,6 @@ bug_2126::BdSecondUnion::second_union_struct_member ()
     }
   return *this->u_.second_union_struct_member_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1253,7 +1218,6 @@ bug_2126::BdSecondUnion::wibble () const
     }
   return this->u_.wibble_;
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1311,7 +1275,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1361,7 +1324,6 @@ TAO::Array_Traits<B42_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1415,11 +1377,9 @@ TAO::Array_Traits<B43_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 // *************************************************************
 // Inline operations for union B85
 // *************************************************************
-
 ACE_INLINE
 void
 B85::_default ()
@@ -1467,7 +1427,6 @@ B85::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1491,7 +1450,6 @@ B85::b_85_1 () const
     }
   return this->u_.b_85_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1515,7 +1473,6 @@ B85::b_85_2 () const
     }
   return this->u_.b_85_2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void

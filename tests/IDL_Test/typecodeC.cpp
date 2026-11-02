@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "typecodeC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -33,7 +32,7 @@
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Valuetype/ValueFactory.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "typecodeC.inl"
@@ -42,27 +41,17 @@
 
 
 
-
 #if !defined (_MYMODULE_TYPECODELIST_CS_)
 #define _MYMODULE_TYPECODELIST_CS_
 
-MyModule::TypeCodeList::TypeCodeList (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_object_reference_sequence<
-        ::CORBA::TypeCode,
-        ::CORBA::TypeCode_var
-      > (max)
-{}
+MyModule::TypeCodeList::TypeCodeList (::CORBA::ULong max)
+  : ::TAO::unbounded_object_reference_sequence<::CORBA::TypeCode, ::CORBA::TypeCode_var> (max) {}
 
-MyModule::TypeCodeList::TypeCodeList (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    ::CORBA::TypeCode_ptr * buffer,
-    ::CORBA::Boolean release)
-  : ::TAO::unbounded_object_reference_sequence<
-        ::CORBA::TypeCode,
-        ::CORBA::TypeCode_var
-      >
+MyModule::TypeCodeList::TypeCodeList (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  ::CORBA::TypeCode_ptr * buffer,
+  ::CORBA::Boolean release)
+  : ::TAO::unbounded_object_reference_sequence<::CORBA::TypeCode, ::CORBA::TypeCode_var>
     (max, length, buffer, release)
 {}
 
@@ -74,7 +63,6 @@ void MyModule::TypeCodeList::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
 #if !defined _TAO_CDR_OP_MyModule_TypeCodeList_CPP_
 #define _TAO_CDR_OP_MyModule_TypeCodeList_CPP_
 

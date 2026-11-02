@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_PRIMTYPESC_2E58IR_H_
-#define _TAO_IDL_PRIMTYPESC_2E58IR_H_
+#ifndef _TAO_IDL_PRIMTYPESC_KDGYW2_H_
+#define _TAO_IDL_PRIMTYPESC_KDGYW2_H_
 
 #include /**/ "ace/pre.h"
 
@@ -63,7 +62,6 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -75,10 +73,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace OldPrimTypes
 {
-
 
 
 #if !defined (_OLDPRIMTYPES_EX1__VAR_OUT_CH_)
@@ -97,13 +93,11 @@ namespace OldPrimTypes
 
 
 
-
   class TAO_IDL_TEST_STUB_Export ex1
     : public virtual ::CORBA::Object
   {
   public:
     friend class TAO::Narrow_Utils<ex1>;
-
     using _ptr_type = ex1_ptr;
     using _var_type = ex1_var;
     using _out_type = ex1_out;
@@ -181,7 +175,6 @@ namespace OldPrimTypes
 
 
 
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     static const char* _desc_repository_id ();
@@ -213,7 +206,6 @@ namespace OldPrimTypes
   };
 
 
-
 #if !defined (_OLDPRIMTYPES_AMH_EX1EXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _OLDPRIMTYPES_AMH_EX1EXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -224,12 +216,10 @@ namespace OldPrimTypes
 #endif /* end #if !defined */
 
 
-
   class TAO_IDL_TEST_STUB_Export AMH_ex1ExceptionHolder
     : public virtual ::CORBA::DefaultValueRefCountBase
   {
   public:
-
     using _ptr_type = AMH_ex1ExceptionHolder*;
     using _var_type = AMH_ex1ExceptionHolder_var;
     using _out_type = AMH_ex1ExceptionHolder_out;
@@ -260,52 +250,43 @@ namespace OldPrimTypes
 
   public:
 
-
   public:
     virtual void raise_get_l1 ();
 
 public:
-
 
 public:
   virtual void raise_set_l1 ();
 
 public:
 
-
 public:
   virtual void raise_m1 ();
 
 public:
-
 
 public:
   virtual void raise_mtypes ();
 
 public:
 
-
 public:
   virtual void raise_sendc_set_l1 ();
 
 public:
-
 
 public:
   virtual void raise_sendc_get_l1 ();
 
 public:
 
-
 public:
   virtual void raise_sendc_m1 ();
 
 public:
 
-
 public:
   virtual void raise_sendc_mtypes ();
-
 
 
 protected:
@@ -329,7 +310,6 @@ protected:
 };
 
 
-
 #if !defined (_OLDPRIMTYPES_AMH_EX1RESPONSEHANDLER__VAR_OUT_CH_)
 #define _OLDPRIMTYPES_AMH_EX1RESPONSEHANDLER__VAR_OUT_CH_
 
@@ -346,12 +326,10 @@ using AMH_ex1ResponseHandler_out = TAO_Objref_Out_T<AMH_ex1ResponseHandler>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMH_ex1ResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-
   using _ptr_type = AMH_ex1ResponseHandler_ptr;
   using _var_type = AMH_ex1ResponseHandler_var;
   using _out_type = AMH_ex1ResponseHandler_out;
@@ -407,7 +385,6 @@ public:
 
 
 
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -431,7 +408,6 @@ private:
 };
 
 
-
 #if !defined (_OLDPRIMTYPES_AMI_EX1HANDLER__VAR_OUT_CH_)
 #define _OLDPRIMTYPES_AMI_EX1HANDLER__VAR_OUT_CH_
 
@@ -445,14 +421,12 @@ using AMI_ex1Handler_out = TAO_Objref_Out_T<AMI_ex1Handler>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMI_ex1Handler
   : public virtual ::Messaging::ReplyHandler
 
 {
 public:
   friend class TAO::Narrow_Utils<AMI_ex1Handler>;
-
   using _ptr_type = AMI_ex1Handler_ptr;
   using _var_type = AMI_ex1Handler_var;
   using _out_type = AMI_ex1Handler_out;
@@ -532,7 +506,6 @@ public:
 
 
 
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -564,7 +537,6 @@ private:
 };
 
 
-
 #if !defined (_OLDPRIMTYPES_EX2__VAR_OUT_CH_)
 #define _OLDPRIMTYPES_EX2__VAR_OUT_CH_
 
@@ -581,14 +553,12 @@ using ex2_out = TAO_Objref_Out_T<ex2>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export ex2
   : public virtual ::OldPrimTypes::ex1
 
 {
 public:
   friend class TAO::Narrow_Utils<ex2>;
-
   using _ptr_type = ex2_ptr;
   using _var_type = ex2_var;
   using _out_type = ex2_out;
@@ -625,7 +595,6 @@ public:
 
 
 
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -657,7 +626,6 @@ private:
 };
 
 
-
 #if !defined (_OLDPRIMTYPES_AMH_EX2EXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _OLDPRIMTYPES_AMH_EX2EXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -668,12 +636,10 @@ using AMH_ex2ExceptionHolder_out = TAO_Value_Out_T<AMH_ex2ExceptionHolder>;
 #endif /* end #if !defined */
 
 
-
 class TAO_IDL_TEST_STUB_Export AMH_ex2ExceptionHolder
   : public virtual ::CORBA::DefaultValueRefCountBase
 {
 public:
-
   using _ptr_type = AMH_ex2ExceptionHolder*;
   using _var_type = AMH_ex2ExceptionHolder_var;
   using _out_type = AMH_ex2ExceptionHolder_out;
@@ -704,40 +670,33 @@ public:
 
 public:
 
-
 public:
   virtual void raise_get_l2 ();
 
 public:
-
 
 public:
   virtual void raise_m2 ();
 
 public:
 
-
 public:
   virtual void raise_mv ();
 
 public:
-
 
 public:
   virtual void raise_sendc_get_l2 ();
 
 public:
 
-
 public:
   virtual void raise_sendc_m2 ();
 
 public:
 
-
 public:
   virtual void raise_sendc_mv ();
-
 
 
 protected:
@@ -761,7 +720,6 @@ protected:
 };
 
 
-
 #if !defined (_OLDPRIMTYPES_AMH_EX2RESPONSEHANDLER__VAR_OUT_CH_)
 #define _OLDPRIMTYPES_AMH_EX2RESPONSEHANDLER__VAR_OUT_CH_
 
@@ -778,12 +736,10 @@ using AMH_ex2ResponseHandler_out = TAO_Objref_Out_T<AMH_ex2ResponseHandler>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMH_ex2ResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-
   using _ptr_type = AMH_ex2ResponseHandler_ptr;
   using _var_type = AMH_ex2ResponseHandler_var;
   using _out_type = AMH_ex2ResponseHandler_out;
@@ -820,7 +776,6 @@ public:
 
 
 
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -844,7 +799,6 @@ private:
 };
 
 
-
 #if !defined (_OLDPRIMTYPES_AMI_EX2HANDLER__VAR_OUT_CH_)
 #define _OLDPRIMTYPES_AMI_EX2HANDLER__VAR_OUT_CH_
 
@@ -858,14 +812,12 @@ using AMI_ex2Handler_out = TAO_Objref_Out_T<AMI_ex2Handler>;
 
 
 
-
 class TAO_IDL_TEST_STUB_Export AMI_ex2Handler
   : public virtual ::OldPrimTypes::AMI_ex1Handler
 
 {
 public:
   friend class TAO::Narrow_Utils<AMI_ex2Handler>;
-
   using _ptr_type = AMI_ex2Handler_ptr;
   using _var_type = AMI_ex2Handler_var;
   using _out_type = AMI_ex2Handler_out;
@@ -920,7 +872,6 @@ public:
 
 
 
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -953,9 +904,7 @@ private:
 
 
 
-
 } // module OldPrimTypes
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -964,7 +913,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -986,7 +934,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDPRIMTYPES_EX1__ARG_TRAITS_)
 #define _OLDPRIMTYPES_EX1__ARG_TRAITS_
 
@@ -1002,7 +949,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDPRIMTYPES_AMH_EX1EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -1024,7 +970,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDPRIMTYPES_AMI_EX1HANDLER__ARG_TRAITS_)
 #define _OLDPRIMTYPES_AMI_EX1HANDLER__ARG_TRAITS_
 
@@ -1040,7 +985,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDPRIMTYPES_EX2__ARG_TRAITS_)
@@ -1060,7 +1004,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDPRIMTYPES_AMH_EX2EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _OLDPRIMTYPES_AMH_EX2EXCEPTIONHOLDER__ARG_TRAITS_
 
@@ -1078,7 +1021,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDPRIMTYPES_AMI_EX2HANDLER__ARG_TRAITS_)
@@ -1101,10 +1043,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace OBV_OldPrimTypes
 {
-
 
 
   // OBV_ class
@@ -1132,7 +1072,6 @@ private:
 };
 
 
-
 // OBV_ class
 class TAO_IDL_TEST_STUB_Export AMH_ex2ExceptionHolder
   : public virtual OldPrimTypes::AMH_ex2ExceptionHolder
@@ -1157,7 +1096,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1283,14 +1221,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldPrimTypes::ex1_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldPrimTypes::ex1_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1305,14 +1241,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldPrimTypes::AMH_ex1ExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldPrimTypes::AMH_ex1ExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1331,14 +1265,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldPrimTypes::ex2_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldPrimTypes::ex2_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1350,7 +1282,6 @@ namespace CORBA
   extern TAO_IDL_TEST_STUB_Export void remove_ref (OldPrimTypes::AMH_ex2ExceptionHolder *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1366,14 +1297,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldPrimTypes::AMI_ex2Handler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldPrimTypes::AMI_ex2Handler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

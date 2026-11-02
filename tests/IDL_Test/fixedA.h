@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_FIXEDA_KN2267_H_
-#define _TAO_IDL_FIXEDA_KN2267_H_
+#ifndef _TAO_IDL_FIXEDA_0G7ZSI_H_
+#define _TAO_IDL_FIXEDA_0G7ZSI_H_
 
 #include /**/ "ace/pre.h"
 
@@ -33,39 +32,24 @@
 
 #include "fixedC.h"
 
-
 namespace FixedPoint
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_WholeNumber;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Fraction;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Amount;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_MaximumDigits;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_MaximumScale;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_FixedValues;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_FixedOperations;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_FixedOperationsExceptionHolder;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_FixedOperationsResponseHandler;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_FixedOperationsHandler;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AmountAlias;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AmountAlias2;
 
 
 
-
 } // module FixedPoint
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -76,7 +60,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::FixedPoint::FixedVa
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::FixedPoint::FixedValues const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -95,7 +78,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -111,7 +93,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -120,7 +101,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FixedPoint::AMH_Fixed
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, FixedPoint::AMH_FixedOperationsResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

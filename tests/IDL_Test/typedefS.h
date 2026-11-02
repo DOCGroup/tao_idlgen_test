@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_TYPEDEFS_MNYBJT_H_
-#define _TAO_IDL_TYPEDEFS_MNYBJT_H_
+#ifndef _TAO_IDL_TYPEDEFS_AP15LN_H_
+#define _TAO_IDL_TYPEDEFS_AP15LN_H_
 
 #include /**/ "ace/pre.h"
 
@@ -56,14 +55,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -149,7 +146,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_TESTMODULE_TESTINTERFACE__SARG_TRAITS_)
 #define _TESTMODULE_TESTINTERFACE__SARG_TRAITS_
 
@@ -164,7 +160,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_TESTMODULE_AMH_TESTINTERFACEEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -183,7 +178,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_TESTMODULE_AMI_TESTINTERFACEHANDLER__SARG_TRAITS_)
@@ -234,7 +228,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_BUG_2124_FOO__SARG_TRAITS_)
 #define _BUG_2124_FOO__SARG_TRAITS_
 
@@ -249,7 +242,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_BUG_2124_AMH_FOOEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -268,7 +260,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_BUG_2124_AMI_FOOHANDLER__SARG_TRAITS_)
@@ -303,7 +294,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_BUG_2122_ONE_WHATEVER__SARG_TRAITS_)
 #define _BUG_2122_ONE_WHATEVER__SARG_TRAITS_
 
@@ -318,7 +308,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_BUG_2122_ONE_AMH_WHATEVEREXCEPTIONHOLDER__SARG_TRAITS_)
@@ -337,7 +326,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_BUG_2122_ONE_AMI_WHATEVERHANDLER__SARG_TRAITS_)
@@ -372,7 +360,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_BUG_2122_TWO_WHOCARES__SARG_TRAITS_)
 #define _BUG_2122_TWO_WHOCARES__SARG_TRAITS_
 
@@ -387,7 +374,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_BUG_2122_TWO_AMH_WHOCARESEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -406,7 +392,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_BUG_2122_TWO_AMI_WHOCARESHANDLER__SARG_TRAITS_)
@@ -441,7 +426,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_BUG_2122_THREE_WHOCARES__SARG_TRAITS_)
 #define _BUG_2122_THREE_WHOCARES__SARG_TRAITS_
 
@@ -456,7 +440,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_BUG_2122_THREE_AMH_WHOCARESEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -475,7 +458,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_BUG_2122_THREE_AMI_WHOCARESHANDLER__SARG_TRAITS_)
@@ -510,7 +492,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::CommaList::Foo>
     : public
@@ -520,7 +501,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -537,10 +517,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_TestModule
 {
-
 
   class AMH_TestInterface;
   using AMH_TestInterface_ptr = AMH_TestInterface *;
@@ -565,7 +543,6 @@ namespace POA_TestModule
     TestModule::TestInterface *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void set_typedef_1_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -575,7 +552,6 @@ namespace POA_TestModule
       TestModule::AMH_TestInterfaceResponseHandler_ptr _tao_rh,
       const char * typ1
     ) = 0;
-
 
   static void set_typedef_2_skel (
       TAO_ServerRequest &_tao_req,
@@ -588,7 +564,6 @@ namespace POA_TestModule
     ) = 0;
 
 };
-
 
 
 
@@ -622,7 +597,6 @@ public:
   ::TestModule::TestInterface *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void set_typedef_1 (
     const char * typ1) = 0;
 
@@ -630,7 +604,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_typedef_2 (
     const char * typ2) = 0;
 
@@ -641,7 +614,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -650,11 +622,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_TestInterface_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_TestInterface_Direct_Proxy_Impl ();
-
   static void
   set_typedef_1 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_typedef_2 (
@@ -667,7 +637,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_TestInterfaceResponseHandler;
 using TAO_AMH_TestInterfaceResponseHandler_ptr = TAO_AMH_TestInterfaceResponseHandler *;
 
@@ -678,18 +647,13 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_TestInterfaceResponseHandler
 public:
   TAO_AMH_TestInterfaceResponseHandler () = default;
   virtual ~TAO_AMH_TestInterfaceResponseHandler () = default;
-
   void set_typedef_1 () override;
-
   void set_typedef_1_excep (
     ::TestModule::AMH_TestInterfaceExceptionHolder * holder) override;
-
   void set_typedef_2 () override;
-
   void set_typedef_2_excep (
     ::TestModule::AMH_TestInterfaceExceptionHolder * holder) override;
 };
-
 
 
 
@@ -723,14 +687,12 @@ public:
   ::TestModule::AMI_TestInterfaceHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void set_typedef_1 () = 0;
 
   static void set_typedef_1_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_typedef_1_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -738,14 +700,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_typedef_2 () = 0;
 
   static void set_typedef_2_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_typedef_2_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -754,7 +714,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -766,21 +725,17 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_TestInterfaceHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_TestInterfaceHandler_Direct_Proxy_Impl ();
-
   static void
   set_typedef_1 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_typedef_1_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_typedef_2 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_typedef_2_excep (
@@ -795,12 +750,9 @@ public:
 
 
 
-
 } // module TestModule
-
 namespace POA_bug_2124
 {
-
 
   class AMH_Foo;
   using AMH_Foo_ptr = AMH_Foo *;
@@ -825,7 +777,6 @@ namespace POA_bug_2124
     bug_2124::Foo *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void op1_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -835,7 +786,6 @@ namespace POA_bug_2124
       bug_2124::AMH_FooResponseHandler_ptr _tao_rh,
       const char * s
     ) = 0;
-
 
   static void op2_skel (
       TAO_ServerRequest &_tao_req,
@@ -848,7 +798,6 @@ namespace POA_bug_2124
     ) = 0;
 
 };
-
 
 
 
@@ -882,7 +831,6 @@ public:
   ::bug_2124::Foo *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op1 (
     const char * s) = 0;
 
@@ -890,7 +838,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op2 (
     const char * s) = 0;
 
@@ -901,7 +848,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -910,11 +856,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_Foo_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_Foo_Direct_Proxy_Impl ();
-
   static void
   op1 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op2 (
@@ -927,7 +871,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_FooResponseHandler;
 using TAO_AMH_FooResponseHandler_ptr = TAO_AMH_FooResponseHandler *;
 
@@ -938,18 +881,13 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_FooResponseHandler
 public:
   TAO_AMH_FooResponseHandler () = default;
   virtual ~TAO_AMH_FooResponseHandler () = default;
-
   void op1 () override;
-
   void op1_excep (
     ::bug_2124::AMH_FooExceptionHolder * holder) override;
-
   void op2 () override;
-
   void op2_excep (
     ::bug_2124::AMH_FooExceptionHolder * holder) override;
 };
-
 
 
 
@@ -983,14 +921,12 @@ public:
   ::bug_2124::AMI_FooHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op1 () = 0;
 
   static void op1_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op1_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -998,14 +934,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op2 () = 0;
 
   static void op2_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op2_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1014,7 +948,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1026,21 +959,17 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_FooHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_FooHandler_Direct_Proxy_Impl ();
-
   static void
   op1 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op1_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op2 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op2_excep (
@@ -1055,16 +984,12 @@ public:
 
 
 
-
 } // module bug_2124
-
 namespace POA_bug_2122
 {
 
-
   namespace One
   {
-
 
     class AMH_Whatever;
     using AMH_Whatever_ptr = AMH_Whatever *;
@@ -1089,7 +1014,6 @@ namespace POA_bug_2122
       bug_2122::One::Whatever *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     static void someOp_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1101,7 +1025,6 @@ namespace POA_bug_2122
       ) = 0;
 
   };
-
 
 
 
@@ -1135,7 +1058,6 @@ namespace POA_bug_2122
     ::bug_2122::One::Whatever *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual void someOp (
       const char * s) = 0;
 
@@ -1146,7 +1068,6 @@ namespace POA_bug_2122
   };
 
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -1155,7 +1076,6 @@ namespace POA_bug_2122
   {
   public:
     virtual ~_TAO_Whatever_Direct_Proxy_Impl ();
-
     static void
     someOp (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -1165,7 +1085,6 @@ namespace POA_bug_2122
   //
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
-
 
 
   class TAO_AMH_WhateverResponseHandler;
@@ -1178,13 +1097,10 @@ namespace POA_bug_2122
   public:
     TAO_AMH_WhateverResponseHandler () = default;
     virtual ~TAO_AMH_WhateverResponseHandler () = default;
-
     void someOp () override;
-
     void someOp_excep (
       ::bug_2122::One::AMH_WhateverExceptionHolder * holder) override;
   };
-
 
 
 
@@ -1218,14 +1134,12 @@ namespace POA_bug_2122
     ::bug_2122::One::AMI_WhateverHandler *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual void someOp () = 0;
 
     static void someOp_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void someOp_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1234,7 +1148,6 @@ namespace POA_bug_2122
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
   ///////////////////////////////////////////////////////////////////////
@@ -1246,11 +1159,9 @@ namespace POA_bug_2122
   {
   public:
     virtual ~_TAO_AMI_WhateverHandler_Direct_Proxy_Impl ();
-
     static void
     someOp (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
     static void
     someOp_excep (
@@ -1265,12 +1176,9 @@ namespace POA_bug_2122
 
 
 
-
 } // module bug_2122::One
-
 namespace Two
 {
-
 
   class AMH_WhoCares;
   using AMH_WhoCares_ptr = AMH_WhoCares *;
@@ -1295,7 +1203,6 @@ namespace Two
     bug_2122::Two::WhoCares *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void someOp_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1307,7 +1214,6 @@ namespace Two
     ) = 0;
 
 };
-
 
 
 
@@ -1341,7 +1247,6 @@ public:
   ::bug_2122::Two::WhoCares *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void someOp (
     const char * s) = 0;
 
@@ -1352,7 +1257,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1361,7 +1265,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_WhoCares_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_WhoCares_Direct_Proxy_Impl ();
-
   static void
   someOp (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -1371,7 +1274,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_WhoCaresResponseHandler;
@@ -1384,13 +1286,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_WhoCaresResponseHandler
 public:
   TAO_AMH_WhoCaresResponseHandler () = default;
   virtual ~TAO_AMH_WhoCaresResponseHandler () = default;
-
   void someOp () override;
-
   void someOp_excep (
     ::bug_2122::Two::AMH_WhoCaresExceptionHolder * holder) override;
 };
-
 
 
 
@@ -1424,14 +1323,12 @@ public:
   ::bug_2122::Two::AMI_WhoCaresHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void someOp () = 0;
 
   static void someOp_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void someOp_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1440,7 +1337,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1452,11 +1348,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_WhoCaresHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_WhoCaresHandler_Direct_Proxy_Impl ();
-
   static void
   someOp (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   someOp_excep (
@@ -1471,12 +1365,9 @@ public:
 
 
 
-
 } // module bug_2122::Two
-
 namespace Three
 {
-
 
   class AMH_WhoCares;
   using AMH_WhoCares_ptr = AMH_WhoCares *;
@@ -1501,7 +1392,6 @@ namespace Three
     bug_2122::Three::WhoCares *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void someOp_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1513,7 +1403,6 @@ namespace Three
     ) = 0;
 
 };
-
 
 
 
@@ -1547,7 +1436,6 @@ public:
   ::bug_2122::Three::WhoCares *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void someOp (
     const char * s) = 0;
 
@@ -1558,7 +1446,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1567,7 +1454,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_WhoCares_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_WhoCares_Direct_Proxy_Impl ();
-
   static void
   someOp (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -1577,7 +1463,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_WhoCaresResponseHandler;
@@ -1590,13 +1475,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_WhoCaresResponseHandler
 public:
   TAO_AMH_WhoCaresResponseHandler () = default;
   virtual ~TAO_AMH_WhoCaresResponseHandler () = default;
-
   void someOp () override;
-
   void someOp_excep (
     ::bug_2122::Three::AMH_WhoCaresExceptionHolder * holder) override;
 };
-
 
 
 
@@ -1630,14 +1512,12 @@ public:
   ::bug_2122::Three::AMI_WhoCaresHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void someOp () = 0;
 
   static void someOp_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void someOp_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1646,7 +1526,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1658,11 +1537,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_WhoCaresHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_WhoCaresHandler_Direct_Proxy_Impl ();
-
   static void
   someOp (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   someOp_excep (
@@ -1677,24 +1554,18 @@ public:
 
 
 
-
 } // module bug_2122::Three
 
 
-
 } // module bug_2122
-
 namespace POA_First
 {
 
 
 
-
 } // module First
-
 namespace POA_CommaList
 {
-
 
 
 

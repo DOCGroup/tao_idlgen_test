@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_INHERITS_S0ZG76_H_
-#define _TAO_IDL_INHERITS_S0ZG76_H_
+#ifndef _TAO_IDL_INHERITS_W6MNSW_H_
+#define _TAO_IDL_INHERITS_W6MNSW_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDINHERIT_ONE__SARG_TRAITS_)
 #define _OLDINHERIT_ONE__SARG_TRAITS_
 
@@ -95,7 +91,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDINHERIT_AMH_ONEEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -116,7 +111,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDINHERIT_AMI_ONEHANDLER__SARG_TRAITS_)
 #define _OLDINHERIT_AMI_ONEHANDLER__SARG_TRAITS_
 
@@ -133,7 +127,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDINHERIT_TWO__SARG_TRAITS_)
 #define _OLDINHERIT_TWO__SARG_TRAITS_
 
@@ -148,7 +141,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDINHERIT_AMH_TWOEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -169,7 +161,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDINHERIT_AMI_TWOHANDLER__SARG_TRAITS_)
 #define _OLDINHERIT_AMI_TWOHANDLER__SARG_TRAITS_
 
@@ -186,7 +177,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDINHERIT_THREE__SARG_TRAITS_)
 #define _OLDINHERIT_THREE__SARG_TRAITS_
 
@@ -201,7 +191,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDINHERIT_AMH_THREEEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -222,7 +211,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDINHERIT_AMI_THREEHANDLER__SARG_TRAITS_)
 #define _OLDINHERIT_AMI_THREEHANDLER__SARG_TRAITS_
 
@@ -239,7 +227,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDINHERIT_FOUR__SARG_TRAITS_)
 #define _OLDINHERIT_FOUR__SARG_TRAITS_
 
@@ -254,7 +241,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDINHERIT_AMH_FOUREXCEPTIONHOLDER__SARG_TRAITS_)
@@ -275,7 +261,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDINHERIT_AMI_FOURHANDLER__SARG_TRAITS_)
 #define _OLDINHERIT_AMI_FOURHANDLER__SARG_TRAITS_
 
@@ -290,7 +275,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDINHERIT_FIVE__SARG_TRAITS_)
@@ -309,7 +293,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDINHERIT_AMH_FIVEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDINHERIT_AMH_FIVEEXCEPTIONHOLDER__SARG_TRAITS_
 
@@ -326,7 +309,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDINHERIT_AMI_FIVEHANDLER__SARG_TRAITS_)
@@ -348,10 +330,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_OldInherit
 {
-
 
   class AMH_one;
   using AMH_one_ptr = AMH_one *;
@@ -376,7 +356,6 @@ namespace POA_OldInherit
     OldInherit::one *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void op_one_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -387,7 +366,6 @@ namespace POA_OldInherit
     ) = 0;
 
 };
-
 
 
 
@@ -421,7 +399,6 @@ public:
   ::OldInherit::one *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op_one () = 0;
 
   static void op_one_skel (
@@ -429,7 +406,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -440,7 +416,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_one_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_one_Direct_Proxy_Impl ();
-
   static void
   op_one (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -450,7 +425,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_oneResponseHandler;
@@ -463,13 +437,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_oneResponseHandler
 public:
   TAO_AMH_oneResponseHandler () = default;
   virtual ~TAO_AMH_oneResponseHandler () = default;
-
   void op_one () override;
-
   void op_one_excep (
     ::OldInherit::AMH_oneExceptionHolder * holder) override;
 };
-
 
 
 
@@ -503,14 +474,12 @@ public:
   ::OldInherit::AMI_oneHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op_one () = 0;
 
   static void op_one_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op_one_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -519,7 +488,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -531,11 +499,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_oneHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_oneHandler_Direct_Proxy_Impl ();
-
   static void
   op_one (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op_one_excep (
@@ -546,7 +512,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class AMH_two;
@@ -573,7 +538,6 @@ public:
   OldInherit::two *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void op_two_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -584,7 +548,6 @@ virtual void op_two (
   ) = 0;
 
 };
-
 
 
 
@@ -618,7 +581,6 @@ public:
   ::OldInherit::two *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op_two () = 0;
 
   static void op_two_skel (
@@ -626,7 +588,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -638,7 +599,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_two_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_two_Direct_Proxy_Impl ();
-
   static void
   op_two (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -648,7 +608,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_twoResponseHandler;
@@ -661,13 +620,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_twoResponseHandler
 public:
   TAO_AMH_twoResponseHandler () = default;
   virtual ~TAO_AMH_twoResponseHandler () = default;
-
   void op_two () override;
-
   void op_two_excep (
     ::OldInherit::AMH_twoExceptionHolder * holder) override;
 };
-
 
 
 
@@ -701,14 +657,12 @@ public:
   ::OldInherit::AMI_twoHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op_two () = 0;
 
   static void op_two_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op_two_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -717,7 +671,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -729,11 +682,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_twoHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_twoHandler_Direct_Proxy_Impl ();
-
   static void
   op_two (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op_two_excep (
@@ -744,7 +695,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class AMH_three;
@@ -771,7 +721,6 @@ public:
   OldInherit::three *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void op_three_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -782,7 +731,6 @@ virtual void op_three (
   ) = 0;
 
 };
-
 
 
 
@@ -816,7 +764,6 @@ public:
   ::OldInherit::three *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op_three () = 0;
 
   static void op_three_skel (
@@ -824,7 +771,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -836,7 +782,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_three_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_three_Direct_Proxy_Impl ();
-
   static void
   op_three (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -846,7 +791,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_threeResponseHandler;
@@ -859,13 +803,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_threeResponseHandler
 public:
   TAO_AMH_threeResponseHandler () = default;
   virtual ~TAO_AMH_threeResponseHandler () = default;
-
   void op_three () override;
-
   void op_three_excep (
     ::OldInherit::AMH_threeExceptionHolder * holder) override;
 };
-
 
 
 
@@ -899,14 +840,12 @@ public:
   ::OldInherit::AMI_threeHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op_three () = 0;
 
   static void op_three_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op_three_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -915,7 +854,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -927,11 +865,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_threeHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_threeHandler_Direct_Proxy_Impl ();
-
   static void
   op_three (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op_three_excep (
@@ -942,7 +878,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class AMH_four;
@@ -970,7 +905,6 @@ public:
   OldInherit::four *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void op_four_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -981,7 +915,6 @@ virtual void op_four (
   ) = 0;
 
 };
-
 
 
 
@@ -1016,7 +949,6 @@ public:
   ::OldInherit::four *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op_four () = 0;
 
   static void op_four_skel (
@@ -1024,7 +956,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1037,7 +968,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_four_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_four_Direct_Proxy_Impl ();
-
   static void
   op_four (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -1047,7 +977,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_fourResponseHandler;
@@ -1060,13 +989,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_fourResponseHandler
 public:
   TAO_AMH_fourResponseHandler () = default;
   virtual ~TAO_AMH_fourResponseHandler () = default;
-
   void op_four () override;
-
   void op_four_excep (
     ::OldInherit::AMH_fourExceptionHolder * holder) override;
 };
-
 
 
 
@@ -1101,14 +1027,12 @@ public:
   ::OldInherit::AMI_fourHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op_four () = 0;
 
   static void op_four_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op_four_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1117,7 +1041,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1130,11 +1053,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_fourHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_fourHandler_Direct_Proxy_Impl ();
-
   static void
   op_four (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op_four_excep (
@@ -1145,7 +1066,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class AMH_five;
@@ -1174,7 +1094,6 @@ public:
   OldInherit::five *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void op_five_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1185,7 +1104,6 @@ virtual void op_five (
   ) = 0;
 
 };
-
 
 
 
@@ -1221,7 +1139,6 @@ public:
   ::OldInherit::five *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op_five () = 0;
 
   static void op_five_skel (
@@ -1229,7 +1146,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1243,7 +1159,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_five_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_five_Direct_Proxy_Impl ();
-
   static void
   op_five (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -1253,7 +1168,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_fiveResponseHandler;
@@ -1266,13 +1180,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_fiveResponseHandler
 public:
   TAO_AMH_fiveResponseHandler () = default;
   virtual ~TAO_AMH_fiveResponseHandler () = default;
-
   void op_five () override;
-
   void op_five_excep (
     ::OldInherit::AMH_fiveExceptionHolder * holder) override;
 };
-
 
 
 
@@ -1308,14 +1219,12 @@ public:
   ::OldInherit::AMI_fiveHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op_five () = 0;
 
   static void op_five_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op_five_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1324,7 +1233,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1338,11 +1246,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_fiveHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_fiveHandler_Direct_Proxy_Impl ();
-
   static void
   op_five (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op_five_excep (
@@ -1353,7 +1259,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 

@@ -42,8 +42,6 @@
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 
 
-
-
 #ifndef _TAO_TYPECODE_Not_Anon_short_seq_GUARD
 #define _TAO_TYPECODE_Not_Anon_short_seq_GUARD
 
@@ -55,17 +53,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Not_Anon_short_seq_0 (
-          ::CORBA::tk_sequence,
-          &CORBA::_tc_short,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Not_Anon_short_seq_0 (
+        ::CORBA::tk_sequence, &CORBA::_tc_short, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_Not_Anon_short_seq_0 =
-        &Not_Anon_short_seq_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_Not_Anon_short_seq_0 =
+      &Not_Anon_short_seq_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -89,9 +83,6 @@ namespace Not_Anon
 
 
 
-
-
-
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_Char__GUARD
 #define _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_Char__GUARD
 
@@ -103,17 +94,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Half_Anon__tao_seq_CORBA_Char__0 (
-          ::CORBA::tk_sequence,
-          &CORBA::_tc_char,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Half_Anon__tao_seq_CORBA_Char__0 (
+        ::CORBA::tk_sequence, &CORBA::_tc_char, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_Half_Anon__tao_seq_CORBA_Char__0 =
-        &Half_Anon__tao_seq_CORBA_Char__0;
-    }
+    ::CORBA::TypeCode_ptr const tc_Half_Anon__tao_seq_CORBA_Char__0 =
+      &Half_Anon__tao_seq_CORBA_Char__0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -132,17 +119,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Half_Anon_char_seq_array_14 (
-          ::CORBA::tk_array,
-          &TAO::TypeCode::tc_Half_Anon__tao_seq_CORBA_Char__0,
-          14U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Half_Anon_char_seq_array_14 (
+        ::CORBA::tk_array,
+        &TAO::TypeCode::tc_Half_Anon__tao_seq_CORBA_Char__0,
+        14U);
 
-      ::CORBA::TypeCode_ptr const tc_Half_Anon_char_seq_array =
-        &Half_Anon_char_seq_array_14;
-    }
+    ::CORBA::TypeCode_ptr const tc_Half_Anon_char_seq_array =
+      &Half_Anon_char_seq_array_14;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -165,9 +150,6 @@ namespace Half_Anon
 
 
 
-
-
-
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_ULong__18_GUARD
 #define _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_ULong__18_GUARD
 
@@ -179,17 +161,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Half_Anon__tao_seq_CORBA_ULong__18_18 (
-          ::CORBA::tk_sequence,
-          &CORBA::_tc_ulong,
-          18U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Half_Anon__tao_seq_CORBA_ULong__18_18 (
+        ::CORBA::tk_sequence, &CORBA::_tc_ulong, 18U);
 
-      ::CORBA::TypeCode_ptr const tc_Half_Anon__tao_seq_CORBA_ULong__18_18 =
-        &Half_Anon__tao_seq_CORBA_ULong__18_18;
-    }
+    ::CORBA::TypeCode_ptr const tc_Half_Anon__tao_seq_CORBA_ULong__18_18 =
+      &Half_Anon__tao_seq_CORBA_ULong__18_18;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -208,17 +186,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Half_Anon_bd_ulong_seq_array_17 (
-          ::CORBA::tk_array,
-          &TAO::TypeCode::tc_Half_Anon__tao_seq_CORBA_ULong__18_18,
-          17U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Half_Anon_bd_ulong_seq_array_17 (
+        ::CORBA::tk_array,
+        &TAO::TypeCode::tc_Half_Anon__tao_seq_CORBA_ULong__18_18,
+        17U);
 
-      ::CORBA::TypeCode_ptr const tc_Half_Anon_bd_ulong_seq_array =
-        &Half_Anon_bd_ulong_seq_array_17;
-    }
+    ::CORBA::TypeCode_ptr const tc_Half_Anon_bd_ulong_seq_array =
+      &Half_Anon_bd_ulong_seq_array_17;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -241,9 +217,6 @@ namespace Half_Anon
 
 
 
-
-
-
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__GUARD
 #define _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__GUARD
 
@@ -255,17 +228,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Half_Anon__tao_seq_CORBA_UShort__0 (
-          ::CORBA::tk_sequence,
-          &CORBA::_tc_ushort,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Half_Anon__tao_seq_CORBA_UShort__0 (
+        ::CORBA::tk_sequence, &CORBA::_tc_ushort, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_Half_Anon__tao_seq_CORBA_UShort__0 =
-        &Half_Anon__tao_seq_CORBA_UShort__0;
-    }
+    ::CORBA::TypeCode_ptr const tc_Half_Anon__tao_seq_CORBA_UShort__0 =
+      &Half_Anon__tao_seq_CORBA_UShort__0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -284,17 +253,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Half_Anon_ushort_seq_array_12 (
-          ::CORBA::tk_array,
-          &TAO::TypeCode::tc_Half_Anon__tao_seq_CORBA_UShort__0,
-          12U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Half_Anon_ushort_seq_array_12 (
+        ::CORBA::tk_array,
+        &TAO::TypeCode::tc_Half_Anon__tao_seq_CORBA_UShort__0,
+        12U);
 
-      ::CORBA::TypeCode_ptr const tc_Half_Anon_ushort_seq_array =
-        &Half_Anon_ushort_seq_array_12;
-    }
+    ::CORBA::TypeCode_ptr const tc_Half_Anon_ushort_seq_array =
+      &Half_Anon_ushort_seq_array_12;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -317,9 +284,6 @@ namespace Half_Anon
 
 
 
-
-
-
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__7_GUARD
 #define _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__7_GUARD
 
@@ -331,17 +295,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Half_Anon__tao_seq_CORBA_UShort__7_7 (
-          ::CORBA::tk_sequence,
-          &CORBA::_tc_ushort,
-          7U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Half_Anon__tao_seq_CORBA_UShort__7_7 (
+        ::CORBA::tk_sequence, &CORBA::_tc_ushort, 7U);
 
-      ::CORBA::TypeCode_ptr const tc_Half_Anon__tao_seq_CORBA_UShort__7_7 =
-        &Half_Anon__tao_seq_CORBA_UShort__7_7;
-    }
+    ::CORBA::TypeCode_ptr const tc_Half_Anon__tao_seq_CORBA_UShort__7_7 =
+      &Half_Anon__tao_seq_CORBA_UShort__7_7;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -360,17 +320,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Half_Anon_bd_ushort_seq_array_11 (
-          ::CORBA::tk_array,
-          &TAO::TypeCode::tc_Half_Anon__tao_seq_CORBA_UShort__7_7,
-          11U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Half_Anon_bd_ushort_seq_array_11 (
+        ::CORBA::tk_array,
+        &TAO::TypeCode::tc_Half_Anon__tao_seq_CORBA_UShort__7_7,
+        11U);
 
-      ::CORBA::TypeCode_ptr const tc_Half_Anon_bd_ushort_seq_array =
-        &Half_Anon_bd_ushort_seq_array_11;
-    }
+    ::CORBA::TypeCode_ptr const tc_Half_Anon_bd_ushort_seq_array =
+      &Half_Anon_bd_ushort_seq_array_11;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -390,7 +348,6 @@ namespace Half_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_bd_ushort_seq_array = std::addressof(_tao_tc_Half_Anon_bd_ushort_seq_array);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_All_Anon_anon_bd_string_test (
@@ -403,7 +360,6 @@ namespace All_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_anon_bd_string_test = std::addressof(_tao_tc_All_Anon_anon_bd_string_test);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_All_Anon_AMH_anon_bd_string_testExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -429,7 +385,6 @@ namespace All_Anon
 }
 
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_All_Anon_AMH_anon_bd_string_testResponseHandler (
@@ -442,7 +397,6 @@ namespace All_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_anon_bd_string_testResponseHandler = std::addressof(_tao_tc_All_Anon_AMH_anon_bd_string_testResponseHandler);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_All_Anon_AMI_anon_bd_string_testHandler (
@@ -464,9 +418,6 @@ namespace All_Anon
 
 
 
-
-
-
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon__tao_seq_CORBA_Float__GUARD
 #define _TAO_TYPECODE_All_Anon_Nested_Anon__tao_seq_CORBA_Float__GUARD
 
@@ -478,17 +429,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        All_Anon_Nested_Anon__tao_seq_CORBA_Float__0 (
-          ::CORBA::tk_sequence,
-          &CORBA::_tc_float,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> All_Anon_Nested_Anon__tao_seq_CORBA_Float__0 (
+        ::CORBA::tk_sequence, &CORBA::_tc_float, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon__tao_seq_CORBA_Float__0 =
-        &All_Anon_Nested_Anon__tao_seq_CORBA_Float__0;
-    }
+    ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon__tao_seq_CORBA_Float__0 =
+      &All_Anon_Nested_Anon__tao_seq_CORBA_Float__0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -507,24 +454,20 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        All_Anon_Nested_Anon_float_seq_array_6 (
-          ::CORBA::tk_array,
-          &TAO::TypeCode::tc_All_Anon_Nested_Anon__tao_seq_CORBA_Float__0,
-          6U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> All_Anon_Nested_Anon_float_seq_array_6 (
+        ::CORBA::tk_array,
+        &TAO::TypeCode::tc_All_Anon_Nested_Anon__tao_seq_CORBA_Float__0,
+        6U);
 
-      ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon_float_seq_array =
-        &All_Anon_Nested_Anon_float_seq_array_6;
-    }
+    ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon_float_seq_array =
+      &All_Anon_Nested_Anon_float_seq_array_6;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon_float_seq_array_GUARD */
-
-
 
 
 
@@ -539,17 +482,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        All_Anon_Nested_Anon__tao_seq_CORBA_Float__0 (
-          ::CORBA::tk_sequence,
-          &CORBA::_tc_float,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> All_Anon_Nested_Anon__tao_seq_CORBA_Float__0 (
+        ::CORBA::tk_sequence, &CORBA::_tc_float, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon__tao_seq_CORBA_Float__0 =
-        &All_Anon_Nested_Anon__tao_seq_CORBA_Float__0;
-    }
+    ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon__tao_seq_CORBA_Float__0 =
+      &All_Anon_Nested_Anon__tao_seq_CORBA_Float__0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -568,23 +507,20 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        All_Anon_Nested_Anon_another_fsa_6 (
-          ::CORBA::tk_array,
-          &TAO::TypeCode::tc_All_Anon_Nested_Anon__tao_seq_CORBA_Float__0,
-          6U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> All_Anon_Nested_Anon_another_fsa_6 (
+        ::CORBA::tk_array,
+        &TAO::TypeCode::tc_All_Anon_Nested_Anon__tao_seq_CORBA_Float__0,
+        6U);
 
-      ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon_another_fsa =
-        &All_Anon_Nested_Anon_another_fsa_6;
-    }
+    ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon_another_fsa =
+      &All_Anon_Nested_Anon_another_fsa_6;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon_another_fsa_GUARD */
-
 
 
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_1_GUARD
@@ -598,23 +534,20 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        All_Anon_Nested_Anon_long_array_1_6 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_long,
-          6U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> All_Anon_Nested_Anon_long_array_1_6 (
+        ::CORBA::tk_array,
+        &CORBA::_tc_long,
+        6U);
 
-      ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon_long_array_1 =
-        &All_Anon_Nested_Anon_long_array_1_6;
-    }
+    ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon_long_array_1 =
+      &All_Anon_Nested_Anon_long_array_1_6;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_1_GUARD */
-
 
 
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_2_GUARD
@@ -628,17 +561,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        All_Anon_Nested_Anon_long_array_2_6 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_long,
-          6U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> All_Anon_Nested_Anon_long_array_2_6 (
+        ::CORBA::tk_array,
+        &CORBA::_tc_long,
+        6U);
 
-      ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon_long_array_2 =
-        &All_Anon_Nested_Anon_long_array_2_6;
-    }
+    ::CORBA::TypeCode_ptr const tc_All_Anon_Nested_Anon_long_array_2 =
+      &All_Anon_Nested_Anon_long_array_2_6;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -674,8 +605,6 @@ namespace All_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_Nested_Anon = std::addressof(_tao_tc_All_Anon_Nested_Anon);
 }
-
-
 
 
 #ifndef _TAO_TYPECODE_CORBA_STRING_32_GUARD
@@ -718,7 +647,6 @@ namespace Second
 {
   ::CORBA::TypeCode_ptr const _tc_SecondString = std::addressof(_tao_tc_Second_SecondString);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -764,7 +692,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -803,7 +730,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -848,7 +774,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -890,7 +815,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -929,7 +853,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -995,7 +918,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1070,7 +992,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1156,7 +1077,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1219,7 +1139,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

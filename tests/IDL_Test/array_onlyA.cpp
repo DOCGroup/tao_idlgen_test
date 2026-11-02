@@ -37,8 +37,6 @@
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 
 
-
-
 #ifndef _TAO_TYPECODE_TEST_TYPE_GUARD
 #define _TAO_TYPECODE_TEST_TYPE_GUARD
 
@@ -50,17 +48,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        TEST_TYPE_10 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_char,
-          10U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> TEST_TYPE_10 (
+        ::CORBA::tk_array,
+        &CORBA::_tc_char,
+        10U);
 
-      ::CORBA::TypeCode_ptr const tc_TEST_TYPE =
-        &TEST_TYPE_10;
-    }
+    ::CORBA::TypeCode_ptr const tc_TEST_TYPE =
+      &TEST_TYPE_10;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -76,7 +72,6 @@ static TAO::TypeCode::Alias<char const *,
     &TAO::TypeCode::tc_TEST_TYPE);
 
 ::CORBA::TypeCode_ptr const _tc_TEST_TYPE = std::addressof(_tao_tc_TEST_TYPE);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {

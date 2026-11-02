@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ARRAY_ONLYC_YA44BN_H_
-#define _TAO_IDL_ARRAY_ONLYC_YA44BN_H_
+#ifndef _TAO_IDL_ARRAY_ONLYC_9E2FKW_H_
+#define _TAO_IDL_ARRAY_ONLYC_9E2FKW_H_
 
 #include /**/ "ace/pre.h"
 
@@ -58,7 +57,6 @@
 #endif
 
 
-
 using TEST_TYPE = ::CORBA::Char[10];
 using TEST_TYPE_slice = ::CORBA::Char;
 struct TEST_TYPE_tag {};
@@ -84,14 +82,12 @@ TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *TEST_TYPE_dup (const TEST_TYPE_slice *
 TAO_IDL_TEST_STUB_Export void TEST_TYPE_copy (TEST_TYPE_slice *_tao_to, const TEST_TYPE_slice *_tao_from);
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -129,7 +125,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -156,14 +151,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::TEST_TYPE_forany &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::TEST_TYPE_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "array_onlyC.inl"

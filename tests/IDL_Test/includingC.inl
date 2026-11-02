@@ -24,11 +24,9 @@
 
 #include <memory>
 #include <new>
-
 // *************************************************************
 // Inline operations for union myUnion
 // *************************************************************
-
 ACE_INLINE
 void
 myUnion::_default ()
@@ -74,7 +72,6 @@ myUnion::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -112,11 +109,9 @@ myUnion::cat ()
     }
   return *this->u_.cat_;
 }
-
 // *************************************************************
 // Inline operations for union Bog
 // *************************************************************
-
 ACE_INLINE
 void
 Bog::_default ()
@@ -166,7 +161,6 @@ Bog::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -190,7 +184,6 @@ Bog::bog1 () const
     }
   return this->u_.bog1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -214,7 +207,6 @@ Bog::bog2 () const
     }
   return this->u_.bog2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -240,7 +232,6 @@ Bog::bog3 () const
 }
 
 
-
 ACE_INLINE
 iface::iface (
     TAO_Stub *objref,
@@ -258,7 +249,6 @@ iface::iface (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_ifaceExceptionHolder::AMH_ifaceExceptionHolder ()
   : exception (nullptr)
@@ -271,7 +261,6 @@ AMH_ifaceExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_ifaceHandler::AMI_ifaceHandler (
     TAO_Stub *objref,
@@ -289,11 +278,9 @@ AMI_ifaceHandler::AMI_ifaceHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 // *************************************************************
 // Inline operations for union TestUn
 // *************************************************************
-
 ACE_INLINE
 void
 TestUn::_default ()
@@ -339,7 +326,6 @@ TestUn::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -377,7 +363,6 @@ TestUn::value1 ()
     }
   return *this->u_.value1_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -426,7 +411,6 @@ TestUn::value2 () const // get method
 }
 
 
-
 ACE_INLINE
 MyInt::MyInt (
     TAO_Stub *objref,
@@ -444,7 +428,6 @@ MyInt::MyInt (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_MyIntExceptionHolder::AMH_MyIntExceptionHolder ()
   : exception (nullptr)
@@ -457,7 +440,6 @@ AMH_MyIntExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_MyIntHandler::AMI_MyIntHandler (
     TAO_Stub *objref,
@@ -477,7 +459,6 @@ AMI_MyIntHandler::AMI_MyIntHandler (
 }
 
 
-
 ACE_INLINE
 RootModule::SUBMODULE1::ChildIF::ChildIF (
     TAO_Stub *objref,
@@ -495,7 +476,6 @@ RootModule::SUBMODULE1::ChildIF::ChildIF (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder::AMH_ChildIFExceptionHolder ()
   : exception (nullptr)
@@ -508,7 +488,6 @@ RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder::_tao_obv_static_repository_i
 }
 
 
-
 ACE_INLINE
 RootModule::SUBMODULE1::AMI_ChildIFHandler::AMI_ChildIFHandler (
     TAO_Stub *objref,
@@ -528,7 +507,6 @@ RootModule::SUBMODULE1::AMI_ChildIFHandler::AMI_ChildIFHandler (
 }
 
 
-
 ACE_INLINE
 B::B (
     TAO_Stub *objref,
@@ -546,7 +524,6 @@ B::B (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_BExceptionHolder::AMH_BExceptionHolder ()
   : exception (nullptr)
@@ -557,7 +534,6 @@ AMH_BExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_BExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

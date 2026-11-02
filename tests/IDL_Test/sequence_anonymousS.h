@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_5KWGC1_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_5KWGC1_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_M1H3IX_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_M1H3IX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -54,14 +53,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -82,7 +79,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_SEQTEST__SARG_TRAITS_)
 #define _SEQTEST__SARG_TRAITS_
 
@@ -99,7 +95,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::seqTest::dozens>
     : public
@@ -109,7 +104,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_AMH_SEQTESTEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -130,7 +124,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_SEQTESTHANDLER__SARG_TRAITS_)
 #define _AMI_SEQTESTHANDLER__SARG_TRAITS_
 
@@ -147,7 +140,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::twinStruct>
     : public
@@ -159,7 +151,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::outside>
     : public
@@ -169,7 +160,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -184,7 +174,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 class POA_AMH_seqTest;
@@ -210,7 +199,6 @@ public:
   seqTest *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void send_dozen_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -222,7 +210,6 @@ virtual void send_dozen (
   ) = 0;
 
 };
-
 
 
 
@@ -256,7 +243,6 @@ public:
   ::seqTest *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void send_dozen (
     ::seqTest::dozens & bouquets) = 0;
 
@@ -267,7 +253,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -276,7 +261,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_seqTest_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_seqTest_Direct_Proxy_Impl ();
-
   static void
   send_dozen (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -286,7 +270,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class POA_TAO_AMH_seqTestResponseHandler;
@@ -299,14 +282,11 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_seqTestResponseHandler
 public:
   POA_TAO_AMH_seqTestResponseHandler () = default;
   virtual ~POA_TAO_AMH_seqTestResponseHandler () = default;
-
   void send_dozen (
     const ::seqTest::dozens & bouquets) override;
-
   void send_dozen_excep (
     ::AMH_seqTestExceptionHolder * holder) override;
 };
-
 
 
 
@@ -340,7 +320,6 @@ public:
   ::AMI_seqTestHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void send_dozen (
     const ::seqTest::dozens & bouquets) = 0;
 
@@ -348,7 +327,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void send_dozen_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -357,7 +335,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -369,11 +346,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_seqTestHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_seqTestHandler_Direct_Proxy_Impl ();
-
   static void
   send_dozen (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   send_dozen_excep (

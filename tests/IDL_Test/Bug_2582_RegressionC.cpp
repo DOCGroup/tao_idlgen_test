@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "Bug_2582_RegressionC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -47,12 +46,11 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_2582_RegressionC.inl"
 #endif /* !defined INLINE */
-
 static char const * const _tao_enumerators_EncodingID_T[] =
   {
     "ENCODING_XML"
@@ -68,7 +66,6 @@ static TAO::TypeCode::Enum<char const *,
     1);
 
 ::CORBA::TypeCode_ptr const _tc_EncodingID_T = std::addressof(_tao_tc_EncodingID_T);
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -94,7 +91,6 @@ _tao_tc_Encoding_T (
 ::CORBA::TypeCode_ptr const _tc_Encoding_T = std::addressof(_tao_tc_Encoding_T);
 
 
-
 void
 Encoding_T::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -102,7 +98,6 @@ Encoding_T::_tao_any_destructor (
   Encoding_T *tmp = static_cast<Encoding_T *> (_tao_void_pointer);
   delete tmp;
 }
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -113,7 +108,6 @@ static TAO::TypeCode::Alias<char const *,
     &_tc_EncodingID_T);
 
 ::CORBA::TypeCode_ptr const _tc_EncodingID2_T = std::addressof(_tao_tc_EncodingID2_T);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -144,7 +138,6 @@ TAO::Objref_Traits<FieldDevice_T>::marshal (const FieldDevice_T_ptr p,TAO_Output
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::EncodingID2_T
@@ -179,7 +172,6 @@ FieldDevice_T::getEncodingID ()
 
   return _tao_retval.retn ();
 }
-
 ::Encoding_T
 FieldDevice_T::getEncoding ()
 {
@@ -214,7 +206,6 @@ FieldDevice_T::getEncoding ()
 }
 
 
-
 void
 FieldDevice_T::sendc_getEncodingID (
   ::AMI_FieldDevice_THandler_ptr ami_handler)
@@ -242,7 +233,6 @@ FieldDevice_T::sendc_getEncodingID (
       &AMI_FieldDevice_THandler::getEncodingID_reply_stub
     );
 }
-
 
 
 void
@@ -353,7 +343,6 @@ FieldDevice_T::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_FieldDevice_T (
@@ -362,7 +351,6 @@ static TAO::TypeCode::Objref<char const *,
     "FieldDevice_T");
 
 ::CORBA::TypeCode_ptr const _tc_FieldDevice_T = std::addressof(_tao_tc_FieldDevice_T);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_FieldDevice_TExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -378,7 +366,6 @@ static TAO::TypeCode::Value<char const *,
     0);
 
 ::CORBA::TypeCode_ptr const _tc_AMH_FieldDevice_TExceptionHolder = std::addressof(_tao_tc_AMH_FieldDevice_TExceptionHolder);
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -521,14 +508,12 @@ AMH_FieldDevice_TExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 AMH_FieldDevice_TExceptionHolder::raise_getEncodingID ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_FieldDevice_TExceptionHolder::raise_getEncoding ()
@@ -537,7 +522,6 @@ AMH_FieldDevice_TExceptionHolder::raise_getEncoding ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_FieldDevice_TExceptionHolder::raise_sendc_getEncodingID ()
 {
@@ -545,14 +529,12 @@ AMH_FieldDevice_TExceptionHolder::raise_sendc_getEncodingID ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_FieldDevice_TExceptionHolder::raise_sendc_getEncoding ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -670,7 +652,6 @@ AMH_FieldDevice_TResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_FieldDevice_TResponseHandler (
@@ -679,7 +660,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_FieldDevice_TResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_FieldDevice_TResponseHandler = std::addressof(_tao_tc_AMH_FieldDevice_TResponseHandler);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -710,7 +690,6 @@ TAO::Objref_Traits<AMI_FieldDevice_THandler>::marshal (const AMI_FieldDevice_THa
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -806,7 +785,6 @@ AMI_FieldDevice_THandler::getEncodingID_reply_stub (
       break;
   }
 }
-
 void
 AMI_FieldDevice_THandler::getEncodingID_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -837,7 +815,6 @@ AMI_FieldDevice_THandler::getEncodingID_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_FieldDevice_THandler::getEncoding (
   const ::Encoding_T & ami_return_val)
@@ -931,7 +908,6 @@ AMI_FieldDevice_THandler::getEncoding_reply_stub (
       break;
   }
 }
-
 void
 AMI_FieldDevice_THandler::getEncoding_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1044,7 +1020,6 @@ AMI_FieldDevice_THandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_FieldDevice_THandler (
@@ -1053,7 +1028,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMI_FieldDevice_THandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMI_FieldDevice_THandler = std::addressof(_tao_tc_AMI_FieldDevice_THandler);
-
 OBV_AMH_FieldDevice_TExceptionHolder::~OBV_AMH_FieldDevice_TExceptionHolder ()
 {}
 
@@ -1068,7 +1042,6 @@ OBV_AMH_FieldDevice_TExceptionHolder::_tao_unmarshal__AMH_FieldDevice_TException
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1101,7 +1074,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1145,7 +1117,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1211,7 +1182,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1286,7 +1256,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1372,7 +1341,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1438,7 +1406,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, EncodingID_T _tao_enumerator)
@@ -1463,7 +1430,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1485,7 +1451,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1521,7 +1486,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_FieldDevice_TExceptionHolder * vt)
@@ -1542,7 +1506,6 @@ CORBA::remove_ref (AMH_FieldDevice_TExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1572,7 +1535,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_FieldDevice_TExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -1590,7 +1552,6 @@ OBV_AMH_FieldDevice_TExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

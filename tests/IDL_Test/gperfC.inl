@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 testlistitem::testlistitem (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ testlistitem::testlistitem (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_testlistitemExceptionHolder::AMH_testlistitemExceptionHolder ()
   : exception (nullptr)
@@ -55,7 +53,6 @@ AMH_testlistitemExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_testlistitemHandler::AMI_testlistitemHandler (
     TAO_Stub *objref,
@@ -75,7 +72,6 @@ AMI_testlistitemHandler::AMI_testlistitemHandler (
 }
 
 
-
 ACE_INLINE
 test::test (
     TAO_Stub *objref,
@@ -93,7 +89,6 @@ test::test (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_testExceptionHolder::AMH_testExceptionHolder ()
   : exception (nullptr)
@@ -106,7 +101,6 @@ AMH_testExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_testHandler::AMI_testHandler (
     TAO_Stub *objref,
@@ -126,7 +120,6 @@ AMI_testHandler::AMI_testHandler (
 }
 
 
-
 ACE_INLINE
 Simple_Server::Simple_Server (
     TAO_Stub *objref,
@@ -144,7 +137,6 @@ Simple_Server::Simple_Server (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_Simple_ServerExceptionHolder::AMH_Simple_ServerExceptionHolder ()
   : exception (nullptr)
@@ -155,7 +147,6 @@ AMH_Simple_ServerExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_Simple_ServerExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

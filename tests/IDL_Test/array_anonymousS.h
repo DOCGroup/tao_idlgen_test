@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_QTFWAO_H_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_QTFWAO_H_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_ON2MPQ_H_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_ON2MPQ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -53,14 +52,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -79,7 +76,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_TDEF__SARG_TRAITS_)
@@ -109,7 +105,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::tdef::bytes_or_longs>
     : public
@@ -119,7 +114,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_AMH_TDEFEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -140,7 +134,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_TDEFHANDLER__SARG_TRAITS_)
 #define _AMI_TDEFHANDLER__SARG_TRAITS_
 
@@ -157,7 +150,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::ABCModule::RmtPhysicalInfo>
     : public
@@ -167,7 +159,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -182,7 +173,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 class POA_AMH_tdef;
@@ -209,7 +199,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -246,7 +235,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -262,7 +250,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_tdefResponseHandler;
 using POA_TAO_AMH_tdefResponseHandler_ptr = POA_TAO_AMH_tdefResponseHandler *;
 
@@ -274,7 +261,6 @@ public:
   POA_TAO_AMH_tdefResponseHandler () = default;
   virtual ~POA_TAO_AMH_tdefResponseHandler () = default;
 };
-
 
 
 
@@ -311,7 +297,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -328,10 +313,8 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 namespace POA_ABCModule
 {
-
 
 
 

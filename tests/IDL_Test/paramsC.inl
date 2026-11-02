@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 foo::bar::fooBar::fooBar (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ foo::bar::fooBar::fooBar (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 foo::bar::AMH_fooBarExceptionHolder::AMH_fooBarExceptionHolder ()
   : exception (nullptr)
@@ -53,7 +51,6 @@ foo::bar::AMH_fooBarExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:foo/bar/AMH_fooBarExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

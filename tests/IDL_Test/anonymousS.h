@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ANONYMOUSS_MT2C6Z_H_
-#define _TAO_IDL_ANONYMOUSS_MT2C6Z_H_
+#ifndef _TAO_IDL_ANONYMOUSS_5GMXOX_H_
+#define _TAO_IDL_ANONYMOUSS_5GMXOX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -56,14 +55,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -82,7 +79,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
   template<>
@@ -140,7 +136,6 @@ namespace TAO
   };
 
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST__SARG_TRAITS_
 
@@ -155,7 +150,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC__SARG_TRAITS_)
@@ -174,7 +168,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC2__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC2__SARG_TRAITS_
 
@@ -189,7 +182,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC3__SARG_TRAITS_)
@@ -208,7 +200,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC23__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC23__SARG_TRAITS_
 
@@ -223,7 +214,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC4_INARG__SARG_TRAITS_)
@@ -243,7 +233,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__SARG_TRAITS_
 
@@ -259,7 +248,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_TestFunc41_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC42_INARG__SARG_TRAITS_)
@@ -279,7 +267,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_TestFunc42_inarg>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__SARG_TRAITS_
 
@@ -295,7 +282,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_TestFunc43_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC4_INARG__SARG_TRAITS_)
@@ -315,7 +301,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc4_inarg>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__SARG_TRAITS_
 
@@ -331,7 +316,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc41_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC42_INARG__SARG_TRAITS_)
@@ -351,7 +335,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc42_inarg>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__SARG_TRAITS_
 
@@ -367,7 +350,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc43_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -388,7 +370,6 @@ class SArg_Traits< ::All_Anon::AMH_anon_bd_string_testExceptionHolder>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__SARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__SARG_TRAITS_
 
@@ -403,7 +384,6 @@ class  SArg_Traits< ::All_Anon::AMI_anon_bd_string_testHandler>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC_AMI_RETURN_VAL__SARG_TRAITS_)
@@ -423,7 +403,6 @@ class SArg_Traits<All_Anon_AMI_anon_bd_string_testHandler_TestFunc_ami_return_va
 #endif /* end #if !defined */
 
 
-
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC2_AMI_RETURN_VAL__SARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC2_AMI_RETURN_VAL__SARG_TRAITS_
 
@@ -441,7 +420,6 @@ class SArg_Traits<All_Anon_AMI_anon_bd_string_testHandler_TestFunc2_ami_return_v
 #endif /* end #if !defined */
 
 
-
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC3_AMI_RETURN_VAL__SARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC3_AMI_RETURN_VAL__SARG_TRAITS_
 
@@ -457,7 +435,6 @@ class SArg_Traits<All_Anon_AMI_anon_bd_string_testHandler_TestFunc3_ami_return_v
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC23_AMI_RETURN_VAL__SARG_TRAITS_)
@@ -496,26 +473,20 @@ class SArg_Traits<SecondString_32>
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_Not_Anon
 {
 
 
 
-
 } // module Not_Anon
-
 namespace POA_Half_Anon
 {
 
 
 
-
 } // module Half_Anon
-
 namespace POA_All_Anon
 {
-
 
   class AMH_anon_bd_string_test;
   using AMH_anon_bd_string_test_ptr = AMH_anon_bd_string_test *;
@@ -540,7 +511,6 @@ namespace POA_All_Anon
     All_Anon::anon_bd_string_test *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void TestFunc_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -549,7 +519,6 @@ namespace POA_All_Anon
   virtual void TestFunc (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void TestFunc2_skel (
       TAO_ServerRequest &_tao_req,
@@ -560,7 +529,6 @@ namespace POA_All_Anon
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh
     ) = 0;
 
-
   static void TestFunc3_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -570,7 +538,6 @@ namespace POA_All_Anon
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh
     ) = 0;
 
-
   static void TestFunc23_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -579,7 +546,6 @@ namespace POA_All_Anon
   virtual void TestFunc23 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void TestFunc4_skel (
       TAO_ServerRequest &_tao_req,
@@ -591,7 +557,6 @@ namespace POA_All_Anon
       const char * inarg
     ) = 0;
 
-
   static void TestFunc41_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -602,7 +567,6 @@ namespace POA_All_Anon
       const char * inarg
     ) = 0;
 
-
   static void TestFunc42_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -612,7 +576,6 @@ namespace POA_All_Anon
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
       const char * inarg
     ) = 0;
-
 
   static void TestFunc43_skel (
       TAO_ServerRequest &_tao_req,
@@ -625,7 +588,6 @@ namespace POA_All_Anon
     ) = 0;
 
 };
-
 
 
 
@@ -659,35 +621,30 @@ public:
   ::All_Anon::anon_bd_string_test *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual char * TestFunc () = 0;
 
   static void TestFunc_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual char * TestFunc2 () = 0;
 
   static void TestFunc2_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual char * TestFunc3 () = 0;
 
   static void TestFunc3_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual char * TestFunc23 () = 0;
 
   static void TestFunc23_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc4 (
     const char * inarg) = 0;
 
@@ -695,7 +652,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc41 (
     const char * inarg) = 0;
 
@@ -703,7 +659,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc42 (
     const char * inarg) = 0;
 
@@ -711,7 +666,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc43 (
     const char * inarg) = 0;
 
@@ -722,7 +676,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -731,41 +684,33 @@ class TAO_IDL_TEST_STUB_Export _TAO_anon_bd_string_test_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_anon_bd_string_test_Direct_Proxy_Impl ();
-
   static void
   TestFunc (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc2 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   TestFunc3 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc23 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   TestFunc4 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc41 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   TestFunc42 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc43 (
@@ -778,7 +723,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_anon_bd_string_testResponseHandler;
 using TAO_AMH_anon_bd_string_testResponseHandler_ptr = TAO_AMH_anon_bd_string_testResponseHandler *;
 
@@ -789,52 +733,35 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_anon_bd_string_testResponseHandler
 public:
   TAO_AMH_anon_bd_string_testResponseHandler () = default;
   virtual ~TAO_AMH_anon_bd_string_testResponseHandler () = default;
-
   void TestFunc (
     const char * return_value) override;
-
   void TestFunc_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
-
   void TestFunc2 (
     const char * return_value) override;
-
   void TestFunc2_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
-
   void TestFunc3 (
     const char * return_value) override;
-
   void TestFunc3_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
-
   void TestFunc23 (
     const char * return_value) override;
-
   void TestFunc23_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
-
   void TestFunc4 () override;
-
   void TestFunc4_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
-
   void TestFunc41 () override;
-
   void TestFunc41_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
-
   void TestFunc42 () override;
-
   void TestFunc42_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
-
   void TestFunc43 () override;
-
   void TestFunc43_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
 };
-
 
 
 
@@ -868,7 +795,6 @@ public:
   ::All_Anon::AMI_anon_bd_string_testHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void TestFunc (
     const char * ami_return_val) = 0;
 
@@ -876,7 +802,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -884,7 +809,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc2 (
     const char * ami_return_val) = 0;
 
@@ -892,7 +816,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc2_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -900,7 +823,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc3 (
     const char * ami_return_val) = 0;
 
@@ -908,7 +830,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc3_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -916,7 +837,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc23 (
     const char * ami_return_val) = 0;
 
@@ -924,7 +844,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc23_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -932,14 +851,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc4 () = 0;
 
   static void TestFunc4_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc4_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -947,14 +864,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc41 () = 0;
 
   static void TestFunc41_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc41_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -962,14 +877,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc42 () = 0;
 
   static void TestFunc42_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc42_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -977,14 +890,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc43 () = 0;
 
   static void TestFunc43_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void TestFunc43_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -993,7 +904,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1005,81 +915,65 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_
 {
 public:
   virtual ~_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl ();
-
   static void
   TestFunc (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   TestFunc2 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc2_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   TestFunc3 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc3_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   TestFunc23 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc23_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   TestFunc4 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc4_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   TestFunc41 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc41_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   TestFunc42 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc42_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   TestFunc43 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   TestFunc43_excep (
@@ -1094,12 +988,9 @@ public:
 
 
 
-
 } // module All_Anon
-
 namespace POA_Second
 {
-
 
 
 

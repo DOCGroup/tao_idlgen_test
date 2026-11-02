@@ -22,14 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_DIF2S_LG0Z0W_CPP_
-#define _TAO_IDL_DIF2S_LG0Z0W_CPP_
+#ifndef _TAO_IDL_DIF2S_BG75HU_CPP_
+#define _TAO_IDL_DIF2S_BG75HU_CPP_
 
 
 #include "dif2S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <cstddef>
 #include <cstring>
+#include <memory>
 #include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
 #include "tao/Exception_Data.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
@@ -52,22 +53,24 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
 class TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -85,23 +88,20 @@ TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable::hash (const char *str, unsigned int le
      19,  0, 19, 19, 19, 19,  0, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 12,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 18,
-      HASH_VALUE_RANGE = 16,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 15
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {12};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {16};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -126,30 +126,25 @@ TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable tao_OldDif2_AMH_ex1_optable;
-
-
-
-
 
 POA_OldDif2::AMH_ex1::AMH_ex1 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMH_ex1_optable);
 }
-
 
 
 void
@@ -188,7 +183,6 @@ POA_OldDif2::AMH_ex1::op0_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex1::op1_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -237,7 +231,6 @@ POA_OldDif2::AMH_ex1::op1_skel (
       l
     );
 }
-
 void
 POA_OldDif2::AMH_ex1::op2_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -286,7 +279,6 @@ POA_OldDif2::AMH_ex1::op2_skel (
       s
     );
 }
-
 void
 POA_OldDif2::AMH_ex1::op3_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -335,7 +327,6 @@ POA_OldDif2::AMH_ex1::op3_skel (
       ul
     );
 }
-
 void
 POA_OldDif2::AMH_ex1::op4_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -384,7 +375,6 @@ POA_OldDif2::AMH_ex1::op4_skel (
       us
     );
 }
-
 void
 POA_OldDif2::AMH_ex1::op5_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -436,7 +426,6 @@ POA_OldDif2::AMH_ex1::op5_skel (
       b
     );
 }
-
 void
 POA_OldDif2::AMH_ex1::op6_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -488,7 +477,6 @@ POA_OldDif2::AMH_ex1::op6_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::AMH_ex1::_is_a (const char* value)
 {
   return
@@ -502,7 +490,6 @@ const char* POA_OldDif2::AMH_ex1::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex1:1.0";
 }
-
 void
 POA_OldDif2::AMH_ex1::_dispatch (
     TAO_ServerRequest &req,
@@ -510,12 +497,11 @@ POA_OldDif2::AMH_ex1::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 OldDif2::ex1*
 POA_OldDif2::AMH_ex1::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -530,17 +516,18 @@ class TAO_OldDif2_ex1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex1_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_ex1_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -558,23 +545,20 @@ TAO_OldDif2_ex1_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
      19,  0, 19, 19, 19, 19,  0, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_ex1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 12,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 18,
-      HASH_VALUE_RANGE = 16,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 15
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {12};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {16};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -599,17 +583,17 @@ TAO_OldDif2_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_ex1_Perfect_Hash_OpTable tao_OldDif2_ex1_optable;
@@ -621,7 +605,6 @@ static TAO_OldDif2_ex1_Perfect_Hash_OpTable tao_OldDif2_ex1_optable;
 POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::~_TAO_ex1_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -640,7 +623,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0 (
   _tao_ptr->op0 (
       );
 }
-
 
 
 void
@@ -665,7 +647,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2 (
     TAO_Abstract_ServantBase  *servant,
@@ -686,7 +667,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2 (
           ((TAO::Arg_Traits< ::CORBA::Short>::inout_arg_val *) args[3])->arg ()
         );
 }
-
 
 
 void
@@ -711,7 +691,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4 (
     TAO_Abstract_ServantBase  *servant,
@@ -732,7 +711,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4 (
           ((TAO::Arg_Traits< ::CORBA::UShort>::inout_arg_val *) args[3])->arg ()
         );
 }
-
 
 
 void
@@ -756,7 +734,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5 (
           ((TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val *) args[4])->arg ()
         );
 }
-
 
 
 void
@@ -785,10 +762,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6 (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldDif2::ex1::ex1 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_ex1_optable);
@@ -798,16 +771,12 @@ POA_OldDif2::ex1::ex1 ()
 namespace POA_OldDif2
 {
 
-
   class op0_ex1
     : public TAO::Upcall_Command
   {
   public:
-    inline op0_ex1 (
-      POA_OldDif2::ex1 * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op0_ex1 (POA_OldDif2::ex1 * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -818,28 +787,26 @@ namespace POA_OldDif2
     POA_OldDif2::ex1 * const servant_;
   };
 }
-
 void POA_OldDif2::ex1::op0_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex1 * const impl =
-    dynamic_cast<POA_OldDif2::ex1 *> (servant);
+  POA_OldDif2::ex1 * const impl = dynamic_cast<POA_OldDif2::ex1 *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op0_ex1 command (
-    impl);
+  op0_ex1 command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -858,20 +825,16 @@ void POA_OldDif2::ex1::op0_skel (
 namespace POA_OldDif2
 {
 
-
   class op1_ex1
     : public TAO::Upcall_Command
   {
   public:
-    inline op1_ex1 (
-      POA_OldDif2::ex1 * servant,
+    inline op1_ex1 (POA_OldDif2::ex1 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -911,12 +874,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex1::op1_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Float>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Float>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Float>::in_arg_val _tao_f;
   TAO::SArg_Traits< ::CORBA::Double>::out_arg_val _tao_d;
   TAO::SArg_Traits< ::CORBA::Long>::inout_arg_val _tao_l;
@@ -929,8 +892,7 @@ void POA_OldDif2::ex1::op1_skel (
       std::addressof(_tao_l)
     };
 
-  POA_OldDif2::ex1 * const impl =
-    dynamic_cast<POA_OldDif2::ex1 *> (servant);
+  POA_OldDif2::ex1 * const impl = dynamic_cast<POA_OldDif2::ex1 *> (servant);
 
   if (!impl)
     {
@@ -959,20 +921,16 @@ void POA_OldDif2::ex1::op1_skel (
 namespace POA_OldDif2
 {
 
-
   class op2_ex1
     : public TAO::Upcall_Command
   {
   public:
-    inline op2_ex1 (
-      POA_OldDif2::ex1 * servant,
+    inline op2_ex1 (POA_OldDif2::ex1 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1012,12 +970,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex1::op2_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Double>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Double>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Double>::in_arg_val _tao_d;
   TAO::SArg_Traits< ::CORBA::Long>::out_arg_val _tao_l;
   TAO::SArg_Traits< ::CORBA::Short>::inout_arg_val _tao_s;
@@ -1030,8 +988,7 @@ void POA_OldDif2::ex1::op2_skel (
       std::addressof(_tao_s)
     };
 
-  POA_OldDif2::ex1 * const impl =
-    dynamic_cast<POA_OldDif2::ex1 *> (servant);
+  POA_OldDif2::ex1 * const impl = dynamic_cast<POA_OldDif2::ex1 *> (servant);
 
   if (!impl)
     {
@@ -1060,20 +1017,16 @@ void POA_OldDif2::ex1::op2_skel (
 namespace POA_OldDif2
 {
 
-
   class op3_ex1
     : public TAO::Upcall_Command
   {
   public:
-    inline op3_ex1 (
-      POA_OldDif2::ex1 * servant,
+    inline op3_ex1 (POA_OldDif2::ex1 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1113,12 +1066,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex1::op3_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_l;
   TAO::SArg_Traits< ::CORBA::Short>::out_arg_val _tao_s;
   TAO::SArg_Traits< ::CORBA::ULong>::inout_arg_val _tao_ul;
@@ -1131,8 +1084,7 @@ void POA_OldDif2::ex1::op3_skel (
       std::addressof(_tao_ul)
     };
 
-  POA_OldDif2::ex1 * const impl =
-    dynamic_cast<POA_OldDif2::ex1 *> (servant);
+  POA_OldDif2::ex1 * const impl = dynamic_cast<POA_OldDif2::ex1 *> (servant);
 
   if (!impl)
     {
@@ -1161,20 +1113,16 @@ void POA_OldDif2::ex1::op3_skel (
 namespace POA_OldDif2
 {
 
-
   class op4_ex1
     : public TAO::Upcall_Command
   {
   public:
-    inline op4_ex1 (
-      POA_OldDif2::ex1 * servant,
+    inline op4_ex1 (POA_OldDif2::ex1 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1214,12 +1162,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex1::op4_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Short>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Short>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_s;
   TAO::SArg_Traits< ::CORBA::ULong>::out_arg_val _tao_ul;
   TAO::SArg_Traits< ::CORBA::UShort>::inout_arg_val _tao_us;
@@ -1232,8 +1180,7 @@ void POA_OldDif2::ex1::op4_skel (
       std::addressof(_tao_us)
     };
 
-  POA_OldDif2::ex1 * const impl =
-    dynamic_cast<POA_OldDif2::ex1 *> (servant);
+  POA_OldDif2::ex1 * const impl = dynamic_cast<POA_OldDif2::ex1 *> (servant);
 
   if (!impl)
     {
@@ -1262,20 +1209,16 @@ void POA_OldDif2::ex1::op4_skel (
 namespace POA_OldDif2
 {
 
-
   class op5_ex1
     : public TAO::Upcall_Command
   {
   public:
-    inline op5_ex1 (
-      POA_OldDif2::ex1 * servant,
+    inline op5_ex1 (POA_OldDif2::ex1 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1322,12 +1265,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex1::op5_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::ULong>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::ULong>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::ULong>::inout_arg_val _tao_ul;
   TAO::SArg_Traits< ::CORBA::UShort>::in_arg_val _tao_us;
   TAO::SArg_Traits< ::ACE_InputCDR::to_char>::out_arg_val _tao_c;
@@ -1342,8 +1285,7 @@ void POA_OldDif2::ex1::op5_skel (
       std::addressof(_tao_b)
     };
 
-  POA_OldDif2::ex1 * const impl =
-    dynamic_cast<POA_OldDif2::ex1 *> (servant);
+  POA_OldDif2::ex1 * const impl = dynamic_cast<POA_OldDif2::ex1 *> (servant);
 
   if (!impl)
     {
@@ -1372,20 +1314,16 @@ void POA_OldDif2::ex1::op5_skel (
 namespace POA_OldDif2
 {
 
-
   class op6_ex1
     : public TAO::Upcall_Command
   {
   public:
-    inline op6_ex1 (
-      POA_OldDif2::ex1 * servant,
+    inline op6_ex1 (POA_OldDif2::ex1 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1418,12 +1356,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex1::op6_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::UShort>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::UShort>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::UShort>::out_arg_val _tao_us;
   TAO::SArg_Traits< ::ACE_InputCDR::to_char>::inout_arg_val _tao_c;
 
@@ -1434,8 +1372,7 @@ void POA_OldDif2::ex1::op6_skel (
       std::addressof(_tao_c)
     };
 
-  POA_OldDif2::ex1 * const impl =
-    dynamic_cast<POA_OldDif2::ex1 *> (servant);
+  POA_OldDif2::ex1 * const impl = dynamic_cast<POA_OldDif2::ex1 *> (servant);
 
   if (!impl)
     {
@@ -1467,7 +1404,6 @@ void POA_OldDif2::ex1::op6_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::ex1::_is_a (const char* value)
 {
   return
@@ -1485,7 +1421,6 @@ const char* POA_OldDif2::ex1::_interface_repository_id () const
 
 
 
-
 void POA_OldDif2::ex1::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1496,12 +1431,11 @@ void POA_OldDif2::ex1::_dispatch (
 
 
 
-
 OldDif2::ex1 *
 POA_OldDif2::ex1::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1511,8 +1445,6 @@ POA_OldDif2::ex1::_this ()
   return {};
 }
 
-
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op0 ()
 {
@@ -1521,7 +1453,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op0 ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op0_excep (
   ::OldDif2::AMH_ex1ExceptionHolder * holder)
@@ -1535,7 +1466,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op0_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op1 (
   ::CORBA::Float return_value,
@@ -1555,7 +1485,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op1 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op1_excep (
   ::OldDif2::AMH_ex1ExceptionHolder * holder)
@@ -1569,7 +1498,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op1_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op2 (
   ::CORBA::Double return_value,
@@ -1589,7 +1517,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op2 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op2_excep (
   ::OldDif2::AMH_ex1ExceptionHolder * holder)
@@ -1603,7 +1530,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op2_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op3 (
   ::CORBA::Long return_value,
@@ -1623,7 +1549,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op3 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op3_excep (
   ::OldDif2::AMH_ex1ExceptionHolder * holder)
@@ -1637,7 +1562,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op3_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op4 (
   ::CORBA::Short return_value,
@@ -1657,7 +1581,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op4 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op4_excep (
   ::OldDif2::AMH_ex1ExceptionHolder * holder)
@@ -1671,7 +1594,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op4_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op5 (
   ::CORBA::ULong return_value,
@@ -1691,7 +1613,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op5 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op5_excep (
   ::OldDif2::AMH_ex1ExceptionHolder * holder)
@@ -1705,7 +1626,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op5_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op6 (
   ::CORBA::UShort return_value,
@@ -1725,7 +1645,6 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op6 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op6_excep (
   ::OldDif2::AMH_ex1ExceptionHolder * holder)
@@ -1744,17 +1663,18 @@ class TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1772,23 +1692,20 @@ TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::hash (const char *str, unsigned
      19,  0,  0, 19, 19, 19,  0, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 19,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 18,
-      HASH_VALUE_RANGE = 16,
-      DUPLICATES = 7,
-      WORDLIST_SIZE = 22
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {19};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {16};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {7};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {22};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1822,7 +1739,7 @@ TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (const char *str, unsign
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -1833,14 +1750,14 @@ TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (const char *str, unsign
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -1849,7 +1766,7 @@ TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (const char *str, unsign
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex1Handler_optable;
@@ -1861,7 +1778,6 @@ static TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex1Handle
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::~_TAO_AMI_ex1Handler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -1882,7 +1798,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1900,7 +1815,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -1924,7 +1838,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1942,7 +1855,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -1966,7 +1878,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1984,7 +1895,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -2008,7 +1918,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -2026,7 +1935,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -2050,7 +1958,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -2068,7 +1975,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -2092,7 +1998,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -2110,7 +2015,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -2132,7 +2036,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6 (
         ((TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val *) args[3])->arg ()
       );
 }
-
 
 
 void
@@ -2159,10 +2062,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldDif2::AMI_ex1Handler::AMI_ex1Handler ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMI_ex1Handler_optable);
@@ -2172,16 +2071,12 @@ POA_OldDif2::AMI_ex1Handler::AMI_ex1Handler ()
 namespace POA_OldDif2
 {
 
-
   class op0_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op0_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline op0_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -2192,28 +2087,26 @@ namespace POA_OldDif2
     POA_OldDif2::AMI_ex1Handler * const servant_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op0_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  op0_AMI_ex1Handler command (
-    impl);
+  op0_AMI_ex1Handler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -2232,20 +2125,16 @@ void POA_OldDif2::AMI_ex1Handler::op0_skel (
 namespace POA_OldDif2
 {
 
-
   class op0_excep_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op0_excep_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op0_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2265,12 +2154,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op0_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2279,8 +2168,7 @@ void POA_OldDif2::AMI_ex1Handler::op0_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2309,20 +2197,16 @@ void POA_OldDif2::AMI_ex1Handler::op0_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class op1_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op1_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op1_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2356,12 +2240,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op1_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Float>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::CORBA::Double>::in_arg_val _tao_d;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_l;
@@ -2374,8 +2258,7 @@ void POA_OldDif2::AMI_ex1Handler::op1_skel (
       std::addressof(_tao_l)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2404,20 +2287,16 @@ void POA_OldDif2::AMI_ex1Handler::op1_skel (
 namespace POA_OldDif2
 {
 
-
   class op1_excep_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op1_excep_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op1_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2437,12 +2316,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op1_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2451,8 +2330,7 @@ void POA_OldDif2::AMI_ex1Handler::op1_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2481,20 +2359,16 @@ void POA_OldDif2::AMI_ex1Handler::op1_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class op2_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op2_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op2_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2528,12 +2402,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op2_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Double>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_l;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_s;
@@ -2546,8 +2420,7 @@ void POA_OldDif2::AMI_ex1Handler::op2_skel (
       std::addressof(_tao_s)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2576,20 +2449,16 @@ void POA_OldDif2::AMI_ex1Handler::op2_skel (
 namespace POA_OldDif2
 {
 
-
   class op2_excep_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op2_excep_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op2_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2609,12 +2478,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op2_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2623,8 +2492,7 @@ void POA_OldDif2::AMI_ex1Handler::op2_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2653,20 +2521,16 @@ void POA_OldDif2::AMI_ex1Handler::op2_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class op3_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op3_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op3_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2700,12 +2564,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op3_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_s;
   TAO::SArg_Traits< ::CORBA::ULong>::in_arg_val _tao_ul;
@@ -2718,8 +2582,7 @@ void POA_OldDif2::AMI_ex1Handler::op3_skel (
       std::addressof(_tao_ul)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2748,20 +2611,16 @@ void POA_OldDif2::AMI_ex1Handler::op3_skel (
 namespace POA_OldDif2
 {
 
-
   class op3_excep_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op3_excep_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op3_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2781,12 +2640,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op3_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2795,8 +2654,7 @@ void POA_OldDif2::AMI_ex1Handler::op3_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2825,20 +2683,16 @@ void POA_OldDif2::AMI_ex1Handler::op3_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class op4_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op4_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op4_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2872,12 +2726,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op4_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::CORBA::ULong>::in_arg_val _tao_ul;
   TAO::SArg_Traits< ::CORBA::UShort>::in_arg_val _tao_us;
@@ -2890,8 +2744,7 @@ void POA_OldDif2::AMI_ex1Handler::op4_skel (
       std::addressof(_tao_us)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2920,20 +2773,16 @@ void POA_OldDif2::AMI_ex1Handler::op4_skel (
 namespace POA_OldDif2
 {
 
-
   class op4_excep_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op4_excep_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op4_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2953,12 +2802,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op4_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2967,8 +2816,7 @@ void POA_OldDif2::AMI_ex1Handler::op4_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2997,20 +2845,16 @@ void POA_OldDif2::AMI_ex1Handler::op4_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class op5_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op5_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op5_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3044,12 +2888,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op5_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::ULong>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::CORBA::ULong>::in_arg_val _tao_ul;
   TAO::SArg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_c;
@@ -3062,8 +2906,7 @@ void POA_OldDif2::AMI_ex1Handler::op5_skel (
       std::addressof(_tao_c)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -3092,20 +2935,16 @@ void POA_OldDif2::AMI_ex1Handler::op5_skel (
 namespace POA_OldDif2
 {
 
-
   class op5_excep_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op5_excep_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op5_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3125,12 +2964,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op5_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -3139,8 +2978,7 @@ void POA_OldDif2::AMI_ex1Handler::op5_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -3169,20 +3007,16 @@ void POA_OldDif2::AMI_ex1Handler::op5_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class op6_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op6_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op6_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3216,12 +3050,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op6_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::UShort>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::CORBA::UShort>::in_arg_val _tao_us;
   TAO::SArg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_c;
@@ -3234,8 +3068,7 @@ void POA_OldDif2::AMI_ex1Handler::op6_skel (
       std::addressof(_tao_c)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -3264,20 +3097,16 @@ void POA_OldDif2::AMI_ex1Handler::op6_skel (
 namespace POA_OldDif2
 {
 
-
   class op6_excep_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op6_excep_AMI_ex1Handler (
-      POA_OldDif2::AMI_ex1Handler * servant,
+    inline op6_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3297,12 +3126,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex1Handler::op6_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -3311,8 +3140,7 @@ void POA_OldDif2::AMI_ex1Handler::op6_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
+  POA_OldDif2::AMI_ex1Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -3344,7 +3172,6 @@ void POA_OldDif2::AMI_ex1Handler::op6_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::AMI_ex1Handler::_is_a (const char* value)
 {
   return
@@ -3363,7 +3190,6 @@ const char* POA_OldDif2::AMI_ex1Handler::_interface_repository_id () const
 
 
 
-
 void POA_OldDif2::AMI_ex1Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -3374,12 +3200,11 @@ void POA_OldDif2::AMI_ex1Handler::_dispatch (
 
 
 
-
 OldDif2::AMI_ex1Handler *
 POA_OldDif2::AMI_ex1Handler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -3393,17 +3218,18 @@ class TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3421,23 +3247,20 @@ TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable::hash (const char *str, unsigned int le
      34,  0, 34, 34, 34, 34,  0, 34, 34, 34,
      34, 34, 34, 34, 34, 34, 34, 34,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 18,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 33,
-      HASH_VALUE_RANGE = 31,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 21
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {18};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {33};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {31};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {21};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -3470,30 +3293,25 @@ TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable tao_OldDif2_AMH_ex2_optable;
-
-
-
-
 
 POA_OldDif2::AMH_ex2::AMH_ex2 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMH_ex2_optable);
 }
-
 
 
 void
@@ -3544,7 +3362,6 @@ POA_OldDif2::AMH_ex2::op7_skel (
       o
     );
 }
-
 void
 POA_OldDif2::AMH_ex2::op8_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -3590,7 +3407,6 @@ POA_OldDif2::AMH_ex2::op8_skel (
       o
     );
 }
-
 void
 POA_OldDif2::AMH_ex2::op9_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -3642,7 +3458,6 @@ POA_OldDif2::AMH_ex2::op9_skel (
       l
     );
 }
-
 void
 POA_OldDif2::AMH_ex2::op10_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -3688,7 +3503,6 @@ POA_OldDif2::AMH_ex2::op10_skel (
       s.in ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex2::op11_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -3734,7 +3548,6 @@ POA_OldDif2::AMH_ex2::op11_skel (
       ls.in ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex2::op12_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -3786,7 +3599,6 @@ POA_OldDif2::AMH_ex2::op12_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::AMH_ex2::_is_a (const char* value)
 {
   return
@@ -3801,7 +3613,6 @@ const char* POA_OldDif2::AMH_ex2::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex2:1.0";
 }
-
 void
 POA_OldDif2::AMH_ex2::_dispatch (
     TAO_ServerRequest &req,
@@ -3809,12 +3620,11 @@ POA_OldDif2::AMH_ex2::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 OldDif2::ex2*
 POA_OldDif2::AMH_ex2::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -3829,17 +3639,18 @@ class TAO_OldDif2_ex2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex2_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_ex2_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3857,23 +3668,20 @@ TAO_OldDif2_ex2_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
      34,  0, 34, 34, 34, 34,  0, 34, 34, 34,
      34, 34, 34, 34, 34, 34, 34, 34,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_ex2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 18,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 33,
-      HASH_VALUE_RANGE = 31,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 21
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {18};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {33};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {31};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {21};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -3906,17 +3714,17 @@ TAO_OldDif2_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_ex2_Perfect_Hash_OpTable tao_OldDif2_ex2_optable;
@@ -3928,7 +3736,6 @@ static TAO_OldDif2_ex2_Perfect_Hash_OpTable tao_OldDif2_ex2_optable;
 POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::~_TAO_ex2_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -3953,7 +3760,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op7 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8 (
     TAO_Abstract_ServantBase  *servant,
@@ -3973,7 +3779,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8 (
           ((TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val *) args[2])->arg ()
         );
 }
-
 
 
 void
@@ -3999,7 +3804,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op9 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10 (
     TAO_Abstract_ServantBase  *servant,
@@ -4021,7 +3825,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11 (
     TAO_Abstract_ServantBase  *servant,
@@ -4041,7 +3844,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11 (
           ((TAO::Arg_Traits< ::CORBA::Long>::out_arg_val *) args[2])->arg ()
         );
 }
-
 
 
 void
@@ -4069,10 +3871,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op12 (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldDif2::ex2::ex2 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_ex2_optable);
@@ -4082,20 +3880,16 @@ POA_OldDif2::ex2::ex2 ()
 namespace POA_OldDif2
 {
 
-
   class op7_ex2
     : public TAO::Upcall_Command
   {
   public:
-    inline op7_ex2 (
-      POA_OldDif2::ex2 * servant,
+    inline op7_ex2 (POA_OldDif2::ex2 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -4135,12 +3929,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex2::op7_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::ACE_InputCDR::to_char>::ret_val retval;
+{
+  TAO::SArg_Traits< ::ACE_InputCDR::to_char>::ret_val retval;
   TAO::SArg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_c;
   TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::out_arg_val _tao_b;
   TAO::SArg_Traits< ::ACE_InputCDR::to_octet>::inout_arg_val _tao_o;
@@ -4153,8 +3947,7 @@ void POA_OldDif2::ex2::op7_skel (
       std::addressof(_tao_o)
     };
 
-  POA_OldDif2::ex2 * const impl =
-    dynamic_cast<POA_OldDif2::ex2 *> (servant);
+  POA_OldDif2::ex2 * const impl = dynamic_cast<POA_OldDif2::ex2 *> (servant);
 
   if (!impl)
     {
@@ -4183,20 +3976,16 @@ void POA_OldDif2::ex2::op7_skel (
 namespace POA_OldDif2
 {
 
-
   class op8_ex2
     : public TAO::Upcall_Command
   {
   public:
-    inline op8_ex2 (
-      POA_OldDif2::ex2 * servant,
+    inline op8_ex2 (POA_OldDif2::ex2 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -4229,12 +4018,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex2::op8_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::ret_val retval;
+{
+  TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::ret_val retval;
   TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::out_arg_val _tao_b;
   TAO::SArg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_o;
 
@@ -4245,8 +4034,7 @@ void POA_OldDif2::ex2::op8_skel (
       std::addressof(_tao_o)
     };
 
-  POA_OldDif2::ex2 * const impl =
-    dynamic_cast<POA_OldDif2::ex2 *> (servant);
+  POA_OldDif2::ex2 * const impl = dynamic_cast<POA_OldDif2::ex2 *> (servant);
 
   if (!impl)
     {
@@ -4275,20 +4063,16 @@ void POA_OldDif2::ex2::op8_skel (
 namespace POA_OldDif2
 {
 
-
   class op9_ex2
     : public TAO::Upcall_Command
   {
   public:
-    inline op9_ex2 (
-      POA_OldDif2::ex2 * servant,
+    inline op9_ex2 (POA_OldDif2::ex2 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -4335,12 +4119,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex2::op9_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::ACE_InputCDR::to_octet>::ret_val retval;
+{
+  TAO::SArg_Traits< ::ACE_InputCDR::to_octet>::ret_val retval;
   TAO::SArg_Traits< ::ACE_InputCDR::to_octet>::inout_arg_val _tao_o;
   TAO::SArg_Traits< char *>::out_arg_val _tao_s;
   TAO::SArg_Traits< ::TAO::OldDif2_ex2_op9_ls>::in_arg_val _tao_ls;
@@ -4355,8 +4139,7 @@ void POA_OldDif2::ex2::op9_skel (
       std::addressof(_tao_l)
     };
 
-  POA_OldDif2::ex2 * const impl =
-    dynamic_cast<POA_OldDif2::ex2 *> (servant);
+  POA_OldDif2::ex2 * const impl = dynamic_cast<POA_OldDif2::ex2 *> (servant);
 
   if (!impl)
     {
@@ -4385,20 +4168,16 @@ void POA_OldDif2::ex2::op9_skel (
 namespace POA_OldDif2
 {
 
-
   class op10_ex2
     : public TAO::Upcall_Command
   {
   public:
-    inline op10_ex2 (
-      POA_OldDif2::ex2 * servant,
+    inline op10_ex2 (POA_OldDif2::ex2 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -4431,12 +4210,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex2::op10_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< char *>::ret_val retval;
+{
+  TAO::SArg_Traits< char *>::ret_val retval;
   TAO::SArg_Traits< char *>::in_arg_val _tao_s;
   TAO::SArg_Traits< ::TAO::OldDif2_ex2_op10_ls>::out_arg_val _tao_ls;
 
@@ -4447,8 +4226,7 @@ void POA_OldDif2::ex2::op10_skel (
       std::addressof(_tao_ls)
     };
 
-  POA_OldDif2::ex2 * const impl =
-    dynamic_cast<POA_OldDif2::ex2 *> (servant);
+  POA_OldDif2::ex2 * const impl = dynamic_cast<POA_OldDif2::ex2 *> (servant);
 
   if (!impl)
     {
@@ -4477,20 +4255,16 @@ void POA_OldDif2::ex2::op10_skel (
 namespace POA_OldDif2
 {
 
-
   class op11_ex2
     : public TAO::Upcall_Command
   {
   public:
-    inline op11_ex2 (
-      POA_OldDif2::ex2 * servant,
+    inline op11_ex2 (POA_OldDif2::ex2 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -4523,12 +4297,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex2::op11_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::TAO::OldDif2_ex2_op11>::ret_val retval;
+{
+  TAO::SArg_Traits< ::TAO::OldDif2_ex2_op11>::ret_val retval;
   TAO::SArg_Traits< ::TAO::OldDif2_ex2_op11_ls>::inout_arg_val _tao_ls;
   TAO::SArg_Traits< ::CORBA::Long>::out_arg_val _tao_l;
 
@@ -4539,8 +4313,7 @@ void POA_OldDif2::ex2::op11_skel (
       std::addressof(_tao_l)
     };
 
-  POA_OldDif2::ex2 * const impl =
-    dynamic_cast<POA_OldDif2::ex2 *> (servant);
+  POA_OldDif2::ex2 * const impl = dynamic_cast<POA_OldDif2::ex2 *> (servant);
 
   if (!impl)
     {
@@ -4569,20 +4342,16 @@ void POA_OldDif2::ex2::op11_skel (
 namespace POA_OldDif2
 {
 
-
   class op12_ex2
     : public TAO::Upcall_Command
   {
   public:
-    inline op12_ex2 (
-      POA_OldDif2::ex2 * servant,
+    inline op12_ex2 (POA_OldDif2::ex2 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -4608,12 +4377,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex2::op12_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_l;
 
   TAO::Argument * const args[] =
@@ -4622,8 +4391,7 @@ void POA_OldDif2::ex2::op12_skel (
       std::addressof(_tao_l)
     };
 
-  POA_OldDif2::ex2 * const impl =
-    dynamic_cast<POA_OldDif2::ex2 *> (servant);
+  POA_OldDif2::ex2 * const impl = dynamic_cast<POA_OldDif2::ex2 *> (servant);
 
   if (!impl)
     {
@@ -4655,7 +4423,6 @@ void POA_OldDif2::ex2::op12_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::ex2::_is_a (const char* value)
 {
   return
@@ -4674,7 +4441,6 @@ const char* POA_OldDif2::ex2::_interface_repository_id () const
 
 
 
-
 void POA_OldDif2::ex2::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -4685,12 +4451,11 @@ void POA_OldDif2::ex2::_dispatch (
 
 
 
-
 OldDif2::ex2 *
 POA_OldDif2::ex2::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -4699,8 +4464,6 @@ POA_OldDif2::ex2::_this ()
     }
   return {};
 }
-
-
 
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op7 (
@@ -4721,7 +4484,6 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op7 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op7_excep (
   ::OldDif2::AMH_ex2ExceptionHolder * holder)
@@ -4735,7 +4497,6 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op7_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op8 (
   ::CORBA::Boolean return_value,
@@ -4753,7 +4514,6 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op8 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op8_excep (
   ::OldDif2::AMH_ex2ExceptionHolder * holder)
@@ -4767,7 +4527,6 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op8_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op9 (
   ::CORBA::Octet return_value,
@@ -4789,7 +4548,6 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op9 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op9_excep (
   ::OldDif2::AMH_ex2ExceptionHolder * holder)
@@ -4803,7 +4561,6 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op9_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op10 (
   const char * return_value,
@@ -4821,7 +4578,6 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op10 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op10_excep (
   ::OldDif2::AMH_ex2ExceptionHolder * holder)
@@ -4835,7 +4591,6 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op10_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op11 (
   const char * return_value,
@@ -4855,7 +4610,6 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op11 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op11_excep (
   ::OldDif2::AMH_ex2ExceptionHolder * holder)
@@ -4869,7 +4623,6 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op11_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op12 (
   ::CORBA::Long return_value)
@@ -4885,7 +4638,6 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op12 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op12_excep (
   ::OldDif2::AMH_ex2ExceptionHolder * holder)
@@ -4904,17 +4656,18 @@ class TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -4932,23 +4685,20 @@ TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::hash (const char *str, unsigned
      39,  0,  0, 39, 39, 39, 25, 39, 39, 39,
      39, 39, 39, 39, 39, 39, 39, 39,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 31,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 38,
-      HASH_VALUE_RANGE = 36,
-      DUPLICATES = 12,
-      WORDLIST_SIZE = 34
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {31};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {38};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {36};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {12};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {34};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -4995,7 +4745,7 @@ TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, unsign
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -5006,14 +4756,14 @@ TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, unsign
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -5022,7 +4772,7 @@ TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, unsign
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex2Handler_optable;
@@ -5034,7 +4784,6 @@ static TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex2Handle
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::~_TAO_AMI_ex2Handler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -5058,7 +4807,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -5076,7 +4824,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -5099,7 +4846,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -5117,7 +4863,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -5142,7 +4887,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -5160,7 +4904,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -5183,7 +4926,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -5201,7 +4943,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -5225,7 +4966,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11 (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -5245,7 +4985,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11_excep (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12 (
     TAO_Abstract_ServantBase  *servant,
@@ -5263,7 +5002,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12 (
         ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -5290,10 +5028,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldDif2::AMI_ex2Handler::AMI_ex2Handler ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMI_ex2Handler_optable);
@@ -5303,20 +5037,16 @@ POA_OldDif2::AMI_ex2Handler::AMI_ex2Handler ()
 namespace POA_OldDif2
 {
 
-
   class op7_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op7_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op7_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -5350,12 +5080,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op7_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_b;
   TAO::SArg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_o;
@@ -5368,8 +5098,7 @@ void POA_OldDif2::AMI_ex2Handler::op7_skel (
       std::addressof(_tao_o)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -5398,20 +5127,16 @@ void POA_OldDif2::AMI_ex2Handler::op7_skel (
 namespace POA_OldDif2
 {
 
-
   class op7_excep_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op7_excep_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op7_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -5431,12 +5156,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op7_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -5445,8 +5170,7 @@ void POA_OldDif2::AMI_ex2Handler::op7_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -5475,20 +5199,16 @@ void POA_OldDif2::AMI_ex2Handler::op7_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class op8_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op8_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op8_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -5515,12 +5235,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op8_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_b;
 
@@ -5531,8 +5251,7 @@ void POA_OldDif2::AMI_ex2Handler::op8_skel (
       std::addressof(_tao_b)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -5561,20 +5280,16 @@ void POA_OldDif2::AMI_ex2Handler::op8_skel (
 namespace POA_OldDif2
 {
 
-
   class op8_excep_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op8_excep_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op8_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -5594,12 +5309,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op8_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -5608,8 +5323,7 @@ void POA_OldDif2::AMI_ex2Handler::op8_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -5638,20 +5352,16 @@ void POA_OldDif2::AMI_ex2Handler::op8_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class op9_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op9_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op9_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -5692,12 +5402,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op9_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_o;
   TAO::SArg_Traits< char *>::in_arg_val _tao_s;
@@ -5712,8 +5422,7 @@ void POA_OldDif2::AMI_ex2Handler::op9_skel (
       std::addressof(_tao_l)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -5742,20 +5451,16 @@ void POA_OldDif2::AMI_ex2Handler::op9_skel (
 namespace POA_OldDif2
 {
 
-
   class op9_excep_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op9_excep_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op9_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -5775,12 +5480,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op9_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -5789,8 +5494,7 @@ void POA_OldDif2::AMI_ex2Handler::op9_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -5819,20 +5523,16 @@ void POA_OldDif2::AMI_ex2Handler::op9_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class op10_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op10_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op10_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -5859,12 +5559,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op10_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< char *>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::TAO::OldDif2_ex2_op10_ls>::in_arg_val _tao_ls;
 
@@ -5875,8 +5575,7 @@ void POA_OldDif2::AMI_ex2Handler::op10_skel (
       std::addressof(_tao_ls)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -5905,20 +5604,16 @@ void POA_OldDif2::AMI_ex2Handler::op10_skel (
 namespace POA_OldDif2
 {
 
-
   class op10_excep_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op10_excep_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op10_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -5938,12 +5633,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op10_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -5952,8 +5647,7 @@ void POA_OldDif2::AMI_ex2Handler::op10_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -5982,20 +5676,16 @@ void POA_OldDif2::AMI_ex2Handler::op10_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class op11_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op11_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op11_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -6029,12 +5719,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op11_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::TAO::OldDif2_AMI_ex2Handler_op11_ami_return_val>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::TAO::OldDif2_ex2_op11_ls>::in_arg_val _tao_ls;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_l;
@@ -6047,8 +5737,7 @@ void POA_OldDif2::AMI_ex2Handler::op11_skel (
       std::addressof(_tao_l)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -6077,20 +5766,16 @@ void POA_OldDif2::AMI_ex2Handler::op11_skel (
 namespace POA_OldDif2
 {
 
-
   class op11_excep_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op11_excep_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op11_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -6110,12 +5795,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op11_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -6124,8 +5809,7 @@ void POA_OldDif2::AMI_ex2Handler::op11_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -6154,20 +5838,16 @@ void POA_OldDif2::AMI_ex2Handler::op11_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class op12_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op12_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op12_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -6187,12 +5867,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op12_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -6201,8 +5881,7 @@ void POA_OldDif2::AMI_ex2Handler::op12_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -6231,20 +5910,16 @@ void POA_OldDif2::AMI_ex2Handler::op12_skel (
 namespace POA_OldDif2
 {
 
-
   class op12_excep_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline op12_excep_AMI_ex2Handler (
-      POA_OldDif2::AMI_ex2Handler * servant,
+    inline op12_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -6264,12 +5939,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex2Handler::op12_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -6278,8 +5953,7 @@ void POA_OldDif2::AMI_ex2Handler::op12_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
+  POA_OldDif2::AMI_ex2Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -6311,7 +5985,6 @@ void POA_OldDif2::AMI_ex2Handler::op12_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::AMI_ex2Handler::_is_a (const char* value)
 {
   return
@@ -6331,7 +6004,6 @@ const char* POA_OldDif2::AMI_ex2Handler::_interface_repository_id () const
 
 
 
-
 void POA_OldDif2::AMI_ex2Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -6342,12 +6014,11 @@ void POA_OldDif2::AMI_ex2Handler::_dispatch (
 
 
 
-
 OldDif2::AMI_ex2Handler *
 POA_OldDif2::AMI_ex2Handler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -6361,17 +6032,18 @@ class TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -6389,23 +6061,20 @@ TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::hash (const char *str, unsigned int le
      29,  0, 29, 29, 29, 29,  5, 29, 29, 29,
      29, 29, 29, 29, 29, 29, 29, 29,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 19,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 28,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 28,
-      HASH_VALUE_RANGE = 26,
-      DUPLICATES = 4,
-      WORDLIST_SIZE = 22
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {19};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {28};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {28};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {26};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {4};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {22};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -6440,7 +6109,7 @@ TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -6451,14 +6120,14 @@ TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -6467,20 +6136,15 @@ TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable tao_OldDif2_AMH_ex3_optable;
-
-
-
-
 
 POA_OldDif2::AMH_ex3::AMH_ex3 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMH_ex3_optable);
 }
-
 
 
 void
@@ -6519,7 +6183,6 @@ POA_OldDif2::AMH_ex3::_get_float_attribute_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex3::_get_double_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -6556,7 +6219,6 @@ POA_OldDif2::AMH_ex3::_get_double_attribute_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex3::_set_double_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -6604,7 +6266,6 @@ POA_OldDif2::AMH_ex3::_set_double_attribute_skel (
       double_attribute
     );
 }
-
 void
 POA_OldDif2::AMH_ex3::_get_long_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -6641,7 +6302,6 @@ POA_OldDif2::AMH_ex3::_get_long_attribute_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex3::_get_short_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -6678,7 +6338,6 @@ POA_OldDif2::AMH_ex3::_get_short_attribute_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex3::_set_short_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -6726,7 +6385,6 @@ POA_OldDif2::AMH_ex3::_set_short_attribute_skel (
       short_attribute
     );
 }
-
 void
 POA_OldDif2::AMH_ex3::_get_unsigned_long_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -6769,7 +6427,6 @@ POA_OldDif2::AMH_ex3::_get_unsigned_long_attribute_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::AMH_ex3::_is_a (const char* value)
 {
   return
@@ -6784,7 +6441,6 @@ const char* POA_OldDif2::AMH_ex3::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex3:1.0";
 }
-
 void
 POA_OldDif2::AMH_ex3::_dispatch (
     TAO_ServerRequest &req,
@@ -6792,12 +6448,11 @@ POA_OldDif2::AMH_ex3::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 OldDif2::ex3*
 POA_OldDif2::AMH_ex3::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -6812,17 +6467,18 @@ class TAO_OldDif2_ex3_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex3_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_ex3_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_ex3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -6840,23 +6496,20 @@ TAO_OldDif2_ex3_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
      29,  0, 29, 29, 29, 29,  5, 29, 29, 29,
      29, 29, 29, 29, 29, 29, 29, 29,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_ex3_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_ex3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 19,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 28,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 28,
-      HASH_VALUE_RANGE = 26,
-      DUPLICATES = 4,
-      WORDLIST_SIZE = 22
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {19};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {28};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {28};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {26};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {4};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {22};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -6891,7 +6544,7 @@ TAO_OldDif2_ex3_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -6902,14 +6555,14 @@ TAO_OldDif2_ex3_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -6918,7 +6571,7 @@ TAO_OldDif2_ex3_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_ex3_Perfect_Hash_OpTable tao_OldDif2_ex3_optable;
@@ -6930,7 +6583,6 @@ static TAO_OldDif2_ex3_Perfect_Hash_OpTable tao_OldDif2_ex3_optable;
 POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::~_TAO_ex3_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -6952,7 +6604,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_float_attribute (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -6970,7 +6621,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute (
     _tao_ptr->double_attribute (
         );
 }
-
 
 
 void
@@ -6992,7 +6642,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_double_attribute (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -7010,7 +6659,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute (
     _tao_ptr->long_attribute (
         );
 }
-
 
 
 void
@@ -7032,7 +6680,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_short_attribute (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -7050,7 +6697,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -7077,10 +6723,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_unsigned_long_attribute (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldDif2::ex3::ex3 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_ex3_optable);
@@ -7090,20 +6732,16 @@ POA_OldDif2::ex3::ex3 ()
 namespace POA_OldDif2
 {
 
-
   class _get_float_attribute_ex3
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_float_attribute_ex3 (
-      POA_OldDif2::ex3 * servant,
+    inline _get_float_attribute_ex3 (POA_OldDif2::ex3 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -7122,20 +6760,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex3::_get_float_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Float>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Float>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex3 * const impl =
-    dynamic_cast<POA_OldDif2::ex3 *> (servant);
+  POA_OldDif2::ex3 * const impl = dynamic_cast<POA_OldDif2::ex3 *> (servant);
 
   if (!impl)
     {
@@ -7164,20 +6801,16 @@ void POA_OldDif2::ex3::_get_float_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _get_double_attribute_ex3
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_double_attribute_ex3 (
-      POA_OldDif2::ex3 * servant,
+    inline _get_double_attribute_ex3 (POA_OldDif2::ex3 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -7196,20 +6829,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex3::_get_double_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Double>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Double>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex3 * const impl =
-    dynamic_cast<POA_OldDif2::ex3 *> (servant);
+  POA_OldDif2::ex3 * const impl = dynamic_cast<POA_OldDif2::ex3 *> (servant);
 
   if (!impl)
     {
@@ -7238,20 +6870,16 @@ void POA_OldDif2::ex3::_get_double_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _set_double_attribute_ex3
     : public TAO::Upcall_Command
   {
   public:
-    inline _set_double_attribute_ex3 (
-      POA_OldDif2::ex3 * servant,
+    inline _set_double_attribute_ex3 (POA_OldDif2::ex3 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -7271,12 +6899,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex3::_set_double_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Double>::in_arg_val _tao_double_attribute;
 
   TAO::Argument * const args[] =
@@ -7285,8 +6913,7 @@ void POA_OldDif2::ex3::_set_double_attribute_skel (
       std::addressof(_tao_double_attribute)
     };
 
-  POA_OldDif2::ex3 * const impl =
-    dynamic_cast<POA_OldDif2::ex3 *> (servant);
+  POA_OldDif2::ex3 * const impl = dynamic_cast<POA_OldDif2::ex3 *> (servant);
 
   if (!impl)
     {
@@ -7315,20 +6942,16 @@ void POA_OldDif2::ex3::_set_double_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _get_long_attribute_ex3
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_long_attribute_ex3 (
-      POA_OldDif2::ex3 * servant,
+    inline _get_long_attribute_ex3 (POA_OldDif2::ex3 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -7347,20 +6970,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex3::_get_long_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex3 * const impl =
-    dynamic_cast<POA_OldDif2::ex3 *> (servant);
+  POA_OldDif2::ex3 * const impl = dynamic_cast<POA_OldDif2::ex3 *> (servant);
 
   if (!impl)
     {
@@ -7389,20 +7011,16 @@ void POA_OldDif2::ex3::_get_long_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _get_short_attribute_ex3
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_short_attribute_ex3 (
-      POA_OldDif2::ex3 * servant,
+    inline _get_short_attribute_ex3 (POA_OldDif2::ex3 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -7421,20 +7039,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex3::_get_short_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Short>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Short>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex3 * const impl =
-    dynamic_cast<POA_OldDif2::ex3 *> (servant);
+  POA_OldDif2::ex3 * const impl = dynamic_cast<POA_OldDif2::ex3 *> (servant);
 
   if (!impl)
     {
@@ -7463,20 +7080,16 @@ void POA_OldDif2::ex3::_get_short_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _set_short_attribute_ex3
     : public TAO::Upcall_Command
   {
   public:
-    inline _set_short_attribute_ex3 (
-      POA_OldDif2::ex3 * servant,
+    inline _set_short_attribute_ex3 (POA_OldDif2::ex3 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -7496,12 +7109,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex3::_set_short_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_short_attribute;
 
   TAO::Argument * const args[] =
@@ -7510,8 +7123,7 @@ void POA_OldDif2::ex3::_set_short_attribute_skel (
       std::addressof(_tao_short_attribute)
     };
 
-  POA_OldDif2::ex3 * const impl =
-    dynamic_cast<POA_OldDif2::ex3 *> (servant);
+  POA_OldDif2::ex3 * const impl = dynamic_cast<POA_OldDif2::ex3 *> (servant);
 
   if (!impl)
     {
@@ -7540,20 +7152,16 @@ void POA_OldDif2::ex3::_set_short_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _get_unsigned_long_attribute_ex3
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_unsigned_long_attribute_ex3 (
-      POA_OldDif2::ex3 * servant,
+    inline _get_unsigned_long_attribute_ex3 (POA_OldDif2::ex3 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -7572,20 +7180,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex3::_get_unsigned_long_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::ULong>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::ULong>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex3 * const impl =
-    dynamic_cast<POA_OldDif2::ex3 *> (servant);
+  POA_OldDif2::ex3 * const impl = dynamic_cast<POA_OldDif2::ex3 *> (servant);
 
   if (!impl)
     {
@@ -7617,7 +7224,6 @@ void POA_OldDif2::ex3::_get_unsigned_long_attribute_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::ex3::_is_a (const char* value)
 {
   return
@@ -7636,7 +7242,6 @@ const char* POA_OldDif2::ex3::_interface_repository_id () const
 
 
 
-
 void POA_OldDif2::ex3::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -7647,12 +7252,11 @@ void POA_OldDif2::ex3::_dispatch (
 
 
 
-
 OldDif2::ex3 *
 POA_OldDif2::ex3::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -7661,8 +7265,6 @@ POA_OldDif2::ex3::_this ()
     }
   return {};
 }
-
-
 
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_float_attribute (
@@ -7679,7 +7281,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_float_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_float_attribute_excep (
   ::OldDif2::AMH_ex3ExceptionHolder * holder)
@@ -7693,7 +7294,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_float_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_double_attribute (
   ::CORBA::Double return_value)
@@ -7709,7 +7309,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_double_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_double_attribute_excep (
   ::OldDif2::AMH_ex3ExceptionHolder * holder)
@@ -7723,7 +7322,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_double_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::set_double_attribute ()
 {
@@ -7732,7 +7330,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::set_double_attribute ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::set_double_attribute_excep (
   ::OldDif2::AMH_ex3ExceptionHolder * holder)
@@ -7746,7 +7343,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::set_double_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_long_attribute (
   ::CORBA::Long return_value)
@@ -7762,7 +7358,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_long_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_long_attribute_excep (
   ::OldDif2::AMH_ex3ExceptionHolder * holder)
@@ -7776,7 +7371,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_long_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_short_attribute (
   ::CORBA::Short return_value)
@@ -7792,7 +7386,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_short_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_short_attribute_excep (
   ::OldDif2::AMH_ex3ExceptionHolder * holder)
@@ -7806,7 +7399,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_short_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::set_short_attribute ()
 {
@@ -7815,7 +7407,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::set_short_attribute ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::set_short_attribute_excep (
   ::OldDif2::AMH_ex3ExceptionHolder * holder)
@@ -7829,7 +7420,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::set_short_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_unsigned_long_attribute (
   ::CORBA::ULong return_value)
@@ -7845,7 +7435,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_unsigned_long_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_unsigned_long_attribute_excep (
   ::OldDif2::AMH_ex3ExceptionHolder * holder)
@@ -7864,17 +7453,18 @@ class TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -7892,23 +7482,20 @@ TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::hash (const char *str, unsigned
      44,  0,  0, 44, 44, 10, 30, 44, 44, 44,
      44, 44, 44, 44, 44, 44, 44, 44,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 33,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 33,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 43,
-      HASH_VALUE_RANGE = 41,
-      DUPLICATES = 9,
-      WORDLIST_SIZE = 36
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {33};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {33};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {43};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {41};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {9};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {36};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -7958,7 +7545,7 @@ TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::lookup (const char *str, unsign
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -7969,14 +7556,14 @@ TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::lookup (const char *str, unsign
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -7985,7 +7572,7 @@ TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::lookup (const char *str, unsign
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex3Handler_optable;
@@ -7997,7 +7584,6 @@ static TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex3Handle
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::~_TAO_AMI_ex3Handler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -8019,7 +7605,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -8037,7 +7622,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -8059,7 +7643,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -8079,7 +7662,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute_excep (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -8096,7 +7678,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute (
   _tao_ptr->set_double_attribute (
       );
 }
-
 
 
 void
@@ -8118,7 +7699,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute_excep (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -8136,7 +7716,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute (
         ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -8158,7 +7737,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute_excep (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -8176,7 +7754,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -8198,7 +7775,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute_excep (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -8215,7 +7791,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute (
   _tao_ptr->set_short_attribute (
       );
 }
-
 
 
 void
@@ -8237,7 +7812,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute_excep (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -8255,7 +7829,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute 
         ((TAO::Arg_Traits< ::CORBA::ULong>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -8282,10 +7855,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute_
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldDif2::AMI_ex3Handler::AMI_ex3Handler ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMI_ex3Handler_optable);
@@ -8295,20 +7864,16 @@ POA_OldDif2::AMI_ex3Handler::AMI_ex3Handler ()
 namespace POA_OldDif2
 {
 
-
   class get_float_attribute_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_float_attribute_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline get_float_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -8328,12 +7893,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::get_float_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Float>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -8342,8 +7907,7 @@ void POA_OldDif2::AMI_ex3Handler::get_float_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -8372,20 +7936,16 @@ void POA_OldDif2::AMI_ex3Handler::get_float_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_float_attribute_excep_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_float_attribute_excep_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline get_float_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -8405,12 +7965,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::get_float_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -8419,8 +7979,7 @@ void POA_OldDif2::AMI_ex3Handler::get_float_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -8449,20 +8008,16 @@ void POA_OldDif2::AMI_ex3Handler::get_float_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class get_double_attribute_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_double_attribute_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline get_double_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -8482,12 +8037,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::get_double_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Double>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -8496,8 +8051,7 @@ void POA_OldDif2::AMI_ex3Handler::get_double_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -8526,20 +8080,16 @@ void POA_OldDif2::AMI_ex3Handler::get_double_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_double_attribute_excep_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_double_attribute_excep_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline get_double_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -8559,12 +8109,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::get_double_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -8573,8 +8123,7 @@ void POA_OldDif2::AMI_ex3Handler::get_double_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -8603,16 +8152,12 @@ void POA_OldDif2::AMI_ex3Handler::get_double_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class set_double_attribute_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_double_attribute_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline set_double_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -8623,28 +8168,26 @@ namespace POA_OldDif2
     POA_OldDif2::AMI_ex3Handler * const servant_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::set_double_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  set_double_attribute_AMI_ex3Handler command (
-    impl);
+  set_double_attribute_AMI_ex3Handler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -8663,20 +8206,16 @@ void POA_OldDif2::AMI_ex3Handler::set_double_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class set_double_attribute_excep_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_double_attribute_excep_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline set_double_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -8696,12 +8235,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::set_double_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -8710,8 +8249,7 @@ void POA_OldDif2::AMI_ex3Handler::set_double_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -8740,20 +8278,16 @@ void POA_OldDif2::AMI_ex3Handler::set_double_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class get_long_attribute_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_long_attribute_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline get_long_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -8773,12 +8307,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::get_long_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -8787,8 +8321,7 @@ void POA_OldDif2::AMI_ex3Handler::get_long_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -8817,20 +8350,16 @@ void POA_OldDif2::AMI_ex3Handler::get_long_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_long_attribute_excep_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_long_attribute_excep_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline get_long_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -8850,12 +8379,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::get_long_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -8864,8 +8393,7 @@ void POA_OldDif2::AMI_ex3Handler::get_long_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -8894,20 +8422,16 @@ void POA_OldDif2::AMI_ex3Handler::get_long_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class get_short_attribute_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_short_attribute_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline get_short_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -8927,12 +8451,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::get_short_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -8941,8 +8465,7 @@ void POA_OldDif2::AMI_ex3Handler::get_short_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -8971,20 +8494,16 @@ void POA_OldDif2::AMI_ex3Handler::get_short_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_short_attribute_excep_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_short_attribute_excep_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline get_short_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -9004,12 +8523,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::get_short_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -9018,8 +8537,7 @@ void POA_OldDif2::AMI_ex3Handler::get_short_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -9048,16 +8566,12 @@ void POA_OldDif2::AMI_ex3Handler::get_short_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class set_short_attribute_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_short_attribute_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline set_short_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -9068,28 +8582,26 @@ namespace POA_OldDif2
     POA_OldDif2::AMI_ex3Handler * const servant_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::set_short_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  set_short_attribute_AMI_ex3Handler command (
-    impl);
+  set_short_attribute_AMI_ex3Handler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -9108,20 +8620,16 @@ void POA_OldDif2::AMI_ex3Handler::set_short_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class set_short_attribute_excep_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_short_attribute_excep_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline set_short_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -9141,12 +8649,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::set_short_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -9155,8 +8663,7 @@ void POA_OldDif2::AMI_ex3Handler::set_short_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -9185,20 +8692,16 @@ void POA_OldDif2::AMI_ex3Handler::set_short_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class get_unsigned_long_attribute_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_unsigned_long_attribute_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline get_unsigned_long_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -9218,12 +8721,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::ULong>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -9232,8 +8735,7 @@ void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -9262,20 +8764,16 @@ void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_unsigned_long_attribute_excep_AMI_ex3Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_unsigned_long_attribute_excep_AMI_ex3Handler (
-      POA_OldDif2::AMI_ex3Handler * servant,
+    inline get_unsigned_long_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -9295,12 +8793,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -9309,8 +8807,7 @@ void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex3Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
+  POA_OldDif2::AMI_ex3Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex3Handler *> (servant);
 
   if (!impl)
     {
@@ -9342,7 +8839,6 @@ void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::AMI_ex3Handler::_is_a (const char* value)
 {
   return
@@ -9362,7 +8858,6 @@ const char* POA_OldDif2::AMI_ex3Handler::_interface_repository_id () const
 
 
 
-
 void POA_OldDif2::AMI_ex3Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -9373,12 +8868,11 @@ void POA_OldDif2::AMI_ex3Handler::_dispatch (
 
 
 
-
 OldDif2::AMI_ex3Handler *
 POA_OldDif2::AMI_ex3Handler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -9392,17 +8886,18 @@ class TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -9420,23 +8915,20 @@ TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::hash (const char *str, unsigned int le
      35,  0, 35, 35, 35, 35,  5, 35, 35, 35,
      35, 35, 35, 35, 35, 35, 35, 35,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 35,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 29,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 34,
-      HASH_VALUE_RANGE = 32,
-      DUPLICATES = 11,
-      WORDLIST_SIZE = 38
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {35};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {29};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {34};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {32};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {11};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {38};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -9480,7 +8972,7 @@ TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -9490,107 +8982,102 @@ TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
               switch (key)
                 {
                 case   3:
-                  resword = &wordlist[3]; break;
+                  resword = std::addressof (wordlist[3]); break;
                 case   4:
-                  resword = &wordlist[4]; break;
+                  resword = std::addressof (wordlist[4]); break;
                 case   5:
-                  resword = &wordlist[5]; break;
+                  resword = std::addressof (wordlist[5]); break;
                 case   6:
-                  resword = &wordlist[6]; break;
+                  resword = std::addressof (wordlist[6]); break;
                 case   8:
-                  resword = &wordlist[7]; break;
+                  resword = std::addressof (wordlist[7]); break;
                 case   9:
-                  resword = &wordlist[8]; break;
+                  resword = std::addressof (wordlist[8]); break;
                 case  10:
-                  resword = &wordlist[9]; break;
+                  resword = std::addressof (wordlist[9]); break;
                 case  11:
-                  resword = &wordlist[10]; break;
+                  resword = std::addressof (wordlist[10]); break;
                 case  13:
-                  resword = &wordlist[11]; break;
+                  resword = std::addressof (wordlist[11]); break;
                 case  14:
-                  resword = &wordlist[12]; break;
+                  resword = std::addressof (wordlist[12]); break;
                 case  15:
-                  resword = &wordlist[13]; break;
+                  resword = std::addressof (wordlist[13]); break;
                 case  16:
-                  resword = &wordlist[14]; break;
+                  resword = std::addressof (wordlist[14]); break;
                 case  18:
-                  resword = &wordlist[15]; break;
+                  resword = std::addressof (wordlist[15]); break;
                 case  19:
-                  resword = &wordlist[16];
+                  resword = std::addressof (wordlist[16]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[17];
+                  resword = std::addressof (wordlist[17]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  20:
-                  resword = &wordlist[18];
+                  resword = std::addressof (wordlist[18]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[19];
+                  resword = std::addressof (wordlist[19]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[20];
+                  resword = std::addressof (wordlist[20]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[21];
+                  resword = std::addressof (wordlist[21]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  21:
-                  resword = &wordlist[22];
+                  resword = std::addressof (wordlist[22]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[23];
+                  resword = std::addressof (wordlist[23]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[24];
+                  resword = std::addressof (wordlist[24]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[25];
+                  resword = std::addressof (wordlist[25]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  22:
-                  resword = &wordlist[26];
+                  resword = std::addressof (wordlist[26]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[27];
+                  resword = std::addressof (wordlist[27]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  23:
-                  resword = &wordlist[28]; break;
+                  resword = std::addressof (wordlist[28]); break;
                 case  24:
-                  resword = &wordlist[29]; break;
+                  resword = std::addressof (wordlist[29]); break;
                 case  26:
-                  resword = &wordlist[30]; break;
+                  resword = std::addressof (wordlist[30]); break;
                 case  28:
-                  resword = &wordlist[31]; break;
+                  resword = std::addressof (wordlist[31]); break;
                 case  29:
-                  resword = &wordlist[32];
+                  resword = std::addressof (wordlist[32]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[33];
+                  resword = std::addressof (wordlist[33]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[34];
+                  resword = std::addressof (wordlist[34]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  31:
-                  resword = &wordlist[35]; break;
+                  resword = std::addressof (wordlist[35]); break;
                 case  33:
-                  resword = &wordlist[36]; break;
+                  resword = std::addressof (wordlist[36]); break;
                 case  34:
-                  resword = &wordlist[37]; break;
-                default: return 0;
+                  resword = std::addressof (wordlist[37]); break;
+                default: return nullptr;
                 }
               if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                 return resword;
-              return 0;
+              return nullptr;
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable tao_OldDif2_AMH_ex4_optable;
-
-
-
-
 
 POA_OldDif2::AMH_ex4::AMH_ex4 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMH_ex4_optable);
 }
-
 
 
 void
@@ -9629,7 +9116,6 @@ POA_OldDif2::AMH_ex4::_get_unsigned_short_attribute_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex4::_set_unsigned_short_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -9677,7 +9163,6 @@ POA_OldDif2::AMH_ex4::_set_unsigned_short_attribute_skel (
       unsigned_short_attribute
     );
 }
-
 void
 POA_OldDif2::AMH_ex4::_get_char_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -9714,7 +9199,6 @@ POA_OldDif2::AMH_ex4::_get_char_attribute_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex4::_get_boolean_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -9751,7 +9235,6 @@ POA_OldDif2::AMH_ex4::_get_boolean_attribute_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex4::_set_boolean_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -9799,7 +9282,6 @@ POA_OldDif2::AMH_ex4::_set_boolean_attribute_skel (
       boolean_attribute
     );
 }
-
 void
 POA_OldDif2::AMH_ex4::_get_octet_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -9836,7 +9318,6 @@ POA_OldDif2::AMH_ex4::_get_octet_attribute_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex4::_get_string_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -9873,7 +9354,6 @@ POA_OldDif2::AMH_ex4::_get_string_attribute_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex4::_set_string_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -9921,7 +9401,6 @@ POA_OldDif2::AMH_ex4::_set_string_attribute_skel (
       string_attribute.in ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex4::_get_limited_string_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -9958,7 +9437,6 @@ POA_OldDif2::AMH_ex4::_get_limited_string_attribute_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldDif2::AMH_ex4::_get_an_object_attribute_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -10001,7 +9479,6 @@ POA_OldDif2::AMH_ex4::_get_an_object_attribute_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::AMH_ex4::_is_a (const char* value)
 {
   return
@@ -10018,7 +9495,6 @@ const char* POA_OldDif2::AMH_ex4::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex4:1.0";
 }
-
 void
 POA_OldDif2::AMH_ex4::_dispatch (
     TAO_ServerRequest &req,
@@ -10026,12 +9502,11 @@ POA_OldDif2::AMH_ex4::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 OldDif2::ex4*
 POA_OldDif2::AMH_ex4::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -10046,17 +9521,18 @@ class TAO_OldDif2_ex4_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex4_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_ex4_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_ex4_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -10074,23 +9550,20 @@ TAO_OldDif2_ex4_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
      35,  0, 35, 35, 35, 35,  5, 35, 35, 35,
      35, 35, 35, 35, 35, 35, 35, 35,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_ex4_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_ex4_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 35,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 29,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 34,
-      HASH_VALUE_RANGE = 32,
-      DUPLICATES = 11,
-      WORDLIST_SIZE = 38
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {35};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {29};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {34};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {32};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {11};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {38};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -10134,7 +9607,7 @@ TAO_OldDif2_ex4_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -10144,94 +9617,94 @@ TAO_OldDif2_ex4_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
               switch (key)
                 {
                 case   3:
-                  resword = &wordlist[3]; break;
+                  resword = std::addressof (wordlist[3]); break;
                 case   4:
-                  resword = &wordlist[4]; break;
+                  resword = std::addressof (wordlist[4]); break;
                 case   5:
-                  resword = &wordlist[5]; break;
+                  resword = std::addressof (wordlist[5]); break;
                 case   6:
-                  resword = &wordlist[6]; break;
+                  resword = std::addressof (wordlist[6]); break;
                 case   8:
-                  resword = &wordlist[7]; break;
+                  resword = std::addressof (wordlist[7]); break;
                 case   9:
-                  resword = &wordlist[8]; break;
+                  resword = std::addressof (wordlist[8]); break;
                 case  10:
-                  resword = &wordlist[9]; break;
+                  resword = std::addressof (wordlist[9]); break;
                 case  11:
-                  resword = &wordlist[10]; break;
+                  resword = std::addressof (wordlist[10]); break;
                 case  13:
-                  resword = &wordlist[11]; break;
+                  resword = std::addressof (wordlist[11]); break;
                 case  14:
-                  resword = &wordlist[12]; break;
+                  resword = std::addressof (wordlist[12]); break;
                 case  15:
-                  resword = &wordlist[13]; break;
+                  resword = std::addressof (wordlist[13]); break;
                 case  16:
-                  resword = &wordlist[14]; break;
+                  resword = std::addressof (wordlist[14]); break;
                 case  18:
-                  resword = &wordlist[15]; break;
+                  resword = std::addressof (wordlist[15]); break;
                 case  19:
-                  resword = &wordlist[16];
+                  resword = std::addressof (wordlist[16]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[17];
+                  resword = std::addressof (wordlist[17]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  20:
-                  resword = &wordlist[18];
+                  resword = std::addressof (wordlist[18]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[19];
+                  resword = std::addressof (wordlist[19]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[20];
+                  resword = std::addressof (wordlist[20]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[21];
+                  resword = std::addressof (wordlist[21]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  21:
-                  resword = &wordlist[22];
+                  resword = std::addressof (wordlist[22]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[23];
+                  resword = std::addressof (wordlist[23]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[24];
+                  resword = std::addressof (wordlist[24]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[25];
+                  resword = std::addressof (wordlist[25]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  22:
-                  resword = &wordlist[26];
+                  resword = std::addressof (wordlist[26]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[27];
+                  resword = std::addressof (wordlist[27]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  23:
-                  resword = &wordlist[28]; break;
+                  resword = std::addressof (wordlist[28]); break;
                 case  24:
-                  resword = &wordlist[29]; break;
+                  resword = std::addressof (wordlist[29]); break;
                 case  26:
-                  resword = &wordlist[30]; break;
+                  resword = std::addressof (wordlist[30]); break;
                 case  28:
-                  resword = &wordlist[31]; break;
+                  resword = std::addressof (wordlist[31]); break;
                 case  29:
-                  resword = &wordlist[32];
+                  resword = std::addressof (wordlist[32]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[33];
+                  resword = std::addressof (wordlist[33]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[34];
+                  resword = std::addressof (wordlist[34]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  31:
-                  resword = &wordlist[35]; break;
+                  resword = std::addressof (wordlist[35]); break;
                 case  33:
-                  resword = &wordlist[36]; break;
+                  resword = std::addressof (wordlist[36]); break;
                 case  34:
-                  resword = &wordlist[37]; break;
-                default: return 0;
+                  resword = std::addressof (wordlist[37]); break;
+                default: return nullptr;
                 }
               if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                 return resword;
-              return 0;
+              return nullptr;
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_ex4_Perfect_Hash_OpTable tao_OldDif2_ex4_optable;
@@ -10243,7 +9716,6 @@ static TAO_OldDif2_ex4_Perfect_Hash_OpTable tao_OldDif2_ex4_optable;
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::~_TAO_ex4_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -10265,7 +9737,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_unsigned_short_attribute (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_unsigned_short_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -10283,7 +9754,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_unsigned_short_attribute (
         ((TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -10305,7 +9775,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_char_attribute (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_boolean_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -10323,7 +9792,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_boolean_attribute (
     _tao_ptr->boolean_attribute (
         );
 }
-
 
 
 void
@@ -10345,7 +9813,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_boolean_attribute (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_octet_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -10363,7 +9830,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_octet_attribute (
     _tao_ptr->octet_attribute (
         );
 }
-
 
 
 void
@@ -10385,7 +9851,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_string_attribute (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_string_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -10405,7 +9870,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_string_attribute (
 }
 
 
-
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_limited_string_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -10423,7 +9887,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_limited_string_attribute (
     _tao_ptr->limited_string_attribute (
         );
 }
-
 
 
 void
@@ -10450,10 +9913,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_an_object_attribute (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldDif2::ex4::ex4 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_ex4_optable);
@@ -10463,20 +9922,16 @@ POA_OldDif2::ex4::ex4 ()
 namespace POA_OldDif2
 {
 
-
   class _get_unsigned_short_attribute_ex4
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_unsigned_short_attribute_ex4 (
-      POA_OldDif2::ex4 * servant,
+    inline _get_unsigned_short_attribute_ex4 (POA_OldDif2::ex4 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -10495,20 +9950,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex4::_get_unsigned_short_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::UShort>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::UShort>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex4 * const impl =
-    dynamic_cast<POA_OldDif2::ex4 *> (servant);
+  POA_OldDif2::ex4 * const impl = dynamic_cast<POA_OldDif2::ex4 *> (servant);
 
   if (!impl)
     {
@@ -10537,20 +9991,16 @@ void POA_OldDif2::ex4::_get_unsigned_short_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _set_unsigned_short_attribute_ex4
     : public TAO::Upcall_Command
   {
   public:
-    inline _set_unsigned_short_attribute_ex4 (
-      POA_OldDif2::ex4 * servant,
+    inline _set_unsigned_short_attribute_ex4 (POA_OldDif2::ex4 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -10570,12 +10020,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex4::_set_unsigned_short_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::UShort>::in_arg_val _tao_unsigned_short_attribute;
 
   TAO::Argument * const args[] =
@@ -10584,8 +10034,7 @@ void POA_OldDif2::ex4::_set_unsigned_short_attribute_skel (
       std::addressof(_tao_unsigned_short_attribute)
     };
 
-  POA_OldDif2::ex4 * const impl =
-    dynamic_cast<POA_OldDif2::ex4 *> (servant);
+  POA_OldDif2::ex4 * const impl = dynamic_cast<POA_OldDif2::ex4 *> (servant);
 
   if (!impl)
     {
@@ -10614,20 +10063,16 @@ void POA_OldDif2::ex4::_set_unsigned_short_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _get_char_attribute_ex4
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_char_attribute_ex4 (
-      POA_OldDif2::ex4 * servant,
+    inline _get_char_attribute_ex4 (POA_OldDif2::ex4 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -10646,20 +10091,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex4::_get_char_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::ACE_InputCDR::to_char>::ret_val retval;
+{
+  TAO::SArg_Traits< ::ACE_InputCDR::to_char>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex4 * const impl =
-    dynamic_cast<POA_OldDif2::ex4 *> (servant);
+  POA_OldDif2::ex4 * const impl = dynamic_cast<POA_OldDif2::ex4 *> (servant);
 
   if (!impl)
     {
@@ -10688,20 +10132,16 @@ void POA_OldDif2::ex4::_get_char_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _get_boolean_attribute_ex4
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_boolean_attribute_ex4 (
-      POA_OldDif2::ex4 * servant,
+    inline _get_boolean_attribute_ex4 (POA_OldDif2::ex4 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -10720,20 +10160,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex4::_get_boolean_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::ret_val retval;
+{
+  TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex4 * const impl =
-    dynamic_cast<POA_OldDif2::ex4 *> (servant);
+  POA_OldDif2::ex4 * const impl = dynamic_cast<POA_OldDif2::ex4 *> (servant);
 
   if (!impl)
     {
@@ -10762,20 +10201,16 @@ void POA_OldDif2::ex4::_get_boolean_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _set_boolean_attribute_ex4
     : public TAO::Upcall_Command
   {
   public:
-    inline _set_boolean_attribute_ex4 (
-      POA_OldDif2::ex4 * servant,
+    inline _set_boolean_attribute_ex4 (POA_OldDif2::ex4 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -10795,12 +10230,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex4::_set_boolean_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_boolean_attribute;
 
   TAO::Argument * const args[] =
@@ -10809,8 +10244,7 @@ void POA_OldDif2::ex4::_set_boolean_attribute_skel (
       std::addressof(_tao_boolean_attribute)
     };
 
-  POA_OldDif2::ex4 * const impl =
-    dynamic_cast<POA_OldDif2::ex4 *> (servant);
+  POA_OldDif2::ex4 * const impl = dynamic_cast<POA_OldDif2::ex4 *> (servant);
 
   if (!impl)
     {
@@ -10839,20 +10273,16 @@ void POA_OldDif2::ex4::_set_boolean_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _get_octet_attribute_ex4
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_octet_attribute_ex4 (
-      POA_OldDif2::ex4 * servant,
+    inline _get_octet_attribute_ex4 (POA_OldDif2::ex4 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -10871,20 +10301,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex4::_get_octet_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::ACE_InputCDR::to_octet>::ret_val retval;
+{
+  TAO::SArg_Traits< ::ACE_InputCDR::to_octet>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex4 * const impl =
-    dynamic_cast<POA_OldDif2::ex4 *> (servant);
+  POA_OldDif2::ex4 * const impl = dynamic_cast<POA_OldDif2::ex4 *> (servant);
 
   if (!impl)
     {
@@ -10913,20 +10342,16 @@ void POA_OldDif2::ex4::_get_octet_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _get_string_attribute_ex4
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_string_attribute_ex4 (
-      POA_OldDif2::ex4 * servant,
+    inline _get_string_attribute_ex4 (POA_OldDif2::ex4 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -10945,20 +10370,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex4::_get_string_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< char *>::ret_val retval;
+{
+  TAO::SArg_Traits< char *>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex4 * const impl =
-    dynamic_cast<POA_OldDif2::ex4 *> (servant);
+  POA_OldDif2::ex4 * const impl = dynamic_cast<POA_OldDif2::ex4 *> (servant);
 
   if (!impl)
     {
@@ -10987,20 +10411,16 @@ void POA_OldDif2::ex4::_get_string_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _set_string_attribute_ex4
     : public TAO::Upcall_Command
   {
   public:
-    inline _set_string_attribute_ex4 (
-      POA_OldDif2::ex4 * servant,
+    inline _set_string_attribute_ex4 (POA_OldDif2::ex4 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -11020,12 +10440,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex4::_set_string_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< char *>::in_arg_val _tao_string_attribute;
 
   TAO::Argument * const args[] =
@@ -11034,8 +10454,7 @@ void POA_OldDif2::ex4::_set_string_attribute_skel (
       std::addressof(_tao_string_attribute)
     };
 
-  POA_OldDif2::ex4 * const impl =
-    dynamic_cast<POA_OldDif2::ex4 *> (servant);
+  POA_OldDif2::ex4 * const impl = dynamic_cast<POA_OldDif2::ex4 *> (servant);
 
   if (!impl)
     {
@@ -11064,20 +10483,16 @@ void POA_OldDif2::ex4::_set_string_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _get_limited_string_attribute_ex4
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_limited_string_attribute_ex4 (
-      POA_OldDif2::ex4 * servant,
+    inline _get_limited_string_attribute_ex4 (POA_OldDif2::ex4 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -11096,20 +10511,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex4::_get_limited_string_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::TAO::OldDif2_ex4_limited_string_attribute>::ret_val retval;
+{
+  TAO::SArg_Traits< ::TAO::OldDif2_ex4_limited_string_attribute>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex4 * const impl =
-    dynamic_cast<POA_OldDif2::ex4 *> (servant);
+  POA_OldDif2::ex4 * const impl = dynamic_cast<POA_OldDif2::ex4 *> (servant);
 
   if (!impl)
     {
@@ -11138,20 +10552,16 @@ void POA_OldDif2::ex4::_get_limited_string_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class _get_an_object_attribute_ex4
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_an_object_attribute_ex4 (
-      POA_OldDif2::ex4 * servant,
+    inline _get_an_object_attribute_ex4 (POA_OldDif2::ex4 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -11170,20 +10580,19 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::ex4::_get_an_object_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::OldDif2::ex4>::ret_val retval;
+{
+  TAO::SArg_Traits< ::OldDif2::ex4>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::ex4 * const impl =
-    dynamic_cast<POA_OldDif2::ex4 *> (servant);
+  POA_OldDif2::ex4 * const impl = dynamic_cast<POA_OldDif2::ex4 *> (servant);
 
   if (!impl)
     {
@@ -11215,7 +10624,6 @@ void POA_OldDif2::ex4::_get_an_object_attribute_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::ex4::_is_a (const char* value)
 {
   return
@@ -11236,7 +10644,6 @@ const char* POA_OldDif2::ex4::_interface_repository_id () const
 
 
 
-
 void POA_OldDif2::ex4::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -11247,12 +10654,11 @@ void POA_OldDif2::ex4::_dispatch (
 
 
 
-
 OldDif2::ex4 *
 POA_OldDif2::ex4::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -11261,8 +10667,6 @@ POA_OldDif2::ex4::_this ()
     }
   return {};
 }
-
-
 
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_unsigned_short_attribute (
@@ -11279,7 +10683,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_unsigned_short_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_unsigned_short_attribute_excep (
   ::OldDif2::AMH_ex4ExceptionHolder * holder)
@@ -11293,7 +10696,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_unsigned_short_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_unsigned_short_attribute ()
 {
@@ -11302,7 +10704,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_unsigned_short_attribute ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_unsigned_short_attribute_excep (
   ::OldDif2::AMH_ex4ExceptionHolder * holder)
@@ -11316,7 +10717,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_unsigned_short_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_char_attribute (
   ::CORBA::Char return_value)
@@ -11332,7 +10732,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_char_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_char_attribute_excep (
   ::OldDif2::AMH_ex4ExceptionHolder * holder)
@@ -11346,7 +10745,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_char_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_boolean_attribute (
   ::CORBA::Boolean return_value)
@@ -11362,7 +10760,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_boolean_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_boolean_attribute_excep (
   ::OldDif2::AMH_ex4ExceptionHolder * holder)
@@ -11376,7 +10773,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_boolean_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_boolean_attribute ()
 {
@@ -11385,7 +10781,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_boolean_attribute ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_boolean_attribute_excep (
   ::OldDif2::AMH_ex4ExceptionHolder * holder)
@@ -11399,7 +10794,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_boolean_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_octet_attribute (
   ::CORBA::Octet return_value)
@@ -11415,7 +10809,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_octet_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_octet_attribute_excep (
   ::OldDif2::AMH_ex4ExceptionHolder * holder)
@@ -11429,7 +10822,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_octet_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_string_attribute (
   const char * return_value)
@@ -11445,7 +10837,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_string_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_string_attribute_excep (
   ::OldDif2::AMH_ex4ExceptionHolder * holder)
@@ -11459,7 +10850,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_string_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_string_attribute ()
 {
@@ -11468,7 +10858,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_string_attribute ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_string_attribute_excep (
   ::OldDif2::AMH_ex4ExceptionHolder * holder)
@@ -11482,7 +10871,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_string_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_limited_string_attribute (
   const char * return_value)
@@ -11498,7 +10886,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_limited_string_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_limited_string_attribute_excep (
   ::OldDif2::AMH_ex4ExceptionHolder * holder)
@@ -11512,7 +10899,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_limited_string_attribute_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_an_object_attribute (
   ::OldDif2::ex4_ptr return_value)
@@ -11528,7 +10914,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_an_object_attribute (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_an_object_attribute_excep (
   ::OldDif2::AMH_ex4ExceptionHolder * holder)
@@ -11547,17 +10932,18 @@ class TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -11575,23 +10961,20 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::hash (const char *str, unsigned
      69,  0,  0, 69, 69, 10, 55, 69, 69, 69,
      69, 69, 69, 69, 69, 69, 69, 69,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 65,
-      MIN_WORD_LENGTH = 3,
-      MAX_WORD_LENGTH = 34,
-      MIN_HASH_VALUE = 3,
-      MAX_HASH_VALUE = 68,
-      HASH_VALUE_RANGE = 66,
-      DUPLICATES = 24,
-      WORDLIST_SIZE = 68
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {65};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {34};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {68};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {66};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {24};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {68};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -11665,7 +11048,7 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (const char *str, unsign
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -11675,168 +11058,168 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (const char *str, unsign
               switch (key)
                 {
                 case   3:
-                  resword = &wordlist[3]; break;
+                  resword = std::addressof (wordlist[3]); break;
                 case   4:
-                  resword = &wordlist[4]; break;
+                  resword = std::addressof (wordlist[4]); break;
                 case   5:
-                  resword = &wordlist[5]; break;
+                  resword = std::addressof (wordlist[5]); break;
                 case   8:
-                  resword = &wordlist[6]; break;
+                  resword = std::addressof (wordlist[6]); break;
                 case   9:
-                  resword = &wordlist[7];
+                  resword = std::addressof (wordlist[7]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[8];
+                  resword = std::addressof (wordlist[8]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[9];
+                  resword = std::addressof (wordlist[9]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[10];
+                  resword = std::addressof (wordlist[10]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[11];
+                  resword = std::addressof (wordlist[11]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[12];
+                  resword = std::addressof (wordlist[12]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[13];
+                  resword = std::addressof (wordlist[13]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[14];
+                  resword = std::addressof (wordlist[14]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[15];
+                  resword = std::addressof (wordlist[15]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[16];
+                  resword = std::addressof (wordlist[16]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  10:
-                  resword = &wordlist[17];
+                  resword = std::addressof (wordlist[17]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[18];
+                  resword = std::addressof (wordlist[18]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[19];
+                  resword = std::addressof (wordlist[19]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  14:
-                  resword = &wordlist[20]; break;
+                  resword = std::addressof (wordlist[20]); break;
                 case  15:
-                  resword = &wordlist[21]; break;
+                  resword = std::addressof (wordlist[21]); break;
                 case  18:
-                  resword = &wordlist[22]; break;
+                  resword = std::addressof (wordlist[22]); break;
                 case  19:
-                  resword = &wordlist[23]; break;
+                  resword = std::addressof (wordlist[23]); break;
                 case  23:
-                  resword = &wordlist[24]; break;
+                  resword = std::addressof (wordlist[24]); break;
                 case  24:
-                  resword = &wordlist[25];
+                  resword = std::addressof (wordlist[25]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[26];
+                  resword = std::addressof (wordlist[26]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  25:
-                  resword = &wordlist[27];
+                  resword = std::addressof (wordlist[27]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[28];
+                  resword = std::addressof (wordlist[28]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[29];
+                  resword = std::addressof (wordlist[29]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  26:
-                  resword = &wordlist[30];
+                  resword = std::addressof (wordlist[30]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[31];
+                  resword = std::addressof (wordlist[31]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  27:
-                  resword = &wordlist[32]; break;
+                  resword = std::addressof (wordlist[32]); break;
                 case  28:
-                  resword = &wordlist[33]; break;
+                  resword = std::addressof (wordlist[33]); break;
                 case  29:
-                  resword = &wordlist[34]; break;
+                  resword = std::addressof (wordlist[34]); break;
                 case  30:
-                  resword = &wordlist[35]; break;
+                  resword = std::addressof (wordlist[35]); break;
                 case  33:
-                  resword = &wordlist[36]; break;
+                  resword = std::addressof (wordlist[36]); break;
                 case  34:
-                  resword = &wordlist[37];
+                  resword = std::addressof (wordlist[37]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[38];
+                  resword = std::addressof (wordlist[38]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  35:
-                  resword = &wordlist[39]; break;
+                  resword = std::addressof (wordlist[39]); break;
                 case  36:
-                  resword = &wordlist[40];
+                  resword = std::addressof (wordlist[40]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[41];
+                  resword = std::addressof (wordlist[41]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  37:
-                  resword = &wordlist[42]; break;
+                  resword = std::addressof (wordlist[42]); break;
                 case  38:
-                  resword = &wordlist[43];
+                  resword = std::addressof (wordlist[43]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[44];
+                  resword = std::addressof (wordlist[44]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  39:
-                  resword = &wordlist[45];
+                  resword = std::addressof (wordlist[45]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[46];
+                  resword = std::addressof (wordlist[46]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[47];
+                  resword = std::addressof (wordlist[47]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  40:
-                  resword = &wordlist[48];
+                  resword = std::addressof (wordlist[48]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[49];
+                  resword = std::addressof (wordlist[49]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  41:
-                  resword = &wordlist[50]; break;
+                  resword = std::addressof (wordlist[50]); break;
                 case  43:
-                  resword = &wordlist[51]; break;
+                  resword = std::addressof (wordlist[51]); break;
                 case  44:
-                  resword = &wordlist[52]; break;
+                  resword = std::addressof (wordlist[52]); break;
                 case  47:
-                  resword = &wordlist[53]; break;
+                  resword = std::addressof (wordlist[53]); break;
                 case  48:
-                  resword = &wordlist[54];
+                  resword = std::addressof (wordlist[54]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[55];
+                  resword = std::addressof (wordlist[55]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  49:
-                  resword = &wordlist[56]; break;
+                  resword = std::addressof (wordlist[56]); break;
                 case  50:
-                  resword = &wordlist[57];
+                  resword = std::addressof (wordlist[57]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  resword = &wordlist[58];
+                  resword = std::addressof (wordlist[58]);
                   if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
-                  return 0;
+                  return nullptr;
                 case  51:
-                  resword = &wordlist[59]; break;
+                  resword = std::addressof (wordlist[59]); break;
                 case  53:
-                  resword = &wordlist[60]; break;
+                  resword = std::addressof (wordlist[60]); break;
                 case  54:
-                  resword = &wordlist[61]; break;
+                  resword = std::addressof (wordlist[61]); break;
                 case  58:
-                  resword = &wordlist[62]; break;
+                  resword = std::addressof (wordlist[62]); break;
                 case  59:
-                  resword = &wordlist[63]; break;
+                  resword = std::addressof (wordlist[63]); break;
                 case  63:
-                  resword = &wordlist[64]; break;
+                  resword = std::addressof (wordlist[64]); break;
                 case  64:
-                  resword = &wordlist[65]; break;
+                  resword = std::addressof (wordlist[65]); break;
                 case  65:
-                  resword = &wordlist[66]; break;
+                  resword = std::addressof (wordlist[66]); break;
                 case  68:
-                  resword = &wordlist[67]; break;
-                default: return 0;
+                  resword = std::addressof (wordlist[67]); break;
+                default: return nullptr;
                 }
               if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                 return resword;
-              return 0;
+              return nullptr;
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex4Handler_optable;
@@ -11848,7 +11231,6 @@ static TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex4Handle
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::~_TAO_AMI_ex4Handler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -11870,7 +11252,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_unsigned_short_attribute
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_unsigned_short_attribute_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -11890,7 +11271,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_unsigned_short_attribute
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_unsigned_short_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11907,7 +11287,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_unsigned_short_attribute
   _tao_ptr->set_unsigned_short_attribute (
       );
 }
-
 
 
 void
@@ -11929,7 +11308,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_unsigned_short_attribute
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_char_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11947,7 +11325,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_char_attribute (
         ((TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -11969,7 +11346,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_char_attribute_excep (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_boolean_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11987,7 +11363,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_boolean_attribute (
         ((TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -12009,7 +11384,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_boolean_attribute_excep 
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_boolean_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -12026,7 +11400,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_boolean_attribute (
   _tao_ptr->set_boolean_attribute (
       );
 }
-
 
 
 void
@@ -12048,7 +11421,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_boolean_attribute_excep 
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_octet_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -12066,7 +11438,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_octet_attribute (
         ((TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -12088,7 +11459,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_octet_attribute_excep (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_string_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -12106,7 +11476,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_string_attribute (
         ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -12128,7 +11497,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_string_attribute_excep (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_string_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -12145,7 +11513,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_string_attribute (
   _tao_ptr->set_string_attribute (
       );
 }
-
 
 
 void
@@ -12167,7 +11534,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_string_attribute_excep (
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_limited_string_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -12185,7 +11551,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_limited_string_attribute
         ((TAO::Arg_Traits< ::TAO::OldDif2_AMI_ex4Handler_get_limited_string_attribute_ami_return_val>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -12207,7 +11572,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_limited_string_attribute
 }
 
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_an_object_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -12225,7 +11589,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_an_object_attribute (
         ((TAO::Arg_Traits< ::OldDif2::ex4>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -12252,10 +11615,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_an_object_attribute_exce
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldDif2::AMI_ex4Handler::AMI_ex4Handler ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMI_ex4Handler_optable);
@@ -12265,20 +11624,16 @@ POA_OldDif2::AMI_ex4Handler::AMI_ex4Handler ()
 namespace POA_OldDif2
 {
 
-
   class get_unsigned_short_attribute_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_unsigned_short_attribute_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_unsigned_short_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -12298,12 +11653,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::UShort>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -12312,8 +11667,7 @@ void POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -12342,20 +11696,16 @@ void POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_unsigned_short_attribute_excep_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_unsigned_short_attribute_excep_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_unsigned_short_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -12375,12 +11725,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -12389,8 +11739,7 @@ void POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -12419,16 +11768,12 @@ void POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class set_unsigned_short_attribute_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_unsigned_short_attribute_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline set_unsigned_short_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -12439,28 +11784,26 @@ namespace POA_OldDif2
     POA_OldDif2::AMI_ex4Handler * const servant_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  set_unsigned_short_attribute_AMI_ex4Handler command (
-    impl);
+  set_unsigned_short_attribute_AMI_ex4Handler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -12479,20 +11822,16 @@ void POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class set_unsigned_short_attribute_excep_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_unsigned_short_attribute_excep_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline set_unsigned_short_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -12512,12 +11851,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -12526,8 +11865,7 @@ void POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -12556,20 +11894,16 @@ void POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class get_char_attribute_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_char_attribute_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_char_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -12589,12 +11923,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_char_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -12603,8 +11937,7 @@ void POA_OldDif2::AMI_ex4Handler::get_char_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -12633,20 +11966,16 @@ void POA_OldDif2::AMI_ex4Handler::get_char_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_char_attribute_excep_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_char_attribute_excep_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_char_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -12666,12 +11995,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_char_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -12680,8 +12009,7 @@ void POA_OldDif2::AMI_ex4Handler::get_char_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -12710,20 +12038,16 @@ void POA_OldDif2::AMI_ex4Handler::get_char_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class get_boolean_attribute_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_boolean_attribute_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_boolean_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -12743,12 +12067,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -12757,8 +12081,7 @@ void POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -12787,20 +12110,16 @@ void POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_boolean_attribute_excep_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_boolean_attribute_excep_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_boolean_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -12820,12 +12139,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -12834,8 +12153,7 @@ void POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -12864,16 +12182,12 @@ void POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class set_boolean_attribute_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_boolean_attribute_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline set_boolean_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -12884,28 +12198,26 @@ namespace POA_OldDif2
     POA_OldDif2::AMI_ex4Handler * const servant_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  set_boolean_attribute_AMI_ex4Handler command (
-    impl);
+  set_boolean_attribute_AMI_ex4Handler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -12924,20 +12236,16 @@ void POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class set_boolean_attribute_excep_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_boolean_attribute_excep_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline set_boolean_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -12957,12 +12265,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -12971,8 +12279,7 @@ void POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -13001,20 +12308,16 @@ void POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class get_octet_attribute_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_octet_attribute_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_octet_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -13034,12 +12337,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_octet_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -13048,8 +12351,7 @@ void POA_OldDif2::AMI_ex4Handler::get_octet_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -13078,20 +12380,16 @@ void POA_OldDif2::AMI_ex4Handler::get_octet_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_octet_attribute_excep_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_octet_attribute_excep_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_octet_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -13111,12 +12409,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_octet_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -13125,8 +12423,7 @@ void POA_OldDif2::AMI_ex4Handler::get_octet_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -13155,20 +12452,16 @@ void POA_OldDif2::AMI_ex4Handler::get_octet_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class get_string_attribute_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_string_attribute_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_string_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -13188,12 +12481,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_string_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< char *>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -13202,8 +12495,7 @@ void POA_OldDif2::AMI_ex4Handler::get_string_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -13232,20 +12524,16 @@ void POA_OldDif2::AMI_ex4Handler::get_string_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_string_attribute_excep_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_string_attribute_excep_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_string_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -13265,12 +12553,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_string_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -13279,8 +12567,7 @@ void POA_OldDif2::AMI_ex4Handler::get_string_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -13309,16 +12596,12 @@ void POA_OldDif2::AMI_ex4Handler::get_string_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class set_string_attribute_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_string_attribute_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline set_string_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -13329,28 +12612,26 @@ namespace POA_OldDif2
     POA_OldDif2::AMI_ex4Handler * const servant_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::set_string_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  set_string_attribute_AMI_ex4Handler command (
-    impl);
+  set_string_attribute_AMI_ex4Handler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -13369,20 +12650,16 @@ void POA_OldDif2::AMI_ex4Handler::set_string_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class set_string_attribute_excep_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_string_attribute_excep_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline set_string_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -13402,12 +12679,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::set_string_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -13416,8 +12693,7 @@ void POA_OldDif2::AMI_ex4Handler::set_string_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -13446,20 +12722,16 @@ void POA_OldDif2::AMI_ex4Handler::set_string_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class get_limited_string_attribute_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_limited_string_attribute_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_limited_string_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -13479,12 +12751,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::TAO::OldDif2_AMI_ex4Handler_get_limited_string_attribute_ami_return_val>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -13493,8 +12765,7 @@ void POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -13523,20 +12794,16 @@ void POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_limited_string_attribute_excep_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_limited_string_attribute_excep_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_limited_string_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -13556,12 +12823,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -13570,8 +12837,7 @@ void POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -13600,20 +12866,16 @@ void POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep_skel (
 namespace POA_OldDif2
 {
 
-
   class get_an_object_attribute_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_an_object_attribute_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_an_object_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -13633,12 +12895,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::OldDif2::ex4>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -13647,8 +12909,7 @@ void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -13677,20 +12938,16 @@ void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_skel (
 namespace POA_OldDif2
 {
 
-
   class get_an_object_attribute_excep_AMI_ex4Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_an_object_attribute_excep_AMI_ex4Handler (
-      POA_OldDif2::AMI_ex4Handler * servant,
+    inline get_an_object_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -13710,12 +12967,12 @@ namespace POA_OldDif2
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -13724,8 +12981,7 @@ void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldDif2::AMI_ex4Handler * const impl =
-    dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
+  POA_OldDif2::AMI_ex4Handler * const impl = dynamic_cast<POA_OldDif2::AMI_ex4Handler *> (servant);
 
   if (!impl)
     {
@@ -13757,7 +13013,6 @@ void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldDif2::AMI_ex4Handler::_is_a (const char* value)
 {
   return
@@ -13779,7 +13034,6 @@ const char* POA_OldDif2::AMI_ex4Handler::_interface_repository_id () const
 
 
 
-
 void POA_OldDif2::AMI_ex4Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -13790,12 +13044,11 @@ void POA_OldDif2::AMI_ex4Handler::_dispatch (
 
 
 
-
 OldDif2::AMI_ex4Handler *
 POA_OldDif2::AMI_ex4Handler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

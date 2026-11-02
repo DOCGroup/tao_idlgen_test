@@ -24,7 +24,6 @@
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -74,7 +73,6 @@ TAO::Array_Traits<Half_Anon::char_seq_array_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -130,7 +128,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -180,7 +177,6 @@ TAO::Array_Traits<Half_Anon::ushort_seq_array_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -236,7 +232,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 ACE_INLINE
 All_Anon::anon_bd_string_test::anon_bd_string_test (
     TAO_Stub *objref,
@@ -254,7 +249,6 @@ All_Anon::anon_bd_string_test::anon_bd_string_test (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 All_Anon::AMH_anon_bd_string_testExceptionHolder::AMH_anon_bd_string_testExceptionHolder ()
   : exception (nullptr)
@@ -267,7 +261,6 @@ All_Anon::AMH_anon_bd_string_testExceptionHolder::_tao_obv_static_repository_id 
 }
 
 
-
 ACE_INLINE
 All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler (
     TAO_Stub *objref,
@@ -285,7 +278,6 @@ All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -337,7 +329,6 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_float_seq_array_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -393,7 +384,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -443,7 +433,6 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_1_forany>::alloc ()
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

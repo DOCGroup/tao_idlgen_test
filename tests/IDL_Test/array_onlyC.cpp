@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "array_onlyC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -34,7 +33,6 @@
 #if !defined (__ACE_INLINE__)
 #include "array_onlyC.inl"
 #endif /* !defined INLINE */
-
 TEST_TYPE_slice *
 TEST_TYPE_dup (const TEST_TYPE_slice *_tao_src_array)
 {
@@ -73,7 +71,6 @@ TEST_TYPE_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 

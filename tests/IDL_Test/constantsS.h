@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_CONSTANTSS_O5XPVR_H_
-#define _TAO_IDL_CONSTANTSS_O5XPVR_H_
+#ifndef _TAO_IDL_CONSTANTSS_6ZZ44O_H_
+#define _TAO_IDL_CONSTANTSS_6ZZ44O_H_
 
 #include /**/ "ace/pre.h"
 
@@ -51,14 +50,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -79,7 +76,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::m_a::enum_a>
     : public
@@ -89,7 +85,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_CLASSCONSTANTS_IFACE__SARG_TRAITS_)
@@ -106,7 +101,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_CLASSCONSTANTS_AMH_IFACEEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -127,7 +121,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_CLASSCONSTANTS_AMI_IFACEHANDLER__SARG_TRAITS_)
 #define _CLASSCONSTANTS_AMI_IFACEHANDLER__SARG_TRAITS_
 
@@ -142,7 +135,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_CLASSCONSTANTS_VT__SARG_TRAITS_)
@@ -166,34 +158,26 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_m_a
 {
 
 
 
-
 } // module m_a
-
 namespace POA_m_b
 {
 
 
 
-
 } // module m_b
-
 namespace POA_problems
 {
 
 
 
-
 } // module problems
-
 namespace POA_ClassConstants
 {
-
 
   class AMH_Iface;
   using AMH_Iface_ptr = AMH_Iface *;
@@ -219,7 +203,6 @@ namespace POA_ClassConstants
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -256,7 +239,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -272,7 +254,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_IfaceResponseHandler;
 using TAO_AMH_IfaceResponseHandler_ptr = TAO_AMH_IfaceResponseHandler *;
 
@@ -284,7 +265,6 @@ public:
   TAO_AMH_IfaceResponseHandler () = default;
   virtual ~TAO_AMH_IfaceResponseHandler () = default;
 };
-
 
 
 
@@ -321,7 +301,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -340,20 +319,15 @@ public:
 
 
 
-
 } // module ClassConstants
-
 namespace POA_CoercionBug
 {
 
 
 
-
 } // module CoercionBug
-
 namespace POA_SignedGen
 {
-
 
 
 

@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 OldDif2::ex1::ex1 (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ OldDif2::ex1::ex1 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldDif2::AMH_ex1ExceptionHolder::AMH_ex1ExceptionHolder ()
   : exception (nullptr)
@@ -55,7 +53,6 @@ OldDif2::AMH_ex1ExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 OldDif2::AMI_ex1Handler::AMI_ex1Handler (
     TAO_Stub *objref,
@@ -75,7 +72,6 @@ OldDif2::AMI_ex1Handler::AMI_ex1Handler (
 }
 
 
-
 ACE_INLINE
 OldDif2::ex2::ex2 (
     TAO_Stub *objref,
@@ -93,7 +89,6 @@ OldDif2::ex2::ex2 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldDif2::AMH_ex2ExceptionHolder::AMH_ex2ExceptionHolder ()
   : exception (nullptr)
@@ -106,7 +101,6 @@ OldDif2::AMH_ex2ExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 OldDif2::AMI_ex2Handler::AMI_ex2Handler (
     TAO_Stub *objref,
@@ -126,7 +120,6 @@ OldDif2::AMI_ex2Handler::AMI_ex2Handler (
 }
 
 
-
 ACE_INLINE
 OldDif2::ex3::ex3 (
     TAO_Stub *objref,
@@ -144,7 +137,6 @@ OldDif2::ex3::ex3 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldDif2::AMH_ex3ExceptionHolder::AMH_ex3ExceptionHolder ()
   : exception (nullptr)
@@ -157,7 +149,6 @@ OldDif2::AMH_ex3ExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 OldDif2::AMI_ex3Handler::AMI_ex3Handler (
     TAO_Stub *objref,
@@ -177,7 +168,6 @@ OldDif2::AMI_ex3Handler::AMI_ex3Handler (
 }
 
 
-
 ACE_INLINE
 OldDif2::ex4::ex4 (
     TAO_Stub *objref,
@@ -195,7 +185,6 @@ OldDif2::ex4::ex4 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldDif2::AMH_ex4ExceptionHolder::AMH_ex4ExceptionHolder ()
   : exception (nullptr)
@@ -206,7 +195,6 @@ OldDif2::AMH_ex4ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldDif2/AMH_ex4ExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

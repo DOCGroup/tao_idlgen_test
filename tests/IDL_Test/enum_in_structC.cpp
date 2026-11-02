@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "enum_in_structC.h"
 #include <memory>
 #include <new>
@@ -50,12 +49,11 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "enum_in_structC.inl"
 #endif /* !defined INLINE */
-
 static char const * const _tao_enumerators_UnNamed[] =
   {
     "UNNAMED_FIRST",
@@ -73,7 +71,6 @@ static TAO::TypeCode::Enum<char const *,
     3);
 
 ::CORBA::TypeCode_ptr const _tc_UnNamed = std::addressof(_tao_tc_UnNamed);
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -100,7 +97,6 @@ _tao_tc_HoldsEnum (
 ::CORBA::TypeCode_ptr const _tc_HoldsEnum = std::addressof(_tao_tc_HoldsEnum);
 
 
-
 void
 HoldsEnum::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -108,7 +104,6 @@ HoldsEnum::_tao_any_destructor (
   HoldsEnum *tmp = static_cast<HoldsEnum *> (_tao_void_pointer);
   delete tmp;
 }
-
 static char const * const _tao_enumerators_HoldsEnum_Named[] =
   {
     "NAMED_FIRST",
@@ -128,8 +123,6 @@ static TAO::TypeCode::Enum<char const *,
 ::CORBA::TypeCode_ptr const HoldsEnum::_tc_Named = std::addressof(_tao_tc_HoldsEnum_Named);
 
 
-
-
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_en_GUARD
 #define _TAO_TYPECODE_decl_heavy_struct_m_en_GUARD
 
@@ -141,23 +134,20 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        decl_heavy_struct_m_en_10 (
-          ::CORBA::tk_array,
-          &decl_heavy_struct::_tc_str_en,
-          10U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_en_10 (
+        ::CORBA::tk_array,
+        &decl_heavy_struct::_tc_str_en,
+        10U);
 
-      ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_en =
-        &decl_heavy_struct_m_en_10;
-    }
+    ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_en =
+      &decl_heavy_struct_m_en_10;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_decl_heavy_struct_m_en_GUARD */
-
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_st_GUARD
@@ -171,23 +161,20 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        decl_heavy_struct_m_st_10 (
-          ::CORBA::tk_array,
-          &decl_heavy_struct::_tc_st,
-          10U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_st_10 (
+        ::CORBA::tk_array,
+        &decl_heavy_struct::_tc_st,
+        10U);
 
-      ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_st =
-        &decl_heavy_struct_m_st_10;
-    }
+    ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_st =
+      &decl_heavy_struct_m_st_10;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_decl_heavy_struct_m_st_GUARD */
-
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_un_GUARD
@@ -201,17 +188,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        decl_heavy_struct_m_un_10 (
-          ::CORBA::tk_array,
-          &decl_heavy_struct::_tc_un,
-          10U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_un_10 (
+        ::CORBA::tk_array,
+        &decl_heavy_struct::_tc_un,
+        10U);
 
-      ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_un =
-        &decl_heavy_struct_m_un_10;
-    }
+    ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_un =
+      &decl_heavy_struct_m_un_10;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -244,7 +229,6 @@ _tao_tc_decl_heavy_struct (
 ::CORBA::TypeCode_ptr const _tc_decl_heavy_struct = std::addressof(_tao_tc_decl_heavy_struct);
 
 
-
 void
 decl_heavy_struct::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -252,7 +236,6 @@ decl_heavy_struct::_tao_any_destructor (
   decl_heavy_struct *tmp = static_cast<decl_heavy_struct *> (_tao_void_pointer);
   delete tmp;
 }
-
 decl_heavy_struct::_m_en_slice *
 decl_heavy_struct::_m_en_dup (const decl_heavy_struct::_m_en_slice *_tao_src_array)
 {
@@ -291,7 +274,6 @@ decl_heavy_struct::_m_en_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 static char const * const _tao_enumerators_decl_heavy_struct_str_en[] =
   {
     "a",
@@ -309,7 +291,6 @@ static TAO::TypeCode::Enum<char const *,
     3);
 
 ::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_str_en = std::addressof(_tao_tc_decl_heavy_struct_str_en);
-
 decl_heavy_struct::_m_st_slice *
 decl_heavy_struct::_m_st_dup (const decl_heavy_struct::_m_st_slice *_tao_src_array)
 {
@@ -348,7 +329,6 @@ decl_heavy_struct::_m_st_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -375,7 +355,6 @@ _tao_tc_decl_heavy_struct_st (
 ::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_st = std::addressof(_tao_tc_decl_heavy_struct_st);
 
 
-
 void
 decl_heavy_struct::st::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -383,7 +362,6 @@ decl_heavy_struct::st::_tao_any_destructor (
   st *tmp = static_cast<st *> (_tao_void_pointer);
   delete tmp;
 }
-
 decl_heavy_struct::_m_un_slice *
 decl_heavy_struct::_m_un_dup (const decl_heavy_struct::_m_un_slice *_tao_src_array)
 {
@@ -422,7 +400,6 @@ decl_heavy_struct::_m_un_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 
 
 decl_heavy_struct::un::un ()
@@ -492,7 +469,6 @@ decl_heavy_struct::un::operator= (::decl_heavy_struct::un const &u)
 void decl_heavy_struct::un::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__0 (1, "a", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__1 (2, "b", &CORBA::_tc_char);
 
@@ -515,7 +491,6 @@ static TAO::TypeCode::Union<char const *,
     -1);
 
 ::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_un = std::addressof(_tao_tc_decl_heavy_struct_un);
-
 static char const * const _tao_enumerators_ErrorException_ReasonCode[] =
   {
     "RESOURCE",
@@ -538,7 +513,6 @@ static TAO::TypeCode::Enum<char const *,
 ::CORBA::TypeCode_ptr const ErrorException::_tc_ReasonCode = std::addressof(_tao_tc_ErrorException_ReasonCode);
 
 
-
 ErrorException::ErrorException (
     ErrorException::ReasonCode _tao_reason)
   : ::CORBA::UserException (
@@ -547,7 +521,6 @@ ErrorException::ErrorException (
 {
   this->reason = _tao_reason;
 }
-
 
 
 ErrorException::ErrorException ()
@@ -632,7 +605,6 @@ void ErrorException::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::_tc_ErrorException;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -656,7 +628,6 @@ _tao_tc_ErrorException (
   1);
 
 ::CORBA::TypeCode_ptr const _tc_ErrorException = std::addressof(_tao_tc_ErrorException);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -689,7 +660,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -736,7 +706,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -768,7 +737,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -812,7 +780,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -893,7 +860,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, UnNamed _tao_enumerator)
@@ -918,7 +884,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, HoldsEnum::Named _tao_enumerator)
@@ -940,7 +905,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -970,7 +934,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_struct::str_en _tao_enumerator)
@@ -992,7 +955,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1030,7 +992,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1054,7 +1015,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1089,7 +1049,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1176,7 +1135,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1208,7 +1166,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1258,7 +1215,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ErrorException::ReasonCode _tao_enumerator)
@@ -1280,7 +1236,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

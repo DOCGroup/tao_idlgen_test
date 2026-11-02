@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_SIMPLE2S_L6HLSJ_H_
-#define _TAO_IDL_SIMPLE2S_L6HLSJ_H_
+#ifndef _TAO_IDL_SIMPLE2S_KQ3T3H_H_
+#define _TAO_IDL_SIMPLE2S_KQ3T3H_H_
 
 #include /**/ "ace/pre.h"
 
@@ -54,14 +53,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -82,7 +79,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_SIMPLE3__SARG_TRAITS_)
 #define _SIMPLE3__SARG_TRAITS_
 
@@ -97,7 +93,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_SIMPLE3EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -118,7 +113,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_SIMPLE3HANDLER__SARG_TRAITS_)
 #define _AMI_SIMPLE3HANDLER__SARG_TRAITS_
 
@@ -136,7 +130,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 class POA_AMH_simple3;
@@ -163,7 +156,6 @@ public:
   simple3 *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void op3_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -173,7 +165,6 @@ virtual void op3 (
     AMH_simple3ResponseHandler_ptr _tao_rh,
     ::CORBA::Long a
   ) = 0;
-
 
 static void op4_skel (
     TAO_ServerRequest &_tao_req,
@@ -187,7 +178,6 @@ virtual void op4 (
   ) = 0;
 
 };
-
 
 
 
@@ -221,7 +211,6 @@ public:
   ::simple3 *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::CORBA::Long op3 (
     ::CORBA::Long a,
     ::simple3_out b,
@@ -232,7 +221,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Any * op4 (
     const ::CORBA::Any & x,
     ::CORBA::Any & y,
@@ -245,7 +233,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -255,11 +242,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_simple3_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_simple3_Direct_Proxy_Impl ();
-
   static void
   op3 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op4 (
@@ -272,7 +257,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_simple3ResponseHandler;
 using POA_TAO_AMH_simple3ResponseHandler_ptr = POA_TAO_AMH_simple3ResponseHandler *;
 
@@ -283,25 +267,20 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_simple3ResponseHandler
 public:
   POA_TAO_AMH_simple3ResponseHandler () = default;
   virtual ~POA_TAO_AMH_simple3ResponseHandler () = default;
-
   void op3 (
     ::CORBA::Long return_value,
     ::simple3_ptr b,
     ::simple2_ptr c,
     ::simple_ptr d) override;
-
   void op3_excep (
     ::AMH_simple3ExceptionHolder * holder) override;
-
   void op4 (
     const ::CORBA::Any & return_value,
     const ::CORBA::Any & y,
     const ::CORBA::Any & z) override;
-
   void op4_excep (
     ::AMH_simple3ExceptionHolder * holder) override;
 };
-
 
 
 
@@ -335,7 +314,6 @@ public:
   ::AMI_simple3Handler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op3 (
     ::CORBA::Long ami_return_val,
     ::simple3_ptr b,
@@ -346,7 +324,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op3_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -354,7 +331,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op4 (
     const ::CORBA::Any & ami_return_val,
     const ::CORBA::Any & y,
@@ -364,7 +340,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op4_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -373,7 +348,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -385,21 +359,17 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_simple3Handler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_simple3Handler_Direct_Proxy_Impl ();
-
   static void
   op3 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op3_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op4 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op4_excep (

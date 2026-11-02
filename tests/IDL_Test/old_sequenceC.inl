@@ -24,7 +24,6 @@
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -77,7 +76,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 ACE_INLINE
 TestSeq::TestSeq (
     TAO_Stub *objref,
@@ -95,7 +93,6 @@ TestSeq::TestSeq (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_TestSeqExceptionHolder::AMH_TestSeqExceptionHolder ()
   : exception (nullptr)
@@ -106,7 +103,6 @@ AMH_TestSeqExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_TestSeqExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

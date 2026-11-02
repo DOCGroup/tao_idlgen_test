@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_REOPENED_MODULESS_82CG4P_H_
-#define _TAO_IDL_REOPENED_MODULESS_82CG4P_H_
+#ifndef _TAO_IDL_REOPENED_MODULESS_DG623Y_H_
+#define _TAO_IDL_REOPENED_MODULESS_DG623Y_H_
 
 #include /**/ "ace/pre.h"
 
@@ -55,14 +54,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -83,7 +80,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AA_BB_X1__SARG_TRAITS_)
 #define _AA_BB_X1__SARG_TRAITS_
 
@@ -98,7 +94,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AA_BB_AMH_X1EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -119,7 +114,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AA_BB_AMI_X1HANDLER__SARG_TRAITS_)
 #define _AA_BB_AMI_X1HANDLER__SARG_TRAITS_
 
@@ -136,7 +130,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AA_BB_CC_X2__SARG_TRAITS_)
 #define _AA_BB_CC_X2__SARG_TRAITS_
 
@@ -151,7 +144,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AA_BB_CC_AMH_X2EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -172,7 +164,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AA_BB_CC_AMI_X2HANDLER__SARG_TRAITS_)
 #define _AA_BB_CC_AMI_X2HANDLER__SARG_TRAITS_
 
@@ -187,7 +178,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_DOT_PARTY__SARG_TRAITS_)
@@ -206,7 +196,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_DOT_PERSON__SARG_TRAITS_)
 #define _DOT_PERSON__SARG_TRAITS_
 
@@ -221,7 +210,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_DOT_AMH_PERSONEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -242,7 +230,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_DOT_AMI_PERSONHANDLER__SARG_TRAITS_)
 #define _DOT_AMI_PERSONHANDLER__SARG_TRAITS_
 
@@ -259,7 +246,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_DOT_PARTY__SARG_TRAITS_)
 #define _DOT_PARTY__SARG_TRAITS_
 
@@ -274,7 +260,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_DOT_AMH_PARTYEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -295,7 +280,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_DOT_AMI_PARTYHANDLER__SARG_TRAITS_)
 #define _DOT_AMI_PARTYHANDLER__SARG_TRAITS_
 
@@ -312,7 +296,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OPHOLDER__SARG_TRAITS_)
 #define _OPHOLDER__SARG_TRAITS_
 
@@ -327,7 +310,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_OPHOLDEREXCEPTIONHOLDER__SARG_TRAITS_)
@@ -348,7 +330,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_OPHOLDERHANDLER__SARG_TRAITS_)
 #define _AMI_OPHOLDERHANDLER__SARG_TRAITS_
 
@@ -365,7 +346,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_COM_IFACE__SARG_TRAITS_)
 #define _COM_IFACE__SARG_TRAITS_
 
@@ -380,7 +360,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_COM_AMH_IFACEEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -401,7 +380,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_COM_AMI_IFACEHANDLER__SARG_TRAITS_)
 #define _COM_AMI_IFACEHANDLER__SARG_TRAITS_
 
@@ -418,7 +396,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_Y_Z__SARG_TRAITS_)
 #define _Y_Z__SARG_TRAITS_
 
@@ -433,7 +410,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_Y_AMH_ZEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -454,7 +430,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_Y_AMI_ZHANDLER__SARG_TRAITS_)
 #define _Y_AMI_ZHANDLER__SARG_TRAITS_
 
@@ -471,7 +446,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_X_BI__SARG_TRAITS_)
 #define _X_BI__SARG_TRAITS_
 
@@ -486,7 +460,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_X_AMH_BIEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -507,7 +480,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_X_AMI_BIHANDLER__SARG_TRAITS_)
 #define _X_AMI_BIHANDLER__SARG_TRAITS_
 
@@ -524,7 +496,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_XX_BLAH_INTFC__SARG_TRAITS_)
 #define _XX_BLAH_INTFC__SARG_TRAITS_
 
@@ -539,7 +510,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_XX_AMH_BLAH_INTFCEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -560,7 +530,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_XX_AMI_BLAH_INTFCHANDLER__SARG_TRAITS_)
 #define _XX_AMI_BLAH_INTFCHANDLER__SARG_TRAITS_
 
@@ -577,7 +546,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_XX_BLAH0__SARG_TRAITS_)
 #define _XX_BLAH0__SARG_TRAITS_
 
@@ -592,7 +560,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_XX_AMH_BLAH0EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -613,7 +580,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_XX_AMI_BLAH0HANDLER__SARG_TRAITS_)
 #define _XX_AMI_BLAH0HANDLER__SARG_TRAITS_
 
@@ -630,7 +596,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_FRAG_FRAG_IFACE__SARG_TRAITS_)
 #define _FRAG_FRAG_IFACE__SARG_TRAITS_
 
@@ -645,7 +610,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_FRAG_AMH_FRAG_IFACEEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -666,7 +630,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_FRAG_AMI_FRAG_IFACEHANDLER__SARG_TRAITS_)
 #define _FRAG_AMI_FRAG_IFACEHANDLER__SARG_TRAITS_
 
@@ -683,7 +646,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_GATHER__SARG_TRAITS_)
 #define _GATHER__SARG_TRAITS_
 
@@ -698,7 +660,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_GATHEREXCEPTIONHOLDER__SARG_TRAITS_)
@@ -719,7 +680,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_GATHERHANDLER__SARG_TRAITS_)
 #define _AMI_GATHERHANDLER__SARG_TRAITS_
 
@@ -736,7 +696,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::bar>
     : public
@@ -748,7 +707,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::foo::foo_struct>
     : public
@@ -758,7 +716,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_FOO_OBJ__SARG_TRAITS_)
@@ -775,7 +732,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_FOO_AMH_OBJEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -796,7 +752,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_FOO_AMI_OBJHANDLER__SARG_TRAITS_)
 #define _FOO_AMI_OBJHANDLER__SARG_TRAITS_
 
@@ -813,7 +768,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::A::B::X2Seq>
     : public
@@ -823,7 +777,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_A_B_X3__SARG_TRAITS_)
@@ -840,7 +793,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_A_B_AMH_X3EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -861,7 +813,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_A_B_AMI_X3HANDLER__SARG_TRAITS_)
 #define _A_B_AMI_X3HANDLER__SARG_TRAITS_
 
@@ -876,7 +827,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_MB_B__SARG_TRAITS_)
@@ -895,7 +845,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_MA_A__SARG_TRAITS_)
 #define _MA_A__SARG_TRAITS_
 
@@ -910,7 +859,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_MA_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -931,7 +879,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_MA_AMI_AHANDLER__SARG_TRAITS_)
 #define _MA_AMI_AHANDLER__SARG_TRAITS_
 
@@ -948,7 +895,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_MB_B__SARG_TRAITS_)
 #define _MB_B__SARG_TRAITS_
 
@@ -963,7 +909,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_MB_AMH_BEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -984,7 +929,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_MB_AMI_BHANDLER__SARG_TRAITS_)
 #define _MB_AMI_BHANDLER__SARG_TRAITS_
 
@@ -1001,7 +945,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_MC_C__SARG_TRAITS_)
 #define _MC_C__SARG_TRAITS_
 
@@ -1016,7 +959,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_MC_AMH_CEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -1037,7 +979,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_MC_AMI_CHANDLER__SARG_TRAITS_)
 #define _MC_AMI_CHANDLER__SARG_TRAITS_
 
@@ -1054,7 +995,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_SCHMOIK_FOO__SARG_TRAITS_)
 #define _SCHMOIK_FOO__SARG_TRAITS_
 
@@ -1069,7 +1009,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_SCHMOIK_AMH_FOOEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -1090,7 +1029,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_SCHMOIK_AMI_FOOHANDLER__SARG_TRAITS_)
 #define _SCHMOIK_AMI_FOOHANDLER__SARG_TRAITS_
 
@@ -1107,7 +1045,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::Schmoik::bar>
     : public
@@ -1117,7 +1054,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_THWOIK_TESTTYPE__SARG_TRAITS_)
@@ -1134,7 +1070,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
   template<>
@@ -1148,7 +1083,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Thwoik::bd_TestTypeSeq>
     : public
@@ -1158,7 +1092,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_THWOIK_TESTTYPE__SARG_TRAITS_)
@@ -1175,7 +1108,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_THWOIK_AMH_TESTTYPEEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -1196,7 +1128,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_THWOIK_AMI_TESTTYPEHANDLER__SARG_TRAITS_)
 #define _THWOIK_AMI_TESTTYPEHANDLER__SARG_TRAITS_
 
@@ -1213,7 +1144,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_A_MOD_FOO__SARG_TRAITS_)
 #define _A_MOD_FOO__SARG_TRAITS_
 
@@ -1228,7 +1158,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_A_MOD_AMH_FOOEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -1249,7 +1178,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_A_MOD_AMI_FOOHANDLER__SARG_TRAITS_)
 #define _A_MOD_AMI_FOOHANDLER__SARG_TRAITS_
 
@@ -1264,7 +1192,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_A_MOD_B_MOD_FOO__SARG_TRAITS_)
@@ -1283,7 +1210,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_A_MOD_B_MOD_AMH_FOOEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _A_MOD_B_MOD_AMH_FOOEXCEPTIONHOLDER__SARG_TRAITS_
 
@@ -1300,7 +1226,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_A_MOD_B_MOD_AMI_FOOHANDLER__SARG_TRAITS_)
@@ -1386,14 +1311,11 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_AA
 {
 
-
   namespace BB
   {
-
 
     class AMH_x1;
     using AMH_x1_ptr = AMH_x1 *;
@@ -1419,7 +1341,6 @@ namespace POA_AA
 
     virtual const char* _interface_repository_id () const;
   };
-
 
 
 
@@ -1456,7 +1377,6 @@ namespace POA_AA
   };
 
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -1472,7 +1392,6 @@ namespace POA_AA
   ///////////////////////////////////////////////////////////////////////
 
 
-
   class TAO_AMH_x1ResponseHandler;
   using TAO_AMH_x1ResponseHandler_ptr = TAO_AMH_x1ResponseHandler *;
 
@@ -1484,7 +1403,6 @@ namespace POA_AA
     TAO_AMH_x1ResponseHandler () = default;
     virtual ~TAO_AMH_x1ResponseHandler () = default;
   };
-
 
 
 
@@ -1521,7 +1439,6 @@ namespace POA_AA
   };
 
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -1540,24 +1457,18 @@ namespace POA_AA
 
 
 
-
 } // module AA::BB
 
 
-
 } // module AA
-
 namespace POA_AA
 {
-
 
   namespace BB
   {
 
-
     namespace CC
     {
-
 
       class AMH_x2;
       using AMH_x2_ptr = AMH_x2 *;
@@ -1582,7 +1493,6 @@ namespace POA_AA
         AA::BB::CC::x2 *_this ();
 
       virtual const char* _interface_repository_id () const;
-
       static void op1_skel (
           TAO_ServerRequest &_tao_req,
           TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1593,7 +1503,6 @@ namespace POA_AA
           ::AA::BB::x1_ptr obj
         ) = 0;
 
-
       static void op2_skel (
           TAO_ServerRequest &_tao_req,
           TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1603,7 +1512,6 @@ namespace POA_AA
           AA::BB::CC::AMH_x2ResponseHandler_ptr _tao_rh,
           ::AA::BB::x1_ptr obj
         ) = 0;
-
 
       static void op3_skel (
           TAO_ServerRequest &_tao_req,
@@ -1616,7 +1524,6 @@ namespace POA_AA
         ) = 0;
 
     };
-
 
 
 
@@ -1650,7 +1557,6 @@ namespace POA_AA
       ::AA::BB::CC::x2 *_this ();
 
       virtual const char* _interface_repository_id () const;
-
       virtual void op1 (
         ::AA::BB::x1_ptr obj) = 0;
 
@@ -1658,7 +1564,6 @@ namespace POA_AA
           TAO_ServerRequest &server_request,
           TAO::Portable_Server::Servant_Upcall *servant_upcall,
           TAO_ServantBase *servant);
-
       virtual void op2 (
         ::AA::BB::x1_ptr obj) = 0;
 
@@ -1666,7 +1571,6 @@ namespace POA_AA
           TAO_ServerRequest &server_request,
           TAO::Portable_Server::Servant_Upcall *servant_upcall,
           TAO_ServantBase *servant);
-
       virtual void op3 (
         ::AA::BB::x1_ptr obj) = 0;
 
@@ -1677,7 +1581,6 @@ namespace POA_AA
     };
 
 
-
     ///////////////////////////////////////////////////////////////////////
     //                    Direct  Impl. Declaration
     //
@@ -1686,16 +1589,13 @@ namespace POA_AA
     {
     public:
       virtual ~_TAO_x2_Direct_Proxy_Impl ();
-
       static void
       op1 (
         TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
       static void
       op2 (
         TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
       static void
       op3 (
@@ -1708,7 +1608,6 @@ namespace POA_AA
     ///////////////////////////////////////////////////////////////////////
 
 
-
     class TAO_AMH_x2ResponseHandler;
     using TAO_AMH_x2ResponseHandler_ptr = TAO_AMH_x2ResponseHandler *;
 
@@ -1719,23 +1618,16 @@ namespace POA_AA
     public:
       TAO_AMH_x2ResponseHandler () = default;
       virtual ~TAO_AMH_x2ResponseHandler () = default;
-
       void op1 () override;
-
       void op1_excep (
         ::AA::BB::CC::AMH_x2ExceptionHolder * holder) override;
-
       void op2 () override;
-
       void op2_excep (
         ::AA::BB::CC::AMH_x2ExceptionHolder * holder) override;
-
       void op3 () override;
-
       void op3_excep (
         ::AA::BB::CC::AMH_x2ExceptionHolder * holder) override;
     };
-
 
 
 
@@ -1769,14 +1661,12 @@ namespace POA_AA
       ::AA::BB::CC::AMI_x2Handler *_this ();
 
       virtual const char* _interface_repository_id () const;
-
       virtual void op1 () = 0;
 
       static void op1_skel (
           TAO_ServerRequest &server_request,
           TAO::Portable_Server::Servant_Upcall *servant_upcall,
           TAO_ServantBase *servant);
-
       virtual void op1_excep (
         ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1784,14 +1674,12 @@ namespace POA_AA
           TAO_ServerRequest &server_request,
           TAO::Portable_Server::Servant_Upcall *servant_upcall,
           TAO_ServantBase *servant);
-
       virtual void op2 () = 0;
 
       static void op2_skel (
           TAO_ServerRequest &server_request,
           TAO::Portable_Server::Servant_Upcall *servant_upcall,
           TAO_ServantBase *servant);
-
       virtual void op2_excep (
         ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1799,14 +1687,12 @@ namespace POA_AA
           TAO_ServerRequest &server_request,
           TAO::Portable_Server::Servant_Upcall *servant_upcall,
           TAO_ServantBase *servant);
-
       virtual void op3 () = 0;
 
       static void op3_skel (
           TAO_ServerRequest &server_request,
           TAO::Portable_Server::Servant_Upcall *servant_upcall,
           TAO_ServantBase *servant);
-
       virtual void op3_excep (
         ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1815,7 +1701,6 @@ namespace POA_AA
           TAO::Portable_Server::Servant_Upcall *servant_upcall,
           TAO_ServantBase *servant);
     };
-
 
 
     ///////////////////////////////////////////////////////////////////////
@@ -1827,31 +1712,25 @@ namespace POA_AA
     {
     public:
       virtual ~_TAO_AMI_x2Handler_Direct_Proxy_Impl ();
-
       static void
       op1 (
         TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
       static void
       op1_excep (
         TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
       static void
       op2 (
         TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
       static void
       op2_excep (
         TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
       static void
       op3 (
         TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
       static void
       op3_excep (
@@ -1866,20 +1745,15 @@ namespace POA_AA
 
 
 
-
   } // module AA::BB::CC
-
 
 
 } // module AA::BB
 
 
-
 } // module AA
-
 namespace POA_dot
 {
-
 
   class AMH_Person;
   using AMH_Person_ptr = AMH_Person *;
@@ -1904,7 +1778,6 @@ namespace POA_dot
     dot::Person *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void _get_someParty_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1913,7 +1786,6 @@ namespace POA_dot
   virtual void someParty (
       dot::AMH_PersonResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void _set_someParty_skel (
       TAO_ServerRequest &_tao_req,
@@ -1926,7 +1798,6 @@ namespace POA_dot
     ) = 0;
 
 };
-
 
 
 
@@ -1960,14 +1831,12 @@ public:
   ::dot::Person *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::dot::Party_ptr someParty () = 0;
 
   static void _get_someParty_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void someParty (
     ::dot::Party_ptr someParty) = 0;
 
@@ -1978,7 +1847,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1987,11 +1855,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_Person_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_Person_Direct_Proxy_Impl ();
-
   static void
   _get_someParty (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_someParty (
@@ -2004,7 +1870,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_PersonResponseHandler;
 using TAO_AMH_PersonResponseHandler_ptr = TAO_AMH_PersonResponseHandler *;
 
@@ -2015,19 +1880,14 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_PersonResponseHandler
 public:
   TAO_AMH_PersonResponseHandler () = default;
   virtual ~TAO_AMH_PersonResponseHandler () = default;
-
   void get_someParty (
     ::dot::Party_ptr return_value) override;
-
   void get_someParty_excep (
     ::dot::AMH_PersonExceptionHolder * holder) override;
-
   void set_someParty () override;
-
   void set_someParty_excep (
     ::dot::AMH_PersonExceptionHolder * holder) override;
 };
-
 
 
 
@@ -2061,7 +1921,6 @@ public:
   ::dot::AMI_PersonHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_someParty (
     ::dot::Party_ptr ami_return_val) = 0;
 
@@ -2069,7 +1928,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_someParty_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2077,14 +1935,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_someParty () = 0;
 
   static void set_someParty_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_someParty_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2093,7 +1949,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -2105,21 +1960,17 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_PersonHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_PersonHandler_Direct_Proxy_Impl ();
-
   static void
   get_someParty (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_someParty_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_someParty (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_someParty_excep (
@@ -2134,12 +1985,9 @@ public:
 
 
 
-
 } // module dot
-
 namespace POA_dot
 {
-
 
   class AMH_Party;
   using AMH_Party_ptr = AMH_Party *;
@@ -2164,7 +2012,6 @@ namespace POA_dot
     dot::Party *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void _get_somePerson_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -2173,7 +2020,6 @@ namespace POA_dot
   virtual void somePerson (
       dot::AMH_PartyResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void _set_somePerson_skel (
       TAO_ServerRequest &_tao_req,
@@ -2186,7 +2032,6 @@ namespace POA_dot
     ) = 0;
 
 };
-
 
 
 
@@ -2220,14 +2065,12 @@ public:
   ::dot::Party *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::dot::Person_ptr somePerson () = 0;
 
   static void _get_somePerson_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void somePerson (
     ::dot::Person_ptr somePerson) = 0;
 
@@ -2238,7 +2081,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2247,11 +2089,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_Party_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_Party_Direct_Proxy_Impl ();
-
   static void
   _get_somePerson (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_somePerson (
@@ -2264,7 +2104,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_PartyResponseHandler;
 using TAO_AMH_PartyResponseHandler_ptr = TAO_AMH_PartyResponseHandler *;
 
@@ -2275,19 +2114,14 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_PartyResponseHandler
 public:
   TAO_AMH_PartyResponseHandler () = default;
   virtual ~TAO_AMH_PartyResponseHandler () = default;
-
   void get_somePerson (
     ::dot::Person_ptr return_value) override;
-
   void get_somePerson_excep (
     ::dot::AMH_PartyExceptionHolder * holder) override;
-
   void set_somePerson () override;
-
   void set_somePerson_excep (
     ::dot::AMH_PartyExceptionHolder * holder) override;
 };
-
 
 
 
@@ -2321,7 +2155,6 @@ public:
   ::dot::AMI_PartyHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_somePerson (
     ::dot::Person_ptr ami_return_val) = 0;
 
@@ -2329,7 +2162,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_somePerson_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2337,14 +2169,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_somePerson () = 0;
 
   static void set_somePerson_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_somePerson_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2353,7 +2183,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -2365,21 +2194,17 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_PartyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_PartyHandler_Direct_Proxy_Impl ();
-
   static void
   get_somePerson (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_somePerson_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_somePerson (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_somePerson_excep (
@@ -2394,33 +2219,25 @@ public:
 
 
 
-
 } // module dot
-
 namespace POA_Outside
 {
 
-
   namespace Reopened
   {
 
 
 
-
   } // module Outside::Reopened
-
   namespace Reopened
   {
 
 
 
-
   } // module Outside::Reopened
-
 
 
 } // module Outside
-
 class POA_AMH_OpHolder;
 using POA_AMH_OpHolder_ptr = POA_AMH_OpHolder *;
 
@@ -2444,7 +2261,6 @@ public:
   OpHolder *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void Operation_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -2457,7 +2273,6 @@ virtual void Operation (
   ) = 0;
 
 };
-
 
 
 
@@ -2491,7 +2306,6 @@ public:
   ::OpHolder *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void Operation (
     ::Outside::Tricky p1,
     ::Outside::Reopened::Tricky_out p2,
@@ -2504,7 +2318,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2513,7 +2326,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_OpHolder_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_OpHolder_Direct_Proxy_Impl ();
-
   static void
   Operation (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -2523,7 +2335,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class POA_TAO_AMH_OpHolderResponseHandler;
@@ -2536,15 +2347,12 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_OpHolderResponseHandler
 public:
   POA_TAO_AMH_OpHolderResponseHandler () = default;
   virtual ~POA_TAO_AMH_OpHolderResponseHandler () = default;
-
   void Operation (
     ::Outside::Reopened::Tricky p2,
     ::Outside::Reopened::Newdef p3) override;
-
   void Operation_excep (
     ::AMH_OpHolderExceptionHolder * holder) override;
 };
-
 
 
 
@@ -2578,7 +2386,6 @@ public:
   ::AMI_OpHolderHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void Operation (
     ::Outside::Reopened::Tricky p2,
     ::Outside::Reopened::Newdef p3) = 0;
@@ -2587,7 +2394,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void Operation_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2596,7 +2402,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -2608,11 +2413,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_OpHolderHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_OpHolderHandler_Direct_Proxy_Impl ();
-
   static void
   Operation (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   Operation_excep (
@@ -2625,26 +2428,20 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 namespace POA_com
 {
-
 
   namespace mr
   {
 
 
 
-
   } // module com::mr
 
 
-
 } // module com
-
 namespace POA_com
 {
-
 
   class AMH_IFace;
   using AMH_IFace_ptr = AMH_IFace *;
@@ -2669,7 +2466,6 @@ namespace POA_com
     com::IFace *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void getInfo_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -2680,7 +2476,6 @@ namespace POA_com
     ) = 0;
 
 };
-
 
 
 
@@ -2714,7 +2509,6 @@ public:
   ::com::IFace *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::com::mr::info getInfo () = 0;
 
   static void getInfo_skel (
@@ -2722,7 +2516,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -2733,7 +2526,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_IFace_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_IFace_Direct_Proxy_Impl ();
-
   static void
   getInfo (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -2743,7 +2535,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_IFaceResponseHandler;
@@ -2756,14 +2547,11 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_IFaceResponseHandler
 public:
   TAO_AMH_IFaceResponseHandler () = default;
   virtual ~TAO_AMH_IFaceResponseHandler () = default;
-
   void getInfo (
     ::com::mr::info return_value) override;
-
   void getInfo_excep (
     ::com::AMH_IFaceExceptionHolder * holder) override;
 };
-
 
 
 
@@ -2797,7 +2585,6 @@ public:
   ::com::AMI_IFaceHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void getInfo (
     ::com::mr::info ami_return_val) = 0;
 
@@ -2805,7 +2592,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void getInfo_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2814,7 +2600,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -2826,11 +2611,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_IFaceHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_IFaceHandler_Direct_Proxy_Impl ();
-
   static void
   getInfo (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   getInfo_excep (
@@ -2845,12 +2628,9 @@ public:
 
 
 
-
 } // module com
-
 namespace POA_Y
 {
-
 
   class AMH_Z;
   using AMH_Z_ptr = AMH_Z *;
@@ -2876,7 +2656,6 @@ namespace POA_Y
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -2913,7 +2692,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2929,7 +2707,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_ZResponseHandler;
 using TAO_AMH_ZResponseHandler_ptr = TAO_AMH_ZResponseHandler *;
 
@@ -2941,7 +2718,6 @@ public:
   TAO_AMH_ZResponseHandler () = default;
   virtual ~TAO_AMH_ZResponseHandler () = default;
 };
-
 
 
 
@@ -2978,7 +2754,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2997,12 +2772,9 @@ public:
 
 
 
-
 } // module Y
-
 namespace POA_X
 {
-
 
   class AMH_BI;
   using AMH_BI_ptr = AMH_BI *;
@@ -3028,7 +2800,6 @@ namespace POA_X
     X::BI *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void method_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -3039,7 +2810,6 @@ namespace POA_X
     ) = 0;
 
 };
-
 
 
 
@@ -3073,7 +2843,6 @@ public:
   ::X::BI *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void method () = 0;
 
   static void method_skel (
@@ -3081,7 +2850,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -3093,7 +2861,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_BI_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_BI_Direct_Proxy_Impl ();
-
   static void
   method (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -3103,7 +2870,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_BIResponseHandler;
@@ -3116,13 +2882,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_BIResponseHandler
 public:
   TAO_AMH_BIResponseHandler () = default;
   virtual ~TAO_AMH_BIResponseHandler () = default;
-
   void method () override;
-
   void method_excep (
     ::X::AMH_BIExceptionHolder * holder) override;
 };
-
 
 
 
@@ -3156,14 +2919,12 @@ public:
   ::X::AMI_BIHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void method () = 0;
 
   static void method_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void method_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -3172,7 +2933,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -3184,11 +2944,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_BIHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_BIHandler_Direct_Proxy_Impl ();
-
   static void
   method (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   method_excep (
@@ -3203,12 +2961,9 @@ public:
 
 
 
-
 } // module X
-
 namespace POA_XX
 {
-
 
   class AMH_blah_intfc;
   using AMH_blah_intfc_ptr = AMH_blah_intfc *;
@@ -3233,7 +2988,6 @@ namespace POA_XX
     XX::blah_intfc *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void op1_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -3244,7 +2998,6 @@ namespace POA_XX
     ) = 0;
 
 };
-
 
 
 
@@ -3278,7 +3031,6 @@ public:
   ::XX::blah_intfc *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op1 () = 0;
 
   static void op1_skel (
@@ -3286,7 +3038,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -3297,7 +3048,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_blah_intfc_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_blah_intfc_Direct_Proxy_Impl ();
-
   static void
   op1 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -3307,7 +3057,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_blah_intfcResponseHandler;
@@ -3320,13 +3069,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_blah_intfcResponseHandler
 public:
   TAO_AMH_blah_intfcResponseHandler () = default;
   virtual ~TAO_AMH_blah_intfcResponseHandler () = default;
-
   void op1 () override;
-
   void op1_excep (
     ::XX::AMH_blah_intfcExceptionHolder * holder) override;
 };
-
 
 
 
@@ -3360,14 +3106,12 @@ public:
   ::XX::AMI_blah_intfcHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op1 () = 0;
 
   static void op1_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op1_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -3376,7 +3120,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -3388,11 +3131,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_blah_intfcHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_blah_intfcHandler_Direct_Proxy_Impl ();
-
   static void
   op1 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op1_excep (
@@ -3403,7 +3144,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class AMH_blah0;
@@ -3430,7 +3170,6 @@ public:
   XX::blah0 *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void op0_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -3441,7 +3180,6 @@ virtual void op0 (
   ) = 0;
 
 };
-
 
 
 
@@ -3475,7 +3213,6 @@ public:
   ::XX::blah0 *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op0 () = 0;
 
   static void op0_skel (
@@ -3483,7 +3220,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -3495,7 +3231,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_blah0_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_blah0_Direct_Proxy_Impl ();
-
   static void
   op0 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -3505,7 +3240,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_blah0ResponseHandler;
@@ -3518,13 +3252,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_blah0ResponseHandler
 public:
   TAO_AMH_blah0ResponseHandler () = default;
   virtual ~TAO_AMH_blah0ResponseHandler () = default;
-
   void op0 () override;
-
   void op0_excep (
     ::XX::AMH_blah0ExceptionHolder * holder) override;
 };
-
 
 
 
@@ -3558,14 +3289,12 @@ public:
   ::XX::AMI_blah0Handler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op0 () = 0;
 
   static void op0_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op0_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -3574,7 +3303,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -3586,11 +3314,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_blah0Handler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_blah0Handler_Direct_Proxy_Impl ();
-
   static void
   op0 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op0_excep (
@@ -3605,12 +3331,9 @@ public:
 
 
 
-
 } // module XX
-
 namespace POA_frag
 {
-
 
   class AMH_frag_iface;
   using AMH_frag_iface_ptr = AMH_frag_iface *;
@@ -3636,7 +3359,6 @@ namespace POA_frag
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -3673,7 +3395,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3689,7 +3410,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_frag_ifaceResponseHandler;
 using TAO_AMH_frag_ifaceResponseHandler_ptr = TAO_AMH_frag_ifaceResponseHandler *;
 
@@ -3701,7 +3421,6 @@ public:
   TAO_AMH_frag_ifaceResponseHandler () = default;
   virtual ~TAO_AMH_frag_ifaceResponseHandler () = default;
 };
-
 
 
 
@@ -3738,7 +3457,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3757,17 +3475,13 @@ public:
 
 
 
-
 } // module frag
-
 namespace POA_frag
 {
 
 
 
-
 } // module frag
-
 class POA_AMH_gather;
 using POA_AMH_gather_ptr = POA_AMH_gather *;
 
@@ -3791,7 +3505,6 @@ public:
   gather *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -3804,7 +3517,6 @@ virtual void op (
   ) = 0;
 
 };
-
 
 
 
@@ -3838,7 +3550,6 @@ public:
   ::gather *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::frag::ret_long op (
     const ::frag::dub_seq & inarg,
     ::frag::pug & inoutarg,
@@ -3851,7 +3562,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3860,7 +3570,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_gather_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_gather_Direct_Proxy_Impl ();
-
   static void
   op (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -3870,7 +3579,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class POA_TAO_AMH_gatherResponseHandler;
@@ -3883,16 +3591,13 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_gatherResponseHandler
 public:
   POA_TAO_AMH_gatherResponseHandler () = default;
   virtual ~POA_TAO_AMH_gatherResponseHandler () = default;
-
   void op (
     ::frag::ret_long return_value,
     const ::frag::pug & inoutarg,
     ::frag::frag_iface_ptr outarg) override;
-
   void op_excep (
     ::AMH_gatherExceptionHolder * holder) override;
 };
-
 
 
 
@@ -3926,7 +3631,6 @@ public:
   ::AMI_gatherHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op (
     ::frag::ret_long ami_return_val,
     const ::frag::pug & inoutarg,
@@ -3936,7 +3640,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -3945,7 +3648,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -3957,11 +3659,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_gatherHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_gatherHandler_Direct_Proxy_Impl ();
-
   static void
   op (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op_excep (
@@ -3974,18 +3674,14 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 namespace POA_foo
 {
-
 
 
 
 } // module foo
-
 namespace POA_foo
 {
-
 
   class AMH_obj;
   using AMH_obj_ptr = AMH_obj *;
@@ -4010,7 +3706,6 @@ namespace POA_foo
     foo::obj *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -4022,7 +3717,6 @@ namespace POA_foo
     ) = 0;
 
 };
-
 
 
 
@@ -4056,7 +3750,6 @@ public:
   ::foo::obj *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op (
     const ::bar & inarg) = 0;
 
@@ -4067,7 +3760,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4076,7 +3768,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_obj_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_obj_Direct_Proxy_Impl ();
-
   static void
   op (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -4086,7 +3777,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_objResponseHandler;
@@ -4099,13 +3789,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_objResponseHandler
 public:
   TAO_AMH_objResponseHandler () = default;
   virtual ~TAO_AMH_objResponseHandler () = default;
-
   void op () override;
-
   void op_excep (
     ::foo::AMH_objExceptionHolder * holder) override;
 };
-
 
 
 
@@ -4139,14 +3826,12 @@ public:
   ::foo::AMI_objHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op () = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -4155,7 +3840,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -4167,11 +3851,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_objHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_objHandler_Direct_Proxy_Impl ();
-
   static void
   op (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op_excep (
@@ -4186,16 +3868,12 @@ public:
 
 
 
-
 } // module foo
-
 namespace POA_A
 {
 
-
   namespace B
   {
-
 
     class AMH_X3;
     using AMH_X3_ptr = AMH_X3 *;
@@ -4222,7 +3900,6 @@ namespace POA_A
       A::B::X3 *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     static void getSeqOfX2_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -4231,7 +3908,6 @@ namespace POA_A
     virtual void getSeqOfX2 (
         A::B::AMH_X3ResponseHandler_ptr _tao_rh
       ) = 0;
-
 
     static void getX3_skel (
         TAO_ServerRequest &_tao_req,
@@ -4243,7 +3919,6 @@ namespace POA_A
       ) = 0;
 
   };
-
 
 
 
@@ -4278,14 +3953,12 @@ namespace POA_A
     ::A::B::X3 *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual ::A::B::X2Seq * getSeqOfX2 () = 0;
 
     static void getSeqOfX2_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual char * getX3 () = 0;
 
     static void getX3_skel (
@@ -4293,7 +3966,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
   ///////////////////////////////////////////////////////////////////////
@@ -4306,11 +3978,9 @@ namespace POA_A
   {
   public:
     virtual ~_TAO_X3_Direct_Proxy_Impl ();
-
     static void
     getSeqOfX2 (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
     static void
     getX3 (
@@ -4323,7 +3993,6 @@ namespace POA_A
   ///////////////////////////////////////////////////////////////////////
 
 
-
   class TAO_AMH_X3ResponseHandler;
   using TAO_AMH_X3ResponseHandler_ptr = TAO_AMH_X3ResponseHandler *;
 
@@ -4334,20 +4003,15 @@ namespace POA_A
   public:
     TAO_AMH_X3ResponseHandler () = default;
     virtual ~TAO_AMH_X3ResponseHandler () = default;
-
     void getSeqOfX2 (
       const ::A::B::X2Seq & return_value) override;
-
     void getSeqOfX2_excep (
       ::A::B::AMH_X3ExceptionHolder * holder) override;
-
     void getX3 (
       const char * return_value) override;
-
     void getX3_excep (
       ::A::B::AMH_X3ExceptionHolder * holder) override;
   };
-
 
 
 
@@ -4382,7 +4046,6 @@ namespace POA_A
     ::A::B::AMI_X3Handler *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual void getSeqOfX2 (
       const ::A::B::X2Seq & ami_return_val) = 0;
 
@@ -4390,7 +4053,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void getSeqOfX2_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -4398,7 +4060,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void getX3 (
       const char * ami_return_val) = 0;
 
@@ -4406,7 +4067,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void getX3_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -4415,7 +4075,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
   ///////////////////////////////////////////////////////////////////////
@@ -4428,21 +4087,17 @@ namespace POA_A
   {
   public:
     virtual ~_TAO_AMI_X3Handler_Direct_Proxy_Impl ();
-
     static void
     getSeqOfX2 (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
     static void
     getSeqOfX2_excep (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
     static void
     getX3 (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
     static void
     getX3_excep (
@@ -4457,24 +4112,18 @@ namespace POA_A
 
 
 
-
 } // module A::B
 
 
-
 } // module A
-
 namespace POA_mB
 {
 
 
 
-
 } // module mB
-
 namespace POA_mA
 {
-
 
   class AMH_A;
   using AMH_A_ptr = AMH_A *;
@@ -4499,7 +4148,6 @@ namespace POA_mA
     mA::A *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void _get_theB_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -4508,7 +4156,6 @@ namespace POA_mA
   virtual void theB (
       mA::AMH_AResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void _set_theB_skel (
       TAO_ServerRequest &_tao_req,
@@ -4521,7 +4168,6 @@ namespace POA_mA
     ) = 0;
 
 };
-
 
 
 
@@ -4555,14 +4201,12 @@ public:
   ::mA::A *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::mB::B_ptr theB () = 0;
 
   static void _get_theB_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void theB (
     ::mB::B_ptr theB) = 0;
 
@@ -4573,7 +4217,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4582,11 +4225,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_A_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_A_Direct_Proxy_Impl ();
-
   static void
   _get_theB (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_theB (
@@ -4599,7 +4240,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_AResponseHandler;
 using TAO_AMH_AResponseHandler_ptr = TAO_AMH_AResponseHandler *;
 
@@ -4610,19 +4250,14 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_AResponseHandler
 public:
   TAO_AMH_AResponseHandler () = default;
   virtual ~TAO_AMH_AResponseHandler () = default;
-
   void get_theB (
     ::mB::B_ptr return_value) override;
-
   void get_theB_excep (
     ::mA::AMH_AExceptionHolder * holder) override;
-
   void set_theB () override;
-
   void set_theB_excep (
     ::mA::AMH_AExceptionHolder * holder) override;
 };
-
 
 
 
@@ -4656,7 +4291,6 @@ public:
   ::mA::AMI_AHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_theB (
     ::mB::B_ptr ami_return_val) = 0;
 
@@ -4664,7 +4298,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_theB_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -4672,14 +4305,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_theB () = 0;
 
   static void set_theB_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_theB_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -4688,7 +4319,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -4700,21 +4330,17 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_AHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_AHandler_Direct_Proxy_Impl ();
-
   static void
   get_theB (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_theB_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_theB (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_theB_excep (
@@ -4729,12 +4355,9 @@ public:
 
 
 
-
 } // module mA
-
 namespace POA_mB
 {
-
 
   class AMH_B;
   using AMH_B_ptr = AMH_B *;
@@ -4760,7 +4383,6 @@ namespace POA_mB
     mB::B *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void _get_theA_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -4769,7 +4391,6 @@ namespace POA_mB
   virtual void theA (
       mB::AMH_BResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void _set_theA_skel (
       TAO_ServerRequest &_tao_req,
@@ -4782,7 +4403,6 @@ namespace POA_mB
     ) = 0;
 
 };
-
 
 
 
@@ -4816,14 +4436,12 @@ public:
   ::mB::B *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::mA::A_ptr theA () = 0;
 
   static void _get_theA_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void theA (
     ::mA::A_ptr theA) = 0;
 
@@ -4832,7 +4450,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -4844,11 +4461,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_B_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_B_Direct_Proxy_Impl ();
-
   static void
   _get_theA (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_theA (
@@ -4861,7 +4476,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_BResponseHandler;
 using TAO_AMH_BResponseHandler_ptr = TAO_AMH_BResponseHandler *;
 
@@ -4872,19 +4486,14 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_BResponseHandler
 public:
   TAO_AMH_BResponseHandler () = default;
   virtual ~TAO_AMH_BResponseHandler () = default;
-
   void get_theA (
     ::mA::A_ptr return_value) override;
-
   void get_theA_excep (
     ::mB::AMH_BExceptionHolder * holder) override;
-
   void set_theA () override;
-
   void set_theA_excep (
     ::mB::AMH_BExceptionHolder * holder) override;
 };
-
 
 
 
@@ -4918,7 +4527,6 @@ public:
   ::mB::AMI_BHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_theA (
     ::mA::A_ptr ami_return_val) = 0;
 
@@ -4926,7 +4534,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_theA_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -4934,14 +4541,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_theA () = 0;
 
   static void set_theA_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_theA_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -4950,7 +4555,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -4962,21 +4566,17 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_BHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_BHandler_Direct_Proxy_Impl ();
-
   static void
   get_theA (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_theA_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_theA (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_theA_excep (
@@ -4991,12 +4591,9 @@ public:
 
 
 
-
 } // module mB
-
 namespace POA_mC
 {
-
 
   class AMH_C;
   using AMH_C_ptr = AMH_C *;
@@ -5023,7 +4620,6 @@ namespace POA_mC
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -5060,7 +4656,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5077,7 +4672,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_CResponseHandler;
 using TAO_AMH_CResponseHandler_ptr = TAO_AMH_CResponseHandler *;
 
@@ -5089,7 +4683,6 @@ public:
   TAO_AMH_CResponseHandler () = default;
   virtual ~TAO_AMH_CResponseHandler () = default;
 };
-
 
 
 
@@ -5126,7 +4719,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5145,12 +4737,9 @@ public:
 
 
 
-
 } // module mC
-
 namespace POA_Schmoik
 {
-
 
   class AMH_foo;
   using AMH_foo_ptr = AMH_foo *;
@@ -5176,7 +4765,6 @@ namespace POA_Schmoik
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -5213,7 +4801,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5229,7 +4816,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_fooResponseHandler;
 using TAO_AMH_fooResponseHandler_ptr = TAO_AMH_fooResponseHandler *;
 
@@ -5241,7 +4827,6 @@ public:
   TAO_AMH_fooResponseHandler () = default;
   virtual ~TAO_AMH_fooResponseHandler () = default;
 };
-
 
 
 
@@ -5278,7 +4863,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5297,44 +4881,33 @@ public:
 
 
 
-
 } // module Schmoik
-
 namespace POA_Schmoik
 {
 
 
 
-
 } // module Schmoik
-
 namespace POA_Schmoik
 {
 
 
 
-
 } // module Schmoik
-
 namespace POA_Thwoik
 {
-
 
 
 
 } // module Thwoik
-
 namespace POA_Thwoik
 {
-
 
 
 
 } // module Thwoik
-
 namespace POA_Thwoik
 {
-
 
   class AMH_TestType;
   using AMH_TestType_ptr = AMH_TestType *;
@@ -5360,7 +4933,6 @@ namespace POA_Thwoik
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -5397,7 +4969,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5413,7 +4984,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_TestTypeResponseHandler;
 using TAO_AMH_TestTypeResponseHandler_ptr = TAO_AMH_TestTypeResponseHandler *;
 
@@ -5425,7 +4995,6 @@ public:
   TAO_AMH_TestTypeResponseHandler () = default;
   virtual ~TAO_AMH_TestTypeResponseHandler () = default;
 };
-
 
 
 
@@ -5462,7 +5031,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5481,12 +5049,9 @@ public:
 
 
 
-
 } // module Thwoik
-
 namespace POA_A_mod
 {
-
 
   class AMH_Foo;
   using AMH_Foo_ptr = AMH_Foo *;
@@ -5512,7 +5077,6 @@ namespace POA_A_mod
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -5549,7 +5113,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5565,7 +5128,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_FooResponseHandler;
 using TAO_AMH_FooResponseHandler_ptr = TAO_AMH_FooResponseHandler *;
 
@@ -5577,7 +5139,6 @@ public:
   TAO_AMH_FooResponseHandler () = default;
   virtual ~TAO_AMH_FooResponseHandler () = default;
 };
-
 
 
 
@@ -5614,7 +5175,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5631,10 +5191,8 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 namespace B_mod
 {
-
 
   class AMH_Foo;
   using AMH_Foo_ptr = AMH_Foo *;
@@ -5661,7 +5219,6 @@ namespace B_mod
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -5698,7 +5255,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5715,7 +5271,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_FooResponseHandler;
 using TAO_AMH_FooResponseHandler_ptr = TAO_AMH_FooResponseHandler *;
 
@@ -5727,7 +5282,6 @@ public:
   TAO_AMH_FooResponseHandler () = default;
   virtual ~TAO_AMH_FooResponseHandler () = default;
 };
-
 
 
 
@@ -5764,7 +5318,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5783,97 +5336,73 @@ public:
 
 
 
-
 } // module A_mod::B_mod
 
 
-
 } // module A_mod
-
 namespace POA_m1
 {
-
 
   namespace m2
   {
 
-
     namespace m3a
     {
-
 
       namespace m4a
       {
 
 
 
-
       } // module m1::m2::m3a::m4a
-
 
 
     } // module m1::m2::m3a
 
 
-
   } // module m1::m2
 
 
-
 } // module m1
-
 namespace POA_m1
 {
-
 
   namespace m2
   {
 
-
     namespace m3a
     {
-
 
       namespace m4b
       {
 
 
 
-
       } // module m1::m2::m3a::m4b
-
 
 
     } // module m1::m2::m3a
 
 
-
   } // module m1::m2
 
 
-
 } // module m1
-
 namespace POA_m1
 {
 
-
   namespace m2
   {
-
 
     namespace m3b
     {
 
 
 
-
     } // module m1::m2::m3b
 
 
-
   } // module m1::m2
-
 
 
 } // module m1

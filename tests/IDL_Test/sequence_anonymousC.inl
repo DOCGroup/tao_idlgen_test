@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 seqTest::seqTest (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ seqTest::seqTest (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_seqTestExceptionHolder::AMH_seqTestExceptionHolder ()
   : exception (nullptr)
@@ -53,7 +51,6 @@ AMH_seqTestExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_seqTestExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "reopen_include1C.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -45,7 +44,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "reopen_include1C.inl"
@@ -54,20 +53,16 @@
 
 
 
-
 #if !defined (_FRAG_DUB_SEQ_CS_)
 #define _FRAG_DUB_SEQ_CS_
 
-frag::dub_seq::dub_seq (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max)
-{}
+frag::dub_seq::dub_seq (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
 
-frag::dub_seq::dub_seq (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    ::CORBA::Double * buffer,
-    ::CORBA::Boolean release)
+frag::dub_seq::dub_seq (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  ::CORBA::Double * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< ::CORBA::Double>
     (max, length, buffer, release)
 {}
@@ -82,8 +77,6 @@ void frag::dub_seq::_tao_any_destructor (
 #endif /* end #if !defined */
 
 
-
-
 #ifndef _TAO_TYPECODE_frag_dub_seq_GUARD
 #define _TAO_TYPECODE_frag_dub_seq_GUARD
 
@@ -95,17 +88,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        frag_dub_seq_0 (
-          ::CORBA::tk_sequence,
-          &CORBA::_tc_double,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> frag_dub_seq_0 (
+        ::CORBA::tk_sequence, &CORBA::_tc_double, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_frag_dub_seq_0 =
-        &frag_dub_seq_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_frag_dub_seq_0 =
+      &frag_dub_seq_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -126,7 +115,6 @@ namespace frag
 {
   ::CORBA::TypeCode_ptr const _tc_dub_seq = std::addressof(_tao_tc_frag_dub_seq);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -157,7 +145,6 @@ TAO::Objref_Traits<A::B::X1>::marshal (const A::B::X1_ptr p,TAO_OutputCDR & cdr)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 char *
@@ -192,7 +179,6 @@ A::B::X1::getX1 ()
 
   return _tao_retval.retn ();
 }
-
 
 
 void
@@ -303,7 +289,6 @@ A::B::X1::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_A_B_X1 (
@@ -320,7 +305,6 @@ namespace A
     ::CORBA::TypeCode_ptr const _tc_X1 = std::addressof(_tao_tc_A_B_X1);
   }
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_B_AMH_X1ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -344,7 +328,6 @@ namespace A
     ::CORBA::TypeCode_ptr const _tc_AMH_X1ExceptionHolder = std::addressof(_tao_tc_A_B_AMH_X1ExceptionHolder);
   }
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -487,7 +470,6 @@ A::B::AMH_X1ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 A::B::AMH_X1ExceptionHolder::raise_getX1 ()
 {
@@ -495,14 +477,12 @@ A::B::AMH_X1ExceptionHolder::raise_getX1 ()
   this->exception->_raise ();
 }
 
-
 void
 A::B::AMH_X1ExceptionHolder::raise_sendc_getX1 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -620,7 +600,6 @@ A::B::AMH_X1ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_A_B_AMH_X1ResponseHandler (
@@ -637,7 +616,6 @@ namespace A
     ::CORBA::TypeCode_ptr const _tc_AMH_X1ResponseHandler = std::addressof(_tao_tc_A_B_AMH_X1ResponseHandler);
   }
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -668,7 +646,6 @@ TAO::Objref_Traits<A::B::AMI_X1Handler>::marshal (const A::B::AMI_X1Handler_ptr 
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -764,7 +741,6 @@ A::B::AMI_X1Handler::getX1_reply_stub (
       break;
   }
 }
-
 void
 A::B::AMI_X1Handler::getX1_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -877,7 +853,6 @@ A::B::AMI_X1Handler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_A_B_AMI_X1Handler (
@@ -894,7 +869,6 @@ namespace A
     ::CORBA::TypeCode_ptr const _tc_AMI_X1Handler = std::addressof(_tao_tc_A_B_AMI_X1Handler);
   }
 }
-
 OBV_A::B::AMH_X1ExceptionHolder::~AMH_X1ExceptionHolder ()
 {}
 
@@ -909,7 +883,6 @@ OBV_A::B::AMH_X1ExceptionHolder::_tao_unmarshal__A_B_AMH_X1ExceptionHolder (TAO_
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -952,7 +925,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1018,7 +990,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1093,7 +1064,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1179,7 +1149,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1244,7 +1213,6 @@ operator>>= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 #if !defined _TAO_CDR_OP_frag_dub_seq_CPP_
 #define _TAO_CDR_OP_frag_dub_seq_CPP_
 
@@ -1268,7 +1236,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_frag_dub_seq_CPP_ */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1302,7 +1269,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (A::B::AMH_X1ExceptionHolder * vt)
@@ -1323,7 +1289,6 @@ CORBA::remove_ref (A::B::AMH_X1ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1353,7 +1318,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_A::B::AMH_X1ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -1371,7 +1335,6 @@ OBV_A::B::AMH_X1ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

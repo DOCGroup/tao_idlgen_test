@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 FixedPoint::FixedOperations::FixedOperations (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ FixedPoint::FixedOperations::FixedOperations (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 FixedPoint::AMH_FixedOperationsExceptionHolder::AMH_FixedOperationsExceptionHolder ()
   : exception (nullptr)
@@ -53,7 +51,6 @@ FixedPoint::AMH_FixedOperationsExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:FixedPoint/AMH_FixedOperationsExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

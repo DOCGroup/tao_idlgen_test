@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 OldInherit::one::one (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ OldInherit::one::one (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldInherit::AMH_oneExceptionHolder::AMH_oneExceptionHolder ()
   : exception (nullptr)
@@ -55,7 +53,6 @@ OldInherit::AMH_oneExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 OldInherit::AMI_oneHandler::AMI_oneHandler (
     TAO_Stub *objref,
@@ -75,7 +72,6 @@ OldInherit::AMI_oneHandler::AMI_oneHandler (
 }
 
 
-
 ACE_INLINE
 OldInherit::two::two (
     TAO_Stub *objref,
@@ -93,7 +89,6 @@ OldInherit::two::two (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldInherit::AMH_twoExceptionHolder::AMH_twoExceptionHolder ()
   : exception (nullptr)
@@ -106,7 +101,6 @@ OldInherit::AMH_twoExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 OldInherit::AMI_twoHandler::AMI_twoHandler (
     TAO_Stub *objref,
@@ -126,7 +120,6 @@ OldInherit::AMI_twoHandler::AMI_twoHandler (
 }
 
 
-
 ACE_INLINE
 OldInherit::three::three (
     TAO_Stub *objref,
@@ -144,7 +137,6 @@ OldInherit::three::three (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldInherit::AMH_threeExceptionHolder::AMH_threeExceptionHolder ()
   : exception (nullptr)
@@ -157,7 +149,6 @@ OldInherit::AMH_threeExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 OldInherit::AMI_threeHandler::AMI_threeHandler (
     TAO_Stub *objref,
@@ -177,7 +168,6 @@ OldInherit::AMI_threeHandler::AMI_threeHandler (
 }
 
 
-
 ACE_INLINE
 OldInherit::four::four (
     TAO_Stub *objref,
@@ -195,7 +185,6 @@ OldInherit::four::four (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldInherit::AMH_fourExceptionHolder::AMH_fourExceptionHolder ()
   : exception (nullptr)
@@ -208,7 +197,6 @@ OldInherit::AMH_fourExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 OldInherit::AMI_fourHandler::AMI_fourHandler (
     TAO_Stub *objref,
@@ -228,7 +216,6 @@ OldInherit::AMI_fourHandler::AMI_fourHandler (
 }
 
 
-
 ACE_INLINE
 OldInherit::five::five (
     TAO_Stub *objref,
@@ -246,7 +233,6 @@ OldInherit::five::five (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 OldInherit::AMH_fiveExceptionHolder::AMH_fiveExceptionHolder ()
   : exception (nullptr)
@@ -257,7 +243,6 @@ OldInherit::AMH_fiveExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldInherit/AMH_fiveExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_49EOVY_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_49EOVY_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_LKI5MP_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_LKI5MP_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::EncodingID_T>
     : public
@@ -92,7 +88,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::Encoding_T>
     : public
@@ -102,7 +97,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_FIELDDEVICE_T__SARG_TRAITS_)
@@ -119,7 +113,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_FIELDDEVICE_TEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -140,7 +133,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_FIELDDEVICE_THANDLER__SARG_TRAITS_)
 #define _AMI_FIELDDEVICE_THANDLER__SARG_TRAITS_
 
@@ -158,7 +150,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 class POA_AMH_FieldDevice_T;
@@ -184,7 +175,6 @@ public:
   FieldDevice_T *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void getEncodingID_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -193,7 +183,6 @@ static void getEncodingID_skel (
 virtual void getEncodingID (
     AMH_FieldDevice_TResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void getEncoding_skel (
     TAO_ServerRequest &_tao_req,
@@ -205,7 +194,6 @@ virtual void getEncoding (
   ) = 0;
 
 };
-
 
 
 
@@ -239,14 +227,12 @@ public:
   ::FieldDevice_T *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::EncodingID2_T getEncodingID () = 0;
 
   static void getEncodingID_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::Encoding_T getEncoding () = 0;
 
   static void getEncoding_skel (
@@ -254,7 +240,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -265,11 +250,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_FieldDevice_T_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_FieldDevice_T_Direct_Proxy_Impl ();
-
   static void
   getEncodingID (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   getEncoding (
@@ -282,7 +265,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_FieldDevice_TResponseHandler;
 using POA_TAO_AMH_FieldDevice_TResponseHandler_ptr = POA_TAO_AMH_FieldDevice_TResponseHandler *;
 
@@ -293,20 +275,15 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_FieldDevice_TResponseHandler
 public:
   POA_TAO_AMH_FieldDevice_TResponseHandler () = default;
   virtual ~POA_TAO_AMH_FieldDevice_TResponseHandler () = default;
-
   void getEncodingID (
     ::EncodingID2_T return_value) override;
-
   void getEncodingID_excep (
     ::AMH_FieldDevice_TExceptionHolder * holder) override;
-
   void getEncoding (
     const ::Encoding_T & return_value) override;
-
   void getEncoding_excep (
     ::AMH_FieldDevice_TExceptionHolder * holder) override;
 };
-
 
 
 
@@ -340,7 +317,6 @@ public:
   ::AMI_FieldDevice_THandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void getEncodingID (
     ::EncodingID2_T ami_return_val) = 0;
 
@@ -348,7 +324,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void getEncodingID_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -356,7 +331,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void getEncoding (
     const ::Encoding_T & ami_return_val) = 0;
 
@@ -364,7 +338,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void getEncoding_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -373,7 +346,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -385,21 +357,17 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl ();
-
   static void
   getEncodingID (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   getEncodingID_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   getEncoding (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   getEncoding_excep (

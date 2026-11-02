@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "attributeC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -46,12 +45,11 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "attributeC.inl"
 #endif /* !defined INLINE */
-
 Hello::InternalErrorA::InternalErrorA ()
   : ::CORBA::UserException (
         "IDL:Hello/InternalErrorA:1.0",
@@ -132,7 +130,6 @@ void Hello::InternalErrorA::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::Hello::_tc_InternalErrorA;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
@@ -157,7 +154,6 @@ namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_InternalErrorA = std::addressof(_tao_tc_Hello_InternalErrorA);
 }
-
 Hello::InternalErrorB::InternalErrorB ()
   : ::CORBA::UserException (
         "IDL:Hello/InternalErrorB:1.0",
@@ -238,7 +234,6 @@ void Hello::InternalErrorB::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::Hello::_tc_InternalErrorB;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
@@ -263,7 +258,6 @@ namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_InternalErrorB = std::addressof(_tao_tc_Hello_InternalErrorB);
 }
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -278,7 +272,6 @@ namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_MyType = std::addressof(_tao_tc_Hello_MyType);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -309,7 +302,6 @@ TAO::Objref_Traits<Hello::MyFoo>::marshal (const Hello::MyFoo_ptr p,TAO_OutputCD
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::Hello::MyType
@@ -359,7 +351,6 @@ Hello::MyFoo::rw_attrib_mytype ()
 
   return _tao_retval.retn ();
 }
-
 void
 Hello::MyFoo::rw_attrib_mytype (
   ::Hello::MyType rw_attrib_mytype)
@@ -405,7 +396,6 @@ Hello::MyFoo::rw_attrib_mytype (
       1
     );
 }
-
 ::CORBA::Short
 Hello::MyFoo::rw_attrib ()
 {
@@ -453,7 +443,6 @@ Hello::MyFoo::rw_attrib ()
 
   return _tao_retval.retn ();
 }
-
 void
 Hello::MyFoo::rw_attrib (
   ::CORBA::Short rw_attrib)
@@ -499,7 +488,6 @@ Hello::MyFoo::rw_attrib (
       1
     );
 }
-
 ::CORBA::Short
 Hello::MyFoo::rw_attrib_reverted ()
 {
@@ -547,7 +535,6 @@ Hello::MyFoo::rw_attrib_reverted ()
 
   return _tao_retval.retn ();
 }
-
 void
 Hello::MyFoo::rw_attrib_reverted (
   ::CORBA::Short rw_attrib_reverted)
@@ -593,7 +580,6 @@ Hello::MyFoo::rw_attrib_reverted (
       1
     );
 }
-
 ::CORBA::Short
 Hello::MyFoo::rw_attribB ()
 {
@@ -641,7 +627,6 @@ Hello::MyFoo::rw_attribB ()
 
   return _tao_retval.retn ();
 }
-
 void
 Hello::MyFoo::rw_attribB (
   ::CORBA::Short rw_attribB)
@@ -672,7 +657,6 @@ Hello::MyFoo::rw_attribB (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::Short
 Hello::MyFoo::ro_attrib ()
 {
@@ -722,7 +706,6 @@ Hello::MyFoo::ro_attrib ()
 }
 
 
-
 void
 Hello::MyFoo::sendc_set_rw_attrib_mytype (
   ::Hello::AMI_MyFooHandler_ptr ami_handler,
@@ -760,7 +743,6 @@ Hello::MyFoo::sendc_set_rw_attrib_mytype (
 }
 
 
-
 void
 Hello::MyFoo::sendc_get_rw_attrib_mytype (
   ::Hello::AMI_MyFooHandler_ptr ami_handler)
@@ -788,7 +770,6 @@ Hello::MyFoo::sendc_get_rw_attrib_mytype (
       &Hello::AMI_MyFooHandler::get_rw_attrib_mytype_reply_stub
     );
 }
-
 
 
 void
@@ -828,7 +809,6 @@ Hello::MyFoo::sendc_set_rw_attrib (
 }
 
 
-
 void
 Hello::MyFoo::sendc_get_rw_attrib (
   ::Hello::AMI_MyFooHandler_ptr ami_handler)
@@ -856,7 +836,6 @@ Hello::MyFoo::sendc_get_rw_attrib (
       &Hello::AMI_MyFooHandler::get_rw_attrib_reply_stub
     );
 }
-
 
 
 void
@@ -896,7 +875,6 @@ Hello::MyFoo::sendc_set_rw_attrib_reverted (
 }
 
 
-
 void
 Hello::MyFoo::sendc_get_rw_attrib_reverted (
   ::Hello::AMI_MyFooHandler_ptr ami_handler)
@@ -924,7 +902,6 @@ Hello::MyFoo::sendc_get_rw_attrib_reverted (
       &Hello::AMI_MyFooHandler::get_rw_attrib_reverted_reply_stub
     );
 }
-
 
 
 void
@@ -964,7 +941,6 @@ Hello::MyFoo::sendc_set_rw_attribB (
 }
 
 
-
 void
 Hello::MyFoo::sendc_get_rw_attribB (
   ::Hello::AMI_MyFooHandler_ptr ami_handler)
@@ -992,7 +968,6 @@ Hello::MyFoo::sendc_get_rw_attribB (
       &Hello::AMI_MyFooHandler::get_rw_attribB_reply_stub
     );
 }
-
 
 
 void
@@ -1103,7 +1078,6 @@ Hello::MyFoo::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_Hello_MyFoo (
@@ -1116,7 +1090,6 @@ namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_MyFoo = std::addressof(_tao_tc_Hello_MyFoo);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Hello_AMH_MyFooExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -1136,7 +1109,6 @@ namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_MyFooExceptionHolder = std::addressof(_tao_tc_Hello_AMH_MyFooExceptionHolder);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1279,14 +1251,12 @@ Hello::AMH_MyFooExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 Hello::AMH_MyFooExceptionHolder::raise_get_rw_attrib_mytype ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_set_rw_attrib_mytype ()
@@ -1295,14 +1265,12 @@ Hello::AMH_MyFooExceptionHolder::raise_set_rw_attrib_mytype ()
   this->exception->_raise ();
 }
 
-
 void
 Hello::AMH_MyFooExceptionHolder::raise_get_rw_attrib ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_set_rw_attrib ()
@@ -1311,14 +1279,12 @@ Hello::AMH_MyFooExceptionHolder::raise_set_rw_attrib ()
   this->exception->_raise ();
 }
 
-
 void
 Hello::AMH_MyFooExceptionHolder::raise_get_rw_attrib_reverted ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_set_rw_attrib_reverted ()
@@ -1327,14 +1293,12 @@ Hello::AMH_MyFooExceptionHolder::raise_set_rw_attrib_reverted ()
   this->exception->_raise ();
 }
 
-
 void
 Hello::AMH_MyFooExceptionHolder::raise_get_rw_attribB ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_set_rw_attribB ()
@@ -1343,14 +1307,12 @@ Hello::AMH_MyFooExceptionHolder::raise_set_rw_attribB ()
   this->exception->_raise ();
 }
 
-
 void
 Hello::AMH_MyFooExceptionHolder::raise_get_ro_attrib ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attrib_mytype ()
@@ -1359,14 +1321,12 @@ Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attrib_mytype ()
   this->exception->_raise ();
 }
 
-
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_get_rw_attrib_mytype ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attrib ()
@@ -1375,14 +1335,12 @@ Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attrib ()
   this->exception->_raise ();
 }
 
-
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_get_rw_attrib ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attrib_reverted ()
@@ -1391,14 +1349,12 @@ Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attrib_reverted ()
   this->exception->_raise ();
 }
 
-
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_get_rw_attrib_reverted ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attribB ()
@@ -1407,7 +1363,6 @@ Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attribB ()
   this->exception->_raise ();
 }
 
-
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_get_rw_attribB ()
 {
@@ -1415,14 +1370,12 @@ Hello::AMH_MyFooExceptionHolder::raise_sendc_get_rw_attribB ()
   this->exception->_raise ();
 }
 
-
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_get_ro_attrib ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1540,7 +1493,6 @@ Hello::AMH_MyFooResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_Hello_AMH_MyFooResponseHandler (
@@ -1553,7 +1505,6 @@ namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_MyFooResponseHandler = std::addressof(_tao_tc_Hello_AMH_MyFooResponseHandler);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1584,7 +1535,6 @@ TAO::Objref_Traits<Hello::AMI_MyFooHandler>::marshal (const Hello::AMI_MyFooHand
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -1707,7 +1657,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype_reply_stub (
       break;
   }
 }
-
 void
 Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1753,7 +1702,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep (
       1
     );
 }
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib_mytype ()
 {
@@ -1866,7 +1814,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype_reply_stub (
       break;
   }
 }
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1912,7 +1859,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep (
       1
     );
 }
-
 void
 Hello::AMI_MyFooHandler::get_rw_attrib (
   ::CORBA::Short ami_return_val)
@@ -2033,7 +1979,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reply_stub (
       break;
   }
 }
-
 void
 Hello::AMI_MyFooHandler::get_rw_attrib_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2079,7 +2024,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_excep (
       1
     );
 }
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib ()
 {
@@ -2192,7 +2136,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reply_stub (
       break;
   }
 }
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2238,7 +2181,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_excep (
       1
     );
 }
-
 void
 Hello::AMI_MyFooHandler::get_rw_attrib_reverted (
   ::CORBA::Short ami_return_val)
@@ -2359,7 +2301,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted_reply_stub (
       break;
   }
 }
-
 void
 Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2405,7 +2346,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep (
       1
     );
 }
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib_reverted ()
 {
@@ -2518,7 +2458,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted_reply_stub (
       break;
   }
 }
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2564,7 +2503,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep (
       1
     );
 }
-
 void
 Hello::AMI_MyFooHandler::get_rw_attribB (
   ::CORBA::Short ami_return_val)
@@ -2685,7 +2623,6 @@ Hello::AMI_MyFooHandler::get_rw_attribB_reply_stub (
       break;
   }
 }
-
 void
 Hello::AMI_MyFooHandler::get_rw_attribB_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2731,7 +2668,6 @@ Hello::AMI_MyFooHandler::get_rw_attribB_excep (
       1
     );
 }
-
 void
 Hello::AMI_MyFooHandler::set_rw_attribB ()
 {
@@ -2817,7 +2753,6 @@ Hello::AMI_MyFooHandler::set_rw_attribB_reply_stub (
       break;
   }
 }
-
 void
 Hello::AMI_MyFooHandler::set_rw_attribB_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2848,7 +2783,6 @@ Hello::AMI_MyFooHandler::set_rw_attribB_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Hello::AMI_MyFooHandler::get_ro_attrib (
   ::CORBA::Short ami_return_val)
@@ -2969,7 +2903,6 @@ Hello::AMI_MyFooHandler::get_ro_attrib_reply_stub (
       break;
   }
 }
-
 void
 Hello::AMI_MyFooHandler::get_ro_attrib_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3097,7 +3030,6 @@ Hello::AMI_MyFooHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_Hello_AMI_MyFooHandler (
@@ -3110,7 +3042,6 @@ namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_MyFooHandler = std::addressof(_tao_tc_Hello_AMI_MyFooHandler);
 }
-
 OBV_Hello::AMH_MyFooExceptionHolder::~AMH_MyFooExceptionHolder ()
 {}
 
@@ -3125,7 +3056,6 @@ OBV_Hello::AMH_MyFooExceptionHolder::_tao_unmarshal__Hello_AMH_MyFooExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3201,7 +3131,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3282,7 +3211,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -3345,7 +3273,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3420,7 +3347,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3506,7 +3432,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -3572,7 +3497,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -3596,7 +3520,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -3617,7 +3540,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3653,7 +3575,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (Hello::AMH_MyFooExceptionHolder * vt)
@@ -3674,7 +3595,6 @@ CORBA::remove_ref (Hello::AMH_MyFooExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3704,7 +3624,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_Hello::AMH_MyFooExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -3722,7 +3641,6 @@ OBV_Hello::AMH_MyFooExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

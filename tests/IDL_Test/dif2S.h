@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_DIF2S_QPK2UI_H_
-#define _TAO_IDL_DIF2S_QPK2UI_H_
+#ifndef _TAO_IDL_DIF2S_EGNXFJ_H_
+#define _TAO_IDL_DIF2S_EGNXFJ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -55,14 +54,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -83,7 +80,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_EX1__SARG_TRAITS_)
 #define _OLDDIF2_EX1__SARG_TRAITS_
 
@@ -98,7 +94,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDDIF2_AMH_EX1EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -119,7 +114,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_AMI_EX1HANDLER__SARG_TRAITS_)
 #define _OLDDIF2_AMI_EX1HANDLER__SARG_TRAITS_
 
@@ -136,7 +130,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_EX2__SARG_TRAITS_)
 #define _OLDDIF2_EX2__SARG_TRAITS_
 
@@ -151,7 +144,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDDIF2_EX2_OP9_LS__SARG_TRAITS_)
@@ -171,7 +163,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_EX2_OP10_LS__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP10_LS__SARG_TRAITS_
 
@@ -189,7 +180,6 @@ class SArg_Traits<OldDif2_ex2_op10_ls>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_EX2_OP11__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP11__SARG_TRAITS_
 
@@ -204,7 +194,6 @@ class SArg_Traits<OldDif2_ex2_op11>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDDIF2_EX2_OP11_LS__SARG_TRAITS_)
@@ -224,7 +213,6 @@ class SArg_Traits<OldDif2_ex2_op11_ls>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_EX2_OP9_LS__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP9_LS__SARG_TRAITS_
 
@@ -242,7 +230,6 @@ class SArg_Traits<OldDif2_ex2_sendc_op9_ls>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_EX2_OP11_LS__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP11_LS__SARG_TRAITS_
 
@@ -258,7 +245,6 @@ class SArg_Traits<OldDif2_ex2_sendc_op11_ls>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDDIF2_AMH_EX2EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -279,7 +265,6 @@ class SArg_Traits< ::OldDif2::AMH_ex2ExceptionHolder>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_AMI_EX2HANDLER__SARG_TRAITS_)
 #define _OLDDIF2_AMI_EX2HANDLER__SARG_TRAITS_
 
@@ -294,7 +279,6 @@ class  SArg_Traits< ::OldDif2::AMI_ex2Handler>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDDIF2_EX2_OP10_LS__SARG_TRAITS_)
@@ -314,7 +298,6 @@ class SArg_Traits<OldDif2_AMI_ex2Handler_op10_ls>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_AMI_EX2HANDLER_OP11_AMI_RETURN_VAL__SARG_TRAITS_)
 #define _OLDDIF2_AMI_EX2HANDLER_OP11_AMI_RETURN_VAL__SARG_TRAITS_
 
@@ -330,7 +313,6 @@ class SArg_Traits<OldDif2_AMI_ex2Handler_op11_ami_return_val>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDDIF2_EX2_OP11_LS__SARG_TRAITS_)
@@ -350,7 +332,6 @@ class SArg_Traits<OldDif2_AMI_ex2Handler_op11_ls>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_EX3__SARG_TRAITS_)
 #define _OLDDIF2_EX3__SARG_TRAITS_
 
@@ -365,7 +346,6 @@ class  SArg_Traits< ::OldDif2::ex3>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDDIF2_AMH_EX3EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -386,7 +366,6 @@ class SArg_Traits< ::OldDif2::AMH_ex3ExceptionHolder>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_AMI_EX3HANDLER__SARG_TRAITS_)
 #define _OLDDIF2_AMI_EX3HANDLER__SARG_TRAITS_
 
@@ -401,7 +380,6 @@ class  SArg_Traits< ::OldDif2::AMI_ex3Handler>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDDIF2_EX4__SARG_TRAITS_)
@@ -420,7 +398,6 @@ class  SArg_Traits< ::OldDif2::ex4>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_EX4_LIMITED_STRING_ATTRIBUTE__SARG_TRAITS_)
 #define _OLDDIF2_EX4_LIMITED_STRING_ATTRIBUTE__SARG_TRAITS_
 template<>
@@ -434,7 +411,6 @@ class SArg_Traits<OldDif2_ex4_limited_string_attribute>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDDIF2_AMH_EX4EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -455,7 +431,6 @@ class SArg_Traits< ::OldDif2::AMH_ex4ExceptionHolder>
 #endif /* end #if !defined */
 
 
-
 #if !defined (_OLDDIF2_AMI_EX4HANDLER__SARG_TRAITS_)
 #define _OLDDIF2_AMI_EX4HANDLER__SARG_TRAITS_
 
@@ -470,7 +445,6 @@ class  SArg_Traits< ::OldDif2::AMI_ex4Handler>
 };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDDIF2_AMI_EX4HANDLER_GET_LIMITED_STRING_ATTRIBUTE_AMI_RETURN_VAL__SARG_TRAITS_)
@@ -493,10 +467,8 @@ class SArg_Traits<OldDif2_AMI_ex4Handler_get_limited_string_attribute_ami_return
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_OldDif2
 {
-
 
   class AMH_ex1;
   using AMH_ex1_ptr = AMH_ex1 *;
@@ -521,7 +493,6 @@ namespace POA_OldDif2
     OldDif2::ex1 *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void op0_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -530,7 +501,6 @@ namespace POA_OldDif2
   virtual void op0 (
       OldDif2::AMH_ex1ResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void op1_skel (
       TAO_ServerRequest &_tao_req,
@@ -543,7 +513,6 @@ namespace POA_OldDif2
       ::CORBA::Long l
     ) = 0;
 
-
   static void op2_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -554,7 +523,6 @@ namespace POA_OldDif2
       ::CORBA::Double d,
       ::CORBA::Short s
     ) = 0;
-
 
   static void op3_skel (
       TAO_ServerRequest &_tao_req,
@@ -567,7 +535,6 @@ namespace POA_OldDif2
       ::CORBA::ULong ul
     ) = 0;
 
-
   static void op4_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -578,7 +545,6 @@ namespace POA_OldDif2
       ::CORBA::Short s,
       ::CORBA::UShort us
     ) = 0;
-
 
   static void op5_skel (
       TAO_ServerRequest &_tao_req,
@@ -592,7 +558,6 @@ namespace POA_OldDif2
       ::CORBA::Boolean b
     ) = 0;
 
-
   static void op6_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -604,7 +569,6 @@ namespace POA_OldDif2
     ) = 0;
 
 };
-
 
 
 
@@ -638,14 +602,12 @@ public:
   ::OldDif2::ex1 *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op0 () = 0;
 
   static void op0_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Float op1 (
     ::CORBA::Float f,
     ::CORBA::Double_out d,
@@ -655,7 +617,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Double op2 (
     ::CORBA::Double d,
     ::CORBA::Long_out l,
@@ -665,7 +626,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Long op3 (
     ::CORBA::Long l,
     ::CORBA::Short_out s,
@@ -675,7 +635,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Short op4 (
     ::CORBA::Short s,
     ::CORBA::ULong_out ul,
@@ -685,7 +644,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::ULong op5 (
     ::CORBA::ULong & ul,
     ::CORBA::UShort us,
@@ -696,7 +654,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::UShort op6 (
     ::CORBA::UShort_out us,
     ::CORBA::Char & c) = 0;
@@ -708,7 +665,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -717,36 +673,29 @@ class TAO_IDL_TEST_STUB_Export _TAO_ex1_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_ex1_Direct_Proxy_Impl ();
-
   static void
   op0 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op1 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op2 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op3 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op4 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op5 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op6 (
@@ -759,7 +708,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_ex1ResponseHandler;
 using TAO_AMH_ex1ResponseHandler_ptr = TAO_AMH_ex1ResponseHandler *;
 
@@ -770,61 +718,46 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_ex1ResponseHandler
 public:
   TAO_AMH_ex1ResponseHandler () = default;
   virtual ~TAO_AMH_ex1ResponseHandler () = default;
-
   void op0 () override;
-
   void op0_excep (
     ::OldDif2::AMH_ex1ExceptionHolder * holder) override;
-
   void op1 (
     ::CORBA::Float return_value,
     ::CORBA::Double d,
     ::CORBA::Long l) override;
-
   void op1_excep (
     ::OldDif2::AMH_ex1ExceptionHolder * holder) override;
-
   void op2 (
     ::CORBA::Double return_value,
     ::CORBA::Long l,
     ::CORBA::Short s) override;
-
   void op2_excep (
     ::OldDif2::AMH_ex1ExceptionHolder * holder) override;
-
   void op3 (
     ::CORBA::Long return_value,
     ::CORBA::Short s,
     ::CORBA::ULong ul) override;
-
   void op3_excep (
     ::OldDif2::AMH_ex1ExceptionHolder * holder) override;
-
   void op4 (
     ::CORBA::Short return_value,
     ::CORBA::ULong ul,
     ::CORBA::UShort us) override;
-
   void op4_excep (
     ::OldDif2::AMH_ex1ExceptionHolder * holder) override;
-
   void op5 (
     ::CORBA::ULong return_value,
     ::CORBA::ULong ul,
     ::CORBA::Char c) override;
-
   void op5_excep (
     ::OldDif2::AMH_ex1ExceptionHolder * holder) override;
-
   void op6 (
     ::CORBA::UShort return_value,
     ::CORBA::UShort us,
     ::CORBA::Char c) override;
-
   void op6_excep (
     ::OldDif2::AMH_ex1ExceptionHolder * holder) override;
 };
-
 
 
 
@@ -858,14 +791,12 @@ public:
   ::OldDif2::AMI_ex1Handler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op0 () = 0;
 
   static void op0_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op0_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -873,7 +804,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op1 (
     ::CORBA::Float ami_return_val,
     ::CORBA::Double d,
@@ -883,7 +813,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op1_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -891,7 +820,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op2 (
     ::CORBA::Double ami_return_val,
     ::CORBA::Long l,
@@ -901,7 +829,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op2_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -909,7 +836,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op3 (
     ::CORBA::Long ami_return_val,
     ::CORBA::Short s,
@@ -919,7 +845,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op3_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -927,7 +852,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op4 (
     ::CORBA::Short ami_return_val,
     ::CORBA::ULong ul,
@@ -937,7 +861,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op4_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -945,7 +868,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op5 (
     ::CORBA::ULong ami_return_val,
     ::CORBA::ULong ul,
@@ -955,7 +877,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op5_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -963,7 +884,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op6 (
     ::CORBA::UShort ami_return_val,
     ::CORBA::UShort us,
@@ -973,7 +893,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op6_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -982,7 +901,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -994,71 +912,57 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_ex1Handler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_ex1Handler_Direct_Proxy_Impl ();
-
   static void
   op0 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op0_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op1 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op1_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op2 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op2_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op3 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op3_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op4 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op4_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op5 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op5_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op6 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op6_excep (
@@ -1069,7 +973,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class AMH_ex2;
@@ -1096,7 +999,6 @@ public:
   OldDif2::ex2 *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void op7_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1108,7 +1010,6 @@ virtual void op7 (
     ::CORBA::Octet o
   ) = 0;
 
-
 static void op8_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1118,7 +1019,6 @@ virtual void op8 (
     OldDif2::AMH_ex2ResponseHandler_ptr _tao_rh,
     ::CORBA::Octet o
   ) = 0;
-
 
 static void op9_skel (
     TAO_ServerRequest &_tao_req,
@@ -1132,7 +1032,6 @@ virtual void op9 (
     ::CORBA::Long l
   ) = 0;
 
-
 static void op10_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1143,7 +1042,6 @@ virtual void op10 (
     const char * s
   ) = 0;
 
-
 static void op11_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1153,7 +1051,6 @@ virtual void op11 (
     OldDif2::AMH_ex2ResponseHandler_ptr _tao_rh,
     const char * ls
   ) = 0;
-
 
 static void op12_skel (
     TAO_ServerRequest &_tao_req,
@@ -1166,7 +1063,6 @@ virtual void op12 (
   ) = 0;
 
 };
-
 
 
 
@@ -1200,7 +1096,6 @@ public:
   ::OldDif2::ex2 *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::CORBA::Char op7 (
     ::CORBA::Char c,
     ::CORBA::Boolean_out b,
@@ -1210,7 +1105,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Boolean op8 (
     ::CORBA::Boolean_out b,
     ::CORBA::Octet o) = 0;
@@ -1219,7 +1113,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Octet op9 (
     ::CORBA::Octet & o,
     ::CORBA::String_out s,
@@ -1230,7 +1123,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual char * op10 (
     const char * s,
     ::CORBA::String_out ls) = 0;
@@ -1239,7 +1131,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual char * op11 (
     char *& ls,
     ::CORBA::Long_out l) = 0;
@@ -1248,7 +1139,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Long op12 (
     ::CORBA::Long l) = 0;
 
@@ -1257,7 +1147,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1269,31 +1158,25 @@ class TAO_IDL_TEST_STUB_Export _TAO_ex2_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_ex2_Direct_Proxy_Impl ();
-
   static void
   op7 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op8 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op9 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op10 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op11 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op12 (
@@ -1306,7 +1189,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_ex2ResponseHandler;
 using TAO_AMH_ex2ResponseHandler_ptr = TAO_AMH_ex2ResponseHandler *;
 
@@ -1317,53 +1199,40 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_ex2ResponseHandler
 public:
   TAO_AMH_ex2ResponseHandler () = default;
   virtual ~TAO_AMH_ex2ResponseHandler () = default;
-
   void op7 (
     ::CORBA::Char return_value,
     ::CORBA::Boolean b,
     ::CORBA::Octet o) override;
-
   void op7_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) override;
-
   void op8 (
     ::CORBA::Boolean return_value,
     ::CORBA::Boolean b) override;
-
   void op8_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) override;
-
   void op9 (
     ::CORBA::Octet return_value,
     ::CORBA::Octet o,
     const char * s,
     ::CORBA::Long l) override;
-
   void op9_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) override;
-
   void op10 (
     const char * return_value,
     const char * ls) override;
-
   void op10_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) override;
-
   void op11 (
     const char * return_value,
     const char * ls,
     ::CORBA::Long l) override;
-
   void op11_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) override;
-
   void op12 (
     ::CORBA::Long return_value) override;
-
   void op12_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) override;
 };
-
 
 
 
@@ -1397,7 +1266,6 @@ public:
   ::OldDif2::AMI_ex2Handler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op7 (
     ::CORBA::Char ami_return_val,
     ::CORBA::Boolean b,
@@ -1407,7 +1275,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op7_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1415,7 +1282,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op8 (
     ::CORBA::Boolean ami_return_val,
     ::CORBA::Boolean b) = 0;
@@ -1424,7 +1290,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op8_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1432,7 +1297,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op9 (
     ::CORBA::Octet ami_return_val,
     ::CORBA::Octet o,
@@ -1443,7 +1307,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op9_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1451,7 +1314,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op10 (
     const char * ami_return_val,
     const char * ls) = 0;
@@ -1460,7 +1322,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op10_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1468,7 +1329,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op11 (
     const char * ami_return_val,
     const char * ls,
@@ -1478,7 +1338,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op11_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1486,7 +1345,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op12 (
     ::CORBA::Long ami_return_val) = 0;
 
@@ -1494,7 +1352,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op12_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1503,7 +1360,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1515,61 +1371,49 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_ex2Handler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_ex2Handler_Direct_Proxy_Impl ();
-
   static void
   op7 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op7_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op8 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op8_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op9 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op9_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op10 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op10_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op11 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op11_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op12 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op12_excep (
@@ -1580,7 +1424,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class AMH_ex3;
@@ -1607,7 +1450,6 @@ public:
   OldDif2::ex3 *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void _get_float_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1617,7 +1459,6 @@ virtual void float_attribute (
     OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void _get_double_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1626,7 +1467,6 @@ static void _get_double_attribute_skel (
 virtual void double_attribute (
     OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_double_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1638,7 +1478,6 @@ virtual void double_attribute (
     ::CORBA::Double double_attribute
   ) = 0;
 
-
 static void _get_long_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1648,7 +1487,6 @@ virtual void long_attribute (
     OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void _get_short_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1657,7 +1495,6 @@ static void _get_short_attribute_skel (
 virtual void short_attribute (
     OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_short_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1669,7 +1506,6 @@ virtual void short_attribute (
     ::CORBA::Short short_attribute
   ) = 0;
 
-
 static void _get_unsigned_long_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1680,7 +1516,6 @@ virtual void unsigned_long_attribute (
   ) = 0;
 
 };
-
 
 
 
@@ -1714,21 +1549,18 @@ public:
   ::OldDif2::ex3 *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::CORBA::Float float_attribute () = 0;
 
   static void _get_float_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Double double_attribute () = 0;
 
   static void _get_double_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void double_attribute (
     ::CORBA::Double double_attribute) = 0;
 
@@ -1736,21 +1568,18 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Long long_attribute () = 0;
 
   static void _get_long_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Short short_attribute () = 0;
 
   static void _get_short_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void short_attribute (
     ::CORBA::Short short_attribute) = 0;
 
@@ -1758,7 +1587,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::ULong unsigned_long_attribute () = 0;
 
   static void _get_unsigned_long_attribute_skel (
@@ -1766,7 +1594,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1778,36 +1605,29 @@ class TAO_IDL_TEST_STUB_Export _TAO_ex3_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_ex3_Direct_Proxy_Impl ();
-
   static void
   _get_float_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _get_double_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _set_double_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _get_long_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_short_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _set_short_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _get_unsigned_long_attribute (
@@ -1820,7 +1640,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_ex3ResponseHandler;
 using TAO_AMH_ex3ResponseHandler_ptr = TAO_AMH_ex3ResponseHandler *;
 
@@ -1831,48 +1650,33 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_ex3ResponseHandler
 public:
   TAO_AMH_ex3ResponseHandler () = default;
   virtual ~TAO_AMH_ex3ResponseHandler () = default;
-
   void get_float_attribute (
     ::CORBA::Float return_value) override;
-
   void get_float_attribute_excep (
     ::OldDif2::AMH_ex3ExceptionHolder * holder) override;
-
   void get_double_attribute (
     ::CORBA::Double return_value) override;
-
   void get_double_attribute_excep (
     ::OldDif2::AMH_ex3ExceptionHolder * holder) override;
-
   void set_double_attribute () override;
-
   void set_double_attribute_excep (
     ::OldDif2::AMH_ex3ExceptionHolder * holder) override;
-
   void get_long_attribute (
     ::CORBA::Long return_value) override;
-
   void get_long_attribute_excep (
     ::OldDif2::AMH_ex3ExceptionHolder * holder) override;
-
   void get_short_attribute (
     ::CORBA::Short return_value) override;
-
   void get_short_attribute_excep (
     ::OldDif2::AMH_ex3ExceptionHolder * holder) override;
-
   void set_short_attribute () override;
-
   void set_short_attribute_excep (
     ::OldDif2::AMH_ex3ExceptionHolder * holder) override;
-
   void get_unsigned_long_attribute (
     ::CORBA::ULong return_value) override;
-
   void get_unsigned_long_attribute_excep (
     ::OldDif2::AMH_ex3ExceptionHolder * holder) override;
 };
-
 
 
 
@@ -1906,7 +1710,6 @@ public:
   ::OldDif2::AMI_ex3Handler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_float_attribute (
     ::CORBA::Float ami_return_val) = 0;
 
@@ -1914,7 +1717,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_float_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1922,7 +1724,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_double_attribute (
     ::CORBA::Double ami_return_val) = 0;
 
@@ -1930,7 +1731,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_double_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1938,14 +1738,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_double_attribute () = 0;
 
   static void set_double_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_double_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1953,7 +1751,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_long_attribute (
     ::CORBA::Long ami_return_val) = 0;
 
@@ -1961,7 +1758,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_long_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1969,7 +1765,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_short_attribute (
     ::CORBA::Short ami_return_val) = 0;
 
@@ -1977,7 +1772,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_short_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1985,14 +1779,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_short_attribute () = 0;
 
   static void set_short_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_short_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2000,7 +1792,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_unsigned_long_attribute (
     ::CORBA::ULong ami_return_val) = 0;
 
@@ -2008,7 +1799,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_unsigned_long_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2017,7 +1807,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -2029,71 +1818,57 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_ex3Handler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_ex3Handler_Direct_Proxy_Impl ();
-
   static void
   get_float_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_float_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_double_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_double_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_double_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_double_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_long_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_long_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_short_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_short_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_short_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_short_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_unsigned_long_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_unsigned_long_attribute_excep (
@@ -2104,7 +1879,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class AMH_ex4;
@@ -2132,7 +1906,6 @@ public:
   OldDif2::ex4 *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void _get_unsigned_short_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -2141,7 +1914,6 @@ static void _get_unsigned_short_attribute_skel (
 virtual void unsigned_short_attribute (
     OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_unsigned_short_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -2153,7 +1925,6 @@ virtual void unsigned_short_attribute (
     ::CORBA::UShort unsigned_short_attribute
   ) = 0;
 
-
 static void _get_char_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -2163,7 +1934,6 @@ virtual void char_attribute (
     OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void _get_boolean_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -2172,7 +1942,6 @@ static void _get_boolean_attribute_skel (
 virtual void boolean_attribute (
     OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_boolean_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -2184,7 +1953,6 @@ virtual void boolean_attribute (
     ::CORBA::Boolean boolean_attribute
   ) = 0;
 
-
 static void _get_octet_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -2194,7 +1962,6 @@ virtual void octet_attribute (
     OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void _get_string_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -2203,7 +1970,6 @@ static void _get_string_attribute_skel (
 virtual void string_attribute (
     OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_string_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -2215,7 +1981,6 @@ virtual void string_attribute (
     const char * string_attribute
   ) = 0;
 
-
 static void _get_limited_string_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -2224,7 +1989,6 @@ static void _get_limited_string_attribute_skel (
 virtual void limited_string_attribute (
     OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _get_an_object_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -2236,7 +2000,6 @@ virtual void an_object_attribute (
   ) = 0;
 
 };
-
 
 
 
@@ -2271,14 +2034,12 @@ public:
   ::OldDif2::ex4 *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::CORBA::UShort unsigned_short_attribute () = 0;
 
   static void _get_unsigned_short_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void unsigned_short_attribute (
     ::CORBA::UShort unsigned_short_attribute) = 0;
 
@@ -2286,21 +2047,18 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Char char_attribute () = 0;
 
   static void _get_char_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Boolean boolean_attribute () = 0;
 
   static void _get_boolean_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void boolean_attribute (
     ::CORBA::Boolean boolean_attribute) = 0;
 
@@ -2308,21 +2066,18 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Octet octet_attribute () = 0;
 
   static void _get_octet_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual char * string_attribute () = 0;
 
   static void _get_string_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void string_attribute (
     const char * string_attribute) = 0;
 
@@ -2330,14 +2085,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual char * limited_string_attribute () = 0;
 
   static void _get_limited_string_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::OldDif2::ex4_ptr an_object_attribute () = 0;
 
   static void _get_an_object_attribute_skel (
@@ -2345,7 +2098,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -2358,51 +2110,41 @@ class TAO_IDL_TEST_STUB_Export _TAO_ex4_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_ex4_Direct_Proxy_Impl ();
-
   static void
   _get_unsigned_short_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_unsigned_short_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_char_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _get_boolean_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _set_boolean_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _get_octet_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_string_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_string_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_limited_string_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _get_an_object_attribute (
@@ -2415,7 +2157,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_ex4ResponseHandler;
 using TAO_AMH_ex4ResponseHandler_ptr = TAO_AMH_ex4ResponseHandler *;
 
@@ -2426,65 +2167,44 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_ex4ResponseHandler
 public:
   TAO_AMH_ex4ResponseHandler () = default;
   virtual ~TAO_AMH_ex4ResponseHandler () = default;
-
   void get_unsigned_short_attribute (
     ::CORBA::UShort return_value) override;
-
   void get_unsigned_short_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
-
   void set_unsigned_short_attribute () override;
-
   void set_unsigned_short_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
-
   void get_char_attribute (
     ::CORBA::Char return_value) override;
-
   void get_char_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
-
   void get_boolean_attribute (
     ::CORBA::Boolean return_value) override;
-
   void get_boolean_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
-
   void set_boolean_attribute () override;
-
   void set_boolean_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
-
   void get_octet_attribute (
     ::CORBA::Octet return_value) override;
-
   void get_octet_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
-
   void get_string_attribute (
     const char * return_value) override;
-
   void get_string_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
-
   void set_string_attribute () override;
-
   void set_string_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
-
   void get_limited_string_attribute (
     const char * return_value) override;
-
   void get_limited_string_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
-
   void get_an_object_attribute (
     ::OldDif2::ex4_ptr return_value) override;
-
   void get_an_object_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
 };
-
 
 
 
@@ -2519,7 +2239,6 @@ public:
   ::OldDif2::AMI_ex4Handler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_unsigned_short_attribute (
     ::CORBA::UShort ami_return_val) = 0;
 
@@ -2527,7 +2246,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_unsigned_short_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2535,14 +2253,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_unsigned_short_attribute () = 0;
 
   static void set_unsigned_short_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_unsigned_short_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2550,7 +2266,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_char_attribute (
     ::CORBA::Char ami_return_val) = 0;
 
@@ -2558,7 +2273,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_char_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2566,7 +2280,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_boolean_attribute (
     ::CORBA::Boolean ami_return_val) = 0;
 
@@ -2574,7 +2287,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_boolean_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2582,14 +2294,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_boolean_attribute () = 0;
 
   static void set_boolean_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_boolean_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2597,7 +2307,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_octet_attribute (
     ::CORBA::Octet ami_return_val) = 0;
 
@@ -2605,7 +2314,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_octet_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2613,7 +2321,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_string_attribute (
     const char * ami_return_val) = 0;
 
@@ -2621,7 +2328,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_string_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2629,14 +2335,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_string_attribute () = 0;
 
   static void set_string_attribute_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_string_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2644,7 +2348,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_limited_string_attribute (
     const char * ami_return_val) = 0;
 
@@ -2652,7 +2355,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_limited_string_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2660,7 +2362,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_an_object_attribute (
     ::OldDif2::ex4_ptr ami_return_val) = 0;
 
@@ -2668,7 +2369,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_an_object_attribute_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -2677,7 +2377,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -2690,101 +2389,81 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_ex4Handler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_ex4Handler_Direct_Proxy_Impl ();
-
   static void
   get_unsigned_short_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_unsigned_short_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_unsigned_short_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_unsigned_short_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_char_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_char_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_boolean_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_boolean_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_boolean_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_boolean_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_octet_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_octet_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_string_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_string_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_string_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_string_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_limited_string_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_limited_string_attribute_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_an_object_attribute (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_an_object_attribute_excep (
@@ -2795,7 +2474,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 

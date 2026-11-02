@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_UNIONS_EE60Y6_CPP_
-#define _TAO_IDL_UNIONS_EE60Y6_CPP_
+#ifndef _TAO_IDL_UNIONS_JZPW4H_CPP_
+#define _TAO_IDL_UNIONS_JZPW4H_CPP_
 
 
 #include "unionS.h"

@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 mod2::full::full (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ mod2::full::full (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 mod2::AMH_fullExceptionHolder::AMH_fullExceptionHolder ()
   : exception (nullptr)
@@ -55,7 +53,6 @@ mod2::AMH_fullExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 mod2::AMI_fullHandler::AMI_fullHandler (
     TAO_Stub *objref,
@@ -75,7 +72,6 @@ mod2::AMI_fullHandler::AMI_fullHandler (
 }
 
 
-
 ACE_INLINE
 fwd_mixed_intf::concrete_parent::concrete_parent (
     TAO_Stub *objref,
@@ -93,7 +89,6 @@ fwd_mixed_intf::concrete_parent::concrete_parent (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 fwd_mixed_intf::AMH_concrete_parentExceptionHolder::AMH_concrete_parentExceptionHolder ()
   : exception (nullptr)
@@ -106,7 +101,6 @@ fwd_mixed_intf::AMH_concrete_parentExceptionHolder::_tao_obv_static_repository_i
 }
 
 
-
 ACE_INLINE
 fwd_mixed_intf::AMI_concrete_parentHandler::AMI_concrete_parentHandler (
     TAO_Stub *objref,
@@ -124,7 +118,6 @@ fwd_mixed_intf::AMI_concrete_parentHandler::AMI_concrete_parentHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 
 ACE_INLINE
@@ -149,7 +142,6 @@ fwd_mixed_intf::abstract_parent::abstract_parent (
       )
 {
 }
-
 
 
 ACE_INLINE
@@ -181,7 +173,6 @@ fwd_mixed_intf::mixed_abs_first::mixed_abs_first (
 }
 
 
-
 ACE_INLINE
 fwd_mixed_intf::AMI_mixed_abs_firstHandler::AMI_mixed_abs_firstHandler (
     TAO_Stub *objref,
@@ -199,7 +190,6 @@ fwd_mixed_intf::AMI_mixed_abs_firstHandler::AMI_mixed_abs_firstHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 
 ACE_INLINE
@@ -235,7 +225,6 @@ fwd_mixed_intf::mixed_conc_first::mixed_conc_first (
 }
 
 
-
 ACE_INLINE
 fwd_mixed_intf::AMI_mixed_conc_firstHandler::AMI_mixed_conc_firstHandler (
     TAO_Stub *objref,
@@ -253,7 +242,6 @@ fwd_mixed_intf::AMI_mixed_conc_firstHandler::AMI_mixed_conc_firstHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 obv_fwd::EnclosingType::EnclosingType ()
 {}
@@ -263,7 +251,6 @@ obv_fwd::EnclosingType::_tao_obv_static_repository_id ()
 {
   return "IDL:obv_fwd/EnclosingType:1.0";
 }
-
 ACE_INLINE
 obv_fwd::ForwardedType::ForwardedType ()
 {}

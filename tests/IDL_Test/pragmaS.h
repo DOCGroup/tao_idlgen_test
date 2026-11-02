@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_PRAGMAS_0M3B3H_H_
-#define _TAO_IDL_PRAGMAS_0M3B3H_H_
+#ifndef _TAO_IDL_PRAGMAS_TUIO31_H_
+#define _TAO_IDL_PRAGMAS_TUIO31_H_
 
 #include /**/ "ace/pre.h"
 
@@ -51,14 +50,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -79,7 +76,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_HELLO__SARG_TRAITS_)
 #define _HELLO__SARG_TRAITS_
 
@@ -94,7 +90,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_HELLOEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -115,7 +110,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_HELLOHANDLER__SARG_TRAITS_)
 #define _AMI_HELLOHANDLER__SARG_TRAITS_
 
@@ -132,7 +126,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::ClusterFu>
     : public
@@ -142,7 +135,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_ALOHA__SARG_TRAITS_)
@@ -161,7 +153,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_GOODBYE__SARG_TRAITS_)
 #define _GOODBYE__SARG_TRAITS_
 
@@ -176,7 +167,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_GOODBYEEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -197,7 +187,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_GOODBYEHANDLER__SARG_TRAITS_)
 #define _AMI_GOODBYEHANDLER__SARG_TRAITS_
 
@@ -214,7 +203,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_SALUTATION_SAYONARA__SARG_TRAITS_)
 #define _SALUTATION_SAYONARA__SARG_TRAITS_
 
@@ -229,7 +217,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_SALUTATION_AMH_SAYONARAEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -250,7 +237,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_SALUTATION_AMI_SAYONARAHANDLER__SARG_TRAITS_)
 #define _SALUTATION_AMI_SAYONARAHANDLER__SARG_TRAITS_
 
@@ -267,7 +253,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_CIAO__SARG_TRAITS_)
 #define _CIAO__SARG_TRAITS_
 
@@ -282,7 +267,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_CIAOEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -303,7 +287,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_CIAOHANDLER__SARG_TRAITS_)
 #define _AMI_CIAOHANDLER__SARG_TRAITS_
 
@@ -318,7 +301,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_ALOHAEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -339,7 +321,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_ALOHAHANDLER__SARG_TRAITS_)
 #define _AMI_ALOHAHANDLER__SARG_TRAITS_
 
@@ -356,7 +337,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::DCPS_Test::Sample>
     : public
@@ -369,7 +349,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 class POA_AMH_hello;
@@ -396,7 +375,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -433,7 +411,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -449,7 +426,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_helloResponseHandler;
 using POA_TAO_AMH_helloResponseHandler_ptr = POA_TAO_AMH_helloResponseHandler *;
 
@@ -461,7 +437,6 @@ public:
   POA_TAO_AMH_helloResponseHandler () = default;
   virtual ~POA_TAO_AMH_helloResponseHandler () = default;
 };
-
 
 
 
@@ -498,7 +473,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -513,7 +487,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class POA_AMH_goodbye;
@@ -540,7 +513,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -577,7 +549,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -593,7 +564,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_goodbyeResponseHandler;
 using POA_TAO_AMH_goodbyeResponseHandler_ptr = POA_TAO_AMH_goodbyeResponseHandler *;
 
@@ -605,7 +575,6 @@ public:
   POA_TAO_AMH_goodbyeResponseHandler () = default;
   virtual ~POA_TAO_AMH_goodbyeResponseHandler () = default;
 };
-
 
 
 
@@ -642,7 +611,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -659,18 +627,14 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 namespace POA_A
 {
 
 
 
-
 } // module A
-
 namespace POA_salutation
 {
-
 
   class AMH_sayonara;
   using AMH_sayonara_ptr = AMH_sayonara *;
@@ -696,7 +660,6 @@ namespace POA_salutation
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -733,7 +696,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -749,7 +711,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_sayonaraResponseHandler;
 using TAO_AMH_sayonaraResponseHandler_ptr = TAO_AMH_sayonaraResponseHandler *;
 
@@ -761,7 +722,6 @@ public:
   TAO_AMH_sayonaraResponseHandler () = default;
   virtual ~TAO_AMH_sayonaraResponseHandler () = default;
 };
-
 
 
 
@@ -798,7 +758,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -817,9 +776,7 @@ public:
 
 
 
-
 } // module salutation
-
 class POA_AMH_ciao;
 using POA_AMH_ciao_ptr = POA_AMH_ciao *;
 
@@ -844,7 +801,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -881,7 +837,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -897,7 +852,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_ciaoResponseHandler;
 using POA_TAO_AMH_ciaoResponseHandler_ptr = POA_TAO_AMH_ciaoResponseHandler *;
 
@@ -909,7 +863,6 @@ public:
   POA_TAO_AMH_ciaoResponseHandler () = default;
   virtual ~POA_TAO_AMH_ciaoResponseHandler () = default;
 };
-
 
 
 
@@ -946,7 +899,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -961,7 +913,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class POA_AMH_aloha;
@@ -988,7 +939,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -1025,7 +975,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1041,7 +990,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_alohaResponseHandler;
 using POA_TAO_AMH_alohaResponseHandler_ptr = POA_TAO_AMH_alohaResponseHandler *;
 
@@ -1053,7 +1001,6 @@ public:
   POA_TAO_AMH_alohaResponseHandler () = default;
   virtual ~POA_TAO_AMH_alohaResponseHandler () = default;
 };
-
 
 
 
@@ -1090,7 +1037,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1107,10 +1053,8 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 namespace POA_DCPS_Test
 {
-
 
 
 

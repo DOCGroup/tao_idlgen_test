@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_REPO_ID_MODC_2YH1QW_H_
-#define _TAO_IDL_REPO_ID_MODC_2YH1QW_H_
+#ifndef _TAO_IDL_REPO_ID_MODC_95YQH2_H_
+#define _TAO_IDL_REPO_ID_MODC_95YQH2_H_
 
 #include /**/ "ace/pre.h"
 
@@ -55,10 +54,8 @@
 #if TAO_MAJOR_VERSION != 4 || TAO_MINOR_VERSION != 0 || TAO_MICRO_VERSION != 8
 #error This file should be regenerated with TAO_IDL
 #endif
-
 namespace gleep
 {
-
 
 
 #if !defined (_GLEEP_SCHMOOZE__VAR_OUT_CH_)
@@ -77,12 +74,10 @@ namespace gleep
 
 
 
-
   class TAO_IDL_TEST_STUB_Export schmooze
     : public virtual ::CORBA::Object
   {
   public:
-
     using _ptr_type = schmooze_ptr;
     using _var_type = schmooze_var;
     using _out_type = schmooze_out;
@@ -97,7 +92,6 @@ namespace gleep
     static schmooze_ptr _narrow (::CORBA::Object_ptr obj);
     static schmooze_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmooze_ptr _nil ();
-
 
 
 
@@ -126,12 +120,9 @@ namespace gleep
 
 
 
-
 } // module gleep
-
 namespace gleep
 {
-
 
 
 #if !defined (_GLEEP_SCHMEER__VAR_OUT_CH_)
@@ -150,12 +141,10 @@ namespace gleep
 
 
 
-
   class TAO_IDL_TEST_STUB_Export schmeer
     : public virtual ::CORBA::Object
   {
   public:
-
     using _ptr_type = schmeer_ptr;
     using _var_type = schmeer_var;
     using _out_type = schmeer_out;
@@ -170,7 +159,6 @@ namespace gleep
     static schmeer_ptr _narrow (::CORBA::Object_ptr obj);
     static schmeer_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmeer_ptr _nil ();
-
 
 
 
@@ -199,12 +187,9 @@ namespace gleep
 
 
 
-
 } // module gleep
-
 namespace gleep
 {
-
 
 
 #if !defined (_GLEEP_SCHLEMIEL__VAR_OUT_CH_)
@@ -223,12 +208,10 @@ namespace gleep
 
 
 
-
   class TAO_IDL_TEST_STUB_Export schlemiel
     : public virtual ::CORBA::Object
   {
   public:
-
     using _ptr_type = schlemiel_ptr;
     using _var_type = schlemiel_var;
     using _out_type = schlemiel_out;
@@ -243,7 +226,6 @@ namespace gleep
     static schlemiel_ptr _narrow (::CORBA::Object_ptr obj);
     static schlemiel_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schlemiel_ptr _nil ();
-
 
 
 
@@ -272,12 +254,9 @@ namespace gleep
 
 
 
-
 } // module gleep
-
 namespace gleep
 {
-
 
 
 #if !defined (_GLEEP_SPILKIS__VAR_OUT_CH_)
@@ -296,12 +275,10 @@ namespace gleep
 
 
 
-
   class TAO_IDL_TEST_STUB_Export spilkis
     : public virtual ::CORBA::Object
   {
   public:
-
     using _ptr_type = spilkis_ptr;
     using _var_type = spilkis_var;
     using _out_type = spilkis_out;
@@ -316,7 +293,6 @@ namespace gleep
     static spilkis_ptr _narrow (::CORBA::Object_ptr obj);
     static spilkis_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static spilkis_ptr _nil ();
-
 
 
 
@@ -342,10 +318,8 @@ namespace gleep
     spilkis &operator= (const spilkis &) = delete;
     spilkis &operator= (spilkis &&) = delete;
   };
-
   namespace floop
   {
-
 
 
 #if !defined (_GLEEP_FLOOP_SCHMUCK__VAR_OUT_CH_)
@@ -364,12 +338,10 @@ namespace gleep
 
 
 
-
     class TAO_IDL_TEST_STUB_Export schmuck
       : public virtual ::CORBA::Object
     {
     public:
-
       using _ptr_type = schmuck_ptr;
       using _var_type = schmuck_var;
       using _out_type = schmuck_out;
@@ -384,7 +356,6 @@ namespace gleep
       static schmuck_ptr _narrow (::CORBA::Object_ptr obj);
       static schmuck_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static schmuck_ptr _nil ();
-
 
 
 
@@ -412,7 +383,6 @@ namespace gleep
     };
 
 
-
 #if !defined (_GLEEP_FLOOP_SCHMENDRICK__VAR_OUT_CH_)
 #define _GLEEP_FLOOP_SCHMENDRICK__VAR_OUT_CH_
 
@@ -429,12 +399,10 @@ namespace gleep
 
 
 
-
     class TAO_IDL_TEST_STUB_Export schmendrick
       : public virtual ::CORBA::Object
     {
     public:
-
       using _ptr_type = schmendrick_ptr;
       using _var_type = schmendrick_var;
       using _out_type = schmendrick_out;
@@ -449,7 +417,6 @@ namespace gleep
       static schmendrick_ptr _narrow (::CORBA::Object_ptr obj);
       static schmendrick_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static schmendrick_ptr _nil ();
-
 
 
 
@@ -475,10 +442,8 @@ namespace gleep
       schmendrick &operator= (const schmendrick &) = delete;
       schmendrick &operator= (schmendrick &&) = delete;
     };
-
     namespace verklempt
     {
-
 
 
 #if !defined (_GLEEP_FLOOP_VERKLEMPT_SCHLEMAZEL__VAR_OUT_CH_)
@@ -497,12 +462,10 @@ namespace gleep
 
 
 
-
       class TAO_IDL_TEST_STUB_Export schlemazel
         : public virtual ::CORBA::Object
       {
       public:
-
         using _ptr_type = schlemazel_ptr;
         using _var_type = schlemazel_var;
         using _out_type = schlemazel_out;
@@ -517,7 +480,6 @@ namespace gleep
         static schlemazel_ptr _narrow (::CORBA::Object_ptr obj);
         static schlemazel_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
         static schlemazel_ptr _nil ();
-
 
 
 
@@ -546,14 +508,11 @@ namespace gleep
 
 
 
-
     } // module gleep::floop::verklempt
 
 
 
-
   } // module gleep::floop
-
 
 
 #if !defined (_GLEEP_SCHMEGEGGING__VAR_OUT_CH_)
@@ -572,12 +531,10 @@ namespace gleep
 
 
 
-
   class TAO_IDL_TEST_STUB_Export schmegegging
     : public virtual ::CORBA::Object
   {
   public:
-
     using _ptr_type = schmegegging_ptr;
     using _var_type = schmegegging_var;
     using _out_type = schmegegging_out;
@@ -592,7 +549,6 @@ namespace gleep
     static schmegegging_ptr _narrow (::CORBA::Object_ptr obj);
     static schmegegging_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmegegging_ptr _nil ();
-
 
 
 
@@ -621,9 +577,7 @@ namespace gleep
 
 
 
-
 } // module gleep
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -632,7 +586,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -655,7 +608,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -779,7 +731,6 @@ namespace TAO
 #endif /* end #if !defined */
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

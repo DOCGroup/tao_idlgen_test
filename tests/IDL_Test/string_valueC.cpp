@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "string_valueC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -42,7 +41,6 @@
 #if !defined (__ACE_INLINE__)
 #include "string_valueC.inl"
 #endif /* !defined INLINE */
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_include_test_StringTest[] =
   {
     { "my_string_value", &CORBA::_tc_StringValue, ::CORBA::PUBLIC_MEMBER }
@@ -66,7 +64,6 @@ namespace include_test
 {
   ::CORBA::TypeCode_ptr const _tc_StringTest = std::addressof(_tao_tc_include_test_StringTest);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -190,7 +187,6 @@ include_test::StringTest::_tao_unmarshal (
 }
 
 
-
 include_test::StringTest_init::StringTest_init ()
 {
 }
@@ -221,7 +217,6 @@ include_test::StringTest_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 OBV_include_test::StringTest::StringTest (
     ::CORBA::StringValue * _tao_init_my_string_value)
 {
@@ -257,7 +252,6 @@ OBV_include_test::StringTest::_tao_unmarshal__include_test_StringTest (TAO_Input
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 /// Accessor to set the member.
 void
 OBV_include_test::StringTest::my_string_value (CORBA::StringValue* val)
@@ -272,7 +266,6 @@ OBV_include_test::StringTest::my_string_value () const
 {
   return this->_pd_my_string_value.in ();
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -349,7 +342,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (include_test::StringTest * vt)
@@ -370,7 +362,6 @@ CORBA::remove_ref (include_test::StringTest * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -398,7 +389,6 @@ operator>> (
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::CORBA::Boolean

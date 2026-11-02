@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "anyunionC.h"
 #include <memory>
 #include <new>
@@ -47,12 +46,11 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "anyunionC.inl"
 #endif /* !defined INLINE */
-
 static char const * const _tao_enumerators_AnyUnionEnum[] =
   {
     "ANYUNIONENUM2"
@@ -68,7 +66,6 @@ static TAO::TypeCode::Enum<char const *,
     1);
 
 ::CORBA::TypeCode_ptr const _tc_AnyUnionEnum = std::addressof(_tao_tc_AnyUnionEnum);
-
 
 
 MyAnyUnion::MyAnyUnion ()
@@ -160,7 +157,6 @@ void MyAnyUnion::_reset ()
     break;
   }
 }
-
 static TAO::TypeCode::Case_T<AnyUnionEnum, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_MyAnyUnion__0 (::ANYUNIONENUM2, "my_any", &CORBA::_tc_any);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_MyAnyUnion[] =
@@ -181,7 +177,6 @@ static TAO::TypeCode::Union<char const *,
     -1);
 
 ::CORBA::TypeCode_ptr const _tc_MyAnyUnion = std::addressof(_tao_tc_MyAnyUnion);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -214,7 +209,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -267,7 +261,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, AnyUnionEnum _tao_enumerator)
@@ -289,7 +282,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

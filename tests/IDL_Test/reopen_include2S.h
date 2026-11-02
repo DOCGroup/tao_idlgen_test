@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_REOPEN_INCLUDE2S_REDP4O_H_
-#define _TAO_IDL_REOPEN_INCLUDE2S_REDP4O_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2S_P7UHNP_H_
+#define _TAO_IDL_REOPEN_INCLUDE2S_P7UHNP_H_
 
 #include /**/ "ace/pre.h"
 
@@ -53,14 +52,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -81,7 +78,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::frag::pug>
     : public
@@ -91,7 +87,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_A_B_X2__SARG_TRAITS_)
@@ -110,7 +105,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_A_B_AMH_X2EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _A_B_AMH_X2EXCEPTIONHOLDER__SARG_TRAITS_
 
@@ -127,7 +121,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_A_B_AMI_X2HANDLER__SARG_TRAITS_)
@@ -149,30 +142,23 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_frag
 {
 
 
 
-
 } // module frag
-
 namespace POA_XX
 {
 
 
 
-
 } // module XX
-
 namespace POA_A
 {
 
-
   namespace B
   {
-
 
     class AMH_X2;
     using AMH_X2_ptr = AMH_X2 *;
@@ -197,7 +183,6 @@ namespace POA_A
       A::B::X2 *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     static void getX2_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -208,7 +193,6 @@ namespace POA_A
       ) = 0;
 
   };
-
 
 
 
@@ -242,7 +226,6 @@ namespace POA_A
     ::A::B::X2 *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual char * getX2 () = 0;
 
     static void getX2_skel (
@@ -250,7 +233,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
   ///////////////////////////////////////////////////////////////////////
@@ -261,7 +243,6 @@ namespace POA_A
   {
   public:
     virtual ~_TAO_X2_Direct_Proxy_Impl ();
-
     static void
     getX2 (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -271,7 +252,6 @@ namespace POA_A
   //
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
-
 
 
   class TAO_AMH_X2ResponseHandler;
@@ -284,14 +264,11 @@ namespace POA_A
   public:
     TAO_AMH_X2ResponseHandler () = default;
     virtual ~TAO_AMH_X2ResponseHandler () = default;
-
     void getX2 (
       const char * return_value) override;
-
     void getX2_excep (
       ::A::B::AMH_X2ExceptionHolder * holder) override;
   };
-
 
 
 
@@ -325,7 +302,6 @@ namespace POA_A
     ::A::B::AMI_X2Handler *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual void getX2 (
       const char * ami_return_val) = 0;
 
@@ -333,7 +309,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-
     virtual void getX2_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -342,7 +317,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 
   ///////////////////////////////////////////////////////////////////////
@@ -354,11 +328,9 @@ namespace POA_A
   {
   public:
     virtual ~_TAO_AMI_X2Handler_Direct_Proxy_Impl ();
-
     static void
     getX2 (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
     static void
     getX2_excep (
@@ -373,9 +345,7 @@ namespace POA_A
 
 
 
-
 } // module A::B
-
 
 
 } // module A

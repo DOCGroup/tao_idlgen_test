@@ -24,11 +24,9 @@
 
 #include <memory>
 #include <new>
-
 // *************************************************************
 // Inline operations for union Data
 // *************************************************************
-
 ACE_INLINE
 void
 Data::_default ()
@@ -76,7 +74,6 @@ Data::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -100,7 +97,6 @@ Data::longData () const
     }
   return this->u_.longData_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -124,11 +120,9 @@ Data::shortData () const
     }
   return this->u_.shortData_;
 }
-
 // *************************************************************
 // Inline operations for union Necessary::WhichResult
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -166,7 +160,6 @@ Necessary::WhichResult::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -190,7 +183,6 @@ Necessary::WhichResult::m_Result () const
     }
   return this->u_.m_Result_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -214,11 +206,9 @@ Necessary::WhichResult::m_Unused () const
     }
   return this->u_.m_Unused_;
 }
-
 // *************************************************************
 // Inline operations for union foo
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -260,7 +250,6 @@ foo::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -307,7 +296,6 @@ foo::foo_str_member () const // get method
     }
   return this->u_.foo_str_member_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -331,7 +319,6 @@ foo::foo_iface_member () const
     }
   return this->u_.foo_iface_member_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -355,11 +342,9 @@ foo::foo_iface_member2 () const
     }
   return this->u_.foo_iface_member2_;
 }
-
 // *************************************************************
 // Inline operations for union UnionDiscTest::BooleanUnion
 // *************************************************************
-
 ACE_INLINE
 void
 UnionDiscTest::BooleanUnion::_default ()
@@ -397,7 +382,6 @@ UnionDiscTest::BooleanUnion::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -444,11 +428,9 @@ UnionDiscTest::BooleanUnion::value () const // get method
     }
   return this->u_.value_;
 }
-
 // *************************************************************
 // Inline operations for union UnionDiscTest::CharUnion
 // *************************************************************
-
 ACE_INLINE
 void
 UnionDiscTest::CharUnion::_default ()
@@ -492,7 +474,6 @@ UnionDiscTest::CharUnion::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -539,11 +520,9 @@ UnionDiscTest::CharUnion::value () const // get method
     }
   return this->u_.value_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchT
 // *************************************************************
-
 ACE_INLINE
 void
 AllBoolUnions::OneBranchT::_default ()
@@ -581,7 +560,6 @@ AllBoolUnions::OneBranchT::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -605,11 +583,9 @@ AllBoolUnions::OneBranchT::val () const
     }
   return this->u_.val_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchF
 // *************************************************************
-
 ACE_INLINE
 void
 AllBoolUnions::OneBranchF::_default ()
@@ -647,7 +623,6 @@ AllBoolUnions::OneBranchF::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -671,11 +646,9 @@ AllBoolUnions::OneBranchF::val () const
     }
   return this->u_.val_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchD
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -700,7 +673,6 @@ AllBoolUnions::OneBranchD::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -724,11 +696,9 @@ AllBoolUnions::OneBranchD::val () const
     }
   return this->u_.val_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchTF
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -753,7 +723,6 @@ AllBoolUnions::OneBranchTF::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -777,11 +746,9 @@ AllBoolUnions::OneBranchTF::val () const
     }
   return this->u_.val_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchFT
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -806,7 +773,6 @@ AllBoolUnions::OneBranchFT::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -830,11 +796,9 @@ AllBoolUnions::OneBranchFT::val () const
     }
   return this->u_.val_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchTD
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -859,7 +823,6 @@ AllBoolUnions::OneBranchTD::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -883,11 +846,9 @@ AllBoolUnions::OneBranchTD::val () const
     }
   return this->u_.val_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchDT
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -912,7 +873,6 @@ AllBoolUnions::OneBranchDT::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -936,11 +896,9 @@ AllBoolUnions::OneBranchDT::val () const
     }
   return this->u_.val_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchFD
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -965,7 +923,6 @@ AllBoolUnions::OneBranchFD::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -989,11 +946,9 @@ AllBoolUnions::OneBranchFD::val () const
     }
   return this->u_.val_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchDF
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1018,7 +973,6 @@ AllBoolUnions::OneBranchDF::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1042,11 +996,9 @@ AllBoolUnions::OneBranchDF::val () const
     }
   return this->u_.val_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesTF
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1078,7 +1030,6 @@ AllBoolUnions::TwoBranchesTF::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1102,7 +1053,6 @@ AllBoolUnions::TwoBranchesTF::val1 () const
     }
   return this->u_.val1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1126,11 +1076,9 @@ AllBoolUnions::TwoBranchesTF::val2 () const
     }
   return this->u_.val2_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesFT
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1162,7 +1110,6 @@ AllBoolUnions::TwoBranchesFT::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1186,7 +1133,6 @@ AllBoolUnions::TwoBranchesFT::val1 () const
     }
   return this->u_.val1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1210,11 +1156,9 @@ AllBoolUnions::TwoBranchesFT::val2 () const
     }
   return this->u_.val2_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesTD
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1246,7 +1190,6 @@ AllBoolUnions::TwoBranchesTD::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1270,7 +1213,6 @@ AllBoolUnions::TwoBranchesTD::val1 () const
     }
   return this->u_.val1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1294,11 +1236,9 @@ AllBoolUnions::TwoBranchesTD::val2 () const
     }
   return this->u_.val2_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesDT
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1330,7 +1270,6 @@ AllBoolUnions::TwoBranchesDT::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1354,7 +1293,6 @@ AllBoolUnions::TwoBranchesDT::val1 () const
     }
   return this->u_.val1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1378,11 +1316,9 @@ AllBoolUnions::TwoBranchesDT::val2 () const
     }
   return this->u_.val2_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesFD
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1414,7 +1350,6 @@ AllBoolUnions::TwoBranchesFD::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1438,7 +1373,6 @@ AllBoolUnions::TwoBranchesFD::val1 () const
     }
   return this->u_.val1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1462,11 +1396,9 @@ AllBoolUnions::TwoBranchesFD::val2 () const
     }
   return this->u_.val2_;
 }
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesDF
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -1498,7 +1430,6 @@ AllBoolUnions::TwoBranchesDF::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1522,7 +1453,6 @@ AllBoolUnions::TwoBranchesDF::val1 () const
     }
   return this->u_.val1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1546,11 +1476,9 @@ AllBoolUnions::TwoBranchesDF::val2 () const
     }
   return this->u_.val2_;
 }
-
 // *************************************************************
 // Inline operations for union inner1
 // *************************************************************
-
 ACE_INLINE
 void
 inner1::_default ()
@@ -1598,7 +1526,6 @@ inner1::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1622,7 +1549,6 @@ inner1::s () const
     }
   return this->u_.s_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1646,11 +1572,9 @@ inner1::l () const
     }
   return this->u_.l_;
 }
-
 // *************************************************************
 // Inline operations for union inner2
 // *************************************************************
-
 ACE_INLINE
 void
 inner2::_default ()
@@ -1698,7 +1622,6 @@ inner2::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1722,7 +1645,6 @@ inner2::c () const
     }
   return this->u_.c_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1746,11 +1668,9 @@ inner2::lng () const
     }
   return this->u_.lng_;
 }
-
 // *************************************************************
 // Inline operations for union outer
 // *************************************************************
-
 ACE_INLINE
 void
 outer::_default ()
@@ -1798,7 +1718,6 @@ outer::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1836,7 +1755,6 @@ outer::first ()
     }
   return *this->u_.first_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1874,11 +1792,9 @@ outer::second ()
     }
   return *this->u_.second_;
 }
-
 // *************************************************************
 // Inline operations for union UnionTest3::ValType
 // *************************************************************
-
 ACE_INLINE
 void
 UnionTest3::ValType::_default ()
@@ -1926,7 +1842,6 @@ UnionTest3::ValType::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1950,7 +1865,6 @@ UnionTest3::ValType::integerValue () const
     }
   return this->u_.integerValue_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1974,11 +1888,9 @@ UnionTest3::ValType::realValue () const
     }
   return this->u_.realValue_;
 }
-
 // *************************************************************
 // Inline operations for union UnionTest3::IndType
 // *************************************************************
-
 ACE_INLINE
 void
 UnionTest3::IndType::_default ()
@@ -2026,7 +1938,6 @@ UnionTest3::IndType::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2064,7 +1975,6 @@ UnionTest3::IndType::up ()
     }
   return *this->u_.up_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2102,11 +2012,9 @@ UnionTest3::IndType::down ()
     }
   return *this->u_.down_;
 }
-
 // *************************************************************
 // Inline operations for union X
 // *************************************************************
-
 ACE_INLINE
 void
 X::_default ()
@@ -2152,11 +2060,9 @@ X::_d () const
 {
   return this->disc_;
 }
-
 // *************************************************************
 // Inline operations for union X::Y::Z
 // *************************************************************
-
 ACE_INLINE
 void
 X::Y::Z::_default ()
@@ -2202,7 +2108,6 @@ X::Y::Z::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2226,7 +2131,6 @@ X::Y::Z::a () const
     }
   return this->u_.a_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2264,11 +2168,9 @@ X::a ()
     }
   return *this->u_.a_;
 }
-
 // *************************************************************
 // Inline operations for union FieldValue
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -2307,7 +2209,6 @@ FieldValue::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2354,7 +2255,6 @@ FieldValue::strValue () const // get method
     }
   return this->u_.strValue_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2401,11 +2301,9 @@ FieldValue::defstr () const // get method
     }
   return this->u_.defstr_;
 }
-
 // *************************************************************
 // Inline operations for union TestUnion
 // *************************************************************
-
 ACE_INLINE
 void
 TestUnion::_default ()
@@ -2451,7 +2349,6 @@ TestUnion::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2475,7 +2372,6 @@ TestUnion::oneEnum () const
     }
   return this->u_.oneEnum_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2499,7 +2395,6 @@ TestUnion::twoEnum () const
     }
   return this->u_.twoEnum_;
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2557,7 +2452,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2608,11 +2502,9 @@ TAO::Array_Traits<U42_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 // *************************************************************
 // Inline operations for union U85
 // *************************************************************
-
 ACE_INLINE
 void
 U85::_default ()
@@ -2658,7 +2550,6 @@ U85::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2682,7 +2573,6 @@ U85::b_85_1 () const
     }
   return this->u_.b_85_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2706,7 +2596,6 @@ U85::b_85_2 () const
     }
   return this->u_.b_85_2_;
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2759,11 +2648,9 @@ TAO::Array_Traits<UString_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 // *************************************************************
 // Inline operations for union U86
 // *************************************************************
-
 ACE_INLINE
 void
 U86::_default ()
@@ -2809,7 +2696,6 @@ U86::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2856,7 +2742,6 @@ U86::b_86_1 () const // get method
     }
   return this->u_.b_86_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2880,11 +2765,9 @@ U86::b_86_2 () const
     }
   return this->u_.b_86_2_;
 }
-
 // *************************************************************
 // Inline operations for union U88
 // *************************************************************
-
 ACE_INLINE
 void
 U88::_default ()
@@ -2930,7 +2813,6 @@ U88::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2954,7 +2836,6 @@ U88::b_86_1 () const
     }
   return this->u_.b_86_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2978,7 +2859,6 @@ U88::b_86_2 () const
     }
   return this->u_.b_86_2_;
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -3031,11 +2911,9 @@ TAO::Array_Traits<UBarArray_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 // *************************************************************
 // Inline operations for union U87
 // *************************************************************
-
 ACE_INLINE
 void
 U87::_default ()
@@ -3081,7 +2959,6 @@ U87::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -3116,7 +2993,6 @@ U87::b_87_1 ()
     }
   return this->u_.b_87_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3140,11 +3016,9 @@ U87::b_87_2 () const
     }
   return this->u_.b_87_2_;
 }
-
 // *************************************************************
 // Inline operations for union U89
 // *************************************************************
-
 ACE_INLINE
 void
 U89::_default ()
@@ -3190,7 +3064,6 @@ U89::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3214,7 +3087,6 @@ U89::b_87_1 () const
     }
   return this->u_.b_87_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3238,7 +3110,6 @@ U89::b_87_2 () const
     }
   return this->u_.b_87_2_;
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -3291,11 +3162,9 @@ TAO::Array_Traits<U90Array_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 // *************************************************************
 // Inline operations for union U91
 // *************************************************************
-
 ACE_INLINE
 void
 U91::_default ()
@@ -3341,7 +3210,6 @@ U91::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3365,7 +3233,6 @@ U91::b_91_1 () const
     }
   return this->u_.b_91_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3389,11 +3256,9 @@ U91::b_92_2 () const
     }
   return this->u_.b_92_2_;
 }
-
 // *************************************************************
 // Inline operations for union U92
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -3433,7 +3298,6 @@ U92::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -3468,7 +3332,6 @@ U92::b_92_1 ()
     }
   return this->u_.b_92_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3492,7 +3355,6 @@ U92::b_92_2 () const
     }
   return this->u_.b_92_2_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -3527,11 +3389,9 @@ U92::b_92_3 ()
     }
   return this->u_.b_92_3_;
 }
-
 // *************************************************************
 // Inline operations for union U93
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -3571,7 +3431,6 @@ U93::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3595,7 +3454,6 @@ U93::b_93_1 () const
     }
   return this->u_.b_93_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3619,7 +3477,6 @@ U93::b_93_2 () const
     }
   return this->u_.b_93_2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3643,11 +3500,9 @@ U93::b_93_3 () const
     }
   return this->u_.b_93_3_;
 }
-
 // *************************************************************
 // Inline operations for union U94
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -3687,7 +3542,6 @@ U94::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3711,7 +3565,6 @@ U94::b_94_1 () const
     }
   return this->u_.b_94_1_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3735,7 +3588,6 @@ U94::b_94_2 () const
     }
   return this->u_.b_94_2_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3759,7 +3611,6 @@ U94::b_94_3 () const
     }
   return this->u_.b_94_3_;
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -3812,11 +3663,9 @@ TAO::Array_Traits<DefaultInitializedLongArray_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 // *************************************************************
 // Inline operations for union DefaultInitializedStructUnion
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -3841,7 +3690,6 @@ DefaultInitializedStructUnion::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -3876,11 +3724,9 @@ DefaultInitializedStructUnion::value ()
     }
   return this->u_.value_;
 }
-
 // *************************************************************
 // Inline operations for union DefaultInitializedBooleanUnion
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -3905,7 +3751,6 @@ DefaultInitializedBooleanUnion::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3929,11 +3774,9 @@ DefaultInitializedBooleanUnion::value () const
     }
   return this->u_.value_;
 }
-
 // *************************************************************
 // Inline operations for union DefaultInitializedLongUnion
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -3958,7 +3801,6 @@ DefaultInitializedLongUnion::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3982,11 +3824,9 @@ DefaultInitializedLongUnion::value () const
     }
   return this->u_.value_;
 }
-
 // *************************************************************
 // Inline operations for union DefaultInitializedDoubleUnion
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -4011,7 +3851,6 @@ DefaultInitializedDoubleUnion::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -4035,11 +3874,9 @@ DefaultInitializedDoubleUnion::value () const
     }
   return this->u_.value_;
 }
-
 // *************************************************************
 // Inline operations for union DefaultInitializedEnumUnion
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -4064,7 +3901,6 @@ DefaultInitializedEnumUnion::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -4088,11 +3924,9 @@ DefaultInitializedEnumUnion::value () const
     }
   return this->u_.value_;
 }
-
 // *************************************************************
 // Inline operations for union DefaultInitializedArrayUnion
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -4117,7 +3951,6 @@ DefaultInitializedArrayUnion::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -4141,11 +3974,9 @@ DefaultInitializedArrayUnion::value () const
     }
   return this->u_.value_;
 }
-
 // *************************************************************
 // Inline operations for union DefaultInitializedStringUnion
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -4170,7 +4001,6 @@ DefaultInitializedStringUnion::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -4217,11 +4047,9 @@ DefaultInitializedStringUnion::value () const // get method
     }
   return this->u_.value_;
 }
-
 // *************************************************************
 // Inline operations for union ResetWithNoopBranches
 // *************************************************************
-
 
 
 ACE_INLINE
@@ -4261,7 +4089,6 @@ ResetWithNoopBranches::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -4308,7 +4135,6 @@ ResetWithNoopBranches::string_value () const // get method
     }
   return this->u_.string_value_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -4332,7 +4158,6 @@ ResetWithNoopBranches::long_value () const
     }
   return this->u_.long_value_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void

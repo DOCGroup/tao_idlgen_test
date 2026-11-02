@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 FieldDevice_T::FieldDevice_T (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ FieldDevice_T::FieldDevice_T (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_FieldDevice_TExceptionHolder::AMH_FieldDevice_TExceptionHolder ()
   : exception (nullptr)
@@ -53,7 +51,6 @@ AMH_FieldDevice_TExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_FieldDevice_TExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

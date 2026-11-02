@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 ACE_INLINE
 include_test::StringTest::StringTest ()
 {}

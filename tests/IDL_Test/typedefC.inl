@@ -24,7 +24,6 @@
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -185,7 +184,6 @@ TAO_J5_free (
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -311,7 +309,6 @@ TAO_V5_free (
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -365,7 +362,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 ACE_INLINE
 TestModule::TestInterface::TestInterface (
     TAO_Stub *objref,
@@ -383,7 +379,6 @@ TestModule::TestInterface::TestInterface (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 TestModule::AMH_TestInterfaceExceptionHolder::AMH_TestInterfaceExceptionHolder ()
   : exception (nullptr)
@@ -396,7 +391,6 @@ TestModule::AMH_TestInterfaceExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 TestModule::AMI_TestInterfaceHandler::AMI_TestInterfaceHandler (
     TAO_Stub *objref,
@@ -416,7 +410,6 @@ TestModule::AMI_TestInterfaceHandler::AMI_TestInterfaceHandler (
 }
 
 
-
 ACE_INLINE
 bug_2124::Foo::Foo (
     TAO_Stub *objref,
@@ -434,7 +427,6 @@ bug_2124::Foo::Foo (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 bug_2124::AMH_FooExceptionHolder::AMH_FooExceptionHolder ()
   : exception (nullptr)
@@ -447,7 +439,6 @@ bug_2124::AMH_FooExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 bug_2124::AMI_FooHandler::AMI_FooHandler (
     TAO_Stub *objref,
@@ -467,7 +458,6 @@ bug_2124::AMI_FooHandler::AMI_FooHandler (
 }
 
 
-
 ACE_INLINE
 bug_2122::One::Whatever::Whatever (
     TAO_Stub *objref,
@@ -485,7 +475,6 @@ bug_2122::One::Whatever::Whatever (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 bug_2122::One::AMH_WhateverExceptionHolder::AMH_WhateverExceptionHolder ()
   : exception (nullptr)
@@ -498,7 +487,6 @@ bug_2122::One::AMH_WhateverExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 bug_2122::One::AMI_WhateverHandler::AMI_WhateverHandler (
     TAO_Stub *objref,
@@ -518,7 +506,6 @@ bug_2122::One::AMI_WhateverHandler::AMI_WhateverHandler (
 }
 
 
-
 ACE_INLINE
 bug_2122::Two::WhoCares::WhoCares (
     TAO_Stub *objref,
@@ -536,7 +523,6 @@ bug_2122::Two::WhoCares::WhoCares (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 bug_2122::Two::AMH_WhoCaresExceptionHolder::AMH_WhoCaresExceptionHolder ()
   : exception (nullptr)
@@ -549,7 +535,6 @@ bug_2122::Two::AMH_WhoCaresExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 bug_2122::Two::AMI_WhoCaresHandler::AMI_WhoCaresHandler (
     TAO_Stub *objref,
@@ -569,7 +554,6 @@ bug_2122::Two::AMI_WhoCaresHandler::AMI_WhoCaresHandler (
 }
 
 
-
 ACE_INLINE
 bug_2122::Three::WhoCares::WhoCares (
     TAO_Stub *objref,
@@ -587,7 +571,6 @@ bug_2122::Three::WhoCares::WhoCares (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 bug_2122::Three::AMH_WhoCaresExceptionHolder::AMH_WhoCaresExceptionHolder ()
   : exception (nullptr)
@@ -598,7 +581,6 @@ bug_2122::Three::AMH_WhoCaresExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:bug_2122/Three/AMH_WhoCaresExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

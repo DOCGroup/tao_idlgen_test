@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "moduleC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -32,12 +31,11 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "moduleC.inl"
 #endif /* !defined INLINE */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -68,7 +66,6 @@ TAO::Objref_Traits<mod1::mod2::ex1>::marshal (const mod1::mod2::ex1_ptr p,TAO_Ou
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::CORBA::Long
@@ -103,7 +100,6 @@ mod1::mod2::ex1::l1 ()
 
   return _tao_retval.retn ();
 }
-
 void
 mod1::mod2::ex1::l1 (
   ::CORBA::Long l1)
@@ -134,7 +130,6 @@ mod1::mod2::ex1::l1 (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::Long
 mod1::mod2::ex1::l2 ()
 {
@@ -167,7 +162,6 @@ mod1::mod2::ex1::l2 ()
 
   return _tao_retval.retn ();
 }
-
 ::CORBA::Long
 mod1::mod2::ex1::m1 (
   ::CORBA::Long a)
@@ -200,7 +194,6 @@ mod1::mod2::ex1::m1 (
 
   return _tao_retval.retn ();
 }
-
 
 
 void
@@ -240,7 +233,6 @@ mod1::mod2::ex1::sendc_set_l1 (
 }
 
 
-
 void
 mod1::mod2::ex1::sendc_get_l1 (
   ::mod1::mod2::AMI_ex1Handler_ptr ami_handler)
@@ -270,7 +262,6 @@ mod1::mod2::ex1::sendc_get_l1 (
 }
 
 
-
 void
 mod1::mod2::ex1::sendc_get_l2 (
   ::mod1::mod2::AMI_ex1Handler_ptr ami_handler)
@@ -298,7 +289,6 @@ mod1::mod2::ex1::sendc_get_l2 (
       &mod1::mod2::AMI_ex1Handler::get_l2_reply_stub
     );
 }
-
 
 
 void
@@ -417,7 +407,6 @@ mod1::mod2::ex1::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -554,14 +543,12 @@ mod1::mod2::AMH_ex1ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_get_l1 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_set_l1 ()
@@ -570,14 +557,12 @@ mod1::mod2::AMH_ex1ExceptionHolder::raise_set_l1 ()
   this->exception->_raise ();
 }
 
-
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_get_l2 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_m1 ()
@@ -586,14 +571,12 @@ mod1::mod2::AMH_ex1ExceptionHolder::raise_m1 ()
   this->exception->_raise ();
 }
 
-
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_set_l1 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_get_l1 ()
@@ -602,7 +585,6 @@ mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_get_l1 ()
   this->exception->_raise ();
 }
 
-
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_get_l2 ()
 {
@@ -610,14 +592,12 @@ mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_get_l2 ()
   this->exception->_raise ();
 }
 
-
 void
 mod1::mod2::AMH_ex1ExceptionHolder::raise_sendc_m1 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -736,7 +716,6 @@ mod1::mod2::AMH_ex1ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for mod1::mod2::AMI_ex1Handler.
@@ -766,7 +745,6 @@ TAO::Objref_Traits<mod1::mod2::AMI_ex1Handler>::marshal (const mod1::mod2::AMI_e
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -862,7 +840,6 @@ mod1::mod2::AMI_ex1Handler::get_l1_reply_stub (
       break;
   }
 }
-
 void
 mod1::mod2::AMI_ex1Handler::get_l1_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -893,7 +870,6 @@ mod1::mod2::AMI_ex1Handler::get_l1_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 mod1::mod2::AMI_ex1Handler::set_l1 ()
 {
@@ -979,7 +955,6 @@ mod1::mod2::AMI_ex1Handler::set_l1_reply_stub (
       break;
   }
 }
-
 void
 mod1::mod2::AMI_ex1Handler::set_l1_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1010,7 +985,6 @@ mod1::mod2::AMI_ex1Handler::set_l1_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 mod1::mod2::AMI_ex1Handler::get_l2 (
   ::CORBA::Long ami_return_val)
@@ -1104,7 +1078,6 @@ mod1::mod2::AMI_ex1Handler::get_l2_reply_stub (
       break;
   }
 }
-
 void
 mod1::mod2::AMI_ex1Handler::get_l2_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1135,7 +1108,6 @@ mod1::mod2::AMI_ex1Handler::get_l2_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 mod1::mod2::AMI_ex1Handler::m1 (
   ::CORBA::Long ami_return_val)
@@ -1229,7 +1201,6 @@ mod1::mod2::AMI_ex1Handler::m1_reply_stub (
       break;
   }
 }
-
 void
 mod1::mod2::AMI_ex1Handler::m1_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1343,7 +1314,6 @@ mod1::mod2::AMI_ex1Handler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for mod1::mod2::ex2.
@@ -1373,7 +1343,6 @@ TAO::Objref_Traits<mod1::mod2::ex2>::marshal (const mod1::mod2::ex2_ptr p,TAO_Ou
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::CORBA::Long
@@ -1408,7 +1377,6 @@ mod1::mod2::ex2::l3 ()
 
   return _tao_retval.retn ();
 }
-
 void
 mod1::mod2::ex2::l3 (
   ::CORBA::Long l3)
@@ -1439,7 +1407,6 @@ mod1::mod2::ex2::l3 (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::Long
 mod1::mod2::ex2::m2 (
   ::CORBA::Long a,
@@ -1475,7 +1442,6 @@ mod1::mod2::ex2::m2 (
 
   return _tao_retval.retn ();
 }
-
 
 
 void
@@ -1515,7 +1481,6 @@ mod1::mod2::ex2::sendc_set_l3 (
 }
 
 
-
 void
 mod1::mod2::ex2::sendc_get_l3 (
   ::mod1::mod2::AMI_ex2Handler_ptr ami_handler)
@@ -1543,7 +1508,6 @@ mod1::mod2::ex2::sendc_get_l3 (
       &mod1::mod2::AMI_ex2Handler::get_l3_reply_stub
     );
 }
-
 
 
 void
@@ -1663,7 +1627,6 @@ mod1::mod2::ex2::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1800,14 +1763,12 @@ mod1::mod2::AMH_ex2ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_get_l3 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_set_l3 ()
@@ -1816,14 +1777,12 @@ mod1::mod2::AMH_ex2ExceptionHolder::raise_set_l3 ()
   this->exception->_raise ();
 }
 
-
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_m2 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_sendc_set_l3 ()
@@ -1832,7 +1791,6 @@ mod1::mod2::AMH_ex2ExceptionHolder::raise_sendc_set_l3 ()
   this->exception->_raise ();
 }
 
-
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_sendc_get_l3 ()
 {
@@ -1840,14 +1798,12 @@ mod1::mod2::AMH_ex2ExceptionHolder::raise_sendc_get_l3 ()
   this->exception->_raise ();
 }
 
-
 void
 mod1::mod2::AMH_ex2ExceptionHolder::raise_sendc_m2 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1966,7 +1922,6 @@ mod1::mod2::AMH_ex2ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for mod1::mod2::AMI_ex2Handler.
@@ -1996,7 +1951,6 @@ TAO::Objref_Traits<mod1::mod2::AMI_ex2Handler>::marshal (const mod1::mod2::AMI_e
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -2092,7 +2046,6 @@ mod1::mod2::AMI_ex2Handler::get_l3_reply_stub (
       break;
   }
 }
-
 void
 mod1::mod2::AMI_ex2Handler::get_l3_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2123,7 +2076,6 @@ mod1::mod2::AMI_ex2Handler::get_l3_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 mod1::mod2::AMI_ex2Handler::set_l3 ()
 {
@@ -2209,7 +2161,6 @@ mod1::mod2::AMI_ex2Handler::set_l3_reply_stub (
       break;
   }
 }
-
 void
 mod1::mod2::AMI_ex2Handler::set_l3_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2240,7 +2191,6 @@ mod1::mod2::AMI_ex2Handler::set_l3_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 mod1::mod2::AMI_ex2Handler::m2 (
   ::CORBA::Long ami_return_val,
@@ -2341,7 +2291,6 @@ mod1::mod2::AMI_ex2Handler::m2_reply_stub (
       break;
   }
 }
-
 void
 mod1::mod2::AMI_ex2Handler::m2_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2455,7 +2404,6 @@ mod1::mod2::AMI_ex2Handler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 OBV_mod1::mod2::AMH_ex1ExceptionHolder::~AMH_ex1ExceptionHolder ()
 {}
 
@@ -2470,7 +2418,6 @@ OBV_mod1::mod2::AMH_ex1ExceptionHolder::_tao_unmarshal__mod1_mod2_AMH_ex1Excepti
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_mod1::mod2::AMH_ex2ExceptionHolder::~AMH_ex2ExceptionHolder ()
 {}
 
@@ -2485,7 +2432,6 @@ OBV_mod1::mod2::AMH_ex2ExceptionHolder::_tao_unmarshal__mod1_mod2_AMH_ex2Excepti
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2519,7 +2465,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (mod1::mod2::AMH_ex1ExceptionHolder * vt)
@@ -2540,7 +2485,6 @@ CORBA::remove_ref (mod1::mod2::AMH_ex1ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2570,7 +2514,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_mod1::mod2::AMH_ex1ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -2588,7 +2531,6 @@ OBV_mod1::mod2::AMH_ex1ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -2620,7 +2562,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2656,7 +2597,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (mod1::mod2::AMH_ex2ExceptionHolder * vt)
@@ -2677,7 +2617,6 @@ CORBA::remove_ref (mod1::mod2::AMH_ex2ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2707,7 +2646,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_mod1::mod2::AMH_ex2ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -2725,7 +2663,6 @@ OBV_mod1::mod2::AMH_ex2ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

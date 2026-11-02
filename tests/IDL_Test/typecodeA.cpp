@@ -38,8 +38,6 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 
 
-
-
 #ifndef _TAO_TYPECODE_MyModule_TypeCodeList_GUARD
 #define _TAO_TYPECODE_MyModule_TypeCodeList_GUARD
 
@@ -51,17 +49,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        MyModule_TypeCodeList_0 (
-          ::CORBA::tk_sequence,
-          &CORBA::_tc_TypeCode,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> MyModule_TypeCodeList_0 (
+        ::CORBA::tk_sequence, &CORBA::_tc_TypeCode, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_MyModule_TypeCodeList_0 =
-        &MyModule_TypeCodeList_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_MyModule_TypeCodeList_0 =
+      &MyModule_TypeCodeList_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -82,7 +76,6 @@ namespace MyModule
 {
   ::CORBA::TypeCode_ptr const _tc_TypeCodeList = std::addressof(_tao_tc_MyModule_TypeCodeList);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {

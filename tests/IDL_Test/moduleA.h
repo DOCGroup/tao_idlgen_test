@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_MODULEA_TQIFOY_H_
-#define _TAO_IDL_MODULEA_TQIFOY_H_
+#ifndef _TAO_IDL_MODULEA_PVB4JD_H_
+#define _TAO_IDL_MODULEA_PVB4JD_H_
 
 #include /**/ "ace/pre.h"
 
@@ -33,29 +32,18 @@
 
 #include "moduleC.h"
 
-
 namespace mod1
 {
-
   namespace mod2
   {
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ex1;
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex1ExceptionHolder;
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex1ResponseHandler;
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_ex1Handler;
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ex2;
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex2ExceptionHolder;
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ex2ResponseHandler;
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_ex2Handler;
-
 
 
 
@@ -64,9 +52,7 @@ namespace mod1
 
 
 
-
 } // module mod1
-
 
 
 
@@ -84,7 +70,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -93,7 +78,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod1::mod2::AMH_ex1Ex
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, mod1::mod2::AMH_ex1ExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -116,7 +100,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -125,7 +108,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod1::mod2::AMI_ex1Ha
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod1::mod2::AMI_ex1Handler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -144,7 +126,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -160,7 +141,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -169,7 +149,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod1::mod2::AMH_ex2Re
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod1::mod2::AMH_ex2ResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

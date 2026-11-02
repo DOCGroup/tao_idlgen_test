@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 Bug_2350_Regression::Bug_2350_Regression (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ Bug_2350_Regression::Bug_2350_Regression (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_Bug_2350_RegressionExceptionHolder::AMH_Bug_2350_RegressionExceptionHolder ()
   : exception (nullptr)
@@ -53,7 +51,6 @@ AMH_Bug_2350_RegressionExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_Bug_2350_RegressionExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

@@ -26,7 +26,6 @@
 #include <new>
 
 
-
 ACE_INLINE
 Base::Base (
     TAO_Stub *objref,
@@ -44,7 +43,6 @@ Base::Base (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_BaseExceptionHolder::AMH_BaseExceptionHolder ()
   : exception (nullptr)
@@ -57,7 +55,6 @@ AMH_BaseExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_BaseHandler::AMI_BaseHandler (
     TAO_Stub *objref,
@@ -77,7 +74,6 @@ AMI_BaseHandler::AMI_BaseHandler (
 }
 
 
-
 ACE_INLINE
 Derived::Derived (
     TAO_Stub *objref,
@@ -95,7 +91,6 @@ Derived::Derived (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_DerivedExceptionHolder::AMH_DerivedExceptionHolder ()
   : exception (nullptr)
@@ -108,7 +103,6 @@ AMH_DerivedExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_DerivedHandler::AMI_DerivedHandler (
     TAO_Stub *objref,
@@ -128,7 +122,6 @@ AMI_DerivedHandler::AMI_DerivedHandler (
 }
 
 
-
 ACE_INLINE
 foostep::foostep (
     TAO_Stub *objref,
@@ -146,7 +139,6 @@ foostep::foostep (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_foostepExceptionHolder::AMH_foostepExceptionHolder ()
   : exception (nullptr)
@@ -159,7 +151,6 @@ AMH_foostepExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_foostepHandler::AMI_foostepHandler (
     TAO_Stub *objref,
@@ -179,7 +170,6 @@ AMI_foostepHandler::AMI_foostepHandler (
 }
 
 
-
 ACE_INLINE
 mother::mother (
     TAO_Stub *objref,
@@ -197,7 +187,6 @@ mother::mother (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_motherExceptionHolder::AMH_motherExceptionHolder ()
   : exception (nullptr)
@@ -210,7 +199,6 @@ AMH_motherExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_motherHandler::AMI_motherHandler (
     TAO_Stub *objref,
@@ -230,7 +218,6 @@ AMI_motherHandler::AMI_motherHandler (
 }
 
 
-
 ACE_INLINE
 father::father (
     TAO_Stub *objref,
@@ -248,7 +235,6 @@ father::father (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_fatherExceptionHolder::AMH_fatherExceptionHolder ()
   : exception (nullptr)
@@ -261,7 +247,6 @@ AMH_fatherExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_fatherHandler::AMI_fatherHandler (
     TAO_Stub *objref,
@@ -281,7 +266,6 @@ AMI_fatherHandler::AMI_fatherHandler (
 }
 
 
-
 ACE_INLINE
 child::child (
     TAO_Stub *objref,
@@ -299,7 +283,6 @@ child::child (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_childExceptionHolder::AMH_childExceptionHolder ()
   : exception (nullptr)
@@ -312,7 +295,6 @@ AMH_childExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_childHandler::AMI_childHandler (
     TAO_Stub *objref,
@@ -332,7 +314,6 @@ AMI_childHandler::AMI_childHandler (
 }
 
 
-
 ACE_INLINE
 _cxx_try::_cxx_try (
     TAO_Stub *objref,
@@ -350,7 +331,6 @@ _cxx_try::_cxx_try (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH__cxx_tryExceptionHolder::AMH__cxx_tryExceptionHolder ()
   : exception (nullptr)
@@ -363,7 +343,6 @@ AMH__cxx_tryExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI__cxx_tryHandler::AMI__cxx_tryHandler (
     TAO_Stub *objref,
@@ -383,7 +362,6 @@ AMI__cxx_tryHandler::AMI__cxx_tryHandler (
 }
 
 
-
 ACE_INLINE
 later_user::later_user (
     TAO_Stub *objref,
@@ -401,7 +379,6 @@ later_user::later_user (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_later_userExceptionHolder::AMH_later_userExceptionHolder ()
   : exception (nullptr)
@@ -414,7 +391,6 @@ AMH_later_userExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_later_userHandler::AMI_later_userHandler (
     TAO_Stub *objref,
@@ -434,7 +410,6 @@ AMI_later_userHandler::AMI_later_userHandler (
 }
 
 
-
 ACE_INLINE
 later::later (
     TAO_Stub *objref,
@@ -452,7 +427,6 @@ later::later (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_laterExceptionHolder::AMH_laterExceptionHolder ()
   : exception (nullptr)
@@ -465,7 +439,6 @@ AMH_laterExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_laterHandler::AMI_laterHandler (
     TAO_Stub *objref,
@@ -485,7 +458,6 @@ AMI_laterHandler::AMI_laterHandler (
 }
 
 
-
 ACE_INLINE
 Begin::Begin (
     TAO_Stub *objref,
@@ -503,7 +475,6 @@ Begin::Begin (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_BeginExceptionHolder::AMH_BeginExceptionHolder ()
   : exception (nullptr)
@@ -516,7 +487,6 @@ AMH_BeginExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_BeginHandler::AMI_BeginHandler (
     TAO_Stub *objref,
@@ -536,7 +506,6 @@ AMI_BeginHandler::AMI_BeginHandler (
 }
 
 
-
 ACE_INLINE
 Middle::Middle (
     TAO_Stub *objref,
@@ -554,7 +523,6 @@ Middle::Middle (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_MiddleExceptionHolder::AMH_MiddleExceptionHolder ()
   : exception (nullptr)
@@ -567,7 +535,6 @@ AMH_MiddleExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_MiddleHandler::AMI_MiddleHandler (
     TAO_Stub *objref,
@@ -587,7 +554,6 @@ AMI_MiddleHandler::AMI_MiddleHandler (
 }
 
 
-
 ACE_INLINE
 End::End (
     TAO_Stub *objref,
@@ -605,7 +571,6 @@ End::End (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_EndExceptionHolder::AMH_EndExceptionHolder ()
   : exception (nullptr)
@@ -618,7 +583,6 @@ AMH_EndExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_EndHandler::AMI_EndHandler (
     TAO_Stub *objref,
@@ -638,7 +602,6 @@ AMI_EndHandler::AMI_EndHandler (
 }
 
 
-
 ACE_INLINE
 Client::Client (
     TAO_Stub *objref,
@@ -656,7 +619,6 @@ Client::Client (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_ClientExceptionHolder::AMH_ClientExceptionHolder ()
   : exception (nullptr)
@@ -669,7 +631,6 @@ AMH_ClientExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_ClientHandler::AMI_ClientHandler (
     TAO_Stub *objref,
@@ -687,7 +648,6 @@ AMI_ClientHandler::AMI_ClientHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -742,7 +702,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 ACE_INLINE
 AttributeTester::AttributeTester (
     TAO_Stub *objref,
@@ -760,7 +719,6 @@ AttributeTester::AttributeTester (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_AttributeTesterExceptionHolder::AMH_AttributeTesterExceptionHolder ()
   : exception (nullptr)
@@ -773,7 +731,6 @@ AMH_AttributeTesterExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_AttributeTesterHandler::AMI_AttributeTesterHandler (
     TAO_Stub *objref,
@@ -791,7 +748,6 @@ AMI_AttributeTesterHandler::AMI_AttributeTesterHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -844,11 +800,9 @@ TAO::Array_Traits<ParamMod::ParameterTester::object_array_type_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 // *************************************************************
 // Inline operations for union ParamMod::ParameterTester::object_union_type
 // *************************************************************
-
 ACE_INLINE
 void
 ParamMod::ParameterTester::object_union_type::_default ()
@@ -894,7 +848,6 @@ ParamMod::ParameterTester::object_union_type::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -941,7 +894,6 @@ ParamMod::ParameterTester::object_union_type::str () const // get method
     }
   return this->u_.str_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -972,7 +924,6 @@ ParamMod::ParameterTester::object_union_type::pt () const
 }
 
 
-
 ACE_INLINE
 ParamMod::ParameterTester::ParameterTester (
     TAO_Stub *objref,
@@ -990,7 +941,6 @@ ParamMod::ParameterTester::ParameterTester (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 ParamMod::AMH_ParameterTesterExceptionHolder::AMH_ParameterTesterExceptionHolder ()
   : exception (nullptr)
@@ -1003,7 +953,6 @@ ParamMod::AMH_ParameterTesterExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 ParamMod::AMI_ParameterTesterHandler::AMI_ParameterTesterHandler (
     TAO_Stub *objref,
@@ -1021,11 +970,9 @@ ParamMod::AMI_ParameterTesterHandler::AMI_ParameterTesterHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 // *************************************************************
 // Inline operations for union A::U
 // *************************************************************
-
 ACE_INLINE
 void
 A::U::_default ()
@@ -1063,7 +1010,6 @@ A::U::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -1094,7 +1040,6 @@ A::U::aa () const
 }
 
 
-
 ACE_INLINE
 A::A (
     TAO_Stub *objref,
@@ -1112,7 +1057,6 @@ A::A (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_AExceptionHolder::AMH_AExceptionHolder ()
   : exception (nullptr)
@@ -1125,7 +1069,6 @@ AMH_AExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_AHandler::AMI_AHandler (
     TAO_Stub *objref,
@@ -1145,7 +1088,6 @@ AMI_AHandler::AMI_AHandler (
 }
 
 
-
 ACE_INLINE
 M::A::A (
     TAO_Stub *objref,
@@ -1163,7 +1105,6 @@ M::A::A (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 M::AMH_AExceptionHolder::AMH_AExceptionHolder ()
   : exception (nullptr)
@@ -1176,7 +1117,6 @@ M::AMH_AExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 M::AMI_AHandler::AMI_AHandler (
     TAO_Stub *objref,
@@ -1196,7 +1136,6 @@ M::AMI_AHandler::AMI_AHandler (
 }
 
 
-
 ACE_INLINE
 i1::if1::if1 (
     TAO_Stub *objref,
@@ -1214,7 +1153,6 @@ i1::if1::if1 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 i1::AMH_if1ExceptionHolder::AMH_if1ExceptionHolder ()
   : exception (nullptr)
@@ -1227,7 +1165,6 @@ i1::AMH_if1ExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 i1::AMI_if1Handler::AMI_if1Handler (
     TAO_Stub *objref,
@@ -1247,7 +1184,6 @@ i1::AMI_if1Handler::AMI_if1Handler (
 }
 
 
-
 ACE_INLINE
 i2::if2::if2 (
     TAO_Stub *objref,
@@ -1265,7 +1201,6 @@ i2::if2::if2 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 i2::AMH_if2ExceptionHolder::AMH_if2ExceptionHolder ()
   : exception (nullptr)
@@ -1278,7 +1213,6 @@ i2::AMH_if2ExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 i2::AMI_if2Handler::AMI_if2Handler (
     TAO_Stub *objref,
@@ -1298,7 +1232,6 @@ i2::AMI_if2Handler::AMI_if2Handler (
 }
 
 
-
 ACE_INLINE
 i2::if3::if3 (
     TAO_Stub *objref,
@@ -1316,7 +1249,6 @@ i2::if3::if3 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 i2::AMH_if3ExceptionHolder::AMH_if3ExceptionHolder ()
   : exception (nullptr)
@@ -1329,7 +1261,6 @@ i2::AMH_if3ExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 i2::AMI_if3Handler::AMI_if3Handler (
     TAO_Stub *objref,
@@ -1349,7 +1280,6 @@ i2::AMI_if3Handler::AMI_if3Handler (
 }
 
 
-
 ACE_INLINE
 redefs::base::base (
     TAO_Stub *objref,
@@ -1367,7 +1297,6 @@ redefs::base::base (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 redefs::AMH_baseExceptionHolder::AMH_baseExceptionHolder ()
   : exception (nullptr)
@@ -1380,7 +1309,6 @@ redefs::AMH_baseExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 redefs::AMI_baseHandler::AMI_baseHandler (
     TAO_Stub *objref,
@@ -1400,7 +1328,6 @@ redefs::AMI_baseHandler::AMI_baseHandler (
 }
 
 
-
 ACE_INLINE
 redefs::derived::derived (
     TAO_Stub *objref,
@@ -1418,7 +1345,6 @@ redefs::derived::derived (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 redefs::AMH_derivedExceptionHolder::AMH_derivedExceptionHolder ()
   : exception (nullptr)
@@ -1431,7 +1357,6 @@ redefs::AMH_derivedExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 redefs::AMI_derivedHandler::AMI_derivedHandler (
     TAO_Stub *objref,
@@ -1451,7 +1376,6 @@ redefs::AMI_derivedHandler::AMI_derivedHandler (
 }
 
 
-
 ACE_INLINE
 Rec_Arg_Traits::base::base (
     TAO_Stub *objref,
@@ -1469,7 +1393,6 @@ Rec_Arg_Traits::base::base (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 Rec_Arg_Traits::AMH_baseExceptionHolder::AMH_baseExceptionHolder ()
   : exception (nullptr)
@@ -1482,7 +1405,6 @@ Rec_Arg_Traits::AMH_baseExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 Rec_Arg_Traits::AMI_baseHandler::AMI_baseHandler (
     TAO_Stub *objref,
@@ -1502,7 +1424,6 @@ Rec_Arg_Traits::AMI_baseHandler::AMI_baseHandler (
 }
 
 
-
 ACE_INLINE
 Rec_Arg_Traits::derived::derived (
     TAO_Stub *objref,
@@ -1520,7 +1441,6 @@ Rec_Arg_Traits::derived::derived (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 Rec_Arg_Traits::AMH_derivedExceptionHolder::AMH_derivedExceptionHolder ()
   : exception (nullptr)
@@ -1533,7 +1453,6 @@ Rec_Arg_Traits::AMH_derivedExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 Rec_Arg_Traits::AMI_derivedHandler::AMI_derivedHandler (
     TAO_Stub *objref,
@@ -1553,7 +1472,6 @@ Rec_Arg_Traits::AMI_derivedHandler::AMI_derivedHandler (
 }
 
 
-
 ACE_INLINE
 call_test::iTest::iTest (
     TAO_Stub *objref,
@@ -1571,7 +1489,6 @@ call_test::iTest::iTest (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 call_test::AMH_iTestExceptionHolder::AMH_iTestExceptionHolder ()
   : exception (nullptr)
@@ -1584,7 +1501,6 @@ call_test::AMH_iTestExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 call_test::AMI_iTestHandler::AMI_iTestHandler (
     TAO_Stub *objref,
@@ -1604,7 +1520,6 @@ call_test::AMI_iTestHandler::AMI_iTestHandler (
 }
 
 
-
 ACE_INLINE
 call_attribute::iBar::iBar (
     TAO_Stub *objref,
@@ -1622,7 +1537,6 @@ call_attribute::iBar::iBar (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 call_attribute::AMH_iBarExceptionHolder::AMH_iBarExceptionHolder ()
   : exception (nullptr)
@@ -1633,7 +1547,6 @@ call_attribute::AMH_iBarExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:call_attribute/AMH_iBarExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_GPERFS_CJNXRO_H_
-#define _TAO_IDL_GPERFS_CJNXRO_H_
+#ifndef _TAO_IDL_GPERFS_VGBB6P_H_
+#define _TAO_IDL_GPERFS_VGBB6P_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::TestEnum>
     : public
@@ -90,7 +86,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_TESTLISTITEM__SARG_TRAITS_)
@@ -107,7 +102,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_TESTLISTITEMEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -128,7 +122,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_TESTLISTITEMHANDLER__SARG_TRAITS_)
 #define _AMI_TESTLISTITEMHANDLER__SARG_TRAITS_
 
@@ -145,7 +138,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_TEST__SARG_TRAITS_)
 #define _TEST__SARG_TRAITS_
 
@@ -160,7 +152,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_TESTEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -181,7 +172,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_TESTHANDLER__SARG_TRAITS_)
 #define _AMI_TESTHANDLER__SARG_TRAITS_
 
@@ -198,7 +188,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_SIMPLE_SERVER__SARG_TRAITS_)
 #define _SIMPLE_SERVER__SARG_TRAITS_
 
@@ -213,7 +202,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_SIMPLE_SERVEREXCEPTIONHOLDER__SARG_TRAITS_)
@@ -234,7 +222,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_SIMPLE_SERVERHANDLER__SARG_TRAITS_)
 #define _AMI_SIMPLE_SERVERHANDLER__SARG_TRAITS_
 
@@ -252,7 +239,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 class POA_AMH_testlistitem;
@@ -278,7 +264,6 @@ public:
   testlistitem *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void _get_name_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -289,7 +274,6 @@ virtual void name (
   ) = 0;
 
 };
-
 
 
 
@@ -323,7 +307,6 @@ public:
   ::testlistitem *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual char * name () = 0;
 
   static void _get_name_skel (
@@ -331,7 +314,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -342,7 +324,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_testlistitem_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_testlistitem_Direct_Proxy_Impl ();
-
   static void
   _get_name (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -352,7 +333,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class POA_TAO_AMH_testlistitemResponseHandler;
@@ -365,14 +345,11 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_testlistitemResponseHandler
 public:
   POA_TAO_AMH_testlistitemResponseHandler () = default;
   virtual ~POA_TAO_AMH_testlistitemResponseHandler () = default;
-
   void get_name (
     const char * return_value) override;
-
   void get_name_excep (
     ::AMH_testlistitemExceptionHolder * holder) override;
 };
-
 
 
 
@@ -406,7 +383,6 @@ public:
   ::AMI_testlistitemHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_name (
     const char * ami_return_val) = 0;
 
@@ -414,7 +390,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_name_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -423,7 +398,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -435,11 +409,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_testlistitemHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_testlistitemHandler_Direct_Proxy_Impl ();
-
   static void
   get_name (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_name_excep (
@@ -450,7 +422,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class POA_AMH_test;
@@ -476,7 +447,6 @@ public:
   test *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void _get_stest_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -485,7 +455,6 @@ static void _get_stest_skel (
 virtual void stest (
     AMH_testResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_stest_skel (
     TAO_ServerRequest &_tao_req,
@@ -497,7 +466,6 @@ virtual void stest (
     const char * stest
   ) = 0;
 
-
 static void _get_wstest_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -506,7 +474,6 @@ static void _get_wstest_skel (
 virtual void wstest (
     AMH_testResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_wstest_skel (
     TAO_ServerRequest &_tao_req,
@@ -518,7 +485,6 @@ virtual void wstest (
     const ::CORBA::WChar * wstest
   ) = 0;
 
-
 static void _get_ltest_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -527,7 +493,6 @@ static void _get_ltest_skel (
 virtual void ltest (
     AMH_testResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_ltest_skel (
     TAO_ServerRequest &_tao_req,
@@ -539,7 +504,6 @@ virtual void ltest (
     ::CORBA::LongLong ltest
   ) = 0;
 
-
 static void _get_ldtest_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -548,7 +512,6 @@ static void _get_ldtest_skel (
 virtual void ldtest (
     AMH_testResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_ldtest_skel (
     TAO_ServerRequest &_tao_req,
@@ -560,7 +523,6 @@ virtual void ldtest (
     ::CORBA::LongDouble ldtest
   ) = 0;
 
-
 static void _get_etest_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -569,7 +531,6 @@ static void _get_etest_skel (
 virtual void etest (
     AMH_testResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_etest_skel (
     TAO_ServerRequest &_tao_req,
@@ -581,7 +542,6 @@ virtual void etest (
     ::TestEnum etest
   ) = 0;
 
-
 static void _get_setest_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -590,7 +550,6 @@ static void _get_setest_skel (
 virtual void setest (
     AMH_testResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_setest_skel (
     TAO_ServerRequest &_tao_req,
@@ -602,7 +561,6 @@ virtual void setest (
     const ::CORBA::WChar * setest
   ) = 0;
 
-
 static void _get_tltest_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -611,7 +569,6 @@ static void _get_tltest_skel (
 virtual void tltest (
     AMH_testResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_tltest_skel (
     TAO_ServerRequest &_tao_req,
@@ -622,7 +579,6 @@ virtual void tltest (
     AMH_testResponseHandler_ptr _tao_rh,
     ::testlistitem_ptr tltest
   ) = 0;
-
 
 static void new_testlistitem_skel (
     TAO_ServerRequest &_tao_req,
@@ -635,7 +591,6 @@ virtual void new_testlistitem (
   ) = 0;
 
 };
-
 
 
 
@@ -669,14 +624,12 @@ public:
   ::test *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual char * stest () = 0;
 
   static void _get_stest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void stest (
     const char * stest) = 0;
 
@@ -684,14 +637,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::WChar * wstest () = 0;
 
   static void _get_wstest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void wstest (
     const ::CORBA::WChar * wstest) = 0;
 
@@ -699,14 +650,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::LongLong ltest () = 0;
 
   static void _get_ltest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ltest (
     ::CORBA::LongLong ltest) = 0;
 
@@ -714,14 +663,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::LongDouble ldtest () = 0;
 
   static void _get_ldtest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ldtest (
     ::CORBA::LongDouble ldtest) = 0;
 
@@ -729,14 +676,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::TestEnum etest () = 0;
 
   static void _get_etest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void etest (
     ::TestEnum etest) = 0;
 
@@ -744,14 +689,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::WChar * setest () = 0;
 
   static void _get_setest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void setest (
     const ::CORBA::WChar * setest) = 0;
 
@@ -759,14 +702,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::testlistitem_ptr tltest () = 0;
 
   static void _get_tltest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void tltest (
     ::testlistitem_ptr tltest) = 0;
 
@@ -774,7 +715,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::testlistitem_ptr new_testlistitem (
     const char * name) = 0;
 
@@ -785,7 +725,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -794,76 +733,61 @@ class TAO_IDL_TEST_STUB_Export _TAO_test_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_test_Direct_Proxy_Impl ();
-
   static void
   _get_stest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_stest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_wstest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_wstest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_ltest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_ltest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_ldtest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_ldtest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_etest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_etest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_setest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_setest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_tltest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _set_tltest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   new_testlistitem (
@@ -876,7 +800,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_testResponseHandler;
 using POA_TAO_AMH_testResponseHandler_ptr = POA_TAO_AMH_testResponseHandler *;
 
@@ -887,91 +810,60 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_testResponseHandler
 public:
   POA_TAO_AMH_testResponseHandler () = default;
   virtual ~POA_TAO_AMH_testResponseHandler () = default;
-
   void get_stest (
     const char * return_value) override;
-
   void get_stest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void set_stest () override;
-
   void set_stest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void get_wstest (
     const ::CORBA::WChar * return_value) override;
-
   void get_wstest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void set_wstest () override;
-
   void set_wstest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void get_ltest (
     ::CORBA::LongLong return_value) override;
-
   void get_ltest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void set_ltest () override;
-
   void set_ltest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void get_ldtest (
     ::CORBA::LongDouble return_value) override;
-
   void get_ldtest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void set_ldtest () override;
-
   void set_ldtest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void get_etest (
     ::TestEnum return_value) override;
-
   void get_etest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void set_etest () override;
-
   void set_etest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void get_setest (
     const ::CORBA::WChar * return_value) override;
-
   void get_setest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void set_setest () override;
-
   void set_setest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void get_tltest (
     ::testlistitem_ptr return_value) override;
-
   void get_tltest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void set_tltest () override;
-
   void set_tltest_excep (
     ::AMH_testExceptionHolder * holder) override;
-
   void new_testlistitem (
     ::testlistitem_ptr return_value) override;
-
   void new_testlistitem_excep (
     ::AMH_testExceptionHolder * holder) override;
 };
-
 
 
 
@@ -1005,7 +897,6 @@ public:
   ::AMI_testHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_stest (
     const char * ami_return_val) = 0;
 
@@ -1013,7 +904,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_stest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1021,14 +911,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_stest () = 0;
 
   static void set_stest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_stest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1036,7 +924,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_wstest (
     const ::CORBA::WChar * ami_return_val) = 0;
 
@@ -1044,7 +931,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_wstest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1052,14 +938,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_wstest () = 0;
 
   static void set_wstest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_wstest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1067,7 +951,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_ltest (
     ::CORBA::LongLong ami_return_val) = 0;
 
@@ -1075,7 +958,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_ltest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1083,14 +965,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_ltest () = 0;
 
   static void set_ltest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_ltest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1098,7 +978,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_ldtest (
     ::CORBA::LongDouble ami_return_val) = 0;
 
@@ -1106,7 +985,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_ldtest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1114,14 +992,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_ldtest () = 0;
 
   static void set_ldtest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_ldtest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1129,7 +1005,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_etest (
     ::TestEnum ami_return_val) = 0;
 
@@ -1137,7 +1012,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_etest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1145,14 +1019,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_etest () = 0;
 
   static void set_etest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_etest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1160,7 +1032,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_setest (
     const ::CORBA::WChar * ami_return_val) = 0;
 
@@ -1168,7 +1039,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_setest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1176,14 +1046,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_setest () = 0;
 
   static void set_setest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_setest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1191,7 +1059,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_tltest (
     ::testlistitem_ptr ami_return_val) = 0;
 
@@ -1199,7 +1066,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_tltest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1207,14 +1073,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_tltest () = 0;
 
   static void set_tltest_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_tltest_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1222,7 +1086,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void new_testlistitem (
     ::testlistitem_ptr ami_return_val) = 0;
 
@@ -1230,7 +1093,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void new_testlistitem_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1239,7 +1101,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1251,151 +1112,121 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_testHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_testHandler_Direct_Proxy_Impl ();
-
   static void
   get_stest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_stest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_stest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_stest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_wstest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_wstest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_wstest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_wstest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_ltest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_ltest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_ltest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_ltest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_ldtest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_ldtest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_ldtest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_ldtest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_etest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_etest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_etest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_etest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_setest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_setest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_setest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_setest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_tltest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_tltest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_tltest (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_tltest_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   new_testlistitem (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   new_testlistitem_excep (
@@ -1406,7 +1237,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class POA_AMH_Simple_Server;
@@ -1432,7 +1262,6 @@ public:
   Simple_Server *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void ackConfBasData_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1441,7 +1270,6 @@ static void ackConfBasData_skel (
 virtual void ackConfBasData (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void ackConfMosData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1452,7 +1280,6 @@ virtual void ackConfMosData (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void ackConfTwmData_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1461,7 +1288,6 @@ static void ackConfTwmData_skel (
 virtual void ackConfTwmData (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void ackConfArchData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1472,7 +1298,6 @@ virtual void ackConfArchData (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void ackConfVonData_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1481,7 +1306,6 @@ static void ackConfVonData_skel (
 virtual void ackConfVonData (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void ackConfFftData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1492,7 +1316,6 @@ virtual void ackConfFftData (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void ackConfSosData_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1501,7 +1324,6 @@ static void ackConfSosData_skel (
 virtual void ackConfSosData (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void ackConfSscData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1512,7 +1334,6 @@ virtual void ackConfSscData (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void ackConfCsData_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1521,7 +1342,6 @@ static void ackConfCsData_skel (
 virtual void ackConfCsData (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void ackConfR10Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1532,7 +1352,6 @@ virtual void ackConfR10Data (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void ackConfR11Data_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1541,7 +1360,6 @@ static void ackConfR11Data_skel (
 virtual void ackConfR11Data (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void ackConfR12Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1552,7 +1370,6 @@ virtual void ackConfR12Data (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void ackConfR13Data_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1561,7 +1378,6 @@ static void ackConfR13Data_skel (
 virtual void ackConfR13Data (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void ackConfR14Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1572,7 +1388,6 @@ virtual void ackConfR14Data (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void ackConfR15Data_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1581,7 +1396,6 @@ static void ackConfR15Data_skel (
 virtual void ackConfR15Data (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void shutdown_skel (
     TAO_ServerRequest &_tao_req,
@@ -1592,7 +1406,6 @@ virtual void shutdown (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
 
-
 static void transferTriggerDb_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1601,7 +1414,6 @@ static void transferTriggerDb_skel (
 virtual void transferTriggerDb (
     AMH_Simple_ServerResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void transferTriggerTdc_skel (
     TAO_ServerRequest &_tao_req,
@@ -1613,7 +1425,6 @@ virtual void transferTriggerTdc (
   ) = 0;
 
 };
-
 
 
 
@@ -1647,126 +1458,108 @@ public:
   ::Simple_Server *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void ackConfBasData () = 0;
 
   static void ackConfBasData_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfMosData () = 0;
 
   static void ackConfMosData_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfTwmData () = 0;
 
   static void ackConfTwmData_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfArchData () = 0;
 
   static void ackConfArchData_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfVonData () = 0;
 
   static void ackConfVonData_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfFftData () = 0;
 
   static void ackConfFftData_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfSosData () = 0;
 
   static void ackConfSosData_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfSscData () = 0;
 
   static void ackConfSscData_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfCsData () = 0;
 
   static void ackConfCsData_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfR10Data () = 0;
 
   static void ackConfR10Data_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfR11Data () = 0;
 
   static void ackConfR11Data_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfR12Data () = 0;
 
   static void ackConfR12Data_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfR13Data () = 0;
 
   static void ackConfR13Data_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfR14Data () = 0;
 
   static void ackConfR14Data_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void ackConfR15Data () = 0;
 
   static void ackConfR15Data_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void shutdown () = 0;
 
   static void shutdown_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void transferTriggerDb () = 0;
 
   static void transferTriggerDb_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void transferTriggerTdc () = 0;
 
   static void transferTriggerTdc_skel (
@@ -1774,7 +1567,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1785,91 +1577,73 @@ class TAO_IDL_TEST_STUB_Export _TAO_Simple_Server_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_Simple_Server_Direct_Proxy_Impl ();
-
   static void
   ackConfBasData (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   ackConfMosData (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   ackConfTwmData (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   ackConfArchData (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   ackConfVonData (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   ackConfFftData (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   ackConfSosData (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   ackConfSscData (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   ackConfCsData (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   ackConfR10Data (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   ackConfR11Data (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   ackConfR12Data (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   ackConfR13Data (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   ackConfR14Data (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   ackConfR15Data (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   shutdown (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   transferTriggerDb (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   transferTriggerTdc (
@@ -1882,7 +1656,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_Simple_ServerResponseHandler;
 using POA_TAO_AMH_Simple_ServerResponseHandler_ptr = POA_TAO_AMH_Simple_ServerResponseHandler *;
 
@@ -1893,98 +1666,61 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_Simple_ServerResponseHandler
 public:
   POA_TAO_AMH_Simple_ServerResponseHandler () = default;
   virtual ~POA_TAO_AMH_Simple_ServerResponseHandler () = default;
-
   void ackConfBasData () override;
-
   void ackConfBasData_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfMosData () override;
-
   void ackConfMosData_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfTwmData () override;
-
   void ackConfTwmData_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfArchData () override;
-
   void ackConfArchData_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfVonData () override;
-
   void ackConfVonData_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfFftData () override;
-
   void ackConfFftData_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfSosData () override;
-
   void ackConfSosData_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfSscData () override;
-
   void ackConfSscData_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfCsData () override;
-
   void ackConfCsData_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfR10Data () override;
-
   void ackConfR10Data_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfR11Data () override;
-
   void ackConfR11Data_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfR12Data () override;
-
   void ackConfR12Data_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfR13Data () override;
-
   void ackConfR13Data_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfR14Data () override;
-
   void ackConfR14Data_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void ackConfR15Data () override;
-
   void ackConfR15Data_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void shutdown () override;
-
   void shutdown_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void transferTriggerDb () override;
-
   void transferTriggerDb_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
-
   void transferTriggerTdc () override;
-
   void transferTriggerTdc_excep (
     ::AMH_Simple_ServerExceptionHolder * holder) override;
 };
-
 
 
 
@@ -2019,7 +1755,6 @@ public:
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////

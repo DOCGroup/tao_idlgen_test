@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_FULLS_M0TFVN_H_
-#define _TAO_IDL_FULLS_M0TFVN_H_
+#ifndef _TAO_IDL_FULLS_CLNVMS_H_
+#define _TAO_IDL_FULLS_CLNVMS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_SCOPE_TEST_I_SCOPE_TEST__SARG_TRAITS_)
 #define _SCOPE_TEST_I_SCOPE_TEST__SARG_TRAITS_
 
@@ -95,7 +91,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_SCOPE_TEST_AMH_I_SCOPE_TESTEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -116,7 +111,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_SCOPE_TEST_AMI_I_SCOPE_TESTHANDLER__SARG_TRAITS_)
 #define _SCOPE_TEST_AMI_I_SCOPE_TESTHANDLER__SARG_TRAITS_
 
@@ -131,7 +125,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_MOD2_FWD__SARG_TRAITS_)
@@ -150,7 +143,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::mod2::fwd::un>
     : public
@@ -160,7 +152,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_MOD2_FULL__SARG_TRAITS_)
@@ -179,7 +170,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::mod2::fwd::full_seq>
     : public
@@ -189,7 +179,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_MOD2_AMH_FWDEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -210,7 +199,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_MOD2_AMI_FWDHANDLER__SARG_TRAITS_)
 #define _MOD2_AMI_FWDHANDLER__SARG_TRAITS_
 
@@ -225,7 +213,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_MOD2_FULL__SARG_TRAITS_)
@@ -247,10 +234,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_scope_test
 {
-
 
   class AMH_i_scope_test;
   using AMH_i_scope_test_ptr = AMH_i_scope_test *;
@@ -276,7 +261,6 @@ namespace POA_scope_test
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -313,7 +297,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -329,7 +312,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_i_scope_testResponseHandler;
 using TAO_AMH_i_scope_testResponseHandler_ptr = TAO_AMH_i_scope_testResponseHandler *;
 
@@ -341,7 +323,6 @@ public:
   TAO_AMH_i_scope_testResponseHandler () = default;
   virtual ~TAO_AMH_i_scope_testResponseHandler () = default;
 };
-
 
 
 
@@ -378,7 +359,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -397,12 +377,9 @@ public:
 
 
 
-
 } // module scope_test
-
 namespace POA_mod2
 {
-
 
   class AMH_fwd;
   using AMH_fwd_ptr = AMH_fwd *;
@@ -427,7 +404,6 @@ namespace POA_mod2
     mod2::fwd *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void _get_attr_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -436,7 +412,6 @@ namespace POA_mod2
   virtual void attr (
       mod2::AMH_fwdResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void _set_attr_skel (
       TAO_ServerRequest &_tao_req,
@@ -447,7 +422,6 @@ namespace POA_mod2
       mod2::AMH_fwdResponseHandler_ptr _tao_rh,
       const char * attr
     ) = 0;
-
 
   static void op_skel (
       TAO_ServerRequest &_tao_req,
@@ -462,7 +436,6 @@ namespace POA_mod2
     ) = 0;
 
 };
-
 
 
 
@@ -496,14 +469,12 @@ public:
   ::mod2::fwd *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual char * attr () = 0;
 
   static void _get_attr_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void attr (
     const char * attr) = 0;
 
@@ -511,7 +482,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::mod2::full_ptr op (
     ::mod2::full_ptr & full_arg,
     ::mod2::fwd::un & un_arg,
@@ -524,7 +494,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -533,16 +502,13 @@ class TAO_IDL_TEST_STUB_Export _TAO_fwd_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_fwd_Direct_Proxy_Impl ();
-
   static void
   _get_attr (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _set_attr (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op (
@@ -555,7 +521,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_fwdResponseHandler;
 using TAO_AMH_fwdResponseHandler_ptr = TAO_AMH_fwdResponseHandler *;
 
@@ -566,28 +531,21 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_fwdResponseHandler
 public:
   TAO_AMH_fwdResponseHandler () = default;
   virtual ~TAO_AMH_fwdResponseHandler () = default;
-
   void get_attr (
     const char * return_value) override;
-
   void get_attr_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) override;
-
   void set_attr () override;
-
   void set_attr_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) override;
-
   void op (
     ::mod2::full_ptr return_value,
     ::mod2::full_ptr full_arg,
     const ::mod2::fwd::un & un_arg,
     const ::mod2::fwd::full_seq & full_seq_arg) override;
-
   void op_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) override;
 };
-
 
 
 
@@ -621,7 +579,6 @@ public:
   ::mod2::AMI_fwdHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_attr (
     const char * ami_return_val) = 0;
 
@@ -629,7 +586,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_attr_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -637,14 +593,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_attr () = 0;
 
   static void set_attr_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_attr_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -652,7 +606,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op (
     ::mod2::full_ptr ami_return_val,
     ::mod2::full_ptr full_arg,
@@ -663,7 +616,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -672,7 +624,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -684,31 +635,25 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_fwdHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_fwdHandler_Direct_Proxy_Impl ();
-
   static void
   get_attr (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_attr_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_attr (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_attr_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   op (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op_excep (
@@ -719,7 +664,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 

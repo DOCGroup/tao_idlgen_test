@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ANYUNIONS_13ZOMD_H_
-#define _TAO_IDL_ANYUNIONS_13ZOMD_H_
+#ifndef _TAO_IDL_ANYUNIONS_8WCB08_H_
+#define _TAO_IDL_ANYUNIONS_8WCB08_H_
 
 #include /**/ "ace/pre.h"
 
@@ -43,14 +42,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -71,7 +68,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::AnyUnionEnum>
     : public
@@ -81,7 +77,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>

@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "array_anon_nestedC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -50,8 +49,6 @@
 #endif /* !defined INLINE */
 
 
-
-
 #ifndef _TAO_TYPECODE_teststruct_b_GUARD
 #define _TAO_TYPECODE_teststruct_b_GUARD
 
@@ -63,17 +60,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        teststruct_b_4 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_char,
-          4U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> teststruct_b_4 (
+        ::CORBA::tk_array,
+        &CORBA::_tc_char,
+        4U);
 
-      ::CORBA::TypeCode_ptr const tc_teststruct_b =
-        &teststruct_b_4;
-    }
+    ::CORBA::TypeCode_ptr const tc_teststruct_b =
+      &teststruct_b_4;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -105,7 +100,6 @@ _tao_tc_teststruct (
 ::CORBA::TypeCode_ptr const _tc_teststruct = std::addressof(_tao_tc_teststruct);
 
 
-
 void
 teststruct::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -113,7 +107,6 @@ teststruct::_tao_any_destructor (
   teststruct *tmp = static_cast<teststruct *> (_tao_void_pointer);
   delete tmp;
 }
-
 teststruct::_b_slice *
 teststruct::_b_dup (const teststruct::_b_slice *_tao_src_array)
 {
@@ -154,8 +147,6 @@ teststruct::_b_copy (
 }
 
 
-
-
 #ifndef _TAO_TYPECODE_teststruct_embeddedstruct_a_GUARD
 #define _TAO_TYPECODE_teststruct_embeddedstruct_a_GUARD
 
@@ -167,17 +158,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        teststruct_embeddedstruct_a_4 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_char,
-          4U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> teststruct_embeddedstruct_a_4 (
+        ::CORBA::tk_array,
+        &CORBA::_tc_char,
+        4U);
 
-      ::CORBA::TypeCode_ptr const tc_teststruct_embeddedstruct_a =
-        &teststruct_embeddedstruct_a_4;
-    }
+    ::CORBA::TypeCode_ptr const tc_teststruct_embeddedstruct_a =
+      &teststruct_embeddedstruct_a_4;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -208,7 +197,6 @@ _tao_tc_teststruct_embeddedstruct (
 ::CORBA::TypeCode_ptr const teststruct::_tc_embeddedstruct = std::addressof(_tao_tc_teststruct_embeddedstruct);
 
 
-
 void
 teststruct::embeddedstruct::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -216,7 +204,6 @@ teststruct::embeddedstruct::_tao_any_destructor (
   embeddedstruct *tmp = static_cast<embeddedstruct *> (_tao_void_pointer);
   delete tmp;
 }
-
 teststruct::embeddedstruct::_a_slice *
 teststruct::embeddedstruct::_a_dup (const teststruct::embeddedstruct::_a_slice *_tao_src_array)
 {
@@ -255,7 +242,6 @@ teststruct::embeddedstruct::_a_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -266,7 +252,6 @@ static TAO::TypeCode::Alias<char const *,
     &_tc_teststruct);
 
 ::CORBA::TypeCode_ptr const _tc_tstruct = std::addressof(_tao_tc_tstruct);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -308,7 +293,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -355,7 +339,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -380,7 +363,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -402,7 +384,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -433,7 +414,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

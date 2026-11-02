@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_STRUCTS_FMMROM_CPP_
-#define _TAO_IDL_STRUCTS_FMMROM_CPP_
+#ifndef _TAO_IDL_STRUCTS_XIC9G7_CPP_
+#define _TAO_IDL_STRUCTS_XIC9G7_CPP_
 
 
 #include "structS.h"

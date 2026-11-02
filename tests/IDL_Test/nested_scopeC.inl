@@ -24,11 +24,9 @@
 
 #include <memory>
 #include <new>
-
 // *************************************************************
 // Inline operations for union u_skip::u_hump::u_skip
 // *************************************************************
-
 ACE_INLINE
 void
 u_skip::u_hump::u_skip::_default ()
@@ -72,7 +70,6 @@ u_skip::u_hump::u_skip::_d () const
 {
   return this->disc_;
 }
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -98,7 +95,6 @@ u_skip::u_hump::u_skip::s () const
 }
 
 
-
 ACE_INLINE
 i_skip::i_hump::i_skip::i_skip (
     TAO_Stub *objref,
@@ -116,7 +112,6 @@ i_skip::i_hump::i_skip::i_skip (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 i_skip::i_hump::AMH_i_skipExceptionHolder::AMH_i_skipExceptionHolder ()
   : exception (nullptr)
@@ -129,7 +124,6 @@ i_skip::i_hump::AMH_i_skipExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 i_skip::i_hump::AMI_i_skipHandler::AMI_i_skipHandler (
     TAO_Stub *objref,
@@ -149,7 +143,6 @@ i_skip::i_hump::AMI_i_skipHandler::AMI_i_skipHandler (
 }
 
 
-
 ACE_INLINE
 bloo::bloo (
     TAO_Stub *objref,
@@ -167,7 +160,6 @@ bloo::bloo (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_blooExceptionHolder::AMH_blooExceptionHolder ()
   : exception (nullptr)
@@ -180,7 +172,6 @@ AMH_blooExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_blooHandler::AMI_blooHandler (
     TAO_Stub *objref,
@@ -200,7 +191,6 @@ AMI_blooHandler::AMI_blooHandler (
 }
 
 
-
 ACE_INLINE
 bug_1985_a::b::something::something (
     TAO_Stub *objref,
@@ -218,7 +208,6 @@ bug_1985_a::b::something::something (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 bug_1985_a::b::AMH_somethingExceptionHolder::AMH_somethingExceptionHolder ()
   : exception (nullptr)
@@ -231,7 +220,6 @@ bug_1985_a::b::AMH_somethingExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 bug_1985_a::b::AMI_somethingHandler::AMI_somethingHandler (
     TAO_Stub *objref,
@@ -251,7 +239,6 @@ bug_1985_a::b::AMI_somethingHandler::AMI_somethingHandler (
 }
 
 
-
 ACE_INLINE
 bug_1985_c::d::something::something (
     TAO_Stub *objref,
@@ -269,7 +256,6 @@ bug_1985_c::d::something::something (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 bug_1985_c::d::AMH_somethingExceptionHolder::AMH_somethingExceptionHolder ()
   : exception (nullptr)
@@ -282,7 +268,6 @@ bug_1985_c::d::AMH_somethingExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 bug_1985_c::d::AMI_somethingHandler::AMI_somethingHandler (
     TAO_Stub *objref,
@@ -302,7 +287,6 @@ bug_1985_c::d::AMI_somethingHandler::AMI_somethingHandler (
 }
 
 
-
 ACE_INLINE
 Negotiator::UAV_Negotiator::UAV_Negotiator (
     TAO_Stub *objref,
@@ -320,7 +304,6 @@ Negotiator::UAV_Negotiator::UAV_Negotiator (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 Negotiator::AMH_UAV_NegotiatorExceptionHolder::AMH_UAV_NegotiatorExceptionHolder ()
   : exception (nullptr)
@@ -333,7 +316,6 @@ Negotiator::AMH_UAV_NegotiatorExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 Negotiator::AMI_UAV_NegotiatorHandler::AMI_UAV_NegotiatorHandler (
     TAO_Stub *objref,
@@ -353,7 +335,6 @@ Negotiator::AMI_UAV_NegotiatorHandler::AMI_UAV_NegotiatorHandler (
 }
 
 
-
 ACE_INLINE
 Negotiator::UAV_Negotiator_Factory::UAV_Negotiator_Factory (
     TAO_Stub *objref,
@@ -371,7 +352,6 @@ Negotiator::UAV_Negotiator_Factory::UAV_Negotiator_Factory (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder::AMH_UAV_Negotiator_FactoryExceptionHolder ()
   : exception (nullptr)
@@ -384,7 +364,6 @@ Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder::_tao_obv_static_repositor
 }
 
 
-
 ACE_INLINE
 Negotiator::AMI_UAV_Negotiator_FactoryHandler::AMI_UAV_Negotiator_FactoryHandler (
     TAO_Stub *objref,
@@ -404,7 +383,6 @@ Negotiator::AMI_UAV_Negotiator_FactoryHandler::AMI_UAV_Negotiator_FactoryHandler
 }
 
 
-
 ACE_INLINE
 Wow::bug_2125::MyInterface::MyInterface (
     TAO_Stub *objref,
@@ -422,7 +400,6 @@ Wow::bug_2125::MyInterface::MyInterface (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 Wow::bug_2125::AMH_MyInterfaceExceptionHolder::AMH_MyInterfaceExceptionHolder ()
   : exception (nullptr)
@@ -433,7 +410,6 @@ Wow::bug_2125::AMH_MyInterfaceExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:Wow/bug_2125/AMH_MyInterfaceExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

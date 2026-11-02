@@ -22,14 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ARRAYS_58PKAG_CPP_
-#define _TAO_IDL_ARRAYS_58PKAG_CPP_
+#ifndef _TAO_IDL_ARRAYS_7JPT4U_CPP_
+#define _TAO_IDL_ARRAYS_7JPT4U_CPP_
 
 
 #include "arrayS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <cstddef>
 #include <cstring>
+#include <memory>
 #include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
 #include "tao/Exception_Data.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
@@ -52,22 +53,24 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
 class TAO_AMH_array_args_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_array_args_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_AMH_array_args_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_AMH_array_args_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -85,23 +88,20 @@ TAO_AMH_array_args_Perfect_Hash_OpTable::hash (const char *str, unsigned int len
      16, 16, 16, 16, 16,  2,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_AMH_array_args_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_AMH_array_args_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 6,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 11
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -118,30 +118,25 @@ TAO_AMH_array_args_Perfect_Hash_OpTable::lookup (const char *str, unsigned int l
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_AMH_array_args_Perfect_Hash_OpTable tao_AMH_array_args_optable;
-
-
-
-
 
 POA_AMH_array_args::POA_AMH_array_args ()
 {
   this->optable_ = std::addressof (tao_AMH_array_args_optable);
 }
-
 
 
 void
@@ -204,7 +199,6 @@ POA_AMH_array_args::all_arrays_skel (
 
 
 
-
 ::CORBA::Boolean POA_AMH_array_args::_is_a (const char* value)
 {
   return
@@ -218,7 +212,6 @@ const char* POA_AMH_array_args::_interface_repository_id () const
 {
   return "IDL:array_args:1.0";
 }
-
 void
 POA_AMH_array_args::_dispatch (
     TAO_ServerRequest &req,
@@ -226,12 +219,11 @@ POA_AMH_array_args::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 array_args*
 POA_AMH_array_args::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -246,17 +238,18 @@ class TAO_array_args_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_array_args_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_array_args_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_array_args_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -274,23 +267,20 @@ TAO_array_args_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
      16, 16, 16, 16, 16,  2,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_array_args_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_array_args_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 6,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 11
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -307,17 +297,17 @@ TAO_array_args_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_array_args_Perfect_Hash_OpTable tao_array_args_optable;
@@ -329,7 +319,6 @@ static TAO_array_args_Perfect_Hash_OpTable tao_array_args_optable;
 _TAO_array_args_Direct_Proxy_Impl::~_TAO_array_args_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -357,30 +346,22 @@ _TAO_array_args_Direct_Proxy_Impl::all_arrays (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_array_args::POA_array_args ()
 {
   this->optable_ = std::addressof (tao_array_args_optable);
 }
 
 
-
 class all_arrays_array_args
   : public TAO::Upcall_Command
 {
 public:
-  inline all_arrays_array_args (
-    POA_array_args * servant,
+  inline all_arrays_array_args (POA_array_args * servant,
     TAO_Operation_Details const * operation_details,
     TAO::Argument * const args[])
     : servant_ (servant)
       , operation_details_ (operation_details)
-      , args_ (args)
-  {
-  }
+      , args_ (args) {}
 
   void execute () override
   {
@@ -406,12 +387,12 @@ private:
   TAO_Operation_Details const * const operation_details_;
   TAO::Argument * const * const args_;
 };
-
 void POA_array_args::all_arrays_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::oa1_tag>::in_arg_val _tao_arg1;
   TAO::SArg_Traits< ::oa2_tag>::in_arg_val _tao_arg2;
 
@@ -422,8 +403,7 @@ void POA_array_args::all_arrays_skel (
       std::addressof(_tao_arg2)
     };
 
-  POA_array_args * const impl =
-    dynamic_cast<POA_array_args *> (servant);
+  POA_array_args * const impl = dynamic_cast<POA_array_args *> (servant);
 
   if (!impl)
     {
@@ -455,7 +435,6 @@ void POA_array_args::all_arrays_skel (
 
 
 
-
 ::CORBA::Boolean POA_array_args::_is_a (const char* value)
 {
   return
@@ -473,7 +452,6 @@ const char* POA_array_args::_interface_repository_id () const
 
 
 
-
 void POA_array_args::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -484,12 +462,11 @@ void POA_array_args::_dispatch (
 
 
 
-
 array_args *
 POA_array_args::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -499,8 +476,6 @@ POA_array_args::_this ()
   return {};
 }
 
-
-
 void
 POA_TAO_AMH_array_argsResponseHandler::all_arrays ()
 {
@@ -509,7 +484,6 @@ POA_TAO_AMH_array_argsResponseHandler::all_arrays ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_TAO_AMH_array_argsResponseHandler::all_arrays_excep (
   ::AMH_array_argsExceptionHolder * holder)
@@ -528,17 +502,18 @@ class TAO_AMI_array_argsHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_array_argsHandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_AMI_array_argsHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_AMI_array_argsHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -556,23 +531,20 @@ TAO_AMI_array_argsHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned 
      17, 17,  0, 17, 17,  2,  0, 17, 17, 17,
      17, 17, 17, 17, 17, 17, 17, 17,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_AMI_array_argsHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_AMI_array_argsHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 16,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 16,
-      HASH_VALUE_RANGE = 12,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {16};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {16};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {12};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -590,17 +562,17 @@ TAO_AMI_array_argsHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigne
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_AMI_array_argsHandler_Perfect_Hash_OpTable tao_AMI_array_argsHandler_optable;
@@ -612,7 +584,6 @@ static TAO_AMI_array_argsHandler_Perfect_Hash_OpTable tao_AMI_array_argsHandler_
 _TAO_AMI_array_argsHandler_Direct_Proxy_Impl::~_TAO_AMI_array_argsHandler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -631,7 +602,6 @@ _TAO_AMI_array_argsHandler_Direct_Proxy_Impl::all_arrays (
   _tao_ptr->all_arrays (
       );
 }
-
 
 
 void
@@ -658,26 +628,18 @@ _TAO_AMI_array_argsHandler_Direct_Proxy_Impl::all_arrays_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_AMI_array_argsHandler::POA_AMI_array_argsHandler ()
 {
   this->optable_ = std::addressof (tao_AMI_array_argsHandler_optable);
 }
 
 
-
 class all_arrays_AMI_array_argsHandler
   : public TAO::Upcall_Command
 {
 public:
-  inline all_arrays_AMI_array_argsHandler (
-    POA_AMI_array_argsHandler * servant)
-    : servant_ (servant)
-  {
-  }
+  inline all_arrays_AMI_array_argsHandler (POA_AMI_array_argsHandler * servant)
+    : servant_ (servant) {}
 
   void execute () override
   {
@@ -687,28 +649,26 @@ public:
 private:
   POA_AMI_array_argsHandler * const servant_;
 };
-
 void POA_AMI_array_argsHandler::all_arrays_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_AMI_array_argsHandler * const impl =
-    dynamic_cast<POA_AMI_array_argsHandler *> (servant);
+  POA_AMI_array_argsHandler * const impl = dynamic_cast<POA_AMI_array_argsHandler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  all_arrays_AMI_array_argsHandler command (
-    impl);
+  all_arrays_AMI_array_argsHandler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -724,20 +684,16 @@ void POA_AMI_array_argsHandler::all_arrays_skel (
 }
 
 
-
 class all_arrays_excep_AMI_array_argsHandler
   : public TAO::Upcall_Command
 {
 public:
-  inline all_arrays_excep_AMI_array_argsHandler (
-    POA_AMI_array_argsHandler * servant,
+  inline all_arrays_excep_AMI_array_argsHandler (POA_AMI_array_argsHandler * servant,
     TAO_Operation_Details const * operation_details,
     TAO::Argument * const args[])
     : servant_ (servant)
       , operation_details_ (operation_details)
-      , args_ (args)
-  {
-  }
+      , args_ (args) {}
 
   void execute () override
   {
@@ -756,12 +712,12 @@ private:
   TAO_Operation_Details const * const operation_details_;
   TAO::Argument * const * const args_;
 };
-
 void POA_AMI_array_argsHandler::all_arrays_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -770,8 +726,7 @@ void POA_AMI_array_argsHandler::all_arrays_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_AMI_array_argsHandler * const impl =
-    dynamic_cast<POA_AMI_array_argsHandler *> (servant);
+  POA_AMI_array_argsHandler * const impl = dynamic_cast<POA_AMI_array_argsHandler *> (servant);
 
   if (!impl)
     {
@@ -803,7 +758,6 @@ void POA_AMI_array_argsHandler::all_arrays_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_AMI_array_argsHandler::_is_a (const char* value)
 {
   return
@@ -822,7 +776,6 @@ const char* POA_AMI_array_argsHandler::_interface_repository_id () const
 
 
 
-
 void POA_AMI_array_argsHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -833,12 +786,11 @@ void POA_AMI_array_argsHandler::_dispatch (
 
 
 
-
 AMI_array_argsHandler *
 POA_AMI_array_argsHandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -852,17 +804,18 @@ class TAO_AMH_testdata_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_testdata_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_AMH_testdata_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_AMH_testdata_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -880,23 +833,20 @@ TAO_AMH_testdata_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_AMH_testdata_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_AMH_testdata_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 5,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 10
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -912,30 +862,25 @@ TAO_AMH_testdata_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_AMH_testdata_Perfect_Hash_OpTable tao_AMH_testdata_optable;
-
-
-
-
 
 POA_AMH_testdata::POA_AMH_testdata ()
 {
   this->optable_ = std::addressof (tao_AMH_testdata_optable);
 }
-
 
 
 
@@ -957,7 +902,6 @@ const char* POA_AMH_testdata::_interface_repository_id () const
 {
   return "IDL:testdata:1.0";
 }
-
 void
 POA_AMH_testdata::_dispatch (
     TAO_ServerRequest &req,
@@ -965,12 +909,11 @@ POA_AMH_testdata::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 testdata*
 POA_AMH_testdata::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -985,17 +928,18 @@ class TAO_testdata_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_testdata_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_testdata_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_testdata_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1013,23 +957,20 @@ TAO_testdata_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_testdata_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_testdata_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 5,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 10
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1045,17 +986,17 @@ TAO_testdata_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_testdata_Perfect_Hash_OpTable tao_testdata_optable;
@@ -1074,15 +1015,10 @@ _TAO_testdata_Direct_Proxy_Impl::~_TAO_testdata_Direct_Proxy_Impl ()
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_testdata::POA_testdata ()
 {
   this->optable_ = std::addressof (tao_testdata_optable);
 }
-
 
 
 
@@ -1108,7 +1044,6 @@ const char* POA_testdata::_interface_repository_id () const
 
 
 
-
 void POA_testdata::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1119,12 +1054,11 @@ void POA_testdata::_dispatch (
 
 
 
-
 testdata *
 POA_testdata::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1135,22 +1069,22 @@ POA_testdata::_this ()
 }
 
 
-
 class TAO_AMI_testdataHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_testdataHandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_AMI_testdataHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_AMI_testdataHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1168,23 +1102,20 @@ TAO_AMI_testdataHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned in
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_AMI_testdataHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_AMI_testdataHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 5,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 10
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1200,17 +1131,17 @@ TAO_AMI_testdataHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned 
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_AMI_testdataHandler_Perfect_Hash_OpTable tao_AMI_testdataHandler_optable;
@@ -1229,16 +1160,11 @@ _TAO_AMI_testdataHandler_Direct_Proxy_Impl::~_TAO_AMI_testdataHandler_Direct_Pro
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_AMI_testdataHandler::POA_AMI_testdataHandler ()
   : TAO_ServantBase ()
 {
   this->optable_ = std::addressof (tao_AMI_testdataHandler_optable);
 }
-
 
 
 
@@ -1265,7 +1191,6 @@ const char* POA_AMI_testdataHandler::_interface_repository_id () const
 
 
 
-
 void POA_AMI_testdataHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1276,12 +1201,11 @@ void POA_AMI_testdataHandler::_dispatch (
 
 
 
-
 AMI_testdataHandler *
 POA_AMI_testdataHandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1295,17 +1219,18 @@ class TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1323,23 +1248,20 @@ TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable::hash (const char *str, unsigned i
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 6,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 11
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1356,30 +1278,25 @@ TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable::lookup (const char *str, unsigned
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable tao_arraytest_AMH_MyTest_optable;
-
-
-
-
 
 POA_arraytest::AMH_MyTest::AMH_MyTest ()
 {
   this->optable_ = std::addressof (tao_arraytest_AMH_MyTest_optable);
 }
-
 
 
 void
@@ -1424,7 +1341,6 @@ POA_arraytest::AMH_MyTest::test_method_skel (
 
 
 
-
 ::CORBA::Boolean POA_arraytest::AMH_MyTest::_is_a (const char* value)
 {
   return
@@ -1438,7 +1354,6 @@ const char* POA_arraytest::AMH_MyTest::_interface_repository_id () const
 {
   return "IDL:arraytest/MyTest:1.0";
 }
-
 void
 POA_arraytest::AMH_MyTest::_dispatch (
     TAO_ServerRequest &req,
@@ -1446,12 +1361,11 @@ POA_arraytest::AMH_MyTest::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 arraytest::MyTest*
 POA_arraytest::AMH_MyTest::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1466,17 +1380,18 @@ class TAO_arraytest_MyTest_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_arraytest_MyTest_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_arraytest_MyTest_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_arraytest_MyTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1494,23 +1409,20 @@ TAO_arraytest_MyTest_Perfect_Hash_OpTable::hash (const char *str, unsigned int l
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_arraytest_MyTest_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_arraytest_MyTest_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 6,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 11
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1527,17 +1439,17 @@ TAO_arraytest_MyTest_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_arraytest_MyTest_Perfect_Hash_OpTable tao_arraytest_MyTest_optable;
@@ -1549,7 +1461,6 @@ static TAO_arraytest_MyTest_Perfect_Hash_OpTable tao_arraytest_MyTest_optable;
 POA_arraytest::_TAO_MyTest_Direct_Proxy_Impl::~_TAO_MyTest_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -1576,10 +1487,6 @@ POA_arraytest::_TAO_MyTest_Direct_Proxy_Impl::test_method (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_arraytest::MyTest::MyTest ()
 {
   this->optable_ = std::addressof (tao_arraytest_MyTest_optable);
@@ -1589,20 +1496,16 @@ POA_arraytest::MyTest::MyTest ()
 namespace POA_arraytest
 {
 
-
   class test_method_MyTest
     : public TAO::Upcall_Command
   {
   public:
-    inline test_method_MyTest (
-      POA_arraytest::MyTest * servant,
+    inline test_method_MyTest (POA_arraytest::MyTest * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1622,12 +1525,12 @@ namespace POA_arraytest
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_arraytest::MyTest::test_method_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::arraytest::myvec2_tag>::out_arg_val _tao_mystring;
 
   TAO::Argument * const args[] =
@@ -1636,8 +1539,7 @@ void POA_arraytest::MyTest::test_method_skel (
       std::addressof(_tao_mystring)
     };
 
-  POA_arraytest::MyTest * const impl =
-    dynamic_cast<POA_arraytest::MyTest *> (servant);
+  POA_arraytest::MyTest * const impl = dynamic_cast<POA_arraytest::MyTest *> (servant);
 
   if (!impl)
     {
@@ -1669,7 +1571,6 @@ void POA_arraytest::MyTest::test_method_skel (
 
 
 
-
 ::CORBA::Boolean POA_arraytest::MyTest::_is_a (const char* value)
 {
   return
@@ -1687,7 +1588,6 @@ const char* POA_arraytest::MyTest::_interface_repository_id () const
 
 
 
-
 void POA_arraytest::MyTest::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1698,12 +1598,11 @@ void POA_arraytest::MyTest::_dispatch (
 
 
 
-
 arraytest::MyTest *
 POA_arraytest::MyTest::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1712,8 +1611,6 @@ POA_arraytest::MyTest::_this ()
     }
   return {};
 }
-
-
 
 void
 POA_arraytest::TAO_AMH_MyTestResponseHandler::test_method (
@@ -1730,7 +1627,6 @@ POA_arraytest::TAO_AMH_MyTestResponseHandler::test_method (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_arraytest::TAO_AMH_MyTestResponseHandler::test_method_excep (
   ::arraytest::AMH_MyTestExceptionHolder * holder)
@@ -1749,17 +1645,18 @@ class TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1777,23 +1674,20 @@ TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable::hash (const char *str, uns
      18, 18,  0, 18, 18, 18,  0, 18, 18, 18,
      18, 18, 18, 18, 18, 18, 18, 18,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 17,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 17,
-      HASH_VALUE_RANGE = 13,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {17};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {17};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {13};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1812,17 +1706,17 @@ TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable::lookup (const char *str, u
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable tao_arraytest_AMI_MyTestHandler_optable;
@@ -1834,7 +1728,6 @@ static TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable tao_arraytest_AMI_My
 POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::~_TAO_AMI_MyTestHandler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -1854,7 +1747,6 @@ POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::test_method (
         ((TAO::Arg_Traits< ::arraytest::myvec2_tag>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -1881,10 +1773,6 @@ POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::test_method_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_arraytest::AMI_MyTestHandler::AMI_MyTestHandler ()
 {
   this->optable_ = std::addressof (tao_arraytest_AMI_MyTestHandler_optable);
@@ -1894,20 +1782,16 @@ POA_arraytest::AMI_MyTestHandler::AMI_MyTestHandler ()
 namespace POA_arraytest
 {
 
-
   class test_method_AMI_MyTestHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline test_method_AMI_MyTestHandler (
-      POA_arraytest::AMI_MyTestHandler * servant,
+    inline test_method_AMI_MyTestHandler (POA_arraytest::AMI_MyTestHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1927,12 +1811,12 @@ namespace POA_arraytest
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_arraytest::AMI_MyTestHandler::test_method_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::arraytest::myvec2_tag>::in_arg_val _tao_mystring;
 
   TAO::Argument * const args[] =
@@ -1941,8 +1825,7 @@ void POA_arraytest::AMI_MyTestHandler::test_method_skel (
       std::addressof(_tao_mystring)
     };
 
-  POA_arraytest::AMI_MyTestHandler * const impl =
-    dynamic_cast<POA_arraytest::AMI_MyTestHandler *> (servant);
+  POA_arraytest::AMI_MyTestHandler * const impl = dynamic_cast<POA_arraytest::AMI_MyTestHandler *> (servant);
 
   if (!impl)
     {
@@ -1971,20 +1854,16 @@ void POA_arraytest::AMI_MyTestHandler::test_method_skel (
 namespace POA_arraytest
 {
 
-
   class test_method_excep_AMI_MyTestHandler
     : public TAO::Upcall_Command
   {
   public:
-    inline test_method_excep_AMI_MyTestHandler (
-      POA_arraytest::AMI_MyTestHandler * servant,
+    inline test_method_excep_AMI_MyTestHandler (POA_arraytest::AMI_MyTestHandler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2004,12 +1883,12 @@ namespace POA_arraytest
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_arraytest::AMI_MyTestHandler::test_method_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2018,8 +1897,7 @@ void POA_arraytest::AMI_MyTestHandler::test_method_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_arraytest::AMI_MyTestHandler * const impl =
-    dynamic_cast<POA_arraytest::AMI_MyTestHandler *> (servant);
+  POA_arraytest::AMI_MyTestHandler * const impl = dynamic_cast<POA_arraytest::AMI_MyTestHandler *> (servant);
 
   if (!impl)
     {
@@ -2051,7 +1929,6 @@ void POA_arraytest::AMI_MyTestHandler::test_method_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_arraytest::AMI_MyTestHandler::_is_a (const char* value)
 {
   return
@@ -2070,7 +1947,6 @@ const char* POA_arraytest::AMI_MyTestHandler::_interface_repository_id () const
 
 
 
-
 void POA_arraytest::AMI_MyTestHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -2081,12 +1957,11 @@ void POA_arraytest::AMI_MyTestHandler::_dispatch (
 
 
 
-
 arraytest::AMI_MyTestHandler *
 POA_arraytest::AMI_MyTestHandler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

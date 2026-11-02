@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_TYPEPREFIXS_HWLQBF_H_
-#define _TAO_IDL_TYPEPREFIXS_HWLQBF_H_
+#ifndef _TAO_IDL_TYPEPREFIXS_9HFEON_H_
+#define _TAO_IDL_TYPEPREFIXS_9HFEON_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_A_B__SARG_TRAITS_)
 #define _A_B__SARG_TRAITS_
 
@@ -95,7 +91,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_A_AMH_BEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -116,7 +111,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_A_AMI_BHANDLER__SARG_TRAITS_)
 #define _A_AMI_BHANDLER__SARG_TRAITS_
 
@@ -131,7 +125,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_A_C__SARG_TRAITS_)
@@ -150,7 +143,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_A_AMH_CEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _A_AMH_CEXCEPTIONHOLDER__SARG_TRAITS_
 
@@ -167,7 +159,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_A_AMI_CHANDLER__SARG_TRAITS_)
@@ -189,10 +180,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_A
 {
-
 
   class AMH_B;
   using AMH_B_ptr = AMH_B *;
@@ -218,7 +207,6 @@ namespace POA_A
 
   virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -255,7 +243,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -271,7 +258,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_BResponseHandler;
 using TAO_AMH_BResponseHandler_ptr = TAO_AMH_BResponseHandler *;
 
@@ -283,7 +269,6 @@ public:
   TAO_AMH_BResponseHandler () = default;
   virtual ~TAO_AMH_BResponseHandler () = default;
 };
-
 
 
 
@@ -320,7 +305,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -335,7 +319,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class AMH_C;
@@ -361,7 +344,6 @@ public:
   A::C *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -373,7 +355,6 @@ virtual void op (
   ) = 0;
 
 };
-
 
 
 
@@ -407,7 +388,6 @@ public:
   ::A::C *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op (
     ::A::B_ptr a) = 0;
 
@@ -418,7 +398,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -427,7 +406,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_C_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_C_Direct_Proxy_Impl ();
-
   static void
   op (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -437,7 +415,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_CResponseHandler;
@@ -450,13 +427,10 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_CResponseHandler
 public:
   TAO_AMH_CResponseHandler () = default;
   virtual ~TAO_AMH_CResponseHandler () = default;
-
   void op () override;
-
   void op_excep (
     ::A::AMH_CExceptionHolder * holder) override;
 };
-
 
 
 
@@ -490,14 +464,12 @@ public:
   ::A::AMI_CHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op () = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -506,7 +478,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -518,11 +489,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_CHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_CHandler_Direct_Proxy_Impl ();
-
   static void
   op (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   op_excep (
@@ -533,7 +502,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 

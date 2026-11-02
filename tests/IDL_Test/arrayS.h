@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ARRAYS_MBE612_H_
-#define _TAO_IDL_ARRAYS_MBE612_H_
+#ifndef _TAO_IDL_ARRAYS_BLSKST_H_
+#define _TAO_IDL_ARRAYS_BLSKST_H_
 
 #include /**/ "ace/pre.h"
 
@@ -54,14 +53,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -126,7 +123,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::wrap>
     : public
@@ -171,7 +167,6 @@ namespace TAO
   };
 
 
-
 #if !defined (_ARRAY_ARGS__SARG_TRAITS_)
 #define _ARRAY_ARGS__SARG_TRAITS_
 
@@ -186,7 +181,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMH_ARRAY_ARGSEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -205,7 +199,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMI_ARRAY_ARGSHANDLER__SARG_TRAITS_)
@@ -246,7 +239,6 @@ namespace TAO
   };
 
 
-
 #if !defined (_TESTDATA__SARG_TRAITS_)
 #define _TESTDATA__SARG_TRAITS_
 
@@ -274,7 +266,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::testdata::struct2>
     : public
@@ -284,7 +275,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -298,7 +288,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::testdata::BdArraycharList>
     : public
@@ -308,7 +297,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -322,7 +310,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::testdata::BdArrayDeCharList>
     : public
@@ -332,7 +319,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_AMH_TESTDATAEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -351,7 +337,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_AMI_TESTDATAHANDLER__SARG_TRAITS_)
@@ -392,7 +377,6 @@ namespace TAO
   };
 
 
-
 #if !defined (_ARRAYTEST_MYTEST__SARG_TRAITS_)
 #define _ARRAYTEST_MYTEST__SARG_TRAITS_
 
@@ -407,7 +391,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_ARRAYTEST_AMH_MYTESTEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -428,7 +411,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_ARRAYTEST_AMI_MYTESTHANDLER__SARG_TRAITS_)
 #define _ARRAYTEST_AMI_MYTESTHANDLER__SARG_TRAITS_
 
@@ -443,7 +425,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
   template<>
@@ -468,7 +449,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::bug_2126::MyStruct>
     : public
@@ -478,7 +458,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -503,7 +482,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::bug_2126::BdMyStruct>
     : public
@@ -513,7 +491,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -560,7 +537,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::B85>
     : public
@@ -573,7 +549,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 class POA_AMH_array_args;
@@ -599,7 +574,6 @@ public:
   array_args *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void all_arrays_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -612,7 +586,6 @@ virtual void all_arrays (
   ) = 0;
 
 };
-
 
 
 
@@ -646,7 +619,6 @@ public:
   ::array_args *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void all_arrays (
     const ::oa1 arg1,
     const ::oa2 arg2) = 0;
@@ -658,7 +630,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -667,7 +638,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_array_args_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_array_args_Direct_Proxy_Impl ();
-
   static void
   all_arrays (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -677,7 +647,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class POA_TAO_AMH_array_argsResponseHandler;
@@ -690,13 +659,10 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_array_argsResponseHandler
 public:
   POA_TAO_AMH_array_argsResponseHandler () = default;
   virtual ~POA_TAO_AMH_array_argsResponseHandler () = default;
-
   void all_arrays () override;
-
   void all_arrays_excep (
     ::AMH_array_argsExceptionHolder * holder) override;
 };
-
 
 
 
@@ -730,14 +696,12 @@ public:
   ::AMI_array_argsHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void all_arrays () = 0;
 
   static void all_arrays_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void all_arrays_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -746,7 +710,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -758,11 +721,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_array_argsHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_array_argsHandler_Direct_Proxy_Impl ();
-
   static void
   all_arrays (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   all_arrays_excep (
@@ -775,15 +736,12 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 namespace POA_string_array
 {
 
 
 
-
 } // module string_array
-
 class POA_AMH_testdata;
 using POA_AMH_testdata_ptr = POA_AMH_testdata *;
 
@@ -808,7 +766,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
 
 
 
@@ -845,7 +802,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -861,7 +817,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_testdataResponseHandler;
 using POA_TAO_AMH_testdataResponseHandler_ptr = POA_TAO_AMH_testdataResponseHandler *;
 
@@ -873,7 +828,6 @@ public:
   POA_TAO_AMH_testdataResponseHandler () = default;
   virtual ~POA_TAO_AMH_testdataResponseHandler () = default;
 };
-
 
 
 
@@ -910,7 +864,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -927,10 +880,8 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 namespace POA_arraytest
 {
-
 
   class AMH_MyTest;
   using AMH_MyTest_ptr = AMH_MyTest *;
@@ -955,7 +906,6 @@ namespace POA_arraytest
     arraytest::MyTest *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void test_method_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -966,7 +916,6 @@ namespace POA_arraytest
     ) = 0;
 
 };
-
 
 
 
@@ -1000,7 +949,6 @@ public:
   ::arraytest::MyTest *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void test_method (
     ::arraytest::myvec2_out mystring) = 0;
 
@@ -1011,7 +959,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1020,7 +967,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_MyTest_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_MyTest_Direct_Proxy_Impl ();
-
   static void
   test_method (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -1030,7 +976,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_MyTestResponseHandler;
@@ -1043,14 +988,11 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_MyTestResponseHandler
 public:
   TAO_AMH_MyTestResponseHandler () = default;
   virtual ~TAO_AMH_MyTestResponseHandler () = default;
-
   void test_method (
     const ::arraytest::myvec2 mystring) override;
-
   void test_method_excep (
     ::arraytest::AMH_MyTestExceptionHolder * holder) override;
 };
-
 
 
 
@@ -1084,7 +1026,6 @@ public:
   ::arraytest::AMI_MyTestHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void test_method (
     const ::arraytest::myvec2 mystring) = 0;
 
@@ -1092,7 +1033,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void test_method_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -1101,7 +1041,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -1113,11 +1052,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_MyTestHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_MyTestHandler_Direct_Proxy_Impl ();
-
   static void
   test_method (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   test_method_excep (
@@ -1132,12 +1069,9 @@ public:
 
 
 
-
 } // module arraytest
-
 namespace POA_bug_2126
 {
-
 
 
 

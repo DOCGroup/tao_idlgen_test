@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_REPO_ID_MODA_V3U0B9_H_
-#define _TAO_IDL_REPO_ID_MODA_V3U0B9_H_
+#ifndef _TAO_IDL_REPO_ID_MODA_MDQE78_H_
+#define _TAO_IDL_REPO_ID_MODA_MDQE78_H_
 
 #include /**/ "ace/pre.h"
 
@@ -33,57 +32,40 @@
 
 #include "repo_id_modC.h"
 
-
 namespace gleep
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_schmooze;
 
 
 
-
 } // module gleep
-
 
 namespace gleep
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_schmeer;
 
 
 
-
 } // module gleep
-
 
 namespace gleep
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_schlemiel;
 
 
 
-
 } // module gleep
-
 
 namespace gleep
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_spilkis;
-
   namespace floop
   {
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_schmuck;
-
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_schmendrick;
-
     namespace verklempt
     {
-
       extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_schlemazel;
-
 
 
 
@@ -92,17 +74,13 @@ namespace gleep
 
 
 
-
   } // module gleep::floop
-
 
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_schmegegging;
 
 
 
-
 } // module gleep
-
 
 
 
@@ -117,7 +95,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::schmooze_ptr *
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::schmooze_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -140,7 +117,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -149,7 +125,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::schlemiel_ptr 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::schlemiel_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -172,7 +147,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -181,7 +155,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::floop::schmuck
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::floop::schmuck_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -204,7 +177,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -213,7 +185,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::floop::verklem
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::floop::verklempt::schlemazel_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

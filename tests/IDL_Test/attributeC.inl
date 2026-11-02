@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 Hello::MyFoo::MyFoo (
     TAO_Stub *objref,
@@ -42,7 +41,6 @@ Hello::MyFoo::MyFoo (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 Hello::AMH_MyFooExceptionHolder::AMH_MyFooExceptionHolder ()
   : exception (nullptr)
@@ -53,7 +51,6 @@ Hello::AMH_MyFooExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:Hello/AMH_MyFooExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

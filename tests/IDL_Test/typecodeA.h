@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_TYPECODEA_YACKDR_H_
-#define _TAO_IDL_TYPECODEA_YACKDR_H_
+#ifndef _TAO_IDL_TYPECODEA_BEUDVY_H_
+#define _TAO_IDL_TYPECODEA_BEUDVY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -56,17 +55,13 @@
 #include "tao/AnyTypeCode/Typecode_typesA.h"
 #include "tao/AnyTypeCode/WrongTransactionA.h"
 
-
 namespace MyModule
 {
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TypeCodeList;
 
 
 
-
 } // module MyModule
-
 
 
 

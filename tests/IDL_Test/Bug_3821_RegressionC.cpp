@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "Bug_3821_RegressionC.h"
 #include <memory>
 #include <new>
@@ -47,12 +46,11 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_3821_RegressionC.inl"
 #endif /* !defined INLINE */
-
 static char const * const _tao_enumerators_test_Enumeration[] =
   {
     "Enum1",
@@ -74,7 +72,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_Enumeration = std::addressof(_tao_tc_test_Enumeration);
 }
-
 
 
 test::UnionAllCovered_EnumerationDiscriminant::UnionAllCovered_EnumerationDiscriminant ()
@@ -154,7 +151,6 @@ test::UnionAllCovered_EnumerationDiscriminant::operator= (::test::UnionAllCovere
 void test::UnionAllCovered_EnumerationDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_EnumerationDiscriminant__2 (test::Enum3, "e_enum3", &CORBA::_tc_long);
@@ -183,7 +179,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCovered_EnumerationDiscriminant);
 }
-
 
 
 test::UnionAllCoveredWithDefault_EnumerationDiscriminant::UnionAllCoveredWithDefault_EnumerationDiscriminant ()
@@ -264,7 +259,6 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::operator= (::test::Uni
 void test::UnionAllCoveredWithDefault_EnumerationDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__2 ((test::Enumeration) -1, "e_def", &CORBA::_tc_long);
@@ -293,7 +287,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionAllCoveredWithDefault_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCoveredWithDefault_EnumerationDiscriminant);
 }
-
 
 
 test::UnionWithDefault_EnumerationDiscriminant::UnionWithDefault_EnumerationDiscriminant ()
@@ -374,7 +367,6 @@ test::UnionWithDefault_EnumerationDiscriminant::operator= (::test::UnionWithDefa
 void test::UnionWithDefault_EnumerationDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_EnumerationDiscriminant__2 (test::Enum3, "e_def", &CORBA::_tc_long);
@@ -403,7 +395,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_EnumerationDiscriminant);
 }
-
 
 
 test::UnionWithImplicitDefault_EnumerationDiscriminant::UnionWithImplicitDefault_EnumerationDiscriminant ()
@@ -473,7 +464,6 @@ test::UnionWithImplicitDefault_EnumerationDiscriminant::operator= (::test::Union
 void test::UnionWithImplicitDefault_EnumerationDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
 
@@ -500,7 +490,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_EnumerationDiscriminant);
 }
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -515,7 +504,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_TypedefedEnumeration = std::addressof(_tao_tc_test_TypedefedEnumeration);
 }
-
 
 
 test::UnionAllCovered_TypedefedEnumerationDiscriminant::UnionAllCovered_TypedefedEnumerationDiscriminant ()
@@ -595,7 +583,6 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::operator= (::test::Union
 void test::UnionAllCovered_TypedefedEnumerationDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__2 (test::Enum3, "e_enum3", &CORBA::_tc_long);
@@ -624,7 +611,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCovered_TypedefedEnumerationDiscriminant);
 }
-
 
 
 test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant ()
@@ -705,7 +691,6 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::operator= (::
 void test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__2 ((test::Enumeration) -1, "e_def", &CORBA::_tc_long);
@@ -734,7 +719,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant);
 }
-
 
 
 test::UnionWithDefault_TypedefedEnumerationDiscriminant::UnionWithDefault_TypedefedEnumerationDiscriminant ()
@@ -815,7 +799,6 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::operator= (::test::Unio
 void test::UnionWithDefault_TypedefedEnumerationDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__2 (test::Enum3, "e_def", &CORBA::_tc_long);
@@ -844,7 +827,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_TypedefedEnumerationDiscriminant);
 }
-
 
 
 test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant ()
@@ -914,7 +896,6 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::operator= (::te
 void test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
 
@@ -941,7 +922,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant);
 }
-
 
 
 test::UnionAllCovered_BooleanDiscriminant::UnionAllCovered_BooleanDiscriminant ()
@@ -1012,7 +992,6 @@ test::UnionAllCovered_BooleanDiscriminant::operator= (::test::UnionAllCovered_Bo
 void test::UnionAllCovered_BooleanDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_BooleanDiscriminant__0 (true, "e_true", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_BooleanDiscriminant__1 (false, "e_false", &CORBA::_tc_long);
 
@@ -1039,7 +1018,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_BooleanDiscriminant = std::addressof(_tao_tc_test_UnionAllCovered_BooleanDiscriminant);
 }
-
 
 
 test::UnionWithDefault_BooleanDiscriminant::UnionWithDefault_BooleanDiscriminant ()
@@ -1110,7 +1088,6 @@ test::UnionWithDefault_BooleanDiscriminant::operator= (::test::UnionWithDefault_
 void test::UnionWithDefault_BooleanDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_BooleanDiscriminant__0 (true, "e_true", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_BooleanDiscriminant__1 (false, "e_def", &CORBA::_tc_long);
 
@@ -1137,7 +1114,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_BooleanDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_BooleanDiscriminant);
 }
-
 
 
 test::UnionWithImplicitDefault_BooleanDiscriminant::UnionWithImplicitDefault_BooleanDiscriminant ()
@@ -1197,7 +1173,6 @@ test::UnionWithImplicitDefault_BooleanDiscriminant::operator= (::test::UnionWith
 void test::UnionWithImplicitDefault_BooleanDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant__0 (true, "e_true", &CORBA::_tc_long);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant[] =
@@ -1222,7 +1197,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_BooleanDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_BooleanDiscriminant);
 }
-
 
 
 test::UnionAllCovered_CharDiscriminant::UnionAllCovered_CharDiscriminant ()
@@ -1283,7 +1257,6 @@ test::UnionAllCovered_CharDiscriminant::operator= (::test::UnionAllCovered_CharD
 void test::UnionAllCovered_CharDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__0 ('\x0', "e_chars", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__1 ('\x1', "e_chars", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__2 ('\x2', "e_chars", &CORBA::_tc_long);
@@ -1820,7 +1793,6 @@ namespace test
 }
 
 
-
 test::UnionWithDefault_CharDiscriminant::UnionWithDefault_CharDiscriminant ()
 {
   this->disc_ = '\10';
@@ -1889,7 +1861,6 @@ test::UnionWithDefault_CharDiscriminant::operator= (::test::UnionWithDefault_Cha
 void test::UnionWithDefault_CharDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__0 ('\x0', "e_chars", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__1 ('\x1', "e_chars", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__2 ('\x2', "e_chars", &CORBA::_tc_long);
@@ -1930,7 +1901,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_CharDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_CharDiscriminant);
 }
-
 
 
 test::UnionWithImplicitDefault_CharDiscriminant::UnionWithImplicitDefault_CharDiscriminant ()
@@ -1990,7 +1960,6 @@ test::UnionWithImplicitDefault_CharDiscriminant::operator= (::test::UnionWithImp
 void test::UnionWithImplicitDefault_CharDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__0 ('\x0', "e_chars", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__1 ('\x1', "e_chars", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__2 ('\x2', "e_chars", &CORBA::_tc_long);
@@ -2029,7 +1998,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_CharDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_CharDiscriminant);
 }
-
 
 
 test::UnionWithDefault_LongDiscriminant::UnionWithDefault_LongDiscriminant ()
@@ -2120,7 +2088,6 @@ test::UnionWithDefault_LongDiscriminant::operator= (::test::UnionWithDefault_Lon
 void test::UnionWithDefault_LongDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_LongDiscriminant__0 (1, "e_case1", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_LongDiscriminant__1 (2, "e_case2", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_LongDiscriminant__2 (3, "e_case3", &CORBA::_tc_long);
@@ -2151,7 +2118,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_LongDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_LongDiscriminant);
 }
-
 
 
 test::UnionWithImplicitDefault_LongDiscriminant::UnionWithImplicitDefault_LongDiscriminant ()
@@ -2231,7 +2197,6 @@ test::UnionWithImplicitDefault_LongDiscriminant::operator= (::test::UnionWithImp
 void test::UnionWithImplicitDefault_LongDiscriminant::_reset ()
 {
 }
-
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__0 (1, "e_case1", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__1 (2, "e_case2", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__2 (3, "e_case3", &CORBA::_tc_long);
@@ -2260,7 +2225,6 @@ namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_LongDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_LongDiscriminant);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2293,7 +2257,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2346,7 +2309,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2393,7 +2355,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2446,7 +2407,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2493,7 +2453,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2546,7 +2505,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2593,7 +2551,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2646,7 +2603,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2693,7 +2649,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2746,7 +2701,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2793,7 +2747,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2846,7 +2799,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2893,7 +2845,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -2946,7 +2897,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -2993,7 +2943,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3046,7 +2995,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -3096,7 +3044,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, test::Enumeration _tao_enumerator)
@@ -3118,7 +3065,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3220,7 +3166,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3311,7 +3256,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3406,7 +3350,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3486,7 +3429,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3588,7 +3530,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3679,7 +3620,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3774,7 +3714,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3857,7 +3796,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3924,7 +3862,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -3997,7 +3934,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -4053,7 +3989,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4628,7 +4563,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -4720,7 +4654,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -4800,7 +4733,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4908,7 +4840,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

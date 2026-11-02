@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_OLD_UNIONS_YEN2UU_H_
-#define _TAO_IDL_OLD_UNIONS_YEN2UU_H_
+#ifndef _TAO_IDL_OLD_UNIONS_FTG0ZG_H_
+#define _TAO_IDL_OLD_UNIONS_FTG0ZG_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::OldUnion::Bar>
     : public
@@ -90,7 +86,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -104,7 +99,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::OldUnion::Foo2>
     : public
@@ -114,7 +108,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_OLDUNION_A__SARG_TRAITS_)
@@ -133,7 +126,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::OldUnion::a::astruct>
     : public
@@ -143,7 +135,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_OLDUNION_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -162,7 +153,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_OLDUNION_AMI_AHANDLER__SARG_TRAITS_)
@@ -184,10 +174,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_OldUnion
 {
-
 
   class AMH_a;
   using AMH_a_ptr = AMH_a *;
@@ -212,7 +200,6 @@ namespace POA_OldUnion
     OldUnion::a *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void opA_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -224,7 +211,6 @@ namespace POA_OldUnion
     ) = 0;
 
 };
-
 
 
 
@@ -258,7 +244,6 @@ public:
   ::OldUnion::a *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::OldUnion::Foo2 opA (
     const ::OldUnion::a::astruct & b) = 0;
 
@@ -269,7 +254,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -278,7 +262,6 @@ class TAO_IDL_TEST_STUB_Export _TAO_a_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_a_Direct_Proxy_Impl ();
-
   static void
   opA (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
@@ -288,7 +271,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 class TAO_AMH_aResponseHandler;
@@ -301,14 +283,11 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_aResponseHandler
 public:
   TAO_AMH_aResponseHandler () = default;
   virtual ~TAO_AMH_aResponseHandler () = default;
-
   void opA (
     const ::OldUnion::Foo2 & return_value) override;
-
   void opA_excep (
     ::OldUnion::AMH_aExceptionHolder * holder) override;
 };
-
 
 
 
@@ -342,7 +321,6 @@ public:
   ::OldUnion::AMI_aHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void opA (
     const ::OldUnion::Foo2 & ami_return_val) = 0;
 
@@ -350,7 +328,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void opA_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -359,7 +336,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -371,11 +347,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_aHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_aHandler_Direct_Proxy_Impl ();
-
   static void
   opA (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   opA_excep (
@@ -386,7 +360,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 

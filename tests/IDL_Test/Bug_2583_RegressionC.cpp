@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "Bug_2583_RegressionC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -45,12 +44,11 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_2583_RegressionC.inl"
 #endif /* !defined INLINE */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -167,7 +165,6 @@ Test::DynAny::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_Test_DynAny (
@@ -180,7 +177,6 @@ namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_DynAny = std::addressof(_tao_tc_Test_DynAny);
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -211,7 +207,6 @@ namespace Test
 }
 
 
-
 void
 Test::NameDynAnyPair::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -223,20 +218,16 @@ Test::NameDynAnyPair::_tao_any_destructor (
 
 
 
-
 #if !defined (_TEST_NAMEDYNANYPAIRSEQ_CS_)
 #define _TEST_NAMEDYNANYPAIRSEQ_CS_
 
-Test::NameDynAnyPairSeq::NameDynAnyPairSeq (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< NameDynAnyPair> (max)
-{}
+Test::NameDynAnyPairSeq::NameDynAnyPairSeq (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< NameDynAnyPair> (max) {}
 
-Test::NameDynAnyPairSeq::NameDynAnyPairSeq (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    Test::NameDynAnyPair * buffer,
-    ::CORBA::Boolean release)
+Test::NameDynAnyPairSeq::NameDynAnyPairSeq (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  Test::NameDynAnyPair * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< NameDynAnyPair>
     (max, length, buffer, release)
 {}
@@ -251,8 +242,6 @@ void Test::NameDynAnyPairSeq::_tao_any_destructor (
 #endif /* end #if !defined */
 
 
-
-
 #ifndef _TAO_TYPECODE_Test_NameDynAnyPairSeq_GUARD
 #define _TAO_TYPECODE_Test_NameDynAnyPairSeq_GUARD
 
@@ -264,17 +253,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Test_NameDynAnyPairSeq_0 (
-          ::CORBA::tk_sequence,
-          &Test::_tc_NameDynAnyPair,
-          0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_NameDynAnyPairSeq_0 (
+        ::CORBA::tk_sequence, &Test::_tc_NameDynAnyPair, 0U);
 
-      ::CORBA::TypeCode_ptr const tc_Test_NameDynAnyPairSeq_0 =
-        &Test_NameDynAnyPairSeq_0;
-    }
+    ::CORBA::TypeCode_ptr const tc_Test_NameDynAnyPairSeq_0 =
+      &Test_NameDynAnyPairSeq_0;
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -295,7 +280,6 @@ namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_NameDynAnyPairSeq = std::addressof(_tao_tc_Test_NameDynAnyPairSeq);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -379,7 +363,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -443,7 +426,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 

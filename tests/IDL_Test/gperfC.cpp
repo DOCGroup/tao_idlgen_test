@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "gperfC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -45,12 +44,11 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "gperfC.inl"
 #endif /* !defined INLINE */
-
 static char const * const _tao_enumerators_TestEnum[] =
   {
     "first",
@@ -68,7 +66,6 @@ static TAO::TypeCode::Enum<char const *,
     3);
 
 ::CORBA::TypeCode_ptr const _tc_TestEnum = std::addressof(_tao_tc_TestEnum);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -99,7 +96,6 @@ TAO::Objref_Traits<testlistitem>::marshal (const testlistitem_ptr p,TAO_OutputCD
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 char *
@@ -134,7 +130,6 @@ testlistitem::name ()
 
   return _tao_retval.retn ();
 }
-
 
 
 void
@@ -245,7 +240,6 @@ testlistitem::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_testlistitem (
@@ -254,7 +248,6 @@ static TAO::TypeCode::Objref<char const *,
     "testlistitem");
 
 ::CORBA::TypeCode_ptr const _tc_testlistitem = std::addressof(_tao_tc_testlistitem);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_testlistitemExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -270,7 +263,6 @@ static TAO::TypeCode::Value<char const *,
     0);
 
 ::CORBA::TypeCode_ptr const _tc_AMH_testlistitemExceptionHolder = std::addressof(_tao_tc_AMH_testlistitemExceptionHolder);
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -413,7 +405,6 @@ AMH_testlistitemExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 AMH_testlistitemExceptionHolder::raise_get_name ()
 {
@@ -421,14 +412,12 @@ AMH_testlistitemExceptionHolder::raise_get_name ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testlistitemExceptionHolder::raise_sendc_get_name ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -546,7 +535,6 @@ AMH_testlistitemResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_testlistitemResponseHandler (
@@ -555,7 +543,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_testlistitemResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_testlistitemResponseHandler = std::addressof(_tao_tc_AMH_testlistitemResponseHandler);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -586,7 +573,6 @@ TAO::Objref_Traits<AMI_testlistitemHandler>::marshal (const AMI_testlistitemHand
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -682,7 +668,6 @@ AMI_testlistitemHandler::get_name_reply_stub (
       break;
   }
 }
-
 void
 AMI_testlistitemHandler::get_name_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -795,7 +780,6 @@ AMI_testlistitemHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_testlistitemHandler (
@@ -804,7 +788,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMI_testlistitemHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMI_testlistitemHandler = std::addressof(_tao_tc_AMI_testlistitemHandler);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -835,7 +818,6 @@ TAO::Objref_Traits<test>::marshal (const test_ptr p,TAO_OutputCDR & cdr)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 char *
@@ -870,7 +852,6 @@ test::stest ()
 
   return _tao_retval.retn ();
 }
-
 void
 test::stest (
   const char * stest)
@@ -901,7 +882,6 @@ test::stest (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::WChar *
 test::wstest ()
 {
@@ -934,7 +914,6 @@ test::wstest ()
 
   return _tao_retval.retn ();
 }
-
 void
 test::wstest (
   const ::CORBA::WChar * wstest)
@@ -965,7 +944,6 @@ test::wstest (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::LongLong
 test::ltest ()
 {
@@ -998,7 +976,6 @@ test::ltest ()
 
   return _tao_retval.retn ();
 }
-
 void
 test::ltest (
   ::CORBA::LongLong ltest)
@@ -1029,7 +1006,6 @@ test::ltest (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::LongDouble
 test::ldtest ()
 {
@@ -1062,7 +1038,6 @@ test::ldtest ()
 
   return _tao_retval.retn ();
 }
-
 void
 test::ldtest (
   ::CORBA::LongDouble ldtest)
@@ -1093,7 +1068,6 @@ test::ldtest (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::TestEnum
 test::etest ()
 {
@@ -1126,7 +1100,6 @@ test::etest ()
 
   return _tao_retval.retn ();
 }
-
 void
 test::etest (
   ::TestEnum etest)
@@ -1157,7 +1130,6 @@ test::etest (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::CORBA::WChar *
 test::setest ()
 {
@@ -1190,7 +1162,6 @@ test::setest ()
 
   return _tao_retval.retn ();
 }
-
 void
 test::setest (
   const ::CORBA::WChar * setest)
@@ -1221,7 +1192,6 @@ test::setest (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::testlistitem_ptr
 test::tltest ()
 {
@@ -1254,7 +1224,6 @@ test::tltest ()
 
   return _tao_retval.retn ();
 }
-
 void
 test::tltest (
   ::testlistitem_ptr tltest)
@@ -1285,7 +1254,6 @@ test::tltest (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 ::testlistitem_ptr
 test::new_testlistitem (
   const char * name)
@@ -1318,7 +1286,6 @@ test::new_testlistitem (
 
   return _tao_retval.retn ();
 }
-
 
 
 void
@@ -1358,7 +1325,6 @@ test::sendc_set_stest (
 }
 
 
-
 void
 test::sendc_get_stest (
   ::AMI_testHandler_ptr ami_handler)
@@ -1386,7 +1352,6 @@ test::sendc_get_stest (
       &AMI_testHandler::get_stest_reply_stub
     );
 }
-
 
 
 void
@@ -1426,7 +1391,6 @@ test::sendc_set_wstest (
 }
 
 
-
 void
 test::sendc_get_wstest (
   ::AMI_testHandler_ptr ami_handler)
@@ -1454,7 +1418,6 @@ test::sendc_get_wstest (
       &AMI_testHandler::get_wstest_reply_stub
     );
 }
-
 
 
 void
@@ -1494,7 +1457,6 @@ test::sendc_set_ltest (
 }
 
 
-
 void
 test::sendc_get_ltest (
   ::AMI_testHandler_ptr ami_handler)
@@ -1522,7 +1484,6 @@ test::sendc_get_ltest (
       &AMI_testHandler::get_ltest_reply_stub
     );
 }
-
 
 
 void
@@ -1562,7 +1523,6 @@ test::sendc_set_ldtest (
 }
 
 
-
 void
 test::sendc_get_ldtest (
   ::AMI_testHandler_ptr ami_handler)
@@ -1590,7 +1550,6 @@ test::sendc_get_ldtest (
       &AMI_testHandler::get_ldtest_reply_stub
     );
 }
-
 
 
 void
@@ -1630,7 +1589,6 @@ test::sendc_set_etest (
 }
 
 
-
 void
 test::sendc_get_etest (
   ::AMI_testHandler_ptr ami_handler)
@@ -1658,7 +1616,6 @@ test::sendc_get_etest (
       &AMI_testHandler::get_etest_reply_stub
     );
 }
-
 
 
 void
@@ -1698,7 +1655,6 @@ test::sendc_set_setest (
 }
 
 
-
 void
 test::sendc_get_setest (
   ::AMI_testHandler_ptr ami_handler)
@@ -1726,7 +1682,6 @@ test::sendc_get_setest (
       &AMI_testHandler::get_setest_reply_stub
     );
 }
-
 
 
 void
@@ -1766,7 +1721,6 @@ test::sendc_set_tltest (
 }
 
 
-
 void
 test::sendc_get_tltest (
   ::AMI_testHandler_ptr ami_handler)
@@ -1794,7 +1748,6 @@ test::sendc_get_tltest (
       &AMI_testHandler::get_tltest_reply_stub
     );
 }
-
 
 
 void
@@ -1913,7 +1866,6 @@ test::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_test (
@@ -1922,7 +1874,6 @@ static TAO::TypeCode::Objref<char const *,
     "test");
 
 ::CORBA::TypeCode_ptr const _tc_test = std::addressof(_tao_tc_test);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_testExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -1938,7 +1889,6 @@ static TAO::TypeCode::Value<char const *,
     0);
 
 ::CORBA::TypeCode_ptr const _tc_AMH_testExceptionHolder = std::addressof(_tao_tc_AMH_testExceptionHolder);
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2081,14 +2031,12 @@ AMH_testExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 AMH_testExceptionHolder::raise_get_stest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_set_stest ()
@@ -2097,14 +2045,12 @@ AMH_testExceptionHolder::raise_set_stest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_get_wstest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_set_wstest ()
@@ -2113,14 +2059,12 @@ AMH_testExceptionHolder::raise_set_wstest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_get_ltest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_set_ltest ()
@@ -2129,14 +2073,12 @@ AMH_testExceptionHolder::raise_set_ltest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_get_ldtest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_set_ldtest ()
@@ -2145,14 +2087,12 @@ AMH_testExceptionHolder::raise_set_ldtest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_get_etest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_set_etest ()
@@ -2161,14 +2101,12 @@ AMH_testExceptionHolder::raise_set_etest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_get_setest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_set_setest ()
@@ -2177,14 +2115,12 @@ AMH_testExceptionHolder::raise_set_setest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_get_tltest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_set_tltest ()
@@ -2193,14 +2129,12 @@ AMH_testExceptionHolder::raise_set_tltest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_new_testlistitem ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_sendc_set_stest ()
@@ -2209,14 +2143,12 @@ AMH_testExceptionHolder::raise_sendc_set_stest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_sendc_get_stest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_sendc_set_wstest ()
@@ -2225,14 +2157,12 @@ AMH_testExceptionHolder::raise_sendc_set_wstest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_sendc_get_wstest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_sendc_set_ltest ()
@@ -2241,14 +2171,12 @@ AMH_testExceptionHolder::raise_sendc_set_ltest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_sendc_get_ltest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_sendc_set_ldtest ()
@@ -2257,14 +2185,12 @@ AMH_testExceptionHolder::raise_sendc_set_ldtest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_sendc_get_ldtest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_sendc_set_etest ()
@@ -2273,14 +2199,12 @@ AMH_testExceptionHolder::raise_sendc_set_etest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_sendc_get_etest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_sendc_set_setest ()
@@ -2289,14 +2213,12 @@ AMH_testExceptionHolder::raise_sendc_set_setest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_sendc_get_setest ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_testExceptionHolder::raise_sendc_set_tltest ()
@@ -2305,7 +2227,6 @@ AMH_testExceptionHolder::raise_sendc_set_tltest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_sendc_get_tltest ()
 {
@@ -2313,14 +2234,12 @@ AMH_testExceptionHolder::raise_sendc_get_tltest ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_testExceptionHolder::raise_sendc_new_testlistitem ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2438,7 +2357,6 @@ AMH_testResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_testResponseHandler (
@@ -2447,7 +2365,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_testResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_testResponseHandler = std::addressof(_tao_tc_AMH_testResponseHandler);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2478,7 +2395,6 @@ TAO::Objref_Traits<AMI_testHandler>::marshal (const AMI_testHandler_ptr p,TAO_Ou
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -2574,7 +2490,6 @@ AMI_testHandler::get_stest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::get_stest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2605,7 +2520,6 @@ AMI_testHandler::get_stest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::set_stest ()
 {
@@ -2691,7 +2605,6 @@ AMI_testHandler::set_stest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::set_stest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2722,7 +2635,6 @@ AMI_testHandler::set_stest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::get_wstest (
   const ::CORBA::WChar * ami_return_val)
@@ -2816,7 +2728,6 @@ AMI_testHandler::get_wstest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::get_wstest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2847,7 +2758,6 @@ AMI_testHandler::get_wstest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::set_wstest ()
 {
@@ -2933,7 +2843,6 @@ AMI_testHandler::set_wstest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::set_wstest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2964,7 +2873,6 @@ AMI_testHandler::set_wstest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::get_ltest (
   ::CORBA::LongLong ami_return_val)
@@ -3058,7 +2966,6 @@ AMI_testHandler::get_ltest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::get_ltest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3089,7 +2996,6 @@ AMI_testHandler::get_ltest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::set_ltest ()
 {
@@ -3175,7 +3081,6 @@ AMI_testHandler::set_ltest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::set_ltest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3206,7 +3111,6 @@ AMI_testHandler::set_ltest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::get_ldtest (
   ::CORBA::LongDouble ami_return_val)
@@ -3300,7 +3204,6 @@ AMI_testHandler::get_ldtest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::get_ldtest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3331,7 +3234,6 @@ AMI_testHandler::get_ldtest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::set_ldtest ()
 {
@@ -3417,7 +3319,6 @@ AMI_testHandler::set_ldtest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::set_ldtest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3448,7 +3349,6 @@ AMI_testHandler::set_ldtest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::get_etest (
   ::TestEnum ami_return_val)
@@ -3542,7 +3442,6 @@ AMI_testHandler::get_etest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::get_etest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3573,7 +3472,6 @@ AMI_testHandler::get_etest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::set_etest ()
 {
@@ -3659,7 +3557,6 @@ AMI_testHandler::set_etest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::set_etest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3690,7 +3587,6 @@ AMI_testHandler::set_etest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::get_setest (
   const ::CORBA::WChar * ami_return_val)
@@ -3784,7 +3680,6 @@ AMI_testHandler::get_setest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::get_setest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3815,7 +3710,6 @@ AMI_testHandler::get_setest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::set_setest ()
 {
@@ -3901,7 +3795,6 @@ AMI_testHandler::set_setest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::set_setest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3932,7 +3825,6 @@ AMI_testHandler::set_setest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::get_tltest (
   ::testlistitem_ptr ami_return_val)
@@ -4026,7 +3918,6 @@ AMI_testHandler::get_tltest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::get_tltest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -4057,7 +3948,6 @@ AMI_testHandler::get_tltest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::set_tltest ()
 {
@@ -4143,7 +4033,6 @@ AMI_testHandler::set_tltest_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::set_tltest_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -4174,7 +4063,6 @@ AMI_testHandler::set_tltest_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 AMI_testHandler::new_testlistitem (
   ::testlistitem_ptr ami_return_val)
@@ -4268,7 +4156,6 @@ AMI_testHandler::new_testlistitem_reply_stub (
       break;
   }
 }
-
 void
 AMI_testHandler::new_testlistitem_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -4381,7 +4268,6 @@ AMI_testHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_testHandler (
@@ -4390,7 +4276,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMI_testHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMI_testHandler = std::addressof(_tao_tc_AMI_testHandler);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4423,7 +4308,6 @@ TAO::Objref_Traits<Simple_Server>::marshal (const Simple_Server_ptr p,TAO_Output
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 void
 Simple_Server::ackConfBasData ()
 {
@@ -4453,7 +4337,6 @@ Simple_Server::ackConfBasData ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfMosData ()
 {
@@ -4483,7 +4366,6 @@ Simple_Server::ackConfMosData ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfTwmData ()
 {
@@ -4513,7 +4395,6 @@ Simple_Server::ackConfTwmData ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfArchData ()
 {
@@ -4543,7 +4424,6 @@ Simple_Server::ackConfArchData ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfVonData ()
 {
@@ -4573,7 +4453,6 @@ Simple_Server::ackConfVonData ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfFftData ()
 {
@@ -4603,7 +4482,6 @@ Simple_Server::ackConfFftData ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfSosData ()
 {
@@ -4633,7 +4511,6 @@ Simple_Server::ackConfSosData ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfSscData ()
 {
@@ -4663,7 +4540,6 @@ Simple_Server::ackConfSscData ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfCsData ()
 {
@@ -4693,7 +4569,6 @@ Simple_Server::ackConfCsData ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfR10Data ()
 {
@@ -4723,7 +4598,6 @@ Simple_Server::ackConfR10Data ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfR11Data ()
 {
@@ -4753,7 +4627,6 @@ Simple_Server::ackConfR11Data ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfR12Data ()
 {
@@ -4783,7 +4656,6 @@ Simple_Server::ackConfR12Data ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfR13Data ()
 {
@@ -4813,7 +4685,6 @@ Simple_Server::ackConfR13Data ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfR14Data ()
 {
@@ -4843,7 +4714,6 @@ Simple_Server::ackConfR14Data ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::ackConfR15Data ()
 {
@@ -4873,7 +4743,6 @@ Simple_Server::ackConfR15Data ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::shutdown ()
 {
@@ -4903,7 +4772,6 @@ Simple_Server::shutdown ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::transferTriggerDb ()
 {
@@ -4933,7 +4801,6 @@ Simple_Server::transferTriggerDb ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 Simple_Server::transferTriggerTdc ()
 {
@@ -5044,7 +4911,6 @@ Simple_Server::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_Simple_Server (
@@ -5053,7 +4919,6 @@ static TAO::TypeCode::Objref<char const *,
     "Simple_Server");
 
 ::CORBA::TypeCode_ptr const _tc_Simple_Server = std::addressof(_tao_tc_Simple_Server);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Simple_ServerExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -5069,7 +4934,6 @@ static TAO::TypeCode::Value<char const *,
     0);
 
 ::CORBA::TypeCode_ptr const _tc_AMH_Simple_ServerExceptionHolder = std::addressof(_tao_tc_AMH_Simple_ServerExceptionHolder);
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -5212,14 +5076,12 @@ AMH_Simple_ServerExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfBasData ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfMosData ()
@@ -5228,14 +5090,12 @@ AMH_Simple_ServerExceptionHolder::raise_ackConfMosData ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfTwmData ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfArchData ()
@@ -5244,14 +5104,12 @@ AMH_Simple_ServerExceptionHolder::raise_ackConfArchData ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfVonData ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfFftData ()
@@ -5260,14 +5118,12 @@ AMH_Simple_ServerExceptionHolder::raise_ackConfFftData ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfSosData ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfSscData ()
@@ -5276,14 +5132,12 @@ AMH_Simple_ServerExceptionHolder::raise_ackConfSscData ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfCsData ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfR10Data ()
@@ -5292,14 +5146,12 @@ AMH_Simple_ServerExceptionHolder::raise_ackConfR10Data ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfR11Data ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfR12Data ()
@@ -5308,14 +5160,12 @@ AMH_Simple_ServerExceptionHolder::raise_ackConfR12Data ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfR13Data ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfR14Data ()
@@ -5324,14 +5174,12 @@ AMH_Simple_ServerExceptionHolder::raise_ackConfR14Data ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_Simple_ServerExceptionHolder::raise_ackConfR15Data ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 AMH_Simple_ServerExceptionHolder::raise_shutdown ()
@@ -5340,7 +5188,6 @@ AMH_Simple_ServerExceptionHolder::raise_shutdown ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_Simple_ServerExceptionHolder::raise_transferTriggerDb ()
 {
@@ -5348,14 +5195,12 @@ AMH_Simple_ServerExceptionHolder::raise_transferTriggerDb ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_Simple_ServerExceptionHolder::raise_transferTriggerTdc ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -5473,7 +5318,6 @@ AMH_Simple_ServerResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_Simple_ServerResponseHandler (
@@ -5482,7 +5326,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_Simple_ServerResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_Simple_ServerResponseHandler = std::addressof(_tao_tc_AMH_Simple_ServerResponseHandler);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5597,7 +5440,6 @@ AMI_Simple_ServerHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_Simple_ServerHandler (
@@ -5606,7 +5448,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMI_Simple_ServerHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMI_Simple_ServerHandler = std::addressof(_tao_tc_AMI_Simple_ServerHandler);
-
 OBV_AMH_testlistitemExceptionHolder::~OBV_AMH_testlistitemExceptionHolder ()
 {}
 
@@ -5621,7 +5462,6 @@ OBV_AMH_testlistitemExceptionHolder::_tao_unmarshal__AMH_testlistitemExceptionHo
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_AMH_testExceptionHolder::~OBV_AMH_testExceptionHolder ()
 {}
 
@@ -5636,7 +5476,6 @@ OBV_AMH_testExceptionHolder::_tao_unmarshal__AMH_testExceptionHolder (TAO_InputC
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_AMH_Simple_ServerExceptionHolder::~OBV_AMH_Simple_ServerExceptionHolder ()
 {}
 
@@ -5651,7 +5490,6 @@ OBV_AMH_Simple_ServerExceptionHolder::_tao_unmarshal__AMH_Simple_ServerException
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5684,7 +5522,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -5750,7 +5587,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -5825,7 +5661,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -5911,7 +5746,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -5977,7 +5811,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -6040,7 +5873,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -6115,7 +5947,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -6201,7 +6032,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -6267,7 +6097,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -6330,7 +6159,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -6405,7 +6233,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -6491,7 +6318,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -6557,7 +6383,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, TestEnum _tao_enumerator)
@@ -6579,7 +6404,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -6615,7 +6439,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_testlistitemExceptionHolder * vt)
@@ -6636,7 +6459,6 @@ CORBA::remove_ref (AMH_testlistitemExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -6666,7 +6488,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_testlistitemExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -6684,7 +6505,6 @@ OBV_AMH_testlistitemExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -6716,7 +6536,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -6752,7 +6571,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_testExceptionHolder * vt)
@@ -6773,7 +6591,6 @@ CORBA::remove_ref (AMH_testExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -6803,7 +6620,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_testExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -6821,7 +6637,6 @@ OBV_AMH_testExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -6853,7 +6668,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -6889,7 +6703,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_Simple_ServerExceptionHolder * vt)
@@ -6910,7 +6723,6 @@ CORBA::remove_ref (AMH_Simple_ServerExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -6940,7 +6752,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_Simple_ServerExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -6958,7 +6769,6 @@ OBV_AMH_Simple_ServerExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

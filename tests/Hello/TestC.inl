@@ -24,7 +24,6 @@
 
 
 
-
 ACE_INLINE
 Test::Hello::Hello (
     TAO_Stub *objref,

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_OLD_UNION2C_NQEHEM_H_
-#define _TAO_IDL_OLD_UNION2C_NQEHEM_H_
+#ifndef _TAO_IDL_OLD_UNION2C_KFPLBY_H_
+#define _TAO_IDL_OLD_UNION2C_KFPLBY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -59,10 +58,8 @@
 #if TAO_MAJOR_VERSION != 4 || TAO_MINOR_VERSION != 0 || TAO_MICRO_VERSION != 8
 #error This file should be regenerated with TAO_IDL
 #endif
-
 namespace OldUnion2
 {
-
   enum FooDisc
   {
     FOO1,
@@ -70,9 +67,7 @@ namespace OldUnion2
   };
 
   using FooDisc_out = FooDisc &;
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_FooDisc;
-
 
 
   class Foo;
@@ -89,10 +84,8 @@ namespace OldUnion2
     Foo &operator= (Foo const &);
 
 
-
     void _d (OldUnion2::FooDisc);
     OldUnion2::FooDisc _d () const;
-
 
     using _var_type = Foo_var;
     using _out_type = Foo_out;
@@ -100,17 +93,14 @@ namespace OldUnion2
     static void _tao_any_destructor (void *);
 
 
-
     void x ( ::CORBA::Long);
     ::CORBA::Long x () const;
-
 
 
     void y (char *);
     void y (char const *);
     void y (::CORBA::String_var const&);
     char const *y () const;
-
 
 
     void _default ();
@@ -122,9 +112,7 @@ namespace OldUnion2
     {
       _tao_union_storage () {}
 
-
       ::CORBA::Long x_;
-
 
       char *y_;
     } u_;
@@ -132,9 +120,7 @@ namespace OldUnion2
     /// TAO extension - frees any allocated storage.
     void _reset ();
   };
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Foo;
-
 
 
   struct Bar;
@@ -144,16 +130,13 @@ namespace OldUnion2
 
 
 
-
   struct TAO_IDL_TEST_STUB_Export Bar
   {
-
 
     using _var_type = Bar_var;
     using _out_type = Bar_out;
 
     static void _tao_any_destructor (void *);
-
 
 
     enum BarDisc
@@ -163,9 +146,7 @@ namespace OldUnion2
     };
 
     using BarDisc_out = BarDisc &;
-
     static ::CORBA::TypeCode_ptr const _tc_BarDisc;OldUnion2::Bar::BarDisc kind {};
-
 
 
 
@@ -183,10 +164,8 @@ namespace OldUnion2
       Foo &operator= (Foo const &);
 
 
-
       void _d (OldUnion2::Bar::BarDisc);
       OldUnion2::Bar::BarDisc _d () const;
-
 
       using _var_type = Foo_var;
       using _out_type = Foo_out;
@@ -194,15 +173,12 @@ namespace OldUnion2
       static void _tao_any_destructor (void *);
 
 
-
       void x ( ::CORBA::Long);
       ::CORBA::Long x () const;
 
 
-
       void y ( ::CORBA::Long);
       ::CORBA::Long y () const;
-
 
 
       void _default ();
@@ -214,9 +190,7 @@ namespace OldUnion2
       {
         _tao_union_storage () {}
 
-
         ::CORBA::Long x_;
-
 
         ::CORBA::Long y_;
       } u_;
@@ -224,19 +198,15 @@ namespace OldUnion2
       /// TAO extension - frees any allocated storage.
       void _reset ();
     };
-
     static ::CORBA::TypeCode_ptr const _tc_Foo;
 
     OldUnion2::Bar::Foo addr {};
   };
-
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Bar;
 
 
 
-
 } // module OldUnion2
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -245,7 +215,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
@@ -267,7 +236,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class Arg_Traits< ::OldUnion2::FooDisc>
     : public
@@ -277,7 +245,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -291,7 +258,6 @@ namespace TAO
   };
 
 
-
   template<>
   class Arg_Traits< ::OldUnion2::Bar>
     : public
@@ -303,7 +269,6 @@ namespace TAO
   };
 
 
-
   template<>
   class Arg_Traits< ::OldUnion2::Bar::BarDisc>
     : public
@@ -313,7 +278,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -332,7 +296,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -340,7 +303,6 @@ namespace TAO
 {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -356,7 +318,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -368,7 +329,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -377,7 +337,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::OldUnion2::Bar*); /
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::OldUnion2::Bar const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -393,7 +352,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -402,7 +360,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion2::Bar::Foo*)
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldUnion2::Bar::Foo const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -415,14 +372,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldUnion2::Foo const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldUnion2::Foo &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -435,7 +390,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OldUnion2::Bar::BarDisc _tao_enumerator);
@@ -445,14 +399,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldUnion2::Bar::Foo const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldUnion2::Bar::Foo &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 #if defined (__ACE_INLINE__)

@@ -22,14 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_PRIMTYPESS_N4U9ID_CPP_
-#define _TAO_IDL_PRIMTYPESS_N4U9ID_CPP_
+#ifndef _TAO_IDL_PRIMTYPESS_Z5RJTY_CPP_
+#define _TAO_IDL_PRIMTYPESS_Z5RJTY_CPP_
 
 
 #include "primtypesS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <cstddef>
 #include <cstring>
+#include <memory>
 #include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
 #include "tao/Exception_Data.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
@@ -52,22 +53,24 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
 class TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -85,23 +88,20 @@ TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::hash (const char *str, unsigned i
      16, 16, 16, 16, 16,  0,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 9,
-      MIN_WORD_LENGTH = 2,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 2,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 14,
-      DUPLICATES = 2,
-      WORDLIST_SIZE = 11
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -125,7 +125,7 @@ TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -136,14 +136,14 @@ TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -152,20 +152,15 @@ TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable tao_OldPrimTypes_AMH_ex1_optable;
-
-
-
-
 
 POA_OldPrimTypes::AMH_ex1::AMH_ex1 ()
 {
   this->optable_ = std::addressof (tao_OldPrimTypes_AMH_ex1_optable);
 }
-
 
 
 void
@@ -204,7 +199,6 @@ POA_OldPrimTypes::AMH_ex1::_get_l1_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldPrimTypes::AMH_ex1::_set_l1_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -252,7 +246,6 @@ POA_OldPrimTypes::AMH_ex1::_set_l1_skel (
       l1
     );
 }
-
 void
 POA_OldPrimTypes::AMH_ex1::m1_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -298,7 +291,6 @@ POA_OldPrimTypes::AMH_ex1::m1_skel (
       a
     );
 }
-
 void
 POA_OldPrimTypes::AMH_ex1::mtypes_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -389,7 +381,6 @@ POA_OldPrimTypes::AMH_ex1::mtypes_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldPrimTypes::AMH_ex1::_is_a (const char* value)
 {
   return
@@ -403,7 +394,6 @@ const char* POA_OldPrimTypes::AMH_ex1::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/ex1:1.0";
 }
-
 void
 POA_OldPrimTypes::AMH_ex1::_dispatch (
     TAO_ServerRequest &req,
@@ -411,12 +401,11 @@ POA_OldPrimTypes::AMH_ex1::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 OldPrimTypes::ex1*
 POA_OldPrimTypes::AMH_ex1::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -431,17 +420,18 @@ class TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -459,23 +449,20 @@ TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::hash (const char *str, unsigned int l
      16, 16, 16, 16, 16,  0,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 9,
-      MIN_WORD_LENGTH = 2,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 2,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 14,
-      DUPLICATES = 2,
-      WORDLIST_SIZE = 11
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -499,7 +486,7 @@ TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -510,14 +497,14 @@ TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -526,7 +513,7 @@ TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable tao_OldPrimTypes_ex1_optable;
@@ -538,7 +525,6 @@ static TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable tao_OldPrimTypes_ex1_optable;
 POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::~_TAO_ex1_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -560,7 +546,6 @@ POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::_get_l1 (
 }
 
 
-
 void
 POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::_set_l1 (
     TAO_Abstract_ServantBase  *servant,
@@ -578,7 +563,6 @@ POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::_set_l1 (
         ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -599,7 +583,6 @@ POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::m1 (
           ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
         );
 }
-
 
 
 void
@@ -647,10 +630,6 @@ POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::mtypes (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldPrimTypes::ex1::ex1 ()
 {
   this->optable_ = std::addressof (tao_OldPrimTypes_ex1_optable);
@@ -660,20 +639,16 @@ POA_OldPrimTypes::ex1::ex1 ()
 namespace POA_OldPrimTypes
 {
 
-
   class _get_l1_ex1
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_l1_ex1 (
-      POA_OldPrimTypes::ex1 * servant,
+    inline _get_l1_ex1 (POA_OldPrimTypes::ex1 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -692,20 +667,19 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::ex1::_get_l1_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldPrimTypes::ex1 * const impl =
-    dynamic_cast<POA_OldPrimTypes::ex1 *> (servant);
+  POA_OldPrimTypes::ex1 * const impl = dynamic_cast<POA_OldPrimTypes::ex1 *> (servant);
 
   if (!impl)
     {
@@ -734,20 +708,16 @@ void POA_OldPrimTypes::ex1::_get_l1_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class _set_l1_ex1
     : public TAO::Upcall_Command
   {
   public:
-    inline _set_l1_ex1 (
-      POA_OldPrimTypes::ex1 * servant,
+    inline _set_l1_ex1 (POA_OldPrimTypes::ex1 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -767,12 +737,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::ex1::_set_l1_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_l1;
 
   TAO::Argument * const args[] =
@@ -781,8 +751,7 @@ void POA_OldPrimTypes::ex1::_set_l1_skel (
       std::addressof(_tao_l1)
     };
 
-  POA_OldPrimTypes::ex1 * const impl =
-    dynamic_cast<POA_OldPrimTypes::ex1 *> (servant);
+  POA_OldPrimTypes::ex1 * const impl = dynamic_cast<POA_OldPrimTypes::ex1 *> (servant);
 
   if (!impl)
     {
@@ -811,20 +780,16 @@ void POA_OldPrimTypes::ex1::_set_l1_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class m1_ex1
     : public TAO::Upcall_Command
   {
   public:
-    inline m1_ex1 (
-      POA_OldPrimTypes::ex1 * servant,
+    inline m1_ex1 (POA_OldPrimTypes::ex1 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -850,12 +815,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::ex1::m1_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_a;
 
   TAO::Argument * const args[] =
@@ -864,8 +829,7 @@ void POA_OldPrimTypes::ex1::m1_skel (
       std::addressof(_tao_a)
     };
 
-  POA_OldPrimTypes::ex1 * const impl =
-    dynamic_cast<POA_OldPrimTypes::ex1 *> (servant);
+  POA_OldPrimTypes::ex1 * const impl = dynamic_cast<POA_OldPrimTypes::ex1 *> (servant);
 
   if (!impl)
     {
@@ -894,20 +858,16 @@ void POA_OldPrimTypes::ex1::m1_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class mtypes_ex1
     : public TAO::Upcall_Command
   {
   public:
-    inline mtypes_ex1 (
-      POA_OldPrimTypes::ex1 * servant,
+    inline mtypes_ex1 (POA_OldPrimTypes::ex1 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1073,12 +1033,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::ex1::mtypes_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::OldPrimTypes::ex1>::ret_val retval;
+{
+  TAO::SArg_Traits< ::OldPrimTypes::ex1>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_a1;
   TAO::SArg_Traits< ::CORBA::Long>::inout_arg_val _tao_a2;
   TAO::SArg_Traits< ::CORBA::Long>::out_arg_val _tao_a3;
@@ -1127,8 +1087,7 @@ void POA_OldPrimTypes::ex1::mtypes_skel (
       std::addressof(_tao_g3)
     };
 
-  POA_OldPrimTypes::ex1 * const impl =
-    dynamic_cast<POA_OldPrimTypes::ex1 *> (servant);
+  POA_OldPrimTypes::ex1 * const impl = dynamic_cast<POA_OldPrimTypes::ex1 *> (servant);
 
   if (!impl)
     {
@@ -1160,7 +1119,6 @@ void POA_OldPrimTypes::ex1::mtypes_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldPrimTypes::ex1::_is_a (const char* value)
 {
   return
@@ -1178,7 +1136,6 @@ const char* POA_OldPrimTypes::ex1::_interface_repository_id () const
 
 
 
-
 void POA_OldPrimTypes::ex1::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -1189,12 +1146,11 @@ void POA_OldPrimTypes::ex1::_dispatch (
 
 
 
-
 OldPrimTypes::ex1 *
 POA_OldPrimTypes::ex1::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1203,8 +1159,6 @@ POA_OldPrimTypes::ex1::_this ()
     }
   return {};
 }
-
-
 
 void
 POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::get_l1 (
@@ -1221,7 +1175,6 @@ POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::get_l1 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::get_l1_excep (
   ::OldPrimTypes::AMH_ex1ExceptionHolder * holder)
@@ -1235,7 +1188,6 @@ POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::get_l1_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::set_l1 ()
 {
@@ -1244,7 +1196,6 @@ POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::set_l1 ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::set_l1_excep (
   ::OldPrimTypes::AMH_ex1ExceptionHolder * holder)
@@ -1258,7 +1209,6 @@ POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::set_l1_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::m1 (
   ::CORBA::Long return_value)
@@ -1274,7 +1224,6 @@ POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::m1 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::m1_excep (
   ::OldPrimTypes::AMH_ex1ExceptionHolder * holder)
@@ -1288,7 +1237,6 @@ POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::m1_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::mtypes (
   ::OldPrimTypes::ex1_ptr return_value,
@@ -1332,7 +1280,6 @@ POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::mtypes (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::mtypes_excep (
   ::OldPrimTypes::AMH_ex1ExceptionHolder * holder)
@@ -1351,17 +1298,18 @@ class TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1379,23 +1327,20 @@ TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::hash (const char *str, uns
      23, 23,  0, 23, 23,  5,  0, 23, 23, 23,
      23, 23, 23, 23, 23, 23, 23, 23,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 13,
-      MIN_WORD_LENGTH = 2,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 22,
-      HASH_VALUE_RANGE = 18,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 18
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {13};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {22};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {18};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1420,17 +1365,17 @@ TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (const char *str, u
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
           const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable tao_OldPrimTypes_AMI_ex1Handler_optable;
@@ -1442,7 +1387,6 @@ static TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable tao_OldPrimTypes_AMI
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::~_TAO_AMI_ex1Handler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -1464,7 +1408,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1 (
 }
 
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1484,7 +1427,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1_excep (
 }
 
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1 (
     TAO_Abstract_ServantBase  *servant,
@@ -1501,7 +1443,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1 (
   _tao_ptr->set_l1 (
       );
 }
-
 
 
 void
@@ -1523,7 +1464,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1_excep (
 }
 
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1 (
     TAO_Abstract_ServantBase  *servant,
@@ -1543,7 +1483,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1 (
 }
 
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1561,7 +1500,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -1597,7 +1535,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::mtypes (
 }
 
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::mtypes_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1622,10 +1559,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::mtypes_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldPrimTypes::AMI_ex1Handler::AMI_ex1Handler ()
 {
   this->optable_ = std::addressof (tao_OldPrimTypes_AMI_ex1Handler_optable);
@@ -1635,20 +1568,16 @@ POA_OldPrimTypes::AMI_ex1Handler::AMI_ex1Handler ()
 namespace POA_OldPrimTypes
 {
 
-
   class get_l1_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_l1_AMI_ex1Handler (
-      POA_OldPrimTypes::AMI_ex1Handler * servant,
+    inline get_l1_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1668,12 +1597,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex1Handler::get_l1_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -1682,8 +1611,7 @@ void POA_OldPrimTypes::AMI_ex1Handler::get_l1_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldPrimTypes::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex1Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -1712,20 +1640,16 @@ void POA_OldPrimTypes::AMI_ex1Handler::get_l1_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class get_l1_excep_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_l1_excep_AMI_ex1Handler (
-      POA_OldPrimTypes::AMI_ex1Handler * servant,
+    inline get_l1_excep_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1745,12 +1669,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex1Handler::get_l1_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -1759,8 +1683,7 @@ void POA_OldPrimTypes::AMI_ex1Handler::get_l1_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldPrimTypes::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex1Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -1789,16 +1712,12 @@ void POA_OldPrimTypes::AMI_ex1Handler::get_l1_excep_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class set_l1_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_l1_AMI_ex1Handler (
-      POA_OldPrimTypes::AMI_ex1Handler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline set_l1_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -1809,28 +1728,26 @@ namespace POA_OldPrimTypes
     POA_OldPrimTypes::AMI_ex1Handler * const servant_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex1Handler::set_l1_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldPrimTypes::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex1Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  set_l1_AMI_ex1Handler command (
-    impl);
+  set_l1_AMI_ex1Handler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -1849,20 +1766,16 @@ void POA_OldPrimTypes::AMI_ex1Handler::set_l1_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class set_l1_excep_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline set_l1_excep_AMI_ex1Handler (
-      POA_OldPrimTypes::AMI_ex1Handler * servant,
+    inline set_l1_excep_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1882,12 +1795,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex1Handler::set_l1_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -1896,8 +1809,7 @@ void POA_OldPrimTypes::AMI_ex1Handler::set_l1_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldPrimTypes::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex1Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -1926,20 +1838,16 @@ void POA_OldPrimTypes::AMI_ex1Handler::set_l1_excep_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class m1_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline m1_AMI_ex1Handler (
-      POA_OldPrimTypes::AMI_ex1Handler * servant,
+    inline m1_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -1959,12 +1867,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex1Handler::m1_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -1973,8 +1881,7 @@ void POA_OldPrimTypes::AMI_ex1Handler::m1_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldPrimTypes::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex1Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2003,20 +1910,16 @@ void POA_OldPrimTypes::AMI_ex1Handler::m1_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class m1_excep_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline m1_excep_AMI_ex1Handler (
-      POA_OldPrimTypes::AMI_ex1Handler * servant,
+    inline m1_excep_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2036,12 +1939,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex1Handler::m1_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2050,8 +1953,7 @@ void POA_OldPrimTypes::AMI_ex1Handler::m1_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldPrimTypes::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex1Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2080,20 +1982,16 @@ void POA_OldPrimTypes::AMI_ex1Handler::m1_excep_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class mtypes_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline mtypes_AMI_ex1Handler (
-      POA_OldPrimTypes::AMI_ex1Handler * servant,
+    inline mtypes_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2211,12 +2109,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex1Handler::mtypes_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::OldPrimTypes::ex1>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_a2;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_a3;
@@ -2253,8 +2151,7 @@ void POA_OldPrimTypes::AMI_ex1Handler::mtypes_skel (
       std::addressof(_tao_g3)
     };
 
-  POA_OldPrimTypes::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex1Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2283,20 +2180,16 @@ void POA_OldPrimTypes::AMI_ex1Handler::mtypes_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class mtypes_excep_AMI_ex1Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline mtypes_excep_AMI_ex1Handler (
-      POA_OldPrimTypes::AMI_ex1Handler * servant,
+    inline mtypes_excep_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2316,12 +2209,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex1Handler::mtypes_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -2330,8 +2223,7 @@ void POA_OldPrimTypes::AMI_ex1Handler::mtypes_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldPrimTypes::AMI_ex1Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex1Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex1Handler *> (servant);
 
   if (!impl)
     {
@@ -2363,7 +2255,6 @@ void POA_OldPrimTypes::AMI_ex1Handler::mtypes_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldPrimTypes::AMI_ex1Handler::_is_a (const char* value)
 {
   return
@@ -2382,7 +2273,6 @@ const char* POA_OldPrimTypes::AMI_ex1Handler::_interface_repository_id () const
 
 
 
-
 void POA_OldPrimTypes::AMI_ex1Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -2393,12 +2283,11 @@ void POA_OldPrimTypes::AMI_ex1Handler::_dispatch (
 
 
 
-
 OldPrimTypes::AMI_ex1Handler *
 POA_OldPrimTypes::AMI_ex1Handler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -2412,17 +2301,18 @@ class TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2440,23 +2330,20 @@ TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::hash (const char *str, unsigned i
      18, 18, 18, 18, 18,  5,  0, 18,  4, 18,
      18, 18, 18, 18, 18, 18, 18, 18,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 12,
-      MIN_WORD_LENGTH = 2,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 2,
-      MAX_HASH_VALUE = 17,
-      HASH_VALUE_RANGE = 16,
-      DUPLICATES = 2,
-      WORDLIST_SIZE = 14
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {12};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {17};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {16};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -2483,7 +2370,7 @@ TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -2494,14 +2381,14 @@ TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -2510,20 +2397,15 @@ TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable tao_OldPrimTypes_AMH_ex2_optable;
-
-
-
-
 
 POA_OldPrimTypes::AMH_ex2::AMH_ex2 ()
 {
   this->optable_ = std::addressof (tao_OldPrimTypes_AMH_ex2_optable);
 }
-
 
 
 void
@@ -2562,7 +2444,6 @@ POA_OldPrimTypes::AMH_ex2::_get_l2_skel (
       safe_rd_.get ()
     );
 }
-
 void
 POA_OldPrimTypes::AMH_ex2::m2_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -2608,7 +2489,6 @@ POA_OldPrimTypes::AMH_ex2::m2_skel (
       a
     );
 }
-
 void
 POA_OldPrimTypes::AMH_ex2::mv_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -2651,7 +2531,6 @@ POA_OldPrimTypes::AMH_ex2::mv_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldPrimTypes::AMH_ex2::_is_a (const char* value)
 {
   return
@@ -2666,7 +2545,6 @@ const char* POA_OldPrimTypes::AMH_ex2::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/ex2:1.0";
 }
-
 void
 POA_OldPrimTypes::AMH_ex2::_dispatch (
     TAO_ServerRequest &req,
@@ -2674,12 +2552,11 @@ POA_OldPrimTypes::AMH_ex2::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-
 OldPrimTypes::ex2*
 POA_OldPrimTypes::AMH_ex2::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -2694,17 +2571,18 @@ class TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2722,23 +2600,20 @@ TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::hash (const char *str, unsigned int l
      18, 18, 18, 18, 18,  5,  0, 18,  4, 18,
      18, 18, 18, 18, 18, 18, 18, 18,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 12,
-      MIN_WORD_LENGTH = 2,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 2,
-      MAX_HASH_VALUE = 17,
-      HASH_VALUE_RANGE = 16,
-      DUPLICATES = 2,
-      WORDLIST_SIZE = 14
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {12};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {17};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {16};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -2765,7 +2640,7 @@ TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -2776,14 +2651,14 @@ TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -2792,7 +2667,7 @@ TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable tao_OldPrimTypes_ex2_optable;
@@ -2804,7 +2679,6 @@ static TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable tao_OldPrimTypes_ex2_optable;
 POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::~_TAO_ex2_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -2826,7 +2700,6 @@ POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::_get_l2 (
 }
 
 
-
 void
 POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::m2 (
     TAO_Abstract_ServantBase  *servant,
@@ -2846,7 +2719,6 @@ POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::m2 (
           ((TAO::Arg_Traits< ::CORBA::Long>::out_arg_val *) args[2])->arg ()
         );
 }
-
 
 
 void
@@ -2872,10 +2744,6 @@ POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::mv (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldPrimTypes::ex2::ex2 ()
 {
   this->optable_ = std::addressof (tao_OldPrimTypes_ex2_optable);
@@ -2885,20 +2753,16 @@ POA_OldPrimTypes::ex2::ex2 ()
 namespace POA_OldPrimTypes
 {
 
-
   class _get_l2_ex2
     : public TAO::Upcall_Command
   {
   public:
-    inline _get_l2_ex2 (
-      POA_OldPrimTypes::ex2 * servant,
+    inline _get_l2_ex2 (POA_OldPrimTypes::ex2 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -2917,20 +2781,19 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::ex2::_get_l2_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldPrimTypes::ex2 * const impl =
-    dynamic_cast<POA_OldPrimTypes::ex2 *> (servant);
+  POA_OldPrimTypes::ex2 * const impl = dynamic_cast<POA_OldPrimTypes::ex2 *> (servant);
 
   if (!impl)
     {
@@ -2959,20 +2822,16 @@ void POA_OldPrimTypes::ex2::_get_l2_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class m2_ex2
     : public TAO::Upcall_Command
   {
   public:
-    inline m2_ex2 (
-      POA_OldPrimTypes::ex2 * servant,
+    inline m2_ex2 (POA_OldPrimTypes::ex2 * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3005,12 +2864,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::ex2::m2_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
+{
+  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_a;
   TAO::SArg_Traits< ::CORBA::Long>::out_arg_val _tao_b;
 
@@ -3021,8 +2880,7 @@ void POA_OldPrimTypes::ex2::m2_skel (
       std::addressof(_tao_b)
     };
 
-  POA_OldPrimTypes::ex2 * const impl =
-    dynamic_cast<POA_OldPrimTypes::ex2 *> (servant);
+  POA_OldPrimTypes::ex2 * const impl = dynamic_cast<POA_OldPrimTypes::ex2 *> (servant);
 
   if (!impl)
     {
@@ -3051,16 +2909,12 @@ void POA_OldPrimTypes::ex2::m2_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class mv_ex2
     : public TAO::Upcall_Command
   {
   public:
-    inline mv_ex2 (
-      POA_OldPrimTypes::ex2 * servant)
-      : servant_ (servant)
-    {
-    }
+    inline mv_ex2 (POA_OldPrimTypes::ex2 * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -3071,28 +2925,26 @@ namespace POA_OldPrimTypes
     POA_OldPrimTypes::ex2 * const servant_;
   };
 }
-
 void POA_OldPrimTypes::ex2::mv_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldPrimTypes::ex2 * const impl =
-    dynamic_cast<POA_OldPrimTypes::ex2 *> (servant);
+  POA_OldPrimTypes::ex2 * const impl = dynamic_cast<POA_OldPrimTypes::ex2 *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  mv_ex2 command (
-    impl);
+  mv_ex2 command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -3106,7 +2958,6 @@ void POA_OldPrimTypes::ex2::mv_skel (
 #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
-
 
 
 
@@ -3133,7 +2984,6 @@ const char* POA_OldPrimTypes::ex2::_interface_repository_id () const
 
 
 
-
 void POA_OldPrimTypes::ex2::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -3144,12 +2994,11 @@ void POA_OldPrimTypes::ex2::_dispatch (
 
 
 
-
 OldPrimTypes::ex2 *
 POA_OldPrimTypes::ex2::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -3158,8 +3007,6 @@ POA_OldPrimTypes::ex2::_this ()
     }
   return {};
 }
-
-
 
 void
 POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::get_l2 (
@@ -3176,7 +3023,6 @@ POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::get_l2 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::get_l2_excep (
   ::OldPrimTypes::AMH_ex2ExceptionHolder * holder)
@@ -3190,7 +3036,6 @@ POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::get_l2_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::m2 (
   ::CORBA::Long return_value,
@@ -3208,7 +3053,6 @@ POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::m2 (
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::m2_excep (
   ::OldPrimTypes::AMH_ex2ExceptionHolder * holder)
@@ -3222,7 +3066,6 @@ POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::m2_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::mv ()
 {
@@ -3231,7 +3074,6 @@ POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::mv ()
 
   this->_tao_rh_send_reply ();
 }
-
 void
 POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::mv_excep (
   ::OldPrimTypes::AMH_ex2ExceptionHolder * holder)
@@ -3250,17 +3092,18 @@ class TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+#include <cstddef>
+#include <memory>
+std::size_t
+TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3278,23 +3121,20 @@ TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::hash (const char *str, uns
      23, 23,  0, 23, 23,  5,  0, 23,  0, 23,
      23, 23, 23, 23, 23, 23, 23, 23,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
 const TAO_operation_db_entry *
-TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 19,
-      MIN_WORD_LENGTH = 2,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 2,
-      MAX_HASH_VALUE = 22,
-      HASH_VALUE_RANGE = 21,
-      DUPLICATES = 4,
-      WORDLIST_SIZE = 21
-    };
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {19};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {22};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {21};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {4};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {21};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -3328,7 +3168,7 @@ TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, u
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -3339,14 +3179,14 @@ TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, u
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return &wordlist[slot];
+                return std::addressof (wordlist[slot]);
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return 0;
+            return nullptr;
           else
             {
               unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = &wordlist[-lookup[offset]];
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
@@ -3355,7 +3195,7 @@ TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, u
             }
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable tao_OldPrimTypes_AMI_ex2Handler_optable;
@@ -3367,7 +3207,6 @@ static TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable tao_OldPrimTypes_AMI
 POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::~_TAO_AMI_ex2Handler_Direct_Proxy_Impl ()
 {
 }
-
 
 
 void
@@ -3389,7 +3228,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l2 (
 }
 
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l2_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -3407,7 +3245,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l2_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 
 void
@@ -3430,7 +3267,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2 (
 }
 
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -3450,7 +3286,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2_excep (
 }
 
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::mv (
     TAO_Abstract_ServantBase  *servant,
@@ -3467,7 +3302,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::mv (
   _tao_ptr->mv (
       );
 }
-
 
 
 void
@@ -3494,10 +3328,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::mv_excep (
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-
 POA_OldPrimTypes::AMI_ex2Handler::AMI_ex2Handler ()
 {
   this->optable_ = std::addressof (tao_OldPrimTypes_AMI_ex2Handler_optable);
@@ -3507,20 +3337,16 @@ POA_OldPrimTypes::AMI_ex2Handler::AMI_ex2Handler ()
 namespace POA_OldPrimTypes
 {
 
-
   class get_l2_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_l2_AMI_ex2Handler (
-      POA_OldPrimTypes::AMI_ex2Handler * servant,
+    inline get_l2_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3540,12 +3366,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex2Handler::get_l2_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
@@ -3554,8 +3380,7 @@ void POA_OldPrimTypes::AMI_ex2Handler::get_l2_skel (
       std::addressof(_tao_ami_return_val)
     };
 
-  POA_OldPrimTypes::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex2Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -3584,20 +3409,16 @@ void POA_OldPrimTypes::AMI_ex2Handler::get_l2_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class get_l2_excep_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline get_l2_excep_AMI_ex2Handler (
-      POA_OldPrimTypes::AMI_ex2Handler * servant,
+    inline get_l2_excep_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3617,12 +3438,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex2Handler::get_l2_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -3631,8 +3452,7 @@ void POA_OldPrimTypes::AMI_ex2Handler::get_l2_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldPrimTypes::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex2Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -3661,20 +3481,16 @@ void POA_OldPrimTypes::AMI_ex2Handler::get_l2_excep_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class m2_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline m2_AMI_ex2Handler (
-      POA_OldPrimTypes::AMI_ex2Handler * servant,
+    inline m2_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3701,12 +3517,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex2Handler::m2_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_b;
 
@@ -3717,8 +3533,7 @@ void POA_OldPrimTypes::AMI_ex2Handler::m2_skel (
       std::addressof(_tao_b)
     };
 
-  POA_OldPrimTypes::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex2Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -3747,20 +3562,16 @@ void POA_OldPrimTypes::AMI_ex2Handler::m2_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class m2_excep_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline m2_excep_AMI_ex2Handler (
-      POA_OldPrimTypes::AMI_ex2Handler * servant,
+    inline m2_excep_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3780,12 +3591,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex2Handler::m2_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -3794,8 +3605,7 @@ void POA_OldPrimTypes::AMI_ex2Handler::m2_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldPrimTypes::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex2Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -3824,16 +3634,12 @@ void POA_OldPrimTypes::AMI_ex2Handler::m2_excep_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class mv_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline mv_AMI_ex2Handler (
-      POA_OldPrimTypes::AMI_ex2Handler * servant)
-      : servant_ (servant)
-    {
-    }
+    inline mv_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
@@ -3844,28 +3650,26 @@ namespace POA_OldPrimTypes
     POA_OldPrimTypes::AMI_ex2Handler * const servant_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex2Handler::mv_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
 
-  POA_OldPrimTypes::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex2Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  mv_AMI_ex2Handler command (
-    impl);
+  mv_AMI_ex2Handler command (impl);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -3884,20 +3688,16 @@ void POA_OldPrimTypes::AMI_ex2Handler::mv_skel (
 namespace POA_OldPrimTypes
 {
 
-
   class mv_excep_AMI_ex2Handler
     : public TAO::Upcall_Command
   {
   public:
-    inline mv_excep_AMI_ex2Handler (
-      POA_OldPrimTypes::AMI_ex2Handler * servant,
+    inline mv_excep_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
@@ -3917,12 +3717,12 @@ namespace POA_OldPrimTypes
     TAO::Argument * const * const args_;
   };
 }
-
 void POA_OldPrimTypes::AMI_ex2Handler::mv_excep_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
@@ -3931,8 +3731,7 @@ void POA_OldPrimTypes::AMI_ex2Handler::mv_excep_skel (
       std::addressof(_tao_excep_holder)
     };
 
-  POA_OldPrimTypes::AMI_ex2Handler * const impl =
-    dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
+  POA_OldPrimTypes::AMI_ex2Handler * const impl = dynamic_cast<POA_OldPrimTypes::AMI_ex2Handler *> (servant);
 
   if (!impl)
     {
@@ -3964,7 +3763,6 @@ void POA_OldPrimTypes::AMI_ex2Handler::mv_excep_skel (
 
 
 
-
 ::CORBA::Boolean POA_OldPrimTypes::AMI_ex2Handler::_is_a (const char* value)
 {
   return
@@ -3984,7 +3782,6 @@ const char* POA_OldPrimTypes::AMI_ex2Handler::_interface_repository_id () const
 
 
 
-
 void POA_OldPrimTypes::AMI_ex2Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
@@ -3995,12 +3792,11 @@ void POA_OldPrimTypes::AMI_ex2Handler::_dispatch (
 
 
 
-
 OldPrimTypes::AMI_ex2Handler *
 POA_OldPrimTypes::AMI_ex2Handler::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

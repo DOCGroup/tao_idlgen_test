@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_OLD_SEQUENCES_69SX5Y_H_
-#define _TAO_IDL_OLD_SEQUENCES_69SX5Y_H_
+#ifndef _TAO_IDL_OLD_SEQUENCES_WY87KW_H_
+#define _TAO_IDL_OLD_SEQUENCES_WY87KW_H_
 
 #include /**/ "ace/pre.h"
 
@@ -55,14 +54,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -83,7 +80,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::c20>
     : public
@@ -93,7 +89,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -107,7 +102,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::c24>
     : public
@@ -117,7 +111,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -131,7 +124,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::cstring>
     : public
@@ -143,7 +135,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::TProgram>
     : public
@@ -153,7 +144,6 @@ namespace TAO
           >
   {
   };
-
 
 
   template<>
@@ -178,7 +168,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::f_unbounded>
     : public
@@ -190,7 +179,6 @@ namespace TAO
   };
 
 
-
   template<>
   class SArg_Traits< ::f_ar_unbounded>
     : public
@@ -200,7 +188,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_TESTSEQ__SARG_TRAITS_)
@@ -219,7 +206,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
   template<>
   class SArg_Traits< ::TestSeq::also_vec10>
     : public
@@ -229,7 +215,6 @@ namespace TAO
           >
   {
   };
-
 
 
 #if !defined (_AMH_TESTSEQEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -250,7 +235,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_AMI_TESTSEQHANDLER__SARG_TRAITS_)
 #define _AMI_TESTSEQHANDLER__SARG_TRAITS_
 
@@ -268,7 +252,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 class POA_AMH_TestSeq;
@@ -294,7 +277,6 @@ public:
   TestSeq *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void _get_fattr_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -303,7 +285,6 @@ static void _get_fattr_skel (
 virtual void fattr (
     AMH_TestSeqResponseHandler_ptr _tao_rh
   ) = 0;
-
 
 static void _set_fattr_skel (
     TAO_ServerRequest &_tao_req,
@@ -316,7 +297,6 @@ virtual void fattr (
   ) = 0;
 
 };
-
 
 
 
@@ -350,14 +330,12 @@ public:
   ::TestSeq *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::f_unbounded * fattr () = 0;
 
   static void _get_fattr_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void fattr (
     const ::f_unbounded & fattr) = 0;
 
@@ -368,7 +346,6 @@ public:
 };
 
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -377,11 +354,9 @@ class TAO_IDL_TEST_STUB_Export _TAO_TestSeq_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_TestSeq_Direct_Proxy_Impl ();
-
   static void
   _get_fattr (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_fattr (
@@ -394,7 +369,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class POA_TAO_AMH_TestSeqResponseHandler;
 using POA_TAO_AMH_TestSeqResponseHandler_ptr = POA_TAO_AMH_TestSeqResponseHandler *;
 
@@ -405,19 +379,14 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_TestSeqResponseHandler
 public:
   POA_TAO_AMH_TestSeqResponseHandler () = default;
   virtual ~POA_TAO_AMH_TestSeqResponseHandler () = default;
-
   void get_fattr (
     const ::f_unbounded & return_value) override;
-
   void get_fattr_excep (
     ::AMH_TestSeqExceptionHolder * holder) override;
-
   void set_fattr () override;
-
   void set_fattr_excep (
     ::AMH_TestSeqExceptionHolder * holder) override;
 };
-
 
 
 
@@ -451,7 +420,6 @@ public:
   ::AMI_TestSeqHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_fattr (
     const ::f_unbounded & ami_return_val) = 0;
 
@@ -459,7 +427,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_fattr_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -467,14 +434,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_fattr () = 0;
 
   static void set_fattr_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_fattr_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -483,7 +448,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -495,21 +459,17 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_TestSeqHandler_Direct_Proxy_Impl ();
-
   static void
   get_fattr (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_fattr_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_fattr (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_fattr_excep (

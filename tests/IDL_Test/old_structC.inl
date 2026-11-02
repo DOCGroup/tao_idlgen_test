@@ -24,7 +24,6 @@
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -77,7 +76,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 ACE_INLINE
 foo1::foo1 (
     TAO_Stub *objref,
@@ -95,7 +93,6 @@ foo1::foo1 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_foo1ExceptionHolder::AMH_foo1ExceptionHolder ()
   : exception (nullptr)
@@ -108,7 +105,6 @@ AMH_foo1ExceptionHolder::_tao_obv_static_repository_id ()
 }
 
 
-
 ACE_INLINE
 AMI_foo1Handler::AMI_foo1Handler (
     TAO_Stub *objref,
@@ -128,7 +124,6 @@ AMI_foo1Handler::AMI_foo1Handler (
 }
 
 
-
 ACE_INLINE
 foo2::foo2 (
     TAO_Stub *objref,
@@ -146,7 +141,6 @@ foo2::foo2 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 AMH_foo2ExceptionHolder::AMH_foo2ExceptionHolder ()
   : exception (nullptr)
@@ -157,7 +151,6 @@ AMH_foo2ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_foo2ExceptionHolder:1.0";
 }
-
 
 
 ACE_INLINE

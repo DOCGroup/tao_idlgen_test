@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "typedefC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -32,12 +31,11 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "typedefC.inl"
 #endif /* !defined INLINE */
-
 TAO_A5_slice *
 TAO_A5_dup (const TAO_A5_slice *_tao_src_array)
 {
@@ -76,7 +74,6 @@ TAO_A5_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 TAO_M5_slice *
 TAO_M5_dup (const TAO_M5_slice *_tao_src_array)
 {
@@ -116,7 +113,6 @@ TAO_M5_copy (
       TAO_J5_copy (_tao_to[i0], _tao_from[i0]);
     }
 }
-
 TAO_Z5_slice *
 TAO_Z5_dup (const TAO_Z5_slice *_tao_src_array)
 {
@@ -157,7 +153,6 @@ TAO_Z5_copy (
     }
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for TestModule::TestInterface.
@@ -187,7 +182,6 @@ TAO::Objref_Traits<TestModule::TestInterface>::marshal (const TestModule::TestIn
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -220,7 +214,6 @@ TestModule::TestInterface::set_typedef_1 (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 TestModule::TestInterface::set_typedef_2 (
   const char * typ2)
@@ -251,7 +244,6 @@ TestModule::TestInterface::set_typedef_2 (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 
 
 void
@@ -289,7 +281,6 @@ TestModule::TestInterface::sendc_set_typedef_1 (
       &TestModule::AMI_TestInterfaceHandler::set_typedef_1_reply_stub
     );
 }
-
 
 
 void
@@ -408,7 +399,6 @@ TestModule::TestInterface::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -545,14 +535,12 @@ TestModule::AMH_TestInterfaceExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_set_typedef_1 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_set_typedef_2 ()
@@ -561,7 +549,6 @@ TestModule::AMH_TestInterfaceExceptionHolder::raise_set_typedef_2 ()
   this->exception->_raise ();
 }
 
-
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_sendc_set_typedef_1 ()
 {
@@ -569,14 +556,12 @@ TestModule::AMH_TestInterfaceExceptionHolder::raise_sendc_set_typedef_1 ()
   this->exception->_raise ();
 }
 
-
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_sendc_set_typedef_2 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -695,7 +680,6 @@ TestModule::AMH_TestInterfaceResponseHandler::marshal (TAO_OutputCDR & /* cdr */
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for TestModule::AMI_TestInterfaceHandler.
@@ -725,7 +709,6 @@ TAO::Objref_Traits<TestModule::AMI_TestInterfaceHandler>::marshal (const TestMod
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -813,7 +796,6 @@ TestModule::AMI_TestInterfaceHandler::set_typedef_1_reply_stub (
       break;
   }
 }
-
 void
 TestModule::AMI_TestInterfaceHandler::set_typedef_1_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -844,7 +826,6 @@ TestModule::AMI_TestInterfaceHandler::set_typedef_1_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 TestModule::AMI_TestInterfaceHandler::set_typedef_2 ()
 {
@@ -930,7 +911,6 @@ TestModule::AMI_TestInterfaceHandler::set_typedef_2_reply_stub (
       break;
   }
 }
-
 void
 TestModule::AMI_TestInterfaceHandler::set_typedef_2_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1044,7 +1024,6 @@ TestModule::AMI_TestInterfaceHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for bug_2124::Foo.
@@ -1074,7 +1053,6 @@ TAO::Objref_Traits<bug_2124::Foo>::marshal (const bug_2124::Foo_ptr p,TAO_Output
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -1107,7 +1085,6 @@ bug_2124::Foo::op1 (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 bug_2124::Foo::op2 (
   const char * s)
@@ -1138,7 +1115,6 @@ bug_2124::Foo::op2 (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 
 
 void
@@ -1176,7 +1152,6 @@ bug_2124::Foo::sendc_op1 (
       &bug_2124::AMI_FooHandler::op1_reply_stub
     );
 }
-
 
 
 void
@@ -1295,7 +1270,6 @@ bug_2124::Foo::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1432,14 +1406,12 @@ bug_2124::AMH_FooExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 bug_2124::AMH_FooExceptionHolder::raise_op1 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 void
 bug_2124::AMH_FooExceptionHolder::raise_op2 ()
@@ -1448,7 +1420,6 @@ bug_2124::AMH_FooExceptionHolder::raise_op2 ()
   this->exception->_raise ();
 }
 
-
 void
 bug_2124::AMH_FooExceptionHolder::raise_sendc_op1 ()
 {
@@ -1456,14 +1427,12 @@ bug_2124::AMH_FooExceptionHolder::raise_sendc_op1 ()
   this->exception->_raise ();
 }
 
-
 void
 bug_2124::AMH_FooExceptionHolder::raise_sendc_op2 ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1582,7 +1551,6 @@ bug_2124::AMH_FooResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for bug_2124::AMI_FooHandler.
@@ -1612,7 +1580,6 @@ TAO::Objref_Traits<bug_2124::AMI_FooHandler>::marshal (const bug_2124::AMI_FooHa
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -1700,7 +1667,6 @@ bug_2124::AMI_FooHandler::op1_reply_stub (
       break;
   }
 }
-
 void
 bug_2124::AMI_FooHandler::op1_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1731,7 +1697,6 @@ bug_2124::AMI_FooHandler::op1_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 void
 bug_2124::AMI_FooHandler::op2 ()
 {
@@ -1817,7 +1782,6 @@ bug_2124::AMI_FooHandler::op2_reply_stub (
       break;
   }
 }
-
 void
 bug_2124::AMI_FooHandler::op2_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1931,7 +1895,6 @@ bug_2124::AMI_FooHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for bug_2122::One::Whatever.
@@ -1961,7 +1924,6 @@ TAO::Objref_Traits<bug_2122::One::Whatever>::marshal (const bug_2122::One::Whate
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -1994,7 +1956,6 @@ bug_2122::One::Whatever::someOp (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 
 
 void
@@ -2113,7 +2074,6 @@ bug_2122::One::Whatever::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2250,7 +2210,6 @@ bug_2122::One::AMH_WhateverExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 bug_2122::One::AMH_WhateverExceptionHolder::raise_someOp ()
 {
@@ -2258,14 +2217,12 @@ bug_2122::One::AMH_WhateverExceptionHolder::raise_someOp ()
   this->exception->_raise ();
 }
 
-
 void
 bug_2122::One::AMH_WhateverExceptionHolder::raise_sendc_someOp ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2384,7 +2341,6 @@ bug_2122::One::AMH_WhateverResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for bug_2122::One::AMI_WhateverHandler.
@@ -2414,7 +2370,6 @@ TAO::Objref_Traits<bug_2122::One::AMI_WhateverHandler>::marshal (const bug_2122:
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -2502,7 +2457,6 @@ bug_2122::One::AMI_WhateverHandler::someOp_reply_stub (
       break;
   }
 }
-
 void
 bug_2122::One::AMI_WhateverHandler::someOp_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2616,7 +2570,6 @@ bug_2122::One::AMI_WhateverHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for bug_2122::Two::WhoCares.
@@ -2646,7 +2599,6 @@ TAO::Objref_Traits<bug_2122::Two::WhoCares>::marshal (const bug_2122::Two::WhoCa
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -2679,7 +2631,6 @@ bug_2122::Two::WhoCares::someOp (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 
 
 void
@@ -2798,7 +2749,6 @@ bug_2122::Two::WhoCares::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2935,7 +2885,6 @@ bug_2122::Two::AMH_WhoCaresExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 bug_2122::Two::AMH_WhoCaresExceptionHolder::raise_someOp ()
 {
@@ -2943,14 +2892,12 @@ bug_2122::Two::AMH_WhoCaresExceptionHolder::raise_someOp ()
   this->exception->_raise ();
 }
 
-
 void
 bug_2122::Two::AMH_WhoCaresExceptionHolder::raise_sendc_someOp ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -3069,7 +3016,6 @@ bug_2122::Two::AMH_WhoCaresResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for bug_2122::Two::AMI_WhoCaresHandler.
@@ -3099,7 +3045,6 @@ TAO::Objref_Traits<bug_2122::Two::AMI_WhoCaresHandler>::marshal (const bug_2122:
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -3187,7 +3132,6 @@ bug_2122::Two::AMI_WhoCaresHandler::someOp_reply_stub (
       break;
   }
 }
-
 void
 bug_2122::Two::AMI_WhoCaresHandler::someOp_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3301,7 +3245,6 @@ bug_2122::Two::AMI_WhoCaresHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for bug_2122::Three::WhoCares.
@@ -3331,7 +3274,6 @@ TAO::Objref_Traits<bug_2122::Three::WhoCares>::marshal (const bug_2122::Three::W
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -3364,7 +3306,6 @@ bug_2122::Three::WhoCares::someOp (
 
   _invocation_call.invoke (nullptr, 0);
 }
-
 
 
 void
@@ -3483,7 +3424,6 @@ bug_2122::Three::WhoCares::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -3620,7 +3560,6 @@ bug_2122::Three::AMH_WhoCaresExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 bug_2122::Three::AMH_WhoCaresExceptionHolder::raise_someOp ()
 {
@@ -3628,14 +3567,12 @@ bug_2122::Three::AMH_WhoCaresExceptionHolder::raise_someOp ()
   this->exception->_raise ();
 }
 
-
 void
 bug_2122::Three::AMH_WhoCaresExceptionHolder::raise_sendc_someOp ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -3754,7 +3691,6 @@ bug_2122::Three::AMH_WhoCaresResponseHandler::marshal (TAO_OutputCDR & /* cdr */
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for bug_2122::Three::AMI_WhoCaresHandler.
@@ -3784,7 +3720,6 @@ TAO::Objref_Traits<bug_2122::Three::AMI_WhoCaresHandler>::marshal (const bug_212
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -3872,7 +3807,6 @@ bug_2122::Three::AMI_WhoCaresHandler::someOp_reply_stub (
       break;
   }
 }
-
 void
 bug_2122::Three::AMI_WhoCaresHandler::someOp_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3989,20 +3923,16 @@ bug_2122::Three::AMI_WhoCaresHandler::marshal (TAO_OutputCDR &cdr)
 
 
 
-
 #if !defined (_COMMALIST_FOO_CS_)
 #define _COMMALIST_FOO_CS_
 
-CommaList::Foo::Foo (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max)
-{}
+CommaList::Foo::Foo (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
 
-CommaList::Foo::Foo (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    ::CORBA::Double * buffer,
-    ::CORBA::Boolean release)
+CommaList::Foo::Foo (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  ::CORBA::Double * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< ::CORBA::Double>
     (max, length, buffer, release)
 {}
@@ -4019,20 +3949,16 @@ void CommaList::Foo::_tao_any_destructor (
 
 
 
-
 #if !defined (_COMMALIST_DUBBLE_CS_)
 #define _COMMALIST_DUBBLE_CS_
 
-CommaList::Dubble::Dubble (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max)
-{}
+CommaList::Dubble::Dubble (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
 
-CommaList::Dubble::Dubble (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    ::CORBA::Double * buffer,
-    ::CORBA::Boolean release)
+CommaList::Dubble::Dubble (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  ::CORBA::Double * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< ::CORBA::Double>
     (max, length, buffer, release)
 {}
@@ -4049,20 +3975,16 @@ void CommaList::Dubble::_tao_any_destructor (
 
 
 
-
 #if !defined (_COMMALIST_DUBBEL_CS_)
 #define _COMMALIST_DUBBEL_CS_
 
-CommaList::Dubbel::Dubbel (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max)
-{}
+CommaList::Dubbel::Dubbel (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
 
-CommaList::Dubbel::Dubbel (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    ::CORBA::Double * buffer,
-    ::CORBA::Boolean release)
+CommaList::Dubbel::Dubbel (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  ::CORBA::Double * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< ::CORBA::Double>
     (max, length, buffer, release)
 {}
@@ -4079,20 +4001,16 @@ void CommaList::Dubbel::_tao_any_destructor (
 
 
 
-
 #if !defined (_COMMALIST_TOIL_CS_)
 #define _COMMALIST_TOIL_CS_
 
-CommaList::Toil::Toil (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max)
-{}
+CommaList::Toil::Toil (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
 
-CommaList::Toil::Toil (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    ::CORBA::Double * buffer,
-    ::CORBA::Boolean release)
+CommaList::Toil::Toil (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  ::CORBA::Double * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< ::CORBA::Double>
     (max, length, buffer, release)
 {}
@@ -4109,20 +4027,16 @@ void CommaList::Toil::_tao_any_destructor (
 
 
 
-
 #if !defined (_COMMALIST_TROUBLE_CS_)
 #define _COMMALIST_TROUBLE_CS_
 
-CommaList::Trouble::Trouble (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max)
-{}
+CommaList::Trouble::Trouble (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
 
-CommaList::Trouble::Trouble (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    ::CORBA::Double * buffer,
-    ::CORBA::Boolean release)
+CommaList::Trouble::Trouble (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  ::CORBA::Double * buffer,
+  ::CORBA::Boolean release)
   : ::TAO::unbounded_value_sequence< ::CORBA::Double>
     (max, length, buffer, release)
 {}
@@ -4135,7 +4049,6 @@ void CommaList::Trouble::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
 OBV_TestModule::AMH_TestInterfaceExceptionHolder::~AMH_TestInterfaceExceptionHolder ()
 {}
 
@@ -4150,7 +4063,6 @@ OBV_TestModule::AMH_TestInterfaceExceptionHolder::_tao_unmarshal__TestModule_AMH
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_bug_2124::AMH_FooExceptionHolder::~AMH_FooExceptionHolder ()
 {}
 
@@ -4165,7 +4077,6 @@ OBV_bug_2124::AMH_FooExceptionHolder::_tao_unmarshal__bug_2124_AMH_FooExceptionH
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_bug_2122::One::AMH_WhateverExceptionHolder::~AMH_WhateverExceptionHolder ()
 {}
 
@@ -4180,7 +4091,6 @@ OBV_bug_2122::One::AMH_WhateverExceptionHolder::_tao_unmarshal__bug_2122_One_AMH
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_bug_2122::Two::AMH_WhoCaresExceptionHolder::~AMH_WhoCaresExceptionHolder ()
 {}
 
@@ -4195,7 +4105,6 @@ OBV_bug_2122::Two::AMH_WhoCaresExceptionHolder::_tao_unmarshal__bug_2122_Two_AMH
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_bug_2122::Three::AMH_WhoCaresExceptionHolder::~AMH_WhoCaresExceptionHolder ()
 {}
 
@@ -4210,7 +4119,6 @@ OBV_bug_2122::Three::AMH_WhoCaresExceptionHolder::_tao_unmarshal__bug_2122_Three
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4233,7 +4141,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4276,7 +4183,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -4316,7 +4222,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -4349,7 +4254,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (TestModule::AMH_TestInterfaceExceptionHolder * vt)
@@ -4370,7 +4274,6 @@ CORBA::remove_ref (TestModule::AMH_TestInterfaceExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4400,7 +4303,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_TestModule::AMH_TestInterfaceExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -4418,7 +4320,6 @@ OBV_TestModule::AMH_TestInterfaceExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -4450,7 +4351,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4486,7 +4386,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (bug_2124::AMH_FooExceptionHolder * vt)
@@ -4507,7 +4406,6 @@ CORBA::remove_ref (bug_2124::AMH_FooExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4537,7 +4435,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_bug_2124::AMH_FooExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -4555,7 +4452,6 @@ OBV_bug_2124::AMH_FooExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -4587,7 +4483,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4623,7 +4518,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (bug_2122::One::AMH_WhateverExceptionHolder * vt)
@@ -4644,7 +4538,6 @@ CORBA::remove_ref (bug_2122::One::AMH_WhateverExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4674,7 +4567,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_bug_2122::One::AMH_WhateverExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -4692,7 +4584,6 @@ OBV_bug_2122::One::AMH_WhateverExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -4724,7 +4615,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4760,7 +4650,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (bug_2122::Two::AMH_WhoCaresExceptionHolder * vt)
@@ -4781,7 +4670,6 @@ CORBA::remove_ref (bug_2122::Two::AMH_WhoCaresExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4811,7 +4699,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_bug_2122::Two::AMH_WhoCaresExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -4829,7 +4716,6 @@ OBV_bug_2122::Two::AMH_WhoCaresExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -4861,7 +4747,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4897,7 +4782,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (bug_2122::Three::AMH_WhoCaresExceptionHolder * vt)
@@ -4918,7 +4802,6 @@ CORBA::remove_ref (bug_2122::Three::AMH_WhoCaresExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -4948,7 +4831,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_bug_2122::Three::AMH_WhoCaresExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -4966,7 +4848,6 @@ OBV_bug_2122::Three::AMH_WhoCaresExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 
@@ -5000,7 +4881,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 #if !defined _TAO_CDR_OP_CommaList_Foo_CPP_
 #define _TAO_CDR_OP_CommaList_Foo_CPP_
 
@@ -5024,7 +4904,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_CommaList_Foo_CPP_ */
-
 #if !defined _TAO_CDR_OP_CommaList_Trouble_CPP_
 #define _TAO_CDR_OP_CommaList_Trouble_CPP_
 

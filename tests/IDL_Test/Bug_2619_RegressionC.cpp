@@ -23,7 +23,6 @@
  **/
 
 
-
 #include "Bug_2619_RegressionC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -46,12 +45,11 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_2619_RegressionC.inl"
 #endif /* !defined INLINE */
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -77,7 +75,6 @@ _tao_tc_Type_T (
 ::CORBA::TypeCode_ptr const _tc_Type_T = std::addressof(_tao_tc_Type_T);
 
 
-
 void
 Type_T::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -85,7 +82,6 @@ Type_T::_tao_any_destructor (
   Type_T *tmp = static_cast<Type_T *> (_tao_void_pointer);
   delete tmp;
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_T_Data_T[] =
   {
     { "type", &_tc_Type_T, ::CORBA::PUBLIC_MEMBER }
@@ -105,7 +101,6 @@ static TAO::TypeCode::Value<char const *,
     1);
 
 ::CORBA::TypeCode_ptr const _tc_T_Data_T = std::addressof(_tao_tc_T_Data_T);
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -229,7 +224,6 @@ T_Data_T::_tao_unmarshal (
 }
 
 
-
 T_Data_T_init::T_Data_T_init ()
 {
 }
@@ -260,7 +254,6 @@ T_Data_T_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -293,7 +286,6 @@ TAO::Objref_Traits<Test>::marshal (const Test_ptr p,TAO_OutputCDR & cdr)
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -304,7 +296,6 @@ static TAO::TypeCode::Alias<char const *,
     &_tc_Type_T);
 
 ::CORBA::TypeCode_ptr const Test::_tc_Group = std::addressof(_tao_tc_Test_Group);
-
 ::Test::Group *
 Test::getGroup ()
 {
@@ -337,7 +328,6 @@ Test::getGroup ()
 
   return _tao_retval.retn ();
 }
-
 
 
 void
@@ -448,7 +438,6 @@ Test::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_Test (
@@ -457,7 +446,6 @@ static TAO::TypeCode::Objref<char const *,
     "Test");
 
 ::CORBA::TypeCode_ptr const _tc_Test = std::addressof(_tao_tc_Test);
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_TestExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -473,7 +461,6 @@ static TAO::TypeCode::Value<char const *,
     0);
 
 ::CORBA::TypeCode_ptr const _tc_AMH_TestExceptionHolder = std::addressof(_tao_tc_AMH_TestExceptionHolder);
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -616,7 +603,6 @@ AMH_TestExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 AMH_TestExceptionHolder::raise_getGroup ()
 {
@@ -624,14 +610,12 @@ AMH_TestExceptionHolder::raise_getGroup ()
   this->exception->_raise ();
 }
 
-
 void
 AMH_TestExceptionHolder::raise_sendc_getGroup ()
 {
   std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -749,7 +733,6 @@ AMH_TestResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMH_TestResponseHandler (
@@ -758,7 +741,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMH_TestResponseHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMH_TestResponseHandler = std::addressof(_tao_tc_AMH_TestResponseHandler);
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -789,7 +771,6 @@ TAO::Objref_Traits<AMI_TestHandler>::marshal (const AMI_TestHandler_ptr p,TAO_Ou
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 void
@@ -885,7 +866,6 @@ AMI_TestHandler::getGroup_reply_stub (
       break;
   }
 }
-
 void
 AMI_TestHandler::getGroup_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -998,7 +978,6 @@ AMI_TestHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_AMI_TestHandler (
@@ -1007,7 +986,6 @@ static TAO::TypeCode::Objref<char const *,
     "AMI_TestHandler");
 
 ::CORBA::TypeCode_ptr const _tc_AMI_TestHandler = std::addressof(_tao_tc_AMI_TestHandler);
-
 OBV_T_Data_T::OBV_T_Data_T (
     const ::Type_T & _tao_init_type)
 {
@@ -1041,7 +1019,6 @@ OBV_T_Data_T::_tao_unmarshal__T_Data_T (TAO_InputCDR &strm, TAO_ChunkInfo& ci)
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 /// Accessor to set the member.
 void
 OBV_T_Data_T::type (const Type_T &val)
@@ -1060,7 +1037,6 @@ OBV_T_Data_T::type ()
 {
   return this->_pd_type;
 }
-
 OBV_AMH_TestExceptionHolder::~OBV_AMH_TestExceptionHolder ()
 {}
 
@@ -1075,7 +1051,6 @@ OBV_AMH_TestExceptionHolder::_tao_unmarshal__AMH_TestExceptionHolder (TAO_InputC
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1117,7 +1092,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1195,7 +1169,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1258,7 +1231,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1333,7 +1305,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1419,7 +1390,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
@@ -1485,7 +1455,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1507,7 +1476,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1535,7 +1503,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
@@ -1560,7 +1527,6 @@ operator>> (
 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 ::CORBA::Boolean
@@ -1608,7 +1574,6 @@ OBV_T_Data_T::truncation_hook ()
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1641,7 +1606,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_TestExceptionHolder * vt)
@@ -1662,7 +1626,6 @@ CORBA::remove_ref (AMH_TestExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 
 
@@ -1692,7 +1655,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 ::CORBA::Boolean
 OBV_AMH_TestExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
@@ -1710,7 +1672,6 @@ OBV_AMH_TestExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
 
 
 

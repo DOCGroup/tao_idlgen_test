@@ -23,19 +23,17 @@
  **/
 
 
-
 #include "repo_id_modC.h"
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Valuetype/ValueFactory.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "repo_id_modC.inl"
 #endif /* !defined INLINE */
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -153,7 +151,6 @@ gleep::schmooze::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for gleep::schmeer.
@@ -269,7 +266,6 @@ gleep::schmeer::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -387,7 +383,6 @@ gleep::schlemiel::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for gleep::spilkis.
@@ -503,7 +498,6 @@ gleep::spilkis::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -621,7 +615,6 @@ gleep::floop::schmuck::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for gleep::floop::schmendrick.
@@ -738,7 +731,6 @@ gleep::floop::schmendrick::marshal (TAO_OutputCDR & /* cdr */)
   return false;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for gleep::floop::verklempt::schlemazel.
@@ -854,7 +846,6 @@ gleep::floop::verklempt::schlemazel::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 

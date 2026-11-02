@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_ATTRIBUTES_UAVUSD_H_
-#define _TAO_IDL_ATTRIBUTES_UAVUSD_H_
+#ifndef _TAO_IDL_ATTRIBUTES_SXJ7DK_H_
+#define _TAO_IDL_ATTRIBUTES_SXJ7DK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +51,12 @@
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
@@ -80,7 +77,6 @@ namespace TAO
 #endif /* end #if !defined */
 
 
-
 #if !defined (_HELLO_MYFOO__SARG_TRAITS_)
 #define _HELLO_MYFOO__SARG_TRAITS_
 
@@ -95,7 +91,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_HELLO_AMH_MYFOOEXCEPTIONHOLDER__SARG_TRAITS_)
@@ -114,7 +109,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 
 #if !defined (_HELLO_AMI_MYFOOHANDLER__SARG_TRAITS_)
@@ -136,10 +130,8 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-
 namespace POA_Hello
 {
-
 
   class AMH_MyFoo;
   using AMH_MyFoo_ptr = AMH_MyFoo *;
@@ -164,7 +156,6 @@ namespace POA_Hello
     Hello::MyFoo *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void _get_rw_attrib_mytype_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -173,7 +164,6 @@ namespace POA_Hello
   virtual void rw_attrib_mytype (
       Hello::AMH_MyFooResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void _set_rw_attrib_mytype_skel (
       TAO_ServerRequest &_tao_req,
@@ -185,7 +175,6 @@ namespace POA_Hello
       ::Hello::MyType rw_attrib_mytype
     ) = 0;
 
-
   static void _get_rw_attrib_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -194,7 +183,6 @@ namespace POA_Hello
   virtual void rw_attrib (
       Hello::AMH_MyFooResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void _set_rw_attrib_skel (
       TAO_ServerRequest &_tao_req,
@@ -206,7 +194,6 @@ namespace POA_Hello
       ::CORBA::Short rw_attrib
     ) = 0;
 
-
   static void _get_rw_attrib_reverted_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -215,7 +202,6 @@ namespace POA_Hello
   virtual void rw_attrib_reverted (
       Hello::AMH_MyFooResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void _set_rw_attrib_reverted_skel (
       TAO_ServerRequest &_tao_req,
@@ -227,7 +213,6 @@ namespace POA_Hello
       ::CORBA::Short rw_attrib_reverted
     ) = 0;
 
-
   static void _get_rw_attribB_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -236,7 +221,6 @@ namespace POA_Hello
   virtual void rw_attribB (
       Hello::AMH_MyFooResponseHandler_ptr _tao_rh
     ) = 0;
-
 
   static void _set_rw_attribB_skel (
       TAO_ServerRequest &_tao_req,
@@ -248,7 +232,6 @@ namespace POA_Hello
       ::CORBA::Short rw_attribB
     ) = 0;
 
-
   static void _get_ro_attrib_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -259,7 +242,6 @@ namespace POA_Hello
     ) = 0;
 
 };
-
 
 
 
@@ -293,14 +275,12 @@ public:
   ::Hello::MyFoo *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual ::Hello::MyType rw_attrib_mytype () = 0;
 
   static void _get_rw_attrib_mytype_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void rw_attrib_mytype (
     ::Hello::MyType rw_attrib_mytype) = 0;
 
@@ -308,14 +288,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Short rw_attrib () = 0;
 
   static void _get_rw_attrib_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void rw_attrib (
     ::CORBA::Short rw_attrib) = 0;
 
@@ -323,14 +301,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Short rw_attrib_reverted () = 0;
 
   static void _get_rw_attrib_reverted_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void rw_attrib_reverted (
     ::CORBA::Short rw_attrib_reverted) = 0;
 
@@ -338,14 +314,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Short rw_attribB () = 0;
 
   static void _get_rw_attribB_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void rw_attribB (
     ::CORBA::Short rw_attribB) = 0;
 
@@ -353,7 +327,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual ::CORBA::Short ro_attrib () = 0;
 
   static void _get_ro_attrib_skel (
@@ -361,7 +334,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -372,46 +344,37 @@ class TAO_IDL_TEST_STUB_Export _TAO_MyFoo_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_MyFoo_Direct_Proxy_Impl ();
-
   static void
   _get_rw_attrib_mytype (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_rw_attrib_mytype (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_rw_attrib (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_rw_attrib (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_rw_attrib_reverted (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _set_rw_attrib_reverted (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _get_rw_attribB (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   _set_rw_attribB (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   _get_ro_attrib (
@@ -424,7 +387,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-
 class TAO_AMH_MyFooResponseHandler;
 using TAO_AMH_MyFooResponseHandler_ptr = TAO_AMH_MyFooResponseHandler *;
 
@@ -435,58 +397,39 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_MyFooResponseHandler
 public:
   TAO_AMH_MyFooResponseHandler () = default;
   virtual ~TAO_AMH_MyFooResponseHandler () = default;
-
   void get_rw_attrib_mytype (
     ::Hello::MyType return_value) override;
-
   void get_rw_attrib_mytype_excep (
     ::Hello::AMH_MyFooExceptionHolder * holder) override;
-
   void set_rw_attrib_mytype () override;
-
   void set_rw_attrib_mytype_excep (
     ::Hello::AMH_MyFooExceptionHolder * holder) override;
-
   void get_rw_attrib (
     ::CORBA::Short return_value) override;
-
   void get_rw_attrib_excep (
     ::Hello::AMH_MyFooExceptionHolder * holder) override;
-
   void set_rw_attrib () override;
-
   void set_rw_attrib_excep (
     ::Hello::AMH_MyFooExceptionHolder * holder) override;
-
   void get_rw_attrib_reverted (
     ::CORBA::Short return_value) override;
-
   void get_rw_attrib_reverted_excep (
     ::Hello::AMH_MyFooExceptionHolder * holder) override;
-
   void set_rw_attrib_reverted () override;
-
   void set_rw_attrib_reverted_excep (
     ::Hello::AMH_MyFooExceptionHolder * holder) override;
-
   void get_rw_attribB (
     ::CORBA::Short return_value) override;
-
   void get_rw_attribB_excep (
     ::Hello::AMH_MyFooExceptionHolder * holder) override;
-
   void set_rw_attribB () override;
-
   void set_rw_attribB_excep (
     ::Hello::AMH_MyFooExceptionHolder * holder) override;
-
   void get_ro_attrib (
     ::CORBA::Short return_value) override;
-
   void get_ro_attrib_excep (
     ::Hello::AMH_MyFooExceptionHolder * holder) override;
 };
-
 
 
 
@@ -520,7 +463,6 @@ public:
   ::Hello::AMI_MyFooHandler *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void get_rw_attrib_mytype (
     ::Hello::MyType ami_return_val) = 0;
 
@@ -528,7 +470,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_rw_attrib_mytype_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -536,14 +477,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_rw_attrib_mytype () = 0;
 
   static void set_rw_attrib_mytype_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_rw_attrib_mytype_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -551,7 +490,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_rw_attrib (
     ::CORBA::Short ami_return_val) = 0;
 
@@ -559,7 +497,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_rw_attrib_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -567,14 +504,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_rw_attrib () = 0;
 
   static void set_rw_attrib_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_rw_attrib_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -582,7 +517,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_rw_attrib_reverted (
     ::CORBA::Short ami_return_val) = 0;
 
@@ -590,7 +524,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_rw_attrib_reverted_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -598,14 +531,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_rw_attrib_reverted () = 0;
 
   static void set_rw_attrib_reverted_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_rw_attrib_reverted_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -613,7 +544,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_rw_attribB (
     ::CORBA::Short ami_return_val) = 0;
 
@@ -621,7 +551,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_rw_attribB_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -629,14 +558,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_rw_attribB () = 0;
 
   static void set_rw_attribB_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void set_rw_attribB_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -644,7 +571,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_ro_attrib (
     ::CORBA::Short ami_return_val) = 0;
 
@@ -652,7 +578,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-
   virtual void get_ro_attrib_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -661,7 +586,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -673,91 +597,73 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_MyFooHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_MyFooHandler_Direct_Proxy_Impl ();
-
   static void
   get_rw_attrib_mytype (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_rw_attrib_mytype_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_rw_attrib_mytype (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_rw_attrib_mytype_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_rw_attrib (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_rw_attrib_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_rw_attrib (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_rw_attrib_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_rw_attrib_reverted (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_rw_attrib_reverted_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_rw_attrib_reverted (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_rw_attrib_reverted_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_rw_attribB (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_rw_attribB_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   set_rw_attribB (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   set_rw_attribB_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-
   static void
   get_ro_attrib (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
 
   static void
   get_ro_attrib_excep (
@@ -768,7 +674,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 
 
