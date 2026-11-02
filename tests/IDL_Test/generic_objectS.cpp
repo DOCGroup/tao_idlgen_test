@@ -29,6 +29,7 @@
 
 #include "generic_objectS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <cstring>
 #include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
 #include "tao/Exception_Data.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
@@ -51,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include <cstring>
 
 class TAO_AMH_generic_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -64,9 +64,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMH_generic_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_generic_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_AMH_generic_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -104,7 +103,7 @@ TAO_AMH_generic_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
       WORDLIST_SIZE = 8
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},
       {"op", std::addressof(POA_AMH_generic::op_skel), std::addressof(_TAO_generic_Direct_Proxy_Impl::op)},
@@ -249,9 +248,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_generic_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_generic_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_generic_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -289,7 +287,7 @@ TAO_generic_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
       WORDLIST_SIZE = 8
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},
       {"op", std::addressof(POA_generic::op_skel), std::addressof(_TAO_generic_Direct_Proxy_Impl::op)},
@@ -561,9 +559,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMI_genericHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_genericHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_AMI_genericHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -601,7 +598,7 @@ TAO_AMI_genericHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned i
       WORDLIST_SIZE = 9
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},
       {"op", std::addressof(POA_AMI_genericHandler::op_skel), std::addressof(_TAO_AMI_genericHandler_Direct_Proxy_Impl::op)},

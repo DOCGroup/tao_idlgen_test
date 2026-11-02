@@ -29,6 +29,7 @@
 
 #include "nested_scopeS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <cstring>
 #include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
 #include "tao/Exception_Data.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
@@ -51,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include <cstring>
 
 class TAO_i_skip_i_hump_AMH_i_skip_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -64,9 +64,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_i_skip_i_hump_AMH_i_skip_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i_skip_i_hump_AMH_i_skip_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_i_skip_i_hump_AMH_i_skip_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -104,7 +103,7 @@ TAO_i_skip_i_hump_AMH_i_skip_Perfect_Hash_OpTable::lookup (const char *str, unsi
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -199,9 +198,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_i_skip_i_hump_i_skip_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i_skip_i_hump_i_skip_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_i_skip_i_hump_i_skip_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -239,7 +237,7 @@ TAO_i_skip_i_hump_i_skip_Perfect_Hash_OpTable::lookup (const char *str, unsigned
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -356,9 +354,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_i_skip_i_hump_AMI_i_skipHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i_skip_i_hump_AMI_i_skipHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_i_skip_i_hump_AMI_i_skipHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -396,7 +393,7 @@ TAO_i_skip_i_hump_AMI_i_skipHandler_Perfect_Hash_OpTable::lookup (const char *st
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -512,9 +509,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMH_bloo_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_bloo_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_AMH_bloo_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -552,7 +548,7 @@ TAO_AMH_bloo_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -647,9 +643,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_bloo_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_bloo_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_bloo_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -687,7 +682,7 @@ TAO_bloo_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -804,9 +799,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_AMI_blooHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_blooHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_AMI_blooHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -844,7 +838,7 @@ TAO_AMI_blooHandler_Perfect_Hash_OpTable::lookup (const char *str, unsigned int 
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -960,9 +954,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_bug_1985_a_b_AMH_something_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_bug_1985_a_b_AMH_something_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_bug_1985_a_b_AMH_something_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1000,7 +993,7 @@ TAO_bug_1985_a_b_AMH_something_Perfect_Hash_OpTable::lookup (const char *str, un
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -1095,9 +1088,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_bug_1985_a_b_something_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_bug_1985_a_b_something_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_bug_1985_a_b_something_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1135,7 +1127,7 @@ TAO_bug_1985_a_b_something_Perfect_Hash_OpTable::lookup (const char *str, unsign
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1252,9 +1244,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_bug_1985_a_b_AMI_somethingHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_bug_1985_a_b_AMI_somethingHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_bug_1985_a_b_AMI_somethingHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1292,7 +1283,7 @@ TAO_bug_1985_a_b_AMI_somethingHandler_Perfect_Hash_OpTable::lookup (const char *
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1408,9 +1399,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_bug_1985_c_d_AMH_something_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_bug_1985_c_d_AMH_something_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_bug_1985_c_d_AMH_something_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1448,7 +1438,7 @@ TAO_bug_1985_c_d_AMH_something_Perfect_Hash_OpTable::lookup (const char *str, un
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -1544,9 +1534,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_bug_1985_c_d_something_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_bug_1985_c_d_something_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_bug_1985_c_d_something_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1584,7 +1573,7 @@ TAO_bug_1985_c_d_something_Perfect_Hash_OpTable::lookup (const char *str, unsign
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1702,9 +1691,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_bug_1985_c_d_AMI_somethingHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_bug_1985_c_d_AMI_somethingHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_bug_1985_c_d_AMI_somethingHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1742,7 +1730,7 @@ TAO_bug_1985_c_d_AMI_somethingHandler_Perfect_Hash_OpTable::lookup (const char *
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1859,9 +1847,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Negotiator_AMH_UAV_Negotiator_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Negotiator_AMH_UAV_Negotiator_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_Negotiator_AMH_UAV_Negotiator_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -1899,7 +1886,7 @@ TAO_Negotiator_AMH_UAV_Negotiator_Perfect_Hash_OpTable::lookup (const char *str,
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -1994,9 +1981,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Negotiator_UAV_Negotiator_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Negotiator_UAV_Negotiator_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_Negotiator_UAV_Negotiator_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -2034,7 +2020,7 @@ TAO_Negotiator_UAV_Negotiator_Perfect_Hash_OpTable::lookup (const char *str, uns
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -2151,9 +2137,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Negotiator_AMI_UAV_NegotiatorHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Negotiator_AMI_UAV_NegotiatorHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_Negotiator_AMI_UAV_NegotiatorHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -2191,7 +2176,7 @@ TAO_Negotiator_AMI_UAV_NegotiatorHandler_Perfect_Hash_OpTable::lookup (const cha
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -2307,9 +2292,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Negotiator_AMH_UAV_Negotiator_Factory_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Negotiator_AMH_UAV_Negotiator_Factory_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_Negotiator_AMH_UAV_Negotiator_Factory_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -2347,7 +2331,7 @@ TAO_Negotiator_AMH_UAV_Negotiator_Factory_Perfect_Hash_OpTable::lookup (const ch
       WORDLIST_SIZE = 11
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -2489,9 +2473,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Negotiator_UAV_Negotiator_Factory_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Negotiator_UAV_Negotiator_Factory_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_Negotiator_UAV_Negotiator_Factory_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -2529,7 +2512,7 @@ TAO_Negotiator_UAV_Negotiator_Factory_Perfect_Hash_OpTable::lookup (const char *
       WORDLIST_SIZE = 11
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -2781,9 +2764,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Negotiator_AMI_UAV_Negotiator_FactoryHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Negotiator_AMI_UAV_Negotiator_FactoryHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_Negotiator_AMI_UAV_Negotiator_FactoryHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -2821,7 +2803,7 @@ TAO_Negotiator_AMI_UAV_Negotiator_FactoryHandler_Perfect_Hash_OpTable::lookup (c
       WORDLIST_SIZE = 12
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -3134,9 +3116,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Wow_bug_2125_AMH_MyInterface_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Wow_bug_2125_AMH_MyInterface_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_Wow_bug_2125_AMH_MyInterface_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -3174,7 +3155,7 @@ TAO_Wow_bug_2125_AMH_MyInterface_Perfect_Hash_OpTable::lookup (const char *str, 
       WORDLIST_SIZE = 9
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},
       {"op2", std::addressof(POA_Wow::bug_2125::AMH_MyInterface::op2_skel), std::addressof(POA_Wow::bug_2125::_TAO_MyInterface_Direct_Proxy_Impl::op2)},
@@ -3316,9 +3297,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Wow_bug_2125_MyInterface_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Wow_bug_2125_MyInterface_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_Wow_bug_2125_MyInterface_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -3356,7 +3336,7 @@ TAO_Wow_bug_2125_MyInterface_Perfect_Hash_OpTable::lookup (const char *str, unsi
       WORDLIST_SIZE = 9
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},
       {"op2", std::addressof(POA_Wow::bug_2125::MyInterface::op2_skel), std::addressof(POA_Wow::bug_2125::_TAO_MyInterface_Direct_Proxy_Impl::op2)},
@@ -3598,9 +3578,8 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Wow_bug_2125_AMI_MyInterfaceHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Wow_bug_2125_AMI_MyInterfaceHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstring>
 unsigned int
 TAO_Wow_bug_2125_AMI_MyInterfaceHandler_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
 {
@@ -3638,7 +3617,7 @@ TAO_Wow_bug_2125_AMI_MyInterfaceHandler_Perfect_Hash_OpTable::lookup (const char
       WORDLIST_SIZE = 10
     };
 
-  static const TAO_operation_db_entry wordlist[] =
+  static constexpr TAO_operation_db_entry wordlist[] =
     {
       {"",0,0},{"",0,0},{"",0,0},
       {"op2", std::addressof(POA_Wow::bug_2125::AMI_MyInterfaceHandler::op2_skel), std::addressof(POA_Wow::bug_2125::_TAO_AMI_MyInterfaceHandler_Direct_Proxy_Impl::op2)},
