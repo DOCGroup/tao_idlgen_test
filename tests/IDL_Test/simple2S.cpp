@@ -805,14 +805,14 @@ TAO_AMI_simple3Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_
         {
           int slot = lookup[key];
 
-          if (slot >= 0 && slot < WORDLIST_SIZE)
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
             return nullptr;
           else
             {

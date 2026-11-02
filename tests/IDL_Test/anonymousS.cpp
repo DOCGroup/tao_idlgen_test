@@ -133,14 +133,14 @@ TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *s
         {
           int slot = lookup[key];
 
-          if (slot >= 0 && slot < WORDLIST_SIZE)
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
             return nullptr;
           else
             {
@@ -603,14 +603,14 @@ TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, 
         {
           int slot = lookup[key];
 
-          if (slot >= 0 && slot < WORDLIST_SIZE)
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
             return nullptr;
           else
             {
@@ -1653,14 +1653,14 @@ TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (const 
         {
           int slot = lookup[key];
 
-          if (slot >= 0 && slot < WORDLIST_SIZE)
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
             return nullptr;
           else
             {
