@@ -4,6 +4,7 @@ declare -a tests=("tests/AMI"
                   "tests/AMH_Exceptions"
                   "tests/Hello"
                   "tests/IDL_Test"
+                  "tests/Smart_Proxies"
                   "tests/Strategies"
                   )
 for i in "${tests[@]}"
@@ -17,6 +18,9 @@ do
       TestVersionedNamespaceC.h
     make -C Versioned_Namespace -f GNUmakefile.IDL_Test_Versioned_Namespace_2 \
       TestVersionedNamespace2C.h
+  fi
+  if [ "$TEST" = "tests/Smart_Proxies" ]; then
+    make -f GNUmakefile.Smart_Proxies_Idl
   fi
   mkdir -p $TAO_IDLGEN_ROOT/$TEST
   find $TAO_IDLGEN_ROOT/$TEST -type f \( -name '*A.h' -o -name '*A.cpp' -o \
