@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -77,8 +75,6 @@ TAO::Array_Traits<tdef::Bytes_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -132,8 +128,6 @@ TAO::Array_Traits<tdef::bytes_or_longs::_Longs_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -154,8 +148,6 @@ tdef::tdef (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_tdefExceptionHolder::AMH_tdefExceptionHolder ()
@@ -167,8 +159,6 @@ AMH_tdefExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_tdefExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -189,8 +179,6 @@ AMI_tdefHandler::AMI_tdefHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -244,8 +232,6 @@ TAO::Array_Traits<ABCModule::RmtPhysicalInfo::_rmtNodeId_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -299,8 +285,6 @@ TAO::Array_Traits<ABCModule::RmtPhysicalInfo::_rmtDetails_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -354,8 +338,6 @@ TAO::Array_Traits<ABCModule::bbbBubBubBubBaby::_rmtNodeId_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 

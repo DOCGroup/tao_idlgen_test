@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:400
 
 #ifndef _TAO_IDL_PARAMSS_C2SM96_H_
 #define _TAO_IDL_PARAMSS_C2SM96_H_
@@ -52,8 +50,6 @@
 #include "tao/Messaging/AMH_Response_Handler.h"
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:62
 
 
 
@@ -63,8 +59,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -84,8 +78,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:902
 
 
 
@@ -98,8 +90,6 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:902
 
 
 
@@ -112,8 +102,6 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:140
 
 
 
@@ -131,8 +119,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -152,8 +138,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:140
 
 
 
@@ -176,20 +160,14 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:32
 
 namespace POA_foo
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:32
 
   namespace bar
   {
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
 
     class AMH_fooBar;
     using AMH_fooBar_ptr = AMH_fooBar *;
@@ -214,8 +192,6 @@ namespace POA_foo
       foo::bar::fooBar *_this ();
 
     virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:124
 
     static void getDate_skel (
         TAO_ServerRequest &_tao_req,
@@ -231,8 +207,6 @@ namespace POA_foo
   };
 
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
 
 
 
@@ -265,8 +239,6 @@ namespace POA_foo
     ::foo::bar::fooBar *_this ();
 
     virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:33
 
     virtual ::foo::theDate getDate (
       const ::foo::theDate & a,
@@ -278,8 +250,6 @@ namespace POA_foo
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
 
 
 
@@ -291,8 +261,6 @@ namespace POA_foo
   {
   public:
     virtual ~_TAO_fooBar_Direct_Proxy_Impl ();
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:23
 
     static void
     getDate (
@@ -305,8 +273,6 @@ namespace POA_foo
   ///////////////////////////////////////////////////////////////////////
 
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:50
 
   class TAO_AMH_fooBarResponseHandler;
   using TAO_AMH_fooBarResponseHandler_ptr = TAO_AMH_fooBarResponseHandler *;
@@ -318,23 +284,17 @@ namespace POA_foo
   public:
     TAO_AMH_fooBarResponseHandler () = default;
     virtual ~TAO_AMH_fooBarResponseHandler () = default;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:57
 
     void getDate (
       const ::foo::theDate & return_value,
       const ::foo::theDate & b,
       const ::foo::theDate & c) override;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:57
 
     void getDate_excep (
       ::foo::bar::AMH_fooBarExceptionHolder * holder) override;
   };
 
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
 
 
 
@@ -367,8 +327,6 @@ namespace POA_foo
     ::foo::bar::AMI_fooBarHandler *_this ();
 
     virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:33
 
     virtual void getDate (
       const ::foo::theDate & ami_return_val,
@@ -379,8 +337,6 @@ namespace POA_foo
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:33
 
     virtual void getDate_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
@@ -390,8 +346,6 @@ namespace POA_foo
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
 
 
 
@@ -404,15 +358,11 @@ namespace POA_foo
   {
   public:
     virtual ~_TAO_AMI_fooBarHandler_Direct_Proxy_Impl ();
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:23
 
     static void
     getDate (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:23
 
     static void
     getDate_excep (
@@ -427,14 +377,10 @@ namespace POA_foo
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:63
 
 } // module foo::bar
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:63
 
 } // module foo
 

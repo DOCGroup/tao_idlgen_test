@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:400
 
 #ifndef _TAO_IDL_SIMPLE2S_L6HLSJ_H_
 #define _TAO_IDL_SIMPLE2S_L6HLSJ_H_
@@ -54,8 +52,6 @@
 #include "tao/Messaging/AMH_Response_Handler.h"
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:62
 
 
 
@@ -65,8 +61,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -86,8 +80,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:140
 
 
 
@@ -105,8 +97,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -126,8 +116,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:140
 
 
 
@@ -150,8 +138,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
 
 class POA_AMH_simple3;
 using POA_AMH_simple3_ptr = POA_AMH_simple3 *;
@@ -177,8 +163,6 @@ public:
   simple3 *_this ();
 
 virtual const char* _interface_repository_id () const;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:124
 
 static void op3_skel (
     TAO_ServerRequest &_tao_req,
@@ -190,8 +174,6 @@ virtual void op3 (
     ::CORBA::Long a
   ) = 0;
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:124
 
 static void op4_skel (
     TAO_ServerRequest &_tao_req,
@@ -207,8 +189,6 @@ virtual void op4 (
 };
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
 
 
 
@@ -241,8 +221,6 @@ public:
   ::simple3 *_this ();
 
   virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:33
 
   virtual ::CORBA::Long op3 (
     ::CORBA::Long a,
@@ -254,8 +232,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:33
 
   virtual ::CORBA::Any * op4 (
     const ::CORBA::Any & x,
@@ -267,8 +243,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
 
 
 
@@ -281,15 +255,11 @@ class TAO_IDL_TEST_STUB_Export _TAO_simple3_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_simple3_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:23
 
   static void
   op3 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:23
 
   static void
   op4 (
@@ -302,8 +272,6 @@ public:
 ///////////////////////////////////////////////////////////////////////
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:50
 
 class POA_TAO_AMH_simple3ResponseHandler;
 using POA_TAO_AMH_simple3ResponseHandler_ptr = POA_TAO_AMH_simple3ResponseHandler *;
@@ -315,36 +283,26 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_simple3ResponseHandler
 public:
   POA_TAO_AMH_simple3ResponseHandler () = default;
   virtual ~POA_TAO_AMH_simple3ResponseHandler () = default;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:57
 
   void op3 (
     ::CORBA::Long return_value,
     ::simple3_ptr b,
     ::simple2_ptr c,
     ::simple_ptr d) override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:57
 
   void op3_excep (
     ::AMH_simple3ExceptionHolder * holder) override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:57
 
   void op4 (
     const ::CORBA::Any & return_value,
     const ::CORBA::Any & y,
     const ::CORBA::Any & z) override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:57
 
   void op4_excep (
     ::AMH_simple3ExceptionHolder * holder) override;
 };
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
 
 
 
@@ -377,8 +335,6 @@ public:
   ::AMI_simple3Handler *_this ();
 
   virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:33
 
   virtual void op3 (
     ::CORBA::Long ami_return_val,
@@ -390,8 +346,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:33
 
   virtual void op3_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
@@ -400,8 +354,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:33
 
   virtual void op4 (
     const ::CORBA::Any & ami_return_val,
@@ -412,8 +364,6 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:33
 
   virtual void op4_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
@@ -423,8 +373,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
 
 
 
@@ -437,29 +385,21 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_simple3Handler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_simple3Handler_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:23
 
   static void
   op3 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:23
 
   static void
   op3_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:23
 
   static void
   op4 (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:23
 
   static void
   op4_excep (

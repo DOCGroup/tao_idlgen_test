@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 Data_T::Data_T ()
@@ -34,8 +32,6 @@ Data_T::_tao_obv_static_repository_id ()
 {
   return "IDL:Data_T:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -56,8 +52,6 @@ User_T::User_T (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_User_TExceptionHolder::AMH_User_TExceptionHolder ()
@@ -69,8 +63,6 @@ AMH_User_TExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_User_TExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 

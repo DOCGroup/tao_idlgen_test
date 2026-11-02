@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:316
 
 
 #include "anyunionC.h"
@@ -54,8 +52,6 @@
 #if !defined (__ACE_INLINE__)
 #include "anyunionC.inl"
 #endif /* !defined INLINE */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
 static char const * const _tao_enumerators_AnyUnionEnum[] =
   {
@@ -72,8 +68,6 @@ static TAO::TypeCode::Enum<char const *,
     1);
 
 ::CORBA::TypeCode_ptr const _tc_AnyUnionEnum = std::addressof(_tao_tc_AnyUnionEnum);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:72
 
 
 
@@ -166,8 +160,6 @@ void MyAnyUnion::_reset ()
     break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:61
 
 static TAO::TypeCode::Case_T<AnyUnionEnum, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_MyAnyUnion__0 (::ANYUNIONENUM2, "my_any", &CORBA::_tc_any);
 
@@ -189,8 +181,6 @@ static TAO::TypeCode::Union<char const *,
     -1);
 
 ::CORBA::TypeCode_ptr const _tc_MyAnyUnion = std::addressof(_tao_tc_MyAnyUnion);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:32
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -226,8 +216,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/any_op_cs.cpp:32
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -278,8 +266,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/cdr_op_cs.cpp:29
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -305,8 +291,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/cdr_op_cs.cpp:116
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL

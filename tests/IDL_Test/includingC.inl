@@ -24,14 +24,10 @@
 
 #include <memory>
 #include <new>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:32
 
 // *************************************************************
 // Inline operations for union myUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:192
 
 ACE_INLINE
 void
@@ -78,8 +74,6 @@ myUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:833
 
 /// Accessor to set the member.
 ACE_INLINE
@@ -118,14 +112,10 @@ myUnion::cat ()
     }
   return *this->u_.cat_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:32
 
 // *************************************************************
 // Inline operations for union Bog
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:192
 
 ACE_INLINE
 void
@@ -176,8 +166,6 @@ Bog::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:599
 
 // Accessor to set the member.
 ACE_INLINE
@@ -202,8 +190,6 @@ Bog::bog1 () const
     }
   return this->u_.bog1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:599
 
 // Accessor to set the member.
 ACE_INLINE
@@ -228,8 +214,6 @@ Bog::bog2 () const
     }
   return this->u_.bog2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:599
 
 // Accessor to set the member.
 ACE_INLINE
@@ -254,8 +238,6 @@ Bog::bog3 () const
     }
   return this->u_.bog3_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -276,8 +258,6 @@ iface::iface (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_ifaceExceptionHolder::AMH_ifaceExceptionHolder ()
@@ -289,8 +269,6 @@ AMH_ifaceExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_ifaceExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -311,14 +289,10 @@ AMI_ifaceHandler::AMI_ifaceHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:32
 
 // *************************************************************
 // Inline operations for union TestUn
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:299
 
 ACE_INLINE
 void
@@ -365,8 +339,6 @@ TestUn::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1114
 
 /// Accessor to set the member.
 ACE_INLINE
@@ -405,8 +377,6 @@ TestUn::value1 ()
     }
   return *this->u_.value1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:910
 
 /// Accessor to set the member.
 ACE_INLINE
@@ -454,8 +424,6 @@ TestUn::value2 () const // get method
     }
   return this->u_.value2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -476,8 +444,6 @@ MyInt::MyInt (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_MyIntExceptionHolder::AMH_MyIntExceptionHolder ()
@@ -489,8 +455,6 @@ AMH_MyIntExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_MyIntExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -511,8 +475,6 @@ AMI_MyIntHandler::AMI_MyIntHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -533,8 +495,6 @@ RootModule::SUBMODULE1::ChildIF::ChildIF (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder::AMH_ChildIFExceptionHolder ()
@@ -546,8 +506,6 @@ RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder::_tao_obv_static_repository_i
 {
   return "IDL:RootModule/SUBMODULE1/AMH_ChildIFExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -568,8 +526,6 @@ RootModule::SUBMODULE1::AMI_ChildIFHandler::AMI_ChildIFHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -590,8 +546,6 @@ B::B (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_BExceptionHolder::AMH_BExceptionHolder ()
@@ -603,8 +557,6 @@ AMH_BExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_BExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 

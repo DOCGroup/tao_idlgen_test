@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:577
 
 #ifndef _TAO_IDL_KEYWORD_CASE_DIFFS_XWQZ9C_CPP_
 #define _TAO_IDL_KEYWORD_CASE_DIFFS_XWQZ9C_CPP_
@@ -47,8 +45,6 @@
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1624
 
 class TAO_MyModule_PortType_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -132,8 +128,6 @@ TAO_MyModule_PortType_Perfect_Hash_OpTable::lookup (const char *str, unsigned in
 static TAO_MyModule_PortType_Perfect_Hash_OpTable tao_MyModule_PortType_optable;
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:89
 
 
 
@@ -146,8 +140,6 @@ POA_MyModule::PortType::PortType ()
 namespace POA_MyModule
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class myMethod_PortType
     : public TAO::Upcall_Command
@@ -168,8 +160,6 @@ namespace POA_MyModule
     POA_MyModule::PortType * const servant_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_MyModule::PortType::myMethod_skel (
   TAO_ServerRequest & server_request,
@@ -218,8 +208,6 @@ void POA_MyModule::PortType::myMethod_skel (
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
 
 
 
@@ -240,8 +228,6 @@ const char* POA_MyModule::PortType::_interface_repository_id () const
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
 
 
 
@@ -253,8 +239,6 @@ void POA_MyModule::PortType::_dispatch (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
 
 
 

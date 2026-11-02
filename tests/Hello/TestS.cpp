@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
 #ifndef _TAO_IDL_TESTS_ADB6GE_CPP_
 #define _TAO_IDL_TESTS_ADB6GE_CPP_
@@ -47,8 +45,6 @@
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Test_Hello_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -135,8 +131,6 @@ TAO_Test_Hello_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
 static TAO_Test_Hello_Perfect_Hash_OpTable tao_Test_Hello_optable;
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -149,8 +143,6 @@ POA_Test::Hello::Hello ()
 namespace POA_Test
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class get_string_Hello
     : public TAO::Upcall_Command
@@ -178,8 +170,6 @@ namespace POA_Test
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_Test::Hello::get_string_skel (
   TAO_ServerRequest & server_request,
@@ -221,8 +211,6 @@ void POA_Test::Hello::get_string_skel (
 namespace POA_Test
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class shutdown_Hello
     : public TAO::Upcall_Command
@@ -243,8 +231,6 @@ namespace POA_Test
     POA_Test::Hello * const servant_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_Test::Hello::shutdown_skel (
   TAO_ServerRequest & server_request,
@@ -284,8 +270,6 @@ void POA_Test::Hello::shutdown_skel (
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -306,8 +290,6 @@ const char* POA_Test::Hello::_interface_repository_id () const
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:370
 
 
 
@@ -319,8 +301,6 @@ void POA_Test::Hello::_dispatch (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:330
 
 
 

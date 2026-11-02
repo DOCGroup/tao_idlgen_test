@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
 #ifndef _TAO_IDL_OLD_ARRAYS_T9MWJD_CPP_
 #define _TAO_IDL_OLD_ARRAYS_T9MWJD_CPP_
@@ -54,8 +52,6 @@
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -164,8 +160,6 @@ TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::lookup (const char *str, unsigned int
 static TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable tao_OldArray_AMH_A_i_optable;
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -175,8 +169,6 @@ POA_OldArray::AMH_A_i::AMH_A_i ()
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_ss.cpp:303
 
 void
 POA_OldArray::AMH_A_i::op_skel (
@@ -226,8 +218,6 @@ POA_OldArray::AMH_A_i::op_skel (
       a2
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_ss.cpp:303
 
 void
 POA_OldArray::AMH_A_i::op2_skel (
@@ -283,8 +273,6 @@ POA_OldArray::AMH_A_i::op2_skel (
       (const ::OldArray::str22_slice *) a2
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_ss.cpp:303
 
 void
 POA_OldArray::AMH_A_i::op4_skel (
@@ -334,8 +322,6 @@ POA_OldArray::AMH_A_i::op4_skel (
       a2
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_ss.cpp:303
 
 void
 POA_OldArray::AMH_A_i::_get_attribute_array_skel (
@@ -373,8 +359,6 @@ POA_OldArray::AMH_A_i::_get_attribute_array_skel (
       safe_rd_.get ()
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_ss.cpp:303
 
 void
 POA_OldArray::AMH_A_i::_set_attribute_array_skel (
@@ -428,8 +412,6 @@ POA_OldArray::AMH_A_i::_set_attribute_array_skel (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -448,8 +430,6 @@ const char* POA_OldArray::AMH_A_i::_interface_repository_id () const
 {
   return "IDL:OldArray/A_i:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_OldArray::AMH_A_i::_dispatch (
@@ -458,8 +438,6 @@ POA_OldArray::AMH_A_i::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 OldArray::A_i*
 POA_OldArray::AMH_A_i::_this ()
@@ -475,8 +453,6 @@ POA_OldArray::AMH_A_i::_this ()
     }
   return {};
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldArray_A_i_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -593,8 +569,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::~_TAO_A_i_Direct_Proxy_Impl ()
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op (
@@ -618,8 +592,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op2 (
@@ -643,8 +615,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op2 (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op4 (
@@ -668,8 +638,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op4 (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_get_attribute_array (
@@ -690,8 +658,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_get_attribute_array (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_set_attribute_array (
@@ -718,8 +684,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_set_attribute_array (
 ///////////////////////////////////////////////////////////////////////
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -732,8 +696,6 @@ POA_OldArray::A_i::A_i ()
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class op_A_i
     : public TAO::Upcall_Command
@@ -787,8 +749,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::A_i::op_skel (
   TAO_ServerRequest & server_request,
@@ -837,8 +797,6 @@ void POA_OldArray::A_i::op_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class op2_A_i
     : public TAO::Upcall_Command
@@ -892,8 +850,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::A_i::op2_skel (
   TAO_ServerRequest & server_request,
@@ -942,8 +898,6 @@ void POA_OldArray::A_i::op2_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class op4_A_i
     : public TAO::Upcall_Command
@@ -997,8 +951,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::A_i::op4_skel (
   TAO_ServerRequest & server_request,
@@ -1047,8 +999,6 @@ void POA_OldArray::A_i::op4_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class _get_attribute_array_A_i
     : public TAO::Upcall_Command
@@ -1081,8 +1031,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::A_i::_get_attribute_array_skel (
   TAO_ServerRequest & server_request,
@@ -1125,8 +1073,6 @@ void POA_OldArray::A_i::_get_attribute_array_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class _set_attribute_array_A_i
     : public TAO::Upcall_Command
@@ -1160,8 +1106,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::A_i::_set_attribute_array_skel (
   TAO_ServerRequest & server_request,
@@ -1205,8 +1149,6 @@ void POA_OldArray::A_i::_set_attribute_array_skel (
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -1227,8 +1169,6 @@ const char* POA_OldArray::A_i::_interface_repository_id () const
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:370
 
 
 
@@ -1240,8 +1180,6 @@ void POA_OldArray::A_i::_dispatch (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:330
 
 
 
@@ -1258,12 +1196,8 @@ POA_OldArray::A_i::_this ()
     }
   return {};
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_ss.cpp:61
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op (
@@ -1284,8 +1218,6 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op (
 
   this->_tao_rh_send_reply ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op_excep (
@@ -1300,8 +1232,6 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op2 (
@@ -1322,8 +1252,6 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op2 (
 
   this->_tao_rh_send_reply ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op2_excep (
@@ -1338,8 +1266,6 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op2_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op4 (
@@ -1360,8 +1286,6 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op4 (
 
   this->_tao_rh_send_reply ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op4_excep (
@@ -1376,8 +1300,6 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op4_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::get_attribute_array (
@@ -1394,8 +1316,6 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::get_attribute_array (
 
   this->_tao_rh_send_reply ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::get_attribute_array_excep (
@@ -1410,8 +1330,6 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::get_attribute_array_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::set_attribute_array ()
@@ -1421,8 +1339,6 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::set_attribute_array ()
 
   this->_tao_rh_send_reply ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::set_attribute_array_excep (
@@ -1437,8 +1353,6 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::set_attribute_array_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -1561,8 +1475,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::~_TAO_AMI_A_iHandler_Direct
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op (
@@ -1585,8 +1497,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op_excep (
@@ -1607,8 +1517,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op_excep (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2 (
@@ -1631,8 +1539,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2 (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2_excep (
@@ -1653,8 +1559,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2_excep (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4 (
@@ -1677,8 +1581,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4 (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4_excep (
@@ -1699,8 +1601,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4_excep (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array (
@@ -1721,8 +1621,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array_excep (
@@ -1743,8 +1641,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array_excep (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array (
@@ -1764,8 +1660,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array_excep (
@@ -1792,8 +1686,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array_excep (
 ///////////////////////////////////////////////////////////////////////
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -1806,8 +1698,6 @@ POA_OldArray::AMI_A_iHandler::AMI_A_iHandler ()
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class op_AMI_A_iHandler
     : public TAO::Upcall_Command
@@ -1855,8 +1745,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::AMI_A_iHandler::op_skel (
   TAO_ServerRequest & server_request,
@@ -1905,8 +1793,6 @@ void POA_OldArray::AMI_A_iHandler::op_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class op_excep_AMI_A_iHandler
     : public TAO::Upcall_Command
@@ -1940,8 +1826,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::AMI_A_iHandler::op_excep_skel (
   TAO_ServerRequest & server_request,
@@ -1986,8 +1870,6 @@ void POA_OldArray::AMI_A_iHandler::op_excep_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class op2_AMI_A_iHandler
     : public TAO::Upcall_Command
@@ -2035,8 +1917,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::AMI_A_iHandler::op2_skel (
   TAO_ServerRequest & server_request,
@@ -2085,8 +1965,6 @@ void POA_OldArray::AMI_A_iHandler::op2_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class op2_excep_AMI_A_iHandler
     : public TAO::Upcall_Command
@@ -2120,8 +1998,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::AMI_A_iHandler::op2_excep_skel (
   TAO_ServerRequest & server_request,
@@ -2166,8 +2042,6 @@ void POA_OldArray::AMI_A_iHandler::op2_excep_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class op4_AMI_A_iHandler
     : public TAO::Upcall_Command
@@ -2215,8 +2089,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::AMI_A_iHandler::op4_skel (
   TAO_ServerRequest & server_request,
@@ -2265,8 +2137,6 @@ void POA_OldArray::AMI_A_iHandler::op4_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class op4_excep_AMI_A_iHandler
     : public TAO::Upcall_Command
@@ -2300,8 +2170,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::AMI_A_iHandler::op4_excep_skel (
   TAO_ServerRequest & server_request,
@@ -2346,8 +2214,6 @@ void POA_OldArray::AMI_A_iHandler::op4_excep_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class get_attribute_array_AMI_A_iHandler
     : public TAO::Upcall_Command
@@ -2381,8 +2247,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::AMI_A_iHandler::get_attribute_array_skel (
   TAO_ServerRequest & server_request,
@@ -2427,8 +2291,6 @@ void POA_OldArray::AMI_A_iHandler::get_attribute_array_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class get_attribute_array_excep_AMI_A_iHandler
     : public TAO::Upcall_Command
@@ -2462,8 +2324,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::AMI_A_iHandler::get_attribute_array_excep_skel (
   TAO_ServerRequest & server_request,
@@ -2508,8 +2368,6 @@ void POA_OldArray::AMI_A_iHandler::get_attribute_array_excep_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class set_attribute_array_AMI_A_iHandler
     : public TAO::Upcall_Command
@@ -2530,8 +2388,6 @@ namespace POA_OldArray
     POA_OldArray::AMI_A_iHandler * const servant_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::AMI_A_iHandler::set_attribute_array_skel (
   TAO_ServerRequest & server_request,
@@ -2572,8 +2428,6 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_skel (
 namespace POA_OldArray
 {
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
   class set_attribute_array_excep_AMI_A_iHandler
     : public TAO::Upcall_Command
@@ -2607,8 +2461,6 @@ namespace POA_OldArray
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel (
   TAO_ServerRequest & server_request,
@@ -2652,8 +2504,6 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel (
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -2675,8 +2525,6 @@ const char* POA_OldArray::AMI_A_iHandler::_interface_repository_id () const
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:370
 
 
 
@@ -2688,8 +2536,6 @@ void POA_OldArray::AMI_A_iHandler::_dispatch (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:330
 
 
 

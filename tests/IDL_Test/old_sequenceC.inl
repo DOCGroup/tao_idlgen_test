@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -77,8 +75,6 @@ TAO::Array_Traits<sfoo_ar_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -99,8 +95,6 @@ TestSeq::TestSeq (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_TestSeqExceptionHolder::AMH_TestSeqExceptionHolder ()
@@ -112,8 +106,6 @@ AMH_TestSeqExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_TestSeqExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 

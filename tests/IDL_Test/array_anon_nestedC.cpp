@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:316
 
 
 #include "array_anon_nestedC.h"
@@ -50,12 +48,8 @@
 #if !defined (__ACE_INLINE__)
 #include "array_anon_nestedC.inl"
 #endif /* !defined INLINE */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:82
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:261
 
 
 #ifndef _TAO_TYPECODE_teststruct_b_GUARD
@@ -111,8 +105,6 @@ _tao_tc_teststruct (
 ::CORBA::TypeCode_ptr const _tc_teststruct = std::addressof(_tao_tc_teststruct);
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:52
 
 void
 teststruct::_tao_any_destructor (
@@ -121,8 +113,6 @@ teststruct::_tao_any_destructor (
   teststruct *tmp = static_cast<teststruct *> (_tao_void_pointer);
   delete tmp;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:81
 
 teststruct::_b_slice *
 teststruct::_b_dup (const teststruct::_b_slice *_tao_src_array)
@@ -162,12 +152,8 @@ teststruct::_b_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:82
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:261
 
 
 #ifndef _TAO_TYPECODE_teststruct_embeddedstruct_a_GUARD
@@ -222,8 +208,6 @@ _tao_tc_teststruct_embeddedstruct (
 ::CORBA::TypeCode_ptr const teststruct::_tc_embeddedstruct = std::addressof(_tao_tc_teststruct_embeddedstruct);
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:52
 
 void
 teststruct::embeddedstruct::_tao_any_destructor (
@@ -232,8 +216,6 @@ teststruct::embeddedstruct::_tao_any_destructor (
   embeddedstruct *tmp = static_cast<embeddedstruct *> (_tao_void_pointer);
   delete tmp;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:81
 
 teststruct::embeddedstruct::_a_slice *
 teststruct::embeddedstruct::_a_dup (const teststruct::embeddedstruct::_a_slice *_tao_src_array)
@@ -273,8 +255,6 @@ teststruct::embeddedstruct::_a_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
@@ -286,8 +266,6 @@ static TAO::TypeCode::Alias<char const *,
     &_tc_teststruct);
 
 ::CORBA::TypeCode_ptr const _tc_tstruct = std::addressof(_tao_tc_tstruct);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -332,8 +310,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -378,8 +354,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/cdr_op_cs.cpp:154
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -405,8 +379,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/cdr_op_cs.cpp:154
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -432,8 +404,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -465,8 +435,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL

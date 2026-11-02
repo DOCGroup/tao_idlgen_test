@@ -24,8 +24,6 @@
 
 #include <memory>
 #include <new>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -82,8 +80,6 @@ TAO::Array_Traits<TwoDArray_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -143,8 +139,6 @@ TAO::Array_Traits<ThreeDArray_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -207,8 +201,6 @@ TAO::Array_Traits<FourDArray_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -262,8 +254,6 @@ TAO::Array_Traits<inside_array_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -317,8 +307,6 @@ TAO::Array_Traits<outside_array_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -372,8 +360,6 @@ TAO::Array_Traits<oa1_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -427,8 +413,6 @@ TAO::Array_Traits<oa2_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -449,8 +433,6 @@ array_args::array_args (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_array_argsExceptionHolder::AMH_array_argsExceptionHolder ()
@@ -462,8 +444,6 @@ AMH_array_argsExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_array_argsExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -484,8 +464,6 @@ AMI_array_argsHandler::AMI_array_argsHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -539,8 +517,6 @@ TAO::Array_Traits<string_array::ArrayOfString_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -594,8 +570,6 @@ TAO::Array_Traits<string_array::ArrayOfMyString_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -685,8 +659,6 @@ testdata::ArrayDeChar_free (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -707,8 +679,6 @@ testdata::testdata (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_testdataExceptionHolder::AMH_testdataExceptionHolder ()
@@ -720,8 +690,6 @@ AMH_testdataExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_testdataExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -742,8 +710,6 @@ AMI_testdataHandler::AMI_testdataHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -797,8 +763,6 @@ TAO::Array_Traits<arraytest::myvec2_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -852,8 +816,6 @@ TAO::Array_Traits<arraytest::myvec3_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -874,8 +836,6 @@ arraytest::MyTest::MyTest (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 arraytest::AMH_MyTestExceptionHolder::AMH_MyTestExceptionHolder ()
@@ -887,8 +847,6 @@ arraytest::AMH_MyTestExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:arraytest/AMH_MyTestExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -909,14 +867,10 @@ arraytest::AMI_MyTestHandler::AMI_MyTestHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:32
 
 // *************************************************************
 // Inline operations for union bug_2126::FirstUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:299
 
 
 
@@ -949,8 +903,6 @@ bug_2126::FirstUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:599
 
 // Accessor to set the member.
 ACE_INLINE
@@ -975,8 +927,6 @@ bug_2126::FirstUnion::first_union_foo () const
     }
   return this->u_.first_union_foo_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:599
 
 // Accessor to set the member.
 ACE_INLINE
@@ -1001,8 +951,6 @@ bug_2126::FirstUnion::first_union_bar () const
     }
   return this->u_.first_union_bar_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -1056,14 +1004,10 @@ TAO::Array_Traits<bug_2126::FirstUnionArray_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:32
 
 // *************************************************************
 // Inline operations for union bug_2126::SecondUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:299
 
 
 
@@ -1096,8 +1040,6 @@ bug_2126::SecondUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1114
 
 /// Accessor to set the member.
 ACE_INLINE
@@ -1136,8 +1078,6 @@ bug_2126::SecondUnion::second_union_struct_member ()
     }
   return *this->u_.second_union_struct_member_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:599
 
 // Accessor to set the member.
 ACE_INLINE
@@ -1162,8 +1102,6 @@ bug_2126::SecondUnion::wibble () const
     }
   return this->u_.wibble_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -1217,14 +1155,10 @@ TAO::Array_Traits<bug_2126::BdFirstUnionArray_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:32
 
 // *************************************************************
 // Inline operations for union bug_2126::BdSecondUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:299
 
 
 
@@ -1257,8 +1191,6 @@ bug_2126::BdSecondUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1114
 
 /// Accessor to set the member.
 ACE_INLINE
@@ -1297,8 +1229,6 @@ bug_2126::BdSecondUnion::second_union_struct_member ()
     }
   return *this->u_.second_union_struct_member_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:599
 
 // Accessor to set the member.
 ACE_INLINE
@@ -1323,8 +1253,6 @@ bug_2126::BdSecondUnion::wibble () const
     }
   return this->u_.wibble_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -1381,8 +1309,6 @@ TAO::Array_Traits<B41_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -1436,8 +1362,6 @@ TAO::Array_Traits<B42_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:133
 
 
 
@@ -1491,14 +1415,10 @@ TAO::Array_Traits<B43_forany>::alloc ()
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:32
 
 // *************************************************************
 // Inline operations for union B85
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:299
 
 ACE_INLINE
 void
@@ -1547,8 +1467,6 @@ B85::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:174
 
 // Accessor to set the member.
 ACE_INLINE
@@ -1573,8 +1491,6 @@ B85::b_85_1 () const
     }
   return this->u_.b_85_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:174
 
 // Accessor to set the member.
 ACE_INLINE
@@ -1599,8 +1515,6 @@ B85::b_85_2 () const
     }
   return this->u_.b_85_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:174
 
 // Accessor to set the member.
 ACE_INLINE

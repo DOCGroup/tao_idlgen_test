@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:316
 
 
 #include "enum_in_structC.h"
@@ -57,8 +55,6 @@
 #if !defined (__ACE_INLINE__)
 #include "enum_in_structC.inl"
 #endif /* !defined INLINE */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
 static char const * const _tao_enumerators_UnNamed[] =
   {
@@ -77,8 +73,6 @@ static TAO::TypeCode::Enum<char const *,
     3);
 
 ::CORBA::TypeCode_ptr const _tc_UnNamed = std::addressof(_tao_tc_UnNamed);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:82
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -106,8 +100,6 @@ _tao_tc_HoldsEnum (
 ::CORBA::TypeCode_ptr const _tc_HoldsEnum = std::addressof(_tao_tc_HoldsEnum);
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:52
 
 void
 HoldsEnum::_tao_any_destructor (
@@ -116,8 +108,6 @@ HoldsEnum::_tao_any_destructor (
   HoldsEnum *tmp = static_cast<HoldsEnum *> (_tao_void_pointer);
   delete tmp;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
 static char const * const _tao_enumerators_HoldsEnum_Named[] =
   {
@@ -136,12 +126,8 @@ static TAO::TypeCode::Enum<char const *,
     3);
 
 ::CORBA::TypeCode_ptr const HoldsEnum::_tc_Named = std::addressof(_tao_tc_HoldsEnum_Named);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:82
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:261
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_en_GUARD
@@ -172,8 +158,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_decl_heavy_struct_m_en_GUARD */
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:261
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_st_GUARD
@@ -204,8 +188,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_decl_heavy_struct_m_st_GUARD */
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:261
 
 
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_un_GUARD
@@ -262,8 +244,6 @@ _tao_tc_decl_heavy_struct (
 ::CORBA::TypeCode_ptr const _tc_decl_heavy_struct = std::addressof(_tao_tc_decl_heavy_struct);
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:52
 
 void
 decl_heavy_struct::_tao_any_destructor (
@@ -272,8 +252,6 @@ decl_heavy_struct::_tao_any_destructor (
   decl_heavy_struct *tmp = static_cast<decl_heavy_struct *> (_tao_void_pointer);
   delete tmp;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:81
 
 decl_heavy_struct::_m_en_slice *
 decl_heavy_struct::_m_en_dup (const decl_heavy_struct::_m_en_slice *_tao_src_array)
@@ -313,8 +291,6 @@ decl_heavy_struct::_m_en_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
 static char const * const _tao_enumerators_decl_heavy_struct_str_en[] =
   {
@@ -333,8 +309,6 @@ static TAO::TypeCode::Enum<char const *,
     3);
 
 ::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_str_en = std::addressof(_tao_tc_decl_heavy_struct_str_en);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:81
 
 decl_heavy_struct::_m_st_slice *
 decl_heavy_struct::_m_st_dup (const decl_heavy_struct::_m_st_slice *_tao_src_array)
@@ -374,8 +348,6 @@ decl_heavy_struct::_m_st_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:82
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -403,8 +375,6 @@ _tao_tc_decl_heavy_struct_st (
 ::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_st = std::addressof(_tao_tc_decl_heavy_struct_st);
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:52
 
 void
 decl_heavy_struct::st::_tao_any_destructor (
@@ -413,8 +383,6 @@ decl_heavy_struct::st::_tao_any_destructor (
   st *tmp = static_cast<st *> (_tao_void_pointer);
   delete tmp;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:81
 
 decl_heavy_struct::_m_un_slice *
 decl_heavy_struct::_m_un_dup (const decl_heavy_struct::_m_un_slice *_tao_src_array)
@@ -454,8 +422,6 @@ decl_heavy_struct::_m_un_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:72
 
 
 
@@ -526,8 +492,6 @@ decl_heavy_struct::un::operator= (::decl_heavy_struct::un const &u)
 void decl_heavy_struct::un::_reset ()
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:61
 
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__0 (1, "a", &CORBA::_tc_long);
 static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__1 (2, "b", &CORBA::_tc_char);
@@ -551,8 +515,6 @@ static TAO::TypeCode::Union<char const *,
     -1);
 
 ::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_un = std::addressof(_tao_tc_decl_heavy_struct_un);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
 static char const * const _tao_enumerators_ErrorException_ReasonCode[] =
   {
@@ -574,8 +536,6 @@ static TAO::TypeCode::Enum<char const *,
     6);
 
 ::CORBA::TypeCode_ptr const ErrorException::_tc_ReasonCode = std::addressof(_tao_tc_ErrorException_ReasonCode);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_ctor.cpp:48
 
 
 
@@ -589,8 +549,6 @@ ErrorException::ErrorException (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_cs.cpp:95
 
 ErrorException::ErrorException ()
   : ::CORBA::UserException (
@@ -674,8 +632,6 @@ void ErrorException::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::_tc_ErrorException;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:82
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -700,8 +656,6 @@ _tao_tc_ErrorException (
   1);
 
 ::CORBA::TypeCode_ptr const _tc_ErrorException = std::addressof(_tao_tc_ErrorException);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:32
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -737,8 +691,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -783,8 +735,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:32
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -820,8 +770,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -866,8 +814,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/any_op_cs.cpp:34
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -946,8 +892,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/cdr_op_cs.cpp:29
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -973,8 +917,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/cdr_op_cs.cpp:29
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1000,8 +942,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1029,8 +969,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/cdr_op_cs.cpp:29
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1056,8 +994,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/cdr_op_cs.cpp:154
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1093,8 +1029,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1122,8 +1056,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/cdr_op_cs.cpp:154
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1159,8 +1091,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/cdr_op_cs.cpp:116
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1245,8 +1175,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/cdr_op_cs.cpp:154
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1282,8 +1210,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1331,8 +1257,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/cdr_op_cs.cpp:29
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1358,8 +1282,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/cdr_op_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL

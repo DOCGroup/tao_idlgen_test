@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:316
 
 
 #include "dif2C.h"
@@ -39,8 +37,6 @@
 #if !defined (__ACE_INLINE__)
 #include "dif2C.inl"
 #endif /* !defined INLINE */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -74,8 +70,6 @@ TAO::Objref_Traits<OldDif2::ex1>::marshal (const OldDif2::ex1_ptr p,TAO_OutputCD
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::ex1::op0 ()
@@ -107,8 +101,6 @@ OldDif2::ex1::op0 ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Float
 OldDif2::ex1::op1 (
@@ -148,8 +140,6 @@ OldDif2::ex1::op1 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Double
 OldDif2::ex1::op2 (
@@ -189,8 +179,6 @@ OldDif2::ex1::op2 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Long
 OldDif2::ex1::op3 (
@@ -230,8 +218,6 @@ OldDif2::ex1::op3 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Short
 OldDif2::ex1::op4 (
@@ -271,8 +257,6 @@ OldDif2::ex1::op4 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::ULong
 OldDif2::ex1::op5 (
@@ -315,8 +299,6 @@ OldDif2::ex1::op5 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::UShort
 OldDif2::ex1::op6 (
@@ -353,8 +335,6 @@ OldDif2::ex1::op6 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -385,8 +365,6 @@ OldDif2::ex1::sendc_op0 (
       &OldDif2::AMI_ex1Handler::op0_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -428,8 +406,6 @@ OldDif2::ex1::sendc_op1 (
       &OldDif2::AMI_ex1Handler::op1_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -471,8 +447,6 @@ OldDif2::ex1::sendc_op2 (
       &OldDif2::AMI_ex1Handler::op2_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -514,8 +488,6 @@ OldDif2::ex1::sendc_op3 (
       &OldDif2::AMI_ex1Handler::op3_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -557,8 +529,6 @@ OldDif2::ex1::sendc_op4 (
       &OldDif2::AMI_ex1Handler::op4_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -603,8 +573,6 @@ OldDif2::ex1::sendc_op5 (
       &OldDif2::AMI_ex1Handler::op5_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -724,8 +692,6 @@ OldDif2::ex1::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
 
 
@@ -863,8 +829,6 @@ OldDif2::AMH_ex1ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op0 ()
@@ -873,8 +837,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_op0 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op1 ()
@@ -883,8 +845,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_op1 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op2 ()
@@ -893,8 +853,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_op2 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op3 ()
@@ -903,8 +861,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_op3 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op4 ()
@@ -913,8 +869,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_op4 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op5 ()
@@ -923,8 +877,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_op5 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op6 ()
@@ -933,8 +885,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_op6 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op0 ()
@@ -943,8 +893,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op0 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op1 ()
@@ -953,8 +901,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op1 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op2 ()
@@ -963,8 +909,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op2 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op3 ()
@@ -973,8 +917,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op3 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op4 ()
@@ -983,8 +925,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op4 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op5 ()
@@ -993,8 +933,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op5 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op6 ()
@@ -1003,8 +941,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op6 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1122,8 +1058,6 @@ OldDif2::AMH_ex1ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1157,8 +1091,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::marshal (const OldDif2::AMI_ex1Hand
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op0 ()
@@ -1245,8 +1177,6 @@ OldDif2::AMI_ex1Handler::op0_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op0_excep (
@@ -1278,8 +1208,6 @@ OldDif2::AMI_ex1Handler::op0_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op1 (
@@ -1388,8 +1316,6 @@ OldDif2::AMI_ex1Handler::op1_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op1_excep (
@@ -1421,8 +1347,6 @@ OldDif2::AMI_ex1Handler::op1_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op2 (
@@ -1531,8 +1455,6 @@ OldDif2::AMI_ex1Handler::op2_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op2_excep (
@@ -1564,8 +1486,6 @@ OldDif2::AMI_ex1Handler::op2_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op3 (
@@ -1674,8 +1594,6 @@ OldDif2::AMI_ex1Handler::op3_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op3_excep (
@@ -1707,8 +1625,6 @@ OldDif2::AMI_ex1Handler::op3_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op4 (
@@ -1817,8 +1733,6 @@ OldDif2::AMI_ex1Handler::op4_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op4_excep (
@@ -1850,8 +1764,6 @@ OldDif2::AMI_ex1Handler::op4_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op5 (
@@ -1960,8 +1872,6 @@ OldDif2::AMI_ex1Handler::op5_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op5_excep (
@@ -1993,8 +1903,6 @@ OldDif2::AMI_ex1Handler::op5_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op6 (
@@ -2103,8 +2011,6 @@ OldDif2::AMI_ex1Handler::op6_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex1Handler::op6_excep (
@@ -2218,8 +2124,6 @@ OldDif2::AMI_ex1Handler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2253,8 +2157,6 @@ TAO::Objref_Traits<OldDif2::ex2>::marshal (const OldDif2::ex2_ptr p,TAO_OutputCD
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Char
 OldDif2::ex2::op7 (
@@ -2294,8 +2196,6 @@ OldDif2::ex2::op7 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Boolean
 OldDif2::ex2::op8 (
@@ -2332,8 +2232,6 @@ OldDif2::ex2::op8 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Octet
 OldDif2::ex2::op9 (
@@ -2376,8 +2274,6 @@ OldDif2::ex2::op9 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 char *
 OldDif2::ex2::op10 (
@@ -2414,8 +2310,6 @@ OldDif2::ex2::op10 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 char *
 OldDif2::ex2::op11 (
@@ -2452,8 +2346,6 @@ OldDif2::ex2::op11 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Long
 OldDif2::ex2::op12 (
@@ -2487,8 +2379,6 @@ OldDif2::ex2::op12 (
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -2530,8 +2420,6 @@ OldDif2::ex2::sendc_op7 (
       &OldDif2::AMI_ex2Handler::op7_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -2570,8 +2458,6 @@ OldDif2::ex2::sendc_op8 (
       &OldDif2::AMI_ex2Handler::op8_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -2616,8 +2502,6 @@ OldDif2::ex2::sendc_op9 (
       &OldDif2::AMI_ex2Handler::op9_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -2656,8 +2540,6 @@ OldDif2::ex2::sendc_op10 (
       &OldDif2::AMI_ex2Handler::op10_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -2696,8 +2578,6 @@ OldDif2::ex2::sendc_op11 (
       &OldDif2::AMI_ex2Handler::op11_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -2818,8 +2698,6 @@ OldDif2::ex2::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
 
 
@@ -2957,8 +2835,6 @@ OldDif2::AMH_ex2ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op7 ()
@@ -2967,8 +2843,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_op7 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op8 ()
@@ -2977,8 +2851,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_op8 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op9 ()
@@ -2987,8 +2859,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_op9 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op10 ()
@@ -2997,8 +2867,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_op10 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op11 ()
@@ -3007,8 +2875,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_op11 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op12 ()
@@ -3017,8 +2883,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_op12 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op7 ()
@@ -3027,8 +2891,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op7 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op8 ()
@@ -3037,8 +2899,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op8 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op9 ()
@@ -3047,8 +2907,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op9 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op10 ()
@@ -3057,8 +2915,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op10 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op11 ()
@@ -3067,8 +2923,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op11 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op12 ()
@@ -3077,8 +2931,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op12 ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -3196,8 +3048,6 @@ OldDif2::AMH_ex2ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -3231,8 +3081,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::marshal (const OldDif2::AMI_ex2Hand
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op7 (
@@ -3341,8 +3189,6 @@ OldDif2::AMI_ex2Handler::op7_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op7_excep (
@@ -3374,8 +3220,6 @@ OldDif2::AMI_ex2Handler::op7_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op8 (
@@ -3477,8 +3321,6 @@ OldDif2::AMI_ex2Handler::op8_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op8_excep (
@@ -3510,8 +3352,6 @@ OldDif2::AMI_ex2Handler::op8_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op9 (
@@ -3627,8 +3467,6 @@ OldDif2::AMI_ex2Handler::op9_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op9_excep (
@@ -3660,8 +3498,6 @@ OldDif2::AMI_ex2Handler::op9_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op10 (
@@ -3763,8 +3599,6 @@ OldDif2::AMI_ex2Handler::op10_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op10_excep (
@@ -3796,8 +3630,6 @@ OldDif2::AMI_ex2Handler::op10_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op11 (
@@ -3906,8 +3738,6 @@ OldDif2::AMI_ex2Handler::op11_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op11_excep (
@@ -3939,8 +3769,6 @@ OldDif2::AMI_ex2Handler::op11_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op12 (
@@ -4035,8 +3863,6 @@ OldDif2::AMI_ex2Handler::op12_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex2Handler::op12_excep (
@@ -4151,8 +3977,6 @@ OldDif2::AMI_ex2Handler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -4186,8 +4010,6 @@ TAO::Objref_Traits<OldDif2::ex3>::marshal (const OldDif2::ex3_ptr p,TAO_OutputCD
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Float
 OldDif2::ex3::float_attribute ()
@@ -4221,8 +4043,6 @@ OldDif2::ex3::float_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Double
 OldDif2::ex3::double_attribute ()
@@ -4256,8 +4076,6 @@ OldDif2::ex3::double_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::ex3::double_attribute (
@@ -4289,8 +4107,6 @@ OldDif2::ex3::double_attribute (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Long
 OldDif2::ex3::long_attribute ()
@@ -4324,8 +4140,6 @@ OldDif2::ex3::long_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Short
 OldDif2::ex3::short_attribute ()
@@ -4359,8 +4173,6 @@ OldDif2::ex3::short_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::ex3::short_attribute (
@@ -4392,8 +4204,6 @@ OldDif2::ex3::short_attribute (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::ULong
 OldDif2::ex3::unsigned_long_attribute ()
@@ -4427,8 +4237,6 @@ OldDif2::ex3::unsigned_long_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -4459,8 +4267,6 @@ OldDif2::ex3::sendc_get_float_attribute (
       &OldDif2::AMI_ex3Handler::get_float_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -4499,8 +4305,6 @@ OldDif2::ex3::sendc_set_double_attribute (
       &OldDif2::AMI_ex3Handler::set_double_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -4531,8 +4335,6 @@ OldDif2::ex3::sendc_get_double_attribute (
       &OldDif2::AMI_ex3Handler::get_double_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -4563,8 +4365,6 @@ OldDif2::ex3::sendc_get_long_attribute (
       &OldDif2::AMI_ex3Handler::get_long_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -4603,8 +4403,6 @@ OldDif2::ex3::sendc_set_short_attribute (
       &OldDif2::AMI_ex3Handler::set_short_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -4635,8 +4433,6 @@ OldDif2::ex3::sendc_get_short_attribute (
       &OldDif2::AMI_ex3Handler::get_short_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -4749,8 +4545,6 @@ OldDif2::ex3::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
 
 
@@ -4888,8 +4682,6 @@ OldDif2::AMH_ex3ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_float_attribute ()
@@ -4898,8 +4690,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_get_float_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_double_attribute ()
@@ -4908,8 +4698,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_get_double_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_set_double_attribute ()
@@ -4918,8 +4706,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_set_double_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_long_attribute ()
@@ -4928,8 +4714,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_get_long_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_short_attribute ()
@@ -4938,8 +4722,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_get_short_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_set_short_attribute ()
@@ -4948,8 +4730,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_set_short_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_unsigned_long_attribute ()
@@ -4958,8 +4738,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_get_unsigned_long_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_float_attribute ()
@@ -4968,8 +4746,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_float_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_set_double_attribute ()
@@ -4978,8 +4754,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_set_double_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_double_attribute ()
@@ -4988,8 +4762,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_double_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_long_attribute ()
@@ -4998,8 +4770,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_long_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_set_short_attribute ()
@@ -5008,8 +4778,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_set_short_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_short_attribute ()
@@ -5018,8 +4786,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_short_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_unsigned_long_attribute ()
@@ -5028,8 +4794,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_unsigned_long_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -5147,8 +4911,6 @@ OldDif2::AMH_ex3ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -5182,8 +4944,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::marshal (const OldDif2::AMI_ex3Hand
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::get_float_attribute (
@@ -5278,8 +5038,6 @@ OldDif2::AMI_ex3Handler::get_float_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::get_float_attribute_excep (
@@ -5311,8 +5069,6 @@ OldDif2::AMI_ex3Handler::get_float_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::get_double_attribute (
@@ -5407,8 +5163,6 @@ OldDif2::AMI_ex3Handler::get_double_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::get_double_attribute_excep (
@@ -5440,8 +5194,6 @@ OldDif2::AMI_ex3Handler::get_double_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::set_double_attribute ()
@@ -5528,8 +5280,6 @@ OldDif2::AMI_ex3Handler::set_double_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::set_double_attribute_excep (
@@ -5561,8 +5311,6 @@ OldDif2::AMI_ex3Handler::set_double_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::get_long_attribute (
@@ -5657,8 +5405,6 @@ OldDif2::AMI_ex3Handler::get_long_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::get_long_attribute_excep (
@@ -5690,8 +5436,6 @@ OldDif2::AMI_ex3Handler::get_long_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::get_short_attribute (
@@ -5786,8 +5530,6 @@ OldDif2::AMI_ex3Handler::get_short_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::get_short_attribute_excep (
@@ -5819,8 +5561,6 @@ OldDif2::AMI_ex3Handler::get_short_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::set_short_attribute ()
@@ -5907,8 +5647,6 @@ OldDif2::AMI_ex3Handler::set_short_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::set_short_attribute_excep (
@@ -5940,8 +5678,6 @@ OldDif2::AMI_ex3Handler::set_short_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::get_unsigned_long_attribute (
@@ -6036,8 +5772,6 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep (
@@ -6152,8 +5886,6 @@ OldDif2::AMI_ex3Handler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -6187,8 +5919,6 @@ TAO::Objref_Traits<OldDif2::ex4>::marshal (const OldDif2::ex4_ptr p,TAO_OutputCD
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::UShort
 OldDif2::ex4::unsigned_short_attribute ()
@@ -6222,8 +5952,6 @@ OldDif2::ex4::unsigned_short_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::ex4::unsigned_short_attribute (
@@ -6255,8 +5983,6 @@ OldDif2::ex4::unsigned_short_attribute (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Char
 OldDif2::ex4::char_attribute ()
@@ -6290,8 +6016,6 @@ OldDif2::ex4::char_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Boolean
 OldDif2::ex4::boolean_attribute ()
@@ -6325,8 +6049,6 @@ OldDif2::ex4::boolean_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::ex4::boolean_attribute (
@@ -6358,8 +6080,6 @@ OldDif2::ex4::boolean_attribute (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::CORBA::Octet
 OldDif2::ex4::octet_attribute ()
@@ -6393,8 +6113,6 @@ OldDif2::ex4::octet_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 char *
 OldDif2::ex4::string_attribute ()
@@ -6428,8 +6146,6 @@ OldDif2::ex4::string_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::ex4::string_attribute (
@@ -6461,8 +6177,6 @@ OldDif2::ex4::string_attribute (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 char *
 OldDif2::ex4::limited_string_attribute ()
@@ -6496,8 +6210,6 @@ OldDif2::ex4::limited_string_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::OldDif2::ex4_ptr
 OldDif2::ex4::an_object_attribute ()
@@ -6531,8 +6243,6 @@ OldDif2::ex4::an_object_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -6571,8 +6281,6 @@ OldDif2::ex4::sendc_set_unsigned_short_attribute (
       &OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -6603,8 +6311,6 @@ OldDif2::ex4::sendc_get_unsigned_short_attribute (
       &OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -6635,8 +6341,6 @@ OldDif2::ex4::sendc_get_char_attribute (
       &OldDif2::AMI_ex4Handler::get_char_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -6675,8 +6379,6 @@ OldDif2::ex4::sendc_set_boolean_attribute (
       &OldDif2::AMI_ex4Handler::set_boolean_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -6707,8 +6409,6 @@ OldDif2::ex4::sendc_get_boolean_attribute (
       &OldDif2::AMI_ex4Handler::get_boolean_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -6739,8 +6439,6 @@ OldDif2::ex4::sendc_get_octet_attribute (
       &OldDif2::AMI_ex4Handler::get_octet_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -6779,8 +6477,6 @@ OldDif2::ex4::sendc_set_string_attribute (
       &OldDif2::AMI_ex4Handler::set_string_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -6811,8 +6507,6 @@ OldDif2::ex4::sendc_get_string_attribute (
       &OldDif2::AMI_ex4Handler::get_string_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -6843,8 +6537,6 @@ OldDif2::ex4::sendc_get_limited_string_attribute (
       &OldDif2::AMI_ex4Handler::get_limited_string_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -6959,8 +6651,6 @@ OldDif2::ex4::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
 
 
@@ -7098,8 +6788,6 @@ OldDif2::AMH_ex4ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_unsigned_short_attribute ()
@@ -7108,8 +6796,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_get_unsigned_short_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_set_unsigned_short_attribute ()
@@ -7118,8 +6804,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_set_unsigned_short_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_char_attribute ()
@@ -7128,8 +6812,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_get_char_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_boolean_attribute ()
@@ -7138,8 +6820,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_get_boolean_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_set_boolean_attribute ()
@@ -7148,8 +6828,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_set_boolean_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_octet_attribute ()
@@ -7158,8 +6836,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_get_octet_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_string_attribute ()
@@ -7168,8 +6844,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_get_string_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_set_string_attribute ()
@@ -7178,8 +6852,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_set_string_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_limited_string_attribute ()
@@ -7188,8 +6860,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_get_limited_string_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_an_object_attribute ()
@@ -7198,8 +6868,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_get_an_object_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_unsigned_short_attribute ()
@@ -7208,8 +6876,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_unsigned_short_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_unsigned_short_attribute ()
@@ -7218,8 +6884,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_unsigned_short_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_char_attribute ()
@@ -7228,8 +6892,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_char_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_boolean_attribute ()
@@ -7238,8 +6900,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_boolean_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_boolean_attribute ()
@@ -7248,8 +6908,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_boolean_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_octet_attribute ()
@@ -7258,8 +6916,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_octet_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_string_attribute ()
@@ -7268,8 +6924,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_string_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_string_attribute ()
@@ -7278,8 +6932,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_string_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_limited_string_attribute ()
@@ -7288,8 +6940,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_limited_string_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_an_object_attribute ()
@@ -7298,8 +6948,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_an_object_attribute ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -7417,8 +7065,6 @@ OldDif2::AMH_ex4ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -7452,8 +7098,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::marshal (const OldDif2::AMI_ex4Hand
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_unsigned_short_attribute (
@@ -7548,8 +7192,6 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep (
@@ -7581,8 +7223,6 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::set_unsigned_short_attribute ()
@@ -7669,8 +7309,6 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep (
@@ -7702,8 +7340,6 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_char_attribute (
@@ -7798,8 +7434,6 @@ OldDif2::AMI_ex4Handler::get_char_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_char_attribute_excep (
@@ -7831,8 +7465,6 @@ OldDif2::AMI_ex4Handler::get_char_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_boolean_attribute (
@@ -7927,8 +7559,6 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_boolean_attribute_excep (
@@ -7960,8 +7590,6 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::set_boolean_attribute ()
@@ -8048,8 +7676,6 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::set_boolean_attribute_excep (
@@ -8081,8 +7707,6 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_octet_attribute (
@@ -8177,8 +7801,6 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_octet_attribute_excep (
@@ -8210,8 +7832,6 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_string_attribute (
@@ -8306,8 +7926,6 @@ OldDif2::AMI_ex4Handler::get_string_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_string_attribute_excep (
@@ -8339,8 +7957,6 @@ OldDif2::AMI_ex4Handler::get_string_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::set_string_attribute ()
@@ -8427,8 +8043,6 @@ OldDif2::AMI_ex4Handler::set_string_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::set_string_attribute_excep (
@@ -8460,8 +8074,6 @@ OldDif2::AMI_ex4Handler::set_string_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_limited_string_attribute (
@@ -8556,8 +8168,6 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep (
@@ -8589,8 +8199,6 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_an_object_attribute (
@@ -8685,8 +8293,6 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 OldDif2::AMI_ex4Handler::get_an_object_attribute_excep (
@@ -8803,8 +8409,6 @@ OldDif2::AMI_ex4Handler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:41
 
 OBV_OldDif2::AMH_ex1ExceptionHolder::~AMH_ex1ExceptionHolder ()
 {}
@@ -8820,8 +8424,6 @@ OBV_OldDif2::AMH_ex1ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex1ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:41
 
 OBV_OldDif2::AMH_ex2ExceptionHolder::~AMH_ex2ExceptionHolder ()
 {}
@@ -8837,8 +8439,6 @@ OBV_OldDif2::AMH_ex2ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex2ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:41
 
 OBV_OldDif2::AMH_ex3ExceptionHolder::~AMH_ex3ExceptionHolder ()
 {}
@@ -8854,8 +8454,6 @@ OBV_OldDif2::AMH_ex3ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex3ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:41
 
 OBV_OldDif2::AMH_ex4ExceptionHolder::~AMH_ex4ExceptionHolder ()
 {}
@@ -8871,8 +8469,6 @@ OBV_OldDif2::AMH_ex4ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex4ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:48
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -8905,8 +8501,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -8932,8 +8526,6 @@ CORBA::remove_ref (OldDif2::AMH_ex1ExceptionHolder * vt)
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_cs.cpp:57
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -8962,8 +8554,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/marshal_cs.cpp:187
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex1ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -8984,8 +8574,6 @@ OBV_OldDif2::AMH_ex1ExceptionHolder::truncation_hook ()
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:48
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -9018,8 +8606,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:48
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -9052,8 +8638,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -9079,8 +8663,6 @@ CORBA::remove_ref (OldDif2::AMH_ex2ExceptionHolder * vt)
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_cs.cpp:57
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -9109,8 +8691,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/marshal_cs.cpp:187
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex2ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -9131,8 +8711,6 @@ OBV_OldDif2::AMH_ex2ExceptionHolder::truncation_hook ()
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:48
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -9165,8 +8743,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:48
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -9199,8 +8775,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -9226,8 +8800,6 @@ CORBA::remove_ref (OldDif2::AMH_ex3ExceptionHolder * vt)
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_cs.cpp:57
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -9256,8 +8828,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/marshal_cs.cpp:187
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex3ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -9278,8 +8848,6 @@ OBV_OldDif2::AMH_ex3ExceptionHolder::truncation_hook ()
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:48
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -9312,8 +8880,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:48
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -9346,8 +8912,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -9373,8 +8937,6 @@ CORBA::remove_ref (OldDif2::AMH_ex4ExceptionHolder * vt)
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_cs.cpp:57
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -9403,8 +8965,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/marshal_cs.cpp:187
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex4ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -9425,8 +8985,6 @@ OBV_OldDif2::AMH_ex4ExceptionHolder::truncation_hook ()
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:48
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL

@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -44,8 +42,6 @@ Bug_2350_Regression::Bug_2350_Regression (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_Bug_2350_RegressionExceptionHolder::AMH_Bug_2350_RegressionExceptionHolder ()
@@ -57,8 +53,6 @@ AMH_Bug_2350_RegressionExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_Bug_2350_RegressionExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 

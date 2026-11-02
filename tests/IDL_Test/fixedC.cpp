@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:316
 
 
 #include "fixedC.h"
@@ -41,8 +39,6 @@
 #endif /* !defined INLINE */
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:52
 
 void
 FixedPoint::FixedValues::_tao_any_destructor (
@@ -51,8 +47,6 @@ FixedPoint::FixedValues::_tao_any_destructor (
   FixedValues *tmp = static_cast<FixedValues *> (_tao_void_pointer);
   delete tmp;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -86,8 +80,6 @@ TAO::Objref_Traits<FixedPoint::FixedOperations>::marshal (const FixedPoint::Fixe
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 ::FixedPoint::Amount
 FixedPoint::FixedOperations::rate ()
@@ -121,8 +113,6 @@ FixedPoint::FixedOperations::rate ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 FixedPoint::FixedOperations::rate (
@@ -154,8 +144,6 @@ FixedPoint::FixedOperations::rate (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -194,8 +182,6 @@ FixedPoint::FixedOperations::sendc_set_rate (
       &FixedPoint::AMI_FixedOperationsHandler::set_rate_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
 
 
 
@@ -307,8 +293,6 @@ FixedPoint::FixedOperations::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
 
 
 
@@ -446,8 +430,6 @@ FixedPoint::AMH_FixedOperationsExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 FixedPoint::AMH_FixedOperationsExceptionHolder::raise_get_rate ()
@@ -456,8 +438,6 @@ FixedPoint::AMH_FixedOperationsExceptionHolder::raise_get_rate ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 FixedPoint::AMH_FixedOperationsExceptionHolder::raise_set_rate ()
@@ -466,8 +446,6 @@ FixedPoint::AMH_FixedOperationsExceptionHolder::raise_set_rate ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 FixedPoint::AMH_FixedOperationsExceptionHolder::raise_sendc_set_rate ()
@@ -476,8 +454,6 @@ FixedPoint::AMH_FixedOperationsExceptionHolder::raise_sendc_set_rate ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 FixedPoint::AMH_FixedOperationsExceptionHolder::raise_sendc_get_rate ()
@@ -486,8 +462,6 @@ FixedPoint::AMH_FixedOperationsExceptionHolder::raise_sendc_get_rate ()
   this->exception->_raise ();
 }
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -605,8 +579,6 @@ FixedPoint::AMH_FixedOperationsResponseHandler::marshal (TAO_OutputCDR & /* cdr 
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:45
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -640,8 +612,6 @@ TAO::Objref_Traits<FixedPoint::AMI_FixedOperationsHandler>::marshal (const Fixed
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 FixedPoint::AMI_FixedOperationsHandler::get_rate (
@@ -736,8 +706,6 @@ FixedPoint::AMI_FixedOperationsHandler::get_rate_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 FixedPoint::AMI_FixedOperationsHandler::get_rate_excep (
@@ -769,8 +737,6 @@ FixedPoint::AMI_FixedOperationsHandler::get_rate_excep (
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 FixedPoint::AMI_FixedOperationsHandler::set_rate ()
@@ -857,8 +823,6 @@ FixedPoint::AMI_FixedOperationsHandler::set_rate_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:85
 
 void
 FixedPoint::AMI_FixedOperationsHandler::set_rate_excep (
@@ -972,8 +936,6 @@ FixedPoint::AMI_FixedOperationsHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:41
 
 OBV_FixedPoint::AMH_FixedOperationsExceptionHolder::~AMH_FixedOperationsExceptionHolder ()
 {}
@@ -989,8 +951,6 @@ OBV_FixedPoint::AMH_FixedOperationsExceptionHolder::_tao_unmarshal__FixedPoint_A
 {
   return _tao_unmarshal_state (strm, ci);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:47
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1024,8 +984,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:48
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1058,8 +1016,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:470
 
 
 
@@ -1085,8 +1041,6 @@ CORBA::remove_ref (FixedPoint::AMH_FixedOperationsExceptionHolder * vt)
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_cs.cpp:57
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1115,8 +1069,6 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/marshal_cs.cpp:187
 
 ::CORBA::Boolean
 OBV_FixedPoint::AMH_FixedOperationsExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -1137,8 +1089,6 @@ OBV_FixedPoint::AMH_FixedOperationsExceptionHolder::truncation_hook ()
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:48
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL

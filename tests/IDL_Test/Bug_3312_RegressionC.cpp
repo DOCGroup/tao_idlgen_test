@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:316
 
 
 #include "Bug_3312_RegressionC.h"
@@ -54,8 +52,6 @@
 #if !defined (__ACE_INLINE__)
 #include "Bug_3312_RegressionC.inl"
 #endif /* !defined INLINE */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
 static char const * const _tao_enumerators_CallMe_Colors[] =
   {
@@ -78,8 +74,6 @@ namespace CallMe
 {
   ::CORBA::TypeCode_ptr const _tc_Colors = std::addressof(_tao_tc_CallMe_Colors);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
 static char const * const _tao_enumerators_CallMe_YourColorBaby_ColorMe[] =
   {
@@ -97,8 +91,6 @@ static TAO::TypeCode::Enum<char const *,
     2);
 
 ::CORBA::TypeCode_ptr const CallMe::YourColorBaby::_tc_ColorMe = std::addressof(_tao_tc_CallMe_YourColorBaby_ColorMe);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
 static char const * const _tao_enumerators_CallMe_YourColorBaby_Val[] =
   {
@@ -116,8 +108,6 @@ static TAO::TypeCode::Enum<char const *,
     2);
 
 ::CORBA::TypeCode_ptr const CallMe::YourColorBaby::_tc_Val = std::addressof(_tao_tc_CallMe_YourColorBaby_Val);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:72
 
 
 
@@ -190,8 +180,6 @@ CallMe::YourColorBaby::operator= (::CallMe::YourColorBaby const &u)
 void CallMe::YourColorBaby::_reset ()
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:61
 
 static TAO::TypeCode::Case_T<CallMe::YourColorBaby::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourColorBaby__0 (CallMe::YourColorBaby::Red, "c_1", &CallMe::YourColorBaby::_tc_Val);
 static TAO::TypeCode::Case_T<CallMe::YourColorBaby::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourColorBaby__1 (CallMe::YourColorBaby::Blue, "c_2", &CORBA::_tc_long);
@@ -219,8 +207,6 @@ namespace CallMe
 {
   ::CORBA::TypeCode_ptr const _tc_YourColorBaby = std::addressof(_tao_tc_CallMe_YourColorBaby);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
 
 static char const * const _tao_enumerators_CallMe_YourCar_ColorMe[] =
   {
@@ -238,8 +224,6 @@ static TAO::TypeCode::Enum<char const *,
     2);
 
 ::CORBA::TypeCode_ptr const CallMe::YourCar::_tc_ColorMe = std::addressof(_tao_tc_CallMe_YourCar_ColorMe);
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_cs.cpp:72
 
 
 
@@ -310,8 +294,6 @@ CallMe::YourCar::operator= (::CallMe::YourCar const &u)
 void CallMe::YourCar::_reset ()
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/union_typecode.cpp:61
 
 static TAO::TypeCode::Case_T<CallMe::YourCar::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourCar__0 (CallMe::YourCar::Green, "c_1", &CORBA::_tc_short);
 static TAO::TypeCode::Case_T<CallMe::YourCar::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourCar__1 (CallMe::YourCar::Pink, "c_2", &CORBA::_tc_short);
@@ -339,8 +321,6 @@ namespace CallMe
 {
   ::CORBA::TypeCode_ptr const _tc_YourCar = std::addressof(_tao_tc_CallMe_YourCar);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:32
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -376,8 +356,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/any_op_cs.cpp:32
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -428,8 +406,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:32
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -465,8 +441,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:32
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -502,8 +476,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/any_op_cs.cpp:32
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -554,8 +526,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:32
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -591,8 +561,6 @@ void operator<<= (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/cdr_op_cs.cpp:29
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -618,8 +586,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/cdr_op_cs.cpp:29
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -645,8 +611,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/cdr_op_cs.cpp:29
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -672,8 +636,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/cdr_op_cs.cpp:116
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -758,8 +720,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/cdr_op_cs.cpp:29
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -785,8 +745,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/cdr_op_cs.cpp:116
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL

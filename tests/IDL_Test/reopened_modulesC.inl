@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -44,8 +42,6 @@ AA::BB::x1::x1 (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AA::BB::AMH_x1ExceptionHolder::AMH_x1ExceptionHolder ()
@@ -57,8 +53,6 @@ AA::BB::AMH_x1ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AA/BB/AMH_x1ExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -79,8 +73,6 @@ AA::BB::AMI_x1Handler::AMI_x1Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -101,8 +93,6 @@ AA::BB::CC::x2::x2 (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AA::BB::CC::AMH_x2ExceptionHolder::AMH_x2ExceptionHolder ()
@@ -114,8 +104,6 @@ AA::BB::CC::AMH_x2ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AA/BB/CC/AMH_x2ExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -136,8 +124,6 @@ AA::BB::CC::AMI_x2Handler::AMI_x2Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -158,8 +144,6 @@ dot::Person::Person (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 dot::AMH_PersonExceptionHolder::AMH_PersonExceptionHolder ()
@@ -171,8 +155,6 @@ dot::AMH_PersonExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:dot/AMH_PersonExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -193,8 +175,6 @@ dot::AMI_PersonHandler::AMI_PersonHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -215,8 +195,6 @@ dot::Party::Party (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 dot::AMH_PartyExceptionHolder::AMH_PartyExceptionHolder ()
@@ -228,8 +206,6 @@ dot::AMH_PartyExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:dot/AMH_PartyExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -250,8 +226,6 @@ dot::AMI_PartyHandler::AMI_PartyHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -272,8 +246,6 @@ OpHolder::OpHolder (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_OpHolderExceptionHolder::AMH_OpHolderExceptionHolder ()
@@ -285,8 +257,6 @@ AMH_OpHolderExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_OpHolderExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -307,8 +277,6 @@ AMI_OpHolderHandler::AMI_OpHolderHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -329,8 +297,6 @@ com::IFace::IFace (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 com::AMH_IFaceExceptionHolder::AMH_IFaceExceptionHolder ()
@@ -342,8 +308,6 @@ com::AMH_IFaceExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:com/AMH_IFaceExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -364,8 +328,6 @@ com::AMI_IFaceHandler::AMI_IFaceHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -386,8 +348,6 @@ Y::Z::Z (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 Y::AMH_ZExceptionHolder::AMH_ZExceptionHolder ()
@@ -399,8 +359,6 @@ Y::AMH_ZExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:Y/AMH_ZExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -421,8 +379,6 @@ Y::AMI_ZHandler::AMI_ZHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -443,8 +399,6 @@ X::BI::BI (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 X::AMH_BIExceptionHolder::AMH_BIExceptionHolder ()
@@ -456,8 +410,6 @@ X::AMH_BIExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:X/AMH_BIExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -478,8 +430,6 @@ X::AMI_BIHandler::AMI_BIHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -500,8 +450,6 @@ XX::blah_intfc::blah_intfc (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 XX::AMH_blah_intfcExceptionHolder::AMH_blah_intfcExceptionHolder ()
@@ -513,8 +461,6 @@ XX::AMH_blah_intfcExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:XX/AMH_blah_intfcExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -535,8 +481,6 @@ XX::AMI_blah_intfcHandler::AMI_blah_intfcHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -557,8 +501,6 @@ XX::blah0::blah0 (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 XX::AMH_blah0ExceptionHolder::AMH_blah0ExceptionHolder ()
@@ -570,8 +512,6 @@ XX::AMH_blah0ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:XX/AMH_blah0ExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -592,8 +532,6 @@ XX::AMI_blah0Handler::AMI_blah0Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -614,8 +552,6 @@ frag::frag_iface::frag_iface (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 frag::AMH_frag_ifaceExceptionHolder::AMH_frag_ifaceExceptionHolder ()
@@ -627,8 +563,6 @@ frag::AMH_frag_ifaceExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:frag/AMH_frag_ifaceExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -649,8 +583,6 @@ frag::AMI_frag_ifaceHandler::AMI_frag_ifaceHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -671,8 +603,6 @@ gather::gather (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_gatherExceptionHolder::AMH_gatherExceptionHolder ()
@@ -684,8 +614,6 @@ AMH_gatherExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_gatherExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -706,8 +634,6 @@ AMI_gatherHandler::AMI_gatherHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -728,8 +654,6 @@ foo::obj::obj (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 foo::AMH_objExceptionHolder::AMH_objExceptionHolder ()
@@ -741,8 +665,6 @@ foo::AMH_objExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:foo/AMH_objExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -763,8 +685,6 @@ foo::AMI_objHandler::AMI_objHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -785,8 +705,6 @@ A::B::X3::X3 (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 A::B::AMH_X3ExceptionHolder::AMH_X3ExceptionHolder ()
@@ -798,8 +716,6 @@ A::B::AMH_X3ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:A/B/AMH_X3ExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -820,8 +736,6 @@ A::B::AMI_X3Handler::AMI_X3Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -842,8 +756,6 @@ mA::A::A (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 mA::AMH_AExceptionHolder::AMH_AExceptionHolder ()
@@ -855,8 +767,6 @@ mA::AMH_AExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:mA/AMH_AExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -877,8 +787,6 @@ mA::AMI_AHandler::AMI_AHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -899,8 +807,6 @@ mB::B::B (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 mB::AMH_BExceptionHolder::AMH_BExceptionHolder ()
@@ -912,8 +818,6 @@ mB::AMH_BExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:mB/AMH_BExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -934,8 +838,6 @@ mB::AMI_BHandler::AMI_BHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -956,8 +858,6 @@ mC::C::C (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 mC::AMH_CExceptionHolder::AMH_CExceptionHolder ()
@@ -969,8 +869,6 @@ mC::AMH_CExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:mC/AMH_CExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -991,8 +889,6 @@ mC::AMI_CHandler::AMI_CHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -1013,8 +909,6 @@ Schmoik::foo::foo (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 Schmoik::AMH_fooExceptionHolder::AMH_fooExceptionHolder ()
@@ -1026,8 +920,6 @@ Schmoik::AMH_fooExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:Schmoik/AMH_fooExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -1048,8 +940,6 @@ Schmoik::AMI_fooHandler::AMI_fooHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -1070,8 +960,6 @@ Thwoik::TestType::TestType (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 Thwoik::AMH_TestTypeExceptionHolder::AMH_TestTypeExceptionHolder ()
@@ -1083,8 +971,6 @@ Thwoik::AMH_TestTypeExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:Thwoik/AMH_TestTypeExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -1105,8 +991,6 @@ Thwoik::AMI_TestTypeHandler::AMI_TestTypeHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -1127,8 +1011,6 @@ A_mod::Foo::Foo (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 A_mod::AMH_FooExceptionHolder::AMH_FooExceptionHolder ()
@@ -1140,8 +1022,6 @@ A_mod::AMH_FooExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:A_mod/AMH_FooExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -1162,8 +1042,6 @@ A_mod::AMI_FooHandler::AMI_FooHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -1184,8 +1062,6 @@ A_mod::B_mod::Foo::Foo (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 A_mod::B_mod::AMH_FooExceptionHolder::AMH_FooExceptionHolder ()
@@ -1197,8 +1073,6 @@ A_mod::B_mod::AMH_FooExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:A_mod/B_mod/AMH_FooExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 

@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 VT_Def::VT::VT ()
@@ -34,8 +32,6 @@ VT_Def::VT::_tao_obv_static_repository_id ()
 {
   return "IDL:VT_Def/VT:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 IncludedBase::IncludedBase ()
@@ -46,8 +42,6 @@ IncludedBase::_tao_obv_static_repository_id ()
 {
   return "IDL:IncludedBase:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -68,8 +62,6 @@ RootModule::SUBMODULE1::ParentIF::ParentIF (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder::AMH_ParentIFExceptionHolder ()
@@ -81,8 +73,6 @@ RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder::_tao_obv_static_repository_
 {
   return "IDL:RootModule/SUBMODULE1/AMH_ParentIFExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -103,8 +93,6 @@ RootModule::SUBMODULE1::AMI_ParentIFHandler::AMI_ParentIFHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 
@@ -125,8 +113,6 @@ AAA::AAA (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:40
 
 ACE_INLINE
 AMH_AAAExceptionHolder::AMH_AAAExceptionHolder ()
@@ -138,8 +124,6 @@ AMH_AAAExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_AAAExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:56
 
 
 

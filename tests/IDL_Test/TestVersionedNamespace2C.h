@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:108
 
 #ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_ROFCWB_H_
 #define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_ROFCWB_H_
@@ -80,8 +78,6 @@ END_USER_VERSIONED_NAMESPACE
 BEGIN_USER_VERSIONED_NAMESPACE
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_root/root_ch.cpp:152
 
 
 
@@ -103,13 +99,9 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:32
 
 namespace M1
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:235
 
 
 
@@ -118,15 +110,11 @@ namespace M1
   using S1_out = S1&;
 
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_ch.cpp:44
 
 
 
   struct  S1
   {
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
 
     using _var_type = S1_var;
@@ -136,12 +124,8 @@ namespace M1
 
     ::CORBA::Octet o {};
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
   extern  ::CORBA::TypeCode_ptr const _tc_S1;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
 
 
 
@@ -156,8 +140,6 @@ namespace M1
 #endif /* end #if !defined */
 
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:37
 
 
 
@@ -166,8 +148,6 @@ namespace M1
   {
   public:
     friend class TAO::Narrow_Utils<LI>;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
     using _ptr_type = LI_ptr;
     using _var_type = LI_var;
@@ -188,8 +168,6 @@ namespace M1
       const ::M1::S1 & s);
 
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:133
 
 
 
@@ -220,12 +198,8 @@ namespace M1
     LI &operator= (const LI &) = delete;
     LI &operator= (LI &&) = delete;
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
   extern  ::CORBA::TypeCode_ptr const _tc_LI;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
 
 
 
@@ -237,8 +211,6 @@ namespace M1
   using AMH_LIExceptionHolder_out = TAO_Value_Out_T<AMH_LIExceptionHolder>;
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
 
 
 
@@ -246,8 +218,6 @@ namespace M1
     : public virtual ::CORBA::DefaultValueRefCountBase
   {
   public:
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
     using _ptr_type = AMH_LIExceptionHolder*;
     using _var_type = AMH_LIExceptionHolder_var;
@@ -278,14 +248,10 @@ namespace M1
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
   public:
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
 
 
   public:
     virtual void raise_op ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
 
 
 
@@ -308,12 +274,8 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M1_AMH_LIExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_LIExceptionHolder;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
 
 
 
@@ -328,8 +290,6 @@ using AMH_LIResponseHandler_out = TAO_Objref_Out_T<AMH_LIResponseHandler>;
 #endif /* end #if !defined */
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:37
 
 
 
@@ -337,8 +297,6 @@ class  AMH_LIResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
   using _ptr_type = AMH_LIResponseHandler_ptr;
   using _var_type = AMH_LIResponseHandler_var;
@@ -361,8 +319,6 @@ public:
     ::M1::AMH_LIExceptionHolder * holder) = 0;
 
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:133
 
 
 
@@ -385,12 +341,8 @@ private:
   AMH_LIResponseHandler &operator= (const AMH_LIResponseHandler &) = delete;
   AMH_LIResponseHandler &operator= (AMH_LIResponseHandler &&) = delete;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_LIResponseHandler;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
 
 
 
@@ -405,8 +357,6 @@ using L2_out = TAO_Objref_Out_T<L2>;
 #endif /* end #if !defined */
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:37
 
 
 
@@ -415,8 +365,6 @@ class  L2
 {
 public:
   friend class TAO::Narrow_Utils<L2>;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
   using _ptr_type = L2_ptr;
   using _var_type = L2_var;
@@ -437,8 +385,6 @@ public:
     const ::M1::S1 & s);
 
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:133
 
 
 
@@ -469,12 +415,8 @@ private:
   L2 &operator= (const L2 &) = delete;
   L2 &operator= (L2 &&) = delete;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_L2;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
 
 
 
@@ -486,8 +428,6 @@ using AMH_L2ExceptionHolder_var = TAO_Value_Var_T<AMH_L2ExceptionHolder>;
 using AMH_L2ExceptionHolder_out = TAO_Value_Out_T<AMH_L2ExceptionHolder>;
 
 #endif /* end #if !defined */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
 
 
 
@@ -495,8 +435,6 @@ class  AMH_L2ExceptionHolder
   : public virtual ::CORBA::DefaultValueRefCountBase
 {
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
   using _ptr_type = AMH_L2ExceptionHolder*;
   using _var_type = AMH_L2ExceptionHolder_var;
@@ -527,14 +465,10 @@ public:
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
 
 
 public:
   virtual void raise_op ();
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
 
 
 
@@ -557,12 +491,8 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M1_AMH_L2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_L2ExceptionHolder;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
 
 
 
@@ -577,8 +507,6 @@ using AMH_L2ResponseHandler_out = TAO_Objref_Out_T<AMH_L2ResponseHandler>;
 #endif /* end #if !defined */
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:37
 
 
 
@@ -586,8 +514,6 @@ class  AMH_L2ResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
   using _ptr_type = AMH_L2ResponseHandler_ptr;
   using _var_type = AMH_L2ResponseHandler_var;
@@ -610,8 +536,6 @@ public:
     ::M1::AMH_L2ExceptionHolder * holder) = 0;
 
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:133
 
 
 
@@ -634,12 +558,8 @@ private:
   AMH_L2ResponseHandler &operator= (const AMH_L2ResponseHandler &) = delete;
   AMH_L2ResponseHandler &operator= (AMH_L2ResponseHandler &&) = delete;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_L2ResponseHandler;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:235
 
 
 
@@ -648,15 +568,11 @@ using X_var = ::TAO_Var_Var_T<X>;
 using X_out = ::TAO_Out_T<X>;
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_ch.cpp:44
 
 
 
 struct  X
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
 
   using _var_type = X_var;
@@ -668,12 +584,8 @@ struct  X
   M1::S1 valStruct {};
   M1::L2_var valLocalIface {};
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_X;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:235
 
 
 
@@ -689,30 +601,22 @@ public:
   ~BooleanUnion1 ();
 
   BooleanUnion1 &operator= (BooleanUnion1 const &);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ch.cpp:95
 
 
 
   void _d ( ::CORBA::Boolean);
   ::CORBA::Boolean _d () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
 
   using _var_type = BooleanUnion1_var;
   using _out_type = BooleanUnion1_out;
 
   static void _tao_any_destructor (void *);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ch.cpp:228
 
 
 
   void valLocalIface (M1::L2_ptr);
   M1::L2_ptr valLocalIface () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ch.cpp:117
 
 
 
@@ -724,8 +628,6 @@ private:
   union _tao_union_storage
   {
     _tao_union_storage () {}
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:174
 
 
     M1::L2_var *valLocalIface_;
@@ -734,12 +636,8 @@ private:
   /// TAO extension - frees any allocated storage.
   void _reset ();
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_BooleanUnion1;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:235
 
 
 
@@ -755,23 +653,17 @@ public:
   ~BooleanUnion2 ();
 
   BooleanUnion2 &operator= (BooleanUnion2 const &);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ch.cpp:95
 
 
 
   void _d ( ::CORBA::Boolean);
   ::CORBA::Boolean _d () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
 
   using _var_type = BooleanUnion2_var;
   using _out_type = BooleanUnion2_out;
 
   static void _tao_any_destructor (void *);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ch.cpp:605
 
 
 
@@ -779,8 +671,6 @@ public:
   void valLocalIface (char const *);
   void valLocalIface (::CORBA::String_var const&);
   char const *valLocalIface () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ch.cpp:117
 
 
 
@@ -792,8 +682,6 @@ private:
   union _tao_union_storage
   {
     _tao_union_storage () {}
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/private_ch.cpp:474
 
 
     char *valLocalIface_;
@@ -802,12 +690,8 @@ private:
   /// TAO extension - frees any allocated storage.
   void _reset ();
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_BooleanUnion2;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
 
 
 
@@ -819,8 +703,6 @@ using V_var = TAO_Value_Var_T<V>;
 using V_out = TAO_Value_Out_T<V>;
 
 #endif /* end #if !defined */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
 
 
 
@@ -828,8 +710,6 @@ class  V
   : public virtual ::CORBA::ValueBase
 {
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
   using _ptr_type = V*;
   using _var_type = V_var;
@@ -853,8 +733,6 @@ public:
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:596
 
   virtual void valString (char *val) = 0;
   virtual void valString (char const *val) = 0;
@@ -862,45 +740,33 @@ public:
   virtual char const *valString () const = 0;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:661
 
   virtual void valStruct (const M1::S1 &) = 0;
   virtual const M1::S1 &valStruct () const = 0;
   virtual M1::S1 &valStruct () = 0;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:227
 
   virtual void valLocalIface (::M1::LI_ptr) = 0;
   virtual ::M1::LI_ptr valLocalIface () const = 0;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:745
 
   virtual void valBoolUnion1 (const M1::BooleanUnion1 &) = 0;
   virtual const M1::BooleanUnion1 &valBoolUnion1 () const = 0;
   virtual M1::BooleanUnion1 &valBoolUnion1 () = 0;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:745
 
   virtual void valBoolUnion2 (const M1::BooleanUnion2 &) = 0;
   virtual const M1::BooleanUnion2 &valBoolUnion2 () const = 0;
   virtual M1::BooleanUnion2 &valBoolUnion2 () = 0;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:661
 
   virtual void valX (const M1::X &) = 0;
   virtual const M1::X &valX () const = 0;
   virtual M1::X &valX () = 0;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
 
 
 
@@ -923,8 +789,6 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M1_V (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_init_ch.cpp:54
 
 class  V_init
   : public virtual ::CORBA::ValueFactoryBase
@@ -943,29 +807,19 @@ public:
 protected:
   virtual ~V_init ();
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_V;
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:60
 
 
 } // module M1
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:32
 
 namespace M2
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:32
 
   namespace M3
   {
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:235
 
 
 
@@ -974,15 +828,11 @@ namespace M2
     using S2_out = S2&;
 
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_ch.cpp:44
 
 
 
     struct  S2
     {
-      // TAO_IDL - Generated from
-      // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
 
       using _var_type = S2_var;
@@ -992,12 +842,8 @@ namespace M2
 
       ::CORBA::Octet o {};
     };
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
     extern  ::CORBA::TypeCode_ptr const _tc_S2;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
 
 
 
@@ -1012,8 +858,6 @@ namespace M2
 #endif /* end #if !defined */
 
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:37
 
 
 
@@ -1022,8 +866,6 @@ namespace M2
     {
     public:
       friend class TAO::Narrow_Utils<L3>;
-      // TAO_IDL - Generated from
-      // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
       using _ptr_type = L3_ptr;
       using _var_type = L3_var;
@@ -1044,8 +886,6 @@ namespace M2
         const ::M2::M3::S2 & s);
 
 
-      // TAO_IDL - Generated from
-      // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:133
 
 
 
@@ -1076,12 +916,8 @@ namespace M2
       L3 &operator= (const L3 &) = delete;
       L3 &operator= (L3 &&) = delete;
     };
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
     extern  ::CORBA::TypeCode_ptr const _tc_L3;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
 
 
 
@@ -1093,8 +929,6 @@ namespace M2
     using AMH_L3ExceptionHolder_out = TAO_Value_Out_T<AMH_L3ExceptionHolder>;
 
 #endif /* end #if !defined */
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
 
 
 
@@ -1102,8 +936,6 @@ namespace M2
       : public virtual ::CORBA::DefaultValueRefCountBase
     {
     public:
-      // TAO_IDL - Generated from
-      // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
       using _ptr_type = AMH_L3ExceptionHolder*;
       using _var_type = AMH_L3ExceptionHolder_var;
@@ -1134,14 +966,10 @@ namespace M2
       virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
     public:
-      // TAO_IDL - Generated from
-      // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
 
 
     public:
       virtual void raise_op ();
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
 
 
 
@@ -1164,12 +992,8 @@ namespace M2
     virtual ::CORBA::Boolean
     _tao_unmarshal__M2_M3_AMH_L3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
   extern  ::CORBA::TypeCode_ptr const _tc_AMH_L3ExceptionHolder;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
 
 
 
@@ -1184,8 +1008,6 @@ namespace M2
 #endif /* end #if !defined */
 
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:37
 
 
 
@@ -1193,8 +1015,6 @@ namespace M2
     : public virtual ::CORBA::Object
   {
   public:
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
     using _ptr_type = AMH_L3ResponseHandler_ptr;
     using _var_type = AMH_L3ResponseHandler_var;
@@ -1217,8 +1037,6 @@ namespace M2
       ::M2::M3::AMH_L3ExceptionHolder * holder) = 0;
 
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:133
 
 
 
@@ -1241,12 +1059,8 @@ namespace M2
     AMH_L3ResponseHandler &operator= (const AMH_L3ResponseHandler &) = delete;
     AMH_L3ResponseHandler &operator= (AMH_L3ResponseHandler &&) = delete;
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
   extern  ::CORBA::TypeCode_ptr const _tc_AMH_L3ResponseHandler;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_ch.cpp:38
 
 
 
@@ -1280,8 +1094,6 @@ namespace M2
 
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
     virtual void _tao_decode (TAO_InputCDR &cdr);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_ctor.cpp:48
 
 
 
@@ -1292,12 +1104,8 @@ namespace M2
 
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
   extern  ::CORBA::TypeCode_ptr const _tc_E1;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
 
 
 
@@ -1312,8 +1120,6 @@ namespace M2
 #endif /* end #if !defined */
 
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:37
 
 
 
@@ -1322,8 +1128,6 @@ namespace M2
   {
   public:
     friend class TAO::Narrow_Utils<L4>;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
     using _ptr_type = L4_ptr;
     using _var_type = L4_var;
@@ -1344,8 +1148,6 @@ namespace M2
       const ::M2::M3::S2 & s);
 
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:133
 
 
 
@@ -1376,12 +1178,8 @@ namespace M2
     L4 &operator= (const L4 &) = delete;
     L4 &operator= (L4 &&) = delete;
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
   extern  ::CORBA::TypeCode_ptr const _tc_L4;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
 
 
 
@@ -1393,8 +1191,6 @@ namespace M2
   using AMH_L4ExceptionHolder_out = TAO_Value_Out_T<AMH_L4ExceptionHolder>;
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
 
 
 
@@ -1402,8 +1198,6 @@ namespace M2
     : public virtual ::CORBA::DefaultValueRefCountBase
   {
   public:
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
     using _ptr_type = AMH_L4ExceptionHolder*;
     using _var_type = AMH_L4ExceptionHolder_var;
@@ -1434,14 +1228,10 @@ namespace M2
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
   public:
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:395
 
 
   public:
     virtual void raise_op ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
 
 
 
@@ -1464,12 +1254,8 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M2_M3_AMH_L4ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_L4ExceptionHolder;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:519
 
 
 
@@ -1484,8 +1270,6 @@ using AMH_L4ResponseHandler_out = TAO_Objref_Out_T<AMH_L4ResponseHandler>;
 #endif /* end #if !defined */
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:37
 
 
 
@@ -1493,8 +1277,6 @@ class  AMH_L4ResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
   using _ptr_type = AMH_L4ResponseHandler_ptr;
   using _var_type = AMH_L4ResponseHandler_var;
@@ -1517,8 +1299,6 @@ public:
     ::M2::M3::AMH_L4ExceptionHolder * holder) = 0;
 
 
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:133
 
 
 
@@ -1541,12 +1321,8 @@ private:
   AMH_L4ResponseHandler &operator= (const AMH_L4ResponseHandler &) = delete;
   AMH_L4ResponseHandler &operator= (AMH_L4ResponseHandler &&) = delete;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_L4ResponseHandler;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
 
 
 
@@ -1558,8 +1334,6 @@ using V2_var = TAO_Value_Var_T<V2>;
 using V2_out = TAO_Value_Out_T<V2>;
 
 #endif /* end #if !defined */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
 
 
 
@@ -1567,8 +1341,6 @@ class  V2
   : public virtual ::CORBA::ValueBase
 {
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
   using _ptr_type = V2*;
   using _var_type = V2_var;
@@ -1592,8 +1364,6 @@ public:
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:596
 
   virtual void valString (char *val) = 0;
   virtual void valString (char const *val) = 0;
@@ -1601,28 +1371,20 @@ public:
   virtual char const *valString () const = 0;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:661
 
   virtual void valStruct (const M2::M3::S2 &) = 0;
   virtual const M2::M3::S2 &valStruct () const = 0;
   virtual M2::M3::S2 &valStruct () = 0;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:227
 
   virtual void valLocalIface (::M2::M3::L3_ptr) = 0;
   virtual ::M2::M3::L3_ptr valLocalIface () const = 0;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:227
 
   virtual void valLocalIface3 (::M2::M3::L4_ptr) = 0;
   virtual ::M2::M3::L4_ptr valLocalIface3 () const = 0;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
 
 
 
@@ -1645,8 +1407,6 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M2_M3_V2 (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_init_ch.cpp:54
 
 class  V2_init
   : public virtual ::CORBA::ValueFactoryBase
@@ -1665,12 +1425,8 @@ public:
 protected:
   virtual ~V2_init ();
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_V2;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:556
 
 
 
@@ -1682,8 +1438,6 @@ using V3_var = TAO_Value_Var_T<V3>;
 using V3_out = TAO_Value_Out_T<V3>;
 
 #endif /* end #if !defined */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:47
 
 
 
@@ -1691,8 +1445,6 @@ class  V3
   : public virtual ::CORBA::ValueBase
 {
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:274
 
   using _ptr_type = V3*;
   using _var_type = V3_var;
@@ -1716,8 +1468,6 @@ public:
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:596
 
   virtual void valString (char *val) = 0;
   virtual void valString (char const *val) = 0;
@@ -1725,21 +1475,15 @@ public:
   virtual char const *valString () const = 0;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:661
 
   virtual void valStruct (const M1::S1 &) = 0;
   virtual const M1::S1 &valStruct () const = 0;
   virtual M1::S1 &valStruct () = 0;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:227
 
   virtual void valLocalIface (::M1::L2_ptr) = 0;
   virtual ::M1::L2_ptr valLocalIface () const = 0;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:234
 
 
 
@@ -1762,8 +1506,6 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M2_M3_V3 (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_init_ch.cpp:54
 
 class  V3_init
   : public virtual ::CORBA::ValueFactoryBase
@@ -1782,26 +1524,18 @@ public:
 protected:
   virtual ~V3_init ();
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
 
 extern  ::CORBA::TypeCode_ptr const _tc_V3;
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:60
 
 
 } // module M2::M3
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:60
 
 
 } // module M2
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:62
 
 
 
@@ -1815,8 +1549,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:902
 
 
 
@@ -1829,8 +1561,6 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:140
 
 
 
@@ -1849,8 +1579,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -1871,8 +1599,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:140
 
 
 
@@ -1891,8 +1617,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -1913,8 +1637,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:902
 
 
 
@@ -1927,8 +1649,6 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1012
 
 
 
@@ -1941,8 +1661,6 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1012
 
 
 
@@ -1955,8 +1673,6 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -1977,8 +1693,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:902
 
 
 
@@ -1991,8 +1705,6 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:140
 
 
 
@@ -2011,8 +1723,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -2033,8 +1743,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:140
 
 
 
@@ -2053,8 +1761,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -2075,8 +1781,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -2097,8 +1801,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:295
 
 
 
@@ -2128,13 +1830,9 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/obv_module.cpp:41
 
 namespace OBV_M1
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_ch.cpp:41
 
 
 
@@ -2161,8 +1859,6 @@ protected:
 private:
   CORBA::Boolean require_truncation_ {false};
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_ch.cpp:41
 
 
 
@@ -2189,8 +1885,6 @@ protected:
 private:
   CORBA::Boolean require_truncation_ {false};
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_ch.cpp:41
 
 
 
@@ -2201,8 +1895,6 @@ class  V
 {
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:596
 
   virtual void valString (char *val);
   virtual void valString (char const *val);
@@ -2210,39 +1902,29 @@ public:
   virtual char const *valString () const;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:661
 
   virtual void valStruct (const M1::S1 &);
   virtual const M1::S1 &valStruct () const;
   virtual M1::S1 &valStruct ();
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:227
 
   virtual void valLocalIface (::M1::LI_ptr);
   virtual ::M1::LI_ptr valLocalIface () const;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:745
 
   virtual void valBoolUnion1 (const M1::BooleanUnion1 &);
   virtual const M1::BooleanUnion1 &valBoolUnion1 () const;
   virtual M1::BooleanUnion1 &valBoolUnion1 ();
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:745
 
   virtual void valBoolUnion2 (const M1::BooleanUnion2 &);
   virtual const M1::BooleanUnion2 &valBoolUnion2 () const;
   virtual M1::BooleanUnion2 &valBoolUnion2 ();
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:661
 
   virtual void valX (const M1::X &);
   virtual const M1::X &valX () const;
@@ -2288,18 +1970,12 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/obv_module.cpp:41
 
 namespace OBV_M2
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/obv_module.cpp:41
 
   namespace M3
   {
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_ch.cpp:41
 
 
 
@@ -2326,8 +2002,6 @@ namespace OBV_M2
   private:
     CORBA::Boolean require_truncation_ {false};
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_ch.cpp:41
 
 
 
@@ -2354,8 +2028,6 @@ protected:
 private:
   CORBA::Boolean require_truncation_ {false};
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_ch.cpp:41
 
 
 
@@ -2366,8 +2038,6 @@ class  V2
 {
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:596
 
   virtual void valString (char *val);
   virtual void valString (char const *val);
@@ -2375,23 +2045,17 @@ public:
   virtual char const *valString () const;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:661
 
   virtual void valStruct (const M2::M3::S2 &);
   virtual const M2::M3::S2 &valStruct () const;
   virtual M2::M3::S2 &valStruct ();
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:227
 
   virtual void valLocalIface (::M2::M3::L3_ptr);
   virtual ::M2::M3::L3_ptr valLocalIface () const;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:227
 
   virtual void valLocalIface3 (::M2::M3::L4_ptr);
   virtual ::M2::M3::L4_ptr valLocalIface3 () const;
@@ -2427,8 +2091,6 @@ private:
   M2::M3::L4_var _pd_valLocalIface3 {};
   CORBA::Boolean require_truncation_ {false};
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_ch.cpp:41
 
 
 
@@ -2439,8 +2101,6 @@ class  V3
 {
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:596
 
   virtual void valString (char *val);
   virtual void valString (char const *val);
@@ -2448,16 +2108,12 @@ public:
   virtual char const *valString () const;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:661
 
   virtual void valStruct (const M1::S1 &);
   virtual const M1::S1 &valStruct () const;
   virtual M1::S1 &valStruct ();
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:227
 
   virtual void valLocalIface (::M1::L2_ptr);
   virtual ::M1::L2_ptr valLocalIface () const;
@@ -2493,8 +2149,6 @@ private:
 };
 }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_traits.cpp:58
 
 
 
@@ -2718,8 +2372,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_ch.cpp:37
 
 
 
@@ -2742,8 +2394,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_ch.cpp:38
 
 
 
@@ -2766,8 +2416,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/any_op_ch.cpp:40
 
 
 
@@ -2790,8 +2438,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_ch.cpp:38
 
 
 
@@ -2816,8 +2462,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_ch.cpp:38
 
 
 
@@ -2840,8 +2484,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/any_op_ch.cpp:40
 
 
 
@@ -2864,8 +2506,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_ch.cpp:38
 
 
 
@@ -2888,8 +2528,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_ch.cpp:37
 
 
 
@@ -2910,8 +2548,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/any_op_ch.cpp:33
 
 
 
@@ -2932,8 +2568,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/any_op_ch.cpp:33
 
 
 
@@ -2954,8 +2588,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/any_op_ch.cpp:40
 
 
 
@@ -2976,8 +2608,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_ch.cpp:37
 
 
 
@@ -3000,8 +2630,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_ch.cpp:38
 
 
 
@@ -3024,8 +2652,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/any_op_ch.cpp:40
 
 
 
@@ -3048,8 +2674,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_ch.cpp:38
 
 
 
@@ -3072,8 +2696,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/any_op_ch.cpp:34
 
 
 
@@ -3098,8 +2720,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_ch.cpp:38
 
 
 
@@ -3122,8 +2742,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/any_op_ch.cpp:40
 
 
 
@@ -3146,8 +2764,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_ch.cpp:38
 
 
 
@@ -3170,8 +2786,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/any_op_ch.cpp:40
 
 
 
@@ -3192,8 +2806,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/any_op_ch.cpp:40
 
 
 
@@ -3214,8 +2826,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_ch.cpp:37
 
 
 
@@ -3236,8 +2846,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_ch.cpp:38
 
 
 
@@ -3257,8 +2865,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:445
 
 
 
@@ -3279,8 +2885,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_ch.cpp:45
 
 
 
@@ -3301,8 +2905,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_ch.cpp:38
 
 
 
@@ -3322,8 +2924,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:445
 
 
 
@@ -3344,8 +2944,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_ch.cpp:45
 
 
 
@@ -3364,8 +2962,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_ch.cpp:37
 
 
 
@@ -3384,8 +2980,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/cdr_op_ch.cpp:34
 
 
 
@@ -3404,8 +2998,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/cdr_op_ch.cpp:34
 
 
 
@@ -3424,8 +3016,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:445
 
 
 
@@ -3446,8 +3036,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_ch.cpp:45
 
 
 
@@ -3466,8 +3054,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_ch.cpp:37
 
 
 
@@ -3488,8 +3074,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_ch.cpp:38
 
 
 
@@ -3509,8 +3093,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:445
 
 
 
@@ -3531,8 +3113,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_ch.cpp:45
 
 
 
@@ -3551,8 +3131,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/cdr_op_ch.cpp:34
 
 
 
@@ -3575,8 +3153,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_ch.cpp:38
 
 
 
@@ -3596,8 +3172,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:445
 
 
 
@@ -3618,8 +3192,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_ch.cpp:45
 
 
 
@@ -3638,8 +3210,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:445
 
 
 
@@ -3660,8 +3230,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_ch.cpp:45
 
 
 
@@ -3680,8 +3248,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:445
 
 
 
@@ -3702,8 +3268,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_ch.cpp:45
 
 
 
@@ -3722,8 +3286,6 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1573
 
 
 

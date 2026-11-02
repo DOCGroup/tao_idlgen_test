@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:571
 
 #ifndef _TAO_IDL_PEMNAMINGS_TST81W_CPP_
 #define _TAO_IDL_PEMNAMINGS_TST81W_CPP_
@@ -54,8 +52,6 @@
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
 #include <cstring>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -141,8 +137,6 @@ TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable::lookup (const char *st
 static TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable tao_Plesk_Naming_AMH_ObjectResolver_optable;
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -152,8 +146,6 @@ POA_Plesk::Naming::AMH_ObjectResolver::AMH_ObjectResolver ()
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_ss.cpp:303
 
 void
 POA_Plesk::Naming::AMH_ObjectResolver::resolve_skel (
@@ -203,8 +195,6 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_skel (
       sc_id
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_ss.cpp:303
 
 void
 POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
@@ -259,8 +249,6 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -279,8 +267,6 @@ const char* POA_Plesk::Naming::AMH_ObjectResolver::_interface_repository_id () c
 {
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:102
 
 void
 POA_Plesk::Naming::AMH_ObjectResolver::_dispatch (
@@ -289,8 +275,6 @@ POA_Plesk::Naming::AMH_ObjectResolver::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:62
 
 Plesk::Naming::ObjectResolver*
 POA_Plesk::Naming::AMH_ObjectResolver::_this ()
@@ -306,8 +290,6 @@ POA_Plesk::Naming::AMH_ObjectResolver::_this ()
     }
   return {};
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -401,8 +383,6 @@ POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::~_TAO_ObjectResolver_D
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve (
@@ -425,8 +405,6 @@ POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve_sc (
@@ -456,8 +434,6 @@ POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve_sc (
 ///////////////////////////////////////////////////////////////////////
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -473,8 +449,6 @@ namespace POA_Plesk
   namespace Naming
   {
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
     class resolve_ObjectResolver
       : public TAO::Upcall_Command
@@ -522,8 +496,6 @@ namespace POA_Plesk
     };
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_Plesk::Naming::ObjectResolver::resolve_skel (
   TAO_ServerRequest & server_request,
@@ -582,8 +554,6 @@ namespace POA_Plesk
   namespace Naming
   {
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
     class resolve_sc_ObjectResolver
       : public TAO::Upcall_Command
@@ -638,8 +608,6 @@ namespace POA_Plesk
     };
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
   TAO_ServerRequest & server_request,
@@ -696,8 +664,6 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -718,8 +684,6 @@ const char* POA_Plesk::Naming::ObjectResolver::_interface_repository_id () const
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:370
 
 
 
@@ -731,8 +695,6 @@ void POA_Plesk::Naming::ObjectResolver::_dispatch (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:330
 
 
 
@@ -749,12 +711,8 @@ POA_Plesk::Naming::ObjectResolver::_this ()
     }
   return {};
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_ss.cpp:61
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve (
@@ -773,8 +731,6 @@ POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve (
 
   this->_tao_rh_send_reply ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_excep (
@@ -789,8 +745,6 @@ POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_sc (
@@ -809,8 +763,6 @@ POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_sc (
 
   this->_tao_rh_send_reply ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:71
 
 void
 POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_sc_excep (
@@ -825,8 +777,6 @@ POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler::resolve_sc_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1569
 
 class TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -923,8 +873,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::~_TAO_AMI_O
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve (
@@ -946,8 +894,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_excep (
@@ -968,8 +914,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_exc
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc (
@@ -991,8 +935,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc 
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/direct_proxy_impl_ss.cpp:54
 
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc_excep (
@@ -1019,8 +961,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc_
 ///////////////////////////////////////////////////////////////////////
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:84
 
 
 
@@ -1036,8 +976,6 @@ namespace POA_Plesk
   namespace Naming
   {
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
     class resolve_AMI_ObjectResolverHandler
       : public TAO::Upcall_Command
@@ -1079,8 +1017,6 @@ namespace POA_Plesk
     };
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_skel (
   TAO_ServerRequest & server_request,
@@ -1139,8 +1075,6 @@ namespace POA_Plesk
   namespace Naming
   {
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
     class resolve_excep_AMI_ObjectResolverHandler
       : public TAO::Upcall_Command
@@ -1194,8 +1128,6 @@ namespace POA_Plesk
     };
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_excep_skel (
   TAO_ServerRequest & server_request,
@@ -1252,8 +1184,6 @@ namespace POA_Plesk
   namespace Naming
   {
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
     class resolve_sc_AMI_ObjectResolverHandler
       : public TAO::Upcall_Command
@@ -1295,8 +1225,6 @@ namespace POA_Plesk
     };
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_skel (
   TAO_ServerRequest & server_request,
@@ -1355,8 +1283,6 @@ namespace POA_Plesk
   namespace Naming
   {
 
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:76
 
     class resolve_sc_excep_AMI_ObjectResolverHandler
       : public TAO::Upcall_Command
@@ -1410,8 +1336,6 @@ namespace POA_Plesk
     };
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
 
 void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
   TAO_ServerRequest & server_request,
@@ -1464,8 +1388,6 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
 
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:131
 
 
 
@@ -1487,8 +1409,6 @@ const char* POA_Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:370
 
 
 
@@ -1500,8 +1420,6 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::_dispatch (
 }
 
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:330
 
 
 

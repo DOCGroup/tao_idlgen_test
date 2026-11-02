@@ -37,8 +37,6 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
 #ifndef _TAO_TYPECODE_FIXED_3_0_GUARD
 #define _TAO_TYPECODE_FIXED_3_0_GUARD
@@ -72,8 +70,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
     {
       ::CORBA::TypeCode_ptr const _tc_WholeNumber = std::addressof(_tao_tc_FixedPoint_WholeNumber);
     }
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
     #ifndef _TAO_TYPECODE_FIXED_3_3_GUARD
     #define _TAO_TYPECODE_FIXED_3_3_GUARD
@@ -107,8 +103,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
         {
           ::CORBA::TypeCode_ptr const _tc_Fraction = std::addressof(_tao_tc_FixedPoint_Fraction);
         }
-        // TAO_IDL - Generated from
-        // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
         #ifndef _TAO_TYPECODE_FIXED_10_3_GUARD
         #define _TAO_TYPECODE_FIXED_10_3_GUARD
@@ -142,8 +136,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
             {
               ::CORBA::TypeCode_ptr const _tc_Amount = std::addressof(_tao_tc_FixedPoint_Amount);
             }
-            // TAO_IDL - Generated from
-            // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
             #ifndef _TAO_TYPECODE_FIXED_31_0_GUARD
             #define _TAO_TYPECODE_FIXED_31_0_GUARD
@@ -177,8 +169,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                 {
                   ::CORBA::TypeCode_ptr const _tc_MaximumDigits = std::addressof(_tao_tc_FixedPoint_MaximumDigits);
                 }
-                // TAO_IDL - Generated from
-                // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
                 #ifndef _TAO_TYPECODE_FIXED_31_31_GUARD
                 #define _TAO_TYPECODE_FIXED_31_31_GUARD
@@ -212,8 +202,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                     {
                       ::CORBA::TypeCode_ptr const _tc_MaximumScale = std::addressof(_tao_tc_FixedPoint_MaximumScale);
                     }
-                    // TAO_IDL - Generated from
-                    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:82
 
                     #ifndef _TAO_TYPECODE_FIXED_3_0_GUARD
                     #define _TAO_TYPECODE_FIXED_3_0_GUARD
@@ -291,8 +279,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_FixedValues = std::addressof(_tao_tc_FixedPoint_FixedValues);
                               }
-                              // TAO_IDL - Generated from
-                              // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:70
 
                               static TAO::TypeCode::Objref<char const *,
                                                            TAO::Null_RefCount_Policy>
@@ -306,8 +292,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_FixedOperations = std::addressof(_tao_tc_FixedPoint_FixedOperations);
                               }
-                              // TAO_IDL - Generated from
-                              // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:61
 
                               static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_FixedPoint_AMH_FixedOperationsExceptionHolder = nullptr;
                               static TAO::TypeCode::Value<char const *,
@@ -334,8 +318,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               }
 
 
-                              // TAO_IDL - Generated from
-                              // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:70
 
                               static TAO::TypeCode::Objref<char const *,
                                                            TAO::Null_RefCount_Policy>
@@ -349,8 +331,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_AMH_FixedOperationsResponseHandler = std::addressof(_tao_tc_FixedPoint_AMH_FixedOperationsResponseHandler);
                               }
-                              // TAO_IDL - Generated from
-                              // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:70
 
                               static TAO::TypeCode::Objref<char const *,
                                                            TAO::Null_RefCount_Policy>
@@ -364,8 +344,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_AMI_FixedOperationsHandler = std::addressof(_tao_tc_FixedPoint_AMI_FixedOperationsHandler);
                               }
-                              // TAO_IDL - Generated from
-                              // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
                               static TAO::TypeCode::Alias<char const *,
                                                           ::CORBA::TypeCode_ptr const *,
@@ -381,8 +359,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_AmountAlias = std::addressof(_tao_tc_FixedPoint_AmountAlias);
                               }
-                              // TAO_IDL - Generated from
-                              // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
 
                               static TAO::TypeCode::Alias<char const *,
                                                           ::CORBA::TypeCode_ptr const *,
@@ -398,8 +374,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_AmountAlias2 = std::addressof(_tao_tc_FixedPoint_AmountAlias2);
                               }
-                              // TAO_IDL - Generated from
-                              // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -444,8 +418,6 @@ namespace CORBA {
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-                              // TAO_IDL - Generated from
-                              // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_cs.cpp:35
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -512,8 +484,6 @@ namespace CORBA {
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-                              // TAO_IDL - Generated from
-                              // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/any_op_cs.cpp:42
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -589,8 +559,6 @@ namespace CORBA {
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-                              // TAO_IDL - Generated from
-                              // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_cs.cpp:35
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -674,8 +642,6 @@ namespace CORBA {
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 
-                              // TAO_IDL - Generated from
-                              // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_cs.cpp:35
 
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
