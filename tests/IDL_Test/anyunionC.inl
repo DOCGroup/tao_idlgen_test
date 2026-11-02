@@ -35,8 +35,6 @@ MyAnyUnion::_default ()
   this->disc_ = static_cast <AnyUnionEnum> (-1);
 }
 
-
-
 ACE_INLINE
 unsigned long
 MyAnyUnion::_tao_member_index (AnyUnionEnum value)

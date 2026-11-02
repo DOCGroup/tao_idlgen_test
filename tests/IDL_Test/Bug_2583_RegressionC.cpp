@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "Bug_2583_RegressionC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -79,8 +78,6 @@ TAO::Objref_Traits<Test::DynAny>::marshal (const Test::DynAny_ptr p,TAO_OutputCD
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 Test::DynAny::DynAny ()
 {}
@@ -172,7 +169,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:Test/DynAny:1.0",
     "DynAny");
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_DynAny = std::addressof(_tao_tc_Test_DynAny);
@@ -200,12 +196,10 @@ _tao_tc_Test_NameDynAnyPair (
   _tao_fields_Test_NameDynAnyPair,
   2);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_NameDynAnyPair = std::addressof(_tao_tc_Test_NameDynAnyPair);
 }
-
 
 void
 Test::NameDynAnyPair::_tao_any_destructor (
@@ -214,9 +208,6 @@ Test::NameDynAnyPair::_tao_any_destructor (
   NameDynAnyPair *tmp = static_cast<NameDynAnyPair *> (_tao_void_pointer);
   delete tmp;
 }
-
-
-
 
 #if !defined (_TEST_NAMEDYNANYPAIRSEQ_CS_)
 #define _TEST_NAMEDYNANYPAIRSEQ_CS_
@@ -240,7 +231,6 @@ void Test::NameDynAnyPairSeq::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
 
 #ifndef _TAO_TYPECODE_Test_NameDynAnyPairSeq_GUARD
 #define _TAO_TYPECODE_Test_NameDynAnyPairSeq_GUARD
@@ -275,15 +265,12 @@ static TAO::TypeCode::Alias<char const *,
     "NameDynAnyPairSeq",
     &TAO::TypeCode::tc_Test_NameDynAnyPairSeq_0);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_NameDynAnyPairSeq = std::addressof(_tao_tc_Test_NameDynAnyPairSeq);
 }
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -315,11 +302,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -361,11 +345,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -384,7 +364,6 @@ namespace TAO
   }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -427,8 +406,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 namespace TAO
@@ -450,10 +427,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -492,6 +467,4 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 testlistitem::testlistitem (
     TAO_Stub *objref,
@@ -52,7 +50,6 @@ AMH_testlistitemExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_testlistitemExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_testlistitemHandler::AMI_testlistitemHandler (
     TAO_Stub *objref,
@@ -70,7 +67,6 @@ AMI_testlistitemHandler::AMI_testlistitemHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 test::test (
@@ -100,7 +96,6 @@ AMH_testExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_testExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_testHandler::AMI_testHandler (
     TAO_Stub *objref,
@@ -118,7 +113,6 @@ AMI_testHandler::AMI_testHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 Simple_Server::Simple_Server (
@@ -147,7 +141,6 @@ AMH_Simple_ServerExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_Simple_ServerExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_Simple_ServerHandler::AMI_Simple_ServerHandler (

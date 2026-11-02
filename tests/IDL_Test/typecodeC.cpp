@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "typecodeC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -37,9 +36,6 @@
 #if !defined (__ACE_INLINE__)
 #include "typecodeC.inl"
 #endif /* !defined INLINE */
-
-
-
 
 #if !defined (_MYMODULE_TYPECODELIST_CS_)
 #define _MYMODULE_TYPECODELIST_CS_
@@ -81,7 +77,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

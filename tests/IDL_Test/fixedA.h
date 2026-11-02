@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDA_0G7ZSI_H_
-#define _TAO_IDL_FIXEDA_0G7ZSI_H_
+#ifndef _TAO_IDL_FIXEDA_12263T_H_
+#define _TAO_IDL_FIXEDA_12263T_H_
 
 #include /**/ "ace/pre.h"
 
@@ -47,10 +47,7 @@ namespace FixedPoint
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AmountAlias;
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AmountAlias2;
 
-
-
 } // module FixedPoint
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -61,12 +58,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::F
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -75,8 +66,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FixedPoint::FixedOper
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, FixedPoint::FixedOperations_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -87,12 +76,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Fix
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -102,12 +85,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Fix
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -116,8 +93,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FixedPoint::AMI_Fixed
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, FixedPoint::AMI_FixedOperationsHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 #include /**/ "ace/post.h"
 

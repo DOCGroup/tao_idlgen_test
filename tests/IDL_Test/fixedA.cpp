@@ -64,7 +64,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
         "WholeNumber",
         &_tao_tc_fixed_3_0_ptr);
 
-
     namespace FixedPoint
     {
       ::CORBA::TypeCode_ptr const _tc_WholeNumber = std::addressof(_tao_tc_FixedPoint_WholeNumber);
@@ -95,7 +94,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
             "IDL:FixedPoint/Fraction:1.0",
             "Fraction",
             &_tao_tc_fixed_3_3_ptr);
-
 
         namespace FixedPoint
         {
@@ -128,7 +126,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                 "Amount",
                 &_tao_tc_fixed_10_3_ptr);
 
-
             namespace FixedPoint
             {
               ::CORBA::TypeCode_ptr const _tc_Amount = std::addressof(_tao_tc_FixedPoint_Amount);
@@ -160,7 +157,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                     "MaximumDigits",
                     &_tao_tc_fixed_31_0_ptr);
 
-
                 namespace FixedPoint
                 {
                   ::CORBA::TypeCode_ptr const _tc_MaximumDigits = std::addressof(_tao_tc_FixedPoint_MaximumDigits);
@@ -191,7 +187,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                         "IDL:FixedPoint/MaximumScale:1.0",
                         "MaximumScale",
                         &_tao_tc_fixed_31_31_ptr);
-
 
                     namespace FixedPoint
                     {
@@ -268,7 +263,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                                 _tao_fields_FixedPoint_FixedValues,
                                 5);
 
-
                               namespace FixedPoint
                               {
                                 ::CORBA::TypeCode_ptr const _tc_FixedValues = std::addressof(_tao_tc_FixedPoint_FixedValues);
@@ -279,7 +273,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                                   ::CORBA::tk_objref,
                                   "IDL:FixedPoint/FixedOperations:1.0",
                                   "FixedOperations");
-
 
                               namespace FixedPoint
                               {
@@ -299,7 +292,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                                   _tao_fields_FixedPoint_AMH_FixedOperationsExceptionHolder,
                                   0);
 
-
                               namespace FixedPoint
                               {
                                 ::CORBA::TypeCode_ptr const _tc_AMH_FixedOperationsExceptionHolder = std::addressof(_tao_tc_FixedPoint_AMH_FixedOperationsExceptionHolder);
@@ -309,14 +301,12 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                                 return ::FixedPoint::_tc_AMH_FixedOperationsExceptionHolder;
                               }
 
-
                               static TAO::TypeCode::Objref<char const *,
                                                            TAO::Null_RefCount_Policy>
                                 _tao_tc_FixedPoint_AMH_FixedOperationsResponseHandler (
                                   ::CORBA::tk_local_interface,
                                   "IDL:FixedPoint/AMH_FixedOperationsResponseHandler:1.0",
                                   "AMH_FixedOperationsResponseHandler");
-
 
                               namespace FixedPoint
                               {
@@ -328,7 +318,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                                   ::CORBA::tk_objref,
                                   "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0",
                                   "AMI_FixedOperationsHandler");
-
 
                               namespace FixedPoint
                               {
@@ -343,7 +332,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                                   "AmountAlias",
                                   &FixedPoint::_tc_Amount);
 
-
                               namespace FixedPoint
                               {
                                 ::CORBA::TypeCode_ptr const _tc_AmountAlias = std::addressof(_tao_tc_FixedPoint_AmountAlias);
@@ -356,7 +344,6 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                                   "IDL:FixedPoint/AmountAlias2:1.0",
                                   "AmountAlias2",
                                   &FixedPoint::_tc_AmountAlias);
-
 
                               namespace FixedPoint
                               {
@@ -404,11 +391,7 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
                               namespace TAO
                               {
@@ -423,11 +406,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
                               }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
                               /// Copying insertion.
                               void
@@ -469,11 +449,7 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
                               namespace TAO
                               {
@@ -488,9 +464,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
                                 }
                               }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -539,15 +513,10 @@ namespace CORBA {
                                       _tao_elem);
                               }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
                               namespace TAO
                               {
@@ -579,11 +548,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
                               }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
                               /// Copying insertion.
                               void
@@ -625,11 +591,7 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
                               namespace TAO
                               {
@@ -644,11 +606,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
                               }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
                               /// Copying insertion.
                               void
@@ -689,5 +648,4 @@ namespace CORBA {
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

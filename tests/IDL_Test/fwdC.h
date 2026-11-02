@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FWDC_83NG34_H_
-#define _TAO_IDL_FWDC_83NG34_H_
+#ifndef _TAO_IDL_FWDC_DHEPB1_H_
+#define _TAO_IDL_FWDC_DHEPB1_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -71,8 +69,6 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class AbstractBase_Narrow_Utils;
@@ -80,10 +76,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace scope_test
 {
-
 
 #if !defined (_SCOPE_TEST_I_SCOPE_TEST__VAR_OUT_CH_)
 #define _SCOPE_TEST_I_SCOPE_TEST__VAR_OUT_CH_
@@ -98,19 +92,13 @@ namespace scope_test
 
 #endif /* end #if !defined */
 
-
-
 } // module scope_test
 namespace scope_test
 {
 
-
   struct same_scope_struct;
   using same_scope_struct_var = ::TAO_Var_Var_T<same_scope_struct>;
   using same_scope_struct_out = ::TAO_Out_T<same_scope_struct>;
-
-
-
 
   struct TAO_IDL_TEST_STUB_Export same_scope_struct
   {
@@ -124,19 +112,13 @@ namespace scope_test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_same_scope_struct;
 
-
-
 } // module scope_test
 namespace mod2
 {
 
-
   struct scope_struct;
   using scope_struct_var = ::TAO_Var_Var_T<scope_struct>;
   using scope_struct_out = ::TAO_Out_T<scope_struct>;
-
-
-
 
   struct TAO_IDL_TEST_STUB_Export scope_struct
   {
@@ -150,7 +132,6 @@ namespace mod2
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_scope_struct;
 
-
 #if !defined (_MOD2_FWD__VAR_OUT_CH_)
 #define _MOD2_FWD__VAR_OUT_CH_
 
@@ -163,7 +144,6 @@ namespace mod2
   using fwd_out = TAO_Objref_Out_T<fwd>;
 
 #endif /* end #if !defined */
-
 
   class TAO_IDL_TEST_STUB_Export exp : public ::CORBA::UserException
   {
@@ -190,7 +170,6 @@ namespace mod2
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
-
     exp (
         const mod2::fwd_ptr _tao_fwd_mem);
 
@@ -204,7 +183,6 @@ namespace mod2
 
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_td_fwd;
 
-
 #if !defined (_MOD2_FULL__VAR_OUT_CH_)
 #define _MOD2_FULL__VAR_OUT_CH_
 
@@ -217,9 +195,6 @@ namespace mod2
   using full_out = TAO_Objref_Out_T<full>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export full
     : public virtual ::CORBA::Object
@@ -250,9 +225,6 @@ namespace mod2
       ::mod2::AMI_fullHandler_ptr ami_handler,
       ::mod2::fwd_ptr inarg,
       ::mod2::fwd_ptr inoutarg);
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -285,7 +257,6 @@ namespace mod2
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_full;
 
-
 #if !defined (_MOD2_AMH_FULLEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _MOD2_AMH_FULLEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -294,7 +265,6 @@ namespace mod2
   using AMH_fullExceptionHolder_out = TAO_Value_Out_T<AMH_fullExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
   class TAO_IDL_TEST_STUB_Export AMH_fullExceptionHolder
     : public virtual ::CORBA::DefaultValueRefCountBase
@@ -338,7 +308,6 @@ public:
 public:
   virtual void raise_sendc_op ();
 
-
 protected:
   AMH_fullExceptionHolder ();
   virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
@@ -360,7 +329,6 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_fullExceptionHolder;
 
-
 #if !defined (_MOD2_AMH_FULLRESPONSEHANDLER__VAR_OUT_CH_)
 #define _MOD2_AMH_FULLRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -373,9 +341,6 @@ using AMH_fullResponseHandler_var = TAO_Objref_Var_T<AMH_fullResponseHandler>;
 using AMH_fullResponseHandler_out = TAO_Objref_Out_T<AMH_fullResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMH_fullResponseHandler
   : public virtual ::CORBA::Object
@@ -404,9 +369,6 @@ public:
   virtual void op_excep (
     ::mod2::AMH_fullExceptionHolder * holder) = 0;
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -416,8 +378,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_fullResponseHandler ();
-
-
 
   virtual ~AMH_fullResponseHandler () = default;
 
@@ -430,7 +390,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_fullResponseHandler;
 
-
 #if !defined (_MOD2_AMI_FULLHANDLER__VAR_OUT_CH_)
 #define _MOD2_AMI_FULLHANDLER__VAR_OUT_CH_
 
@@ -440,9 +399,6 @@ using AMI_fullHandler_var = TAO_Objref_Var_T<AMI_fullHandler>;
 using AMI_fullHandler_out = TAO_Objref_Out_T<AMI_fullHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMI_fullHandler
   : public virtual ::Messaging::ReplyHandler
@@ -479,9 +435,6 @@ public:
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -513,16 +466,12 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_fullHandler;
 
-
-
-
 #if !defined (_MOD2_FULL_SEQ2_CH_)
 #define _MOD2_FULL_SEQ2_CH_
 
 class full_seq2;
 using full_seq2_var = ::TAO_VarSeq_Var_T<full_seq2>;
 using full_seq2_out = ::TAO_Seq_Out_T<full_seq2>;
-
 
 class TAO_IDL_TEST_STUB_Export full_seq2
   : public
@@ -544,7 +493,6 @@ public:
   full_seq2& operator= (full_seq2 &&) = default;
   virtual ~full_seq2 () = default;
 
-
   using _var_type = full_seq2_var;
   using _out_type = full_seq2_out;
 
@@ -553,7 +501,6 @@ public:
 
 #endif /* end #if !defined */
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_full_seq2;
-
 
 #if !defined (_MOD2_FWD__VAR_OUT_CH_)
 #define _MOD2_FWD__VAR_OUT_CH_
@@ -568,12 +515,9 @@ using fwd_out = TAO_Objref_Out_T<fwd>;
 
 #endif /* end #if !defined */
 
-
-
 } // module mod2
 namespace fwd_mixed_intf
 {
-
 
 #if !defined (_FWD_MIXED_INTF_MIXED_PARENTS__VAR_OUT_CH_)
 #define _FWD_MIXED_INTF_MIXED_PARENTS__VAR_OUT_CH_
@@ -588,7 +532,6 @@ namespace fwd_mixed_intf
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_CONCRETE_PARENT__VAR_OUT_CH_)
 #define _FWD_MIXED_INTF_CONCRETE_PARENT__VAR_OUT_CH_
 
@@ -601,9 +544,6 @@ namespace fwd_mixed_intf
   using concrete_parent_out = TAO_Objref_Out_T<concrete_parent>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export concrete_parent
     : public virtual ::CORBA::Object
@@ -624,9 +564,6 @@ namespace fwd_mixed_intf
     static concrete_parent_ptr _narrow (::CORBA::Object_ptr obj);
     static concrete_parent_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static concrete_parent_ptr _nil ();
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -659,7 +596,6 @@ namespace fwd_mixed_intf
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_concrete_parent;
 
-
 #if !defined (_FWD_MIXED_INTF_AMH_CONCRETE_PARENTEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _FWD_MIXED_INTF_AMH_CONCRETE_PARENTEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -668,7 +604,6 @@ namespace fwd_mixed_intf
   using AMH_concrete_parentExceptionHolder_out = TAO_Value_Out_T<AMH_concrete_parentExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
   class TAO_IDL_TEST_STUB_Export AMH_concrete_parentExceptionHolder
     : public virtual ::CORBA::DefaultValueRefCountBase
@@ -701,7 +636,6 @@ namespace fwd_mixed_intf
     static char const * _tao_obv_static_repository_id ();
 
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
-
 
   protected:
     AMH_concrete_parentExceptionHolder ();
@@ -741,7 +675,6 @@ namespace fwd_mixed_intf
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_concrete_parentExceptionHolder;
 
-
 #if !defined (_FWD_MIXED_INTF_AMH_CONCRETE_PARENTRESPONSEHANDLER__VAR_OUT_CH_)
 #define _FWD_MIXED_INTF_AMH_CONCRETE_PARENTRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -754,9 +687,6 @@ namespace fwd_mixed_intf
   using AMH_concrete_parentResponseHandler_out = TAO_Objref_Out_T<AMH_concrete_parentResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export AMH_concrete_parentResponseHandler
     : public virtual ::CORBA::Object
@@ -777,9 +707,6 @@ namespace fwd_mixed_intf
     static AMH_concrete_parentResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMH_concrete_parentResponseHandler_ptr _nil ();
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     static const char* _desc_repository_id ();
@@ -789,8 +716,6 @@ namespace fwd_mixed_intf
   protected:
     // Abstract or local interface only.
     AMH_concrete_parentResponseHandler ();
-
-
 
     virtual ~AMH_concrete_parentResponseHandler () = default;
 
@@ -803,7 +728,6 @@ namespace fwd_mixed_intf
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_concrete_parentResponseHandler;
 
-
 #if !defined (_FWD_MIXED_INTF_AMI_CONCRETE_PARENTHANDLER__VAR_OUT_CH_)
 #define _FWD_MIXED_INTF_AMI_CONCRETE_PARENTHANDLER__VAR_OUT_CH_
 
@@ -813,9 +737,6 @@ namespace fwd_mixed_intf
   using AMI_concrete_parentHandler_out = TAO_Objref_Out_T<AMI_concrete_parentHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export AMI_concrete_parentHandler
     : public virtual ::Messaging::ReplyHandler
@@ -837,9 +758,6 @@ namespace fwd_mixed_intf
     static AMI_concrete_parentHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_concrete_parentHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_concrete_parentHandler_ptr _nil ();
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -872,7 +790,6 @@ namespace fwd_mixed_intf
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_concrete_parentHandler;
 
-
 #if !defined (_FWD_MIXED_INTF_ABSTRACT_PARENT__VAR_OUT_CH_)
 #define _FWD_MIXED_INTF_ABSTRACT_PARENT__VAR_OUT_CH_
 
@@ -885,9 +802,6 @@ namespace fwd_mixed_intf
   using abstract_parent_out = TAO_Objref_Out_T<abstract_parent>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export abstract_parent
     : public virtual ::CORBA::AbstractBase
@@ -909,9 +823,6 @@ namespace fwd_mixed_intf
     static abstract_parent_ptr _narrow (::CORBA::AbstractBase_ptr obj);
     static abstract_parent_ptr _unchecked_narrow (::CORBA::AbstractBase_ptr obj);
     static abstract_parent_ptr _nil ();
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -941,7 +852,6 @@ namespace fwd_mixed_intf
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_abstract_parent;
 
-
 #if !defined (_FWD_MIXED_INTF_MIXED_ABS_FIRST__VAR_OUT_CH_)
 #define _FWD_MIXED_INTF_MIXED_ABS_FIRST__VAR_OUT_CH_
 
@@ -954,9 +864,6 @@ namespace fwd_mixed_intf
   using mixed_abs_first_out = TAO_Objref_Out_T<mixed_abs_first>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export mixed_abs_first
     : public virtual ::fwd_mixed_intf::abstract_parent,
@@ -979,9 +886,6 @@ namespace fwd_mixed_intf
     static mixed_abs_first_ptr _narrow (::CORBA::Object_ptr obj);
     static mixed_abs_first_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static mixed_abs_first_ptr _nil ();
-
-
-
 
     virtual void _add_ref ();
 
@@ -1016,7 +920,6 @@ namespace fwd_mixed_intf
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_mixed_abs_first;
 
-
 #if !defined (_FWD_MIXED_INTF_AMI_MIXED_ABS_FIRSTHANDLER__VAR_OUT_CH_)
 #define _FWD_MIXED_INTF_AMI_MIXED_ABS_FIRSTHANDLER__VAR_OUT_CH_
 
@@ -1026,9 +929,6 @@ namespace fwd_mixed_intf
   using AMI_mixed_abs_firstHandler_out = TAO_Objref_Out_T<AMI_mixed_abs_firstHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export AMI_mixed_abs_firstHandler
     : public virtual ::fwd_mixed_intf::AMI_concrete_parentHandler
@@ -1050,9 +950,6 @@ namespace fwd_mixed_intf
     static AMI_mixed_abs_firstHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_mixed_abs_firstHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_mixed_abs_firstHandler_ptr _nil ();
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -1085,7 +982,6 @@ namespace fwd_mixed_intf
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_mixed_abs_firstHandler;
 
-
 #if !defined (_FWD_MIXED_INTF_MIXED_CONC_FIRST__VAR_OUT_CH_)
 #define _FWD_MIXED_INTF_MIXED_CONC_FIRST__VAR_OUT_CH_
 
@@ -1098,9 +994,6 @@ namespace fwd_mixed_intf
   using mixed_conc_first_out = TAO_Objref_Out_T<mixed_conc_first>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export mixed_conc_first
     : public virtual ::fwd_mixed_intf::concrete_parent,
@@ -1123,9 +1016,6 @@ namespace fwd_mixed_intf
     static mixed_conc_first_ptr _narrow (::CORBA::Object_ptr obj);
     static mixed_conc_first_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static mixed_conc_first_ptr _nil ();
-
-
-
 
     virtual void _add_ref ();
 
@@ -1160,7 +1050,6 @@ namespace fwd_mixed_intf
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_mixed_conc_first;
 
-
 #if !defined (_FWD_MIXED_INTF_AMI_MIXED_CONC_FIRSTHANDLER__VAR_OUT_CH_)
 #define _FWD_MIXED_INTF_AMI_MIXED_CONC_FIRSTHANDLER__VAR_OUT_CH_
 
@@ -1170,9 +1059,6 @@ namespace fwd_mixed_intf
   using AMI_mixed_conc_firstHandler_out = TAO_Objref_Out_T<AMI_mixed_conc_firstHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export AMI_mixed_conc_firstHandler
     : public virtual ::fwd_mixed_intf::AMI_concrete_parentHandler
@@ -1194,9 +1080,6 @@ namespace fwd_mixed_intf
     static AMI_mixed_conc_firstHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_mixed_conc_firstHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_mixed_conc_firstHandler_ptr _nil ();
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -1229,12 +1112,9 @@ namespace fwd_mixed_intf
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_mixed_conc_firstHandler;
 
-
-
 } // module fwd_mixed_intf
 namespace obv_fwd
 {
-
 
 #if !defined (_OBV_FWD_FORWARDEDTYPE__VAR_OUT_CH_)
 #define _OBV_FWD_FORWARDEDTYPE__VAR_OUT_CH_
@@ -1245,12 +1125,9 @@ namespace obv_fwd
 
 #endif /* end #if !defined */
 
-
-
 } // module obv_fwd
 namespace obv_fwd
 {
-
 
 #if !defined (_OBV_FWD_ENCLOSINGTYPE__VAR_OUT_CH_)
 #define _OBV_FWD_ENCLOSINGTYPE__VAR_OUT_CH_
@@ -1260,7 +1137,6 @@ namespace obv_fwd
   using EnclosingType_out = TAO_Value_Out_T<EnclosingType>;
 
 #endif /* end #if !defined */
-
 
   class TAO_IDL_TEST_STUB_Export EnclosingType
     : public virtual ::CORBA::ValueBase
@@ -1290,7 +1166,6 @@ namespace obv_fwd
   public:
     virtual void forwarded (obv_fwd::ForwardedType *) = 0;
     virtual obv_fwd::ForwardedType *forwarded () const = 0;
-
 
   protected:
     EnclosingType ();
@@ -1330,12 +1205,9 @@ namespace obv_fwd
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_EnclosingType;
 
-
-
 } // module obv_fwd
 namespace obv_fwd
 {
-
 
 #if !defined (_OBV_FWD_FORWARDEDTYPE__VAR_OUT_CH_)
 #define _OBV_FWD_FORWARDEDTYPE__VAR_OUT_CH_
@@ -1345,7 +1217,6 @@ namespace obv_fwd
   using ForwardedType_out = TAO_Value_Out_T<ForwardedType>;
 
 #endif /* end #if !defined */
-
 
   class TAO_IDL_TEST_STUB_Export ForwardedType
     : public virtual ::CORBA::ValueBase
@@ -1375,7 +1246,6 @@ namespace obv_fwd
   public:
     virtual void number (const ::CORBA::Long) = 0;
     virtual ::CORBA::Long number () const = 0;
-
 
   protected:
     ForwardedType ();
@@ -1415,18 +1285,13 @@ namespace obv_fwd
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ForwardedType;
 
-
-
 } // module obv_fwd
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -1446,7 +1311,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_SCOPE_TEST_I_SCOPE_TEST__ARG_TRAITS_)
 #define _SCOPE_TEST_I_SCOPE_TEST__ARG_TRAITS_
 
@@ -1463,7 +1327,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::scope_test::same_scope_struct>
     : public
@@ -1474,7 +1337,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::mod2::scope_struct>
     : public
@@ -1484,7 +1346,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_MOD2_FWD__ARG_TRAITS_)
 #define _MOD2_FWD__ARG_TRAITS_
@@ -1502,7 +1363,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MOD2_FULL__ARG_TRAITS_)
 #define _MOD2_FULL__ARG_TRAITS_
 
@@ -1518,7 +1378,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_MOD2_AMH_FULLEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MOD2_AMH_FULLEXCEPTIONHOLDER__ARG_TRAITS_
@@ -1538,7 +1397,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MOD2_AMI_FULLHANDLER__ARG_TRAITS_)
 #define _MOD2_AMI_FULLHANDLER__ARG_TRAITS_
 
@@ -1555,7 +1413,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::mod2::full_seq2>
     : public
@@ -1565,7 +1422,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_MOD2_FWD__ARG_TRAITS_)
 #define _MOD2_FWD__ARG_TRAITS_
@@ -1583,7 +1439,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_MIXED_PARENTS__ARG_TRAITS_)
 #define _FWD_MIXED_INTF_MIXED_PARENTS__ARG_TRAITS_
 
@@ -1600,7 +1455,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_CONCRETE_PARENT__ARG_TRAITS_)
 #define _FWD_MIXED_INTF_CONCRETE_PARENT__ARG_TRAITS_
 
@@ -1616,7 +1470,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FWD_MIXED_INTF_AMH_CONCRETE_PARENTEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _FWD_MIXED_INTF_AMH_CONCRETE_PARENTEXCEPTIONHOLDER__ARG_TRAITS_
@@ -1636,7 +1489,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_AMI_CONCRETE_PARENTHANDLER__ARG_TRAITS_)
 #define _FWD_MIXED_INTF_AMI_CONCRETE_PARENTHANDLER__ARG_TRAITS_
 
@@ -1652,7 +1504,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FWD_MIXED_INTF_ABSTRACT_PARENT__ARG_TRAITS_)
 #define _FWD_MIXED_INTF_ABSTRACT_PARENT__ARG_TRAITS_
@@ -1670,7 +1521,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_MIXED_ABS_FIRST__ARG_TRAITS_)
 #define _FWD_MIXED_INTF_MIXED_ABS_FIRST__ARG_TRAITS_
 
@@ -1686,7 +1536,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FWD_MIXED_INTF_AMI_MIXED_ABS_FIRSTHANDLER__ARG_TRAITS_)
 #define _FWD_MIXED_INTF_AMI_MIXED_ABS_FIRSTHANDLER__ARG_TRAITS_
@@ -1704,7 +1553,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_MIXED_CONC_FIRST__ARG_TRAITS_)
 #define _FWD_MIXED_INTF_MIXED_CONC_FIRST__ARG_TRAITS_
 
@@ -1721,7 +1569,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_AMI_MIXED_CONC_FIRSTHANDLER__ARG_TRAITS_)
 #define _FWD_MIXED_INTF_AMI_MIXED_CONC_FIRSTHANDLER__ARG_TRAITS_
 
@@ -1737,7 +1584,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OBV_FWD_FORWARDEDTYPE__ARG_TRAITS_)
 #define _OBV_FWD_FORWARDEDTYPE__ARG_TRAITS_
@@ -1756,7 +1602,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OBV_FWD_ENCLOSINGTYPE__ARG_TRAITS_)
 #define _OBV_FWD_ENCLOSINGTYPE__ARG_TRAITS_
@@ -1776,7 +1621,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OBV_FWD_FORWARDEDTYPE__ARG_TRAITS_)
 #define _OBV_FWD_FORWARDEDTYPE__ARG_TRAITS_
 
@@ -1798,8 +1642,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Overrides of CORBA::release and CORBA::is_nil for
@@ -1817,7 +1659,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 namespace OBV_mod2
 {
-
 
   // OBV_ class
   class TAO_IDL_TEST_STUB_Export AMH_fullExceptionHolder
@@ -1845,7 +1686,6 @@ private:
 }
 namespace OBV_fwd_mixed_intf
 {
-
 
   // OBV_ class
   class TAO_IDL_TEST_STUB_Export AMH_concrete_parentExceptionHolder
@@ -1880,7 +1720,6 @@ namespace OBV_obv_fwd
 }
 namespace OBV_obv_fwd
 {
-
 
   // OBV_ class
   class TAO_IDL_TEST_STUB_Export EnclosingType
@@ -1921,7 +1760,6 @@ private:
 namespace OBV_obv_fwd
 {
 
-
   // OBV_ class
   class TAO_IDL_TEST_STUB_Export ForwardedType
     : public virtual obv_fwd::ForwardedType,
@@ -1958,7 +1796,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2243,8 +2080,6 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2253,8 +2088,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, scope_test::i_scope_t
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, scope_test::i_scope_test *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2265,8 +2098,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::s
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2275,8 +2106,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::mod2::scope_struct*
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::mod2::scope_struct const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2287,24 +2116,14 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const mod2::exp &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::exp*); // noncopying version
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const mod2::exp *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2315,8 +2134,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2325,12 +2142,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::AMH_fullExcepti
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, mod2::AMH_fullExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2341,12 +2152,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2355,12 +2160,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::AMI_fullHandler
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod2::AMI_fullHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2371,8 +2170,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::m
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2381,8 +2178,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::fwd_ptr *); // 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod2::fwd *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2393,12 +2188,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, fwd
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2407,8 +2196,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, fwd_mixed_intf::concr
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, fwd_mixed_intf::concrete_parent_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2419,12 +2206,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, fwd
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2433,12 +2214,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, fwd_mixed_intf::AMH_c
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, fwd_mixed_intf::AMH_concrete_parentResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2449,12 +2224,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, fwd
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2463,12 +2232,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, fwd_mixed_intf::abstr
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, fwd_mixed_intf::abstract_parent_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2479,12 +2242,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, fwd
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2493,12 +2250,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, fwd_mixed_intf::AMI_m
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2509,12 +2260,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, fwd
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2523,8 +2268,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, fwd_mixed_intf::AMI_m
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2535,8 +2278,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, obv
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -2545,8 +2286,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, obv_fwd::EnclosingTyp
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, obv_fwd::EnclosingType *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2557,16 +2296,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, obv
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const scope_test::i_scope_test_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, scope_test::i_scope_test_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2575,16 +2310,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, scope_test
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod2::scope_struct const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::scope_struct &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2593,21 +2324,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::fwd_
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod2::exp &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::exp &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2615,8 +2337,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::full_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2627,19 +2347,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod2::AMH_fullExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::AMH_fullExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2648,13 +2361,9 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::AMI_
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 #if !defined _TAO_CDR_OP_mod2_full_seq2_H_
 #define _TAO_CDR_OP_mod2_full_seq2_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -2665,8 +2374,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_mod2_full_seq2_H_ */
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2676,8 +2383,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::fwd_
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const fwd_mixed_intf::mixed_parents_ptr );
@@ -2685,19 +2390,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, fwd_mixed_
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const fwd_mixed_intf::concrete_parent_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, fwd_mixed_intf::concrete_parent_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2708,19 +2406,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const fwd_mixed_intf::AMH_concrete_parentExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, fwd_mixed_intf::AMH_concrete_parentExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2729,22 +2420,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, fwd_mixed_
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const fwd_mixed_intf::abstract_parent_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, fwd_mixed_intf::abstract_parent_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2753,22 +2434,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, fwd_mixed_
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2777,19 +2448,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, fwd_mixed_
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2800,16 +2464,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const obv_fwd::ForwardedType *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, obv_fwd::ForwardedType *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2820,16 +2480,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const obv_fwd::EnclosingType *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, obv_fwd::EnclosingType *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2840,15 +2496,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const obv_fwd::ForwardedType *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, obv_fwd::ForwardedType *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "fwdC.inl"

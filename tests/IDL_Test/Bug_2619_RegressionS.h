@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_AB6IKT_H_
-#define _TAO_IDL_BUG_2619_REGRESSIONS_AB6IKT_H_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_VIUIN1_H_
+#define _TAO_IDL_BUG_2619_REGRESSIONS_VIUIN1_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::Type_T>
     : public
@@ -86,7 +82,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_T_DATA_T__SARG_TRAITS_)
 #define _T_DATA_T__SARG_TRAITS_
@@ -105,7 +100,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_TEST__SARG_TRAITS_)
 #define _TEST__SARG_TRAITS_
 
@@ -120,7 +114,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_TESTEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_TESTEXCEPTIONHOLDER__SARG_TRAITS_
@@ -138,7 +131,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_TESTHANDLER__SARG_TRAITS_)
 #define _AMI_TESTHANDLER__SARG_TRAITS_
@@ -158,7 +150,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_Test;
 using POA_AMH_Test_ptr = POA_AMH_Test *;
 
@@ -171,7 +162,6 @@ protected:
 public:
   POA_AMH_Test (const POA_AMH_Test& rhs);
   virtual ~POA_AMH_Test () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -192,9 +182,6 @@ virtual void getGroup (
   ) = 0;
 
 };
-
-
-
 
 class POA_Test;
 using POA_Test_ptr = POA_Test *;
@@ -233,7 +220,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -252,7 +238,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_TestResponseHandler;
 using POA_TAO_AMH_TestResponseHandler_ptr = POA_TAO_AMH_TestResponseHandler *;
 
@@ -268,9 +253,6 @@ public:
   void getGroup_excep (
     ::AMH_TestExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_TestHandler;
 using POA_AMI_TestHandler_ptr = POA_AMI_TestHandler *;
@@ -317,7 +299,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -341,10 +322,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "Bug_2619_RegressionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

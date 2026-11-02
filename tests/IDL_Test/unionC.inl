@@ -35,8 +35,6 @@ Data::_default ()
   this->disc_ = dtEmpty;
 }
 
-
-
 ACE_INLINE
 unsigned long
 Data::_tao_member_index (DataType value)
@@ -124,7 +122,6 @@ Data::shortData () const
 // Inline operations for union Necessary::WhichResult
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 Necessary::WhichResult::_tao_member_index (Necessary::Kind value)
@@ -209,7 +206,6 @@ Necessary::WhichResult::m_Unused () const
 // *************************************************************
 // Inline operations for union foo
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -650,7 +646,6 @@ AllBoolUnions::OneBranchF::val () const
 // Inline operations for union AllBoolUnions::OneBranchD
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 AllBoolUnions::OneBranchD::_tao_member_index (::CORBA::Boolean value)
@@ -699,7 +694,6 @@ AllBoolUnions::OneBranchD::val () const
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchTF
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -750,7 +744,6 @@ AllBoolUnions::OneBranchTF::val () const
 // Inline operations for union AllBoolUnions::OneBranchFT
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 AllBoolUnions::OneBranchFT::_tao_member_index (::CORBA::Boolean value)
@@ -799,7 +792,6 @@ AllBoolUnions::OneBranchFT::val () const
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchTD
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -850,7 +842,6 @@ AllBoolUnions::OneBranchTD::val () const
 // Inline operations for union AllBoolUnions::OneBranchDT
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 AllBoolUnions::OneBranchDT::_tao_member_index (::CORBA::Boolean value)
@@ -899,7 +890,6 @@ AllBoolUnions::OneBranchDT::val () const
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchFD
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -950,7 +940,6 @@ AllBoolUnions::OneBranchFD::val () const
 // Inline operations for union AllBoolUnions::OneBranchDF
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 AllBoolUnions::OneBranchDF::_tao_member_index (::CORBA::Boolean value)
@@ -999,7 +988,6 @@ AllBoolUnions::OneBranchDF::val () const
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesTF
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -1080,7 +1068,6 @@ AllBoolUnions::TwoBranchesTF::val2 () const
 // Inline operations for union AllBoolUnions::TwoBranchesFT
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 AllBoolUnions::TwoBranchesFT::_tao_member_index (::CORBA::Boolean value)
@@ -1159,7 +1146,6 @@ AllBoolUnions::TwoBranchesFT::val2 () const
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesTD
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -1240,7 +1226,6 @@ AllBoolUnions::TwoBranchesTD::val2 () const
 // Inline operations for union AllBoolUnions::TwoBranchesDT
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 AllBoolUnions::TwoBranchesDT::_tao_member_index (::CORBA::Boolean value)
@@ -1320,7 +1305,6 @@ AllBoolUnions::TwoBranchesDT::val2 () const
 // Inline operations for union AllBoolUnions::TwoBranchesFD
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 AllBoolUnions::TwoBranchesFD::_tao_member_index (::CORBA::Boolean value)
@@ -1399,7 +1383,6 @@ AllBoolUnions::TwoBranchesFD::val2 () const
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesDF
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -1486,8 +1469,6 @@ inner1::_default ()
   this->_reset ();
   this->disc_ = static_cast <disc1> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -1583,8 +1564,6 @@ inner2::_default ()
   this->disc_ = static_cast <disc2> (-1);
 }
 
-
-
 ACE_INLINE
 unsigned long
 inner2::_tao_member_index (disc2 value)
@@ -1678,8 +1657,6 @@ outer::_default ()
   this->_reset ();
   this->disc_ = static_cast <disc_outer> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -1803,8 +1780,6 @@ UnionTest3::ValType::_default ()
   this->disc_ = static_cast <UnionTest3::ValChoice> (-1);
 }
 
-
-
 ACE_INLINE
 unsigned long
 UnionTest3::ValType::_tao_member_index (UnionTest3::ValChoice value)
@@ -1898,8 +1873,6 @@ UnionTest3::IndType::_default ()
   this->_reset ();
   this->disc_ = static_cast <UnionTest3::IndChoice> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -2023,8 +1996,6 @@ X::_default ()
   this->disc_ = static_cast <XType> (-1);
 }
 
-
-
 ACE_INLINE
 unsigned long
 X::_tao_member_index (XType value)
@@ -2070,8 +2041,6 @@ X::Y::Z::_default ()
   this->_reset ();
   this->disc_ = static_cast <ZType> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -2171,7 +2140,6 @@ X::a ()
 // *************************************************************
 // Inline operations for union FieldValue
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -2396,9 +2364,7 @@ TestUnion::twoEnum () const
   return this->u_.twoEnum_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -2447,13 +2413,9 @@ TAO::Array_Traits<U41_forany>::alloc ()
   return U41_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -2498,7 +2460,6 @@ TAO::Array_Traits<U42_forany>::alloc ()
 {
   return U42_alloc ();
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2597,9 +2558,7 @@ U85::b_85_2 () const
   return this->u_.b_85_2_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -2644,7 +2603,6 @@ TAO::Array_Traits<UString_forany>::alloc ()
 {
   return UString_alloc ();
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2860,9 +2818,7 @@ U88::b_86_2 () const
   return this->u_.b_86_2_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -2907,7 +2863,6 @@ TAO::Array_Traits<UBarArray_forany>::alloc ()
 {
   return UBarArray_alloc ();
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -3111,9 +3066,7 @@ U89::b_87_2 () const
   return this->u_.b_87_2_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -3158,7 +3111,6 @@ TAO::Array_Traits<U90Array_forany>::alloc ()
 {
   return U90Array_alloc ();
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -3259,7 +3211,6 @@ U91::b_92_2 () const
 // *************************************************************
 // Inline operations for union U92
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -3393,7 +3344,6 @@ U92::b_92_3 ()
 // Inline operations for union U93
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 U93::_tao_member_index (::CORBA::Long value)
@@ -3504,7 +3454,6 @@ U93::b_93_3 () const
 // Inline operations for union U94
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 U94::_tao_member_index (::CORBA::Long value)
@@ -3612,9 +3561,7 @@ U94::b_94_3 () const
   return this->u_.b_94_3_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -3660,13 +3607,11 @@ TAO::Array_Traits<DefaultInitializedLongArray_forany>::alloc ()
   return DefaultInitializedLongArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 // *************************************************************
 // Inline operations for union DefaultInitializedStructUnion
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -3728,7 +3673,6 @@ DefaultInitializedStructUnion::value ()
 // Inline operations for union DefaultInitializedBooleanUnion
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 DefaultInitializedBooleanUnion::_tao_member_index (::CORBA::Boolean value)
@@ -3777,7 +3721,6 @@ DefaultInitializedBooleanUnion::value () const
 // *************************************************************
 // Inline operations for union DefaultInitializedLongUnion
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -3828,7 +3771,6 @@ DefaultInitializedLongUnion::value () const
 // Inline operations for union DefaultInitializedDoubleUnion
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 DefaultInitializedDoubleUnion::_tao_member_index (::CORBA::Boolean value)
@@ -3877,7 +3819,6 @@ DefaultInitializedDoubleUnion::value () const
 // *************************************************************
 // Inline operations for union DefaultInitializedEnumUnion
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -3928,7 +3869,6 @@ DefaultInitializedEnumUnion::value () const
 // Inline operations for union DefaultInitializedArrayUnion
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 DefaultInitializedArrayUnion::_tao_member_index (::CORBA::Boolean value)
@@ -3977,7 +3917,6 @@ DefaultInitializedArrayUnion::value () const
 // *************************************************************
 // Inline operations for union DefaultInitializedStringUnion
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -4050,7 +3989,6 @@ DefaultInitializedStringUnion::value () const // get method
 // *************************************************************
 // Inline operations for union ResetWithNoopBranches
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long

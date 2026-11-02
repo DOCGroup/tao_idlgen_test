@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_CONSTANTSS_08OZ5D_CPP_
-#define _TAO_IDL_OLD_CONSTANTSS_08OZ5D_CPP_
-
+#ifndef _TAO_IDL_OLD_CONSTANTSS_US6MI0_CPP_
+#define _TAO_IDL_OLD_CONSTANTSS_US6MI0_CPP_
 
 #include "old_constantsS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldConstants_M_AMH_A_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldConstants_M_AMH_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -139,7 +136,6 @@ POA_OldConstants::M::AMH_A::AMH_A ()
   this->optable_ = std::addressof (tao_OldConstants_M_AMH_A_optable);
 }
 
-
 void
 POA_OldConstants::M::AMH_A::foo_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -189,11 +185,6 @@ POA_OldConstants::M::AMH_A::foo_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_OldConstants::M::AMH_A::_is_a (const char* value)
 {
   return
@@ -241,8 +232,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldConstants_M_A_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldConstants_M_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -316,7 +305,6 @@ POA_OldConstants::M::_TAO_A_Direct_Proxy_Impl::~_TAO_A_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldConstants::M::_TAO_A_Direct_Proxy_Impl::foo (
     TAO_Abstract_ServantBase  *servant,
@@ -338,8 +326,6 @@ POA_OldConstants::M::_TAO_A_Direct_Proxy_Impl::foo (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -349,15 +335,13 @@ POA_OldConstants::M::A::A ()
   this->optable_ = std::addressof (tao_OldConstants_M_A_optable);
 }
 
-
 namespace POA_OldConstants
 {
 
   namespace M
   {
 
-    class foo_A
-      : public TAO::Upcall_Command
+    class foo_A : public TAO::Upcall_Command
     {
     public:
       inline foo_A (POA_OldConstants::M::A * servant,
@@ -449,13 +433,6 @@ void POA_OldConstants::M::A::foo_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldConstants::M::A::_is_a (const char* value)
 {
   return
@@ -470,18 +447,12 @@ const char* POA_OldConstants::M::A::_interface_repository_id () const
   return "IDL:OldConstants/M/A:1.0";
 }
 
-
-
-
 void POA_OldConstants::M::A::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldConstants::M::A *
 POA_OldConstants::M::A::_this ()
@@ -542,8 +513,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldConstants_M_AMI_AHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldConstants_M_AMI_AHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -618,7 +587,6 @@ POA_OldConstants::M::_TAO_AMI_AHandler_Direct_Proxy_Impl::~_TAO_AMI_AHandler_Dir
 {
 }
 
-
 void
 POA_OldConstants::M::_TAO_AMI_AHandler_Direct_Proxy_Impl::foo (
     TAO_Abstract_ServantBase  *servant,
@@ -639,7 +607,6 @@ POA_OldConstants::M::_TAO_AMI_AHandler_Direct_Proxy_Impl::foo (
       );
 }
 
-
 void
 POA_OldConstants::M::_TAO_AMI_AHandler_Direct_Proxy_Impl::foo_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -658,8 +625,6 @@ POA_OldConstants::M::_TAO_AMI_AHandler_Direct_Proxy_Impl::foo_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -669,15 +634,13 @@ POA_OldConstants::M::AMI_AHandler::AMI_AHandler ()
   this->optable_ = std::addressof (tao_OldConstants_M_AMI_AHandler_optable);
 }
 
-
 namespace POA_OldConstants
 {
 
   namespace M
   {
 
-    class foo_AMI_AHandler
-      : public TAO::Upcall_Command
+    class foo_AMI_AHandler : public TAO::Upcall_Command
     {
     public:
       inline foo_AMI_AHandler (POA_OldConstants::M::AMI_AHandler * servant,
@@ -763,15 +726,13 @@ void POA_OldConstants::M::AMI_AHandler::foo_skel (
                          );
 }
 
-
 namespace POA_OldConstants
 {
 
   namespace M
   {
 
-    class foo_excep_AMI_AHandler
-      : public TAO::Upcall_Command
+    class foo_excep_AMI_AHandler : public TAO::Upcall_Command
     {
     public:
       inline foo_excep_AMI_AHandler (POA_OldConstants::M::AMI_AHandler * servant,
@@ -839,13 +800,6 @@ void POA_OldConstants::M::AMI_AHandler::foo_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldConstants::M::AMI_AHandler::_is_a (const char* value)
 {
   return
@@ -861,18 +815,12 @@ const char* POA_OldConstants::M::AMI_AHandler::_interface_repository_id () const
   return "IDL:OldConstants/M/AMI_AHandler:1.0";
 }
 
-
-
-
 void POA_OldConstants::M::AMI_AHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldConstants::M::AMI_AHandler *
 POA_OldConstants::M::AMI_AHandler::_this ()

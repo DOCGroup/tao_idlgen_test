@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSC_LQKO82_H_
-#define _TAO_IDL_PARAMSC_LQKO82_H_
+#ifndef _TAO_IDL_PARAMSC_MQI15G_H_
+#define _TAO_IDL_PARAMSC_MQI15G_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -66,25 +64,18 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace foo
 {
-
 
   struct theDate;
   using theDate_var = ::TAO_Fixed_Var_T<theDate>;
   using theDate_out = theDate&;
-
-
-
 
   struct TAO_IDL_TEST_STUB_Export theDate
   {
@@ -102,13 +93,9 @@ namespace foo
   namespace bar
   {
 
-
     struct theDate;
     using theDate_var = ::TAO_Fixed_Var_T<theDate>;
     using theDate_out = theDate&;
-
-
-
 
     struct TAO_IDL_TEST_STUB_Export theDate
     {
@@ -122,7 +109,6 @@ namespace foo
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_theDate;
 
-
 #if !defined (_FOO_BAR_FOOBAR__VAR_OUT_CH_)
 #define _FOO_BAR_FOOBAR__VAR_OUT_CH_
 
@@ -135,9 +121,6 @@ namespace foo
     using fooBar_out = TAO_Objref_Out_T<fooBar>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export fooBar
       : public virtual ::CORBA::Object
@@ -168,9 +151,6 @@ namespace foo
         ::foo::bar::AMI_fooBarHandler_ptr ami_handler,
         const ::foo::theDate & a,
         const ::foo::theDate & b);
-
-
-
 
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
@@ -203,7 +183,6 @@ namespace foo
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_fooBar;
 
-
 #if !defined (_FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -212,7 +191,6 @@ namespace foo
     using AMH_fooBarExceptionHolder_out = TAO_Value_Out_T<AMH_fooBarExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
     class TAO_IDL_TEST_STUB_Export AMH_fooBarExceptionHolder
       : public virtual ::CORBA::DefaultValueRefCountBase
@@ -256,7 +234,6 @@ namespace foo
   public:
     virtual void raise_sendc_getDate ();
 
-
 protected:
   AMH_fooBarExceptionHolder ();
   virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
@@ -278,7 +255,6 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_fooBarExceptionHolder;
 
-
 #if !defined (_FOO_BAR_AMH_FOOBARRESPONSEHANDLER__VAR_OUT_CH_)
 #define _FOO_BAR_AMH_FOOBARRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -291,9 +267,6 @@ using AMH_fooBarResponseHandler_var = TAO_Objref_Var_T<AMH_fooBarResponseHandler
 using AMH_fooBarResponseHandler_out = TAO_Objref_Out_T<AMH_fooBarResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMH_fooBarResponseHandler
   : public virtual ::CORBA::Object
@@ -322,9 +295,6 @@ public:
   virtual void getDate_excep (
     ::foo::bar::AMH_fooBarExceptionHolder * holder) = 0;
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -334,8 +304,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_fooBarResponseHandler ();
-
-
 
   virtual ~AMH_fooBarResponseHandler () = default;
 
@@ -348,7 +316,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_fooBarResponseHandler;
 
-
 #if !defined (_FOO_BAR_AMI_FOOBARHANDLER__VAR_OUT_CH_)
 #define _FOO_BAR_AMI_FOOBARHANDLER__VAR_OUT_CH_
 
@@ -358,9 +325,6 @@ using AMI_fooBarHandler_var = TAO_Objref_Var_T<AMI_fooBarHandler>;
 using AMI_fooBarHandler_out = TAO_Objref_Out_T<AMI_fooBarHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMI_fooBarHandler
   : public virtual ::Messaging::ReplyHandler
@@ -397,9 +361,6 @@ public:
   virtual void getDate_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -431,22 +392,15 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_fooBarHandler;
 
-
-
 } // module foo::bar
-
-
 
 } // module foo
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -466,7 +420,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::foo::theDate>
     : public
@@ -477,7 +430,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::foo::bar::theDate>
     : public
@@ -487,7 +439,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_FOO_BAR_FOOBAR__ARG_TRAITS_)
 #define _FOO_BAR_FOOBAR__ARG_TRAITS_
@@ -504,7 +455,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__ARG_TRAITS_)
 #define _FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__ARG_TRAITS_
@@ -523,7 +473,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FOO_BAR_AMI_FOOBARHANDLER__ARG_TRAITS_)
 #define _FOO_BAR_AMI_FOOBARHANDLER__ARG_TRAITS_
@@ -544,12 +493,10 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace OBV_foo
 {
   namespace bar
   {
-
 
     // OBV_ class
     class TAO_IDL_TEST_STUB_Export AMH_fooBarExceptionHolder
@@ -576,7 +523,6 @@ namespace OBV_foo
   };
 }
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -641,8 +587,6 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -651,8 +595,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::foo::theDate*); // 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::foo::theDate const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -663,12 +605,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::f
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -677,8 +613,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo::bar::fooBar_ptr 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, foo::bar::fooBar_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -689,12 +623,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, foo
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -703,12 +631,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo::bar::AMH_fooBarR
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, foo::bar::AMH_fooBarResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -719,16 +641,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, foo
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, foo::theDate const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, foo::theDate &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -737,19 +655,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, foo::bar::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const foo::bar::fooBar_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, foo::bar::fooBar_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -760,8 +671,6 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const foo::bar::AMH_fooBarExceptionHolder *);
@@ -769,18 +678,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, foo::bar::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const foo::bar::AMI_fooBarHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, foo::bar::AMI_fooBarHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "paramsC.inl"

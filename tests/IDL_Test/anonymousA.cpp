@@ -41,7 +41,6 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 
-
 #ifndef _TAO_TYPECODE_Not_Anon_short_seq_GUARD
 #define _TAO_TYPECODE_Not_Anon_short_seq_GUARD
 
@@ -75,13 +74,10 @@ static TAO::TypeCode::Alias<char const *,
     "short_seq",
     &TAO::TypeCode::tc_Not_Anon_short_seq_0);
 
-
 namespace Not_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_short_seq = std::addressof(_tao_tc_Not_Anon_short_seq);
 }
-
-
 
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_Char__GUARD
 #define _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_Char__GUARD
@@ -106,7 +102,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_Char__GUARD */
-
 
 #ifndef _TAO_TYPECODE_Half_Anon_char_seq_array_GUARD
 #define _TAO_TYPECODE_Half_Anon_char_seq_array_GUARD
@@ -142,13 +137,10 @@ static TAO::TypeCode::Alias<char const *,
     "char_seq_array",
     &TAO::TypeCode::tc_Half_Anon_char_seq_array);
 
-
 namespace Half_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_char_seq_array = std::addressof(_tao_tc_Half_Anon_char_seq_array);
 }
-
-
 
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_ULong__18_GUARD
 #define _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_ULong__18_GUARD
@@ -173,7 +165,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_ULong__18_GUARD */
-
 
 #ifndef _TAO_TYPECODE_Half_Anon_bd_ulong_seq_array_GUARD
 #define _TAO_TYPECODE_Half_Anon_bd_ulong_seq_array_GUARD
@@ -209,13 +200,10 @@ static TAO::TypeCode::Alias<char const *,
     "bd_ulong_seq_array",
     &TAO::TypeCode::tc_Half_Anon_bd_ulong_seq_array);
 
-
 namespace Half_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_bd_ulong_seq_array = std::addressof(_tao_tc_Half_Anon_bd_ulong_seq_array);
 }
-
-
 
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__GUARD
 #define _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__GUARD
@@ -240,7 +228,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__GUARD */
-
 
 #ifndef _TAO_TYPECODE_Half_Anon_ushort_seq_array_GUARD
 #define _TAO_TYPECODE_Half_Anon_ushort_seq_array_GUARD
@@ -276,13 +263,10 @@ static TAO::TypeCode::Alias<char const *,
     "ushort_seq_array",
     &TAO::TypeCode::tc_Half_Anon_ushort_seq_array);
 
-
 namespace Half_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_ushort_seq_array = std::addressof(_tao_tc_Half_Anon_ushort_seq_array);
 }
-
-
 
 #ifndef _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__7_GUARD
 #define _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__7_GUARD
@@ -307,7 +291,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_Half_Anon__tao_seq_CORBA_UShort__7_GUARD */
-
 
 #ifndef _TAO_TYPECODE_Half_Anon_bd_ushort_seq_array_GUARD
 #define _TAO_TYPECODE_Half_Anon_bd_ushort_seq_array_GUARD
@@ -343,7 +326,6 @@ static TAO::TypeCode::Alias<char const *,
     "bd_ushort_seq_array",
     &TAO::TypeCode::tc_Half_Anon_bd_ushort_seq_array);
 
-
 namespace Half_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_bd_ushort_seq_array = std::addressof(_tao_tc_Half_Anon_bd_ushort_seq_array);
@@ -354,7 +336,6 @@ static TAO::TypeCode::Objref<char const *,
     ::CORBA::tk_objref,
     "IDL:All_Anon/anon_bd_string_test:1.0",
     "anon_bd_string_test");
-
 
 namespace All_Anon
 {
@@ -374,7 +355,6 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_All_Anon_AMH_anon_bd_string_testExceptionHolder,
     0);
 
-
 namespace All_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_anon_bd_string_testExceptionHolder = std::addressof(_tao_tc_All_Anon_AMH_anon_bd_string_testExceptionHolder);
@@ -384,14 +364,12 @@ namespace All_Anon
   return ::All_Anon::_tc_AMH_anon_bd_string_testExceptionHolder;
 }
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_All_Anon_AMH_anon_bd_string_testResponseHandler (
     ::CORBA::tk_local_interface,
     "IDL:All_Anon/AMH_anon_bd_string_testResponseHandler:1.0",
     "AMH_anon_bd_string_testResponseHandler");
-
 
 namespace All_Anon
 {
@@ -404,7 +382,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:All_Anon/AMI_anon_bd_string_testHandler:1.0",
     "AMI_anon_bd_string_testHandler");
 
-
 namespace All_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_anon_bd_string_testHandler = std::addressof(_tao_tc_All_Anon_AMI_anon_bd_string_testHandler);
@@ -415,8 +392,6 @@ namespace All_Anon
 {
   return ::All_Anon::_tc_Nested_Anon;
 }
-
-
 
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon__tao_seq_CORBA_Float__GUARD
 #define _TAO_TYPECODE_All_Anon_Nested_Anon__tao_seq_CORBA_Float__GUARD
@@ -441,7 +416,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon__tao_seq_CORBA_Float__GUARD */
-
 
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon_float_seq_array_GUARD
 #define _TAO_TYPECODE_All_Anon_Nested_Anon_float_seq_array_GUARD
@@ -469,8 +443,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon_float_seq_array_GUARD */
 
-
-
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon__tao_seq_CORBA_Float__GUARD
 #define _TAO_TYPECODE_All_Anon_Nested_Anon__tao_seq_CORBA_Float__GUARD
 
@@ -494,7 +466,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon__tao_seq_CORBA_Float__GUARD */
-
 
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon_another_fsa_GUARD
 #define _TAO_TYPECODE_All_Anon_Nested_Anon_another_fsa_GUARD
@@ -522,7 +493,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon_another_fsa_GUARD */
 
-
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_1_GUARD
 #define _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_1_GUARD
 
@@ -548,7 +518,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_1_GUARD */
-
 
 #ifndef _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_2_GUARD
 #define _TAO_TYPECODE_All_Anon_Nested_Anon_long_array_2_GUARD
@@ -600,12 +569,10 @@ _tao_tc_All_Anon_Nested_Anon (
   _tao_fields_All_Anon_Nested_Anon,
   4);
 
-
 namespace All_Anon
 {
   ::CORBA::TypeCode_ptr const _tc_Nested_Anon = std::addressof(_tao_tc_All_Anon_Nested_Anon);
 }
-
 
 #ifndef _TAO_TYPECODE_CORBA_STRING_32_GUARD
 #define _TAO_TYPECODE_CORBA_STRING_32_GUARD
@@ -642,7 +609,6 @@ static TAO::TypeCode::Alias<char const *,
     "SecondString",
     &TAO::TypeCode::tc_CORBA_STRING_32);
 
-
 namespace Second
 {
   ::CORBA::TypeCode_ptr const _tc_SecondString = std::addressof(_tao_tc_Second_SecondString);
@@ -650,7 +616,6 @@ namespace Second
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -689,8 +654,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -731,8 +694,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -771,8 +732,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -813,8 +772,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -854,11 +811,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -873,11 +826,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -919,11 +869,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -938,9 +884,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -989,15 +933,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1029,11 +968,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1075,11 +1011,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1094,11 +1026,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1140,11 +1069,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1173,11 +1098,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1216,5 +1138,4 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

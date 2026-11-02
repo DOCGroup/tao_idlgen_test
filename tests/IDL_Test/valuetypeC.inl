@@ -53,8 +53,6 @@ MyValueTypeUnion::_default ()
   this->disc_ = static_cast <ValueSort2> (-1);
 }
 
-
-
 ACE_INLINE
 unsigned long
 MyValueTypeUnion::_tao_member_index (ValueSort2 value)

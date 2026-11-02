@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "old_union2C.h"
 #include <memory>
 #include <new>
@@ -67,12 +66,10 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_OldUnion2_FooDisc,
     2);
 
-
 namespace OldUnion2
 {
   ::CORBA::TypeCode_ptr const _tc_FooDisc = std::addressof(_tao_tc_OldUnion2_FooDisc);
 }
-
 
 OldUnion2::Foo::Foo ()
 {
@@ -176,7 +173,6 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_OldUnion2_Foo)/sizeof (_tao_cases_OldUnion2_Foo[0]),
     -1);
 
-
 namespace OldUnion2
 {
   ::CORBA::TypeCode_ptr const _tc_Foo = std::addressof(_tao_tc_OldUnion2_Foo);
@@ -204,12 +200,10 @@ _tao_tc_OldUnion2_Bar (
   _tao_fields_OldUnion2_Bar,
   2);
 
-
 namespace OldUnion2
 {
   ::CORBA::TypeCode_ptr const _tc_Bar = std::addressof(_tao_tc_OldUnion2_Bar);
 }
-
 
 void
 OldUnion2::Bar::_tao_any_destructor (
@@ -234,7 +228,6 @@ static TAO::TypeCode::Enum<char const *,
     2);
 
 ::CORBA::TypeCode_ptr const OldUnion2::Bar::_tc_BarDisc = std::addressof(_tao_tc_OldUnion2_Bar_BarDisc);
-
 
 OldUnion2::Bar::Foo::Foo ()
 {
@@ -328,9 +321,7 @@ static TAO::TypeCode::Union<char const *,
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -358,13 +349,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -407,8 +394,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -450,13 +435,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -484,13 +465,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -533,8 +510,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OldUnion2::FooDisc _tao_enumerator)
@@ -556,8 +531,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -639,8 +612,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OldUnion2::Bar::BarDisc _tao_enumerator)
@@ -662,8 +633,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -745,8 +714,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -770,6 +737,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_UNIONS_PJSFKZ_H_
-#define _TAO_IDL_UNIONS_PJSFKZ_H_
+#ifndef _TAO_IDL_UNIONS_KBUCGR_H_
+#define _TAO_IDL_UNIONS_KBUCGR_H_
 
 #include /**/ "ace/pre.h"
 
@@ -41,17 +41,13 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -70,7 +66,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::DataType>
     : public
@@ -80,7 +75,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::Data>
@@ -92,7 +86,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Necessary::Kind>
     : public
@@ -102,7 +95,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::Necessary::WhichResult>
@@ -114,7 +106,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::foo>
     : public
@@ -124,7 +115,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::UnionDiscTest::BooleanUnion>
@@ -136,7 +126,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::UnionDiscTest::CharUnion>
     : public
@@ -146,7 +135,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::AllBoolUnions::OneBranchT>
@@ -158,7 +146,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::AllBoolUnions::OneBranchF>
     : public
@@ -168,7 +155,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::AllBoolUnions::OneBranchD>
@@ -180,7 +166,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::AllBoolUnions::OneBranchTF>
     : public
@@ -190,7 +175,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::AllBoolUnions::OneBranchFT>
@@ -202,7 +186,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::AllBoolUnions::OneBranchTD>
     : public
@@ -212,7 +195,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::AllBoolUnions::OneBranchDT>
@@ -224,7 +206,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::AllBoolUnions::OneBranchFD>
     : public
@@ -234,7 +215,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::AllBoolUnions::OneBranchDF>
@@ -246,7 +226,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::AllBoolUnions::TwoBranchesTF>
     : public
@@ -256,7 +235,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::AllBoolUnions::TwoBranchesFT>
@@ -268,7 +246,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::AllBoolUnions::TwoBranchesTD>
     : public
@@ -278,7 +255,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::AllBoolUnions::TwoBranchesDT>
@@ -290,7 +266,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::AllBoolUnions::TwoBranchesFD>
     : public
@@ -300,7 +275,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::AllBoolUnions::TwoBranchesDF>
@@ -312,7 +286,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::disc1>
     : public
@@ -322,7 +295,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::disc2>
@@ -334,7 +306,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::disc_outer>
     : public
@@ -344,7 +315,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::inner1>
@@ -356,7 +326,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::inner2>
     : public
@@ -366,7 +335,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::outer>
@@ -378,7 +346,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::UnionTest3::ValChoice>
     : public
@@ -388,7 +355,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::UnionTest3::ValType>
@@ -400,7 +366,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::UnionTest3::UpType>
     : public
@@ -410,7 +375,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::UnionTest3::DownType>
@@ -422,7 +386,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::UnionTest3::IndChoice>
     : public
@@ -432,7 +395,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::UnionTest3::IndType>
@@ -444,7 +406,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::XType>
     : public
@@ -454,7 +415,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::ZType>
@@ -466,7 +426,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::X>
     : public
@@ -476,7 +435,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::X::Y>
@@ -488,7 +446,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::X::Y::Z>
     : public
@@ -498,7 +455,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::FieldType>
@@ -510,7 +466,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::FieldValue>
     : public
@@ -520,7 +475,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::Field>
@@ -532,7 +486,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::TestOneEnum>
     : public
@@ -543,7 +496,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::TestTwoEnum>
     : public
@@ -553,7 +505,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::TestUnion>
@@ -587,7 +538,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::U85>
     : public
@@ -609,7 +559,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::U86>
     : public
@@ -620,7 +569,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::U88>
     : public
@@ -630,7 +578,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::UBar>
@@ -653,7 +600,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::U87>
     : public
@@ -664,7 +610,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::U89>
     : public
@@ -674,7 +619,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::U90>
@@ -697,7 +641,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::U91>
     : public
@@ -707,7 +650,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::U92>
@@ -719,7 +661,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::U93>
     : public
@@ -729,7 +670,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::U94>
@@ -752,7 +692,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::DefaultInitializedStructUnion>
     : public
@@ -762,7 +701,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::DefaultInitializedBooleanUnion>
@@ -774,7 +712,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::DefaultInitializedLongUnion>
     : public
@@ -784,7 +721,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::DefaultInitializedDoubleUnion>
@@ -796,7 +732,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::DefaultInitializedEnumUnion>
     : public
@@ -806,7 +741,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::DefaultInitializedArrayUnion>
@@ -818,7 +752,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::DefaultInitializedStringUnion>
     : public
@@ -829,7 +762,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::ResetDiscriminator>
     : public
@@ -839,7 +771,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::ResetWithNoopBranches>
@@ -854,34 +785,24 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_Necessary
 {
-
-
 
 } // module Necessary
 namespace POA_UnionDiscTest
 {
 
-
-
 } // module UnionDiscTest
 namespace POA_AllBoolUnions
 {
-
-
 
 } // module AllBoolUnions
 namespace POA_UnionTest3
 {
 
-
-
 } // module UnionTest3
 
 #include "unionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEDEFS_AP15LN_H_
-#define _TAO_IDL_TYPEDEFS_AP15LN_H_
+#ifndef _TAO_IDL_TYPEDEFS_1LT52X_H_
+#define _TAO_IDL_TYPEDEFS_1LT52X_H_
 
 #include /**/ "ace/pre.h"
 
@@ -54,14 +54,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -145,7 +142,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_TESTMODULE_TESTINTERFACE__SARG_TRAITS_)
 #define _TESTMODULE_TESTINTERFACE__SARG_TRAITS_
 
@@ -160,7 +156,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_TESTMODULE_AMH_TESTINTERFACEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _TESTMODULE_AMH_TESTINTERFACEEXCEPTIONHOLDER__SARG_TRAITS_
@@ -178,7 +173,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_TESTMODULE_AMI_TESTINTERFACEHANDLER__SARG_TRAITS_)
 #define _TESTMODULE_AMI_TESTINTERFACEHANDLER__SARG_TRAITS_
@@ -227,7 +221,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BUG_2124_FOO__SARG_TRAITS_)
 #define _BUG_2124_FOO__SARG_TRAITS_
 
@@ -242,7 +235,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_2124_AMH_FOOEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _BUG_2124_AMH_FOOEXCEPTIONHOLDER__SARG_TRAITS_
@@ -260,7 +252,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_2124_AMI_FOOHANDLER__SARG_TRAITS_)
 #define _BUG_2124_AMI_FOOHANDLER__SARG_TRAITS_
@@ -293,7 +284,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BUG_2122_ONE_WHATEVER__SARG_TRAITS_)
 #define _BUG_2122_ONE_WHATEVER__SARG_TRAITS_
 
@@ -308,7 +298,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_2122_ONE_AMH_WHATEVEREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _BUG_2122_ONE_AMH_WHATEVEREXCEPTIONHOLDER__SARG_TRAITS_
@@ -326,7 +315,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_2122_ONE_AMI_WHATEVERHANDLER__SARG_TRAITS_)
 #define _BUG_2122_ONE_AMI_WHATEVERHANDLER__SARG_TRAITS_
@@ -359,7 +347,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BUG_2122_TWO_WHOCARES__SARG_TRAITS_)
 #define _BUG_2122_TWO_WHOCARES__SARG_TRAITS_
 
@@ -374,7 +361,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_2122_TWO_AMH_WHOCARESEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _BUG_2122_TWO_AMH_WHOCARESEXCEPTIONHOLDER__SARG_TRAITS_
@@ -392,7 +378,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_2122_TWO_AMI_WHOCARESHANDLER__SARG_TRAITS_)
 #define _BUG_2122_TWO_AMI_WHOCARESHANDLER__SARG_TRAITS_
@@ -425,7 +410,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BUG_2122_THREE_WHOCARES__SARG_TRAITS_)
 #define _BUG_2122_THREE_WHOCARES__SARG_TRAITS_
 
@@ -440,7 +424,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_2122_THREE_AMH_WHOCARESEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _BUG_2122_THREE_AMH_WHOCARESEXCEPTIONHOLDER__SARG_TRAITS_
@@ -458,7 +441,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_2122_THREE_AMI_WHOCARESHANDLER__SARG_TRAITS_)
 #define _BUG_2122_THREE_AMI_WHOCARESHANDLER__SARG_TRAITS_
@@ -491,7 +473,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::CommaList::Foo>
     : public
@@ -501,7 +482,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::CommaList::Dubble>
@@ -515,7 +495,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 namespace POA_TestModule
 {
@@ -532,7 +511,6 @@ namespace POA_TestModule
   public:
     AMH_TestInterface (const AMH_TestInterface& rhs);
     virtual ~AMH_TestInterface () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -564,9 +542,6 @@ namespace POA_TestModule
     ) = 0;
 
 };
-
-
-
 
 class TestInterface;
 using TestInterface_ptr = TestInterface *;
@@ -613,7 +588,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -636,7 +610,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_TestInterfaceResponseHandler;
 using TAO_AMH_TestInterfaceResponseHandler_ptr = TAO_AMH_TestInterfaceResponseHandler *;
 
@@ -654,9 +627,6 @@ public:
   void set_typedef_2_excep (
     ::TestModule::AMH_TestInterfaceExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_TestInterfaceHandler;
 using AMI_TestInterfaceHandler_ptr = AMI_TestInterfaceHandler *;
@@ -715,7 +685,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -747,9 +716,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module TestModule
 namespace POA_bug_2124
 {
@@ -766,7 +732,6 @@ namespace POA_bug_2124
   public:
     AMH_Foo (const AMH_Foo& rhs);
     virtual ~AMH_Foo () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -798,9 +763,6 @@ namespace POA_bug_2124
     ) = 0;
 
 };
-
-
-
 
 class Foo;
 using Foo_ptr = Foo *;
@@ -847,7 +809,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -870,7 +831,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_FooResponseHandler;
 using TAO_AMH_FooResponseHandler_ptr = TAO_AMH_FooResponseHandler *;
 
@@ -888,9 +848,6 @@ public:
   void op2_excep (
     ::bug_2124::AMH_FooExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_FooHandler;
 using AMI_FooHandler_ptr = AMI_FooHandler *;
@@ -949,7 +906,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -981,9 +937,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module bug_2124
 namespace POA_bug_2122
 {
@@ -1003,7 +956,6 @@ namespace POA_bug_2122
     public:
       AMH_Whatever (const AMH_Whatever& rhs);
       virtual ~AMH_Whatever () = default;
-
 
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -1025,9 +977,6 @@ namespace POA_bug_2122
       ) = 0;
 
   };
-
-
-
 
   class Whatever;
   using Whatever_ptr = Whatever *;
@@ -1067,7 +1016,6 @@ namespace POA_bug_2122
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -1086,7 +1034,6 @@ namespace POA_bug_2122
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class TAO_AMH_WhateverResponseHandler;
   using TAO_AMH_WhateverResponseHandler_ptr = TAO_AMH_WhateverResponseHandler *;
 
@@ -1101,9 +1048,6 @@ namespace POA_bug_2122
     void someOp_excep (
       ::bug_2122::One::AMH_WhateverExceptionHolder * holder) override;
   };
-
-
-
 
   class AMI_WhateverHandler;
   using AMI_WhateverHandler_ptr = AMI_WhateverHandler *;
@@ -1149,7 +1093,6 @@ namespace POA_bug_2122
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -1173,9 +1116,6 @@ namespace POA_bug_2122
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module bug_2122::One
 namespace Two
 {
@@ -1192,7 +1132,6 @@ namespace Two
   public:
     AMH_WhoCares (const AMH_WhoCares& rhs);
     virtual ~AMH_WhoCares () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -1214,9 +1153,6 @@ namespace Two
     ) = 0;
 
 };
-
-
-
 
 class WhoCares;
 using WhoCares_ptr = WhoCares *;
@@ -1256,7 +1192,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1275,7 +1210,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_WhoCaresResponseHandler;
 using TAO_AMH_WhoCaresResponseHandler_ptr = TAO_AMH_WhoCaresResponseHandler *;
 
@@ -1290,9 +1224,6 @@ public:
   void someOp_excep (
     ::bug_2122::Two::AMH_WhoCaresExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_WhoCaresHandler;
 using AMI_WhoCaresHandler_ptr = AMI_WhoCaresHandler *;
@@ -1338,7 +1269,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1362,9 +1292,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module bug_2122::Two
 namespace Three
 {
@@ -1381,7 +1308,6 @@ namespace Three
   public:
     AMH_WhoCares (const AMH_WhoCares& rhs);
     virtual ~AMH_WhoCares () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -1403,9 +1329,6 @@ namespace Three
     ) = 0;
 
 };
-
-
-
 
 class WhoCares;
 using WhoCares_ptr = WhoCares *;
@@ -1445,7 +1368,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1464,7 +1386,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_WhoCaresResponseHandler;
 using TAO_AMH_WhoCaresResponseHandler_ptr = TAO_AMH_WhoCaresResponseHandler *;
 
@@ -1479,9 +1400,6 @@ public:
   void someOp_excep (
     ::bug_2122::Three::AMH_WhoCaresExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_WhoCaresHandler;
 using AMI_WhoCaresHandler_ptr = AMI_WhoCaresHandler *;
@@ -1527,7 +1445,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1551,28 +1468,19 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module bug_2122::Three
-
 
 } // module bug_2122
 namespace POA_First
 {
 
-
-
 } // module First
 namespace POA_CommaList
 {
 
-
-
 } // module CommaList
 
 #include "typedefS_T.h"
-
 
 #include /**/ "ace/post.h"
 

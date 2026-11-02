@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTC_Q44VF3_H_
-#define _TAO_IDL_SIMPLE_TESTC_Q44VF3_H_
+#ifndef _TAO_IDL_SIMPLE_TESTC_V0UUBG_H_
+#define _TAO_IDL_SIMPLE_TESTC_V0UUBG_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include "tao/ORB.h"
 #include "tao/SystemException.h"
@@ -58,16 +56,11 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 #if !defined (_SIMPLE_SERVER__VAR_OUT_CH_)
 #define _SIMPLE_SERVER__VAR_OUT_CH_
@@ -78,9 +71,6 @@ using Simple_Server_var = TAO_Objref_Var_T<Simple_Server>;
 using Simple_Server_out = TAO_Objref_Out_T<Simple_Server>;
 
 #endif /* end #if !defined */
-
-
-
 
 class  Simple_Server
   : public virtual ::CORBA::Object
@@ -103,9 +93,6 @@ public:
   virtual ::CORBA::Boolean print_status ();
 
   virtual void shutdown ();
-
-
-
 
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
@@ -135,14 +122,11 @@ private:
   Simple_Server &operator= (Simple_Server &&) = delete;
 };
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_SIMPLE_SERVER__ARG_TRAITS_)
 #define _SIMPLE_SERVER__ARG_TRAITS_
@@ -162,9 +146,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -188,18 +169,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
  ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Simple_Server_ptr );
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Simple_Server_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "simple_testC.inl"

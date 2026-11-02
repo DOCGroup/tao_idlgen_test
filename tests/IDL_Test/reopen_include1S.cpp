@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE1S_5PWVJ8_CPP_
-#define _TAO_IDL_REOPEN_INCLUDE1S_5PWVJ8_CPP_
-
+#ifndef _TAO_IDL_REOPEN_INCLUDE1S_J2EWT1_CPP_
+#define _TAO_IDL_REOPEN_INCLUDE1S_J2EWT1_CPP_
 
 #include "reopen_include1S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_B_AMH_X1_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_A_B_AMH_X1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -139,7 +136,6 @@ POA_A::B::AMH_X1::AMH_X1 ()
   this->optable_ = std::addressof (tao_A_B_AMH_X1_optable);
 }
 
-
 void
 POA_A::B::AMH_X1::getX1_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -176,11 +172,6 @@ POA_A::B::AMH_X1::getX1_skel (
       safe_rd_.get ()
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_A::B::AMH_X1::_is_a (const char* value)
 {
@@ -229,8 +220,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_B_X1_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_A_B_X1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -304,7 +293,6 @@ POA_A::B::_TAO_X1_Direct_Proxy_Impl::~_TAO_X1_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_A::B::_TAO_X1_Direct_Proxy_Impl::getX1 (
     TAO_Abstract_ServantBase  *servant,
@@ -323,8 +311,6 @@ POA_A::B::_TAO_X1_Direct_Proxy_Impl::getX1 (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -334,15 +320,13 @@ POA_A::B::X1::X1 ()
   this->optable_ = std::addressof (tao_A_B_X1_optable);
 }
 
-
 namespace POA_A
 {
 
   namespace B
   {
 
-    class getX1_X1
-      : public TAO::Upcall_Command
+    class getX1_X1 : public TAO::Upcall_Command
     {
     public:
       inline getX1_X1 (POA_A::B::X1 * servant,
@@ -407,13 +391,6 @@ void POA_A::B::X1::getX1_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_A::B::X1::_is_a (const char* value)
 {
   return
@@ -428,18 +405,12 @@ const char* POA_A::B::X1::_interface_repository_id () const
   return "IDL:A/B/X1:1.0";
 }
 
-
-
-
 void POA_A::B::X1::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 A::B::X1 *
 POA_A::B::X1::_this ()
@@ -496,8 +467,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_B_AMI_X1Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_A_B_AMI_X1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -572,7 +541,6 @@ POA_A::B::_TAO_AMI_X1Handler_Direct_Proxy_Impl::~_TAO_AMI_X1Handler_Direct_Proxy
 {
 }
 
-
 void
 POA_A::B::_TAO_AMI_X1Handler_Direct_Proxy_Impl::getX1 (
     TAO_Abstract_ServantBase  *servant,
@@ -590,7 +558,6 @@ POA_A::B::_TAO_AMI_X1Handler_Direct_Proxy_Impl::getX1 (
         ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_A::B::_TAO_AMI_X1Handler_Direct_Proxy_Impl::getX1_excep (
@@ -610,8 +577,6 @@ POA_A::B::_TAO_AMI_X1Handler_Direct_Proxy_Impl::getX1_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -621,15 +586,13 @@ POA_A::B::AMI_X1Handler::AMI_X1Handler ()
   this->optable_ = std::addressof (tao_A_B_AMI_X1Handler_optable);
 }
 
-
 namespace POA_A
 {
 
   namespace B
   {
 
-    class getX1_AMI_X1Handler
-      : public TAO::Upcall_Command
+    class getX1_AMI_X1Handler : public TAO::Upcall_Command
     {
     public:
       inline getX1_AMI_X1Handler (POA_A::B::AMI_X1Handler * servant,
@@ -697,15 +660,13 @@ void POA_A::B::AMI_X1Handler::getX1_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
   namespace B
   {
 
-    class getX1_excep_AMI_X1Handler
-      : public TAO::Upcall_Command
+    class getX1_excep_AMI_X1Handler : public TAO::Upcall_Command
     {
     public:
       inline getX1_excep_AMI_X1Handler (POA_A::B::AMI_X1Handler * servant,
@@ -773,13 +734,6 @@ void POA_A::B::AMI_X1Handler::getX1_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_A::B::AMI_X1Handler::_is_a (const char* value)
 {
   return
@@ -795,18 +749,12 @@ const char* POA_A::B::AMI_X1Handler::_interface_repository_id () const
   return "IDL:A/B/AMI_X1Handler:1.0";
 }
 
-
-
-
 void POA_A::B::AMI_X1Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 A::B::AMI_X1Handler *
 POA_A::B::AMI_X1Handler::_this ()

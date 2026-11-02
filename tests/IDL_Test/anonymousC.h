@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSC_S1YFXH_H_
-#define _TAO_IDL_ANONYMOUSC_S1YFXH_H_
+#ifndef _TAO_IDL_ANONYMOUSC_S6SP5V_H_
+#define _TAO_IDL_ANONYMOUSC_S6SP5V_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/Valuetype/ValueBase.h"
@@ -73,20 +71,14 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace Not_Anon
 {
-
-
-
 
 #if !defined (_NOT_ANON_SHORT_SEQ_CH_)
 #define _NOT_ANON_SHORT_SEQ_CH_
@@ -94,7 +86,6 @@ namespace Not_Anon
   class short_seq;
   using short_seq_var = ::TAO_FixedSeq_Var_T<short_seq>;
   using short_seq_out = ::TAO_Seq_Out_T<short_seq>;
-
 
   class TAO_IDL_TEST_STUB_Export short_seq
     : public
@@ -114,7 +105,6 @@ namespace Not_Anon
     short_seq& operator= (short_seq &&) = default;
     virtual ~short_seq () = default;
 
-
     using _var_type = short_seq_var;
     using _out_type = short_seq_out;
 
@@ -123,20 +113,12 @@ namespace Not_Anon
 
 #endif /* end #if !defined */
 
-
-
 } // module Not_Anon
 namespace Half_Anon
 {
 
-
-
-
-
 #if !defined (_HALF_ANON__TAO_SEQ_CORBA_CHAR__CH_)
 #define _HALF_ANON__TAO_SEQ_CORBA_CHAR__CH_
-
-
 
   class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_Char_
     : public
@@ -164,7 +146,6 @@ namespace Half_Anon
   using char_seq_array_slice = _tao_seq_CORBA_Char_;
   struct char_seq_array_tag {};
 
-
   using char_seq_array_var =
     TAO_VarArray_Var_T<
         char_seq_array,
@@ -190,14 +171,8 @@ namespace Half_Anon
 
       extern TAO_IDL_TEST_STUB_Export void char_seq_array_copy (char_seq_array_slice *_tao_to, const char_seq_array_slice *_tao_from);
 
-
-
-
-
 #if !defined (_HALF_ANON__TAO_SEQ_CORBA_ULONG__18_CH_)
 #define _HALF_ANON__TAO_SEQ_CORBA_ULONG__18_CH_
-
-
 
       class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_ULong__18
         : public
@@ -222,7 +197,6 @@ namespace Half_Anon
       using bd_ulong_seq_array = _tao_seq_CORBA_ULong__18[17];
       using bd_ulong_seq_array_slice = _tao_seq_CORBA_ULong__18;
       struct bd_ulong_seq_array_tag {};
-
 
       using bd_ulong_seq_array_var =
         TAO_VarArray_Var_T<
@@ -249,14 +223,8 @@ namespace Half_Anon
 
           extern TAO_IDL_TEST_STUB_Export void bd_ulong_seq_array_copy (bd_ulong_seq_array_slice *_tao_to, const bd_ulong_seq_array_slice *_tao_from);
 
-
-
-
-
 #if !defined (_HALF_ANON__TAO_SEQ_CORBA_USHORT__CH_)
 #define _HALF_ANON__TAO_SEQ_CORBA_USHORT__CH_
-
-
 
           class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_UShort_
             : public
@@ -284,7 +252,6 @@ namespace Half_Anon
           using ushort_seq_array_slice = _tao_seq_CORBA_UShort_;
           struct ushort_seq_array_tag {};
 
-
           using ushort_seq_array_var =
             TAO_VarArray_Var_T<
                 ushort_seq_array,
@@ -310,14 +277,8 @@ namespace Half_Anon
 
               extern TAO_IDL_TEST_STUB_Export void ushort_seq_array_copy (ushort_seq_array_slice *_tao_to, const ushort_seq_array_slice *_tao_from);
 
-
-
-
-
 #if !defined (_HALF_ANON__TAO_SEQ_CORBA_USHORT__7_CH_)
 #define _HALF_ANON__TAO_SEQ_CORBA_USHORT__7_CH_
-
-
 
               class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_UShort__7
                 : public
@@ -342,7 +303,6 @@ namespace Half_Anon
               using bd_ushort_seq_array = _tao_seq_CORBA_UShort__7[11];
               using bd_ushort_seq_array_slice = _tao_seq_CORBA_UShort__7;
               struct bd_ushort_seq_array_tag {};
-
 
               using bd_ushort_seq_array_var =
                 TAO_VarArray_Var_T<
@@ -369,12 +329,9 @@ namespace Half_Anon
 
                   extern TAO_IDL_TEST_STUB_Export void bd_ushort_seq_array_copy (bd_ushort_seq_array_slice *_tao_to, const bd_ushort_seq_array_slice *_tao_from);
 
-
-
                 } // module Half_Anon
                 namespace All_Anon
                 {
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST__VAR_OUT_CH_)
 #define _ALL_ANON_ANON_BD_STRING_TEST__VAR_OUT_CH_
@@ -388,9 +345,6 @@ namespace Half_Anon
                   using anon_bd_string_test_out = TAO_Objref_Out_T<anon_bd_string_test>;
 
 #endif /* end #if !defined */
-
-
-
 
                   class TAO_IDL_TEST_STUB_Export anon_bd_string_test
                     : public virtual ::CORBA::Object
@@ -411,7 +365,6 @@ namespace Half_Anon
                     static anon_bd_string_test_ptr _narrow (::CORBA::Object_ptr obj);
                     static anon_bd_string_test_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
                     static anon_bd_string_test_ptr _nil ();
-
 
                     static const CORBA::Long test_string_size = 25;
 
@@ -463,9 +416,6 @@ namespace Half_Anon
                       ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
                       const char * inarg);
 
-
-
-
                     virtual ::CORBA::Boolean _is_a (const char *type_id);
                     virtual const char* _interface_repository_id () const;
                     static const char* _desc_repository_id ();
@@ -496,7 +446,6 @@ namespace Half_Anon
                     anon_bd_string_test &operator= (anon_bd_string_test &&) = delete;
                   };
 
-
 #if !defined (_ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -505,7 +454,6 @@ namespace Half_Anon
                   using AMH_anon_bd_string_testExceptionHolder_out = TAO_Value_Out_T<AMH_anon_bd_string_testExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
                   class TAO_IDL_TEST_STUB_Export AMH_anon_bd_string_testExceptionHolder
                     : public virtual ::CORBA::DefaultValueRefCountBase
@@ -619,7 +567,6 @@ public:
 public:
   virtual void raise_sendc_TestFunc43 ();
 
-
 protected:
   AMH_anon_bd_string_testExceptionHolder ();
   virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
@@ -640,7 +587,6 @@ protected:
   _tao_unmarshal__All_Anon_AMH_anon_bd_string_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
 
-
 #if !defined (_ALL_ANON_AMH_ANON_BD_STRING_TESTRESPONSEHANDLER__VAR_OUT_CH_)
 #define _ALL_ANON_AMH_ANON_BD_STRING_TESTRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -653,9 +599,6 @@ using AMH_anon_bd_string_testResponseHandler_var = TAO_Objref_Var_T<AMH_anon_bd_
 using AMH_anon_bd_string_testResponseHandler_out = TAO_Objref_Out_T<AMH_anon_bd_string_testResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMH_anon_bd_string_testResponseHandler
   : public virtual ::CORBA::Object
@@ -720,9 +663,6 @@ public:
   virtual void TestFunc43_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) = 0;
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -732,8 +672,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_anon_bd_string_testResponseHandler ();
-
-
 
   virtual ~AMH_anon_bd_string_testResponseHandler () = default;
 
@@ -745,7 +683,6 @@ private:
   AMH_anon_bd_string_testResponseHandler &operator= (AMH_anon_bd_string_testResponseHandler &&) = delete;
 };
 
-
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__VAR_OUT_CH_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__VAR_OUT_CH_
 
@@ -755,9 +692,6 @@ using AMI_anon_bd_string_testHandler_var = TAO_Objref_Var_T<AMI_anon_bd_string_t
 using AMI_anon_bd_string_testHandler_out = TAO_Objref_Out_T<AMI_anon_bd_string_testHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMI_anon_bd_string_testHandler
   : public virtual ::Messaging::ReplyHandler
@@ -872,9 +806,6 @@ public:
   virtual void TestFunc43_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -905,20 +836,12 @@ private:
   AMI_anon_bd_string_testHandler &operator= (AMI_anon_bd_string_testHandler &&) = delete;
 };
 
-
 class TAO_IDL_TEST_STUB_Export Nested_Anon : public ::CORBA::UserException
 {
 public:
 
-
-
-
-
-
 #if !defined (_ALL_ANON_NESTED_ANON__TAO_SEQ_CORBA_FLOAT__CH_)
 #define _ALL_ANON_NESTED_ANON__TAO_SEQ_CORBA_FLOAT__CH_
-
-
 
   class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_Float_
     : public
@@ -946,7 +869,6 @@ public:
   using _float_seq_array_slice = _tao_seq_CORBA_Float_;
   struct _float_seq_array_tag {};
 
-
   using _float_seq_array_forany = TAO_Array_Forany_T<_float_seq_array, _float_seq_array_slice, _float_seq_array_tag>;
 
   static _float_seq_array_slice *_float_seq_array_alloc ();
@@ -959,15 +881,8 @@ public:
 
   _float_seq_array float_seq_array {};
 
-
-
-
-
-
 #if !defined (_ALL_ANON_NESTED_ANON__TAO_SEQ_CORBA_FLOAT__CH_)
 #define _ALL_ANON_NESTED_ANON__TAO_SEQ_CORBA_FLOAT__CH_
-
-
 
   class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_Float_
     : public
@@ -995,7 +910,6 @@ public:
   using _another_fsa_slice = _tao_seq_CORBA_Float_;
   struct _another_fsa_tag {};
 
-
   using _another_fsa_forany = TAO_Array_Forany_T<_another_fsa, _another_fsa_slice, _another_fsa_tag>;
 
   static _another_fsa_slice *_another_fsa_alloc ();
@@ -1008,12 +922,9 @@ public:
 
   _another_fsa another_fsa {};
 
-
-
   using _long_array_1 = ::CORBA::Long[6];
   using _long_array_1_slice = ::CORBA::Long;
   struct _long_array_1_tag {};
-
 
   using _long_array_1_forany = TAO_Array_Forany_T<_long_array_1, _long_array_1_slice, _long_array_1_tag>;
 
@@ -1027,12 +938,9 @@ public:
 
   _long_array_1 long_array_1 {};
 
-
-
   using _long_array_2 = ::CORBA::Long[6];
   using _long_array_2_slice = ::CORBA::Long;
   struct _long_array_2_tag {};
-
 
   using _long_array_2_forany = TAO_Array_Forany_T<_long_array_2, _long_array_2_slice, _long_array_2_tag>;
 
@@ -1066,7 +974,6 @@ public:
   virtual void _tao_encode (TAO_OutputCDR &cdr) const;
   virtual void _tao_decode (TAO_InputCDR &cdr);
 
-
   Nested_Anon (
       const _float_seq_array _tao_float_seq_array,
       const _another_fsa _tao_another_fsa,
@@ -1076,8 +983,6 @@ public:
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
 };
 
-
-
 } // module All_Anon
 namespace Second
 {
@@ -1085,18 +990,13 @@ namespace Second
   using SecondString_var = ::CORBA::String_var;
   using SecondString_out = ::CORBA::String_out;
 
-
-
 } // module Second
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -1115,7 +1015,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
   template<>
   class Arg_Traits< ::Not_Anon::short_seq>
@@ -1171,7 +1070,6 @@ namespace TAO
   {
   };
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST__ARG_TRAITS_
 
@@ -1187,7 +1085,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC__ARG_TRAITS_
@@ -1206,7 +1103,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC2__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC2__ARG_TRAITS_
 
@@ -1223,7 +1119,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC3__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC3__ARG_TRAITS_
@@ -1242,7 +1137,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC23__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC23__ARG_TRAITS_
 
@@ -1259,7 +1153,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC4_INARG__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC4_INARG__ARG_TRAITS_
@@ -1279,7 +1172,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__ARG_TRAITS_
 
@@ -1297,7 +1189,6 @@ class Arg_Traits<All_Anon_anon_bd_string_test_TestFunc41_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC42_INARG__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC42_INARG__ARG_TRAITS_
@@ -1317,7 +1208,6 @@ class Arg_Traits<All_Anon_anon_bd_string_test_TestFunc42_inarg>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__ARG_TRAITS_
 
@@ -1335,7 +1225,6 @@ class Arg_Traits<All_Anon_anon_bd_string_test_TestFunc43_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC4_INARG__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC4_INARG__ARG_TRAITS_
@@ -1355,7 +1244,6 @@ class Arg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc4_inarg>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__ARG_TRAITS_
 
@@ -1373,7 +1261,6 @@ class Arg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc41_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC42_INARG__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC42_INARG__ARG_TRAITS_
@@ -1393,7 +1280,6 @@ class Arg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc42_inarg>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__ARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__ARG_TRAITS_
 
@@ -1411,7 +1297,6 @@ class Arg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc43_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__ARG_TRAITS_
@@ -1431,7 +1316,6 @@ class Arg_Traits< ::All_Anon::AMH_anon_bd_string_testExceptionHolder>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__ARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__ARG_TRAITS_
 
@@ -1447,7 +1331,6 @@ class  Arg_Traits< ::All_Anon::AMI_anon_bd_string_testHandler>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC_AMI_RETURN_VAL__ARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC_AMI_RETURN_VAL__ARG_TRAITS_
@@ -1467,7 +1350,6 @@ class Arg_Traits<All_Anon_AMI_anon_bd_string_testHandler_TestFunc_ami_return_val
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC2_AMI_RETURN_VAL__ARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC2_AMI_RETURN_VAL__ARG_TRAITS_
 
@@ -1486,7 +1368,6 @@ class Arg_Traits<All_Anon_AMI_anon_bd_string_testHandler_TestFunc2_ami_return_va
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC3_AMI_RETURN_VAL__ARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC3_AMI_RETURN_VAL__ARG_TRAITS_
 
@@ -1504,7 +1385,6 @@ class Arg_Traits<All_Anon_AMI_anon_bd_string_testHandler_TestFunc3_ami_return_va
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC23_AMI_RETURN_VAL__ARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC23_AMI_RETURN_VAL__ARG_TRAITS_
@@ -1545,10 +1425,8 @@ class Arg_Traits<SecondString_32>
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace OBV_All_Anon
 {
-
 
   // OBV_ class
   class TAO_IDL_TEST_STUB_Export AMH_anon_bd_string_testExceptionHolder
@@ -1574,7 +1452,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1767,13 +1644,9 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 #if !defined _TAO_CDR_OP_Not_Anon_short_seq_H_
 #define _TAO_CDR_OP_Not_Anon_short_seq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1784,15 +1657,11 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_Not_Anon_short_seq_H_ */
-
 
 #if !defined _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_Char__H_
 #define _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_Char__H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1803,8 +1672,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_Char__H_ */
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1814,12 +1681,9 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Half_Anon:
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #if !defined _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_ULong__18_H_
 #define _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_ULong__18_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1830,8 +1694,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_ULong__18_H_ */
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1841,12 +1703,9 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Half_Anon:
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #if !defined _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_UShort__H_
 #define _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_UShort__H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1857,8 +1716,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_UShort__H_ */
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1868,12 +1725,9 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Half_Anon:
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #if !defined _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_UShort__7_H_
 #define _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_UShort__7_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1884,8 +1738,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_Half_Anon__tao_seq_CORBA_UShort__7_H_ */
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -1895,18 +1747,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Half_Anon:
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const All_Anon::anon_bd_string_test_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::anon_bd_string_test_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1917,19 +1763,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const All_Anon::AMH_anon_bd_string_testExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::AMH_anon_bd_string_testExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1938,24 +1777,16 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const All_Anon::Nested_Anon &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::Nested_Anon &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 #if !defined _TAO_CDR_OP_All_Anon_Nested_Anon__tao_seq_CORBA_Float__H_
 #define _TAO_CDR_OP_All_Anon_Nested_Anon__tao_seq_CORBA_Float__H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1965,8 +1796,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
     All_Anon::Nested_Anon::_tao_seq_CORBA_Float_ &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 #endif /* _TAO_CDR_OP_All_Anon_Nested_Anon__tao_seq_CORBA_Float__H_ */
 
@@ -1977,12 +1806,9 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #if !defined _TAO_CDR_OP_All_Anon_Nested_Anon__tao_seq_CORBA_Float__H_
 #define _TAO_CDR_OP_All_Anon_Nested_Anon__tao_seq_CORBA_Float__H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1993,8 +1819,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_All_Anon_Nested_Anon__tao_seq_CORBA_Float__H_ */
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
@@ -2004,14 +1828,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const All_Anon::Nested_Anon::_long_array_1_forany &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::Nested_Anon::_long_array_1_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONS_NHF197_CPP_
-#define _TAO_IDL_OLD_UNIONS_NHF197_CPP_
-
+#ifndef _TAO_IDL_OLD_UNIONS_H91ZZ4_CPP_
+#define _TAO_IDL_OLD_UNIONS_H91ZZ4_CPP_
 
 #include "old_unionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldUnion_AMH_a_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldUnion_AMH_a_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -139,7 +136,6 @@ POA_OldUnion::AMH_a::AMH_a ()
   this->optable_ = std::addressof (tao_OldUnion_AMH_a_optable);
 }
 
-
 void
 POA_OldUnion::AMH_a::opA_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -185,11 +181,6 @@ POA_OldUnion::AMH_a::opA_skel (
       b
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_OldUnion::AMH_a::_is_a (const char* value)
 {
@@ -238,8 +229,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldUnion_a_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldUnion_a_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -313,7 +302,6 @@ POA_OldUnion::_TAO_a_Direct_Proxy_Impl::~_TAO_a_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldUnion::_TAO_a_Direct_Proxy_Impl::opA (
     TAO_Abstract_ServantBase  *servant,
@@ -333,8 +321,6 @@ POA_OldUnion::_TAO_a_Direct_Proxy_Impl::opA (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -344,12 +330,10 @@ POA_OldUnion::a::a ()
   this->optable_ = std::addressof (tao_OldUnion_a_optable);
 }
 
-
 namespace POA_OldUnion
 {
 
-  class opA_a
-    : public TAO::Upcall_Command
+  class opA_a : public TAO::Upcall_Command
   {
   public:
     inline opA_a (POA_OldUnion::a * servant,
@@ -422,13 +406,6 @@ void POA_OldUnion::a::opA_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldUnion::a::_is_a (const char* value)
 {
   return
@@ -443,18 +420,12 @@ const char* POA_OldUnion::a::_interface_repository_id () const
   return "IDL:OldUnion/a:1.0";
 }
 
-
-
-
 void POA_OldUnion::a::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldUnion::a *
 POA_OldUnion::a::_this ()
@@ -511,8 +482,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldUnion_AMI_aHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldUnion_AMI_aHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -587,7 +556,6 @@ POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::~_TAO_AMI_aHandler_Direct_Pro
 {
 }
 
-
 void
 POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::opA (
     TAO_Abstract_ServantBase  *servant,
@@ -605,7 +573,6 @@ POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::opA (
         ((TAO::Arg_Traits< ::OldUnion::Foo2>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::opA_excep (
@@ -625,8 +592,6 @@ POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::opA_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -636,12 +601,10 @@ POA_OldUnion::AMI_aHandler::AMI_aHandler ()
   this->optable_ = std::addressof (tao_OldUnion_AMI_aHandler_optable);
 }
 
-
 namespace POA_OldUnion
 {
 
-  class opA_AMI_aHandler
-    : public TAO::Upcall_Command
+  class opA_AMI_aHandler : public TAO::Upcall_Command
   {
   public:
     inline opA_AMI_aHandler (POA_OldUnion::AMI_aHandler * servant,
@@ -708,12 +671,10 @@ void POA_OldUnion::AMI_aHandler::opA_skel (
                          );
 }
 
-
 namespace POA_OldUnion
 {
 
-  class opA_excep_AMI_aHandler
-    : public TAO::Upcall_Command
+  class opA_excep_AMI_aHandler : public TAO::Upcall_Command
   {
   public:
     inline opA_excep_AMI_aHandler (POA_OldUnion::AMI_aHandler * servant,
@@ -780,13 +741,6 @@ void POA_OldUnion::AMI_aHandler::opA_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldUnion::AMI_aHandler::_is_a (const char* value)
 {
   return
@@ -802,18 +756,12 @@ const char* POA_OldUnion::AMI_aHandler::_interface_repository_id () const
   return "IDL:OldUnion/AMI_aHandler:1.0";
 }
 
-
-
-
 void POA_OldUnion::AMI_aHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldUnion::AMI_aHandler *
 POA_OldUnion::AMI_aHandler::_this ()

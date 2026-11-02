@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "array_onlyC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -93,6 +92,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

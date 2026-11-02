@@ -37,7 +37,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 
-
 #ifndef _TAO_TYPECODE_MyModule_TypeCodeList_GUARD
 #define _TAO_TYPECODE_MyModule_TypeCodeList_GUARD
 
@@ -71,7 +70,6 @@ static TAO::TypeCode::Alias<char const *,
     "TypeCodeList",
     &TAO::TypeCode::tc_MyModule_TypeCodeList_0);
 
-
 namespace MyModule
 {
   ::CORBA::TypeCode_ptr const _tc_TypeCodeList = std::addressof(_tao_tc_MyModule_TypeCodeList);
@@ -79,7 +77,6 @@ namespace MyModule
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -118,5 +115,4 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "simple_testC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -64,7 +63,6 @@ TAO::Objref_Traits<Simple_Server>::marshal (const Simple_Server_ptr p,TAO_Output
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 Simple_Server::print_status ()
@@ -220,6 +218,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEDEFA_C2QRVV_H_
-#define _TAO_IDL_TYPEDEFA_C2QRVV_H_
+#ifndef _TAO_IDL_TYPEDEFA_IW7RVF_H_
+#define _TAO_IDL_TYPEDEFA_IW7RVF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -49,8 +49,6 @@ namespace TestModule
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_TestInterfaceResponseHandler;
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_TestInterfaceHandler;
 
-
-
 } // module TestModule
 
 namespace bug_2124
@@ -61,8 +59,6 @@ namespace bug_2124
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_FooExceptionHolder;
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_FooResponseHandler;
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_FooHandler;
-
-
 
 } // module bug_2124
 
@@ -76,8 +72,6 @@ namespace bug_2122
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_WhateverResponseHandler;
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_WhateverHandler;
 
-
-
   } // module bug_2122::One
 
   namespace Two
@@ -87,8 +81,6 @@ namespace bug_2122
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_WhoCaresExceptionHolder;
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_WhoCaresResponseHandler;
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_WhoCaresHandler;
-
-
 
   } // module bug_2122::Two
 
@@ -100,20 +92,13 @@ namespace bug_2122
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_WhoCaresResponseHandler;
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_WhoCaresHandler;
 
-
-
   } // module bug_2122::Three
-
-
-
 
 } // module bug_2122
 
 namespace First
 {
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_FirstString;
-
-
 
 } // module First
 
@@ -125,10 +110,7 @@ namespace CommaList
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Toil;
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Trouble;
 
-
-
 } // module CommaList
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -138,8 +120,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -148,8 +128,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -157,12 +135,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const TAO_Z5_forany &
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TAO_Z5_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -173,8 +145,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Tes
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -183,12 +153,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestModule::AMH_TestI
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, TestModule::AMH_TestInterfaceExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -199,12 +163,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Tes
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -213,12 +171,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestModule::AMI_TestI
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TestModule::AMI_TestInterfaceHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -229,8 +181,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -239,12 +189,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_2124::AMH_FooExce
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, bug_2124::AMH_FooExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -255,12 +199,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -269,12 +207,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_2124::AMI_FooHand
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug_2124::AMI_FooHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -285,8 +217,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -295,12 +225,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_2122::One::AMH_Wh
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, bug_2122::One::AMH_WhateverExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -311,12 +235,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -325,12 +243,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_2122::One::AMI_Wh
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug_2122::One::AMI_WhateverHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -341,8 +253,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -351,12 +261,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_2122::Two::AMH_Wh
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, bug_2122::Two::AMH_WhoCaresExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -367,12 +271,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -381,12 +279,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_2122::Two::AMI_Wh
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug_2122::Two::AMI_WhoCaresHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -397,8 +289,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -407,12 +297,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_2122::Three::AMH_
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, bug_2122::Three::AMH_WhoCaresExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -423,12 +307,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -437,12 +315,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_2122::Three::AMI_
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug_2122::Three::AMI_WhoCaresHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -453,12 +325,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::C
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -467,8 +333,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::CommaList::Trouble*
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::CommaList::Trouble const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 #include /**/ "ace/post.h"
 

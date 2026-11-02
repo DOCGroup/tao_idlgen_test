@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPECODEA_BEUDVY_H_
-#define _TAO_IDL_TYPECODEA_BEUDVY_H_
+#ifndef _TAO_IDL_TYPECODEA_NV21Z5_H_
+#define _TAO_IDL_TYPECODEA_NV21Z5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -59,14 +59,7 @@ namespace MyModule
 {
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TypeCodeList;
 
-
-
 } // module MyModule
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -76,8 +69,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::MyModule::TypeCodeL
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::MyModule::TypeCodeList const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 #include /**/ "ace/post.h"
 

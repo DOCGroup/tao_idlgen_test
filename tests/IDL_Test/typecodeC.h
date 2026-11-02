@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPECODEC_NCKF1E_H_
-#define _TAO_IDL_TYPECODEC_NCKF1E_H_
+#ifndef _TAO_IDL_TYPECODEC_JN2UQQ_H_
+#define _TAO_IDL_TYPECODEC_JN2UQQ_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/Valuetype/ValueBase.h"
@@ -92,20 +90,14 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace MyModule
 {
-
-
-
 
 #if !defined (_MYMODULE_TYPECODELIST_CH_)
 #define _MYMODULE_TYPECODELIST_CH_
@@ -113,7 +105,6 @@ namespace MyModule
   class TypeCodeList;
   using TypeCodeList_var = ::TAO_VarSeq_Var_T<TypeCodeList>;
   using TypeCodeList_out = ::TAO_Seq_Out_T<TypeCodeList>;
-
 
   class TAO_IDL_TEST_STUB_Export TypeCodeList
     : public
@@ -133,7 +124,6 @@ namespace MyModule
     TypeCodeList& operator= (TypeCodeList &&) = default;
     virtual ~TypeCodeList () = default;
 
-
     using _var_type = TypeCodeList_var;
     using _out_type = TypeCodeList_out;
 
@@ -142,18 +132,13 @@ namespace MyModule
 
 #endif /* end #if !defined */
 
-
-
 } // module MyModule
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -173,7 +158,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::MyModule::TypeCodeList>
     : public
@@ -187,9 +171,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -198,13 +179,9 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 #if !defined _TAO_CDR_OP_MyModule_TypeCodeList_H_
 #define _TAO_CDR_OP_MyModule_TypeCodeList_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -214,8 +191,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
     MyModule::TypeCodeList &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 #endif /* _TAO_CDR_OP_MyModule_TypeCodeList_H_ */
 #if defined (__ACE_INLINE__)

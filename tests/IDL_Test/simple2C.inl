@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 simple3::simple3 (
     TAO_Stub *objref,
@@ -51,7 +49,6 @@ AMH_simple3ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_simple3ExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_simple3Handler::AMI_simple3Handler (

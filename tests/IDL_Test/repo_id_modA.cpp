@@ -41,7 +41,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:gleep_prefix/gleep/schmooze:1.0",
     "schmooze");
 
-
 namespace gleep
 {
   ::CORBA::TypeCode_ptr const _tc_schmooze = std::addressof(_tao_tc_gleep_schmooze);
@@ -52,7 +51,6 @@ static TAO::TypeCode::Objref<char const *,
     ::CORBA::tk_local_interface,
     "IDL:gleep_prefix/gleep/schmeer:1.0",
     "schmeer");
-
 
 namespace gleep
 {
@@ -65,7 +63,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:gleep_prefix/gleep/schlemiel:1.0",
     "schlemiel");
 
-
 namespace gleep
 {
   ::CORBA::TypeCode_ptr const _tc_schlemiel = std::addressof(_tao_tc_gleep_schlemiel);
@@ -77,7 +74,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:gleep_prefix/gleep/spilkis:1.0",
     "spilkis");
 
-
 namespace gleep
 {
   ::CORBA::TypeCode_ptr const _tc_spilkis = std::addressof(_tao_tc_gleep_spilkis);
@@ -88,7 +84,6 @@ static TAO::TypeCode::Objref<char const *,
     ::CORBA::tk_local_interface,
     "ABRA:cadabra/hocus/pocus:1.23",
     "schmuck");
-
 
 namespace gleep
 {
@@ -105,7 +100,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:floop_prefix/gleep/floop/schmendrick:524.23",
     "schmendrick");
 
-
 namespace gleep
 {
 
@@ -120,7 +114,6 @@ static TAO::TypeCode::Objref<char const *,
     ::CORBA::tk_local_interface,
     "IDL:verklempt_prefix/gleep/floop/verklempt/schlemazel:1.0",
     "schlemazel");
-
 
 namespace gleep
 {
@@ -141,15 +134,12 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:gleep_prefix/gleep/schmegegging:1.0",
     "schmegegging");
 
-
 namespace gleep
 {
   ::CORBA::TypeCode_ptr const _tc_schmegegging = std::addressof(_tao_tc_gleep_schmegegging);
 }
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -181,11 +171,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -227,11 +214,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -263,11 +246,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -309,11 +289,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -345,11 +321,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -391,11 +364,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -427,11 +396,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -473,11 +439,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -509,11 +471,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -555,11 +514,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -591,11 +546,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -637,11 +589,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -673,11 +621,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -719,11 +664,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -755,11 +696,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -800,5 +738,4 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

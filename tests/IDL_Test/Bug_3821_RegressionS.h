@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_3821_REGRESSIONS_B64921_H_
-#define _TAO_IDL_BUG_3821_REGRESSIONS_B64921_H_
+#ifndef _TAO_IDL_BUG_3821_REGRESSIONS_FP9IB5_H_
+#define _TAO_IDL_BUG_3821_REGRESSIONS_FP9IB5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -38,17 +38,13 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -67,7 +63,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::test::Enumeration>
     : public
@@ -77,7 +72,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::test::UnionAllCovered_EnumerationDiscriminant>
@@ -89,7 +83,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::test::UnionAllCoveredWithDefault_EnumerationDiscriminant>
     : public
@@ -99,7 +92,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::test::UnionWithDefault_EnumerationDiscriminant>
@@ -111,7 +103,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::test::UnionWithImplicitDefault_EnumerationDiscriminant>
     : public
@@ -121,7 +112,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::test::UnionAllCovered_TypedefedEnumerationDiscriminant>
@@ -133,7 +123,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant>
     : public
@@ -143,7 +132,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::test::UnionWithDefault_TypedefedEnumerationDiscriminant>
@@ -155,7 +143,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant>
     : public
@@ -165,7 +152,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::test::UnionAllCovered_BooleanDiscriminant>
@@ -177,7 +163,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::test::UnionWithDefault_BooleanDiscriminant>
     : public
@@ -187,7 +172,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::test::UnionWithImplicitDefault_BooleanDiscriminant>
@@ -199,7 +183,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::test::UnionAllCovered_CharDiscriminant>
     : public
@@ -209,7 +192,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::test::UnionWithDefault_CharDiscriminant>
@@ -221,7 +203,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::test::UnionWithImplicitDefault_CharDiscriminant>
     : public
@@ -232,7 +213,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::test::UnionWithDefault_LongDiscriminant>
     : public
@@ -242,7 +222,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::test::UnionWithImplicitDefault_LongDiscriminant>
@@ -257,16 +236,12 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_test
 {
-
-
 
 } // module test
 
 #include "Bug_3821_RegressionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

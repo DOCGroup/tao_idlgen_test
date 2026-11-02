@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2583_REGRESSIONC_I8XVVC_H_
-#define _TAO_IDL_BUG_2583_REGRESSIONC_I8XVVC_H_
+#ifndef _TAO_IDL_BUG_2583_REGRESSIONC_IL5L21_H_
+#define _TAO_IDL_BUG_2583_REGRESSIONC_IL5L21_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -65,7 +63,6 @@
 namespace Test
 {
 
-
 #if !defined (_TEST_DYNANY__VAR_OUT_CH_)
 #define _TEST_DYNANY__VAR_OUT_CH_
 
@@ -78,9 +75,6 @@ namespace Test
   using DynAny_out = TAO_Objref_Out_T<DynAny>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export DynAny
     : public virtual ::CORBA::Object
@@ -101,9 +95,6 @@ namespace Test
     static DynAny_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static DynAny_ptr _nil ();
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     static const char* _desc_repository_id ();
@@ -113,8 +104,6 @@ namespace Test
   protected:
     // Abstract or local interface only.
     DynAny ();
-
-
 
     virtual ~DynAny () = default;
 
@@ -127,13 +116,9 @@ namespace Test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DynAny;
 
-
   struct NameDynAnyPair;
   using NameDynAnyPair_var = ::TAO_Var_Var_T<NameDynAnyPair>;
   using NameDynAnyPair_out = ::TAO_Out_T<NameDynAnyPair>;
-
-
-
 
   struct TAO_IDL_TEST_STUB_Export NameDynAnyPair
   {
@@ -148,16 +133,12 @@ namespace Test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_NameDynAnyPair;
 
-
-
-
 #if !defined (_TEST_NAMEDYNANYPAIRSEQ_CH_)
 #define _TEST_NAMEDYNANYPAIRSEQ_CH_
 
   class NameDynAnyPairSeq;
   using NameDynAnyPairSeq_var = ::TAO_VarSeq_Var_T<NameDynAnyPairSeq>;
   using NameDynAnyPairSeq_out = ::TAO_Seq_Out_T<NameDynAnyPairSeq>;
-
 
   class TAO_IDL_TEST_STUB_Export NameDynAnyPairSeq
     : public
@@ -177,7 +158,6 @@ namespace Test
     NameDynAnyPairSeq& operator= (NameDynAnyPairSeq &&) = default;
     virtual ~NameDynAnyPairSeq () = default;
 
-
     using _var_type = NameDynAnyPairSeq_var;
     using _out_type = NameDynAnyPairSeq_out;
 
@@ -187,18 +167,13 @@ namespace Test
 #endif /* end #if !defined */
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_NameDynAnyPairSeq;
 
-
-
 } // module Test
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -218,7 +193,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::Test::NameDynAnyPair>
     : public
@@ -228,7 +202,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::Test::NameDynAnyPairSeq>
@@ -242,9 +215,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -268,12 +238,6 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -282,8 +246,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Test::DynAny_ptr *); 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::DynAny_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -294,12 +256,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::T
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -308,7 +264,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::NameDynAnyPai
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::NameDynAnyPairSeq const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "Bug_2583_RegressionC.inl"

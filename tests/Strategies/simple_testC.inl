@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 Simple_Server::Simple_Server (
     TAO_Stub *objref,

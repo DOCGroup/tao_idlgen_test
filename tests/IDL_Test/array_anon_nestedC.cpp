@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "array_anon_nestedC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -47,7 +46,6 @@
 #if !defined (__ACE_INLINE__)
 #include "array_anon_nestedC.inl"
 #endif /* !defined INLINE */
-
 
 #ifndef _TAO_TYPECODE_teststruct_b_GUARD
 #define _TAO_TYPECODE_teststruct_b_GUARD
@@ -99,7 +97,6 @@ _tao_tc_teststruct (
 
 ::CORBA::TypeCode_ptr const _tc_teststruct = std::addressof(_tao_tc_teststruct);
 
-
 void
 teststruct::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -145,7 +142,6 @@ teststruct::_b_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 
 #ifndef _TAO_TYPECODE_teststruct_embeddedstruct_a_GUARD
 #define _TAO_TYPECODE_teststruct_embeddedstruct_a_GUARD
@@ -195,7 +191,6 @@ _tao_tc_teststruct_embeddedstruct (
   1);
 
 ::CORBA::TypeCode_ptr const teststruct::_tc_embeddedstruct = std::addressof(_tao_tc_teststruct_embeddedstruct);
-
 
 void
 teststruct::embeddedstruct::_tao_any_destructor (
@@ -294,8 +289,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -337,8 +330,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -361,8 +352,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -384,8 +373,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -414,8 +401,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -446,6 +431,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

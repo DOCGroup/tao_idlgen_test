@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIF2S_EGNXFJ_H_
-#define _TAO_IDL_DIF2S_EGNXFJ_H_
+#ifndef _TAO_IDL_DIF2S_Q3XHEJ_H_
+#define _TAO_IDL_DIF2S_Q3XHEJ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -53,14 +53,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -79,7 +76,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_EX1__SARG_TRAITS_)
 #define _OLDDIF2_EX1__SARG_TRAITS_
 
@@ -94,7 +90,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDDIF2_AMH_EX1EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDDIF2_AMH_EX1EXCEPTIONHOLDER__SARG_TRAITS_
@@ -113,7 +108,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_AMI_EX1HANDLER__SARG_TRAITS_)
 #define _OLDDIF2_AMI_EX1HANDLER__SARG_TRAITS_
 
@@ -129,7 +123,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_EX2__SARG_TRAITS_)
 #define _OLDDIF2_EX2__SARG_TRAITS_
 
@@ -144,7 +137,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDDIF2_EX2_OP9_LS__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP9_LS__SARG_TRAITS_
@@ -162,7 +154,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_EX2_OP10_LS__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP10_LS__SARG_TRAITS_
 
@@ -179,7 +170,6 @@ class SArg_Traits<OldDif2_ex2_op10_ls>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_EX2_OP11__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP11__SARG_TRAITS_
 
@@ -194,7 +184,6 @@ class SArg_Traits<OldDif2_ex2_op11>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDDIF2_EX2_OP11_LS__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP11_LS__SARG_TRAITS_
@@ -212,7 +201,6 @@ class SArg_Traits<OldDif2_ex2_op11_ls>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_EX2_OP9_LS__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP9_LS__SARG_TRAITS_
 
@@ -229,7 +217,6 @@ class SArg_Traits<OldDif2_ex2_sendc_op9_ls>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_EX2_OP11_LS__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP11_LS__SARG_TRAITS_
 
@@ -245,7 +232,6 @@ class SArg_Traits<OldDif2_ex2_sendc_op11_ls>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDDIF2_AMH_EX2EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDDIF2_AMH_EX2EXCEPTIONHOLDER__SARG_TRAITS_
@@ -264,7 +250,6 @@ class SArg_Traits< ::OldDif2::AMH_ex2ExceptionHolder>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_AMI_EX2HANDLER__SARG_TRAITS_)
 #define _OLDDIF2_AMI_EX2HANDLER__SARG_TRAITS_
 
@@ -279,7 +264,6 @@ class  SArg_Traits< ::OldDif2::AMI_ex2Handler>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDDIF2_EX2_OP10_LS__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP10_LS__SARG_TRAITS_
@@ -297,7 +281,6 @@ class SArg_Traits<OldDif2_AMI_ex2Handler_op10_ls>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_AMI_EX2HANDLER_OP11_AMI_RETURN_VAL__SARG_TRAITS_)
 #define _OLDDIF2_AMI_EX2HANDLER_OP11_AMI_RETURN_VAL__SARG_TRAITS_
 
@@ -313,7 +296,6 @@ class SArg_Traits<OldDif2_AMI_ex2Handler_op11_ami_return_val>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDDIF2_EX2_OP11_LS__SARG_TRAITS_)
 #define _OLDDIF2_EX2_OP11_LS__SARG_TRAITS_
@@ -331,7 +313,6 @@ class SArg_Traits<OldDif2_AMI_ex2Handler_op11_ls>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_EX3__SARG_TRAITS_)
 #define _OLDDIF2_EX3__SARG_TRAITS_
 
@@ -346,7 +327,6 @@ class  SArg_Traits< ::OldDif2::ex3>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDDIF2_AMH_EX3EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDDIF2_AMH_EX3EXCEPTIONHOLDER__SARG_TRAITS_
@@ -365,7 +345,6 @@ class SArg_Traits< ::OldDif2::AMH_ex3ExceptionHolder>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_AMI_EX3HANDLER__SARG_TRAITS_)
 #define _OLDDIF2_AMI_EX3HANDLER__SARG_TRAITS_
 
@@ -380,7 +359,6 @@ class  SArg_Traits< ::OldDif2::AMI_ex3Handler>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDDIF2_EX4__SARG_TRAITS_)
 #define _OLDDIF2_EX4__SARG_TRAITS_
@@ -397,7 +375,6 @@ class  SArg_Traits< ::OldDif2::ex4>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_EX4_LIMITED_STRING_ATTRIBUTE__SARG_TRAITS_)
 #define _OLDDIF2_EX4_LIMITED_STRING_ATTRIBUTE__SARG_TRAITS_
 template<>
@@ -411,7 +388,6 @@ class SArg_Traits<OldDif2_ex4_limited_string_attribute>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDDIF2_AMH_EX4EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDDIF2_AMH_EX4EXCEPTIONHOLDER__SARG_TRAITS_
@@ -430,7 +406,6 @@ class SArg_Traits< ::OldDif2::AMH_ex4ExceptionHolder>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDDIF2_AMI_EX4HANDLER__SARG_TRAITS_)
 #define _OLDDIF2_AMI_EX4HANDLER__SARG_TRAITS_
 
@@ -445,7 +420,6 @@ class  SArg_Traits< ::OldDif2::AMI_ex4Handler>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDDIF2_AMI_EX4HANDLER_GET_LIMITED_STRING_ATTRIBUTE_AMI_RETURN_VAL__SARG_TRAITS_)
 #define _OLDDIF2_AMI_EX4HANDLER_GET_LIMITED_STRING_ATTRIBUTE_AMI_RETURN_VAL__SARG_TRAITS_
@@ -466,7 +440,6 @@ class SArg_Traits<OldDif2_AMI_ex4Handler_get_limited_string_attribute_ami_return
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_OldDif2
 {
 
@@ -482,7 +455,6 @@ namespace POA_OldDif2
   public:
     AMH_ex1 (const AMH_ex1& rhs);
     virtual ~AMH_ex1 () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -569,9 +541,6 @@ namespace POA_OldDif2
     ) = 0;
 
 };
-
-
-
 
 class ex1;
 using ex1_ptr = ex1 *;
@@ -664,7 +633,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -706,7 +674,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 class TAO_AMH_ex1ResponseHandler;
 using TAO_AMH_ex1ResponseHandler_ptr = TAO_AMH_ex1ResponseHandler *;
@@ -758,9 +725,6 @@ public:
   void op6_excep (
     ::OldDif2::AMH_ex1ExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_ex1Handler;
 using AMI_ex1Handler_ptr = AMI_ex1Handler *;
@@ -902,7 +866,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -974,7 +937,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_ex2;
 using AMH_ex2_ptr = AMH_ex2 *;
 
@@ -988,7 +950,6 @@ protected:
 public:
   AMH_ex2 (const AMH_ex2& rhs);
   virtual ~AMH_ex2 () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -1063,9 +1024,6 @@ virtual void op12 (
   ) = 0;
 
 };
-
-
-
 
 class ex2;
 using ex2_ptr = ex2 *;
@@ -1148,7 +1106,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1187,7 +1144,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 class TAO_AMH_ex2ResponseHandler;
 using TAO_AMH_ex2ResponseHandler_ptr = TAO_AMH_ex2ResponseHandler *;
@@ -1233,9 +1189,6 @@ public:
   void op12_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_ex2Handler;
 using AMI_ex2Handler_ptr = AMI_ex2Handler *;
@@ -1361,7 +1314,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1425,7 +1377,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_ex3;
 using AMH_ex3_ptr = AMH_ex3 *;
 
@@ -1439,7 +1390,6 @@ protected:
 public:
   AMH_ex3 (const AMH_ex3& rhs);
   virtual ~AMH_ex3 () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -1517,9 +1467,6 @@ virtual void unsigned_long_attribute (
 
 };
 
-
-
-
 class ex3;
 using ex3_ptr = ex3 *;
 
@@ -1595,7 +1542,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1639,7 +1585,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_ex3ResponseHandler;
 using TAO_AMH_ex3ResponseHandler_ptr = TAO_AMH_ex3ResponseHandler *;
 
@@ -1677,9 +1622,6 @@ public:
   void get_unsigned_long_attribute_excep (
     ::OldDif2::AMH_ex3ExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_ex3Handler;
 using AMI_ex3Handler_ptr = AMI_ex3Handler *;
@@ -1808,7 +1750,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1880,7 +1821,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_ex4;
 using AMH_ex4_ptr = AMH_ex4 *;
 
@@ -1895,7 +1835,6 @@ protected:
 public:
   AMH_ex4 (const AMH_ex4& rhs);
   virtual ~AMH_ex4 () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -2001,9 +1940,6 @@ virtual void an_object_attribute (
 
 };
 
-
-
-
 class ex4;
 using ex4_ptr = ex4 *;
 
@@ -2099,7 +2035,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2156,7 +2091,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_ex4ResponseHandler;
 using TAO_AMH_ex4ResponseHandler_ptr = TAO_AMH_ex4ResponseHandler *;
 
@@ -2205,9 +2139,6 @@ public:
   void get_an_object_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_ex4Handler;
 using AMI_ex4Handler_ptr = AMI_ex4Handler *;
@@ -2378,7 +2309,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2475,13 +2405,9 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module OldDif2
 
 #include "dif2S_T.h"
-
 
 #include /**/ "ace/post.h"
 

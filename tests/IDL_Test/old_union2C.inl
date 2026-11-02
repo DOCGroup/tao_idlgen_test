@@ -35,8 +35,6 @@ OldUnion2::Foo::_default ()
   this->disc_ = static_cast <OldUnion2::FooDisc> (-1);
 }
 
-
-
 ACE_INLINE
 unsigned long
 OldUnion2::Foo::_tao_member_index (OldUnion2::FooDisc value)
@@ -153,8 +151,6 @@ OldUnion2::Bar::Foo::_default ()
   this->_reset ();
   this->disc_ = static_cast <OldUnion2::Bar::BarDisc> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long

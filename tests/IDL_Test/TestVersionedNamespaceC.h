@@ -22,19 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_TRAS3A_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_TRAS3A_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_HH2AJ5_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_HH2AJ5_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
 #include "tao/AnyTypeCode/Any.h"
@@ -67,42 +64,26 @@
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
 END_USER_VERSIONED_NAMESPACE
-
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
 namespace M1
 {
-
-
 
   struct S1;
   using S1_var = ::TAO_Fixed_Var_T<S1>;
   using S1_out = S1&;
 
-
-
-
-
   struct  S1
   {
-
 
     using _var_type = S1_var;
     using _out_type = S1_out;
 
     ::CORBA::Octet o {};
   };
-
   extern  ::CORBA::TypeCode_ptr const _tc_S1;
-
-
 
 #if !defined (_M1_LI__VAR_OUT_CH_)
 #define _M1_LI__VAR_OUT_CH_
@@ -114,15 +95,10 @@ namespace M1
 
 #endif /* end #if !defined */
 
-
-
-
-
   class  LI
     : public virtual ::CORBA::Object
   {
   public:
-
     using _ptr_type = LI_ptr;
     using _var_type = LI_var;
     using _out_type = LI_out;
@@ -139,10 +115,6 @@ namespace M1
     virtual void op (
       const ::M1::S1 & s) = 0;
 
-
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
@@ -150,8 +122,6 @@ namespace M1
   protected:
     // Abstract or local interface only.
     LI ();
-
-
 
     virtual ~LI () = default;
 
@@ -162,10 +132,7 @@ namespace M1
     LI &operator= (const LI &) = delete;
     LI &operator= (LI &&) = delete;
   };
-
   extern  ::CORBA::TypeCode_ptr const _tc_LI;
-
-
 
 #if !defined (_M1_V__VAR_OUT_CH_)
 #define _M1_V__VAR_OUT_CH_
@@ -176,13 +143,10 @@ namespace M1
 
 #endif /* end #if !defined */
 
-
-
   class  V
     : public virtual ::CORBA::ValueBase
   {
   public:
-
     using _ptr_type = V*;
     using _var_type = V_var;
     using _out_type = V_out;
@@ -203,24 +167,19 @@ namespace M1
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
   public:
-
     virtual void valString (char *val) = 0;
     virtual void valString (char const *val) = 0;
     virtual void valString (::CORBA::String_var const &val) = 0;
     virtual char const *valString () const = 0;
 
   public:
-
     virtual void valStruct (const M1::S1 &) = 0;
     virtual const M1::S1 &valStruct () const = 0;
     virtual M1::S1 &valStruct () = 0;
 
   public:
-
     virtual void valLocalIface (::M1::LI_ptr) = 0;
     virtual ::M1::LI_ptr valLocalIface () const = 0;
-
-
 
   protected:
     V ();
@@ -237,7 +196,6 @@ namespace M1
   protected:
 
   };
-
   class  V_init
     : public virtual ::CORBA::ValueFactoryBase
   {
@@ -255,28 +213,17 @@ namespace M1
   protected:
     virtual ~V_init ();
   };
-
   extern  ::CORBA::TypeCode_ptr const _tc_V;
-
-
-
 
 } // module M1
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
-
 
   template<>
   class Arg_Traits< ::M1::S1>
@@ -287,8 +234,6 @@ namespace TAO
           >
   {
   };
-
-
 
 #if !defined (_M1_V__ARG_TRAITS_)
 #define _M1_V__ARG_TRAITS_
@@ -311,16 +256,10 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 namespace OBV_M1
 {
-
-
 
   // OBV_ class
   class  V
@@ -329,20 +268,17 @@ namespace OBV_M1
   {
 
 public:
-
   virtual void valString (char *val);
   virtual void valString (char const *val);
   virtual void valString (::CORBA::String_var const &val);
   virtual char const *valString () const;
 
 public:
-
   virtual void valStruct (const M1::S1 &);
   virtual const M1::S1 &valStruct () const;
   virtual M1::S1 &valStruct ();
 
 public:
-
   virtual void valLocalIface (::M1::LI_ptr);
   virtual ::M1::LI_ptr valLocalIface () const;
 
@@ -363,11 +299,7 @@ public:
   };
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -404,13 +336,7 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 

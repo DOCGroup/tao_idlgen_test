@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 FieldDevice_T::FieldDevice_T (
     TAO_Stub *objref,
@@ -51,7 +49,6 @@ AMH_FieldDevice_TExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_FieldDevice_TExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_FieldDevice_THandler::AMI_FieldDevice_THandler (

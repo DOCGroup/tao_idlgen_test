@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEPREFIXS_9HFEON_H_
-#define _TAO_IDL_TYPEPREFIXS_9HFEON_H_
+#ifndef _TAO_IDL_TYPEPREFIXS_N422HL_H_
+#define _TAO_IDL_TYPEPREFIXS_N422HL_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_A_B__SARG_TRAITS_)
 #define _A_B__SARG_TRAITS_
 
@@ -91,7 +87,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_A_AMH_BEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _A_AMH_BEXCEPTIONHOLDER__SARG_TRAITS_
@@ -110,7 +105,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_A_AMI_BHANDLER__SARG_TRAITS_)
 #define _A_AMI_BHANDLER__SARG_TRAITS_
 
@@ -126,7 +120,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_A_C__SARG_TRAITS_)
 #define _A_C__SARG_TRAITS_
 
@@ -141,7 +134,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_A_AMH_CEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _A_AMH_CEXCEPTIONHOLDER__SARG_TRAITS_
@@ -159,7 +151,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_A_AMI_CHANDLER__SARG_TRAITS_)
 #define _A_AMI_CHANDLER__SARG_TRAITS_
@@ -179,7 +170,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_A
 {
 
@@ -196,7 +186,6 @@ namespace POA_A
     AMH_B (const AMH_B& rhs);
     virtual ~AMH_B () = default;
 
-
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
     virtual void _dispatch (
@@ -207,9 +196,6 @@ namespace POA_A
 
   virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class B;
 using B_ptr = B *;
@@ -242,7 +228,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -257,7 +242,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_BResponseHandler;
 using TAO_AMH_BResponseHandler_ptr = TAO_AMH_BResponseHandler *;
 
@@ -269,9 +253,6 @@ public:
   TAO_AMH_BResponseHandler () = default;
   virtual ~TAO_AMH_BResponseHandler () = default;
 };
-
-
-
 
 class AMI_BHandler;
 using AMI_BHandler_ptr = AMI_BHandler *;
@@ -304,7 +285,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -320,7 +300,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_C;
 using AMH_C_ptr = AMH_C *;
 
@@ -333,7 +312,6 @@ protected:
 public:
   AMH_C (const AMH_C& rhs);
   virtual ~AMH_C () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -355,9 +333,6 @@ virtual void op (
   ) = 0;
 
 };
-
-
-
 
 class C;
 using C_ptr = C *;
@@ -397,7 +372,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -416,7 +390,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_CResponseHandler;
 using TAO_AMH_CResponseHandler_ptr = TAO_AMH_CResponseHandler *;
 
@@ -431,9 +404,6 @@ public:
   void op_excep (
     ::A::AMH_CExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_CHandler;
 using AMI_CHandler_ptr = AMI_CHandler *;
@@ -479,7 +449,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -503,13 +472,9 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module A
 
 #include "typeprefixS_T.h"
-
 
 #include /**/ "ace/post.h"
 

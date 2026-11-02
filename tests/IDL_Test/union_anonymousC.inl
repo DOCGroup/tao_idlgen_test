@@ -133,9 +133,7 @@ Element::ValueUnion::VUValue ()
   return *this->u_.VUValue_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -180,7 +178,6 @@ TAO::Array_Traits<NamedLongArray_forany>::alloc ()
 {
   return NamedLongArray_alloc ();
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -264,9 +261,7 @@ decl_heavy_union::m_which () const
   return this->u_.m_which_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -312,7 +307,6 @@ TAO::Array_Traits<decl_heavy_union::_m_en_arr_forany>::alloc ()
   return decl_heavy_union::_m_en_arr_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 // Accessor to set the member.
@@ -339,9 +333,7 @@ decl_heavy_union::m_en_arr () const
   return this->u_.m_en_arr_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -386,7 +378,6 @@ TAO::Array_Traits<decl_heavy_union::_m_st_arr_forany>::alloc ()
 {
   return decl_heavy_union::_m_st_arr_alloc ();
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -508,9 +499,7 @@ decl_heavy_union::un::b () const
   return this->u_.b_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -555,7 +544,6 @@ TAO::Array_Traits<decl_heavy_union::_m_un_arr_forany>::alloc ()
 {
   return decl_heavy_union::_m_un_arr_alloc ();
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -606,9 +594,7 @@ decl_heavy_union::m_named_long_array () const
   return this->u_.m_named_long_array_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -653,7 +639,6 @@ TAO::Array_Traits<decl_heavy_union::_m_anon_long_array_forany>::alloc ()
 {
   return decl_heavy_union::_m_anon_long_array_alloc ();
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

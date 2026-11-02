@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTS_8N6ZRT_H_
-#define _TAO_IDL_AMI_TESTS_8N6ZRT_H_
+#ifndef _TAO_IDL_AMI_TESTS_85LJWC_H_
+#define _TAO_IDL_AMI_TESTS_85LJWC_H_
 
 #include /**/ "ace/pre.h"
 
@@ -47,14 +47,11 @@
 #include "tao/PortableServer/PortableServer.h"
 #include "tao/PortableServer/Servant_Base.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -73,7 +70,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_A_AMI_TEST__SARG_TRAITS_)
 #define _A_AMI_TEST__SARG_TRAITS_
 
@@ -88,7 +84,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_A_AMI_AMI_TESTHANDLER__SARG_TRAITS_)
 #define _A_AMI_AMI_TESTHANDLER__SARG_TRAITS_
@@ -105,7 +100,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_A_TEST_CHILD__SARG_TRAITS_)
 #define _A_TEST_CHILD__SARG_TRAITS_
 
@@ -120,7 +114,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_A_AMI_TEST_CHILDHANDLER__SARG_TRAITS_)
 #define _A_AMI_TEST_CHILDHANDLER__SARG_TRAITS_
@@ -140,13 +133,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_A
 {
-
-
-
-
 
   class AMI_Test;
   using AMI_Test_ptr = AMI_Test *;
@@ -211,9 +199,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
-
-
 
   class AMI_AMI_TestHandler;
   using AMI_AMI_TestHandler_ptr = AMI_AMI_TestHandler *;
@@ -300,9 +285,6 @@ namespace POA_A
         TAO_ServantBase *servant);
   };
 
-
-
-
   class Test_Child;
   using Test_Child_ptr = Test_Child *;
 
@@ -337,9 +319,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
-
-
 
   class AMI_Test_ChildHandler;
   using AMI_Test_ChildHandler_ptr = AMI_Test_ChildHandler *;
@@ -382,7 +361,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 } // module A
 

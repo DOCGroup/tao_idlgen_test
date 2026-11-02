@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_CONSTANTSS_RJ2I45_CPP_
-#define _TAO_IDL_CONSTANTSS_RJ2I45_CPP_
-
+#ifndef _TAO_IDL_CONSTANTSS_TQL769_CPP_
+#define _TAO_IDL_CONSTANTSS_TQL769_CPP_
 
 #include "constantsS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -137,13 +134,6 @@ POA_ClassConstants::AMH_Iface::AMH_Iface ()
   this->optable_ = std::addressof (tao_ClassConstants_AMH_Iface_optable);
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_ClassConstants::AMH_Iface::_is_a (const char* value)
 {
   return
@@ -191,8 +181,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_ClassConstants_Iface_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_ClassConstants_Iface_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -264,8 +252,6 @@ POA_ClassConstants::_TAO_Iface_Direct_Proxy_Impl::~_TAO_Iface_Direct_Proxy_Impl 
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -274,13 +260,6 @@ POA_ClassConstants::Iface::Iface ()
 {
   this->optable_ = std::addressof (tao_ClassConstants_Iface_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_ClassConstants::Iface::_is_a (const char* value)
 {
@@ -296,18 +275,12 @@ const char* POA_ClassConstants::Iface::_interface_repository_id () const
   return "IDL:ClassConstants/Iface:1.0";
 }
 
-
-
-
 void POA_ClassConstants::Iface::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 ClassConstants::Iface *
 POA_ClassConstants::Iface::_this ()
@@ -323,7 +296,6 @@ POA_ClassConstants::Iface::_this ()
   return {};
 }
 
-
 class TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
@@ -336,8 +308,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -409,8 +379,6 @@ POA_ClassConstants::_TAO_AMI_IfaceHandler_Direct_Proxy_Impl::~_TAO_AMI_IfaceHand
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -420,13 +388,6 @@ POA_ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler ()
 {
   this->optable_ = std::addressof (tao_ClassConstants_AMI_IfaceHandler_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_ClassConstants::AMI_IfaceHandler::_is_a (const char* value)
 {
@@ -443,18 +404,12 @@ const char* POA_ClassConstants::AMI_IfaceHandler::_interface_repository_id () co
   return "IDL:ClassConstants/AMI_IfaceHandler:1.0";
 }
 
-
-
-
 void POA_ClassConstants::AMI_IfaceHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 ClassConstants::AMI_IfaceHandler *
 POA_ClassConstants::AMI_IfaceHandler::_this ()

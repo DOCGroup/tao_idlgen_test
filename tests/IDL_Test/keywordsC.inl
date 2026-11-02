@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 Testing::Testing (
     TAO_Stub *objref,
@@ -51,7 +49,6 @@ AMH_TestingExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_TestingExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_TestingHandler::AMI_TestingHandler (

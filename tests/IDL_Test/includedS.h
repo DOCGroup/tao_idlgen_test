@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDEDS_HPBPXM_H_
-#define _TAO_IDL_INCLUDEDS_HPBPXM_H_
+#ifndef _TAO_IDL_INCLUDEDS_HFCE9D_H_
+#define _TAO_IDL_INCLUDEDS_HFCE9D_H_
 
 #include /**/ "ace/pre.h"
 
@@ -49,14 +49,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -75,7 +72,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::Aok::Seq1Type>
     : public
@@ -86,7 +82,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Agog>
     : public
@@ -96,7 +91,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_VT_DEF_VT__SARG_TRAITS_)
 #define _VT_DEF_VT__SARG_TRAITS_
@@ -115,7 +109,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_INCLUDEDBASE__SARG_TRAITS_)
 #define _INCLUDEDBASE__SARG_TRAITS_
 
@@ -133,7 +126,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::A::MySeqA>
     : public
@@ -144,7 +136,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::A::MyStructA>
     : public
@@ -154,7 +145,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_ROOTMODULE_SUBMODULE1_PARENTIF__SARG_TRAITS_)
 #define _ROOTMODULE_SUBMODULE1_PARENTIF__SARG_TRAITS_
@@ -171,7 +161,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::RootModule::SUBMODULE1::ParentIF::Mode>
     : public
@@ -181,7 +170,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_ROOTMODULE_SUBMODULE1_AMH_PARENTIFEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _ROOTMODULE_SUBMODULE1_AMH_PARENTIFEXCEPTIONHOLDER__SARG_TRAITS_
@@ -200,7 +188,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ROOTMODULE_SUBMODULE1_AMI_PARENTIFHANDLER__SARG_TRAITS_)
 #define _ROOTMODULE_SUBMODULE1_AMI_PARENTIFHANDLER__SARG_TRAITS_
 
@@ -216,7 +203,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AAA__SARG_TRAITS_)
 #define _AAA__SARG_TRAITS_
 
@@ -231,7 +217,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_AAAEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_AAAEXCEPTIONHOLDER__SARG_TRAITS_
@@ -249,7 +234,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_AAAHANDLER__SARG_TRAITS_)
 #define _AMI_AAAHANDLER__SARG_TRAITS_
@@ -269,23 +253,16 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_Aok
 {
-
-
 
 } // module Aok
 namespace POA_VT_Def
 {
 
-
-
 } // module VT_Def
 namespace POA_A
 {
-
-
 
 } // module A
 namespace POA_RootModule
@@ -307,7 +284,6 @@ namespace POA_RootModule
       AMH_ParentIF (const AMH_ParentIF& rhs);
       virtual ~AMH_ParentIF () = default;
 
-
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
       virtual void _dispatch (
@@ -318,9 +294,6 @@ namespace POA_RootModule
 
     virtual const char* _interface_repository_id () const;
   };
-
-
-
 
   class ParentIF;
   using ParentIF_ptr = ParentIF *;
@@ -353,7 +326,6 @@ namespace POA_RootModule
     virtual const char* _interface_repository_id () const;
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -368,7 +340,6 @@ namespace POA_RootModule
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class TAO_AMH_ParentIFResponseHandler;
   using TAO_AMH_ParentIFResponseHandler_ptr = TAO_AMH_ParentIFResponseHandler *;
 
@@ -380,9 +351,6 @@ namespace POA_RootModule
     TAO_AMH_ParentIFResponseHandler () = default;
     virtual ~TAO_AMH_ParentIFResponseHandler () = default;
   };
-
-
-
 
   class AMI_ParentIFHandler;
   using AMI_ParentIFHandler_ptr = AMI_ParentIFHandler *;
@@ -415,7 +383,6 @@ namespace POA_RootModule
     virtual const char* _interface_repository_id () const;
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -431,11 +398,7 @@ namespace POA_RootModule
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module RootModule::SUBMODULE1
-
 
 } // module RootModule
 class POA_AMH_AAA;
@@ -451,7 +414,6 @@ public:
   POA_AMH_AAA (const POA_AMH_AAA& rhs);
   virtual ~POA_AMH_AAA () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -462,9 +424,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_AAA;
 using POA_AAA_ptr = POA_AAA *;
@@ -497,7 +456,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -512,7 +470,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_AAAResponseHandler;
 using POA_TAO_AMH_AAAResponseHandler_ptr = POA_TAO_AMH_AAAResponseHandler *;
 
@@ -524,9 +481,6 @@ public:
   POA_TAO_AMH_AAAResponseHandler () = default;
   virtual ~POA_TAO_AMH_AAAResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_AAAHandler;
 using POA_AMI_AAAHandler_ptr = POA_AMI_AAAHandler *;
@@ -559,7 +513,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -575,10 +528,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "includedS_T.h"
-
 
 #include /**/ "ace/post.h"
 

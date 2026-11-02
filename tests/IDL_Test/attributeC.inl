@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 Hello::MyFoo::MyFoo (
     TAO_Stub *objref,
@@ -51,7 +49,6 @@ Hello::AMH_MyFooExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:Hello/AMH_MyFooExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 Hello::AMI_MyFooHandler::AMI_MyFooHandler (

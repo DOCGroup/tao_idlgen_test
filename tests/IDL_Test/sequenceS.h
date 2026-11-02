@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCES_C43Q39_H_
-#define _TAO_IDL_SEQUENCES_C43Q39_H_
+#ifndef _TAO_IDL_SEQUENCES_DRV4WF_H_
+#define _TAO_IDL_SEQUENCES_DRV4WF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -40,17 +40,13 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -69,7 +65,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::myfoostructseq>
     : public
@@ -79,7 +74,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::myfoostruct>
@@ -91,7 +85,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::OctetSeqSeq>
     : public
@@ -101,7 +94,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::seqLocalSeq>
@@ -113,7 +105,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Deployment::ComponentPackageDescriptions>
     : public
@@ -123,7 +114,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::Deployment::ComponentAssemblyDescription>
@@ -135,7 +125,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Deployment::ComponentAssemblyDescriptions>
     : public
@@ -145,7 +134,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::Deployment::NamedImplementationArtifacts>
@@ -157,7 +145,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Deployment::NamedImplementationArtifact>
     : public
@@ -167,7 +154,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::Deployment::MonolithicImplementationDescription>
@@ -179,7 +165,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Deployment::MonolithicImplementationDescriptions>
     : public
@@ -189,7 +174,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::Deployment::PackagedComponentImplementation>
@@ -201,7 +185,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Deployment::PackagedComponentImplementations>
     : public
@@ -211,7 +194,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::Deployment::ComponentPackageDescription>
@@ -226,16 +208,12 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_Deployment
 {
-
-
 
 } // module Deployment
 
 #include "sequenceS_T.h"
-
 
 #include /**/ "ace/post.h"
 

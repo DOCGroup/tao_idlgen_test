@@ -22,10 +22,7 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -71,13 +68,9 @@ TAO::Array_Traits<Test::S90Array_forany>::alloc ()
   return Test::S90Array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -123,13 +116,9 @@ TAO::Array_Traits<Test::S42_forany>::alloc ()
   return Test::S42_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -175,13 +164,9 @@ TAO::Array_Traits<Test::SString43_forany>::alloc ()
   return Test::SString43_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -227,7 +212,5 @@ TAO::Array_Traits<Test::S4Array_forany>::alloc ()
   return Test::S4Array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

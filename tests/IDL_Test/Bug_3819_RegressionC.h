@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_3819_REGRESSIONC_VY23BC_H_
-#define _TAO_IDL_BUG_3819_REGRESSIONC_VY23BC_H_
+#ifndef _TAO_IDL_BUG_3819_REGRESSIONC_4ELLRB_H_
+#define _TAO_IDL_BUG_3819_REGRESSIONC_4ELLRB_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -61,7 +59,6 @@ namespace orange
   namespace apple
   {
 
-
 #if !defined (_ORANGE_APPLE_FOO__VAR_OUT_CH_)
 #define _ORANGE_APPLE_FOO__VAR_OUT_CH_
 
@@ -71,7 +68,6 @@ namespace orange
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ORANGE_APPLE_FOO__VAR_OUT_CH_)
 #define _ORANGE_APPLE_FOO__VAR_OUT_CH_
 
@@ -80,7 +76,6 @@ namespace orange
     using Foo_out = TAO_Value_Out_T<Foo>;
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ORANGE_APPLE_BAR__VAR_OUT_CH_)
 #define _ORANGE_APPLE_BAR__VAR_OUT_CH_
@@ -95,7 +90,6 @@ namespace orange
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ORANGE_APPLE_BAR__VAR_OUT_CH_)
 #define _ORANGE_APPLE_BAR__VAR_OUT_CH_
 
@@ -108,23 +102,16 @@ namespace orange
     using Bar_out = TAO_Objref_Out_T<Bar>;
 
 #endif /* end #if !defined */
-
-
 
   } // module orange::apple
 
-
-
 } // module orange
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -144,7 +131,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ORANGE_APPLE_FOO__ARG_TRAITS_)
 #define _ORANGE_APPLE_FOO__ARG_TRAITS_
 
@@ -163,7 +149,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ORANGE_APPLE_FOO__ARG_TRAITS_)
 #define _ORANGE_APPLE_FOO__ARG_TRAITS_
 
@@ -181,7 +166,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ORANGE_APPLE_BAR__ARG_TRAITS_)
 #define _ORANGE_APPLE_BAR__ARG_TRAITS_
@@ -198,7 +182,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ORANGE_APPLE_BAR__ARG_TRAITS_)
 #define _ORANGE_APPLE_BAR__ARG_TRAITS_
@@ -219,14 +202,12 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace OBV_orange
 {
   namespace apple
   {
   }
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -290,7 +271,14 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
 
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Foo *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Foo **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Foo *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -301,18 +289,14 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ora
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Foo *); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Foo **); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Foo *&);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr *); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Bar *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -323,18 +307,21 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ora
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Bar *&);
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (orange::apple::Foo *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (orange::apple::Foo *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Foo *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::apple::Foo *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -345,36 +332,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Foo *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::apple::Foo *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-namespace CORBA
-{
-  extern TAO_IDL_TEST_STUB_Export void add_ref (orange::apple::Foo *);
-  extern TAO_IDL_TEST_STUB_Export void remove_ref (orange::apple::Foo *);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Foo *);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::apple::Foo *&);
-
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -383,15 +346,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::ap
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Bar_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::apple::Bar_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "Bug_3819_RegressionC.inl"

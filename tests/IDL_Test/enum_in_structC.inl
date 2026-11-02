@@ -25,9 +25,7 @@
 #include <memory>
 #include <new>
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -73,13 +71,9 @@ TAO::Array_Traits<decl_heavy_struct::_m_en_forany>::alloc ()
   return decl_heavy_struct::_m_en_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -124,7 +118,6 @@ TAO::Array_Traits<decl_heavy_struct::_m_st_forany>::alloc ()
 {
   return decl_heavy_struct::_m_st_alloc ();
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -223,9 +216,7 @@ decl_heavy_struct::un::b () const
   return this->u_.b_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -271,7 +262,5 @@ TAO::Array_Traits<decl_heavy_struct::_m_un_forany>::alloc ()
   return decl_heavy_struct::_m_un_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

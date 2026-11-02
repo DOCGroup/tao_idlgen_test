@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 Plesk::Naming::ObjectResolver::ObjectResolver (
     TAO_Stub *objref,
@@ -51,7 +49,6 @@ Plesk::Naming::AMH_ObjectResolverExceptionHolder::_tao_obv_static_repository_id 
 {
   return "IDL:Plesk/Naming/AMH_ObjectResolverExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 Plesk::Naming::AMI_ObjectResolverHandler::AMI_ObjectResolverHandler (

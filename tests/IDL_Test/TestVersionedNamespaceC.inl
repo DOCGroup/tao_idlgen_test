@@ -22,10 +22,7 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
 
 ACE_INLINE
 M1::V::V ()
@@ -37,7 +34,5 @@ M1::V::_tao_obv_static_repository_id ()
   return "IDL:M1/V:1.0";
 }
 
-
 END_USER_VERSIONED_NAMESPACE
-
 

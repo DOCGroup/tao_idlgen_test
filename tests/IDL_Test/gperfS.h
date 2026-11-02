@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFS_VGBB6P_H_
-#define _TAO_IDL_GPERFS_VGBB6P_H_
+#ifndef _TAO_IDL_GPERFS_O2T6FE_H_
+#define _TAO_IDL_GPERFS_O2T6FE_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::TestEnum>
     : public
@@ -86,7 +82,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_TESTLISTITEM__SARG_TRAITS_)
 #define _TESTLISTITEM__SARG_TRAITS_
@@ -102,7 +97,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_TESTLISTITEMEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_TESTLISTITEMEXCEPTIONHOLDER__SARG_TRAITS_
@@ -121,7 +115,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_TESTLISTITEMHANDLER__SARG_TRAITS_)
 #define _AMI_TESTLISTITEMHANDLER__SARG_TRAITS_
 
@@ -137,7 +130,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_TEST__SARG_TRAITS_)
 #define _TEST__SARG_TRAITS_
 
@@ -152,7 +144,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_TESTEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_TESTEXCEPTIONHOLDER__SARG_TRAITS_
@@ -171,7 +162,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_TESTHANDLER__SARG_TRAITS_)
 #define _AMI_TESTHANDLER__SARG_TRAITS_
 
@@ -187,7 +177,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_SIMPLE_SERVER__SARG_TRAITS_)
 #define _SIMPLE_SERVER__SARG_TRAITS_
 
@@ -202,7 +191,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_SIMPLE_SERVEREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_SIMPLE_SERVEREXCEPTIONHOLDER__SARG_TRAITS_
@@ -220,7 +208,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_SIMPLE_SERVERHANDLER__SARG_TRAITS_)
 #define _AMI_SIMPLE_SERVERHANDLER__SARG_TRAITS_
@@ -240,7 +227,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_testlistitem;
 using POA_AMH_testlistitem_ptr = POA_AMH_testlistitem *;
 
@@ -253,7 +239,6 @@ protected:
 public:
   POA_AMH_testlistitem (const POA_AMH_testlistitem& rhs);
   virtual ~POA_AMH_testlistitem () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -274,9 +259,6 @@ virtual void name (
   ) = 0;
 
 };
-
-
-
 
 class POA_testlistitem;
 using POA_testlistitem_ptr = POA_testlistitem *;
@@ -315,7 +297,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -334,7 +315,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_testlistitemResponseHandler;
 using POA_TAO_AMH_testlistitemResponseHandler_ptr = POA_TAO_AMH_testlistitemResponseHandler *;
 
@@ -350,9 +330,6 @@ public:
   void get_name_excep (
     ::AMH_testlistitemExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_testlistitemHandler;
 using POA_AMI_testlistitemHandler_ptr = POA_AMI_testlistitemHandler *;
@@ -399,7 +376,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -423,7 +399,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_test;
 using POA_AMH_test_ptr = POA_AMH_test *;
 
@@ -436,7 +411,6 @@ protected:
 public:
   POA_AMH_test (const POA_AMH_test& rhs);
   virtual ~POA_AMH_test () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -592,9 +566,6 @@ virtual void new_testlistitem (
 
 };
 
-
-
-
 class POA_test;
 using POA_test_ptr = POA_test *;
 
@@ -724,7 +695,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -799,7 +769,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_testResponseHandler;
 using POA_TAO_AMH_testResponseHandler_ptr = POA_TAO_AMH_testResponseHandler *;
 
@@ -864,9 +833,6 @@ public:
   void new_testlistitem_excep (
     ::AMH_testExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_testHandler;
 using POA_AMI_testHandler_ptr = POA_AMI_testHandler *;
@@ -1102,7 +1068,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1238,7 +1203,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_Simple_Server;
 using POA_AMH_Simple_Server_ptr = POA_AMH_Simple_Server *;
 
@@ -1251,7 +1215,6 @@ protected:
 public:
   POA_AMH_Simple_Server (const POA_AMH_Simple_Server& rhs);
   virtual ~POA_AMH_Simple_Server () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -1426,9 +1389,6 @@ virtual void transferTriggerTdc (
 
 };
 
-
-
-
 class POA_Simple_Server;
 using POA_Simple_Server_ptr = POA_Simple_Server *;
 
@@ -1568,7 +1528,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1655,7 +1614,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_Simple_ServerResponseHandler;
 using POA_TAO_AMH_Simple_ServerResponseHandler_ptr = POA_TAO_AMH_Simple_ServerResponseHandler *;
 
@@ -1722,9 +1680,6 @@ public:
     ::AMH_Simple_ServerExceptionHolder * holder) override;
 };
 
-
-
-
 class POA_AMI_Simple_ServerHandler;
 using POA_AMI_Simple_ServerHandler_ptr = POA_AMI_Simple_ServerHandler *;
 
@@ -1756,7 +1711,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1772,10 +1726,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "gperfS_T.h"
-
 
 #include /**/ "ace/post.h"
 

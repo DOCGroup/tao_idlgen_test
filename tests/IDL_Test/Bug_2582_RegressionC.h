@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONC_ZBM7SA_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONC_ZBM7SA_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONC_SDZXRS_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONC_SDZXRS_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -67,14 +65,11 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 enum EncodingID_T
 {
@@ -84,13 +79,9 @@ enum EncodingID_T
 using EncodingID_T_out = EncodingID_T &;
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_EncodingID_T;
 
-
 struct Encoding_T;
 using Encoding_T_var = ::TAO_Fixed_Var_T<Encoding_T>;
 using Encoding_T_out = Encoding_T&;
-
-
-
 
 struct TAO_IDL_TEST_STUB_Export Encoding_T
 {
@@ -107,7 +98,6 @@ using EncodingID2_T = EncodingID_T;
 using EncodingID2_T_out = EncodingID_T_out;
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_EncodingID2_T;
 
-
 #if !defined (_FIELDDEVICE_T__VAR_OUT_CH_)
 #define _FIELDDEVICE_T__VAR_OUT_CH_
 
@@ -120,9 +110,6 @@ using FieldDevice_T_var = TAO_Objref_Var_T<FieldDevice_T>;
 using FieldDevice_T_out = TAO_Objref_Out_T<FieldDevice_T>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export FieldDevice_T
   : public virtual ::CORBA::Object
@@ -153,9 +140,6 @@ public:
 
   virtual void sendc_getEncoding (
     ::AMI_FieldDevice_THandler_ptr ami_handler);
-
-
-
 
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
@@ -188,7 +172,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_FieldDevice_T;
 
-
 #if !defined (_AMH_FIELDDEVICE_TEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _AMH_FIELDDEVICE_TEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -197,7 +180,6 @@ using AMH_FieldDevice_TExceptionHolder_var = TAO_Value_Var_T<AMH_FieldDevice_TEx
 using AMH_FieldDevice_TExceptionHolder_out = TAO_Value_Out_T<AMH_FieldDevice_TExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
 class TAO_IDL_TEST_STUB_Export AMH_FieldDevice_TExceptionHolder
   : public virtual ::CORBA::DefaultValueRefCountBase
@@ -251,7 +233,6 @@ public:
 public:
   virtual void raise_sendc_getEncoding ();
 
-
 protected:
   AMH_FieldDevice_TExceptionHolder ();
   virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
@@ -273,7 +254,6 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_FieldDevice_TExceptionHolder;
 
-
 #if !defined (_AMH_FIELDDEVICE_TRESPONSEHANDLER__VAR_OUT_CH_)
 #define _AMH_FIELDDEVICE_TRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -286,9 +266,6 @@ using AMH_FieldDevice_TResponseHandler_var = TAO_Objref_Var_T<AMH_FieldDevice_TR
 using AMH_FieldDevice_TResponseHandler_out = TAO_Objref_Out_T<AMH_FieldDevice_TResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMH_FieldDevice_TResponseHandler
   : public virtual ::CORBA::Object
@@ -321,9 +298,6 @@ public:
   virtual void getEncoding_excep (
     ::AMH_FieldDevice_TExceptionHolder * holder) = 0;
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -333,8 +307,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_FieldDevice_TResponseHandler ();
-
-
 
   virtual ~AMH_FieldDevice_TResponseHandler () = default;
 
@@ -347,7 +319,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_FieldDevice_TResponseHandler;
 
-
 #if !defined (_AMI_FIELDDEVICE_THANDLER__VAR_OUT_CH_)
 #define _AMI_FIELDDEVICE_THANDLER__VAR_OUT_CH_
 
@@ -357,9 +328,6 @@ using AMI_FieldDevice_THandler_var = TAO_Objref_Var_T<AMI_FieldDevice_THandler>;
 using AMI_FieldDevice_THandler_out = TAO_Objref_Out_T<AMI_FieldDevice_THandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMI_FieldDevice_THandler
   : public virtual ::Messaging::ReplyHandler
@@ -406,9 +374,6 @@ public:
   virtual void getEncoding_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -440,14 +405,11 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_FieldDevice_THandler;
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -467,7 +429,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::EncodingID_T>
     : public
@@ -478,7 +439,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::Encoding_T>
     : public
@@ -488,7 +448,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_FIELDDEVICE_T__ARG_TRAITS_)
 #define _FIELDDEVICE_T__ARG_TRAITS_
@@ -505,7 +464,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_FIELDDEVICE_TEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _AMH_FIELDDEVICE_TEXCEPTIONHOLDER__ARG_TRAITS_
@@ -525,7 +483,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_FIELDDEVICE_THANDLER__ARG_TRAITS_)
 #define _AMI_FIELDDEVICE_THANDLER__ARG_TRAITS_
 
@@ -544,9 +501,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 // OBV_ class
 class TAO_IDL_TEST_STUB_Export OBV_AMH_FieldDevice_TExceptionHolder
@@ -571,7 +525,6 @@ protected:
 private:
   CORBA::Boolean require_truncation_ {false};
 };
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -636,19 +589,13 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, EncodingID_T);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, EncodingID_T &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -659,12 +606,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::E
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -673,8 +614,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FieldDevice_T_ptr *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, FieldDevice_T_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -685,12 +624,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMH
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -699,12 +632,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_FieldDevice_TResp
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMH_FieldDevice_TResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -715,16 +642,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMI
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, EncodingID_T _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, EncodingID_T &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -733,19 +656,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Encoding_T
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const FieldDevice_T_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, FieldDevice_T_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -756,8 +672,6 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_FieldDevice_TExceptionHolder *);
@@ -765,18 +679,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_FieldD
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_FieldDevice_THandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_FieldDevice_THandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "Bug_2582_RegressionC.inl"

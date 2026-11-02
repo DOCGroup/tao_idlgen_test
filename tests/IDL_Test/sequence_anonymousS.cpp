@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_872P40_CPP_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_872P40_CPP_
-
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_3CN8A9_CPP_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_3CN8A9_CPP_
 
 #include "sequence_anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_seqTest_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_seqTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -138,7 +135,6 @@ POA_AMH_seqTest::POA_AMH_seqTest ()
   this->optable_ = std::addressof (tao_AMH_seqTest_optable);
 }
 
-
 void
 POA_AMH_seqTest::send_dozen_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -184,11 +180,6 @@ POA_AMH_seqTest::send_dozen_skel (
       bouquets
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_AMH_seqTest::_is_a (const char* value)
 {
@@ -237,8 +228,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_seqTest_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_seqTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -311,7 +300,6 @@ _TAO_seqTest_Direct_Proxy_Impl::~_TAO_seqTest_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_seqTest_Direct_Proxy_Impl::send_dozen (
     TAO_Abstract_ServantBase  *servant,
@@ -330,8 +318,6 @@ _TAO_seqTest_Direct_Proxy_Impl::send_dozen (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -341,9 +327,7 @@ POA_seqTest::POA_seqTest ()
   this->optable_ = std::addressof (tao_seqTest_optable);
 }
 
-
-class send_dozen_seqTest
-  : public TAO::Upcall_Command
+class send_dozen_seqTest : public TAO::Upcall_Command
 {
 public:
   inline send_dozen_seqTest (POA_seqTest * servant,
@@ -409,13 +393,6 @@ void POA_seqTest::send_dozen_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_seqTest::_is_a (const char* value)
 {
   return
@@ -430,18 +407,12 @@ const char* POA_seqTest::_interface_repository_id () const
   return "IDL:seqTest:1.0";
 }
 
-
-
-
 void POA_seqTest::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 seqTest *
 POA_seqTest::_this ()
@@ -498,8 +469,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_seqTestHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_seqTestHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -573,7 +542,6 @@ _TAO_AMI_seqTestHandler_Direct_Proxy_Impl::~_TAO_AMI_seqTestHandler_Direct_Proxy
 {
 }
 
-
 void
 _TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen (
     TAO_Abstract_ServantBase  *servant,
@@ -591,7 +559,6 @@ _TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen (
         ((TAO::Arg_Traits< ::seqTest::dozens>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen_excep (
@@ -611,8 +578,6 @@ _TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -622,9 +587,7 @@ POA_AMI_seqTestHandler::POA_AMI_seqTestHandler ()
   this->optable_ = std::addressof (tao_AMI_seqTestHandler_optable);
 }
 
-
-class send_dozen_AMI_seqTestHandler
-  : public TAO::Upcall_Command
+class send_dozen_AMI_seqTestHandler : public TAO::Upcall_Command
 {
 public:
   inline send_dozen_AMI_seqTestHandler (POA_AMI_seqTestHandler * servant,
@@ -690,9 +653,7 @@ void POA_AMI_seqTestHandler::send_dozen_skel (
                          );
 }
 
-
-class send_dozen_excep_AMI_seqTestHandler
-  : public TAO::Upcall_Command
+class send_dozen_excep_AMI_seqTestHandler : public TAO::Upcall_Command
 {
 public:
   inline send_dozen_excep_AMI_seqTestHandler (POA_AMI_seqTestHandler * servant,
@@ -758,13 +719,6 @@ void POA_AMI_seqTestHandler::send_dozen_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_seqTestHandler::_is_a (const char* value)
 {
   return
@@ -780,18 +734,12 @@ const char* POA_AMI_seqTestHandler::_interface_repository_id () const
   return "IDL:AMI_seqTestHandler:1.0";
 }
 
-
-
-
 void POA_AMI_seqTestHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_seqTestHandler *
 POA_AMI_seqTestHandler::_this ()

@@ -32,7 +32,6 @@ Test::Red_Herring::_tao_obv_static_repository_id ()
   return "IDL:Test/Red_Herring:1.0";
 }
 
-
 ACE_INLINE
 Test::Roundtrip::Roundtrip (
     TAO_Stub *objref,

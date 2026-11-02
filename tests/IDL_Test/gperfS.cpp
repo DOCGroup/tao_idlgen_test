@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFS_5G1S6Q_CPP_
-#define _TAO_IDL_GPERFS_5G1S6Q_CPP_
-
+#ifndef _TAO_IDL_GPERFS_T8L6OW_CPP_
+#define _TAO_IDL_GPERFS_T8L6OW_CPP_
 
 #include "gperfS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_testlistitem_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_testlistitem_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -139,7 +136,6 @@ POA_AMH_testlistitem::POA_AMH_testlistitem ()
   this->optable_ = std::addressof (tao_AMH_testlistitem_optable);
 }
 
-
 void
 POA_AMH_testlistitem::_get_name_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -176,11 +172,6 @@ POA_AMH_testlistitem::_get_name_skel (
       safe_rd_.get ()
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_AMH_testlistitem::_is_a (const char* value)
 {
@@ -229,8 +220,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_testlistitem_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_testlistitem_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -304,7 +293,6 @@ _TAO_testlistitem_Direct_Proxy_Impl::~_TAO_testlistitem_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_testlistitem_Direct_Proxy_Impl::_get_name (
     TAO_Abstract_ServantBase  *servant,
@@ -323,8 +311,6 @@ _TAO_testlistitem_Direct_Proxy_Impl::_get_name (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -334,9 +320,7 @@ POA_testlistitem::POA_testlistitem ()
   this->optable_ = std::addressof (tao_testlistitem_optable);
 }
 
-
-class _get_name_testlistitem
-  : public TAO::Upcall_Command
+class _get_name_testlistitem : public TAO::Upcall_Command
 {
 public:
   inline _get_name_testlistitem (POA_testlistitem * servant,
@@ -399,13 +383,6 @@ void POA_testlistitem::_get_name_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_testlistitem::_is_a (const char* value)
 {
   return
@@ -420,18 +397,12 @@ const char* POA_testlistitem::_interface_repository_id () const
   return "IDL:testlistitem:1.0";
 }
 
-
-
-
 void POA_testlistitem::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 testlistitem *
 POA_testlistitem::_this ()
@@ -488,8 +459,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -565,7 +534,6 @@ _TAO_AMI_testlistitemHandler_Direct_Proxy_Impl::~_TAO_AMI_testlistitemHandler_Di
 {
 }
 
-
 void
 _TAO_AMI_testlistitemHandler_Direct_Proxy_Impl::get_name (
     TAO_Abstract_ServantBase  *servant,
@@ -583,7 +551,6 @@ _TAO_AMI_testlistitemHandler_Direct_Proxy_Impl::get_name (
         ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_testlistitemHandler_Direct_Proxy_Impl::get_name_excep (
@@ -603,8 +570,6 @@ _TAO_AMI_testlistitemHandler_Direct_Proxy_Impl::get_name_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -614,9 +579,7 @@ POA_AMI_testlistitemHandler::POA_AMI_testlistitemHandler ()
   this->optable_ = std::addressof (tao_AMI_testlistitemHandler_optable);
 }
 
-
-class get_name_AMI_testlistitemHandler
-  : public TAO::Upcall_Command
+class get_name_AMI_testlistitemHandler : public TAO::Upcall_Command
 {
 public:
   inline get_name_AMI_testlistitemHandler (POA_AMI_testlistitemHandler * servant,
@@ -682,9 +645,7 @@ void POA_AMI_testlistitemHandler::get_name_skel (
                          );
 }
 
-
-class get_name_excep_AMI_testlistitemHandler
-  : public TAO::Upcall_Command
+class get_name_excep_AMI_testlistitemHandler : public TAO::Upcall_Command
 {
 public:
   inline get_name_excep_AMI_testlistitemHandler (POA_AMI_testlistitemHandler * servant,
@@ -750,13 +711,6 @@ void POA_AMI_testlistitemHandler::get_name_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_testlistitemHandler::_is_a (const char* value)
 {
   return
@@ -772,18 +726,12 @@ const char* POA_AMI_testlistitemHandler::_interface_repository_id () const
   return "IDL:AMI_testlistitemHandler:1.0";
 }
 
-
-
-
 void POA_AMI_testlistitemHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_testlistitemHandler *
 POA_AMI_testlistitemHandler::_this ()
@@ -811,8 +759,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_test_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -916,7 +862,6 @@ POA_AMH_test::POA_AMH_test ()
 {
   this->optable_ = std::addressof (tao_AMH_test_optable);
 }
-
 
 void
 POA_AMH_test::_get_stest_skel (
@@ -1545,11 +1490,6 @@ POA_AMH_test::new_testlistitem_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_AMH_test::_is_a (const char* value)
 {
   return
@@ -1597,8 +1537,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_test_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1706,7 +1644,6 @@ _TAO_test_Direct_Proxy_Impl::~_TAO_test_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_test_Direct_Proxy_Impl::_get_stest (
     TAO_Abstract_ServantBase  *servant,
@@ -1724,7 +1661,6 @@ _TAO_test_Direct_Proxy_Impl::_get_stest (
     _tao_ptr->stest (
         );
 }
-
 
 void
 _TAO_test_Direct_Proxy_Impl::_set_stest (
@@ -1744,7 +1680,6 @@ _TAO_test_Direct_Proxy_Impl::_set_stest (
       );
 }
 
-
 void
 _TAO_test_Direct_Proxy_Impl::_get_wstest (
     TAO_Abstract_ServantBase  *servant,
@@ -1762,7 +1697,6 @@ _TAO_test_Direct_Proxy_Impl::_get_wstest (
     _tao_ptr->wstest (
         );
 }
-
 
 void
 _TAO_test_Direct_Proxy_Impl::_set_wstest (
@@ -1782,7 +1716,6 @@ _TAO_test_Direct_Proxy_Impl::_set_wstest (
       );
 }
 
-
 void
 _TAO_test_Direct_Proxy_Impl::_get_ltest (
     TAO_Abstract_ServantBase  *servant,
@@ -1800,7 +1733,6 @@ _TAO_test_Direct_Proxy_Impl::_get_ltest (
     _tao_ptr->ltest (
         );
 }
-
 
 void
 _TAO_test_Direct_Proxy_Impl::_set_ltest (
@@ -1820,7 +1752,6 @@ _TAO_test_Direct_Proxy_Impl::_set_ltest (
       );
 }
 
-
 void
 _TAO_test_Direct_Proxy_Impl::_get_ldtest (
     TAO_Abstract_ServantBase  *servant,
@@ -1838,7 +1769,6 @@ _TAO_test_Direct_Proxy_Impl::_get_ldtest (
     _tao_ptr->ldtest (
         );
 }
-
 
 void
 _TAO_test_Direct_Proxy_Impl::_set_ldtest (
@@ -1858,7 +1788,6 @@ _TAO_test_Direct_Proxy_Impl::_set_ldtest (
       );
 }
 
-
 void
 _TAO_test_Direct_Proxy_Impl::_get_etest (
     TAO_Abstract_ServantBase  *servant,
@@ -1876,7 +1805,6 @@ _TAO_test_Direct_Proxy_Impl::_get_etest (
     _tao_ptr->etest (
         );
 }
-
 
 void
 _TAO_test_Direct_Proxy_Impl::_set_etest (
@@ -1896,7 +1824,6 @@ _TAO_test_Direct_Proxy_Impl::_set_etest (
       );
 }
 
-
 void
 _TAO_test_Direct_Proxy_Impl::_get_setest (
     TAO_Abstract_ServantBase  *servant,
@@ -1914,7 +1841,6 @@ _TAO_test_Direct_Proxy_Impl::_get_setest (
     _tao_ptr->setest (
         );
 }
-
 
 void
 _TAO_test_Direct_Proxy_Impl::_set_setest (
@@ -1934,7 +1860,6 @@ _TAO_test_Direct_Proxy_Impl::_set_setest (
       );
 }
 
-
 void
 _TAO_test_Direct_Proxy_Impl::_get_tltest (
     TAO_Abstract_ServantBase  *servant,
@@ -1953,7 +1878,6 @@ _TAO_test_Direct_Proxy_Impl::_get_tltest (
         );
 }
 
-
 void
 _TAO_test_Direct_Proxy_Impl::_set_tltest (
     TAO_Abstract_ServantBase  *servant,
@@ -1971,7 +1895,6 @@ _TAO_test_Direct_Proxy_Impl::_set_tltest (
         ((TAO::Arg_Traits< ::testlistitem>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_test_Direct_Proxy_Impl::new_testlistitem (
@@ -1992,8 +1915,6 @@ _TAO_test_Direct_Proxy_Impl::new_testlistitem (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -2003,9 +1924,7 @@ POA_test::POA_test ()
   this->optable_ = std::addressof (tao_test_optable);
 }
 
-
-class _get_stest_test
-  : public TAO::Upcall_Command
+class _get_stest_test : public TAO::Upcall_Command
 {
 public:
   inline _get_stest_test (POA_test * servant,
@@ -2068,9 +1987,7 @@ void POA_test::_get_stest_skel (
                          );
 }
 
-
-class _set_stest_test
-  : public TAO::Upcall_Command
+class _set_stest_test : public TAO::Upcall_Command
 {
 public:
   inline _set_stest_test (POA_test * servant,
@@ -2136,9 +2053,7 @@ void POA_test::_set_stest_skel (
                          );
 }
 
-
-class _get_wstest_test
-  : public TAO::Upcall_Command
+class _get_wstest_test : public TAO::Upcall_Command
 {
 public:
   inline _get_wstest_test (POA_test * servant,
@@ -2201,9 +2116,7 @@ void POA_test::_get_wstest_skel (
                          );
 }
 
-
-class _set_wstest_test
-  : public TAO::Upcall_Command
+class _set_wstest_test : public TAO::Upcall_Command
 {
 public:
   inline _set_wstest_test (POA_test * servant,
@@ -2269,9 +2182,7 @@ void POA_test::_set_wstest_skel (
                          );
 }
 
-
-class _get_ltest_test
-  : public TAO::Upcall_Command
+class _get_ltest_test : public TAO::Upcall_Command
 {
 public:
   inline _get_ltest_test (POA_test * servant,
@@ -2334,9 +2245,7 @@ void POA_test::_get_ltest_skel (
                          );
 }
 
-
-class _set_ltest_test
-  : public TAO::Upcall_Command
+class _set_ltest_test : public TAO::Upcall_Command
 {
 public:
   inline _set_ltest_test (POA_test * servant,
@@ -2402,9 +2311,7 @@ void POA_test::_set_ltest_skel (
                          );
 }
 
-
-class _get_ldtest_test
-  : public TAO::Upcall_Command
+class _get_ldtest_test : public TAO::Upcall_Command
 {
 public:
   inline _get_ldtest_test (POA_test * servant,
@@ -2467,9 +2374,7 @@ void POA_test::_get_ldtest_skel (
                          );
 }
 
-
-class _set_ldtest_test
-  : public TAO::Upcall_Command
+class _set_ldtest_test : public TAO::Upcall_Command
 {
 public:
   inline _set_ldtest_test (POA_test * servant,
@@ -2535,9 +2440,7 @@ void POA_test::_set_ldtest_skel (
                          );
 }
 
-
-class _get_etest_test
-  : public TAO::Upcall_Command
+class _get_etest_test : public TAO::Upcall_Command
 {
 public:
   inline _get_etest_test (POA_test * servant,
@@ -2600,9 +2503,7 @@ void POA_test::_get_etest_skel (
                          );
 }
 
-
-class _set_etest_test
-  : public TAO::Upcall_Command
+class _set_etest_test : public TAO::Upcall_Command
 {
 public:
   inline _set_etest_test (POA_test * servant,
@@ -2668,9 +2569,7 @@ void POA_test::_set_etest_skel (
                          );
 }
 
-
-class _get_setest_test
-  : public TAO::Upcall_Command
+class _get_setest_test : public TAO::Upcall_Command
 {
 public:
   inline _get_setest_test (POA_test * servant,
@@ -2733,9 +2632,7 @@ void POA_test::_get_setest_skel (
                          );
 }
 
-
-class _set_setest_test
-  : public TAO::Upcall_Command
+class _set_setest_test : public TAO::Upcall_Command
 {
 public:
   inline _set_setest_test (POA_test * servant,
@@ -2801,9 +2698,7 @@ void POA_test::_set_setest_skel (
                          );
 }
 
-
-class _get_tltest_test
-  : public TAO::Upcall_Command
+class _get_tltest_test : public TAO::Upcall_Command
 {
 public:
   inline _get_tltest_test (POA_test * servant,
@@ -2866,9 +2761,7 @@ void POA_test::_get_tltest_skel (
                          );
 }
 
-
-class _set_tltest_test
-  : public TAO::Upcall_Command
+class _set_tltest_test : public TAO::Upcall_Command
 {
 public:
   inline _set_tltest_test (POA_test * servant,
@@ -2934,9 +2827,7 @@ void POA_test::_set_tltest_skel (
                          );
 }
 
-
-class new_testlistitem_test
-  : public TAO::Upcall_Command
+class new_testlistitem_test : public TAO::Upcall_Command
 {
 public:
   inline new_testlistitem_test (POA_test * servant,
@@ -3008,13 +2899,6 @@ void POA_test::new_testlistitem_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_test::_is_a (const char* value)
 {
   return
@@ -3029,18 +2913,12 @@ const char* POA_test::_interface_repository_id () const
   return "IDL:test:1.0";
 }
 
-
-
-
 void POA_test::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 test *
 POA_test::_this ()
@@ -3088,7 +2966,6 @@ void
 POA_TAO_AMH_testResponseHandler::set_stest ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -3138,7 +3015,6 @@ POA_TAO_AMH_testResponseHandler::set_wstest ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -3186,7 +3062,6 @@ void
 POA_TAO_AMH_testResponseHandler::set_ltest ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -3236,7 +3111,6 @@ POA_TAO_AMH_testResponseHandler::set_ldtest ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -3284,7 +3158,6 @@ void
 POA_TAO_AMH_testResponseHandler::set_etest ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -3334,7 +3207,6 @@ POA_TAO_AMH_testResponseHandler::set_setest ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -3382,7 +3254,6 @@ void
 POA_TAO_AMH_testResponseHandler::set_tltest ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -3440,8 +3311,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_testHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_testHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -3634,7 +3503,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::~_TAO_AMI_testHandler_Direct_Proxy_Impl 
 {
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_stest (
     TAO_Abstract_ServantBase  *servant,
@@ -3652,7 +3520,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_stest (
         ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_stest_excep (
@@ -3672,7 +3539,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_stest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_stest (
     TAO_Abstract_ServantBase  *servant,
@@ -3689,7 +3555,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_stest (
   _tao_ptr->set_stest (
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_stest_excep (
@@ -3709,7 +3574,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_stest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_wstest (
     TAO_Abstract_ServantBase  *servant,
@@ -3727,7 +3591,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_wstest (
         ((TAO::Arg_Traits< ::CORBA::WChar *>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_wstest_excep (
@@ -3747,7 +3610,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_wstest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_wstest (
     TAO_Abstract_ServantBase  *servant,
@@ -3764,7 +3626,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_wstest (
   _tao_ptr->set_wstest (
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_wstest_excep (
@@ -3784,7 +3645,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_wstest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ltest (
     TAO_Abstract_ServantBase  *servant,
@@ -3802,7 +3662,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ltest (
         ((TAO::Arg_Traits< ::CORBA::LongLong>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ltest_excep (
@@ -3822,7 +3681,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ltest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_ltest (
     TAO_Abstract_ServantBase  *servant,
@@ -3839,7 +3697,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_ltest (
   _tao_ptr->set_ltest (
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_ltest_excep (
@@ -3859,7 +3716,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_ltest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ldtest (
     TAO_Abstract_ServantBase  *servant,
@@ -3877,7 +3733,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ldtest (
         ((TAO::Arg_Traits< ::CORBA::LongDouble>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ldtest_excep (
@@ -3897,7 +3752,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ldtest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_ldtest (
     TAO_Abstract_ServantBase  *servant,
@@ -3914,7 +3768,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_ldtest (
   _tao_ptr->set_ldtest (
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_ldtest_excep (
@@ -3934,7 +3787,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_ldtest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_etest (
     TAO_Abstract_ServantBase  *servant,
@@ -3952,7 +3804,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_etest (
         ((TAO::Arg_Traits< ::TestEnum>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_etest_excep (
@@ -3972,7 +3823,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_etest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_etest (
     TAO_Abstract_ServantBase  *servant,
@@ -3989,7 +3839,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_etest (
   _tao_ptr->set_etest (
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_etest_excep (
@@ -4009,7 +3858,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_etest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_setest (
     TAO_Abstract_ServantBase  *servant,
@@ -4027,7 +3875,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_setest (
         ((TAO::Arg_Traits< ::CORBA::WChar *>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_setest_excep (
@@ -4047,7 +3894,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_setest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_setest (
     TAO_Abstract_ServantBase  *servant,
@@ -4064,7 +3910,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_setest (
   _tao_ptr->set_setest (
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_setest_excep (
@@ -4084,7 +3929,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_setest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_tltest (
     TAO_Abstract_ServantBase  *servant,
@@ -4102,7 +3946,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_tltest (
         ((TAO::Arg_Traits< ::testlistitem>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::get_tltest_excep (
@@ -4122,7 +3965,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_tltest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_tltest (
     TAO_Abstract_ServantBase  *servant,
@@ -4139,7 +3981,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_tltest (
   _tao_ptr->set_tltest (
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::set_tltest_excep (
@@ -4159,7 +4000,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_tltest_excep (
       );
 }
 
-
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::new_testlistitem (
     TAO_Abstract_ServantBase  *servant,
@@ -4177,7 +4017,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::new_testlistitem (
         ((TAO::Arg_Traits< ::testlistitem>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_testHandler_Direct_Proxy_Impl::new_testlistitem_excep (
@@ -4197,8 +4036,6 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::new_testlistitem_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -4208,9 +4045,7 @@ POA_AMI_testHandler::POA_AMI_testHandler ()
   this->optable_ = std::addressof (tao_AMI_testHandler_optable);
 }
 
-
-class get_stest_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_stest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_stest_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -4276,9 +4111,7 @@ void POA_AMI_testHandler::get_stest_skel (
                          );
 }
 
-
-class get_stest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_stest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_stest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -4344,9 +4177,7 @@ void POA_AMI_testHandler::get_stest_excep_skel (
                          );
 }
 
-
-class set_stest_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_stest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_stest_AMI_testHandler (POA_AMI_testHandler * servant)
@@ -4394,9 +4225,7 @@ void POA_AMI_testHandler::set_stest_skel (
                          );
 }
 
-
-class set_stest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_stest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_stest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -4462,9 +4291,7 @@ void POA_AMI_testHandler::set_stest_excep_skel (
                          );
 }
 
-
-class get_wstest_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_wstest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_wstest_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -4530,9 +4357,7 @@ void POA_AMI_testHandler::get_wstest_skel (
                          );
 }
 
-
-class get_wstest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_wstest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_wstest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -4598,9 +4423,7 @@ void POA_AMI_testHandler::get_wstest_excep_skel (
                          );
 }
 
-
-class set_wstest_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_wstest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_wstest_AMI_testHandler (POA_AMI_testHandler * servant)
@@ -4648,9 +4471,7 @@ void POA_AMI_testHandler::set_wstest_skel (
                          );
 }
 
-
-class set_wstest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_wstest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_wstest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -4716,9 +4537,7 @@ void POA_AMI_testHandler::set_wstest_excep_skel (
                          );
 }
 
-
-class get_ltest_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_ltest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_ltest_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -4784,9 +4603,7 @@ void POA_AMI_testHandler::get_ltest_skel (
                          );
 }
 
-
-class get_ltest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_ltest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_ltest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -4852,9 +4669,7 @@ void POA_AMI_testHandler::get_ltest_excep_skel (
                          );
 }
 
-
-class set_ltest_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_ltest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_ltest_AMI_testHandler (POA_AMI_testHandler * servant)
@@ -4902,9 +4717,7 @@ void POA_AMI_testHandler::set_ltest_skel (
                          );
 }
 
-
-class set_ltest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_ltest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_ltest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -4970,9 +4783,7 @@ void POA_AMI_testHandler::set_ltest_excep_skel (
                          );
 }
 
-
-class get_ldtest_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_ldtest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_ldtest_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5038,9 +4849,7 @@ void POA_AMI_testHandler::get_ldtest_skel (
                          );
 }
 
-
-class get_ldtest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_ldtest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_ldtest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5106,9 +4915,7 @@ void POA_AMI_testHandler::get_ldtest_excep_skel (
                          );
 }
 
-
-class set_ldtest_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_ldtest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_ldtest_AMI_testHandler (POA_AMI_testHandler * servant)
@@ -5156,9 +4963,7 @@ void POA_AMI_testHandler::set_ldtest_skel (
                          );
 }
 
-
-class set_ldtest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_ldtest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_ldtest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5224,9 +5029,7 @@ void POA_AMI_testHandler::set_ldtest_excep_skel (
                          );
 }
 
-
-class get_etest_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_etest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_etest_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5292,9 +5095,7 @@ void POA_AMI_testHandler::get_etest_skel (
                          );
 }
 
-
-class get_etest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_etest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_etest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5360,9 +5161,7 @@ void POA_AMI_testHandler::get_etest_excep_skel (
                          );
 }
 
-
-class set_etest_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_etest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_etest_AMI_testHandler (POA_AMI_testHandler * servant)
@@ -5410,9 +5209,7 @@ void POA_AMI_testHandler::set_etest_skel (
                          );
 }
 
-
-class set_etest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_etest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_etest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5478,9 +5275,7 @@ void POA_AMI_testHandler::set_etest_excep_skel (
                          );
 }
 
-
-class get_setest_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_setest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_setest_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5546,9 +5341,7 @@ void POA_AMI_testHandler::get_setest_skel (
                          );
 }
 
-
-class get_setest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_setest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_setest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5614,9 +5407,7 @@ void POA_AMI_testHandler::get_setest_excep_skel (
                          );
 }
 
-
-class set_setest_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_setest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_setest_AMI_testHandler (POA_AMI_testHandler * servant)
@@ -5664,9 +5455,7 @@ void POA_AMI_testHandler::set_setest_skel (
                          );
 }
 
-
-class set_setest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_setest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_setest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5732,9 +5521,7 @@ void POA_AMI_testHandler::set_setest_excep_skel (
                          );
 }
 
-
-class get_tltest_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_tltest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_tltest_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5800,9 +5587,7 @@ void POA_AMI_testHandler::get_tltest_skel (
                          );
 }
 
-
-class get_tltest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class get_tltest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline get_tltest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5868,9 +5653,7 @@ void POA_AMI_testHandler::get_tltest_excep_skel (
                          );
 }
 
-
-class set_tltest_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_tltest_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_tltest_AMI_testHandler (POA_AMI_testHandler * servant)
@@ -5918,9 +5701,7 @@ void POA_AMI_testHandler::set_tltest_skel (
                          );
 }
 
-
-class set_tltest_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class set_tltest_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline set_tltest_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -5986,9 +5767,7 @@ void POA_AMI_testHandler::set_tltest_excep_skel (
                          );
 }
 
-
-class new_testlistitem_AMI_testHandler
-  : public TAO::Upcall_Command
+class new_testlistitem_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline new_testlistitem_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -6054,9 +5833,7 @@ void POA_AMI_testHandler::new_testlistitem_skel (
                          );
 }
 
-
-class new_testlistitem_excep_AMI_testHandler
-  : public TAO::Upcall_Command
+class new_testlistitem_excep_AMI_testHandler : public TAO::Upcall_Command
 {
 public:
   inline new_testlistitem_excep_AMI_testHandler (POA_AMI_testHandler * servant,
@@ -6122,13 +5899,6 @@ void POA_AMI_testHandler::new_testlistitem_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_testHandler::_is_a (const char* value)
 {
   return
@@ -6144,18 +5914,12 @@ const char* POA_AMI_testHandler::_interface_repository_id () const
   return "IDL:AMI_testHandler:1.0";
 }
 
-
-
-
 void POA_AMI_testHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_testHandler *
 POA_AMI_testHandler::_this ()
@@ -6183,8 +5947,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Simple_Server_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_Simple_Server_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -6292,7 +6054,6 @@ POA_AMH_Simple_Server::POA_AMH_Simple_Server ()
 {
   this->optable_ = std::addressof (tao_AMH_Simple_Server_optable);
 }
-
 
 void
 POA_AMH_Simple_Server::ackConfBasData_skel (
@@ -6943,11 +6704,6 @@ POA_AMH_Simple_Server::transferTriggerTdc_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_AMH_Simple_Server::_is_a (const char* value)
 {
   return
@@ -6995,8 +6751,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Simple_Server_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Simple_Server_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -7108,7 +6862,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::~_TAO_Simple_Server_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfBasData (
     TAO_Abstract_ServantBase  *servant,
@@ -7125,7 +6878,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfBasData (
   _tao_ptr->ackConfBasData (
       );
 }
-
 
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfMosData (
@@ -7144,7 +6896,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfMosData (
       );
 }
 
-
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfTwmData (
     TAO_Abstract_ServantBase  *servant,
@@ -7161,7 +6912,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfTwmData (
   _tao_ptr->ackConfTwmData (
       );
 }
-
 
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfArchData (
@@ -7180,7 +6930,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfArchData (
       );
 }
 
-
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfVonData (
     TAO_Abstract_ServantBase  *servant,
@@ -7197,7 +6946,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfVonData (
   _tao_ptr->ackConfVonData (
       );
 }
-
 
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfFftData (
@@ -7216,7 +6964,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfFftData (
       );
 }
 
-
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfSosData (
     TAO_Abstract_ServantBase  *servant,
@@ -7233,7 +6980,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfSosData (
   _tao_ptr->ackConfSosData (
       );
 }
-
 
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfSscData (
@@ -7252,7 +6998,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfSscData (
       );
 }
 
-
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfCsData (
     TAO_Abstract_ServantBase  *servant,
@@ -7269,7 +7014,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfCsData (
   _tao_ptr->ackConfCsData (
       );
 }
-
 
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR10Data (
@@ -7288,7 +7032,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR10Data (
       );
 }
 
-
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR11Data (
     TAO_Abstract_ServantBase  *servant,
@@ -7305,7 +7048,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR11Data (
   _tao_ptr->ackConfR11Data (
       );
 }
-
 
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR12Data (
@@ -7324,7 +7066,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR12Data (
       );
 }
 
-
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR13Data (
     TAO_Abstract_ServantBase  *servant,
@@ -7341,7 +7082,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR13Data (
   _tao_ptr->ackConfR13Data (
       );
 }
-
 
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR14Data (
@@ -7360,7 +7100,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR14Data (
       );
 }
 
-
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR15Data (
     TAO_Abstract_ServantBase  *servant,
@@ -7377,7 +7116,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::ackConfR15Data (
   _tao_ptr->ackConfR15Data (
       );
 }
-
 
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::shutdown (
@@ -7396,7 +7134,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::shutdown (
       );
 }
 
-
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::transferTriggerDb (
     TAO_Abstract_ServantBase  *servant,
@@ -7413,7 +7150,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::transferTriggerDb (
   _tao_ptr->transferTriggerDb (
       );
 }
-
 
 void
 _TAO_Simple_Server_Direct_Proxy_Impl::transferTriggerTdc (
@@ -7432,8 +7168,6 @@ _TAO_Simple_Server_Direct_Proxy_Impl::transferTriggerTdc (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -7443,9 +7177,7 @@ POA_Simple_Server::POA_Simple_Server ()
   this->optable_ = std::addressof (tao_Simple_Server_optable);
 }
 
-
-class ackConfBasData_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfBasData_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfBasData_Simple_Server (POA_Simple_Server * servant)
@@ -7493,9 +7225,7 @@ void POA_Simple_Server::ackConfBasData_skel (
                          );
 }
 
-
-class ackConfMosData_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfMosData_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfMosData_Simple_Server (POA_Simple_Server * servant)
@@ -7543,9 +7273,7 @@ void POA_Simple_Server::ackConfMosData_skel (
                          );
 }
 
-
-class ackConfTwmData_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfTwmData_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfTwmData_Simple_Server (POA_Simple_Server * servant)
@@ -7593,9 +7321,7 @@ void POA_Simple_Server::ackConfTwmData_skel (
                          );
 }
 
-
-class ackConfArchData_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfArchData_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfArchData_Simple_Server (POA_Simple_Server * servant)
@@ -7643,9 +7369,7 @@ void POA_Simple_Server::ackConfArchData_skel (
                          );
 }
 
-
-class ackConfVonData_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfVonData_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfVonData_Simple_Server (POA_Simple_Server * servant)
@@ -7693,9 +7417,7 @@ void POA_Simple_Server::ackConfVonData_skel (
                          );
 }
 
-
-class ackConfFftData_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfFftData_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfFftData_Simple_Server (POA_Simple_Server * servant)
@@ -7743,9 +7465,7 @@ void POA_Simple_Server::ackConfFftData_skel (
                          );
 }
 
-
-class ackConfSosData_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfSosData_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfSosData_Simple_Server (POA_Simple_Server * servant)
@@ -7793,9 +7513,7 @@ void POA_Simple_Server::ackConfSosData_skel (
                          );
 }
 
-
-class ackConfSscData_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfSscData_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfSscData_Simple_Server (POA_Simple_Server * servant)
@@ -7843,9 +7561,7 @@ void POA_Simple_Server::ackConfSscData_skel (
                          );
 }
 
-
-class ackConfCsData_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfCsData_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfCsData_Simple_Server (POA_Simple_Server * servant)
@@ -7893,9 +7609,7 @@ void POA_Simple_Server::ackConfCsData_skel (
                          );
 }
 
-
-class ackConfR10Data_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfR10Data_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfR10Data_Simple_Server (POA_Simple_Server * servant)
@@ -7943,9 +7657,7 @@ void POA_Simple_Server::ackConfR10Data_skel (
                          );
 }
 
-
-class ackConfR11Data_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfR11Data_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfR11Data_Simple_Server (POA_Simple_Server * servant)
@@ -7993,9 +7705,7 @@ void POA_Simple_Server::ackConfR11Data_skel (
                          );
 }
 
-
-class ackConfR12Data_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfR12Data_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfR12Data_Simple_Server (POA_Simple_Server * servant)
@@ -8043,9 +7753,7 @@ void POA_Simple_Server::ackConfR12Data_skel (
                          );
 }
 
-
-class ackConfR13Data_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfR13Data_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfR13Data_Simple_Server (POA_Simple_Server * servant)
@@ -8093,9 +7801,7 @@ void POA_Simple_Server::ackConfR13Data_skel (
                          );
 }
 
-
-class ackConfR14Data_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfR14Data_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfR14Data_Simple_Server (POA_Simple_Server * servant)
@@ -8143,9 +7849,7 @@ void POA_Simple_Server::ackConfR14Data_skel (
                          );
 }
 
-
-class ackConfR15Data_Simple_Server
-  : public TAO::Upcall_Command
+class ackConfR15Data_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline ackConfR15Data_Simple_Server (POA_Simple_Server * servant)
@@ -8193,9 +7897,7 @@ void POA_Simple_Server::ackConfR15Data_skel (
                          );
 }
 
-
-class shutdown_Simple_Server
-  : public TAO::Upcall_Command
+class shutdown_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline shutdown_Simple_Server (POA_Simple_Server * servant)
@@ -8243,9 +7945,7 @@ void POA_Simple_Server::shutdown_skel (
                          );
 }
 
-
-class transferTriggerDb_Simple_Server
-  : public TAO::Upcall_Command
+class transferTriggerDb_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline transferTriggerDb_Simple_Server (POA_Simple_Server * servant)
@@ -8293,9 +7993,7 @@ void POA_Simple_Server::transferTriggerDb_skel (
                          );
 }
 
-
-class transferTriggerTdc_Simple_Server
-  : public TAO::Upcall_Command
+class transferTriggerTdc_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline transferTriggerTdc_Simple_Server (POA_Simple_Server * servant)
@@ -8343,13 +8041,6 @@ void POA_Simple_Server::transferTriggerTdc_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Simple_Server::_is_a (const char* value)
 {
   return
@@ -8364,18 +8055,12 @@ const char* POA_Simple_Server::_interface_repository_id () const
   return "IDL:Simple_Server:1.0";
 }
 
-
-
-
 void POA_Simple_Server::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Simple_Server *
 POA_Simple_Server::_this ()
@@ -8395,7 +8080,6 @@ void
 POA_TAO_AMH_Simple_ServerResponseHandler::ackConfBasData ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -8417,7 +8101,6 @@ POA_TAO_AMH_Simple_ServerResponseHandler::ackConfMosData ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -8437,7 +8120,6 @@ void
 POA_TAO_AMH_Simple_ServerResponseHandler::ackConfTwmData ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -8459,7 +8141,6 @@ POA_TAO_AMH_Simple_ServerResponseHandler::ackConfArchData ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -8479,7 +8160,6 @@ void
 POA_TAO_AMH_Simple_ServerResponseHandler::ackConfVonData ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -8501,7 +8181,6 @@ POA_TAO_AMH_Simple_ServerResponseHandler::ackConfFftData ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -8521,7 +8200,6 @@ void
 POA_TAO_AMH_Simple_ServerResponseHandler::ackConfSosData ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -8543,7 +8221,6 @@ POA_TAO_AMH_Simple_ServerResponseHandler::ackConfSscData ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -8563,7 +8240,6 @@ void
 POA_TAO_AMH_Simple_ServerResponseHandler::ackConfCsData ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -8585,7 +8261,6 @@ POA_TAO_AMH_Simple_ServerResponseHandler::ackConfR10Data ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -8605,7 +8280,6 @@ void
 POA_TAO_AMH_Simple_ServerResponseHandler::ackConfR11Data ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -8627,7 +8301,6 @@ POA_TAO_AMH_Simple_ServerResponseHandler::ackConfR12Data ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -8647,7 +8320,6 @@ void
 POA_TAO_AMH_Simple_ServerResponseHandler::ackConfR13Data ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -8669,7 +8341,6 @@ POA_TAO_AMH_Simple_ServerResponseHandler::ackConfR14Data ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -8689,7 +8360,6 @@ void
 POA_TAO_AMH_Simple_ServerResponseHandler::ackConfR15Data ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -8711,7 +8381,6 @@ POA_TAO_AMH_Simple_ServerResponseHandler::shutdown ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -8732,7 +8401,6 @@ POA_TAO_AMH_Simple_ServerResponseHandler::transferTriggerDb ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -8752,7 +8420,6 @@ void
 POA_TAO_AMH_Simple_ServerResponseHandler::transferTriggerTdc ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -8782,8 +8449,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -8855,8 +8520,6 @@ _TAO_AMI_Simple_ServerHandler_Direct_Proxy_Impl::~_TAO_AMI_Simple_ServerHandler_
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -8866,13 +8529,6 @@ POA_AMI_Simple_ServerHandler::POA_AMI_Simple_ServerHandler ()
 {
   this->optable_ = std::addressof (tao_AMI_Simple_ServerHandler_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_AMI_Simple_ServerHandler::_is_a (const char* value)
 {
@@ -8889,18 +8545,12 @@ const char* POA_AMI_Simple_ServerHandler::_interface_repository_id () const
   return "IDL:AMI_Simple_ServerHandler:1.0";
 }
 
-
-
-
 void POA_AMI_Simple_ServerHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_Simple_ServerHandler *
 POA_AMI_Simple_ServerHandler::_this ()

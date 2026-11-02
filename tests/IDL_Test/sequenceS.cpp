@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCES_9GCV0H_CPP_
-#define _TAO_IDL_SEQUENCES_9GCV0H_CPP_
-
+#ifndef _TAO_IDL_SEQUENCES_M88ARS_CPP_
+#define _TAO_IDL_SEQUENCES_M88ARS_CPP_
 
 #include "sequenceS.h"
 

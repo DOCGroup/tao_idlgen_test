@@ -25,7 +25,6 @@
 #include <memory>
 #include <new>
 
-
 ACE_INLINE
 scope_test::i_scope_test::i_scope_test (
     TAO_Stub *objref,
@@ -53,7 +52,6 @@ scope_test::AMH_i_scope_testExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:scope_test/AMH_i_scope_testExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler (
@@ -147,7 +145,6 @@ mod2::fwd::un::full_mem () const
   return this->u_.full_mem_->in ();
 }
 
-
 ACE_INLINE
 mod2::fwd::fwd (
     TAO_Stub *objref,
@@ -175,7 +172,6 @@ mod2::AMH_fwdExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:mod2/AMH_fwdExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 mod2::AMI_fwdHandler::AMI_fwdHandler (

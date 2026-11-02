@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRING_VALUEC_EVJ24E_H_
-#define _TAO_IDL_STRING_VALUEC_EVJ24E_H_
+#ifndef _TAO_IDL_STRING_VALUEC_2X4KK5_H_
+#define _TAO_IDL_STRING_VALUEC_2X4KK5_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -66,7 +64,6 @@
 namespace include_test
 {
 
-
 #if !defined (_INCLUDE_TEST_STRINGTEST__VAR_OUT_CH_)
 #define _INCLUDE_TEST_STRINGTEST__VAR_OUT_CH_
 
@@ -75,7 +72,6 @@ namespace include_test
   using StringTest_out = TAO_Value_Out_T<StringTest>;
 
 #endif /* end #if !defined */
-
 
   class TAO_IDL_TEST_STUB_Export StringTest
     : public virtual ::CORBA::ValueBase
@@ -105,7 +101,6 @@ namespace include_test
   public:
     virtual void my_string_value (CORBA::StringValue *) = 0;
     virtual CORBA::StringValue *my_string_value () const = 0;
-
 
   protected:
     StringTest ();
@@ -145,18 +140,13 @@ namespace include_test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_StringTest;
 
-
-
 } // module include_test
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -175,7 +165,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_INCLUDE_TEST_STRINGTEST__ARG_TRAITS_)
 #define _INCLUDE_TEST_STRINGTEST__ARG_TRAITS_
@@ -198,10 +187,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace OBV_include_test
 {
-
 
   // OBV_ class
   class TAO_IDL_TEST_STUB_Export StringTest
@@ -240,7 +227,6 @@ private:
 };
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -262,8 +248,6 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -272,8 +256,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, include_test::StringT
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, include_test::StringTest *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -284,15 +266,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const include_test::StringTest *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, include_test::StringTest *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "string_valueC.inl"

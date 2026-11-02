@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_9TCL1B_H_
-#define _TAO_IDL_BUG_2616_REGRESSIONS_9TCL1B_H_
+#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_QL32BC_H_
+#define _TAO_IDL_BUG_2616_REGRESSIONS_QL32BC_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::AA>
     : public
@@ -87,7 +83,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::BB>
     : public
@@ -97,7 +92,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_INTERFACE1__SARG_TRAITS_)
 #define _INTERFACE1__SARG_TRAITS_
@@ -113,7 +107,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_INTERFACE1EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_INTERFACE1EXCEPTIONHOLDER__SARG_TRAITS_
@@ -132,7 +125,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_INTERFACE1HANDLER__SARG_TRAITS_)
 #define _AMI_INTERFACE1HANDLER__SARG_TRAITS_
 
@@ -148,7 +140,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_INTERFACE2__SARG_TRAITS_)
 #define _INTERFACE2__SARG_TRAITS_
 
@@ -163,7 +154,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_INTERFACE2EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_INTERFACE2EXCEPTIONHOLDER__SARG_TRAITS_
@@ -181,7 +171,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_INTERFACE2HANDLER__SARG_TRAITS_)
 #define _AMI_INTERFACE2HANDLER__SARG_TRAITS_
@@ -201,7 +190,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_Interface1;
 using POA_AMH_Interface1_ptr = POA_AMH_Interface1 *;
 
@@ -214,7 +202,6 @@ protected:
 public:
   POA_AMH_Interface1 (const POA_AMH_Interface1& rhs);
   virtual ~POA_AMH_Interface1 () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -236,9 +223,6 @@ virtual void do_it (
   ) = 0;
 
 };
-
-
-
 
 class POA_Interface1;
 using POA_Interface1_ptr = POA_Interface1 *;
@@ -278,7 +262,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -297,7 +280,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_Interface1ResponseHandler;
 using POA_TAO_AMH_Interface1ResponseHandler_ptr = POA_TAO_AMH_Interface1ResponseHandler *;
 
@@ -312,9 +294,6 @@ public:
   void do_it_excep (
     ::AMH_Interface1ExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_Interface1Handler;
 using POA_AMI_Interface1Handler_ptr = POA_AMI_Interface1Handler *;
@@ -360,7 +339,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -384,7 +362,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_Interface2;
 using POA_AMH_Interface2_ptr = POA_AMH_Interface2 *;
 
@@ -397,7 +374,6 @@ protected:
 public:
   POA_AMH_Interface2 (const POA_AMH_Interface2& rhs);
   virtual ~POA_AMH_Interface2 () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -419,9 +395,6 @@ virtual void do_it (
   ) = 0;
 
 };
-
-
-
 
 class POA_Interface2;
 using POA_Interface2_ptr = POA_Interface2 *;
@@ -461,7 +434,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -480,7 +452,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_Interface2ResponseHandler;
 using POA_TAO_AMH_Interface2ResponseHandler_ptr = POA_TAO_AMH_Interface2ResponseHandler *;
 
@@ -495,9 +466,6 @@ public:
   void do_it_excep (
     ::AMH_Interface2ExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_Interface2Handler;
 using POA_AMI_Interface2Handler_ptr = POA_AMI_Interface2Handler *;
@@ -543,7 +511,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -567,10 +534,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "Bug_2616_RegressionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

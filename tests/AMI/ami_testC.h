@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTC_4286ZK_H_
-#define _TAO_IDL_AMI_TESTC_4286ZK_H_
+#ifndef _TAO_IDL_AMI_TESTC_1MEP0N_H_
+#define _TAO_IDL_AMI_TESTC_1MEP0N_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
 #include "tao/AnyTypeCode/Any.h"
@@ -67,18 +65,14 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace A
 {
-
 
   class  DidTheRightThing : public ::CORBA::UserException
   {
@@ -106,7 +100,6 @@ namespace A
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
-
     DidTheRightThing (
         ::CORBA::Long _tao_id,
         const char * _tao_whatDidTheRightThing);
@@ -114,7 +107,6 @@ namespace A
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
   };
   extern  ::CORBA::TypeCode_ptr const _tc_DidTheRightThing;
-
 
 #if !defined (_A_AMI_TEST__VAR_OUT_CH_)
 #define _A_AMI_TEST__VAR_OUT_CH_
@@ -128,9 +120,6 @@ namespace A
   using AMI_Test_out = TAO_Objref_Out_T<AMI_Test>;
 
 #endif /* end #if !defined */
-
-
-
 
   class  AMI_Test
     : public virtual ::CORBA::Object
@@ -183,9 +172,6 @@ namespace A
       ::A::AMI_AMI_TestHandler_ptr ami_handler,
       const char * str);
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
@@ -215,7 +201,6 @@ namespace A
   };
   extern  ::CORBA::TypeCode_ptr const _tc_AMI_Test;
 
-
 #if !defined (_A_AMI_AMI_TESTHANDLER__VAR_OUT_CH_)
 #define _A_AMI_AMI_TESTHANDLER__VAR_OUT_CH_
 
@@ -225,9 +210,6 @@ namespace A
   using AMI_AMI_TestHandler_out = TAO_Objref_Out_T<AMI_AMI_TestHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
   class  AMI_AMI_TestHandler
     : public virtual ::Messaging::ReplyHandler
@@ -298,9 +280,6 @@ namespace A
     virtual void inout_arg_test_excep (
       ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
@@ -330,7 +309,6 @@ namespace A
   };
   extern  ::CORBA::TypeCode_ptr const _tc_AMI_AMI_TestHandler;
 
-
 #if !defined (_A_TEST_CHILD__VAR_OUT_CH_)
 #define _A_TEST_CHILD__VAR_OUT_CH_
 
@@ -343,9 +321,6 @@ namespace A
   using Test_Child_out = TAO_Objref_Out_T<Test_Child>;
 
 #endif /* end #if !defined */
-
-
-
 
   class  Test_Child
     : public virtual ::A::AMI_Test
@@ -372,9 +347,6 @@ namespace A
 
     virtual void sendc_child_op (
       ::A::AMI_Test_ChildHandler_ptr ami_handler);
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -405,7 +377,6 @@ namespace A
   };
   extern  ::CORBA::TypeCode_ptr const _tc_Test_Child;
 
-
 #if !defined (_A_AMI_TEST_CHILDHANDLER__VAR_OUT_CH_)
 #define _A_AMI_TEST_CHILDHANDLER__VAR_OUT_CH_
 
@@ -415,9 +386,6 @@ namespace A
   using AMI_Test_ChildHandler_out = TAO_Objref_Out_T<AMI_Test_ChildHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
   class  AMI_Test_ChildHandler
     : public virtual ::A::AMI_AMI_TestHandler
@@ -451,9 +419,6 @@ namespace A
     virtual void child_op_excep (
       ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
@@ -483,18 +448,13 @@ namespace A
   };
   extern  ::CORBA::TypeCode_ptr const _tc_AMI_Test_ChildHandler;
 
-
-
 } // module A
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -514,7 +474,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_A_AMI_TEST__ARG_TRAITS_)
 #define _A_AMI_TEST__ARG_TRAITS_
 
@@ -530,7 +489,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_A_AMI_AMI_TESTHANDLER__ARG_TRAITS_)
 #define _A_AMI_AMI_TESTHANDLER__ARG_TRAITS_
@@ -548,7 +506,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_A_TEST_CHILD__ARG_TRAITS_)
 #define _A_TEST_CHILD__ARG_TRAITS_
 
@@ -564,7 +521,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_A_AMI_TEST_CHILDHANDLER__ARG_TRAITS_)
 #define _A_AMI_TEST_CHILDHANDLER__ARG_TRAITS_
@@ -585,11 +541,9 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace OBV_A
 {
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -655,24 +609,14 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
  void operator<<= (::CORBA::Any &, const A::DidTheRightThing &); // copying version
  void operator<<= (::CORBA::Any &, A::DidTheRightThing*); // noncopying version
  ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const A::DidTheRightThing *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -683,12 +627,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -697,12 +635,6 @@ namespace CORBA {
  ::CORBA::Boolean operator>>= (const ::CORBA::Any &, A::AMI_AMI_TestHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -713,12 +645,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -728,21 +654,12 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
  ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::DidTheRightThing &);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, A::DidTheRightThing &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -751,22 +668,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
  ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::AMI_AMI_TestHandler_ptr );
  ::CORBA::Boolean operator>> (TAO_InputCDR &, A::AMI_AMI_TestHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -775,18 +682,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
  ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::AMI_Test_ChildHandler_ptr );
  ::CORBA::Boolean operator>> (TAO_InputCDR &, A::AMI_Test_ChildHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "ami_testC.inl"

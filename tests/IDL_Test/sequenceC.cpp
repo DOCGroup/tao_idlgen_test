@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "sequenceC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -52,9 +51,6 @@
 #include "sequenceC.inl"
 #endif /* !defined INLINE */
 
-
-
-
 #if !defined (_MYFOOSTRUCTSEQ_CS_)
 #define _MYFOOSTRUCTSEQ_CS_
 
@@ -77,7 +73,6 @@ void myfoostructseq::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
 
 #ifndef _TAO_TYPECODE_myfoostructseq_GUARD
 #define _TAO_TYPECODE_myfoostructseq_GUARD
@@ -144,7 +139,6 @@ _tao_tc_myfoostruct (
 
 ::CORBA::TypeCode_ptr const _tc_myfoostruct = std::addressof(_tao_tc_myfoostruct);
 
-
 void
 myfoostruct::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -152,7 +146,6 @@ myfoostruct::_tao_any_destructor (
   myfoostruct *tmp = static_cast<myfoostruct *> (_tao_void_pointer);
   delete tmp;
 }
-
 
 nasty::nasty (
     const char * _tao_id,
@@ -164,7 +157,6 @@ nasty::nasty (
   this->id = ::CORBA::string_dup (_tao_id);
   this->rec_info = _tao_rec_info;
 }
-
 
 nasty::nasty ()
   : ::CORBA::UserException (
@@ -275,9 +267,6 @@ _tao_tc_nasty (
 
 ::CORBA::TypeCode_ptr const _tc_nasty = std::addressof(_tao_tc_nasty);
 
-
-
-
 #if !defined (_OCTETSEQSEQ_CS_)
 #define _OCTETSEQSEQ_CS_
 
@@ -300,7 +289,6 @@ void OctetSeqSeq::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
 
 #ifndef _TAO_TYPECODE_OctetSeqSeq_GUARD
 #define _TAO_TYPECODE_OctetSeqSeq_GUARD
@@ -366,8 +354,6 @@ TAO::Objref_Traits<seqLocal>::marshal (const seqLocal_ptr p,TAO_OutputCDR & cdr)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 seqLocal::seqLocal ()
 {}
@@ -461,9 +447,6 @@ static TAO::TypeCode::Objref<char const *,
 
 ::CORBA::TypeCode_ptr const _tc_seqLocal = std::addressof(_tao_tc_seqLocal);
 
-
-
-
 #if !defined (_SEQLOCALSEQ_CS_)
 #define _SEQLOCALSEQ_CS_
 
@@ -486,7 +469,6 @@ void seqLocalSeq::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
 
 #ifndef _TAO_TYPECODE_seqLocalSeq_GUARD
 #define _TAO_TYPECODE_seqLocalSeq_GUARD
@@ -523,9 +505,6 @@ static TAO::TypeCode::Alias<char const *,
 
 ::CORBA::TypeCode_ptr const _tc_seqLocalSeq = std::addressof(_tao_tc_seqLocalSeq);
 
-
-
-
 #if !defined (_DEPLOYMENT_COMPONENTPACKAGEDESCRIPTIONS_CS_)
 #define _DEPLOYMENT_COMPONENTPACKAGEDESCRIPTIONS_CS_
 
@@ -548,7 +527,6 @@ void Deployment::ComponentPackageDescriptions::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
 
 #ifndef _TAO_TYPECODE_Deployment_ComponentPackageDescriptions_GUARD
 #define _TAO_TYPECODE_Deployment_ComponentPackageDescriptions_GUARD
@@ -583,7 +561,6 @@ static TAO::TypeCode::Alias<char const *,
     "ComponentPackageDescriptions",
     &TAO::TypeCode::tc_Deployment_ComponentPackageDescriptions_0);
 
-
 namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_ComponentPackageDescriptions = std::addressof(_tao_tc_Deployment_ComponentPackageDescriptions);
@@ -616,12 +593,10 @@ _tao_tc_Deployment_ComponentAssemblyDescription (
   _tao_fields_Deployment_ComponentAssemblyDescription,
   1);
 
-
 namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_ComponentAssemblyDescription = std::addressof(_tao_tc_Deployment_ComponentAssemblyDescription);
 }
-
 
 void
 Deployment::ComponentAssemblyDescription::_tao_any_destructor (
@@ -630,9 +605,6 @@ Deployment::ComponentAssemblyDescription::_tao_any_destructor (
   ComponentAssemblyDescription *tmp = static_cast<ComponentAssemblyDescription *> (_tao_void_pointer);
   delete tmp;
 }
-
-
-
 
 #if !defined (_DEPLOYMENT_COMPONENTASSEMBLYDESCRIPTIONS_CS_)
 #define _DEPLOYMENT_COMPONENTASSEMBLYDESCRIPTIONS_CS_
@@ -656,7 +628,6 @@ void Deployment::ComponentAssemblyDescriptions::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
 
 #ifndef _TAO_TYPECODE_Deployment_ComponentAssemblyDescriptions_GUARD
 #define _TAO_TYPECODE_Deployment_ComponentAssemblyDescriptions_GUARD
@@ -691,14 +662,10 @@ static TAO::TypeCode::Alias<char const *,
     "ComponentAssemblyDescriptions",
     &TAO::TypeCode::tc_Deployment_ComponentAssemblyDescriptions_0);
 
-
 namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_ComponentAssemblyDescriptions = std::addressof(_tao_tc_Deployment_ComponentAssemblyDescriptions);
 }
-
-
-
 
 #if !defined (_DEPLOYMENT_NAMEDIMPLEMENTATIONARTIFACTS_CS_)
 #define _DEPLOYMENT_NAMEDIMPLEMENTATIONARTIFACTS_CS_
@@ -722,7 +689,6 @@ void Deployment::NamedImplementationArtifacts::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
 
 #ifndef _TAO_TYPECODE_Deployment_NamedImplementationArtifacts_GUARD
 #define _TAO_TYPECODE_Deployment_NamedImplementationArtifacts_GUARD
@@ -757,7 +723,6 @@ static TAO::TypeCode::Alias<char const *,
     "NamedImplementationArtifacts",
     &TAO::TypeCode::tc_Deployment_NamedImplementationArtifacts_0);
 
-
 namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_NamedImplementationArtifacts = std::addressof(_tao_tc_Deployment_NamedImplementationArtifacts);
@@ -791,12 +756,10 @@ _tao_tc_Deployment_NamedImplementationArtifact (
   _tao_fields_Deployment_NamedImplementationArtifact,
   2);
 
-
 namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_NamedImplementationArtifact = std::addressof(_tao_tc_Deployment_NamedImplementationArtifact);
 }
-
 
 void
 Deployment::NamedImplementationArtifact::_tao_any_destructor (
@@ -828,12 +791,10 @@ _tao_tc_Deployment_MonolithicImplementationDescription (
   _tao_fields_Deployment_MonolithicImplementationDescription,
   1);
 
-
 namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_MonolithicImplementationDescription = std::addressof(_tao_tc_Deployment_MonolithicImplementationDescription);
 }
-
 
 void
 Deployment::MonolithicImplementationDescription::_tao_any_destructor (
@@ -842,9 +803,6 @@ Deployment::MonolithicImplementationDescription::_tao_any_destructor (
   MonolithicImplementationDescription *tmp = static_cast<MonolithicImplementationDescription *> (_tao_void_pointer);
   delete tmp;
 }
-
-
-
 
 #if !defined (_DEPLOYMENT_MONOLITHICIMPLEMENTATIONDESCRIPTIONS_CS_)
 #define _DEPLOYMENT_MONOLITHICIMPLEMENTATIONDESCRIPTIONS_CS_
@@ -868,7 +826,6 @@ void Deployment::MonolithicImplementationDescriptions::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
 
 #ifndef _TAO_TYPECODE_Deployment_MonolithicImplementationDescriptions_GUARD
 #define _TAO_TYPECODE_Deployment_MonolithicImplementationDescriptions_GUARD
@@ -903,12 +860,10 @@ static TAO::TypeCode::Alias<char const *,
     "MonolithicImplementationDescriptions",
     &TAO::TypeCode::tc_Deployment_MonolithicImplementationDescriptions_0);
 
-
 namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_MonolithicImplementationDescriptions = std::addressof(_tao_tc_Deployment_MonolithicImplementationDescriptions);
 }
-
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -938,12 +893,10 @@ _tao_tc_Deployment_PackagedComponentImplementation (
   _tao_fields_Deployment_PackagedComponentImplementation,
   2);
 
-
 namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_PackagedComponentImplementation = std::addressof(_tao_tc_Deployment_PackagedComponentImplementation);
 }
-
 
 void
 Deployment::PackagedComponentImplementation::_tao_any_destructor (
@@ -952,9 +905,6 @@ Deployment::PackagedComponentImplementation::_tao_any_destructor (
   PackagedComponentImplementation *tmp = static_cast<PackagedComponentImplementation *> (_tao_void_pointer);
   delete tmp;
 }
-
-
-
 
 #if !defined (_DEPLOYMENT_PACKAGEDCOMPONENTIMPLEMENTATIONS_CS_)
 #define _DEPLOYMENT_PACKAGEDCOMPONENTIMPLEMENTATIONS_CS_
@@ -978,7 +928,6 @@ void Deployment::PackagedComponentImplementations::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
 
 #ifndef _TAO_TYPECODE_Deployment_PackagedComponentImplementations_GUARD
 #define _TAO_TYPECODE_Deployment_PackagedComponentImplementations_GUARD
@@ -1013,7 +962,6 @@ static TAO::TypeCode::Alias<char const *,
     "PackagedComponentImplementations",
     &TAO::TypeCode::tc_Deployment_PackagedComponentImplementations_0);
 
-
 namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_PackagedComponentImplementations = std::addressof(_tao_tc_Deployment_PackagedComponentImplementations);
@@ -1047,12 +995,10 @@ _tao_tc_Deployment_ComponentPackageDescription (
   _tao_fields_Deployment_ComponentPackageDescription,
   2);
 
-
 namespace Deployment
 {
   ::CORBA::TypeCode_ptr const _tc_ComponentPackageDescription = std::addressof(_tao_tc_Deployment_ComponentPackageDescription);
 }
-
 
 void
 Deployment::ComponentPackageDescription::_tao_any_destructor (
@@ -1064,7 +1010,6 @@ Deployment::ComponentPackageDescription::_tao_any_destructor (
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1103,8 +1048,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1147,11 +1090,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1180,11 +1119,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1224,11 +1160,8 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1268,11 +1201,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1304,11 +1233,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1350,8 +1276,6 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 namespace TAO
@@ -1373,10 +1297,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1416,11 +1338,8 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1459,8 +1378,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1503,11 +1420,8 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1547,11 +1461,8 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1590,8 +1501,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1634,8 +1543,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1677,11 +1584,8 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1720,8 +1624,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1764,11 +1666,8 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1807,8 +1706,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1851,7 +1748,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 #if !defined _TAO_CDR_OP_myfoostructseq_CPP_
 #define _TAO_CDR_OP_myfoostructseq_CPP_
 
@@ -1870,7 +1766,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1900,11 +1795,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1938,7 +1829,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 #if !defined _TAO_CDR_OP_OctetSeqSeq_CPP_
 #define _TAO_CDR_OP_OctetSeqSeq_CPP_
 
@@ -1957,7 +1847,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1980,7 +1869,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2008,7 +1896,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 #if !defined _TAO_CDR_OP_Deployment_ComponentAssemblyDescriptions_CPP_
 #define _TAO_CDR_OP_Deployment_ComponentAssemblyDescriptions_CPP_
 
@@ -2027,7 +1914,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2050,7 +1936,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2080,8 +1965,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -2104,7 +1987,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 #if !defined _TAO_CDR_OP_Deployment_MonolithicImplementationDescriptions_CPP_
 #define _TAO_CDR_OP_Deployment_MonolithicImplementationDescriptions_CPP_
 
@@ -2123,7 +2005,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2153,7 +2034,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 #if !defined _TAO_CDR_OP_Deployment_PackagedComponentImplementations_CPP_
 #define _TAO_CDR_OP_Deployment_PackagedComponentImplementations_CPP_
 
@@ -2172,7 +2052,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2201,6 +2080,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

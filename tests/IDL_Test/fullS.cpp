@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLS_2L2WMJ_CPP_
-#define _TAO_IDL_FULLS_2L2WMJ_CPP_
-
+#ifndef _TAO_IDL_FULLS_OQU3Y2_CPP_
+#define _TAO_IDL_FULLS_OQU3Y2_CPP_
 
 #include "fullS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_scope_test_AMH_i_scope_test_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_scope_test_AMH_i_scope_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -138,13 +135,6 @@ POA_scope_test::AMH_i_scope_test::AMH_i_scope_test ()
   this->optable_ = std::addressof (tao_scope_test_AMH_i_scope_test_optable);
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_scope_test::AMH_i_scope_test::_is_a (const char* value)
 {
   return
@@ -192,8 +182,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_scope_test_i_scope_test_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_scope_test_i_scope_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -265,8 +253,6 @@ POA_scope_test::_TAO_i_scope_test_Direct_Proxy_Impl::~_TAO_i_scope_test_Direct_P
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -276,13 +262,6 @@ POA_scope_test::i_scope_test::i_scope_test ()
 {
   this->optable_ = std::addressof (tao_scope_test_i_scope_test_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_scope_test::i_scope_test::_is_a (const char* value)
 {
@@ -298,18 +277,12 @@ const char* POA_scope_test::i_scope_test::_interface_repository_id () const
   return "IDL:scope_test/i_scope_test:1.0";
 }
 
-
-
-
 void POA_scope_test::i_scope_test::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 scope_test::i_scope_test *
 POA_scope_test::i_scope_test::_this ()
@@ -325,7 +298,6 @@ POA_scope_test::i_scope_test::_this ()
   return {};
 }
 
-
 class TAO_scope_test_AMI_i_scope_testHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
@@ -338,8 +310,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_scope_test_AMI_i_scope_testHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_scope_test_AMI_i_scope_testHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -411,8 +381,6 @@ POA_scope_test::_TAO_AMI_i_scope_testHandler_Direct_Proxy_Impl::~_TAO_AMI_i_scop
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -422,13 +390,6 @@ POA_scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler ()
 {
   this->optable_ = std::addressof (tao_scope_test_AMI_i_scope_testHandler_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_scope_test::AMI_i_scope_testHandler::_is_a (const char* value)
 {
@@ -445,18 +406,12 @@ const char* POA_scope_test::AMI_i_scope_testHandler::_interface_repository_id ()
   return "IDL:scope_test/AMI_i_scope_testHandler:1.0";
 }
 
-
-
-
 void POA_scope_test::AMI_i_scope_testHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 scope_test::AMI_i_scope_testHandler *
 POA_scope_test::AMI_i_scope_testHandler::_this ()
@@ -484,8 +439,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod2_AMH_fwd_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod2_AMH_fwd_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -577,7 +530,6 @@ POA_mod2::AMH_fwd::AMH_fwd ()
 {
   this->optable_ = std::addressof (tao_mod2_AMH_fwd_optable);
 }
-
 
 void
 POA_mod2::AMH_fwd::_get_attr_skel (
@@ -714,11 +666,6 @@ POA_mod2::AMH_fwd::op_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_mod2::AMH_fwd::_is_a (const char* value)
 {
   return
@@ -766,8 +713,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod2_fwd_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod2_fwd_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -863,7 +808,6 @@ POA_mod2::_TAO_fwd_Direct_Proxy_Impl::~_TAO_fwd_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_mod2::_TAO_fwd_Direct_Proxy_Impl::_get_attr (
     TAO_Abstract_ServantBase  *servant,
@@ -882,7 +826,6 @@ POA_mod2::_TAO_fwd_Direct_Proxy_Impl::_get_attr (
         );
 }
 
-
 void
 POA_mod2::_TAO_fwd_Direct_Proxy_Impl::_set_attr (
     TAO_Abstract_ServantBase  *servant,
@@ -900,7 +843,6 @@ POA_mod2::_TAO_fwd_Direct_Proxy_Impl::_set_attr (
         ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_mod2::_TAO_fwd_Direct_Proxy_Impl::op (
@@ -923,8 +865,6 @@ POA_mod2::_TAO_fwd_Direct_Proxy_Impl::op (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -934,12 +874,10 @@ POA_mod2::fwd::fwd ()
   this->optable_ = std::addressof (tao_mod2_fwd_optable);
 }
 
-
 namespace POA_mod2
 {
 
-  class _get_attr_fwd
-    : public TAO::Upcall_Command
+  class _get_attr_fwd : public TAO::Upcall_Command
   {
   public:
     inline _get_attr_fwd (POA_mod2::fwd * servant,
@@ -1003,12 +941,10 @@ void POA_mod2::fwd::_get_attr_skel (
                          );
 }
 
-
 namespace POA_mod2
 {
 
-  class _set_attr_fwd
-    : public TAO::Upcall_Command
+  class _set_attr_fwd : public TAO::Upcall_Command
   {
   public:
     inline _set_attr_fwd (POA_mod2::fwd * servant,
@@ -1075,12 +1011,10 @@ void POA_mod2::fwd::_set_attr_skel (
                          );
 }
 
-
 namespace POA_mod2
 {
 
-  class op_fwd
-    : public TAO::Upcall_Command
+  class op_fwd : public TAO::Upcall_Command
   {
   public:
     inline op_fwd (POA_mod2::fwd * servant,
@@ -1180,13 +1114,6 @@ void POA_mod2::fwd::op_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_mod2::fwd::_is_a (const char* value)
 {
   return
@@ -1201,18 +1128,12 @@ const char* POA_mod2::fwd::_interface_repository_id () const
   return "IDL:mod2/fwd:1.0";
 }
 
-
-
-
 void POA_mod2::fwd::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 mod2::fwd *
 POA_mod2::fwd::_this ()
@@ -1260,7 +1181,6 @@ void
 POA_mod2::TAO_AMH_fwdResponseHandler::set_attr ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -1324,8 +1244,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod2_AMI_fwdHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod2_AMI_fwdHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1406,7 +1324,6 @@ POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::~_TAO_AMI_fwdHandler_Direct_Pro
 {
 }
 
-
 void
 POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::get_attr (
     TAO_Abstract_ServantBase  *servant,
@@ -1424,7 +1341,6 @@ POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::get_attr (
         ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::get_attr_excep (
@@ -1444,7 +1360,6 @@ POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::get_attr_excep (
       );
 }
 
-
 void
 POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::set_attr (
     TAO_Abstract_ServantBase  *servant,
@@ -1461,7 +1376,6 @@ POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::set_attr (
   _tao_ptr->set_attr (
       );
 }
-
 
 void
 POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::set_attr_excep (
@@ -1480,7 +1394,6 @@ POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::set_attr_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::op (
@@ -1503,7 +1416,6 @@ POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::op (
       );
 }
 
-
 void
 POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::op_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1522,8 +1434,6 @@ POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::op_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1533,12 +1443,10 @@ POA_mod2::AMI_fwdHandler::AMI_fwdHandler ()
   this->optable_ = std::addressof (tao_mod2_AMI_fwdHandler_optable);
 }
 
-
 namespace POA_mod2
 {
 
-  class get_attr_AMI_fwdHandler
-    : public TAO::Upcall_Command
+  class get_attr_AMI_fwdHandler : public TAO::Upcall_Command
   {
   public:
     inline get_attr_AMI_fwdHandler (POA_mod2::AMI_fwdHandler * servant,
@@ -1605,12 +1513,10 @@ void POA_mod2::AMI_fwdHandler::get_attr_skel (
                          );
 }
 
-
 namespace POA_mod2
 {
 
-  class get_attr_excep_AMI_fwdHandler
-    : public TAO::Upcall_Command
+  class get_attr_excep_AMI_fwdHandler : public TAO::Upcall_Command
   {
   public:
     inline get_attr_excep_AMI_fwdHandler (POA_mod2::AMI_fwdHandler * servant,
@@ -1677,12 +1583,10 @@ void POA_mod2::AMI_fwdHandler::get_attr_excep_skel (
                          );
 }
 
-
 namespace POA_mod2
 {
 
-  class set_attr_AMI_fwdHandler
-    : public TAO::Upcall_Command
+  class set_attr_AMI_fwdHandler : public TAO::Upcall_Command
   {
   public:
     inline set_attr_AMI_fwdHandler (POA_mod2::AMI_fwdHandler * servant)
@@ -1731,12 +1635,10 @@ void POA_mod2::AMI_fwdHandler::set_attr_skel (
                          );
 }
 
-
 namespace POA_mod2
 {
 
-  class set_attr_excep_AMI_fwdHandler
-    : public TAO::Upcall_Command
+  class set_attr_excep_AMI_fwdHandler : public TAO::Upcall_Command
   {
   public:
     inline set_attr_excep_AMI_fwdHandler (POA_mod2::AMI_fwdHandler * servant,
@@ -1803,12 +1705,10 @@ void POA_mod2::AMI_fwdHandler::set_attr_excep_skel (
                          );
 }
 
-
 namespace POA_mod2
 {
 
-  class op_AMI_fwdHandler
-    : public TAO::Upcall_Command
+  class op_AMI_fwdHandler : public TAO::Upcall_Command
   {
   public:
     inline op_AMI_fwdHandler (POA_mod2::AMI_fwdHandler * servant,
@@ -1911,12 +1811,10 @@ void POA_mod2::AMI_fwdHandler::op_skel (
                          );
 }
 
-
 namespace POA_mod2
 {
 
-  class op_excep_AMI_fwdHandler
-    : public TAO::Upcall_Command
+  class op_excep_AMI_fwdHandler : public TAO::Upcall_Command
   {
   public:
     inline op_excep_AMI_fwdHandler (POA_mod2::AMI_fwdHandler * servant,
@@ -1933,8 +1831,6 @@ namespace POA_mod2
           this->operation_details_,
           this->args_,
           1);
-
-
 
       static TAO::Exception_Data
       _tao_mod2_AMI_fwdHandler_op_excep_exceptiondata [] =
@@ -2011,13 +1907,6 @@ void POA_mod2::AMI_fwdHandler::op_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_mod2::AMI_fwdHandler::_is_a (const char* value)
 {
   return
@@ -2033,18 +1922,12 @@ const char* POA_mod2::AMI_fwdHandler::_interface_repository_id () const
   return "IDL:mod2/AMI_fwdHandler:1.0";
 }
 
-
-
-
 void POA_mod2::AMI_fwdHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 mod2::AMI_fwdHandler *
 POA_mod2::AMI_fwdHandler::_this ()

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2S_P7UHNP_H_
-#define _TAO_IDL_REOPEN_INCLUDE2S_P7UHNP_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2S_EITQVN_H_
+#define _TAO_IDL_REOPEN_INCLUDE2S_EITQVN_H_
 
 #include /**/ "ace/pre.h"
 
@@ -51,14 +51,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -77,7 +74,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::frag::pug>
     : public
@@ -87,7 +83,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_A_B_X2__SARG_TRAITS_)
 #define _A_B_X2__SARG_TRAITS_
@@ -103,7 +98,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_A_B_AMH_X2EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _A_B_AMH_X2EXCEPTIONHOLDER__SARG_TRAITS_
@@ -121,7 +115,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_A_B_AMI_X2HANDLER__SARG_TRAITS_)
 #define _A_B_AMI_X2HANDLER__SARG_TRAITS_
@@ -141,17 +134,12 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_frag
 {
-
-
 
 } // module frag
 namespace POA_XX
 {
-
-
 
 } // module XX
 namespace POA_A
@@ -173,7 +161,6 @@ namespace POA_A
       AMH_X2 (const AMH_X2& rhs);
       virtual ~AMH_X2 () = default;
 
-
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
       virtual void _dispatch (
@@ -193,9 +180,6 @@ namespace POA_A
       ) = 0;
 
   };
-
-
-
 
   class X2;
   using X2_ptr = X2 *;
@@ -234,7 +218,6 @@ namespace POA_A
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -253,7 +236,6 @@ namespace POA_A
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class TAO_AMH_X2ResponseHandler;
   using TAO_AMH_X2ResponseHandler_ptr = TAO_AMH_X2ResponseHandler *;
 
@@ -269,9 +251,6 @@ namespace POA_A
     void getX2_excep (
       ::A::B::AMH_X2ExceptionHolder * holder) override;
   };
-
-
-
 
   class AMI_X2Handler;
   using AMI_X2Handler_ptr = AMI_X2Handler *;
@@ -318,7 +297,6 @@ namespace POA_A
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -342,16 +320,11 @@ namespace POA_A
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module A::B
-
 
 } // module A
 
 #include "reopen_include2S_T.h"
-
 
 #include /**/ "ace/post.h"
 

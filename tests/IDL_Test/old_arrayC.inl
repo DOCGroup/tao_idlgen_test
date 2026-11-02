@@ -22,10 +22,7 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -74,13 +71,9 @@ TAO::Array_Traits<OldArray::str22_forany>::alloc ()
   return OldArray::str22_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -129,13 +122,9 @@ TAO::Array_Traits<OldArray::boolarray_forany>::alloc ()
   return OldArray::boolarray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -181,13 +170,9 @@ TAO::Array_Traits<OldArray::char_17_forany>::alloc ()
   return OldArray::char_17_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -236,13 +221,9 @@ TAO::Array_Traits<OldArray::char_10_2_forany>::alloc ()
   return OldArray::char_10_2_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -294,13 +275,9 @@ TAO::Array_Traits<OldArray::A_matrix_forany>::alloc ()
   return OldArray::A_matrix_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -352,13 +329,9 @@ TAO::Array_Traits<OldArray::B_matrix_forany>::alloc ()
   return OldArray::B_matrix_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -410,13 +383,9 @@ TAO::Array_Traits<OldArray::C_matrix_forany>::alloc ()
   return OldArray::C_matrix_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -472,10 +441,7 @@ TAO::Array_Traits<OldArray::A_rmatrix_forany>::alloc ()
   return OldArray::A_rmatrix_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 ACE_INLINE
 OldArray::A_i::A_i (
@@ -504,7 +470,6 @@ OldArray::AMH_A_iExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldArray/AMH_A_iExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 OldArray::AMI_A_iHandler::AMI_A_iHandler (

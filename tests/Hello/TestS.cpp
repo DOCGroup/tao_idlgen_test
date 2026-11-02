@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_7KXID5_CPP_
-#define _TAO_IDL_TESTS_7KXID5_CPP_
-
+#ifndef _TAO_IDL_TESTS_CDWI4F_CPP_
+#define _TAO_IDL_TESTS_CDWI4F_CPP_
 
 #include "TestS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -60,8 +59,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Test_Hello_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Test_Hello_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -134,12 +131,10 @@ POA_Test::Hello::Hello ()
   this->optable_ = std::addressof (tao_Test_Hello_optable);
 }
 
-
 namespace POA_Test
 {
 
-  class get_string_Hello
-    : public TAO::Upcall_Command
+  class get_string_Hello : public TAO::Upcall_Command
   {
   public:
     inline get_string_Hello (POA_Test::Hello * servant,
@@ -180,9 +175,7 @@ void POA_Test::Hello::get_string_skel (
       throw ::CORBA::INTERNAL ();
     }
 
-  get_string_Hello command (
-    impl,
-    args);
+  get_string_Hello command (impl, args);
 
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
@@ -197,12 +190,10 @@ void POA_Test::Hello::get_string_skel (
                          );
 }
 
-
 namespace POA_Test
 {
 
-  class shutdown_Hello
-    : public TAO::Upcall_Command
+  class shutdown_Hello : public TAO::Upcall_Command
   {
   public:
     inline shutdown_Hello (POA_Test::Hello * servant)
@@ -251,13 +242,6 @@ void POA_Test::Hello::shutdown_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Test::Hello::_is_a (const char* value)
 {
   return
@@ -272,18 +256,12 @@ const char* POA_Test::Hello::_interface_repository_id () const
   return "IDL:Test/Hello:1.0";
 }
 
-
-
-
 void POA_Test::Hello::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Test::Hello *
 POA_Test::Hello::_this ()

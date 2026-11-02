@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAYS_BLSKST_H_
-#define _TAO_IDL_ARRAYS_BLSKST_H_
+#ifndef _TAO_IDL_ARRAYS_MPXDVR_H_
+#define _TAO_IDL_ARRAYS_MPXDVR_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +52,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -122,7 +119,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::wrap>
     : public
@@ -166,7 +162,6 @@ namespace TAO
   {
   };
 
-
 #if !defined (_ARRAY_ARGS__SARG_TRAITS_)
 #define _ARRAY_ARGS__SARG_TRAITS_
 
@@ -181,7 +176,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_ARRAY_ARGSEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_ARRAY_ARGSEXCEPTIONHOLDER__SARG_TRAITS_
@@ -199,7 +193,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_ARRAY_ARGSHANDLER__SARG_TRAITS_)
 #define _AMI_ARRAY_ARGSHANDLER__SARG_TRAITS_
@@ -238,7 +231,6 @@ namespace TAO
   {
   };
 
-
 #if !defined (_TESTDATA__SARG_TRAITS_)
 #define _TESTDATA__SARG_TRAITS_
 
@@ -265,7 +257,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::testdata::struct2>
     : public
@@ -275,7 +266,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::testdata::ArraycharList>
@@ -287,7 +277,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::testdata::BdArraycharList>
     : public
@@ -297,7 +286,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::testdata::ArrayDeCharList>
@@ -309,7 +297,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::testdata::BdArrayDeCharList>
     : public
@@ -319,7 +306,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_AMH_TESTDATAEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_TESTDATAEXCEPTIONHOLDER__SARG_TRAITS_
@@ -337,7 +323,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_TESTDATAHANDLER__SARG_TRAITS_)
 #define _AMI_TESTDATAHANDLER__SARG_TRAITS_
@@ -376,7 +361,6 @@ namespace TAO
   {
   };
 
-
 #if !defined (_ARRAYTEST_MYTEST__SARG_TRAITS_)
 #define _ARRAYTEST_MYTEST__SARG_TRAITS_
 
@@ -391,7 +375,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ARRAYTEST_AMH_MYTESTEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _ARRAYTEST_AMH_MYTESTEXCEPTIONHOLDER__SARG_TRAITS_
@@ -410,7 +393,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ARRAYTEST_AMI_MYTESTHANDLER__SARG_TRAITS_)
 #define _ARRAYTEST_AMI_MYTESTHANDLER__SARG_TRAITS_
 
@@ -425,7 +407,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
   template<>
   class SArg_Traits< ::bug_2126::FirstUnion>
@@ -448,7 +429,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::bug_2126::MyStruct>
     : public
@@ -458,7 +438,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::bug_2126::SecondUnion>
@@ -481,7 +460,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::bug_2126::BdMyStruct>
     : public
@@ -491,7 +469,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::bug_2126::BdSecondUnion>
@@ -536,7 +513,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::B85>
     : public
@@ -550,7 +526,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_array_args;
 using POA_AMH_array_args_ptr = POA_AMH_array_args *;
 
@@ -563,7 +538,6 @@ protected:
 public:
   POA_AMH_array_args (const POA_AMH_array_args& rhs);
   virtual ~POA_AMH_array_args () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -586,9 +560,6 @@ virtual void all_arrays (
   ) = 0;
 
 };
-
-
-
 
 class POA_array_args;
 using POA_array_args_ptr = POA_array_args *;
@@ -629,7 +600,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -648,7 +618,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_array_argsResponseHandler;
 using POA_TAO_AMH_array_argsResponseHandler_ptr = POA_TAO_AMH_array_argsResponseHandler *;
 
@@ -663,9 +632,6 @@ public:
   void all_arrays_excep (
     ::AMH_array_argsExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_array_argsHandler;
 using POA_AMI_array_argsHandler_ptr = POA_AMI_array_argsHandler *;
@@ -711,7 +677,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -735,11 +700,8 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 namespace POA_string_array
 {
-
-
 
 } // module string_array
 class POA_AMH_testdata;
@@ -755,7 +717,6 @@ public:
   POA_AMH_testdata (const POA_AMH_testdata& rhs);
   virtual ~POA_AMH_testdata () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -766,9 +727,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_testdata;
 using POA_testdata_ptr = POA_testdata *;
@@ -801,7 +759,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -816,7 +773,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_testdataResponseHandler;
 using POA_TAO_AMH_testdataResponseHandler_ptr = POA_TAO_AMH_testdataResponseHandler *;
 
@@ -828,9 +784,6 @@ public:
   POA_TAO_AMH_testdataResponseHandler () = default;
   virtual ~POA_TAO_AMH_testdataResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_testdataHandler;
 using POA_AMI_testdataHandler_ptr = POA_AMI_testdataHandler *;
@@ -863,7 +816,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -878,7 +830,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 namespace POA_arraytest
 {
@@ -895,7 +846,6 @@ namespace POA_arraytest
   public:
     AMH_MyTest (const AMH_MyTest& rhs);
     virtual ~AMH_MyTest () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -916,9 +866,6 @@ namespace POA_arraytest
     ) = 0;
 
 };
-
-
-
 
 class MyTest;
 using MyTest_ptr = MyTest *;
@@ -958,7 +905,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -977,7 +923,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_MyTestResponseHandler;
 using TAO_AMH_MyTestResponseHandler_ptr = TAO_AMH_MyTestResponseHandler *;
 
@@ -993,9 +938,6 @@ public:
   void test_method_excep (
     ::arraytest::AMH_MyTestExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_MyTestHandler;
 using AMI_MyTestHandler_ptr = AMI_MyTestHandler *;
@@ -1042,7 +984,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1066,19 +1007,13 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module arraytest
 namespace POA_bug_2126
 {
 
-
-
 } // module bug_2126
 
 #include "arrayS_T.h"
-
 
 #include /**/ "ace/post.h"
 

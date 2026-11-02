@@ -25,7 +25,6 @@
 #include <memory>
 #include <new>
 
-
 ACE_INLINE
 Base::Base (
     TAO_Stub *objref,
@@ -54,7 +53,6 @@ AMH_BaseExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_BaseExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_BaseHandler::AMI_BaseHandler (
     TAO_Stub *objref,
@@ -72,7 +70,6 @@ AMI_BaseHandler::AMI_BaseHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 Derived::Derived (
@@ -102,7 +99,6 @@ AMH_DerivedExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_DerivedExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_DerivedHandler::AMI_DerivedHandler (
     TAO_Stub *objref,
@@ -120,7 +116,6 @@ AMI_DerivedHandler::AMI_DerivedHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 foostep::foostep (
@@ -150,7 +145,6 @@ AMH_foostepExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_foostepExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_foostepHandler::AMI_foostepHandler (
     TAO_Stub *objref,
@@ -168,7 +162,6 @@ AMI_foostepHandler::AMI_foostepHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 mother::mother (
@@ -198,7 +191,6 @@ AMH_motherExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_motherExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_motherHandler::AMI_motherHandler (
     TAO_Stub *objref,
@@ -216,7 +208,6 @@ AMI_motherHandler::AMI_motherHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 father::father (
@@ -246,7 +237,6 @@ AMH_fatherExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_fatherExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_fatherHandler::AMI_fatherHandler (
     TAO_Stub *objref,
@@ -264,7 +254,6 @@ AMI_fatherHandler::AMI_fatherHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 child::child (
@@ -294,7 +283,6 @@ AMH_childExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_childExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_childHandler::AMI_childHandler (
     TAO_Stub *objref,
@@ -312,7 +300,6 @@ AMI_childHandler::AMI_childHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 _cxx_try::_cxx_try (
@@ -342,7 +329,6 @@ AMH__cxx_tryExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH__cxx_tryExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI__cxx_tryHandler::AMI__cxx_tryHandler (
     TAO_Stub *objref,
@@ -360,7 +346,6 @@ AMI__cxx_tryHandler::AMI__cxx_tryHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 later_user::later_user (
@@ -390,7 +375,6 @@ AMH_later_userExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_later_userExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_later_userHandler::AMI_later_userHandler (
     TAO_Stub *objref,
@@ -408,7 +392,6 @@ AMI_later_userHandler::AMI_later_userHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 later::later (
@@ -438,7 +421,6 @@ AMH_laterExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_laterExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_laterHandler::AMI_laterHandler (
     TAO_Stub *objref,
@@ -456,7 +438,6 @@ AMI_laterHandler::AMI_laterHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 Begin::Begin (
@@ -486,7 +467,6 @@ AMH_BeginExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_BeginExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_BeginHandler::AMI_BeginHandler (
     TAO_Stub *objref,
@@ -504,7 +484,6 @@ AMI_BeginHandler::AMI_BeginHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 Middle::Middle (
@@ -534,7 +513,6 @@ AMH_MiddleExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_MiddleExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_MiddleHandler::AMI_MiddleHandler (
     TAO_Stub *objref,
@@ -552,7 +530,6 @@ AMI_MiddleHandler::AMI_MiddleHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 End::End (
@@ -582,7 +559,6 @@ AMH_EndExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_EndExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_EndHandler::AMI_EndHandler (
     TAO_Stub *objref,
@@ -600,7 +576,6 @@ AMI_EndHandler::AMI_EndHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 Client::Client (
@@ -630,7 +605,6 @@ AMH_ClientExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_ClientExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_ClientHandler::AMI_ClientHandler (
     TAO_Stub *objref,
@@ -649,9 +623,7 @@ AMI_ClientHandler::AMI_ClientHandler (
 {
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -697,10 +669,7 @@ TAO::Array_Traits<AttributeTester::string_1_forany>::alloc ()
   return AttributeTester::string_1_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 ACE_INLINE
 AttributeTester::AttributeTester (
@@ -730,7 +699,6 @@ AMH_AttributeTesterExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_AttributeTesterExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_AttributeTesterHandler::AMI_AttributeTesterHandler (
     TAO_Stub *objref,
@@ -749,9 +717,7 @@ AMI_AttributeTesterHandler::AMI_AttributeTesterHandler (
 {
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -796,7 +762,6 @@ TAO::Array_Traits<ParamMod::ParameterTester::object_array_type_forany>::alloc ()
 {
   return ParamMod::ParameterTester::object_array_type_alloc ();
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -923,7 +888,6 @@ ParamMod::ParameterTester::object_union_type::pt () const
   return this->u_.pt_->in ();
 }
 
-
 ACE_INLINE
 ParamMod::ParameterTester::ParameterTester (
     TAO_Stub *objref,
@@ -951,7 +915,6 @@ ParamMod::AMH_ParameterTesterExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:ParamMod/AMH_ParameterTesterExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 ParamMod::AMI_ParameterTesterHandler::AMI_ParameterTesterHandler (
@@ -1039,7 +1002,6 @@ A::U::aa () const
   return this->u_.aa_->in ();
 }
 
-
 ACE_INLINE
 A::A (
     TAO_Stub *objref,
@@ -1068,7 +1030,6 @@ AMH_AExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_AExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_AHandler::AMI_AHandler (
     TAO_Stub *objref,
@@ -1086,7 +1047,6 @@ AMI_AHandler::AMI_AHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 M::A::A (
@@ -1116,7 +1076,6 @@ M::AMH_AExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:M/AMH_AExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 M::AMI_AHandler::AMI_AHandler (
     TAO_Stub *objref,
@@ -1134,7 +1093,6 @@ M::AMI_AHandler::AMI_AHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 i1::if1::if1 (
@@ -1164,7 +1122,6 @@ i1::AMH_if1ExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:i1/AMH_if1ExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 i1::AMI_if1Handler::AMI_if1Handler (
     TAO_Stub *objref,
@@ -1182,7 +1139,6 @@ i1::AMI_if1Handler::AMI_if1Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 i2::if2::if2 (
@@ -1212,7 +1168,6 @@ i2::AMH_if2ExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:i2/AMH_if2ExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 i2::AMI_if2Handler::AMI_if2Handler (
     TAO_Stub *objref,
@@ -1230,7 +1185,6 @@ i2::AMI_if2Handler::AMI_if2Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 i2::if3::if3 (
@@ -1260,7 +1214,6 @@ i2::AMH_if3ExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:i2/AMH_if3ExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 i2::AMI_if3Handler::AMI_if3Handler (
     TAO_Stub *objref,
@@ -1278,7 +1231,6 @@ i2::AMI_if3Handler::AMI_if3Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 redefs::base::base (
@@ -1308,7 +1260,6 @@ redefs::AMH_baseExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:redefs/AMH_baseExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 redefs::AMI_baseHandler::AMI_baseHandler (
     TAO_Stub *objref,
@@ -1326,7 +1277,6 @@ redefs::AMI_baseHandler::AMI_baseHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 redefs::derived::derived (
@@ -1356,7 +1306,6 @@ redefs::AMH_derivedExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:redefs/AMH_derivedExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 redefs::AMI_derivedHandler::AMI_derivedHandler (
     TAO_Stub *objref,
@@ -1374,7 +1323,6 @@ redefs::AMI_derivedHandler::AMI_derivedHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 Rec_Arg_Traits::base::base (
@@ -1404,7 +1352,6 @@ Rec_Arg_Traits::AMH_baseExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:Rec_Arg_Traits/AMH_baseExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 Rec_Arg_Traits::AMI_baseHandler::AMI_baseHandler (
     TAO_Stub *objref,
@@ -1422,7 +1369,6 @@ Rec_Arg_Traits::AMI_baseHandler::AMI_baseHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 Rec_Arg_Traits::derived::derived (
@@ -1452,7 +1398,6 @@ Rec_Arg_Traits::AMH_derivedExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:Rec_Arg_Traits/AMH_derivedExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 Rec_Arg_Traits::AMI_derivedHandler::AMI_derivedHandler (
     TAO_Stub *objref,
@@ -1470,7 +1415,6 @@ Rec_Arg_Traits::AMI_derivedHandler::AMI_derivedHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 call_test::iTest::iTest (
@@ -1500,7 +1444,6 @@ call_test::AMH_iTestExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:call_test/AMH_iTestExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 call_test::AMI_iTestHandler::AMI_iTestHandler (
     TAO_Stub *objref,
@@ -1518,7 +1461,6 @@ call_test::AMI_iTestHandler::AMI_iTestHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 call_attribute::iBar::iBar (
@@ -1547,7 +1489,6 @@ call_attribute::AMH_iBarExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:call_attribute/AMH_iBarExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 call_attribute::AMI_iBarHandler::AMI_iBarHandler (

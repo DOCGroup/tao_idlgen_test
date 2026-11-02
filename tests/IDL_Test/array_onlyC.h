@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ONLYC_9E2FKW_H_
-#define _TAO_IDL_ARRAY_ONLYC_9E2FKW_H_
+#ifndef _TAO_IDL_ARRAY_ONLYC_0DZDDY_H_
+#define _TAO_IDL_ARRAY_ONLYC_0DZDDY_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/ORB.h"
@@ -56,11 +54,9 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-
 using TEST_TYPE = ::CORBA::Char[10];
 using TEST_TYPE_slice = ::CORBA::Char;
 struct TEST_TYPE_tag {};
-
 
 using TEST_TYPE_var =
   TAO_FixedArray_Var_T<
@@ -81,14 +77,11 @@ TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *TEST_TYPE_dup (const TEST_TYPE_slice *
 
 TAO_IDL_TEST_STUB_Export void TEST_TYPE_copy (TEST_TYPE_slice *_tao_to, const TEST_TYPE_slice *_tao_from);
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -122,9 +115,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -148,8 +138,6 @@ namespace TAO
   };
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 

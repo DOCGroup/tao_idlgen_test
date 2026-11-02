@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2C_0AB35T_H_
-#define _TAO_IDL_SIMPLE2C_0AB35T_H_
+#ifndef _TAO_IDL_SIMPLE2C_4WHQKX_H_
+#define _TAO_IDL_SIMPLE2C_4WHQKX_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -75,16 +73,11 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 #if !defined (_SIMPLE3__VAR_OUT_CH_)
 #define _SIMPLE3__VAR_OUT_CH_
@@ -98,9 +91,6 @@ using simple3_var = TAO_Objref_Var_T<simple3>;
 using simple3_out = TAO_Objref_Out_T<simple3>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export simple3
   : public virtual ::simple2
@@ -122,7 +112,6 @@ public:
   static simple3_ptr _narrow (::CORBA::Object_ptr obj);
   static simple3_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static simple3_ptr _nil ();
-
 
   class TAO_IDL_TEST_STUB_Export OverFlow : public ::CORBA::UserException
   {
@@ -150,7 +139,6 @@ public:
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
-
     OverFlow (
         ::CORBA::Long _tao_a,
         const char * _tao_msg);
@@ -158,7 +146,6 @@ public:
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
   };
   static ::CORBA::TypeCode_ptr const _tc_OverFlow;
-
 
   class TAO_IDL_TEST_STUB_Export UnderFlow : public ::CORBA::UserException
   {
@@ -186,7 +173,6 @@ public:
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
-
     UnderFlow (
         ::CORBA::Long _tao_b,
         const char * _tao_msg);
@@ -194,7 +180,6 @@ public:
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
   };
   static ::CORBA::TypeCode_ptr const _tc_UnderFlow;
-
 
   class TAO_IDL_TEST_STUB_Export BadNum : public ::CORBA::UserException
   {
@@ -221,14 +206,12 @@ public:
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
-
     BadNum (
         const vec10 & _tao_c);
 
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
   };
   static ::CORBA::TypeCode_ptr const _tc_BadNum;
-
 
   class TAO_IDL_TEST_STUB_Export UserError : public ::CORBA::UserException
   {
@@ -254,7 +237,6 @@ public:
 
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
     virtual void _tao_decode (TAO_InputCDR &cdr);
-
 
     UserError (
         const ::CORBA::Any & _tao_reason);
@@ -282,9 +264,6 @@ public:
     ::AMI_simple3Handler_ptr ami_handler,
     const ::CORBA::Any & x,
     const ::CORBA::Any & y);
-
-
-
 
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
@@ -317,7 +296,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_simple3;
 
-
 #if !defined (_AMH_SIMPLE3EXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _AMH_SIMPLE3EXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -326,7 +304,6 @@ using AMH_simple3ExceptionHolder_var = TAO_Value_Var_T<AMH_simple3ExceptionHolde
 using AMH_simple3ExceptionHolder_out = TAO_Value_Out_T<AMH_simple3ExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
 class TAO_IDL_TEST_STUB_Export AMH_simple3ExceptionHolder
   : public virtual ::CORBA::DefaultValueRefCountBase
@@ -380,7 +357,6 @@ public:
 public:
   virtual void raise_sendc_op4 ();
 
-
 protected:
   AMH_simple3ExceptionHolder ();
   virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
@@ -402,7 +378,6 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_simple3ExceptionHolder;
 
-
 #if !defined (_AMH_SIMPLE3RESPONSEHANDLER__VAR_OUT_CH_)
 #define _AMH_SIMPLE3RESPONSEHANDLER__VAR_OUT_CH_
 
@@ -415,9 +390,6 @@ using AMH_simple3ResponseHandler_var = TAO_Objref_Var_T<AMH_simple3ResponseHandl
 using AMH_simple3ResponseHandler_out = TAO_Objref_Out_T<AMH_simple3ResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMH_simple3ResponseHandler
   : public virtual ::CORBA::Object
@@ -455,9 +427,6 @@ public:
   virtual void op4_excep (
     ::AMH_simple3ExceptionHolder * holder) = 0;
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -467,8 +436,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_simple3ResponseHandler ();
-
-
 
   virtual ~AMH_simple3ResponseHandler () = default;
 
@@ -481,7 +448,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_simple3ResponseHandler;
 
-
 #if !defined (_AMI_SIMPLE3HANDLER__VAR_OUT_CH_)
 #define _AMI_SIMPLE3HANDLER__VAR_OUT_CH_
 
@@ -491,9 +457,6 @@ using AMI_simple3Handler_var = TAO_Objref_Var_T<AMI_simple3Handler>;
 using AMI_simple3Handler_out = TAO_Objref_Out_T<AMI_simple3Handler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMI_simple3Handler
   : public virtual ::AMI_simple2Handler
@@ -545,9 +508,6 @@ public:
   virtual void op4_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -579,14 +539,11 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_simple3Handler;
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -606,7 +563,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_SIMPLE3__ARG_TRAITS_)
 #define _SIMPLE3__ARG_TRAITS_
 
@@ -622,7 +578,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_SIMPLE3EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _AMH_SIMPLE3EXCEPTIONHOLDER__ARG_TRAITS_
@@ -642,7 +597,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_SIMPLE3HANDLER__ARG_TRAITS_)
 #define _AMI_SIMPLE3HANDLER__ARG_TRAITS_
 
@@ -661,9 +615,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 // OBV_ class
 class TAO_IDL_TEST_STUB_Export OBV_AMH_simple3ExceptionHolder
@@ -688,7 +639,6 @@ protected:
 private:
   CORBA::Boolean require_truncation_ {false};
 };
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -753,12 +703,6 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -768,12 +712,8 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, sim
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const simple3::OverFlow &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::OverFlow*); // noncopying version
@@ -781,12 +721,8 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, con
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const simple3::UnderFlow &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::UnderFlow*); // noncopying version
@@ -794,12 +730,8 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, con
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const simple3::BadNum &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::BadNum*); // noncopying version
@@ -807,20 +739,14 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, con
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const simple3::UserError &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::UserError*); // noncopying version
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const simple3::UserError *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -831,12 +757,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMH
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -845,12 +765,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_simple3ResponseHa
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMH_simple3ResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -861,11 +775,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMI
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const simple3_ptr );
@@ -873,51 +782,33 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, simple3_pt
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const simple3::OverFlow &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, simple3::OverFlow &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const simple3::UnderFlow &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, simple3::UnderFlow &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const simple3::BadNum &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, simple3::BadNum &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const simple3::UserError &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, simple3::UserError &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -928,8 +819,6 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_simple3ExceptionHolder *);
@@ -937,18 +826,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_simple
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_simple3Handler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_simple3Handler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "simple2C.inl"

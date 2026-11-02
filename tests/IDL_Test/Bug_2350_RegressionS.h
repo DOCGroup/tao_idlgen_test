@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_Z3QSFY_H_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_Z3QSFY_H_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_I6VB51_H_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_I6VB51_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::user_ExceptionHolder>
     : public
@@ -86,7 +82,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_BUG_2350_REGRESSION__SARG_TRAITS_)
 #define _BUG_2350_REGRESSION__SARG_TRAITS_
@@ -102,7 +97,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_BUG_2350_REGRESSIONEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_BUG_2350_REGRESSIONEXCEPTIONHOLDER__SARG_TRAITS_
@@ -120,7 +114,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_BUG_2350_REGRESSIONHANDLER__SARG_TRAITS_)
 #define _AMI_BUG_2350_REGRESSIONHANDLER__SARG_TRAITS_
@@ -140,7 +133,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_Bug_2350_Regression;
 using POA_AMH_Bug_2350_Regression_ptr = POA_AMH_Bug_2350_Regression *;
 
@@ -153,7 +145,6 @@ protected:
 public:
   POA_AMH_Bug_2350_Regression (const POA_AMH_Bug_2350_Regression& rhs);
   virtual ~POA_AMH_Bug_2350_Regression () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -175,9 +166,6 @@ virtual void Bug_2350_Regression_excep (
   ) = 0;
 
 };
-
-
-
 
 class POA_Bug_2350_Regression;
 using POA_Bug_2350_Regression_ptr = POA_Bug_2350_Regression *;
@@ -217,7 +205,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -236,7 +223,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_Bug_2350_RegressionResponseHandler;
 using POA_TAO_AMH_Bug_2350_RegressionResponseHandler_ptr = POA_TAO_AMH_Bug_2350_RegressionResponseHandler *;
 
@@ -251,9 +237,6 @@ public:
   void Bug_2350_Regression_excep_excep (
     ::AMH_Bug_2350_RegressionExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_Bug_2350_RegressionHandler;
 using POA_AMI_Bug_2350_RegressionHandler_ptr = POA_AMI_Bug_2350_RegressionHandler *;
@@ -299,7 +282,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -323,10 +305,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "Bug_2350_RegressionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

@@ -22,10 +22,7 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -71,10 +68,7 @@ TAO::Array_Traits<sfoo_ar_forany>::alloc ()
   return sfoo_ar_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 ACE_INLINE
 TestSeq::TestSeq (
@@ -103,7 +97,6 @@ AMH_TestSeqExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_TestSeqExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_TestSeqHandler::AMI_TestSeqHandler (

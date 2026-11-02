@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2S_KQ3T3H_H_
-#define _TAO_IDL_SIMPLE2S_KQ3T3H_H_
+#ifndef _TAO_IDL_SIMPLE2S_MUFI5Z_H_
+#define _TAO_IDL_SIMPLE2S_MUFI5Z_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +52,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -78,7 +75,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_SIMPLE3__SARG_TRAITS_)
 #define _SIMPLE3__SARG_TRAITS_
 
@@ -93,7 +89,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_SIMPLE3EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_SIMPLE3EXCEPTIONHOLDER__SARG_TRAITS_
@@ -111,7 +106,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_SIMPLE3HANDLER__SARG_TRAITS_)
 #define _AMI_SIMPLE3HANDLER__SARG_TRAITS_
@@ -131,7 +125,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_simple3;
 using POA_AMH_simple3_ptr = POA_AMH_simple3 *;
 
@@ -145,7 +138,6 @@ protected:
 public:
   POA_AMH_simple3 (const POA_AMH_simple3& rhs);
   virtual ~POA_AMH_simple3 () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -178,9 +170,6 @@ virtual void op4 (
   ) = 0;
 
 };
-
-
-
 
 class POA_simple3;
 using POA_simple3_ptr = POA_simple3 *;
@@ -232,7 +221,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -255,7 +243,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 class POA_TAO_AMH_simple3ResponseHandler;
 using POA_TAO_AMH_simple3ResponseHandler_ptr = POA_TAO_AMH_simple3ResponseHandler *;
@@ -281,9 +268,6 @@ public:
   void op4_excep (
     ::AMH_simple3ExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_simple3Handler;
 using POA_AMI_simple3Handler_ptr = POA_AMI_simple3Handler *;
@@ -349,7 +333,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -381,10 +364,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "simple2S_T.h"
-
 
 #include /**/ "ace/post.h"
 

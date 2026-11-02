@@ -22,10 +22,7 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -71,7 +68,5 @@ TAO::Array_Traits<TEST_TYPE_forany>::alloc ()
   return TEST_TYPE_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

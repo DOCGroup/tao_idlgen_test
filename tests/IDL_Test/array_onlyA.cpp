@@ -36,7 +36,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 
-
 #ifndef _TAO_TYPECODE_TEST_TYPE_GUARD
 #define _TAO_TYPECODE_TEST_TYPE_GUARD
 
@@ -111,5 +110,4 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

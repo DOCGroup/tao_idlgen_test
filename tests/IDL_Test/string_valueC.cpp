@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "string_valueC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -59,15 +58,12 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_include_test_StringTest,
     1);
 
-
 namespace include_test
 {
   ::CORBA::TypeCode_ptr const _tc_StringTest = std::addressof(_tao_tc_include_test_StringTest);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<include_test::StringTest>::add_ref (include_test::StringTest * p)
@@ -88,8 +84,6 @@ TAO::Value_Traits<include_test::StringTest>::release (include_test::StringTest *
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 include_test::StringTest *
 include_test::StringTest::_downcast (::CORBA::ValueBase *v)
@@ -186,7 +180,6 @@ include_test::StringTest::_tao_unmarshal (
   return true;
 }
 
-
 include_test::StringTest_init::StringTest_init ()
 {
 }
@@ -269,8 +262,6 @@ OBV_include_test::StringTest::my_string_value () const
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<>
@@ -284,9 +275,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -335,12 +324,8 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
@@ -362,8 +347,6 @@ CORBA::remove_ref (include_test::StringTest * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -387,9 +370,7 @@ operator>> (
   return include_test::StringTest::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_include_test::StringTest::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
@@ -425,7 +406,6 @@ OBV_include_test::StringTest::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_Chun
   else
     return ci.handle_chunking (strm);
 
-
 }
 
 void
@@ -433,6 +413,4 @@ OBV_include_test::StringTest::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 

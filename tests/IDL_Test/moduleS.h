@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_MODULES_HZ5JK0_H_
-#define _TAO_IDL_MODULES_HZ5JK0_H_
+#ifndef _TAO_IDL_MODULES_C1W7BT_H_
+#define _TAO_IDL_MODULES_C1W7BT_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MOD1_MOD2_EX1__SARG_TRAITS_)
 #define _MOD1_MOD2_EX1__SARG_TRAITS_
 
@@ -91,7 +87,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_MOD1_MOD2_AMH_EX1EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MOD1_MOD2_AMH_EX1EXCEPTIONHOLDER__SARG_TRAITS_
@@ -110,7 +105,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MOD1_MOD2_AMI_EX1HANDLER__SARG_TRAITS_)
 #define _MOD1_MOD2_AMI_EX1HANDLER__SARG_TRAITS_
 
@@ -126,7 +120,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MOD1_MOD2_EX2__SARG_TRAITS_)
 #define _MOD1_MOD2_EX2__SARG_TRAITS_
 
@@ -141,7 +134,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_MOD1_MOD2_AMH_EX2EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MOD1_MOD2_AMH_EX2EXCEPTIONHOLDER__SARG_TRAITS_
@@ -159,7 +151,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_MOD1_MOD2_AMI_EX2HANDLER__SARG_TRAITS_)
 #define _MOD1_MOD2_AMI_EX2HANDLER__SARG_TRAITS_
@@ -179,7 +170,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_mod1
 {
 
@@ -198,7 +188,6 @@ namespace POA_mod1
     public:
       AMH_ex1 (const AMH_ex1& rhs);
       virtual ~AMH_ex1 () = default;
-
 
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -248,9 +237,6 @@ namespace POA_mod1
       ) = 0;
 
   };
-
-
-
 
   class ex1;
   using ex1_ptr = ex1 *;
@@ -309,7 +295,6 @@ namespace POA_mod1
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -340,7 +325,6 @@ namespace POA_mod1
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class TAO_AMH_ex1ResponseHandler;
   using TAO_AMH_ex1ResponseHandler_ptr = TAO_AMH_ex1ResponseHandler *;
 
@@ -367,9 +351,6 @@ namespace POA_mod1
     void m1_excep (
       ::mod1::mod2::AMH_ex1ExceptionHolder * holder) override;
   };
-
-
-
 
   class AMI_ex1Handler;
   using AMI_ex1Handler_ptr = AMI_ex1Handler *;
@@ -457,7 +438,6 @@ namespace POA_mod1
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -505,7 +485,6 @@ namespace POA_mod1
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class AMH_ex2;
   using AMH_ex2_ptr = AMH_ex2 *;
 
@@ -519,7 +498,6 @@ namespace POA_mod1
   public:
     AMH_ex2 (const AMH_ex2& rhs);
     virtual ~AMH_ex2 () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -560,9 +538,6 @@ namespace POA_mod1
     ) = 0;
 
 };
-
-
-
 
 class ex2;
 using ex2_ptr = ex2 *;
@@ -616,7 +591,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -644,7 +618,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_ex2ResponseHandler;
 using TAO_AMH_ex2ResponseHandler_ptr = TAO_AMH_ex2ResponseHandler *;
 
@@ -668,9 +641,6 @@ public:
   void m2_excep (
     ::mod1::mod2::AMH_ex2ExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_ex2Handler;
 using AMI_ex2Handler_ptr = AMI_ex2Handler *;
@@ -745,7 +715,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -785,16 +754,11 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module mod1::mod2
-
 
 } // module mod1
 
 #include "moduleS_T.h"
-
 
 #include /**/ "ace/post.h"
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_LKI5MP_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_LKI5MP_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_WNW3DH_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_WNW3DH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::EncodingID_T>
     : public
@@ -87,7 +83,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Encoding_T>
     : public
@@ -97,7 +92,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_FIELDDEVICE_T__SARG_TRAITS_)
 #define _FIELDDEVICE_T__SARG_TRAITS_
@@ -113,7 +107,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_FIELDDEVICE_TEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_FIELDDEVICE_TEXCEPTIONHOLDER__SARG_TRAITS_
@@ -131,7 +124,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_FIELDDEVICE_THANDLER__SARG_TRAITS_)
 #define _AMI_FIELDDEVICE_THANDLER__SARG_TRAITS_
@@ -151,7 +143,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_FieldDevice_T;
 using POA_AMH_FieldDevice_T_ptr = POA_AMH_FieldDevice_T *;
 
@@ -164,7 +155,6 @@ protected:
 public:
   POA_AMH_FieldDevice_T (const POA_AMH_FieldDevice_T& rhs);
   virtual ~POA_AMH_FieldDevice_T () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -194,9 +184,6 @@ virtual void getEncoding (
   ) = 0;
 
 };
-
-
-
 
 class POA_FieldDevice_T;
 using POA_FieldDevice_T_ptr = POA_FieldDevice_T *;
@@ -241,7 +228,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -264,7 +250,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_FieldDevice_TResponseHandler;
 using POA_TAO_AMH_FieldDevice_TResponseHandler_ptr = POA_TAO_AMH_FieldDevice_TResponseHandler *;
 
@@ -284,9 +269,6 @@ public:
   void getEncoding_excep (
     ::AMH_FieldDevice_TExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_FieldDevice_THandler;
 using POA_AMI_FieldDevice_THandler_ptr = POA_AMI_FieldDevice_THandler *;
@@ -347,7 +329,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -379,10 +360,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "Bug_2582_RegressionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

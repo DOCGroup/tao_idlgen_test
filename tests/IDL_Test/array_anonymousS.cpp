@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_DA8JYA_CPP_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_DA8JYA_CPP_
-
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_9VDRMU_CPP_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_9VDRMU_CPP_
 
 #include "array_anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_tdef_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_tdef_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -137,13 +134,6 @@ POA_AMH_tdef::POA_AMH_tdef ()
   this->optable_ = std::addressof (tao_AMH_tdef_optable);
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMH_tdef::_is_a (const char* value)
 {
   return
@@ -191,8 +181,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_tdef_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_tdef_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -264,8 +252,6 @@ _TAO_tdef_Direct_Proxy_Impl::~_TAO_tdef_Direct_Proxy_Impl ()
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -274,13 +260,6 @@ POA_tdef::POA_tdef ()
 {
   this->optable_ = std::addressof (tao_tdef_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_tdef::_is_a (const char* value)
 {
@@ -296,18 +275,12 @@ const char* POA_tdef::_interface_repository_id () const
   return "IDL:tdef:1.0";
 }
 
-
-
-
 void POA_tdef::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 tdef *
 POA_tdef::_this ()
@@ -323,7 +296,6 @@ POA_tdef::_this ()
   return {};
 }
 
-
 class TAO_AMI_tdefHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
@@ -336,8 +308,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_tdefHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_tdefHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -409,8 +379,6 @@ _TAO_AMI_tdefHandler_Direct_Proxy_Impl::~_TAO_AMI_tdefHandler_Direct_Proxy_Impl 
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -420,13 +388,6 @@ POA_AMI_tdefHandler::POA_AMI_tdefHandler ()
 {
   this->optable_ = std::addressof (tao_AMI_tdefHandler_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_AMI_tdefHandler::_is_a (const char* value)
 {
@@ -443,18 +404,12 @@ const char* POA_AMI_tdefHandler::_interface_repository_id () const
   return "IDL:AMI_tdefHandler:1.0";
 }
 
-
-
-
 void POA_AMI_tdefHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_tdefHandler *
 POA_AMI_tdefHandler::_this ()

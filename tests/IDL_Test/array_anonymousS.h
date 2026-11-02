@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_ON2MPQ_H_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_ON2MPQ_H_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_VKCWHI_H_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_VKCWHI_H_
 
 #include /**/ "ace/pre.h"
 
@@ -51,14 +51,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_TDEF__SARG_TRAITS_)
 #define _TDEF__SARG_TRAITS_
@@ -104,7 +100,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::tdef::bytes_or_longs>
     : public
@@ -114,7 +109,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_AMH_TDEFEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_TDEFEXCEPTIONHOLDER__SARG_TRAITS_
@@ -133,7 +127,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_TDEFHANDLER__SARG_TRAITS_)
 #define _AMI_TDEFHANDLER__SARG_TRAITS_
 
@@ -149,7 +142,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::ABCModule::RmtPhysicalInfo>
     : public
@@ -159,7 +151,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::ABCModule::bbbBubBubBubBaby>
@@ -174,7 +165,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_tdef;
 using POA_AMH_tdef_ptr = POA_AMH_tdef *;
 
@@ -188,7 +178,6 @@ public:
   POA_AMH_tdef (const POA_AMH_tdef& rhs);
   virtual ~POA_AMH_tdef () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -199,9 +188,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_tdef;
 using POA_tdef_ptr = POA_tdef *;
@@ -234,7 +220,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -249,7 +234,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_tdefResponseHandler;
 using POA_TAO_AMH_tdefResponseHandler_ptr = POA_TAO_AMH_tdefResponseHandler *;
 
@@ -261,9 +245,6 @@ public:
   POA_TAO_AMH_tdefResponseHandler () = default;
   virtual ~POA_TAO_AMH_tdefResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_tdefHandler;
 using POA_AMI_tdefHandler_ptr = POA_AMI_tdefHandler *;
@@ -296,7 +277,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -312,16 +292,12 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 namespace POA_ABCModule
 {
-
-
 
 } // module ABCModule
 
 #include "array_anonymousS_T.h"
-
 
 #include /**/ "ace/post.h"
 

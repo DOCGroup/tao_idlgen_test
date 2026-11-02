@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ONLYA_RMXL9I_H_
-#define _TAO_IDL_ARRAY_ONLYA_RMXL9I_H_
+#ifndef _TAO_IDL_ARRAY_ONLYA_C2STJK_H_
+#define _TAO_IDL_ARRAY_ONLYA_C2STJK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -41,8 +41,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const TEST_TYPE_foran
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TEST_TYPE_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 #include /**/ "ace/post.h"
 

@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "Bug_2350_RegressionC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -174,7 +173,6 @@ _tao_tc_user_ExceptionHolder (
 
 ::CORBA::TypeCode_ptr const _tc_user_ExceptionHolder = std::addressof(_tao_tc_user_ExceptionHolder);
 
-
 void
 user_ExceptionHolder::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -212,7 +210,6 @@ TAO::Objref_Traits<Bug_2350_Regression>::marshal (const Bug_2350_Regression_ptr 
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 Bug_2350_Regression::Bug_2350_Regression_excep (
@@ -260,7 +257,6 @@ Bug_2350_Regression::Bug_2350_Regression_excep (
     );
 }
 
-
 void
 Bug_2350_Regression::sendc_Bug_2350_Regression_excep (
   ::AMI_Bug_2350_RegressionHandler_ptr ami_handler,
@@ -270,8 +266,6 @@ Bug_2350_Regression::sendc_Bug_2350_Regression_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::user_ExceptionHolder>::in_arg_val _tao_a (a);
@@ -401,9 +395,7 @@ static TAO::TypeCode::Value<char const *,
 
 ::CORBA::TypeCode_ptr const _tc_AMH_Bug_2350_RegressionExceptionHolder = std::addressof(_tao_tc_AMH_Bug_2350_RegressionExceptionHolder);
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<AMH_Bug_2350_RegressionExceptionHolder>::add_ref (AMH_Bug_2350_RegressionExceptionHolder * p)
@@ -424,8 +416,6 @@ TAO::Value_Traits<AMH_Bug_2350_RegressionExceptionHolder>::release (AMH_Bug_2350
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 AMH_Bug_2350_RegressionExceptionHolder *
 AMH_Bug_2350_RegressionExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -556,7 +546,6 @@ AMH_Bug_2350_RegressionExceptionHolder::raise_sendc_Bug_2350_Regression_excep ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for AMH_Bug_2350_RegressionResponseHandler.
@@ -586,8 +575,6 @@ TAO::Objref_Traits<AMH_Bug_2350_RegressionResponseHandler>::marshal (const AMH_B
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 AMH_Bug_2350_RegressionResponseHandler::AMH_Bug_2350_RegressionResponseHandler ()
 {}
@@ -710,7 +697,6 @@ TAO::Objref_Traits<AMI_Bug_2350_RegressionHandler>::marshal (const AMI_Bug_2350_
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep ()
@@ -976,8 +962,6 @@ OBV_AMH_Bug_2350_RegressionExceptionHolder::_tao_unmarshal__AMH_Bug_2350_Regress
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<>
@@ -1005,11 +989,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1048,8 +1029,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1092,11 +1071,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1111,11 +1086,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1157,11 +1129,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1176,9 +1144,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1227,15 +1193,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1267,11 +1228,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1313,11 +1271,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1332,11 +1286,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1378,11 +1329,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1400,8 +1347,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1424,8 +1369,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1456,9 +1399,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_Bug_2350_RegressionExceptionHolder * vt)
@@ -1479,8 +1419,6 @@ CORBA::remove_ref (AMH_Bug_2350_RegressionExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1504,9 +1442,7 @@ operator>> (
   return AMH_Bug_2350_RegressionExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_AMH_Bug_2350_RegressionExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -1525,8 +1461,6 @@ OBV_AMH_Bug_2350_RegressionExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1556,6 +1490,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

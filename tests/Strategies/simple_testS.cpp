@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_DP8VBA_CPP_
-#define _TAO_IDL_SIMPLE_TESTS_DP8VBA_CPP_
-
+#ifndef _TAO_IDL_SIMPLE_TESTS_X022UG_CPP_
+#define _TAO_IDL_SIMPLE_TESTS_X022UG_CPP_
 
 #include "simple_testS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -60,8 +59,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Simple_Server_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Simple_Server_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -133,9 +130,7 @@ POA_Simple_Server::POA_Simple_Server ()
   this->optable_ = std::addressof (tao_Simple_Server_optable);
 }
 
-
-class print_status_Simple_Server
-  : public TAO::Upcall_Command
+class print_status_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline print_status_Simple_Server (POA_Simple_Server * servant,
@@ -198,9 +193,7 @@ void POA_Simple_Server::print_status_skel (
                          );
 }
 
-
-class shutdown_Simple_Server
-  : public TAO::Upcall_Command
+class shutdown_Simple_Server : public TAO::Upcall_Command
 {
 public:
   inline shutdown_Simple_Server (POA_Simple_Server * servant)
@@ -248,13 +241,6 @@ void POA_Simple_Server::shutdown_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Simple_Server::_is_a (const char* value)
 {
   return
@@ -269,18 +255,12 @@ const char* POA_Simple_Server::_interface_repository_id () const
   return "IDL:Simple_Server:1.0";
 }
 
-
-
-
 void POA_Simple_Server::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Simple_Server *
 POA_Simple_Server::_this ()

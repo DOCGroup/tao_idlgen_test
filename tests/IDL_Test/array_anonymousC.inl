@@ -22,10 +22,7 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -71,13 +68,9 @@ TAO::Array_Traits<tdef::Bytes_forany>::alloc ()
   return tdef::Bytes_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -123,10 +116,7 @@ TAO::Array_Traits<tdef::bytes_or_longs::_Longs_forany>::alloc ()
   return tdef::bytes_or_longs::_Longs_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 ACE_INLINE
 tdef::tdef (
@@ -156,7 +146,6 @@ AMH_tdefExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_tdefExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_tdefHandler::AMI_tdefHandler (
     TAO_Stub *objref,
@@ -175,9 +164,7 @@ AMI_tdefHandler::AMI_tdefHandler (
 {
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -223,13 +210,9 @@ TAO::Array_Traits<ABCModule::RmtPhysicalInfo::_rmtNodeId_forany>::alloc ()
   return ABCModule::RmtPhysicalInfo::_rmtNodeId_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -275,13 +258,9 @@ TAO::Array_Traits<ABCModule::RmtPhysicalInfo::_rmtDetails_forany>::alloc ()
   return ABCModule::RmtPhysicalInfo::_rmtDetails_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -327,13 +306,9 @@ TAO::Array_Traits<ABCModule::bbbBubBubBubBaby::_rmtNodeId_forany>::alloc ()
   return ABCModule::bbbBubBubBubBaby::_rmtNodeId_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -379,7 +354,5 @@ TAO::Array_Traits<ABCModule::bbbBubBubBubBaby::_rmtDetails_forany>::alloc ()
   return ABCModule::bbbBubBubBubBaby::_rmtDetails_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

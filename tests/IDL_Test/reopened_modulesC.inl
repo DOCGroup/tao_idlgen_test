@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 AA::BB::x1::x1 (
     TAO_Stub *objref,
@@ -52,7 +50,6 @@ AA::BB::AMH_x1ExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AA/BB/AMH_x1ExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AA::BB::AMI_x1Handler::AMI_x1Handler (
     TAO_Stub *objref,
@@ -70,7 +67,6 @@ AA::BB::AMI_x1Handler::AMI_x1Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 AA::BB::CC::x2::x2 (
@@ -100,7 +96,6 @@ AA::BB::CC::AMH_x2ExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AA/BB/CC/AMH_x2ExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AA::BB::CC::AMI_x2Handler::AMI_x2Handler (
     TAO_Stub *objref,
@@ -118,7 +113,6 @@ AA::BB::CC::AMI_x2Handler::AMI_x2Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 dot::Person::Person (
@@ -148,7 +142,6 @@ dot::AMH_PersonExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:dot/AMH_PersonExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 dot::AMI_PersonHandler::AMI_PersonHandler (
     TAO_Stub *objref,
@@ -166,7 +159,6 @@ dot::AMI_PersonHandler::AMI_PersonHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 dot::Party::Party (
@@ -196,7 +188,6 @@ dot::AMH_PartyExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:dot/AMH_PartyExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 dot::AMI_PartyHandler::AMI_PartyHandler (
     TAO_Stub *objref,
@@ -214,7 +205,6 @@ dot::AMI_PartyHandler::AMI_PartyHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 OpHolder::OpHolder (
@@ -244,7 +234,6 @@ AMH_OpHolderExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_OpHolderExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_OpHolderHandler::AMI_OpHolderHandler (
     TAO_Stub *objref,
@@ -262,7 +251,6 @@ AMI_OpHolderHandler::AMI_OpHolderHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 com::IFace::IFace (
@@ -292,7 +280,6 @@ com::AMH_IFaceExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:com/AMH_IFaceExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 com::AMI_IFaceHandler::AMI_IFaceHandler (
     TAO_Stub *objref,
@@ -310,7 +297,6 @@ com::AMI_IFaceHandler::AMI_IFaceHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 Y::Z::Z (
@@ -340,7 +326,6 @@ Y::AMH_ZExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:Y/AMH_ZExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 Y::AMI_ZHandler::AMI_ZHandler (
     TAO_Stub *objref,
@@ -358,7 +343,6 @@ Y::AMI_ZHandler::AMI_ZHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 X::BI::BI (
@@ -388,7 +372,6 @@ X::AMH_BIExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:X/AMH_BIExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 X::AMI_BIHandler::AMI_BIHandler (
     TAO_Stub *objref,
@@ -406,7 +389,6 @@ X::AMI_BIHandler::AMI_BIHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 XX::blah_intfc::blah_intfc (
@@ -436,7 +418,6 @@ XX::AMH_blah_intfcExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:XX/AMH_blah_intfcExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 XX::AMI_blah_intfcHandler::AMI_blah_intfcHandler (
     TAO_Stub *objref,
@@ -454,7 +435,6 @@ XX::AMI_blah_intfcHandler::AMI_blah_intfcHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 XX::blah0::blah0 (
@@ -484,7 +464,6 @@ XX::AMH_blah0ExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:XX/AMH_blah0ExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 XX::AMI_blah0Handler::AMI_blah0Handler (
     TAO_Stub *objref,
@@ -502,7 +481,6 @@ XX::AMI_blah0Handler::AMI_blah0Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 frag::frag_iface::frag_iface (
@@ -532,7 +510,6 @@ frag::AMH_frag_ifaceExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:frag/AMH_frag_ifaceExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 frag::AMI_frag_ifaceHandler::AMI_frag_ifaceHandler (
     TAO_Stub *objref,
@@ -550,7 +527,6 @@ frag::AMI_frag_ifaceHandler::AMI_frag_ifaceHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 gather::gather (
@@ -580,7 +556,6 @@ AMH_gatherExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_gatherExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_gatherHandler::AMI_gatherHandler (
     TAO_Stub *objref,
@@ -598,7 +573,6 @@ AMI_gatherHandler::AMI_gatherHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 foo::obj::obj (
@@ -628,7 +602,6 @@ foo::AMH_objExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:foo/AMH_objExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 foo::AMI_objHandler::AMI_objHandler (
     TAO_Stub *objref,
@@ -646,7 +619,6 @@ foo::AMI_objHandler::AMI_objHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 A::B::X3::X3 (
@@ -676,7 +648,6 @@ A::B::AMH_X3ExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:A/B/AMH_X3ExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 A::B::AMI_X3Handler::AMI_X3Handler (
     TAO_Stub *objref,
@@ -694,7 +665,6 @@ A::B::AMI_X3Handler::AMI_X3Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 mA::A::A (
@@ -724,7 +694,6 @@ mA::AMH_AExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:mA/AMH_AExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 mA::AMI_AHandler::AMI_AHandler (
     TAO_Stub *objref,
@@ -742,7 +711,6 @@ mA::AMI_AHandler::AMI_AHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 mB::B::B (
@@ -772,7 +740,6 @@ mB::AMH_BExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:mB/AMH_BExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 mB::AMI_BHandler::AMI_BHandler (
     TAO_Stub *objref,
@@ -790,7 +757,6 @@ mB::AMI_BHandler::AMI_BHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 mC::C::C (
@@ -820,7 +786,6 @@ mC::AMH_CExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:mC/AMH_CExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 mC::AMI_CHandler::AMI_CHandler (
     TAO_Stub *objref,
@@ -838,7 +803,6 @@ mC::AMI_CHandler::AMI_CHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 Schmoik::foo::foo (
@@ -868,7 +832,6 @@ Schmoik::AMH_fooExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:Schmoik/AMH_fooExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 Schmoik::AMI_fooHandler::AMI_fooHandler (
     TAO_Stub *objref,
@@ -886,7 +849,6 @@ Schmoik::AMI_fooHandler::AMI_fooHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 Thwoik::TestType::TestType (
@@ -916,7 +878,6 @@ Thwoik::AMH_TestTypeExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:Thwoik/AMH_TestTypeExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 Thwoik::AMI_TestTypeHandler::AMI_TestTypeHandler (
     TAO_Stub *objref,
@@ -934,7 +895,6 @@ Thwoik::AMI_TestTypeHandler::AMI_TestTypeHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 A_mod::Foo::Foo (
@@ -964,7 +924,6 @@ A_mod::AMH_FooExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:A_mod/AMH_FooExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 A_mod::AMI_FooHandler::AMI_FooHandler (
     TAO_Stub *objref,
@@ -982,7 +941,6 @@ A_mod::AMI_FooHandler::AMI_FooHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 A_mod::B_mod::Foo::Foo (
@@ -1011,7 +969,6 @@ A_mod::B_mod::AMH_FooExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:A_mod/B_mod/AMH_FooExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 A_mod::B_mod::AMI_FooHandler::AMI_FooHandler (

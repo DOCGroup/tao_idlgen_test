@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_VALUETYPEC_N0X8XF_H_
-#define _TAO_IDL_VALUETYPEC_N0X8XF_H_
+#ifndef _TAO_IDL_VALUETYPEC_4USCQB_H_
+#define _TAO_IDL_VALUETYPEC_4USCQB_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -75,16 +73,11 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 #if !defined (_MYVALUETYPE__VAR_OUT_CH_)
 #define _MYVALUETYPE__VAR_OUT_CH_
@@ -94,7 +87,6 @@ using MyValueType_var = TAO_Value_Var_T<MyValueType>;
 using MyValueType_out = TAO_Value_Out_T<MyValueType>;
 
 #endif /* end #if !defined */
-
 
 class TAO_IDL_TEST_STUB_Export MyValueType
   : public virtual ::CORBA::ValueBase
@@ -128,7 +120,6 @@ public:
   virtual char const *my_string_value () const = 0;
 
 public:
-
 
 protected:
   MyValueType ();
@@ -170,7 +161,6 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_MyValueType;
 
-
 #if !defined (_DEFAULTINITIALIZEDVALUE__VAR_OUT_CH_)
 #define _DEFAULTINITIALIZEDVALUE__VAR_OUT_CH_
 
@@ -179,7 +169,6 @@ using DefaultInitializedValue_var = TAO_Value_Var_T<DefaultInitializedValue>;
 using DefaultInitializedValue_out = TAO_Value_Out_T<DefaultInitializedValue>;
 
 #endif /* end #if !defined */
-
 
 class TAO_IDL_TEST_STUB_Export DefaultInitializedValue
   : public virtual ::CORBA::ValueBase
@@ -213,7 +202,6 @@ public:
 public:
   virtual void long_value (const ::CORBA::Long) = 0;
   virtual ::CORBA::Long long_value () const = 0;
-
 
 protected:
   DefaultInitializedValue ();
@@ -260,7 +248,6 @@ enum ValueSort2
 using ValueSort2_out = ValueSort2 &;
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ValueSort2;
 
-
 class MyValueTypeUnion;
 using MyValueTypeUnion_var = ::TAO_Var_Var_T<MyValueTypeUnion>;
 using MyValueTypeUnion_out = ::TAO_Out_T<MyValueTypeUnion>;
@@ -274,7 +261,6 @@ public:
 
   MyValueTypeUnion &operator= (MyValueTypeUnion const &);
 
-
   void _d (ValueSort2);
   ValueSort2 _d () const;
 
@@ -283,10 +269,8 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   void symbol_val (MyValueType*);
   MyValueType* symbol_val () const;
-
 
   void _default ();
 private:
@@ -305,7 +289,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_MyValueTypeUnion;
 
-
 #if !defined (_RECVALUETYPE__VAR_OUT_CH_)
 #define _RECVALUETYPE__VAR_OUT_CH_
 
@@ -314,7 +297,6 @@ using RecValueType_var = TAO_Value_Var_T<RecValueType>;
 using RecValueType_out = TAO_Value_Out_T<RecValueType>;
 
 #endif /* end #if !defined */
-
 
 class TAO_IDL_TEST_STUB_Export RecValueType
   : public virtual ::CORBA::ValueBase
@@ -345,14 +327,8 @@ protected:
 
 public:
 
-
-
-
-
 #if !defined (_RECVALUETYPE__TAO_SEQ_RECVALUETYPE__CH_)
 #define _RECVALUETYPE__TAO_SEQ_RECVALUETYPE__CH_
-
-
 
   class TAO_IDL_TEST_STUB_Export _tao_seq_RecValueType_
     : public
@@ -390,14 +366,8 @@ protected:
 
 public:
 
-
-
-
-
 #if !defined (_RECVALUETYPE__TAO_SEQ_RECVALUETYPE__2_CH_)
 #define _RECVALUETYPE__TAO_SEQ_RECVALUETYPE__2_CH_
-
-
 
   class TAO_IDL_TEST_STUB_Export _tao_seq_RecValueType__2
     : public
@@ -429,7 +399,6 @@ protected:
   virtual void rec_value_types2 (const RecValueType::_tao_seq_RecValueType__2 &) = 0;
   virtual const RecValueType::_tao_seq_RecValueType__2 &rec_value_types2 () const = 0;
   virtual RecValueType::_tao_seq_RecValueType__2 &rec_value_types2 () = 0;
-
 
 protected:
   RecValueType ();
@@ -469,7 +438,6 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_RecValueType;
 
-
 #if !defined (_GETSDEPRECATEDMEMBER__VAR_OUT_CH_)
 #define _GETSDEPRECATEDMEMBER__VAR_OUT_CH_
 
@@ -478,7 +446,6 @@ using GetsDeprecatedMember_var = TAO_Value_Var_T<GetsDeprecatedMember>;
 using GetsDeprecatedMember_out = TAO_Value_Out_T<GetsDeprecatedMember>;
 
 #endif /* end #if !defined */
-
 
 class TAO_IDL_TEST_STUB_Export GetsDeprecatedMember
   : public virtual IncludedBase
@@ -510,7 +477,6 @@ public:
   virtual void StringMember (char const *val) = 0;
   virtual void StringMember (::CORBA::String_var const &val) = 0;
   virtual char const *StringMember () const = 0;
-
 
 protected:
   GetsDeprecatedMember ();
@@ -552,7 +518,6 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_GetsDeprecatedMe
 namespace X_VALUETYPE
 {
 
-
 #if !defined (_X_VALUETYPE_AXXX__VAR_OUT_CH_)
 #define _X_VALUETYPE_AXXX__VAR_OUT_CH_
 
@@ -561,7 +526,6 @@ namespace X_VALUETYPE
   using AXXX_out = TAO_Value_Out_T<AXXX>;
 
 #endif /* end #if !defined */
-
 
   class TAO_IDL_TEST_STUB_Export AXXX
     : public virtual ::CORBA::ValueBase
@@ -593,11 +557,9 @@ namespace X_VALUETYPE
   public:
     virtual ::CORBA::Object_ptr make_object () = 0;
 
-
 protected:
   AXXX ();
   virtual ~AXXX ();
-
 
 private:
   AXXX (const AXXX &);
@@ -605,7 +567,6 @@ private:
 
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AXXX;
-
 
 #if !defined (_X_VALUETYPE_BXXX__VAR_OUT_CH_)
 #define _X_VALUETYPE_BXXX__VAR_OUT_CH_
@@ -615,7 +576,6 @@ using BXXX_var = TAO_Value_Var_T<BXXX>;
 using BXXX_out = TAO_Value_Out_T<BXXX>;
 
 #endif /* end #if !defined */
-
 
 class TAO_IDL_TEST_STUB_Export BXXX
   : public virtual AXXX
@@ -642,11 +602,9 @@ public:
 
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
-
 protected:
   BXXX ();
   virtual ~BXXX ();
-
 
 private:
   BXXX (const BXXX &);
@@ -655,16 +613,12 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_BXXX;
 
-
-
-
 #if !defined (_X_VALUETYPE_BSEQ_CH_)
 #define _X_VALUETYPE_BSEQ_CH_
 
 class BSeq;
 using BSeq_var = ::TAO_VarSeq_Var_T<BSeq>;
 using BSeq_out = ::TAO_Seq_Out_T<BSeq>;
-
 
 class TAO_IDL_TEST_STUB_Export BSeq
   : public
@@ -687,7 +641,6 @@ public:
   BSeq& operator= (BSeq &&) = default;
   virtual ~BSeq () = default;
 
-
   using _var_type = BSeq_var;
   using _out_type = BSeq_out;
 
@@ -697,14 +650,11 @@ public:
 #endif /* end #if !defined */
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_BSeq;
 
-
-
 } // module X_VALUETYPE
 namespace ModSelection
 {
   namespace SelectionDefns
   {
-
 
 #if !defined (_MODSELECTION_SELECTIONDEFNS_CRITERION__VAR_OUT_CH_)
 #define _MODSELECTION_SELECTIONDEFNS_CRITERION__VAR_OUT_CH_
@@ -714,7 +664,6 @@ namespace ModSelection
     using Criterion_out = TAO_Value_Out_T<Criterion>;
 
 #endif /* end #if !defined */
-
 
     class TAO_IDL_TEST_STUB_Export Criterion
       : public virtual ::CORBA::ValueBase
@@ -755,11 +704,9 @@ namespace ModSelection
           const ::CORBA::WChar *
         ) = 0;
 
-
     protected:
       Criterion ();
       virtual ~Criterion ();
-
 
     private:
       Criterion (const Criterion &);
@@ -767,7 +714,6 @@ namespace ModSelection
 
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Criterion;
-
 
 #if !defined (_MODSELECTION_SELECTIONDEFNS_CRITERIONEXPR__VAR_OUT_CH_)
 #define _MODSELECTION_SELECTIONDEFNS_CRITERIONEXPR__VAR_OUT_CH_
@@ -777,7 +723,6 @@ namespace ModSelection
     using CriterionExpr_out = TAO_Value_Out_T<CriterionExpr>;
 
 #endif /* end #if !defined */
-
 
     class TAO_IDL_TEST_STUB_Export CriterionExpr
       : public virtual Criterion
@@ -806,13 +751,9 @@ namespace ModSelection
 
     public:
 
-
       struct RightCriterionInfos;
       using RightCriterionInfos_var = ::TAO_Var_Var_T<RightCriterionInfos>;
       using RightCriterionInfos_out = ::TAO_Out_T<RightCriterionInfos>;
-
-
-
 
       struct TAO_IDL_TEST_STUB_Export RightCriterionInfos
       {
@@ -829,7 +770,6 @@ namespace ModSelection
 
     public:
 
-
       class RightCriterionExpr;
       using RightCriterionExpr_var = ::TAO_Var_Var_T<RightCriterionExpr>;
       using RightCriterionExpr_out = ::TAO_Out_T<RightCriterionExpr>;
@@ -843,7 +783,6 @@ namespace ModSelection
 
         RightCriterionExpr &operator= (RightCriterionExpr const &);
 
-
         void _d ( ::CORBA::Boolean);
         ::CORBA::Boolean _d () const;
 
@@ -852,12 +791,10 @@ namespace ModSelection
 
         static void _tao_any_destructor (void *);
 
-
         void theRightCriterionInfos (char *);
         void theRightCriterionInfos (char const *);
         void theRightCriterionInfos (::CORBA::String_var const&);
         char const *theRightCriterionInfos () const;
-
 
         void _default ();
       private:
@@ -888,7 +825,6 @@ namespace ModSelection
     public:
 
     public:
-
 
     protected:
       CriterionExpr ();
@@ -936,22 +872,15 @@ namespace ModSelection
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_CriterionExpr;
 
-
-
   } // module ModSelection::SelectionDefns
-
-
 
 } // module ModSelection
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -971,7 +900,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MYVALUETYPE__ARG_TRAITS_)
 #define _MYVALUETYPE__ARG_TRAITS_
 
@@ -989,7 +917,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_DEFAULTINITIALIZEDVALUE__ARG_TRAITS_)
 #define _DEFAULTINITIALIZEDVALUE__ARG_TRAITS_
@@ -1009,7 +936,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::ValueSort2>
     : public
@@ -1020,7 +946,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::MyValueTypeUnion>
     : public
@@ -1030,7 +955,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_RECVALUETYPE__ARG_TRAITS_)
 #define _RECVALUETYPE__ARG_TRAITS_
@@ -1050,7 +974,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_GETSDEPRECATEDMEMBER__ARG_TRAITS_)
 #define _GETSDEPRECATEDMEMBER__ARG_TRAITS_
 
@@ -1068,7 +991,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_X_VALUETYPE_AXXX__ARG_TRAITS_)
 #define _X_VALUETYPE_AXXX__ARG_TRAITS_
@@ -1088,7 +1010,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_X_VALUETYPE_BXXX__ARG_TRAITS_)
 #define _X_VALUETYPE_BXXX__ARG_TRAITS_
 
@@ -1107,7 +1028,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::X_VALUETYPE::BSeq>
     : public
@@ -1117,7 +1037,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_MODSELECTION_SELECTIONDEFNS_CRITERION__ARG_TRAITS_)
 #define _MODSELECTION_SELECTIONDEFNS_CRITERION__ARG_TRAITS_
@@ -1137,7 +1056,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MODSELECTION_SELECTIONDEFNS_CRITERIONEXPR__ARG_TRAITS_)
 #define _MODSELECTION_SELECTIONDEFNS_CRITERIONEXPR__ARG_TRAITS_
 
@@ -1156,7 +1074,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionInfos>
     : public
@@ -1166,7 +1083,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr>
@@ -1180,9 +1096,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 // OBV_ class
 class TAO_IDL_TEST_STUB_Export OBV_MyValueType
@@ -1219,7 +1132,6 @@ private:
   ::TAO::String_Manager _pd_my_string_value {};
   CORBA::Boolean require_truncation_ {false};
 };
-
 
 // OBV_ class
 class TAO_IDL_TEST_STUB_Export OBV_DefaultInitializedValue
@@ -1262,7 +1174,6 @@ private:
   ::CORBA::Long _pd_long_value {};
   CORBA::Boolean require_truncation_ {false};
 };
-
 
 // OBV_ class
 class TAO_IDL_TEST_STUB_Export OBV_RecValueType
@@ -1308,7 +1219,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 
-
 // OBV_ class
 class TAO_IDL_TEST_STUB_Export OBV_GetsDeprecatedMember
   : public virtual GetsDeprecatedMember,
@@ -1351,7 +1261,6 @@ namespace OBV_ModSelection
 {
   namespace SelectionDefns
   {
-
 
     // OBV_ class
     class TAO_IDL_TEST_STUB_Export CriterionExpr
@@ -1397,13 +1306,11 @@ namespace OBV_ModSelection
   private:
     ModSelection::SelectionDefns::Criterion_var _pd_theLeftCriterion {};
 
-
     ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr _pd_theRightCriterionExpr {};
     CORBA::Boolean require_truncation_ {false};
   };
 }
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1517,8 +1424,6 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1527,8 +1432,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, MyValueType **); // n
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, MyValueType *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1539,19 +1442,13 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Def
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ValueSort2);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ValueSort2 &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1562,8 +1459,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, MyV
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1572,8 +1467,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, RecValueType **); // 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, RecValueType *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1584,8 +1477,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Get
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1594,8 +1485,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X_VALUETYPE::AXXX **)
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, X_VALUETYPE::AXXX *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1606,12 +1495,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, X_V
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1620,8 +1503,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::X_VALUETYPE::BSeq*)
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::X_VALUETYPE::BSeq const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1632,8 +1513,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Mod
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1642,8 +1521,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ModSelection::Selecti
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ModSelection::SelectionDefns::CriterionExpr *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1654,16 +1531,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const MyValueType *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, MyValueType *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1674,16 +1547,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const DefaultInitializedValue *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedValue *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1692,16 +1561,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ValueS
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, MyValueTypeUnion const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, MyValueTypeUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1712,8 +1577,6 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const RecValueType *);
@@ -1721,13 +1584,9 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, RecValueTy
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 #if !defined _TAO_CDR_OP_RecValueType__tao_seq_RecValueType__H_
 #define _TAO_CDR_OP_RecValueType__tao_seq_RecValueType__H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1738,15 +1597,11 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_RecValueType__tao_seq_RecValueType__H_ */
-
 
 #if !defined _TAO_CDR_OP_RecValueType__tao_seq_RecValueType__2_H_
 #define _TAO_CDR_OP_RecValueType__tao_seq_RecValueType__2_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1756,8 +1611,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
     RecValueType::_tao_seq_RecValueType__2 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 #endif /* _TAO_CDR_OP_RecValueType__tao_seq_RecValueType__2_H_ */
 
@@ -1770,16 +1623,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const GetsDeprecatedMember *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, GetsDeprecatedMember *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1790,16 +1639,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const X_VALUETYPE::AXXX *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X_VALUETYPE::AXXX *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1810,8 +1655,6 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const X_VALUETYPE::BXXX *);
@@ -1819,13 +1662,9 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X_VALUETYP
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 #if !defined _TAO_CDR_OP_X_VALUETYPE_BSeq_H_
 #define _TAO_CDR_OP_X_VALUETYPE_BSeq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1835,8 +1674,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
     X_VALUETYPE::BSeq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 #endif /* _TAO_CDR_OP_X_VALUETYPE_BSeq_H_ */
 
@@ -1849,16 +1686,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ModSelection::SelectionDefns::Criterion *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ModSelection::SelectionDefns::Criterion *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1869,16 +1702,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ModSelection::SelectionDefns::CriterionExpr *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ModSelection::SelectionDefns::CriterionExpr *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1887,15 +1716,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ModSelecti
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "valuetypeC.inl"

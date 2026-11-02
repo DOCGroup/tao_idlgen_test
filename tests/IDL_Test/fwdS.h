@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FWDS_0RGCL1_H_
-#define _TAO_IDL_FWDS_0RGCL1_H_
+#ifndef _TAO_IDL_FWDS_APH4VG_H_
+#define _TAO_IDL_FWDS_APH4VG_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_SCOPE_TEST_I_SCOPE_TEST__SARG_TRAITS_)
 #define _SCOPE_TEST_I_SCOPE_TEST__SARG_TRAITS_
 
@@ -92,7 +88,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::scope_test::same_scope_struct>
     : public
@@ -103,7 +98,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::mod2::scope_struct>
     : public
@@ -113,7 +107,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_MOD2_FWD__SARG_TRAITS_)
 #define _MOD2_FWD__SARG_TRAITS_
@@ -130,7 +123,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MOD2_FULL__SARG_TRAITS_)
 #define _MOD2_FULL__SARG_TRAITS_
 
@@ -145,7 +137,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_MOD2_AMH_FULLEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MOD2_AMH_FULLEXCEPTIONHOLDER__SARG_TRAITS_
@@ -164,7 +155,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MOD2_AMI_FULLHANDLER__SARG_TRAITS_)
 #define _MOD2_AMI_FULLHANDLER__SARG_TRAITS_
 
@@ -180,7 +170,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::mod2::full_seq2>
     : public
@@ -190,7 +179,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_MOD2_FWD__SARG_TRAITS_)
 #define _MOD2_FWD__SARG_TRAITS_
@@ -207,7 +195,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_MIXED_PARENTS__SARG_TRAITS_)
 #define _FWD_MIXED_INTF_MIXED_PARENTS__SARG_TRAITS_
 
@@ -223,7 +210,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_CONCRETE_PARENT__SARG_TRAITS_)
 #define _FWD_MIXED_INTF_CONCRETE_PARENT__SARG_TRAITS_
 
@@ -238,7 +224,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FWD_MIXED_INTF_AMH_CONCRETE_PARENTEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _FWD_MIXED_INTF_AMH_CONCRETE_PARENTEXCEPTIONHOLDER__SARG_TRAITS_
@@ -257,7 +242,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_AMI_CONCRETE_PARENTHANDLER__SARG_TRAITS_)
 #define _FWD_MIXED_INTF_AMI_CONCRETE_PARENTHANDLER__SARG_TRAITS_
 
@@ -272,7 +256,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FWD_MIXED_INTF_ABSTRACT_PARENT__SARG_TRAITS_)
 #define _FWD_MIXED_INTF_ABSTRACT_PARENT__SARG_TRAITS_
@@ -289,7 +272,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_MIXED_ABS_FIRST__SARG_TRAITS_)
 #define _FWD_MIXED_INTF_MIXED_ABS_FIRST__SARG_TRAITS_
 
@@ -304,7 +286,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FWD_MIXED_INTF_AMI_MIXED_ABS_FIRSTHANDLER__SARG_TRAITS_)
 #define _FWD_MIXED_INTF_AMI_MIXED_ABS_FIRSTHANDLER__SARG_TRAITS_
@@ -321,7 +302,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_MIXED_CONC_FIRST__SARG_TRAITS_)
 #define _FWD_MIXED_INTF_MIXED_CONC_FIRST__SARG_TRAITS_
 
@@ -337,7 +317,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FWD_MIXED_INTF_AMI_MIXED_CONC_FIRSTHANDLER__SARG_TRAITS_)
 #define _FWD_MIXED_INTF_AMI_MIXED_CONC_FIRSTHANDLER__SARG_TRAITS_
 
@@ -352,7 +331,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OBV_FWD_FORWARDEDTYPE__SARG_TRAITS_)
 #define _OBV_FWD_FORWARDEDTYPE__SARG_TRAITS_
@@ -371,7 +349,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OBV_FWD_ENCLOSINGTYPE__SARG_TRAITS_)
 #define _OBV_FWD_ENCLOSINGTYPE__SARG_TRAITS_
 
@@ -388,7 +365,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OBV_FWD_FORWARDEDTYPE__SARG_TRAITS_)
 #define _OBV_FWD_FORWARDEDTYPE__SARG_TRAITS_
@@ -410,17 +386,12 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_scope_test
 {
-
-
 
 } // module scope_test
 namespace POA_scope_test
 {
-
-
 
 } // module scope_test
 namespace POA_mod2
@@ -438,7 +409,6 @@ namespace POA_mod2
   public:
     AMH_full (const AMH_full& rhs);
     virtual ~AMH_full () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -461,9 +431,6 @@ namespace POA_mod2
     ) = 0;
 
 };
-
-
-
 
 class full;
 using full_ptr = full *;
@@ -505,7 +472,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -524,7 +490,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_fullResponseHandler;
 using TAO_AMH_fullResponseHandler_ptr = TAO_AMH_fullResponseHandler *;
 
@@ -542,9 +507,6 @@ public:
   void op_excep (
     ::mod2::AMH_fullExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_fullHandler;
 using AMI_fullHandler_ptr = AMI_fullHandler *;
@@ -593,7 +555,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -617,9 +578,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module mod2
 namespace POA_fwd_mixed_intf
 {
@@ -637,7 +595,6 @@ namespace POA_fwd_mixed_intf
     AMH_concrete_parent (const AMH_concrete_parent& rhs);
     virtual ~AMH_concrete_parent () = default;
 
-
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
     virtual void _dispatch (
@@ -648,9 +605,6 @@ namespace POA_fwd_mixed_intf
 
   virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class concrete_parent;
 using concrete_parent_ptr = concrete_parent *;
@@ -683,7 +637,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -698,7 +651,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_concrete_parentResponseHandler;
 using TAO_AMH_concrete_parentResponseHandler_ptr = TAO_AMH_concrete_parentResponseHandler *;
 
@@ -710,9 +662,6 @@ public:
   TAO_AMH_concrete_parentResponseHandler () = default;
   virtual ~TAO_AMH_concrete_parentResponseHandler () = default;
 };
-
-
-
 
 class AMI_concrete_parentHandler;
 using AMI_concrete_parentHandler_ptr = AMI_concrete_parentHandler *;
@@ -745,7 +694,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -760,11 +708,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
-
-
-
-
 
 class mixed_abs_first;
 using mixed_abs_first_ptr = mixed_abs_first *;
@@ -797,7 +740,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -812,11 +754,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
-
-
-
-
 
 class AMI_mixed_abs_firstHandler;
 using AMI_mixed_abs_firstHandler_ptr = AMI_mixed_abs_firstHandler *;
@@ -849,7 +786,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -864,11 +800,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
-
-
-
-
 
 class mixed_conc_first;
 using mixed_conc_first_ptr = mixed_conc_first *;
@@ -901,7 +832,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -916,11 +846,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
-
-
-
-
 
 class AMI_mixed_conc_firstHandler;
 using AMI_mixed_conc_firstHandler_ptr = AMI_mixed_conc_firstHandler *;
@@ -953,7 +878,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -969,31 +893,21 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module fwd_mixed_intf
 namespace POA_obv_fwd
 {
 
-
-
 } // module obv_fwd
 namespace POA_obv_fwd
 {
 
-
-
 } // module obv_fwd
 namespace POA_obv_fwd
 {
-
-
 
 } // module obv_fwd
 
 #include "fwdS_T.h"
-
 
 #include /**/ "ace/post.h"
 

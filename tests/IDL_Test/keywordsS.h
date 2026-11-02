@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSS_W2UK5C_H_
-#define _TAO_IDL_KEYWORDSS_W2UK5C_H_
+#ifndef _TAO_IDL_KEYWORDSS_S2YX7U_H_
+#define _TAO_IDL_KEYWORDSS_S2YX7U_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::Keywords>
     : public
@@ -86,7 +82,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::Object>
@@ -98,7 +93,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::ObjectSeq>
     : public
@@ -109,7 +103,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Objects>
     : public
@@ -119,7 +112,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_TESTING__SARG_TRAITS_)
 #define _TESTING__SARG_TRAITS_
@@ -135,7 +127,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_TESTINGEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_TESTINGEXCEPTIONHOLDER__SARG_TRAITS_
@@ -153,7 +144,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_TESTINGHANDLER__SARG_TRAITS_)
 #define _AMI_TESTINGHANDLER__SARG_TRAITS_
@@ -173,7 +163,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_Testing;
 using POA_AMH_Testing_ptr = POA_AMH_Testing *;
 
@@ -186,7 +175,6 @@ protected:
 public:
   POA_AMH_Testing (const POA_AMH_Testing& rhs);
   virtual ~POA_AMH_Testing () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -218,9 +206,6 @@ virtual void bar (
   ) = 0;
 
 };
-
-
-
 
 class POA_Testing;
 using POA_Testing_ptr = POA_Testing *;
@@ -267,7 +252,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -290,7 +274,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_TestingResponseHandler;
 using POA_TAO_AMH_TestingResponseHandler_ptr = POA_TAO_AMH_TestingResponseHandler *;
 
@@ -308,9 +291,6 @@ public:
   void bar_excep (
     ::AMH_TestingExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_TestingHandler;
 using POA_AMI_TestingHandler_ptr = POA_AMI_TestingHandler *;
@@ -369,7 +349,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -401,10 +380,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "keywordsS_T.h"
-
 
 #include /**/ "ace/post.h"
 

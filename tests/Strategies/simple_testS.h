@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_CFAWTW_H_
-#define _TAO_IDL_SIMPLE_TESTS_CFAWTW_H_
+#ifndef _TAO_IDL_SIMPLE_TESTS_2H2RRY_H_
+#define _TAO_IDL_SIMPLE_TESTS_2H2RRY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -46,14 +46,11 @@
 #include "tao/PortableServer/PortableServer.h"
 #include "tao/PortableServer/Servant_Base.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_SIMPLE_SERVER__SARG_TRAITS_)
 #define _SIMPLE_SERVER__SARG_TRAITS_
@@ -72,11 +69,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 class POA_Simple_Server;
 using POA_Simple_Server_ptr = POA_Simple_Server *;

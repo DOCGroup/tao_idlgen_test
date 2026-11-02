@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "union_anonymousC.h"
 #include <memory>
 #include <new>
@@ -78,7 +77,6 @@ _tao_tc_Element (
 
 ::CORBA::TypeCode_ptr const _tc_Element = std::addressof(_tao_tc_Element);
 
-
 void
 Element::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -86,9 +84,6 @@ Element::_tao_any_destructor (
   Element *tmp = static_cast<Element *> (_tao_void_pointer);
   delete tmp;
 }
-
-
-
 
 #if !defined (_ELEMENT_VALUEUNION__TAO_SEQ_ELEMENT_VALUEUNION__CS_)
 #define _ELEMENT_VALUEUNION__TAO_SEQ_ELEMENT_VALUEUNION__CS_
@@ -105,7 +100,6 @@ Element::ValueUnion::_tao_seq_Element_ValueUnion_::_tao_seq_Element_ValueUnion_ 
 {}
 
 #endif /* end #if !defined */
-
 
 Element::ValueUnion::ValueUnion ()
 {
@@ -209,7 +203,6 @@ void Element::ValueUnion::_reset ()
   }
 }
 
-
 #ifndef _TAO_TYPECODE_Element_ValueUnion__tao_seq_Element_ValueUnion__GUARD
 #define _TAO_TYPECODE_Element_ValueUnion__tao_seq_Element_ValueUnion__GUARD
 
@@ -298,7 +291,6 @@ NamedLongArray_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 
 #ifndef _TAO_TYPECODE_NamedLongArray_GUARD
 #define _TAO_TYPECODE_NamedLongArray_GUARD
@@ -470,7 +462,6 @@ _tao_tc_decl_heavy_union_st (
 
 ::CORBA::TypeCode_ptr const decl_heavy_union::_tc_st = std::addressof(_tao_tc_decl_heavy_union_st);
 
-
 void
 decl_heavy_union::st::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -516,7 +507,6 @@ decl_heavy_union::_m_un_arr_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 
 decl_heavy_union::un::un ()
 {
@@ -645,7 +635,6 @@ decl_heavy_union::_m_anon_long_array_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 
 decl_heavy_union::decl_heavy_union ()
 {
@@ -815,7 +804,6 @@ void decl_heavy_union::_reset ()
   }
 }
 
-
 #ifndef _TAO_TYPECODE_decl_heavy_union_m_en_arr_GUARD
 #define _TAO_TYPECODE_decl_heavy_union_m_en_arr_GUARD
 
@@ -841,7 +829,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_decl_heavy_union_m_en_arr_GUARD */
-
 
 #ifndef _TAO_TYPECODE_decl_heavy_union_m_st_arr_GUARD
 #define _TAO_TYPECODE_decl_heavy_union_m_st_arr_GUARD
@@ -869,7 +856,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_decl_heavy_union_m_st_arr_GUARD */
 
-
 #ifndef _TAO_TYPECODE_decl_heavy_union_m_un_arr_GUARD
 #define _TAO_TYPECODE_decl_heavy_union_m_un_arr_GUARD
 
@@ -895,8 +881,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_decl_heavy_union_m_un_arr_GUARD */
-
-
 
 #ifndef _TAO_TYPECODE_decl_heavy_union_m_anon_long_array_GUARD
 #define _TAO_TYPECODE_decl_heavy_union_m_anon_long_array_GUARD
@@ -995,13 +979,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1044,8 +1024,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1085,13 +1063,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1134,13 +1108,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1168,13 +1138,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1202,7 +1168,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 #if !defined _TAO_CDR_OP_Element_ValueUnion__tao_seq_Element_ValueUnion__CPP_
 #define _TAO_CDR_OP_Element_ValueUnion__tao_seq_Element_ValueUnion__CPP_
 
@@ -1221,7 +1186,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1307,8 +1271,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1330,8 +1292,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1355,8 +1315,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_union::which _tao_enumerator)
@@ -1379,8 +1337,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_union::en _tao_enumerator)
@@ -1402,8 +1358,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1437,8 +1391,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1462,8 +1414,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1496,8 +1446,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1580,8 +1528,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1614,8 +1560,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1637,8 +1581,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1814,6 +1756,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

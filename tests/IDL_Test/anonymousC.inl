@@ -22,10 +22,7 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -71,13 +68,9 @@ TAO::Array_Traits<Half_Anon::char_seq_array_forany>::alloc ()
   return Half_Anon::char_seq_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -123,13 +116,9 @@ TAO::Array_Traits<Half_Anon::bd_ulong_seq_array_forany>::alloc ()
   return Half_Anon::bd_ulong_seq_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -175,13 +164,9 @@ TAO::Array_Traits<Half_Anon::ushort_seq_array_forany>::alloc ()
   return Half_Anon::ushort_seq_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -227,10 +212,7 @@ TAO::Array_Traits<Half_Anon::bd_ushort_seq_array_forany>::alloc ()
   return Half_Anon::bd_ushort_seq_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 ACE_INLINE
 All_Anon::anon_bd_string_test::anon_bd_string_test (
@@ -260,7 +242,6 @@ All_Anon::AMH_anon_bd_string_testExceptionHolder::_tao_obv_static_repository_id 
   return "IDL:All_Anon/AMH_anon_bd_string_testExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler (
     TAO_Stub *objref,
@@ -279,9 +260,7 @@ All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler (
 {
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -327,13 +306,9 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_float_seq_array_forany>::alloc ()
   return All_Anon::Nested_Anon::_float_seq_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -379,13 +354,9 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_another_fsa_forany>::alloc ()
   return All_Anon::Nested_Anon::_another_fsa_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -431,13 +402,9 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_1_forany>::alloc ()
   return All_Anon::Nested_Anon::_long_array_1_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -483,7 +450,5 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_2_forany>::alloc ()
   return All_Anon::Nested_Anon::_long_array_2_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

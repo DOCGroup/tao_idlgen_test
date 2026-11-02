@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYS_H7J7PL_CPP_
-#define _TAO_IDL_OLD_ARRAYS_H7J7PL_CPP_
-
+#ifndef _TAO_IDL_OLD_ARRAYS_TIC6FD_CPP_
+#define _TAO_IDL_OLD_ARRAYS_TIC6FD_CPP_
 
 #include "old_arrayS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -162,7 +159,6 @@ POA_OldArray::AMH_A_i::AMH_A_i ()
 {
   this->optable_ = std::addressof (tao_OldArray_AMH_A_i_optable);
 }
-
 
 void
 POA_OldArray::AMH_A_i::op_skel (
@@ -401,11 +397,6 @@ POA_OldArray::AMH_A_i::_set_attribute_array_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_OldArray::AMH_A_i::_is_a (const char* value)
 {
   return
@@ -453,8 +444,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_A_i_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldArray_A_i_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -552,7 +541,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::~_TAO_A_i_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op (
     TAO_Abstract_ServantBase  *servant,
@@ -573,7 +561,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op (
           ((TAO::Arg_Traits< ::OldArray::A>::out_arg_val *) args[3])->arg ()
         );
 }
-
 
 void
 POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op2 (
@@ -596,7 +583,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op2 (
         );
 }
 
-
 void
 POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op4 (
     TAO_Abstract_ServantBase  *servant,
@@ -618,7 +604,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op4 (
         );
 }
 
-
 void
 POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_get_attribute_array (
     TAO_Abstract_ServantBase  *servant,
@@ -636,7 +621,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_get_attribute_array (
     _tao_ptr->attribute_array (
         );
 }
-
 
 void
 POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_set_attribute_array (
@@ -656,8 +640,6 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_set_attribute_array (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -667,12 +649,10 @@ POA_OldArray::A_i::A_i ()
   this->optable_ = std::addressof (tao_OldArray_A_i_optable);
 }
 
-
 namespace POA_OldArray
 {
 
-  class op_A_i
-    : public TAO::Upcall_Command
+  class op_A_i : public TAO::Upcall_Command
   {
   public:
     inline op_A_i (POA_OldArray::A_i * servant,
@@ -763,12 +743,10 @@ void POA_OldArray::A_i::op_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class op2_A_i
-    : public TAO::Upcall_Command
+  class op2_A_i : public TAO::Upcall_Command
   {
   public:
     inline op2_A_i (POA_OldArray::A_i * servant,
@@ -859,12 +837,10 @@ void POA_OldArray::A_i::op2_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class op4_A_i
-    : public TAO::Upcall_Command
+  class op4_A_i : public TAO::Upcall_Command
   {
   public:
     inline op4_A_i (POA_OldArray::A_i * servant,
@@ -955,12 +931,10 @@ void POA_OldArray::A_i::op4_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class _get_attribute_array_A_i
-    : public TAO::Upcall_Command
+  class _get_attribute_array_A_i : public TAO::Upcall_Command
   {
   public:
     inline _get_attribute_array_A_i (POA_OldArray::A_i * servant,
@@ -1024,12 +998,10 @@ void POA_OldArray::A_i::_get_attribute_array_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class _set_attribute_array_A_i
-    : public TAO::Upcall_Command
+  class _set_attribute_array_A_i : public TAO::Upcall_Command
   {
   public:
     inline _set_attribute_array_A_i (POA_OldArray::A_i * servant,
@@ -1096,13 +1068,6 @@ void POA_OldArray::A_i::_set_attribute_array_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldArray::A_i::_is_a (const char* value)
 {
   return
@@ -1117,18 +1082,12 @@ const char* POA_OldArray::A_i::_interface_repository_id () const
   return "IDL:OldArray/A_i:1.0";
 }
 
-
-
-
 void POA_OldArray::A_i::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldArray::A_i *
 POA_OldArray::A_i::_this ()
@@ -1273,7 +1232,6 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::set_attribute_array ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -1302,8 +1260,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1407,7 +1363,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::~_TAO_AMI_A_iHandler_Direct
 {
 }
 
-
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op (
     TAO_Abstract_ServantBase  *servant,
@@ -1428,7 +1383,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op (
       );
 }
 
-
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1446,7 +1400,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2 (
@@ -1468,7 +1421,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2 (
       );
 }
 
-
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1486,7 +1438,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4 (
@@ -1508,7 +1459,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4 (
       );
 }
 
-
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1526,7 +1476,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array (
@@ -1546,7 +1495,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array (
       );
 }
 
-
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1565,7 +1513,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array_excep (
       );
 }
 
-
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array (
     TAO_Abstract_ServantBase  *servant,
@@ -1582,7 +1529,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array (
   _tao_ptr->set_attribute_array (
       );
 }
-
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array_excep (
@@ -1602,8 +1548,6 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1613,12 +1557,10 @@ POA_OldArray::AMI_A_iHandler::AMI_A_iHandler ()
   this->optable_ = std::addressof (tao_OldArray_AMI_A_iHandler_optable);
 }
 
-
 namespace POA_OldArray
 {
 
-  class op_AMI_A_iHandler
-    : public TAO::Upcall_Command
+  class op_AMI_A_iHandler : public TAO::Upcall_Command
   {
   public:
     inline op_AMI_A_iHandler (POA_OldArray::AMI_A_iHandler * servant,
@@ -1703,12 +1645,10 @@ void POA_OldArray::AMI_A_iHandler::op_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class op_excep_AMI_A_iHandler
-    : public TAO::Upcall_Command
+  class op_excep_AMI_A_iHandler : public TAO::Upcall_Command
   {
   public:
     inline op_excep_AMI_A_iHandler (POA_OldArray::AMI_A_iHandler * servant,
@@ -1775,12 +1715,10 @@ void POA_OldArray::AMI_A_iHandler::op_excep_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class op2_AMI_A_iHandler
-    : public TAO::Upcall_Command
+  class op2_AMI_A_iHandler : public TAO::Upcall_Command
   {
   public:
     inline op2_AMI_A_iHandler (POA_OldArray::AMI_A_iHandler * servant,
@@ -1865,12 +1803,10 @@ void POA_OldArray::AMI_A_iHandler::op2_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class op2_excep_AMI_A_iHandler
-    : public TAO::Upcall_Command
+  class op2_excep_AMI_A_iHandler : public TAO::Upcall_Command
   {
   public:
     inline op2_excep_AMI_A_iHandler (POA_OldArray::AMI_A_iHandler * servant,
@@ -1937,12 +1873,10 @@ void POA_OldArray::AMI_A_iHandler::op2_excep_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class op4_AMI_A_iHandler
-    : public TAO::Upcall_Command
+  class op4_AMI_A_iHandler : public TAO::Upcall_Command
   {
   public:
     inline op4_AMI_A_iHandler (POA_OldArray::AMI_A_iHandler * servant,
@@ -2027,12 +1961,10 @@ void POA_OldArray::AMI_A_iHandler::op4_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class op4_excep_AMI_A_iHandler
-    : public TAO::Upcall_Command
+  class op4_excep_AMI_A_iHandler : public TAO::Upcall_Command
   {
   public:
     inline op4_excep_AMI_A_iHandler (POA_OldArray::AMI_A_iHandler * servant,
@@ -2099,12 +2031,10 @@ void POA_OldArray::AMI_A_iHandler::op4_excep_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class get_attribute_array_AMI_A_iHandler
-    : public TAO::Upcall_Command
+  class get_attribute_array_AMI_A_iHandler : public TAO::Upcall_Command
   {
   public:
     inline get_attribute_array_AMI_A_iHandler (POA_OldArray::AMI_A_iHandler * servant,
@@ -2171,12 +2101,10 @@ void POA_OldArray::AMI_A_iHandler::get_attribute_array_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class get_attribute_array_excep_AMI_A_iHandler
-    : public TAO::Upcall_Command
+  class get_attribute_array_excep_AMI_A_iHandler : public TAO::Upcall_Command
   {
   public:
     inline get_attribute_array_excep_AMI_A_iHandler (POA_OldArray::AMI_A_iHandler * servant,
@@ -2243,12 +2171,10 @@ void POA_OldArray::AMI_A_iHandler::get_attribute_array_excep_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class set_attribute_array_AMI_A_iHandler
-    : public TAO::Upcall_Command
+  class set_attribute_array_AMI_A_iHandler : public TAO::Upcall_Command
   {
   public:
     inline set_attribute_array_AMI_A_iHandler (POA_OldArray::AMI_A_iHandler * servant)
@@ -2297,12 +2223,10 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_skel (
                          );
 }
 
-
 namespace POA_OldArray
 {
 
-  class set_attribute_array_excep_AMI_A_iHandler
-    : public TAO::Upcall_Command
+  class set_attribute_array_excep_AMI_A_iHandler : public TAO::Upcall_Command
   {
   public:
     inline set_attribute_array_excep_AMI_A_iHandler (POA_OldArray::AMI_A_iHandler * servant,
@@ -2369,13 +2293,6 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldArray::AMI_A_iHandler::_is_a (const char* value)
 {
   return
@@ -2391,18 +2308,12 @@ const char* POA_OldArray::AMI_A_iHandler::_interface_repository_id () const
   return "IDL:OldArray/AMI_A_iHandler:1.0";
 }
 
-
-
-
 void POA_OldArray::AMI_A_iHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldArray::AMI_A_iHandler *
 POA_OldArray::AMI_A_iHandler::_this ()

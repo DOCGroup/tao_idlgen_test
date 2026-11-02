@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "primtypesC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -66,7 +65,6 @@ TAO::Objref_Traits<OldPrimTypes::ex1>::marshal (const OldPrimTypes::ex1_ptr p,TA
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Long
 OldPrimTypes::ex1::l1 ()
@@ -255,7 +253,6 @@ OldPrimTypes::ex1::mtypes (
   return _tao_retval.retn ();
 }
 
-
 void
 OldPrimTypes::ex1::sendc_set_l1 (
   ::OldPrimTypes::AMI_ex1Handler_ptr ami_handler,
@@ -265,8 +262,6 @@ OldPrimTypes::ex1::sendc_set_l1 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l1 (l1);
@@ -292,7 +287,6 @@ OldPrimTypes::ex1::sendc_set_l1 (
     );
 }
 
-
 void
 OldPrimTypes::ex1::sendc_get_l1 (
   ::OldPrimTypes::AMI_ex1Handler_ptr ami_handler)
@@ -301,8 +295,6 @@ OldPrimTypes::ex1::sendc_get_l1 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -321,7 +313,6 @@ OldPrimTypes::ex1::sendc_get_l1 (
     );
 }
 
-
 void
 OldPrimTypes::ex1::sendc_m1 (
   ::OldPrimTypes::AMI_ex1Handler_ptr ami_handler,
@@ -331,8 +322,6 @@ OldPrimTypes::ex1::sendc_m1 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_a (a);
@@ -358,7 +347,6 @@ OldPrimTypes::ex1::sendc_m1 (
     );
 }
 
-
 void
 OldPrimTypes::ex1::sendc_mtypes (
   ::OldPrimTypes::AMI_ex1Handler_ptr ami_handler,
@@ -381,8 +369,6 @@ OldPrimTypes::ex1::sendc_mtypes (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_a1 (a1);
@@ -515,9 +501,7 @@ OldPrimTypes::ex1::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<OldPrimTypes::AMH_ex1ExceptionHolder>::add_ref (OldPrimTypes::AMH_ex1ExceptionHolder * p)
@@ -538,8 +522,6 @@ TAO::Value_Traits<OldPrimTypes::AMH_ex1ExceptionHolder>::release (OldPrimTypes::
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldPrimTypes::AMH_ex1ExceptionHolder *
 OldPrimTypes::AMH_ex1ExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -706,7 +688,6 @@ OldPrimTypes::AMH_ex1ExceptionHolder::raise_sendc_mtypes ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldPrimTypes::AMH_ex1ResponseHandler.
@@ -736,8 +717,6 @@ TAO::Objref_Traits<OldPrimTypes::AMH_ex1ResponseHandler>::marshal (const OldPrim
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldPrimTypes::AMH_ex1ResponseHandler::AMH_ex1ResponseHandler ()
 {}
@@ -852,7 +831,6 @@ TAO::Objref_Traits<OldPrimTypes::AMI_ex1Handler>::marshal (const OldPrimTypes::A
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 OldPrimTypes::AMI_ex1Handler::get_l1 (
@@ -1549,7 +1527,6 @@ TAO::Objref_Traits<OldPrimTypes::ex2>::marshal (const OldPrimTypes::ex2_ptr p,TA
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 ::CORBA::Long
 OldPrimTypes::ex2::l2 ()
 {
@@ -1648,7 +1625,6 @@ OldPrimTypes::ex2::mv ()
   _invocation_call.invoke (nullptr, 0);
 }
 
-
 void
 OldPrimTypes::ex2::sendc_get_l2 (
   ::OldPrimTypes::AMI_ex2Handler_ptr ami_handler)
@@ -1657,8 +1633,6 @@ OldPrimTypes::ex2::sendc_get_l2 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -1677,7 +1651,6 @@ OldPrimTypes::ex2::sendc_get_l2 (
     );
 }
 
-
 void
 OldPrimTypes::ex2::sendc_m2 (
   ::OldPrimTypes::AMI_ex2Handler_ptr ami_handler,
@@ -1687,8 +1660,6 @@ OldPrimTypes::ex2::sendc_m2 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_a (a);
@@ -1714,7 +1685,6 @@ OldPrimTypes::ex2::sendc_m2 (
     );
 }
 
-
 void
 OldPrimTypes::ex2::sendc_mv (
   ::OldPrimTypes::AMI_ex2Handler_ptr ami_handler)
@@ -1723,8 +1693,6 @@ OldPrimTypes::ex2::sendc_mv (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -1825,9 +1793,7 @@ OldPrimTypes::ex2::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<OldPrimTypes::AMH_ex2ExceptionHolder>::add_ref (OldPrimTypes::AMH_ex2ExceptionHolder * p)
@@ -1848,8 +1814,6 @@ TAO::Value_Traits<OldPrimTypes::AMH_ex2ExceptionHolder>::release (OldPrimTypes::
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldPrimTypes::AMH_ex2ExceptionHolder *
 OldPrimTypes::AMH_ex2ExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -2002,7 +1966,6 @@ OldPrimTypes::AMH_ex2ExceptionHolder::raise_sendc_mv ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldPrimTypes::AMH_ex2ResponseHandler.
@@ -2032,8 +1995,6 @@ TAO::Objref_Traits<OldPrimTypes::AMH_ex2ResponseHandler>::marshal (const OldPrim
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldPrimTypes::AMH_ex2ResponseHandler::AMH_ex2ResponseHandler ()
 {}
@@ -2148,7 +2109,6 @@ TAO::Objref_Traits<OldPrimTypes::AMI_ex2Handler>::marshal (const OldPrimTypes::A
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 OldPrimTypes::AMI_ex2Handler::get_l2 (
@@ -2659,9 +2619,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldPrimTypes::AMH_ex1ExceptionHolder * vt)
@@ -2682,8 +2639,6 @@ CORBA::remove_ref (OldPrimTypes::AMH_ex1ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2707,9 +2662,7 @@ operator>> (
   return OldPrimTypes::AMH_ex1ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_OldPrimTypes::AMH_ex1ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -2728,8 +2681,6 @@ OBV_OldPrimTypes::AMH_ex1ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2760,8 +2711,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -2791,9 +2740,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldPrimTypes::AMH_ex2ExceptionHolder * vt)
@@ -2814,8 +2760,6 @@ CORBA::remove_ref (OldPrimTypes::AMH_ex2ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2839,9 +2783,7 @@ operator>> (
   return OldPrimTypes::AMH_ex2ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_OldPrimTypes::AMH_ex2ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -2860,8 +2802,6 @@ OBV_OldPrimTypes::AMH_ex2ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2891,6 +2831,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

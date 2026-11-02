@@ -28,7 +28,6 @@
 // Inline operations for union OldUnion::Foo
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 OldUnion::Foo::_tao_member_index (::CORBA::Long value)
@@ -255,7 +254,6 @@ OldUnion::Foo2::y ()
   return *this->u_.y_;
 }
 
-
 ACE_INLINE
 OldUnion::a::a (
     TAO_Stub *objref,
@@ -283,7 +281,6 @@ OldUnion::AMH_aExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldUnion/AMH_aExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 OldUnion::AMI_aHandler::AMI_aHandler (

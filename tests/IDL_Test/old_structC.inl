@@ -22,10 +22,7 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -71,10 +68,7 @@ TAO::Array_Traits<string_20_forany>::alloc ()
   return string_20_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 ACE_INLINE
 foo1::foo1 (
@@ -104,7 +98,6 @@ AMH_foo1ExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_foo1ExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_foo1Handler::AMI_foo1Handler (
     TAO_Stub *objref,
@@ -122,7 +115,6 @@ AMI_foo1Handler::AMI_foo1Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 foo2::foo2 (
@@ -151,7 +143,6 @@ AMH_foo2ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_foo2ExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_foo2Handler::AMI_foo2Handler (

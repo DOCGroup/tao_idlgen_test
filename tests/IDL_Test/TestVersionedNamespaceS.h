@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_SEOAK4_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACES_SEOAK4_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_JVE0QX_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACES_JVE0QX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -41,25 +40,15 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
-
 
   template<>
   class SArg_Traits< ::M1::S1>
@@ -70,8 +59,6 @@ namespace TAO
           >
   {
   };
-
-
 
 #if !defined (_M1_V__SARG_TRAITS_)
 #define _M1_V__SARG_TRAITS_
@@ -93,23 +80,14 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 namespace POA_M1
 {
 
-
-
-
 } // module M1
 
 END_USER_VERSIONED_NAMESPACE
-
-
 
 #include /**/ "ace/post.h"
 

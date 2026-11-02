@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYC_JJ5CWD_H_
-#define _TAO_IDL_OLD_ARRAYC_JJ5CWD_H_
+#ifndef _TAO_IDL_OLD_ARRAYC_MZEHIO_H_
+#define _TAO_IDL_OLD_ARRAYC_MZEHIO_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -71,23 +69,18 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace OldArray
 {
-
 
   using str22 = ::CORBA::Char[22][2];
   using str22_slice = ::CORBA::Char[2];
   struct str22_tag {};
-
 
   using str22_var =
     TAO_FixedArray_Var_T<
@@ -109,11 +102,9 @@ namespace OldArray
   extern TAO_IDL_TEST_STUB_Export void str22_copy (str22_slice *_tao_to, const str22_slice *_tao_from);
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_str22;
 
-
   using boolarray = ::CORBA::Boolean[3][40];
   using boolarray_slice = ::CORBA::Boolean[40];
   struct boolarray_tag {};
-
 
   using boolarray_var =
     TAO_FixedArray_Var_T<
@@ -135,11 +126,9 @@ namespace OldArray
   extern TAO_IDL_TEST_STUB_Export void boolarray_copy (boolarray_slice *_tao_to, const boolarray_slice *_tao_from);
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_boolarray;
 
-
   using char_17 = ::CORBA::Char[17];
   using char_17_slice = ::CORBA::Char;
   struct char_17_tag {};
-
 
   using char_17_var =
     TAO_FixedArray_Var_T<
@@ -161,11 +150,9 @@ namespace OldArray
   extern TAO_IDL_TEST_STUB_Export void char_17_copy (char_17_slice *_tao_to, const char_17_slice *_tao_from);
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_char_17;
 
-
   using char_10_2 = ::CORBA::Char[10][2];
   using char_10_2_slice = ::CORBA::Char[2];
   struct char_10_2_tag {};
-
 
   using char_10_2_var =
     TAO_FixedArray_Var_T<
@@ -187,13 +174,9 @@ namespace OldArray
   extern TAO_IDL_TEST_STUB_Export void char_10_2_copy (char_10_2_slice *_tao_to, const char_10_2_slice *_tao_from);
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_char_10_2;
 
-
   struct A;
   using A_var = ::TAO_Fixed_Var_T<A>;
   using A_out = A&;
-
-
-
 
   struct TAO_IDL_TEST_STUB_Export A
   {
@@ -209,13 +192,9 @@ namespace OldArray
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_A;
 
-
   struct B;
   using B_var = ::TAO_Fixed_Var_T<B>;
   using B_out = B&;
-
-
-
 
   struct TAO_IDL_TEST_STUB_Export B
   {
@@ -230,13 +209,9 @@ namespace OldArray
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_B;
 
-
   struct C;
   using C_var = ::TAO_Fixed_Var_T<C>;
   using C_out = C&;
-
-
-
 
   struct TAO_IDL_TEST_STUB_Export C
   {
@@ -251,11 +226,9 @@ namespace OldArray
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_C;
 
-
   using A_matrix = A[2][3][4];
   using A_matrix_slice = A[3][4];
   struct A_matrix_tag {};
-
 
   using A_matrix_var =
     TAO_FixedArray_Var_T<
@@ -277,11 +250,9 @@ namespace OldArray
   extern TAO_IDL_TEST_STUB_Export void A_matrix_copy (A_matrix_slice *_tao_to, const A_matrix_slice *_tao_from);
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_A_matrix;
 
-
   using B_matrix = B[2][3][4];
   using B_matrix_slice = B[3][4];
   struct B_matrix_tag {};
-
 
   using B_matrix_var =
     TAO_FixedArray_Var_T<
@@ -303,11 +274,9 @@ namespace OldArray
   extern TAO_IDL_TEST_STUB_Export void B_matrix_copy (B_matrix_slice *_tao_to, const B_matrix_slice *_tao_from);
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_B_matrix;
 
-
   using C_matrix = C[2][3][4];
   using C_matrix_slice = C[3][4];
   struct C_matrix_tag {};
-
 
   using C_matrix_var =
     TAO_FixedArray_Var_T<
@@ -329,11 +298,9 @@ namespace OldArray
   extern TAO_IDL_TEST_STUB_Export void C_matrix_copy (C_matrix_slice *_tao_to, const C_matrix_slice *_tao_from);
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_C_matrix;
 
-
   using A_rmatrix = A_matrix[2][3][4][5];
   using A_rmatrix_slice = A_matrix[3][4][5];
   struct A_rmatrix_tag {};
-
 
   using A_rmatrix_var =
     TAO_FixedArray_Var_T<
@@ -355,7 +322,6 @@ namespace OldArray
   extern TAO_IDL_TEST_STUB_Export void A_rmatrix_copy (A_rmatrix_slice *_tao_to, const A_rmatrix_slice *_tao_from);
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_A_rmatrix;
 
-
 #if !defined (_OLDARRAY_A_I__VAR_OUT_CH_)
 #define _OLDARRAY_A_I__VAR_OUT_CH_
 
@@ -368,9 +334,6 @@ namespace OldArray
   using A_i_out = TAO_Objref_Out_T<A_i>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export A_i
     : public virtual ::CORBA::Object
@@ -434,9 +397,6 @@ namespace OldArray
     virtual void sendc_get_attribute_array (
       ::OldArray::AMI_A_iHandler_ptr ami_handler);
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     static const char* _desc_repository_id ();
@@ -468,7 +428,6 @@ namespace OldArray
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_A_i;
 
-
 #if !defined (_OLDARRAY_AMH_A_IEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _OLDARRAY_AMH_A_IEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -477,7 +436,6 @@ namespace OldArray
   using AMH_A_iExceptionHolder_out = TAO_Value_Out_T<AMH_A_iExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
   class TAO_IDL_TEST_STUB_Export AMH_A_iExceptionHolder
     : public virtual ::CORBA::DefaultValueRefCountBase
@@ -561,7 +519,6 @@ public:
 public:
   virtual void raise_sendc_get_attribute_array ();
 
-
 protected:
   AMH_A_iExceptionHolder ();
   virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
@@ -583,7 +540,6 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_A_iExceptionHolder;
 
-
 #if !defined (_OLDARRAY_AMH_A_IRESPONSEHANDLER__VAR_OUT_CH_)
 #define _OLDARRAY_AMH_A_IRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -596,9 +552,6 @@ using AMH_A_iResponseHandler_var = TAO_Objref_Var_T<AMH_A_iResponseHandler>;
 using AMH_A_iResponseHandler_out = TAO_Objref_Out_T<AMH_A_iResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMH_A_iResponseHandler
   : public virtual ::CORBA::Object
@@ -654,9 +607,6 @@ public:
   virtual void set_attribute_array_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) = 0;
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -666,8 +616,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_A_iResponseHandler ();
-
-
 
   virtual ~AMH_A_iResponseHandler () = default;
 
@@ -680,7 +628,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_A_iResponseHandler;
 
-
 #if !defined (_OLDARRAY_AMI_A_IHANDLER__VAR_OUT_CH_)
 #define _OLDARRAY_AMI_A_IHANDLER__VAR_OUT_CH_
 
@@ -690,9 +637,6 @@ using AMI_A_iHandler_var = TAO_Objref_Var_T<AMI_A_iHandler>;
 using AMI_A_iHandler_out = TAO_Objref_Out_T<AMI_A_iHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMI_A_iHandler
   : public virtual ::Messaging::ReplyHandler
@@ -780,9 +724,6 @@ public:
   virtual void set_attribute_array_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -814,18 +755,13 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_A_iHandler;
 
-
-
 } // module OldArray
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -889,7 +825,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::OldArray::A>
     : public
@@ -900,7 +835,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::OldArray::B>
     : public
@@ -910,7 +844,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::OldArray::C>
@@ -966,7 +899,6 @@ namespace TAO
   {
   };
 
-
 #if !defined (_OLDARRAY_A_I__ARG_TRAITS_)
 #define _OLDARRAY_A_I__ARG_TRAITS_
 
@@ -982,7 +914,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDARRAY_AMH_A_IEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _OLDARRAY_AMH_A_IEXCEPTIONHOLDER__ARG_TRAITS_
@@ -1001,7 +932,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDARRAY_AMI_A_IHANDLER__ARG_TRAITS_)
 #define _OLDARRAY_AMI_A_IHANDLER__ARG_TRAITS_
@@ -1022,10 +952,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace OBV_OldArray
 {
-
 
   // OBV_ class
   class TAO_IDL_TEST_STUB_Export AMH_A_iExceptionHolder
@@ -1051,7 +979,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1244,8 +1171,6 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1253,8 +1178,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const OldArray::str22
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldArray::str22_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1264,8 +1187,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Old
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1274,8 +1195,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Old
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1283,8 +1202,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const OldArray::char_
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldArray::char_10_2_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1295,8 +1212,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::O
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1305,8 +1220,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::OldArray::B*); // n
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::OldArray::B const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1317,8 +1230,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::O
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1326,8 +1237,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const OldArray::A_mat
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldArray::A_matrix_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1337,8 +1246,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Old
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1347,8 +1254,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Old
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1356,12 +1261,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const OldArray::A_rma
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldArray::A_rmatrix_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1372,8 +1271,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Old
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1382,12 +1279,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::AMH_A_iExce
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldArray::AMH_A_iExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1398,12 +1289,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Old
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1413,15 +1298,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Old
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const OldArray::str22_forany &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::str22_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1430,14 +1312,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const OldArray::char_17_forany &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::char_17_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1446,15 +1326,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldArray::A const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::A &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1463,16 +1340,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldArray::C const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::C &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1481,14 +1354,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const OldArray::B_matrix_forany &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::B_matrix_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1497,7 +1368,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const OldArray::A_rmatrix_forany &_tao_array);
@@ -1505,18 +1375,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldArray::A_i_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::A_i_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1527,8 +1391,6 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldArray::AMH_A_iExceptionHolder *);
@@ -1536,18 +1398,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldArray::AMI_A_iHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::AMI_A_iHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "old_arrayC.inl"

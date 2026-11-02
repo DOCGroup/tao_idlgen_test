@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSS_FD1WEN_H_
-#define _TAO_IDL_PARAMSS_FD1WEN_H_
+#ifndef _TAO_IDL_PARAMSS_N2MA3D_H_
+#define _TAO_IDL_PARAMSS_N2MA3D_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::foo::theDate>
     : public
@@ -87,7 +83,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::foo::bar::theDate>
     : public
@@ -97,7 +92,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_FOO_BAR_FOOBAR__SARG_TRAITS_)
 #define _FOO_BAR_FOOBAR__SARG_TRAITS_
@@ -113,7 +107,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__SARG_TRAITS_
@@ -131,7 +124,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FOO_BAR_AMI_FOOBARHANDLER__SARG_TRAITS_)
 #define _FOO_BAR_AMI_FOOBARHANDLER__SARG_TRAITS_
@@ -151,7 +143,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_foo
 {
 
@@ -170,7 +161,6 @@ namespace POA_foo
     public:
       AMH_fooBar (const AMH_fooBar& rhs);
       virtual ~AMH_fooBar () = default;
-
 
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -193,9 +183,6 @@ namespace POA_foo
       ) = 0;
 
   };
-
-
-
 
   class fooBar;
   using fooBar_ptr = fooBar *;
@@ -237,7 +224,6 @@ namespace POA_foo
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -256,7 +242,6 @@ namespace POA_foo
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class TAO_AMH_fooBarResponseHandler;
   using TAO_AMH_fooBarResponseHandler_ptr = TAO_AMH_fooBarResponseHandler *;
 
@@ -274,9 +259,6 @@ namespace POA_foo
     void getDate_excep (
       ::foo::bar::AMH_fooBarExceptionHolder * holder) override;
   };
-
-
-
 
   class AMI_fooBarHandler;
   using AMI_fooBarHandler_ptr = AMI_fooBarHandler *;
@@ -325,7 +307,6 @@ namespace POA_foo
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -349,16 +330,11 @@ namespace POA_foo
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module foo::bar
-
 
 } // module foo
 
 #include "paramsS_T.h"
-
 
 #include /**/ "ace/post.h"
 

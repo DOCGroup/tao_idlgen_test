@@ -25,9 +25,7 @@
 #include <memory>
 #include <new>
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -76,13 +74,9 @@ TAO::Array_Traits<TwoDArray_forany>::alloc ()
   return TwoDArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -134,13 +128,9 @@ TAO::Array_Traits<ThreeDArray_forany>::alloc ()
   return ThreeDArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -195,13 +185,9 @@ TAO::Array_Traits<FourDArray_forany>::alloc ()
   return FourDArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -247,13 +233,9 @@ TAO::Array_Traits<inside_array_forany>::alloc ()
   return inside_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -299,13 +281,9 @@ TAO::Array_Traits<outside_array_forany>::alloc ()
   return outside_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -351,13 +329,9 @@ TAO::Array_Traits<oa1_forany>::alloc ()
   return oa1_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -403,10 +377,7 @@ TAO::Array_Traits<oa2_forany>::alloc ()
   return oa2_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 ACE_INLINE
 array_args::array_args (
@@ -436,7 +407,6 @@ AMH_array_argsExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_array_argsExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_array_argsHandler::AMI_array_argsHandler (
     TAO_Stub *objref,
@@ -455,9 +425,7 @@ AMI_array_argsHandler::AMI_array_argsHandler (
 {
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -503,13 +471,9 @@ TAO::Array_Traits<string_array::ArrayOfString_forany>::alloc ()
   return string_array::ArrayOfString_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -555,13 +519,9 @@ TAO::Array_Traits<string_array::ArrayOfMyString_forany>::alloc ()
   return string_array::ArrayOfMyString_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -607,7 +567,6 @@ TAO::Array_Traits<testdata::Arraychar_forany>::alloc ()
   return testdata::Arraychar_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ACE_INLINE
@@ -645,9 +604,6 @@ testdata::ArrayDeChar_free (
   testdata::Arraychar_free (_tao_src);
 }
 
-
-
-
 ACE_INLINE
 testdata::testdata (
     TAO_Stub *objref,
@@ -676,7 +632,6 @@ AMH_testdataExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_testdataExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_testdataHandler::AMI_testdataHandler (
     TAO_Stub *objref,
@@ -695,9 +650,7 @@ AMI_testdataHandler::AMI_testdataHandler (
 {
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -743,13 +696,9 @@ TAO::Array_Traits<arraytest::myvec2_forany>::alloc ()
   return arraytest::myvec2_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -795,10 +744,7 @@ TAO::Array_Traits<arraytest::myvec3_forany>::alloc ()
   return arraytest::myvec3_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 ACE_INLINE
 arraytest::MyTest::MyTest (
@@ -828,7 +774,6 @@ arraytest::AMH_MyTestExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:arraytest/AMH_MyTestExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 arraytest::AMI_MyTestHandler::AMI_MyTestHandler (
     TAO_Stub *objref,
@@ -849,7 +794,6 @@ arraytest::AMI_MyTestHandler::AMI_MyTestHandler (
 // *************************************************************
 // Inline operations for union bug_2126::FirstUnion
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -927,9 +871,7 @@ bug_2126::FirstUnion::first_union_bar () const
   return this->u_.first_union_bar_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -975,13 +917,11 @@ TAO::Array_Traits<bug_2126::FirstUnionArray_forany>::alloc ()
   return bug_2126::FirstUnionArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 // *************************************************************
 // Inline operations for union bug_2126::SecondUnion
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -1073,9 +1013,7 @@ bug_2126::SecondUnion::wibble () const
   return this->u_.wibble_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -1121,13 +1059,11 @@ TAO::Array_Traits<bug_2126::BdFirstUnionArray_forany>::alloc ()
   return bug_2126::BdFirstUnionArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 // *************************************************************
 // Inline operations for union bug_2126::BdSecondUnion
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -1219,9 +1155,7 @@ bug_2126::BdSecondUnion::wibble () const
   return this->u_.wibble_;
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -1270,13 +1204,9 @@ TAO::Array_Traits<B41_forany>::alloc ()
   return B41_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -1322,13 +1252,9 @@ TAO::Array_Traits<B42_forany>::alloc ()
   return B42_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -1373,7 +1299,6 @@ TAO::Array_Traits<B43_forany>::alloc ()
 {
   return B43_alloc ();
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

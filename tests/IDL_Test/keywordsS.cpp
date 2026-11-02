@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSS_LJW13M_CPP_
-#define _TAO_IDL_KEYWORDSS_LJW13M_CPP_
-
+#ifndef _TAO_IDL_KEYWORDSS_LOAZKO_CPP_
+#define _TAO_IDL_KEYWORDSS_LOAZKO_CPP_
 
 #include "keywordsS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Testing_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_Testing_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -140,7 +137,6 @@ POA_AMH_Testing::POA_AMH_Testing ()
 {
   this->optable_ = std::addressof (tao_AMH_Testing_optable);
 }
-
 
 void
 POA_AMH_Testing::foo_skel (
@@ -233,11 +229,6 @@ POA_AMH_Testing::bar_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_AMH_Testing::_is_a (const char* value)
 {
   return
@@ -285,8 +276,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Testing_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Testing_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -362,7 +351,6 @@ _TAO_Testing_Direct_Proxy_Impl::~_TAO_Testing_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_Testing_Direct_Proxy_Impl::foo (
     TAO_Abstract_ServantBase  *servant,
@@ -380,7 +368,6 @@ _TAO_Testing_Direct_Proxy_Impl::foo (
         ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_Testing_Direct_Proxy_Impl::bar (
@@ -400,8 +387,6 @@ _TAO_Testing_Direct_Proxy_Impl::bar (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -411,9 +396,7 @@ POA_Testing::POA_Testing ()
   this->optable_ = std::addressof (tao_Testing_optable);
 }
 
-
-class foo_Testing
-  : public TAO::Upcall_Command
+class foo_Testing : public TAO::Upcall_Command
 {
 public:
   inline foo_Testing (POA_Testing * servant,
@@ -479,9 +462,7 @@ void POA_Testing::foo_skel (
                          );
 }
 
-
-class bar_Testing
-  : public TAO::Upcall_Command
+class bar_Testing : public TAO::Upcall_Command
 {
 public:
   inline bar_Testing (POA_Testing * servant,
@@ -547,13 +528,6 @@ void POA_Testing::bar_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Testing::_is_a (const char* value)
 {
   return
@@ -568,18 +542,12 @@ const char* POA_Testing::_interface_repository_id () const
   return "IDL:Testing:1.0";
 }
 
-
-
-
 void POA_Testing::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Testing *
 POA_Testing::_this ()
@@ -600,7 +568,6 @@ POA_TAO_AMH_TestingResponseHandler::foo ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -620,7 +587,6 @@ void
 POA_TAO_AMH_TestingResponseHandler::bar ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -650,8 +616,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_TestingHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_TestingHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -729,7 +693,6 @@ _TAO_AMI_TestingHandler_Direct_Proxy_Impl::~_TAO_AMI_TestingHandler_Direct_Proxy
 {
 }
 
-
 void
 _TAO_AMI_TestingHandler_Direct_Proxy_Impl::foo (
     TAO_Abstract_ServantBase  *servant,
@@ -746,7 +709,6 @@ _TAO_AMI_TestingHandler_Direct_Proxy_Impl::foo (
   _tao_ptr->foo (
       );
 }
-
 
 void
 _TAO_AMI_TestingHandler_Direct_Proxy_Impl::foo_excep (
@@ -766,7 +728,6 @@ _TAO_AMI_TestingHandler_Direct_Proxy_Impl::foo_excep (
       );
 }
 
-
 void
 _TAO_AMI_TestingHandler_Direct_Proxy_Impl::bar (
     TAO_Abstract_ServantBase  *servant,
@@ -783,7 +744,6 @@ _TAO_AMI_TestingHandler_Direct_Proxy_Impl::bar (
   _tao_ptr->bar (
       );
 }
-
 
 void
 _TAO_AMI_TestingHandler_Direct_Proxy_Impl::bar_excep (
@@ -803,8 +763,6 @@ _TAO_AMI_TestingHandler_Direct_Proxy_Impl::bar_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -814,9 +772,7 @@ POA_AMI_TestingHandler::POA_AMI_TestingHandler ()
   this->optable_ = std::addressof (tao_AMI_TestingHandler_optable);
 }
 
-
-class foo_AMI_TestingHandler
-  : public TAO::Upcall_Command
+class foo_AMI_TestingHandler : public TAO::Upcall_Command
 {
 public:
   inline foo_AMI_TestingHandler (POA_AMI_TestingHandler * servant)
@@ -864,9 +820,7 @@ void POA_AMI_TestingHandler::foo_skel (
                          );
 }
 
-
-class foo_excep_AMI_TestingHandler
-  : public TAO::Upcall_Command
+class foo_excep_AMI_TestingHandler : public TAO::Upcall_Command
 {
 public:
   inline foo_excep_AMI_TestingHandler (POA_AMI_TestingHandler * servant,
@@ -932,9 +886,7 @@ void POA_AMI_TestingHandler::foo_excep_skel (
                          );
 }
 
-
-class bar_AMI_TestingHandler
-  : public TAO::Upcall_Command
+class bar_AMI_TestingHandler : public TAO::Upcall_Command
 {
 public:
   inline bar_AMI_TestingHandler (POA_AMI_TestingHandler * servant)
@@ -982,9 +934,7 @@ void POA_AMI_TestingHandler::bar_skel (
                          );
 }
 
-
-class bar_excep_AMI_TestingHandler
-  : public TAO::Upcall_Command
+class bar_excep_AMI_TestingHandler : public TAO::Upcall_Command
 {
 public:
   inline bar_excep_AMI_TestingHandler (POA_AMI_TestingHandler * servant,
@@ -1050,13 +1000,6 @@ void POA_AMI_TestingHandler::bar_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_TestingHandler::_is_a (const char* value)
 {
   return
@@ -1072,18 +1015,12 @@ const char* POA_AMI_TestingHandler::_interface_repository_id () const
   return "IDL:AMI_TestingHandler:1.0";
 }
 
-
-
-
 void POA_AMI_TestingHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_TestingHandler *
 POA_AMI_TestingHandler::_this ()

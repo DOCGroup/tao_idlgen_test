@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2S_VHXJ08_CPP_
-#define _TAO_IDL_SIMPLE2S_VHXJ08_CPP_
-
+#ifndef _TAO_IDL_SIMPLE2S_259SNL_CPP_
+#define _TAO_IDL_SIMPLE2S_259SNL_CPP_
 
 #include "simple2S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_simple3_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_simple3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -143,7 +140,6 @@ POA_AMH_simple3::POA_AMH_simple3 ()
 {
   this->optable_ = std::addressof (tao_AMH_simple3_optable);
 }
-
 
 void
 POA_AMH_simple3::op3_skel (
@@ -239,11 +235,6 @@ POA_AMH_simple3::op4_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_AMH_simple3::_is_a (const char* value)
 {
   return
@@ -293,8 +284,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_simple3_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_simple3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -373,7 +362,6 @@ _TAO_simple3_Direct_Proxy_Impl::~_TAO_simple3_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_simple3_Direct_Proxy_Impl::op3 (
     TAO_Abstract_ServantBase  *servant,
@@ -396,7 +384,6 @@ _TAO_simple3_Direct_Proxy_Impl::op3 (
         );
 }
 
-
 void
 _TAO_simple3_Direct_Proxy_Impl::op4 (
     TAO_Abstract_ServantBase  *servant,
@@ -418,8 +405,6 @@ _TAO_simple3_Direct_Proxy_Impl::op4 (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -429,9 +414,7 @@ POA_simple3::POA_simple3 ()
   this->optable_ = std::addressof (tao_simple3_optable);
 }
 
-
-class op3_simple3
-  : public TAO::Upcall_Command
+class op3_simple3 : public TAO::Upcall_Command
 {
 public:
   inline op3_simple3 (POA_simple3 * servant,
@@ -541,9 +524,7 @@ void POA_simple3::op3_skel (
                          );
 }
 
-
-class op4_simple3
-  : public TAO::Upcall_Command
+class op4_simple3 : public TAO::Upcall_Command
 {
 public:
   inline op4_simple3 (POA_simple3 * servant,
@@ -642,13 +623,6 @@ void POA_simple3::op4_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_simple3::_is_a (const char* value)
 {
   return
@@ -665,18 +639,12 @@ const char* POA_simple3::_interface_repository_id () const
   return "IDL:simple3:1.0";
 }
 
-
-
-
 void POA_simple3::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 simple3 *
 POA_simple3::_this ()
@@ -771,8 +739,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_simple3Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_simple3Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -873,7 +839,6 @@ _TAO_AMI_simple3Handler_Direct_Proxy_Impl::~_TAO_AMI_simple3Handler_Direct_Proxy
 {
 }
 
-
 void
 _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op3 (
     TAO_Abstract_ServantBase  *servant,
@@ -895,7 +860,6 @@ _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op3 (
       );
 }
 
-
 void
 _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op3_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -913,7 +877,6 @@ _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op3_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op4 (
@@ -935,7 +898,6 @@ _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op4 (
       );
 }
 
-
 void
 _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op4_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -954,8 +916,6 @@ _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op4_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -965,9 +925,7 @@ POA_AMI_simple3Handler::POA_AMI_simple3Handler ()
   this->optable_ = std::addressof (tao_AMI_simple3Handler_optable);
 }
 
-
-class op3_AMI_simple3Handler
-  : public TAO::Upcall_Command
+class op3_AMI_simple3Handler : public TAO::Upcall_Command
 {
 public:
   inline op3_AMI_simple3Handler (POA_AMI_simple3Handler * servant,
@@ -1071,9 +1029,7 @@ void POA_AMI_simple3Handler::op3_skel (
                          );
 }
 
-
-class op3_excep_AMI_simple3Handler
-  : public TAO::Upcall_Command
+class op3_excep_AMI_simple3Handler : public TAO::Upcall_Command
 {
 public:
   inline op3_excep_AMI_simple3Handler (POA_AMI_simple3Handler * servant,
@@ -1090,8 +1046,6 @@ public:
         this->operation_details_,
         this->args_,
         1);
-
-
 
     static TAO::Exception_Data
     _tao_AMI_simple3Handler_op3_excep_exceptiondata [] =
@@ -1185,9 +1139,7 @@ void POA_AMI_simple3Handler::op3_excep_skel (
                          );
 }
 
-
-class op4_AMI_simple3Handler
-  : public TAO::Upcall_Command
+class op4_AMI_simple3Handler : public TAO::Upcall_Command
 {
 public:
   inline op4_AMI_simple3Handler (POA_AMI_simple3Handler * servant,
@@ -1280,9 +1232,7 @@ void POA_AMI_simple3Handler::op4_skel (
                          );
 }
 
-
-class op4_excep_AMI_simple3Handler
-  : public TAO::Upcall_Command
+class op4_excep_AMI_simple3Handler : public TAO::Upcall_Command
 {
 public:
   inline op4_excep_AMI_simple3Handler (POA_AMI_simple3Handler * servant,
@@ -1299,8 +1249,6 @@ public:
         this->operation_details_,
         this->args_,
         1);
-
-
 
     static TAO::Exception_Data
     _tao_AMI_simple3Handler_op4_excep_exceptiondata [] =
@@ -1376,13 +1324,6 @@ void POA_AMI_simple3Handler::op4_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_simple3Handler::_is_a (const char* value)
 {
   return
@@ -1400,18 +1341,12 @@ const char* POA_AMI_simple3Handler::_interface_repository_id () const
   return "IDL:AMI_simple3Handler:1.0";
 }
 
-
-
-
 void POA_AMI_simple3Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_simple3Handler *
 POA_AMI_simple3Handler::_this ()

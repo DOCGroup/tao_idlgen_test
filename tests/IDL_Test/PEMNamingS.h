@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGS_MDJ0H7_H_
-#define _TAO_IDL_PEMNAMINGS_MDJ0H7_H_
+#ifndef _TAO_IDL_PEMNAMINGS_GE5VQG_H_
+#define _TAO_IDL_PEMNAMINGS_GE5VQG_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
   template<>
   class SArg_Traits< ::Plesk::TBool>
@@ -69,7 +66,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Plesk::TProperty>
     : public
@@ -79,7 +75,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::Plesk::TPropertyList>
@@ -91,7 +86,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Plesk::Naming::NamingContext>
     : public
@@ -101,7 +95,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_PLESK_NAMING_OBJECTRESOLVER__SARG_TRAITS_)
 #define _PLESK_NAMING_OBJECTRESOLVER__SARG_TRAITS_
@@ -117,7 +110,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_PLESK_NAMING_AMH_OBJECTRESOLVEREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _PLESK_NAMING_AMH_OBJECTRESOLVEREXCEPTIONHOLDER__SARG_TRAITS_
@@ -135,7 +127,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_PLESK_NAMING_AMI_OBJECTRESOLVERHANDLER__SARG_TRAITS_)
 #define _PLESK_NAMING_AMI_OBJECTRESOLVERHANDLER__SARG_TRAITS_
@@ -155,7 +146,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_Plesk
 {
 
@@ -174,7 +164,6 @@ namespace POA_Plesk
     public:
       AMH_ObjectResolver (const AMH_ObjectResolver& rhs);
       virtual ~AMH_ObjectResolver () = default;
-
 
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -209,9 +198,6 @@ namespace POA_Plesk
       ) = 0;
 
   };
-
-
-
 
   class ObjectResolver;
   using ObjectResolver_ptr = ObjectResolver *;
@@ -261,7 +247,6 @@ namespace POA_Plesk
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -284,7 +269,6 @@ namespace POA_Plesk
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class TAO_AMH_ObjectResolverResponseHandler;
   using TAO_AMH_ObjectResolverResponseHandler_ptr = TAO_AMH_ObjectResolverResponseHandler *;
 
@@ -306,9 +290,6 @@ namespace POA_Plesk
     void resolve_sc_excep (
       ::Plesk::Naming::AMH_ObjectResolverExceptionHolder * holder) override;
   };
-
-
-
 
   class AMI_ObjectResolverHandler;
   using AMI_ObjectResolverHandler_ptr = AMI_ObjectResolverHandler *;
@@ -371,7 +352,6 @@ namespace POA_Plesk
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -403,16 +383,11 @@ namespace POA_Plesk
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module Plesk::Naming
-
 
 } // module Plesk
 
 #include "PEMNamingS_T.h"
-
 
 #include /**/ "ace/post.h"
 

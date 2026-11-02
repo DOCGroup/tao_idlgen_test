@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "expressionsC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"

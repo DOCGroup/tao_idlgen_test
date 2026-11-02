@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSS_E7LQA2_CPP_
-#define _TAO_IDL_PARAMSS_E7LQA2_CPP_
-
+#ifndef _TAO_IDL_PARAMSS_EEKLKV_CPP_
+#define _TAO_IDL_PARAMSS_EEKLKV_CPP_
 
 #include "paramsS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_foo_bar_AMH_fooBar_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_foo_bar_AMH_fooBar_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -138,7 +135,6 @@ POA_foo::bar::AMH_fooBar::AMH_fooBar ()
   this->optable_ = std::addressof (tao_foo_bar_AMH_fooBar_optable);
 }
 
-
 void
 POA_foo::bar::AMH_fooBar::getDate_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -188,11 +184,6 @@ POA_foo::bar::AMH_fooBar::getDate_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_foo::bar::AMH_fooBar::_is_a (const char* value)
 {
   return
@@ -240,8 +231,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_foo_bar_fooBar_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_foo_bar_fooBar_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -314,7 +303,6 @@ POA_foo::bar::_TAO_fooBar_Direct_Proxy_Impl::~_TAO_fooBar_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_foo::bar::_TAO_fooBar_Direct_Proxy_Impl::getDate (
     TAO_Abstract_ServantBase  *servant,
@@ -336,8 +324,6 @@ POA_foo::bar::_TAO_fooBar_Direct_Proxy_Impl::getDate (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -347,15 +333,13 @@ POA_foo::bar::fooBar::fooBar ()
   this->optable_ = std::addressof (tao_foo_bar_fooBar_optable);
 }
 
-
 namespace POA_foo
 {
 
   namespace bar
   {
 
-    class getDate_fooBar
-      : public TAO::Upcall_Command
+    class getDate_fooBar : public TAO::Upcall_Command
     {
     public:
       inline getDate_fooBar (POA_foo::bar::fooBar * servant,
@@ -447,13 +431,6 @@ void POA_foo::bar::fooBar::getDate_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_foo::bar::fooBar::_is_a (const char* value)
 {
   return
@@ -468,18 +445,12 @@ const char* POA_foo::bar::fooBar::_interface_repository_id () const
   return "IDL:foo/bar/fooBar:1.0";
 }
 
-
-
-
 void POA_foo::bar::fooBar::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 foo::bar::fooBar *
 POA_foo::bar::fooBar::_this ()
@@ -540,8 +511,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_foo_bar_AMI_fooBarHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_foo_bar_AMI_fooBarHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -616,7 +585,6 @@ POA_foo::bar::_TAO_AMI_fooBarHandler_Direct_Proxy_Impl::~_TAO_AMI_fooBarHandler_
 {
 }
 
-
 void
 POA_foo::bar::_TAO_AMI_fooBarHandler_Direct_Proxy_Impl::getDate (
     TAO_Abstract_ServantBase  *servant,
@@ -637,7 +605,6 @@ POA_foo::bar::_TAO_AMI_fooBarHandler_Direct_Proxy_Impl::getDate (
       );
 }
 
-
 void
 POA_foo::bar::_TAO_AMI_fooBarHandler_Direct_Proxy_Impl::getDate_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -656,8 +623,6 @@ POA_foo::bar::_TAO_AMI_fooBarHandler_Direct_Proxy_Impl::getDate_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -667,15 +632,13 @@ POA_foo::bar::AMI_fooBarHandler::AMI_fooBarHandler ()
   this->optable_ = std::addressof (tao_foo_bar_AMI_fooBarHandler_optable);
 }
 
-
 namespace POA_foo
 {
 
   namespace bar
   {
 
-    class getDate_AMI_fooBarHandler
-      : public TAO::Upcall_Command
+    class getDate_AMI_fooBarHandler : public TAO::Upcall_Command
     {
     public:
       inline getDate_AMI_fooBarHandler (POA_foo::bar::AMI_fooBarHandler * servant,
@@ -761,15 +724,13 @@ void POA_foo::bar::AMI_fooBarHandler::getDate_skel (
                          );
 }
 
-
 namespace POA_foo
 {
 
   namespace bar
   {
 
-    class getDate_excep_AMI_fooBarHandler
-      : public TAO::Upcall_Command
+    class getDate_excep_AMI_fooBarHandler : public TAO::Upcall_Command
     {
     public:
       inline getDate_excep_AMI_fooBarHandler (POA_foo::bar::AMI_fooBarHandler * servant,
@@ -837,13 +798,6 @@ void POA_foo::bar::AMI_fooBarHandler::getDate_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_foo::bar::AMI_fooBarHandler::_is_a (const char* value)
 {
   return
@@ -859,18 +813,12 @@ const char* POA_foo::bar::AMI_fooBarHandler::_interface_repository_id () const
   return "IDL:foo/bar/AMI_fooBarHandler:1.0";
 }
 
-
-
-
 void POA_foo::bar::AMI_fooBarHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 foo::bar::AMI_fooBarHandler *
 POA_foo::bar::AMI_fooBarHandler::_this ()

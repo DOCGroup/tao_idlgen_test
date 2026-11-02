@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "TestC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -147,7 +146,6 @@ _tao_tc_Test_InvalidTimestamp (
   _tao_fields_Test_InvalidTimestamp,
   0);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_InvalidTimestamp = std::addressof(_tao_tc_Test_InvalidTimestamp);
@@ -251,7 +249,6 @@ _tao_tc_Test_ServerOverload (
   _tao_fields_Test_ServerOverload,
   0);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_ServerOverload = std::addressof(_tao_tc_Test_ServerOverload);
@@ -264,7 +261,6 @@ static TAO::TypeCode::Alias<char const *,
     "IDL:Test/Timestamp:1.0",
     "Timestamp",
     &CORBA::_tc_ulonglong);
-
 
 namespace Test
 {
@@ -284,15 +280,12 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_Test_Red_Herring,
     0);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_Red_Herring = std::addressof(_tao_tc_Test_Red_Herring);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<Test::Red_Herring>::add_ref (Test::Red_Herring * p)
@@ -313,8 +306,6 @@ TAO::Value_Traits<Test::Red_Herring>::release (Test::Red_Herring * p)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 Test::Red_Herring *
 Test::Red_Herring::_downcast (::CORBA::ValueBase *v)
@@ -440,7 +431,6 @@ TAO::Objref_Traits<Test::Roundtrip>::marshal (const Test::Roundtrip_ptr p,TAO_Ou
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::Test::Timestamp
 Test::Roundtrip::test_method (
@@ -604,7 +594,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:Test/Roundtrip:1.0",
     "Roundtrip");
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_Roundtrip = std::addressof(_tao_tc_Test_Roundtrip);
@@ -623,15 +612,12 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_Test_AMH_RoundtripExceptionHolder,
     0);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_RoundtripExceptionHolder = std::addressof(_tao_tc_Test_AMH_RoundtripExceptionHolder);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<Test::AMH_RoundtripExceptionHolder>::add_ref (Test::AMH_RoundtripExceptionHolder * p)
@@ -652,8 +638,6 @@ TAO::Value_Traits<Test::AMH_RoundtripExceptionHolder>::release (Test::AMH_Roundt
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 Test::AMH_RoundtripExceptionHolder *
 Test::AMH_RoundtripExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -784,7 +768,6 @@ Test::AMH_RoundtripExceptionHolder::raise_shutdown ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for Test::AMH_RoundtripResponseHandler.
@@ -814,8 +797,6 @@ TAO::Objref_Traits<Test::AMH_RoundtripResponseHandler>::marshal (const Test::AMH
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 Test::AMH_RoundtripResponseHandler::AMH_RoundtripResponseHandler ()
 {}
@@ -897,7 +878,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:Test/AMH_RoundtripResponseHandler:1.0",
     "AMH_RoundtripResponseHandler");
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_RoundtripResponseHandler = std::addressof(_tao_tc_Test_AMH_RoundtripResponseHandler);
@@ -933,8 +913,6 @@ OBV_Test::AMH_RoundtripExceptionHolder::_tao_unmarshal__Test_AMH_RoundtripExcept
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<>
@@ -962,11 +940,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1006,11 +981,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1039,11 +1010,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1083,11 +1051,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1102,9 +1066,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1153,15 +1115,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1176,11 +1133,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1222,11 +1176,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1241,9 +1191,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1292,15 +1240,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1332,11 +1275,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1378,11 +1318,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1401,11 +1337,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1423,9 +1355,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
@@ -1447,8 +1376,6 @@ CORBA::remove_ref (Test::Red_Herring * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1472,9 +1399,7 @@ operator>> (
   return Test::Red_Herring::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_Test::Red_Herring::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -1493,8 +1418,6 @@ OBV_Test::Red_Herring::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1525,9 +1448,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (Test::AMH_RoundtripExceptionHolder * vt)
@@ -1548,8 +1468,6 @@ CORBA::remove_ref (Test::AMH_RoundtripExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1573,9 +1491,7 @@ operator>> (
   return Test::AMH_RoundtripExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_Test::AMH_RoundtripExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -1594,6 +1510,4 @@ OBV_Test::AMH_RoundtripExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 

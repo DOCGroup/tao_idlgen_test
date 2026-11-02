@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 ClassConstants::Iface::Iface (
     TAO_Stub *objref,
@@ -51,7 +49,6 @@ ClassConstants::AMH_IfaceExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:ClassConstants/AMH_IfaceExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler (

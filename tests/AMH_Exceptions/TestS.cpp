@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_6F4TG9_CPP_
-#define _TAO_IDL_TESTS_6F4TG9_CPP_
-
+#ifndef _TAO_IDL_TESTS_10JCMZ_CPP_
+#define _TAO_IDL_TESTS_10JCMZ_CPP_
 
 #include "TestS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -64,8 +63,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -136,7 +133,6 @@ POA_Test::AMH_Roundtrip::AMH_Roundtrip ()
 {
   this->optable_ = std::addressof (tao_Test_AMH_Roundtrip_optable);
 }
-
 
 void
 POA_Test::AMH_Roundtrip::test_method_skel (
@@ -220,11 +216,6 @@ POA_Test::AMH_Roundtrip::shutdown_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_Test::AMH_Roundtrip::_is_a (const char* value)
 {
   return
@@ -272,8 +263,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Test_Roundtrip_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Test_Roundtrip_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -345,12 +334,10 @@ POA_Test::Roundtrip::Roundtrip ()
   this->optable_ = std::addressof (tao_Test_Roundtrip_optable);
 }
 
-
 namespace POA_Test
 {
 
-  class test_method_Roundtrip
-    : public TAO::Upcall_Command
+  class test_method_Roundtrip : public TAO::Upcall_Command
   {
   public:
     inline test_method_Roundtrip (POA_Test::Roundtrip * servant,
@@ -433,12 +420,10 @@ void POA_Test::Roundtrip::test_method_skel (
                          );
 }
 
-
 namespace POA_Test
 {
 
-  class shutdown_Roundtrip
-    : public TAO::Upcall_Command
+  class shutdown_Roundtrip : public TAO::Upcall_Command
   {
   public:
     inline shutdown_Roundtrip (POA_Test::Roundtrip * servant)
@@ -487,13 +472,6 @@ void POA_Test::Roundtrip::shutdown_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Test::Roundtrip::_is_a (const char* value)
 {
   return
@@ -508,18 +486,12 @@ const char* POA_Test::Roundtrip::_interface_repository_id () const
   return "IDL:Test/Roundtrip:1.0";
 }
 
-
-
-
 void POA_Test::Roundtrip::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Test::Roundtrip *
 POA_Test::Roundtrip::_this ()
@@ -567,7 +539,6 @@ void
 POA_Test::TAO_AMH_RoundtripResponseHandler::shutdown ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }

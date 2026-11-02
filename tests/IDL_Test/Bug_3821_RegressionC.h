@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_3821_REGRESSIONC_8PGUH2_H_
-#define _TAO_IDL_BUG_3821_REGRESSIONC_8PGUH2_H_
+#ifndef _TAO_IDL_BUG_3821_REGRESSIONC_NEWYGL_H_
+#define _TAO_IDL_BUG_3821_REGRESSIONC_NEWYGL_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -68,7 +66,6 @@ namespace test
   using Enumeration_out = Enumeration &;
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Enumeration;
 
-
   class UnionAllCovered_EnumerationDiscriminant;
   using UnionAllCovered_EnumerationDiscriminant_var = ::TAO_Fixed_Var_T<UnionAllCovered_EnumerationDiscriminant>;
   using UnionAllCovered_EnumerationDiscriminant_out = UnionAllCovered_EnumerationDiscriminant&;
@@ -82,7 +79,6 @@ namespace test
 
     UnionAllCovered_EnumerationDiscriminant &operator= (UnionAllCovered_EnumerationDiscriminant const &);
 
-
     void _d (test::Enumeration);
     test::Enumeration _d () const;
 
@@ -91,18 +87,14 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_enum1 ( ::CORBA::Long);
     ::CORBA::Long e_enum1 () const;
-
 
     void e_enum2 ( ::CORBA::Long);
     ::CORBA::Long e_enum2 () const;
 
-
     void e_enum3 ( ::CORBA::Long);
     ::CORBA::Long e_enum3 () const;
-
 
     void _default ();
   private:
@@ -125,7 +117,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_EnumerationDiscriminant;
 
-
   class UnionAllCoveredWithDefault_EnumerationDiscriminant;
   using UnionAllCoveredWithDefault_EnumerationDiscriminant_var = ::TAO_Fixed_Var_T<UnionAllCoveredWithDefault_EnumerationDiscriminant>;
   using UnionAllCoveredWithDefault_EnumerationDiscriminant_out = UnionAllCoveredWithDefault_EnumerationDiscriminant&;
@@ -139,7 +130,6 @@ namespace test
 
     UnionAllCoveredWithDefault_EnumerationDiscriminant &operator= (UnionAllCoveredWithDefault_EnumerationDiscriminant const &);
 
-
     void _d (test::Enumeration);
     test::Enumeration _d () const;
 
@@ -148,14 +138,11 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_enum1 ( ::CORBA::Long);
     ::CORBA::Long e_enum1 () const;
 
-
     void e_enum2 ( ::CORBA::Long);
     ::CORBA::Long e_enum2 () const;
-
 
     void e_def ( ::CORBA::Long);
     ::CORBA::Long e_def () const;
@@ -179,7 +166,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionAllCoveredWithDefault_EnumerationDiscriminant;
 
-
   class UnionWithDefault_EnumerationDiscriminant;
   using UnionWithDefault_EnumerationDiscriminant_var = ::TAO_Fixed_Var_T<UnionWithDefault_EnumerationDiscriminant>;
   using UnionWithDefault_EnumerationDiscriminant_out = UnionWithDefault_EnumerationDiscriminant&;
@@ -193,7 +179,6 @@ namespace test
 
     UnionWithDefault_EnumerationDiscriminant &operator= (UnionWithDefault_EnumerationDiscriminant const &);
 
-
     void _d (test::Enumeration);
     test::Enumeration _d () const;
 
@@ -202,14 +187,11 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_enum1 ( ::CORBA::Long);
     ::CORBA::Long e_enum1 () const;
 
-
     void e_enum2 ( ::CORBA::Long);
     ::CORBA::Long e_enum2 () const;
-
 
     void e_def ( ::CORBA::Long);
     ::CORBA::Long e_def () const;
@@ -233,7 +215,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_EnumerationDiscriminant;
 
-
   class UnionWithImplicitDefault_EnumerationDiscriminant;
   using UnionWithImplicitDefault_EnumerationDiscriminant_var = ::TAO_Fixed_Var_T<UnionWithImplicitDefault_EnumerationDiscriminant>;
   using UnionWithImplicitDefault_EnumerationDiscriminant_out = UnionWithImplicitDefault_EnumerationDiscriminant&;
@@ -247,7 +228,6 @@ namespace test
 
     UnionWithImplicitDefault_EnumerationDiscriminant &operator= (UnionWithImplicitDefault_EnumerationDiscriminant const &);
 
-
     void _d (test::Enumeration);
     test::Enumeration _d () const;
 
@@ -256,14 +236,11 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_enum1 ( ::CORBA::Long);
     ::CORBA::Long e_enum1 () const;
 
-
     void e_enum2 ( ::CORBA::Long);
     ::CORBA::Long e_enum2 () const;
-
 
     void _default ();
   private:
@@ -287,7 +264,6 @@ namespace test
   using TypedefedEnumeration_out = Enumeration_out;
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TypedefedEnumeration;
 
-
   class UnionAllCovered_TypedefedEnumerationDiscriminant;
   using UnionAllCovered_TypedefedEnumerationDiscriminant_var = ::TAO_Fixed_Var_T<UnionAllCovered_TypedefedEnumerationDiscriminant>;
   using UnionAllCovered_TypedefedEnumerationDiscriminant_out = UnionAllCovered_TypedefedEnumerationDiscriminant&;
@@ -301,7 +277,6 @@ namespace test
 
     UnionAllCovered_TypedefedEnumerationDiscriminant &operator= (UnionAllCovered_TypedefedEnumerationDiscriminant const &);
 
-
     void _d (test::Enumeration);
     test::Enumeration _d () const;
 
@@ -310,18 +285,14 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_enum1 ( ::CORBA::Long);
     ::CORBA::Long e_enum1 () const;
-
 
     void e_enum2 ( ::CORBA::Long);
     ::CORBA::Long e_enum2 () const;
 
-
     void e_enum3 ( ::CORBA::Long);
     ::CORBA::Long e_enum3 () const;
-
 
     void _default ();
   private:
@@ -344,7 +315,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_TypedefedEnumerationDiscriminant;
 
-
   class UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant;
   using UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant_var = ::TAO_Fixed_Var_T<UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant>;
   using UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant_out = UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant&;
@@ -358,7 +328,6 @@ namespace test
 
     UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant &operator= (UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant const &);
 
-
     void _d (test::Enumeration);
     test::Enumeration _d () const;
 
@@ -367,14 +336,11 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_enum1 ( ::CORBA::Long);
     ::CORBA::Long e_enum1 () const;
 
-
     void e_enum2 ( ::CORBA::Long);
     ::CORBA::Long e_enum2 () const;
-
 
     void e_def ( ::CORBA::Long);
     ::CORBA::Long e_def () const;
@@ -398,7 +364,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant;
 
-
   class UnionWithDefault_TypedefedEnumerationDiscriminant;
   using UnionWithDefault_TypedefedEnumerationDiscriminant_var = ::TAO_Fixed_Var_T<UnionWithDefault_TypedefedEnumerationDiscriminant>;
   using UnionWithDefault_TypedefedEnumerationDiscriminant_out = UnionWithDefault_TypedefedEnumerationDiscriminant&;
@@ -412,7 +377,6 @@ namespace test
 
     UnionWithDefault_TypedefedEnumerationDiscriminant &operator= (UnionWithDefault_TypedefedEnumerationDiscriminant const &);
 
-
     void _d (test::Enumeration);
     test::Enumeration _d () const;
 
@@ -421,14 +385,11 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_enum1 ( ::CORBA::Long);
     ::CORBA::Long e_enum1 () const;
 
-
     void e_enum2 ( ::CORBA::Long);
     ::CORBA::Long e_enum2 () const;
-
 
     void e_def ( ::CORBA::Long);
     ::CORBA::Long e_def () const;
@@ -452,7 +413,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_TypedefedEnumerationDiscriminant;
 
-
   class UnionWithImplicitDefault_TypedefedEnumerationDiscriminant;
   using UnionWithImplicitDefault_TypedefedEnumerationDiscriminant_var = ::TAO_Fixed_Var_T<UnionWithImplicitDefault_TypedefedEnumerationDiscriminant>;
   using UnionWithImplicitDefault_TypedefedEnumerationDiscriminant_out = UnionWithImplicitDefault_TypedefedEnumerationDiscriminant&;
@@ -466,7 +426,6 @@ namespace test
 
     UnionWithImplicitDefault_TypedefedEnumerationDiscriminant &operator= (UnionWithImplicitDefault_TypedefedEnumerationDiscriminant const &);
 
-
     void _d (test::Enumeration);
     test::Enumeration _d () const;
 
@@ -475,14 +434,11 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_enum1 ( ::CORBA::Long);
     ::CORBA::Long e_enum1 () const;
 
-
     void e_enum2 ( ::CORBA::Long);
     ::CORBA::Long e_enum2 () const;
-
 
     void _default ();
   private:
@@ -503,7 +459,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant;
 
-
   class UnionAllCovered_BooleanDiscriminant;
   using UnionAllCovered_BooleanDiscriminant_var = ::TAO_Fixed_Var_T<UnionAllCovered_BooleanDiscriminant>;
   using UnionAllCovered_BooleanDiscriminant_out = UnionAllCovered_BooleanDiscriminant&;
@@ -517,7 +472,6 @@ namespace test
 
     UnionAllCovered_BooleanDiscriminant &operator= (UnionAllCovered_BooleanDiscriminant const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -526,10 +480,8 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_true ( ::CORBA::Long);
     ::CORBA::Long e_true () const;
-
 
     void e_false ( ::CORBA::Long);
     ::CORBA::Long e_false () const;
@@ -551,7 +503,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_BooleanDiscriminant;
 
-
   class UnionWithDefault_BooleanDiscriminant;
   using UnionWithDefault_BooleanDiscriminant_var = ::TAO_Fixed_Var_T<UnionWithDefault_BooleanDiscriminant>;
   using UnionWithDefault_BooleanDiscriminant_out = UnionWithDefault_BooleanDiscriminant&;
@@ -565,7 +516,6 @@ namespace test
 
     UnionWithDefault_BooleanDiscriminant &operator= (UnionWithDefault_BooleanDiscriminant const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -574,10 +524,8 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_true ( ::CORBA::Long);
     ::CORBA::Long e_true () const;
-
 
     void e_def ( ::CORBA::Long);
     ::CORBA::Long e_def () const;
@@ -599,7 +547,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_BooleanDiscriminant;
 
-
   class UnionWithImplicitDefault_BooleanDiscriminant;
   using UnionWithImplicitDefault_BooleanDiscriminant_var = ::TAO_Fixed_Var_T<UnionWithImplicitDefault_BooleanDiscriminant>;
   using UnionWithImplicitDefault_BooleanDiscriminant_out = UnionWithImplicitDefault_BooleanDiscriminant&;
@@ -613,7 +560,6 @@ namespace test
 
     UnionWithImplicitDefault_BooleanDiscriminant &operator= (UnionWithImplicitDefault_BooleanDiscriminant const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -622,10 +568,8 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_true ( ::CORBA::Long);
     ::CORBA::Long e_true () const;
-
 
     void _default ();
   private:
@@ -644,7 +588,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_BooleanDiscriminant;
 
-
   class UnionAllCovered_CharDiscriminant;
   using UnionAllCovered_CharDiscriminant_var = ::TAO_Fixed_Var_T<UnionAllCovered_CharDiscriminant>;
   using UnionAllCovered_CharDiscriminant_out = UnionAllCovered_CharDiscriminant&;
@@ -658,7 +601,6 @@ namespace test
 
     UnionAllCovered_CharDiscriminant &operator= (UnionAllCovered_CharDiscriminant const &);
 
-
     void _d ( ::CORBA::Char);
     ::CORBA::Char _d () const;
 
@@ -666,7 +608,6 @@ namespace test
     using _out_type = UnionAllCovered_CharDiscriminant_out;
 
     static void _tao_any_destructor (void *);
-
 
     void e_chars ( ::CORBA::Long);
     ::CORBA::Long e_chars () const;
@@ -686,7 +627,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_CharDiscriminant;
 
-
   class UnionWithDefault_CharDiscriminant;
   using UnionWithDefault_CharDiscriminant_var = ::TAO_Fixed_Var_T<UnionWithDefault_CharDiscriminant>;
   using UnionWithDefault_CharDiscriminant_out = UnionWithDefault_CharDiscriminant&;
@@ -700,7 +640,6 @@ namespace test
 
     UnionWithDefault_CharDiscriminant &operator= (UnionWithDefault_CharDiscriminant const &);
 
-
     void _d ( ::CORBA::Char);
     ::CORBA::Char _d () const;
 
@@ -709,10 +648,8 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_chars ( ::CORBA::Long);
     ::CORBA::Long e_chars () const;
-
 
     void e_def ( ::CORBA::Long);
     ::CORBA::Long e_def () const;
@@ -734,7 +671,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_CharDiscriminant;
 
-
   class UnionWithImplicitDefault_CharDiscriminant;
   using UnionWithImplicitDefault_CharDiscriminant_var = ::TAO_Fixed_Var_T<UnionWithImplicitDefault_CharDiscriminant>;
   using UnionWithImplicitDefault_CharDiscriminant_out = UnionWithImplicitDefault_CharDiscriminant&;
@@ -748,7 +684,6 @@ namespace test
 
     UnionWithImplicitDefault_CharDiscriminant &operator= (UnionWithImplicitDefault_CharDiscriminant const &);
 
-
     void _d ( ::CORBA::Char);
     ::CORBA::Char _d () const;
 
@@ -757,10 +692,8 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_chars ( ::CORBA::Long);
     ::CORBA::Long e_chars () const;
-
 
     void _default ();
   private:
@@ -779,7 +712,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_CharDiscriminant;
 
-
   class UnionWithDefault_LongDiscriminant;
   using UnionWithDefault_LongDiscriminant_var = ::TAO_Fixed_Var_T<UnionWithDefault_LongDiscriminant>;
   using UnionWithDefault_LongDiscriminant_out = UnionWithDefault_LongDiscriminant&;
@@ -793,7 +725,6 @@ namespace test
 
     UnionWithDefault_LongDiscriminant &operator= (UnionWithDefault_LongDiscriminant const &);
 
-
     void _d ( ::CORBA::Long);
     ::CORBA::Long _d () const;
 
@@ -802,18 +733,14 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_case1 ( ::CORBA::Long);
     ::CORBA::Long e_case1 () const;
-
 
     void e_case2 ( ::CORBA::Long);
     ::CORBA::Long e_case2 () const;
 
-
     void e_case3 ( ::CORBA::Long);
     ::CORBA::Long e_case3 () const;
-
 
     void e_def ( ::CORBA::Long);
     ::CORBA::Long e_def () const;
@@ -839,7 +766,6 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_LongDiscriminant;
 
-
   class UnionWithImplicitDefault_LongDiscriminant;
   using UnionWithImplicitDefault_LongDiscriminant_var = ::TAO_Fixed_Var_T<UnionWithImplicitDefault_LongDiscriminant>;
   using UnionWithImplicitDefault_LongDiscriminant_out = UnionWithImplicitDefault_LongDiscriminant&;
@@ -853,7 +779,6 @@ namespace test
 
     UnionWithImplicitDefault_LongDiscriminant &operator= (UnionWithImplicitDefault_LongDiscriminant const &);
 
-
     void _d ( ::CORBA::Long);
     ::CORBA::Long _d () const;
 
@@ -862,18 +787,14 @@ namespace test
 
     static void _tao_any_destructor (void *);
 
-
     void e_case1 ( ::CORBA::Long);
     ::CORBA::Long e_case1 () const;
-
 
     void e_case2 ( ::CORBA::Long);
     ::CORBA::Long e_case2 () const;
 
-
     void e_case3 ( ::CORBA::Long);
     ::CORBA::Long e_case3 () const;
-
 
     void _default ();
   private:
@@ -896,18 +817,13 @@ namespace test
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_LongDiscriminant;
 
-
-
 } // module test
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -927,7 +843,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::test::Enumeration>
     : public
@@ -937,7 +852,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::test::UnionAllCovered_EnumerationDiscriminant>
@@ -949,7 +863,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::test::UnionAllCoveredWithDefault_EnumerationDiscriminant>
     : public
@@ -959,7 +872,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::test::UnionWithDefault_EnumerationDiscriminant>
@@ -971,7 +883,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::test::UnionWithImplicitDefault_EnumerationDiscriminant>
     : public
@@ -981,7 +892,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::test::UnionAllCovered_TypedefedEnumerationDiscriminant>
@@ -993,7 +903,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant>
     : public
@@ -1003,7 +912,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::test::UnionWithDefault_TypedefedEnumerationDiscriminant>
@@ -1015,7 +923,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant>
     : public
@@ -1025,7 +932,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::test::UnionAllCovered_BooleanDiscriminant>
@@ -1037,7 +943,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::test::UnionWithDefault_BooleanDiscriminant>
     : public
@@ -1047,7 +952,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::test::UnionWithImplicitDefault_BooleanDiscriminant>
@@ -1059,7 +963,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::test::UnionAllCovered_CharDiscriminant>
     : public
@@ -1069,7 +972,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::test::UnionWithDefault_CharDiscriminant>
@@ -1081,7 +983,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::test::UnionWithImplicitDefault_CharDiscriminant>
     : public
@@ -1092,7 +993,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::test::UnionWithDefault_LongDiscriminant>
     : public
@@ -1102,7 +1002,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::test::UnionWithImplicitDefault_LongDiscriminant>
@@ -1117,9 +1016,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -1128,19 +1024,13 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, test::Enumeration);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, test::Enumeration &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1151,8 +1041,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, tes
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1161,8 +1049,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, test::UnionAllCovered
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, test::UnionAllCoveredWithDefault_EnumerationDiscriminant const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1173,8 +1059,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, tes
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1183,8 +1067,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, test::UnionWithImplic
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, test::UnionWithImplicitDefault_EnumerationDiscriminant const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1195,8 +1077,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, tes
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1205,8 +1085,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, test::UnionAllCovered
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1217,8 +1095,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, tes
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1227,8 +1103,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, test::UnionWithImplic
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1239,8 +1113,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, tes
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1249,8 +1121,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, test::UnionWithDefaul
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, test::UnionWithDefault_BooleanDiscriminant const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1261,8 +1131,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, tes
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1271,8 +1139,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, test::UnionAllCovered
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, test::UnionAllCovered_CharDiscriminant const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1283,8 +1149,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, tes
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1293,8 +1157,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, test::UnionWithImplic
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, test::UnionWithImplicitDefault_CharDiscriminant const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1305,8 +1167,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, tes
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -1316,16 +1176,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, tes
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, test::Enumeration _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, test::Enumeration &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1334,16 +1190,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::Unio
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, test::UnionAllCoveredWithDefault_EnumerationDiscriminant const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::UnionAllCoveredWithDefault_EnumerationDiscriminant &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1352,16 +1204,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::Unio
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, test::UnionWithImplicitDefault_EnumerationDiscriminant const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::UnionWithImplicitDefault_EnumerationDiscriminant &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1370,16 +1218,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::Unio
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1388,16 +1232,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::Unio
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1406,16 +1246,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::Unio
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, test::UnionWithDefault_BooleanDiscriminant const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::UnionWithDefault_BooleanDiscriminant &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1424,16 +1260,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::Unio
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, test::UnionAllCovered_CharDiscriminant const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::UnionAllCovered_CharDiscriminant &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1442,16 +1274,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::Unio
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, test::UnionWithImplicitDefault_CharDiscriminant const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::UnionWithImplicitDefault_CharDiscriminant &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1460,15 +1288,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::Unio
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, test::UnionWithImplicitDefault_LongDiscriminant const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, test::UnionWithImplicitDefault_LongDiscriminant &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "Bug_3821_RegressionC.inl"

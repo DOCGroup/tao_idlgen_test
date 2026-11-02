@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 Bug_2350_Regression::Bug_2350_Regression (
     TAO_Stub *objref,
@@ -51,7 +49,6 @@ AMH_Bug_2350_RegressionExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_Bug_2350_RegressionExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_Bug_2350_RegressionHandler::AMI_Bug_2350_RegressionHandler (

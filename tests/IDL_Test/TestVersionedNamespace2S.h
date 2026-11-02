@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_BBEIPY_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_BBEIPY_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_DRIIEB_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_DRIIEB_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,22 +49,13 @@
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
-
 
   template<>
   class SArg_Traits< ::M1::S1>
@@ -76,8 +66,6 @@ namespace TAO
           >
   {
   };
-
-
 
 #if !defined (_M1_LI__SARG_TRAITS_)
 #define _M1_LI__SARG_TRAITS_
@@ -93,8 +81,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
-
 
 #if !defined (_M1_AMH_LIEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _M1_AMH_LIEXCEPTIONHOLDER__SARG_TRAITS_
@@ -113,8 +99,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
-
 #if !defined (_M1_L2__SARG_TRAITS_)
 #define _M1_L2__SARG_TRAITS_
 
@@ -129,8 +113,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
-
 
 #if !defined (_M1_AMH_L2EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _M1_AMH_L2EXCEPTIONHOLDER__SARG_TRAITS_
@@ -149,8 +131,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
-
   template<>
   class SArg_Traits< ::M1::X>
     : public
@@ -160,8 +140,6 @@ namespace TAO
           >
   {
   };
-
-
 
   template<>
   class SArg_Traits< ::M1::BooleanUnion1>
@@ -173,8 +151,6 @@ namespace TAO
   {
   };
 
-
-
   template<>
   class SArg_Traits< ::M1::BooleanUnion2>
     : public
@@ -184,8 +160,6 @@ namespace TAO
           >
   {
   };
-
-
 
 #if !defined (_M1_V__SARG_TRAITS_)
 #define _M1_V__SARG_TRAITS_
@@ -204,8 +178,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
-
   template<>
   class SArg_Traits< ::M2::M3::S2>
     : public
@@ -215,8 +187,6 @@ namespace TAO
           >
   {
   };
-
-
 
 #if !defined (_M2_M3_L3__SARG_TRAITS_)
 #define _M2_M3_L3__SARG_TRAITS_
@@ -232,8 +202,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
-
 
 #if !defined (_M2_M3_AMH_L3EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _M2_M3_AMH_L3EXCEPTIONHOLDER__SARG_TRAITS_
@@ -252,8 +220,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
-
 #if !defined (_M2_M3_L4__SARG_TRAITS_)
 #define _M2_M3_L4__SARG_TRAITS_
 
@@ -268,8 +234,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
-
 
 #if !defined (_M2_M3_AMH_L4EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _M2_M3_AMH_L4EXCEPTIONHOLDER__SARG_TRAITS_
@@ -288,8 +252,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
-
 #if !defined (_M2_M3_V2__SARG_TRAITS_)
 #define _M2_M3_V2__SARG_TRAITS_
 
@@ -306,8 +268,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
-
 
 #if !defined (_M2_M3_V3__SARG_TRAITS_)
 #define _M2_M3_V3__SARG_TRAITS_
@@ -329,15 +289,10 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 namespace POA_M1
 {
-
 
   class AMH_LI;
   using AMH_LI_ptr = AMH_LI *;
@@ -352,7 +307,6 @@ namespace POA_M1
     AMH_LI (const AMH_LI& rhs);
     virtual ~AMH_LI () = default;
 
-
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
     virtual void _dispatch (
@@ -362,7 +316,6 @@ namespace POA_M1
     M1::LI *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -374,10 +327,6 @@ namespace POA_M1
     ) = 0;
 
 };
-
-
-
-
 
 class LI;
 using LI_ptr = LI *;
@@ -406,7 +355,6 @@ public:
   ::M1::LI *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op (
     const ::M1::S1 & s) = 0;
 
@@ -415,7 +363,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 class TAO_AMH_LIResponseHandler;
 using TAO_AMH_LIResponseHandler_ptr = TAO_AMH_LIResponseHandler *;
 
@@ -426,13 +373,10 @@ class  TAO_AMH_LIResponseHandler
 public:
   TAO_AMH_LIResponseHandler () = default;
   virtual ~TAO_AMH_LIResponseHandler () = default;
-
   void op () override;
-
   void op_excep (
     ::M1::AMH_LIExceptionHolder * holder) override;
 };
-
 class AMH_L2;
 using AMH_L2_ptr = AMH_L2 *;
 
@@ -446,7 +390,6 @@ public:
   AMH_L2 (const AMH_L2& rhs);
   virtual ~AMH_L2 () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -456,7 +399,6 @@ public:
   M1::L2 *_this ();
 
 virtual const char* _interface_repository_id () const;
-
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -468,10 +410,6 @@ virtual void op (
   ) = 0;
 
 };
-
-
-
-
 
 class L2;
 using L2_ptr = L2 *;
@@ -500,7 +438,6 @@ public:
   ::M1::L2 *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op (
     const ::M1::S1 & s) = 0;
 
@@ -509,7 +446,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 class TAO_AMH_L2ResponseHandler;
 using TAO_AMH_L2ResponseHandler_ptr = TAO_AMH_L2ResponseHandler *;
 
@@ -520,24 +456,17 @@ class  TAO_AMH_L2ResponseHandler
 public:
   TAO_AMH_L2ResponseHandler () = default;
   virtual ~TAO_AMH_L2ResponseHandler () = default;
-
   void op () override;
-
   void op_excep (
     ::M1::AMH_L2ExceptionHolder * holder) override;
 };
 
-
-
 } // module M1
-
 namespace POA_M2
 {
 
-
   namespace M3
   {
-
 
     class AMH_L3;
     using AMH_L3_ptr = AMH_L3 *;
@@ -552,7 +481,6 @@ namespace POA_M2
       AMH_L3 (const AMH_L3& rhs);
       virtual ~AMH_L3 () = default;
 
-
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
       virtual void _dispatch (
@@ -562,7 +490,6 @@ namespace POA_M2
       M2::M3::L3 *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     static void op_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -574,10 +501,6 @@ namespace POA_M2
       ) = 0;
 
   };
-
-
-
-
 
   class L3;
   using L3_ptr = L3 *;
@@ -606,7 +529,6 @@ namespace POA_M2
     ::M2::M3::L3 *_this ();
 
     virtual const char* _interface_repository_id () const;
-
     virtual void op (
       const ::M2::M3::S2 & s) = 0;
 
@@ -615,7 +537,6 @@ namespace POA_M2
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
   class TAO_AMH_L3ResponseHandler;
   using TAO_AMH_L3ResponseHandler_ptr = TAO_AMH_L3ResponseHandler *;
 
@@ -626,13 +547,10 @@ namespace POA_M2
   public:
     TAO_AMH_L3ResponseHandler () = default;
     virtual ~TAO_AMH_L3ResponseHandler () = default;
-
     void op () override;
-
     void op_excep (
       ::M2::M3::AMH_L3ExceptionHolder * holder) override;
   };
-
   class AMH_L4;
   using AMH_L4_ptr = AMH_L4 *;
 
@@ -646,7 +564,6 @@ namespace POA_M2
     AMH_L4 (const AMH_L4& rhs);
     virtual ~AMH_L4 () = default;
 
-
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
     virtual void _dispatch (
@@ -656,7 +573,6 @@ namespace POA_M2
     M2::M3::L4 *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -668,10 +584,6 @@ namespace POA_M2
     ) = 0;
 
 };
-
-
-
-
 
 class L4;
 using L4_ptr = L4 *;
@@ -700,7 +612,6 @@ public:
   ::M2::M3::L4 *_this ();
 
   virtual const char* _interface_repository_id () const;
-
   virtual void op (
     const ::M2::M3::S2 & s) = 0;
 
@@ -709,7 +620,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-
 class TAO_AMH_L4ResponseHandler;
 using TAO_AMH_L4ResponseHandler_ptr = TAO_AMH_L4ResponseHandler *;
 
@@ -720,24 +630,16 @@ class  TAO_AMH_L4ResponseHandler
 public:
   TAO_AMH_L4ResponseHandler () = default;
   virtual ~TAO_AMH_L4ResponseHandler () = default;
-
   void op () override;
-
   void op_excep (
     ::M2::M3::AMH_L4ExceptionHolder * holder) override;
 };
 
-
-
 } // module M2::M3
-
-
 
 } // module M2
 
 END_USER_VERSIONED_NAMESPACE
-
-
 
 #include /**/ "ace/post.h"
 

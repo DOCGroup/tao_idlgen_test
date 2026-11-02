@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 #include "TestVersionedNamespace2C.h"
 #include <memory>
 #include <new>
@@ -48,15 +46,13 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "TestVersionedNamespace2C.inl"
 #endif /* !defined INLINE */
 
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -80,13 +76,10 @@ _tao_tc_M1_S1 (
   _tao_fields_M1_S1,
   1);
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_S1 = std::addressof(_tao_tc_M1_S1);
 }
-
-
 
 void
 M1::S1::_tao_any_destructor (
@@ -96,10 +89,7 @@ M1::S1::_tao_any_destructor (
   delete tmp;
 }
 
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -131,11 +121,7 @@ TAO::Objref_Traits<M1::LI>::marshal (const M1::LI_ptr p,TAO_OutputCDR & cdr)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 void
 M1::LI::op (
@@ -238,7 +224,6 @@ M1::LI::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_M1_LI (
@@ -246,12 +231,10 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:M1/LI:1.0",
     "LI");
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_LI = std::addressof(_tao_tc_M1_LI);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M1_AMH_LIExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -266,20 +249,14 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_M1_AMH_LIExceptionHolder,
     0);
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_LIExceptionHolder = std::addressof(_tao_tc_M1_AMH_LIExceptionHolder);
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<M1::AMH_LIExceptionHolder>::add_ref (M1::AMH_LIExceptionHolder * p)
@@ -301,11 +278,7 @@ TAO::Value_Traits<M1::AMH_LIExceptionHolder>::release (M1::AMH_LIExceptionHolder
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M1::AMH_LIExceptionHolder *
 M1::AMH_LIExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -422,7 +395,6 @@ M1::AMH_LIExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 M1::AMH_LIExceptionHolder::raise_op ()
 {
@@ -430,11 +402,7 @@ M1::AMH_LIExceptionHolder::raise_op ()
   this->exception->_raise ();
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -466,11 +434,7 @@ TAO::Objref_Traits<M1::AMH_LIResponseHandler>::marshal (const M1::AMH_LIResponse
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M1::AMH_LIResponseHandler::AMH_LIResponseHandler ()
 {}
@@ -545,7 +509,6 @@ M1::AMH_LIResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_M1_AMH_LIResponseHandler (
@@ -553,16 +516,12 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:M1/AMH_LIResponseHandler:1.0",
     "AMH_LIResponseHandler");
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_LIResponseHandler = std::addressof(_tao_tc_M1_AMH_LIResponseHandler);
 }
 
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -594,11 +553,7 @@ TAO::Objref_Traits<M1::L2>::marshal (const M1::L2_ptr p,TAO_OutputCDR & cdr)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 void
 M1::L2::op (
@@ -701,7 +656,6 @@ M1::L2::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_M1_L2 (
@@ -709,12 +663,10 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:M1/L2:1.0",
     "L2");
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_L2 = std::addressof(_tao_tc_M1_L2);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M1_AMH_L2ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -729,20 +681,14 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_M1_AMH_L2ExceptionHolder,
     0);
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_L2ExceptionHolder = std::addressof(_tao_tc_M1_AMH_L2ExceptionHolder);
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<M1::AMH_L2ExceptionHolder>::add_ref (M1::AMH_L2ExceptionHolder * p)
@@ -764,11 +710,7 @@ TAO::Value_Traits<M1::AMH_L2ExceptionHolder>::release (M1::AMH_L2ExceptionHolder
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M1::AMH_L2ExceptionHolder *
 M1::AMH_L2ExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -885,7 +827,6 @@ M1::AMH_L2ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 M1::AMH_L2ExceptionHolder::raise_op ()
 {
@@ -893,11 +834,7 @@ M1::AMH_L2ExceptionHolder::raise_op ()
   this->exception->_raise ();
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -929,11 +866,7 @@ TAO::Objref_Traits<M1::AMH_L2ResponseHandler>::marshal (const M1::AMH_L2Response
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M1::AMH_L2ResponseHandler::AMH_L2ResponseHandler ()
 {}
@@ -1008,7 +941,6 @@ M1::AMH_L2ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_M1_AMH_L2ResponseHandler (
@@ -1016,12 +948,10 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:M1/AMH_L2ResponseHandler:1.0",
     "AMH_L2ResponseHandler");
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_L2ResponseHandler = std::addressof(_tao_tc_M1_AMH_L2ResponseHandler);
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -1046,13 +976,10 @@ _tao_tc_M1_X (
   _tao_fields_M1_X,
   3);
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_X = std::addressof(_tao_tc_M1_X);
 }
-
-
 
 void
 M1::X::_tao_any_destructor (
@@ -1061,8 +988,6 @@ M1::X::_tao_any_destructor (
   X *tmp = static_cast<X *> (_tao_void_pointer);
   delete tmp;
 }
-
-
 
 M1::BooleanUnion1::BooleanUnion1 ()
 {
@@ -1163,7 +1088,6 @@ void M1::BooleanUnion1::_reset ()
     break;
   }
 }
-
 static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_M1_BooleanUnion1__0 (true, "valLocalIface", &M1::_tc_L2);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_M1_BooleanUnion1[] =
@@ -1183,13 +1107,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_M1_BooleanUnion1)/sizeof (_tao_cases_M1_BooleanUnion1[0]),
     -1);
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_BooleanUnion1 = std::addressof(_tao_tc_M1_BooleanUnion1);
 }
-
-
 
 M1::BooleanUnion2::BooleanUnion2 ()
 {
@@ -1260,7 +1181,6 @@ void M1::BooleanUnion2::_reset ()
     break;
   }
 }
-
 static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_M1_BooleanUnion2__0 (true, "valLocalIface", &CORBA::_tc_string);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_M1_BooleanUnion2[] =
@@ -1280,12 +1200,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_M1_BooleanUnion2)/sizeof (_tao_cases_M1_BooleanUnion2[0]),
     -1);
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_BooleanUnion2 = std::addressof(_tao_tc_M1_BooleanUnion2);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_M1_V[] =
   {
     { "valString", &CORBA::_tc_string, ::CORBA::PUBLIC_MEMBER },
@@ -1309,20 +1227,14 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_M1_V,
     6);
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_V = std::addressof(_tao_tc_M1_V);
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<M1::V>::add_ref (M1::V * p)
@@ -1344,11 +1256,7 @@ TAO::Value_Traits<M1::V>::release (M1::V * p)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M1::V *
 M1::V::_downcast (::CORBA::ValueBase *v)
@@ -1445,8 +1353,6 @@ M1::V::_tao_unmarshal (
   return true;
 }
 
-
-
 M1::V_init::V_init ()
 {
 }
@@ -1477,7 +1383,6 @@ M1::V_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -1500,7 +1405,6 @@ _tao_tc_M2_M3_S2 (
   _tao_fields_M2_M3_S2,
   1);
 
-
 namespace M2
 {
 
@@ -1510,8 +1414,6 @@ namespace M2
   }
 }
 
-
-
 void
 M2::M3::S2::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -1520,10 +1422,7 @@ M2::M3::S2::_tao_any_destructor (
   delete tmp;
 }
 
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1555,11 +1454,7 @@ TAO::Objref_Traits<M2::M3::L3>::marshal (const M2::M3::L3_ptr p,TAO_OutputCDR & 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 void
 M2::M3::L3::op (
@@ -1662,14 +1557,12 @@ M2::M3::L3::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_M2_M3_L3 (
     ::CORBA::tk_objref,
     "IDL:M2/M3/L3:1.0",
     "L3");
-
 
 namespace M2
 {
@@ -1679,7 +1572,6 @@ namespace M2
     ::CORBA::TypeCode_ptr const _tc_L3 = std::addressof(_tao_tc_M2_M3_L3);
   }
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M2_M3_AMH_L3ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -1694,7 +1586,6 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_M2_M3_AMH_L3ExceptionHolder,
     0);
 
-
 namespace M2
 {
 
@@ -1704,14 +1595,9 @@ namespace M2
   }
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<M2::M3::AMH_L3ExceptionHolder>::add_ref (M2::M3::AMH_L3ExceptionHolder * p)
@@ -1733,11 +1619,7 @@ TAO::Value_Traits<M2::M3::AMH_L3ExceptionHolder>::release (M2::M3::AMH_L3Excepti
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M2::M3::AMH_L3ExceptionHolder *
 M2::M3::AMH_L3ExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -1854,7 +1736,6 @@ M2::M3::AMH_L3ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 M2::M3::AMH_L3ExceptionHolder::raise_op ()
 {
@@ -1862,11 +1743,7 @@ M2::M3::AMH_L3ExceptionHolder::raise_op ()
   this->exception->_raise ();
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1898,11 +1775,7 @@ TAO::Objref_Traits<M2::M3::AMH_L3ResponseHandler>::marshal (const M2::M3::AMH_L3
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M2::M3::AMH_L3ResponseHandler::AMH_L3ResponseHandler ()
 {}
@@ -1977,14 +1850,12 @@ M2::M3::AMH_L3ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_M2_M3_AMH_L3ResponseHandler (
     ::CORBA::tk_local_interface,
     "IDL:M2/M3/AMH_L3ResponseHandler:1.0",
     "AMH_L3ResponseHandler");
-
 
 namespace M2
 {
@@ -1994,8 +1865,6 @@ namespace M2
     ::CORBA::TypeCode_ptr const _tc_AMH_L3ResponseHandler = std::addressof(_tao_tc_M2_M3_AMH_L3ResponseHandler);
   }
 }
-
-
 
 M2::M3::E1::E1 (
     const M2::M3::L3_ptr _tao_val2,
@@ -2009,8 +1878,6 @@ M2::M3::E1::E1 (
   this->bool1 = _tao_bool1;
   this->bool2 = _tao_bool2;
 }
-
-
 
 M2::M3::E1::E1 ()
   : ::CORBA::UserException (
@@ -2098,7 +1965,6 @@ void M2::M3::E1::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::M2::M3::_tc_E1;
 }
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
@@ -2123,7 +1989,6 @@ _tao_tc_M2_M3_E1 (
   _tao_fields_M2_M3_E1,
   3);
 
-
 namespace M2
 {
 
@@ -2133,10 +1998,7 @@ namespace M2
   }
 }
 
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2168,11 +2030,7 @@ TAO::Objref_Traits<M2::M3::L4>::marshal (const M2::M3::L4_ptr p,TAO_OutputCDR & 
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 void
 M2::M3::L4::op (
@@ -2290,14 +2148,12 @@ M2::M3::L4::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_M2_M3_L4 (
     ::CORBA::tk_objref,
     "IDL:M2/M3/L4:1.0",
     "L4");
-
 
 namespace M2
 {
@@ -2307,7 +2163,6 @@ namespace M2
     ::CORBA::TypeCode_ptr const _tc_L4 = std::addressof(_tao_tc_M2_M3_L4);
   }
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M2_M3_AMH_L4ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -2322,7 +2177,6 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_M2_M3_AMH_L4ExceptionHolder,
     0);
 
-
 namespace M2
 {
 
@@ -2332,14 +2186,9 @@ namespace M2
   }
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<M2::M3::AMH_L4ExceptionHolder>::add_ref (M2::M3::AMH_L4ExceptionHolder * p)
@@ -2361,11 +2210,7 @@ TAO::Value_Traits<M2::M3::AMH_L4ExceptionHolder>::release (M2::M3::AMH_L4Excepti
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M2::M3::AMH_L4ExceptionHolder *
 M2::M3::AMH_L4ExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -2482,7 +2327,6 @@ M2::M3::AMH_L4ExceptionHolder::_tao_unmarshal (
   owner._retn ();
   return true;
 }
-
 void
 M2::M3::AMH_L4ExceptionHolder::raise_op ()
 {
@@ -2490,11 +2334,7 @@ M2::M3::AMH_L4ExceptionHolder::raise_op ()
   this->exception->_raise ();
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2526,11 +2366,7 @@ TAO::Objref_Traits<M2::M3::AMH_L4ResponseHandler>::marshal (const M2::M3::AMH_L4
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M2::M3::AMH_L4ResponseHandler::AMH_L4ResponseHandler ()
 {}
@@ -2605,14 +2441,12 @@ M2::M3::AMH_L4ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_M2_M3_AMH_L4ResponseHandler (
     ::CORBA::tk_local_interface,
     "IDL:M2/M3/AMH_L4ResponseHandler:1.0",
     "AMH_L4ResponseHandler");
-
 
 namespace M2
 {
@@ -2622,7 +2456,6 @@ namespace M2
     ::CORBA::TypeCode_ptr const _tc_AMH_L4ResponseHandler = std::addressof(_tao_tc_M2_M3_AMH_L4ResponseHandler);
   }
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_M2_M3_V2[] =
   {
     { "valString", &CORBA::_tc_string, ::CORBA::PUBLIC_MEMBER },
@@ -2644,7 +2477,6 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_M2_M3_V2,
     4);
 
-
 namespace M2
 {
 
@@ -2654,14 +2486,9 @@ namespace M2
   }
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<M2::M3::V2>::add_ref (M2::M3::V2 * p)
@@ -2683,11 +2510,7 @@ TAO::Value_Traits<M2::M3::V2>::release (M2::M3::V2 * p)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M2::M3::V2 *
 M2::M3::V2::_downcast (::CORBA::ValueBase *v)
@@ -2784,8 +2607,6 @@ M2::M3::V2::_tao_unmarshal (
   return true;
 }
 
-
-
 M2::M3::V2_init::V2_init ()
 {
 }
@@ -2816,7 +2637,6 @@ M2::M3::V2_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_M2_M3_V3[] =
   {
     { "valString", &CORBA::_tc_string, ::CORBA::PUBLIC_MEMBER },
@@ -2837,7 +2657,6 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_M2_M3_V3,
     3);
 
-
 namespace M2
 {
 
@@ -2847,14 +2666,9 @@ namespace M2
   }
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<M2::M3::V3>::add_ref (M2::M3::V3 * p)
@@ -2876,11 +2690,7 @@ TAO::Value_Traits<M2::M3::V3>::release (M2::M3::V3 * p)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M2::M3::V3 *
 M2::M3::V3::_downcast (::CORBA::ValueBase *v)
@@ -2977,8 +2787,6 @@ M2::M3::V3::_tao_unmarshal (
   return true;
 }
 
-
-
 M2::M3::V3_init::V3_init ()
 {
 }
@@ -3009,7 +2817,6 @@ M2::M3::V3_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 OBV_M1::AMH_LIExceptionHolder::~AMH_LIExceptionHolder ()
 {}
 
@@ -3024,7 +2831,6 @@ OBV_M1::AMH_LIExceptionHolder::_tao_unmarshal__M1_AMH_LIExceptionHolder (TAO_Inp
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_M1::AMH_L2ExceptionHolder::~AMH_L2ExceptionHolder ()
 {}
 
@@ -3039,7 +2845,6 @@ OBV_M1::AMH_L2ExceptionHolder::_tao_unmarshal__M1_AMH_L2ExceptionHolder (TAO_Inp
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_M1::V::V (
     const char * _tao_init_valString,
     const ::M1::S1 & _tao_init_valStruct,
@@ -3088,7 +2893,6 @@ OBV_M1::V::_tao_unmarshal__M1_V (TAO_InputCDR &strm, TAO_ChunkInfo& ci)
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 /// Accessor to set the member.
 void
 OBV_M1::V::valString (char *val)
@@ -3117,7 +2921,6 @@ OBV_M1::V::valString () const // get method
 {
   return this->_pd_valString;
 }
-
 /// Accessor to set the member.
 void
 OBV_M1::V::valStruct (const M1::S1 &val)
@@ -3136,7 +2939,6 @@ OBV_M1::V::valStruct ()
 {
   return this->_pd_valStruct;
 }
-
 /// Accessor to set the member.
 void
 OBV_M1::V::valLocalIface (M1::LI_ptr val)
@@ -3151,7 +2953,6 @@ OBV_M1::V::valLocalIface () const
 {
   return this->_pd_valLocalIface.in ();
 }
-
 /// Accessor to set the member
 void
 OBV_M1::V::valBoolUnion1 (const M1::BooleanUnion1 &val)
@@ -3170,7 +2971,6 @@ OBV_M1::V::valBoolUnion1 ()
 {
   return this->_pd_valBoolUnion1;
 }
-
 /// Accessor to set the member
 void
 OBV_M1::V::valBoolUnion2 (const M1::BooleanUnion2 &val)
@@ -3189,7 +2989,6 @@ OBV_M1::V::valBoolUnion2 ()
 {
   return this->_pd_valBoolUnion2;
 }
-
 /// Accessor to set the member.
 void
 OBV_M1::V::valX (const M1::X &val)
@@ -3208,7 +3007,6 @@ OBV_M1::V::valX ()
 {
   return this->_pd_valX;
 }
-
 OBV_M2::M3::AMH_L3ExceptionHolder::~AMH_L3ExceptionHolder ()
 {}
 
@@ -3223,7 +3021,6 @@ OBV_M2::M3::AMH_L3ExceptionHolder::_tao_unmarshal__M2_M3_AMH_L3ExceptionHolder (
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_M2::M3::AMH_L4ExceptionHolder::~AMH_L4ExceptionHolder ()
 {}
 
@@ -3238,7 +3035,6 @@ OBV_M2::M3::AMH_L4ExceptionHolder::_tao_unmarshal__M2_M3_AMH_L4ExceptionHolder (
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 OBV_M2::M3::V2::V2 (
     const char * _tao_init_valString,
     const ::M2::M3::S2 & _tao_init_valStruct,
@@ -3281,7 +3077,6 @@ OBV_M2::M3::V2::_tao_unmarshal__M2_M3_V2 (TAO_InputCDR &strm, TAO_ChunkInfo& ci)
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 /// Accessor to set the member.
 void
 OBV_M2::M3::V2::valString (char *val)
@@ -3310,7 +3105,6 @@ OBV_M2::M3::V2::valString () const // get method
 {
   return this->_pd_valString;
 }
-
 /// Accessor to set the member.
 void
 OBV_M2::M3::V2::valStruct (const M2::M3::S2 &val)
@@ -3329,7 +3123,6 @@ OBV_M2::M3::V2::valStruct ()
 {
   return this->_pd_valStruct;
 }
-
 /// Accessor to set the member.
 void
 OBV_M2::M3::V2::valLocalIface (M2::M3::L3_ptr val)
@@ -3344,7 +3137,6 @@ OBV_M2::M3::V2::valLocalIface () const
 {
   return this->_pd_valLocalIface.in ();
 }
-
 /// Accessor to set the member.
 void
 OBV_M2::M3::V2::valLocalIface3 (M2::M3::L4_ptr val)
@@ -3359,7 +3151,6 @@ OBV_M2::M3::V2::valLocalIface3 () const
 {
   return this->_pd_valLocalIface3.in ();
 }
-
 OBV_M2::M3::V3::V3 (
     const char * _tao_init_valString,
     const ::M1::S1 & _tao_init_valStruct,
@@ -3399,7 +3190,6 @@ OBV_M2::M3::V3::_tao_unmarshal__M2_M3_V3 (TAO_InputCDR &strm, TAO_ChunkInfo& ci)
 {
   return _tao_unmarshal_state (strm, ci);
 }
-
 /// Accessor to set the member.
 void
 OBV_M2::M3::V3::valString (char *val)
@@ -3428,7 +3218,6 @@ OBV_M2::M3::V3::valString () const // get method
 {
   return this->_pd_valString;
 }
-
 /// Accessor to set the member.
 void
 OBV_M2::M3::V3::valStruct (const M1::S1 &val)
@@ -3447,7 +3236,6 @@ OBV_M2::M3::V3::valStruct ()
 {
   return this->_pd_valStruct;
 }
-
 /// Accessor to set the member.
 void
 OBV_M2::M3::V3::valLocalIface (M1::L2_ptr val)
@@ -3463,10 +3251,7 @@ OBV_M2::M3::V3::valLocalIface () const
   return this->_pd_valLocalIface.in ();
 }
 
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3509,20 +3294,11 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3537,19 +3313,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -3591,20 +3360,11 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3619,17 +3379,11 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3678,24 +3432,14 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3727,19 +3471,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -3781,20 +3518,11 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3809,19 +3537,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -3863,20 +3584,11 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3891,17 +3603,11 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3950,24 +3656,14 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3999,19 +3695,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -4053,16 +3742,9 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4105,30 +3787,17 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4171,30 +3840,17 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4237,20 +3893,11 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -4265,17 +3912,11 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4324,20 +3965,12 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4380,20 +4013,11 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -4408,19 +4032,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -4462,20 +4079,11 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -4490,17 +4098,11 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4549,24 +4151,14 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -4598,19 +4190,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -4652,20 +4237,11 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -4694,19 +4270,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
@@ -4746,20 +4315,11 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -4774,19 +4334,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -4828,20 +4381,11 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -4856,17 +4400,11 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4915,24 +4453,14 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -4964,19 +4492,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -5018,20 +4539,11 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -5046,17 +4558,11 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -5105,24 +4611,14 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -5137,17 +4633,11 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -5196,20 +4686,12 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5233,16 +4715,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5273,17 +4748,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
@@ -5306,16 +4773,9 @@ CORBA::remove_ref (M1::AMH_LIExceptionHolder * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5339,14 +4799,9 @@ operator>> (
   return M1::AMH_LIExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 ::CORBA::Boolean
 OBV_M1::AMH_LIExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -5366,12 +4821,7 @@ OBV_M1::AMH_LIExceptionHolder::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5402,17 +4852,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
@@ -5435,16 +4877,9 @@ CORBA::remove_ref (M1::AMH_L2ExceptionHolder * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5468,14 +4903,9 @@ operator>> (
   return M1::AMH_L2ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 ::CORBA::Boolean
 OBV_M1::AMH_L2ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -5495,12 +4925,7 @@ OBV_M1::AMH_L2ExceptionHolder::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5531,16 +4956,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5602,16 +5020,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5669,17 +5080,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
@@ -5702,16 +5105,9 @@ CORBA::remove_ref (M1::V * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5735,14 +5131,9 @@ operator>> (
   return M1::V::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 ::CORBA::Boolean
 OBV_M1::V::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
@@ -5791,7 +5182,6 @@ OBV_M1::V::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
   else
     return ci.handle_chunking (strm);
 
-
 }
 
 void
@@ -5800,12 +5190,7 @@ OBV_M1::V::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5829,16 +5214,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5869,17 +5247,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
@@ -5902,16 +5272,9 @@ CORBA::remove_ref (M2::M3::AMH_L3ExceptionHolder * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5935,14 +5298,9 @@ operator>> (
   return M2::M3::AMH_L3ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 ::CORBA::Boolean
 OBV_M2::M3::AMH_L3ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -5962,16 +5320,9 @@ OBV_M2::M3::AMH_L3ExceptionHolder::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -6010,16 +5361,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -6050,17 +5394,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
@@ -6083,16 +5419,9 @@ CORBA::remove_ref (M2::M3::AMH_L4ExceptionHolder * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -6116,14 +5445,9 @@ operator>> (
   return M2::M3::AMH_L4ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 ::CORBA::Boolean
 OBV_M2::M3::AMH_L4ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -6143,13 +5467,7 @@ OBV_M2::M3::AMH_L4ExceptionHolder::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
@@ -6172,16 +5490,9 @@ CORBA::remove_ref (M2::M3::V2 * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -6205,14 +5516,9 @@ operator>> (
   return M2::M3::V2::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 ::CORBA::Boolean
 OBV_M2::M3::V2::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
@@ -6260,7 +5566,6 @@ OBV_M2::M3::V2::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
   else
     return ci.handle_chunking (strm);
 
-
 }
 
 void
@@ -6269,13 +5574,7 @@ OBV_M2::M3::V2::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
@@ -6298,16 +5597,9 @@ CORBA::remove_ref (M2::M3::V3 * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -6331,14 +5623,9 @@ operator>> (
   return M2::M3::V3::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 ::CORBA::Boolean
 OBV_M2::M3::V3::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
@@ -6381,7 +5668,6 @@ OBV_M2::M3::V3::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
   else
     return ci.handle_chunking (strm);
 
-
 }
 
 void
@@ -6390,9 +5676,5 @@ OBV_M2::M3::V3::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 

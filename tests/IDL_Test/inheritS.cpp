@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INHERITS_MLT4UL_CPP_
-#define _TAO_IDL_INHERITS_MLT4UL_CPP_
-
+#ifndef _TAO_IDL_INHERITS_8PQA9R_CPP_
+#define _TAO_IDL_INHERITS_8PQA9R_CPP_
 
 #include "inheritS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_one_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_AMH_one_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -138,7 +135,6 @@ POA_OldInherit::AMH_one::AMH_one ()
   this->optable_ = std::addressof (tao_OldInherit_AMH_one_optable);
 }
 
-
 void
 POA_OldInherit::AMH_one::op_one_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -175,11 +171,6 @@ POA_OldInherit::AMH_one::op_one_skel (
       safe_rd_.get ()
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_OldInherit::AMH_one::_is_a (const char* value)
 {
@@ -228,8 +219,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_one_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_one_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -302,7 +291,6 @@ POA_OldInherit::_TAO_one_Direct_Proxy_Impl::~_TAO_one_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldInherit::_TAO_one_Direct_Proxy_Impl::op_one (
     TAO_Abstract_ServantBase  *servant,
@@ -320,8 +308,6 @@ POA_OldInherit::_TAO_one_Direct_Proxy_Impl::op_one (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -331,12 +317,10 @@ POA_OldInherit::one::one ()
   this->optable_ = std::addressof (tao_OldInherit_one_optable);
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_one_one
-    : public TAO::Upcall_Command
+  class op_one_one : public TAO::Upcall_Command
   {
   public:
     inline op_one_one (POA_OldInherit::one * servant)
@@ -385,13 +369,6 @@ void POA_OldInherit::one::op_one_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldInherit::one::_is_a (const char* value)
 {
   return
@@ -406,18 +383,12 @@ const char* POA_OldInherit::one::_interface_repository_id () const
   return "IDL:OldInherit/one:1.0";
 }
 
-
-
-
 void POA_OldInherit::one::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldInherit::one *
 POA_OldInherit::one::_this ()
@@ -437,7 +408,6 @@ void
 POA_OldInherit::TAO_AMH_oneResponseHandler::op_one ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -467,8 +437,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -541,7 +509,6 @@ POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::~_TAO_AMI_oneHandler_Dire
 {
 }
 
-
 void
 POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::op_one (
     TAO_Abstract_ServantBase  *servant,
@@ -558,7 +525,6 @@ POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::op_one (
   _tao_ptr->op_one (
       );
 }
-
 
 void
 POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::op_one_excep (
@@ -578,8 +544,6 @@ POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::op_one_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -589,12 +553,10 @@ POA_OldInherit::AMI_oneHandler::AMI_oneHandler ()
   this->optable_ = std::addressof (tao_OldInherit_AMI_oneHandler_optable);
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_one_AMI_oneHandler
-    : public TAO::Upcall_Command
+  class op_one_AMI_oneHandler : public TAO::Upcall_Command
   {
   public:
     inline op_one_AMI_oneHandler (POA_OldInherit::AMI_oneHandler * servant)
@@ -643,12 +605,10 @@ void POA_OldInherit::AMI_oneHandler::op_one_skel (
                          );
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_one_excep_AMI_oneHandler
-    : public TAO::Upcall_Command
+  class op_one_excep_AMI_oneHandler : public TAO::Upcall_Command
   {
   public:
     inline op_one_excep_AMI_oneHandler (POA_OldInherit::AMI_oneHandler * servant,
@@ -715,13 +675,6 @@ void POA_OldInherit::AMI_oneHandler::op_one_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldInherit::AMI_oneHandler::_is_a (const char* value)
 {
   return
@@ -737,18 +690,12 @@ const char* POA_OldInherit::AMI_oneHandler::_interface_repository_id () const
   return "IDL:OldInherit/AMI_oneHandler:1.0";
 }
 
-
-
-
 void POA_OldInherit::AMI_oneHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldInherit::AMI_oneHandler *
 POA_OldInherit::AMI_oneHandler::_this ()
@@ -776,8 +723,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_two_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_AMH_two_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -848,7 +793,6 @@ POA_OldInherit::AMH_two::AMH_two ()
   this->optable_ = std::addressof (tao_OldInherit_AMH_two_optable);
 }
 
-
 void
 POA_OldInherit::AMH_two::op_two_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -885,11 +829,6 @@ POA_OldInherit::AMH_two::op_two_skel (
       safe_rd_.get ()
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_OldInherit::AMH_two::_is_a (const char* value)
 {
@@ -939,8 +878,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_two_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_two_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1014,7 +951,6 @@ POA_OldInherit::_TAO_two_Direct_Proxy_Impl::~_TAO_two_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldInherit::_TAO_two_Direct_Proxy_Impl::op_two (
     TAO_Abstract_ServantBase  *servant,
@@ -1032,8 +968,6 @@ POA_OldInherit::_TAO_two_Direct_Proxy_Impl::op_two (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1043,12 +977,10 @@ POA_OldInherit::two::two ()
   this->optable_ = std::addressof (tao_OldInherit_two_optable);
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_two_two
-    : public TAO::Upcall_Command
+  class op_two_two : public TAO::Upcall_Command
   {
   public:
     inline op_two_two (POA_OldInherit::two * servant)
@@ -1097,13 +1029,6 @@ void POA_OldInherit::two::op_two_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldInherit::two::_is_a (const char* value)
 {
   return
@@ -1119,18 +1044,12 @@ const char* POA_OldInherit::two::_interface_repository_id () const
   return "IDL:OldInherit/two:1.0";
 }
 
-
-
-
 void POA_OldInherit::two::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldInherit::two *
 POA_OldInherit::two::_this ()
@@ -1150,7 +1069,6 @@ void
 POA_OldInherit::TAO_AMH_twoResponseHandler::op_two ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -1180,8 +1098,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1278,7 +1194,6 @@ POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::~_TAO_AMI_twoHandler_Dire
 {
 }
 
-
 void
 POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::op_two (
     TAO_Abstract_ServantBase  *servant,
@@ -1295,7 +1210,6 @@ POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::op_two (
   _tao_ptr->op_two (
       );
 }
-
 
 void
 POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::op_two_excep (
@@ -1315,8 +1229,6 @@ POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::op_two_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1326,12 +1238,10 @@ POA_OldInherit::AMI_twoHandler::AMI_twoHandler ()
   this->optable_ = std::addressof (tao_OldInherit_AMI_twoHandler_optable);
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_two_AMI_twoHandler
-    : public TAO::Upcall_Command
+  class op_two_AMI_twoHandler : public TAO::Upcall_Command
   {
   public:
     inline op_two_AMI_twoHandler (POA_OldInherit::AMI_twoHandler * servant)
@@ -1380,12 +1290,10 @@ void POA_OldInherit::AMI_twoHandler::op_two_skel (
                          );
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_two_excep_AMI_twoHandler
-    : public TAO::Upcall_Command
+  class op_two_excep_AMI_twoHandler : public TAO::Upcall_Command
   {
   public:
     inline op_two_excep_AMI_twoHandler (POA_OldInherit::AMI_twoHandler * servant,
@@ -1452,13 +1360,6 @@ void POA_OldInherit::AMI_twoHandler::op_two_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldInherit::AMI_twoHandler::_is_a (const char* value)
 {
   return
@@ -1475,18 +1376,12 @@ const char* POA_OldInherit::AMI_twoHandler::_interface_repository_id () const
   return "IDL:OldInherit/AMI_twoHandler:1.0";
 }
 
-
-
-
 void POA_OldInherit::AMI_twoHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldInherit::AMI_twoHandler *
 POA_OldInherit::AMI_twoHandler::_this ()
@@ -1514,8 +1409,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_three_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_AMH_three_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1588,7 +1481,6 @@ POA_OldInherit::AMH_three::AMH_three ()
   this->optable_ = std::addressof (tao_OldInherit_AMH_three_optable);
 }
 
-
 void
 POA_OldInherit::AMH_three::op_three_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -1625,11 +1517,6 @@ POA_OldInherit::AMH_three::op_three_skel (
       safe_rd_.get ()
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_OldInherit::AMH_three::_is_a (const char* value)
 {
@@ -1679,8 +1566,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_three_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_three_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1756,7 +1641,6 @@ POA_OldInherit::_TAO_three_Direct_Proxy_Impl::~_TAO_three_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldInherit::_TAO_three_Direct_Proxy_Impl::op_three (
     TAO_Abstract_ServantBase  *servant,
@@ -1774,8 +1658,6 @@ POA_OldInherit::_TAO_three_Direct_Proxy_Impl::op_three (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1785,12 +1667,10 @@ POA_OldInherit::three::three ()
   this->optable_ = std::addressof (tao_OldInherit_three_optable);
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_three_three
-    : public TAO::Upcall_Command
+  class op_three_three : public TAO::Upcall_Command
   {
   public:
     inline op_three_three (POA_OldInherit::three * servant)
@@ -1839,13 +1719,6 @@ void POA_OldInherit::three::op_three_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldInherit::three::_is_a (const char* value)
 {
   return
@@ -1861,18 +1734,12 @@ const char* POA_OldInherit::three::_interface_repository_id () const
   return "IDL:OldInherit/three:1.0";
 }
 
-
-
-
 void POA_OldInherit::three::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldInherit::three *
 POA_OldInherit::three::_this ()
@@ -1892,7 +1759,6 @@ void
 POA_OldInherit::TAO_AMH_threeResponseHandler::op_three ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -1922,8 +1788,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -2002,7 +1866,6 @@ POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::~_TAO_AMI_threeHandler_
 {
 }
 
-
 void
 POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::op_three (
     TAO_Abstract_ServantBase  *servant,
@@ -2019,7 +1882,6 @@ POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::op_three (
   _tao_ptr->op_three (
       );
 }
-
 
 void
 POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::op_three_excep (
@@ -2039,8 +1901,6 @@ POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::op_three_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -2050,12 +1910,10 @@ POA_OldInherit::AMI_threeHandler::AMI_threeHandler ()
   this->optable_ = std::addressof (tao_OldInherit_AMI_threeHandler_optable);
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_three_AMI_threeHandler
-    : public TAO::Upcall_Command
+  class op_three_AMI_threeHandler : public TAO::Upcall_Command
   {
   public:
     inline op_three_AMI_threeHandler (POA_OldInherit::AMI_threeHandler * servant)
@@ -2104,12 +1962,10 @@ void POA_OldInherit::AMI_threeHandler::op_three_skel (
                          );
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_three_excep_AMI_threeHandler
-    : public TAO::Upcall_Command
+  class op_three_excep_AMI_threeHandler : public TAO::Upcall_Command
   {
   public:
     inline op_three_excep_AMI_threeHandler (POA_OldInherit::AMI_threeHandler * servant,
@@ -2176,13 +2032,6 @@ void POA_OldInherit::AMI_threeHandler::op_three_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldInherit::AMI_threeHandler::_is_a (const char* value)
 {
   return
@@ -2199,18 +2048,12 @@ const char* POA_OldInherit::AMI_threeHandler::_interface_repository_id () const
   return "IDL:OldInherit/AMI_threeHandler:1.0";
 }
 
-
-
-
 void POA_OldInherit::AMI_threeHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldInherit::AMI_threeHandler *
 POA_OldInherit::AMI_threeHandler::_this ()
@@ -2238,8 +2081,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_four_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_AMH_four_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -2314,7 +2155,6 @@ POA_OldInherit::AMH_four::AMH_four ()
   this->optable_ = std::addressof (tao_OldInherit_AMH_four_optable);
 }
 
-
 void
 POA_OldInherit::AMH_four::op_four_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -2351,11 +2191,6 @@ POA_OldInherit::AMH_four::op_four_skel (
       safe_rd_.get ()
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_OldInherit::AMH_four::_is_a (const char* value)
 {
@@ -2407,8 +2242,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_four_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_four_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -2486,7 +2319,6 @@ POA_OldInherit::_TAO_four_Direct_Proxy_Impl::~_TAO_four_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldInherit::_TAO_four_Direct_Proxy_Impl::op_four (
     TAO_Abstract_ServantBase  *servant,
@@ -2504,8 +2336,6 @@ POA_OldInherit::_TAO_four_Direct_Proxy_Impl::op_four (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -2515,12 +2345,10 @@ POA_OldInherit::four::four ()
   this->optable_ = std::addressof (tao_OldInherit_four_optable);
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_four_four
-    : public TAO::Upcall_Command
+  class op_four_four : public TAO::Upcall_Command
   {
   public:
     inline op_four_four (POA_OldInherit::four * servant)
@@ -2569,13 +2397,6 @@ void POA_OldInherit::four::op_four_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldInherit::four::_is_a (const char* value)
 {
   return
@@ -2593,18 +2414,12 @@ const char* POA_OldInherit::four::_interface_repository_id () const
   return "IDL:OldInherit/four:1.0";
 }
 
-
-
-
 void POA_OldInherit::four::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldInherit::four *
 POA_OldInherit::four::_this ()
@@ -2624,7 +2439,6 @@ void
 POA_OldInherit::TAO_AMH_fourResponseHandler::op_four ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -2654,8 +2468,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -2757,7 +2569,6 @@ POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::~_TAO_AMI_fourHandler_Di
 {
 }
 
-
 void
 POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::op_four (
     TAO_Abstract_ServantBase  *servant,
@@ -2774,7 +2585,6 @@ POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::op_four (
   _tao_ptr->op_four (
       );
 }
-
 
 void
 POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::op_four_excep (
@@ -2794,8 +2604,6 @@ POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::op_four_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -2805,12 +2613,10 @@ POA_OldInherit::AMI_fourHandler::AMI_fourHandler ()
   this->optable_ = std::addressof (tao_OldInherit_AMI_fourHandler_optable);
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_four_AMI_fourHandler
-    : public TAO::Upcall_Command
+  class op_four_AMI_fourHandler : public TAO::Upcall_Command
   {
   public:
     inline op_four_AMI_fourHandler (POA_OldInherit::AMI_fourHandler * servant)
@@ -2859,12 +2665,10 @@ void POA_OldInherit::AMI_fourHandler::op_four_skel (
                          );
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_four_excep_AMI_fourHandler
-    : public TAO::Upcall_Command
+  class op_four_excep_AMI_fourHandler : public TAO::Upcall_Command
   {
   public:
     inline op_four_excep_AMI_fourHandler (POA_OldInherit::AMI_fourHandler * servant,
@@ -2931,13 +2735,6 @@ void POA_OldInherit::AMI_fourHandler::op_four_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldInherit::AMI_fourHandler::_is_a (const char* value)
 {
   return
@@ -2956,18 +2753,12 @@ const char* POA_OldInherit::AMI_fourHandler::_interface_repository_id () const
   return "IDL:OldInherit/AMI_fourHandler:1.0";
 }
 
-
-
-
 void POA_OldInherit::AMI_fourHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldInherit::AMI_fourHandler *
 POA_OldInherit::AMI_fourHandler::_this ()
@@ -2995,8 +2786,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_five_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_AMH_five_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -3071,7 +2860,6 @@ POA_OldInherit::AMH_five::AMH_five ()
   this->optable_ = std::addressof (tao_OldInherit_AMH_five_optable);
 }
 
-
 void
 POA_OldInherit::AMH_five::op_five_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -3108,11 +2896,6 @@ POA_OldInherit::AMH_five::op_five_skel (
       safe_rd_.get ()
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_OldInherit::AMH_five::_is_a (const char* value)
 {
@@ -3165,8 +2948,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_five_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_five_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -3244,7 +3025,6 @@ POA_OldInherit::_TAO_five_Direct_Proxy_Impl::~_TAO_five_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldInherit::_TAO_five_Direct_Proxy_Impl::op_five (
     TAO_Abstract_ServantBase  *servant,
@@ -3262,8 +3042,6 @@ POA_OldInherit::_TAO_five_Direct_Proxy_Impl::op_five (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -3273,12 +3051,10 @@ POA_OldInherit::five::five ()
   this->optable_ = std::addressof (tao_OldInherit_five_optable);
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_five_five
-    : public TAO::Upcall_Command
+  class op_five_five : public TAO::Upcall_Command
   {
   public:
     inline op_five_five (POA_OldInherit::five * servant)
@@ -3327,13 +3103,6 @@ void POA_OldInherit::five::op_five_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldInherit::five::_is_a (const char* value)
 {
   return
@@ -3352,18 +3121,12 @@ const char* POA_OldInherit::five::_interface_repository_id () const
   return "IDL:OldInherit/five:1.0";
 }
 
-
-
-
 void POA_OldInherit::five::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldInherit::five *
 POA_OldInherit::five::_this ()
@@ -3383,7 +3146,6 @@ void
 POA_OldInherit::TAO_AMH_fiveResponseHandler::op_five ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -3413,8 +3175,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -3518,7 +3278,6 @@ POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::~_TAO_AMI_fiveHandler_Di
 {
 }
 
-
 void
 POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::op_five (
     TAO_Abstract_ServantBase  *servant,
@@ -3535,7 +3294,6 @@ POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::op_five (
   _tao_ptr->op_five (
       );
 }
-
 
 void
 POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::op_five_excep (
@@ -3555,8 +3313,6 @@ POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::op_five_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -3566,12 +3322,10 @@ POA_OldInherit::AMI_fiveHandler::AMI_fiveHandler ()
   this->optable_ = std::addressof (tao_OldInherit_AMI_fiveHandler_optable);
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_five_AMI_fiveHandler
-    : public TAO::Upcall_Command
+  class op_five_AMI_fiveHandler : public TAO::Upcall_Command
   {
   public:
     inline op_five_AMI_fiveHandler (POA_OldInherit::AMI_fiveHandler * servant)
@@ -3620,12 +3374,10 @@ void POA_OldInherit::AMI_fiveHandler::op_five_skel (
                          );
 }
 
-
 namespace POA_OldInherit
 {
 
-  class op_five_excep_AMI_fiveHandler
-    : public TAO::Upcall_Command
+  class op_five_excep_AMI_fiveHandler : public TAO::Upcall_Command
   {
   public:
     inline op_five_excep_AMI_fiveHandler (POA_OldInherit::AMI_fiveHandler * servant,
@@ -3692,13 +3444,6 @@ void POA_OldInherit::AMI_fiveHandler::op_five_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldInherit::AMI_fiveHandler::_is_a (const char* value)
 {
   return
@@ -3718,18 +3463,12 @@ const char* POA_OldInherit::AMI_fiveHandler::_interface_repository_id () const
   return "IDL:OldInherit/AMI_fiveHandler:1.0";
 }
 
-
-
-
 void POA_OldInherit::AMI_fiveHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldInherit::AMI_fiveHandler *
 POA_OldInherit::AMI_fiveHandler::_this ()

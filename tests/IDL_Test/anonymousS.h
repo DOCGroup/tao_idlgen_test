@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSS_5GMXOX_H_
-#define _TAO_IDL_ANONYMOUSS_5GMXOX_H_
+#ifndef _TAO_IDL_ANONYMOUSS_NKS9N7_H_
+#define _TAO_IDL_ANONYMOUSS_NKS9N7_H_
 
 #include /**/ "ace/pre.h"
 
@@ -54,14 +54,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -79,7 +76,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
   template<>
   class SArg_Traits< ::Not_Anon::short_seq>
@@ -135,7 +131,6 @@ namespace TAO
   {
   };
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST__SARG_TRAITS_
 
@@ -150,7 +145,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC__SARG_TRAITS_
@@ -167,7 +161,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC2__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC2__SARG_TRAITS_
 
@@ -182,7 +175,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC3__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC3__SARG_TRAITS_
@@ -199,7 +191,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC23__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC23__SARG_TRAITS_
 
@@ -214,7 +205,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC4_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC4_INARG__SARG_TRAITS_
@@ -232,7 +222,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__SARG_TRAITS_
 
@@ -248,7 +237,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_TestFunc41_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC42_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC42_INARG__SARG_TRAITS_
@@ -266,7 +254,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_TestFunc42_inarg>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__SARG_TRAITS_
 
@@ -282,7 +269,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_TestFunc43_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC4_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC4_INARG__SARG_TRAITS_
@@ -300,7 +286,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc4_inarg>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC41_INARG__SARG_TRAITS_
 
@@ -316,7 +301,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc41_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC42_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC42_INARG__SARG_TRAITS_
@@ -334,7 +318,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc42_inarg>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__SARG_TRAITS_)
 #define _ALL_ANON_ANON_BD_STRING_TEST_TESTFUNC43_INARG__SARG_TRAITS_
 
@@ -350,7 +333,6 @@ class SArg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc43_inarg>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__SARG_TRAITS_
@@ -369,7 +351,6 @@ class SArg_Traits< ::All_Anon::AMH_anon_bd_string_testExceptionHolder>
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__SARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__SARG_TRAITS_
 
@@ -384,7 +365,6 @@ class  SArg_Traits< ::All_Anon::AMI_anon_bd_string_testHandler>
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC_AMI_RETURN_VAL__SARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC_AMI_RETURN_VAL__SARG_TRAITS_
@@ -402,7 +382,6 @@ class SArg_Traits<All_Anon_AMI_anon_bd_string_testHandler_TestFunc_ami_return_va
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC2_AMI_RETURN_VAL__SARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC2_AMI_RETURN_VAL__SARG_TRAITS_
 
@@ -419,7 +398,6 @@ class SArg_Traits<All_Anon_AMI_anon_bd_string_testHandler_TestFunc2_ami_return_v
 
 #endif /* end #if !defined */
 
-
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC3_AMI_RETURN_VAL__SARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC3_AMI_RETURN_VAL__SARG_TRAITS_
 
@@ -435,7 +413,6 @@ class SArg_Traits<All_Anon_AMI_anon_bd_string_testHandler_TestFunc3_ami_return_v
 };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC23_AMI_RETURN_VAL__SARG_TRAITS_)
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER_TESTFUNC23_AMI_RETURN_VAL__SARG_TRAITS_
@@ -472,17 +449,12 @@ class SArg_Traits<SecondString_32>
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_Not_Anon
 {
-
-
 
 } // module Not_Anon
 namespace POA_Half_Anon
 {
-
-
 
 } // module Half_Anon
 namespace POA_All_Anon
@@ -500,7 +472,6 @@ namespace POA_All_Anon
   public:
     AMH_anon_bd_string_test (const AMH_anon_bd_string_test& rhs);
     virtual ~AMH_anon_bd_string_test () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -589,9 +560,6 @@ namespace POA_All_Anon
 
 };
 
-
-
-
 class anon_bd_string_test;
 using anon_bd_string_test_ptr = anon_bd_string_test *;
 
@@ -675,7 +643,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -722,7 +689,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_anon_bd_string_testResponseHandler;
 using TAO_AMH_anon_bd_string_testResponseHandler_ptr = TAO_AMH_anon_bd_string_testResponseHandler *;
 
@@ -762,9 +728,6 @@ public:
   void TestFunc43_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_anon_bd_string_testHandler;
 using AMI_anon_bd_string_testHandler_ptr = AMI_anon_bd_string_testHandler *;
@@ -905,7 +868,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -985,19 +947,13 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module All_Anon
 namespace POA_Second
 {
 
-
-
 } // module Second
 
 #include "anonymousS_T.h"
-
 
 #include /**/ "ace/post.h"
 

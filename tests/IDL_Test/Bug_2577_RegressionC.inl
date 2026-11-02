@@ -32,7 +32,6 @@ Data_T::_tao_obv_static_repository_id ()
   return "IDL:Data_T:1.0";
 }
 
-
 ACE_INLINE
 User_T::User_T (
     TAO_Stub *objref,
@@ -60,7 +59,6 @@ AMH_User_TExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_User_TExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_User_THandler::AMI_User_THandler (

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REPO_ID_MODS_D6K004_H_
-#define _TAO_IDL_REPO_ID_MODS_D6K004_H_
+#ifndef _TAO_IDL_REPO_ID_MODS_A956OX_H_
+#define _TAO_IDL_REPO_ID_MODS_A956OX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -38,17 +38,13 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -70,23 +66,16 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_gleep
 {
-
-
 
 } // module gleep
 namespace POA_gleep
 {
 
-
-
 } // module gleep
 namespace POA_gleep
 {
-
-
 
 } // module gleep
 namespace POA_gleep
@@ -98,18 +87,13 @@ namespace POA_gleep
     namespace verklempt
     {
 
-
-
     } // module gleep::floop::verklempt
 
-
   } // module gleep::floop
-
 
 } // module gleep
 
 #include "repo_id_modS_T.h"
-
 
 #include /**/ "ace/post.h"
 

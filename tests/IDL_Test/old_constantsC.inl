@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 OldConstants::M::A::A (
     TAO_Stub *objref,
@@ -51,7 +49,6 @@ OldConstants::M::AMH_AExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldConstants/M/AMH_AExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 OldConstants::M::AMI_AHandler::AMI_AHandler (

@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "TestC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -64,7 +63,6 @@ TAO::Objref_Traits<Test::Hello>::marshal (const Test::Hello_ptr p,TAO_OutputCDR 
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 char *
 Test::Hello::get_string ()
@@ -220,6 +218,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

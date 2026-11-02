@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAYS_7JPT4U_CPP_
-#define _TAO_IDL_ARRAYS_7JPT4U_CPP_
-
+#ifndef _TAO_IDL_ARRAYS_0W2VDZ_CPP_
+#define _TAO_IDL_ARRAYS_0W2VDZ_CPP_
 
 #include "arrayS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_array_args_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_array_args_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -138,7 +135,6 @@ POA_AMH_array_args::POA_AMH_array_args ()
   this->optable_ = std::addressof (tao_AMH_array_args_optable);
 }
 
-
 void
 POA_AMH_array_args::all_arrays_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -194,11 +190,6 @@ POA_AMH_array_args::all_arrays_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_AMH_array_args::_is_a (const char* value)
 {
   return
@@ -246,8 +237,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_array_args_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_array_args_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -320,7 +309,6 @@ _TAO_array_args_Direct_Proxy_Impl::~_TAO_array_args_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_array_args_Direct_Proxy_Impl::all_arrays (
     TAO_Abstract_ServantBase  *servant,
@@ -340,8 +328,6 @@ _TAO_array_args_Direct_Proxy_Impl::all_arrays (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -351,9 +337,7 @@ POA_array_args::POA_array_args ()
   this->optable_ = std::addressof (tao_array_args_optable);
 }
 
-
-class all_arrays_array_args
-  : public TAO::Upcall_Command
+class all_arrays_array_args : public TAO::Upcall_Command
 {
 public:
   inline all_arrays_array_args (POA_array_args * servant,
@@ -428,13 +412,6 @@ void POA_array_args::all_arrays_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_array_args::_is_a (const char* value)
 {
   return
@@ -449,18 +426,12 @@ const char* POA_array_args::_interface_repository_id () const
   return "IDL:array_args:1.0";
 }
 
-
-
-
 void POA_array_args::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 array_args *
 POA_array_args::_this ()
@@ -480,7 +451,6 @@ void
 POA_TAO_AMH_array_argsResponseHandler::all_arrays ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -510,8 +480,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_array_argsHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_array_argsHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -585,7 +553,6 @@ _TAO_AMI_array_argsHandler_Direct_Proxy_Impl::~_TAO_AMI_array_argsHandler_Direct
 {
 }
 
-
 void
 _TAO_AMI_array_argsHandler_Direct_Proxy_Impl::all_arrays (
     TAO_Abstract_ServantBase  *servant,
@@ -602,7 +569,6 @@ _TAO_AMI_array_argsHandler_Direct_Proxy_Impl::all_arrays (
   _tao_ptr->all_arrays (
       );
 }
-
 
 void
 _TAO_AMI_array_argsHandler_Direct_Proxy_Impl::all_arrays_excep (
@@ -622,8 +588,6 @@ _TAO_AMI_array_argsHandler_Direct_Proxy_Impl::all_arrays_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -633,9 +597,7 @@ POA_AMI_array_argsHandler::POA_AMI_array_argsHandler ()
   this->optable_ = std::addressof (tao_AMI_array_argsHandler_optable);
 }
 
-
-class all_arrays_AMI_array_argsHandler
-  : public TAO::Upcall_Command
+class all_arrays_AMI_array_argsHandler : public TAO::Upcall_Command
 {
 public:
   inline all_arrays_AMI_array_argsHandler (POA_AMI_array_argsHandler * servant)
@@ -683,9 +645,7 @@ void POA_AMI_array_argsHandler::all_arrays_skel (
                          );
 }
 
-
-class all_arrays_excep_AMI_array_argsHandler
-  : public TAO::Upcall_Command
+class all_arrays_excep_AMI_array_argsHandler : public TAO::Upcall_Command
 {
 public:
   inline all_arrays_excep_AMI_array_argsHandler (POA_AMI_array_argsHandler * servant,
@@ -751,13 +711,6 @@ void POA_AMI_array_argsHandler::all_arrays_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_array_argsHandler::_is_a (const char* value)
 {
   return
@@ -773,18 +726,12 @@ const char* POA_AMI_array_argsHandler::_interface_repository_id () const
   return "IDL:AMI_array_argsHandler:1.0";
 }
 
-
-
-
 void POA_AMI_array_argsHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_array_argsHandler *
 POA_AMI_array_argsHandler::_this ()
@@ -812,8 +759,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_testdata_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_testdata_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -882,13 +827,6 @@ POA_AMH_testdata::POA_AMH_testdata ()
   this->optable_ = std::addressof (tao_AMH_testdata_optable);
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMH_testdata::_is_a (const char* value)
 {
   return
@@ -936,8 +874,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_testdata_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_testdata_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1009,8 +945,6 @@ _TAO_testdata_Direct_Proxy_Impl::~_TAO_testdata_Direct_Proxy_Impl ()
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1019,13 +953,6 @@ POA_testdata::POA_testdata ()
 {
   this->optable_ = std::addressof (tao_testdata_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_testdata::_is_a (const char* value)
 {
@@ -1041,18 +968,12 @@ const char* POA_testdata::_interface_repository_id () const
   return "IDL:testdata:1.0";
 }
 
-
-
-
 void POA_testdata::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 testdata *
 POA_testdata::_this ()
@@ -1068,7 +989,6 @@ POA_testdata::_this ()
   return {};
 }
 
-
 class TAO_AMI_testdataHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
@@ -1081,8 +1001,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_testdataHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_testdataHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1154,8 +1072,6 @@ _TAO_AMI_testdataHandler_Direct_Proxy_Impl::~_TAO_AMI_testdataHandler_Direct_Pro
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1165,13 +1081,6 @@ POA_AMI_testdataHandler::POA_AMI_testdataHandler ()
 {
   this->optable_ = std::addressof (tao_AMI_testdataHandler_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_AMI_testdataHandler::_is_a (const char* value)
 {
@@ -1188,18 +1097,12 @@ const char* POA_AMI_testdataHandler::_interface_repository_id () const
   return "IDL:AMI_testdataHandler:1.0";
 }
 
-
-
-
 void POA_AMI_testdataHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_testdataHandler *
 POA_AMI_testdataHandler::_this ()
@@ -1227,8 +1130,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1298,7 +1199,6 @@ POA_arraytest::AMH_MyTest::AMH_MyTest ()
   this->optable_ = std::addressof (tao_arraytest_AMH_MyTest_optable);
 }
 
-
 void
 POA_arraytest::AMH_MyTest::test_method_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -1335,11 +1235,6 @@ POA_arraytest::AMH_MyTest::test_method_skel (
       safe_rd_.get ()
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_arraytest::AMH_MyTest::_is_a (const char* value)
 {
@@ -1388,8 +1283,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_arraytest_MyTest_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_arraytest_MyTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1462,7 +1355,6 @@ POA_arraytest::_TAO_MyTest_Direct_Proxy_Impl::~_TAO_MyTest_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_arraytest::_TAO_MyTest_Direct_Proxy_Impl::test_method (
     TAO_Abstract_ServantBase  *servant,
@@ -1481,8 +1373,6 @@ POA_arraytest::_TAO_MyTest_Direct_Proxy_Impl::test_method (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1492,12 +1382,10 @@ POA_arraytest::MyTest::MyTest ()
   this->optable_ = std::addressof (tao_arraytest_MyTest_optable);
 }
 
-
 namespace POA_arraytest
 {
 
-  class test_method_MyTest
-    : public TAO::Upcall_Command
+  class test_method_MyTest : public TAO::Upcall_Command
   {
   public:
     inline test_method_MyTest (POA_arraytest::MyTest * servant,
@@ -1564,13 +1452,6 @@ void POA_arraytest::MyTest::test_method_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_arraytest::MyTest::_is_a (const char* value)
 {
   return
@@ -1585,18 +1466,12 @@ const char* POA_arraytest::MyTest::_interface_repository_id () const
   return "IDL:arraytest/MyTest:1.0";
 }
 
-
-
-
 void POA_arraytest::MyTest::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 arraytest::MyTest *
 POA_arraytest::MyTest::_this ()
@@ -1653,8 +1528,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1729,7 +1602,6 @@ POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::~_TAO_AMI_MyTestHandler
 {
 }
 
-
 void
 POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::test_method (
     TAO_Abstract_ServantBase  *servant,
@@ -1747,7 +1619,6 @@ POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::test_method (
         ((TAO::Arg_Traits< ::arraytest::myvec2_tag>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::test_method_excep (
@@ -1767,8 +1638,6 @@ POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::test_method_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1778,12 +1647,10 @@ POA_arraytest::AMI_MyTestHandler::AMI_MyTestHandler ()
   this->optable_ = std::addressof (tao_arraytest_AMI_MyTestHandler_optable);
 }
 
-
 namespace POA_arraytest
 {
 
-  class test_method_AMI_MyTestHandler
-    : public TAO::Upcall_Command
+  class test_method_AMI_MyTestHandler : public TAO::Upcall_Command
   {
   public:
     inline test_method_AMI_MyTestHandler (POA_arraytest::AMI_MyTestHandler * servant,
@@ -1850,12 +1717,10 @@ void POA_arraytest::AMI_MyTestHandler::test_method_skel (
                          );
 }
 
-
 namespace POA_arraytest
 {
 
-  class test_method_excep_AMI_MyTestHandler
-    : public TAO::Upcall_Command
+  class test_method_excep_AMI_MyTestHandler : public TAO::Upcall_Command
   {
   public:
     inline test_method_excep_AMI_MyTestHandler (POA_arraytest::AMI_MyTestHandler * servant,
@@ -1922,13 +1787,6 @@ void POA_arraytest::AMI_MyTestHandler::test_method_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_arraytest::AMI_MyTestHandler::_is_a (const char* value)
 {
   return
@@ -1944,18 +1802,12 @@ const char* POA_arraytest::AMI_MyTestHandler::_interface_repository_id () const
   return "IDL:arraytest/AMI_MyTestHandler:1.0";
 }
 
-
-
-
 void POA_arraytest::AMI_MyTestHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 arraytest::AMI_MyTestHandler *
 POA_arraytest::AMI_MyTestHandler::_this ()

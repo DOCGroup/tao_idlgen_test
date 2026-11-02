@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 OldInherit::one::one (
     TAO_Stub *objref,
@@ -52,7 +50,6 @@ OldInherit::AMH_oneExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:OldInherit/AMH_oneExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 OldInherit::AMI_oneHandler::AMI_oneHandler (
     TAO_Stub *objref,
@@ -70,7 +67,6 @@ OldInherit::AMI_oneHandler::AMI_oneHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 OldInherit::two::two (
@@ -100,7 +96,6 @@ OldInherit::AMH_twoExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:OldInherit/AMH_twoExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 OldInherit::AMI_twoHandler::AMI_twoHandler (
     TAO_Stub *objref,
@@ -118,7 +113,6 @@ OldInherit::AMI_twoHandler::AMI_twoHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 OldInherit::three::three (
@@ -148,7 +142,6 @@ OldInherit::AMH_threeExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:OldInherit/AMH_threeExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 OldInherit::AMI_threeHandler::AMI_threeHandler (
     TAO_Stub *objref,
@@ -166,7 +159,6 @@ OldInherit::AMI_threeHandler::AMI_threeHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 OldInherit::four::four (
@@ -196,7 +188,6 @@ OldInherit::AMH_fourExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:OldInherit/AMH_fourExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 OldInherit::AMI_fourHandler::AMI_fourHandler (
     TAO_Stub *objref,
@@ -214,7 +205,6 @@ OldInherit::AMI_fourHandler::AMI_fourHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 OldInherit::five::five (
@@ -243,7 +233,6 @@ OldInherit::AMH_fiveExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldInherit/AMH_fiveExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 OldInherit::AMI_fiveHandler::AMI_fiveHandler (

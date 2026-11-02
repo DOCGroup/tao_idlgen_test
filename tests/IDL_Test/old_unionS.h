@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONS_FTG0ZG_H_
-#define _TAO_IDL_OLD_UNIONS_FTG0ZG_H_
+#ifndef _TAO_IDL_OLD_UNIONS_Z9RQ62_H_
+#define _TAO_IDL_OLD_UNIONS_Z9RQ62_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::OldUnion::Bar>
     : public
@@ -86,7 +82,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::OldUnion::Foo>
@@ -98,7 +93,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::OldUnion::Foo2>
     : public
@@ -108,7 +102,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_OLDUNION_A__SARG_TRAITS_)
 #define _OLDUNION_A__SARG_TRAITS_
@@ -125,7 +118,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::OldUnion::a::astruct>
     : public
@@ -135,7 +127,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_OLDUNION_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDUNION_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_
@@ -153,7 +144,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDUNION_AMI_AHANDLER__SARG_TRAITS_)
 #define _OLDUNION_AMI_AHANDLER__SARG_TRAITS_
@@ -173,7 +163,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_OldUnion
 {
 
@@ -189,7 +178,6 @@ namespace POA_OldUnion
   public:
     AMH_a (const AMH_a& rhs);
     virtual ~AMH_a () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -211,9 +199,6 @@ namespace POA_OldUnion
     ) = 0;
 
 };
-
-
-
 
 class a;
 using a_ptr = a *;
@@ -253,7 +238,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -272,7 +256,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_aResponseHandler;
 using TAO_AMH_aResponseHandler_ptr = TAO_AMH_aResponseHandler *;
 
@@ -288,9 +271,6 @@ public:
   void opA_excep (
     ::OldUnion::AMH_aExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_aHandler;
 using AMI_aHandler_ptr = AMI_aHandler *;
@@ -337,7 +317,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -361,13 +340,9 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module OldUnion
 
 #include "old_unionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

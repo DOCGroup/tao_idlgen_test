@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_UNIONC_C7DOVT_H_
-#define _TAO_IDL_UNIONC_C7DOVT_H_
+#ifndef _TAO_IDL_UNIONC_LGQ5ZL_H_
+#define _TAO_IDL_UNIONC_LGQ5ZL_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -71,7 +69,6 @@ enum DataType
 using DataType_out = DataType &;
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DataType;
 
-
 class Data;
 using Data_var = ::TAO_Fixed_Var_T<Data>;
 using Data_out = Data&;
@@ -85,7 +82,6 @@ public:
 
   Data &operator= (Data const &);
 
-
   void _d (DataType);
   DataType _d () const;
 
@@ -94,14 +90,11 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   void longData ( ::CORBA::Long);
   ::CORBA::Long longData () const;
 
-
   void shortData ( ::CORBA::Short);
   ::CORBA::Short shortData () const;
-
 
   void _default ();
 private:
@@ -135,7 +128,6 @@ namespace Necessary
   using Kind_out = Kind &;
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Kind;
 
-
   class WhichResult;
   using WhichResult_var = ::TAO_Fixed_Var_T<WhichResult>;
   using WhichResult_out = WhichResult&;
@@ -149,7 +141,6 @@ namespace Necessary
 
     WhichResult &operator= (WhichResult const &);
 
-
     void _d (Necessary::Kind);
     Necessary::Kind _d () const;
 
@@ -158,10 +149,8 @@ namespace Necessary
 
     static void _tao_any_destructor (void *);
 
-
     void m_Result ( Necessary::Result);
     Necessary::Result m_Result () const;
-
 
     void m_Unused ( ::CORBA::Long);
     ::CORBA::Long m_Unused () const;
@@ -183,10 +172,7 @@ namespace Necessary
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_WhichResult;
 
-
-
 } // module Necessary
-
 
 class foo;
 using foo_var = ::TAO_Var_Var_T<foo>;
@@ -201,7 +187,6 @@ public:
 
   foo &operator= (foo const &);
 
-
   void _d ( ::CORBA::Short);
   ::CORBA::Short _d () const;
 
@@ -210,16 +195,13 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   void foo_str_member (char *);
   void foo_str_member (char const *);
   void foo_str_member (::CORBA::String_var const&);
   char const *foo_str_member () const;
 
-
   void foo_iface_member ( ::CORBA::Long);
   ::CORBA::Long foo_iface_member () const;
-
 
   void foo_iface_member2 ( ::CORBA::Long);
   ::CORBA::Long foo_iface_member2 () const;
@@ -245,7 +227,6 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_foo;
 namespace UnionDiscTest
 {
 
-
   class BooleanUnion;
   using BooleanUnion_var = ::TAO_Var_Var_T<BooleanUnion>;
   using BooleanUnion_out = ::TAO_Out_T<BooleanUnion>;
@@ -259,7 +240,6 @@ namespace UnionDiscTest
 
     BooleanUnion &operator= (BooleanUnion const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -268,12 +248,10 @@ namespace UnionDiscTest
 
     static void _tao_any_destructor (void *);
 
-
     void value (char *);
     void value (char const *);
     void value (::CORBA::String_var const&);
     char const *value () const;
-
 
     void _default ();
   private:
@@ -292,7 +270,6 @@ namespace UnionDiscTest
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_BooleanUnion;
 
-
   class CharUnion;
   using CharUnion_var = ::TAO_Var_Var_T<CharUnion>;
   using CharUnion_out = ::TAO_Out_T<CharUnion>;
@@ -306,7 +283,6 @@ namespace UnionDiscTest
 
     CharUnion &operator= (CharUnion const &);
 
-
     void _d ( ::CORBA::Char);
     ::CORBA::Char _d () const;
 
@@ -315,12 +291,10 @@ namespace UnionDiscTest
 
     static void _tao_any_destructor (void *);
 
-
     void value (char *);
     void value (char const *);
     void value (::CORBA::String_var const&);
     char const *value () const;
-
 
     void _default ();
   private:
@@ -339,12 +313,9 @@ namespace UnionDiscTest
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_CharUnion;
 
-
-
 } // module UnionDiscTest
 namespace AllBoolUnions
 {
-
 
   class OneBranchT;
   using OneBranchT_var = ::TAO_Fixed_Var_T<OneBranchT>;
@@ -359,7 +330,6 @@ namespace AllBoolUnions
 
     OneBranchT &operator= (OneBranchT const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -368,10 +338,8 @@ namespace AllBoolUnions
 
     static void _tao_any_destructor (void *);
 
-
     void val ( ::CORBA::Octet);
     ::CORBA::Octet val () const;
-
 
     void _default ();
   private:
@@ -390,7 +358,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_OneBranchT;
 
-
   class OneBranchF;
   using OneBranchF_var = ::TAO_Fixed_Var_T<OneBranchF>;
   using OneBranchF_out = OneBranchF&;
@@ -404,7 +371,6 @@ namespace AllBoolUnions
 
     OneBranchF &operator= (OneBranchF const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -413,10 +379,8 @@ namespace AllBoolUnions
 
     static void _tao_any_destructor (void *);
 
-
     void val ( ::CORBA::Octet);
     ::CORBA::Octet val () const;
-
 
     void _default ();
   private:
@@ -435,7 +399,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_OneBranchF;
 
-
   class OneBranchD;
   using OneBranchD_var = ::TAO_Fixed_Var_T<OneBranchD>;
   using OneBranchD_out = OneBranchD&;
@@ -449,7 +412,6 @@ namespace AllBoolUnions
 
     OneBranchD &operator= (OneBranchD const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -457,7 +419,6 @@ namespace AllBoolUnions
     using _out_type = OneBranchD_out;
 
     static void _tao_any_destructor (void *);
-
 
     void val ( ::CORBA::Octet);
     ::CORBA::Octet val () const;
@@ -477,7 +438,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_OneBranchD;
 
-
   class OneBranchTF;
   using OneBranchTF_var = ::TAO_Fixed_Var_T<OneBranchTF>;
   using OneBranchTF_out = OneBranchTF&;
@@ -491,7 +451,6 @@ namespace AllBoolUnions
 
     OneBranchTF &operator= (OneBranchTF const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -499,7 +458,6 @@ namespace AllBoolUnions
     using _out_type = OneBranchTF_out;
 
     static void _tao_any_destructor (void *);
-
 
     void val ( ::CORBA::Octet);
     ::CORBA::Octet val () const;
@@ -519,7 +477,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_OneBranchTF;
 
-
   class OneBranchFT;
   using OneBranchFT_var = ::TAO_Fixed_Var_T<OneBranchFT>;
   using OneBranchFT_out = OneBranchFT&;
@@ -533,7 +490,6 @@ namespace AllBoolUnions
 
     OneBranchFT &operator= (OneBranchFT const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -541,7 +497,6 @@ namespace AllBoolUnions
     using _out_type = OneBranchFT_out;
 
     static void _tao_any_destructor (void *);
-
 
     void val ( ::CORBA::Octet);
     ::CORBA::Octet val () const;
@@ -561,7 +516,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_OneBranchFT;
 
-
   class OneBranchTD;
   using OneBranchTD_var = ::TAO_Fixed_Var_T<OneBranchTD>;
   using OneBranchTD_out = OneBranchTD&;
@@ -575,7 +529,6 @@ namespace AllBoolUnions
 
     OneBranchTD &operator= (OneBranchTD const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -583,7 +536,6 @@ namespace AllBoolUnions
     using _out_type = OneBranchTD_out;
 
     static void _tao_any_destructor (void *);
-
 
     void val ( ::CORBA::Octet);
     ::CORBA::Octet val () const;
@@ -603,7 +555,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_OneBranchTD;
 
-
   class OneBranchDT;
   using OneBranchDT_var = ::TAO_Fixed_Var_T<OneBranchDT>;
   using OneBranchDT_out = OneBranchDT&;
@@ -617,7 +568,6 @@ namespace AllBoolUnions
 
     OneBranchDT &operator= (OneBranchDT const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -625,7 +575,6 @@ namespace AllBoolUnions
     using _out_type = OneBranchDT_out;
 
     static void _tao_any_destructor (void *);
-
 
     void val ( ::CORBA::Octet);
     ::CORBA::Octet val () const;
@@ -645,7 +594,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_OneBranchDT;
 
-
   class OneBranchFD;
   using OneBranchFD_var = ::TAO_Fixed_Var_T<OneBranchFD>;
   using OneBranchFD_out = OneBranchFD&;
@@ -659,7 +607,6 @@ namespace AllBoolUnions
 
     OneBranchFD &operator= (OneBranchFD const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -667,7 +614,6 @@ namespace AllBoolUnions
     using _out_type = OneBranchFD_out;
 
     static void _tao_any_destructor (void *);
-
 
     void val ( ::CORBA::Octet);
     ::CORBA::Octet val () const;
@@ -687,7 +633,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_OneBranchFD;
 
-
   class OneBranchDF;
   using OneBranchDF_var = ::TAO_Fixed_Var_T<OneBranchDF>;
   using OneBranchDF_out = OneBranchDF&;
@@ -701,7 +646,6 @@ namespace AllBoolUnions
 
     OneBranchDF &operator= (OneBranchDF const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -709,7 +653,6 @@ namespace AllBoolUnions
     using _out_type = OneBranchDF_out;
 
     static void _tao_any_destructor (void *);
-
 
     void val ( ::CORBA::Octet);
     ::CORBA::Octet val () const;
@@ -729,7 +672,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_OneBranchDF;
 
-
   class TwoBranchesTF;
   using TwoBranchesTF_var = ::TAO_Fixed_Var_T<TwoBranchesTF>;
   using TwoBranchesTF_out = TwoBranchesTF&;
@@ -743,7 +685,6 @@ namespace AllBoolUnions
 
     TwoBranchesTF &operator= (TwoBranchesTF const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -752,10 +693,8 @@ namespace AllBoolUnions
 
     static void _tao_any_destructor (void *);
 
-
     void val1 ( ::CORBA::Octet);
     ::CORBA::Octet val1 () const;
-
 
     void val2 ( ::CORBA::Char);
     ::CORBA::Char val2 () const;
@@ -777,7 +716,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TwoBranchesTF;
 
-
   class TwoBranchesFT;
   using TwoBranchesFT_var = ::TAO_Fixed_Var_T<TwoBranchesFT>;
   using TwoBranchesFT_out = TwoBranchesFT&;
@@ -791,7 +729,6 @@ namespace AllBoolUnions
 
     TwoBranchesFT &operator= (TwoBranchesFT const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -800,10 +737,8 @@ namespace AllBoolUnions
 
     static void _tao_any_destructor (void *);
 
-
     void val1 ( ::CORBA::Octet);
     ::CORBA::Octet val1 () const;
-
 
     void val2 ( ::CORBA::Char);
     ::CORBA::Char val2 () const;
@@ -825,7 +760,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TwoBranchesFT;
 
-
   class TwoBranchesTD;
   using TwoBranchesTD_var = ::TAO_Fixed_Var_T<TwoBranchesTD>;
   using TwoBranchesTD_out = TwoBranchesTD&;
@@ -839,7 +773,6 @@ namespace AllBoolUnions
 
     TwoBranchesTD &operator= (TwoBranchesTD const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -848,10 +781,8 @@ namespace AllBoolUnions
 
     static void _tao_any_destructor (void *);
 
-
     void val1 ( ::CORBA::Octet);
     ::CORBA::Octet val1 () const;
-
 
     void val2 ( ::CORBA::Char);
     ::CORBA::Char val2 () const;
@@ -873,7 +804,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TwoBranchesTD;
 
-
   class TwoBranchesDT;
   using TwoBranchesDT_var = ::TAO_Fixed_Var_T<TwoBranchesDT>;
   using TwoBranchesDT_out = TwoBranchesDT&;
@@ -887,7 +817,6 @@ namespace AllBoolUnions
 
     TwoBranchesDT &operator= (TwoBranchesDT const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -896,10 +825,8 @@ namespace AllBoolUnions
 
     static void _tao_any_destructor (void *);
 
-
     void val1 ( ::CORBA::Octet);
     ::CORBA::Octet val1 () const;
-
 
     void val2 ( ::CORBA::Char);
     ::CORBA::Char val2 () const;
@@ -921,7 +848,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TwoBranchesDT;
 
-
   class TwoBranchesFD;
   using TwoBranchesFD_var = ::TAO_Fixed_Var_T<TwoBranchesFD>;
   using TwoBranchesFD_out = TwoBranchesFD&;
@@ -935,7 +861,6 @@ namespace AllBoolUnions
 
     TwoBranchesFD &operator= (TwoBranchesFD const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -944,10 +869,8 @@ namespace AllBoolUnions
 
     static void _tao_any_destructor (void *);
 
-
     void val1 ( ::CORBA::Octet);
     ::CORBA::Octet val1 () const;
-
 
     void val2 ( ::CORBA::Char);
     ::CORBA::Char val2 () const;
@@ -969,7 +892,6 @@ namespace AllBoolUnions
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TwoBranchesFD;
 
-
   class TwoBranchesDF;
   using TwoBranchesDF_var = ::TAO_Fixed_Var_T<TwoBranchesDF>;
   using TwoBranchesDF_out = TwoBranchesDF&;
@@ -983,7 +905,6 @@ namespace AllBoolUnions
 
     TwoBranchesDF &operator= (TwoBranchesDF const &);
 
-
     void _d ( ::CORBA::Boolean);
     ::CORBA::Boolean _d () const;
 
@@ -992,10 +913,8 @@ namespace AllBoolUnions
 
     static void _tao_any_destructor (void *);
 
-
     void val1 ( ::CORBA::Octet);
     ::CORBA::Octet val1 () const;
-
 
     void val2 ( ::CORBA::Char);
     ::CORBA::Char val2 () const;
@@ -1016,8 +935,6 @@ namespace AllBoolUnions
     void _reset ();
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TwoBranchesDF;
-
-
 
 } // module AllBoolUnions
 enum disc1
@@ -1045,7 +962,6 @@ enum disc_outer
 using disc_outer_out = disc_outer &;
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_disc_outer;
 
-
 class inner1;
 using inner1_var = ::TAO_Fixed_Var_T<inner1>;
 using inner1_out = inner1&;
@@ -1059,7 +975,6 @@ public:
 
   inner1 &operator= (inner1 const &);
 
-
   void _d (disc1);
   disc1 _d () const;
 
@@ -1068,14 +983,11 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   void s ( ::CORBA::Short);
   ::CORBA::Short s () const;
 
-
   void l ( ::CORBA::Long);
   ::CORBA::Long l () const;
-
 
   void _default ();
 private:
@@ -1096,7 +1008,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_inner1;
 
-
 class inner2;
 using inner2_var = ::TAO_Fixed_Var_T<inner2>;
 using inner2_out = inner2&;
@@ -1110,7 +1021,6 @@ public:
 
   inner2 &operator= (inner2 const &);
 
-
   void _d (disc2);
   disc2 _d () const;
 
@@ -1119,14 +1029,11 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   void c ( ::CORBA::Char);
   ::CORBA::Char c () const;
 
-
   void lng ( ::CORBA::Long);
   ::CORBA::Long lng () const;
-
 
   void _default ();
 private:
@@ -1147,7 +1054,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_inner2;
 
-
 class outer;
 using outer_var = ::TAO_Fixed_Var_T<outer>;
 using outer_out = outer&;
@@ -1161,7 +1067,6 @@ public:
 
   outer &operator= (outer const &);
 
-
   void _d (disc_outer);
   disc_outer _d () const;
 
@@ -1170,16 +1075,13 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   void first (inner1 const &);
   inner1 const &first () const;
   inner1 &first ();
 
-
   void second (inner2 const &);
   inner2 const &second () const;
   inner2 &second ();
-
 
   void _default ();
 private:
@@ -1210,7 +1112,6 @@ namespace UnionTest3
   using ValChoice_out = ValChoice &;
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ValChoice;
 
-
   class ValType;
   using ValType_var = ::TAO_Fixed_Var_T<ValType>;
   using ValType_out = ValType&;
@@ -1224,7 +1125,6 @@ namespace UnionTest3
 
     ValType &operator= (ValType const &);
 
-
     void _d (UnionTest3::ValChoice);
     UnionTest3::ValChoice _d () const;
 
@@ -1233,14 +1133,11 @@ namespace UnionTest3
 
     static void _tao_any_destructor (void *);
 
-
     void integerValue ( ::CORBA::Long);
     ::CORBA::Long integerValue () const;
 
-
     void realValue ( ::CORBA::Double);
     ::CORBA::Double realValue () const;
-
 
     void _default ();
   private:
@@ -1261,13 +1158,9 @@ namespace UnionTest3
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ValType;
 
-
   struct UpType;
   using UpType_var = ::TAO_Fixed_Var_T<UpType>;
   using UpType_out = UpType&;
-
-
-
 
   struct TAO_IDL_TEST_STUB_Export UpType
   {
@@ -1277,22 +1170,15 @@ namespace UnionTest3
 
     static void _tao_any_destructor (void *);
 
-
-
     UnionTest3::ValType high {};
-
 
     UnionTest3::ValType low {};
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UpType;
 
-
   struct DownType;
   using DownType_var = ::TAO_Fixed_Var_T<DownType>;
   using DownType_out = DownType&;
-
-
-
 
   struct TAO_IDL_TEST_STUB_Export DownType
   {
@@ -1302,10 +1188,7 @@ namespace UnionTest3
 
     static void _tao_any_destructor (void *);
 
-
-
     UnionTest3::ValType high {};
-
 
     UnionTest3::ValType low {};
   };
@@ -1318,7 +1201,6 @@ namespace UnionTest3
 
   using IndChoice_out = IndChoice &;
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_IndChoice;
-
 
   class IndType;
   using IndType_var = ::TAO_Fixed_Var_T<IndType>;
@@ -1333,7 +1215,6 @@ namespace UnionTest3
 
     IndType &operator= (IndType const &);
 
-
     void _d (UnionTest3::IndChoice);
     UnionTest3::IndChoice _d () const;
 
@@ -1342,16 +1223,13 @@ namespace UnionTest3
 
     static void _tao_any_destructor (void *);
 
-
     void up (UnionTest3::UpType const &);
     UnionTest3::UpType const &up () const;
     UnionTest3::UpType &up ();
 
-
     void down (UnionTest3::DownType const &);
     UnionTest3::DownType const &down () const;
     UnionTest3::DownType &down ();
-
 
     void _default ();
   private:
@@ -1372,8 +1250,6 @@ namespace UnionTest3
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_IndType;
 
-
-
 } // module UnionTest3
 enum XType
 {
@@ -1390,7 +1266,6 @@ enum ZType
 using ZType_out = ZType &;
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ZType;
 
-
 class X;
 using X_var = ::TAO_Fixed_Var_T<X>;
 using X_out = X&;
@@ -1404,7 +1279,6 @@ public:
 
   X &operator= (X const &);
 
-
   void _d (XType);
   XType _d () const;
 
@@ -1413,13 +1287,9 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   struct Y;
   using Y_var = ::TAO_Fixed_Var_T<Y>;
   using Y_out = Y&;
-
-
-
 
   struct TAO_IDL_TEST_STUB_Export Y
   {
@@ -1428,9 +1298,6 @@ public:
     using _out_type = Y_out;
 
     static void _tao_any_destructor (void *);
-
-
-
 
     class Z;
     using Z_var = ::TAO_Fixed_Var_T<Z>;
@@ -1445,7 +1312,6 @@ public:
 
       Z &operator= (Z const &);
 
-
       void _d (ZType);
       ZType _d () const;
 
@@ -1454,10 +1320,8 @@ public:
 
       static void _tao_any_destructor (void *);
 
-
       void a ( ::CORBA::Long);
       ::CORBA::Long a () const;
-
 
       void _default ();
     private:
@@ -1480,11 +1344,9 @@ public:
   };
   static ::CORBA::TypeCode_ptr const _tc_Y;
 
-
   void a (Y const &);
   Y const &a () const;
   Y &a ();
-
 
   void _default ();
 private:
@@ -1512,7 +1374,6 @@ enum FieldType
 using FieldType_out = FieldType &;
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_FieldType;
 
-
 class FieldValue;
 using FieldValue_var = ::TAO_Var_Var_T<FieldValue>;
 using FieldValue_out = ::TAO_Out_T<FieldValue>;
@@ -1526,7 +1387,6 @@ public:
 
   FieldValue &operator= (FieldValue const &);
 
-
   void _d (FieldType);
   FieldType _d () const;
 
@@ -1535,12 +1395,10 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   void strValue (char *);
   void strValue (char const *);
   void strValue (::CORBA::String_var const&);
   char const *strValue () const;
-
 
   void defstr (char *);
   void defstr (char const *);
@@ -1564,13 +1422,9 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_FieldValue;
 
-
 struct Field;
 using Field_var = ::TAO_Var_Var_T<Field>;
 using Field_out = ::TAO_Out_T<Field>;
-
-
-
 
 struct TAO_IDL_TEST_STUB_Export Field
 {
@@ -1579,8 +1433,6 @@ struct TAO_IDL_TEST_STUB_Export Field
   using _out_type = Field_out;
 
   static void _tao_any_destructor (void *);
-
-
 
   FieldValue value {};
 };
@@ -1602,7 +1454,6 @@ enum TestTwoEnum
 using TestTwoEnum_out = TestTwoEnum &;
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TestTwoEnum;
 
-
 class TestUnion;
 using TestUnion_var = ::TAO_Fixed_Var_T<TestUnion>;
 using TestUnion_out = TestUnion&;
@@ -1616,7 +1467,6 @@ public:
 
   TestUnion &operator= (TestUnion const &);
 
-
   void _d ( ::CORBA::Short);
   ::CORBA::Short _d () const;
 
@@ -1625,14 +1475,11 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   void oneEnum (TestOneEnum);
   TestOneEnum oneEnum () const;
 
-
   void twoEnum (TestTwoEnum);
   TestTwoEnum twoEnum () const;
-
 
   void _default ();
 private:
@@ -1653,11 +1500,9 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_TestUnion;
 
-
 using U41 = ::CORBA::Long[2][3];
 using U41_slice = ::CORBA::Long[3];
 struct U41_tag {};
-
 
 using U41_var =
   TAO_FixedArray_Var_T<
@@ -1679,11 +1524,9 @@ TAO_IDL_TEST_STUB_Export U41_slice *U41_dup (const U41_slice *_tao_slice);
 TAO_IDL_TEST_STUB_Export void U41_copy (U41_slice *_tao_to, const U41_slice *_tao_from);
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U41;
 
-
 using U42 = ::CORBA::Long[2];
 using U42_slice = ::CORBA::Long;
 struct U42_tag {};
-
 
 using U42_var =
   TAO_FixedArray_Var_T<
@@ -1705,7 +1548,6 @@ TAO_IDL_TEST_STUB_Export U42_slice *U42_dup (const U42_slice *_tao_slice);
 TAO_IDL_TEST_STUB_Export void U42_copy (U42_slice *_tao_to, const U42_slice *_tao_from);
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U42;
 
-
 class U85;
 using U85_var = ::TAO_Fixed_Var_T<U85>;
 using U85_out = U85&;
@@ -1719,7 +1561,6 @@ public:
 
   U85 &operator= (U85 const &);
 
-
   void _d ( ::CORBA::Long);
   ::CORBA::Long _d () const;
 
@@ -1728,14 +1569,11 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   void b_85_1 (U41);
   U41_slice * b_85_1 () const;
 
-
   void b_85_2 (U42);
   U42_slice * b_85_2 () const;
-
 
   void _default ();
 private:
@@ -1756,11 +1594,9 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U85;
 
-
 using UString = ::TAO::String_Manager[2];
 using UString_slice = ::TAO::String_Manager;
 struct UString_tag {};
-
 
 using UString_var =
   TAO_VarArray_Var_T<
@@ -1788,7 +1624,6 @@ using UString_var =
     TAO_IDL_TEST_STUB_Export void UString_copy (UString_slice *_tao_to, const UString_slice *_tao_from);
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UString;
 
-
     class U86;
     using U86_var = ::TAO_Var_Var_T<U86>;
     using U86_out = ::TAO_Out_T<U86>;
@@ -1802,7 +1637,6 @@ using UString_var =
 
       U86 &operator= (U86 const &);
 
-
       void _d ( ::CORBA::Long);
       ::CORBA::Long _d () const;
 
@@ -1811,16 +1645,13 @@ using UString_var =
 
       static void _tao_any_destructor (void *);
 
-
       void b_86_1 (char *);
       void b_86_1 (char const *);
       void b_86_1 (::CORBA::String_var const&);
       char const *b_86_1 () const;
 
-
       void b_86_2 ( ::CORBA::Long);
       ::CORBA::Long b_86_2 () const;
-
 
       void _default ();
     private:
@@ -1841,7 +1672,6 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U86;
 
-
     class U88;
     using U88_var = ::TAO_Var_Var_T<U88>;
     using U88_out = ::TAO_Out_T<U88>;
@@ -1855,7 +1685,6 @@ using UString_var =
 
       U88 &operator= (U88 const &);
 
-
       void _d ( ::CORBA::Long);
       ::CORBA::Long _d () const;
 
@@ -1864,14 +1693,11 @@ using UString_var =
 
       static void _tao_any_destructor (void *);
 
-
       void b_86_1 (UString);
       UString_slice * b_86_1 () const;
 
-
       void b_86_2 ( ::CORBA::Long);
       ::CORBA::Long b_86_2 () const;
-
 
       void _default ();
     private:
@@ -1892,13 +1718,9 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U88;
 
-
     struct UBar;
     using UBar_var = ::TAO_Fixed_Var_T<UBar>;
     using UBar_out = UBar&;
-
-
-
 
     struct TAO_IDL_TEST_STUB_Export UBar
     {
@@ -1912,11 +1734,9 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UBar;
 
-
     using UBarArray = UBar[2];
     using UBarArray_slice = UBar;
     struct UBarArray_tag {};
-
 
     using UBarArray_var =
       TAO_FixedArray_Var_T<
@@ -1938,7 +1758,6 @@ using UString_var =
     TAO_IDL_TEST_STUB_Export void UBarArray_copy (UBarArray_slice *_tao_to, const UBarArray_slice *_tao_from);
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UBarArray;
 
-
     class U87;
     using U87_var = ::TAO_Fixed_Var_T<U87>;
     using U87_out = U87&;
@@ -1952,7 +1771,6 @@ using UString_var =
 
       U87 &operator= (U87 const &);
 
-
       void _d ( ::CORBA::Long);
       ::CORBA::Long _d () const;
 
@@ -1961,15 +1779,12 @@ using UString_var =
 
       static void _tao_any_destructor (void *);
 
-
       void b_87_1 (UBar const &);
       UBar const &b_87_1 () const;
       UBar &b_87_1 ();
 
-
       void b_87_2 ( ::CORBA::Long);
       ::CORBA::Long b_87_2 () const;
-
 
       void _default ();
     private:
@@ -1990,7 +1805,6 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U87;
 
-
     class U89;
     using U89_var = ::TAO_Fixed_Var_T<U89>;
     using U89_out = U89&;
@@ -2004,7 +1818,6 @@ using UString_var =
 
       U89 &operator= (U89 const &);
 
-
       void _d ( ::CORBA::Long);
       ::CORBA::Long _d () const;
 
@@ -2013,14 +1826,11 @@ using UString_var =
 
       static void _tao_any_destructor (void *);
 
-
       void b_87_1 (UBarArray);
       UBarArray_slice * b_87_1 () const;
 
-
       void b_87_2 ( ::CORBA::Long);
       ::CORBA::Long b_87_2 () const;
-
 
       void _default ();
     private:
@@ -2049,11 +1859,9 @@ using UString_var =
     using U90_out = U90 &;
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U90;
 
-
     using U90Array = U90[2];
     using U90Array_slice = U90;
     struct U90Array_tag {};
-
 
     using U90Array_var =
       TAO_FixedArray_Var_T<
@@ -2075,7 +1883,6 @@ using UString_var =
     TAO_IDL_TEST_STUB_Export void U90Array_copy (U90Array_slice *_tao_to, const U90Array_slice *_tao_from);
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U90Array;
 
-
     class U91;
     using U91_var = ::TAO_Fixed_Var_T<U91>;
     using U91_out = U91&;
@@ -2089,7 +1896,6 @@ using UString_var =
 
       U91 &operator= (U91 const &);
 
-
       void _d ( ::CORBA::Long);
       ::CORBA::Long _d () const;
 
@@ -2098,14 +1904,11 @@ using UString_var =
 
       static void _tao_any_destructor (void *);
 
-
       void b_91_1 (U90Array);
       U90Array_slice * b_91_1 () const;
 
-
       void b_92_2 ( ::CORBA::Long);
       ::CORBA::Long b_92_2 () const;
-
 
       void _default ();
     private:
@@ -2126,7 +1929,6 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U91;
 
-
     class U92;
     using U92_var = ::TAO_Fixed_Var_T<U92>;
     using U92_out = U92&;
@@ -2140,7 +1942,6 @@ using UString_var =
 
       U92 &operator= (U92 const &);
 
-
       void _d ( ::CORBA::Long);
       ::CORBA::Long _d () const;
 
@@ -2149,15 +1950,12 @@ using UString_var =
 
       static void _tao_any_destructor (void *);
 
-
       void b_92_1 (UBar const &);
       UBar const &b_92_1 () const;
       UBar &b_92_1 ();
 
-
       void b_92_2 ( ::CORBA::Long);
       ::CORBA::Long b_92_2 () const;
-
 
       void b_92_3 (UBar const &);
       UBar const &b_92_3 () const;
@@ -2182,7 +1980,6 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U92;
 
-
     class U93;
     using U93_var = ::TAO_Fixed_Var_T<U93>;
     using U93_out = U93&;
@@ -2196,7 +1993,6 @@ using UString_var =
 
       U93 &operator= (U93 const &);
 
-
       void _d ( ::CORBA::Long);
       ::CORBA::Long _d () const;
 
@@ -2205,14 +2001,11 @@ using UString_var =
 
       static void _tao_any_destructor (void *);
 
-
       void b_93_1 (UBarArray);
       UBarArray_slice * b_93_1 () const;
 
-
       void b_93_2 ( ::CORBA::Long);
       ::CORBA::Long b_93_2 () const;
-
 
       void b_93_3 (UBarArray);
       UBarArray_slice * b_93_3 () const;
@@ -2236,7 +2029,6 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U93;
 
-
     class U94;
     using U94_var = ::TAO_Fixed_Var_T<U94>;
     using U94_out = U94&;
@@ -2250,7 +2042,6 @@ using UString_var =
 
       U94 &operator= (U94 const &);
 
-
       void _d ( ::CORBA::Long);
       ::CORBA::Long _d () const;
 
@@ -2259,14 +2050,11 @@ using UString_var =
 
       static void _tao_any_destructor (void *);
 
-
       void b_94_1 (U90Array);
       U90Array_slice * b_94_1 () const;
 
-
       void b_94_2 ( ::CORBA::Long);
       ::CORBA::Long b_94_2 () const;
-
 
       void b_94_3 (U90Array);
       U90Array_slice * b_94_3 () const;
@@ -2290,11 +2078,9 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U94;
 
-
     using DefaultInitializedLongArray = ::CORBA::Long[2];
     using DefaultInitializedLongArray_slice = ::CORBA::Long;
     struct DefaultInitializedLongArray_tag {};
-
 
     using DefaultInitializedLongArray_var =
       TAO_FixedArray_Var_T<
@@ -2316,7 +2102,6 @@ using UString_var =
     TAO_IDL_TEST_STUB_Export void DefaultInitializedLongArray_copy (DefaultInitializedLongArray_slice *_tao_to, const DefaultInitializedLongArray_slice *_tao_from);
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedLongArray;
 
-
     class DefaultInitializedStructUnion;
     using DefaultInitializedStructUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedStructUnion>;
     using DefaultInitializedStructUnion_out = DefaultInitializedStructUnion&;
@@ -2330,7 +2115,6 @@ using UString_var =
 
       DefaultInitializedStructUnion &operator= (DefaultInitializedStructUnion const &);
 
-
       void _d ( ::CORBA::Boolean);
       ::CORBA::Boolean _d () const;
 
@@ -2338,7 +2122,6 @@ using UString_var =
       using _out_type = DefaultInitializedStructUnion_out;
 
       static void _tao_any_destructor (void *);
-
 
       void value (UBar const &);
       UBar const &value () const;
@@ -2359,7 +2142,6 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedStructUnion;
 
-
     class DefaultInitializedBooleanUnion;
     using DefaultInitializedBooleanUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedBooleanUnion>;
     using DefaultInitializedBooleanUnion_out = DefaultInitializedBooleanUnion&;
@@ -2373,7 +2155,6 @@ using UString_var =
 
       DefaultInitializedBooleanUnion &operator= (DefaultInitializedBooleanUnion const &);
 
-
       void _d ( ::CORBA::Boolean);
       ::CORBA::Boolean _d () const;
 
@@ -2381,7 +2162,6 @@ using UString_var =
       using _out_type = DefaultInitializedBooleanUnion_out;
 
       static void _tao_any_destructor (void *);
-
 
       void value ( ::CORBA::Boolean);
       ::CORBA::Boolean value () const;
@@ -2401,7 +2181,6 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedBooleanUnion;
 
-
     class DefaultInitializedLongUnion;
     using DefaultInitializedLongUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedLongUnion>;
     using DefaultInitializedLongUnion_out = DefaultInitializedLongUnion&;
@@ -2415,7 +2194,6 @@ using UString_var =
 
       DefaultInitializedLongUnion &operator= (DefaultInitializedLongUnion const &);
 
-
       void _d ( ::CORBA::Boolean);
       ::CORBA::Boolean _d () const;
 
@@ -2423,7 +2201,6 @@ using UString_var =
       using _out_type = DefaultInitializedLongUnion_out;
 
       static void _tao_any_destructor (void *);
-
 
       void value ( ::CORBA::Long);
       ::CORBA::Long value () const;
@@ -2443,7 +2220,6 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedLongUnion;
 
-
     class DefaultInitializedDoubleUnion;
     using DefaultInitializedDoubleUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedDoubleUnion>;
     using DefaultInitializedDoubleUnion_out = DefaultInitializedDoubleUnion&;
@@ -2457,7 +2233,6 @@ using UString_var =
 
       DefaultInitializedDoubleUnion &operator= (DefaultInitializedDoubleUnion const &);
 
-
       void _d ( ::CORBA::Boolean);
       ::CORBA::Boolean _d () const;
 
@@ -2465,7 +2240,6 @@ using UString_var =
       using _out_type = DefaultInitializedDoubleUnion_out;
 
       static void _tao_any_destructor (void *);
-
 
       void value ( ::CORBA::Double);
       ::CORBA::Double value () const;
@@ -2485,7 +2259,6 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedDoubleUnion;
 
-
     class DefaultInitializedEnumUnion;
     using DefaultInitializedEnumUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedEnumUnion>;
     using DefaultInitializedEnumUnion_out = DefaultInitializedEnumUnion&;
@@ -2499,7 +2272,6 @@ using UString_var =
 
       DefaultInitializedEnumUnion &operator= (DefaultInitializedEnumUnion const &);
 
-
       void _d ( ::CORBA::Boolean);
       ::CORBA::Boolean _d () const;
 
@@ -2507,7 +2279,6 @@ using UString_var =
       using _out_type = DefaultInitializedEnumUnion_out;
 
       static void _tao_any_destructor (void *);
-
 
       void value (U90);
       U90 value () const;
@@ -2527,7 +2298,6 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedEnumUnion;
 
-
     class DefaultInitializedArrayUnion;
     using DefaultInitializedArrayUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedArrayUnion>;
     using DefaultInitializedArrayUnion_out = DefaultInitializedArrayUnion&;
@@ -2541,7 +2311,6 @@ using UString_var =
 
       DefaultInitializedArrayUnion &operator= (DefaultInitializedArrayUnion const &);
 
-
       void _d ( ::CORBA::Boolean);
       ::CORBA::Boolean _d () const;
 
@@ -2549,7 +2318,6 @@ using UString_var =
       using _out_type = DefaultInitializedArrayUnion_out;
 
       static void _tao_any_destructor (void *);
-
 
       void value (DefaultInitializedLongArray);
       DefaultInitializedLongArray_slice * value () const;
@@ -2569,7 +2337,6 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedArrayUnion;
 
-
     class DefaultInitializedStringUnion;
     using DefaultInitializedStringUnion_var = ::TAO_Var_Var_T<DefaultInitializedStringUnion>;
     using DefaultInitializedStringUnion_out = ::TAO_Out_T<DefaultInitializedStringUnion>;
@@ -2583,7 +2350,6 @@ using UString_var =
 
       DefaultInitializedStringUnion &operator= (DefaultInitializedStringUnion const &);
 
-
       void _d ( ::CORBA::Boolean);
       ::CORBA::Boolean _d () const;
 
@@ -2591,7 +2357,6 @@ using UString_var =
       using _out_type = DefaultInitializedStringUnion_out;
 
       static void _tao_any_destructor (void *);
-
 
       void value (char *);
       void value (char const *);
@@ -2622,7 +2387,6 @@ using UString_var =
     using ResetDiscriminator_out = ResetDiscriminator &;
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ResetDiscriminator;
 
-
     class ResetWithNoopBranches;
     using ResetWithNoopBranches_var = ::TAO_Var_Var_T<ResetWithNoopBranches>;
     using ResetWithNoopBranches_out = ::TAO_Out_T<ResetWithNoopBranches>;
@@ -2636,7 +2400,6 @@ using UString_var =
 
       ResetWithNoopBranches &operator= (ResetWithNoopBranches const &);
 
-
       void _d (ResetDiscriminator);
       ResetDiscriminator _d () const;
 
@@ -2645,16 +2408,13 @@ using UString_var =
 
       static void _tao_any_destructor (void *);
 
-
       void string_value (char *);
       void string_value (char const *);
       void string_value (::CORBA::String_var const&);
       char const *string_value () const;
 
-
       void long_value ( ::CORBA::Long);
       ::CORBA::Long long_value () const;
-
 
       void struct_value (UBar const &);
       UBar const &struct_value () const;
@@ -2679,14 +2439,11 @@ using UString_var =
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ResetWithNoopBranches;
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
     // Arg traits specializations.
     namespace TAO
     {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -2706,7 +2463,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 #endif /* end #if !defined */
 
-
       template<>
       class Arg_Traits< ::DataType>
         : public
@@ -2716,7 +2472,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::Data>
@@ -2728,7 +2483,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::Necessary::Kind>
         : public
@@ -2738,7 +2492,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::Necessary::WhichResult>
@@ -2750,7 +2503,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::foo>
         : public
@@ -2760,7 +2512,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::UnionDiscTest::BooleanUnion>
@@ -2772,7 +2523,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::UnionDiscTest::CharUnion>
         : public
@@ -2782,7 +2532,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::AllBoolUnions::OneBranchT>
@@ -2794,7 +2543,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::AllBoolUnions::OneBranchF>
         : public
@@ -2804,7 +2552,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::AllBoolUnions::OneBranchD>
@@ -2816,7 +2563,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::AllBoolUnions::OneBranchTF>
         : public
@@ -2826,7 +2572,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::AllBoolUnions::OneBranchFT>
@@ -2838,7 +2583,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::AllBoolUnions::OneBranchTD>
         : public
@@ -2848,7 +2592,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::AllBoolUnions::OneBranchDT>
@@ -2860,7 +2603,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::AllBoolUnions::OneBranchFD>
         : public
@@ -2870,7 +2612,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::AllBoolUnions::OneBranchDF>
@@ -2882,7 +2623,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::AllBoolUnions::TwoBranchesTF>
         : public
@@ -2892,7 +2632,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::AllBoolUnions::TwoBranchesFT>
@@ -2904,7 +2643,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::AllBoolUnions::TwoBranchesTD>
         : public
@@ -2914,7 +2652,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::AllBoolUnions::TwoBranchesDT>
@@ -2926,7 +2663,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::AllBoolUnions::TwoBranchesFD>
         : public
@@ -2936,7 +2672,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::AllBoolUnions::TwoBranchesDF>
@@ -2948,7 +2683,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::disc1>
         : public
@@ -2958,7 +2692,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::disc2>
@@ -2970,7 +2703,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::disc_outer>
         : public
@@ -2980,7 +2712,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::inner1>
@@ -2992,7 +2723,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::inner2>
         : public
@@ -3002,7 +2732,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::outer>
@@ -3014,7 +2743,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::UnionTest3::ValChoice>
         : public
@@ -3024,7 +2752,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::UnionTest3::ValType>
@@ -3036,7 +2763,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::UnionTest3::UpType>
         : public
@@ -3046,7 +2772,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::UnionTest3::DownType>
@@ -3058,7 +2783,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::UnionTest3::IndChoice>
         : public
@@ -3068,7 +2792,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::UnionTest3::IndType>
@@ -3080,7 +2803,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::XType>
         : public
@@ -3090,7 +2812,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::ZType>
@@ -3102,7 +2823,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::X>
         : public
@@ -3112,7 +2832,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::X::Y>
@@ -3124,7 +2843,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::X::Y::Z>
         : public
@@ -3134,7 +2852,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::FieldType>
@@ -3146,7 +2863,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::FieldValue>
         : public
@@ -3156,7 +2872,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::Field>
@@ -3168,7 +2883,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::TestOneEnum>
         : public
@@ -3179,7 +2893,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::TestTwoEnum>
         : public
@@ -3189,7 +2902,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::TestUnion>
@@ -3223,7 +2935,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::U85>
         : public
@@ -3245,7 +2956,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::U86>
         : public
@@ -3256,7 +2966,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::U88>
         : public
@@ -3266,7 +2975,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::UBar>
@@ -3289,7 +2997,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::U87>
         : public
@@ -3300,7 +3007,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::U89>
         : public
@@ -3310,7 +3016,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::U90>
@@ -3333,7 +3038,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::U91>
         : public
@@ -3343,7 +3047,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::U92>
@@ -3355,7 +3058,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::U93>
         : public
@@ -3365,7 +3067,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::U94>
@@ -3388,7 +3089,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::DefaultInitializedStructUnion>
         : public
@@ -3398,7 +3098,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::DefaultInitializedBooleanUnion>
@@ -3410,7 +3109,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::DefaultInitializedLongUnion>
         : public
@@ -3420,7 +3118,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::DefaultInitializedDoubleUnion>
@@ -3432,7 +3129,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::DefaultInitializedEnumUnion>
         : public
@@ -3442,7 +3138,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::DefaultInitializedArrayUnion>
@@ -3454,7 +3149,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::DefaultInitializedStringUnion>
         : public
@@ -3465,7 +3159,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       {
       };
 
-
       template<>
       class Arg_Traits< ::ResetDiscriminator>
         : public
@@ -3475,7 +3168,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
               >
       {
       };
-
 
       template<>
       class Arg_Traits< ::ResetWithNoopBranches>
@@ -3489,9 +3181,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3597,19 +3286,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DataType);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, DataType &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3620,19 +3303,13 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Necessary::Kind);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Necessary::Kind &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3643,8 +3320,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3653,8 +3328,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, foo const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3665,8 +3338,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3675,8 +3346,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, UnionDiscTest::CharUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3687,8 +3356,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3697,8 +3364,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchF const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3709,8 +3374,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3719,8 +3382,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchTF const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3731,8 +3392,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3741,8 +3400,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchTD const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3753,8 +3410,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3763,8 +3418,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchFD const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3775,8 +3428,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3785,8 +3436,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesTF const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3797,8 +3446,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3807,8 +3454,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesTD const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3819,8 +3464,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3829,8 +3472,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesFD const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3841,43 +3482,29 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, disc1);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, disc1 &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, disc2);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, disc2 &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, disc_outer);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, disc_outer &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3888,8 +3515,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3898,8 +3523,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, inner2 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3910,19 +3533,13 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::ValChoice);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UnionTest3::ValChoice &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3933,8 +3550,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3943,8 +3558,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::UnionTest3::UpType const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3955,19 +3568,13 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::IndChoice);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UnionTest3::IndChoice &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3978,31 +3585,21 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, XType);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, XType &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ZType);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ZType &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4013,8 +3610,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4023,8 +3618,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::X::Y const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4035,19 +3628,13 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FieldType);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, FieldType &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4058,8 +3645,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4069,31 +3654,21 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestOneEnum);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TestOneEnum &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestTwoEnum);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TestTwoEnum &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4104,8 +3679,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4114,8 +3687,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4123,8 +3694,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, U42_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4135,8 +3704,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4144,8 +3711,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UString_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4156,8 +3721,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4166,8 +3729,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U88 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4178,8 +3739,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4187,8 +3746,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UBarArray_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4199,8 +3756,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4210,19 +3765,13 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U90);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, U90 &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4231,8 +3780,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, U90Array_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4243,8 +3790,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4253,8 +3798,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U92 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4265,8 +3808,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4276,8 +3817,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4285,8 +3824,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, DefaultInitializedLongArray_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4297,8 +3834,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4307,8 +3842,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedBooleanUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4319,8 +3852,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4329,8 +3860,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedDoubleUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4341,8 +3870,6 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4351,8 +3878,6 @@ namespace CORBA {
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedArrayUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4363,19 +3888,13 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
     TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ResetDiscriminator);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ResetDiscriminator &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4386,16 +3905,12 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, DataType _tao_enumerator);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, DataType &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4404,16 +3919,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Necessary::Kind _tao_enumerator);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Necessary::Kind &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4422,16 +3933,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, foo const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, foo &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4440,16 +3947,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionDiscTest::CharUnion const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionDiscTest::CharUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4458,16 +3961,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchF const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchF &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4476,16 +3975,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchTF const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchTF &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4494,16 +3989,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchTD const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchTD &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4512,16 +4003,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchFD const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchFD &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4530,16 +4017,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesTF const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesTF &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4548,16 +4031,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesTD const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesTD &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4566,16 +4045,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesFD const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesFD &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4584,16 +4059,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, disc1 _tao_enumerator);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, disc1 &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4602,16 +4073,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, disc_outer _tao_enumerator);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, disc_outer &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4620,16 +4087,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, inner2 const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, inner2 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4638,16 +4101,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, UnionTest3::ValChoice _tao_enumerator);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, UnionTest3::ValChoice &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4656,16 +4115,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionTest3::UpType const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionTest3::UpType &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4674,16 +4129,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, UnionTest3::IndChoice _tao_enumerator);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, UnionTest3::IndChoice &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4692,16 +4143,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, XType _tao_enumerator);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, XType &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4710,16 +4157,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, X const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4728,16 +4171,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, X::Y::Z const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X::Y::Z &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4746,16 +4185,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, FieldValue const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, FieldValue &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4764,16 +4199,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, TestOneEnum _tao_enumerator);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, TestOneEnum &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4782,16 +4213,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, TestUnion const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, TestUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4800,14 +4227,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::U42_forany &_tao_array);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::U42_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4816,15 +4241,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::UString_forany &_tao_array);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::UString_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4833,16 +4255,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U88 const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U88 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4851,15 +4269,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::UBarArray_forany &_tao_array);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::UBarArray_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4868,16 +4283,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U89 const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U89 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4886,15 +4297,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::U90Array_forany &_tao_array);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::U90Array_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4903,16 +4311,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U92 const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U92 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4921,16 +4325,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U94 const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U94 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4939,15 +4339,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedStructUnion const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedStructUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4956,16 +4353,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedLongUnion const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedLongUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4974,16 +4367,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedEnumUnion const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedEnumUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4992,16 +4381,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedStringUnion const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedStringUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5010,15 +4395,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ResetWithNoopBranches const &);
     TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ResetWithNoopBranches &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
     #if defined (__ACE_INLINE__)
 #include "unionC.inl"

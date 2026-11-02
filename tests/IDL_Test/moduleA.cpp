@@ -41,7 +41,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:mod1/mod2/ex1:1.0",
     "ex1");
 
-
 namespace mod1
 {
 
@@ -64,7 +63,6 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_mod1_mod2_AMH_ex1ExceptionHolder,
     0);
 
-
 namespace mod1
 {
 
@@ -78,14 +76,12 @@ namespace mod1
   return ::mod1::mod2::_tc_AMH_ex1ExceptionHolder;
 }
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_mod1_mod2_AMH_ex1ResponseHandler (
     ::CORBA::tk_local_interface,
     "IDL:mod1/mod2/AMH_ex1ResponseHandler:1.0",
     "AMH_ex1ResponseHandler");
-
 
 namespace mod1
 {
@@ -102,7 +98,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:mod1/mod2/AMI_ex1Handler:1.0",
     "AMI_ex1Handler");
 
-
 namespace mod1
 {
 
@@ -117,7 +112,6 @@ static TAO::TypeCode::Objref<char const *,
     ::CORBA::tk_objref,
     "IDL:mod1/mod2/ex2:1.0",
     "ex2");
-
 
 namespace mod1
 {
@@ -141,7 +135,6 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_mod1_mod2_AMH_ex2ExceptionHolder,
     0);
 
-
 namespace mod1
 {
 
@@ -155,14 +148,12 @@ namespace mod1
   return ::mod1::mod2::_tc_AMH_ex2ExceptionHolder;
 }
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_mod1_mod2_AMH_ex2ResponseHandler (
     ::CORBA::tk_local_interface,
     "IDL:mod1/mod2/AMH_ex2ResponseHandler:1.0",
     "AMH_ex2ResponseHandler");
-
 
 namespace mod1
 {
@@ -179,7 +170,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:mod1/mod2/AMI_ex2Handler:1.0",
     "AMI_ex2Handler");
 
-
 namespace mod1
 {
 
@@ -190,8 +180,6 @@ namespace mod1
 }
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -206,11 +194,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -252,11 +237,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -271,9 +252,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -322,15 +301,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -362,11 +336,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -408,11 +379,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -427,11 +394,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -473,11 +437,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -492,11 +452,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -538,11 +495,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -557,9 +510,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -608,15 +559,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -648,11 +594,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -694,11 +637,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -713,11 +652,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -758,5 +694,4 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

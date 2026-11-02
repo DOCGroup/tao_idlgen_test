@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_2MK79G_H_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_2MK79G_H_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_GW5XP1_H_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_GW5XP1_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::DateTime_T>
     : public
@@ -86,7 +82,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_DATA_T__SARG_TRAITS_)
 #define _DATA_T__SARG_TRAITS_
@@ -105,7 +100,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_USER_T__SARG_TRAITS_)
 #define _USER_T__SARG_TRAITS_
 
@@ -120,7 +114,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_USER_TEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_USER_TEXCEPTIONHOLDER__SARG_TRAITS_
@@ -138,7 +131,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_USER_THANDLER__SARG_TRAITS_)
 #define _AMI_USER_THANDLER__SARG_TRAITS_
@@ -158,7 +150,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_User_T;
 using POA_AMH_User_T_ptr = POA_AMH_User_T *;
 
@@ -171,7 +162,6 @@ protected:
 public:
   POA_AMH_User_T (const POA_AMH_User_T& rhs);
   virtual ~POA_AMH_User_T () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -192,9 +182,6 @@ virtual void getLoginTime (
   ) = 0;
 
 };
-
-
-
 
 class POA_User_T;
 using POA_User_T_ptr = POA_User_T *;
@@ -233,7 +220,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -252,7 +238,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_User_TResponseHandler;
 using POA_TAO_AMH_User_TResponseHandler_ptr = POA_TAO_AMH_User_TResponseHandler *;
 
@@ -268,9 +253,6 @@ public:
   void getLoginTime_excep (
     ::AMH_User_TExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_User_THandler;
 using POA_AMI_User_THandler_ptr = POA_AMI_User_THandler *;
@@ -317,7 +299,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -341,10 +322,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "Bug_2577_RegressionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

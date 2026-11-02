@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INHERITS_W6MNSW_H_
-#define _TAO_IDL_INHERITS_W6MNSW_H_
+#ifndef _TAO_IDL_INHERITS_U7P00Q_H_
+#define _TAO_IDL_INHERITS_U7P00Q_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDINHERIT_ONE__SARG_TRAITS_)
 #define _OLDINHERIT_ONE__SARG_TRAITS_
 
@@ -91,7 +87,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDINHERIT_AMH_ONEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDINHERIT_AMH_ONEEXCEPTIONHOLDER__SARG_TRAITS_
@@ -110,7 +105,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDINHERIT_AMI_ONEHANDLER__SARG_TRAITS_)
 #define _OLDINHERIT_AMI_ONEHANDLER__SARG_TRAITS_
 
@@ -126,7 +120,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDINHERIT_TWO__SARG_TRAITS_)
 #define _OLDINHERIT_TWO__SARG_TRAITS_
 
@@ -141,7 +134,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDINHERIT_AMH_TWOEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDINHERIT_AMH_TWOEXCEPTIONHOLDER__SARG_TRAITS_
@@ -160,7 +152,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDINHERIT_AMI_TWOHANDLER__SARG_TRAITS_)
 #define _OLDINHERIT_AMI_TWOHANDLER__SARG_TRAITS_
 
@@ -176,7 +167,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDINHERIT_THREE__SARG_TRAITS_)
 #define _OLDINHERIT_THREE__SARG_TRAITS_
 
@@ -191,7 +181,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDINHERIT_AMH_THREEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDINHERIT_AMH_THREEEXCEPTIONHOLDER__SARG_TRAITS_
@@ -210,7 +199,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDINHERIT_AMI_THREEHANDLER__SARG_TRAITS_)
 #define _OLDINHERIT_AMI_THREEHANDLER__SARG_TRAITS_
 
@@ -226,7 +214,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDINHERIT_FOUR__SARG_TRAITS_)
 #define _OLDINHERIT_FOUR__SARG_TRAITS_
 
@@ -241,7 +228,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDINHERIT_AMH_FOUREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDINHERIT_AMH_FOUREXCEPTIONHOLDER__SARG_TRAITS_
@@ -260,7 +246,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDINHERIT_AMI_FOURHANDLER__SARG_TRAITS_)
 #define _OLDINHERIT_AMI_FOURHANDLER__SARG_TRAITS_
 
@@ -276,7 +261,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDINHERIT_FIVE__SARG_TRAITS_)
 #define _OLDINHERIT_FIVE__SARG_TRAITS_
 
@@ -291,7 +275,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDINHERIT_AMH_FIVEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDINHERIT_AMH_FIVEEXCEPTIONHOLDER__SARG_TRAITS_
@@ -309,7 +292,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDINHERIT_AMI_FIVEHANDLER__SARG_TRAITS_)
 #define _OLDINHERIT_AMI_FIVEHANDLER__SARG_TRAITS_
@@ -329,7 +311,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_OldInherit
 {
 
@@ -345,7 +326,6 @@ namespace POA_OldInherit
   public:
     AMH_one (const AMH_one& rhs);
     virtual ~AMH_one () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -366,9 +346,6 @@ namespace POA_OldInherit
     ) = 0;
 
 };
-
-
-
 
 class one;
 using one_ptr = one *;
@@ -407,7 +384,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -426,7 +402,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_oneResponseHandler;
 using TAO_AMH_oneResponseHandler_ptr = TAO_AMH_oneResponseHandler *;
 
@@ -441,9 +416,6 @@ public:
   void op_one_excep (
     ::OldInherit::AMH_oneExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_oneHandler;
 using AMI_oneHandler_ptr = AMI_oneHandler *;
@@ -489,7 +461,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -513,7 +484,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_two;
 using AMH_two_ptr = AMH_two *;
 
@@ -527,7 +497,6 @@ protected:
 public:
   AMH_two (const AMH_two& rhs);
   virtual ~AMH_two () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -548,9 +517,6 @@ virtual void op_two (
   ) = 0;
 
 };
-
-
-
 
 class two;
 using two_ptr = two *;
@@ -589,7 +555,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -609,7 +574,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_twoResponseHandler;
 using TAO_AMH_twoResponseHandler_ptr = TAO_AMH_twoResponseHandler *;
 
@@ -624,9 +588,6 @@ public:
   void op_two_excep (
     ::OldInherit::AMH_twoExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_twoHandler;
 using AMI_twoHandler_ptr = AMI_twoHandler *;
@@ -672,7 +633,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -696,7 +656,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_three;
 using AMH_three_ptr = AMH_three *;
 
@@ -710,7 +669,6 @@ protected:
 public:
   AMH_three (const AMH_three& rhs);
   virtual ~AMH_three () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -731,9 +689,6 @@ virtual void op_three (
   ) = 0;
 
 };
-
-
-
 
 class three;
 using three_ptr = three *;
@@ -772,7 +727,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -792,7 +746,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_threeResponseHandler;
 using TAO_AMH_threeResponseHandler_ptr = TAO_AMH_threeResponseHandler *;
 
@@ -807,9 +760,6 @@ public:
   void op_three_excep (
     ::OldInherit::AMH_threeExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_threeHandler;
 using AMI_threeHandler_ptr = AMI_threeHandler *;
@@ -855,7 +805,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -879,7 +828,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_four;
 using AMH_four_ptr = AMH_four *;
 
@@ -894,7 +842,6 @@ protected:
 public:
   AMH_four (const AMH_four& rhs);
   virtual ~AMH_four () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -915,9 +862,6 @@ virtual void op_four (
   ) = 0;
 
 };
-
-
-
 
 class four;
 using four_ptr = four *;
@@ -957,7 +901,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -978,7 +921,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_fourResponseHandler;
 using TAO_AMH_fourResponseHandler_ptr = TAO_AMH_fourResponseHandler *;
 
@@ -993,9 +935,6 @@ public:
   void op_four_excep (
     ::OldInherit::AMH_fourExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_fourHandler;
 using AMI_fourHandler_ptr = AMI_fourHandler *;
@@ -1042,7 +981,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1067,7 +1005,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_five;
 using AMH_five_ptr = AMH_five *;
 
@@ -1083,7 +1020,6 @@ protected:
 public:
   AMH_five (const AMH_five& rhs);
   virtual ~AMH_five () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -1104,9 +1040,6 @@ virtual void op_five (
   ) = 0;
 
 };
-
-
-
 
 class five;
 using five_ptr = five *;
@@ -1147,7 +1080,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1169,7 +1101,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_fiveResponseHandler;
 using TAO_AMH_fiveResponseHandler_ptr = TAO_AMH_fiveResponseHandler *;
 
@@ -1184,9 +1115,6 @@ public:
   void op_five_excep (
     ::OldInherit::AMH_fiveExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_fiveHandler;
 using AMI_fiveHandler_ptr = AMI_fiveHandler *;
@@ -1234,7 +1162,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1260,13 +1187,9 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module OldInherit
 
 #include "inheritS_T.h"
-
 
 #include /**/ "ace/post.h"
 

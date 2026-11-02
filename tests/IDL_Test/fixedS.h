@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDS_H1XPAB_H_
-#define _TAO_IDL_FIXEDS_H1XPAB_H_
+#ifndef _TAO_IDL_FIXEDS_ZGEY8V_H_
+#define _TAO_IDL_FIXEDS_ZGEY8V_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::ACE_CDR::Fixed>
     : public Basic_SArg_Traits_T<
@@ -85,7 +81,6 @@ namespace TAO
     >
   {
   };
-
 
   template<>
   class SArg_Traits< ::FixedPoint::FixedValues>
@@ -96,7 +91,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_FIXEDPOINT_FIXEDOPERATIONS__SARG_TRAITS_)
 #define _FIXEDPOINT_FIXEDOPERATIONS__SARG_TRAITS_
@@ -112,7 +106,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FIXEDPOINT_AMH_FIXEDOPERATIONSEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _FIXEDPOINT_AMH_FIXEDOPERATIONSEXCEPTIONHOLDER__SARG_TRAITS_
@@ -130,7 +123,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FIXEDPOINT_AMI_FIXEDOPERATIONSHANDLER__SARG_TRAITS_)
 #define _FIXEDPOINT_AMI_FIXEDOPERATIONSHANDLER__SARG_TRAITS_
@@ -150,7 +142,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_FixedPoint
 {
 
@@ -166,7 +157,6 @@ namespace POA_FixedPoint
   public:
     AMH_FixedOperations (const AMH_FixedOperations& rhs);
     virtual ~AMH_FixedOperations () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -197,9 +187,6 @@ namespace POA_FixedPoint
     ) = 0;
 
 };
-
-
-
 
 class FixedOperations;
 using FixedOperations_ptr = FixedOperations *;
@@ -245,7 +232,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -268,7 +254,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_FixedOperationsResponseHandler;
 using TAO_AMH_FixedOperationsResponseHandler_ptr = TAO_AMH_FixedOperationsResponseHandler *;
 
@@ -287,9 +272,6 @@ public:
   void set_rate_excep (
     ::FixedPoint::AMH_FixedOperationsExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_FixedOperationsHandler;
 using AMI_FixedOperationsHandler_ptr = AMI_FixedOperationsHandler *;
@@ -349,7 +331,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -381,13 +362,9 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module FixedPoint
 
 #include "fixedS_T.h"
-
 
 #include /**/ "ace/post.h"
 

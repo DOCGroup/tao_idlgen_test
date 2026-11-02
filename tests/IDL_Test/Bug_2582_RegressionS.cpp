@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_5DWRFS_CPP_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_5DWRFS_CPP_
-
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_LQBTFS_CPP_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_LQBTFS_CPP_
 
 #include "Bug_2582_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -139,7 +136,6 @@ POA_AMH_FieldDevice_T::POA_AMH_FieldDevice_T ()
 {
   this->optable_ = std::addressof (tao_AMH_FieldDevice_T_optable);
 }
-
 
 void
 POA_AMH_FieldDevice_T::getEncodingID_skel (
@@ -214,11 +210,6 @@ POA_AMH_FieldDevice_T::getEncoding_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_AMH_FieldDevice_T::_is_a (const char* value)
 {
   return
@@ -266,8 +257,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_FieldDevice_T_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_FieldDevice_T_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -342,7 +331,6 @@ _TAO_FieldDevice_T_Direct_Proxy_Impl::~_TAO_FieldDevice_T_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_FieldDevice_T_Direct_Proxy_Impl::getEncodingID (
     TAO_Abstract_ServantBase  *servant,
@@ -360,7 +348,6 @@ _TAO_FieldDevice_T_Direct_Proxy_Impl::getEncodingID (
     _tao_ptr->getEncodingID (
         );
 }
-
 
 void
 _TAO_FieldDevice_T_Direct_Proxy_Impl::getEncoding (
@@ -380,8 +367,6 @@ _TAO_FieldDevice_T_Direct_Proxy_Impl::getEncoding (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -391,9 +376,7 @@ POA_FieldDevice_T::POA_FieldDevice_T ()
   this->optable_ = std::addressof (tao_FieldDevice_T_optable);
 }
 
-
-class getEncodingID_FieldDevice_T
-  : public TAO::Upcall_Command
+class getEncodingID_FieldDevice_T : public TAO::Upcall_Command
 {
 public:
   inline getEncodingID_FieldDevice_T (POA_FieldDevice_T * servant,
@@ -456,9 +439,7 @@ void POA_FieldDevice_T::getEncodingID_skel (
                          );
 }
 
-
-class getEncoding_FieldDevice_T
-  : public TAO::Upcall_Command
+class getEncoding_FieldDevice_T : public TAO::Upcall_Command
 {
 public:
   inline getEncoding_FieldDevice_T (POA_FieldDevice_T * servant,
@@ -521,13 +502,6 @@ void POA_FieldDevice_T::getEncoding_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_FieldDevice_T::_is_a (const char* value)
 {
   return
@@ -542,18 +516,12 @@ const char* POA_FieldDevice_T::_interface_repository_id () const
   return "IDL:FieldDevice_T:1.0";
 }
 
-
-
-
 void POA_FieldDevice_T::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 FieldDevice_T *
 POA_FieldDevice_T::_this ()
@@ -638,8 +606,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -716,7 +682,6 @@ _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::~_TAO_AMI_FieldDevice_THandler_
 {
 }
 
-
 void
 _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncodingID (
     TAO_Abstract_ServantBase  *servant,
@@ -734,7 +699,6 @@ _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncodingID (
         ((TAO::Arg_Traits< ::EncodingID_T>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncodingID_excep (
@@ -754,7 +718,6 @@ _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncodingID_excep (
       );
 }
 
-
 void
 _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncoding (
     TAO_Abstract_ServantBase  *servant,
@@ -772,7 +735,6 @@ _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncoding (
         ((TAO::Arg_Traits< ::Encoding_T>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncoding_excep (
@@ -792,8 +754,6 @@ _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncoding_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -803,9 +763,7 @@ POA_AMI_FieldDevice_THandler::POA_AMI_FieldDevice_THandler ()
   this->optable_ = std::addressof (tao_AMI_FieldDevice_THandler_optable);
 }
 
-
-class getEncodingID_AMI_FieldDevice_THandler
-  : public TAO::Upcall_Command
+class getEncodingID_AMI_FieldDevice_THandler : public TAO::Upcall_Command
 {
 public:
   inline getEncodingID_AMI_FieldDevice_THandler (POA_AMI_FieldDevice_THandler * servant,
@@ -871,9 +829,7 @@ void POA_AMI_FieldDevice_THandler::getEncodingID_skel (
                          );
 }
 
-
-class getEncodingID_excep_AMI_FieldDevice_THandler
-  : public TAO::Upcall_Command
+class getEncodingID_excep_AMI_FieldDevice_THandler : public TAO::Upcall_Command
 {
 public:
   inline getEncodingID_excep_AMI_FieldDevice_THandler (POA_AMI_FieldDevice_THandler * servant,
@@ -939,9 +895,7 @@ void POA_AMI_FieldDevice_THandler::getEncodingID_excep_skel (
                          );
 }
 
-
-class getEncoding_AMI_FieldDevice_THandler
-  : public TAO::Upcall_Command
+class getEncoding_AMI_FieldDevice_THandler : public TAO::Upcall_Command
 {
 public:
   inline getEncoding_AMI_FieldDevice_THandler (POA_AMI_FieldDevice_THandler * servant,
@@ -1007,9 +961,7 @@ void POA_AMI_FieldDevice_THandler::getEncoding_skel (
                          );
 }
 
-
-class getEncoding_excep_AMI_FieldDevice_THandler
-  : public TAO::Upcall_Command
+class getEncoding_excep_AMI_FieldDevice_THandler : public TAO::Upcall_Command
 {
 public:
   inline getEncoding_excep_AMI_FieldDevice_THandler (POA_AMI_FieldDevice_THandler * servant,
@@ -1075,13 +1027,6 @@ void POA_AMI_FieldDevice_THandler::getEncoding_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_FieldDevice_THandler::_is_a (const char* value)
 {
   return
@@ -1097,18 +1042,12 @@ const char* POA_AMI_FieldDevice_THandler::_interface_repository_id () const
   return "IDL:AMI_FieldDevice_THandler:1.0";
 }
 
-
-
-
 void POA_AMI_FieldDevice_THandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_FieldDevice_THandler *
 POA_AMI_FieldDevice_THandler::_this ()

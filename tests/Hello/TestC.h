@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTC_E75JMU_H_
-#define _TAO_IDL_TESTC_E75JMU_H_
+#ifndef _TAO_IDL_TESTC_NNKTO6_H_
+#define _TAO_IDL_TESTC_NNKTO6_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include "tao/ORB.h"
 #include "tao/SystemException.h"
@@ -58,18 +56,14 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace Test
 {
-
 
 #if !defined (_TEST_HELLO__VAR_OUT_CH_)
 #define _TEST_HELLO__VAR_OUT_CH_
@@ -80,9 +74,6 @@ namespace Test
   using Hello_out = TAO_Objref_Out_T<Hello>;
 
 #endif /* end #if !defined */
-
-
-
 
   class  Hello
     : public virtual ::CORBA::Object
@@ -105,9 +96,6 @@ namespace Test
     virtual char * get_string ();
 
     virtual void shutdown ();
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -137,18 +125,13 @@ namespace Test
     Hello &operator= (Hello &&) = delete;
   };
 
-
-
 } // module Test
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_TEST_HELLO__ARG_TRAITS_)
 #define _TEST_HELLO__ARG_TRAITS_
@@ -168,9 +151,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -194,18 +174,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
  ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::Hello_ptr );
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::Hello_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "TestC.inl"

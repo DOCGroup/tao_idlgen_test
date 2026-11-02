@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_M1H3IX_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_M1H3IX_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_VSUC67_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_VSUC67_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +52,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -78,7 +75,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_SEQTEST__SARG_TRAITS_)
 #define _SEQTEST__SARG_TRAITS_
 
@@ -94,7 +90,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::seqTest::dozens>
     : public
@@ -104,7 +99,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_AMH_SEQTESTEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_SEQTESTEXCEPTIONHOLDER__SARG_TRAITS_
@@ -123,7 +117,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_SEQTESTHANDLER__SARG_TRAITS_)
 #define _AMI_SEQTESTHANDLER__SARG_TRAITS_
 
@@ -139,7 +132,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::twinStruct>
     : public
@@ -150,7 +142,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::outside>
     : public
@@ -160,7 +151,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::nestedSeqStruct>
@@ -175,7 +165,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_seqTest;
 using POA_AMH_seqTest_ptr = POA_AMH_seqTest *;
 
@@ -188,7 +177,6 @@ protected:
 public:
   POA_AMH_seqTest (const POA_AMH_seqTest& rhs);
   virtual ~POA_AMH_seqTest () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -210,9 +198,6 @@ virtual void send_dozen (
   ) = 0;
 
 };
-
-
-
 
 class POA_seqTest;
 using POA_seqTest_ptr = POA_seqTest *;
@@ -252,7 +237,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -271,7 +255,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_seqTestResponseHandler;
 using POA_TAO_AMH_seqTestResponseHandler_ptr = POA_TAO_AMH_seqTestResponseHandler *;
 
@@ -287,9 +270,6 @@ public:
   void send_dozen_excep (
     ::AMH_seqTestExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_seqTestHandler;
 using POA_AMI_seqTestHandler_ptr = POA_AMI_seqTestHandler *;
@@ -336,7 +316,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -360,10 +339,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "sequence_anonymousS_T.h"
-
 
 #include /**/ "ace/post.h"
 

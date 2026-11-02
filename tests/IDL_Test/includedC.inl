@@ -41,7 +41,6 @@ IncludedBase::_tao_obv_static_repository_id ()
   return "IDL:IncludedBase:1.0";
 }
 
-
 ACE_INLINE
 RootModule::SUBMODULE1::ParentIF::ParentIF (
     TAO_Stub *objref,
@@ -70,7 +69,6 @@ RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder::_tao_obv_static_repository_
   return "IDL:RootModule/SUBMODULE1/AMH_ParentIFExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 RootModule::SUBMODULE1::AMI_ParentIFHandler::AMI_ParentIFHandler (
     TAO_Stub *objref,
@@ -88,7 +86,6 @@ RootModule::SUBMODULE1::AMI_ParentIFHandler::AMI_ParentIFHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 AAA::AAA (
@@ -117,7 +114,6 @@ AMH_AAAExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_AAAExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_AAAHandler::AMI_AAAHandler (

@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 A::AMI_Test::AMI_Test (
     TAO_Stub *objref,
@@ -41,7 +39,6 @@ A::AMI_Test::AMI_Test (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 A::AMI_AMI_TestHandler::AMI_AMI_TestHandler (
@@ -61,7 +58,6 @@ A::AMI_AMI_TestHandler::AMI_AMI_TestHandler (
 {
 }
 
-
 ACE_INLINE
 A::Test_Child::Test_Child (
     TAO_Stub *objref,
@@ -79,7 +75,6 @@ A::Test_Child::Test_Child (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 A::AMI_Test_ChildHandler::AMI_Test_ChildHandler (

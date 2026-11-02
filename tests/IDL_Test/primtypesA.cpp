@@ -41,7 +41,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:OldPrimTypes/ex1:1.0",
     "ex1");
 
-
 namespace OldPrimTypes
 {
   ::CORBA::TypeCode_ptr const _tc_ex1 = std::addressof(_tao_tc_OldPrimTypes_ex1);
@@ -60,7 +59,6 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_OldPrimTypes_AMH_ex1ExceptionHolder,
     0);
 
-
 namespace OldPrimTypes
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_ex1ExceptionHolder = std::addressof(_tao_tc_OldPrimTypes_AMH_ex1ExceptionHolder);
@@ -70,14 +68,12 @@ namespace OldPrimTypes
   return ::OldPrimTypes::_tc_AMH_ex1ExceptionHolder;
 }
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldPrimTypes_AMH_ex1ResponseHandler (
     ::CORBA::tk_local_interface,
     "IDL:OldPrimTypes/AMH_ex1ResponseHandler:1.0",
     "AMH_ex1ResponseHandler");
-
 
 namespace OldPrimTypes
 {
@@ -90,7 +86,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:OldPrimTypes/AMI_ex1Handler:1.0",
     "AMI_ex1Handler");
 
-
 namespace OldPrimTypes
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_ex1Handler = std::addressof(_tao_tc_OldPrimTypes_AMI_ex1Handler);
@@ -101,7 +96,6 @@ static TAO::TypeCode::Objref<char const *,
     ::CORBA::tk_objref,
     "IDL:OldPrimTypes/ex2:1.0",
     "ex2");
-
 
 namespace OldPrimTypes
 {
@@ -121,7 +115,6 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_OldPrimTypes_AMH_ex2ExceptionHolder,
     0);
 
-
 namespace OldPrimTypes
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_ex2ExceptionHolder = std::addressof(_tao_tc_OldPrimTypes_AMH_ex2ExceptionHolder);
@@ -131,14 +124,12 @@ namespace OldPrimTypes
   return ::OldPrimTypes::_tc_AMH_ex2ExceptionHolder;
 }
 
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_OldPrimTypes_AMH_ex2ResponseHandler (
     ::CORBA::tk_local_interface,
     "IDL:OldPrimTypes/AMH_ex2ResponseHandler:1.0",
     "AMH_ex2ResponseHandler");
-
 
 namespace OldPrimTypes
 {
@@ -151,15 +142,12 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:OldPrimTypes/AMI_ex2Handler:1.0",
     "AMI_ex2Handler");
 
-
 namespace OldPrimTypes
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_ex2Handler = std::addressof(_tao_tc_OldPrimTypes_AMI_ex2Handler);
 }
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -174,11 +162,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -220,11 +205,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -239,9 +220,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -290,15 +269,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -330,11 +304,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -376,11 +347,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -395,11 +362,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -441,11 +405,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -460,11 +420,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -506,11 +463,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -525,9 +478,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -576,15 +527,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -616,11 +562,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -662,11 +605,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -681,11 +620,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -726,5 +662,4 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

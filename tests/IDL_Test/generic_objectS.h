@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_4G9YDK_H_
-#define _TAO_IDL_GENERIC_OBJECTS_4G9YDK_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_EZIAO3_H_
+#define _TAO_IDL_GENERIC_OBJECTS_EZIAO3_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::ObjectType>
     : public
@@ -87,7 +83,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::Selecter>
     : public
@@ -97,7 +92,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_GENERIC__SARG_TRAITS_)
 #define _GENERIC__SARG_TRAITS_
@@ -113,7 +107,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_GENERICEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_GENERICEXCEPTIONHOLDER__SARG_TRAITS_
@@ -131,7 +124,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_GENERICHANDLER__SARG_TRAITS_)
 #define _AMI_GENERICHANDLER__SARG_TRAITS_
@@ -151,7 +143,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_generic;
 using POA_AMH_generic_ptr = POA_AMH_generic *;
 
@@ -164,7 +155,6 @@ protected:
 public:
   POA_AMH_generic (const POA_AMH_generic& rhs);
   virtual ~POA_AMH_generic () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -187,9 +177,6 @@ virtual void op (
   ) = 0;
 
 };
-
-
-
 
 class POA_generic;
 using POA_generic_ptr = POA_generic *;
@@ -231,7 +218,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -250,7 +236,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_genericResponseHandler;
 using POA_TAO_AMH_genericResponseHandler_ptr = POA_TAO_AMH_genericResponseHandler *;
 
@@ -268,9 +253,6 @@ public:
   void op_excep (
     ::AMH_genericExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_genericHandler;
 using POA_AMI_genericHandler_ptr = POA_AMI_genericHandler *;
@@ -319,7 +301,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -343,10 +324,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "generic_objectS_T.h"
-
 
 #include /**/ "ace/post.h"
 

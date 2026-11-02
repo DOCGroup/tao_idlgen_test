@@ -35,8 +35,6 @@ Selecter::_default ()
   this->disc_ = static_cast <ObjectType> (-1);
 }
 
-
-
 ACE_INLINE
 unsigned long
 Selecter::_tao_member_index (ObjectType value)
@@ -127,7 +125,6 @@ Selecter::that_object () const
   return this->u_.that_object_->in ();
 }
 
-
 ACE_INLINE
 generic::generic (
     TAO_Stub *objref,
@@ -155,7 +152,6 @@ AMH_genericExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_genericExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_genericHandler::AMI_genericHandler (

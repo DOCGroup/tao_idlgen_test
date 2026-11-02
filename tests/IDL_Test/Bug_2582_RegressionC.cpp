@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "Bug_2582_RegressionC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -90,7 +89,6 @@ _tao_tc_Encoding_T (
 
 ::CORBA::TypeCode_ptr const _tc_Encoding_T = std::addressof(_tao_tc_Encoding_T);
 
-
 void
 Encoding_T::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -138,7 +136,6 @@ TAO::Objref_Traits<FieldDevice_T>::marshal (const FieldDevice_T_ptr p,TAO_Output
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::EncodingID2_T
 FieldDevice_T::getEncodingID ()
@@ -205,7 +202,6 @@ FieldDevice_T::getEncoding ()
   return _tao_retval.retn ();
 }
 
-
 void
 FieldDevice_T::sendc_getEncodingID (
   ::AMI_FieldDevice_THandler_ptr ami_handler)
@@ -214,8 +210,6 @@ FieldDevice_T::sendc_getEncodingID (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -234,7 +228,6 @@ FieldDevice_T::sendc_getEncodingID (
     );
 }
 
-
 void
 FieldDevice_T::sendc_getEncoding (
   ::AMI_FieldDevice_THandler_ptr ami_handler)
@@ -243,8 +236,6 @@ FieldDevice_T::sendc_getEncoding (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -367,9 +358,7 @@ static TAO::TypeCode::Value<char const *,
 
 ::CORBA::TypeCode_ptr const _tc_AMH_FieldDevice_TExceptionHolder = std::addressof(_tao_tc_AMH_FieldDevice_TExceptionHolder);
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<AMH_FieldDevice_TExceptionHolder>::add_ref (AMH_FieldDevice_TExceptionHolder * p)
@@ -390,8 +379,6 @@ TAO::Value_Traits<AMH_FieldDevice_TExceptionHolder>::release (AMH_FieldDevice_TE
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 AMH_FieldDevice_TExceptionHolder *
 AMH_FieldDevice_TExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -536,7 +523,6 @@ AMH_FieldDevice_TExceptionHolder::raise_sendc_getEncoding ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for AMH_FieldDevice_TResponseHandler.
@@ -566,8 +552,6 @@ TAO::Objref_Traits<AMH_FieldDevice_TResponseHandler>::marshal (const AMH_FieldDe
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 AMH_FieldDevice_TResponseHandler::AMH_FieldDevice_TResponseHandler ()
 {}
@@ -690,7 +674,6 @@ TAO::Objref_Traits<AMI_FieldDevice_THandler>::marshal (const AMI_FieldDevice_THa
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 AMI_FieldDevice_THandler::getEncodingID (
@@ -1045,9 +1028,7 @@ OBV_AMH_FieldDevice_TExceptionHolder::_tao_unmarshal__AMH_FieldDevice_TException
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1074,8 +1055,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1118,11 +1097,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1137,11 +1112,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1183,11 +1155,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1202,9 +1170,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1253,15 +1219,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1293,11 +1254,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1339,11 +1297,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1358,11 +1312,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1404,8 +1355,6 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, EncodingID_T _tao_enumerator)
@@ -1428,8 +1377,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1451,8 +1398,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1483,9 +1428,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_FieldDevice_TExceptionHolder * vt)
@@ -1506,8 +1448,6 @@ CORBA::remove_ref (AMH_FieldDevice_TExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1531,9 +1471,7 @@ operator>> (
   return AMH_FieldDevice_TExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_AMH_FieldDevice_TExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -1552,8 +1490,6 @@ OBV_AMH_FieldDevice_TExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1583,6 +1519,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

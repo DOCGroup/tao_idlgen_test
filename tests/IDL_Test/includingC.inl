@@ -35,8 +35,6 @@ myUnion::_default ()
   this->disc_ = static_cast <choice> (-1);
 }
 
-
-
 ACE_INLINE
 unsigned long
 myUnion::_tao_member_index (choice value)
@@ -119,8 +117,6 @@ Bog::_default ()
   this->_reset ();
   this->disc_ = static_cast <Agog> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -231,7 +227,6 @@ Bog::bog3 () const
   return this->u_.bog3_;
 }
 
-
 ACE_INLINE
 iface::iface (
     TAO_Stub *objref,
@@ -259,7 +254,6 @@ AMH_ifaceExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_ifaceExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_ifaceHandler::AMI_ifaceHandler (
@@ -410,7 +404,6 @@ TestUn::value2 () const // get method
   return this->u_.value2_;
 }
 
-
 ACE_INLINE
 MyInt::MyInt (
     TAO_Stub *objref,
@@ -439,7 +432,6 @@ AMH_MyIntExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:AMH_MyIntExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_MyIntHandler::AMI_MyIntHandler (
     TAO_Stub *objref,
@@ -457,7 +449,6 @@ AMI_MyIntHandler::AMI_MyIntHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 RootModule::SUBMODULE1::ChildIF::ChildIF (
@@ -487,7 +478,6 @@ RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder::_tao_obv_static_repository_i
   return "IDL:RootModule/SUBMODULE1/AMH_ChildIFExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 RootModule::SUBMODULE1::AMI_ChildIFHandler::AMI_ChildIFHandler (
     TAO_Stub *objref,
@@ -505,7 +495,6 @@ RootModule::SUBMODULE1::AMI_ChildIFHandler::AMI_ChildIFHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 B::B (
@@ -534,7 +523,6 @@ AMH_BExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_BExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_BHandler::AMI_BHandler (

@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 hello::hello (
     TAO_Stub *objref,
@@ -52,7 +50,6 @@ AMH_helloExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:anvil.com/AMH_helloExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_helloHandler::AMI_helloHandler (
     TAO_Stub *objref,
@@ -70,7 +67,6 @@ AMI_helloHandler::AMI_helloHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 goodbye::goodbye (
@@ -100,7 +96,6 @@ AMH_goodbyeExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:anvil.com/AMH_goodbyeExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_goodbyeHandler::AMI_goodbyeHandler (
     TAO_Stub *objref,
@@ -118,7 +113,6 @@ AMI_goodbyeHandler::AMI_goodbyeHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 salutation::sayonara::sayonara (
@@ -148,7 +142,6 @@ salutation::AMH_sayonaraExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:hammer.com/salutation/AMH_sayonaraExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 salutation::AMI_sayonaraHandler::AMI_sayonaraHandler (
     TAO_Stub *objref,
@@ -166,7 +159,6 @@ salutation::AMI_sayonaraHandler::AMI_sayonaraHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 ciao::ciao (
@@ -196,7 +188,6 @@ AMH_ciaoExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:anvil.com/AMH_ciaoExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 AMI_ciaoHandler::AMI_ciaoHandler (
     TAO_Stub *objref,
@@ -214,7 +205,6 @@ AMI_ciaoHandler::AMI_ciaoHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 aloha::aloha (
@@ -243,7 +233,6 @@ AMH_alohaExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:anvil.com/AMH_alohaExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_alohaHandler::AMI_alohaHandler (

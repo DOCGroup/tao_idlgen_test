@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_STRUCTS_FQA0F3_H_
-#define _TAO_IDL_OLD_STRUCTS_FQA0F3_H_
+#ifndef _TAO_IDL_OLD_STRUCTS_0UFKQ4_H_
+#define _TAO_IDL_OLD_STRUCTS_0UFKQ4_H_
 
 #include /**/ "ace/pre.h"
 
@@ -53,14 +53,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -90,7 +87,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::bar1>
     : public
@@ -100,7 +96,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::bar2>
@@ -112,7 +107,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::bar3>
     : public
@@ -123,7 +117,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::bar4>
     : public
@@ -133,7 +126,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_FOO1__SARG_TRAITS_)
 #define _FOO1__SARG_TRAITS_
@@ -149,7 +141,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_FOO1EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_FOO1EXCEPTIONHOLDER__SARG_TRAITS_
@@ -168,7 +159,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_FOO1HANDLER__SARG_TRAITS_)
 #define _AMI_FOO1HANDLER__SARG_TRAITS_
 
@@ -184,7 +174,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_FOO2__SARG_TRAITS_)
 #define _FOO2__SARG_TRAITS_
 
@@ -199,7 +188,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_FOO2EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_FOO2EXCEPTIONHOLDER__SARG_TRAITS_
@@ -218,7 +206,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_FOO2HANDLER__SARG_TRAITS_)
 #define _AMI_FOO2HANDLER__SARG_TRAITS_
 
@@ -234,7 +221,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::CellPos>
     : public
@@ -245,7 +231,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::CellPos2>
     : public
@@ -255,7 +240,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::CellPos3>
@@ -270,7 +254,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_foo1;
 using POA_AMH_foo1_ptr = POA_AMH_foo1 *;
 
@@ -283,7 +266,6 @@ protected:
 public:
   POA_AMH_foo1 (const POA_AMH_foo1& rhs);
   virtual ~POA_AMH_foo1 () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -305,9 +287,6 @@ virtual void op (
   ) = 0;
 
 };
-
-
-
 
 class POA_foo1;
 using POA_foo1_ptr = POA_foo1 *;
@@ -348,7 +327,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -367,7 +345,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_foo1ResponseHandler;
 using POA_TAO_AMH_foo1ResponseHandler_ptr = POA_TAO_AMH_foo1ResponseHandler *;
 
@@ -384,9 +361,6 @@ public:
   void op_excep (
     ::AMH_foo1ExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_foo1Handler;
 using POA_AMI_foo1Handler_ptr = POA_AMI_foo1Handler *;
@@ -434,7 +408,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -458,7 +431,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_foo2;
 using POA_AMH_foo2_ptr = POA_AMH_foo2 *;
 
@@ -472,7 +444,6 @@ protected:
 public:
   POA_AMH_foo2 (const POA_AMH_foo2& rhs);
   virtual ~POA_AMH_foo2 () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -504,9 +475,6 @@ virtual void op3 (
   ) = 0;
 
 };
-
-
-
 
 class POA_foo2;
 using POA_foo2_ptr = POA_foo2 *;
@@ -554,7 +522,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -578,7 +545,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_foo2ResponseHandler;
 using POA_TAO_AMH_foo2ResponseHandler_ptr = POA_TAO_AMH_foo2ResponseHandler *;
 
@@ -599,9 +565,6 @@ public:
   void op3_excep (
     ::AMH_foo2ExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_foo2Handler;
 using POA_AMI_foo2Handler_ptr = POA_AMI_foo2Handler *;
@@ -663,7 +626,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -695,10 +657,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "old_structS_T.h"
-
 
 #include /**/ "ace/post.h"
 

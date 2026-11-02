@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "fixedC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -36,7 +35,6 @@
 #if !defined (__ACE_INLINE__)
 #include "fixedC.inl"
 #endif /* !defined INLINE */
-
 
 void
 FixedPoint::FixedValues::_tao_any_destructor (
@@ -75,7 +73,6 @@ TAO::Objref_Traits<FixedPoint::FixedOperations>::marshal (const FixedPoint::Fixe
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::FixedPoint::Amount
 FixedPoint::FixedOperations::rate ()
@@ -140,7 +137,6 @@ FixedPoint::FixedOperations::rate (
   _invocation_call.invoke (nullptr, 0);
 }
 
-
 void
 FixedPoint::FixedOperations::sendc_set_rate (
   ::FixedPoint::AMI_FixedOperationsHandler_ptr ami_handler,
@@ -150,8 +146,6 @@ FixedPoint::FixedOperations::sendc_set_rate (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::ACE_CDR::Fixed>::in_arg_val _tao_rate (rate);
@@ -177,7 +171,6 @@ FixedPoint::FixedOperations::sendc_set_rate (
     );
 }
 
-
 void
 FixedPoint::FixedOperations::sendc_get_rate (
   ::FixedPoint::AMI_FixedOperationsHandler_ptr ami_handler)
@@ -186,8 +179,6 @@ FixedPoint::FixedOperations::sendc_get_rate (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -287,9 +278,7 @@ FixedPoint::FixedOperations::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<FixedPoint::AMH_FixedOperationsExceptionHolder>::add_ref (FixedPoint::AMH_FixedOperationsExceptionHolder * p)
@@ -310,8 +299,6 @@ TAO::Value_Traits<FixedPoint::AMH_FixedOperationsExceptionHolder>::release (Fixe
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 FixedPoint::AMH_FixedOperationsExceptionHolder *
 FixedPoint::AMH_FixedOperationsExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -450,7 +437,6 @@ FixedPoint::AMH_FixedOperationsExceptionHolder::raise_sendc_get_rate ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for FixedPoint::AMH_FixedOperationsResponseHandler.
@@ -480,8 +466,6 @@ TAO::Objref_Traits<FixedPoint::AMH_FixedOperationsResponseHandler>::marshal (con
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 FixedPoint::AMH_FixedOperationsResponseHandler::AMH_FixedOperationsResponseHandler ()
 {}
@@ -596,7 +580,6 @@ TAO::Objref_Traits<FixedPoint::AMI_FixedOperationsHandler>::marshal (const Fixed
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 FixedPoint::AMI_FixedOperationsHandler::get_rate (
@@ -963,8 +946,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -994,9 +975,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (FixedPoint::AMH_FixedOperationsExceptionHolder * vt)
@@ -1017,8 +995,6 @@ CORBA::remove_ref (FixedPoint::AMH_FixedOperationsExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1042,9 +1018,7 @@ operator>> (
   return FixedPoint::AMH_FixedOperationsExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_FixedPoint::AMH_FixedOperationsExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -1063,8 +1037,6 @@ OBV_FixedPoint::AMH_FixedOperationsExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1094,6 +1066,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

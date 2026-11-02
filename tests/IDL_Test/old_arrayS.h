@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYS_X32VX9_H_
-#define _TAO_IDL_OLD_ARRAYS_X32VX9_H_
+#ifndef _TAO_IDL_OLD_ARRAYS_U2V8QB_H_
+#define _TAO_IDL_OLD_ARRAYS_U2V8QB_H_
 
 #include /**/ "ace/pre.h"
 
@@ -53,14 +53,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -123,7 +120,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::OldArray::A>
     : public
@@ -134,7 +130,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::OldArray::B>
     : public
@@ -144,7 +139,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::OldArray::C>
@@ -200,7 +194,6 @@ namespace TAO
   {
   };
 
-
 #if !defined (_OLDARRAY_A_I__SARG_TRAITS_)
 #define _OLDARRAY_A_I__SARG_TRAITS_
 
@@ -215,7 +208,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDARRAY_AMH_A_IEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDARRAY_AMH_A_IEXCEPTIONHOLDER__SARG_TRAITS_
@@ -233,7 +225,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDARRAY_AMI_A_IHANDLER__SARG_TRAITS_)
 #define _OLDARRAY_AMI_A_IHANDLER__SARG_TRAITS_
@@ -253,7 +244,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_OldArray
 {
 
@@ -269,7 +259,6 @@ namespace POA_OldArray
   public:
     AMH_A_i (const AMH_A_i& rhs);
     virtual ~AMH_A_i () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -333,9 +322,6 @@ namespace POA_OldArray
     ) = 0;
 
 };
-
-
-
 
 class A_i;
 using A_i_ptr = A_i *;
@@ -408,7 +394,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -442,7 +427,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 class TAO_AMH_A_iResponseHandler;
 using TAO_AMH_A_iResponseHandler_ptr = TAO_AMH_A_iResponseHandler *;
@@ -480,9 +464,6 @@ public:
   void set_attribute_array_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_A_iHandler;
 using AMI_A_iHandler_ptr = AMI_A_iHandler *;
@@ -590,7 +571,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -646,13 +626,9 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module OldArray
 
 #include "old_arrayS_T.h"
-
 
 #include /**/ "ace/post.h"
 

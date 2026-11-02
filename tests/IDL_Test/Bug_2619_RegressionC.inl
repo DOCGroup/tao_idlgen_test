@@ -32,7 +32,6 @@ T_Data_T::_tao_obv_static_repository_id ()
   return "IDL:T_Data_T:1.0";
 }
 
-
 ACE_INLINE
 Test::Test (
     TAO_Stub *objref,
@@ -60,7 +59,6 @@ AMH_TestExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_TestExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 AMI_TestHandler::AMI_TestHandler (

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTES_SXJ7DK_H_
-#define _TAO_IDL_ATTRIBUTES_SXJ7DK_H_
+#ifndef _TAO_IDL_ATTRIBUTES_X6T034_H_
+#define _TAO_IDL_ATTRIBUTES_X6T034_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_HELLO_MYFOO__SARG_TRAITS_)
 #define _HELLO_MYFOO__SARG_TRAITS_
 
@@ -91,7 +87,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_HELLO_AMH_MYFOOEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _HELLO_AMH_MYFOOEXCEPTIONHOLDER__SARG_TRAITS_
@@ -109,7 +104,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_HELLO_AMI_MYFOOHANDLER__SARG_TRAITS_)
 #define _HELLO_AMI_MYFOOHANDLER__SARG_TRAITS_
@@ -129,7 +123,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_Hello
 {
 
@@ -145,7 +138,6 @@ namespace POA_Hello
   public:
     AMH_MyFoo (const AMH_MyFoo& rhs);
     virtual ~AMH_MyFoo () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -243,9 +235,6 @@ namespace POA_Hello
 
 };
 
-
-
-
 class MyFoo;
 using MyFoo_ptr = MyFoo *;
 
@@ -335,7 +324,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -386,7 +374,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_MyFooResponseHandler;
 using TAO_AMH_MyFooResponseHandler_ptr = TAO_AMH_MyFooResponseHandler *;
 
@@ -430,9 +417,6 @@ public:
   void get_ro_attrib_excep (
     ::Hello::AMH_MyFooExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_MyFooHandler;
 using AMI_MyFooHandler_ptr = AMI_MyFooHandler *;
@@ -587,7 +571,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -675,13 +658,9 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module Hello
 
 #include "attributeS_T.h"
-
 
 #include /**/ "ace/post.h"
 

@@ -22,19 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_ROFCWB_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_ROFCWB_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_00L08Y_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_00L08Y_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
 #include "tao/AnyTypeCode/Any.h"
@@ -69,24 +66,13 @@
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
 END_USER_VERSIONED_NAMESPACE
-
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -94,28 +80,17 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 namespace M1
 {
-
-
 
   struct S1;
   using S1_var = ::TAO_Fixed_Var_T<S1>;
   using S1_out = S1&;
 
-
-
-
-
   struct  S1
   {
-
 
     using _var_type = S1_var;
     using _out_type = S1_out;
@@ -124,10 +99,7 @@ namespace M1
 
     ::CORBA::Octet o {};
   };
-
   extern  ::CORBA::TypeCode_ptr const _tc_S1;
-
-
 
 #if !defined (_M1_LI__VAR_OUT_CH_)
 #define _M1_LI__VAR_OUT_CH_
@@ -139,16 +111,11 @@ namespace M1
 
 #endif /* end #if !defined */
 
-
-
-
-
   class  LI
     : public virtual ::CORBA::Object
   {
   public:
     friend class TAO::Narrow_Utils<LI>;
-
     using _ptr_type = LI_ptr;
     using _var_type = LI_var;
     using _out_type = LI_out;
@@ -166,10 +133,6 @@ namespace M1
 
     virtual void op (
       const ::M1::S1 & s);
-
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -198,10 +161,7 @@ namespace M1
     LI &operator= (const LI &) = delete;
     LI &operator= (LI &&) = delete;
   };
-
   extern  ::CORBA::TypeCode_ptr const _tc_LI;
-
-
 
 #if !defined (_M1_AMH_LIEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _M1_AMH_LIEXCEPTIONHOLDER__VAR_OUT_CH_
@@ -212,13 +172,10 @@ namespace M1
 
 #endif /* end #if !defined */
 
-
-
   class  AMH_LIExceptionHolder
     : public virtual ::CORBA::DefaultValueRefCountBase
   {
   public:
-
     using _ptr_type = AMH_LIExceptionHolder*;
     using _var_type = AMH_LIExceptionHolder_var;
     using _out_type = AMH_LIExceptionHolder_out;
@@ -249,11 +206,8 @@ namespace M1
 
   public:
 
-
   public:
     virtual void raise_op ();
-
-
 
 protected:
   AMH_LIExceptionHolder ();
@@ -274,10 +228,7 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M1_AMH_LIExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_LIExceptionHolder;
-
-
 
 #if !defined (_M1_AMH_LIRESPONSEHANDLER__VAR_OUT_CH_)
 #define _M1_AMH_LIRESPONSEHANDLER__VAR_OUT_CH_
@@ -289,15 +240,10 @@ using AMH_LIResponseHandler_out = TAO_Objref_Out_T<AMH_LIResponseHandler>;
 
 #endif /* end #if !defined */
 
-
-
-
-
 class  AMH_LIResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-
   using _ptr_type = AMH_LIResponseHandler_ptr;
   using _var_type = AMH_LIResponseHandler_var;
   using _out_type = AMH_LIResponseHandler_out;
@@ -318,10 +264,6 @@ public:
   virtual void op_excep (
     ::M1::AMH_LIExceptionHolder * holder) = 0;
 
-
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
@@ -329,8 +271,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_LIResponseHandler ();
-
-
 
   virtual ~AMH_LIResponseHandler () = default;
 
@@ -341,10 +281,7 @@ private:
   AMH_LIResponseHandler &operator= (const AMH_LIResponseHandler &) = delete;
   AMH_LIResponseHandler &operator= (AMH_LIResponseHandler &&) = delete;
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_LIResponseHandler;
-
-
 
 #if !defined (_M1_L2__VAR_OUT_CH_)
 #define _M1_L2__VAR_OUT_CH_
@@ -356,16 +293,11 @@ using L2_out = TAO_Objref_Out_T<L2>;
 
 #endif /* end #if !defined */
 
-
-
-
-
 class  L2
   : public virtual ::CORBA::Object
 {
 public:
   friend class TAO::Narrow_Utils<L2>;
-
   using _ptr_type = L2_ptr;
   using _var_type = L2_var;
   using _out_type = L2_out;
@@ -383,10 +315,6 @@ public:
 
   virtual void op (
     const ::M1::S1 & s);
-
-
-
-
 
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
@@ -415,10 +343,7 @@ private:
   L2 &operator= (const L2 &) = delete;
   L2 &operator= (L2 &&) = delete;
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_L2;
-
-
 
 #if !defined (_M1_AMH_L2EXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _M1_AMH_L2EXCEPTIONHOLDER__VAR_OUT_CH_
@@ -429,13 +354,10 @@ using AMH_L2ExceptionHolder_out = TAO_Value_Out_T<AMH_L2ExceptionHolder>;
 
 #endif /* end #if !defined */
 
-
-
 class  AMH_L2ExceptionHolder
   : public virtual ::CORBA::DefaultValueRefCountBase
 {
 public:
-
   using _ptr_type = AMH_L2ExceptionHolder*;
   using _var_type = AMH_L2ExceptionHolder_var;
   using _out_type = AMH_L2ExceptionHolder_out;
@@ -466,11 +388,8 @@ public:
 
 public:
 
-
 public:
   virtual void raise_op ();
-
-
 
 protected:
   AMH_L2ExceptionHolder ();
@@ -491,10 +410,7 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M1_AMH_L2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_L2ExceptionHolder;
-
-
 
 #if !defined (_M1_AMH_L2RESPONSEHANDLER__VAR_OUT_CH_)
 #define _M1_AMH_L2RESPONSEHANDLER__VAR_OUT_CH_
@@ -506,15 +422,10 @@ using AMH_L2ResponseHandler_out = TAO_Objref_Out_T<AMH_L2ResponseHandler>;
 
 #endif /* end #if !defined */
 
-
-
-
-
 class  AMH_L2ResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-
   using _ptr_type = AMH_L2ResponseHandler_ptr;
   using _var_type = AMH_L2ResponseHandler_var;
   using _out_type = AMH_L2ResponseHandler_out;
@@ -535,10 +446,6 @@ public:
   virtual void op_excep (
     ::M1::AMH_L2ExceptionHolder * holder) = 0;
 
-
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
@@ -546,8 +453,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_L2ResponseHandler ();
-
-
 
   virtual ~AMH_L2ResponseHandler () = default;
 
@@ -558,22 +463,14 @@ private:
   AMH_L2ResponseHandler &operator= (const AMH_L2ResponseHandler &) = delete;
   AMH_L2ResponseHandler &operator= (AMH_L2ResponseHandler &&) = delete;
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_L2ResponseHandler;
-
-
 
 struct X;
 using X_var = ::TAO_Var_Var_T<X>;
 using X_out = ::TAO_Out_T<X>;
 
-
-
-
-
 struct  X
 {
-
 
   using _var_type = X_var;
   using _out_type = X_out;
@@ -584,10 +481,7 @@ struct  X
   M1::S1 valStruct {};
   M1::L2_var valLocalIface {};
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_X;
-
-
 
 class BooleanUnion1;
 using BooleanUnion1_var = ::TAO_Var_Var_T<BooleanUnion1>;
@@ -602,23 +496,16 @@ public:
 
   BooleanUnion1 &operator= (BooleanUnion1 const &);
 
-
-
   void _d ( ::CORBA::Boolean);
   ::CORBA::Boolean _d () const;
-
 
   using _var_type = BooleanUnion1_var;
   using _out_type = BooleanUnion1_out;
 
   static void _tao_any_destructor (void *);
 
-
-
   void valLocalIface (M1::L2_ptr);
   M1::L2_ptr valLocalIface () const;
-
-
 
   void _default ();
 private:
@@ -629,17 +516,13 @@ private:
   {
     _tao_union_storage () {}
 
-
     M1::L2_var *valLocalIface_;
   } u_;
 
   /// TAO extension - frees any allocated storage.
   void _reset ();
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_BooleanUnion1;
-
-
 
 class BooleanUnion2;
 using BooleanUnion2_var = ::TAO_Var_Var_T<BooleanUnion2>;
@@ -654,25 +537,18 @@ public:
 
   BooleanUnion2 &operator= (BooleanUnion2 const &);
 
-
-
   void _d ( ::CORBA::Boolean);
   ::CORBA::Boolean _d () const;
-
 
   using _var_type = BooleanUnion2_var;
   using _out_type = BooleanUnion2_out;
 
   static void _tao_any_destructor (void *);
 
-
-
   void valLocalIface (char *);
   void valLocalIface (char const *);
   void valLocalIface (::CORBA::String_var const&);
   char const *valLocalIface () const;
-
-
 
   void _default ();
 private:
@@ -683,17 +559,13 @@ private:
   {
     _tao_union_storage () {}
 
-
     char *valLocalIface_;
   } u_;
 
   /// TAO extension - frees any allocated storage.
   void _reset ();
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_BooleanUnion2;
-
-
 
 #if !defined (_M1_V__VAR_OUT_CH_)
 #define _M1_V__VAR_OUT_CH_
@@ -704,13 +576,10 @@ using V_out = TAO_Value_Out_T<V>;
 
 #endif /* end #if !defined */
 
-
-
 class  V
   : public virtual ::CORBA::ValueBase
 {
 public:
-
   using _ptr_type = V*;
   using _var_type = V_var;
   using _out_type = V_out;
@@ -733,42 +602,34 @@ public:
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
 public:
-
   virtual void valString (char *val) = 0;
   virtual void valString (char const *val) = 0;
   virtual void valString (::CORBA::String_var const &val) = 0;
   virtual char const *valString () const = 0;
 
 public:
-
   virtual void valStruct (const M1::S1 &) = 0;
   virtual const M1::S1 &valStruct () const = 0;
   virtual M1::S1 &valStruct () = 0;
 
 public:
-
   virtual void valLocalIface (::M1::LI_ptr) = 0;
   virtual ::M1::LI_ptr valLocalIface () const = 0;
 
 public:
-
   virtual void valBoolUnion1 (const M1::BooleanUnion1 &) = 0;
   virtual const M1::BooleanUnion1 &valBoolUnion1 () const = 0;
   virtual M1::BooleanUnion1 &valBoolUnion1 () = 0;
 
 public:
-
   virtual void valBoolUnion2 (const M1::BooleanUnion2 &) = 0;
   virtual const M1::BooleanUnion2 &valBoolUnion2 () const = 0;
   virtual M1::BooleanUnion2 &valBoolUnion2 () = 0;
 
 public:
-
   virtual void valX (const M1::X &) = 0;
   virtual const M1::X &valX () const = 0;
   virtual M1::X &valX () = 0;
-
-
 
 protected:
   V ();
@@ -789,7 +650,6 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M1_V (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 };
-
 class  V_init
   : public virtual ::CORBA::ValueFactoryBase
 {
@@ -807,33 +667,20 @@ public:
 protected:
   virtual ~V_init ();
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_V;
 
-
-
-
 } // module M1
-
 namespace M2
 {
-
   namespace M3
   {
-
-
 
     struct S2;
     using S2_var = ::TAO_Fixed_Var_T<S2>;
     using S2_out = S2&;
 
-
-
-
-
     struct  S2
     {
-
 
       using _var_type = S2_var;
       using _out_type = S2_out;
@@ -842,10 +689,7 @@ namespace M2
 
       ::CORBA::Octet o {};
     };
-
     extern  ::CORBA::TypeCode_ptr const _tc_S2;
-
-
 
 #if !defined (_M2_M3_L3__VAR_OUT_CH_)
 #define _M2_M3_L3__VAR_OUT_CH_
@@ -857,16 +701,11 @@ namespace M2
 
 #endif /* end #if !defined */
 
-
-
-
-
     class  L3
       : public virtual ::CORBA::Object
     {
     public:
       friend class TAO::Narrow_Utils<L3>;
-
       using _ptr_type = L3_ptr;
       using _var_type = L3_var;
       using _out_type = L3_out;
@@ -884,10 +723,6 @@ namespace M2
 
       virtual void op (
         const ::M2::M3::S2 & s);
-
-
-
-
 
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
@@ -916,10 +751,7 @@ namespace M2
       L3 &operator= (const L3 &) = delete;
       L3 &operator= (L3 &&) = delete;
     };
-
     extern  ::CORBA::TypeCode_ptr const _tc_L3;
-
-
 
 #if !defined (_M2_M3_AMH_L3EXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _M2_M3_AMH_L3EXCEPTIONHOLDER__VAR_OUT_CH_
@@ -930,13 +762,10 @@ namespace M2
 
 #endif /* end #if !defined */
 
-
-
     class  AMH_L3ExceptionHolder
       : public virtual ::CORBA::DefaultValueRefCountBase
     {
     public:
-
       using _ptr_type = AMH_L3ExceptionHolder*;
       using _var_type = AMH_L3ExceptionHolder_var;
       using _out_type = AMH_L3ExceptionHolder_out;
@@ -967,11 +796,8 @@ namespace M2
 
     public:
 
-
     public:
       virtual void raise_op ();
-
-
 
   protected:
     AMH_L3ExceptionHolder ();
@@ -992,10 +818,7 @@ namespace M2
     virtual ::CORBA::Boolean
     _tao_unmarshal__M2_M3_AMH_L3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
   };
-
   extern  ::CORBA::TypeCode_ptr const _tc_AMH_L3ExceptionHolder;
-
-
 
 #if !defined (_M2_M3_AMH_L3RESPONSEHANDLER__VAR_OUT_CH_)
 #define _M2_M3_AMH_L3RESPONSEHANDLER__VAR_OUT_CH_
@@ -1007,15 +830,10 @@ namespace M2
 
 #endif /* end #if !defined */
 
-
-
-
-
   class  AMH_L3ResponseHandler
     : public virtual ::CORBA::Object
   {
   public:
-
     using _ptr_type = AMH_L3ResponseHandler_ptr;
     using _var_type = AMH_L3ResponseHandler_var;
     using _out_type = AMH_L3ResponseHandler_out;
@@ -1036,10 +854,6 @@ namespace M2
     virtual void op_excep (
       ::M2::M3::AMH_L3ExceptionHolder * holder) = 0;
 
-
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
@@ -1047,8 +861,6 @@ namespace M2
   protected:
     // Abstract or local interface only.
     AMH_L3ResponseHandler ();
-
-
 
     virtual ~AMH_L3ResponseHandler () = default;
 
@@ -1059,19 +871,14 @@ namespace M2
     AMH_L3ResponseHandler &operator= (const AMH_L3ResponseHandler &) = delete;
     AMH_L3ResponseHandler &operator= (AMH_L3ResponseHandler &&) = delete;
   };
-
   extern  ::CORBA::TypeCode_ptr const _tc_AMH_L3ResponseHandler;
-
-
 
   class  E1 : public ::CORBA::UserException
   {
   public:
     M2::M3::L3_var val2 {};
 
-
     M1::BooleanUnion1 bool1 {};
-
 
     M1::BooleanUnion2 bool2 {};
 
@@ -1095,8 +902,6 @@ namespace M2
     virtual void _tao_encode (TAO_OutputCDR &cdr) const;
     virtual void _tao_decode (TAO_InputCDR &cdr);
 
-
-
     E1 (
         const M2::M3::L3_ptr _tao_val2,
         const M1::BooleanUnion1 & _tao_bool1,
@@ -1104,10 +909,7 @@ namespace M2
 
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
   };
-
   extern  ::CORBA::TypeCode_ptr const _tc_E1;
-
-
 
 #if !defined (_M2_M3_L4__VAR_OUT_CH_)
 #define _M2_M3_L4__VAR_OUT_CH_
@@ -1119,16 +921,11 @@ namespace M2
 
 #endif /* end #if !defined */
 
-
-
-
-
   class  L4
     : public virtual ::CORBA::Object
   {
   public:
     friend class TAO::Narrow_Utils<L4>;
-
     using _ptr_type = L4_ptr;
     using _var_type = L4_var;
     using _out_type = L4_out;
@@ -1146,10 +943,6 @@ namespace M2
 
     virtual void op (
       const ::M2::M3::S2 & s);
-
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -1178,10 +971,7 @@ namespace M2
     L4 &operator= (const L4 &) = delete;
     L4 &operator= (L4 &&) = delete;
   };
-
   extern  ::CORBA::TypeCode_ptr const _tc_L4;
-
-
 
 #if !defined (_M2_M3_AMH_L4EXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _M2_M3_AMH_L4EXCEPTIONHOLDER__VAR_OUT_CH_
@@ -1192,13 +982,10 @@ namespace M2
 
 #endif /* end #if !defined */
 
-
-
   class  AMH_L4ExceptionHolder
     : public virtual ::CORBA::DefaultValueRefCountBase
   {
   public:
-
     using _ptr_type = AMH_L4ExceptionHolder*;
     using _var_type = AMH_L4ExceptionHolder_var;
     using _out_type = AMH_L4ExceptionHolder_out;
@@ -1229,11 +1016,8 @@ namespace M2
 
   public:
 
-
   public:
     virtual void raise_op ();
-
-
 
 protected:
   AMH_L4ExceptionHolder ();
@@ -1254,10 +1038,7 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M2_M3_AMH_L4ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_L4ExceptionHolder;
-
-
 
 #if !defined (_M2_M3_AMH_L4RESPONSEHANDLER__VAR_OUT_CH_)
 #define _M2_M3_AMH_L4RESPONSEHANDLER__VAR_OUT_CH_
@@ -1269,15 +1050,10 @@ using AMH_L4ResponseHandler_out = TAO_Objref_Out_T<AMH_L4ResponseHandler>;
 
 #endif /* end #if !defined */
 
-
-
-
-
 class  AMH_L4ResponseHandler
   : public virtual ::CORBA::Object
 {
 public:
-
   using _ptr_type = AMH_L4ResponseHandler_ptr;
   using _var_type = AMH_L4ResponseHandler_var;
   using _out_type = AMH_L4ResponseHandler_out;
@@ -1298,10 +1074,6 @@ public:
   virtual void op_excep (
     ::M2::M3::AMH_L4ExceptionHolder * holder) = 0;
 
-
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
@@ -1309,8 +1081,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_L4ResponseHandler ();
-
-
 
   virtual ~AMH_L4ResponseHandler () = default;
 
@@ -1321,10 +1091,7 @@ private:
   AMH_L4ResponseHandler &operator= (const AMH_L4ResponseHandler &) = delete;
   AMH_L4ResponseHandler &operator= (AMH_L4ResponseHandler &&) = delete;
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_AMH_L4ResponseHandler;
-
-
 
 #if !defined (_M2_M3_V2__VAR_OUT_CH_)
 #define _M2_M3_V2__VAR_OUT_CH_
@@ -1335,13 +1102,10 @@ using V2_out = TAO_Value_Out_T<V2>;
 
 #endif /* end #if !defined */
 
-
-
 class  V2
   : public virtual ::CORBA::ValueBase
 {
 public:
-
   using _ptr_type = V2*;
   using _var_type = V2_var;
   using _out_type = V2_out;
@@ -1364,29 +1128,23 @@ public:
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
 public:
-
   virtual void valString (char *val) = 0;
   virtual void valString (char const *val) = 0;
   virtual void valString (::CORBA::String_var const &val) = 0;
   virtual char const *valString () const = 0;
 
 public:
-
   virtual void valStruct (const M2::M3::S2 &) = 0;
   virtual const M2::M3::S2 &valStruct () const = 0;
   virtual M2::M3::S2 &valStruct () = 0;
 
 public:
-
   virtual void valLocalIface (::M2::M3::L3_ptr) = 0;
   virtual ::M2::M3::L3_ptr valLocalIface () const = 0;
 
 public:
-
   virtual void valLocalIface3 (::M2::M3::L4_ptr) = 0;
   virtual ::M2::M3::L4_ptr valLocalIface3 () const = 0;
-
-
 
 protected:
   V2 ();
@@ -1407,7 +1165,6 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M2_M3_V2 (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 };
-
 class  V2_init
   : public virtual ::CORBA::ValueFactoryBase
 {
@@ -1425,10 +1182,7 @@ public:
 protected:
   virtual ~V2_init ();
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_V2;
-
-
 
 #if !defined (_M2_M3_V3__VAR_OUT_CH_)
 #define _M2_M3_V3__VAR_OUT_CH_
@@ -1439,13 +1193,10 @@ using V3_out = TAO_Value_Out_T<V3>;
 
 #endif /* end #if !defined */
 
-
-
 class  V3
   : public virtual ::CORBA::ValueBase
 {
 public:
-
   using _ptr_type = V3*;
   using _var_type = V3_var;
   using _out_type = V3_out;
@@ -1468,24 +1219,19 @@ public:
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
 
 public:
-
   virtual void valString (char *val) = 0;
   virtual void valString (char const *val) = 0;
   virtual void valString (::CORBA::String_var const &val) = 0;
   virtual char const *valString () const = 0;
 
 public:
-
   virtual void valStruct (const M1::S1 &) = 0;
   virtual const M1::S1 &valStruct () const = 0;
   virtual M1::S1 &valStruct () = 0;
 
 public:
-
   virtual void valLocalIface (::M1::L2_ptr) = 0;
   virtual ::M1::L2_ptr valLocalIface () const = 0;
-
-
 
 protected:
   V3 ();
@@ -1506,7 +1252,6 @@ protected:
   virtual ::CORBA::Boolean
   _tao_unmarshal__M2_M3_V3 (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 };
-
 class  V3_init
   : public virtual ::CORBA::ValueFactoryBase
 {
@@ -1524,33 +1269,19 @@ public:
 protected:
   virtual ~V3_init ();
 };
-
 extern  ::CORBA::TypeCode_ptr const _tc_V3;
-
-
-
 
 } // module M2::M3
 
-
-
-
 } // module M2
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
-
 
   template<>
   class Arg_Traits< ::M1::S1>
@@ -1561,8 +1292,6 @@ namespace TAO
           >
   {
   };
-
-
 
 #if !defined (_M1_LI__ARG_TRAITS_)
 #define _M1_LI__ARG_TRAITS_
@@ -1579,8 +1308,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
-
 
 #if !defined (_M1_AMH_LIEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _M1_AMH_LIEXCEPTIONHOLDER__ARG_TRAITS_
@@ -1600,8 +1327,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
-
 #if !defined (_M1_L2__ARG_TRAITS_)
 #define _M1_L2__ARG_TRAITS_
 
@@ -1617,8 +1342,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
-
 
 #if !defined (_M1_AMH_L2EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _M1_AMH_L2EXCEPTIONHOLDER__ARG_TRAITS_
@@ -1638,8 +1361,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
-
   template<>
   class Arg_Traits< ::M1::X>
     : public
@@ -1649,8 +1370,6 @@ namespace TAO
           >
   {
   };
-
-
 
   template<>
   class Arg_Traits< ::M1::BooleanUnion1>
@@ -1662,8 +1381,6 @@ namespace TAO
   {
   };
 
-
-
   template<>
   class Arg_Traits< ::M1::BooleanUnion2>
     : public
@@ -1673,8 +1390,6 @@ namespace TAO
           >
   {
   };
-
-
 
 #if !defined (_M1_V__ARG_TRAITS_)
 #define _M1_V__ARG_TRAITS_
@@ -1694,8 +1409,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
-
   template<>
   class Arg_Traits< ::M2::M3::S2>
     : public
@@ -1705,8 +1418,6 @@ namespace TAO
           >
   {
   };
-
-
 
 #if !defined (_M2_M3_L3__ARG_TRAITS_)
 #define _M2_M3_L3__ARG_TRAITS_
@@ -1723,8 +1434,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
-
 
 #if !defined (_M2_M3_AMH_L3EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _M2_M3_AMH_L3EXCEPTIONHOLDER__ARG_TRAITS_
@@ -1744,8 +1453,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
-
 #if !defined (_M2_M3_L4__ARG_TRAITS_)
 #define _M2_M3_L4__ARG_TRAITS_
 
@@ -1761,8 +1468,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
-
 
 #if !defined (_M2_M3_AMH_L4EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _M2_M3_AMH_L4EXCEPTIONHOLDER__ARG_TRAITS_
@@ -1782,8 +1487,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
-
 #if !defined (_M2_M3_V2__ARG_TRAITS_)
 #define _M2_M3_V2__ARG_TRAITS_
 
@@ -1801,8 +1504,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
-
 
 #if !defined (_M2_M3_V3__ARG_TRAITS_)
 #define _M2_M3_V3__ARG_TRAITS_
@@ -1825,16 +1526,10 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 namespace OBV_M1
 {
-
-
 
   // OBV_ class
   class  AMH_LIExceptionHolder
@@ -1860,8 +1555,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 
-
-
 // OBV_ class
 class  AMH_L2ExceptionHolder
   : public virtual M1::AMH_L2ExceptionHolder
@@ -1886,8 +1579,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 
-
-
 // OBV_ class
 class  V
   : public virtual M1::V,
@@ -1895,37 +1586,31 @@ class  V
 {
 
 public:
-
   virtual void valString (char *val);
   virtual void valString (char const *val);
   virtual void valString (::CORBA::String_var const &val);
   virtual char const *valString () const;
 
 public:
-
   virtual void valStruct (const M1::S1 &);
   virtual const M1::S1 &valStruct () const;
   virtual M1::S1 &valStruct ();
 
 public:
-
   virtual void valLocalIface (::M1::LI_ptr);
   virtual ::M1::LI_ptr valLocalIface () const;
 
 public:
-
   virtual void valBoolUnion1 (const M1::BooleanUnion1 &);
   virtual const M1::BooleanUnion1 &valBoolUnion1 () const;
   virtual M1::BooleanUnion1 &valBoolUnion1 ();
 
 public:
-
   virtual void valBoolUnion2 (const M1::BooleanUnion2 &);
   virtual const M1::BooleanUnion2 &valBoolUnion2 () const;
   virtual M1::BooleanUnion2 &valBoolUnion2 ();
 
 public:
-
   virtual void valX (const M1::X &);
   virtual const M1::X &valX () const;
   virtual M1::X &valX ();
@@ -1961,23 +1646,17 @@ private:
   M1::S1 _pd_valStruct {};
   M1::LI_var _pd_valLocalIface {};
 
-
   M1::BooleanUnion1 _pd_valBoolUnion1 {};
-
 
   M1::BooleanUnion2 _pd_valBoolUnion2 {};
   M1::X _pd_valX {};
   CORBA::Boolean require_truncation_ {false};
 };
 }
-
 namespace OBV_M2
 {
-
   namespace M3
   {
-
-
 
     // OBV_ class
     class  AMH_L3ExceptionHolder
@@ -2003,8 +1682,6 @@ namespace OBV_M2
     CORBA::Boolean require_truncation_ {false};
   };
 
-
-
   // OBV_ class
   class  AMH_L4ExceptionHolder
     : public virtual M2::M3::AMH_L4ExceptionHolder
@@ -2029,8 +1706,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 
-
-
 // OBV_ class
 class  V2
   : public virtual M2::M3::V2,
@@ -2038,25 +1713,21 @@ class  V2
 {
 
 public:
-
   virtual void valString (char *val);
   virtual void valString (char const *val);
   virtual void valString (::CORBA::String_var const &val);
   virtual char const *valString () const;
 
 public:
-
   virtual void valStruct (const M2::M3::S2 &);
   virtual const M2::M3::S2 &valStruct () const;
   virtual M2::M3::S2 &valStruct ();
 
 public:
-
   virtual void valLocalIface (::M2::M3::L3_ptr);
   virtual ::M2::M3::L3_ptr valLocalIface () const;
 
 public:
-
   virtual void valLocalIface3 (::M2::M3::L4_ptr);
   virtual ::M2::M3::L4_ptr valLocalIface3 () const;
 
@@ -2092,8 +1763,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 
-
-
 // OBV_ class
 class  V3
   : public virtual M2::M3::V3,
@@ -2101,20 +1770,17 @@ class  V3
 {
 
 public:
-
   virtual void valString (char *val);
   virtual void valString (char const *val);
   virtual void valString (::CORBA::String_var const &val);
   virtual char const *valString () const;
 
 public:
-
   virtual void valStruct (const M1::S1 &);
   virtual const M1::S1 &valStruct () const;
   virtual M1::S1 &valStruct ();
 
 public:
-
   virtual void valLocalIface (::M1::L2_ptr);
   virtual ::M1::L2_ptr valLocalIface () const;
 
@@ -2150,11 +1816,7 @@ private:
 }
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2367,16 +2029,9 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2387,20 +2042,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2411,16 +2055,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2431,20 +2068,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2455,20 +2081,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2479,16 +2094,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2499,20 +2107,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2523,16 +2120,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2543,16 +2133,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2563,16 +2146,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2583,16 +2159,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2603,16 +2172,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2623,20 +2185,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2647,16 +2198,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2667,20 +2211,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2691,21 +2224,12 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
  void operator<<= (::CORBA::Any &, const M2::M3::E1 &); // copying version
  void operator<<= (::CORBA::Any &, M2::M3::E1*); // noncopying version
@@ -2713,20 +2237,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2737,16 +2250,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2757,20 +2263,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2781,16 +2276,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2801,16 +2289,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2821,16 +2302,9 @@ namespace CORBA {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2839,19 +2313,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2860,16 +2324,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2880,16 +2337,9 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2898,19 +2348,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2919,16 +2359,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2939,16 +2372,9 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2957,16 +2383,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2975,16 +2394,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2993,16 +2405,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3011,16 +2416,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3031,16 +2429,9 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3049,16 +2440,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3067,19 +2451,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3088,16 +2462,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3108,16 +2475,9 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3126,39 +2486,20 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
  ::CORBA::Boolean operator<< (TAO_OutputCDR &, const M2::M3::E1 &);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, M2::M3::E1 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3167,16 +2508,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3187,16 +2521,9 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3205,16 +2532,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3225,16 +2545,9 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3243,16 +2556,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3263,16 +2569,9 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3281,13 +2580,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTS_U39BWN_CPP_
-#define _TAO_IDL_AMI_TESTS_U39BWN_CPP_
-
+#ifndef _TAO_IDL_AMI_TESTS_NY9BI3_CPP_
+#define _TAO_IDL_AMI_TESTS_NY9BI3_CPP_
 
 #include "ami_testS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -62,8 +61,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_AMI_Test_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_A_AMI_Test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -158,12 +155,10 @@ POA_A::AMI_Test::AMI_Test ()
   this->optable_ = std::addressof (tao_A_AMI_Test_optable);
 }
 
-
 namespace POA_A
 {
 
-  class foo_AMI_Test
-    : public TAO::Upcall_Command
+  class foo_AMI_Test : public TAO::Upcall_Command
   {
   public:
     inline foo_AMI_Test (POA_A::AMI_Test * servant,
@@ -263,12 +258,10 @@ void POA_A::AMI_Test::foo_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class _get_yadda_AMI_Test
-    : public TAO::Upcall_Command
+  class _get_yadda_AMI_Test : public TAO::Upcall_Command
   {
   public:
     inline _get_yadda_AMI_Test (POA_A::AMI_Test * servant,
@@ -332,12 +325,10 @@ void POA_A::AMI_Test::_get_yadda_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class _set_yadda_AMI_Test
-    : public TAO::Upcall_Command
+  class _set_yadda_AMI_Test : public TAO::Upcall_Command
   {
   public:
     inline _set_yadda_AMI_Test (POA_A::AMI_Test * servant,
@@ -404,12 +395,10 @@ void POA_A::AMI_Test::_set_yadda_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class shutdown_AMI_Test
-    : public TAO::Upcall_Command
+  class shutdown_AMI_Test : public TAO::Upcall_Command
   {
   public:
     inline shutdown_AMI_Test (POA_A::AMI_Test * servant)
@@ -458,12 +447,10 @@ void POA_A::AMI_Test::shutdown_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class inout_arg_test_AMI_Test
-    : public TAO::Upcall_Command
+  class inout_arg_test_AMI_Test : public TAO::Upcall_Command
   {
   public:
     inline inout_arg_test_AMI_Test (POA_A::AMI_Test * servant,
@@ -530,13 +517,6 @@ void POA_A::AMI_Test::inout_arg_test_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_A::AMI_Test::_is_a (const char* value)
 {
   return
@@ -551,18 +531,12 @@ const char* POA_A::AMI_Test::_interface_repository_id () const
   return "IDL:A/AMI_Test:1.0";
 }
 
-
-
-
 void POA_A::AMI_Test::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 A::AMI_Test *
 POA_A::AMI_Test::_this ()
@@ -590,8 +564,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_AMI_AMI_TestHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_A_AMI_AMI_TestHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -671,12 +643,10 @@ POA_A::AMI_AMI_TestHandler::AMI_AMI_TestHandler ()
   this->optable_ = std::addressof (tao_A_AMI_AMI_TestHandler_optable);
 }
 
-
 namespace POA_A
 {
 
-  class foo_AMI_AMI_TestHandler
-    : public TAO::Upcall_Command
+  class foo_AMI_AMI_TestHandler : public TAO::Upcall_Command
   {
   public:
     inline foo_AMI_AMI_TestHandler (POA_A::AMI_AMI_TestHandler * servant,
@@ -761,12 +731,10 @@ void POA_A::AMI_AMI_TestHandler::foo_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class foo_excep_AMI_AMI_TestHandler
-    : public TAO::Upcall_Command
+  class foo_excep_AMI_AMI_TestHandler : public TAO::Upcall_Command
   {
   public:
     inline foo_excep_AMI_AMI_TestHandler (POA_A::AMI_AMI_TestHandler * servant,
@@ -783,8 +751,6 @@ namespace POA_A
           this->operation_details_,
           this->args_,
           1);
-
-
 
       static TAO::Exception_Data
       _tao_A_AMI_AMI_TestHandler_foo_excep_exceptiondata [] =
@@ -861,12 +827,10 @@ void POA_A::AMI_AMI_TestHandler::foo_excep_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class get_yadda_AMI_AMI_TestHandler
-    : public TAO::Upcall_Command
+  class get_yadda_AMI_AMI_TestHandler : public TAO::Upcall_Command
   {
   public:
     inline get_yadda_AMI_AMI_TestHandler (POA_A::AMI_AMI_TestHandler * servant,
@@ -933,12 +897,10 @@ void POA_A::AMI_AMI_TestHandler::get_yadda_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class get_yadda_excep_AMI_AMI_TestHandler
-    : public TAO::Upcall_Command
+  class get_yadda_excep_AMI_AMI_TestHandler : public TAO::Upcall_Command
   {
   public:
     inline get_yadda_excep_AMI_AMI_TestHandler (POA_A::AMI_AMI_TestHandler * servant,
@@ -1005,12 +967,10 @@ void POA_A::AMI_AMI_TestHandler::get_yadda_excep_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class set_yadda_AMI_AMI_TestHandler
-    : public TAO::Upcall_Command
+  class set_yadda_AMI_AMI_TestHandler : public TAO::Upcall_Command
   {
   public:
     inline set_yadda_AMI_AMI_TestHandler (POA_A::AMI_AMI_TestHandler * servant)
@@ -1059,12 +1019,10 @@ void POA_A::AMI_AMI_TestHandler::set_yadda_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class set_yadda_excep_AMI_AMI_TestHandler
-    : public TAO::Upcall_Command
+  class set_yadda_excep_AMI_AMI_TestHandler : public TAO::Upcall_Command
   {
   public:
     inline set_yadda_excep_AMI_AMI_TestHandler (POA_A::AMI_AMI_TestHandler * servant,
@@ -1131,12 +1089,10 @@ void POA_A::AMI_AMI_TestHandler::set_yadda_excep_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class inout_arg_test_AMI_AMI_TestHandler
-    : public TAO::Upcall_Command
+  class inout_arg_test_AMI_AMI_TestHandler : public TAO::Upcall_Command
   {
   public:
     inline inout_arg_test_AMI_AMI_TestHandler (POA_A::AMI_AMI_TestHandler * servant,
@@ -1203,12 +1159,10 @@ void POA_A::AMI_AMI_TestHandler::inout_arg_test_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class inout_arg_test_excep_AMI_AMI_TestHandler
-    : public TAO::Upcall_Command
+  class inout_arg_test_excep_AMI_AMI_TestHandler : public TAO::Upcall_Command
   {
   public:
     inline inout_arg_test_excep_AMI_AMI_TestHandler (POA_A::AMI_AMI_TestHandler * servant,
@@ -1275,13 +1229,6 @@ void POA_A::AMI_AMI_TestHandler::inout_arg_test_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_A::AMI_AMI_TestHandler::_is_a (const char* value)
 {
   return
@@ -1297,18 +1244,12 @@ const char* POA_A::AMI_AMI_TestHandler::_interface_repository_id () const
   return "IDL:A/AMI_AMI_TestHandler:1.0";
 }
 
-
-
-
 void POA_A::AMI_AMI_TestHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 A::AMI_AMI_TestHandler *
 POA_A::AMI_AMI_TestHandler::_this ()
@@ -1336,8 +1277,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_Test_Child_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_A_Test_Child_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1433,12 +1372,10 @@ POA_A::Test_Child::Test_Child ()
   this->optable_ = std::addressof (tao_A_Test_Child_optable);
 }
 
-
 namespace POA_A
 {
 
-  class child_op_Test_Child
-    : public TAO::Upcall_Command
+  class child_op_Test_Child : public TAO::Upcall_Command
   {
   public:
     inline child_op_Test_Child (POA_A::Test_Child * servant)
@@ -1487,13 +1424,6 @@ void POA_A::Test_Child::child_op_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_A::Test_Child::_is_a (const char* value)
 {
   return
@@ -1509,18 +1439,12 @@ const char* POA_A::Test_Child::_interface_repository_id () const
   return "IDL:A/Test_Child:1.0";
 }
 
-
-
-
 void POA_A::Test_Child::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 A::Test_Child *
 POA_A::Test_Child::_this ()
@@ -1548,8 +1472,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_AMI_Test_ChildHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_A_AMI_Test_ChildHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1631,12 +1553,10 @@ POA_A::AMI_Test_ChildHandler::AMI_Test_ChildHandler ()
   this->optable_ = std::addressof (tao_A_AMI_Test_ChildHandler_optable);
 }
 
-
 namespace POA_A
 {
 
-  class child_op_AMI_Test_ChildHandler
-    : public TAO::Upcall_Command
+  class child_op_AMI_Test_ChildHandler : public TAO::Upcall_Command
   {
   public:
     inline child_op_AMI_Test_ChildHandler (POA_A::AMI_Test_ChildHandler * servant)
@@ -1685,12 +1605,10 @@ void POA_A::AMI_Test_ChildHandler::child_op_skel (
                          );
 }
 
-
 namespace POA_A
 {
 
-  class child_op_excep_AMI_Test_ChildHandler
-    : public TAO::Upcall_Command
+  class child_op_excep_AMI_Test_ChildHandler : public TAO::Upcall_Command
   {
   public:
     inline child_op_excep_AMI_Test_ChildHandler (POA_A::AMI_Test_ChildHandler * servant,
@@ -1757,13 +1675,6 @@ void POA_A::AMI_Test_ChildHandler::child_op_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_A::AMI_Test_ChildHandler::_is_a (const char* value)
 {
   return
@@ -1780,18 +1691,12 @@ const char* POA_A::AMI_Test_ChildHandler::_interface_repository_id () const
   return "IDL:A/AMI_Test_ChildHandler:1.0";
 }
 
-
-
-
 void POA_A::AMI_Test_ChildHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 A::AMI_Test_ChildHandler *
 POA_A::AMI_Test_ChildHandler::_this ()

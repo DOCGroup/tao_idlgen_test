@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLES_RMRD9O_H_
-#define _TAO_IDL_SIMPLES_RMRD9O_H_
+#ifndef _TAO_IDL_SIMPLES_IAWLYV_H_
+#define _TAO_IDL_SIMPLES_IAWLYV_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::vec10>
     : public
@@ -86,7 +82,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_SIMPLE__SARG_TRAITS_)
 #define _SIMPLE__SARG_TRAITS_
@@ -102,7 +97,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_SIMPLEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_SIMPLEEXCEPTIONHOLDER__SARG_TRAITS_
@@ -121,7 +115,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_SIMPLEHANDLER__SARG_TRAITS_)
 #define _AMI_SIMPLEHANDLER__SARG_TRAITS_
 
@@ -137,7 +130,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_SIMPLE2__SARG_TRAITS_)
 #define _SIMPLE2__SARG_TRAITS_
 
@@ -152,7 +144,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_SIMPLE2EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_SIMPLE2EXCEPTIONHOLDER__SARG_TRAITS_
@@ -170,7 +161,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_SIMPLE2HANDLER__SARG_TRAITS_)
 #define _AMI_SIMPLE2HANDLER__SARG_TRAITS_
@@ -190,7 +180,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_simple;
 using POA_AMH_simple_ptr = POA_AMH_simple *;
 
@@ -203,7 +192,6 @@ protected:
 public:
   POA_AMH_simple (const POA_AMH_simple& rhs);
   virtual ~POA_AMH_simple () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -226,9 +214,6 @@ virtual void op (
   ) = 0;
 
 };
-
-
-
 
 class POA_simple;
 using POA_simple_ptr = POA_simple *;
@@ -270,7 +255,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -289,7 +273,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_simpleResponseHandler;
 using POA_TAO_AMH_simpleResponseHandler_ptr = POA_TAO_AMH_simpleResponseHandler *;
 
@@ -307,9 +290,6 @@ public:
   void op_excep (
     ::AMH_simpleExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_simpleHandler;
 using POA_AMI_simpleHandler_ptr = POA_AMI_simpleHandler *;
@@ -358,7 +338,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -382,7 +361,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_simple2;
 using POA_AMH_simple2_ptr = POA_AMH_simple2 *;
 
@@ -396,7 +374,6 @@ protected:
 public:
   POA_AMH_simple2 (const POA_AMH_simple2& rhs);
   virtual ~POA_AMH_simple2 () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -419,9 +396,6 @@ virtual void op2 (
   ) = 0;
 
 };
-
-
-
 
 class POA_simple2;
 using POA_simple2_ptr = POA_simple2 *;
@@ -463,7 +437,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -483,7 +456,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_simple2ResponseHandler;
 using POA_TAO_AMH_simple2ResponseHandler_ptr = POA_TAO_AMH_simple2ResponseHandler *;
 
@@ -500,9 +472,6 @@ public:
   void op2_excep (
     ::AMH_simple2ExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_simple2Handler;
 using POA_AMI_simple2Handler_ptr = POA_AMI_simple2Handler *;
@@ -550,7 +519,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -574,10 +542,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "simpleS_T.h"
-
 
 #include /**/ "ace/post.h"
 

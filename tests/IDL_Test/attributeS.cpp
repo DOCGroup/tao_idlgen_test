@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTES_80QP9X_CPP_
-#define _TAO_IDL_ATTRIBUTES_80QP9X_CPP_
-
+#ifndef _TAO_IDL_ATTRIBUTES_P7U48F_CPP_
+#define _TAO_IDL_ATTRIBUTES_P7U48F_CPP_
 
 #include "attributeS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Hello_AMH_MyFoo_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -166,7 +163,6 @@ POA_Hello::AMH_MyFoo::AMH_MyFoo ()
 {
   this->optable_ = std::addressof (tao_Hello_AMH_MyFoo_optable);
 }
-
 
 void
 POA_Hello::AMH_MyFoo::_get_rw_attrib_mytype_skel (
@@ -537,11 +533,6 @@ POA_Hello::AMH_MyFoo::_get_ro_attrib_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_Hello::AMH_MyFoo::_is_a (const char* value)
 {
   return
@@ -589,8 +580,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Hello_MyFoo_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Hello_MyFoo_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -692,7 +681,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::~_TAO_MyFoo_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attrib_mytype (
     TAO_Abstract_ServantBase  *servant,
@@ -710,7 +698,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attrib_mytype (
     _tao_ptr->rw_attrib_mytype (
         );
 }
-
 
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib_mytype (
@@ -730,7 +717,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib_mytype (
       );
 }
 
-
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attrib (
     TAO_Abstract_ServantBase  *servant,
@@ -748,7 +734,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attrib (
     _tao_ptr->rw_attrib (
         );
 }
-
 
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib (
@@ -768,7 +753,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib (
       );
 }
 
-
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attrib_reverted (
     TAO_Abstract_ServantBase  *servant,
@@ -786,7 +770,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attrib_reverted (
     _tao_ptr->rw_attrib_reverted (
         );
 }
-
 
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib_reverted (
@@ -806,7 +789,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attrib_reverted (
       );
 }
 
-
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attribB (
     TAO_Abstract_ServantBase  *servant,
@@ -824,7 +806,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_rw_attribB (
     _tao_ptr->rw_attribB (
         );
 }
-
 
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attribB (
@@ -844,7 +825,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_set_rw_attribB (
       );
 }
 
-
 void
 POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_ro_attrib (
     TAO_Abstract_ServantBase  *servant,
@@ -863,8 +843,6 @@ POA_Hello::_TAO_MyFoo_Direct_Proxy_Impl::_get_ro_attrib (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -874,12 +852,10 @@ POA_Hello::MyFoo::MyFoo ()
   this->optable_ = std::addressof (tao_Hello_MyFoo_optable);
 }
 
-
 namespace POA_Hello
 {
 
-  class _get_rw_attrib_mytype_MyFoo
-    : public TAO::Upcall_Command
+  class _get_rw_attrib_mytype_MyFoo : public TAO::Upcall_Command
   {
   public:
     inline _get_rw_attrib_mytype_MyFoo (POA_Hello::MyFoo * servant,
@@ -952,12 +928,10 @@ void POA_Hello::MyFoo::_get_rw_attrib_mytype_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class _set_rw_attrib_mytype_MyFoo
-    : public TAO::Upcall_Command
+  class _set_rw_attrib_mytype_MyFoo : public TAO::Upcall_Command
   {
   public:
     inline _set_rw_attrib_mytype_MyFoo (POA_Hello::MyFoo * servant,
@@ -1033,12 +1007,10 @@ void POA_Hello::MyFoo::_set_rw_attrib_mytype_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class _get_rw_attrib_MyFoo
-    : public TAO::Upcall_Command
+  class _get_rw_attrib_MyFoo : public TAO::Upcall_Command
   {
   public:
     inline _get_rw_attrib_MyFoo (POA_Hello::MyFoo * servant,
@@ -1111,12 +1083,10 @@ void POA_Hello::MyFoo::_get_rw_attrib_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class _set_rw_attrib_MyFoo
-    : public TAO::Upcall_Command
+  class _set_rw_attrib_MyFoo : public TAO::Upcall_Command
   {
   public:
     inline _set_rw_attrib_MyFoo (POA_Hello::MyFoo * servant,
@@ -1192,12 +1162,10 @@ void POA_Hello::MyFoo::_set_rw_attrib_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class _get_rw_attrib_reverted_MyFoo
-    : public TAO::Upcall_Command
+  class _get_rw_attrib_reverted_MyFoo : public TAO::Upcall_Command
   {
   public:
     inline _get_rw_attrib_reverted_MyFoo (POA_Hello::MyFoo * servant,
@@ -1270,12 +1238,10 @@ void POA_Hello::MyFoo::_get_rw_attrib_reverted_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class _set_rw_attrib_reverted_MyFoo
-    : public TAO::Upcall_Command
+  class _set_rw_attrib_reverted_MyFoo : public TAO::Upcall_Command
   {
   public:
     inline _set_rw_attrib_reverted_MyFoo (POA_Hello::MyFoo * servant,
@@ -1351,12 +1317,10 @@ void POA_Hello::MyFoo::_set_rw_attrib_reverted_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class _get_rw_attribB_MyFoo
-    : public TAO::Upcall_Command
+  class _get_rw_attribB_MyFoo : public TAO::Upcall_Command
   {
   public:
     inline _get_rw_attribB_MyFoo (POA_Hello::MyFoo * servant,
@@ -1429,12 +1393,10 @@ void POA_Hello::MyFoo::_get_rw_attribB_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class _set_rw_attribB_MyFoo
-    : public TAO::Upcall_Command
+  class _set_rw_attribB_MyFoo : public TAO::Upcall_Command
   {
   public:
     inline _set_rw_attribB_MyFoo (POA_Hello::MyFoo * servant,
@@ -1501,12 +1463,10 @@ void POA_Hello::MyFoo::_set_rw_attribB_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class _get_ro_attrib_MyFoo
-    : public TAO::Upcall_Command
+  class _get_ro_attrib_MyFoo : public TAO::Upcall_Command
   {
   public:
     inline _get_ro_attrib_MyFoo (POA_Hello::MyFoo * servant,
@@ -1579,13 +1539,6 @@ void POA_Hello::MyFoo::_get_ro_attrib_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Hello::MyFoo::_is_a (const char* value)
 {
   return
@@ -1600,18 +1553,12 @@ const char* POA_Hello::MyFoo::_interface_repository_id () const
   return "IDL:Hello/MyFoo:1.0";
 }
 
-
-
-
 void POA_Hello::MyFoo::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Hello::MyFoo *
 POA_Hello::MyFoo::_this ()
@@ -1659,7 +1606,6 @@ void
 POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_mytype ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -1709,7 +1655,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -1758,7 +1703,6 @@ POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attrib_reverted ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -1806,7 +1750,6 @@ void
 POA_Hello::TAO_AMH_MyFooResponseHandler::set_rw_attribB ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -1864,8 +1807,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Hello_AMI_MyFooHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1978,7 +1919,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::~_TAO_AMI_MyFooHandler_Direc
 {
 }
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_mytype (
     TAO_Abstract_ServantBase  *servant,
@@ -1996,7 +1936,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_mytype (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_mytype_excep (
@@ -2016,7 +1955,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_mytype_excep (
       );
 }
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_mytype (
     TAO_Abstract_ServantBase  *servant,
@@ -2033,7 +1971,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_mytype (
   _tao_ptr->set_rw_attrib_mytype (
       );
 }
-
 
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_mytype_excep (
@@ -2053,7 +1990,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_mytype_excep (
       );
 }
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib (
     TAO_Abstract_ServantBase  *servant,
@@ -2071,7 +2007,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_excep (
@@ -2091,7 +2026,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_excep (
       );
 }
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib (
     TAO_Abstract_ServantBase  *servant,
@@ -2108,7 +2042,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib (
   _tao_ptr->set_rw_attrib (
       );
 }
-
 
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_excep (
@@ -2128,7 +2061,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_excep (
       );
 }
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_reverted (
     TAO_Abstract_ServantBase  *servant,
@@ -2146,7 +2078,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_reverted (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_reverted_excep (
@@ -2166,7 +2097,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attrib_reverted_excep
       );
 }
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_reverted (
     TAO_Abstract_ServantBase  *servant,
@@ -2183,7 +2113,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_reverted (
   _tao_ptr->set_rw_attrib_reverted (
       );
 }
-
 
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_reverted_excep (
@@ -2203,7 +2132,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attrib_reverted_excep
       );
 }
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attribB (
     TAO_Abstract_ServantBase  *servant,
@@ -2221,7 +2149,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attribB (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attribB_excep (
@@ -2241,7 +2168,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_rw_attribB_excep (
       );
 }
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attribB (
     TAO_Abstract_ServantBase  *servant,
@@ -2258,7 +2184,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attribB (
   _tao_ptr->set_rw_attribB (
       );
 }
-
 
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attribB_excep (
@@ -2278,7 +2203,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::set_rw_attribB_excep (
       );
 }
 
-
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_ro_attrib (
     TAO_Abstract_ServantBase  *servant,
@@ -2296,7 +2220,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_ro_attrib (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_ro_attrib_excep (
@@ -2316,8 +2239,6 @@ POA_Hello::_TAO_AMI_MyFooHandler_Direct_Proxy_Impl::get_ro_attrib_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -2327,12 +2248,10 @@ POA_Hello::AMI_MyFooHandler::AMI_MyFooHandler ()
   this->optable_ = std::addressof (tao_Hello_AMI_MyFooHandler_optable);
 }
 
-
 namespace POA_Hello
 {
 
-  class get_rw_attrib_mytype_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class get_rw_attrib_mytype_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline get_rw_attrib_mytype_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -2408,12 +2327,10 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class get_rw_attrib_mytype_excep_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class get_rw_attrib_mytype_excep_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline get_rw_attrib_mytype_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -2430,8 +2347,6 @@ namespace POA_Hello
           this->operation_details_,
           this->args_,
           1);
-
-
 
       static TAO::Exception_Data
       _tao_Hello_AMI_MyFooHandler_get_rw_attrib_mytype_excep_exceptiondata [] =
@@ -2508,12 +2423,10 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class set_rw_attrib_mytype_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class set_rw_attrib_mytype_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline set_rw_attrib_mytype_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant)
@@ -2571,12 +2484,10 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class set_rw_attrib_mytype_excep_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class set_rw_attrib_mytype_excep_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline set_rw_attrib_mytype_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -2593,8 +2504,6 @@ namespace POA_Hello
           this->operation_details_,
           this->args_,
           1);
-
-
 
       static TAO::Exception_Data
       _tao_Hello_AMI_MyFooHandler_set_rw_attrib_mytype_excep_exceptiondata [] =
@@ -2671,12 +2580,10 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class get_rw_attrib_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class get_rw_attrib_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline get_rw_attrib_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -2752,12 +2659,10 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class get_rw_attrib_excep_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class get_rw_attrib_excep_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline get_rw_attrib_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -2774,8 +2679,6 @@ namespace POA_Hello
           this->operation_details_,
           this->args_,
           1);
-
-
 
       static TAO::Exception_Data
       _tao_Hello_AMI_MyFooHandler_get_rw_attrib_excep_exceptiondata [] =
@@ -2852,12 +2755,10 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_excep_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class set_rw_attrib_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class set_rw_attrib_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline set_rw_attrib_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant)
@@ -2915,12 +2816,10 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class set_rw_attrib_excep_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class set_rw_attrib_excep_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline set_rw_attrib_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -2937,8 +2836,6 @@ namespace POA_Hello
           this->operation_details_,
           this->args_,
           1);
-
-
 
       static TAO::Exception_Data
       _tao_Hello_AMI_MyFooHandler_set_rw_attrib_excep_exceptiondata [] =
@@ -3015,12 +2912,10 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_excep_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class get_rw_attrib_reverted_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class get_rw_attrib_reverted_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline get_rw_attrib_reverted_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -3096,12 +2991,10 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class get_rw_attrib_reverted_excep_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class get_rw_attrib_reverted_excep_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline get_rw_attrib_reverted_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -3118,8 +3011,6 @@ namespace POA_Hello
           this->operation_details_,
           this->args_,
           1);
-
-
 
       static TAO::Exception_Data
       _tao_Hello_AMI_MyFooHandler_get_rw_attrib_reverted_excep_exceptiondata [] =
@@ -3196,12 +3087,10 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class set_rw_attrib_reverted_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class set_rw_attrib_reverted_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline set_rw_attrib_reverted_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant)
@@ -3259,12 +3148,10 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class set_rw_attrib_reverted_excep_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class set_rw_attrib_reverted_excep_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline set_rw_attrib_reverted_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -3281,8 +3168,6 @@ namespace POA_Hello
           this->operation_details_,
           this->args_,
           1);
-
-
 
       static TAO::Exception_Data
       _tao_Hello_AMI_MyFooHandler_set_rw_attrib_reverted_excep_exceptiondata [] =
@@ -3359,12 +3244,10 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class get_rw_attribB_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class get_rw_attribB_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline get_rw_attribB_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -3440,12 +3323,10 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attribB_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class get_rw_attribB_excep_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class get_rw_attribB_excep_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline get_rw_attribB_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -3462,8 +3343,6 @@ namespace POA_Hello
           this->operation_details_,
           this->args_,
           1);
-
-
 
       static TAO::Exception_Data
       _tao_Hello_AMI_MyFooHandler_get_rw_attribB_excep_exceptiondata [] =
@@ -3540,12 +3419,10 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attribB_excep_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class set_rw_attribB_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class set_rw_attribB_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline set_rw_attribB_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant)
@@ -3594,12 +3471,10 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attribB_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class set_rw_attribB_excep_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class set_rw_attribB_excep_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline set_rw_attribB_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -3666,12 +3541,10 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attribB_excep_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class get_ro_attrib_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class get_ro_attrib_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline get_ro_attrib_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -3747,12 +3620,10 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_skel (
                          );
 }
 
-
 namespace POA_Hello
 {
 
-  class get_ro_attrib_excep_AMI_MyFooHandler
-    : public TAO::Upcall_Command
+  class get_ro_attrib_excep_AMI_MyFooHandler : public TAO::Upcall_Command
   {
   public:
     inline get_ro_attrib_excep_AMI_MyFooHandler (POA_Hello::AMI_MyFooHandler * servant,
@@ -3769,8 +3640,6 @@ namespace POA_Hello
           this->operation_details_,
           this->args_,
           1);
-
-
 
       static TAO::Exception_Data
       _tao_Hello_AMI_MyFooHandler_get_ro_attrib_excep_exceptiondata [] =
@@ -3847,13 +3716,6 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Hello::AMI_MyFooHandler::_is_a (const char* value)
 {
   return
@@ -3869,18 +3731,12 @@ const char* POA_Hello::AMI_MyFooHandler::_interface_repository_id () const
   return "IDL:Hello/AMI_MyFooHandler:1.0";
 }
 
-
-
-
 void POA_Hello::AMI_MyFooHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Hello::AMI_MyFooHandler *
 POA_Hello::AMI_MyFooHandler::_this ()

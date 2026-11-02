@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPEC_8KQLN2_H_
-#define _TAO_IDL_NESTED_SCOPEC_8KQLN2_H_
+#ifndef _TAO_IDL_NESTED_SCOPEC_TSG4QA_H_
+#define _TAO_IDL_NESTED_SCOPEC_TSG4QA_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -72,27 +70,20 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace skip
 {
   namespace hump
   {
 
-
     struct skip;
     using skip_var = ::TAO_Fixed_Var_T<skip>;
     using skip_out = skip&;
-
-
-
 
     struct TAO_IDL_TEST_STUB_Export skip
     {
@@ -106,18 +97,13 @@ namespace skip
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_skip;
 
-
-
   } // module skip::hump
-
-
 
 } // module skip
 namespace u_skip
 {
   namespace u_hump
   {
-
 
     class u_skip;
     using u_skip_var = ::TAO_Fixed_Var_T<u_skip>;
@@ -132,7 +118,6 @@ namespace u_skip
 
       u_skip &operator= (u_skip const &);
 
-
       void _d ( ::CORBA::Short);
       ::CORBA::Short _d () const;
 
@@ -141,10 +126,8 @@ namespace u_skip
 
       static void _tao_any_destructor (void *);
 
-
       void s ( ::CORBA::Short);
       ::CORBA::Short s () const;
-
 
       void _default ();
     private:
@@ -163,18 +146,13 @@ namespace u_skip
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_u_skip;
 
-
-
   } // module u_skip::u_hump
-
-
 
 } // module u_skip
 namespace e_skip
 {
   namespace e_hump
   {
-
 
     class TAO_IDL_TEST_STUB_Export e_skip : public ::CORBA::UserException
     {
@@ -204,18 +182,13 @@ namespace e_skip
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_e_skip;
 
-
-
   } // module e_skip::e_hump
-
-
 
 } // module e_skip
 namespace i_skip
 {
   namespace i_hump
   {
-
 
 #if !defined (_I_SKIP_I_HUMP_I_SKIP__VAR_OUT_CH_)
 #define _I_SKIP_I_HUMP_I_SKIP__VAR_OUT_CH_
@@ -229,9 +202,6 @@ namespace i_skip
     using i_skip_out = TAO_Objref_Out_T<i_skip>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export i_skip
       : public virtual ::CORBA::Object
@@ -252,9 +222,6 @@ namespace i_skip
       static i_skip_ptr _narrow (::CORBA::Object_ptr obj);
       static i_skip_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static i_skip_ptr _nil ();
-
-
-
 
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
@@ -287,7 +254,6 @@ namespace i_skip
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_i_skip;
 
-
 #if !defined (_I_SKIP_I_HUMP_AMH_I_SKIPEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _I_SKIP_I_HUMP_AMH_I_SKIPEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -296,7 +262,6 @@ namespace i_skip
     using AMH_i_skipExceptionHolder_out = TAO_Value_Out_T<AMH_i_skipExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
     class TAO_IDL_TEST_STUB_Export AMH_i_skipExceptionHolder
       : public virtual ::CORBA::DefaultValueRefCountBase
@@ -329,7 +294,6 @@ namespace i_skip
       static char const * _tao_obv_static_repository_id ();
 
       virtual ::CORBA::TypeCode_ptr _tao_type () const;
-
 
     protected:
       AMH_i_skipExceptionHolder ();
@@ -369,7 +333,6 @@ namespace i_skip
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_i_skipExceptionHolder;
 
-
 #if !defined (_I_SKIP_I_HUMP_AMH_I_SKIPRESPONSEHANDLER__VAR_OUT_CH_)
 #define _I_SKIP_I_HUMP_AMH_I_SKIPRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -382,9 +345,6 @@ namespace i_skip
     using AMH_i_skipResponseHandler_out = TAO_Objref_Out_T<AMH_i_skipResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export AMH_i_skipResponseHandler
       : public virtual ::CORBA::Object
@@ -405,9 +365,6 @@ namespace i_skip
       static AMH_i_skipResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static AMH_i_skipResponseHandler_ptr _nil ();
 
-
-
-
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
       static const char* _desc_repository_id ();
@@ -417,8 +374,6 @@ namespace i_skip
     protected:
       // Abstract or local interface only.
       AMH_i_skipResponseHandler ();
-
-
 
       virtual ~AMH_i_skipResponseHandler () = default;
 
@@ -431,7 +386,6 @@ namespace i_skip
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_i_skipResponseHandler;
 
-
 #if !defined (_I_SKIP_I_HUMP_AMI_I_SKIPHANDLER__VAR_OUT_CH_)
 #define _I_SKIP_I_HUMP_AMI_I_SKIPHANDLER__VAR_OUT_CH_
 
@@ -441,9 +395,6 @@ namespace i_skip
     using AMI_i_skipHandler_out = TAO_Objref_Out_T<AMI_i_skipHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export AMI_i_skipHandler
       : public virtual ::Messaging::ReplyHandler
@@ -465,9 +416,6 @@ namespace i_skip
       static AMI_i_skipHandler_ptr _narrow (::CORBA::Object_ptr obj);
       static AMI_i_skipHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static AMI_i_skipHandler_ptr _nil ();
-
-
-
 
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
@@ -500,11 +448,7 @@ namespace i_skip
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_i_skipHandler;
 
-
-
   } // module i_skip::i_hump
-
-
 
 } // module i_skip
 namespace pre_u_skip
@@ -512,16 +456,12 @@ namespace pre_u_skip
   namespace pre_u_hump
   {
 
-
-
-
 #if !defined (_PRE_U_SKIP_PRE_U_HUMP_PRE_U_SKIP_CH_)
 #define _PRE_U_SKIP_PRE_U_HUMP_PRE_U_SKIP_CH_
 
     class pre_u_skip;
     using pre_u_skip_var = ::TAO_FixedSeq_Var_T<pre_u_skip>;
     using pre_u_skip_out = ::TAO_Seq_Out_T<pre_u_skip>;
-
 
     class TAO_IDL_TEST_STUB_Export pre_u_skip
       : public
@@ -541,7 +481,6 @@ namespace pre_u_skip
       pre_u_skip& operator= (pre_u_skip &&) = default;
       virtual ~pre_u_skip () = default;
 
-
       using _var_type = pre_u_skip_var;
       using _out_type = pre_u_skip_out;
 
@@ -551,11 +490,7 @@ namespace pre_u_skip
 #endif /* end #if !defined */
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_pre_u_skip;
 
-
-
   } // module pre_u_skip::pre_u_hump
-
-
 
 } // module pre_u_skip
 namespace pre_b_skip
@@ -563,16 +498,12 @@ namespace pre_b_skip
   namespace pre_b_hump
   {
 
-
-
-
 #if !defined (_PRE_B_SKIP_PRE_B_HUMP_PRE_B_SKIP_CH_)
 #define _PRE_B_SKIP_PRE_B_HUMP_PRE_B_SKIP_CH_
 
     class pre_b_skip;
     using pre_b_skip_var = ::TAO_FixedSeq_Var_T<pre_b_skip>;
     using pre_b_skip_out = ::TAO_Seq_Out_T<pre_b_skip>;
-
 
     class TAO_IDL_TEST_STUB_Export pre_b_skip
       : public
@@ -590,7 +521,6 @@ namespace pre_b_skip
       pre_b_skip& operator= (pre_b_skip &&) = default;
       virtual ~pre_b_skip () = default;
 
-
       using _var_type = pre_b_skip_var;
       using _out_type = pre_b_skip_out;
 
@@ -600,11 +530,7 @@ namespace pre_b_skip
 #endif /* end #if !defined */
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_pre_b_skip;
 
-
-
   } // module pre_b_skip::pre_b_hump
-
-
 
 } // module pre_b_skip
 namespace str_u_skip
@@ -612,16 +538,12 @@ namespace str_u_skip
   namespace str_u_hump
   {
 
-
-
-
 #if !defined (_STR_U_SKIP_STR_U_HUMP_STR_U_SKIP_CH_)
 #define _STR_U_SKIP_STR_U_HUMP_STR_U_SKIP_CH_
 
     class str_u_skip;
     using str_u_skip_var = ::TAO_VarSeq_Var_T<str_u_skip>;
     using str_u_skip_out = ::TAO_Seq_Out_T<str_u_skip>;
-
 
     class TAO_IDL_TEST_STUB_Export str_u_skip
       : public
@@ -641,7 +563,6 @@ namespace str_u_skip
       str_u_skip& operator= (str_u_skip &&) = default;
       virtual ~str_u_skip () = default;
 
-
       using _var_type = str_u_skip_var;
       using _out_type = str_u_skip_out;
 
@@ -651,11 +572,7 @@ namespace str_u_skip
 #endif /* end #if !defined */
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_str_u_skip;
 
-
-
   } // module str_u_skip::str_u_hump
-
-
 
 } // module str_u_skip
 namespace str_b_skip
@@ -663,16 +580,12 @@ namespace str_b_skip
   namespace str_b_hump
   {
 
-
-
-
 #if !defined (_STR_B_SKIP_STR_B_HUMP_STR_B_SKIP_CH_)
 #define _STR_B_SKIP_STR_B_HUMP_STR_B_SKIP_CH_
 
     class str_b_skip;
     using str_b_skip_var = ::TAO_VarSeq_Var_T<str_b_skip>;
     using str_b_skip_out = ::TAO_Seq_Out_T<str_b_skip>;
-
 
     class TAO_IDL_TEST_STUB_Export str_b_skip
       : public
@@ -690,7 +603,6 @@ namespace str_b_skip
       str_b_skip& operator= (str_b_skip &&) = default;
       virtual ~str_b_skip () = default;
 
-
       using _var_type = str_b_skip_var;
       using _out_type = str_b_skip_out;
 
@@ -700,11 +612,7 @@ namespace str_b_skip
 #endif /* end #if !defined */
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_str_b_skip;
 
-
-
   } // module str_b_skip::str_b_hump
-
-
 
 } // module str_b_skip
 namespace wstr_u_skip
@@ -712,16 +620,12 @@ namespace wstr_u_skip
   namespace wstr_u_hump
   {
 
-
-
-
 #if !defined (_WSTR_U_SKIP_WSTR_U_HUMP_WSTR_U_SKIP_CH_)
 #define _WSTR_U_SKIP_WSTR_U_HUMP_WSTR_U_SKIP_CH_
 
     class wstr_u_skip;
     using wstr_u_skip_var = ::TAO_VarSeq_Var_T<wstr_u_skip>;
     using wstr_u_skip_out = ::TAO_Seq_Out_T<wstr_u_skip>;
-
 
     class TAO_IDL_TEST_STUB_Export wstr_u_skip
       : public
@@ -741,7 +645,6 @@ namespace wstr_u_skip
       wstr_u_skip& operator= (wstr_u_skip &&) = default;
       virtual ~wstr_u_skip () = default;
 
-
       using _var_type = wstr_u_skip_var;
       using _out_type = wstr_u_skip_out;
 
@@ -751,11 +654,7 @@ namespace wstr_u_skip
 #endif /* end #if !defined */
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_wstr_u_skip;
 
-
-
   } // module wstr_u_skip::wstr_u_hump
-
-
 
 } // module wstr_u_skip
 namespace wstr_b_skip
@@ -763,16 +662,12 @@ namespace wstr_b_skip
   namespace wstr_b_hump
   {
 
-
-
-
 #if !defined (_WSTR_B_SKIP_WSTR_B_HUMP_WSTR_B_SKIP_CH_)
 #define _WSTR_B_SKIP_WSTR_B_HUMP_WSTR_B_SKIP_CH_
 
     class wstr_b_skip;
     using wstr_b_skip_var = ::TAO_VarSeq_Var_T<wstr_b_skip>;
     using wstr_b_skip_out = ::TAO_Seq_Out_T<wstr_b_skip>;
-
 
     class TAO_IDL_TEST_STUB_Export wstr_b_skip
       : public
@@ -790,7 +685,6 @@ namespace wstr_b_skip
       wstr_b_skip& operator= (wstr_b_skip &&) = default;
       virtual ~wstr_b_skip () = default;
 
-
       using _var_type = wstr_b_skip_var;
       using _out_type = wstr_b_skip_out;
 
@@ -800,14 +694,9 @@ namespace wstr_b_skip
 #endif /* end #if !defined */
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_wstr_b_skip;
 
-
-
   } // module wstr_b_skip::wstr_b_hump
 
-
-
 } // module wstr_b_skip
-
 
 #if !defined (_BLOO__VAR_OUT_CH_)
 #define _BLOO__VAR_OUT_CH_
@@ -821,9 +710,6 @@ using bloo_var = TAO_Objref_Var_T<bloo>;
 using bloo_out = TAO_Objref_Out_T<bloo>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export bloo
   : public virtual ::CORBA::Object
@@ -844,9 +730,6 @@ public:
   static bloo_ptr _narrow (::CORBA::Object_ptr obj);
   static bloo_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static bloo_ptr _nil ();
-
-
-
 
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
@@ -879,7 +762,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_bloo;
 
-
 #if !defined (_AMH_BLOOEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _AMH_BLOOEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -888,7 +770,6 @@ using AMH_blooExceptionHolder_var = TAO_Value_Var_T<AMH_blooExceptionHolder>;
 using AMH_blooExceptionHolder_out = TAO_Value_Out_T<AMH_blooExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
 class TAO_IDL_TEST_STUB_Export AMH_blooExceptionHolder
   : public virtual ::CORBA::DefaultValueRefCountBase
@@ -921,7 +802,6 @@ public:
   static char const * _tao_obv_static_repository_id ();
 
   virtual ::CORBA::TypeCode_ptr _tao_type () const;
-
 
 protected:
   AMH_blooExceptionHolder ();
@@ -961,7 +841,6 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_blooExceptionHolder;
 
-
 #if !defined (_AMH_BLOORESPONSEHANDLER__VAR_OUT_CH_)
 #define _AMH_BLOORESPONSEHANDLER__VAR_OUT_CH_
 
@@ -974,9 +853,6 @@ using AMH_blooResponseHandler_var = TAO_Objref_Var_T<AMH_blooResponseHandler>;
 using AMH_blooResponseHandler_out = TAO_Objref_Out_T<AMH_blooResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMH_blooResponseHandler
   : public virtual ::CORBA::Object
@@ -997,9 +873,6 @@ public:
   static AMH_blooResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_blooResponseHandler_ptr _nil ();
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -1009,8 +882,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_blooResponseHandler ();
-
-
 
   virtual ~AMH_blooResponseHandler () = default;
 
@@ -1023,7 +894,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_blooResponseHandler;
 
-
 #if !defined (_AMI_BLOOHANDLER__VAR_OUT_CH_)
 #define _AMI_BLOOHANDLER__VAR_OUT_CH_
 
@@ -1033,9 +903,6 @@ using AMI_blooHandler_var = TAO_Objref_Var_T<AMI_blooHandler>;
 using AMI_blooHandler_out = TAO_Objref_Out_T<AMI_blooHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMI_blooHandler
   : public virtual ::Messaging::ReplyHandler
@@ -1057,9 +924,6 @@ public:
   static AMI_blooHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_blooHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_blooHandler_ptr _nil ();
-
-
-
 
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
@@ -1096,16 +960,12 @@ namespace obj_u_skip
   namespace obj_u_hump
   {
 
-
-
-
 #if !defined (_OBJ_U_SKIP_OBJ_U_HUMP_OBJ_U_SKIP_CH_)
 #define _OBJ_U_SKIP_OBJ_U_HUMP_OBJ_U_SKIP_CH_
 
     class obj_u_skip;
     using obj_u_skip_var = ::TAO_VarSeq_Var_T<obj_u_skip>;
     using obj_u_skip_out = ::TAO_Seq_Out_T<obj_u_skip>;
-
 
     class TAO_IDL_TEST_STUB_Export obj_u_skip
       : public
@@ -1125,7 +985,6 @@ namespace obj_u_skip
       obj_u_skip& operator= (obj_u_skip &&) = default;
       virtual ~obj_u_skip () = default;
 
-
       using _var_type = obj_u_skip_var;
       using _out_type = obj_u_skip_out;
 
@@ -1135,11 +994,7 @@ namespace obj_u_skip
 #endif /* end #if !defined */
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_obj_u_skip;
 
-
-
   } // module obj_u_skip::obj_u_hump
-
-
 
 } // module obj_u_skip
 namespace obj_b_skip
@@ -1147,16 +1002,12 @@ namespace obj_b_skip
   namespace obj_b_hump
   {
 
-
-
-
 #if !defined (_OBJ_B_SKIP_OBJ_B_HUMP_OBJ_B_SKIP_CH_)
 #define _OBJ_B_SKIP_OBJ_B_HUMP_OBJ_B_SKIP_CH_
 
     class obj_b_skip;
     using obj_b_skip_var = ::TAO_VarSeq_Var_T<obj_b_skip>;
     using obj_b_skip_out = ::TAO_Seq_Out_T<obj_b_skip>;
-
 
     class TAO_IDL_TEST_STUB_Export obj_b_skip
       : public
@@ -1176,7 +1027,6 @@ namespace obj_b_skip
       obj_b_skip& operator= (obj_b_skip &&) = default;
       virtual ~obj_b_skip () = default;
 
-
       using _var_type = obj_b_skip_var;
       using _out_type = obj_b_skip_out;
 
@@ -1186,18 +1036,13 @@ namespace obj_b_skip
 #endif /* end #if !defined */
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_obj_b_skip;
 
-
-
   } // module obj_b_skip::obj_b_hump
-
-
 
 } // module obj_b_skip
 namespace bug_1985_a
 {
   namespace b
   {
-
 
 #if !defined (_BUG_1985_A_B_SOMETHING__VAR_OUT_CH_)
 #define _BUG_1985_A_B_SOMETHING__VAR_OUT_CH_
@@ -1211,9 +1056,6 @@ namespace bug_1985_a
     using something_out = TAO_Objref_Out_T<something>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export something
       : public virtual ::CORBA::Object
@@ -1234,9 +1076,6 @@ namespace bug_1985_a
       static something_ptr _narrow (::CORBA::Object_ptr obj);
       static something_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static something_ptr _nil ();
-
-
-
 
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
@@ -1269,7 +1108,6 @@ namespace bug_1985_a
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_something;
 
-
 #if !defined (_BUG_1985_A_B_AMH_SOMETHINGEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _BUG_1985_A_B_AMH_SOMETHINGEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -1278,7 +1116,6 @@ namespace bug_1985_a
     using AMH_somethingExceptionHolder_out = TAO_Value_Out_T<AMH_somethingExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
     class TAO_IDL_TEST_STUB_Export AMH_somethingExceptionHolder
       : public virtual ::CORBA::DefaultValueRefCountBase
@@ -1311,7 +1148,6 @@ namespace bug_1985_a
       static char const * _tao_obv_static_repository_id ();
 
       virtual ::CORBA::TypeCode_ptr _tao_type () const;
-
 
     protected:
       AMH_somethingExceptionHolder ();
@@ -1351,7 +1187,6 @@ namespace bug_1985_a
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_somethingExceptionHolder;
 
-
 #if !defined (_BUG_1985_A_B_AMH_SOMETHINGRESPONSEHANDLER__VAR_OUT_CH_)
 #define _BUG_1985_A_B_AMH_SOMETHINGRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -1364,9 +1199,6 @@ namespace bug_1985_a
     using AMH_somethingResponseHandler_out = TAO_Objref_Out_T<AMH_somethingResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export AMH_somethingResponseHandler
       : public virtual ::CORBA::Object
@@ -1387,9 +1219,6 @@ namespace bug_1985_a
       static AMH_somethingResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static AMH_somethingResponseHandler_ptr _nil ();
 
-
-
-
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
       static const char* _desc_repository_id ();
@@ -1399,8 +1228,6 @@ namespace bug_1985_a
     protected:
       // Abstract or local interface only.
       AMH_somethingResponseHandler ();
-
-
 
       virtual ~AMH_somethingResponseHandler () = default;
 
@@ -1413,7 +1240,6 @@ namespace bug_1985_a
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_somethingResponseHandler;
 
-
 #if !defined (_BUG_1985_A_B_AMI_SOMETHINGHANDLER__VAR_OUT_CH_)
 #define _BUG_1985_A_B_AMI_SOMETHINGHANDLER__VAR_OUT_CH_
 
@@ -1423,9 +1249,6 @@ namespace bug_1985_a
     using AMI_somethingHandler_out = TAO_Objref_Out_T<AMI_somethingHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export AMI_somethingHandler
       : public virtual ::Messaging::ReplyHandler
@@ -1447,9 +1270,6 @@ namespace bug_1985_a
       static AMI_somethingHandler_ptr _narrow (::CORBA::Object_ptr obj);
       static AMI_somethingHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static AMI_somethingHandler_ptr _nil ();
-
-
-
 
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
@@ -1482,18 +1302,13 @@ namespace bug_1985_a
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_somethingHandler;
 
-
-
   } // module bug_1985_a::b
-
-
 
 } // module bug_1985_a
 namespace bug_1985_c
 {
   namespace d
   {
-
 
 #if !defined (_BUG_1985_C_D_SOMETHING__VAR_OUT_CH_)
 #define _BUG_1985_C_D_SOMETHING__VAR_OUT_CH_
@@ -1507,9 +1322,6 @@ namespace bug_1985_c
     using something_out = TAO_Objref_Out_T<something>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export something
       : public virtual ::bug_1985_a::b::something
@@ -1531,9 +1343,6 @@ namespace bug_1985_c
       static something_ptr _narrow (::CORBA::Object_ptr obj);
       static something_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static something_ptr _nil ();
-
-
-
 
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
@@ -1566,7 +1375,6 @@ namespace bug_1985_c
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_something;
 
-
 #if !defined (_BUG_1985_C_D_AMH_SOMETHINGEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _BUG_1985_C_D_AMH_SOMETHINGEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -1575,7 +1383,6 @@ namespace bug_1985_c
     using AMH_somethingExceptionHolder_out = TAO_Value_Out_T<AMH_somethingExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
     class TAO_IDL_TEST_STUB_Export AMH_somethingExceptionHolder
       : public virtual ::CORBA::DefaultValueRefCountBase
@@ -1608,7 +1415,6 @@ namespace bug_1985_c
       static char const * _tao_obv_static_repository_id ();
 
       virtual ::CORBA::TypeCode_ptr _tao_type () const;
-
 
     protected:
       AMH_somethingExceptionHolder ();
@@ -1648,7 +1454,6 @@ namespace bug_1985_c
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_somethingExceptionHolder;
 
-
 #if !defined (_BUG_1985_C_D_AMH_SOMETHINGRESPONSEHANDLER__VAR_OUT_CH_)
 #define _BUG_1985_C_D_AMH_SOMETHINGRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -1661,9 +1466,6 @@ namespace bug_1985_c
     using AMH_somethingResponseHandler_out = TAO_Objref_Out_T<AMH_somethingResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export AMH_somethingResponseHandler
       : public virtual ::CORBA::Object
@@ -1684,9 +1486,6 @@ namespace bug_1985_c
       static AMH_somethingResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static AMH_somethingResponseHandler_ptr _nil ();
 
-
-
-
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
       static const char* _desc_repository_id ();
@@ -1696,8 +1495,6 @@ namespace bug_1985_c
     protected:
       // Abstract or local interface only.
       AMH_somethingResponseHandler ();
-
-
 
       virtual ~AMH_somethingResponseHandler () = default;
 
@@ -1710,7 +1507,6 @@ namespace bug_1985_c
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_somethingResponseHandler;
 
-
 #if !defined (_BUG_1985_C_D_AMI_SOMETHINGHANDLER__VAR_OUT_CH_)
 #define _BUG_1985_C_D_AMI_SOMETHINGHANDLER__VAR_OUT_CH_
 
@@ -1720,9 +1516,6 @@ namespace bug_1985_c
     using AMI_somethingHandler_out = TAO_Objref_Out_T<AMI_somethingHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export AMI_somethingHandler
       : public virtual ::bug_1985_a::b::AMI_somethingHandler
@@ -1744,9 +1537,6 @@ namespace bug_1985_c
       static AMI_somethingHandler_ptr _narrow (::CORBA::Object_ptr obj);
       static AMI_somethingHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static AMI_somethingHandler_ptr _nil ();
-
-
-
 
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
@@ -1779,16 +1569,11 @@ namespace bug_1985_c
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_somethingHandler;
 
-
-
   } // module bug_1985_c::d
-
-
 
 } // module bug_1985_c
 namespace Negotiator
 {
-
 
 #if !defined (_NEGOTIATOR_UAV_NEGOTIATOR__VAR_OUT_CH_)
 #define _NEGOTIATOR_UAV_NEGOTIATOR__VAR_OUT_CH_
@@ -1802,9 +1587,6 @@ namespace Negotiator
   using UAV_Negotiator_out = TAO_Objref_Out_T<UAV_Negotiator>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export UAV_Negotiator
     : public virtual ::CORBA::Object
@@ -1825,9 +1607,6 @@ namespace Negotiator
     static UAV_Negotiator_ptr _narrow (::CORBA::Object_ptr obj);
     static UAV_Negotiator_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static UAV_Negotiator_ptr _nil ();
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -1860,7 +1639,6 @@ namespace Negotiator
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UAV_Negotiator;
 
-
 #if !defined (_NEGOTIATOR_AMH_UAV_NEGOTIATOREXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOREXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -1869,7 +1647,6 @@ namespace Negotiator
   using AMH_UAV_NegotiatorExceptionHolder_out = TAO_Value_Out_T<AMH_UAV_NegotiatorExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
   class TAO_IDL_TEST_STUB_Export AMH_UAV_NegotiatorExceptionHolder
     : public virtual ::CORBA::DefaultValueRefCountBase
@@ -1902,7 +1679,6 @@ namespace Negotiator
     static char const * _tao_obv_static_repository_id ();
 
     virtual ::CORBA::TypeCode_ptr _tao_type () const;
-
 
   protected:
     AMH_UAV_NegotiatorExceptionHolder ();
@@ -1942,7 +1718,6 @@ namespace Negotiator
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_UAV_NegotiatorExceptionHolder;
 
-
 #if !defined (_NEGOTIATOR_AMH_UAV_NEGOTIATORRESPONSEHANDLER__VAR_OUT_CH_)
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATORRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -1955,9 +1730,6 @@ namespace Negotiator
   using AMH_UAV_NegotiatorResponseHandler_out = TAO_Objref_Out_T<AMH_UAV_NegotiatorResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export AMH_UAV_NegotiatorResponseHandler
     : public virtual ::CORBA::Object
@@ -1978,9 +1750,6 @@ namespace Negotiator
     static AMH_UAV_NegotiatorResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMH_UAV_NegotiatorResponseHandler_ptr _nil ();
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     static const char* _desc_repository_id ();
@@ -1990,8 +1759,6 @@ namespace Negotiator
   protected:
     // Abstract or local interface only.
     AMH_UAV_NegotiatorResponseHandler ();
-
-
 
     virtual ~AMH_UAV_NegotiatorResponseHandler () = default;
 
@@ -2004,7 +1771,6 @@ namespace Negotiator
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_UAV_NegotiatorResponseHandler;
 
-
 #if !defined (_NEGOTIATOR_AMI_UAV_NEGOTIATORHANDLER__VAR_OUT_CH_)
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATORHANDLER__VAR_OUT_CH_
 
@@ -2014,9 +1780,6 @@ namespace Negotiator
   using AMI_UAV_NegotiatorHandler_out = TAO_Objref_Out_T<AMI_UAV_NegotiatorHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export AMI_UAV_NegotiatorHandler
     : public virtual ::Messaging::ReplyHandler
@@ -2038,9 +1801,6 @@ namespace Negotiator
     static AMI_UAV_NegotiatorHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_UAV_NegotiatorHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_UAV_NegotiatorHandler_ptr _nil ();
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -2073,7 +1833,6 @@ namespace Negotiator
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_UAV_NegotiatorHandler;
 
-
 #if !defined (_NEGOTIATOR_UAV_NEGOTIATOR_FACTORY__VAR_OUT_CH_)
 #define _NEGOTIATOR_UAV_NEGOTIATOR_FACTORY__VAR_OUT_CH_
 
@@ -2086,9 +1845,6 @@ namespace Negotiator
   using UAV_Negotiator_Factory_out = TAO_Objref_Out_T<UAV_Negotiator_Factory>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export UAV_Negotiator_Factory
     : public virtual ::Negotiator::UAV_Negotiator
@@ -2117,9 +1873,6 @@ namespace Negotiator
     virtual void sendc_make_negotiator (
       ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr ami_handler,
       const char * bitrate_sc);
-
-
-
 
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
@@ -2152,7 +1905,6 @@ namespace Negotiator
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UAV_Negotiator_Factory;
 
-
 #if !defined (_NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -2161,7 +1913,6 @@ namespace Negotiator
   using AMH_UAV_Negotiator_FactoryExceptionHolder_out = TAO_Value_Out_T<AMH_UAV_Negotiator_FactoryExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
   class TAO_IDL_TEST_STUB_Export AMH_UAV_Negotiator_FactoryExceptionHolder
     : public virtual ::CORBA::DefaultValueRefCountBase
@@ -2205,7 +1956,6 @@ public:
 public:
   virtual void raise_sendc_make_negotiator ();
 
-
 protected:
   AMH_UAV_Negotiator_FactoryExceptionHolder ();
   virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
@@ -2227,7 +1977,6 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_UAV_Negotiator_FactoryExceptionHolder;
 
-
 #if !defined (_NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYRESPONSEHANDLER__VAR_OUT_CH_)
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -2240,9 +1989,6 @@ using AMH_UAV_Negotiator_FactoryResponseHandler_var = TAO_Objref_Var_T<AMH_UAV_N
 using AMH_UAV_Negotiator_FactoryResponseHandler_out = TAO_Objref_Out_T<AMH_UAV_Negotiator_FactoryResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMH_UAV_Negotiator_FactoryResponseHandler
   : public virtual ::CORBA::Object
@@ -2269,9 +2015,6 @@ public:
   virtual void make_negotiator_excep (
     ::Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder * holder) = 0;
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -2281,8 +2024,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_UAV_Negotiator_FactoryResponseHandler ();
-
-
 
   virtual ~AMH_UAV_Negotiator_FactoryResponseHandler () = default;
 
@@ -2295,7 +2036,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_UAV_Negotiator_FactoryResponseHandler;
 
-
 #if !defined (_NEGOTIATOR_AMI_UAV_NEGOTIATOR_FACTORYHANDLER__VAR_OUT_CH_)
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATOR_FACTORYHANDLER__VAR_OUT_CH_
 
@@ -2305,9 +2045,6 @@ using AMI_UAV_Negotiator_FactoryHandler_var = TAO_Objref_Var_T<AMI_UAV_Negotiato
 using AMI_UAV_Negotiator_FactoryHandler_out = TAO_Objref_Out_T<AMI_UAV_Negotiator_FactoryHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMI_UAV_Negotiator_FactoryHandler
   : public virtual ::Negotiator::AMI_UAV_NegotiatorHandler
@@ -2342,9 +2079,6 @@ public:
   virtual void make_negotiator_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -2376,8 +2110,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_UAV_Negotiator_FactoryHandler;
 
-
-
 } // module Negotiator
 namespace bug_2125
 {
@@ -2392,18 +2124,13 @@ namespace bug_2125
     using Stuff_out = Stuff &;
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Stuff;
 
-
-
   } // module bug_2125::Bar
-
-
 
 } // module bug_2125
 namespace Wow
 {
   namespace bug_2125
   {
-
 
 #if !defined (_WOW_BUG_2125_MYINTERFACE__VAR_OUT_CH_)
 #define _WOW_BUG_2125_MYINTERFACE__VAR_OUT_CH_
@@ -2417,9 +2144,6 @@ namespace Wow
     using MyInterface_out = TAO_Objref_Out_T<MyInterface>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export MyInterface
       : public virtual ::CORBA::Object
@@ -2447,9 +2171,6 @@ namespace Wow
       virtual void sendc_op2 (
         ::Wow::bug_2125::AMI_MyInterfaceHandler_ptr ami_handler,
         ::bug_2125::Bar::Stuff fbs);
-
-
-
 
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
@@ -2482,7 +2203,6 @@ namespace Wow
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_MyInterface;
 
-
 #if !defined (_WOW_BUG_2125_AMH_MYINTERFACEEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _WOW_BUG_2125_AMH_MYINTERFACEEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -2491,7 +2211,6 @@ namespace Wow
     using AMH_MyInterfaceExceptionHolder_out = TAO_Value_Out_T<AMH_MyInterfaceExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
     class TAO_IDL_TEST_STUB_Export AMH_MyInterfaceExceptionHolder
       : public virtual ::CORBA::DefaultValueRefCountBase
@@ -2535,7 +2254,6 @@ namespace Wow
   public:
     virtual void raise_sendc_op2 ();
 
-
 protected:
   AMH_MyInterfaceExceptionHolder ();
   virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
@@ -2557,7 +2275,6 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_MyInterfaceExceptionHolder;
 
-
 #if !defined (_WOW_BUG_2125_AMH_MYINTERFACERESPONSEHANDLER__VAR_OUT_CH_)
 #define _WOW_BUG_2125_AMH_MYINTERFACERESPONSEHANDLER__VAR_OUT_CH_
 
@@ -2570,9 +2287,6 @@ using AMH_MyInterfaceResponseHandler_var = TAO_Objref_Var_T<AMH_MyInterfaceRespo
 using AMH_MyInterfaceResponseHandler_out = TAO_Objref_Out_T<AMH_MyInterfaceResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMH_MyInterfaceResponseHandler
   : public virtual ::CORBA::Object
@@ -2598,9 +2312,6 @@ public:
   virtual void op2_excep (
     ::Wow::bug_2125::AMH_MyInterfaceExceptionHolder * holder) = 0;
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -2610,8 +2321,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_MyInterfaceResponseHandler ();
-
-
 
   virtual ~AMH_MyInterfaceResponseHandler () = default;
 
@@ -2624,7 +2333,6 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_MyInterfaceResponseHandler;
 
-
 #if !defined (_WOW_BUG_2125_AMI_MYINTERFACEHANDLER__VAR_OUT_CH_)
 #define _WOW_BUG_2125_AMI_MYINTERFACEHANDLER__VAR_OUT_CH_
 
@@ -2634,9 +2342,6 @@ using AMI_MyInterfaceHandler_var = TAO_Objref_Var_T<AMI_MyInterfaceHandler>;
 using AMI_MyInterfaceHandler_out = TAO_Objref_Out_T<AMI_MyInterfaceHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMI_MyInterfaceHandler
   : public virtual ::Messaging::ReplyHandler
@@ -2670,9 +2375,6 @@ public:
   virtual void op2_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -2704,11 +2406,7 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_MyInterfaceHandler;
 
-
-
 } // module Wow::bug_2125
-
-
 
 } // module Wow
 namespace Company
@@ -2721,13 +2419,9 @@ namespace Company
     namespace Inner
     {
 
-
       struct Foo;
       using Foo_var = ::TAO_Fixed_Var_T<Foo>;
       using Foo_out = Foo&;
-
-
-
 
       struct TAO_IDL_TEST_STUB_Export Foo
       {
@@ -2741,26 +2435,17 @@ namespace Company
       };
       extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Foo;
 
-
-
     } // module Company::CORBA::Inner
-
-
 
   } // module Company::CORBA
 
-
-
 } // module Company
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -2780,7 +2465,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::skip::hump::skip>
     : public
@@ -2791,7 +2475,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::u_skip::u_hump::u_skip>
     : public
@@ -2801,7 +2484,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_I_SKIP_I_HUMP_I_SKIP__ARG_TRAITS_)
 #define _I_SKIP_I_HUMP_I_SKIP__ARG_TRAITS_
@@ -2818,7 +2500,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_I_SKIP_I_HUMP_AMH_I_SKIPEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _I_SKIP_I_HUMP_AMH_I_SKIPEXCEPTIONHOLDER__ARG_TRAITS_
@@ -2838,7 +2519,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_I_SKIP_I_HUMP_AMI_I_SKIPHANDLER__ARG_TRAITS_)
 #define _I_SKIP_I_HUMP_AMI_I_SKIPHANDLER__ARG_TRAITS_
 
@@ -2855,7 +2535,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::pre_u_skip::pre_u_hump::pre_u_skip>
     : public
@@ -2865,7 +2544,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::pre_b_skip::pre_b_hump::pre_b_skip>
@@ -2877,7 +2555,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::str_u_skip::str_u_hump::str_u_skip>
     : public
@@ -2887,7 +2564,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::str_b_skip::str_b_hump::str_b_skip>
@@ -2899,7 +2575,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::wstr_u_skip::wstr_u_hump::wstr_u_skip>
     : public
@@ -2910,7 +2585,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::wstr_b_skip::wstr_b_hump::wstr_b_skip>
     : public
@@ -2920,7 +2594,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_BLOO__ARG_TRAITS_)
 #define _BLOO__ARG_TRAITS_
@@ -2937,7 +2610,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_BLOOEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _AMH_BLOOEXCEPTIONHOLDER__ARG_TRAITS_
@@ -2957,7 +2629,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_BLOOHANDLER__ARG_TRAITS_)
 #define _AMI_BLOOHANDLER__ARG_TRAITS_
 
@@ -2974,7 +2645,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::obj_u_skip::obj_u_hump::obj_u_skip>
     : public
@@ -2985,7 +2655,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::obj_b_skip::obj_b_hump::obj_b_skip>
     : public
@@ -2995,7 +2664,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_BUG_1985_A_B_SOMETHING__ARG_TRAITS_)
 #define _BUG_1985_A_B_SOMETHING__ARG_TRAITS_
@@ -3012,7 +2680,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_1985_A_B_AMH_SOMETHINGEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _BUG_1985_A_B_AMH_SOMETHINGEXCEPTIONHOLDER__ARG_TRAITS_
@@ -3032,7 +2699,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BUG_1985_A_B_AMI_SOMETHINGHANDLER__ARG_TRAITS_)
 #define _BUG_1985_A_B_AMI_SOMETHINGHANDLER__ARG_TRAITS_
 
@@ -3049,7 +2715,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BUG_1985_C_D_SOMETHING__ARG_TRAITS_)
 #define _BUG_1985_C_D_SOMETHING__ARG_TRAITS_
 
@@ -3065,7 +2730,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_1985_C_D_AMH_SOMETHINGEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _BUG_1985_C_D_AMH_SOMETHINGEXCEPTIONHOLDER__ARG_TRAITS_
@@ -3085,7 +2749,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BUG_1985_C_D_AMI_SOMETHINGHANDLER__ARG_TRAITS_)
 #define _BUG_1985_C_D_AMI_SOMETHINGHANDLER__ARG_TRAITS_
 
@@ -3102,7 +2765,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_NEGOTIATOR_UAV_NEGOTIATOR__ARG_TRAITS_)
 #define _NEGOTIATOR_UAV_NEGOTIATOR__ARG_TRAITS_
 
@@ -3118,7 +2780,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_NEGOTIATOR_AMH_UAV_NEGOTIATOREXCEPTIONHOLDER__ARG_TRAITS_)
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOREXCEPTIONHOLDER__ARG_TRAITS_
@@ -3138,7 +2799,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_NEGOTIATOR_AMI_UAV_NEGOTIATORHANDLER__ARG_TRAITS_)
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATORHANDLER__ARG_TRAITS_
 
@@ -3155,7 +2815,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_NEGOTIATOR_UAV_NEGOTIATOR_FACTORY__ARG_TRAITS_)
 #define _NEGOTIATOR_UAV_NEGOTIATOR_FACTORY__ARG_TRAITS_
 
@@ -3171,7 +2830,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYEXCEPTIONHOLDER__ARG_TRAITS_
@@ -3191,7 +2849,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_NEGOTIATOR_AMI_UAV_NEGOTIATOR_FACTORYHANDLER__ARG_TRAITS_)
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATOR_FACTORYHANDLER__ARG_TRAITS_
 
@@ -3208,7 +2865,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::bug_2125::Bar::Stuff>
     : public
@@ -3218,7 +2874,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_WOW_BUG_2125_MYINTERFACE__ARG_TRAITS_)
 #define _WOW_BUG_2125_MYINTERFACE__ARG_TRAITS_
@@ -3235,7 +2890,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_WOW_BUG_2125_AMH_MYINTERFACEEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _WOW_BUG_2125_AMH_MYINTERFACEEXCEPTIONHOLDER__ARG_TRAITS_
@@ -3255,7 +2909,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_WOW_BUG_2125_AMI_MYINTERFACEHANDLER__ARG_TRAITS_)
 #define _WOW_BUG_2125_AMI_MYINTERFACEHANDLER__ARG_TRAITS_
 
@@ -3272,7 +2925,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::Company::CORBA::Inner::Foo>
     : public
@@ -3286,12 +2938,10 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace OBV_i_skip
 {
   namespace i_hump
   {
-
 
     // OBV_ class
     class TAO_IDL_TEST_STUB_Export AMH_i_skipExceptionHolder
@@ -3322,7 +2972,6 @@ namespace OBV_i_skip
   };
 }
 }
-
 
 // OBV_ class
 class TAO_IDL_TEST_STUB_Export OBV_AMH_blooExceptionHolder
@@ -3355,7 +3004,6 @@ namespace OBV_bug_1985_a
 {
   namespace b
   {
-
 
     // OBV_ class
     class TAO_IDL_TEST_STUB_Export AMH_somethingExceptionHolder
@@ -3391,7 +3039,6 @@ namespace OBV_bug_1985_c
   namespace d
   {
 
-
     // OBV_ class
     class TAO_IDL_TEST_STUB_Export AMH_somethingExceptionHolder
       : public virtual bug_1985_c::d::AMH_somethingExceptionHolder,
@@ -3424,7 +3071,6 @@ namespace OBV_bug_1985_c
 namespace OBV_Negotiator
 {
 
-
   // OBV_ class
   class TAO_IDL_TEST_STUB_Export AMH_UAV_NegotiatorExceptionHolder
     : public virtual Negotiator::AMH_UAV_NegotiatorExceptionHolder,
@@ -3452,7 +3098,6 @@ protected:
 private:
   CORBA::Boolean require_truncation_ {false};
 };
-
 
 // OBV_ class
 class TAO_IDL_TEST_STUB_Export AMH_UAV_Negotiator_FactoryExceptionHolder
@@ -3483,7 +3128,6 @@ namespace OBV_Wow
   namespace bug_2125
   {
 
-
     // OBV_ class
     class TAO_IDL_TEST_STUB_Export AMH_MyInterfaceExceptionHolder
       : public virtual Wow::bug_2125::AMH_MyInterfaceExceptionHolder
@@ -3509,7 +3153,6 @@ namespace OBV_Wow
   };
 }
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3904,8 +3547,6 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3914,8 +3555,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::skip::hump::skip*);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::skip::hump::skip const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3926,24 +3565,14 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, u_s
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const e_skip::e_hump::e_skip &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, e_skip::e_hump::e_skip*); // noncopying version
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const e_skip::e_hump::e_skip *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3954,8 +3583,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, i_s
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3964,12 +3591,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, i_skip::i_hump::AMH_i
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, i_skip::i_hump::AMH_i_skipExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3980,12 +3601,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, i_s
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -3994,12 +3609,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, i_skip::i_hump::AMI_i
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, i_skip::i_hump::AMI_i_skipHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4010,12 +3619,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::p
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4024,12 +3627,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::pre_b_skip::pre_b_h
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::pre_b_skip::pre_b_hump::pre_b_skip const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4040,12 +3637,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::s
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4054,12 +3645,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::str_b_skip::str_b_h
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::str_b_skip::str_b_hump::str_b_skip const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4070,12 +3655,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::w
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4084,12 +3663,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::wstr_b_skip::wstr_b
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::wstr_b_skip::wstr_b_hump::wstr_b_skip const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4100,8 +3673,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, blo
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4110,12 +3681,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_blooExceptionHold
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMH_blooExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4126,12 +3691,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMH
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4140,12 +3699,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_blooHandler_ptr *
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMI_blooHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4156,12 +3709,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::o
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4170,12 +3717,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::obj_b_skip::obj_b_h
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::obj_b_skip::obj_b_hump::obj_b_skip const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4186,8 +3727,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4196,12 +3735,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_1985_a::b::AMH_so
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, bug_1985_a::b::AMH_somethingExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4212,12 +3745,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4226,12 +3753,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_1985_a::b::AMI_so
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug_1985_a::b::AMI_somethingHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4242,8 +3763,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4252,12 +3771,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_1985_c::d::AMH_so
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, bug_1985_c::d::AMH_somethingExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4268,12 +3781,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4282,12 +3789,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_1985_c::d::AMI_so
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug_1985_c::d::AMI_somethingHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4298,8 +3799,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Neg
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4308,12 +3807,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Negotiator::AMH_UAV_N
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Negotiator::AMH_UAV_NegotiatorExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4324,12 +3817,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Neg
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4338,12 +3825,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Negotiator::AMI_UAV_N
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Negotiator::AMI_UAV_NegotiatorHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4354,8 +3835,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Neg
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4364,12 +3843,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Negotiator::AMH_UAV_N
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4380,12 +3853,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Neg
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4395,23 +3862,13 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Neg
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, bug_2125::Bar::Stuff);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, bug_2125::Bar::Stuff &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4422,8 +3879,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Wow
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4432,12 +3887,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Wow::bug_2125::AMH_My
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Wow::bug_2125::AMH_MyInterfaceExceptionHolder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4448,12 +3897,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Wow
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
@@ -4462,8 +3905,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Wow::bug_2125::AMI_My
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Wow::bug_2125::AMI_MyInterfaceHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -4474,16 +3915,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::C
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, skip::hump::skip const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, skip::hump::skip &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4492,21 +3929,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, u_skip::u_
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const e_skip::e_hump::e_skip &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, e_skip::e_hump::e_skip &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4514,8 +3942,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const i_s
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, i_skip::i_hump::i_skip_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4526,19 +3952,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const i_skip::i_hump::AMH_i_skipExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, i_skip::i_hump::AMH_i_skipExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4547,13 +3966,9 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, i_skip::i_
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 #if !defined _TAO_CDR_OP_pre_u_skip_pre_u_hump_pre_u_skip_H_
 #define _TAO_CDR_OP_pre_u_skip_pre_u_hump_pre_u_skip_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -4564,15 +3979,11 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_pre_u_skip_pre_u_hump_pre_u_skip_H_ */
-
 
 #if !defined _TAO_CDR_OP_pre_b_skip_pre_b_hump_pre_b_skip_H_
 #define _TAO_CDR_OP_pre_b_skip_pre_b_hump_pre_b_skip_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -4583,15 +3994,11 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_pre_b_skip_pre_b_hump_pre_b_skip_H_ */
-
 
 #if !defined _TAO_CDR_OP_str_u_skip_str_u_hump_str_u_skip_H_
 #define _TAO_CDR_OP_str_u_skip_str_u_hump_str_u_skip_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -4602,15 +4009,11 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_str_u_skip_str_u_hump_str_u_skip_H_ */
-
 
 #if !defined _TAO_CDR_OP_str_b_skip_str_b_hump_str_b_skip_H_
 #define _TAO_CDR_OP_str_b_skip_str_b_hump_str_b_skip_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -4621,15 +4024,11 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_str_b_skip_str_b_hump_str_b_skip_H_ */
-
 
 #if !defined _TAO_CDR_OP_wstr_u_skip_wstr_u_hump_wstr_u_skip_H_
 #define _TAO_CDR_OP_wstr_u_skip_wstr_u_hump_wstr_u_skip_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -4640,15 +4039,11 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_wstr_u_skip_wstr_u_hump_wstr_u_skip_H_ */
-
 
 #if !defined _TAO_CDR_OP_wstr_b_skip_wstr_b_hump_wstr_b_skip_H_
 #define _TAO_CDR_OP_wstr_b_skip_wstr_b_hump_wstr_b_skip_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -4659,12 +4054,7 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_wstr_b_skip_wstr_b_hump_wstr_b_skip_H_ */
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4672,8 +4062,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const blo
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, bloo_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4684,19 +4072,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_blooExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_blooExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4705,13 +4086,9 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_blooHa
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 #if !defined _TAO_CDR_OP_obj_u_skip_obj_u_hump_obj_u_skip_H_
 #define _TAO_CDR_OP_obj_u_skip_obj_u_hump_obj_u_skip_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -4722,15 +4099,11 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_obj_u_skip_obj_u_hump_obj_u_skip_H_ */
-
 
 #if !defined _TAO_CDR_OP_obj_b_skip_obj_b_hump_obj_b_skip_H_
 #define _TAO_CDR_OP_obj_b_skip_obj_b_hump_obj_b_skip_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -4741,12 +4114,7 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_obj_b_skip_obj_b_hump_obj_b_skip_H_ */
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4754,8 +4122,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const bug
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, bug_1985_a::b::something_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4766,19 +4132,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const bug_1985_a::b::AMH_somethingExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, bug_1985_a::b::AMH_somethingExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4787,19 +4146,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, bug_1985_a
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const bug_1985_c::d::something_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, bug_1985_c::d::something_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4810,19 +4162,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const bug_1985_c::d::AMH_somethingExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, bug_1985_c::d::AMH_somethingExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4831,19 +4176,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, bug_1985_c
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Negotiator::UAV_Negotiator_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Negotiator::UAV_Negotiator_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4854,19 +4192,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Negotiator::AMH_UAV_NegotiatorExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Negotiator::AMH_UAV_NegotiatorExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4875,19 +4206,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Negotiator
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Negotiator::UAV_Negotiator_Factory_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Negotiator::UAV_Negotiator_Factory_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4898,19 +4222,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4919,8 +4236,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Negotiator
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, bug_2125::Bar::Stuff _tao_enumerator);
@@ -4928,19 +4243,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, bug_21
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Wow::bug_2125::MyInterface_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Wow::bug_2125::MyInterface_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4951,19 +4259,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Wow::bug_2125::AMH_MyInterfaceExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Wow::bug_2125::AMH_MyInterfaceExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4972,15 +4273,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Wow::bug_2
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Company::CORBA::Inner::Foo const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Company::CORBA::Inner::Foo &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "nested_scopeC.inl"

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INTERFACES_B1C3BK_H_
-#define _TAO_IDL_INTERFACES_B1C3BK_H_
+#ifndef _TAO_IDL_INTERFACES_SE5LEO_H_
+#define _TAO_IDL_INTERFACES_SE5LEO_H_
 
 #include /**/ "ace/pre.h"
 
@@ -53,14 +53,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -79,7 +76,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BASE__SARG_TRAITS_)
 #define _BASE__SARG_TRAITS_
 
@@ -94,7 +90,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_BASEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_BASEEXCEPTIONHOLDER__SARG_TRAITS_
@@ -113,7 +108,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_BASEHANDLER__SARG_TRAITS_)
 #define _AMI_BASEHANDLER__SARG_TRAITS_
 
@@ -129,7 +123,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_DERIVED__SARG_TRAITS_)
 #define _DERIVED__SARG_TRAITS_
 
@@ -144,7 +137,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_DERIVEDEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_DERIVEDEXCEPTIONHOLDER__SARG_TRAITS_
@@ -163,7 +155,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_DERIVEDHANDLER__SARG_TRAITS_)
 #define _AMI_DERIVEDHANDLER__SARG_TRAITS_
 
@@ -179,7 +170,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::foo_mod::date>
     : public
@@ -189,7 +179,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_FOOSTEP__SARG_TRAITS_)
 #define _FOOSTEP__SARG_TRAITS_
@@ -205,7 +194,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_FOOSTEPEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_FOOSTEPEXCEPTIONHOLDER__SARG_TRAITS_
@@ -224,7 +212,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_FOOSTEPHANDLER__SARG_TRAITS_)
 #define _AMI_FOOSTEPHANDLER__SARG_TRAITS_
 
@@ -239,7 +226,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_MOTHER__SARG_TRAITS_)
 #define _MOTHER__SARG_TRAITS_
@@ -256,7 +242,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::mother::member>
     : public
@@ -266,7 +251,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_AMH_MOTHEREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_MOTHEREXCEPTIONHOLDER__SARG_TRAITS_
@@ -285,7 +269,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_MOTHERHANDLER__SARG_TRAITS_)
 #define _AMI_MOTHERHANDLER__SARG_TRAITS_
 
@@ -300,7 +283,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FATHER__SARG_TRAITS_)
 #define _FATHER__SARG_TRAITS_
@@ -317,7 +299,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::father::member>
     : public
@@ -327,7 +308,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_AMH_FATHEREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_FATHEREXCEPTIONHOLDER__SARG_TRAITS_
@@ -346,7 +326,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_FATHERHANDLER__SARG_TRAITS_)
 #define _AMI_FATHERHANDLER__SARG_TRAITS_
 
@@ -362,7 +341,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_CHILD__SARG_TRAITS_)
 #define _CHILD__SARG_TRAITS_
 
@@ -377,7 +355,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_CHILDEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_CHILDEXCEPTIONHOLDER__SARG_TRAITS_
@@ -396,7 +373,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_CHILDHANDLER__SARG_TRAITS_)
 #define _AMI_CHILDHANDLER__SARG_TRAITS_
 
@@ -412,7 +388,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_TRY__SARG_TRAITS_)
 #define _TRY__SARG_TRAITS_
 
@@ -427,7 +402,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH__CXX_TRYEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH__CXX_TRYEXCEPTIONHOLDER__SARG_TRAITS_
@@ -446,7 +420,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI__CXX_TRYHANDLER__SARG_TRAITS_)
 #define _AMI__CXX_TRYHANDLER__SARG_TRAITS_
 
@@ -461,7 +434,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_LATER__SARG_TRAITS_)
 #define _LATER__SARG_TRAITS_
@@ -478,7 +450,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_LATER_USER__SARG_TRAITS_)
 #define _LATER_USER__SARG_TRAITS_
 
@@ -493,7 +464,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_LATER_USEREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_LATER_USEREXCEPTIONHOLDER__SARG_TRAITS_
@@ -512,7 +482,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_LATER_USERHANDLER__SARG_TRAITS_)
 #define _AMI_LATER_USERHANDLER__SARG_TRAITS_
 
@@ -528,7 +497,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::later_holder>
     : public
@@ -538,7 +506,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_AMH_LATEREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_LATEREXCEPTIONHOLDER__SARG_TRAITS_
@@ -557,7 +524,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_LATERHANDLER__SARG_TRAITS_)
 #define _AMI_LATERHANDLER__SARG_TRAITS_
 
@@ -573,7 +539,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BEGIN__SARG_TRAITS_)
 #define _BEGIN__SARG_TRAITS_
 
@@ -588,7 +553,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_BEGINEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_BEGINEXCEPTIONHOLDER__SARG_TRAITS_
@@ -607,7 +571,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_BEGINHANDLER__SARG_TRAITS_)
 #define _AMI_BEGINHANDLER__SARG_TRAITS_
 
@@ -623,7 +586,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MIDDLE__SARG_TRAITS_)
 #define _MIDDLE__SARG_TRAITS_
 
@@ -638,7 +600,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_MIDDLEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_MIDDLEEXCEPTIONHOLDER__SARG_TRAITS_
@@ -657,7 +618,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_MIDDLEHANDLER__SARG_TRAITS_)
 #define _AMI_MIDDLEHANDLER__SARG_TRAITS_
 
@@ -673,7 +633,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_END__SARG_TRAITS_)
 #define _END__SARG_TRAITS_
 
@@ -688,7 +647,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_ENDEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_ENDEXCEPTIONHOLDER__SARG_TRAITS_
@@ -707,7 +665,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_ENDHANDLER__SARG_TRAITS_)
 #define _AMI_ENDHANDLER__SARG_TRAITS_
 
@@ -723,7 +680,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_CLIENT__SARG_TRAITS_)
 #define _CLIENT__SARG_TRAITS_
 
@@ -738,7 +694,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_CLIENTEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_CLIENTEXCEPTIONHOLDER__SARG_TRAITS_
@@ -757,7 +712,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_CLIENTHANDLER__SARG_TRAITS_)
 #define _AMI_CLIENTHANDLER__SARG_TRAITS_
 
@@ -772,7 +726,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_ATTRIBUTETESTER__SARG_TRAITS_)
 #define _ATTRIBUTETESTER__SARG_TRAITS_
@@ -800,7 +753,6 @@ namespace TAO
   {
   };
 
-
 #if !defined (_AMH_ATTRIBUTETESTEREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_ATTRIBUTETESTEREXCEPTIONHOLDER__SARG_TRAITS_
 
@@ -818,7 +770,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_ATTRIBUTETESTERHANDLER__SARG_TRAITS_)
 #define _AMI_ATTRIBUTETESTERHANDLER__SARG_TRAITS_
 
@@ -834,7 +785,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_PARAMMOD_PARAMETERTESTER__SARG_TRAITS_)
 #define _PARAMMOD_PARAMETERTESTER__SARG_TRAITS_
 
@@ -849,7 +799,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
   template<>
   class SArg_Traits< ::ParamMod::ParameterTester::object_seq_type>
@@ -872,7 +821,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::ParamMod::ParameterTester::object_struct_type>
     : public
@@ -883,7 +831,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::ParamMod::ParameterTester::object_union_type>
     : public
@@ -893,7 +840,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_PARAMMOD_AMH_PARAMETERTESTEREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _PARAMMOD_AMH_PARAMETERTESTEREXCEPTIONHOLDER__SARG_TRAITS_
@@ -912,7 +858,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_PARAMMOD_AMI_PARAMETERTESTERHANDLER__SARG_TRAITS_)
 #define _PARAMMOD_AMI_PARAMETERTESTERHANDLER__SARG_TRAITS_
 
@@ -927,7 +872,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_A__SARG_TRAITS_)
 #define _A__SARG_TRAITS_
@@ -944,7 +888,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::A::U>
     : public
@@ -954,7 +897,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_AEXCEPTIONHOLDER__SARG_TRAITS_
@@ -973,7 +915,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_AHANDLER__SARG_TRAITS_)
 #define _AMI_AHANDLER__SARG_TRAITS_
 
@@ -989,7 +930,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_M_A__SARG_TRAITS_)
 #define _M_A__SARG_TRAITS_
 
@@ -1005,7 +945,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_M_A__SARG_TRAITS_)
 #define _M_A__SARG_TRAITS_
 
@@ -1020,7 +959,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_M_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _M_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_
@@ -1039,7 +977,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_M_AMI_AHANDLER__SARG_TRAITS_)
 #define _M_AMI_AHANDLER__SARG_TRAITS_
 
@@ -1055,7 +992,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_I1_IF1__SARG_TRAITS_)
 #define _I1_IF1__SARG_TRAITS_
 
@@ -1070,7 +1006,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_I1_AMH_IF1EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _I1_AMH_IF1EXCEPTIONHOLDER__SARG_TRAITS_
@@ -1089,7 +1024,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_I1_AMI_IF1HANDLER__SARG_TRAITS_)
 #define _I1_AMI_IF1HANDLER__SARG_TRAITS_
 
@@ -1105,7 +1039,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_I2_IF2__SARG_TRAITS_)
 #define _I2_IF2__SARG_TRAITS_
 
@@ -1120,7 +1053,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_I2_AMH_IF2EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _I2_AMH_IF2EXCEPTIONHOLDER__SARG_TRAITS_
@@ -1139,7 +1071,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_I2_AMI_IF2HANDLER__SARG_TRAITS_)
 #define _I2_AMI_IF2HANDLER__SARG_TRAITS_
 
@@ -1155,7 +1086,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_I2_IF3__SARG_TRAITS_)
 #define _I2_IF3__SARG_TRAITS_
 
@@ -1170,7 +1100,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_I2_AMH_IF3EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _I2_AMH_IF3EXCEPTIONHOLDER__SARG_TRAITS_
@@ -1189,7 +1118,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_I2_AMI_IF3HANDLER__SARG_TRAITS_)
 #define _I2_AMI_IF3HANDLER__SARG_TRAITS_
 
@@ -1204,7 +1132,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_REDEFS_BASE__SARG_TRAITS_)
 #define _REDEFS_BASE__SARG_TRAITS_
@@ -1221,7 +1148,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::redefs::base::foo>
     : public
@@ -1231,7 +1157,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_REDEFS_AMH_BASEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _REDEFS_AMH_BASEEXCEPTIONHOLDER__SARG_TRAITS_
@@ -1250,7 +1175,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_REDEFS_AMI_BASEHANDLER__SARG_TRAITS_)
 #define _REDEFS_AMI_BASEHANDLER__SARG_TRAITS_
 
@@ -1265,7 +1189,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_REDEFS_DERIVED__SARG_TRAITS_)
 #define _REDEFS_DERIVED__SARG_TRAITS_
@@ -1282,7 +1205,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::redefs::derived::foo>
     : public
@@ -1292,7 +1214,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_REDEFS_AMH_DERIVEDEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _REDEFS_AMH_DERIVEDEXCEPTIONHOLDER__SARG_TRAITS_
@@ -1311,7 +1232,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_REDEFS_AMI_DERIVEDHANDLER__SARG_TRAITS_)
 #define _REDEFS_AMI_DERIVEDHANDLER__SARG_TRAITS_
 
@@ -1327,7 +1247,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_REC_ARG_TRAITS_BASE__SARG_TRAITS_)
 #define _REC_ARG_TRAITS_BASE__SARG_TRAITS_
 
@@ -1342,7 +1261,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_REC_ARG_TRAITS_AMH_BASEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _REC_ARG_TRAITS_AMH_BASEEXCEPTIONHOLDER__SARG_TRAITS_
@@ -1361,7 +1279,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_REC_ARG_TRAITS_AMI_BASEHANDLER__SARG_TRAITS_)
 #define _REC_ARG_TRAITS_AMI_BASEHANDLER__SARG_TRAITS_
 
@@ -1377,7 +1294,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_REC_ARG_TRAITS_DERIVED__SARG_TRAITS_)
 #define _REC_ARG_TRAITS_DERIVED__SARG_TRAITS_
 
@@ -1392,7 +1308,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_REC_ARG_TRAITS_AMH_DERIVEDEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _REC_ARG_TRAITS_AMH_DERIVEDEXCEPTIONHOLDER__SARG_TRAITS_
@@ -1411,7 +1326,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_REC_ARG_TRAITS_AMI_DERIVEDHANDLER__SARG_TRAITS_)
 #define _REC_ARG_TRAITS_AMI_DERIVEDHANDLER__SARG_TRAITS_
 
@@ -1427,7 +1341,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_CALL_TEST_ITEST__SARG_TRAITS_)
 #define _CALL_TEST_ITEST__SARG_TRAITS_
 
@@ -1442,7 +1355,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_CALL_TEST_AMH_ITESTEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _CALL_TEST_AMH_ITESTEXCEPTIONHOLDER__SARG_TRAITS_
@@ -1461,7 +1373,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_CALL_TEST_AMI_ITESTHANDLER__SARG_TRAITS_)
 #define _CALL_TEST_AMI_ITESTHANDLER__SARG_TRAITS_
 
@@ -1477,7 +1388,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_CALL_ATTRIBUTE_IBAR__SARG_TRAITS_)
 #define _CALL_ATTRIBUTE_IBAR__SARG_TRAITS_
 
@@ -1492,7 +1402,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_CALL_ATTRIBUTE_AMH_IBAREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _CALL_ATTRIBUTE_AMH_IBAREXCEPTIONHOLDER__SARG_TRAITS_
@@ -1510,7 +1419,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_CALL_ATTRIBUTE_AMI_IBARHANDLER__SARG_TRAITS_)
 #define _CALL_ATTRIBUTE_AMI_IBARHANDLER__SARG_TRAITS_
@@ -1530,7 +1438,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_Base;
 using POA_AMH_Base_ptr = POA_AMH_Base *;
 
@@ -1543,7 +1450,6 @@ protected:
 public:
   POA_AMH_Base (const POA_AMH_Base& rhs);
   virtual ~POA_AMH_Base () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -1574,9 +1480,6 @@ virtual void value (
   ) = 0;
 
 };
-
-
-
 
 class POA_Base;
 using POA_Base_ptr = POA_Base *;
@@ -1622,7 +1525,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1645,7 +1547,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_BaseResponseHandler;
 using POA_TAO_AMH_BaseResponseHandler_ptr = POA_TAO_AMH_BaseResponseHandler *;
 
@@ -1664,9 +1565,6 @@ public:
   void set_value_excep (
     ::AMH_BaseExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_BaseHandler;
 using POA_AMI_BaseHandler_ptr = POA_AMI_BaseHandler *;
@@ -1726,7 +1624,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1758,7 +1655,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_Derived;
 using POA_AMH_Derived_ptr = POA_AMH_Derived *;
 
@@ -1773,7 +1669,6 @@ public:
   POA_AMH_Derived (const POA_AMH_Derived& rhs);
   virtual ~POA_AMH_Derived () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -1784,9 +1679,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_Derived;
 using POA_Derived_ptr = POA_Derived *;
@@ -1819,7 +1711,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1835,7 +1726,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_DerivedResponseHandler;
 using POA_TAO_AMH_DerivedResponseHandler_ptr = POA_TAO_AMH_DerivedResponseHandler *;
 
@@ -1847,9 +1737,6 @@ public:
   POA_TAO_AMH_DerivedResponseHandler () = default;
   virtual ~POA_TAO_AMH_DerivedResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_DerivedHandler;
 using POA_AMI_DerivedHandler_ptr = POA_AMI_DerivedHandler *;
@@ -1882,7 +1769,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1898,11 +1784,8 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 namespace POA_foo_mod
 {
-
-
 
 } // module foo_mod
 class POA_AMH_foostep;
@@ -1917,7 +1800,6 @@ protected:
 public:
   POA_AMH_foostep (const POA_AMH_foostep& rhs);
   virtual ~POA_AMH_foostep () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -1938,9 +1820,6 @@ virtual void getDate (
   ) = 0;
 
 };
-
-
-
 
 class POA_foostep;
 using POA_foostep_ptr = POA_foostep *;
@@ -1979,7 +1858,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1998,7 +1876,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_foostepResponseHandler;
 using POA_TAO_AMH_foostepResponseHandler_ptr = POA_TAO_AMH_foostepResponseHandler *;
 
@@ -2014,9 +1891,6 @@ public:
   void getDate_excep (
     ::AMH_foostepExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_foostepHandler;
 using POA_AMI_foostepHandler_ptr = POA_AMI_foostepHandler *;
@@ -2063,7 +1937,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2087,7 +1960,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_mother;
 using POA_AMH_mother_ptr = POA_AMH_mother *;
 
@@ -2101,7 +1973,6 @@ public:
   POA_AMH_mother (const POA_AMH_mother& rhs);
   virtual ~POA_AMH_mother () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -2112,9 +1983,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_mother;
 using POA_mother_ptr = POA_mother *;
@@ -2147,7 +2015,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2162,7 +2029,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_motherResponseHandler;
 using POA_TAO_AMH_motherResponseHandler_ptr = POA_TAO_AMH_motherResponseHandler *;
 
@@ -2174,9 +2040,6 @@ public:
   POA_TAO_AMH_motherResponseHandler () = default;
   virtual ~POA_TAO_AMH_motherResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_motherHandler;
 using POA_AMI_motherHandler_ptr = POA_AMI_motherHandler *;
@@ -2209,7 +2072,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2225,7 +2087,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_father;
 using POA_AMH_father_ptr = POA_AMH_father *;
 
@@ -2239,7 +2100,6 @@ public:
   POA_AMH_father (const POA_AMH_father& rhs);
   virtual ~POA_AMH_father () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -2250,9 +2110,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_father;
 using POA_father_ptr = POA_father *;
@@ -2285,7 +2142,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2300,7 +2156,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_fatherResponseHandler;
 using POA_TAO_AMH_fatherResponseHandler_ptr = POA_TAO_AMH_fatherResponseHandler *;
 
@@ -2312,9 +2167,6 @@ public:
   POA_TAO_AMH_fatherResponseHandler () = default;
   virtual ~POA_TAO_AMH_fatherResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_fatherHandler;
 using POA_AMI_fatherHandler_ptr = POA_AMI_fatherHandler *;
@@ -2347,7 +2199,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2362,7 +2213,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 class POA_AMH_child;
 using POA_AMH_child_ptr = POA_AMH_child *;
@@ -2379,7 +2229,6 @@ public:
   POA_AMH_child (const POA_AMH_child& rhs);
   virtual ~POA_AMH_child () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -2390,9 +2239,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_child;
 using POA_child_ptr = POA_child *;
@@ -2426,7 +2272,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2443,7 +2288,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_childResponseHandler;
 using POA_TAO_AMH_childResponseHandler_ptr = POA_TAO_AMH_childResponseHandler *;
 
@@ -2455,9 +2299,6 @@ public:
   POA_TAO_AMH_childResponseHandler () = default;
   virtual ~POA_TAO_AMH_childResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_childHandler;
 using POA_AMI_childHandler_ptr = POA_AMI_childHandler *;
@@ -2491,7 +2332,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2508,7 +2348,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH__cxx_try;
 using POA_AMH__cxx_try_ptr = POA_AMH__cxx_try *;
 
@@ -2522,7 +2361,6 @@ public:
   POA_AMH__cxx_try (const POA_AMH__cxx_try& rhs);
   virtual ~POA_AMH__cxx_try () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -2533,9 +2371,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA__cxx_try;
 using POA__cxx_try_ptr = POA__cxx_try *;
@@ -2568,7 +2403,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2583,7 +2417,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH__cxx_tryResponseHandler;
 using POA_TAO_AMH__cxx_tryResponseHandler_ptr = POA_TAO_AMH__cxx_tryResponseHandler *;
 
@@ -2595,9 +2428,6 @@ public:
   POA_TAO_AMH__cxx_tryResponseHandler () = default;
   virtual ~POA_TAO_AMH__cxx_tryResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI__cxx_tryHandler;
 using POA_AMI__cxx_tryHandler_ptr = POA_AMI__cxx_tryHandler *;
@@ -2630,7 +2460,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2646,7 +2475,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_later_user;
 using POA_AMH_later_user_ptr = POA_AMH_later_user *;
 
@@ -2659,7 +2487,6 @@ protected:
 public:
   POA_AMH_later_user (const POA_AMH_later_user& rhs);
   virtual ~POA_AMH_later_user () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -2692,9 +2519,6 @@ virtual void op2 (
   ) = 0;
 
 };
-
-
-
 
 class POA_later_user;
 using POA_later_user_ptr = POA_later_user *;
@@ -2743,7 +2567,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2766,7 +2589,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_later_userResponseHandler;
 using POA_TAO_AMH_later_userResponseHandler_ptr = POA_TAO_AMH_later_userResponseHandler *;
 
@@ -2787,9 +2609,6 @@ public:
   void op2_excep (
     ::AMH_later_userExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_later_userHandler;
 using POA_AMI_later_userHandler_ptr = POA_AMI_later_userHandler *;
@@ -2851,7 +2670,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2883,7 +2701,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_later;
 using POA_AMH_later_ptr = POA_AMH_later *;
 
@@ -2897,7 +2714,6 @@ public:
   POA_AMH_later (const POA_AMH_later& rhs);
   virtual ~POA_AMH_later () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -2908,9 +2724,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_later;
 using POA_later_ptr = POA_later *;
@@ -2943,7 +2756,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -2958,7 +2770,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_laterResponseHandler;
 using POA_TAO_AMH_laterResponseHandler_ptr = POA_TAO_AMH_laterResponseHandler *;
 
@@ -2970,9 +2781,6 @@ public:
   POA_TAO_AMH_laterResponseHandler () = default;
   virtual ~POA_TAO_AMH_laterResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_laterHandler;
 using POA_AMI_laterHandler_ptr = POA_AMI_laterHandler *;
@@ -3005,7 +2813,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3021,7 +2828,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_Begin;
 using POA_AMH_Begin_ptr = POA_AMH_Begin *;
 
@@ -3035,7 +2841,6 @@ public:
   POA_AMH_Begin (const POA_AMH_Begin& rhs);
   virtual ~POA_AMH_Begin () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -3046,9 +2851,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_Begin;
 using POA_Begin_ptr = POA_Begin *;
@@ -3081,7 +2883,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3096,7 +2897,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_BeginResponseHandler;
 using POA_TAO_AMH_BeginResponseHandler_ptr = POA_TAO_AMH_BeginResponseHandler *;
 
@@ -3108,9 +2908,6 @@ public:
   POA_TAO_AMH_BeginResponseHandler () = default;
   virtual ~POA_TAO_AMH_BeginResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_BeginHandler;
 using POA_AMI_BeginHandler_ptr = POA_AMI_BeginHandler *;
@@ -3143,7 +2940,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3159,7 +2955,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_Middle;
 using POA_AMH_Middle_ptr = POA_AMH_Middle *;
 
@@ -3174,7 +2969,6 @@ public:
   POA_AMH_Middle (const POA_AMH_Middle& rhs);
   virtual ~POA_AMH_Middle () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -3185,9 +2979,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_Middle;
 using POA_Middle_ptr = POA_Middle *;
@@ -3220,7 +3011,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3236,7 +3026,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_MiddleResponseHandler;
 using POA_TAO_AMH_MiddleResponseHandler_ptr = POA_TAO_AMH_MiddleResponseHandler *;
 
@@ -3248,9 +3037,6 @@ public:
   POA_TAO_AMH_MiddleResponseHandler () = default;
   virtual ~POA_TAO_AMH_MiddleResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_MiddleHandler;
 using POA_AMI_MiddleHandler_ptr = POA_AMI_MiddleHandler *;
@@ -3283,7 +3069,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3299,7 +3084,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_End;
 using POA_AMH_End_ptr = POA_AMH_End *;
 
@@ -3314,7 +3098,6 @@ public:
   POA_AMH_End (const POA_AMH_End& rhs);
   virtual ~POA_AMH_End () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -3325,9 +3108,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_End;
 using POA_End_ptr = POA_End *;
@@ -3360,7 +3140,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3376,7 +3155,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_EndResponseHandler;
 using POA_TAO_AMH_EndResponseHandler_ptr = POA_TAO_AMH_EndResponseHandler *;
 
@@ -3388,9 +3166,6 @@ public:
   POA_TAO_AMH_EndResponseHandler () = default;
   virtual ~POA_TAO_AMH_EndResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_EndHandler;
 using POA_AMI_EndHandler_ptr = POA_AMI_EndHandler *;
@@ -3423,7 +3198,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3439,7 +3213,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_Client;
 using POA_AMH_Client_ptr = POA_AMH_Client *;
 
@@ -3452,7 +3225,6 @@ protected:
 public:
   POA_AMH_Client (const POA_AMH_Client& rhs);
   virtual ~POA_AMH_Client () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -3483,9 +3255,6 @@ virtual void v (
   ) = 0;
 
 };
-
-
-
 
 class POA_Client;
 using POA_Client_ptr = POA_Client *;
@@ -3531,7 +3300,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3554,7 +3322,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_ClientResponseHandler;
 using POA_TAO_AMH_ClientResponseHandler_ptr = POA_TAO_AMH_ClientResponseHandler *;
 
@@ -3573,9 +3340,6 @@ public:
   void set_v_excep (
     ::AMH_ClientExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_ClientHandler;
 using POA_AMI_ClientHandler_ptr = POA_AMI_ClientHandler *;
@@ -3635,7 +3399,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3667,7 +3430,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_AMH_AttributeTester;
 using POA_AMH_AttributeTester_ptr = POA_AMH_AttributeTester *;
 
@@ -3680,7 +3442,6 @@ protected:
 public:
   POA_AMH_AttributeTester (const POA_AMH_AttributeTester& rhs);
   virtual ~POA_AMH_AttributeTester () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -3730,9 +3491,6 @@ virtual void a_sb (
   ) = 0;
 
 };
-
-
-
 
 class POA_AttributeTester;
 using POA_AttributeTester_ptr = POA_AttributeTester *;
@@ -3791,7 +3549,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3822,7 +3579,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_AttributeTesterResponseHandler;
 using POA_TAO_AMH_AttributeTesterResponseHandler_ptr = POA_TAO_AMH_AttributeTesterResponseHandler *;
 
@@ -3848,9 +3604,6 @@ public:
   void set_a_sb_excep (
     ::AMH_AttributeTesterExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_AttributeTesterHandler;
 using POA_AMI_AttributeTesterHandler_ptr = POA_AMI_AttributeTesterHandler *;
@@ -3937,7 +3690,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -3985,7 +3737,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 namespace POA_ParamMod
 {
 
@@ -4001,7 +3752,6 @@ namespace POA_ParamMod
   public:
     AMH_ParameterTester (const AMH_ParameterTester& rhs);
     virtual ~AMH_ParameterTester () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -4024,9 +3774,6 @@ namespace POA_ParamMod
     ) = 0;
 
 };
-
-
-
 
 class ParameterTester;
 using ParameterTester_ptr = ParameterTester *;
@@ -4068,7 +3815,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4087,7 +3833,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_ParameterTesterResponseHandler;
 using TAO_AMH_ParameterTesterResponseHandler_ptr = TAO_AMH_ParameterTesterResponseHandler *;
 
@@ -4105,9 +3850,6 @@ public:
   void parameter_tester_op_excep (
     ::ParamMod::AMH_ParameterTesterExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_ParameterTesterHandler;
 using AMI_ParameterTesterHandler_ptr = AMI_ParameterTesterHandler *;
@@ -4156,7 +3898,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4180,9 +3921,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module ParamMod
 class POA_AMH_A;
 using POA_AMH_A_ptr = POA_AMH_A *;
@@ -4197,7 +3935,6 @@ public:
   POA_AMH_A (const POA_AMH_A& rhs);
   virtual ~POA_AMH_A () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -4208,9 +3945,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_A;
 using POA_A_ptr = POA_A *;
@@ -4243,7 +3977,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4258,7 +3991,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_AResponseHandler;
 using POA_TAO_AMH_AResponseHandler_ptr = POA_TAO_AMH_AResponseHandler *;
 
@@ -4270,9 +4002,6 @@ public:
   POA_TAO_AMH_AResponseHandler () = default;
   virtual ~POA_TAO_AMH_AResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_AHandler;
 using POA_AMI_AHandler_ptr = POA_AMI_AHandler *;
@@ -4305,7 +4034,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4321,11 +4049,8 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 namespace POA_M
 {
-
-
 
 } // module M
 namespace POA_M
@@ -4344,7 +4069,6 @@ namespace POA_M
     AMH_A (const AMH_A& rhs);
     virtual ~AMH_A () = default;
 
-
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
     virtual void _dispatch (
@@ -4355,9 +4079,6 @@ namespace POA_M
 
   virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class A;
 using A_ptr = A *;
@@ -4390,7 +4111,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4405,7 +4125,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_AResponseHandler;
 using TAO_AMH_AResponseHandler_ptr = TAO_AMH_AResponseHandler *;
 
@@ -4417,9 +4136,6 @@ public:
   TAO_AMH_AResponseHandler () = default;
   virtual ~TAO_AMH_AResponseHandler () = default;
 };
-
-
-
 
 class AMI_AHandler;
 using AMI_AHandler_ptr = AMI_AHandler *;
@@ -4452,7 +4168,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4467,9 +4182,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
-
-
 
 } // module M
 namespace POA_i1
@@ -4487,7 +4199,6 @@ namespace POA_i1
   public:
     AMH_if1 (const AMH_if1& rhs);
     virtual ~AMH_if1 () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -4508,9 +4219,6 @@ namespace POA_i1
     ) = 0;
 
 };
-
-
-
 
 class if1;
 using if1_ptr = if1 *;
@@ -4549,7 +4257,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4568,7 +4275,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_if1ResponseHandler;
 using TAO_AMH_if1ResponseHandler_ptr = TAO_AMH_if1ResponseHandler *;
 
@@ -4584,9 +4290,6 @@ public:
   void getStr_excep (
     ::i1::AMH_if1ExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_if1Handler;
 using AMI_if1Handler_ptr = AMI_if1Handler *;
@@ -4633,7 +4336,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4657,9 +4359,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module i1
 namespace POA_i2
 {
@@ -4677,7 +4376,6 @@ namespace POA_i2
   public:
     AMH_if2 (const AMH_if2& rhs);
     virtual ~AMH_if2 () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -4698,9 +4396,6 @@ namespace POA_i2
     ) = 0;
 
 };
-
-
-
 
 class if2;
 using if2_ptr = if2 *;
@@ -4739,7 +4434,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4759,7 +4453,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_if2ResponseHandler;
 using TAO_AMH_if2ResponseHandler_ptr = TAO_AMH_if2ResponseHandler *;
 
@@ -4775,9 +4468,6 @@ public:
   void getstr2_excep (
     ::i2::AMH_if2ExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_if2Handler;
 using AMI_if2Handler_ptr = AMI_if2Handler *;
@@ -4824,7 +4514,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4848,7 +4537,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_if3;
 using AMH_if3_ptr = AMH_if3 *;
 
@@ -4862,7 +4550,6 @@ protected:
 public:
   AMH_if3 (const AMH_if3& rhs);
   virtual ~AMH_if3 () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -4883,9 +4570,6 @@ virtual void getstr3 (
   ) = 0;
 
 };
-
-
-
 
 class if3;
 using if3_ptr = if3 *;
@@ -4924,7 +4608,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -4944,7 +4627,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_if3ResponseHandler;
 using TAO_AMH_if3ResponseHandler_ptr = TAO_AMH_if3ResponseHandler *;
 
@@ -4960,9 +4642,6 @@ public:
   void getstr3_excep (
     ::i2::AMH_if3ExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_if3Handler;
 using AMI_if3Handler_ptr = AMI_if3Handler *;
@@ -5009,7 +4688,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5033,9 +4711,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module i2
 namespace POA_redefs
 {
@@ -5053,7 +4728,6 @@ namespace POA_redefs
     AMH_base (const AMH_base& rhs);
     virtual ~AMH_base () = default;
 
-
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
     virtual void _dispatch (
@@ -5064,9 +4738,6 @@ namespace POA_redefs
 
   virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class base;
 using base_ptr = base *;
@@ -5099,7 +4770,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5114,7 +4784,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_baseResponseHandler;
 using TAO_AMH_baseResponseHandler_ptr = TAO_AMH_baseResponseHandler *;
 
@@ -5126,9 +4795,6 @@ public:
   TAO_AMH_baseResponseHandler () = default;
   virtual ~TAO_AMH_baseResponseHandler () = default;
 };
-
-
-
 
 class AMI_baseHandler;
 using AMI_baseHandler_ptr = AMI_baseHandler *;
@@ -5161,7 +4827,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5177,7 +4842,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_derived;
 using AMH_derived_ptr = AMH_derived *;
 
@@ -5192,7 +4856,6 @@ public:
   AMH_derived (const AMH_derived& rhs);
   virtual ~AMH_derived () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -5203,9 +4866,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class derived;
 using derived_ptr = derived *;
@@ -5238,7 +4898,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5254,7 +4913,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_derivedResponseHandler;
 using TAO_AMH_derivedResponseHandler_ptr = TAO_AMH_derivedResponseHandler *;
 
@@ -5266,9 +4924,6 @@ public:
   TAO_AMH_derivedResponseHandler () = default;
   virtual ~TAO_AMH_derivedResponseHandler () = default;
 };
-
-
-
 
 class AMI_derivedHandler;
 using AMI_derivedHandler_ptr = AMI_derivedHandler *;
@@ -5301,7 +4956,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5316,9 +4970,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
-
-
 
 } // module redefs
 namespace POA_Rec_Arg_Traits
@@ -5337,7 +4988,6 @@ namespace POA_Rec_Arg_Traits
     AMH_base (const AMH_base& rhs);
     virtual ~AMH_base () = default;
 
-
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
     virtual void _dispatch (
@@ -5348,9 +4998,6 @@ namespace POA_Rec_Arg_Traits
 
   virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class base;
 using base_ptr = base *;
@@ -5383,7 +5030,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5398,7 +5044,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_baseResponseHandler;
 using TAO_AMH_baseResponseHandler_ptr = TAO_AMH_baseResponseHandler *;
 
@@ -5410,9 +5055,6 @@ public:
   TAO_AMH_baseResponseHandler () = default;
   virtual ~TAO_AMH_baseResponseHandler () = default;
 };
-
-
-
 
 class AMI_baseHandler;
 using AMI_baseHandler_ptr = AMI_baseHandler *;
@@ -5445,7 +5087,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5461,7 +5102,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_derived;
 using AMH_derived_ptr = AMH_derived *;
 
@@ -5475,7 +5115,6 @@ protected:
 public:
   AMH_derived (const AMH_derived& rhs);
   virtual ~AMH_derived () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -5497,9 +5136,6 @@ virtual void remove_task (
   ) = 0;
 
 };
-
-
-
 
 class derived;
 using derived_ptr = derived *;
@@ -5539,7 +5175,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5559,7 +5194,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_derivedResponseHandler;
 using TAO_AMH_derivedResponseHandler_ptr = TAO_AMH_derivedResponseHandler *;
 
@@ -5574,9 +5208,6 @@ public:
   void remove_task_excep (
     ::Rec_Arg_Traits::AMH_derivedExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_derivedHandler;
 using AMI_derivedHandler_ptr = AMI_derivedHandler *;
@@ -5622,7 +5253,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5646,9 +5276,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module Rec_Arg_Traits
 namespace POA_call_test
 {
@@ -5665,7 +5292,6 @@ namespace POA_call_test
   public:
     AMH_iTest (const AMH_iTest& rhs);
     virtual ~AMH_iTest () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -5687,9 +5313,6 @@ namespace POA_call_test
     ) = 0;
 
 };
-
-
-
 
 class iTest;
 using iTest_ptr = iTest *;
@@ -5729,7 +5352,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5748,7 +5370,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_iTestResponseHandler;
 using TAO_AMH_iTestResponseHandler_ptr = TAO_AMH_iTestResponseHandler *;
 
@@ -5763,9 +5384,6 @@ public:
   void do_op_excep (
     ::call_test::AMH_iTestExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_iTestHandler;
 using AMI_iTestHandler_ptr = AMI_iTestHandler *;
@@ -5811,7 +5429,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5835,9 +5452,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module call_test
 namespace POA_call_attribute
 {
@@ -5854,7 +5468,6 @@ namespace POA_call_attribute
   public:
     AMH_iBar (const AMH_iBar& rhs);
     virtual ~AMH_iBar () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -5885,9 +5498,6 @@ namespace POA_call_attribute
     ) = 0;
 
 };
-
-
-
 
 class iBar;
 using iBar_ptr = iBar *;
@@ -5933,7 +5543,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -5956,7 +5565,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_iBarResponseHandler;
 using TAO_AMH_iBarResponseHandler_ptr = TAO_AMH_iBarResponseHandler *;
 
@@ -5975,9 +5583,6 @@ public:
   void set_call_excep (
     ::call_attribute::AMH_iBarExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_iBarHandler;
 using AMI_iBarHandler_ptr = AMI_iBarHandler *;
@@ -6037,7 +5642,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -6069,13 +5673,9 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module call_attribute
 
 #include "interfaceS_T.h"
-
 
 #include /**/ "ace/post.h"
 

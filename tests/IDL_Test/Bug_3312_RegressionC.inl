@@ -35,8 +35,6 @@ CallMe::YourColorBaby::_default ()
   this->disc_ = static_cast <CallMe::YourColorBaby::ColorMe> (-1);
 }
 
-
-
 ACE_INLINE
 unsigned long
 CallMe::YourColorBaby::_tao_member_index (CallMe::YourColorBaby::ColorMe value)
@@ -130,8 +128,6 @@ CallMe::YourCar::_default ()
   this->_reset ();
   this->disc_ = static_cast <CallMe::YourCar::ColorMe> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long

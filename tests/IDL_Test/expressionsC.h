@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_EXPRESSIONSC_ZBOOC5_H_
-#define _TAO_IDL_EXPRESSIONSC_ZBOOC5_H_
+#ifndef _TAO_IDL_EXPRESSIONSC_ZTWHVB_H_
+#define _TAO_IDL_EXPRESSIONSC_ZTWHVB_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -57,153 +55,103 @@
 namespace ShortValues
 {
 
-
   const CORBA::Short a = 6;
-
 
   const CORBA::Short b = 3;
 
-
   const CORBA::Short div = 2;
-
 
   const CORBA::Short mul = 18;
 
-
   const CORBA::Short add = 9;
-
 
   const CORBA::Short sub = 3;
 
-
   const CORBA::Short mod = 0;
-
-
 
 } // module ShortValues
 namespace LongValues
 {
 
-
   const CORBA::Long a = 6;
-
 
   const CORBA::Long b = 3;
 
-
   const CORBA::Long div = 2;
-
 
   const CORBA::Long mul = 18;
 
-
   const CORBA::Long add = 9;
-
 
   const CORBA::Long sub = 3;
 
-
   const CORBA::Long mod = 0;
-
-
 
 } // module LongValues
 namespace MixedIntValues
 {
 
-
   const CORBA::Long div = 2;
-
 
   const CORBA::Long mul = 18;
 
-
   const CORBA::Long add = 9;
-
 
   const CORBA::Long sub = 3;
 
-
   const CORBA::Long mod = 0;
-
-
 
 } // module MixedIntValues
 namespace FloatValues
 {
 
-
   const CORBA::Float a =                        6;
-
 
   const CORBA::Float b =                        3;
 
-
   const CORBA::Float div = 2.000000F;
-
 
   const CORBA::Float mul = 18.000000F;
 
-
   const CORBA::Float add = 9.000000F;
 
-
   const CORBA::Float sub = 3.000000F;
-
-
 
 } // module FloatValues
 namespace DoubleValues
 {
 
-
   const CORBA::Double a =                        6;
-
 
   const CORBA::Double b =                        3;
 
-
   const CORBA::Double div =                        2;
-
 
   const CORBA::Double mul =                       18;
 
-
   const CORBA::Double add =                        9;
 
-
   const CORBA::Double sub =                        3;
-
-
 
 } // module DoubleValues
 namespace MixedFloatValues
 {
 
-
   const CORBA::Double div =                        2;
-
 
   const CORBA::Double mul =                       18;
 
-
   const CORBA::Double add =                        9;
-
 
   const CORBA::Double sub =                        3;
 
-
-
 } // module MixedFloatValues
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -226,9 +174,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -236,7 +181,6 @@ namespace TAO
 {
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "expressionsC.inl"

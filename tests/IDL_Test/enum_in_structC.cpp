@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "enum_in_structC.h"
 #include <memory>
 #include <new>
@@ -96,7 +95,6 @@ _tao_tc_HoldsEnum (
 
 ::CORBA::TypeCode_ptr const _tc_HoldsEnum = std::addressof(_tao_tc_HoldsEnum);
 
-
 void
 HoldsEnum::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -121,7 +119,6 @@ static TAO::TypeCode::Enum<char const *,
     3);
 
 ::CORBA::TypeCode_ptr const HoldsEnum::_tc_Named = std::addressof(_tao_tc_HoldsEnum_Named);
-
 
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_en_GUARD
 #define _TAO_TYPECODE_decl_heavy_struct_m_en_GUARD
@@ -149,7 +146,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_decl_heavy_struct_m_en_GUARD */
 
-
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_st_GUARD
 #define _TAO_TYPECODE_decl_heavy_struct_m_st_GUARD
 
@@ -175,7 +171,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_decl_heavy_struct_m_st_GUARD */
-
 
 #ifndef _TAO_TYPECODE_decl_heavy_struct_m_un_GUARD
 #define _TAO_TYPECODE_decl_heavy_struct_m_un_GUARD
@@ -227,7 +222,6 @@ _tao_tc_decl_heavy_struct (
   3);
 
 ::CORBA::TypeCode_ptr const _tc_decl_heavy_struct = std::addressof(_tao_tc_decl_heavy_struct);
-
 
 void
 decl_heavy_struct::_tao_any_destructor (
@@ -354,7 +348,6 @@ _tao_tc_decl_heavy_struct_st (
 
 ::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_st = std::addressof(_tao_tc_decl_heavy_struct_st);
 
-
 void
 decl_heavy_struct::st::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -400,7 +393,6 @@ decl_heavy_struct::_m_un_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-
 
 decl_heavy_struct::un::un ()
 {
@@ -512,7 +504,6 @@ static TAO::TypeCode::Enum<char const *,
 
 ::CORBA::TypeCode_ptr const ErrorException::_tc_ReasonCode = std::addressof(_tao_tc_ErrorException_ReasonCode);
 
-
 ErrorException::ErrorException (
     ErrorException::ReasonCode _tao_reason)
   : ::CORBA::UserException (
@@ -521,7 +512,6 @@ ErrorException::ErrorException (
 {
   this->reason = _tao_reason;
 }
-
 
 ErrorException::ErrorException ()
   : ::CORBA::UserException (
@@ -631,9 +621,7 @@ _tao_tc_ErrorException (
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -660,8 +648,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -704,13 +690,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -737,8 +719,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -781,11 +761,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -814,11 +790,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
@@ -858,8 +831,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, UnNamed _tao_enumerator)
@@ -882,8 +853,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, HoldsEnum::Named _tao_enumerator)
@@ -905,8 +874,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -932,8 +899,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_struct::str_en _tao_enumerator)
@@ -955,8 +920,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -990,8 +953,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1015,8 +976,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1049,8 +1008,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1133,8 +1090,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -1166,8 +1121,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1213,8 +1166,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ErrorException::ReasonCode _tao_enumerator)
@@ -1237,11 +1188,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -1272,6 +1219,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

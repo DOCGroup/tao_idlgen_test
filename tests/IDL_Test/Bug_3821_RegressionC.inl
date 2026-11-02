@@ -35,8 +35,6 @@ test::UnionAllCovered_EnumerationDiscriminant::_default ()
   this->disc_ = static_cast <test::Enumeration> (-1);
 }
 
-
-
 ACE_INLINE
 unsigned long
 test::UnionAllCovered_EnumerationDiscriminant::_tao_member_index (test::Enumeration value)
@@ -149,7 +147,6 @@ test::UnionAllCovered_EnumerationDiscriminant::e_enum3 () const
 // Inline operations for union test::UnionAllCoveredWithDefault_EnumerationDiscriminant
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 test::UnionAllCoveredWithDefault_EnumerationDiscriminant::_tao_member_index (test::Enumeration value)
@@ -261,7 +258,6 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::e_def () const
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_EnumerationDiscriminant
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -380,8 +376,6 @@ test::UnionWithImplicitDefault_EnumerationDiscriminant::_default ()
   this->disc_ = test::Enum3;
 }
 
-
-
 ACE_INLINE
 unsigned long
 test::UnionWithImplicitDefault_EnumerationDiscriminant::_tao_member_index (test::Enumeration value)
@@ -475,8 +469,6 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::_default ()
   this->_reset ();
   this->disc_ = static_cast <test::Enumeration> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -590,7 +582,6 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::e_enum3 () const
 // Inline operations for union test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::_tao_member_index (test::Enumeration value)
@@ -702,7 +693,6 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::e_def () cons
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_TypedefedEnumerationDiscriminant
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -821,8 +811,6 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::_default ()
   this->disc_ = test::Enum3;
 }
 
-
-
 ACE_INLINE
 unsigned long
 test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::_tao_member_index (test::Enumeration value)
@@ -910,7 +898,6 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::e_enum2 () cons
 // Inline operations for union test::UnionAllCovered_BooleanDiscriminant
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 test::UnionAllCovered_BooleanDiscriminant::_tao_member_index (::CORBA::Boolean value)
@@ -989,7 +976,6 @@ test::UnionAllCovered_BooleanDiscriminant::e_false () const
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_BooleanDiscriminant
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -1132,7 +1118,6 @@ test::UnionWithImplicitDefault_BooleanDiscriminant::e_true () const
 // *************************************************************
 // Inline operations for union test::UnionAllCovered_CharDiscriminant
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long
@@ -1444,7 +1429,6 @@ test::UnionAllCovered_CharDiscriminant::e_chars () const
 // Inline operations for union test::UnionWithDefault_CharDiscriminant
 // *************************************************************
 
-
 ACE_INLINE
 unsigned long
 test::UnionWithDefault_CharDiscriminant::_tao_member_index (::CORBA::Char value)
@@ -1612,7 +1596,6 @@ test::UnionWithImplicitDefault_CharDiscriminant::e_chars () const
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_LongDiscriminant
 // *************************************************************
-
 
 ACE_INLINE
 unsigned long

@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDC_ZZKSCI_H_
-#define _TAO_IDL_FIXEDC_ZZKSCI_H_
+#ifndef _TAO_IDL_FIXEDC_RRTY8T_H_
+#define _TAO_IDL_FIXEDC_RRTY8T_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/Valuetype/ValueBase.h"
@@ -64,14 +62,11 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 namespace FixedPoint
 {
@@ -81,13 +76,9 @@ namespace FixedPoint
   using MaximumDigits = ::ACE_CDR::Fixed;
   using MaximumScale = ::ACE_CDR::Fixed;
 
-
   struct FixedValues;
   using FixedValues_var = ::TAO_Var_Var_T<FixedValues>;
   using FixedValues_out = ::TAO_Out_T<FixedValues>;
-
-
-
 
   struct TAO_IDL_TEST_STUB_Export FixedValues
   {
@@ -104,7 +95,6 @@ namespace FixedPoint
     FixedPoint::MaximumScale maximum_scale_value {};
   };
 
-
 #if !defined (_FIXEDPOINT_FIXEDOPERATIONS__VAR_OUT_CH_)
 #define _FIXEDPOINT_FIXEDOPERATIONS__VAR_OUT_CH_
 
@@ -117,9 +107,6 @@ namespace FixedPoint
   using FixedOperations_out = TAO_Objref_Out_T<FixedOperations>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export FixedOperations
     : public virtual ::CORBA::Object
@@ -153,9 +140,6 @@ namespace FixedPoint
     virtual void sendc_get_rate (
       ::FixedPoint::AMI_FixedOperationsHandler_ptr ami_handler);
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     static const char* _desc_repository_id ();
@@ -186,7 +170,6 @@ namespace FixedPoint
     FixedOperations &operator= (FixedOperations &&) = delete;
   };
 
-
 #if !defined (_FIXEDPOINT_AMH_FIXEDOPERATIONSEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _FIXEDPOINT_AMH_FIXEDOPERATIONSEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -195,7 +178,6 @@ namespace FixedPoint
   using AMH_FixedOperationsExceptionHolder_out = TAO_Value_Out_T<AMH_FixedOperationsExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
   class TAO_IDL_TEST_STUB_Export AMH_FixedOperationsExceptionHolder
     : public virtual ::CORBA::DefaultValueRefCountBase
@@ -249,7 +231,6 @@ public:
 public:
   virtual void raise_sendc_get_rate ();
 
-
 protected:
   AMH_FixedOperationsExceptionHolder ();
   virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
@@ -270,7 +251,6 @@ protected:
   _tao_unmarshal__FixedPoint_AMH_FixedOperationsExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
 
-
 #if !defined (_FIXEDPOINT_AMH_FIXEDOPERATIONSRESPONSEHANDLER__VAR_OUT_CH_)
 #define _FIXEDPOINT_AMH_FIXEDOPERATIONSRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -283,9 +263,6 @@ using AMH_FixedOperationsResponseHandler_var = TAO_Objref_Var_T<AMH_FixedOperati
 using AMH_FixedOperationsResponseHandler_out = TAO_Objref_Out_T<AMH_FixedOperationsResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMH_FixedOperationsResponseHandler
   : public virtual ::CORBA::Object
@@ -317,9 +294,6 @@ public:
   virtual void set_rate_excep (
     ::FixedPoint::AMH_FixedOperationsExceptionHolder * holder) = 0;
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -329,8 +303,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_FixedOperationsResponseHandler ();
-
-
 
   virtual ~AMH_FixedOperationsResponseHandler () = default;
 
@@ -342,7 +314,6 @@ private:
   AMH_FixedOperationsResponseHandler &operator= (AMH_FixedOperationsResponseHandler &&) = delete;
 };
 
-
 #if !defined (_FIXEDPOINT_AMI_FIXEDOPERATIONSHANDLER__VAR_OUT_CH_)
 #define _FIXEDPOINT_AMI_FIXEDOPERATIONSHANDLER__VAR_OUT_CH_
 
@@ -352,9 +323,6 @@ using AMI_FixedOperationsHandler_var = TAO_Objref_Var_T<AMI_FixedOperationsHandl
 using AMI_FixedOperationsHandler_out = TAO_Objref_Out_T<AMI_FixedOperationsHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMI_FixedOperationsHandler
   : public virtual ::Messaging::ReplyHandler
@@ -400,9 +368,6 @@ public:
   virtual void set_rate_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -435,18 +400,13 @@ private:
 using AmountAlias = ::ACE_CDR::Fixed;
 using AmountAlias2 = ::ACE_CDR::Fixed;
 
-
-
 } // module FixedPoint
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -466,7 +426,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::ACE_CDR::Fixed>
     : public Basic_Arg_Traits_T<
@@ -475,7 +434,6 @@ namespace TAO
     >
   {
   };
-
 
   template<>
   class Arg_Traits< ::FixedPoint::FixedValues>
@@ -486,7 +444,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_FIXEDPOINT_FIXEDOPERATIONS__ARG_TRAITS_)
 #define _FIXEDPOINT_FIXEDOPERATIONS__ARG_TRAITS_
@@ -503,7 +460,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FIXEDPOINT_AMH_FIXEDOPERATIONSEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _FIXEDPOINT_AMH_FIXEDOPERATIONSEXCEPTIONHOLDER__ARG_TRAITS_
@@ -522,7 +478,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_FIXEDPOINT_AMI_FIXEDOPERATIONSHANDLER__ARG_TRAITS_)
 #define _FIXEDPOINT_AMI_FIXEDOPERATIONSHANDLER__ARG_TRAITS_
@@ -543,10 +498,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace OBV_FixedPoint
 {
-
 
   // OBV_ class
   class TAO_IDL_TEST_STUB_Export AMH_FixedOperationsExceptionHolder
@@ -572,7 +525,6 @@ private:
   CORBA::Boolean require_truncation_ {false};
 };
 }
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -637,8 +589,6 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, FixedPoint::FixedValues const &);
@@ -646,19 +596,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, FixedPoint
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const FixedPoint::FixedOperations_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, FixedPoint::FixedOperations_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -669,8 +612,6 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const FixedPoint::AMH_FixedOperationsExceptionHolder *);
@@ -678,18 +619,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, FixedPoint
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const FixedPoint::AMI_FixedOperationsHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, FixedPoint::AMI_FixedOperationsHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "fixedC.inl"

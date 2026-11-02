@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "repo_id_modC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -64,8 +63,6 @@ TAO::Objref_Traits<gleep::schmooze>::marshal (const gleep::schmooze_ptr p,TAO_Ou
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::schmooze::schmooze ()
 {}
@@ -181,8 +178,6 @@ TAO::Objref_Traits<gleep::schmeer>::marshal (const gleep::schmeer_ptr p,TAO_Outp
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 gleep::schmeer::schmeer ()
 {}
 
@@ -296,8 +291,6 @@ TAO::Objref_Traits<gleep::schlemiel>::marshal (const gleep::schlemiel_ptr p,TAO_
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::schlemiel::schlemiel ()
 {}
@@ -413,8 +406,6 @@ TAO::Objref_Traits<gleep::spilkis>::marshal (const gleep::spilkis_ptr p,TAO_Outp
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 gleep::spilkis::spilkis ()
 {}
 
@@ -528,8 +519,6 @@ TAO::Objref_Traits<gleep::floop::schmuck>::marshal (const gleep::floop::schmuck_
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::floop::schmuck::schmuck ()
 {}
@@ -645,8 +634,6 @@ TAO::Objref_Traits<gleep::floop::schmendrick>::marshal (const gleep::floop::schm
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 gleep::floop::schmendrick::schmendrick ()
 {}
 
@@ -761,8 +748,6 @@ TAO::Objref_Traits<gleep::floop::verklempt::schlemazel>::marshal (const gleep::f
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 gleep::floop::verklempt::schlemazel::schlemazel ()
 {}
 
@@ -876,8 +861,6 @@ TAO::Objref_Traits<gleep::schmegegging>::marshal (const gleep::schmegegging_ptr 
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::schmegegging::schmegegging ()
 {}

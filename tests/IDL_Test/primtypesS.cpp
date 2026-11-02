@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESS_Z5RJTY_CPP_
-#define _TAO_IDL_PRIMTYPESS_Z5RJTY_CPP_
-
+#ifndef _TAO_IDL_PRIMTYPESS_8VSEG9_CPP_
+#define _TAO_IDL_PRIMTYPESS_8VSEG9_CPP_
 
 #include "primtypesS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -161,7 +158,6 @@ POA_OldPrimTypes::AMH_ex1::AMH_ex1 ()
 {
   this->optable_ = std::addressof (tao_OldPrimTypes_AMH_ex1_optable);
 }
-
 
 void
 POA_OldPrimTypes::AMH_ex1::_get_l1_skel (
@@ -376,11 +372,6 @@ POA_OldPrimTypes::AMH_ex1::mtypes_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_OldPrimTypes::AMH_ex1::_is_a (const char* value)
 {
   return
@@ -428,8 +419,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -526,7 +515,6 @@ POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::~_TAO_ex1_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::_get_l1 (
     TAO_Abstract_ServantBase  *servant,
@@ -544,7 +532,6 @@ POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::_get_l1 (
     _tao_ptr->l1 (
         );
 }
-
 
 void
 POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::_set_l1 (
@@ -564,7 +551,6 @@ POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::_set_l1 (
       );
 }
 
-
 void
 POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::m1 (
     TAO_Abstract_ServantBase  *servant,
@@ -583,7 +569,6 @@ POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::m1 (
           ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
         );
 }
-
 
 void
 POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::mtypes (
@@ -624,8 +609,6 @@ POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::mtypes (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -635,12 +618,10 @@ POA_OldPrimTypes::ex1::ex1 ()
   this->optable_ = std::addressof (tao_OldPrimTypes_ex1_optable);
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class _get_l1_ex1
-    : public TAO::Upcall_Command
+  class _get_l1_ex1 : public TAO::Upcall_Command
   {
   public:
     inline _get_l1_ex1 (POA_OldPrimTypes::ex1 * servant,
@@ -704,12 +685,10 @@ void POA_OldPrimTypes::ex1::_get_l1_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class _set_l1_ex1
-    : public TAO::Upcall_Command
+  class _set_l1_ex1 : public TAO::Upcall_Command
   {
   public:
     inline _set_l1_ex1 (POA_OldPrimTypes::ex1 * servant,
@@ -776,12 +755,10 @@ void POA_OldPrimTypes::ex1::_set_l1_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class m1_ex1
-    : public TAO::Upcall_Command
+  class m1_ex1 : public TAO::Upcall_Command
   {
   public:
     inline m1_ex1 (POA_OldPrimTypes::ex1 * servant,
@@ -854,12 +831,10 @@ void POA_OldPrimTypes::ex1::m1_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class mtypes_ex1
-    : public TAO::Upcall_Command
+  class mtypes_ex1 : public TAO::Upcall_Command
   {
   public:
     inline mtypes_ex1 (POA_OldPrimTypes::ex1 * servant,
@@ -1112,13 +1087,6 @@ void POA_OldPrimTypes::ex1::mtypes_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldPrimTypes::ex1::_is_a (const char* value)
 {
   return
@@ -1133,18 +1101,12 @@ const char* POA_OldPrimTypes::ex1::_interface_repository_id () const
   return "IDL:OldPrimTypes/ex1:1.0";
 }
 
-
-
-
 void POA_OldPrimTypes::ex1::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldPrimTypes::ex1 *
 POA_OldPrimTypes::ex1::_this ()
@@ -1192,7 +1154,6 @@ void
 POA_OldPrimTypes::TAO_AMH_ex1ResponseHandler::set_l1 ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -1306,8 +1267,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1388,7 +1347,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::~_TAO_AMI_ex1Handler_Di
 {
 }
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1 (
     TAO_Abstract_ServantBase  *servant,
@@ -1406,7 +1364,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1 (
         ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1_excep (
@@ -1426,7 +1383,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1_excep (
       );
 }
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1 (
     TAO_Abstract_ServantBase  *servant,
@@ -1443,7 +1399,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1 (
   _tao_ptr->set_l1 (
       );
 }
-
 
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1_excep (
@@ -1463,7 +1418,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1_excep (
       );
 }
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1 (
     TAO_Abstract_ServantBase  *servant,
@@ -1482,7 +1436,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1 (
       );
 }
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1500,7 +1453,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::mtypes (
@@ -1534,7 +1486,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::mtypes (
       );
 }
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::mtypes_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1553,8 +1504,6 @@ POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::mtypes_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1564,12 +1513,10 @@ POA_OldPrimTypes::AMI_ex1Handler::AMI_ex1Handler ()
   this->optable_ = std::addressof (tao_OldPrimTypes_AMI_ex1Handler_optable);
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class get_l1_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class get_l1_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline get_l1_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
@@ -1636,12 +1583,10 @@ void POA_OldPrimTypes::AMI_ex1Handler::get_l1_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class get_l1_excep_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class get_l1_excep_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline get_l1_excep_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
@@ -1708,12 +1653,10 @@ void POA_OldPrimTypes::AMI_ex1Handler::get_l1_excep_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class set_l1_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class set_l1_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline set_l1_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant)
@@ -1762,12 +1705,10 @@ void POA_OldPrimTypes::AMI_ex1Handler::set_l1_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class set_l1_excep_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class set_l1_excep_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline set_l1_excep_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
@@ -1834,12 +1775,10 @@ void POA_OldPrimTypes::AMI_ex1Handler::set_l1_excep_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class m1_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class m1_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline m1_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
@@ -1906,12 +1845,10 @@ void POA_OldPrimTypes::AMI_ex1Handler::m1_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class m1_excep_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class m1_excep_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline m1_excep_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
@@ -1978,12 +1915,10 @@ void POA_OldPrimTypes::AMI_ex1Handler::m1_excep_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class mtypes_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class mtypes_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline mtypes_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
@@ -2176,12 +2111,10 @@ void POA_OldPrimTypes::AMI_ex1Handler::mtypes_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class mtypes_excep_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class mtypes_excep_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline mtypes_excep_AMI_ex1Handler (POA_OldPrimTypes::AMI_ex1Handler * servant,
@@ -2248,13 +2181,6 @@ void POA_OldPrimTypes::AMI_ex1Handler::mtypes_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldPrimTypes::AMI_ex1Handler::_is_a (const char* value)
 {
   return
@@ -2270,18 +2196,12 @@ const char* POA_OldPrimTypes::AMI_ex1Handler::_interface_repository_id () const
   return "IDL:OldPrimTypes/AMI_ex1Handler:1.0";
 }
 
-
-
-
 void POA_OldPrimTypes::AMI_ex1Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldPrimTypes::AMI_ex1Handler *
 POA_OldPrimTypes::AMI_ex1Handler::_this ()
@@ -2309,8 +2229,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -2406,7 +2324,6 @@ POA_OldPrimTypes::AMH_ex2::AMH_ex2 ()
 {
   this->optable_ = std::addressof (tao_OldPrimTypes_AMH_ex2_optable);
 }
-
 
 void
 POA_OldPrimTypes::AMH_ex2::_get_l2_skel (
@@ -2526,11 +2443,6 @@ POA_OldPrimTypes::AMH_ex2::mv_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_OldPrimTypes::AMH_ex2::_is_a (const char* value)
 {
   return
@@ -2579,8 +2491,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -2680,7 +2590,6 @@ POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::~_TAO_ex2_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::_get_l2 (
     TAO_Abstract_ServantBase  *servant,
@@ -2698,7 +2607,6 @@ POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::_get_l2 (
     _tao_ptr->l2 (
         );
 }
-
 
 void
 POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::m2 (
@@ -2720,7 +2628,6 @@ POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::m2 (
         );
 }
 
-
 void
 POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::mv (
     TAO_Abstract_ServantBase  *servant,
@@ -2738,8 +2645,6 @@ POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::mv (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -2749,12 +2654,10 @@ POA_OldPrimTypes::ex2::ex2 ()
   this->optable_ = std::addressof (tao_OldPrimTypes_ex2_optable);
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class _get_l2_ex2
-    : public TAO::Upcall_Command
+  class _get_l2_ex2 : public TAO::Upcall_Command
   {
   public:
     inline _get_l2_ex2 (POA_OldPrimTypes::ex2 * servant,
@@ -2818,12 +2721,10 @@ void POA_OldPrimTypes::ex2::_get_l2_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class m2_ex2
-    : public TAO::Upcall_Command
+  class m2_ex2 : public TAO::Upcall_Command
   {
   public:
     inline m2_ex2 (POA_OldPrimTypes::ex2 * servant,
@@ -2905,12 +2806,10 @@ void POA_OldPrimTypes::ex2::m2_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class mv_ex2
-    : public TAO::Upcall_Command
+  class mv_ex2 : public TAO::Upcall_Command
   {
   public:
     inline mv_ex2 (POA_OldPrimTypes::ex2 * servant)
@@ -2959,13 +2858,6 @@ void POA_OldPrimTypes::ex2::mv_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldPrimTypes::ex2::_is_a (const char* value)
 {
   return
@@ -2981,18 +2873,12 @@ const char* POA_OldPrimTypes::ex2::_interface_repository_id () const
   return "IDL:OldPrimTypes/ex2:1.0";
 }
 
-
-
-
 void POA_OldPrimTypes::ex2::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldPrimTypes::ex2 *
 POA_OldPrimTypes::ex2::_this ()
@@ -3071,7 +2957,6 @@ POA_OldPrimTypes::TAO_AMH_ex2ResponseHandler::mv ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -3100,8 +2985,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -3208,7 +3091,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::~_TAO_AMI_ex2Handler_Di
 {
 }
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l2 (
     TAO_Abstract_ServantBase  *servant,
@@ -3227,7 +3109,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l2 (
       );
 }
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l2_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -3245,7 +3126,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l2_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2 (
@@ -3266,7 +3146,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2 (
       );
 }
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -3285,7 +3164,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2_excep (
       );
 }
 
-
 void
 POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::mv (
     TAO_Abstract_ServantBase  *servant,
@@ -3302,7 +3180,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::mv (
   _tao_ptr->mv (
       );
 }
-
 
 void
 POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::mv_excep (
@@ -3322,8 +3199,6 @@ POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::mv_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -3333,12 +3208,10 @@ POA_OldPrimTypes::AMI_ex2Handler::AMI_ex2Handler ()
   this->optable_ = std::addressof (tao_OldPrimTypes_AMI_ex2Handler_optable);
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class get_l2_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class get_l2_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline get_l2_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant,
@@ -3405,12 +3278,10 @@ void POA_OldPrimTypes::AMI_ex2Handler::get_l2_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class get_l2_excep_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class get_l2_excep_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline get_l2_excep_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant,
@@ -3477,12 +3348,10 @@ void POA_OldPrimTypes::AMI_ex2Handler::get_l2_excep_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class m2_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class m2_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline m2_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant,
@@ -3558,12 +3427,10 @@ void POA_OldPrimTypes::AMI_ex2Handler::m2_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class m2_excep_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class m2_excep_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline m2_excep_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant,
@@ -3630,12 +3497,10 @@ void POA_OldPrimTypes::AMI_ex2Handler::m2_excep_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class mv_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class mv_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline mv_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant)
@@ -3684,12 +3549,10 @@ void POA_OldPrimTypes::AMI_ex2Handler::mv_skel (
                          );
 }
 
-
 namespace POA_OldPrimTypes
 {
 
-  class mv_excep_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class mv_excep_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline mv_excep_AMI_ex2Handler (POA_OldPrimTypes::AMI_ex2Handler * servant,
@@ -3756,13 +3619,6 @@ void POA_OldPrimTypes::AMI_ex2Handler::mv_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldPrimTypes::AMI_ex2Handler::_is_a (const char* value)
 {
   return
@@ -3779,18 +3635,12 @@ const char* POA_OldPrimTypes::AMI_ex2Handler::_interface_repository_id () const
   return "IDL:OldPrimTypes/AMI_ex2Handler:1.0";
 }
 
-
-
-
 void POA_OldPrimTypes::AMI_ex2Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldPrimTypes::AMI_ex2Handler *
 POA_OldPrimTypes::AMI_ex2Handler::_this ()

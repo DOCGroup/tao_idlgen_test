@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FWDS_2UVIGW_CPP_
-#define _TAO_IDL_FWDS_2UVIGW_CPP_
-
+#ifndef _TAO_IDL_FWDS_WF7P1O_CPP_
+#define _TAO_IDL_FWDS_WF7P1O_CPP_
 
 #include "fwdS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod2_AMH_full_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod2_AMH_full_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -139,7 +136,6 @@ POA_mod2::AMH_full::AMH_full ()
   this->optable_ = std::addressof (tao_mod2_AMH_full_optable);
 }
 
-
 void
 POA_mod2::AMH_full::op_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -189,11 +185,6 @@ POA_mod2::AMH_full::op_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_mod2::AMH_full::_is_a (const char* value)
 {
   return
@@ -241,8 +232,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod2_full_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod2_full_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -316,7 +305,6 @@ POA_mod2::_TAO_full_Direct_Proxy_Impl::~_TAO_full_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_mod2::_TAO_full_Direct_Proxy_Impl::op (
     TAO_Abstract_ServantBase  *servant,
@@ -338,8 +326,6 @@ POA_mod2::_TAO_full_Direct_Proxy_Impl::op (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -349,12 +335,10 @@ POA_mod2::full::full ()
   this->optable_ = std::addressof (tao_mod2_full_optable);
 }
 
-
 namespace POA_mod2
 {
 
-  class op_full
-    : public TAO::Upcall_Command
+  class op_full : public TAO::Upcall_Command
   {
   public:
     inline op_full (POA_mod2::full * servant,
@@ -445,13 +429,6 @@ void POA_mod2::full::op_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_mod2::full::_is_a (const char* value)
 {
   return
@@ -466,18 +443,12 @@ const char* POA_mod2::full::_interface_repository_id () const
   return "IDL:mod2/full:1.0";
 }
 
-
-
-
 void POA_mod2::full::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 mod2::full *
 POA_mod2::full::_this ()
@@ -538,8 +509,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod2_AMI_fullHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod2_AMI_fullHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -615,7 +584,6 @@ POA_mod2::_TAO_AMI_fullHandler_Direct_Proxy_Impl::~_TAO_AMI_fullHandler_Direct_P
 {
 }
 
-
 void
 POA_mod2::_TAO_AMI_fullHandler_Direct_Proxy_Impl::op (
     TAO_Abstract_ServantBase  *servant,
@@ -636,7 +604,6 @@ POA_mod2::_TAO_AMI_fullHandler_Direct_Proxy_Impl::op (
       );
 }
 
-
 void
 POA_mod2::_TAO_AMI_fullHandler_Direct_Proxy_Impl::op_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -655,8 +622,6 @@ POA_mod2::_TAO_AMI_fullHandler_Direct_Proxy_Impl::op_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -666,12 +631,10 @@ POA_mod2::AMI_fullHandler::AMI_fullHandler ()
   this->optable_ = std::addressof (tao_mod2_AMI_fullHandler_optable);
 }
 
-
 namespace POA_mod2
 {
 
-  class op_AMI_fullHandler
-    : public TAO::Upcall_Command
+  class op_AMI_fullHandler : public TAO::Upcall_Command
   {
   public:
     inline op_AMI_fullHandler (POA_mod2::AMI_fullHandler * servant,
@@ -756,12 +719,10 @@ void POA_mod2::AMI_fullHandler::op_skel (
                          );
 }
 
-
 namespace POA_mod2
 {
 
-  class op_excep_AMI_fullHandler
-    : public TAO::Upcall_Command
+  class op_excep_AMI_fullHandler : public TAO::Upcall_Command
   {
   public:
     inline op_excep_AMI_fullHandler (POA_mod2::AMI_fullHandler * servant,
@@ -828,13 +789,6 @@ void POA_mod2::AMI_fullHandler::op_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_mod2::AMI_fullHandler::_is_a (const char* value)
 {
   return
@@ -850,18 +804,12 @@ const char* POA_mod2::AMI_fullHandler::_interface_repository_id () const
   return "IDL:mod2/AMI_fullHandler:1.0";
 }
 
-
-
-
 void POA_mod2::AMI_fullHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 mod2::AMI_fullHandler *
 POA_mod2::AMI_fullHandler::_this ()
@@ -889,8 +837,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_fwd_mixed_intf_AMH_concrete_parent_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_fwd_mixed_intf_AMH_concrete_parent_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -960,13 +906,6 @@ POA_fwd_mixed_intf::AMH_concrete_parent::AMH_concrete_parent ()
   this->optable_ = std::addressof (tao_fwd_mixed_intf_AMH_concrete_parent_optable);
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_fwd_mixed_intf::AMH_concrete_parent::_is_a (const char* value)
 {
   return
@@ -1014,8 +953,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_fwd_mixed_intf_concrete_parent_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_fwd_mixed_intf_concrete_parent_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1087,8 +1024,6 @@ POA_fwd_mixed_intf::_TAO_concrete_parent_Direct_Proxy_Impl::~_TAO_concrete_paren
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1098,13 +1033,6 @@ POA_fwd_mixed_intf::concrete_parent::concrete_parent ()
 {
   this->optable_ = std::addressof (tao_fwd_mixed_intf_concrete_parent_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_fwd_mixed_intf::concrete_parent::_is_a (const char* value)
 {
@@ -1120,18 +1048,12 @@ const char* POA_fwd_mixed_intf::concrete_parent::_interface_repository_id () con
   return "IDL:fwd_mixed_intf/concrete_parent:1.0";
 }
 
-
-
-
 void POA_fwd_mixed_intf::concrete_parent::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 fwd_mixed_intf::concrete_parent *
 POA_fwd_mixed_intf::concrete_parent::_this ()
@@ -1147,7 +1069,6 @@ POA_fwd_mixed_intf::concrete_parent::_this ()
   return {};
 }
 
-
 class TAO_fwd_mixed_intf_AMI_concrete_parentHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
@@ -1160,8 +1081,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_fwd_mixed_intf_AMI_concrete_parentHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_fwd_mixed_intf_AMI_concrete_parentHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1233,8 +1152,6 @@ POA_fwd_mixed_intf::_TAO_AMI_concrete_parentHandler_Direct_Proxy_Impl::~_TAO_AMI
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1244,13 +1161,6 @@ POA_fwd_mixed_intf::AMI_concrete_parentHandler::AMI_concrete_parentHandler ()
 {
   this->optable_ = std::addressof (tao_fwd_mixed_intf_AMI_concrete_parentHandler_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_fwd_mixed_intf::AMI_concrete_parentHandler::_is_a (const char* value)
 {
@@ -1267,18 +1177,12 @@ const char* POA_fwd_mixed_intf::AMI_concrete_parentHandler::_interface_repositor
   return "IDL:fwd_mixed_intf/AMI_concrete_parentHandler:1.0";
 }
 
-
-
-
 void POA_fwd_mixed_intf::AMI_concrete_parentHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 fwd_mixed_intf::AMI_concrete_parentHandler *
 POA_fwd_mixed_intf::AMI_concrete_parentHandler::_this ()
@@ -1306,8 +1210,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_fwd_mixed_intf_mixed_abs_first_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_fwd_mixed_intf_mixed_abs_first_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1379,8 +1281,6 @@ POA_fwd_mixed_intf::_TAO_mixed_abs_first_Direct_Proxy_Impl::~_TAO_mixed_abs_firs
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1390,13 +1290,6 @@ POA_fwd_mixed_intf::mixed_abs_first::mixed_abs_first ()
 {
   this->optable_ = std::addressof (tao_fwd_mixed_intf_mixed_abs_first_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_fwd_mixed_intf::mixed_abs_first::_is_a (const char* value)
 {
@@ -1415,18 +1308,12 @@ const char* POA_fwd_mixed_intf::mixed_abs_first::_interface_repository_id () con
   return "IDL:fwd_mixed_intf/mixed_abs_first:1.0";
 }
 
-
-
-
 void POA_fwd_mixed_intf::mixed_abs_first::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 fwd_mixed_intf::mixed_abs_first *
 POA_fwd_mixed_intf::mixed_abs_first::_this ()
@@ -1454,8 +1341,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_fwd_mixed_intf_AMI_mixed_abs_firstHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_fwd_mixed_intf_AMI_mixed_abs_firstHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1527,8 +1412,6 @@ POA_fwd_mixed_intf::_TAO_AMI_mixed_abs_firstHandler_Direct_Proxy_Impl::~_TAO_AMI
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1538,13 +1421,6 @@ POA_fwd_mixed_intf::AMI_mixed_abs_firstHandler::AMI_mixed_abs_firstHandler ()
 {
   this->optable_ = std::addressof (tao_fwd_mixed_intf_AMI_mixed_abs_firstHandler_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_fwd_mixed_intf::AMI_mixed_abs_firstHandler::_is_a (const char* value)
 {
@@ -1562,18 +1438,12 @@ const char* POA_fwd_mixed_intf::AMI_mixed_abs_firstHandler::_interface_repositor
   return "IDL:fwd_mixed_intf/AMI_mixed_abs_firstHandler:1.0";
 }
 
-
-
-
 void POA_fwd_mixed_intf::AMI_mixed_abs_firstHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 fwd_mixed_intf::AMI_mixed_abs_firstHandler *
 POA_fwd_mixed_intf::AMI_mixed_abs_firstHandler::_this ()
@@ -1601,8 +1471,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_fwd_mixed_intf_mixed_conc_first_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_fwd_mixed_intf_mixed_conc_first_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1674,8 +1542,6 @@ POA_fwd_mixed_intf::_TAO_mixed_conc_first_Direct_Proxy_Impl::~_TAO_mixed_conc_fi
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1685,13 +1551,6 @@ POA_fwd_mixed_intf::mixed_conc_first::mixed_conc_first ()
 {
   this->optable_ = std::addressof (tao_fwd_mixed_intf_mixed_conc_first_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_fwd_mixed_intf::mixed_conc_first::_is_a (const char* value)
 {
@@ -1710,18 +1569,12 @@ const char* POA_fwd_mixed_intf::mixed_conc_first::_interface_repository_id () co
   return "IDL:fwd_mixed_intf/mixed_conc_first:1.0";
 }
 
-
-
-
 void POA_fwd_mixed_intf::mixed_conc_first::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 fwd_mixed_intf::mixed_conc_first *
 POA_fwd_mixed_intf::mixed_conc_first::_this ()
@@ -1749,8 +1602,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_fwd_mixed_intf_AMI_mixed_conc_firstHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_fwd_mixed_intf_AMI_mixed_conc_firstHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1822,8 +1673,6 @@ POA_fwd_mixed_intf::_TAO_AMI_mixed_conc_firstHandler_Direct_Proxy_Impl::~_TAO_AM
 {
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1833,13 +1682,6 @@ POA_fwd_mixed_intf::AMI_mixed_conc_firstHandler::AMI_mixed_conc_firstHandler ()
 {
   this->optable_ = std::addressof (tao_fwd_mixed_intf_AMI_mixed_conc_firstHandler_optable);
 }
-
-
-
-
-
-
-
 
 ::CORBA::Boolean POA_fwd_mixed_intf::AMI_mixed_conc_firstHandler::_is_a (const char* value)
 {
@@ -1857,18 +1699,12 @@ const char* POA_fwd_mixed_intf::AMI_mixed_conc_firstHandler::_interface_reposito
   return "IDL:fwd_mixed_intf/AMI_mixed_conc_firstHandler:1.0";
 }
 
-
-
-
 void POA_fwd_mixed_intf::AMI_mixed_conc_firstHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 fwd_mixed_intf::AMI_mixed_conc_firstHandler *
 POA_fwd_mixed_intf::AMI_mixed_conc_firstHandler::_this ()

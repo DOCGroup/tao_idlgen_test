@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "attributeC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -149,7 +148,6 @@ _tao_tc_Hello_InternalErrorA (
   _tao_fields_Hello_InternalErrorA,
   0);
 
-
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_InternalErrorA = std::addressof(_tao_tc_Hello_InternalErrorA);
@@ -253,7 +251,6 @@ _tao_tc_Hello_InternalErrorB (
   _tao_fields_Hello_InternalErrorB,
   0);
 
-
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_InternalErrorB = std::addressof(_tao_tc_Hello_InternalErrorB);
@@ -266,7 +263,6 @@ static TAO::TypeCode::Alias<char const *,
     "IDL:Hello/MyType:1.0",
     "MyType",
     &CORBA::_tc_short);
-
 
 namespace Hello
 {
@@ -302,7 +298,6 @@ TAO::Objref_Traits<Hello::MyFoo>::marshal (const Hello::MyFoo_ptr p,TAO_OutputCD
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::Hello::MyType
 Hello::MyFoo::rw_attrib_mytype ()
@@ -705,7 +700,6 @@ Hello::MyFoo::ro_attrib ()
   return _tao_retval.retn ();
 }
 
-
 void
 Hello::MyFoo::sendc_set_rw_attrib_mytype (
   ::Hello::AMI_MyFooHandler_ptr ami_handler,
@@ -715,8 +709,6 @@ Hello::MyFoo::sendc_set_rw_attrib_mytype (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib_mytype (rw_attrib_mytype);
@@ -742,7 +734,6 @@ Hello::MyFoo::sendc_set_rw_attrib_mytype (
     );
 }
 
-
 void
 Hello::MyFoo::sendc_get_rw_attrib_mytype (
   ::Hello::AMI_MyFooHandler_ptr ami_handler)
@@ -751,8 +742,6 @@ Hello::MyFoo::sendc_get_rw_attrib_mytype (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -771,7 +760,6 @@ Hello::MyFoo::sendc_get_rw_attrib_mytype (
     );
 }
 
-
 void
 Hello::MyFoo::sendc_set_rw_attrib (
   ::Hello::AMI_MyFooHandler_ptr ami_handler,
@@ -781,8 +769,6 @@ Hello::MyFoo::sendc_set_rw_attrib (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib (rw_attrib);
@@ -808,7 +794,6 @@ Hello::MyFoo::sendc_set_rw_attrib (
     );
 }
 
-
 void
 Hello::MyFoo::sendc_get_rw_attrib (
   ::Hello::AMI_MyFooHandler_ptr ami_handler)
@@ -817,8 +802,6 @@ Hello::MyFoo::sendc_get_rw_attrib (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -837,7 +820,6 @@ Hello::MyFoo::sendc_get_rw_attrib (
     );
 }
 
-
 void
 Hello::MyFoo::sendc_set_rw_attrib_reverted (
   ::Hello::AMI_MyFooHandler_ptr ami_handler,
@@ -847,8 +829,6 @@ Hello::MyFoo::sendc_set_rw_attrib_reverted (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib_reverted (rw_attrib_reverted);
@@ -874,7 +854,6 @@ Hello::MyFoo::sendc_set_rw_attrib_reverted (
     );
 }
 
-
 void
 Hello::MyFoo::sendc_get_rw_attrib_reverted (
   ::Hello::AMI_MyFooHandler_ptr ami_handler)
@@ -883,8 +862,6 @@ Hello::MyFoo::sendc_get_rw_attrib_reverted (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -903,7 +880,6 @@ Hello::MyFoo::sendc_get_rw_attrib_reverted (
     );
 }
 
-
 void
 Hello::MyFoo::sendc_set_rw_attribB (
   ::Hello::AMI_MyFooHandler_ptr ami_handler,
@@ -913,8 +889,6 @@ Hello::MyFoo::sendc_set_rw_attribB (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attribB (rw_attribB);
@@ -940,7 +914,6 @@ Hello::MyFoo::sendc_set_rw_attribB (
     );
 }
 
-
 void
 Hello::MyFoo::sendc_get_rw_attribB (
   ::Hello::AMI_MyFooHandler_ptr ami_handler)
@@ -949,8 +922,6 @@ Hello::MyFoo::sendc_get_rw_attribB (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -969,7 +940,6 @@ Hello::MyFoo::sendc_get_rw_attribB (
     );
 }
 
-
 void
 Hello::MyFoo::sendc_get_ro_attrib (
   ::Hello::AMI_MyFooHandler_ptr ami_handler)
@@ -978,8 +948,6 @@ Hello::MyFoo::sendc_get_ro_attrib (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -1085,7 +1053,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:Hello/MyFoo:1.0",
     "MyFoo");
 
-
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_MyFoo = std::addressof(_tao_tc_Hello_MyFoo);
@@ -1104,15 +1071,12 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_Hello_AMH_MyFooExceptionHolder,
     0);
 
-
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_MyFooExceptionHolder = std::addressof(_tao_tc_Hello_AMH_MyFooExceptionHolder);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<Hello::AMH_MyFooExceptionHolder>::add_ref (Hello::AMH_MyFooExceptionHolder * p)
@@ -1133,8 +1097,6 @@ TAO::Value_Traits<Hello::AMH_MyFooExceptionHolder>::release (Hello::AMH_MyFooExc
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 Hello::AMH_MyFooExceptionHolder *
 Hello::AMH_MyFooExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -1377,7 +1339,6 @@ Hello::AMH_MyFooExceptionHolder::raise_sendc_get_ro_attrib ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for Hello::AMH_MyFooResponseHandler.
@@ -1407,8 +1368,6 @@ TAO::Objref_Traits<Hello::AMH_MyFooResponseHandler>::marshal (const Hello::AMH_M
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 Hello::AMH_MyFooResponseHandler::AMH_MyFooResponseHandler ()
 {}
@@ -1500,7 +1459,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:Hello/AMH_MyFooResponseHandler:1.0",
     "AMH_MyFooResponseHandler");
 
-
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_MyFooResponseHandler = std::addressof(_tao_tc_Hello_AMH_MyFooResponseHandler);
@@ -1535,7 +1493,6 @@ TAO::Objref_Traits<Hello::AMI_MyFooHandler>::marshal (const Hello::AMI_MyFooHand
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 Hello::AMI_MyFooHandler::get_rw_attrib_mytype (
@@ -3037,7 +2994,6 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:Hello/AMI_MyFooHandler:1.0",
     "AMI_MyFooHandler");
 
-
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_MyFooHandler = std::addressof(_tao_tc_Hello_AMI_MyFooHandler);
@@ -3058,8 +3014,6 @@ OBV_Hello::AMH_MyFooExceptionHolder::_tao_unmarshal__Hello_AMH_MyFooExceptionHol
 }
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3088,11 +3042,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
@@ -3132,11 +3083,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3165,11 +3112,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
@@ -3209,11 +3153,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3228,11 +3168,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -3274,11 +3211,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3293,9 +3226,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3344,15 +3275,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3384,11 +3310,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -3430,11 +3353,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3449,11 +3368,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -3495,11 +3411,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -3518,11 +3430,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
@@ -3540,8 +3448,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3572,9 +3478,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (Hello::AMH_MyFooExceptionHolder * vt)
@@ -3595,8 +3498,6 @@ CORBA::remove_ref (Hello::AMH_MyFooExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3620,9 +3521,7 @@ operator>> (
   return Hello::AMH_MyFooExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_Hello::AMH_MyFooExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -3641,8 +3540,6 @@ OBV_Hello::AMH_MyFooExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3672,6 +3569,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANON_NESTEDS_L3SEJ1_H_
-#define _TAO_IDL_ARRAY_ANON_NESTEDS_L3SEJ1_H_
+#ifndef _TAO_IDL_ARRAY_ANON_NESTEDS_3YHDOO_H_
+#define _TAO_IDL_ARRAY_ANON_NESTEDS_3YHDOO_H_
 
 #include /**/ "ace/pre.h"
 
@@ -40,17 +40,13 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -69,7 +65,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::teststruct>
     : public
@@ -79,7 +74,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::teststruct::embeddedstruct>
@@ -94,10 +88,7 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #include "array_anon_nestedS_T.h"
-
 
 #include /**/ "ace/post.h"
 

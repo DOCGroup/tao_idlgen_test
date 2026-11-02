@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_VALUETYPES_BX64JM_H_
-#define _TAO_IDL_VALUETYPES_BX64JM_H_
+#ifndef _TAO_IDL_VALUETYPES_0T9B2O_H_
+#define _TAO_IDL_VALUETYPES_0T9B2O_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,14 +52,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -78,7 +75,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MYVALUETYPE__SARG_TRAITS_)
 #define _MYVALUETYPE__SARG_TRAITS_
 
@@ -95,7 +91,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_DEFAULTINITIALIZEDVALUE__SARG_TRAITS_)
 #define _DEFAULTINITIALIZEDVALUE__SARG_TRAITS_
@@ -114,7 +109,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::ValueSort2>
     : public
@@ -125,7 +119,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::MyValueTypeUnion>
     : public
@@ -135,7 +128,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_RECVALUETYPE__SARG_TRAITS_)
 #define _RECVALUETYPE__SARG_TRAITS_
@@ -154,7 +146,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_GETSDEPRECATEDMEMBER__SARG_TRAITS_)
 #define _GETSDEPRECATEDMEMBER__SARG_TRAITS_
 
@@ -171,7 +162,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_X_VALUETYPE_AXXX__SARG_TRAITS_)
 #define _X_VALUETYPE_AXXX__SARG_TRAITS_
@@ -190,7 +180,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_X_VALUETYPE_BXXX__SARG_TRAITS_)
 #define _X_VALUETYPE_BXXX__SARG_TRAITS_
 
@@ -208,7 +197,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::X_VALUETYPE::BSeq>
     : public
@@ -218,7 +206,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_MODSELECTION_SELECTIONDEFNS_CRITERION__SARG_TRAITS_)
 #define _MODSELECTION_SELECTIONDEFNS_CRITERION__SARG_TRAITS_
@@ -237,7 +224,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MODSELECTION_SELECTIONDEFNS_CRITERIONEXPR__SARG_TRAITS_)
 #define _MODSELECTION_SELECTIONDEFNS_CRITERIONEXPR__SARG_TRAITS_
 
@@ -255,7 +241,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionInfos>
     : public
@@ -265,7 +250,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr>
@@ -280,11 +264,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_X_VALUETYPE
 {
-
-
 
 } // module X_VALUETYPE
 namespace POA_ModSelection
@@ -293,15 +274,11 @@ namespace POA_ModSelection
   namespace SelectionDefns
   {
 
-
-
   } // module ModSelection::SelectionDefns
-
 
 } // module ModSelection
 
 #include "valuetypeS_T.h"
-
 
 #include /**/ "ace/post.h"
 

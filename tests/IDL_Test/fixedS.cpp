@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDS_CH8FF7_CPP_
-#define _TAO_IDL_FIXEDS_CH8FF7_CPP_
-
+#ifndef _TAO_IDL_FIXEDS_MB1PZM_CPP_
+#define _TAO_IDL_FIXEDS_MB1PZM_CPP_
 
 #include "fixedS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -160,7 +157,6 @@ POA_FixedPoint::AMH_FixedOperations::AMH_FixedOperations ()
   this->optable_ = std::addressof (tao_FixedPoint_AMH_FixedOperations_optable);
 }
 
-
 void
 POA_FixedPoint::AMH_FixedOperations::_get_rate_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -245,11 +241,6 @@ POA_FixedPoint::AMH_FixedOperations::_set_rate_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_FixedPoint::AMH_FixedOperations::_is_a (const char* value)
 {
   return
@@ -297,8 +288,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -393,7 +382,6 @@ POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::~_TAO_FixedOperations_Di
 {
 }
 
-
 void
 POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_get_rate (
     TAO_Abstract_ServantBase  *servant,
@@ -411,7 +399,6 @@ POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_get_rate (
     _tao_ptr->rate (
         );
 }
-
 
 void
 POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_set_rate (
@@ -431,8 +418,6 @@ POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_set_rate (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -442,12 +427,10 @@ POA_FixedPoint::FixedOperations::FixedOperations ()
   this->optable_ = std::addressof (tao_FixedPoint_FixedOperations_optable);
 }
 
-
 namespace POA_FixedPoint
 {
 
-  class _get_rate_FixedOperations
-    : public TAO::Upcall_Command
+  class _get_rate_FixedOperations : public TAO::Upcall_Command
   {
   public:
     inline _get_rate_FixedOperations (POA_FixedPoint::FixedOperations * servant,
@@ -511,12 +494,10 @@ void POA_FixedPoint::FixedOperations::_get_rate_skel (
                          );
 }
 
-
 namespace POA_FixedPoint
 {
 
-  class _set_rate_FixedOperations
-    : public TAO::Upcall_Command
+  class _set_rate_FixedOperations : public TAO::Upcall_Command
   {
   public:
     inline _set_rate_FixedOperations (POA_FixedPoint::FixedOperations * servant,
@@ -583,13 +564,6 @@ void POA_FixedPoint::FixedOperations::_set_rate_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_FixedPoint::FixedOperations::_is_a (const char* value)
 {
   return
@@ -604,18 +578,12 @@ const char* POA_FixedPoint::FixedOperations::_interface_repository_id () const
   return "IDL:FixedPoint/FixedOperations:1.0";
 }
 
-
-
-
 void POA_FixedPoint::FixedOperations::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 FixedPoint::FixedOperations *
 POA_FixedPoint::FixedOperations::_this ()
@@ -664,7 +632,6 @@ POA_FixedPoint::TAO_AMH_FixedOperationsResponseHandler::set_rate ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -693,8 +660,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -773,7 +738,6 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::~_TAO_AMI_Fix
 {
 }
 
-
 void
 POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate (
     TAO_Abstract_ServantBase  *servant,
@@ -791,7 +755,6 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate (
         ((TAO::Arg_Traits< ::ACE_CDR::Fixed>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate_excep (
@@ -811,7 +774,6 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate_exce
       );
 }
 
-
 void
 POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::set_rate (
     TAO_Abstract_ServantBase  *servant,
@@ -828,7 +790,6 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::set_rate (
   _tao_ptr->set_rate (
       );
 }
-
 
 void
 POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::set_rate_excep (
@@ -848,8 +809,6 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::set_rate_exce
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -859,12 +818,10 @@ POA_FixedPoint::AMI_FixedOperationsHandler::AMI_FixedOperationsHandler ()
   this->optable_ = std::addressof (tao_FixedPoint_AMI_FixedOperationsHandler_optable);
 }
 
-
 namespace POA_FixedPoint
 {
 
-  class get_rate_AMI_FixedOperationsHandler
-    : public TAO::Upcall_Command
+  class get_rate_AMI_FixedOperationsHandler : public TAO::Upcall_Command
   {
   public:
     inline get_rate_AMI_FixedOperationsHandler (POA_FixedPoint::AMI_FixedOperationsHandler * servant,
@@ -931,12 +888,10 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::get_rate_skel (
                          );
 }
 
-
 namespace POA_FixedPoint
 {
 
-  class get_rate_excep_AMI_FixedOperationsHandler
-    : public TAO::Upcall_Command
+  class get_rate_excep_AMI_FixedOperationsHandler : public TAO::Upcall_Command
   {
   public:
     inline get_rate_excep_AMI_FixedOperationsHandler (POA_FixedPoint::AMI_FixedOperationsHandler * servant,
@@ -1003,12 +958,10 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::get_rate_excep_skel (
                          );
 }
 
-
 namespace POA_FixedPoint
 {
 
-  class set_rate_AMI_FixedOperationsHandler
-    : public TAO::Upcall_Command
+  class set_rate_AMI_FixedOperationsHandler : public TAO::Upcall_Command
   {
   public:
     inline set_rate_AMI_FixedOperationsHandler (POA_FixedPoint::AMI_FixedOperationsHandler * servant)
@@ -1057,12 +1010,10 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_skel (
                          );
 }
 
-
 namespace POA_FixedPoint
 {
 
-  class set_rate_excep_AMI_FixedOperationsHandler
-    : public TAO::Upcall_Command
+  class set_rate_excep_AMI_FixedOperationsHandler : public TAO::Upcall_Command
   {
   public:
     inline set_rate_excep_AMI_FixedOperationsHandler (POA_FixedPoint::AMI_FixedOperationsHandler * servant,
@@ -1129,13 +1080,6 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_FixedPoint::AMI_FixedOperationsHandler::_is_a (const char* value)
 {
   return
@@ -1151,18 +1095,12 @@ const char* POA_FixedPoint::AMI_FixedOperationsHandler::_interface_repository_id
   return "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0";
 }
 
-
-
-
 void POA_FixedPoint::AMI_FixedOperationsHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 FixedPoint::AMI_FixedOperationsHandler *
 POA_FixedPoint::AMI_FixedOperationsHandler::_this ()

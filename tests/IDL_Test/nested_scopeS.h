@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPES_8KLRS3_H_
-#define _TAO_IDL_NESTED_SCOPES_8KLRS3_H_
+#ifndef _TAO_IDL_NESTED_SCOPES_MNWTLG_H_
+#define _TAO_IDL_NESTED_SCOPES_MNWTLG_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::skip::hump::skip>
     : public
@@ -87,7 +83,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::u_skip::u_hump::u_skip>
     : public
@@ -97,7 +92,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_I_SKIP_I_HUMP_I_SKIP__SARG_TRAITS_)
 #define _I_SKIP_I_HUMP_I_SKIP__SARG_TRAITS_
@@ -113,7 +107,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_I_SKIP_I_HUMP_AMH_I_SKIPEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _I_SKIP_I_HUMP_AMH_I_SKIPEXCEPTIONHOLDER__SARG_TRAITS_
@@ -132,7 +125,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_I_SKIP_I_HUMP_AMI_I_SKIPHANDLER__SARG_TRAITS_)
 #define _I_SKIP_I_HUMP_AMI_I_SKIPHANDLER__SARG_TRAITS_
 
@@ -148,7 +140,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::pre_u_skip::pre_u_hump::pre_u_skip>
     : public
@@ -158,7 +149,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::pre_b_skip::pre_b_hump::pre_b_skip>
@@ -170,7 +160,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::str_u_skip::str_u_hump::str_u_skip>
     : public
@@ -180,7 +169,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::str_b_skip::str_b_hump::str_b_skip>
@@ -192,7 +180,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::wstr_u_skip::wstr_u_hump::wstr_u_skip>
     : public
@@ -203,7 +190,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::wstr_b_skip::wstr_b_hump::wstr_b_skip>
     : public
@@ -213,7 +199,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_BLOO__SARG_TRAITS_)
 #define _BLOO__SARG_TRAITS_
@@ -229,7 +214,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_BLOOEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_BLOOEXCEPTIONHOLDER__SARG_TRAITS_
@@ -248,7 +232,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_BLOOHANDLER__SARG_TRAITS_)
 #define _AMI_BLOOHANDLER__SARG_TRAITS_
 
@@ -264,7 +247,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::obj_u_skip::obj_u_hump::obj_u_skip>
     : public
@@ -275,7 +257,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::obj_b_skip::obj_b_hump::obj_b_skip>
     : public
@@ -285,7 +266,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_BUG_1985_A_B_SOMETHING__SARG_TRAITS_)
 #define _BUG_1985_A_B_SOMETHING__SARG_TRAITS_
@@ -301,7 +281,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_1985_A_B_AMH_SOMETHINGEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _BUG_1985_A_B_AMH_SOMETHINGEXCEPTIONHOLDER__SARG_TRAITS_
@@ -320,7 +299,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BUG_1985_A_B_AMI_SOMETHINGHANDLER__SARG_TRAITS_)
 #define _BUG_1985_A_B_AMI_SOMETHINGHANDLER__SARG_TRAITS_
 
@@ -336,7 +314,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BUG_1985_C_D_SOMETHING__SARG_TRAITS_)
 #define _BUG_1985_C_D_SOMETHING__SARG_TRAITS_
 
@@ -351,7 +328,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_BUG_1985_C_D_AMH_SOMETHINGEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _BUG_1985_C_D_AMH_SOMETHINGEXCEPTIONHOLDER__SARG_TRAITS_
@@ -370,7 +346,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_BUG_1985_C_D_AMI_SOMETHINGHANDLER__SARG_TRAITS_)
 #define _BUG_1985_C_D_AMI_SOMETHINGHANDLER__SARG_TRAITS_
 
@@ -386,7 +361,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_NEGOTIATOR_UAV_NEGOTIATOR__SARG_TRAITS_)
 #define _NEGOTIATOR_UAV_NEGOTIATOR__SARG_TRAITS_
 
@@ -401,7 +375,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_NEGOTIATOR_AMH_UAV_NEGOTIATOREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOREXCEPTIONHOLDER__SARG_TRAITS_
@@ -420,7 +393,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_NEGOTIATOR_AMI_UAV_NEGOTIATORHANDLER__SARG_TRAITS_)
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATORHANDLER__SARG_TRAITS_
 
@@ -436,7 +408,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_NEGOTIATOR_UAV_NEGOTIATOR_FACTORY__SARG_TRAITS_)
 #define _NEGOTIATOR_UAV_NEGOTIATOR_FACTORY__SARG_TRAITS_
 
@@ -451,7 +422,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYEXCEPTIONHOLDER__SARG_TRAITS_
@@ -470,7 +440,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_NEGOTIATOR_AMI_UAV_NEGOTIATOR_FACTORYHANDLER__SARG_TRAITS_)
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATOR_FACTORYHANDLER__SARG_TRAITS_
 
@@ -486,7 +455,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::bug_2125::Bar::Stuff>
     : public
@@ -496,7 +464,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_WOW_BUG_2125_MYINTERFACE__SARG_TRAITS_)
 #define _WOW_BUG_2125_MYINTERFACE__SARG_TRAITS_
@@ -512,7 +479,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_WOW_BUG_2125_AMH_MYINTERFACEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _WOW_BUG_2125_AMH_MYINTERFACEEXCEPTIONHOLDER__SARG_TRAITS_
@@ -531,7 +497,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_WOW_BUG_2125_AMI_MYINTERFACEHANDLER__SARG_TRAITS_)
 #define _WOW_BUG_2125_AMI_MYINTERFACEHANDLER__SARG_TRAITS_
 
@@ -547,7 +512,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::Company::CORBA::Inner::Foo>
     : public
@@ -561,17 +525,13 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_skip
 {
 
   namespace hump
   {
 
-
-
   } // module skip::hump
-
 
 } // module skip
 namespace POA_u_skip
@@ -580,10 +540,7 @@ namespace POA_u_skip
   namespace u_hump
   {
 
-
-
   } // module u_skip::u_hump
-
 
 } // module u_skip
 namespace POA_e_skip
@@ -592,10 +549,7 @@ namespace POA_e_skip
   namespace e_hump
   {
 
-
-
   } // module e_skip::e_hump
-
 
 } // module e_skip
 namespace POA_i_skip
@@ -617,7 +571,6 @@ namespace POA_i_skip
       AMH_i_skip (const AMH_i_skip& rhs);
       virtual ~AMH_i_skip () = default;
 
-
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
       virtual void _dispatch (
@@ -628,9 +581,6 @@ namespace POA_i_skip
 
     virtual const char* _interface_repository_id () const;
   };
-
-
-
 
   class i_skip;
   using i_skip_ptr = i_skip *;
@@ -663,7 +613,6 @@ namespace POA_i_skip
     virtual const char* _interface_repository_id () const;
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -678,7 +627,6 @@ namespace POA_i_skip
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class TAO_AMH_i_skipResponseHandler;
   using TAO_AMH_i_skipResponseHandler_ptr = TAO_AMH_i_skipResponseHandler *;
 
@@ -690,9 +638,6 @@ namespace POA_i_skip
     TAO_AMH_i_skipResponseHandler () = default;
     virtual ~TAO_AMH_i_skipResponseHandler () = default;
   };
-
-
-
 
   class AMI_i_skipHandler;
   using AMI_i_skipHandler_ptr = AMI_i_skipHandler *;
@@ -725,7 +670,6 @@ namespace POA_i_skip
     virtual const char* _interface_repository_id () const;
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -741,11 +685,7 @@ namespace POA_i_skip
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module i_skip::i_hump
-
 
 } // module i_skip
 namespace POA_pre_u_skip
@@ -754,10 +694,7 @@ namespace POA_pre_u_skip
   namespace pre_u_hump
   {
 
-
-
   } // module pre_u_skip::pre_u_hump
-
 
 } // module pre_u_skip
 namespace POA_pre_b_skip
@@ -766,10 +703,7 @@ namespace POA_pre_b_skip
   namespace pre_b_hump
   {
 
-
-
   } // module pre_b_skip::pre_b_hump
-
 
 } // module pre_b_skip
 namespace POA_str_u_skip
@@ -778,10 +712,7 @@ namespace POA_str_u_skip
   namespace str_u_hump
   {
 
-
-
   } // module str_u_skip::str_u_hump
-
 
 } // module str_u_skip
 namespace POA_str_b_skip
@@ -790,10 +721,7 @@ namespace POA_str_b_skip
   namespace str_b_hump
   {
 
-
-
   } // module str_b_skip::str_b_hump
-
 
 } // module str_b_skip
 namespace POA_wstr_u_skip
@@ -802,10 +730,7 @@ namespace POA_wstr_u_skip
   namespace wstr_u_hump
   {
 
-
-
   } // module wstr_u_skip::wstr_u_hump
-
 
 } // module wstr_u_skip
 namespace POA_wstr_b_skip
@@ -814,10 +739,7 @@ namespace POA_wstr_b_skip
   namespace wstr_b_hump
   {
 
-
-
   } // module wstr_b_skip::wstr_b_hump
-
 
 } // module wstr_b_skip
 class POA_AMH_bloo;
@@ -833,7 +755,6 @@ public:
   POA_AMH_bloo (const POA_AMH_bloo& rhs);
   virtual ~POA_AMH_bloo () = default;
 
-
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
   virtual void _dispatch (
@@ -844,9 +765,6 @@ public:
 
 virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class POA_bloo;
 using POA_bloo_ptr = POA_bloo *;
@@ -879,7 +797,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -894,7 +811,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_blooResponseHandler;
 using POA_TAO_AMH_blooResponseHandler_ptr = POA_TAO_AMH_blooResponseHandler *;
 
@@ -906,9 +822,6 @@ public:
   POA_TAO_AMH_blooResponseHandler () = default;
   virtual ~POA_TAO_AMH_blooResponseHandler () = default;
 };
-
-
-
 
 class POA_AMI_blooHandler;
 using POA_AMI_blooHandler_ptr = POA_AMI_blooHandler *;
@@ -941,7 +854,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -957,17 +869,13 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 namespace POA_obj_u_skip
 {
 
   namespace obj_u_hump
   {
 
-
-
   } // module obj_u_skip::obj_u_hump
-
 
 } // module obj_u_skip
 namespace POA_obj_b_skip
@@ -976,10 +884,7 @@ namespace POA_obj_b_skip
   namespace obj_b_hump
   {
 
-
-
   } // module obj_b_skip::obj_b_hump
-
 
 } // module obj_b_skip
 namespace POA_bug_1985_a
@@ -1001,7 +906,6 @@ namespace POA_bug_1985_a
       AMH_something (const AMH_something& rhs);
       virtual ~AMH_something () = default;
 
-
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
       virtual void _dispatch (
@@ -1012,9 +916,6 @@ namespace POA_bug_1985_a
 
     virtual const char* _interface_repository_id () const;
   };
-
-
-
 
   class something;
   using something_ptr = something *;
@@ -1047,7 +948,6 @@ namespace POA_bug_1985_a
     virtual const char* _interface_repository_id () const;
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -1062,7 +962,6 @@ namespace POA_bug_1985_a
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class TAO_AMH_somethingResponseHandler;
   using TAO_AMH_somethingResponseHandler_ptr = TAO_AMH_somethingResponseHandler *;
 
@@ -1074,9 +973,6 @@ namespace POA_bug_1985_a
     TAO_AMH_somethingResponseHandler () = default;
     virtual ~TAO_AMH_somethingResponseHandler () = default;
   };
-
-
-
 
   class AMI_somethingHandler;
   using AMI_somethingHandler_ptr = AMI_somethingHandler *;
@@ -1109,7 +1005,6 @@ namespace POA_bug_1985_a
     virtual const char* _interface_repository_id () const;
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -1125,11 +1020,7 @@ namespace POA_bug_1985_a
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module bug_1985_a::b
-
 
 } // module bug_1985_a
 namespace POA_bug_1985_c
@@ -1152,7 +1043,6 @@ namespace POA_bug_1985_c
       AMH_something (const AMH_something& rhs);
       virtual ~AMH_something () = default;
 
-
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
       virtual void _dispatch (
@@ -1163,9 +1053,6 @@ namespace POA_bug_1985_c
 
     virtual const char* _interface_repository_id () const;
   };
-
-
-
 
   class something;
   using something_ptr = something *;
@@ -1198,7 +1085,6 @@ namespace POA_bug_1985_c
     virtual const char* _interface_repository_id () const;
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -1214,7 +1100,6 @@ namespace POA_bug_1985_c
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class TAO_AMH_somethingResponseHandler;
   using TAO_AMH_somethingResponseHandler_ptr = TAO_AMH_somethingResponseHandler *;
 
@@ -1226,9 +1111,6 @@ namespace POA_bug_1985_c
     TAO_AMH_somethingResponseHandler () = default;
     virtual ~TAO_AMH_somethingResponseHandler () = default;
   };
-
-
-
 
   class AMI_somethingHandler;
   using AMI_somethingHandler_ptr = AMI_somethingHandler *;
@@ -1261,7 +1143,6 @@ namespace POA_bug_1985_c
     virtual const char* _interface_repository_id () const;
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -1277,11 +1158,7 @@ namespace POA_bug_1985_c
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module bug_1985_c::d
-
 
 } // module bug_1985_c
 namespace POA_Negotiator
@@ -1300,7 +1177,6 @@ namespace POA_Negotiator
     AMH_UAV_Negotiator (const AMH_UAV_Negotiator& rhs);
     virtual ~AMH_UAV_Negotiator () = default;
 
-
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
     virtual void _dispatch (
@@ -1311,9 +1187,6 @@ namespace POA_Negotiator
 
   virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class UAV_Negotiator;
 using UAV_Negotiator_ptr = UAV_Negotiator *;
@@ -1346,7 +1219,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1361,7 +1233,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_UAV_NegotiatorResponseHandler;
 using TAO_AMH_UAV_NegotiatorResponseHandler_ptr = TAO_AMH_UAV_NegotiatorResponseHandler *;
 
@@ -1373,9 +1244,6 @@ public:
   TAO_AMH_UAV_NegotiatorResponseHandler () = default;
   virtual ~TAO_AMH_UAV_NegotiatorResponseHandler () = default;
 };
-
-
-
 
 class AMI_UAV_NegotiatorHandler;
 using AMI_UAV_NegotiatorHandler_ptr = AMI_UAV_NegotiatorHandler *;
@@ -1408,7 +1276,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1424,7 +1291,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_UAV_Negotiator_Factory;
 using AMH_UAV_Negotiator_Factory_ptr = AMH_UAV_Negotiator_Factory *;
 
@@ -1438,7 +1304,6 @@ protected:
 public:
   AMH_UAV_Negotiator_Factory (const AMH_UAV_Negotiator_Factory& rhs);
   virtual ~AMH_UAV_Negotiator_Factory () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -1460,9 +1325,6 @@ virtual void make_negotiator (
   ) = 0;
 
 };
-
-
-
 
 class UAV_Negotiator_Factory;
 using UAV_Negotiator_Factory_ptr = UAV_Negotiator_Factory *;
@@ -1502,7 +1364,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1522,7 +1383,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_UAV_Negotiator_FactoryResponseHandler;
 using TAO_AMH_UAV_Negotiator_FactoryResponseHandler_ptr = TAO_AMH_UAV_Negotiator_FactoryResponseHandler *;
 
@@ -1538,9 +1398,6 @@ public:
   void make_negotiator_excep (
     ::Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_UAV_Negotiator_FactoryHandler;
 using AMI_UAV_Negotiator_FactoryHandler_ptr = AMI_UAV_Negotiator_FactoryHandler *;
@@ -1587,7 +1444,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -1611,9 +1467,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module Negotiator
 namespace POA_bug_2125
 {
@@ -1621,10 +1474,7 @@ namespace POA_bug_2125
   namespace Bar
   {
 
-
-
   } // module bug_2125::Bar
-
 
 } // module bug_2125
 namespace POA_Wow
@@ -1646,7 +1496,6 @@ namespace POA_Wow
       AMH_MyInterface (const AMH_MyInterface& rhs);
       virtual ~AMH_MyInterface () = default;
 
-
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
       virtual void _dispatch (
@@ -1667,9 +1516,6 @@ namespace POA_Wow
       ) = 0;
 
   };
-
-
-
 
   class MyInterface;
   using MyInterface_ptr = MyInterface *;
@@ -1709,7 +1555,6 @@ namespace POA_Wow
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -1728,7 +1573,6 @@ namespace POA_Wow
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class TAO_AMH_MyInterfaceResponseHandler;
   using TAO_AMH_MyInterfaceResponseHandler_ptr = TAO_AMH_MyInterfaceResponseHandler *;
 
@@ -1743,9 +1587,6 @@ namespace POA_Wow
     void op2_excep (
       ::Wow::bug_2125::AMH_MyInterfaceExceptionHolder * holder) override;
   };
-
-
-
 
   class AMI_MyInterfaceHandler;
   using AMI_MyInterfaceHandler_ptr = AMI_MyInterfaceHandler *;
@@ -1791,7 +1632,6 @@ namespace POA_Wow
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -1815,11 +1655,7 @@ namespace POA_Wow
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module Wow::bug_2125
-
 
 } // module Wow
 namespace POA_Company
@@ -1831,18 +1667,13 @@ namespace POA_Company
     namespace Inner
     {
 
-
-
     } // module Company::CORBA::Inner
 
-
   } // module Company::CORBA
-
 
 } // module Company
 
 #include "nested_scopeS_T.h"
-
 
 #include /**/ "ace/post.h"
 

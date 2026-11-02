@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_JVERB6_CPP_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_JVERB6_CPP_
-
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_U4XB46_CPP_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_U4XB46_CPP_
 
 #include "Bug_2350_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -139,7 +136,6 @@ POA_AMH_Bug_2350_Regression::POA_AMH_Bug_2350_Regression ()
   this->optable_ = std::addressof (tao_AMH_Bug_2350_Regression_optable);
 }
 
-
 void
 POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -185,11 +181,6 @@ POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
       a
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_AMH_Bug_2350_Regression::_is_a (const char* value)
 {
@@ -238,8 +229,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Bug_2350_Regression_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -313,7 +302,6 @@ _TAO_Bug_2350_Regression_Direct_Proxy_Impl::~_TAO_Bug_2350_Regression_Direct_Pro
 {
 }
 
-
 void
 _TAO_Bug_2350_Regression_Direct_Proxy_Impl::Bug_2350_Regression_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -332,8 +320,6 @@ _TAO_Bug_2350_Regression_Direct_Proxy_Impl::Bug_2350_Regression_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -343,9 +329,7 @@ POA_Bug_2350_Regression::POA_Bug_2350_Regression ()
   this->optable_ = std::addressof (tao_Bug_2350_Regression_optable);
 }
 
-
-class Bug_2350_Regression_excep_Bug_2350_Regression
-  : public TAO::Upcall_Command
+class Bug_2350_Regression_excep_Bug_2350_Regression : public TAO::Upcall_Command
 {
 public:
   inline Bug_2350_Regression_excep_Bug_2350_Regression (POA_Bug_2350_Regression * servant,
@@ -420,13 +404,6 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Bug_2350_Regression::_is_a (const char* value)
 {
   return
@@ -441,18 +418,12 @@ const char* POA_Bug_2350_Regression::_interface_repository_id () const
   return "IDL:Bug_2350_Regression:1.0";
 }
 
-
-
-
 void POA_Bug_2350_Regression::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Bug_2350_Regression *
 POA_Bug_2350_Regression::_this ()
@@ -472,7 +443,6 @@ void
 POA_TAO_AMH_Bug_2350_RegressionResponseHandler::Bug_2350_Regression_excep ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -502,8 +472,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -579,7 +547,6 @@ _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::~_TAO_AMI_Bug_2350_Regres
 {
 }
 
-
 void
 _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -596,7 +563,6 @@ _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep
   _tao_ptr->Bug_2350_Regression_excep (
       );
 }
-
 
 void
 _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep_excep (
@@ -616,8 +582,6 @@ _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -627,9 +591,7 @@ POA_AMI_Bug_2350_RegressionHandler::POA_AMI_Bug_2350_RegressionHandler ()
   this->optable_ = std::addressof (tao_AMI_Bug_2350_RegressionHandler_optable);
 }
 
-
-class Bug_2350_Regression_excep_AMI_Bug_2350_RegressionHandler
-  : public TAO::Upcall_Command
+class Bug_2350_Regression_excep_AMI_Bug_2350_RegressionHandler : public TAO::Upcall_Command
 {
 public:
   inline Bug_2350_Regression_excep_AMI_Bug_2350_RegressionHandler (POA_AMI_Bug_2350_RegressionHandler * servant)
@@ -686,9 +648,7 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_skel (
                          );
 }
 
-
-class Bug_2350_Regression_excep_excep_AMI_Bug_2350_RegressionHandler
-  : public TAO::Upcall_Command
+class Bug_2350_Regression_excep_excep_AMI_Bug_2350_RegressionHandler : public TAO::Upcall_Command
 {
 public:
   inline Bug_2350_Regression_excep_excep_AMI_Bug_2350_RegressionHandler (POA_AMI_Bug_2350_RegressionHandler * servant,
@@ -705,8 +665,6 @@ public:
         this->operation_details_,
         this->args_,
         1);
-
-
 
     static TAO::Exception_Data
     _tao_AMI_Bug_2350_RegressionHandler_Bug_2350_Regression_excep_excep_exceptiondata [] =
@@ -782,13 +740,6 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_Bug_2350_RegressionHandler::_is_a (const char* value)
 {
   return
@@ -804,18 +755,12 @@ const char* POA_AMI_Bug_2350_RegressionHandler::_interface_repository_id () cons
   return "IDL:AMI_Bug_2350_RegressionHandler:1.0";
 }
 
-
-
-
 void POA_AMI_Bug_2350_RegressionHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_Bug_2350_RegressionHandler *
 POA_AMI_Bug_2350_RegressionHandler::_this ()

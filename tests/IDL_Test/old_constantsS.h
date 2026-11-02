@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_CONSTANTSS_HLU91D_H_
-#define _TAO_IDL_OLD_CONSTANTSS_HLU91D_H_
+#ifndef _TAO_IDL_OLD_CONSTANTSS_ZYQ5HM_H_
+#define _TAO_IDL_OLD_CONSTANTSS_ZYQ5HM_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::OldConstants::N>
     : public
@@ -87,7 +83,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::OldConstants::M::N>
     : public
@@ -97,7 +92,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_OLDCONSTANTS_M_A__SARG_TRAITS_)
 #define _OLDCONSTANTS_M_A__SARG_TRAITS_
@@ -114,7 +108,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::OldConstants::M::A::N>
     : public
@@ -124,7 +117,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_OLDCONSTANTS_M_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDCONSTANTS_M_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_
@@ -142,7 +134,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDCONSTANTS_M_AMI_AHANDLER__SARG_TRAITS_)
 #define _OLDCONSTANTS_M_AMI_AHANDLER__SARG_TRAITS_
@@ -162,7 +153,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_OldConstants
 {
 
@@ -181,7 +171,6 @@ namespace POA_OldConstants
     public:
       AMH_A (const AMH_A& rhs);
       virtual ~AMH_A () = default;
-
 
       virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -204,9 +193,6 @@ namespace POA_OldConstants
       ) = 0;
 
   };
-
-
-
 
   class A;
   using A_ptr = A *;
@@ -248,7 +234,6 @@ namespace POA_OldConstants
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -267,7 +252,6 @@ namespace POA_OldConstants
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
   class TAO_AMH_AResponseHandler;
   using TAO_AMH_AResponseHandler_ptr = TAO_AMH_AResponseHandler *;
 
@@ -285,9 +269,6 @@ namespace POA_OldConstants
     void foo_excep (
       ::OldConstants::M::AMH_AExceptionHolder * holder) override;
   };
-
-
-
 
   class AMI_AHandler;
   using AMI_AHandler_ptr = AMI_AHandler *;
@@ -336,7 +317,6 @@ namespace POA_OldConstants
         TAO_ServantBase *servant);
   };
 
-
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
   //
@@ -360,16 +340,11 @@ namespace POA_OldConstants
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module OldConstants::M
-
 
 } // module OldConstants
 
 #include "old_constantsS_T.h"
-
 
 #include /**/ "ace/post.h"
 

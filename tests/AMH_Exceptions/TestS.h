@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_3A699I_H_
-#define _TAO_IDL_TESTS_3A699I_H_
+#ifndef _TAO_IDL_TESTS_7AF60N_H_
+#define _TAO_IDL_TESTS_7AF60N_H_
 
 #include /**/ "ace/pre.h"
 
@@ -47,14 +47,11 @@
 #include "tao/PortableServer/Servant_Base.h"
 #include "tao/Messaging/AMH_Response_Handler.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_TEST_RED_HERRING__SARG_TRAITS_)
 #define _TEST_RED_HERRING__SARG_TRAITS_
@@ -73,7 +70,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_TEST_ROUNDTRIP__SARG_TRAITS_)
 #define _TEST_ROUNDTRIP__SARG_TRAITS_
 
@@ -88,7 +84,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_TEST_AMH_ROUNDTRIPEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _TEST_AMH_ROUNDTRIPEXCEPTIONHOLDER__SARG_TRAITS_
@@ -110,7 +105,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_Test
 {
 
@@ -126,7 +120,6 @@ namespace POA_Test
   public:
     AMH_Roundtrip (const AMH_Roundtrip& rhs);
     virtual ~AMH_Roundtrip () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -157,9 +150,6 @@ namespace POA_Test
     ) = 0;
 
 };
-
-
-
 
 class Roundtrip;
 using Roundtrip_ptr = Roundtrip *;
@@ -220,7 +210,6 @@ public:
   void shutdown_excep (
     ::Test::AMH_RoundtripExceptionHolder * holder) override;
 };
-
 
 } // module Test
 

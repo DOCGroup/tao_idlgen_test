@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REPO_ID_MODC_95YQH2_H_
-#define _TAO_IDL_REPO_ID_MODC_95YQH2_H_
+#ifndef _TAO_IDL_REPO_ID_MODC_DE4VYT_H_
+#define _TAO_IDL_REPO_ID_MODC_DE4VYT_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/ORB.h"
@@ -57,7 +55,6 @@
 namespace gleep
 {
 
-
 #if !defined (_GLEEP_SCHMOOZE__VAR_OUT_CH_)
 #define _GLEEP_SCHMOOZE__VAR_OUT_CH_
 
@@ -70,9 +67,6 @@ namespace gleep
   using schmooze_out = TAO_Objref_Out_T<schmooze>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export schmooze
     : public virtual ::CORBA::Object
@@ -93,9 +87,6 @@ namespace gleep
     static schmooze_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmooze_ptr _nil ();
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     static const char* _desc_repository_id ();
@@ -105,8 +96,6 @@ namespace gleep
   protected:
     // Abstract or local interface only.
     schmooze ();
-
-
 
     virtual ~schmooze () = default;
 
@@ -118,12 +107,9 @@ namespace gleep
     schmooze &operator= (schmooze &&) = delete;
   };
 
-
-
 } // module gleep
 namespace gleep
 {
-
 
 #if !defined (_GLEEP_SCHMEER__VAR_OUT_CH_)
 #define _GLEEP_SCHMEER__VAR_OUT_CH_
@@ -137,9 +123,6 @@ namespace gleep
   using schmeer_out = TAO_Objref_Out_T<schmeer>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export schmeer
     : public virtual ::CORBA::Object
@@ -160,9 +143,6 @@ namespace gleep
     static schmeer_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmeer_ptr _nil ();
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     static const char* _desc_repository_id ();
@@ -172,8 +152,6 @@ namespace gleep
   protected:
     // Abstract or local interface only.
     schmeer ();
-
-
 
     virtual ~schmeer () = default;
 
@@ -185,12 +163,9 @@ namespace gleep
     schmeer &operator= (schmeer &&) = delete;
   };
 
-
-
 } // module gleep
 namespace gleep
 {
-
 
 #if !defined (_GLEEP_SCHLEMIEL__VAR_OUT_CH_)
 #define _GLEEP_SCHLEMIEL__VAR_OUT_CH_
@@ -204,9 +179,6 @@ namespace gleep
   using schlemiel_out = TAO_Objref_Out_T<schlemiel>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export schlemiel
     : public virtual ::CORBA::Object
@@ -227,9 +199,6 @@ namespace gleep
     static schlemiel_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schlemiel_ptr _nil ();
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     static const char* _desc_repository_id ();
@@ -239,8 +208,6 @@ namespace gleep
   protected:
     // Abstract or local interface only.
     schlemiel ();
-
-
 
     virtual ~schlemiel () = default;
 
@@ -252,12 +219,9 @@ namespace gleep
     schlemiel &operator= (schlemiel &&) = delete;
   };
 
-
-
 } // module gleep
 namespace gleep
 {
-
 
 #if !defined (_GLEEP_SPILKIS__VAR_OUT_CH_)
 #define _GLEEP_SPILKIS__VAR_OUT_CH_
@@ -271,9 +235,6 @@ namespace gleep
   using spilkis_out = TAO_Objref_Out_T<spilkis>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export spilkis
     : public virtual ::CORBA::Object
@@ -294,9 +255,6 @@ namespace gleep
     static spilkis_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static spilkis_ptr _nil ();
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     static const char* _desc_repository_id ();
@@ -306,8 +264,6 @@ namespace gleep
   protected:
     // Abstract or local interface only.
     spilkis ();
-
-
 
     virtual ~spilkis () = default;
 
@@ -321,7 +277,6 @@ namespace gleep
   namespace floop
   {
 
-
 #if !defined (_GLEEP_FLOOP_SCHMUCK__VAR_OUT_CH_)
 #define _GLEEP_FLOOP_SCHMUCK__VAR_OUT_CH_
 
@@ -334,9 +289,6 @@ namespace gleep
     using schmuck_out = TAO_Objref_Out_T<schmuck>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export schmuck
       : public virtual ::CORBA::Object
@@ -357,9 +309,6 @@ namespace gleep
       static schmuck_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static schmuck_ptr _nil ();
 
-
-
-
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
       static const char* _desc_repository_id ();
@@ -370,8 +319,6 @@ namespace gleep
       // Abstract or local interface only.
       schmuck ();
 
-
-
       virtual ~schmuck () = default;
 
     private:
@@ -381,7 +328,6 @@ namespace gleep
       schmuck &operator= (const schmuck &) = delete;
       schmuck &operator= (schmuck &&) = delete;
     };
-
 
 #if !defined (_GLEEP_FLOOP_SCHMENDRICK__VAR_OUT_CH_)
 #define _GLEEP_FLOOP_SCHMENDRICK__VAR_OUT_CH_
@@ -395,9 +341,6 @@ namespace gleep
     using schmendrick_out = TAO_Objref_Out_T<schmendrick>;
 
 #endif /* end #if !defined */
-
-
-
 
     class TAO_IDL_TEST_STUB_Export schmendrick
       : public virtual ::CORBA::Object
@@ -418,9 +361,6 @@ namespace gleep
       static schmendrick_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static schmendrick_ptr _nil ();
 
-
-
-
       virtual ::CORBA::Boolean _is_a (const char *type_id);
       virtual const char* _interface_repository_id () const;
       static const char* _desc_repository_id ();
@@ -430,8 +370,6 @@ namespace gleep
     protected:
       // Abstract or local interface only.
       schmendrick ();
-
-
 
       virtual ~schmendrick () = default;
 
@@ -445,7 +383,6 @@ namespace gleep
     namespace verklempt
     {
 
-
 #if !defined (_GLEEP_FLOOP_VERKLEMPT_SCHLEMAZEL__VAR_OUT_CH_)
 #define _GLEEP_FLOOP_VERKLEMPT_SCHLEMAZEL__VAR_OUT_CH_
 
@@ -458,9 +395,6 @@ namespace gleep
       using schlemazel_out = TAO_Objref_Out_T<schlemazel>;
 
 #endif /* end #if !defined */
-
-
-
 
       class TAO_IDL_TEST_STUB_Export schlemazel
         : public virtual ::CORBA::Object
@@ -481,9 +415,6 @@ namespace gleep
         static schlemazel_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
         static schlemazel_ptr _nil ();
 
-
-
-
         virtual ::CORBA::Boolean _is_a (const char *type_id);
         virtual const char* _interface_repository_id () const;
         static const char* _desc_repository_id ();
@@ -493,8 +424,6 @@ namespace gleep
       protected:
         // Abstract or local interface only.
         schlemazel ();
-
-
 
         virtual ~schlemazel () = default;
 
@@ -506,14 +435,9 @@ namespace gleep
         schlemazel &operator= (schlemazel &&) = delete;
       };
 
-
-
     } // module gleep::floop::verklempt
 
-
-
   } // module gleep::floop
-
 
 #if !defined (_GLEEP_SCHMEGEGGING__VAR_OUT_CH_)
 #define _GLEEP_SCHMEGEGGING__VAR_OUT_CH_
@@ -527,9 +451,6 @@ namespace gleep
   using schmegegging_out = TAO_Objref_Out_T<schmegegging>;
 
 #endif /* end #if !defined */
-
-
-
 
   class TAO_IDL_TEST_STUB_Export schmegegging
     : public virtual ::CORBA::Object
@@ -550,9 +471,6 @@ namespace gleep
     static schmegegging_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmegegging_ptr _nil ();
 
-
-
-
     virtual ::CORBA::Boolean _is_a (const char *type_id);
     virtual const char* _interface_repository_id () const;
     static const char* _desc_repository_id ();
@@ -562,8 +480,6 @@ namespace gleep
   protected:
     // Abstract or local interface only.
     schmegegging ();
-
-
 
     virtual ~schmegegging () = default;
 
@@ -575,18 +491,13 @@ namespace gleep
     schmegegging &operator= (schmegegging &&) = delete;
   };
 
-
-
 } // module gleep
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -608,9 +519,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -731,7 +639,6 @@ namespace TAO
 #endif /* end #if !defined */
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "repo_id_modC.inl"

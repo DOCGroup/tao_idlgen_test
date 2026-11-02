@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIF2S_BG75HU_CPP_
-#define _TAO_IDL_DIF2S_BG75HU_CPP_
-
+#ifndef _TAO_IDL_DIF2S_O456ZG_CPP_
+#define _TAO_IDL_DIF2S_O456ZG_CPP_
 
 #include "dif2S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -145,7 +142,6 @@ POA_OldDif2::AMH_ex1::AMH_ex1 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMH_ex1_optable);
 }
-
 
 void
 POA_OldDif2::AMH_ex1::op0_skel (
@@ -472,11 +468,6 @@ POA_OldDif2::AMH_ex1::op6_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::AMH_ex1::_is_a (const char* value)
 {
   return
@@ -524,8 +515,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex1_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -606,7 +595,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::~_TAO_ex1_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0 (
     TAO_Abstract_ServantBase  *servant,
@@ -623,7 +611,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0 (
   _tao_ptr->op0 (
       );
 }
-
 
 void
 POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1 (
@@ -646,7 +633,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1 (
         );
 }
 
-
 void
 POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2 (
     TAO_Abstract_ServantBase  *servant,
@@ -667,7 +653,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2 (
           ((TAO::Arg_Traits< ::CORBA::Short>::inout_arg_val *) args[3])->arg ()
         );
 }
-
 
 void
 POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3 (
@@ -690,7 +675,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3 (
         );
 }
 
-
 void
 POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4 (
     TAO_Abstract_ServantBase  *servant,
@@ -711,7 +695,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4 (
           ((TAO::Arg_Traits< ::CORBA::UShort>::inout_arg_val *) args[3])->arg ()
         );
 }
-
 
 void
 POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5 (
@@ -735,7 +718,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5 (
         );
 }
 
-
 void
 POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6 (
     TAO_Abstract_ServantBase  *servant,
@@ -756,8 +738,6 @@ POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6 (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -767,12 +747,10 @@ POA_OldDif2::ex1::ex1 ()
   this->optable_ = std::addressof (tao_OldDif2_ex1_optable);
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op0_ex1
-    : public TAO::Upcall_Command
+  class op0_ex1 : public TAO::Upcall_Command
   {
   public:
     inline op0_ex1 (POA_OldDif2::ex1 * servant)
@@ -821,12 +799,10 @@ void POA_OldDif2::ex1::op0_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op1_ex1
-    : public TAO::Upcall_Command
+  class op1_ex1 : public TAO::Upcall_Command
   {
   public:
     inline op1_ex1 (POA_OldDif2::ex1 * servant,
@@ -917,12 +893,10 @@ void POA_OldDif2::ex1::op1_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op2_ex1
-    : public TAO::Upcall_Command
+  class op2_ex1 : public TAO::Upcall_Command
   {
   public:
     inline op2_ex1 (POA_OldDif2::ex1 * servant,
@@ -1013,12 +987,10 @@ void POA_OldDif2::ex1::op2_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op3_ex1
-    : public TAO::Upcall_Command
+  class op3_ex1 : public TAO::Upcall_Command
   {
   public:
     inline op3_ex1 (POA_OldDif2::ex1 * servant,
@@ -1109,12 +1081,10 @@ void POA_OldDif2::ex1::op3_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op4_ex1
-    : public TAO::Upcall_Command
+  class op4_ex1 : public TAO::Upcall_Command
   {
   public:
     inline op4_ex1 (POA_OldDif2::ex1 * servant,
@@ -1205,12 +1175,10 @@ void POA_OldDif2::ex1::op4_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op5_ex1
-    : public TAO::Upcall_Command
+  class op5_ex1 : public TAO::Upcall_Command
   {
   public:
     inline op5_ex1 (POA_OldDif2::ex1 * servant,
@@ -1310,12 +1278,10 @@ void POA_OldDif2::ex1::op5_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op6_ex1
-    : public TAO::Upcall_Command
+  class op6_ex1 : public TAO::Upcall_Command
   {
   public:
     inline op6_ex1 (POA_OldDif2::ex1 * servant,
@@ -1397,13 +1363,6 @@ void POA_OldDif2::ex1::op6_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::ex1::_is_a (const char* value)
 {
   return
@@ -1418,18 +1377,12 @@ const char* POA_OldDif2::ex1::_interface_repository_id () const
   return "IDL:OldDif2/ex1:1.0";
 }
 
-
-
-
 void POA_OldDif2::ex1::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldDif2::ex1 *
 POA_OldDif2::ex1::_this ()
@@ -1449,7 +1402,6 @@ void
 POA_OldDif2::TAO_AMH_ex1ResponseHandler::op0 ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -1671,8 +1623,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1779,7 +1729,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::~_TAO_AMI_ex1Handler_Direct_
 {
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0 (
     TAO_Abstract_ServantBase  *servant,
@@ -1796,7 +1745,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0 (
   _tao_ptr->op0 (
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep (
@@ -1815,7 +1763,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1 (
@@ -1837,7 +1784,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1855,7 +1801,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2 (
@@ -1877,7 +1822,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1895,7 +1839,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3 (
@@ -1917,7 +1860,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1935,7 +1877,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4 (
@@ -1957,7 +1898,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -1975,7 +1915,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5 (
@@ -1997,7 +1936,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -2015,7 +1953,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6 (
@@ -2037,7 +1974,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -2056,8 +1992,6 @@ POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -2067,12 +2001,10 @@ POA_OldDif2::AMI_ex1Handler::AMI_ex1Handler ()
   this->optable_ = std::addressof (tao_OldDif2_AMI_ex1Handler_optable);
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op0_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op0_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op0_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant)
@@ -2121,12 +2053,10 @@ void POA_OldDif2::AMI_ex1Handler::op0_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op0_excep_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op0_excep_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op0_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -2193,12 +2123,10 @@ void POA_OldDif2::AMI_ex1Handler::op0_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op1_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op1_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op1_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -2283,12 +2211,10 @@ void POA_OldDif2::AMI_ex1Handler::op1_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op1_excep_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op1_excep_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op1_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -2355,12 +2281,10 @@ void POA_OldDif2::AMI_ex1Handler::op1_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op2_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op2_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op2_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -2445,12 +2369,10 @@ void POA_OldDif2::AMI_ex1Handler::op2_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op2_excep_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op2_excep_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op2_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -2517,12 +2439,10 @@ void POA_OldDif2::AMI_ex1Handler::op2_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op3_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op3_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op3_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -2607,12 +2527,10 @@ void POA_OldDif2::AMI_ex1Handler::op3_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op3_excep_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op3_excep_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op3_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -2679,12 +2597,10 @@ void POA_OldDif2::AMI_ex1Handler::op3_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op4_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op4_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op4_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -2769,12 +2685,10 @@ void POA_OldDif2::AMI_ex1Handler::op4_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op4_excep_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op4_excep_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op4_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -2841,12 +2755,10 @@ void POA_OldDif2::AMI_ex1Handler::op4_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op5_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op5_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op5_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -2931,12 +2843,10 @@ void POA_OldDif2::AMI_ex1Handler::op5_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op5_excep_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op5_excep_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op5_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -3003,12 +2913,10 @@ void POA_OldDif2::AMI_ex1Handler::op5_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op6_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op6_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op6_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -3093,12 +3001,10 @@ void POA_OldDif2::AMI_ex1Handler::op6_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op6_excep_AMI_ex1Handler
-    : public TAO::Upcall_Command
+  class op6_excep_AMI_ex1Handler : public TAO::Upcall_Command
   {
   public:
     inline op6_excep_AMI_ex1Handler (POA_OldDif2::AMI_ex1Handler * servant,
@@ -3165,13 +3071,6 @@ void POA_OldDif2::AMI_ex1Handler::op6_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::AMI_ex1Handler::_is_a (const char* value)
 {
   return
@@ -3187,18 +3086,12 @@ const char* POA_OldDif2::AMI_ex1Handler::_interface_repository_id () const
   return "IDL:OldDif2/AMI_ex1Handler:1.0";
 }
 
-
-
-
 void POA_OldDif2::AMI_ex1Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldDif2::AMI_ex1Handler *
 POA_OldDif2::AMI_ex1Handler::_this ()
@@ -3226,8 +3119,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -3312,7 +3203,6 @@ POA_OldDif2::AMH_ex2::AMH_ex2 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMH_ex2_optable);
 }
-
 
 void
 POA_OldDif2::AMH_ex2::op7_skel (
@@ -3594,11 +3484,6 @@ POA_OldDif2::AMH_ex2::op12_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::AMH_ex2::_is_a (const char* value)
 {
   return
@@ -3647,8 +3532,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex2_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -3737,7 +3620,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::~_TAO_ex2_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op7 (
     TAO_Abstract_ServantBase  *servant,
@@ -3759,7 +3641,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op7 (
         );
 }
 
-
 void
 POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8 (
     TAO_Abstract_ServantBase  *servant,
@@ -3779,7 +3660,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8 (
           ((TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val *) args[2])->arg ()
         );
 }
-
 
 void
 POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op9 (
@@ -3803,7 +3683,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op9 (
         );
 }
 
-
 void
 POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10 (
     TAO_Abstract_ServantBase  *servant,
@@ -3823,7 +3702,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10 (
           ((TAO::Arg_Traits< ::TAO::OldDif2_ex2_op10_ls>::out_arg_val *) args[2])->arg ()
         );
 }
-
 
 void
 POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11 (
@@ -3845,7 +3723,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11 (
         );
 }
 
-
 void
 POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op12 (
     TAO_Abstract_ServantBase  *servant,
@@ -3865,8 +3742,6 @@ POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op12 (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -3876,12 +3751,10 @@ POA_OldDif2::ex2::ex2 ()
   this->optable_ = std::addressof (tao_OldDif2_ex2_optable);
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op7_ex2
-    : public TAO::Upcall_Command
+  class op7_ex2 : public TAO::Upcall_Command
   {
   public:
     inline op7_ex2 (POA_OldDif2::ex2 * servant,
@@ -3972,12 +3845,10 @@ void POA_OldDif2::ex2::op7_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op8_ex2
-    : public TAO::Upcall_Command
+  class op8_ex2 : public TAO::Upcall_Command
   {
   public:
     inline op8_ex2 (POA_OldDif2::ex2 * servant,
@@ -4059,12 +3930,10 @@ void POA_OldDif2::ex2::op8_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op9_ex2
-    : public TAO::Upcall_Command
+  class op9_ex2 : public TAO::Upcall_Command
   {
   public:
     inline op9_ex2 (POA_OldDif2::ex2 * servant,
@@ -4164,12 +4033,10 @@ void POA_OldDif2::ex2::op9_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op10_ex2
-    : public TAO::Upcall_Command
+  class op10_ex2 : public TAO::Upcall_Command
   {
   public:
     inline op10_ex2 (POA_OldDif2::ex2 * servant,
@@ -4251,12 +4118,10 @@ void POA_OldDif2::ex2::op10_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op11_ex2
-    : public TAO::Upcall_Command
+  class op11_ex2 : public TAO::Upcall_Command
   {
   public:
     inline op11_ex2 (POA_OldDif2::ex2 * servant,
@@ -4338,12 +4203,10 @@ void POA_OldDif2::ex2::op11_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op12_ex2
-    : public TAO::Upcall_Command
+  class op12_ex2 : public TAO::Upcall_Command
   {
   public:
     inline op12_ex2 (POA_OldDif2::ex2 * servant,
@@ -4416,13 +4279,6 @@ void POA_OldDif2::ex2::op12_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::ex2::_is_a (const char* value)
 {
   return
@@ -4438,18 +4294,12 @@ const char* POA_OldDif2::ex2::_interface_repository_id () const
   return "IDL:OldDif2/ex2:1.0";
 }
 
-
-
-
 void POA_OldDif2::ex2::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldDif2::ex2 *
 POA_OldDif2::ex2::_this ()
@@ -4664,8 +4514,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -4785,7 +4633,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::~_TAO_AMI_ex2Handler_Direct_
 {
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7 (
     TAO_Abstract_ServantBase  *servant,
@@ -4806,7 +4653,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -4824,7 +4670,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8 (
@@ -4845,7 +4690,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -4863,7 +4707,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9 (
@@ -4886,7 +4729,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -4904,7 +4746,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10 (
@@ -4925,7 +4766,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -4943,7 +4783,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11 (
@@ -4965,7 +4804,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -4983,7 +4821,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12 (
@@ -5003,7 +4840,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12 (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -5022,8 +4858,6 @@ POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -5033,12 +4867,10 @@ POA_OldDif2::AMI_ex2Handler::AMI_ex2Handler ()
   this->optable_ = std::addressof (tao_OldDif2_AMI_ex2Handler_optable);
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op7_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op7_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op7_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5123,12 +4955,10 @@ void POA_OldDif2::AMI_ex2Handler::op7_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op7_excep_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op7_excep_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op7_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5195,12 +5025,10 @@ void POA_OldDif2::AMI_ex2Handler::op7_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op8_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op8_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op8_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5276,12 +5104,10 @@ void POA_OldDif2::AMI_ex2Handler::op8_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op8_excep_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op8_excep_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op8_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5348,12 +5174,10 @@ void POA_OldDif2::AMI_ex2Handler::op8_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op9_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op9_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op9_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5447,12 +5271,10 @@ void POA_OldDif2::AMI_ex2Handler::op9_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op9_excep_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op9_excep_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op9_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5519,12 +5341,10 @@ void POA_OldDif2::AMI_ex2Handler::op9_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op10_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op10_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op10_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5600,12 +5420,10 @@ void POA_OldDif2::AMI_ex2Handler::op10_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op10_excep_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op10_excep_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op10_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5672,12 +5490,10 @@ void POA_OldDif2::AMI_ex2Handler::op10_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op11_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op11_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op11_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5762,12 +5578,10 @@ void POA_OldDif2::AMI_ex2Handler::op11_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op11_excep_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op11_excep_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op11_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5834,12 +5648,10 @@ void POA_OldDif2::AMI_ex2Handler::op11_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op12_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op12_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op12_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5906,12 +5718,10 @@ void POA_OldDif2::AMI_ex2Handler::op12_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class op12_excep_AMI_ex2Handler
-    : public TAO::Upcall_Command
+  class op12_excep_AMI_ex2Handler : public TAO::Upcall_Command
   {
   public:
     inline op12_excep_AMI_ex2Handler (POA_OldDif2::AMI_ex2Handler * servant,
@@ -5978,13 +5788,6 @@ void POA_OldDif2::AMI_ex2Handler::op12_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::AMI_ex2Handler::_is_a (const char* value)
 {
   return
@@ -6001,18 +5804,12 @@ const char* POA_OldDif2::AMI_ex2Handler::_interface_repository_id () const
   return "IDL:OldDif2/AMI_ex2Handler:1.0";
 }
 
-
-
-
 void POA_OldDif2::AMI_ex2Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldDif2::AMI_ex2Handler *
 POA_OldDif2::AMI_ex2Handler::_this ()
@@ -6040,8 +5837,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -6145,7 +5940,6 @@ POA_OldDif2::AMH_ex3::AMH_ex3 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMH_ex3_optable);
 }
-
 
 void
 POA_OldDif2::AMH_ex3::_get_float_attribute_skel (
@@ -6422,11 +6216,6 @@ POA_OldDif2::AMH_ex3::_get_unsigned_long_attribute_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::AMH_ex3::_is_a (const char* value)
 {
   return
@@ -6475,8 +6264,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex3_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_ex3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -6584,7 +6371,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::~_TAO_ex3_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_float_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -6602,7 +6388,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_float_attribute (
     _tao_ptr->float_attribute (
         );
 }
-
 
 void
 POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute (
@@ -6622,7 +6407,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute (
         );
 }
 
-
 void
 POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_double_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -6640,7 +6424,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_double_attribute (
         ((TAO::Arg_Traits< ::CORBA::Double>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute (
@@ -6660,7 +6443,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute (
         );
 }
 
-
 void
 POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_short_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -6678,7 +6460,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_short_attribute (
     _tao_ptr->short_attribute (
         );
 }
-
 
 void
 POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute (
@@ -6698,7 +6479,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_unsigned_long_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -6717,8 +6497,6 @@ POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_unsigned_long_attribute (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -6728,12 +6506,10 @@ POA_OldDif2::ex3::ex3 ()
   this->optable_ = std::addressof (tao_OldDif2_ex3_optable);
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_float_attribute_ex3
-    : public TAO::Upcall_Command
+  class _get_float_attribute_ex3 : public TAO::Upcall_Command
   {
   public:
     inline _get_float_attribute_ex3 (POA_OldDif2::ex3 * servant,
@@ -6797,12 +6573,10 @@ void POA_OldDif2::ex3::_get_float_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_double_attribute_ex3
-    : public TAO::Upcall_Command
+  class _get_double_attribute_ex3 : public TAO::Upcall_Command
   {
   public:
     inline _get_double_attribute_ex3 (POA_OldDif2::ex3 * servant,
@@ -6866,12 +6640,10 @@ void POA_OldDif2::ex3::_get_double_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _set_double_attribute_ex3
-    : public TAO::Upcall_Command
+  class _set_double_attribute_ex3 : public TAO::Upcall_Command
   {
   public:
     inline _set_double_attribute_ex3 (POA_OldDif2::ex3 * servant,
@@ -6938,12 +6710,10 @@ void POA_OldDif2::ex3::_set_double_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_long_attribute_ex3
-    : public TAO::Upcall_Command
+  class _get_long_attribute_ex3 : public TAO::Upcall_Command
   {
   public:
     inline _get_long_attribute_ex3 (POA_OldDif2::ex3 * servant,
@@ -7007,12 +6777,10 @@ void POA_OldDif2::ex3::_get_long_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_short_attribute_ex3
-    : public TAO::Upcall_Command
+  class _get_short_attribute_ex3 : public TAO::Upcall_Command
   {
   public:
     inline _get_short_attribute_ex3 (POA_OldDif2::ex3 * servant,
@@ -7076,12 +6844,10 @@ void POA_OldDif2::ex3::_get_short_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _set_short_attribute_ex3
-    : public TAO::Upcall_Command
+  class _set_short_attribute_ex3 : public TAO::Upcall_Command
   {
   public:
     inline _set_short_attribute_ex3 (POA_OldDif2::ex3 * servant,
@@ -7148,12 +6914,10 @@ void POA_OldDif2::ex3::_set_short_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_unsigned_long_attribute_ex3
-    : public TAO::Upcall_Command
+  class _get_unsigned_long_attribute_ex3 : public TAO::Upcall_Command
   {
   public:
     inline _get_unsigned_long_attribute_ex3 (POA_OldDif2::ex3 * servant,
@@ -7217,13 +6981,6 @@ void POA_OldDif2::ex3::_get_unsigned_long_attribute_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::ex3::_is_a (const char* value)
 {
   return
@@ -7239,18 +6996,12 @@ const char* POA_OldDif2::ex3::_interface_repository_id () const
   return "IDL:OldDif2/ex3:1.0";
 }
 
-
-
-
 void POA_OldDif2::ex3::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldDif2::ex3 *
 POA_OldDif2::ex3::_this ()
@@ -7326,7 +7077,6 @@ void
 POA_OldDif2::TAO_AMH_ex3ResponseHandler::set_double_attribute ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -7404,7 +7154,6 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::set_short_attribute ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -7461,8 +7210,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -7585,7 +7332,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::~_TAO_AMI_ex3Handler_Direct_
 {
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -7603,7 +7349,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute (
         ((TAO::Arg_Traits< ::CORBA::Float>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute_excep (
@@ -7623,7 +7368,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute_excep (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -7641,7 +7385,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute (
         ((TAO::Arg_Traits< ::CORBA::Double>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute_excep (
@@ -7661,7 +7404,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute_excep (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -7678,7 +7420,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute (
   _tao_ptr->set_double_attribute (
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute_excep (
@@ -7698,7 +7439,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute_excep (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -7716,7 +7456,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute (
         ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute_excep (
@@ -7736,7 +7475,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute_excep (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -7754,7 +7492,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute (
         ((TAO::Arg_Traits< ::CORBA::Short>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute_excep (
@@ -7774,7 +7511,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute_excep (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -7791,7 +7527,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute (
   _tao_ptr->set_short_attribute (
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute_excep (
@@ -7811,7 +7546,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute_excep (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -7829,7 +7563,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute 
         ((TAO::Arg_Traits< ::CORBA::ULong>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute_excep (
@@ -7849,8 +7582,6 @@ POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute_
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -7860,12 +7591,10 @@ POA_OldDif2::AMI_ex3Handler::AMI_ex3Handler ()
   this->optable_ = std::addressof (tao_OldDif2_AMI_ex3Handler_optable);
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_float_attribute_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class get_float_attribute_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline get_float_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -7932,12 +7661,10 @@ void POA_OldDif2::AMI_ex3Handler::get_float_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_float_attribute_excep_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class get_float_attribute_excep_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline get_float_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -8004,12 +7731,10 @@ void POA_OldDif2::AMI_ex3Handler::get_float_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_double_attribute_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class get_double_attribute_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline get_double_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -8076,12 +7801,10 @@ void POA_OldDif2::AMI_ex3Handler::get_double_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_double_attribute_excep_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class get_double_attribute_excep_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline get_double_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -8148,12 +7871,10 @@ void POA_OldDif2::AMI_ex3Handler::get_double_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class set_double_attribute_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class set_double_attribute_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline set_double_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant)
@@ -8202,12 +7923,10 @@ void POA_OldDif2::AMI_ex3Handler::set_double_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class set_double_attribute_excep_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class set_double_attribute_excep_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline set_double_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -8274,12 +7993,10 @@ void POA_OldDif2::AMI_ex3Handler::set_double_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_long_attribute_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class get_long_attribute_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline get_long_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -8346,12 +8063,10 @@ void POA_OldDif2::AMI_ex3Handler::get_long_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_long_attribute_excep_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class get_long_attribute_excep_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline get_long_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -8418,12 +8133,10 @@ void POA_OldDif2::AMI_ex3Handler::get_long_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_short_attribute_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class get_short_attribute_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline get_short_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -8490,12 +8203,10 @@ void POA_OldDif2::AMI_ex3Handler::get_short_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_short_attribute_excep_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class get_short_attribute_excep_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline get_short_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -8562,12 +8273,10 @@ void POA_OldDif2::AMI_ex3Handler::get_short_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class set_short_attribute_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class set_short_attribute_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline set_short_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant)
@@ -8616,12 +8325,10 @@ void POA_OldDif2::AMI_ex3Handler::set_short_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class set_short_attribute_excep_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class set_short_attribute_excep_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline set_short_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -8688,12 +8395,10 @@ void POA_OldDif2::AMI_ex3Handler::set_short_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_unsigned_long_attribute_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class get_unsigned_long_attribute_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline get_unsigned_long_attribute_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -8760,12 +8465,10 @@ void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_unsigned_long_attribute_excep_AMI_ex3Handler
-    : public TAO::Upcall_Command
+  class get_unsigned_long_attribute_excep_AMI_ex3Handler : public TAO::Upcall_Command
   {
   public:
     inline get_unsigned_long_attribute_excep_AMI_ex3Handler (POA_OldDif2::AMI_ex3Handler * servant,
@@ -8832,13 +8535,6 @@ void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::AMI_ex3Handler::_is_a (const char* value)
 {
   return
@@ -8855,18 +8551,12 @@ const char* POA_OldDif2::AMI_ex3Handler::_interface_repository_id () const
   return "IDL:OldDif2/AMI_ex3Handler:1.0";
 }
 
-
-
-
 void POA_OldDif2::AMI_ex3Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldDif2::AMI_ex3Handler *
 POA_OldDif2::AMI_ex3Handler::_this ()
@@ -8894,8 +8584,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -9078,7 +8766,6 @@ POA_OldDif2::AMH_ex4::AMH_ex4 ()
 {
   this->optable_ = std::addressof (tao_OldDif2_AMH_ex4_optable);
 }
-
 
 void
 POA_OldDif2::AMH_ex4::_get_unsigned_short_attribute_skel (
@@ -9474,11 +9161,6 @@ POA_OldDif2::AMH_ex4::_get_an_object_attribute_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::AMH_ex4::_is_a (const char* value)
 {
   return
@@ -9529,8 +9211,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex4_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_ex4_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -9717,7 +9397,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::~_TAO_ex4_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_unsigned_short_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -9735,7 +9414,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_unsigned_short_attribute (
     _tao_ptr->unsigned_short_attribute (
         );
 }
-
 
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_unsigned_short_attribute (
@@ -9755,7 +9433,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_unsigned_short_attribute (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_char_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -9773,7 +9450,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_char_attribute (
     _tao_ptr->char_attribute (
         );
 }
-
 
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_boolean_attribute (
@@ -9793,7 +9469,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_boolean_attribute (
         );
 }
 
-
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_boolean_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -9811,7 +9486,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_boolean_attribute (
         ((TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_octet_attribute (
@@ -9831,7 +9505,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_octet_attribute (
         );
 }
 
-
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_string_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -9849,7 +9522,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_string_attribute (
     _tao_ptr->string_attribute (
         );
 }
-
 
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_string_attribute (
@@ -9869,7 +9541,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_string_attribute (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_limited_string_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -9887,7 +9558,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_limited_string_attribute (
     _tao_ptr->limited_string_attribute (
         );
 }
-
 
 void
 POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_an_object_attribute (
@@ -9907,8 +9577,6 @@ POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_an_object_attribute (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -9918,12 +9586,10 @@ POA_OldDif2::ex4::ex4 ()
   this->optable_ = std::addressof (tao_OldDif2_ex4_optable);
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_unsigned_short_attribute_ex4
-    : public TAO::Upcall_Command
+  class _get_unsigned_short_attribute_ex4 : public TAO::Upcall_Command
   {
   public:
     inline _get_unsigned_short_attribute_ex4 (POA_OldDif2::ex4 * servant,
@@ -9987,12 +9653,10 @@ void POA_OldDif2::ex4::_get_unsigned_short_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _set_unsigned_short_attribute_ex4
-    : public TAO::Upcall_Command
+  class _set_unsigned_short_attribute_ex4 : public TAO::Upcall_Command
   {
   public:
     inline _set_unsigned_short_attribute_ex4 (POA_OldDif2::ex4 * servant,
@@ -10059,12 +9723,10 @@ void POA_OldDif2::ex4::_set_unsigned_short_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_char_attribute_ex4
-    : public TAO::Upcall_Command
+  class _get_char_attribute_ex4 : public TAO::Upcall_Command
   {
   public:
     inline _get_char_attribute_ex4 (POA_OldDif2::ex4 * servant,
@@ -10128,12 +9790,10 @@ void POA_OldDif2::ex4::_get_char_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_boolean_attribute_ex4
-    : public TAO::Upcall_Command
+  class _get_boolean_attribute_ex4 : public TAO::Upcall_Command
   {
   public:
     inline _get_boolean_attribute_ex4 (POA_OldDif2::ex4 * servant,
@@ -10197,12 +9857,10 @@ void POA_OldDif2::ex4::_get_boolean_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _set_boolean_attribute_ex4
-    : public TAO::Upcall_Command
+  class _set_boolean_attribute_ex4 : public TAO::Upcall_Command
   {
   public:
     inline _set_boolean_attribute_ex4 (POA_OldDif2::ex4 * servant,
@@ -10269,12 +9927,10 @@ void POA_OldDif2::ex4::_set_boolean_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_octet_attribute_ex4
-    : public TAO::Upcall_Command
+  class _get_octet_attribute_ex4 : public TAO::Upcall_Command
   {
   public:
     inline _get_octet_attribute_ex4 (POA_OldDif2::ex4 * servant,
@@ -10338,12 +9994,10 @@ void POA_OldDif2::ex4::_get_octet_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_string_attribute_ex4
-    : public TAO::Upcall_Command
+  class _get_string_attribute_ex4 : public TAO::Upcall_Command
   {
   public:
     inline _get_string_attribute_ex4 (POA_OldDif2::ex4 * servant,
@@ -10407,12 +10061,10 @@ void POA_OldDif2::ex4::_get_string_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _set_string_attribute_ex4
-    : public TAO::Upcall_Command
+  class _set_string_attribute_ex4 : public TAO::Upcall_Command
   {
   public:
     inline _set_string_attribute_ex4 (POA_OldDif2::ex4 * servant,
@@ -10479,12 +10131,10 @@ void POA_OldDif2::ex4::_set_string_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_limited_string_attribute_ex4
-    : public TAO::Upcall_Command
+  class _get_limited_string_attribute_ex4 : public TAO::Upcall_Command
   {
   public:
     inline _get_limited_string_attribute_ex4 (POA_OldDif2::ex4 * servant,
@@ -10548,12 +10198,10 @@ void POA_OldDif2::ex4::_get_limited_string_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class _get_an_object_attribute_ex4
-    : public TAO::Upcall_Command
+  class _get_an_object_attribute_ex4 : public TAO::Upcall_Command
   {
   public:
     inline _get_an_object_attribute_ex4 (POA_OldDif2::ex4 * servant,
@@ -10617,13 +10265,6 @@ void POA_OldDif2::ex4::_get_an_object_attribute_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::ex4::_is_a (const char* value)
 {
   return
@@ -10641,18 +10282,12 @@ const char* POA_OldDif2::ex4::_interface_repository_id () const
   return "IDL:OldDif2/ex4:1.0";
 }
 
-
-
-
 void POA_OldDif2::ex4::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldDif2::ex4 *
 POA_OldDif2::ex4::_this ()
@@ -10700,7 +10335,6 @@ void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_unsigned_short_attribute ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -10778,7 +10412,6 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_boolean_attribute ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -10854,7 +10487,6 @@ void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_string_attribute ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -10940,8 +10572,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -11232,7 +10862,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::~_TAO_AMI_ex4Handler_Direct_
 {
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_unsigned_short_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11250,7 +10879,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_unsigned_short_attribute
         ((TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_unsigned_short_attribute_excep (
@@ -11270,7 +10898,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_unsigned_short_attribute
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_unsigned_short_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11287,7 +10914,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_unsigned_short_attribute
   _tao_ptr->set_unsigned_short_attribute (
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_unsigned_short_attribute_excep (
@@ -11307,7 +10933,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_unsigned_short_attribute
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_char_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11325,7 +10950,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_char_attribute (
         ((TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_char_attribute_excep (
@@ -11345,7 +10969,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_char_attribute_excep (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_boolean_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11363,7 +10986,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_boolean_attribute (
         ((TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_boolean_attribute_excep (
@@ -11383,7 +11005,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_boolean_attribute_excep 
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_boolean_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11400,7 +11021,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_boolean_attribute (
   _tao_ptr->set_boolean_attribute (
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_boolean_attribute_excep (
@@ -11420,7 +11040,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_boolean_attribute_excep 
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_octet_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11438,7 +11057,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_octet_attribute (
         ((TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_octet_attribute_excep (
@@ -11458,7 +11076,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_octet_attribute_excep (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_string_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11476,7 +11093,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_string_attribute (
         ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_string_attribute_excep (
@@ -11496,7 +11112,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_string_attribute_excep (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_string_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11513,7 +11128,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_string_attribute (
   _tao_ptr->set_string_attribute (
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_string_attribute_excep (
@@ -11533,7 +11147,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_string_attribute_excep (
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_limited_string_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11551,7 +11164,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_limited_string_attribute
         ((TAO::Arg_Traits< ::TAO::OldDif2_AMI_ex4Handler_get_limited_string_attribute_ami_return_val>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_limited_string_attribute_excep (
@@ -11571,7 +11183,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_limited_string_attribute
       );
 }
 
-
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_an_object_attribute (
     TAO_Abstract_ServantBase  *servant,
@@ -11589,7 +11200,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_an_object_attribute (
         ((TAO::Arg_Traits< ::OldDif2::ex4>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_an_object_attribute_excep (
@@ -11609,8 +11219,6 @@ POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_an_object_attribute_exce
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -11620,12 +11228,10 @@ POA_OldDif2::AMI_ex4Handler::AMI_ex4Handler ()
   this->optable_ = std::addressof (tao_OldDif2_AMI_ex4Handler_optable);
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_unsigned_short_attribute_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_unsigned_short_attribute_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_unsigned_short_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -11692,12 +11298,10 @@ void POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_unsigned_short_attribute_excep_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_unsigned_short_attribute_excep_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_unsigned_short_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -11764,12 +11368,10 @@ void POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class set_unsigned_short_attribute_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class set_unsigned_short_attribute_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline set_unsigned_short_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant)
@@ -11818,12 +11420,10 @@ void POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class set_unsigned_short_attribute_excep_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class set_unsigned_short_attribute_excep_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline set_unsigned_short_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -11890,12 +11490,10 @@ void POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_char_attribute_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_char_attribute_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_char_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -11962,12 +11560,10 @@ void POA_OldDif2::AMI_ex4Handler::get_char_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_char_attribute_excep_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_char_attribute_excep_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_char_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12034,12 +11630,10 @@ void POA_OldDif2::AMI_ex4Handler::get_char_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_boolean_attribute_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_boolean_attribute_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_boolean_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12106,12 +11700,10 @@ void POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_boolean_attribute_excep_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_boolean_attribute_excep_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_boolean_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12178,12 +11770,10 @@ void POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class set_boolean_attribute_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class set_boolean_attribute_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline set_boolean_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant)
@@ -12232,12 +11822,10 @@ void POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class set_boolean_attribute_excep_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class set_boolean_attribute_excep_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline set_boolean_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12304,12 +11892,10 @@ void POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_octet_attribute_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_octet_attribute_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_octet_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12376,12 +11962,10 @@ void POA_OldDif2::AMI_ex4Handler::get_octet_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_octet_attribute_excep_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_octet_attribute_excep_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_octet_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12448,12 +12032,10 @@ void POA_OldDif2::AMI_ex4Handler::get_octet_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_string_attribute_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_string_attribute_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_string_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12520,12 +12102,10 @@ void POA_OldDif2::AMI_ex4Handler::get_string_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_string_attribute_excep_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_string_attribute_excep_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_string_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12592,12 +12172,10 @@ void POA_OldDif2::AMI_ex4Handler::get_string_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class set_string_attribute_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class set_string_attribute_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline set_string_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant)
@@ -12646,12 +12224,10 @@ void POA_OldDif2::AMI_ex4Handler::set_string_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class set_string_attribute_excep_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class set_string_attribute_excep_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline set_string_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12718,12 +12294,10 @@ void POA_OldDif2::AMI_ex4Handler::set_string_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_limited_string_attribute_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_limited_string_attribute_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_limited_string_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12790,12 +12364,10 @@ void POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_limited_string_attribute_excep_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_limited_string_attribute_excep_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_limited_string_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12862,12 +12434,10 @@ void POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_an_object_attribute_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_an_object_attribute_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_an_object_attribute_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -12934,12 +12504,10 @@ void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_skel (
                          );
 }
 
-
 namespace POA_OldDif2
 {
 
-  class get_an_object_attribute_excep_AMI_ex4Handler
-    : public TAO::Upcall_Command
+  class get_an_object_attribute_excep_AMI_ex4Handler : public TAO::Upcall_Command
   {
   public:
     inline get_an_object_attribute_excep_AMI_ex4Handler (POA_OldDif2::AMI_ex4Handler * servant,
@@ -13006,13 +12574,6 @@ void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_OldDif2::AMI_ex4Handler::_is_a (const char* value)
 {
   return
@@ -13031,18 +12592,12 @@ const char* POA_OldDif2::AMI_ex4Handler::_interface_repository_id () const
   return "IDL:OldDif2/AMI_ex4Handler:1.0";
 }
 
-
-
-
 void POA_OldDif2::AMI_ex4Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 OldDif2::AMI_ex4Handler *
 POA_OldDif2::AMI_ex4Handler::_this ()

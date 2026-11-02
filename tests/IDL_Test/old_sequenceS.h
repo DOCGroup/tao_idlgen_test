@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_WY87KW_H_
-#define _TAO_IDL_OLD_SEQUENCES_WY87KW_H_
+#ifndef _TAO_IDL_OLD_SEQUENCES_GT9YMJ_H_
+#define _TAO_IDL_OLD_SEQUENCES_GT9YMJ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -53,14 +53,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -79,7 +76,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::c20>
     : public
@@ -89,7 +85,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::cc23>
@@ -101,7 +96,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::c24>
     : public
@@ -111,7 +105,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::c30>
@@ -123,7 +116,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::cstring>
     : public
@@ -134,7 +126,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::TProgram>
     : public
@@ -144,7 +135,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::sfoo>
@@ -167,7 +157,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::f_unbounded>
     : public
@@ -178,7 +167,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::f_ar_unbounded>
     : public
@@ -188,7 +176,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_TESTSEQ__SARG_TRAITS_)
 #define _TESTSEQ__SARG_TRAITS_
@@ -205,7 +192,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::TestSeq::also_vec10>
     : public
@@ -215,7 +201,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_AMH_TESTSEQEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_TESTSEQEXCEPTIONHOLDER__SARG_TRAITS_
@@ -233,7 +218,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMI_TESTSEQHANDLER__SARG_TRAITS_)
 #define _AMI_TESTSEQHANDLER__SARG_TRAITS_
@@ -253,7 +237,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 class POA_AMH_TestSeq;
 using POA_AMH_TestSeq_ptr = POA_AMH_TestSeq *;
 
@@ -266,7 +249,6 @@ protected:
 public:
   POA_AMH_TestSeq (const POA_AMH_TestSeq& rhs);
   virtual ~POA_AMH_TestSeq () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -297,9 +279,6 @@ virtual void fattr (
   ) = 0;
 
 };
-
-
-
 
 class POA_TestSeq;
 using POA_TestSeq_ptr = POA_TestSeq *;
@@ -345,7 +324,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -368,7 +346,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class POA_TAO_AMH_TestSeqResponseHandler;
 using POA_TAO_AMH_TestSeqResponseHandler_ptr = POA_TAO_AMH_TestSeqResponseHandler *;
 
@@ -387,9 +364,6 @@ public:
   void set_fattr_excep (
     ::AMH_TestSeqExceptionHolder * holder) override;
 };
-
-
-
 
 class POA_AMI_TestSeqHandler;
 using POA_AMI_TestSeqHandler_ptr = POA_AMI_TestSeqHandler *;
@@ -449,7 +423,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -481,10 +454,7 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "old_sequenceS_T.h"
-
 
 #include /**/ "ace/post.h"
 

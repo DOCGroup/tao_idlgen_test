@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "dif2C.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -66,7 +65,6 @@ TAO::Objref_Traits<OldDif2::ex1>::marshal (const OldDif2::ex1_ptr p,TAO_OutputCD
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 OldDif2::ex1::op0 ()
@@ -327,7 +325,6 @@ OldDif2::ex1::op6 (
   return _tao_retval.retn ();
 }
 
-
 void
 OldDif2::ex1::sendc_op0 (
   ::OldDif2::AMI_ex1Handler_ptr ami_handler)
@@ -336,8 +333,6 @@ OldDif2::ex1::sendc_op0 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -356,7 +351,6 @@ OldDif2::ex1::sendc_op0 (
     );
 }
 
-
 void
 OldDif2::ex1::sendc_op1 (
   ::OldDif2::AMI_ex1Handler_ptr ami_handler,
@@ -367,8 +361,6 @@ OldDif2::ex1::sendc_op1 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Float>::in_arg_val _tao_f (f);
@@ -396,7 +388,6 @@ OldDif2::ex1::sendc_op1 (
     );
 }
 
-
 void
 OldDif2::ex1::sendc_op2 (
   ::OldDif2::AMI_ex1Handler_ptr ami_handler,
@@ -407,8 +398,6 @@ OldDif2::ex1::sendc_op2 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Double>::in_arg_val _tao_d (d);
@@ -436,7 +425,6 @@ OldDif2::ex1::sendc_op2 (
     );
 }
 
-
 void
 OldDif2::ex1::sendc_op3 (
   ::OldDif2::AMI_ex1Handler_ptr ami_handler,
@@ -447,8 +435,6 @@ OldDif2::ex1::sendc_op3 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
@@ -476,7 +462,6 @@ OldDif2::ex1::sendc_op3 (
     );
 }
 
-
 void
 OldDif2::ex1::sendc_op4 (
   ::OldDif2::AMI_ex1Handler_ptr ami_handler,
@@ -487,8 +472,6 @@ OldDif2::ex1::sendc_op4 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_s (s);
@@ -516,7 +499,6 @@ OldDif2::ex1::sendc_op4 (
     );
 }
 
-
 void
 OldDif2::ex1::sendc_op5 (
   ::OldDif2::AMI_ex1Handler_ptr ami_handler,
@@ -528,8 +510,6 @@ OldDif2::ex1::sendc_op5 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::ULong>::in_arg_val _tao_ul (ul);
@@ -559,7 +539,6 @@ OldDif2::ex1::sendc_op5 (
     );
 }
 
-
 void
 OldDif2::ex1::sendc_op6 (
   ::OldDif2::AMI_ex1Handler_ptr ami_handler,
@@ -569,8 +548,6 @@ OldDif2::ex1::sendc_op6 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
@@ -677,9 +654,7 @@ OldDif2::ex1::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<OldDif2::AMH_ex1ExceptionHolder>::add_ref (OldDif2::AMH_ex1ExceptionHolder * p)
@@ -700,8 +675,6 @@ TAO::Value_Traits<OldDif2::AMH_ex1ExceptionHolder>::release (OldDif2::AMH_ex1Exc
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex1ExceptionHolder *
 OldDif2::AMH_ex1ExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -910,7 +883,6 @@ OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op6 ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldDif2::AMH_ex1ResponseHandler.
@@ -940,8 +912,6 @@ TAO::Objref_Traits<OldDif2::AMH_ex1ResponseHandler>::marshal (const OldDif2::AMH
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex1ResponseHandler::AMH_ex1ResponseHandler ()
 {}
@@ -1056,7 +1026,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::marshal (const OldDif2::AMI_ex1Hand
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 OldDif2::AMI_ex1Handler::op0 ()
@@ -2108,7 +2077,6 @@ TAO::Objref_Traits<OldDif2::ex2>::marshal (const OldDif2::ex2_ptr p,TAO_OutputCD
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 ::CORBA::Char
 OldDif2::ex2::op7 (
   ::CORBA::Char c,
@@ -2326,7 +2294,6 @@ OldDif2::ex2::op12 (
   return _tao_retval.retn ();
 }
 
-
 void
 OldDif2::ex2::sendc_op7 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
@@ -2337,8 +2304,6 @@ OldDif2::ex2::sendc_op7 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
@@ -2366,7 +2331,6 @@ OldDif2::ex2::sendc_op7 (
     );
 }
 
-
 void
 OldDif2::ex2::sendc_op8 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
@@ -2376,8 +2340,6 @@ OldDif2::ex2::sendc_op8 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
@@ -2403,7 +2365,6 @@ OldDif2::ex2::sendc_op8 (
     );
 }
 
-
 void
 OldDif2::ex2::sendc_op9 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
@@ -2415,8 +2376,6 @@ OldDif2::ex2::sendc_op9 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
@@ -2446,7 +2405,6 @@ OldDif2::ex2::sendc_op9 (
     );
 }
 
-
 void
 OldDif2::ex2::sendc_op10 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
@@ -2456,8 +2414,6 @@ OldDif2::ex2::sendc_op10 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< char *>::in_arg_val _tao_s (s);
@@ -2483,7 +2439,6 @@ OldDif2::ex2::sendc_op10 (
     );
 }
 
-
 void
 OldDif2::ex2::sendc_op11 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
@@ -2493,8 +2448,6 @@ OldDif2::ex2::sendc_op11 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::TAO::OldDif2_ex2_op11_ls>::in_arg_val _tao_ls (ls);
@@ -2520,7 +2473,6 @@ OldDif2::ex2::sendc_op11 (
     );
 }
 
-
 void
 OldDif2::ex2::sendc_op12 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
@@ -2530,8 +2482,6 @@ OldDif2::ex2::sendc_op12 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
@@ -2639,9 +2589,7 @@ OldDif2::ex2::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<OldDif2::AMH_ex2ExceptionHolder>::add_ref (OldDif2::AMH_ex2ExceptionHolder * p)
@@ -2662,8 +2610,6 @@ TAO::Value_Traits<OldDif2::AMH_ex2ExceptionHolder>::release (OldDif2::AMH_ex2Exc
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex2ExceptionHolder *
 OldDif2::AMH_ex2ExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -2858,7 +2804,6 @@ OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op12 ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldDif2::AMH_ex2ResponseHandler.
@@ -2888,8 +2833,6 @@ TAO::Objref_Traits<OldDif2::AMH_ex2ResponseHandler>::marshal (const OldDif2::AMH
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex2ResponseHandler::AMH_ex2ResponseHandler ()
 {}
@@ -3004,7 +2947,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::marshal (const OldDif2::AMI_ex2Hand
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 OldDif2::AMI_ex2Handler::op7 (
@@ -3921,7 +3863,6 @@ TAO::Objref_Traits<OldDif2::ex3>::marshal (const OldDif2::ex3_ptr p,TAO_OutputCD
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 ::CORBA::Float
 OldDif2::ex3::float_attribute ()
 {
@@ -4143,7 +4084,6 @@ OldDif2::ex3::unsigned_long_attribute ()
   return _tao_retval.retn ();
 }
 
-
 void
 OldDif2::ex3::sendc_get_float_attribute (
   ::OldDif2::AMI_ex3Handler_ptr ami_handler)
@@ -4152,8 +4092,6 @@ OldDif2::ex3::sendc_get_float_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -4172,7 +4110,6 @@ OldDif2::ex3::sendc_get_float_attribute (
     );
 }
 
-
 void
 OldDif2::ex3::sendc_set_double_attribute (
   ::OldDif2::AMI_ex3Handler_ptr ami_handler,
@@ -4182,8 +4119,6 @@ OldDif2::ex3::sendc_set_double_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Double>::in_arg_val _tao_double_attribute (double_attribute);
@@ -4209,7 +4144,6 @@ OldDif2::ex3::sendc_set_double_attribute (
     );
 }
 
-
 void
 OldDif2::ex3::sendc_get_double_attribute (
   ::OldDif2::AMI_ex3Handler_ptr ami_handler)
@@ -4218,8 +4152,6 @@ OldDif2::ex3::sendc_get_double_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -4238,7 +4170,6 @@ OldDif2::ex3::sendc_get_double_attribute (
     );
 }
 
-
 void
 OldDif2::ex3::sendc_get_long_attribute (
   ::OldDif2::AMI_ex3Handler_ptr ami_handler)
@@ -4247,8 +4178,6 @@ OldDif2::ex3::sendc_get_long_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -4267,7 +4196,6 @@ OldDif2::ex3::sendc_get_long_attribute (
     );
 }
 
-
 void
 OldDif2::ex3::sendc_set_short_attribute (
   ::OldDif2::AMI_ex3Handler_ptr ami_handler,
@@ -4277,8 +4205,6 @@ OldDif2::ex3::sendc_set_short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_short_attribute (short_attribute);
@@ -4304,7 +4230,6 @@ OldDif2::ex3::sendc_set_short_attribute (
     );
 }
 
-
 void
 OldDif2::ex3::sendc_get_short_attribute (
   ::OldDif2::AMI_ex3Handler_ptr ami_handler)
@@ -4313,8 +4238,6 @@ OldDif2::ex3::sendc_get_short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -4333,7 +4256,6 @@ OldDif2::ex3::sendc_get_short_attribute (
     );
 }
 
-
 void
 OldDif2::ex3::sendc_get_unsigned_long_attribute (
   ::OldDif2::AMI_ex3Handler_ptr ami_handler)
@@ -4342,8 +4264,6 @@ OldDif2::ex3::sendc_get_unsigned_long_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -4444,9 +4364,7 @@ OldDif2::ex3::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<OldDif2::AMH_ex3ExceptionHolder>::add_ref (OldDif2::AMH_ex3ExceptionHolder * p)
@@ -4467,8 +4385,6 @@ TAO::Value_Traits<OldDif2::AMH_ex3ExceptionHolder>::release (OldDif2::AMH_ex3Exc
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex3ExceptionHolder *
 OldDif2::AMH_ex3ExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -4677,7 +4593,6 @@ OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_unsigned_long_attribute ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldDif2::AMH_ex3ResponseHandler.
@@ -4707,8 +4622,6 @@ TAO::Objref_Traits<OldDif2::AMH_ex3ResponseHandler>::marshal (const OldDif2::AMH
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex3ResponseHandler::AMH_ex3ResponseHandler ()
 {}
@@ -4823,7 +4736,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::marshal (const OldDif2::AMI_ex3Hand
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 OldDif2::AMI_ex3Handler::get_float_attribute (
@@ -5784,7 +5696,6 @@ TAO::Objref_Traits<OldDif2::ex4>::marshal (const OldDif2::ex4_ptr p,TAO_OutputCD
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 ::CORBA::UShort
 OldDif2::ex4::unsigned_short_attribute ()
 {
@@ -6100,7 +6011,6 @@ OldDif2::ex4::an_object_attribute ()
   return _tao_retval.retn ();
 }
 
-
 void
 OldDif2::ex4::sendc_set_unsigned_short_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler,
@@ -6110,8 +6020,6 @@ OldDif2::ex4::sendc_set_unsigned_short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val _tao_unsigned_short_attribute (unsigned_short_attribute);
@@ -6137,7 +6045,6 @@ OldDif2::ex4::sendc_set_unsigned_short_attribute (
     );
 }
 
-
 void
 OldDif2::ex4::sendc_get_unsigned_short_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6146,8 +6053,6 @@ OldDif2::ex4::sendc_get_unsigned_short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6166,7 +6071,6 @@ OldDif2::ex4::sendc_get_unsigned_short_attribute (
     );
 }
 
-
 void
 OldDif2::ex4::sendc_get_char_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6175,8 +6079,6 @@ OldDif2::ex4::sendc_get_char_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6195,7 +6097,6 @@ OldDif2::ex4::sendc_get_char_attribute (
     );
 }
 
-
 void
 OldDif2::ex4::sendc_set_boolean_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler,
@@ -6205,8 +6106,6 @@ OldDif2::ex4::sendc_set_boolean_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_boolean_attribute (boolean_attribute);
@@ -6232,7 +6131,6 @@ OldDif2::ex4::sendc_set_boolean_attribute (
     );
 }
 
-
 void
 OldDif2::ex4::sendc_get_boolean_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6241,8 +6139,6 @@ OldDif2::ex4::sendc_get_boolean_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6261,7 +6157,6 @@ OldDif2::ex4::sendc_get_boolean_attribute (
     );
 }
 
-
 void
 OldDif2::ex4::sendc_get_octet_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6270,8 +6165,6 @@ OldDif2::ex4::sendc_get_octet_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6290,7 +6183,6 @@ OldDif2::ex4::sendc_get_octet_attribute (
     );
 }
 
-
 void
 OldDif2::ex4::sendc_set_string_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler,
@@ -6300,8 +6192,6 @@ OldDif2::ex4::sendc_set_string_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< char *>::in_arg_val _tao_string_attribute (string_attribute);
@@ -6327,7 +6217,6 @@ OldDif2::ex4::sendc_set_string_attribute (
     );
 }
 
-
 void
 OldDif2::ex4::sendc_get_string_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6336,8 +6225,6 @@ OldDif2::ex4::sendc_get_string_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6356,7 +6243,6 @@ OldDif2::ex4::sendc_get_string_attribute (
     );
 }
 
-
 void
 OldDif2::ex4::sendc_get_limited_string_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6365,8 +6251,6 @@ OldDif2::ex4::sendc_get_limited_string_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6385,7 +6269,6 @@ OldDif2::ex4::sendc_get_limited_string_attribute (
     );
 }
 
-
 void
 OldDif2::ex4::sendc_get_an_object_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler)
@@ -6394,8 +6277,6 @@ OldDif2::ex4::sendc_get_an_object_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6498,9 +6379,7 @@ OldDif2::ex4::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<OldDif2::AMH_ex4ExceptionHolder>::add_ref (OldDif2::AMH_ex4ExceptionHolder * p)
@@ -6521,8 +6400,6 @@ TAO::Value_Traits<OldDif2::AMH_ex4ExceptionHolder>::release (OldDif2::AMH_ex4Exc
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex4ExceptionHolder *
 OldDif2::AMH_ex4ExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -6773,7 +6650,6 @@ OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_an_object_attribute ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for OldDif2::AMH_ex4ResponseHandler.
@@ -6803,8 +6679,6 @@ TAO::Objref_Traits<OldDif2::AMH_ex4ResponseHandler>::marshal (const OldDif2::AMH
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex4ResponseHandler::AMH_ex4ResponseHandler ()
 {}
@@ -6919,7 +6793,6 @@ TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::marshal (const OldDif2::AMI_ex4Hand
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 OldDif2::AMI_ex4Handler::get_unsigned_short_attribute (
@@ -8298,9 +8171,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex1ExceptionHolder * vt)
@@ -8321,8 +8191,6 @@ CORBA::remove_ref (OldDif2::AMH_ex1ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -8346,9 +8214,7 @@ operator>> (
   return OldDif2::AMH_ex1ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex1ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -8367,8 +8233,6 @@ OBV_OldDif2::AMH_ex1ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -8399,8 +8263,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -8430,9 +8292,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex2ExceptionHolder * vt)
@@ -8453,8 +8312,6 @@ CORBA::remove_ref (OldDif2::AMH_ex2ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -8478,9 +8335,7 @@ operator>> (
   return OldDif2::AMH_ex2ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex2ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -8499,8 +8354,6 @@ OBV_OldDif2::AMH_ex2ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -8531,8 +8384,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -8562,9 +8413,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex3ExceptionHolder * vt)
@@ -8585,8 +8433,6 @@ CORBA::remove_ref (OldDif2::AMH_ex3ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -8610,9 +8456,7 @@ operator>> (
   return OldDif2::AMH_ex3ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex3ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -8631,8 +8475,6 @@ OBV_OldDif2::AMH_ex3ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -8663,8 +8505,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -8694,9 +8534,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex4ExceptionHolder * vt)
@@ -8717,8 +8554,6 @@ CORBA::remove_ref (OldDif2::AMH_ex4ExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -8742,9 +8577,7 @@ operator>> (
   return OldDif2::AMH_ex4ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex4ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -8763,8 +8596,6 @@ OBV_OldDif2::AMH_ex4ExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -8794,6 +8625,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

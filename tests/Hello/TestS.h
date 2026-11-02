@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_7952RK_H_
-#define _TAO_IDL_TESTS_7952RK_H_
+#ifndef _TAO_IDL_TESTS_05Y1U3_H_
+#define _TAO_IDL_TESTS_05Y1U3_H_
 
 #include /**/ "ace/pre.h"
 
@@ -42,14 +42,11 @@
 #include "tao/PortableServer/PortableServer.h"
 #include "tao/PortableServer/Servant_Base.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_TEST_HELLO__SARG_TRAITS_)
 #define _TEST_HELLO__SARG_TRAITS_
@@ -69,13 +66,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_Test
 {
-
-
-
-
 
   class Hello;
   using Hello_ptr = Hello *;
@@ -117,7 +109,6 @@ namespace POA_Test
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
 
 } // module Test
 

@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "sequence_anonymousC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -82,11 +81,6 @@ TAO::Objref_Traits<seqTest>::marshal (const seqTest_ptr p,TAO_OutputCDR & cdr)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 #if !defined (_SEQTEST_DOZENS_CS_)
 #define _SEQTEST_DOZENS_CS_
 
@@ -109,8 +103,6 @@ void seqTest::dozens::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-
-
 
 #ifndef _TAO_TYPECODE_CORBA_STRING_12_GUARD
 #define _TAO_TYPECODE_CORBA_STRING_12_GUARD
@@ -137,7 +129,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_CORBA_STRING_12_GUARD */
-
 
 #ifndef _TAO_TYPECODE_seqTest_dozens_GUARD
 #define _TAO_TYPECODE_seqTest_dozens_GUARD
@@ -204,7 +195,6 @@ seqTest::send_dozen (
   _invocation_call.invoke (nullptr, 0);
 }
 
-
 void
 seqTest::sendc_send_dozen (
   ::AMI_seqTestHandler_ptr ami_handler,
@@ -214,8 +204,6 @@ seqTest::sendc_send_dozen (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-
-
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
   TAO::Arg_Traits< ::seqTest::dozens>::in_arg_val _tao_bouquets (bouquets);
@@ -345,9 +333,7 @@ static TAO::TypeCode::Value<char const *,
 
 ::CORBA::TypeCode_ptr const _tc_AMH_seqTestExceptionHolder = std::addressof(_tao_tc_AMH_seqTestExceptionHolder);
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<AMH_seqTestExceptionHolder>::add_ref (AMH_seqTestExceptionHolder * p)
@@ -368,8 +354,6 @@ TAO::Value_Traits<AMH_seqTestExceptionHolder>::release (AMH_seqTestExceptionHold
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 AMH_seqTestExceptionHolder *
 AMH_seqTestExceptionHolder::_downcast (::CORBA::ValueBase *v)
@@ -500,7 +484,6 @@ AMH_seqTestExceptionHolder::raise_sendc_send_dozen ()
   this->exception->_raise ();
 }
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for AMH_seqTestResponseHandler.
@@ -530,8 +513,6 @@ TAO::Objref_Traits<AMH_seqTestResponseHandler>::marshal (const AMH_seqTestRespon
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 AMH_seqTestResponseHandler::AMH_seqTestResponseHandler ()
 {}
@@ -654,7 +635,6 @@ TAO::Objref_Traits<AMI_seqTestHandler>::marshal (const AMI_seqTestHandler_ptr p,
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 void
 AMI_seqTestHandler::send_dozen (
@@ -870,8 +850,6 @@ static TAO::TypeCode::Objref<char const *,
 
 ::CORBA::TypeCode_ptr const _tc_AMI_seqTestHandler = std::addressof(_tao_tc_AMI_seqTestHandler);
 
-
-
 #ifndef _TAO_TYPECODE_twinStruct__tao_seq_CORBA_Short__GUARD
 #define _TAO_TYPECODE_twinStruct__tao_seq_CORBA_Short__GUARD
 
@@ -895,7 +873,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_twinStruct__tao_seq_CORBA_Short__GUARD */
-
 
 #ifndef _TAO_TYPECODE_twinStruct__tao_seq__tao_seq_CORBA_Short__and__GUARD
 #define _TAO_TYPECODE_twinStruct__tao_seq__tao_seq_CORBA_Short__and__GUARD
@@ -921,9 +898,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_twinStruct__tao_seq__tao_seq_CORBA_Short__and__GUARD */
 
-
-
-
 #ifndef _TAO_TYPECODE_twinStruct__tao_seq_CORBA_Short__GUARD
 #define _TAO_TYPECODE_twinStruct__tao_seq_CORBA_Short__GUARD
 
@@ -947,7 +921,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_twinStruct__tao_seq_CORBA_Short__GUARD */
-
 
 #ifndef _TAO_TYPECODE_twinStruct__tao_seq__tao_seq_CORBA_Short__or__GUARD
 #define _TAO_TYPECODE_twinStruct__tao_seq__tao_seq_CORBA_Short__or__GUARD
@@ -998,7 +971,6 @@ _tao_tc_twinStruct (
 
 ::CORBA::TypeCode_ptr const _tc_twinStruct = std::addressof(_tao_tc_twinStruct);
 
-
 void
 twinStruct::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -1006,9 +978,6 @@ twinStruct::_tao_any_destructor (
   twinStruct *tmp = static_cast<twinStruct *> (_tao_void_pointer);
   delete tmp;
 }
-
-
-
 
 #if !defined (_TWINSTRUCT__TAO_SEQ_CORBA_SHORT__CS_)
 #define _TWINSTRUCT__TAO_SEQ_CORBA_SHORT__CS_
@@ -1025,9 +994,6 @@ twinStruct::_tao_seq_CORBA_Short_::_tao_seq_CORBA_Short_ (::CORBA::ULong max,
 {}
 
 #endif /* end #if !defined */
-
-
-
 
 #if !defined (_TWINSTRUCT__TAO_SEQ__TAO_SEQ_CORBA_SHORT__AND__CS_)
 #define _TWINSTRUCT__TAO_SEQ__TAO_SEQ_CORBA_SHORT__AND__CS_
@@ -1045,9 +1011,6 @@ twinStruct::_tao_seq__tao_seq_CORBA_Short__and_::_tao_seq__tao_seq_CORBA_Short__
 
 #endif /* end #if !defined */
 
-
-
-
 #if !defined (_TWINSTRUCT__TAO_SEQ_CORBA_SHORT__CS_)
 #define _TWINSTRUCT__TAO_SEQ_CORBA_SHORT__CS_
 
@@ -1063,9 +1026,6 @@ twinStruct::_tao_seq_CORBA_Short_::_tao_seq_CORBA_Short_ (::CORBA::ULong max,
 {}
 
 #endif /* end #if !defined */
-
-
-
 
 #if !defined (_TWINSTRUCT__TAO_SEQ__TAO_SEQ_CORBA_SHORT__OR__CS_)
 #define _TWINSTRUCT__TAO_SEQ__TAO_SEQ_CORBA_SHORT__OR__CS_
@@ -1083,9 +1043,6 @@ twinStruct::_tao_seq__tao_seq_CORBA_Short__or_::_tao_seq__tao_seq_CORBA_Short__o
 
 #endif /* end #if !defined */
 
-
-
-
 #if !defined (__TAO_SEQ_CORBA_SHORT__5_CS_)
 #define __TAO_SEQ_CORBA_SHORT__5_CS_
 
@@ -1097,9 +1054,6 @@ _tao_seq_CORBA_Short__5::_tao_seq_CORBA_Short__5 (::CORBA::ULong length,
 {}
 
 #endif /* end #if !defined */
-
-
-
 
 #if !defined (_OUTSIDE_CS_)
 #define _OUTSIDE_CS_
@@ -1124,8 +1078,6 @@ void outside::_tao_any_destructor (
 
 #endif /* end #if !defined */
 
-
-
 #ifndef _TAO_TYPECODE__tao_seq_CORBA_Short__5_GUARD
 #define _TAO_TYPECODE__tao_seq_CORBA_Short__5_GUARD
 
@@ -1149,7 +1101,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE__tao_seq_CORBA_Short__5_GUARD */
-
 
 #ifndef _TAO_TYPECODE_outside_GUARD
 #define _TAO_TYPECODE_outside_GUARD
@@ -1186,8 +1137,6 @@ static TAO::TypeCode::Alias<char const *,
 
 ::CORBA::TypeCode_ptr const _tc_outside = std::addressof(_tao_tc_outside);
 
-
-
 #ifndef _TAO_TYPECODE_nestedSeqStruct__tao_seq_outside__GUARD
 #define _TAO_TYPECODE_nestedSeqStruct__tao_seq_outside__GUARD
 
@@ -1211,7 +1160,6 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_nestedSeqStruct__tao_seq_outside__GUARD */
-
 
 #ifndef _TAO_TYPECODE_nestedSeqStruct__tao_seq__tao_seq_outside__inside_7_GUARD
 #define _TAO_TYPECODE_nestedSeqStruct__tao_seq__tao_seq_outside__inside_7_GUARD
@@ -1261,7 +1209,6 @@ _tao_tc_nestedSeqStruct (
 
 ::CORBA::TypeCode_ptr const _tc_nestedSeqStruct = std::addressof(_tao_tc_nestedSeqStruct);
 
-
 void
 nestedSeqStruct::_tao_any_destructor (
     void *_tao_void_pointer)
@@ -1269,9 +1216,6 @@ nestedSeqStruct::_tao_any_destructor (
   nestedSeqStruct *tmp = static_cast<nestedSeqStruct *> (_tao_void_pointer);
   delete tmp;
 }
-
-
-
 
 #if !defined (_NESTEDSEQSTRUCT__TAO_SEQ_OUTSIDE__CS_)
 #define _NESTEDSEQSTRUCT__TAO_SEQ_OUTSIDE__CS_
@@ -1288,9 +1232,6 @@ nestedSeqStruct::_tao_seq_outside_::_tao_seq_outside_ (::CORBA::ULong max,
 {}
 
 #endif /* end #if !defined */
-
-
-
 
 #if !defined (_NESTEDSEQSTRUCT__TAO_SEQ__TAO_SEQ_OUTSIDE__INSIDE_7_CS_)
 #define _NESTEDSEQSTRUCT__TAO_SEQ__TAO_SEQ_OUTSIDE__INSIDE_7_CS_
@@ -1320,8 +1261,6 @@ OBV_AMH_seqTestExceptionHolder::_tao_unmarshal__AMH_seqTestExceptionHolder (TAO_
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<>
@@ -1335,11 +1274,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1381,11 +1317,8 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1425,11 +1358,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1444,9 +1373,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1495,15 +1422,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1535,11 +1457,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1581,11 +1500,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1600,11 +1515,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -1645,8 +1557,6 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1689,11 +1599,8 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
@@ -1732,8 +1639,6 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1776,7 +1681,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 #if !defined _TAO_CDR_OP_seqTest_dozens_CPP_
 #define _TAO_CDR_OP_seqTest_dozens_CPP_
 
@@ -1795,7 +1699,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1830,9 +1733,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (AMH_seqTestExceptionHolder * vt)
@@ -1853,8 +1753,6 @@ CORBA::remove_ref (AMH_seqTestExceptionHolder * vt)
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1878,9 +1776,7 @@ operator>> (
   return AMH_seqTestExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 ::CORBA::Boolean
 OBV_AMH_seqTestExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -1899,8 +1795,6 @@ OBV_AMH_seqTestExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1931,7 +1825,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 #if !defined _TAO_CDR_OP_twinStruct__tao_seq_CORBA_Short__CPP_
 #define _TAO_CDR_OP_twinStruct__tao_seq_CORBA_Short__CPP_
 
@@ -1950,7 +1843,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1974,7 +1866,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_twinStruct__tao_seq__tao_seq_CORBA_Short__and__CPP_ */
@@ -1997,7 +1888,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_twinStruct__tao_seq_CORBA_Short__CPP_ */
@@ -2019,7 +1909,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2049,7 +1938,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 #if !defined _TAO_CDR_OP__tao_seq_CORBA_Short__5_CPP_
 #define _TAO_CDR_OP__tao_seq_CORBA_Short__5_CPP_
 
@@ -2068,7 +1956,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2092,7 +1979,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_outside_CPP_ */
@@ -2115,7 +2001,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_nestedSeqStruct__tao_seq_outside__CPP_ */
@@ -2137,7 +2022,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2164,6 +2048,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

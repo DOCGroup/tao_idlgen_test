@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_WOK02K_CPP_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_WOK02K_CPP_
-
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_ZNEHQB_CPP_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_ZNEHQB_CPP_
 
 #include "Bug_2577_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_User_T_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_User_T_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -139,7 +136,6 @@ POA_AMH_User_T::POA_AMH_User_T ()
   this->optable_ = std::addressof (tao_AMH_User_T_optable);
 }
 
-
 void
 POA_AMH_User_T::getLoginTime_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -176,11 +172,6 @@ POA_AMH_User_T::getLoginTime_skel (
       safe_rd_.get ()
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_AMH_User_T::_is_a (const char* value)
 {
@@ -229,8 +220,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_User_T_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_User_T_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -304,7 +293,6 @@ _TAO_User_T_Direct_Proxy_Impl::~_TAO_User_T_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_User_T_Direct_Proxy_Impl::getLoginTime (
     TAO_Abstract_ServantBase  *servant,
@@ -323,8 +311,6 @@ _TAO_User_T_Direct_Proxy_Impl::getLoginTime (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -334,9 +320,7 @@ POA_User_T::POA_User_T ()
   this->optable_ = std::addressof (tao_User_T_optable);
 }
 
-
-class getLoginTime_User_T
-  : public TAO::Upcall_Command
+class getLoginTime_User_T : public TAO::Upcall_Command
 {
 public:
   inline getLoginTime_User_T (POA_User_T * servant,
@@ -399,13 +383,6 @@ void POA_User_T::getLoginTime_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_User_T::_is_a (const char* value)
 {
   return
@@ -420,18 +397,12 @@ const char* POA_User_T::_interface_repository_id () const
   return "IDL:User_T:1.0";
 }
 
-
-
-
 void POA_User_T::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 User_T *
 POA_User_T::_this ()
@@ -488,8 +459,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_User_THandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_User_THandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -564,7 +533,6 @@ _TAO_AMI_User_THandler_Direct_Proxy_Impl::~_TAO_AMI_User_THandler_Direct_Proxy_I
 {
 }
 
-
 void
 _TAO_AMI_User_THandler_Direct_Proxy_Impl::getLoginTime (
     TAO_Abstract_ServantBase  *servant,
@@ -582,7 +550,6 @@ _TAO_AMI_User_THandler_Direct_Proxy_Impl::getLoginTime (
         ((TAO::Arg_Traits< ::DateTime_T>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_User_THandler_Direct_Proxy_Impl::getLoginTime_excep (
@@ -602,8 +569,6 @@ _TAO_AMI_User_THandler_Direct_Proxy_Impl::getLoginTime_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -613,9 +578,7 @@ POA_AMI_User_THandler::POA_AMI_User_THandler ()
   this->optable_ = std::addressof (tao_AMI_User_THandler_optable);
 }
 
-
-class getLoginTime_AMI_User_THandler
-  : public TAO::Upcall_Command
+class getLoginTime_AMI_User_THandler : public TAO::Upcall_Command
 {
 public:
   inline getLoginTime_AMI_User_THandler (POA_AMI_User_THandler * servant,
@@ -681,9 +644,7 @@ void POA_AMI_User_THandler::getLoginTime_skel (
                          );
 }
 
-
-class getLoginTime_excep_AMI_User_THandler
-  : public TAO::Upcall_Command
+class getLoginTime_excep_AMI_User_THandler : public TAO::Upcall_Command
 {
 public:
   inline getLoginTime_excep_AMI_User_THandler (POA_AMI_User_THandler * servant,
@@ -749,13 +710,6 @@ void POA_AMI_User_THandler::getLoginTime_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_User_THandler::_is_a (const char* value)
 {
   return
@@ -771,18 +725,12 @@ const char* POA_AMI_User_THandler::_interface_repository_id () const
   return "IDL:AMI_User_THandler:1.0";
 }
 
-
-
-
 void POA_AMI_User_THandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_User_THandler *
 POA_AMI_User_THandler::_this ()

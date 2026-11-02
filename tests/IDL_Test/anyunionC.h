@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANYUNIONC_IMX7EC_H_
-#define _TAO_IDL_ANYUNIONC_IMX7EC_H_
+#ifndef _TAO_IDL_ANYUNIONC_Y87QOU_H_
+#define _TAO_IDL_ANYUNIONC_Y87QOU_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -67,7 +65,6 @@ enum AnyUnionEnum
 using AnyUnionEnum_out = AnyUnionEnum &;
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AnyUnionEnum;
 
-
 class MyAnyUnion;
 using MyAnyUnion_var = ::TAO_Var_Var_T<MyAnyUnion>;
 using MyAnyUnion_out = ::TAO_Out_T<MyAnyUnion>;
@@ -81,7 +78,6 @@ public:
 
   MyAnyUnion &operator= (MyAnyUnion const &);
 
-
   void _d (AnyUnionEnum);
   AnyUnionEnum _d () const;
 
@@ -90,11 +86,9 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   void my_any (::CORBA::Any const &);
   ::CORBA::Any const &my_any () const;
   ::CORBA::Any &my_any ();
-
 
   void _default ();
 private:
@@ -113,14 +107,11 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_MyAnyUnion;
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -140,7 +131,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::AnyUnionEnum>
     : public
@@ -150,7 +140,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class Arg_Traits< ::MyAnyUnion>
@@ -165,9 +154,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -176,19 +162,13 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AnyUnionEnum);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AnyUnionEnum &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -199,8 +179,6 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, MyA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, AnyUnionEnum _tao_enumerator);
@@ -208,15 +186,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, AnyUni
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, MyAnyUnion const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, MyAnyUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "anyunionC.inl"

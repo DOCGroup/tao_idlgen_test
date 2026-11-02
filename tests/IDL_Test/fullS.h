@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLS_CLNVMS_H_
-#define _TAO_IDL_FULLS_CLNVMS_H_
+#ifndef _TAO_IDL_FULLS_EL56TU_H_
+#define _TAO_IDL_FULLS_EL56TU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,14 +50,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -76,7 +73,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_SCOPE_TEST_I_SCOPE_TEST__SARG_TRAITS_)
 #define _SCOPE_TEST_I_SCOPE_TEST__SARG_TRAITS_
 
@@ -91,7 +87,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_SCOPE_TEST_AMH_I_SCOPE_TESTEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _SCOPE_TEST_AMH_I_SCOPE_TESTEXCEPTIONHOLDER__SARG_TRAITS_
@@ -110,7 +105,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_SCOPE_TEST_AMI_I_SCOPE_TESTHANDLER__SARG_TRAITS_)
 #define _SCOPE_TEST_AMI_I_SCOPE_TESTHANDLER__SARG_TRAITS_
 
@@ -125,7 +119,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_MOD2_FWD__SARG_TRAITS_)
 #define _MOD2_FWD__SARG_TRAITS_
@@ -142,7 +135,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::mod2::fwd::un>
     : public
@@ -152,7 +144,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_MOD2_FULL__SARG_TRAITS_)
 #define _MOD2_FULL__SARG_TRAITS_
@@ -169,7 +160,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::mod2::fwd::full_seq>
     : public
@@ -179,7 +169,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_MOD2_AMH_FWDEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MOD2_AMH_FWDEXCEPTIONHOLDER__SARG_TRAITS_
@@ -198,7 +187,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_MOD2_AMI_FWDHANDLER__SARG_TRAITS_)
 #define _MOD2_AMI_FWDHANDLER__SARG_TRAITS_
 
@@ -213,7 +201,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_MOD2_FULL__SARG_TRAITS_)
 #define _MOD2_FULL__SARG_TRAITS_
@@ -233,7 +220,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_scope_test
 {
 
@@ -250,7 +236,6 @@ namespace POA_scope_test
     AMH_i_scope_test (const AMH_i_scope_test& rhs);
     virtual ~AMH_i_scope_test () = default;
 
-
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
     virtual void _dispatch (
@@ -261,9 +246,6 @@ namespace POA_scope_test
 
   virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class i_scope_test;
 using i_scope_test_ptr = i_scope_test *;
@@ -296,7 +278,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -311,7 +292,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_i_scope_testResponseHandler;
 using TAO_AMH_i_scope_testResponseHandler_ptr = TAO_AMH_i_scope_testResponseHandler *;
 
@@ -323,9 +303,6 @@ public:
   TAO_AMH_i_scope_testResponseHandler () = default;
   virtual ~TAO_AMH_i_scope_testResponseHandler () = default;
 };
-
-
-
 
 class AMI_i_scope_testHandler;
 using AMI_i_scope_testHandler_ptr = AMI_i_scope_testHandler *;
@@ -358,7 +335,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -373,9 +349,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
-
-
 
 } // module scope_test
 namespace POA_mod2
@@ -393,7 +366,6 @@ namespace POA_mod2
   public:
     AMH_fwd (const AMH_fwd& rhs);
     virtual ~AMH_fwd () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -436,9 +408,6 @@ namespace POA_mod2
     ) = 0;
 
 };
-
-
-
 
 class fwd;
 using fwd_ptr = fwd *;
@@ -493,7 +462,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -520,7 +488,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_fwdResponseHandler;
 using TAO_AMH_fwdResponseHandler_ptr = TAO_AMH_fwdResponseHandler *;
 
@@ -546,9 +513,6 @@ public:
   void op_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_fwdHandler;
 using AMI_fwdHandler_ptr = AMI_fwdHandler *;
@@ -625,7 +589,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -665,13 +628,9 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module mod2
 
 #include "fullS_T.h"
-
 
 #include /**/ "ace/post.h"
 

@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 #include "TestVersionedNamespaceC.h"
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -37,15 +35,13 @@
 #include "tao/AnyTypeCode/Value_TypeCode_Static.h"
 #include "tao/AnyTypeCode/TypeCode_Value_Field.h"
 #include "tao/CDR.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "TestVersionedNamespaceC.inl"
 #endif /* !defined INLINE */
 
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
 
 static TAO::TypeCode::Struct_Field<
   char const *,
@@ -69,16 +65,12 @@ _tao_tc_M1_S1 (
   _tao_fields_M1_S1,
   1);
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_S1 = std::addressof(_tao_tc_M1_S1);
 }
 
-
-
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -110,11 +102,7 @@ TAO::Objref_Traits<M1::LI>::marshal (const M1::LI_ptr p,TAO_OutputCDR & cdr)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M1::LI::LI ()
 {}
@@ -182,7 +170,6 @@ M1::LI::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_M1_LI (
@@ -190,12 +177,10 @@ static TAO::TypeCode::Objref<char const *,
     "IDL:M1/LI:1.0",
     "LI");
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_LI = std::addressof(_tao_tc_M1_LI);
 }
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_M1_V[] =
   {
     { "valString", &CORBA::_tc_string, ::CORBA::PUBLIC_MEMBER },
@@ -216,20 +201,14 @@ static TAO::TypeCode::Value<char const *,
     _tao_fields_M1_V,
     3);
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_V = std::addressof(_tao_tc_M1_V);
 }
 
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<M1::V>::add_ref (M1::V * p)
@@ -251,11 +230,7 @@ TAO::Value_Traits<M1::V>::release (M1::V * p)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M1::V *
 M1::V::_downcast (::CORBA::ValueBase *v)
@@ -343,8 +318,6 @@ M1::V::_tao_unmarshal (
   return true;
 }
 
-
-
 M1::V_init::V_init ()
 {
 }
@@ -375,7 +348,6 @@ M1::V_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 OBV_M1::V::V (
     const char * _tao_init_valString,
     const ::M1::S1 & _tao_init_valStruct,
@@ -403,7 +375,6 @@ OBV_M1::V::_copy_value ()
     ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-
 /// Accessor to set the member.
 void
 OBV_M1::V::valString (char *val)
@@ -432,7 +403,6 @@ OBV_M1::V::valString () const // get method
 {
   return this->_pd_valString;
 }
-
 /// Accessor to set the member.
 void
 OBV_M1::V::valStruct (const M1::S1 &val)
@@ -451,7 +421,6 @@ OBV_M1::V::valStruct ()
 {
   return this->_pd_valStruct;
 }
-
 /// Accessor to set the member.
 void
 OBV_M1::V::valLocalIface (M1::LI_ptr val)
@@ -467,7 +436,5 @@ OBV_M1::V::valLocalIface () const
   return this->_pd_valLocalIface.in ();
 }
 
-
 END_USER_VERSIONED_NAMESPACE
-
 

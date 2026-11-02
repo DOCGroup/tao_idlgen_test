@@ -27,10 +27,6 @@
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
-
-
 ACE_INLINE
 M1::LI::LI (
     TAO_Stub *objref,
@@ -48,7 +44,6 @@ M1::LI::LI (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 M1::AMH_LIExceptionHolder::AMH_LIExceptionHolder ()
   : exception (nullptr)
@@ -60,8 +55,6 @@ M1::AMH_LIExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:M1/AMH_LIExceptionHolder:1.0";
 }
 
-
-
 ACE_INLINE
 M1::L2::L2 (
     TAO_Stub *objref,
@@ -79,7 +72,6 @@ M1::L2::L2 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 M1::AMH_L2ExceptionHolder::AMH_L2ExceptionHolder ()
   : exception (nullptr)
@@ -90,11 +82,9 @@ M1::AMH_L2ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:M1/AMH_L2ExceptionHolder:1.0";
 }
-
 // *************************************************************
 // Inline operations for union M1::BooleanUnion1
 // *************************************************************
-
 ACE_INLINE
 void
 M1::BooleanUnion1::_default ()
@@ -132,7 +122,6 @@ M1::BooleanUnion1::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -161,11 +150,9 @@ M1::BooleanUnion1::valLocalIface () const
     }
   return this->u_.valLocalIface_->in ();
 }
-
 // *************************************************************
 // Inline operations for union M1::BooleanUnion2
 // *************************************************************
-
 ACE_INLINE
 void
 M1::BooleanUnion2::_default ()
@@ -203,7 +190,6 @@ M1::BooleanUnion2::_d () const
 {
   return this->disc_;
 }
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -250,7 +236,6 @@ M1::BooleanUnion2::valLocalIface () const // get method
     }
   return this->u_.valLocalIface_;
 }
-
 ACE_INLINE
 M1::V::V ()
 {}
@@ -260,8 +245,6 @@ M1::V::_tao_obv_static_repository_id ()
 {
   return "IDL:M1/V:1.0";
 }
-
-
 
 ACE_INLINE
 M2::M3::L3::L3 (
@@ -280,7 +263,6 @@ M2::M3::L3::L3 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 M2::M3::AMH_L3ExceptionHolder::AMH_L3ExceptionHolder ()
   : exception (nullptr)
@@ -292,8 +274,6 @@ M2::M3::AMH_L3ExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:M2/M3/AMH_L3ExceptionHolder:1.0";
 }
 
-
-
 ACE_INLINE
 M2::M3::L4::L4 (
     TAO_Stub *objref,
@@ -311,7 +291,6 @@ M2::M3::L4::L4 (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 ACE_INLINE
 M2::M3::AMH_L4ExceptionHolder::AMH_L4ExceptionHolder ()
   : exception (nullptr)
@@ -322,7 +301,6 @@ M2::M3::AMH_L4ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:M2/M3/AMH_L4ExceptionHolder:1.0";
 }
-
 ACE_INLINE
 M2::M3::V2::V2 ()
 {}
@@ -332,7 +310,6 @@ M2::M3::V2::_tao_obv_static_repository_id ()
 {
   return "IDL:M2/M3/V2:1.0";
 }
-
 ACE_INLINE
 M2::M3::V3::V3 ()
 {}
@@ -343,7 +320,5 @@ M2::M3::V3::_tao_obv_static_repository_id ()
   return "IDL:M2/M3/V3:1.0";
 }
 
-
 END_USER_VERSIONED_NAMESPACE
-
 

@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_75RZAP_CPP_
-#define _TAO_IDL_OLD_SEQUENCES_75RZAP_CPP_
-
+#ifndef _TAO_IDL_OLD_SEQUENCES_53ZOZH_CPP_
+#define _TAO_IDL_OLD_SEQUENCES_53ZOZH_CPP_
 
 #include "old_sequenceS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_TestSeq_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_TestSeq_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -160,7 +157,6 @@ POA_AMH_TestSeq::POA_AMH_TestSeq ()
   this->optable_ = std::addressof (tao_AMH_TestSeq_optable);
 }
 
-
 void
 POA_AMH_TestSeq::_get_fattr_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -245,11 +241,6 @@ POA_AMH_TestSeq::_set_fattr_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_AMH_TestSeq::_is_a (const char* value)
 {
   return
@@ -297,8 +288,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_TestSeq_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_TestSeq_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -393,7 +382,6 @@ _TAO_TestSeq_Direct_Proxy_Impl::~_TAO_TestSeq_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_TestSeq_Direct_Proxy_Impl::_get_fattr (
     TAO_Abstract_ServantBase  *servant,
@@ -411,7 +399,6 @@ _TAO_TestSeq_Direct_Proxy_Impl::_get_fattr (
     _tao_ptr->fattr (
         );
 }
-
 
 void
 _TAO_TestSeq_Direct_Proxy_Impl::_set_fattr (
@@ -431,8 +418,6 @@ _TAO_TestSeq_Direct_Proxy_Impl::_set_fattr (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -442,9 +427,7 @@ POA_TestSeq::POA_TestSeq ()
   this->optable_ = std::addressof (tao_TestSeq_optable);
 }
 
-
-class _get_fattr_TestSeq
-  : public TAO::Upcall_Command
+class _get_fattr_TestSeq : public TAO::Upcall_Command
 {
 public:
   inline _get_fattr_TestSeq (POA_TestSeq * servant,
@@ -507,9 +490,7 @@ void POA_TestSeq::_get_fattr_skel (
                          );
 }
 
-
-class _set_fattr_TestSeq
-  : public TAO::Upcall_Command
+class _set_fattr_TestSeq : public TAO::Upcall_Command
 {
 public:
   inline _set_fattr_TestSeq (POA_TestSeq * servant,
@@ -575,13 +556,6 @@ void POA_TestSeq::_set_fattr_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_TestSeq::_is_a (const char* value)
 {
   return
@@ -596,18 +570,12 @@ const char* POA_TestSeq::_interface_repository_id () const
   return "IDL:TestSeq:1.0";
 }
 
-
-
-
 void POA_TestSeq::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 TestSeq *
 POA_TestSeq::_this ()
@@ -656,7 +624,6 @@ POA_TAO_AMH_TestSeqResponseHandler::set_fattr ()
 {
   this->_tao_rh_init_reply ();
 
-
   this->_tao_rh_send_reply ();
 }
 void
@@ -685,8 +652,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_TestSeqHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_TestSeqHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -764,7 +729,6 @@ _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::~_TAO_AMI_TestSeqHandler_Direct_Proxy
 {
 }
 
-
 void
 _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::get_fattr (
     TAO_Abstract_ServantBase  *servant,
@@ -782,7 +746,6 @@ _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::get_fattr (
         ((TAO::Arg_Traits< ::f_unbounded>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::get_fattr_excep (
@@ -802,7 +765,6 @@ _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::get_fattr_excep (
       );
 }
 
-
 void
 _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::set_fattr (
     TAO_Abstract_ServantBase  *servant,
@@ -819,7 +781,6 @@ _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::set_fattr (
   _tao_ptr->set_fattr (
       );
 }
-
 
 void
 _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::set_fattr_excep (
@@ -839,8 +800,6 @@ _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::set_fattr_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -850,9 +809,7 @@ POA_AMI_TestSeqHandler::POA_AMI_TestSeqHandler ()
   this->optable_ = std::addressof (tao_AMI_TestSeqHandler_optable);
 }
 
-
-class get_fattr_AMI_TestSeqHandler
-  : public TAO::Upcall_Command
+class get_fattr_AMI_TestSeqHandler : public TAO::Upcall_Command
 {
 public:
   inline get_fattr_AMI_TestSeqHandler (POA_AMI_TestSeqHandler * servant,
@@ -918,9 +875,7 @@ void POA_AMI_TestSeqHandler::get_fattr_skel (
                          );
 }
 
-
-class get_fattr_excep_AMI_TestSeqHandler
-  : public TAO::Upcall_Command
+class get_fattr_excep_AMI_TestSeqHandler : public TAO::Upcall_Command
 {
 public:
   inline get_fattr_excep_AMI_TestSeqHandler (POA_AMI_TestSeqHandler * servant,
@@ -986,9 +941,7 @@ void POA_AMI_TestSeqHandler::get_fattr_excep_skel (
                          );
 }
 
-
-class set_fattr_AMI_TestSeqHandler
-  : public TAO::Upcall_Command
+class set_fattr_AMI_TestSeqHandler : public TAO::Upcall_Command
 {
 public:
   inline set_fattr_AMI_TestSeqHandler (POA_AMI_TestSeqHandler * servant)
@@ -1036,9 +989,7 @@ void POA_AMI_TestSeqHandler::set_fattr_skel (
                          );
 }
 
-
-class set_fattr_excep_AMI_TestSeqHandler
-  : public TAO::Upcall_Command
+class set_fattr_excep_AMI_TestSeqHandler : public TAO::Upcall_Command
 {
 public:
   inline set_fattr_excep_AMI_TestSeqHandler (POA_AMI_TestSeqHandler * servant,
@@ -1104,13 +1055,6 @@ void POA_AMI_TestSeqHandler::set_fattr_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_TestSeqHandler::_is_a (const char* value)
 {
   return
@@ -1126,18 +1070,12 @@ const char* POA_AMI_TestSeqHandler::_interface_repository_id () const
   return "IDL:AMI_TestSeqHandler:1.0";
 }
 
-
-
-
 void POA_AMI_TestSeqHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_TestSeqHandler *
 POA_AMI_TestSeqHandler::_this ()

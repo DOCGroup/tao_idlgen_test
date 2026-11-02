@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPECODES_TZWQ8D_H_
-#define _TAO_IDL_TYPECODES_TZWQ8D_H_
+#ifndef _TAO_IDL_TYPECODES_YUJ02D_H_
+#define _TAO_IDL_TYPECODES_YUJ02D_H_
 
 #include /**/ "ace/pre.h"
 
@@ -74,14 +74,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -100,7 +97,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::MyModule::TypeCodeList>
     : public
@@ -114,16 +110,12 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_MyModule
 {
-
-
 
 } // module MyModule
 
 #include "typecodeS_T.h"
-
 
 #include /**/ "ace/post.h"
 

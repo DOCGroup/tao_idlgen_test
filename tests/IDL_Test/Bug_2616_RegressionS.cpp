@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_XBRI3L_CPP_
-#define _TAO_IDL_BUG_2616_REGRESSIONS_XBRI3L_CPP_
-
+#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_1RQM11_CPP_
+#define _TAO_IDL_BUG_2616_REGRESSIONS_1RQM11_CPP_
 
 #include "Bug_2616_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Interface1_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_Interface1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -139,7 +136,6 @@ POA_AMH_Interface1::POA_AMH_Interface1 ()
   this->optable_ = std::addressof (tao_AMH_Interface1_optable);
 }
 
-
 void
 POA_AMH_Interface1::do_it_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -185,11 +181,6 @@ POA_AMH_Interface1::do_it_skel (
       value
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_AMH_Interface1::_is_a (const char* value)
 {
@@ -238,8 +229,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Interface1_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Interface1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -313,7 +302,6 @@ _TAO_Interface1_Direct_Proxy_Impl::~_TAO_Interface1_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_Interface1_Direct_Proxy_Impl::do_it (
     TAO_Abstract_ServantBase  *servant,
@@ -332,8 +320,6 @@ _TAO_Interface1_Direct_Proxy_Impl::do_it (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -343,9 +329,7 @@ POA_Interface1::POA_Interface1 ()
   this->optable_ = std::addressof (tao_Interface1_optable);
 }
 
-
-class do_it_Interface1
-  : public TAO::Upcall_Command
+class do_it_Interface1 : public TAO::Upcall_Command
 {
 public:
   inline do_it_Interface1 (POA_Interface1 * servant,
@@ -411,13 +395,6 @@ void POA_Interface1::do_it_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Interface1::_is_a (const char* value)
 {
   return
@@ -432,18 +409,12 @@ const char* POA_Interface1::_interface_repository_id () const
   return "IDL:Interface1:1.0";
 }
 
-
-
-
 void POA_Interface1::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Interface1 *
 POA_Interface1::_this ()
@@ -463,7 +434,6 @@ void
 POA_TAO_AMH_Interface1ResponseHandler::do_it ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -493,8 +463,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_Interface1Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_Interface1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -569,7 +537,6 @@ _TAO_AMI_Interface1Handler_Direct_Proxy_Impl::~_TAO_AMI_Interface1Handler_Direct
 {
 }
 
-
 void
 _TAO_AMI_Interface1Handler_Direct_Proxy_Impl::do_it (
     TAO_Abstract_ServantBase  *servant,
@@ -586,7 +553,6 @@ _TAO_AMI_Interface1Handler_Direct_Proxy_Impl::do_it (
   _tao_ptr->do_it (
       );
 }
-
 
 void
 _TAO_AMI_Interface1Handler_Direct_Proxy_Impl::do_it_excep (
@@ -606,8 +572,6 @@ _TAO_AMI_Interface1Handler_Direct_Proxy_Impl::do_it_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -617,9 +581,7 @@ POA_AMI_Interface1Handler::POA_AMI_Interface1Handler ()
   this->optable_ = std::addressof (tao_AMI_Interface1Handler_optable);
 }
 
-
-class do_it_AMI_Interface1Handler
-  : public TAO::Upcall_Command
+class do_it_AMI_Interface1Handler : public TAO::Upcall_Command
 {
 public:
   inline do_it_AMI_Interface1Handler (POA_AMI_Interface1Handler * servant)
@@ -667,9 +629,7 @@ void POA_AMI_Interface1Handler::do_it_skel (
                          );
 }
 
-
-class do_it_excep_AMI_Interface1Handler
-  : public TAO::Upcall_Command
+class do_it_excep_AMI_Interface1Handler : public TAO::Upcall_Command
 {
 public:
   inline do_it_excep_AMI_Interface1Handler (POA_AMI_Interface1Handler * servant,
@@ -735,13 +695,6 @@ void POA_AMI_Interface1Handler::do_it_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_Interface1Handler::_is_a (const char* value)
 {
   return
@@ -757,18 +710,12 @@ const char* POA_AMI_Interface1Handler::_interface_repository_id () const
   return "IDL:AMI_Interface1Handler:1.0";
 }
 
-
-
-
 void POA_AMI_Interface1Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_Interface1Handler *
 POA_AMI_Interface1Handler::_this ()
@@ -796,8 +743,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Interface2_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_Interface2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -868,7 +813,6 @@ POA_AMH_Interface2::POA_AMH_Interface2 ()
   this->optable_ = std::addressof (tao_AMH_Interface2_optable);
 }
 
-
 void
 POA_AMH_Interface2::do_it_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -914,11 +858,6 @@ POA_AMH_Interface2::do_it_skel (
       value
     );
 }
-
-
-
-
-
 
 ::CORBA::Boolean POA_AMH_Interface2::_is_a (const char* value)
 {
@@ -967,8 +906,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Interface2_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Interface2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1042,7 +979,6 @@ _TAO_Interface2_Direct_Proxy_Impl::~_TAO_Interface2_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_Interface2_Direct_Proxy_Impl::do_it (
     TAO_Abstract_ServantBase  *servant,
@@ -1061,8 +997,6 @@ _TAO_Interface2_Direct_Proxy_Impl::do_it (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1072,9 +1006,7 @@ POA_Interface2::POA_Interface2 ()
   this->optable_ = std::addressof (tao_Interface2_optable);
 }
 
-
-class do_it_Interface2
-  : public TAO::Upcall_Command
+class do_it_Interface2 : public TAO::Upcall_Command
 {
 public:
   inline do_it_Interface2 (POA_Interface2 * servant,
@@ -1140,13 +1072,6 @@ void POA_Interface2::do_it_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Interface2::_is_a (const char* value)
 {
   return
@@ -1161,18 +1086,12 @@ const char* POA_Interface2::_interface_repository_id () const
   return "IDL:Interface2:1.0";
 }
 
-
-
-
 void POA_Interface2::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Interface2 *
 POA_Interface2::_this ()
@@ -1192,7 +1111,6 @@ void
 POA_TAO_AMH_Interface2ResponseHandler::do_it ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -1222,8 +1140,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_Interface2Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_Interface2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1298,7 +1214,6 @@ _TAO_AMI_Interface2Handler_Direct_Proxy_Impl::~_TAO_AMI_Interface2Handler_Direct
 {
 }
 
-
 void
 _TAO_AMI_Interface2Handler_Direct_Proxy_Impl::do_it (
     TAO_Abstract_ServantBase  *servant,
@@ -1315,7 +1230,6 @@ _TAO_AMI_Interface2Handler_Direct_Proxy_Impl::do_it (
   _tao_ptr->do_it (
       );
 }
-
 
 void
 _TAO_AMI_Interface2Handler_Direct_Proxy_Impl::do_it_excep (
@@ -1335,8 +1249,6 @@ _TAO_AMI_Interface2Handler_Direct_Proxy_Impl::do_it_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1346,9 +1258,7 @@ POA_AMI_Interface2Handler::POA_AMI_Interface2Handler ()
   this->optable_ = std::addressof (tao_AMI_Interface2Handler_optable);
 }
 
-
-class do_it_AMI_Interface2Handler
-  : public TAO::Upcall_Command
+class do_it_AMI_Interface2Handler : public TAO::Upcall_Command
 {
 public:
   inline do_it_AMI_Interface2Handler (POA_AMI_Interface2Handler * servant)
@@ -1396,9 +1306,7 @@ void POA_AMI_Interface2Handler::do_it_skel (
                          );
 }
 
-
-class do_it_excep_AMI_Interface2Handler
-  : public TAO::Upcall_Command
+class do_it_excep_AMI_Interface2Handler : public TAO::Upcall_Command
 {
 public:
   inline do_it_excep_AMI_Interface2Handler (POA_AMI_Interface2Handler * servant,
@@ -1464,13 +1372,6 @@ void POA_AMI_Interface2Handler::do_it_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_Interface2Handler::_is_a (const char* value)
 {
   return
@@ -1486,18 +1387,12 @@ const char* POA_AMI_Interface2Handler::_interface_repository_id () const
   return "IDL:AMI_Interface2Handler:1.0";
 }
 
-
-
-
 void POA_AMI_Interface2Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_Interface2Handler *
 POA_AMI_Interface2Handler::_this ()

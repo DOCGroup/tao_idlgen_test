@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_WF7BQO_CPP_
-#define _TAO_IDL_GENERIC_OBJECTS_WF7BQO_CPP_
-
+#ifndef _TAO_IDL_GENERIC_OBJECTS_QNG2B7_CPP_
+#define _TAO_IDL_GENERIC_OBJECTS_QNG2B7_CPP_
 
 #include "generic_objectS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_generic_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_generic_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -139,7 +136,6 @@ POA_AMH_generic::POA_AMH_generic ()
   this->optable_ = std::addressof (tao_AMH_generic_optable);
 }
 
-
 void
 POA_AMH_generic::op_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -189,11 +185,6 @@ POA_AMH_generic::op_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_AMH_generic::_is_a (const char* value)
 {
   return
@@ -241,8 +232,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_generic_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_generic_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -316,7 +305,6 @@ _TAO_generic_Direct_Proxy_Impl::~_TAO_generic_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 _TAO_generic_Direct_Proxy_Impl::op (
     TAO_Abstract_ServantBase  *servant,
@@ -338,8 +326,6 @@ _TAO_generic_Direct_Proxy_Impl::op (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -349,9 +335,7 @@ POA_generic::POA_generic ()
   this->optable_ = std::addressof (tao_generic_optable);
 }
 
-
-class op_generic
-  : public TAO::Upcall_Command
+class op_generic : public TAO::Upcall_Command
 {
 public:
   inline op_generic (POA_generic * servant,
@@ -441,13 +425,6 @@ void POA_generic::op_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_generic::_is_a (const char* value)
 {
   return
@@ -462,18 +439,12 @@ const char* POA_generic::_interface_repository_id () const
   return "IDL:generic:1.0";
 }
 
-
-
-
 void POA_generic::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 generic *
 POA_generic::_this ()
@@ -534,8 +505,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_genericHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_genericHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -611,7 +580,6 @@ _TAO_AMI_genericHandler_Direct_Proxy_Impl::~_TAO_AMI_genericHandler_Direct_Proxy
 {
 }
 
-
 void
 _TAO_AMI_genericHandler_Direct_Proxy_Impl::op (
     TAO_Abstract_ServantBase  *servant,
@@ -632,7 +600,6 @@ _TAO_AMI_genericHandler_Direct_Proxy_Impl::op (
       );
 }
 
-
 void
 _TAO_AMI_genericHandler_Direct_Proxy_Impl::op_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -651,8 +618,6 @@ _TAO_AMI_genericHandler_Direct_Proxy_Impl::op_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -662,9 +627,7 @@ POA_AMI_genericHandler::POA_AMI_genericHandler ()
   this->optable_ = std::addressof (tao_AMI_genericHandler_optable);
 }
 
-
-class op_AMI_genericHandler
-  : public TAO::Upcall_Command
+class op_AMI_genericHandler : public TAO::Upcall_Command
 {
 public:
   inline op_AMI_genericHandler (POA_AMI_genericHandler * servant,
@@ -748,9 +711,7 @@ void POA_AMI_genericHandler::op_skel (
                          );
 }
 
-
-class op_excep_AMI_genericHandler
-  : public TAO::Upcall_Command
+class op_excep_AMI_genericHandler : public TAO::Upcall_Command
 {
 public:
   inline op_excep_AMI_genericHandler (POA_AMI_genericHandler * servant,
@@ -816,13 +777,6 @@ void POA_AMI_genericHandler::op_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_AMI_genericHandler::_is_a (const char* value)
 {
   return
@@ -838,18 +792,12 @@ const char* POA_AMI_genericHandler::_interface_repository_id () const
   return "IDL:AMI_genericHandler:1.0";
 }
 
-
-
-
 void POA_AMI_genericHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 AMI_genericHandler *
 POA_AMI_genericHandler::_this ()

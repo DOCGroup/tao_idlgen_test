@@ -22,18 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTC_KL4QU4_H_
-#define _TAO_IDL_GENERIC_OBJECTC_KL4QU4_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTC_SJLPMR_H_
+#define _TAO_IDL_GENERIC_OBJECTC_SJLPMR_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/Valuetype/ValueBase.h"
@@ -65,14 +63,11 @@
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 enum ObjectType
 {
@@ -81,7 +76,6 @@ enum ObjectType
 };
 
 using ObjectType_out = ObjectType &;
-
 
 class Selecter;
 using Selecter_var = ::TAO_Var_Var_T<Selecter>;
@@ -96,7 +90,6 @@ public:
 
   Selecter &operator= (Selecter const &);
 
-
   void _d (ObjectType);
   ObjectType _d () const;
 
@@ -105,14 +98,11 @@ public:
 
   static void _tao_any_destructor (void *);
 
-
   void this_object (::CORBA::Object_ptr);
   ::CORBA::Object_ptr this_object () const;
 
-
   void that_object (::CORBA::Object_ptr);
   ::CORBA::Object_ptr that_object () const;
-
 
   void _default ();
 private:
@@ -132,7 +122,6 @@ private:
   void _reset ();
 };
 
-
 #if !defined (_GENERIC__VAR_OUT_CH_)
 #define _GENERIC__VAR_OUT_CH_
 
@@ -145,9 +134,6 @@ using generic_var = TAO_Objref_Var_T<generic>;
 using generic_out = TAO_Objref_Out_T<generic>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export generic
   : public virtual ::CORBA::Object
@@ -179,9 +165,6 @@ public:
     ::CORBA::Object_ptr inarg,
     ::CORBA::Object_ptr inoutarg);
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -212,7 +195,6 @@ private:
   generic &operator= (generic &&) = delete;
 };
 
-
 #if !defined (_AMH_GENERICEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _AMH_GENERICEXCEPTIONHOLDER__VAR_OUT_CH_
 
@@ -221,7 +203,6 @@ using AMH_genericExceptionHolder_var = TAO_Value_Var_T<AMH_genericExceptionHolde
 using AMH_genericExceptionHolder_out = TAO_Value_Out_T<AMH_genericExceptionHolder>;
 
 #endif /* end #if !defined */
-
 
 class TAO_IDL_TEST_STUB_Export AMH_genericExceptionHolder
   : public virtual ::CORBA::DefaultValueRefCountBase
@@ -265,7 +246,6 @@ public:
 public:
   virtual void raise_sendc_op ();
 
-
 protected:
   AMH_genericExceptionHolder ();
   virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
@@ -286,7 +266,6 @@ protected:
   _tao_unmarshal__AMH_genericExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
 };
 
-
 #if !defined (_AMH_GENERICRESPONSEHANDLER__VAR_OUT_CH_)
 #define _AMH_GENERICRESPONSEHANDLER__VAR_OUT_CH_
 
@@ -299,9 +278,6 @@ using AMH_genericResponseHandler_var = TAO_Objref_Var_T<AMH_genericResponseHandl
 using AMH_genericResponseHandler_out = TAO_Objref_Out_T<AMH_genericResponseHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMH_genericResponseHandler
   : public virtual ::CORBA::Object
@@ -330,9 +306,6 @@ public:
   virtual void op_excep (
     ::AMH_genericExceptionHolder * holder) = 0;
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -342,8 +315,6 @@ public:
 protected:
   // Abstract or local interface only.
   AMH_genericResponseHandler ();
-
-
 
   virtual ~AMH_genericResponseHandler () = default;
 
@@ -355,7 +326,6 @@ private:
   AMH_genericResponseHandler &operator= (AMH_genericResponseHandler &&) = delete;
 };
 
-
 #if !defined (_AMI_GENERICHANDLER__VAR_OUT_CH_)
 #define _AMI_GENERICHANDLER__VAR_OUT_CH_
 
@@ -365,9 +335,6 @@ using AMI_genericHandler_var = TAO_Objref_Var_T<AMI_genericHandler>;
 using AMI_genericHandler_out = TAO_Objref_Out_T<AMI_genericHandler>;
 
 #endif /* end #if !defined */
-
-
-
 
 class TAO_IDL_TEST_STUB_Export AMI_genericHandler
   : public virtual ::Messaging::ReplyHandler
@@ -404,9 +371,6 @@ public:
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-
-
-
   virtual ::CORBA::Boolean _is_a (const char *type_id);
   virtual const char* _interface_repository_id () const;
   static const char* _desc_repository_id ();
@@ -437,14 +401,11 @@ private:
   AMI_genericHandler &operator= (AMI_genericHandler &&) = delete;
 };
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
@@ -464,7 +425,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class Arg_Traits< ::ObjectType>
     : public
@@ -475,7 +435,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class Arg_Traits< ::Selecter>
     : public
@@ -485,7 +444,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_GENERIC__ARG_TRAITS_)
 #define _GENERIC__ARG_TRAITS_
@@ -502,7 +460,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_AMH_GENERICEXCEPTIONHOLDER__ARG_TRAITS_)
 #define _AMH_GENERICEXCEPTIONHOLDER__ARG_TRAITS_
@@ -522,7 +479,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_AMI_GENERICHANDLER__ARG_TRAITS_)
 #define _AMI_GENERICHANDLER__ARG_TRAITS_
 
@@ -541,9 +497,6 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-
 
 // OBV_ class
 class TAO_IDL_TEST_STUB_Export OBV_AMH_genericExceptionHolder
@@ -568,7 +521,6 @@ protected:
 private:
   CORBA::Boolean require_truncation_ {false};
 };
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -633,16 +585,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ObjectType _tao_enumerator);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ObjectType &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -651,19 +599,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Selecter &
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const generic_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, generic_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -674,8 +615,6 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_genericExceptionHolder *);
@@ -683,18 +622,12 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_generi
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_genericHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_genericHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 #if defined (__ACE_INLINE__)
 #include "generic_objectC.inl"

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_CONSTANTSS_6ZZ44O_H_
-#define _TAO_IDL_CONSTANTSS_6ZZ44O_H_
+#ifndef _TAO_IDL_CONSTANTSS_72OCHD_H_
+#define _TAO_IDL_CONSTANTSS_72OCHD_H_
 
 #include /**/ "ace/pre.h"
 
@@ -49,14 +49,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -75,7 +72,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::m_a::enum_a>
     : public
@@ -85,7 +81,6 @@ namespace TAO
           >
   {
   };
-
 
 #if !defined (_CLASSCONSTANTS_IFACE__SARG_TRAITS_)
 #define _CLASSCONSTANTS_IFACE__SARG_TRAITS_
@@ -101,7 +96,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_CLASSCONSTANTS_AMH_IFACEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _CLASSCONSTANTS_AMH_IFACEEXCEPTIONHOLDER__SARG_TRAITS_
@@ -120,7 +114,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_CLASSCONSTANTS_AMI_IFACEHANDLER__SARG_TRAITS_)
 #define _CLASSCONSTANTS_AMI_IFACEHANDLER__SARG_TRAITS_
 
@@ -135,7 +128,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_CLASSCONSTANTS_VT__SARG_TRAITS_)
 #define _CLASSCONSTANTS_VT__SARG_TRAITS_
@@ -157,23 +149,16 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_m_a
 {
-
-
 
 } // module m_a
 namespace POA_m_b
 {
 
-
-
 } // module m_b
 namespace POA_problems
 {
-
-
 
 } // module problems
 namespace POA_ClassConstants
@@ -192,7 +177,6 @@ namespace POA_ClassConstants
     AMH_Iface (const AMH_Iface& rhs);
     virtual ~AMH_Iface () = default;
 
-
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
     virtual void _dispatch (
@@ -203,9 +187,6 @@ namespace POA_ClassConstants
 
   virtual const char* _interface_repository_id () const;
 };
-
-
-
 
 class Iface;
 using Iface_ptr = Iface *;
@@ -238,7 +219,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -253,7 +233,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_IfaceResponseHandler;
 using TAO_AMH_IfaceResponseHandler_ptr = TAO_AMH_IfaceResponseHandler *;
 
@@ -265,9 +244,6 @@ public:
   TAO_AMH_IfaceResponseHandler () = default;
   virtual ~TAO_AMH_IfaceResponseHandler () = default;
 };
-
-
-
 
 class AMI_IfaceHandler;
 using AMI_IfaceHandler_ptr = AMI_IfaceHandler *;
@@ -300,7 +276,6 @@ public:
   virtual const char* _interface_repository_id () const;
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -316,25 +291,17 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module ClassConstants
 namespace POA_CoercionBug
 {
-
-
 
 } // module CoercionBug
 namespace POA_SignedGen
 {
 
-
-
 } // module SignedGen
 
 #include "constantsS_T.h"
-
 
 #include /**/ "ace/post.h"
 

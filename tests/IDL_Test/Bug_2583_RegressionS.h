@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2583_REGRESSIONS_5STQOH_H_
-#define _TAO_IDL_BUG_2583_REGRESSIONS_5STQOH_H_
+#ifndef _TAO_IDL_BUG_2583_REGRESSIONS_S8RMRB_H_
+#define _TAO_IDL_BUG_2583_REGRESSIONS_S8RMRB_H_
 
 #include /**/ "ace/pre.h"
 
@@ -39,17 +39,13 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -68,7 +64,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::Test::NameDynAnyPair>
     : public
@@ -78,7 +73,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::Test::NameDynAnyPairSeq>
@@ -93,16 +87,12 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_Test
 {
-
-
 
 } // module Test
 
 #include "Bug_2583_RegressionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

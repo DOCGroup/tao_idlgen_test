@@ -22,7 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
 #include "Bug_3821_RegressionC.h"
 #include <memory>
 #include <new>
@@ -67,12 +66,10 @@ static TAO::TypeCode::Enum<char const *,
     _tao_enumerators_test_Enumeration,
     3);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_Enumeration = std::addressof(_tao_tc_test_Enumeration);
 }
-
 
 test::UnionAllCovered_EnumerationDiscriminant::UnionAllCovered_EnumerationDiscriminant ()
 {
@@ -174,12 +171,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionAllCovered_EnumerationDiscriminant)/sizeof (_tao_cases_test_UnionAllCovered_EnumerationDiscriminant[0]),
     -1);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCovered_EnumerationDiscriminant);
 }
-
 
 test::UnionAllCoveredWithDefault_EnumerationDiscriminant::UnionAllCoveredWithDefault_EnumerationDiscriminant ()
 {
@@ -282,12 +277,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant)/sizeof (_tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant[0]),
     2);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionAllCoveredWithDefault_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCoveredWithDefault_EnumerationDiscriminant);
 }
-
 
 test::UnionWithDefault_EnumerationDiscriminant::UnionWithDefault_EnumerationDiscriminant ()
 {
@@ -390,12 +383,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionWithDefault_EnumerationDiscriminant)/sizeof (_tao_cases_test_UnionWithDefault_EnumerationDiscriminant[0]),
     2);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_EnumerationDiscriminant);
 }
-
 
 test::UnionWithImplicitDefault_EnumerationDiscriminant::UnionWithImplicitDefault_EnumerationDiscriminant ()
 {
@@ -485,7 +476,6 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant)/sizeof (_tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant[0]),
     -1);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_EnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_EnumerationDiscriminant);
@@ -499,12 +489,10 @@ static TAO::TypeCode::Alias<char const *,
     "TypedefedEnumeration",
     &test::_tc_Enumeration);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_TypedefedEnumeration = std::addressof(_tao_tc_test_TypedefedEnumeration);
 }
-
 
 test::UnionAllCovered_TypedefedEnumerationDiscriminant::UnionAllCovered_TypedefedEnumerationDiscriminant ()
 {
@@ -606,12 +594,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant)/sizeof (_tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant[0]),
     -1);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCovered_TypedefedEnumerationDiscriminant);
 }
-
 
 test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant ()
 {
@@ -714,12 +700,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant)/sizeof (_tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant[0]),
     2);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant);
 }
-
 
 test::UnionWithDefault_TypedefedEnumerationDiscriminant::UnionWithDefault_TypedefedEnumerationDiscriminant ()
 {
@@ -822,12 +806,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant)/sizeof (_tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant[0]),
     2);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_TypedefedEnumerationDiscriminant);
 }
-
 
 test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant ()
 {
@@ -917,12 +899,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant)/sizeof (_tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant[0]),
     -1);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant);
 }
-
 
 test::UnionAllCovered_BooleanDiscriminant::UnionAllCovered_BooleanDiscriminant ()
 {
@@ -1013,12 +993,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionAllCovered_BooleanDiscriminant)/sizeof (_tao_cases_test_UnionAllCovered_BooleanDiscriminant[0]),
     -1);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_BooleanDiscriminant = std::addressof(_tao_tc_test_UnionAllCovered_BooleanDiscriminant);
 }
-
 
 test::UnionWithDefault_BooleanDiscriminant::UnionWithDefault_BooleanDiscriminant ()
 {
@@ -1109,12 +1087,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionWithDefault_BooleanDiscriminant)/sizeof (_tao_cases_test_UnionWithDefault_BooleanDiscriminant[0]),
     1);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_BooleanDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_BooleanDiscriminant);
 }
-
 
 test::UnionWithImplicitDefault_BooleanDiscriminant::UnionWithImplicitDefault_BooleanDiscriminant ()
 {
@@ -1192,12 +1168,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant)/sizeof (_tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant[0]),
     -1);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_BooleanDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_BooleanDiscriminant);
 }
-
 
 test::UnionAllCovered_CharDiscriminant::UnionAllCovered_CharDiscriminant ()
 {
@@ -1786,12 +1760,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionAllCovered_CharDiscriminant)/sizeof (_tao_cases_test_UnionAllCovered_CharDiscriminant[0]),
     -1);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionAllCovered_CharDiscriminant = std::addressof(_tao_tc_test_UnionAllCovered_CharDiscriminant);
 }
-
 
 test::UnionWithDefault_CharDiscriminant::UnionWithDefault_CharDiscriminant ()
 {
@@ -1896,12 +1868,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionWithDefault_CharDiscriminant)/sizeof (_tao_cases_test_UnionWithDefault_CharDiscriminant[0]),
     1);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_CharDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_CharDiscriminant);
 }
-
 
 test::UnionWithImplicitDefault_CharDiscriminant::UnionWithImplicitDefault_CharDiscriminant ()
 {
@@ -1993,12 +1963,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant)/sizeof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant[0]),
     -1);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_CharDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_CharDiscriminant);
 }
-
 
 test::UnionWithDefault_LongDiscriminant::UnionWithDefault_LongDiscriminant ()
 {
@@ -2113,12 +2081,10 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionWithDefault_LongDiscriminant)/sizeof (_tao_cases_test_UnionWithDefault_LongDiscriminant[0]),
     3);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithDefault_LongDiscriminant = std::addressof(_tao_tc_test_UnionWithDefault_LongDiscriminant);
 }
-
 
 test::UnionWithImplicitDefault_LongDiscriminant::UnionWithImplicitDefault_LongDiscriminant ()
 {
@@ -2220,7 +2186,6 @@ static TAO::TypeCode::Union<char const *,
     sizeof (_tao_cases_test_UnionWithImplicitDefault_LongDiscriminant)/sizeof (_tao_cases_test_UnionWithImplicitDefault_LongDiscriminant[0]),
     -1);
 
-
 namespace test
 {
   ::CORBA::TypeCode_ptr const _tc_UnionWithImplicitDefault_LongDiscriminant = std::addressof(_tao_tc_test_UnionWithImplicitDefault_LongDiscriminant);
@@ -2228,9 +2193,7 @@ namespace test
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2258,13 +2221,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2307,13 +2266,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2356,13 +2311,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2405,13 +2356,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2454,13 +2401,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2503,13 +2446,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2552,13 +2491,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2601,13 +2536,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2650,13 +2581,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2699,13 +2626,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2748,13 +2671,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2797,13 +2716,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2846,13 +2761,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2895,13 +2806,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2944,13 +2851,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -2993,13 +2896,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3042,8 +2941,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, test::Enumeration _tao_enumerator)
@@ -3065,8 +2962,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3164,8 +3059,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3257,8 +3150,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3348,8 +3239,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3429,8 +3318,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3528,8 +3415,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3621,8 +3506,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3712,8 +3595,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3794,8 +3675,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3862,8 +3741,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3932,8 +3809,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -3989,8 +3864,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4561,8 +4434,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -4652,8 +4523,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -4733,8 +4602,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4841,8 +4708,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
@@ -4938,6 +4803,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

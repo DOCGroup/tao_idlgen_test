@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_MODULES_NYYZDT_CPP_
-#define _TAO_IDL_MODULES_NYYZDT_CPP_
-
+#ifndef _TAO_IDL_MODULES_W7T7BJ_CPP_
+#define _TAO_IDL_MODULES_W7T7BJ_CPP_
 
 #include "moduleS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod1_mod2_AMH_ex1_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod1_mod2_AMH_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -161,7 +158,6 @@ POA_mod1::mod2::AMH_ex1::AMH_ex1 ()
 {
   this->optable_ = std::addressof (tao_mod1_mod2_AMH_ex1_optable);
 }
-
 
 void
 POA_mod1::mod2::AMH_ex1::_get_l1_skel (
@@ -328,11 +324,6 @@ POA_mod1::mod2::AMH_ex1::m1_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_mod1::mod2::AMH_ex1::_is_a (const char* value)
 {
   return
@@ -380,8 +371,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod1_mod2_ex1_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod1_mod2_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -478,7 +467,6 @@ POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::~_TAO_ex1_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::_get_l1 (
     TAO_Abstract_ServantBase  *servant,
@@ -496,7 +484,6 @@ POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::_get_l1 (
     _tao_ptr->l1 (
         );
 }
-
 
 void
 POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::_set_l1 (
@@ -516,7 +503,6 @@ POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::_set_l1 (
       );
 }
 
-
 void
 POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::_get_l2 (
     TAO_Abstract_ServantBase  *servant,
@@ -534,7 +520,6 @@ POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::_get_l2 (
     _tao_ptr->l2 (
         );
 }
-
 
 void
 POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::m1 (
@@ -555,8 +540,6 @@ POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::m1 (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -566,15 +549,13 @@ POA_mod1::mod2::ex1::ex1 ()
   this->optable_ = std::addressof (tao_mod1_mod2_ex1_optable);
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class _get_l1_ex1
-      : public TAO::Upcall_Command
+    class _get_l1_ex1 : public TAO::Upcall_Command
     {
     public:
       inline _get_l1_ex1 (POA_mod1::mod2::ex1 * servant,
@@ -639,15 +620,13 @@ void POA_mod1::mod2::ex1::_get_l1_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class _set_l1_ex1
-      : public TAO::Upcall_Command
+    class _set_l1_ex1 : public TAO::Upcall_Command
     {
     public:
       inline _set_l1_ex1 (POA_mod1::mod2::ex1 * servant,
@@ -715,15 +694,13 @@ void POA_mod1::mod2::ex1::_set_l1_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class _get_l2_ex1
-      : public TAO::Upcall_Command
+    class _get_l2_ex1 : public TAO::Upcall_Command
     {
     public:
       inline _get_l2_ex1 (POA_mod1::mod2::ex1 * servant,
@@ -788,15 +765,13 @@ void POA_mod1::mod2::ex1::_get_l2_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class m1_ex1
-      : public TAO::Upcall_Command
+    class m1_ex1 : public TAO::Upcall_Command
     {
     public:
       inline m1_ex1 (POA_mod1::mod2::ex1 * servant,
@@ -870,13 +845,6 @@ void POA_mod1::mod2::ex1::m1_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_mod1::mod2::ex1::_is_a (const char* value)
 {
   return
@@ -891,18 +859,12 @@ const char* POA_mod1::mod2::ex1::_interface_repository_id () const
   return "IDL:mod1/mod2/ex1:1.0";
 }
 
-
-
-
 void POA_mod1::mod2::ex1::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 mod1::mod2::ex1 *
 POA_mod1::mod2::ex1::_this ()
@@ -950,7 +912,6 @@ void
 POA_mod1::mod2::TAO_AMH_ex1ResponseHandler::set_l1 ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -1036,8 +997,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod1_mod2_AMI_ex1Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod1_mod2_AMI_ex1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -1138,7 +1097,6 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::~_TAO_AMI_ex1Handler_Dire
 {
 }
 
-
 void
 POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1 (
     TAO_Abstract_ServantBase  *servant,
@@ -1156,7 +1114,6 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1 (
         ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1_excep (
@@ -1176,7 +1133,6 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1_excep (
       );
 }
 
-
 void
 POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1 (
     TAO_Abstract_ServantBase  *servant,
@@ -1193,7 +1149,6 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1 (
   _tao_ptr->set_l1 (
       );
 }
-
 
 void
 POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1_excep (
@@ -1213,7 +1168,6 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1_excep (
       );
 }
 
-
 void
 POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l2 (
     TAO_Abstract_ServantBase  *servant,
@@ -1231,7 +1185,6 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l2 (
         ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l2_excep (
@@ -1251,7 +1204,6 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l2_excep (
       );
 }
 
-
 void
 POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1 (
     TAO_Abstract_ServantBase  *servant,
@@ -1269,7 +1221,6 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1 (
         ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1_excep (
@@ -1289,8 +1240,6 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -1300,15 +1249,13 @@ POA_mod1::mod2::AMI_ex1Handler::AMI_ex1Handler ()
   this->optable_ = std::addressof (tao_mod1_mod2_AMI_ex1Handler_optable);
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class get_l1_AMI_ex1Handler
-      : public TAO::Upcall_Command
+    class get_l1_AMI_ex1Handler : public TAO::Upcall_Command
     {
     public:
       inline get_l1_AMI_ex1Handler (POA_mod1::mod2::AMI_ex1Handler * servant,
@@ -1376,15 +1323,13 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l1_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class get_l1_excep_AMI_ex1Handler
-      : public TAO::Upcall_Command
+    class get_l1_excep_AMI_ex1Handler : public TAO::Upcall_Command
     {
     public:
       inline get_l1_excep_AMI_ex1Handler (POA_mod1::mod2::AMI_ex1Handler * servant,
@@ -1452,15 +1397,13 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l1_excep_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class set_l1_AMI_ex1Handler
-      : public TAO::Upcall_Command
+    class set_l1_AMI_ex1Handler : public TAO::Upcall_Command
     {
     public:
       inline set_l1_AMI_ex1Handler (POA_mod1::mod2::AMI_ex1Handler * servant)
@@ -1510,15 +1453,13 @@ void POA_mod1::mod2::AMI_ex1Handler::set_l1_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class set_l1_excep_AMI_ex1Handler
-      : public TAO::Upcall_Command
+    class set_l1_excep_AMI_ex1Handler : public TAO::Upcall_Command
     {
     public:
       inline set_l1_excep_AMI_ex1Handler (POA_mod1::mod2::AMI_ex1Handler * servant,
@@ -1586,15 +1527,13 @@ void POA_mod1::mod2::AMI_ex1Handler::set_l1_excep_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class get_l2_AMI_ex1Handler
-      : public TAO::Upcall_Command
+    class get_l2_AMI_ex1Handler : public TAO::Upcall_Command
     {
     public:
       inline get_l2_AMI_ex1Handler (POA_mod1::mod2::AMI_ex1Handler * servant,
@@ -1662,15 +1601,13 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l2_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class get_l2_excep_AMI_ex1Handler
-      : public TAO::Upcall_Command
+    class get_l2_excep_AMI_ex1Handler : public TAO::Upcall_Command
     {
     public:
       inline get_l2_excep_AMI_ex1Handler (POA_mod1::mod2::AMI_ex1Handler * servant,
@@ -1738,15 +1675,13 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l2_excep_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class m1_AMI_ex1Handler
-      : public TAO::Upcall_Command
+    class m1_AMI_ex1Handler : public TAO::Upcall_Command
     {
     public:
       inline m1_AMI_ex1Handler (POA_mod1::mod2::AMI_ex1Handler * servant,
@@ -1814,15 +1749,13 @@ void POA_mod1::mod2::AMI_ex1Handler::m1_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class m1_excep_AMI_ex1Handler
-      : public TAO::Upcall_Command
+    class m1_excep_AMI_ex1Handler : public TAO::Upcall_Command
     {
     public:
       inline m1_excep_AMI_ex1Handler (POA_mod1::mod2::AMI_ex1Handler * servant,
@@ -1890,13 +1823,6 @@ void POA_mod1::mod2::AMI_ex1Handler::m1_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_mod1::mod2::AMI_ex1Handler::_is_a (const char* value)
 {
   return
@@ -1912,18 +1838,12 @@ const char* POA_mod1::mod2::AMI_ex1Handler::_interface_repository_id () const
   return "IDL:mod1/mod2/AMI_ex1Handler:1.0";
 }
 
-
-
-
 void POA_mod1::mod2::AMI_ex1Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 mod1::mod2::AMI_ex1Handler *
 POA_mod1::mod2::AMI_ex1Handler::_this ()
@@ -1951,8 +1871,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod1_mod2_AMH_ex2_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod1_mod2_AMH_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -2048,7 +1966,6 @@ POA_mod1::mod2::AMH_ex2::AMH_ex2 ()
 {
   this->optable_ = std::addressof (tao_mod1_mod2_AMH_ex2_optable);
 }
-
 
 void
 POA_mod1::mod2::AMH_ex2::_get_l3_skel (
@@ -2179,11 +2096,6 @@ POA_mod1::mod2::AMH_ex2::m2_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_mod1::mod2::AMH_ex2::_is_a (const char* value)
 {
   return
@@ -2232,8 +2144,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod1_mod2_ex2_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod1_mod2_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -2333,7 +2243,6 @@ POA_mod1::mod2::_TAO_ex2_Direct_Proxy_Impl::~_TAO_ex2_Direct_Proxy_Impl ()
 {
 }
 
-
 void
 POA_mod1::mod2::_TAO_ex2_Direct_Proxy_Impl::_get_l3 (
     TAO_Abstract_ServantBase  *servant,
@@ -2352,7 +2261,6 @@ POA_mod1::mod2::_TAO_ex2_Direct_Proxy_Impl::_get_l3 (
         );
 }
 
-
 void
 POA_mod1::mod2::_TAO_ex2_Direct_Proxy_Impl::_set_l3 (
     TAO_Abstract_ServantBase  *servant,
@@ -2370,7 +2278,6 @@ POA_mod1::mod2::_TAO_ex2_Direct_Proxy_Impl::_set_l3 (
         ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_mod1::mod2::_TAO_ex2_Direct_Proxy_Impl::m2 (
@@ -2392,8 +2299,6 @@ POA_mod1::mod2::_TAO_ex2_Direct_Proxy_Impl::m2 (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -2403,15 +2308,13 @@ POA_mod1::mod2::ex2::ex2 ()
   this->optable_ = std::addressof (tao_mod1_mod2_ex2_optable);
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class _get_l3_ex2
-      : public TAO::Upcall_Command
+    class _get_l3_ex2 : public TAO::Upcall_Command
     {
     public:
       inline _get_l3_ex2 (POA_mod1::mod2::ex2 * servant,
@@ -2476,15 +2379,13 @@ void POA_mod1::mod2::ex2::_get_l3_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class _set_l3_ex2
-      : public TAO::Upcall_Command
+    class _set_l3_ex2 : public TAO::Upcall_Command
     {
     public:
       inline _set_l3_ex2 (POA_mod1::mod2::ex2 * servant,
@@ -2552,15 +2453,13 @@ void POA_mod1::mod2::ex2::_set_l3_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class m2_ex2
-      : public TAO::Upcall_Command
+    class m2_ex2 : public TAO::Upcall_Command
     {
     public:
       inline m2_ex2 (POA_mod1::mod2::ex2 * servant,
@@ -2643,13 +2542,6 @@ void POA_mod1::mod2::ex2::m2_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_mod1::mod2::ex2::_is_a (const char* value)
 {
   return
@@ -2665,18 +2557,12 @@ const char* POA_mod1::mod2::ex2::_interface_repository_id () const
   return "IDL:mod1/mod2/ex2:1.0";
 }
 
-
-
-
 void POA_mod1::mod2::ex2::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 mod1::mod2::ex2 *
 POA_mod1::mod2::ex2::_this ()
@@ -2724,7 +2610,6 @@ void
 POA_mod1::mod2::TAO_AMH_ex2ResponseHandler::set_l3 ()
 {
   this->_tao_rh_init_reply ();
-
 
   this->_tao_rh_send_reply ();
 }
@@ -2784,8 +2669,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mod1_mod2_AMI_ex2Handler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_mod1_mod2_AMI_ex2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -2892,7 +2775,6 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::~_TAO_AMI_ex2Handler_Dire
 {
 }
 
-
 void
 POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l3 (
     TAO_Abstract_ServantBase  *servant,
@@ -2910,7 +2792,6 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l3 (
         ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l3_excep (
@@ -2930,7 +2811,6 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l3_excep (
       );
 }
 
-
 void
 POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::set_l3 (
     TAO_Abstract_ServantBase  *servant,
@@ -2947,7 +2827,6 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::set_l3 (
   _tao_ptr->set_l3 (
       );
 }
-
 
 void
 POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::set_l3_excep (
@@ -2966,7 +2845,6 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::set_l3_excep (
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2 (
@@ -2987,7 +2865,6 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2 (
       );
 }
 
-
 void
 POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -3006,8 +2883,6 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2_excep (
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -3017,15 +2892,13 @@ POA_mod1::mod2::AMI_ex2Handler::AMI_ex2Handler ()
   this->optable_ = std::addressof (tao_mod1_mod2_AMI_ex2Handler_optable);
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class get_l3_AMI_ex2Handler
-      : public TAO::Upcall_Command
+    class get_l3_AMI_ex2Handler : public TAO::Upcall_Command
     {
     public:
       inline get_l3_AMI_ex2Handler (POA_mod1::mod2::AMI_ex2Handler * servant,
@@ -3093,15 +2966,13 @@ void POA_mod1::mod2::AMI_ex2Handler::get_l3_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class get_l3_excep_AMI_ex2Handler
-      : public TAO::Upcall_Command
+    class get_l3_excep_AMI_ex2Handler : public TAO::Upcall_Command
     {
     public:
       inline get_l3_excep_AMI_ex2Handler (POA_mod1::mod2::AMI_ex2Handler * servant,
@@ -3169,15 +3040,13 @@ void POA_mod1::mod2::AMI_ex2Handler::get_l3_excep_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class set_l3_AMI_ex2Handler
-      : public TAO::Upcall_Command
+    class set_l3_AMI_ex2Handler : public TAO::Upcall_Command
     {
     public:
       inline set_l3_AMI_ex2Handler (POA_mod1::mod2::AMI_ex2Handler * servant)
@@ -3227,15 +3096,13 @@ void POA_mod1::mod2::AMI_ex2Handler::set_l3_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class set_l3_excep_AMI_ex2Handler
-      : public TAO::Upcall_Command
+    class set_l3_excep_AMI_ex2Handler : public TAO::Upcall_Command
     {
     public:
       inline set_l3_excep_AMI_ex2Handler (POA_mod1::mod2::AMI_ex2Handler * servant,
@@ -3303,15 +3170,13 @@ void POA_mod1::mod2::AMI_ex2Handler::set_l3_excep_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class m2_AMI_ex2Handler
-      : public TAO::Upcall_Command
+    class m2_AMI_ex2Handler : public TAO::Upcall_Command
     {
     public:
       inline m2_AMI_ex2Handler (POA_mod1::mod2::AMI_ex2Handler * servant,
@@ -3388,15 +3253,13 @@ void POA_mod1::mod2::AMI_ex2Handler::m2_skel (
                          );
 }
 
-
 namespace POA_mod1
 {
 
   namespace mod2
   {
 
-    class m2_excep_AMI_ex2Handler
-      : public TAO::Upcall_Command
+    class m2_excep_AMI_ex2Handler : public TAO::Upcall_Command
     {
     public:
       inline m2_excep_AMI_ex2Handler (POA_mod1::mod2::AMI_ex2Handler * servant,
@@ -3464,13 +3327,6 @@ void POA_mod1::mod2::AMI_ex2Handler::m2_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_mod1::mod2::AMI_ex2Handler::_is_a (const char* value)
 {
   return
@@ -3487,18 +3343,12 @@ const char* POA_mod1::mod2::AMI_ex2Handler::_interface_repository_id () const
   return "IDL:mod1/mod2/AMI_ex2Handler:1.0";
 }
 
-
-
-
 void POA_mod1::mod2::AMI_ex2Handler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 mod1::mod2::AMI_ex2Handler *
 POA_mod1::mod2::AMI_ex2Handler::_this ()

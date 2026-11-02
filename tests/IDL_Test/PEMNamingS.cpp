@@ -22,9 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGS_DVBQF4_CPP_
-#define _TAO_IDL_PEMNAMINGS_DVBQF4_CPP_
-
+#ifndef _TAO_IDL_PEMNAMINGS_Z2GWV9_CPP_
+#define _TAO_IDL_PEMNAMINGS_Z2GWV9_CPP_
 
 #include "PEMNamingS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -67,8 +66,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -139,7 +136,6 @@ POA_Plesk::Naming::AMH_ObjectResolver::AMH_ObjectResolver ()
 {
   this->optable_ = std::addressof (tao_Plesk_Naming_AMH_ObjectResolver_optable);
 }
-
 
 void
 POA_Plesk::Naming::AMH_ObjectResolver::resolve_skel (
@@ -241,11 +237,6 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
     );
 }
 
-
-
-
-
-
 ::CORBA::Boolean POA_Plesk::Naming::AMH_ObjectResolver::_is_a (const char* value)
 {
   return
@@ -293,8 +284,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -369,7 +358,6 @@ POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::~_TAO_ObjectResolver_D
 {
 }
 
-
 void
 POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve (
     TAO_Abstract_ServantBase  *servant,
@@ -389,7 +377,6 @@ POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve (
           ((TAO::Arg_Traits< ::CORBA::Long>::inout_arg_val *) args[2])->arg ()
         );
 }
-
 
 void
 POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve_sc (
@@ -412,8 +399,6 @@ POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve_sc (
         );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -423,15 +408,13 @@ POA_Plesk::Naming::ObjectResolver::ObjectResolver ()
   this->optable_ = std::addressof (tao_Plesk_Naming_ObjectResolver_optable);
 }
 
-
 namespace POA_Plesk
 {
 
   namespace Naming
   {
 
-    class resolve_ObjectResolver
-      : public TAO::Upcall_Command
+    class resolve_ObjectResolver : public TAO::Upcall_Command
     {
     public:
       inline resolve_ObjectResolver (POA_Plesk::Naming::ObjectResolver * servant,
@@ -523,15 +506,13 @@ void POA_Plesk::Naming::ObjectResolver::resolve_skel (
                          );
 }
 
-
 namespace POA_Plesk
 {
 
   namespace Naming
   {
 
-    class resolve_sc_ObjectResolver
-      : public TAO::Upcall_Command
+    class resolve_sc_ObjectResolver : public TAO::Upcall_Command
     {
     public:
       inline resolve_sc_ObjectResolver (POA_Plesk::Naming::ObjectResolver * servant,
@@ -632,13 +613,6 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Plesk::Naming::ObjectResolver::_is_a (const char* value)
 {
   return
@@ -653,18 +627,12 @@ const char* POA_Plesk::Naming::ObjectResolver::_interface_repository_id () const
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
 
-
-
-
 void POA_Plesk::Naming::ObjectResolver::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Plesk::Naming::ObjectResolver *
 POA_Plesk::Naming::ObjectResolver::_this ()
@@ -753,8 +721,6 @@ public:
 /* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
@@ -832,7 +798,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::~_TAO_AMI_O
 {
 }
 
-
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve (
     TAO_Abstract_ServantBase  *servant,
@@ -852,7 +817,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve (
       );
 }
 
-
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -870,7 +834,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_exc
         ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
-
 
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc (
@@ -891,7 +854,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc 
       );
 }
 
-
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc_excep (
     TAO_Abstract_ServantBase  *servant,
@@ -910,8 +872,6 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc_
       );
 }
 
-
-
 //
 //           End Direct Proxy Implementation
 ///////////////////////////////////////////////////////////////////////
@@ -921,15 +881,13 @@ POA_Plesk::Naming::AMI_ObjectResolverHandler::AMI_ObjectResolverHandler ()
   this->optable_ = std::addressof (tao_Plesk_Naming_AMI_ObjectResolverHandler_optable);
 }
 
-
 namespace POA_Plesk
 {
 
   namespace Naming
   {
 
-    class resolve_AMI_ObjectResolverHandler
-      : public TAO::Upcall_Command
+    class resolve_AMI_ObjectResolverHandler : public TAO::Upcall_Command
     {
     public:
       inline resolve_AMI_ObjectResolverHandler (POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
@@ -1015,15 +973,13 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_skel (
                          );
 }
 
-
 namespace POA_Plesk
 {
 
   namespace Naming
   {
 
-    class resolve_excep_AMI_ObjectResolverHandler
-      : public TAO::Upcall_Command
+    class resolve_excep_AMI_ObjectResolverHandler : public TAO::Upcall_Command
     {
     public:
       inline resolve_excep_AMI_ObjectResolverHandler (POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
@@ -1040,8 +996,6 @@ namespace POA_Plesk
             this->operation_details_,
             this->args_,
             1);
-
-
 
         static TAO::Exception_Data
         _tao_Plesk_Naming_AMI_ObjectResolverHandler_resolve_excep_exceptiondata [] =
@@ -1119,15 +1073,13 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_excep_skel (
                          );
 }
 
-
 namespace POA_Plesk
 {
 
   namespace Naming
   {
 
-    class resolve_sc_AMI_ObjectResolverHandler
-      : public TAO::Upcall_Command
+    class resolve_sc_AMI_ObjectResolverHandler : public TAO::Upcall_Command
     {
     public:
       inline resolve_sc_AMI_ObjectResolverHandler (POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
@@ -1213,15 +1165,13 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_skel (
                          );
 }
 
-
 namespace POA_Plesk
 {
 
   namespace Naming
   {
 
-    class resolve_sc_excep_AMI_ObjectResolverHandler
-      : public TAO::Upcall_Command
+    class resolve_sc_excep_AMI_ObjectResolverHandler : public TAO::Upcall_Command
     {
     public:
       inline resolve_sc_excep_AMI_ObjectResolverHandler (POA_Plesk::Naming::AMI_ObjectResolverHandler * servant,
@@ -1238,8 +1188,6 @@ namespace POA_Plesk
             this->operation_details_,
             this->args_,
             1);
-
-
 
         static TAO::Exception_Data
         _tao_Plesk_Naming_AMI_ObjectResolverHandler_resolve_sc_excep_exceptiondata [] =
@@ -1317,13 +1265,6 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
                          );
 }
 
-
-
-
-
-
-
-
 ::CORBA::Boolean POA_Plesk::Naming::AMI_ObjectResolverHandler::_is_a (const char* value)
 {
   return
@@ -1339,18 +1280,12 @@ const char* POA_Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_
   return "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0";
 }
 
-
-
-
 void POA_Plesk::Naming::AMI_ObjectResolverHandler::_dispatch (
   TAO_ServerRequest & req,
   TAO::Portable_Server::Servant_Upcall* servant_upcall)
 {
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
-
-
-
 
 Plesk::Naming::AMI_ObjectResolverHandler *
 POA_Plesk::Naming::AMI_ObjectResolverHandler::_this ()

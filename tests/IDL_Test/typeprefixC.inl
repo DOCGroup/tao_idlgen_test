@@ -22,8 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-
-
 ACE_INLINE
 A::B::B (
     TAO_Stub *objref,
@@ -52,7 +50,6 @@ A::AMH_BExceptionHolder::_tao_obv_static_repository_id ()
   return "IDL:TAO/A/AMH_BExceptionHolder:1.0";
 }
 
-
 ACE_INLINE
 A::AMI_BHandler::AMI_BHandler (
     TAO_Stub *objref,
@@ -70,7 +67,6 @@ A::AMI_BHandler::AMI_BHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-
 
 ACE_INLINE
 A::C::C (
@@ -99,7 +95,6 @@ A::AMH_CExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:TAO/A/AMH_CExceptionHolder:1.0";
 }
-
 
 ACE_INLINE
 A::AMI_CHandler::AMI_CHandler (

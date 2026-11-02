@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESS_MBTOFM_H_
-#define _TAO_IDL_PRIMTYPESS_MBTOFM_H_
+#ifndef _TAO_IDL_PRIMTYPESS_7N9KLS_H_
+#define _TAO_IDL_PRIMTYPESS_7N9KLS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -51,14 +51,11 @@
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -77,7 +74,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDPRIMTYPES_EX1__SARG_TRAITS_)
 #define _OLDPRIMTYPES_EX1__SARG_TRAITS_
 
@@ -92,7 +88,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDPRIMTYPES_AMH_EX1EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDPRIMTYPES_AMH_EX1EXCEPTIONHOLDER__SARG_TRAITS_
@@ -111,7 +106,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDPRIMTYPES_AMI_EX1HANDLER__SARG_TRAITS_)
 #define _OLDPRIMTYPES_AMI_EX1HANDLER__SARG_TRAITS_
 
@@ -127,7 +121,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
 #if !defined (_OLDPRIMTYPES_EX2__SARG_TRAITS_)
 #define _OLDPRIMTYPES_EX2__SARG_TRAITS_
 
@@ -142,7 +135,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDPRIMTYPES_AMH_EX2EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDPRIMTYPES_AMH_EX2EXCEPTIONHOLDER__SARG_TRAITS_
@@ -160,7 +152,6 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-
 
 #if !defined (_OLDPRIMTYPES_AMI_EX2HANDLER__SARG_TRAITS_)
 #define _OLDPRIMTYPES_AMI_EX2HANDLER__SARG_TRAITS_
@@ -180,7 +171,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_OldPrimTypes
 {
 
@@ -196,7 +186,6 @@ namespace POA_OldPrimTypes
   public:
     AMH_ex1 (const AMH_ex1& rhs);
     virtual ~AMH_ex1 () = default;
-
 
     virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -260,9 +249,6 @@ namespace POA_OldPrimTypes
     ) = 0;
 
 };
-
-
-
 
 class ex1;
 using ex1_ptr = ex1 *;
@@ -342,7 +328,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -372,7 +357,6 @@ public:
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
-
 
 class TAO_AMH_ex1ResponseHandler;
 using TAO_AMH_ex1ResponseHandler_ptr = TAO_AMH_ex1ResponseHandler *;
@@ -414,9 +398,6 @@ public:
   void mtypes_excep (
     ::OldPrimTypes::AMH_ex1ExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_ex1Handler;
 using AMI_ex1Handler_ptr = AMI_ex1Handler *;
@@ -518,7 +499,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -566,7 +546,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class AMH_ex2;
 using AMH_ex2_ptr = AMH_ex2 *;
 
@@ -580,7 +559,6 @@ protected:
 public:
   AMH_ex2 (const AMH_ex2& rhs);
   virtual ~AMH_ex2 () = default;
-
 
   virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
 
@@ -620,9 +598,6 @@ virtual void mv (
   ) = 0;
 
 };
-
-
-
 
 class ex2;
 using ex2_ptr = ex2 *;
@@ -675,7 +650,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -703,7 +677,6 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
 class TAO_AMH_ex2ResponseHandler;
 using TAO_AMH_ex2ResponseHandler_ptr = TAO_AMH_ex2ResponseHandler *;
 
@@ -727,9 +700,6 @@ public:
   void mv_excep (
     ::OldPrimTypes::AMH_ex2ExceptionHolder * holder) override;
 };
-
-
-
 
 class AMI_ex2Handler;
 using AMI_ex2Handler_ptr = AMI_ex2Handler *;
@@ -804,7 +774,6 @@ public:
       TAO_ServantBase *servant);
 };
 
-
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
 //
@@ -844,13 +813,9 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
 } // module OldPrimTypes
 
 #include "primtypesS_T.h"
-
 
 #include /**/ "ace/post.h"
 

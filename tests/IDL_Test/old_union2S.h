@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNION2S_XTSGYG_H_
-#define _TAO_IDL_OLD_UNION2S_XTSGYG_H_
+#ifndef _TAO_IDL_OLD_UNION2S_CJSGSN_H_
+#define _TAO_IDL_OLD_UNION2S_CJSGSN_H_
 
 #include /**/ "ace/pre.h"
 
@@ -39,17 +39,13 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -68,7 +64,6 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-
   template<>
   class SArg_Traits< ::OldUnion2::FooDisc>
     : public
@@ -78,7 +73,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::OldUnion2::Foo>
@@ -90,7 +84,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::OldUnion2::Bar>
     : public
@@ -101,7 +94,6 @@ namespace TAO
   {
   };
 
-
   template<>
   class SArg_Traits< ::OldUnion2::Bar::BarDisc>
     : public
@@ -111,7 +103,6 @@ namespace TAO
           >
   {
   };
-
 
   template<>
   class SArg_Traits< ::OldUnion2::Bar::Foo>
@@ -126,16 +117,12 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 namespace POA_OldUnion2
 {
-
-
 
 } // module OldUnion2
 
 #include "old_union2S_T.h"
-
 
 #include /**/ "ace/post.h"
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ONLYS_12FWHY_H_
-#define _TAO_IDL_ARRAY_ONLYS_12FWHY_H_
+#ifndef _TAO_IDL_ARRAY_ONLYS_FZ0U7O_H_
+#define _TAO_IDL_ARRAY_ONLYS_FZ0U7O_H_
 
 #include /**/ "ace/pre.h"
 
@@ -40,17 +40,13 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
@@ -83,10 +79,7 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #include "array_onlyS_T.h"
-
 
 #include /**/ "ace/post.h"
 
