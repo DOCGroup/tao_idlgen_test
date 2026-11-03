@@ -23,6 +23,7 @@
  **/
 
 #include "enum_in_structC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"

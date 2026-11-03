@@ -23,6 +23,7 @@
  **/
 
 #include "old_union2C.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
