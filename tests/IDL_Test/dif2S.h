@@ -454,17 +454,17 @@ namespace POA_OldDif2
 
   public:
     AMH_ex1 (const AMH_ex1& rhs);
-    virtual ~AMH_ex1 () = default;
+    ~AMH_ex1 () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
     OldDif2::ex1 *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   static void op0_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -560,17 +560,17 @@ public:
   using _stub_var_type = ::OldDif2::ex1_var;
 
   ex1 (const ex1& rhs) = default;
-  virtual ~ex1 () = default;
+  ~ex1 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::OldDif2::ex1 *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void op0 () = 0;
 
   static void op0_skel (
@@ -744,17 +744,17 @@ public:
   using _stub_var_type = ::OldDif2::AMI_ex1Handler_var;
 
   AMI_ex1Handler (const AMI_ex1Handler& rhs) = default;
-  virtual ~AMI_ex1Handler () = default;
+  ~AMI_ex1Handler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::OldDif2::AMI_ex1Handler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void op0 () = 0;
 
   static void op0_skel (
@@ -949,17 +949,17 @@ protected:
 
 public:
   AMH_ex2 (const AMH_ex2& rhs);
-  virtual ~AMH_ex2 () = default;
+  ~AMH_ex2 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   OldDif2::ex2 *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void op7_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1043,17 +1043,17 @@ public:
   using _stub_var_type = ::OldDif2::ex2_var;
 
   ex2 (const ex2& rhs) = default;
-  virtual ~ex2 () = default;
+  ~ex2 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::OldDif2::ex2 *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Char op7 (
     ::CORBA::Char c,
     ::CORBA::Boolean_out b,
@@ -1208,17 +1208,17 @@ public:
   using _stub_var_type = ::OldDif2::AMI_ex2Handler_var;
 
   AMI_ex2Handler (const AMI_ex2Handler& rhs) = default;
-  virtual ~AMI_ex2Handler () = default;
+  ~AMI_ex2Handler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::OldDif2::AMI_ex2Handler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void op7 (
     ::CORBA::Char ami_return_val,
     ::CORBA::Boolean b,
@@ -1389,17 +1389,17 @@ protected:
 
 public:
   AMH_ex3 (const AMH_ex3& rhs);
-  virtual ~AMH_ex3 () = default;
+  ~AMH_ex3 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   OldDif2::ex3 *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void _get_float_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1485,17 +1485,17 @@ public:
   using _stub_var_type = ::OldDif2::ex3_var;
 
   ex3 (const ex3& rhs) = default;
-  virtual ~ex3 () = default;
+  ~ex3 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::OldDif2::ex3 *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Float float_attribute () = 0;
 
   static void _get_float_attribute_skel (
@@ -1641,17 +1641,17 @@ public:
   using _stub_var_type = ::OldDif2::AMI_ex3Handler_var;
 
   AMI_ex3Handler (const AMI_ex3Handler& rhs) = default;
-  virtual ~AMI_ex3Handler () = default;
+  ~AMI_ex3Handler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::OldDif2::AMI_ex3Handler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void get_float_attribute (
     ::CORBA::Float ami_return_val) = 0;
 
@@ -1834,17 +1834,17 @@ protected:
 
 public:
   AMH_ex4 (const AMH_ex4& rhs);
-  virtual ~AMH_ex4 () = default;
+  ~AMH_ex4 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   OldDif2::ex4 *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void _get_unsigned_short_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1959,17 +1959,17 @@ public:
   using _stub_var_type = ::OldDif2::ex4_var;
 
   ex4 (const ex4& rhs) = default;
-  virtual ~ex4 () = default;
+  ~ex4 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::OldDif2::ex4 *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::UShort unsigned_short_attribute () = 0;
 
   static void _get_unsigned_short_attribute_skel (
@@ -2159,17 +2159,17 @@ public:
   using _stub_var_type = ::OldDif2::AMI_ex4Handler_var;
 
   AMI_ex4Handler (const AMI_ex4Handler& rhs) = default;
-  virtual ~AMI_ex4Handler () = default;
+  ~AMI_ex4Handler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::OldDif2::AMI_ex4Handler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void get_unsigned_short_attribute (
     ::CORBA::UShort ami_return_val) = 0;
 

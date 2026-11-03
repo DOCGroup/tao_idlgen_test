@@ -170,17 +170,17 @@ namespace POA_OldConstants
 
     public:
       AMH_A (const AMH_A& rhs);
-      virtual ~AMH_A () = default;
+      ~AMH_A () override = default;
 
-      virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-      virtual void _dispatch (
+      void _dispatch (
           TAO_ServerRequest &req,
-          TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+          TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
       OldConstants::M::A *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     static void foo_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -212,17 +212,17 @@ namespace POA_OldConstants
     using _stub_var_type = ::OldConstants::M::A_var;
 
     A (const A& rhs) = default;
-    virtual ~A () = default;
+    ~A () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::OldConstants::M::A *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual ::OldConstants::M::A::N foo (
       ::OldConstants::M::A::N x,
       ::OldConstants::M::A::N_out y,
@@ -288,17 +288,17 @@ namespace POA_OldConstants
     using _stub_var_type = ::OldConstants::M::AMI_AHandler_var;
 
     AMI_AHandler (const AMI_AHandler& rhs) = default;
-    virtual ~AMI_AHandler () = default;
+    ~AMI_AHandler () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::OldConstants::M::AMI_AHandler *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual void foo (
       ::OldConstants::M::A::N ami_return_val,
       ::OldConstants::M::A::N y,

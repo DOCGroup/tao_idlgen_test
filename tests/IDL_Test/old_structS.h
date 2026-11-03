@@ -265,17 +265,17 @@ protected:
 
 public:
   POA_AMH_foo1 (const POA_AMH_foo1& rhs);
-  virtual ~POA_AMH_foo1 () = default;
+  ~POA_AMH_foo1 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   foo1 *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -306,17 +306,17 @@ public:
   using _stub_var_type = ::foo1_var;
 
   POA_foo1 (const POA_foo1& rhs) = default;
-  virtual ~POA_foo1 () = default;
+  ~POA_foo1 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::foo1 *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Long op (
     const ::bar1 & a,
     ::bar2_out b) = 0;
@@ -380,17 +380,17 @@ public:
   using _stub_var_type = ::AMI_foo1Handler_var;
 
   POA_AMI_foo1Handler (const POA_AMI_foo1Handler& rhs) = default;
-  virtual ~POA_AMI_foo1Handler () = default;
+  ~POA_AMI_foo1Handler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_foo1Handler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void op (
     ::CORBA::Long ami_return_val,
     const ::bar2 & b) = 0;
@@ -443,17 +443,17 @@ protected:
 
 public:
   POA_AMH_foo2 (const POA_AMH_foo2& rhs);
-  virtual ~POA_AMH_foo2 () = default;
+  ~POA_AMH_foo2 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   foo2 *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void op2_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -494,17 +494,17 @@ public:
   using _stub_var_type = ::foo2_var;
 
   POA_foo2 (const POA_foo2& rhs) = default;
-  virtual ~POA_foo2 () = default;
+  ~POA_foo2 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::foo2 *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::bar1 * op2 (
     const ::bar2 & a) = 0;
 
@@ -584,17 +584,17 @@ public:
   using _stub_var_type = ::AMI_foo2Handler_var;
 
   POA_AMI_foo2Handler (const POA_AMI_foo2Handler& rhs) = default;
-  virtual ~POA_AMI_foo2Handler () = default;
+  ~POA_AMI_foo2Handler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_foo2Handler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void op2 (
     const ::bar1 & ami_return_val) = 0;
 

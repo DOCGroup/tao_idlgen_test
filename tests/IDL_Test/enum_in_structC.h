@@ -247,7 +247,7 @@ public:
 
   ErrorException ();
   ErrorException (const ErrorException &);
-  ~ErrorException () = default;
+  ~ErrorException () override = default;
 
   ErrorException &operator= (const ErrorException &);
 
@@ -258,17 +258,17 @@ public:
 
   static ::CORBA::Exception *_alloc ();
 
-  virtual ::CORBA::Exception *_tao_duplicate () const;
+  ::CORBA::Exception *_tao_duplicate () const override;
 
-  virtual void _raise () const;
+  void _raise () const override;
 
-  virtual void _tao_encode (TAO_OutputCDR &cdr) const;
-  virtual void _tao_decode (TAO_InputCDR &cdr);
+  void _tao_encode (TAO_OutputCDR &cdr) const override;
+  void _tao_decode (TAO_InputCDR &cdr) override;
 
   ErrorException (
       ReasonCode _tao_reason);
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ErrorException;
 

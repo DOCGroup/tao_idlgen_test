@@ -137,17 +137,17 @@ namespace POA_Diamond
     using _stub_var_type = ::Diamond::Top_var;
 
     Top (const Top& rhs) = default;
-    virtual ~Top () = default;
+    ~Top () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::Diamond::Top *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual char * shape () = 0;
 
     static void shape_skel (
@@ -192,17 +192,17 @@ namespace POA_Diamond
     using _stub_var_type = ::Diamond::Left_var;
 
     Left (const Left& rhs) = default;
-    virtual ~Left () = default;
+    ~Left () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::Diamond::Left *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual char * color () = 0;
 
     static void color_skel (
@@ -248,17 +248,17 @@ namespace POA_Diamond
     using _stub_var_type = ::Diamond::Right_var;
 
     Right (const Right& rhs) = default;
-    virtual ~Right () = default;
+    ~Right () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::Diamond::Right *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual ::CORBA::Long width () = 0;
 
     static void width_skel (
@@ -305,17 +305,17 @@ namespace POA_Diamond
     using _stub_var_type = ::Diamond::Buttom_var;
 
     Buttom (const Buttom& rhs) = default;
-    virtual ~Buttom () = default;
+    ~Buttom () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::Diamond::Buttom *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual char * name () = 0;
 
     static void name_skel (

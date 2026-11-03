@@ -115,15 +115,15 @@ namespace M1
     virtual void op (
       const ::M1::S1 & s) = 0;
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
     LI ();
 
-    virtual ~LI () = default;
+    ~LI () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -158,13 +158,13 @@ namespace M1
         TAO_InputCDR &strm,
         V *&new_object);
 
-    virtual char const * _tao_obv_repository_id () const;
+    char const * _tao_obv_repository_id () const override;
 
-    virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+    void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
     static char const * _tao_obv_static_repository_id ();
 
-    virtual ::CORBA::TypeCode_ptr _tao_type () const;
+    ::CORBA::TypeCode_ptr _tao_type () const override;
 
   public:
     virtual void valString (char *val) = 0;
@@ -183,11 +183,11 @@ namespace M1
 
   protected:
     V ();
-    virtual ~V ();
+    ~V () override;
 
-    virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-    virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-    virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+    ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+    ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+    ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
     V (const V &);
@@ -204,7 +204,7 @@ namespace M1
 
     static V_init* _downcast (::CORBA::ValueFactoryBase *);
 
-    virtual ::CORBA::ValueBase *create_for_unmarshal ();
+    ::CORBA::ValueBase *create_for_unmarshal () override;
 
     // TAO-specific extensions
   public:
@@ -268,19 +268,19 @@ namespace OBV_M1
   {
 
 public:
-  virtual void valString (char *val);
-  virtual void valString (char const *val);
-  virtual void valString (::CORBA::String_var const &val);
-  virtual char const *valString () const;
+  void valString (char *val) override;
+  void valString (char const *val) override;
+  void valString (::CORBA::String_var const &val) override;
+  char const *valString () const override;
 
 public:
-  virtual void valStruct (const M1::S1 &);
-  virtual const M1::S1 &valStruct () const;
-  virtual M1::S1 &valStruct ();
+  void valStruct (const M1::S1 &) override;
+  const M1::S1 &valStruct () const override;
+  M1::S1 &valStruct () override;
 
 public:
-  virtual void valLocalIface (::M1::LI_ptr);
-  virtual ::M1::LI_ptr valLocalIface () const;
+  void valLocalIface (::M1::LI_ptr) override;
+  ::M1::LI_ptr valLocalIface () const override;
 
 public:
   V () = default;
@@ -289,10 +289,10 @@ public:
       const ::M1::S1 & _tao_init_valStruct,
       ::M1::LI_ptr _tao_init_valLocalIface
     );
-  virtual ~V ();
+  ~V () override;
 
 public:
-  virtual ::CORBA::ValueBase *_copy_value ();private:
+  ::CORBA::ValueBase *_copy_value () override;private:
     ::TAO::String_Manager _pd_valString {};
     M1::S1 _pd_valStruct {};
     M1::LI_var _pd_valLocalIface {};

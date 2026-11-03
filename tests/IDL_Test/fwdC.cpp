@@ -23,6 +23,7 @@
  **/
 
 #include "fwdC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -1743,12 +1744,6 @@ const char* fwd_mixed_intf::abstract_parent::_desc_repository_id ()
 const char* fwd_mixed_intf::abstract_parent::_desc_interface_name ()
 {
   return "abstract_parent";
-}
-
-::CORBA::Boolean
-fwd_mixed_intf::abstract_parent::marshal (TAO_OutputCDR &cdr)
-{
-  return (cdr << this);
 }
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>

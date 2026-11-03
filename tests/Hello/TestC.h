@@ -97,9 +97,9 @@ namespace Test
 
     virtual void shutdown ();
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -115,7 +115,7 @@ namespace Test
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    virtual ~Hello () = default;
+    ~Hello () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.

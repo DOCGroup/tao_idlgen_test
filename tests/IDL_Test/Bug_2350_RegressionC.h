@@ -77,7 +77,7 @@ public:
 
   something ();
   something (const something &);
-  ~something () = default;
+  ~something () override = default;
 
   something &operator= (const something &);
 
@@ -88,14 +88,14 @@ public:
 
   static ::CORBA::Exception *_alloc ();
 
-  virtual ::CORBA::Exception *_tao_duplicate () const;
+  ::CORBA::Exception *_tao_duplicate () const override;
 
-  virtual void _raise () const;
+  void _raise () const override;
 
-  virtual void _tao_encode (TAO_OutputCDR &cdr) const;
-  virtual void _tao_decode (TAO_InputCDR &cdr);
+  void _tao_encode (TAO_OutputCDR &cdr) const override;
+  void _tao_decode (TAO_InputCDR &cdr) override;
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_something;
 
@@ -155,11 +155,11 @@ public:
     ::AMI_Bug_2350_RegressionHandler_ptr ami_handler,
     const ::user_ExceptionHolder & a);
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -175,7 +175,7 @@ protected:
       TAO_Abstract_ServantBase *servant = nullptr,
       TAO_ORB_Core *orb_core = nullptr);
 
-  virtual ~Bug_2350_Regression () = default;
+  ~Bug_2350_Regression () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -209,8 +209,8 @@ public:
     : exception (ex)
   {}
 
-  virtual ~AMH_Bug_2350_RegressionExceptionHolder ();
-  virtual ::CORBA::ValueBase *_copy_value ();
+  ~AMH_Bug_2350_RegressionExceptionHolder () override;
+  ::CORBA::ValueBase *_copy_value () override;
 
   static AMH_Bug_2350_RegressionExceptionHolder* _downcast (::CORBA::ValueBase *v);
 
@@ -219,13 +219,13 @@ public:
       TAO_InputCDR &strm,
       AMH_Bug_2350_RegressionExceptionHolder *&new_object);
 
-  virtual char const * _tao_obv_repository_id () const;
+  char const * _tao_obv_repository_id () const override;
 
-  virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
   static char const * _tao_obv_static_repository_id ();
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 
 public:
 
@@ -239,9 +239,9 @@ public:
 
 protected:
   AMH_Bug_2350_RegressionExceptionHolder ();
-  virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-  virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-  virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
   AMH_Bug_2350_RegressionExceptionHolder (const AMH_Bug_2350_RegressionExceptionHolder &);
@@ -295,17 +295,17 @@ public:
   virtual void Bug_2350_Regression_excep_excep (
     ::AMH_Bug_2350_RegressionExceptionHolder * holder) = 0;
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
   AMH_Bug_2350_RegressionResponseHandler ();
 
-  virtual ~AMH_Bug_2350_RegressionResponseHandler () = default;
+  ~AMH_Bug_2350_RegressionResponseHandler () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -358,11 +358,11 @@ public:
   virtual void Bug_2350_Regression_excep_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -378,7 +378,7 @@ protected:
       TAO_Abstract_ServantBase *servant = nullptr,
       TAO_ORB_Core *orb_core = nullptr);
 
-  virtual ~AMI_Bug_2350_RegressionHandler () = default;
+  ~AMI_Bug_2350_RegressionHandler () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -483,18 +483,18 @@ class TAO_IDL_TEST_STUB_Export OBV_AMH_Bug_2350_RegressionExceptionHolder
 
 protected:
   OBV_AMH_Bug_2350_RegressionExceptionHolder () = default;
-  virtual ~OBV_AMH_Bug_2350_RegressionExceptionHolder ();
+  ~OBV_AMH_Bug_2350_RegressionExceptionHolder () override;
 
 protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean
+  _tao_marshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
+  ::CORBA::Boolean
+  _tao_unmarshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  virtual void truncation_hook ();
+  void truncation_hook () override;
 
 private:
   CORBA::Boolean require_truncation_ {false};

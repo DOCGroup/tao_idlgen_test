@@ -154,17 +154,17 @@ protected:
 
 public:
   POA_AMH_FieldDevice_T (const POA_AMH_FieldDevice_T& rhs);
-  virtual ~POA_AMH_FieldDevice_T () = default;
+  ~POA_AMH_FieldDevice_T () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   FieldDevice_T *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void getEncodingID_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -203,17 +203,17 @@ public:
   using _stub_var_type = ::FieldDevice_T_var;
 
   POA_FieldDevice_T (const POA_FieldDevice_T& rhs) = default;
-  virtual ~POA_FieldDevice_T () = default;
+  ~POA_FieldDevice_T () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::FieldDevice_T *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::EncodingID2_T getEncodingID () = 0;
 
   static void getEncodingID_skel (
@@ -288,17 +288,17 @@ public:
   using _stub_var_type = ::AMI_FieldDevice_THandler_var;
 
   POA_AMI_FieldDevice_THandler (const POA_AMI_FieldDevice_THandler& rhs) = default;
-  virtual ~POA_AMI_FieldDevice_THandler () = default;
+  ~POA_AMI_FieldDevice_THandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_FieldDevice_THandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void getEncodingID (
     ::EncodingID2_T ami_return_val) = 0;
 

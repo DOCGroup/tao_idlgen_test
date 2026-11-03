@@ -137,17 +137,17 @@ protected:
 
 public:
   POA_AMH_simple3 (const POA_AMH_simple3& rhs);
-  virtual ~POA_AMH_simple3 () = default;
+  ~POA_AMH_simple3 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   simple3 *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void op3_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -189,17 +189,17 @@ public:
   using _stub_var_type = ::simple3_var;
 
   POA_simple3 (const POA_simple3& rhs) = default;
-  virtual ~POA_simple3 () = default;
+  ~POA_simple3 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::simple3 *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Long op3 (
     ::CORBA::Long a,
     ::simple3_out b,
@@ -287,17 +287,17 @@ public:
   using _stub_var_type = ::AMI_simple3Handler_var;
 
   POA_AMI_simple3Handler (const POA_AMI_simple3Handler& rhs) = default;
-  virtual ~POA_AMI_simple3Handler () = default;
+  ~POA_AMI_simple3Handler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_simple3Handler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void op3 (
     ::CORBA::Long ami_return_val,
     ::simple3_ptr b,

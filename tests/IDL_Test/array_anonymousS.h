@@ -176,17 +176,17 @@ protected:
 
 public:
   POA_AMH_tdef (const POA_AMH_tdef& rhs);
-  virtual ~POA_AMH_tdef () = default;
+  ~POA_AMH_tdef () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   tdef *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 };
 
 class POA_tdef;
@@ -207,17 +207,17 @@ public:
   using _stub_var_type = ::tdef_var;
 
   POA_tdef (const POA_tdef& rhs) = default;
-  virtual ~POA_tdef () = default;
+  ~POA_tdef () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::tdef *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -264,17 +264,17 @@ public:
   using _stub_var_type = ::AMI_tdefHandler_var;
 
   POA_AMI_tdefHandler (const POA_AMI_tdefHandler& rhs) = default;
-  virtual ~POA_AMI_tdefHandler () = default;
+  ~POA_AMI_tdefHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_tdefHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

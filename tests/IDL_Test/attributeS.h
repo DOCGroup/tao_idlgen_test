@@ -137,17 +137,17 @@ namespace POA_Hello
 
   public:
     AMH_MyFoo (const AMH_MyFoo& rhs);
-    virtual ~AMH_MyFoo () = default;
+    ~AMH_MyFoo () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
     Hello::MyFoo *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   static void _get_rw_attrib_mytype_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -253,17 +253,17 @@ public:
   using _stub_var_type = ::Hello::MyFoo_var;
 
   MyFoo (const MyFoo& rhs) = default;
-  virtual ~MyFoo () = default;
+  ~MyFoo () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::Hello::MyFoo *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::Hello::MyType rw_attrib_mytype () = 0;
 
   static void _get_rw_attrib_mytype_skel (
@@ -436,17 +436,17 @@ public:
   using _stub_var_type = ::Hello::AMI_MyFooHandler_var;
 
   AMI_MyFooHandler (const AMI_MyFooHandler& rhs) = default;
-  virtual ~AMI_MyFooHandler () = default;
+  ~AMI_MyFooHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::Hello::AMI_MyFooHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void get_rw_attrib_mytype (
     ::Hello::MyType ami_return_val) = 0;
 

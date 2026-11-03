@@ -35,14 +35,11 @@
 
 #include "tao/ORB.h"
 #include "tao/SystemException.h"
-#include "tao/UserException.h"
 #include "tao/Basic_Types.h"
 #include "tao/ORB_Constants.h"
 #include "tao/Object.h"
-#include "tao/String_Manager_T.h"
 #include "tao/SmartProxies/Smart_Proxies.h"
 #include "tao/Objref_VarOut_T.h"
-#include "tao/VarOut_T.h"
 #include "tao/Arg_Traits_T.h"
 #include "tao/Basic_Arguments.h"
 #include "tao/Special_Basic_Arguments.h"
@@ -50,7 +47,6 @@
 #include "tao/Fixed_Size_Argument_T.h"
 #include "tao/Var_Size_Argument_T.h"
 #include "tao/Object_Argument_T.h"
-#include "tao/UB_String_Arguments.h"
 #include /**/ "tao/Version.h"
 #include /**/ "tao/Versioned_Namespace.h"
 
@@ -94,41 +90,16 @@ public:
   static Test_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static Test_ptr _nil ();
 
-  class  Oops : public ::CORBA::UserException
-  {
-  public:
-    ::TAO::String_Manager reason {};
+  virtual ::CORBA::Short box_prices ();
 
-    Oops ();
-    Oops (const Oops &);
-    ~Oops () = default;
-
-    Oops &operator= (const Oops &);
-
-    static Oops *_downcast (::CORBA::Exception *);
-    static const Oops *_downcast (::CORBA::Exception const *);
-
-    static ::CORBA::Exception *_alloc ();
-
-    virtual ::CORBA::Exception *_tao_duplicate () const;
-
-    virtual void _raise () const;
-
-    virtual void _tao_encode (TAO_OutputCDR &cdr) const;
-    virtual void _tao_decode (TAO_InputCDR &cdr);
-
-    Oops (
-        const char * _tao_reason);
-  };
-
-  virtual ::CORBA::Short method (
-    ::CORBA::Short boo);
+  virtual ::CORBA::Long tickets (
+    ::CORBA::Short number);
 
   virtual void shutdown ();
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -144,7 +115,7 @@ protected:
       TAO_Abstract_ServantBase *servant = nullptr,
       TAO_ORB_Core *orb_core = nullptr);
 
-  virtual ~Test () = default;
+  ~Test () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -214,8 +185,8 @@ public:
   ~TAO_Test_Smart_Proxy_Base ();
   virtual TAO_Stub *_stubobj () const;
   virtual TAO_Stub *_stubobj ();
-virtual ::CORBA::Short method (
-  ::CORBA::Short boo);virtual void shutdown ();protected:
+virtual ::CORBA::Short box_prices ();virtual ::CORBA::Long tickets (
+  ::CORBA::Short number);virtual void shutdown ();protected:
   ::Test_ptr get_proxy ();
   ::Test_var proxy_;
 };
@@ -271,13 +242,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
  ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test_ptr );
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Test_ptr &);
-
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::Oops &);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::Oops &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

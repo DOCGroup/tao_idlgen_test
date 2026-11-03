@@ -23,6 +23,7 @@
  **/
 
 #include "ami_testC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"

@@ -163,17 +163,17 @@ namespace POA_Plesk
 
     public:
       AMH_ObjectResolver (const AMH_ObjectResolver& rhs);
-      virtual ~AMH_ObjectResolver () = default;
+      ~AMH_ObjectResolver () override = default;
 
-      virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-      virtual void _dispatch (
+      void _dispatch (
           TAO_ServerRequest &req,
-          TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+          TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
       Plesk::Naming::ObjectResolver *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     static void resolve_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -217,17 +217,17 @@ namespace POA_Plesk
     using _stub_var_type = ::Plesk::Naming::ObjectResolver_var;
 
     ObjectResolver (const ObjectResolver& rhs) = default;
-    virtual ~ObjectResolver () = default;
+    ~ObjectResolver () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::Plesk::Naming::ObjectResolver *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual ::CORBA::Object_ptr resolve (
       const char * service_type,
       ::Plesk::TObjectID & sc_id) = 0;
@@ -309,17 +309,17 @@ namespace POA_Plesk
     using _stub_var_type = ::Plesk::Naming::AMI_ObjectResolverHandler_var;
 
     AMI_ObjectResolverHandler (const AMI_ObjectResolverHandler& rhs) = default;
-    virtual ~AMI_ObjectResolverHandler () = default;
+    ~AMI_ObjectResolverHandler () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::Plesk::Naming::AMI_ObjectResolverHandler *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual void resolve (
       ::CORBA::Object_ptr ami_return_val,
       ::Plesk::TObjectID sc_id) = 0;

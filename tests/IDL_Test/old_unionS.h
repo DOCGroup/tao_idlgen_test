@@ -177,17 +177,17 @@ namespace POA_OldUnion
 
   public:
     AMH_a (const AMH_a& rhs);
-    virtual ~AMH_a () = default;
+    ~AMH_a () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
     OldUnion::a *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   static void opA_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -218,17 +218,17 @@ public:
   using _stub_var_type = ::OldUnion::a_var;
 
   a (const a& rhs) = default;
-  virtual ~a () = default;
+  ~a () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::OldUnion::a *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::OldUnion::Foo2 opA (
     const ::OldUnion::a::astruct & b) = 0;
 
@@ -290,17 +290,17 @@ public:
   using _stub_var_type = ::OldUnion::AMI_aHandler_var;
 
   AMI_aHandler (const AMI_aHandler& rhs) = default;
-  virtual ~AMI_aHandler () = default;
+  ~AMI_aHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::OldUnion::AMI_aHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void opA (
     const ::OldUnion::Foo2 & ami_return_val) = 0;
 

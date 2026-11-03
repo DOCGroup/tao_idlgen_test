@@ -154,17 +154,17 @@ namespace POA_A
 
     public:
       AMH_X1 (const AMH_X1& rhs);
-      virtual ~AMH_X1 () = default;
+      ~AMH_X1 () override = default;
 
-      virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-      virtual void _dispatch (
+      void _dispatch (
           TAO_ServerRequest &req,
-          TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+          TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
       A::B::X1 *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     static void getX1_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -194,17 +194,17 @@ namespace POA_A
     using _stub_var_type = ::A::B::X1_var;
 
     X1 (const X1& rhs) = default;
-    virtual ~X1 () = default;
+    ~X1 () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::A::B::X1 *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual char * getX1 () = 0;
 
     static void getX1_skel (
@@ -265,17 +265,17 @@ namespace POA_A
     using _stub_var_type = ::A::B::AMI_X1Handler_var;
 
     AMI_X1Handler (const AMI_X1Handler& rhs) = default;
-    virtual ~AMI_X1Handler () = default;
+    ~AMI_X1Handler () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::A::B::AMI_X1Handler *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual void getX1 (
       const char * ami_return_val) = 0;
 

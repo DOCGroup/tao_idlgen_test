@@ -105,13 +105,13 @@ public:
       TAO_InputCDR &strm,
       MyValueType *&new_object);
 
-  virtual char const * _tao_obv_repository_id () const;
+  char const * _tao_obv_repository_id () const override;
 
-  virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
   static char const * _tao_obv_static_repository_id ();
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 
 public:
   virtual void my_string_value (char *val) = 0;
@@ -123,11 +123,11 @@ public:
 
 protected:
   MyValueType ();
-  virtual ~MyValueType ();
+  ~MyValueType () override;
 
-  virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-  virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-  virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
   MyValueType (const MyValueType &);
@@ -187,13 +187,13 @@ public:
       TAO_InputCDR &strm,
       DefaultInitializedValue *&new_object);
 
-  virtual char const * _tao_obv_repository_id () const;
+  char const * _tao_obv_repository_id () const override;
 
-  virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
   static char const * _tao_obv_static_repository_id ();
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 
 public:
   virtual void boolean_value (const ::CORBA::Boolean) = 0;
@@ -205,11 +205,11 @@ public:
 
 protected:
   DefaultInitializedValue ();
-  virtual ~DefaultInitializedValue ();
+  ~DefaultInitializedValue () override;
 
-  virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-  virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-  virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
   DefaultInitializedValue (const DefaultInitializedValue &);
@@ -230,7 +230,7 @@ public:
 
   static DefaultInitializedValue_init* _downcast (::CORBA::ValueFactoryBase *);
 
-  virtual ::CORBA::ValueBase *create_for_unmarshal ();
+  ::CORBA::ValueBase *create_for_unmarshal () override;
 
   // TAO-specific extensions
 public:
@@ -315,13 +315,13 @@ public:
       TAO_InputCDR &strm,
       RecValueType *&new_object);
 
-  virtual char const * _tao_obv_repository_id () const;
+  char const * _tao_obv_repository_id () const override;
 
-  virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
   static char const * _tao_obv_static_repository_id ();
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 
 protected:
 
@@ -402,11 +402,11 @@ protected:
 
 protected:
   RecValueType ();
-  virtual ~RecValueType ();
+  ~RecValueType () override;
 
-  virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-  virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-  virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
   RecValueType (const RecValueType &);
@@ -427,7 +427,7 @@ public:
 
   static RecValueType_init* _downcast (::CORBA::ValueFactoryBase *);
 
-  virtual ::CORBA::ValueBase *create_for_unmarshal ();
+  ::CORBA::ValueBase *create_for_unmarshal () override;
 
   // TAO-specific extensions
 public:
@@ -464,13 +464,13 @@ public:
       TAO_InputCDR &strm,
       GetsDeprecatedMember *&new_object);
 
-  virtual char const * _tao_obv_repository_id () const;
+  char const * _tao_obv_repository_id () const override;
 
-  virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
   static char const * _tao_obv_static_repository_id ();
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 
 public:
   virtual void StringMember (char *val) = 0;
@@ -480,11 +480,11 @@ public:
 
 protected:
   GetsDeprecatedMember ();
-  virtual ~GetsDeprecatedMember ();
+  ~GetsDeprecatedMember () override;
 
-  virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-  virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-  virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
   GetsDeprecatedMember (const GetsDeprecatedMember &);
@@ -505,7 +505,7 @@ public:
 
   static GetsDeprecatedMember_init* _downcast (::CORBA::ValueFactoryBase *);
 
-  virtual ::CORBA::ValueBase *create_for_unmarshal ();
+  ::CORBA::ValueBase *create_for_unmarshal () override;
 
   // TAO-specific extensions
 public:
@@ -544,13 +544,13 @@ namespace X_VALUETYPE
         TAO_InputCDR &strm,
         AXXX *&new_object);
 
-    virtual char const * _tao_obv_repository_id () const;
+    char const * _tao_obv_repository_id () const override;
 
-    virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+    void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
     static char const * _tao_obv_static_repository_id ();
 
-    virtual ::CORBA::TypeCode_ptr _tao_type () const;
+    ::CORBA::TypeCode_ptr _tao_type () const override;
 
   public:
 
@@ -559,7 +559,7 @@ namespace X_VALUETYPE
 
 protected:
   AXXX ();
-  virtual ~AXXX ();
+  ~AXXX () override;
 
 private:
   AXXX (const AXXX &);
@@ -594,17 +594,17 @@ public:
       TAO_InputCDR &strm,
       BXXX *&new_object);
 
-  virtual char const * _tao_obv_repository_id () const;
+  char const * _tao_obv_repository_id () const override;
 
-  virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
   static char const * _tao_obv_static_repository_id ();
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 
 protected:
   BXXX ();
-  virtual ~BXXX ();
+  ~BXXX () override;
 
 private:
   BXXX (const BXXX &);
@@ -682,13 +682,13 @@ namespace ModSelection
           TAO_InputCDR &strm,
           Criterion *&new_object);
 
-      virtual char const * _tao_obv_repository_id () const;
+      char const * _tao_obv_repository_id () const override;
 
-      virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+      void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
       static char const * _tao_obv_static_repository_id ();
 
-      virtual ::CORBA::TypeCode_ptr _tao_type () const;
+      ::CORBA::TypeCode_ptr _tao_type () const override;
 
     public:
 
@@ -706,7 +706,7 @@ namespace ModSelection
 
     protected:
       Criterion ();
-      virtual ~Criterion ();
+      ~Criterion () override;
 
     private:
       Criterion (const Criterion &);
@@ -741,13 +741,13 @@ namespace ModSelection
           TAO_InputCDR &strm,
           CriterionExpr *&new_object);
 
-      virtual char const * _tao_obv_repository_id () const;
+      char const * _tao_obv_repository_id () const override;
 
-      virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+      void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
       static char const * _tao_obv_static_repository_id ();
 
-      virtual ::CORBA::TypeCode_ptr _tao_type () const;
+      ::CORBA::TypeCode_ptr _tao_type () const override;
 
     public:
 
@@ -828,11 +828,11 @@ namespace ModSelection
 
     protected:
       CriterionExpr ();
-      virtual ~CriterionExpr ();
+      ~CriterionExpr () override;
 
-      virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-      virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-      virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+      ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+      ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+      ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
     private:
       CriterionExpr (const CriterionExpr &);
@@ -1103,10 +1103,10 @@ class TAO_IDL_TEST_STUB_Export OBV_MyValueType
 {
 
 public:
-  virtual void my_string_value (char *val);
-  virtual void my_string_value (char const *val);
-  virtual void my_string_value (::CORBA::String_var const &val);
-  virtual char const *my_string_value () const;
+  void my_string_value (char *val) override;
+  void my_string_value (char const *val) override;
+  void my_string_value (::CORBA::String_var const &val) override;
+  char const *my_string_value () const override;
 
 public:
 
@@ -1115,18 +1115,18 @@ public:
   OBV_MyValueType (
       const char * _tao_init_my_string_value
     );
-  virtual ~OBV_MyValueType ();
+  ~OBV_MyValueType () override;
 
 protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__MyValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean
+  _tao_marshal__MyValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__MyValueType (TAO_InputCDR &, TAO_ChunkInfo &);
+  ::CORBA::Boolean
+  _tao_unmarshal__MyValueType (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  virtual void truncation_hook ();
+  void truncation_hook () override;
 
 private:
   ::TAO::String_Manager _pd_my_string_value {};
@@ -1140,12 +1140,12 @@ class TAO_IDL_TEST_STUB_Export OBV_DefaultInitializedValue
 {
 
 public:
-  virtual void boolean_value (const ::CORBA::Boolean);
-  virtual ::CORBA::Boolean boolean_value () const;
+  void boolean_value (const ::CORBA::Boolean) override;
+  ::CORBA::Boolean boolean_value () const override;
 
 public:
-  virtual void long_value (const ::CORBA::Long);
-  virtual ::CORBA::Long long_value () const;
+  void long_value (const ::CORBA::Long) override;
+  ::CORBA::Long long_value () const override;
 
 public:
   OBV_DefaultInitializedValue () = default;
@@ -1153,21 +1153,21 @@ public:
       ::CORBA::Boolean _tao_init_boolean_value,
       ::CORBA::Long _tao_init_long_value
     );
-  virtual ~OBV_DefaultInitializedValue ();
+  ~OBV_DefaultInitializedValue () override;
 
 public:
-  virtual ::CORBA::ValueBase *_copy_value ();
+  ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__DefaultInitializedValue (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean
+  _tao_marshal__DefaultInitializedValue (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__DefaultInitializedValue (TAO_InputCDR &, TAO_ChunkInfo &);
+  ::CORBA::Boolean
+  _tao_unmarshal__DefaultInitializedValue (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  virtual void truncation_hook ();
+  void truncation_hook () override;
 
 private:
   ::CORBA::Boolean _pd_boolean_value {};
@@ -1182,14 +1182,14 @@ class TAO_IDL_TEST_STUB_Export OBV_RecValueType
 {
 
 protected:
-  virtual void rec_value_types (const RecValueType::_tao_seq_RecValueType_ &);
-  virtual const RecValueType::_tao_seq_RecValueType_ &rec_value_types () const;
-  virtual RecValueType::_tao_seq_RecValueType_ &rec_value_types ();
+  void rec_value_types (const RecValueType::_tao_seq_RecValueType_ &) override;
+  const RecValueType::_tao_seq_RecValueType_ &rec_value_types () const override;
+  RecValueType::_tao_seq_RecValueType_ &rec_value_types () override;
 
 protected:
-  virtual void rec_value_types2 (const RecValueType::_tao_seq_RecValueType__2 &);
-  virtual const RecValueType::_tao_seq_RecValueType__2 &rec_value_types2 () const;
-  virtual RecValueType::_tao_seq_RecValueType__2 &rec_value_types2 ();
+  void rec_value_types2 (const RecValueType::_tao_seq_RecValueType__2 &) override;
+  const RecValueType::_tao_seq_RecValueType__2 &rec_value_types2 () const override;
+  RecValueType::_tao_seq_RecValueType__2 &rec_value_types2 () override;
 
 public:
   OBV_RecValueType () = default;
@@ -1197,21 +1197,21 @@ public:
       const ::RecValueType::_tao_seq_RecValueType_ & _tao_init_rec_value_types,
       const ::RecValueType::_tao_seq_RecValueType__2 & _tao_init_rec_value_types2
     );
-  virtual ~OBV_RecValueType ();
+  ~OBV_RecValueType () override;
 
 public:
-  virtual ::CORBA::ValueBase *_copy_value ();
+  ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__RecValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean
+  _tao_marshal__RecValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__RecValueType (TAO_InputCDR &, TAO_ChunkInfo &);
+  ::CORBA::Boolean
+  _tao_unmarshal__RecValueType (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  virtual void truncation_hook ();
+  void truncation_hook () override;
 
 private:
   _tao_seq_RecValueType_ _pd_rec_value_types {};
@@ -1226,10 +1226,10 @@ class TAO_IDL_TEST_STUB_Export OBV_GetsDeprecatedMember
 {
 
 public:
-  virtual void StringMember (char *val);
-  virtual void StringMember (char const *val);
-  virtual void StringMember (::CORBA::String_var const &val);
-  virtual char const *StringMember () const;
+  void StringMember (char *val) override;
+  void StringMember (char const *val) override;
+  void StringMember (::CORBA::String_var const &val) override;
+  char const *StringMember () const override;
 
 public:
   OBV_GetsDeprecatedMember () = default;
@@ -1237,18 +1237,18 @@ public:
       const ::IncludedBase::_tao_seq_CORBA_Long_ & _tao_init_DeprecatedMember,
       const char * _tao_init_StringMember
     );
-  virtual ~OBV_GetsDeprecatedMember ();
+  ~OBV_GetsDeprecatedMember () override;
 
 protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__GetsDeprecatedMember (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean
+  _tao_marshal__GetsDeprecatedMember (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__GetsDeprecatedMember (TAO_InputCDR &, TAO_ChunkInfo &);
+  ::CORBA::Boolean
+  _tao_unmarshal__GetsDeprecatedMember (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  virtual void truncation_hook ();
+  void truncation_hook () override;
 
 private:
   ::TAO::String_Manager _pd_StringMember {};
@@ -1272,13 +1272,13 @@ namespace OBV_ModSelection
   public:
 
   public:
-    virtual void theLeftCriterion (ModSelection::SelectionDefns::Criterion *);
-    virtual ModSelection::SelectionDefns::Criterion *theLeftCriterion () const;
+    void theLeftCriterion (ModSelection::SelectionDefns::Criterion *) override;
+    ModSelection::SelectionDefns::Criterion *theLeftCriterion () const override;
 
   public:
-    virtual void theRightCriterionExpr (const ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &);
-    virtual const ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &theRightCriterionExpr () const;
-    virtual ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &theRightCriterionExpr ();
+    void theRightCriterionExpr (const ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &) override;
+    const ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &theRightCriterionExpr () const override;
+    ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &theRightCriterionExpr () override;
 
   public:
 
@@ -1290,18 +1290,18 @@ namespace OBV_ModSelection
         ::ModSelection::SelectionDefns::Criterion * _tao_init_theLeftCriterion,
         const ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr & _tao_init_theRightCriterionExpr
       );
-    virtual ~CriterionExpr ();
+    ~CriterionExpr () override;
 
   protected:
-    virtual ::CORBA::Boolean
-    _tao_marshal__ModSelection_SelectionDefns_CriterionExpr (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+    ::CORBA::Boolean
+    _tao_marshal__ModSelection_SelectionDefns_CriterionExpr (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    virtual ::CORBA::Boolean
-    _tao_unmarshal__ModSelection_SelectionDefns_CriterionExpr (TAO_InputCDR &, TAO_ChunkInfo &);
+    ::CORBA::Boolean
+    _tao_unmarshal__ModSelection_SelectionDefns_CriterionExpr (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-    virtual void truncation_hook ();
+    void truncation_hook () override;
 
   private:
     ModSelection::SelectionDefns::Criterion_var _pd_theLeftCriterion {};

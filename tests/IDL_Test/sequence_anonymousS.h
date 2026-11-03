@@ -176,17 +176,17 @@ protected:
 
 public:
   POA_AMH_seqTest (const POA_AMH_seqTest& rhs);
-  virtual ~POA_AMH_seqTest () = default;
+  ~POA_AMH_seqTest () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   seqTest *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void send_dozen_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -217,17 +217,17 @@ public:
   using _stub_var_type = ::seqTest_var;
 
   POA_seqTest (const POA_seqTest& rhs) = default;
-  virtual ~POA_seqTest () = default;
+  ~POA_seqTest () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::seqTest *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void send_dozen (
     ::seqTest::dozens & bouquets) = 0;
 
@@ -289,17 +289,17 @@ public:
   using _stub_var_type = ::AMI_seqTestHandler_var;
 
   POA_AMI_seqTestHandler (const POA_AMI_seqTestHandler& rhs) = default;
-  virtual ~POA_AMI_seqTestHandler () = default;
+  ~POA_AMI_seqTestHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_seqTestHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void send_dozen (
     const ::seqTest::dozens & bouquets) = 0;
 

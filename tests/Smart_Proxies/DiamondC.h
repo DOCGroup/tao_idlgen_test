@@ -97,9 +97,9 @@ namespace Diamond
 
     virtual char * shape ();
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -115,7 +115,7 @@ namespace Diamond
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    virtual ~Top () = default;
+    ~Top () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -221,9 +221,9 @@ class MY_Stub_Export TAO_Diamond_Top_Proxy_Factory_Adapter
 
     virtual char * color ();
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -239,7 +239,7 @@ class MY_Stub_Export TAO_Diamond_Top_Proxy_Factory_Adapter
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    virtual ~Left () = default;
+    ~Left () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -345,9 +345,9 @@ class MY_Stub_Export TAO_Diamond_Left_Proxy_Factory_Adapter
 
     virtual ::CORBA::Long width ();
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -363,7 +363,7 @@ class MY_Stub_Export TAO_Diamond_Left_Proxy_Factory_Adapter
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    virtual ~Right () = default;
+    ~Right () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -470,9 +470,9 @@ class MY_Stub_Export TAO_Diamond_Right_Proxy_Factory_Adapter
 
     virtual char * name ();
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -488,7 +488,7 @@ class MY_Stub_Export TAO_Diamond_Right_Proxy_Factory_Adapter
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    virtual ~Buttom () = default;
+    ~Buttom () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.

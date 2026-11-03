@@ -90,13 +90,13 @@ namespace include_test
         TAO_InputCDR &strm,
         StringTest *&new_object);
 
-    virtual char const * _tao_obv_repository_id () const;
+    char const * _tao_obv_repository_id () const override;
 
-    virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+    void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
     static char const * _tao_obv_static_repository_id ();
 
-    virtual ::CORBA::TypeCode_ptr _tao_type () const;
+    ::CORBA::TypeCode_ptr _tao_type () const override;
 
   public:
     virtual void my_string_value (CORBA::StringValue *) = 0;
@@ -104,11 +104,11 @@ namespace include_test
 
   protected:
     StringTest ();
-    virtual ~StringTest ();
+    ~StringTest () override;
 
-    virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-    virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-    virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+    ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+    ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+    ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
     StringTest (const StringTest &);
@@ -129,7 +129,7 @@ namespace include_test
 
     static StringTest_init* _downcast (::CORBA::ValueFactoryBase *);
 
-    virtual ::CORBA::ValueBase *create_for_unmarshal ();
+    ::CORBA::ValueBase *create_for_unmarshal () override;
 
     // TAO-specific extensions
   public:
@@ -197,29 +197,29 @@ namespace OBV_include_test
   {
 
 public:
-  virtual void my_string_value (CORBA::StringValue *);
-  virtual CORBA::StringValue *my_string_value () const;
+  void my_string_value (CORBA::StringValue *) override;
+  CORBA::StringValue *my_string_value () const override;
 
 public:
   StringTest () = default;
   StringTest (
       ::CORBA::StringValue * _tao_init_my_string_value
     );
-  virtual ~StringTest ();
+  ~StringTest () override;
 
 public:
-  virtual ::CORBA::ValueBase *_copy_value ();
+  ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__include_test_StringTest (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean
+  _tao_marshal__include_test_StringTest (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__include_test_StringTest (TAO_InputCDR &, TAO_ChunkInfo &);
+  ::CORBA::Boolean
+  _tao_unmarshal__include_test_StringTest (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  virtual void truncation_hook ();
+  void truncation_hook () override;
 
 private:
   CORBA::StringValue_var _pd_my_string_value {};

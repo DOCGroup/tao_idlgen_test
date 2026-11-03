@@ -144,17 +144,17 @@ protected:
 
 public:
   POA_AMH_Bug_2350_Regression (const POA_AMH_Bug_2350_Regression& rhs);
-  virtual ~POA_AMH_Bug_2350_Regression () = default;
+  ~POA_AMH_Bug_2350_Regression () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   Bug_2350_Regression *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void Bug_2350_Regression_excep_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -185,17 +185,17 @@ public:
   using _stub_var_type = ::Bug_2350_Regression_var;
 
   POA_Bug_2350_Regression (const POA_Bug_2350_Regression& rhs) = default;
-  virtual ~POA_Bug_2350_Regression () = default;
+  ~POA_Bug_2350_Regression () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::Bug_2350_Regression *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void Bug_2350_Regression_excep (
     const ::user_ExceptionHolder & a) = 0;
 
@@ -256,17 +256,17 @@ public:
   using _stub_var_type = ::AMI_Bug_2350_RegressionHandler_var;
 
   POA_AMI_Bug_2350_RegressionHandler (const POA_AMI_Bug_2350_RegressionHandler& rhs) = default;
-  virtual ~POA_AMI_Bug_2350_RegressionHandler () = default;
+  ~POA_AMI_Bug_2350_RegressionHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_Bug_2350_RegressionHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void Bug_2350_Regression_excep () = 0;
 
   static void Bug_2350_Regression_excep_skel (

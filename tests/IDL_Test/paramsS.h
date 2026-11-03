@@ -160,17 +160,17 @@ namespace POA_foo
 
     public:
       AMH_fooBar (const AMH_fooBar& rhs);
-      virtual ~AMH_fooBar () = default;
+      ~AMH_fooBar () override = default;
 
-      virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-      virtual void _dispatch (
+      void _dispatch (
           TAO_ServerRequest &req,
-          TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+          TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
       foo::bar::fooBar *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     static void getDate_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -202,17 +202,17 @@ namespace POA_foo
     using _stub_var_type = ::foo::bar::fooBar_var;
 
     fooBar (const fooBar& rhs) = default;
-    virtual ~fooBar () = default;
+    ~fooBar () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::foo::bar::fooBar *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual ::foo::theDate getDate (
       const ::foo::theDate & a,
       ::foo::theDate & b,
@@ -278,17 +278,17 @@ namespace POA_foo
     using _stub_var_type = ::foo::bar::AMI_fooBarHandler_var;
 
     AMI_fooBarHandler (const AMI_fooBarHandler& rhs) = default;
-    virtual ~AMI_fooBarHandler () = default;
+    ~AMI_fooBarHandler () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::foo::bar::AMI_fooBarHandler *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual void getDate (
       const ::foo::theDate & ami_return_val,
       const ::foo::theDate & b,

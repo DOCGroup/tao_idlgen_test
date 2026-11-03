@@ -174,17 +174,17 @@ protected:
 
 public:
   POA_AMH_Testing (const POA_AMH_Testing& rhs);
-  virtual ~POA_AMH_Testing () = default;
+  ~POA_AMH_Testing () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   Testing *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void foo_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -225,17 +225,17 @@ public:
   using _stub_var_type = ::Testing_var;
 
   POA_Testing (const POA_Testing& rhs) = default;
-  virtual ~POA_Testing () = default;
+  ~POA_Testing () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::Testing *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void foo (
     const char * _cxx_namespace) = 0;
 
@@ -310,17 +310,17 @@ public:
   using _stub_var_type = ::AMI_TestingHandler_var;
 
   POA_AMI_TestingHandler (const POA_AMI_TestingHandler& rhs) = default;
-  virtual ~POA_AMI_TestingHandler () = default;
+  ~POA_AMI_TestingHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_TestingHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void foo () = 0;
 
   static void foo_skel (

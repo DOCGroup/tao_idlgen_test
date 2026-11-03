@@ -87,17 +87,17 @@ namespace gleep
     static schmooze_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmooze_ptr _nil ();
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
     static const char* _desc_repository_id ();
     static const char* _desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
     schmooze ();
 
-    virtual ~schmooze () = default;
+    ~schmooze () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -143,17 +143,17 @@ namespace gleep
     static schmeer_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmeer_ptr _nil ();
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
     static const char* _desc_repository_id ();
     static const char* _desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
     schmeer ();
 
-    virtual ~schmeer () = default;
+    ~schmeer () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -199,17 +199,17 @@ namespace gleep
     static schlemiel_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schlemiel_ptr _nil ();
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
     static const char* _desc_repository_id ();
     static const char* _desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
     schlemiel ();
 
-    virtual ~schlemiel () = default;
+    ~schlemiel () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -255,17 +255,17 @@ namespace gleep
     static spilkis_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static spilkis_ptr _nil ();
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
     static const char* _desc_repository_id ();
     static const char* _desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
     spilkis ();
 
-    virtual ~spilkis () = default;
+    ~spilkis () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -309,17 +309,17 @@ namespace gleep
       static schmuck_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static schmuck_ptr _nil ();
 
-      virtual ::CORBA::Boolean _is_a (const char *type_id);
-      virtual const char* _interface_repository_id () const;
+      ::CORBA::Boolean _is_a (const char *type_id) override;
+      const char* _interface_repository_id () const override;
       static const char* _desc_repository_id ();
       static const char* _desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Abstract or local interface only.
       schmuck ();
 
-      virtual ~schmuck () = default;
+      ~schmuck () override = default;
 
     private:
       // Private and unimplemented for concrete interfaces.
@@ -361,17 +361,17 @@ namespace gleep
       static schmendrick_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static schmendrick_ptr _nil ();
 
-      virtual ::CORBA::Boolean _is_a (const char *type_id);
-      virtual const char* _interface_repository_id () const;
+      ::CORBA::Boolean _is_a (const char *type_id) override;
+      const char* _interface_repository_id () const override;
       static const char* _desc_repository_id ();
       static const char* _desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Abstract or local interface only.
       schmendrick ();
 
-      virtual ~schmendrick () = default;
+      ~schmendrick () override = default;
 
     private:
       // Private and unimplemented for concrete interfaces.
@@ -415,17 +415,17 @@ namespace gleep
         static schlemazel_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
         static schlemazel_ptr _nil ();
 
-        virtual ::CORBA::Boolean _is_a (const char *type_id);
-        virtual const char* _interface_repository_id () const;
+        ::CORBA::Boolean _is_a (const char *type_id) override;
+        const char* _interface_repository_id () const override;
         static const char* _desc_repository_id ();
         static const char* _desc_interface_name ();
-        virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+        ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
       protected:
         // Abstract or local interface only.
         schlemazel ();
 
-        virtual ~schlemazel () = default;
+        ~schlemazel () override = default;
 
       private:
         // Private and unimplemented for concrete interfaces.
@@ -471,17 +471,17 @@ namespace gleep
     static schmegegging_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmegegging_ptr _nil ();
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
     static const char* _desc_repository_id ();
     static const char* _desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
     schmegegging ();
 
-    virtual ~schmegegging () = default;
+    ~schmegegging () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.

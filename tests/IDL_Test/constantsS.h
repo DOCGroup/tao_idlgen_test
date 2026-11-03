@@ -175,17 +175,17 @@ namespace POA_ClassConstants
 
   public:
     AMH_Iface (const AMH_Iface& rhs);
-    virtual ~AMH_Iface () = default;
+    ~AMH_Iface () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
     ClassConstants::Iface *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
 };
 
 class Iface;
@@ -206,17 +206,17 @@ public:
   using _stub_var_type = ::ClassConstants::Iface_var;
 
   Iface (const Iface& rhs) = default;
-  virtual ~Iface () = default;
+  ~Iface () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::ClassConstants::Iface *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -263,17 +263,17 @@ public:
   using _stub_var_type = ::ClassConstants::AMI_IfaceHandler_var;
 
   AMI_IfaceHandler (const AMI_IfaceHandler& rhs) = default;
-  virtual ~AMI_IfaceHandler () = default;
+  ~AMI_IfaceHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::ClassConstants::AMI_IfaceHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

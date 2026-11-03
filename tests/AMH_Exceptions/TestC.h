@@ -78,7 +78,7 @@ namespace Test
 
     InvalidTimestamp ();
     InvalidTimestamp (const InvalidTimestamp &);
-    ~InvalidTimestamp () = default;
+    ~InvalidTimestamp () override = default;
 
     InvalidTimestamp &operator= (const InvalidTimestamp &);
 
@@ -89,14 +89,14 @@ namespace Test
 
     static ::CORBA::Exception *_alloc ();
 
-    virtual ::CORBA::Exception *_tao_duplicate () const;
+    ::CORBA::Exception *_tao_duplicate () const override;
 
-    virtual void _raise () const;
+    void _raise () const override;
 
-    virtual void _tao_encode (TAO_OutputCDR &cdr) const;
-    virtual void _tao_decode (TAO_InputCDR &cdr);
+    void _tao_encode (TAO_OutputCDR &cdr) const override;
+    void _tao_decode (TAO_InputCDR &cdr) override;
 
-    virtual ::CORBA::TypeCode_ptr _tao_type () const;
+    ::CORBA::TypeCode_ptr _tao_type () const override;
   };
   extern  ::CORBA::TypeCode_ptr const _tc_InvalidTimestamp;
 
@@ -106,7 +106,7 @@ namespace Test
 
     ServerOverload ();
     ServerOverload (const ServerOverload &);
-    ~ServerOverload () = default;
+    ~ServerOverload () override = default;
 
     ServerOverload &operator= (const ServerOverload &);
 
@@ -117,14 +117,14 @@ namespace Test
 
     static ::CORBA::Exception *_alloc ();
 
-    virtual ::CORBA::Exception *_tao_duplicate () const;
+    ::CORBA::Exception *_tao_duplicate () const override;
 
-    virtual void _raise () const;
+    void _raise () const override;
 
-    virtual void _tao_encode (TAO_OutputCDR &cdr) const;
-    virtual void _tao_decode (TAO_InputCDR &cdr);
+    void _tao_encode (TAO_OutputCDR &cdr) const override;
+    void _tao_decode (TAO_InputCDR &cdr) override;
 
-    virtual ::CORBA::TypeCode_ptr _tao_type () const;
+    ::CORBA::TypeCode_ptr _tao_type () const override;
   };
   extern  ::CORBA::TypeCode_ptr const _tc_ServerOverload;
   using Timestamp = ::CORBA::ULongLong;
@@ -157,13 +157,13 @@ namespace Test
         TAO_InputCDR &strm,
         Red_Herring *&new_object);
 
-    virtual char const * _tao_obv_repository_id () const;
+    char const * _tao_obv_repository_id () const override;
 
-    virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+    void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
     static char const * _tao_obv_static_repository_id ();
 
-    virtual ::CORBA::TypeCode_ptr _tao_type () const;
+    ::CORBA::TypeCode_ptr _tao_type () const override;
 
   public:
 
@@ -174,11 +174,11 @@ namespace Test
 
   protected:
     Red_Herring ();
-    virtual ~Red_Herring ();
+    ~Red_Herring () override;
 
-    virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-    virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-    virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+    ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+    ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+    ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
     Red_Herring (const Red_Herring &);
@@ -228,9 +228,9 @@ namespace Test
 
     virtual void shutdown ();
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -246,7 +246,7 @@ namespace Test
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    virtual ~Roundtrip () = default;
+    ~Roundtrip () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -280,8 +280,8 @@ namespace Test
       : exception (ex)
     {}
 
-    virtual ~AMH_RoundtripExceptionHolder ();
-    virtual ::CORBA::ValueBase *_copy_value ();
+    ~AMH_RoundtripExceptionHolder () override;
+    ::CORBA::ValueBase *_copy_value () override;
 
     static AMH_RoundtripExceptionHolder* _downcast (::CORBA::ValueBase *v);
 
@@ -290,13 +290,13 @@ namespace Test
         TAO_InputCDR &strm,
         AMH_RoundtripExceptionHolder *&new_object);
 
-    virtual char const * _tao_obv_repository_id () const;
+    char const * _tao_obv_repository_id () const override;
 
-    virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+    void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
     static char const * _tao_obv_static_repository_id ();
 
-    virtual ::CORBA::TypeCode_ptr _tao_type () const;
+    ::CORBA::TypeCode_ptr _tao_type () const override;
 
   public:
 
@@ -310,9 +310,9 @@ public:
 
 protected:
   AMH_RoundtripExceptionHolder ();
-  virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-  virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-  virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
   AMH_RoundtripExceptionHolder (const AMH_RoundtripExceptionHolder &);
@@ -369,15 +369,15 @@ public:
   virtual void shutdown_excep (
     ::Test::AMH_RoundtripExceptionHolder * holder) = 0;
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
   AMH_RoundtripResponseHandler ();
 
-  virtual ~AMH_RoundtripResponseHandler () = default;
+  ~AMH_RoundtripResponseHandler () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -461,18 +461,18 @@ namespace OBV_Test
 
 protected:
   Red_Herring () = default;
-  virtual ~Red_Herring ();
+  ~Red_Herring () override;
 
 protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__Test_Red_Herring (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean
+  _tao_marshal__Test_Red_Herring (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__Test_Red_Herring (TAO_InputCDR &, TAO_ChunkInfo &);
+  ::CORBA::Boolean
+  _tao_unmarshal__Test_Red_Herring (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  virtual void truncation_hook ();
+  void truncation_hook () override;
 
 private:
   CORBA::Boolean require_truncation_ {false};
@@ -485,18 +485,18 @@ class  AMH_RoundtripExceptionHolder
 
 protected:
   AMH_RoundtripExceptionHolder () = default;
-  virtual ~AMH_RoundtripExceptionHolder ();
+  ~AMH_RoundtripExceptionHolder () override;
 
 protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__Test_AMH_RoundtripExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean
+  _tao_marshal__Test_AMH_RoundtripExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__Test_AMH_RoundtripExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
+  ::CORBA::Boolean
+  _tao_unmarshal__Test_AMH_RoundtripExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  virtual void truncation_hook ();
+  void truncation_hook () override;
 
 private:
   CORBA::Boolean require_truncation_ {false};

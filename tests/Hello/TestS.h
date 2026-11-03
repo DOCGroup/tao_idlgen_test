@@ -85,17 +85,17 @@ namespace POA_Test
     using _stub_var_type = ::Test::Hello_var;
 
     Hello (const Hello& rhs) = default;
-    virtual ~Hello () = default;
+    ~Hello () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::Test::Hello *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual char * get_string () = 0;
 
     static void get_string_skel (

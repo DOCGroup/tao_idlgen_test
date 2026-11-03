@@ -86,17 +86,17 @@ public:
   using _stub_var_type = ::Simple_Server_var;
 
   POA_Simple_Server (const POA_Simple_Server& rhs) = default;
-  virtual ~POA_Simple_Server () = default;
+  ~POA_Simple_Server () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::Simple_Server *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Boolean print_status () = 0;
 
   static void print_status_skel (

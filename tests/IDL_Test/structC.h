@@ -411,7 +411,7 @@ namespace Test
 
         DefaultInitializedException ();
         DefaultInitializedException (const DefaultInitializedException &);
-        ~DefaultInitializedException () = default;
+        ~DefaultInitializedException () override = default;
 
         DefaultInitializedException &operator= (const DefaultInitializedException &);
 
@@ -422,18 +422,18 @@ namespace Test
 
         static ::CORBA::Exception *_alloc ();
 
-        virtual ::CORBA::Exception *_tao_duplicate () const;
+        ::CORBA::Exception *_tao_duplicate () const override;
 
-        virtual void _raise () const;
+        void _raise () const override;
 
-        virtual void _tao_encode (TAO_OutputCDR &cdr) const;
-        virtual void _tao_decode (TAO_InputCDR &cdr);
+        void _tao_encode (TAO_OutputCDR &cdr) const override;
+        void _tao_decode (TAO_InputCDR &cdr) override;
 
         DefaultInitializedException (
             ::CORBA::Boolean _tao_boolean_value,
             ::CORBA::Long _tao_long_value);
 
-        virtual ::CORBA::TypeCode_ptr _tao_type () const;
+        ::CORBA::TypeCode_ptr _tao_type () const override;
       };
       extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedException;
 

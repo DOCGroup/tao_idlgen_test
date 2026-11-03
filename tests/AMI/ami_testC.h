@@ -82,7 +82,7 @@ namespace A
 
     DidTheRightThing ();
     DidTheRightThing (const DidTheRightThing &);
-    ~DidTheRightThing () = default;
+    ~DidTheRightThing () override = default;
 
     DidTheRightThing &operator= (const DidTheRightThing &);
 
@@ -93,18 +93,18 @@ namespace A
 
     static ::CORBA::Exception *_alloc ();
 
-    virtual ::CORBA::Exception *_tao_duplicate () const;
+    ::CORBA::Exception *_tao_duplicate () const override;
 
-    virtual void _raise () const;
+    void _raise () const override;
 
-    virtual void _tao_encode (TAO_OutputCDR &cdr) const;
-    virtual void _tao_decode (TAO_InputCDR &cdr);
+    void _tao_encode (TAO_OutputCDR &cdr) const override;
+    void _tao_decode (TAO_InputCDR &cdr) override;
 
     DidTheRightThing (
         ::CORBA::Long _tao_id,
         const char * _tao_whatDidTheRightThing);
 
-    virtual ::CORBA::TypeCode_ptr _tao_type () const;
+    ::CORBA::TypeCode_ptr _tao_type () const override;
   };
   extern  ::CORBA::TypeCode_ptr const _tc_DidTheRightThing;
 
@@ -172,9 +172,9 @@ namespace A
       ::A::AMI_AMI_TestHandler_ptr ami_handler,
       const char * str);
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -190,7 +190,7 @@ namespace A
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    virtual ~AMI_Test () = default;
+    ~AMI_Test () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -280,9 +280,9 @@ namespace A
     virtual void inout_arg_test_excep (
       ::Messaging::ExceptionHolder * excep_holder);
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -298,7 +298,7 @@ namespace A
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    virtual ~AMI_AMI_TestHandler () = default;
+    ~AMI_AMI_TestHandler () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -348,9 +348,9 @@ namespace A
     virtual void sendc_child_op (
       ::A::AMI_Test_ChildHandler_ptr ami_handler);
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -366,7 +366,7 @@ namespace A
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    virtual ~Test_Child () = default;
+    ~Test_Child () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
@@ -419,9 +419,9 @@ namespace A
     virtual void child_op_excep (
       ::Messaging::ExceptionHolder * excep_holder);
 
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -437,7 +437,7 @@ namespace A
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    virtual ~AMI_Test_ChildHandler () = default;
+    ~AMI_Test_ChildHandler () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.

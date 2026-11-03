@@ -154,17 +154,17 @@ protected:
 
 public:
   POA_AMH_generic (const POA_AMH_generic& rhs);
-  virtual ~POA_AMH_generic () = default;
+  ~POA_AMH_generic () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   generic *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -196,17 +196,17 @@ public:
   using _stub_var_type = ::generic_var;
 
   POA_generic (const POA_generic& rhs) = default;
-  virtual ~POA_generic () = default;
+  ~POA_generic () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::generic *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Object_ptr op (
     ::CORBA::Object_ptr inarg,
     ::CORBA::Object_ptr & inoutarg,
@@ -272,17 +272,17 @@ public:
   using _stub_var_type = ::AMI_genericHandler_var;
 
   POA_AMI_genericHandler (const POA_AMI_genericHandler& rhs) = default;
-  virtual ~POA_AMI_genericHandler () = default;
+  ~POA_AMI_genericHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_genericHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void op (
     ::CORBA::Object_ptr ami_return_val,
     ::CORBA::Object_ptr inoutarg,

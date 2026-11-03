@@ -248,17 +248,17 @@ protected:
 
 public:
   POA_AMH_TestSeq (const POA_AMH_TestSeq& rhs);
-  virtual ~POA_AMH_TestSeq () = default;
+  ~POA_AMH_TestSeq () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   TestSeq *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void _get_fattr_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -298,17 +298,17 @@ public:
   using _stub_var_type = ::TestSeq_var;
 
   POA_TestSeq (const POA_TestSeq& rhs) = default;
-  virtual ~POA_TestSeq () = default;
+  ~POA_TestSeq () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::TestSeq *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::f_unbounded * fattr () = 0;
 
   static void _get_fattr_skel (
@@ -383,17 +383,17 @@ public:
   using _stub_var_type = ::AMI_TestSeqHandler_var;
 
   POA_AMI_TestSeqHandler (const POA_AMI_TestSeqHandler& rhs) = default;
-  virtual ~POA_AMI_TestSeqHandler () = default;
+  ~POA_AMI_TestSeqHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_TestSeqHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void get_fattr (
     const ::f_unbounded & ami_return_val) = 0;
 

@@ -154,11 +154,11 @@ namespace A
       virtual void sendc_getX1 (
         ::A::B::AMI_X1Handler_ptr ami_handler);
 
-      virtual ::CORBA::Boolean _is_a (const char *type_id);
-      virtual const char* _interface_repository_id () const;
+      ::CORBA::Boolean _is_a (const char *type_id) override;
+      const char* _interface_repository_id () const override;
       static const char* _desc_repository_id ();
       static const char* _desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Concrete interface only.
@@ -174,7 +174,7 @@ namespace A
           TAO_Abstract_ServantBase *servant = nullptr,
           TAO_ORB_Core *orb_core = nullptr);
 
-      virtual ~X1 () = default;
+      ~X1 () override = default;
 
     private:
       // Private and unimplemented for concrete interfaces.
@@ -208,8 +208,8 @@ namespace A
         : exception (ex)
       {}
 
-      virtual ~AMH_X1ExceptionHolder ();
-      virtual ::CORBA::ValueBase *_copy_value ();
+      ~AMH_X1ExceptionHolder () override;
+      ::CORBA::ValueBase *_copy_value () override;
 
       static AMH_X1ExceptionHolder* _downcast (::CORBA::ValueBase *v);
 
@@ -218,13 +218,13 @@ namespace A
           TAO_InputCDR &strm,
           AMH_X1ExceptionHolder *&new_object);
 
-      virtual char const * _tao_obv_repository_id () const;
+      char const * _tao_obv_repository_id () const override;
 
-      virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+      void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
       static char const * _tao_obv_static_repository_id ();
 
-      virtual ::CORBA::TypeCode_ptr _tao_type () const;
+      ::CORBA::TypeCode_ptr _tao_type () const override;
 
     public:
 
@@ -238,9 +238,9 @@ namespace A
 
 protected:
   AMH_X1ExceptionHolder ();
-  virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-  virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-  virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
   AMH_X1ExceptionHolder (const AMH_X1ExceptionHolder &);
@@ -295,17 +295,17 @@ public:
   virtual void getX1_excep (
     ::A::B::AMH_X1ExceptionHolder * holder) = 0;
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
   AMH_X1ResponseHandler ();
 
-  virtual ~AMH_X1ResponseHandler () = default;
+  ~AMH_X1ResponseHandler () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -359,11 +359,11 @@ public:
   virtual void getX1_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -379,7 +379,7 @@ protected:
       TAO_Abstract_ServantBase *servant = nullptr,
       TAO_ORB_Core *orb_core = nullptr);
 
-  virtual ~AMI_X1Handler () = default;
+  ~AMI_X1Handler () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -493,18 +493,18 @@ namespace OBV_A
 
   protected:
     AMH_X1ExceptionHolder () = default;
-    virtual ~AMH_X1ExceptionHolder ();
+    ~AMH_X1ExceptionHolder () override;
 
   protected:
-    virtual ::CORBA::Boolean
-    _tao_marshal__A_B_AMH_X1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+    ::CORBA::Boolean
+    _tao_marshal__A_B_AMH_X1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    virtual ::CORBA::Boolean
-    _tao_unmarshal__A_B_AMH_X1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
+    ::CORBA::Boolean
+    _tao_unmarshal__A_B_AMH_X1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-    virtual void truncation_hook ();
+    void truncation_hook () override;
 
   private:
     CORBA::Boolean require_truncation_ {false};

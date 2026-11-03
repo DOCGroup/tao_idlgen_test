@@ -537,17 +537,17 @@ protected:
 
 public:
   POA_AMH_array_args (const POA_AMH_array_args& rhs);
-  virtual ~POA_AMH_array_args () = default;
+  ~POA_AMH_array_args () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   array_args *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void all_arrays_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -579,17 +579,17 @@ public:
   using _stub_var_type = ::array_args_var;
 
   POA_array_args (const POA_array_args& rhs) = default;
-  virtual ~POA_array_args () = default;
+  ~POA_array_args () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::array_args *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void all_arrays (
     const ::oa1 arg1,
     const ::oa2 arg2) = 0;
@@ -651,17 +651,17 @@ public:
   using _stub_var_type = ::AMI_array_argsHandler_var;
 
   POA_AMI_array_argsHandler (const POA_AMI_array_argsHandler& rhs) = default;
-  virtual ~POA_AMI_array_argsHandler () = default;
+  ~POA_AMI_array_argsHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_array_argsHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void all_arrays () = 0;
 
   static void all_arrays_skel (
@@ -715,17 +715,17 @@ protected:
 
 public:
   POA_AMH_testdata (const POA_AMH_testdata& rhs);
-  virtual ~POA_AMH_testdata () = default;
+  ~POA_AMH_testdata () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   testdata *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 };
 
 class POA_testdata;
@@ -746,17 +746,17 @@ public:
   using _stub_var_type = ::testdata_var;
 
   POA_testdata (const POA_testdata& rhs) = default;
-  virtual ~POA_testdata () = default;
+  ~POA_testdata () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::testdata *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -803,17 +803,17 @@ public:
   using _stub_var_type = ::AMI_testdataHandler_var;
 
   POA_AMI_testdataHandler (const POA_AMI_testdataHandler& rhs) = default;
-  virtual ~POA_AMI_testdataHandler () = default;
+  ~POA_AMI_testdataHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_testdataHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -845,17 +845,17 @@ namespace POA_arraytest
 
   public:
     AMH_MyTest (const AMH_MyTest& rhs);
-    virtual ~AMH_MyTest () = default;
+    ~AMH_MyTest () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
     arraytest::MyTest *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   static void test_method_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -885,17 +885,17 @@ public:
   using _stub_var_type = ::arraytest::MyTest_var;
 
   MyTest (const MyTest& rhs) = default;
-  virtual ~MyTest () = default;
+  ~MyTest () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::arraytest::MyTest *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void test_method (
     ::arraytest::myvec2_out mystring) = 0;
 
@@ -957,17 +957,17 @@ public:
   using _stub_var_type = ::arraytest::AMI_MyTestHandler_var;
 
   AMI_MyTestHandler (const AMI_MyTestHandler& rhs) = default;
-  virtual ~AMI_MyTestHandler () = default;
+  ~AMI_MyTestHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::arraytest::AMI_MyTestHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void test_method (
     const ::arraytest::myvec2 mystring) = 0;
 

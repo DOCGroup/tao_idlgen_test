@@ -124,7 +124,7 @@ public:
 
   nasty ();
   nasty (const nasty &);
-  ~nasty () = default;
+  ~nasty () override = default;
 
   nasty &operator= (const nasty &);
 
@@ -135,18 +135,18 @@ public:
 
   static ::CORBA::Exception *_alloc ();
 
-  virtual ::CORBA::Exception *_tao_duplicate () const;
+  ::CORBA::Exception *_tao_duplicate () const override;
 
-  virtual void _raise () const;
+  void _raise () const override;
 
-  virtual void _tao_encode (TAO_OutputCDR &cdr) const;
-  virtual void _tao_decode (TAO_InputCDR &cdr);
+  void _tao_encode (TAO_OutputCDR &cdr) const override;
+  void _tao_decode (TAO_InputCDR &cdr) override;
 
   nasty (
       const char * _tao_id,
       const myfoostruct & _tao_rec_info);
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_nasty;
 
@@ -216,17 +216,17 @@ public:
   static seqLocal_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static seqLocal_ptr _nil ();
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
   seqLocal ();
 
-  virtual ~seqLocal () = default;
+  ~seqLocal () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.

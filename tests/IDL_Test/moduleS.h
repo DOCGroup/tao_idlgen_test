@@ -187,17 +187,17 @@ namespace POA_mod1
 
     public:
       AMH_ex1 (const AMH_ex1& rhs);
-      virtual ~AMH_ex1 () = default;
+      ~AMH_ex1 () override = default;
 
-      virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-      virtual void _dispatch (
+      void _dispatch (
           TAO_ServerRequest &req,
-          TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+          TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
       mod1::mod2::ex1 *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     static void _get_l1_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -256,17 +256,17 @@ namespace POA_mod1
     using _stub_var_type = ::mod1::mod2::ex1_var;
 
     ex1 (const ex1& rhs) = default;
-    virtual ~ex1 () = default;
+    ~ex1 () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::mod1::mod2::ex1 *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual ::CORBA::Long l1 () = 0;
 
     static void _get_l1_skel (
@@ -370,17 +370,17 @@ namespace POA_mod1
     using _stub_var_type = ::mod1::mod2::AMI_ex1Handler_var;
 
     AMI_ex1Handler (const AMI_ex1Handler& rhs) = default;
-    virtual ~AMI_ex1Handler () = default;
+    ~AMI_ex1Handler () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
     ::mod1::mod2::AMI_ex1Handler *_this ();
 
-    virtual const char* _interface_repository_id () const;
+    const char* _interface_repository_id () const override;
     virtual void get_l1 (
       ::CORBA::Long ami_return_val) = 0;
 
@@ -497,17 +497,17 @@ namespace POA_mod1
 
   public:
     AMH_ex2 (const AMH_ex2& rhs);
-    virtual ~AMH_ex2 () = default;
+    ~AMH_ex2 () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
     mod1::mod2::ex2 *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   static void _get_l3_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -557,17 +557,17 @@ public:
   using _stub_var_type = ::mod1::mod2::ex2_var;
 
   ex2 (const ex2& rhs) = default;
-  virtual ~ex2 () = default;
+  ~ex2 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::mod1::mod2::ex2 *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Long l3 () = 0;
 
   static void _get_l3_skel (
@@ -660,17 +660,17 @@ public:
   using _stub_var_type = ::mod1::mod2::AMI_ex2Handler_var;
 
   AMI_ex2Handler (const AMI_ex2Handler& rhs) = default;
-  virtual ~AMI_ex2Handler () = default;
+  ~AMI_ex2Handler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::mod1::mod2::AMI_ex2Handler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void get_l3 (
     ::CORBA::Long ami_return_val) = 0;
 

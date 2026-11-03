@@ -161,17 +161,17 @@ protected:
 
 public:
   POA_AMH_Test (const POA_AMH_Test& rhs);
-  virtual ~POA_AMH_Test () = default;
+  ~POA_AMH_Test () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   Test *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void getGroup_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -201,17 +201,17 @@ public:
   using _stub_var_type = ::Test_var;
 
   POA_Test (const POA_Test& rhs) = default;
-  virtual ~POA_Test () = default;
+  ~POA_Test () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::Test *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::Test::Group * getGroup () = 0;
 
   static void getGroup_skel (
@@ -272,17 +272,17 @@ public:
   using _stub_var_type = ::AMI_TestHandler_var;
 
   POA_AMI_TestHandler (const POA_AMI_TestHandler& rhs) = default;
-  virtual ~POA_AMI_TestHandler () = default;
+  ~POA_AMI_TestHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_TestHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void getGroup (
     const ::Test::Group & ami_return_val) = 0;
 

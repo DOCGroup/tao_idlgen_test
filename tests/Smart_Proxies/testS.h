@@ -85,21 +85,27 @@ public:
   using _stub_var_type = ::Test_var;
 
   POA_Test (const POA_Test& rhs) = default;
-  virtual ~POA_Test () = default;
+  ~POA_Test () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::Test *_this ();
 
-  virtual const char* _interface_repository_id () const;
-  virtual ::CORBA::Short method (
-    ::CORBA::Short boo) = 0;
+  const char* _interface_repository_id () const override;
+  virtual ::CORBA::Short box_prices () = 0;
 
-  static void method_skel (
+  static void box_prices_skel (
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
+  virtual ::CORBA::Long tickets (
+    ::CORBA::Short number) = 0;
+
+  static void tickets_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);

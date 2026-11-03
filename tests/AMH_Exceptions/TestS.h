@@ -119,17 +119,17 @@ namespace POA_Test
 
   public:
     AMH_Roundtrip (const AMH_Roundtrip& rhs);
-    virtual ~AMH_Roundtrip () = default;
+    ~AMH_Roundtrip () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
     Test::Roundtrip *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   static void test_method_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -167,17 +167,17 @@ public:
   using _stub_var_type = ::Test::Roundtrip_var;
 
   Roundtrip (const Roundtrip& rhs) = default;
-  virtual ~Roundtrip () = default;
+  ~Roundtrip () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::Test::Roundtrip *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::Test::Timestamp test_method (
     ::Test::Timestamp send_time) = 0;
 

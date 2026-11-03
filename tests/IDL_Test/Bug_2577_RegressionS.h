@@ -161,17 +161,17 @@ protected:
 
 public:
   POA_AMH_User_T (const POA_AMH_User_T& rhs);
-  virtual ~POA_AMH_User_T () = default;
+  ~POA_AMH_User_T () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
   User_T *_this ();
 
-virtual const char* _interface_repository_id () const;
+const char* _interface_repository_id () const override;
 static void getLoginTime_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -201,17 +201,17 @@ public:
   using _stub_var_type = ::User_T_var;
 
   POA_User_T (const POA_User_T& rhs) = default;
-  virtual ~POA_User_T () = default;
+  ~POA_User_T () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::User_T *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual ::DateTime_T getLoginTime () = 0;
 
   static void getLoginTime_skel (
@@ -272,17 +272,17 @@ public:
   using _stub_var_type = ::AMI_User_THandler_var;
 
   POA_AMI_User_THandler (const POA_AMI_User_THandler& rhs) = default;
-  virtual ~POA_AMI_User_THandler () = default;
+  ~POA_AMI_User_THandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::AMI_User_THandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void getLoginTime (
     const ::DateTime_T & ami_return_val) = 0;
 

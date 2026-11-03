@@ -471,17 +471,17 @@ namespace POA_All_Anon
 
   public:
     AMH_anon_bd_string_test (const AMH_anon_bd_string_test& rhs);
-    virtual ~AMH_anon_bd_string_test () = default;
+    ~AMH_anon_bd_string_test () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
 
     All_Anon::anon_bd_string_test *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   static void TestFunc_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -578,17 +578,17 @@ public:
   using _stub_var_type = ::All_Anon::anon_bd_string_test_var;
 
   anon_bd_string_test (const anon_bd_string_test& rhs) = default;
-  virtual ~anon_bd_string_test () = default;
+  ~anon_bd_string_test () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::All_Anon::anon_bd_string_test *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual char * TestFunc () = 0;
 
   static void TestFunc_skel (
@@ -747,17 +747,17 @@ public:
   using _stub_var_type = ::All_Anon::AMI_anon_bd_string_testHandler_var;
 
   AMI_anon_bd_string_testHandler (const AMI_anon_bd_string_testHandler& rhs) = default;
-  virtual ~AMI_anon_bd_string_testHandler () = default;
+  ~AMI_anon_bd_string_testHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
   ::All_Anon::AMI_anon_bd_string_testHandler *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  const char* _interface_repository_id () const override;
   virtual void TestFunc (
     const char * ami_return_val) = 0;
 

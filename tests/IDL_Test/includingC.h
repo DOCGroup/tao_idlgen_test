@@ -238,11 +238,11 @@ public:
   };
   static ::CORBA::TypeCode_ptr const _tc_using_incl;
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -258,7 +258,7 @@ protected:
       TAO_Abstract_ServantBase *servant = nullptr,
       TAO_ORB_Core *orb_core = nullptr);
 
-  virtual ~iface () = default;
+  ~iface () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -292,8 +292,8 @@ public:
     : exception (ex)
   {}
 
-  virtual ~AMH_ifaceExceptionHolder ();
-  virtual ::CORBA::ValueBase *_copy_value ();
+  ~AMH_ifaceExceptionHolder () override;
+  ::CORBA::ValueBase *_copy_value () override;
 
   static AMH_ifaceExceptionHolder* _downcast (::CORBA::ValueBase *v);
 
@@ -302,19 +302,19 @@ public:
       TAO_InputCDR &strm,
       AMH_ifaceExceptionHolder *&new_object);
 
-  virtual char const * _tao_obv_repository_id () const;
+  char const * _tao_obv_repository_id () const override;
 
-  virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
   static char const * _tao_obv_static_repository_id ();
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 
 protected:
   AMH_ifaceExceptionHolder ();
-  virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-  virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-  virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
   AMH_ifaceExceptionHolder (const AMH_ifaceExceptionHolder &);
@@ -337,7 +337,7 @@ public:
 
   static AMH_ifaceExceptionHolder_init* _downcast (::CORBA::ValueFactoryBase *);
 
-  virtual ::CORBA::ValueBase *create_for_unmarshal ();
+  ::CORBA::ValueBase *create_for_unmarshal () override;
 
   // TAO-specific extensions
 public:
@@ -380,17 +380,17 @@ public:
   static AMH_ifaceResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_ifaceResponseHandler_ptr _nil ();
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
   AMH_ifaceResponseHandler ();
 
-  virtual ~AMH_ifaceResponseHandler () = default;
+  ~AMH_ifaceResponseHandler () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -432,11 +432,11 @@ public:
   static AMI_ifaceHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_ifaceHandler_ptr _nil ();
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -452,7 +452,7 @@ protected:
       TAO_Abstract_ServantBase *servant = nullptr,
       TAO_ORB_Core *orb_core = nullptr);
 
-  virtual ~AMI_ifaceHandler () = default;
+  ~AMI_ifaceHandler () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -517,7 +517,7 @@ public:
 
   MyException ();
   MyException (const MyException &);
-  ~MyException () = default;
+  ~MyException () override = default;
 
   MyException &operator= (const MyException &);
 
@@ -528,17 +528,17 @@ public:
 
   static ::CORBA::Exception *_alloc ();
 
-  virtual ::CORBA::Exception *_tao_duplicate () const;
+  ::CORBA::Exception *_tao_duplicate () const override;
 
-  virtual void _raise () const;
+  void _raise () const override;
 
-  virtual void _tao_encode (TAO_OutputCDR &cdr) const;
-  virtual void _tao_decode (TAO_InputCDR &cdr);
+  void _tao_encode (TAO_OutputCDR &cdr) const override;
+  void _tao_decode (TAO_InputCDR &cdr) override;
 
   MyException (
       const A::MyStructA & _tao_exField);
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_MyException;
 
@@ -647,11 +647,11 @@ public:
     ::AMI_MyIntHandler_ptr ami_handler,
     const ::A::MyStructA & ab);
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -667,7 +667,7 @@ protected:
       TAO_Abstract_ServantBase *servant = nullptr,
       TAO_ORB_Core *orb_core = nullptr);
 
-  virtual ~MyInt () = default;
+  ~MyInt () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -701,8 +701,8 @@ public:
     : exception (ex)
   {}
 
-  virtual ~AMH_MyIntExceptionHolder ();
-  virtual ::CORBA::ValueBase *_copy_value ();
+  ~AMH_MyIntExceptionHolder () override;
+  ::CORBA::ValueBase *_copy_value () override;
 
   static AMH_MyIntExceptionHolder* _downcast (::CORBA::ValueBase *v);
 
@@ -711,13 +711,13 @@ public:
       TAO_InputCDR &strm,
       AMH_MyIntExceptionHolder *&new_object);
 
-  virtual char const * _tao_obv_repository_id () const;
+  char const * _tao_obv_repository_id () const override;
 
-  virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
   static char const * _tao_obv_static_repository_id ();
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 
 public:
 
@@ -731,9 +731,9 @@ public:
 
 protected:
   AMH_MyIntExceptionHolder ();
-  virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-  virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-  virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
   AMH_MyIntExceptionHolder (const AMH_MyIntExceptionHolder &);
@@ -788,17 +788,17 @@ public:
   virtual void op_excep (
     ::AMH_MyIntExceptionHolder * holder) = 0;
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
   AMH_MyIntResponseHandler ();
 
-  virtual ~AMH_MyIntResponseHandler () = default;
+  ~AMH_MyIntResponseHandler () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -852,11 +852,11 @@ public:
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -872,7 +872,7 @@ protected:
       TAO_Abstract_ServantBase *servant = nullptr,
       TAO_ORB_Core *orb_core = nullptr);
 
-  virtual ~AMI_MyIntHandler () = default;
+  ~AMI_MyIntHandler () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -930,11 +930,11 @@ namespace RootModule
       using DifferentMode_out = DifferentMode &;
       static ::CORBA::TypeCode_ptr const _tc_DifferentMode;
 
-      virtual ::CORBA::Boolean _is_a (const char *type_id);
-      virtual const char* _interface_repository_id () const;
+      ::CORBA::Boolean _is_a (const char *type_id) override;
+      const char* _interface_repository_id () const override;
       static const char* _desc_repository_id ();
       static const char* _desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Concrete interface only.
@@ -950,7 +950,7 @@ namespace RootModule
           TAO_Abstract_ServantBase *servant = nullptr,
           TAO_ORB_Core *orb_core = nullptr);
 
-      virtual ~ChildIF () = default;
+      ~ChildIF () override = default;
 
     private:
       // Private and unimplemented for concrete interfaces.
@@ -984,8 +984,8 @@ namespace RootModule
         : exception (ex)
       {}
 
-      virtual ~AMH_ChildIFExceptionHolder ();
-      virtual ::CORBA::ValueBase *_copy_value ();
+      ~AMH_ChildIFExceptionHolder () override;
+      ::CORBA::ValueBase *_copy_value () override;
 
       static AMH_ChildIFExceptionHolder* _downcast (::CORBA::ValueBase *v);
 
@@ -994,19 +994,19 @@ namespace RootModule
           TAO_InputCDR &strm,
           AMH_ChildIFExceptionHolder *&new_object);
 
-      virtual char const * _tao_obv_repository_id () const;
+      char const * _tao_obv_repository_id () const override;
 
-      virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+      void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
       static char const * _tao_obv_static_repository_id ();
 
-      virtual ::CORBA::TypeCode_ptr _tao_type () const;
+      ::CORBA::TypeCode_ptr _tao_type () const override;
 
     protected:
       AMH_ChildIFExceptionHolder ();
-      virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-      virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-      virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+      ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+      ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+      ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
     private:
       AMH_ChildIFExceptionHolder (const AMH_ChildIFExceptionHolder &);
@@ -1029,7 +1029,7 @@ namespace RootModule
 
       static AMH_ChildIFExceptionHolder_init* _downcast (::CORBA::ValueFactoryBase *);
 
-      virtual ::CORBA::ValueBase *create_for_unmarshal ();
+      ::CORBA::ValueBase *create_for_unmarshal () override;
 
       // TAO-specific extensions
     public:
@@ -1072,17 +1072,17 @@ namespace RootModule
       static AMH_ChildIFResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static AMH_ChildIFResponseHandler_ptr _nil ();
 
-      virtual ::CORBA::Boolean _is_a (const char *type_id);
-      virtual const char* _interface_repository_id () const;
+      ::CORBA::Boolean _is_a (const char *type_id) override;
+      const char* _interface_repository_id () const override;
       static const char* _desc_repository_id ();
       static const char* _desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Abstract or local interface only.
       AMH_ChildIFResponseHandler ();
 
-      virtual ~AMH_ChildIFResponseHandler () = default;
+      ~AMH_ChildIFResponseHandler () override = default;
 
     private:
       // Private and unimplemented for concrete interfaces.
@@ -1124,11 +1124,11 @@ namespace RootModule
       static AMI_ChildIFHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static AMI_ChildIFHandler_ptr _nil ();
 
-      virtual ::CORBA::Boolean _is_a (const char *type_id);
-      virtual const char* _interface_repository_id () const;
+      ::CORBA::Boolean _is_a (const char *type_id) override;
+      const char* _interface_repository_id () const override;
       static const char* _desc_repository_id ();
       static const char* _desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Concrete interface only.
@@ -1144,7 +1144,7 @@ namespace RootModule
           TAO_Abstract_ServantBase *servant = nullptr,
           TAO_ORB_Core *orb_core = nullptr);
 
-      virtual ~AMI_ChildIFHandler () = default;
+      ~AMI_ChildIFHandler () override = default;
 
     private:
       // Private and unimplemented for concrete interfaces.
@@ -1208,11 +1208,11 @@ public:
   using my_b_long_out = AAA::my_long_type_out;
   static ::CORBA::TypeCode_ptr const _tc_my_b_long;
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -1228,7 +1228,7 @@ protected:
       TAO_Abstract_ServantBase *servant = nullptr,
       TAO_ORB_Core *orb_core = nullptr);
 
-  virtual ~B () = default;
+  ~B () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -1262,8 +1262,8 @@ public:
     : exception (ex)
   {}
 
-  virtual ~AMH_BExceptionHolder ();
-  virtual ::CORBA::ValueBase *_copy_value ();
+  ~AMH_BExceptionHolder () override;
+  ::CORBA::ValueBase *_copy_value () override;
 
   static AMH_BExceptionHolder* _downcast (::CORBA::ValueBase *v);
 
@@ -1272,19 +1272,19 @@ public:
       TAO_InputCDR &strm,
       AMH_BExceptionHolder *&new_object);
 
-  virtual char const * _tao_obv_repository_id () const;
+  char const * _tao_obv_repository_id () const override;
 
-  virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
   static char const * _tao_obv_static_repository_id ();
 
-  virtual ::CORBA::TypeCode_ptr _tao_type () const;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 
 protected:
   AMH_BExceptionHolder ();
-  virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-  virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-  virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
   AMH_BExceptionHolder (const AMH_BExceptionHolder &);
@@ -1307,7 +1307,7 @@ public:
 
   static AMH_BExceptionHolder_init* _downcast (::CORBA::ValueFactoryBase *);
 
-  virtual ::CORBA::ValueBase *create_for_unmarshal ();
+  ::CORBA::ValueBase *create_for_unmarshal () override;
 
   // TAO-specific extensions
 public:
@@ -1350,17 +1350,17 @@ public:
   static AMH_BResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_BResponseHandler_ptr _nil ();
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
   AMH_BResponseHandler ();
 
-  virtual ~AMH_BResponseHandler () = default;
+  ~AMH_BResponseHandler () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -1402,11 +1402,11 @@ public:
   static AMI_BHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_BHandler_ptr _nil ();
 
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
   static const char* _desc_repository_id ();
   static const char* _desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -1422,7 +1422,7 @@ protected:
       TAO_Abstract_ServantBase *servant = nullptr,
       TAO_ORB_Core *orb_core = nullptr);
 
-  virtual ~AMI_BHandler () = default;
+  ~AMI_BHandler () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
@@ -1758,21 +1758,21 @@ class TAO_IDL_TEST_STUB_Export OBV_AMH_ifaceExceptionHolder
 
 public:
   OBV_AMH_ifaceExceptionHolder () = default;
-  virtual ~OBV_AMH_ifaceExceptionHolder ();
+  ~OBV_AMH_ifaceExceptionHolder () override;
 
 public:
-  virtual ::CORBA::ValueBase *_copy_value ();
+  ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__AMH_ifaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean
+  _tao_marshal__AMH_ifaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__AMH_ifaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
+  ::CORBA::Boolean
+  _tao_unmarshal__AMH_ifaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  virtual void truncation_hook ();
+  void truncation_hook () override;
 
 private:
   CORBA::Boolean require_truncation_ {false};
@@ -1785,18 +1785,18 @@ class TAO_IDL_TEST_STUB_Export OBV_AMH_MyIntExceptionHolder
 
 protected:
   OBV_AMH_MyIntExceptionHolder () = default;
-  virtual ~OBV_AMH_MyIntExceptionHolder ();
+  ~OBV_AMH_MyIntExceptionHolder () override;
 
 protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__AMH_MyIntExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean
+  _tao_marshal__AMH_MyIntExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__AMH_MyIntExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
+  ::CORBA::Boolean
+  _tao_unmarshal__AMH_MyIntExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  virtual void truncation_hook ();
+  void truncation_hook () override;
 
 private:
   CORBA::Boolean require_truncation_ {false};
@@ -1814,21 +1814,21 @@ namespace OBV_RootModule
 
   public:
     AMH_ChildIFExceptionHolder () = default;
-    virtual ~AMH_ChildIFExceptionHolder ();
+    ~AMH_ChildIFExceptionHolder () override;
 
   public:
-    virtual ::CORBA::ValueBase *_copy_value ();
+    ::CORBA::ValueBase *_copy_value () override;
 
   protected:
-    virtual ::CORBA::Boolean
-    _tao_marshal__RootModule_SUBMODULE1_AMH_ChildIFExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+    ::CORBA::Boolean
+    _tao_marshal__RootModule_SUBMODULE1_AMH_ChildIFExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    virtual ::CORBA::Boolean
-    _tao_unmarshal__RootModule_SUBMODULE1_AMH_ChildIFExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
+    ::CORBA::Boolean
+    _tao_unmarshal__RootModule_SUBMODULE1_AMH_ChildIFExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-    virtual void truncation_hook ();
+    void truncation_hook () override;
 
   private:
     CORBA::Boolean require_truncation_ {false};
@@ -1844,21 +1844,21 @@ class TAO_IDL_TEST_STUB_Export OBV_AMH_BExceptionHolder
 
 public:
   OBV_AMH_BExceptionHolder () = default;
-  virtual ~OBV_AMH_BExceptionHolder ();
+  ~OBV_AMH_BExceptionHolder () override;
 
 public:
-  virtual ::CORBA::ValueBase *_copy_value ();
+  ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__AMH_BExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean
+  _tao_marshal__AMH_BExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__AMH_BExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
+  ::CORBA::Boolean
+  _tao_unmarshal__AMH_BExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  virtual void truncation_hook ();
+  void truncation_hook () override;
 
 private:
   CORBA::Boolean require_truncation_ {false};
