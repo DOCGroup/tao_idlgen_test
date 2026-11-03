@@ -1251,7 +1251,9 @@ TAO_AA_BB_CC_AMI_x2Handler_Perfect_Hash_OpTable::lookup (const char *str, std::s
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -1921,7 +1923,9 @@ TAO_dot_AMH_Person_Perfect_Hash_OpTable::lookup (const char *str, std::size_t le
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -2143,7 +2147,9 @@ TAO_dot_Person_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -2983,7 +2989,9 @@ TAO_dot_AMH_Party_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -3205,7 +3213,9 @@ TAO_dot_Party_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -7606,7 +7616,9 @@ TAO_XX_AMI_blah0Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -10309,7 +10321,9 @@ TAO_A_B_AMI_X3Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -10830,7 +10844,9 @@ TAO_mA_AMH_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -11052,7 +11068,9 @@ TAO_mA_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -11894,7 +11912,9 @@ TAO_mB_AMH_B_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -12119,7 +12139,9 @@ TAO_mB_B_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -12499,7 +12521,9 @@ TAO_mB_AMI_BHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -12986,7 +13010,9 @@ TAO_mC_AMH_C_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -13129,7 +13155,9 @@ TAO_mC_C_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
@@ -13289,7 +13317,9 @@ TAO_mC_AMI_CHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
               const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
               const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
