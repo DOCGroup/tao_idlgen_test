@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_VALUETYPEC_YJ1TYD_H_
-#define _TAO_IDL_VALUETYPEC_YJ1TYD_H_
+#ifndef _TAO_IDL_VALUETYPEC_AN3E5E_H_
+#define _TAO_IDL_VALUETYPEC_AN3E5E_H_
 
 #include /**/ "ace/pre.h"
 
@@ -701,7 +701,7 @@ namespace ModSelection
 
     public:
       virtual ::CORBA::Boolean isValid (
-          const ::CORBA::WChar *
+          ::CORBA::WChar const *
         ) = 0;
 
     protected:
@@ -852,7 +852,7 @@ namespace ModSelection
 
       virtual CriterionExpr* createWithCriterionLink (
         ::ModSelection::SelectionDefns::Criterion * theLeftCriterion,
-        const char * link,
+        char const * link,
         ::ModSelection::SelectionDefns::CriterionExpr * theRightCriterion) = 0;
 
       virtual CriterionExpr* createWithSingleCriterion (
@@ -1113,7 +1113,7 @@ public:
 public:
   OBV_MyValueType () = default;
   OBV_MyValueType (
-      const char * _tao_init_my_string_value
+      char const * _tao_init_my_string_value
     );
   ~OBV_MyValueType () override;
 
@@ -1190,8 +1190,8 @@ protected:
 public:
   OBV_RecValueType () = default;
   OBV_RecValueType (
-      const ::RecValueType::_tao_seq_RecValueType_ & _tao_init_rec_value_types,
-      const ::RecValueType::_tao_seq_RecValueType__2 & _tao_init_rec_value_types2
+      ::RecValueType::_tao_seq_RecValueType_ const & _tao_init_rec_value_types,
+      ::RecValueType::_tao_seq_RecValueType__2 const & _tao_init_rec_value_types2
     );
   ~OBV_RecValueType () override;
 
@@ -1228,8 +1228,8 @@ public:
 public:
   OBV_GetsDeprecatedMember () = default;
   OBV_GetsDeprecatedMember (
-      const ::IncludedBase::_tao_seq_CORBA_Long_ & _tao_init_DeprecatedMember,
-      const char * _tao_init_StringMember
+      ::IncludedBase::_tao_seq_CORBA_Long_ const & _tao_init_DeprecatedMember,
+      char const * _tao_init_StringMember
     );
   ~OBV_GetsDeprecatedMember () override;
 
@@ -1280,7 +1280,7 @@ namespace OBV_ModSelection
     CriterionExpr () = default;
     CriterionExpr (
         ::ModSelection::SelectionDefns::Criterion * _tao_init_theLeftCriterion,
-        const ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr & _tao_init_theRightCriterionExpr
+        ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr const & _tao_init_theRightCriterionExpr
       );
     ~CriterionExpr () override;
 

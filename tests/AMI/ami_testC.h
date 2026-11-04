@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTC_S8YU62_H_
-#define _TAO_IDL_AMI_TESTC_S8YU62_H_
+#ifndef _TAO_IDL_AMI_TESTC_1W62EQ_H_
+#define _TAO_IDL_AMI_TESTC_1W62EQ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -144,7 +144,7 @@ namespace A
     virtual ::CORBA::Long foo (
       ::CORBA::Long_out out_l,
       ::CORBA::Long in_l,
-      const char * in_str);
+      char const * in_str);
 
     virtual ::CORBA::Long yadda ();
 
@@ -159,7 +159,7 @@ namespace A
     virtual void sendc_foo (
       ::A::AMI_AMI_TestHandler_ptr ami_handler,
       ::CORBA::Long in_l,
-      const char * in_str);
+      char const * in_str);
 
     virtual void sendc_set_yadda (
       ::A::AMI_AMI_TestHandler_ptr ami_handler,
@@ -170,7 +170,7 @@ namespace A
 
     virtual void sendc_inout_arg_test (
       ::A::AMI_AMI_TestHandler_ptr ami_handler,
-      const char * str);
+      char const * str);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -269,7 +269,7 @@ namespace A
       ::Messaging::ExceptionHolder * excep_holder);
 
     virtual void inout_arg_test (
-      const char * str);
+      char const * str);
 
     static void
     inout_arg_test_reply_stub (

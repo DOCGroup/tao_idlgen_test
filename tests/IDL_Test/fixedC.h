@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDC_7U8L2Q_H_
-#define _TAO_IDL_FIXEDC_7U8L2Q_H_
+#ifndef _TAO_IDL_FIXEDC_II44EF_H_
+#define _TAO_IDL_FIXEDC_II44EF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -131,11 +131,11 @@ namespace FixedPoint
     virtual ::FixedPoint::Amount rate ();
 
     virtual void rate (
-      const ::FixedPoint::Amount & rate);
+      ::FixedPoint::Amount const & rate);
 
     virtual void sendc_set_rate (
       ::FixedPoint::AMI_FixedOperationsHandler_ptr ami_handler,
-      const ::FixedPoint::Amount & rate);
+      ::FixedPoint::Amount const & rate);
 
     virtual void sendc_get_rate (
       ::FixedPoint::AMI_FixedOperationsHandler_ptr ami_handler);
@@ -284,7 +284,7 @@ public:
   static AMH_FixedOperationsResponseHandler_ptr _nil ();
 
   virtual void get_rate (
-    const ::FixedPoint::Amount & return_value) = 0;
+    ::FixedPoint::Amount const & return_value) = 0;
 
   virtual void get_rate_excep (
     ::FixedPoint::AMH_FixedOperationsExceptionHolder * holder) = 0;
@@ -346,7 +346,7 @@ public:
   static AMI_FixedOperationsHandler_ptr _nil ();
 
   virtual void get_rate (
-    const ::FixedPoint::Amount & ami_return_val);
+    ::FixedPoint::Amount const & ami_return_val);
 
   static void
   get_rate_reply_stub (

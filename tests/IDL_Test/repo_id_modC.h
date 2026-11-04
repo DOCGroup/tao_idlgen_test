@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REPO_ID_MODC_QIFMZY_H_
-#define _TAO_IDL_REPO_ID_MODC_QIFMZY_H_
+#ifndef _TAO_IDL_REPO_ID_MODC_I81LKE_H_
+#define _TAO_IDL_REPO_ID_MODC_I81LKE_H_
 
 #include /**/ "ace/pre.h"
 

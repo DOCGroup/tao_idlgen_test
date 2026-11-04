@@ -701,8 +701,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 array_args::all_arrays (
-  const ::oa1 arg1,
-  const ::oa2 arg2)
+  ::oa1 const arg1,
+  ::oa2 const arg2)
 {
   if (!this->is_evaluated ())
     {
@@ -736,8 +736,8 @@ array_args::all_arrays (
 void
 array_args::sendc_all_arrays (
   ::AMI_array_argsHandler_ptr ami_handler,
-  const ::oa1 arg1,
-  const ::oa2 arg2)
+  ::oa1 const arg1,
+  ::oa2 const arg2)
 {
   if (!this->is_evaluated ())
     {
@@ -3107,7 +3107,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 arraytest::AMI_MyTestHandler::test_method (
-  const ::arraytest::myvec2 mystring)
+  ::arraytest::myvec2 const mystring)
 {
   if (!this->is_evaluated ())
     {

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_G2NBOW_CPP_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_G2NBOW_CPP_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_33S2GZ_CPP_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_33S2GZ_CPP_
 
 #include "Bug_2350_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

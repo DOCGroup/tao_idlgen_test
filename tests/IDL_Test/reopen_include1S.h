@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE1S_RG0862_H_
-#define _TAO_IDL_REOPEN_INCLUDE1S_RG0862_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE1S_3DIS6Y_H_
+#define _TAO_IDL_REOPEN_INCLUDE1S_3DIS6Y_H_
 
 #include /**/ "ace/pre.h"
 
@@ -242,7 +242,7 @@ namespace POA_A
     TAO_AMH_X1ResponseHandler () = default;
     virtual ~TAO_AMH_X1ResponseHandler () = default;
     void getX1 (
-      const char * return_value) override;
+      char const * return_value) override;
     void getX1_excep (
       ::A::B::AMH_X1ExceptionHolder * holder) override;
   };
@@ -277,7 +277,7 @@ namespace POA_A
 
     const char* _interface_repository_id () const override;
     virtual void getX1 (
-      const char * ami_return_val) = 0;
+      char const * ami_return_val) = 0;
 
     static void getX1_skel (
         TAO_ServerRequest &server_request,

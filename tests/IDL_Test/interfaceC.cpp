@@ -2020,7 +2020,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 AMI_foostepHandler::getDate (
-  const ::foo_mod::date & ami_return_val)
+  ::foo_mod::date const & ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -8625,7 +8625,7 @@ AttributeTester::a_su ()
 }
 void
 AttributeTester::a_su (
-  const char * a_su)
+  char const * a_su)
 {
   if (!this->is_evaluated ())
     {
@@ -8687,7 +8687,7 @@ AttributeTester::a_sb ()
 }
 void
 AttributeTester::a_sb (
-  const ::AttributeTester::string_1 a_sb)
+  ::AttributeTester::string_1 const a_sb)
 {
   if (!this->is_evaluated ())
     {
@@ -8719,7 +8719,7 @@ AttributeTester::a_sb (
 void
 AttributeTester::sendc_set_a_su (
   ::AMI_AttributeTesterHandler_ptr ami_handler,
-  const char * a_su)
+  char const * a_su)
 {
   if (!this->is_evaluated ())
     {
@@ -8779,7 +8779,7 @@ AttributeTester::sendc_get_a_su (
 void
 AttributeTester::sendc_set_a_sb (
   ::AMI_AttributeTesterHandler_ptr ami_handler,
-  const ::AttributeTester::string_1 a_sb)
+  ::AttributeTester::string_1 const a_sb)
 {
   if (!this->is_evaluated ())
     {
@@ -9283,7 +9283,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 AMI_AttributeTesterHandler::get_a_su (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -9521,7 +9521,7 @@ AMI_AttributeTesterHandler::set_a_su_excep (
 }
 void
 AMI_AttributeTesterHandler::get_a_sb (
-  const ::AttributeTester::string_1 ami_return_val)
+  ::AttributeTester::string_1 const ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -10296,7 +10296,7 @@ static TAO::TypeCode::Union<char const *,
 ::CORBA::TypeCode_ptr const ParamMod::ParameterTester::_tc_object_union_type = std::addressof(_tao_tc_ParamMod_ParameterTester_object_union_type);
 ::ParamMod::ParameterTester::object_seq_type *
 ParamMod::ParameterTester::parameter_tester_op (
-  const ::ParamMod::ParameterTester::object_struct_type & inarg,
+  ::ParamMod::ParameterTester::object_struct_type const & inarg,
   ::ParamMod::ParameterTester::object_array_type inoutarg,
   ::ParamMod::ParameterTester::object_union_type_out outarg)
 {
@@ -10351,8 +10351,8 @@ ParamMod::ParameterTester::parameter_tester_op (
 void
 ParamMod::ParameterTester::sendc_parameter_tester_op (
   ::ParamMod::AMI_ParameterTesterHandler_ptr ami_handler,
-  const ::ParamMod::ParameterTester::object_struct_type & inarg,
-  const ::ParamMod::ParameterTester::object_array_type inoutarg)
+  ::ParamMod::ParameterTester::object_struct_type const & inarg,
+  ::ParamMod::ParameterTester::object_array_type const inoutarg)
 {
   if (!this->is_evaluated ())
     {
@@ -10799,9 +10799,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 ParamMod::AMI_ParameterTesterHandler::parameter_tester_op (
-  const ::ParamMod::ParameterTester::object_seq_type & ami_return_val,
-  const ::ParamMod::ParameterTester::object_array_type inoutarg,
-  const ::ParamMod::ParameterTester::object_union_type & outarg)
+  ::ParamMod::ParameterTester::object_seq_type const & ami_return_val,
+  ::ParamMod::ParameterTester::object_array_type const inoutarg,
+  ::ParamMod::ParameterTester::object_union_type const & outarg)
 {
   if (!this->is_evaluated ())
     {
@@ -12904,7 +12904,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 i1::AMI_if1Handler::getStr (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -13621,7 +13621,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 i2::AMI_if2Handler::getstr2 (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -14340,7 +14340,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 i2::AMI_if3Handler::getstr3 (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -17261,7 +17261,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 call_test::iTest::do_op (
-  const char * call)
+  char const * call)
 {
   if (!this->is_evaluated ())
     {
@@ -17293,7 +17293,7 @@ call_test::iTest::do_op (
 void
 call_test::iTest::sendc_do_op (
   ::call_test::AMI_iTestHandler_ptr ami_handler,
-  const char * call)
+  char const * call)
 {
   if (!this->is_evaluated ())
     {
@@ -18007,7 +18007,7 @@ call_attribute::iBar::call ()
 }
 void
 call_attribute::iBar::call (
-  const char * call)
+  char const * call)
 {
   if (!this->is_evaluated ())
     {
@@ -18039,7 +18039,7 @@ call_attribute::iBar::call (
 void
 call_attribute::iBar::sendc_set_call (
   ::call_attribute::AMI_iBarHandler_ptr ami_handler,
-  const char * call)
+  char const * call)
 {
   if (!this->is_evaluated ())
     {
@@ -18524,7 +18524,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 call_attribute::AMI_iBarHandler::get_call (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {

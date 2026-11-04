@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE1S_KSDYX1_CPP_
-#define _TAO_IDL_REOPEN_INCLUDE1S_KSDYX1_CPP_
+#ifndef _TAO_IDL_REOPEN_INCLUDE1S_CQ843K_CPP_
+#define _TAO_IDL_REOPEN_INCLUDE1S_CQ843K_CPP_
 
 #include "reopen_include1S.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -309,7 +309,7 @@ POA_A::B::X1::_this ()
 
 void
 POA_A::B::TAO_AMH_X1ResponseHandler::getX1 (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 

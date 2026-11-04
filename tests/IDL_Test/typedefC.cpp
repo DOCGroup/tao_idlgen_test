@@ -184,7 +184,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 TestModule::TestInterface::set_typedef_1 (
-  const char * typ1)
+  char const * typ1)
 {
   if (!this->is_evaluated ())
     {
@@ -214,7 +214,7 @@ TestModule::TestInterface::set_typedef_1 (
 }
 void
 TestModule::TestInterface::set_typedef_2 (
-  const char * typ2)
+  char const * typ2)
 {
   if (!this->is_evaluated ())
     {
@@ -246,7 +246,7 @@ TestModule::TestInterface::set_typedef_2 (
 void
 TestModule::TestInterface::sendc_set_typedef_1 (
   ::TestModule::AMI_TestInterfaceHandler_ptr ami_handler,
-  const char * typ1)
+  char const * typ1)
 {
   if (!this->is_evaluated ())
     {
@@ -280,7 +280,7 @@ TestModule::TestInterface::sendc_set_typedef_1 (
 void
 TestModule::TestInterface::sendc_set_typedef_2 (
   ::TestModule::AMI_TestInterfaceHandler_ptr ami_handler,
-  const char * typ2)
+  char const * typ2)
 {
   if (!this->is_evaluated ())
     {
@@ -1034,7 +1034,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 bug_2124::Foo::op1 (
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -1064,7 +1064,7 @@ bug_2124::Foo::op1 (
 }
 void
 bug_2124::Foo::op2 (
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -1096,7 +1096,7 @@ bug_2124::Foo::op2 (
 void
 bug_2124::Foo::sendc_op1 (
   ::bug_2124::AMI_FooHandler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -1130,7 +1130,7 @@ bug_2124::Foo::sendc_op1 (
 void
 bug_2124::Foo::sendc_op2 (
   ::bug_2124::AMI_FooHandler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -1884,7 +1884,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 bug_2122::One::Whatever::someOp (
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -1916,7 +1916,7 @@ bug_2122::One::Whatever::someOp (
 void
 bug_2122::One::Whatever::sendc_someOp (
   ::bug_2122::One::AMI_WhateverHandler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -2541,7 +2541,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 bug_2122::Two::WhoCares::someOp (
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -2573,7 +2573,7 @@ bug_2122::Two::WhoCares::someOp (
 void
 bug_2122::Two::WhoCares::sendc_someOp (
   ::bug_2122::Two::AMI_WhoCaresHandler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -3198,7 +3198,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 bug_2122::Three::WhoCares::someOp (
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -3230,7 +3230,7 @@ bug_2122::Three::WhoCares::someOp (
 void
 bug_2122::Three::WhoCares::sendc_someOp (
   ::bug_2122::Three::AMI_WhoCaresHandler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {

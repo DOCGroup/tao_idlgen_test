@@ -381,7 +381,7 @@ void OldUnion::a::astruct::_tao_any_destructor (void *_tao_void_pointer)
 }
 ::OldUnion::Foo2
 OldUnion::a::opA (
-  const ::OldUnion::a::astruct & b)
+  ::OldUnion::a::astruct const & b)
 {
   if (!this->is_evaluated ())
     {
@@ -415,7 +415,7 @@ OldUnion::a::opA (
 void
 OldUnion::a::sendc_opA (
   ::OldUnion::AMI_aHandler_ptr ami_handler,
-  const ::OldUnion::a::astruct & b)
+  ::OldUnion::a::astruct const & b)
 {
   if (!this->is_evaluated ())
     {
@@ -860,7 +860,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 OldUnion::AMI_aHandler::opA (
-  const ::OldUnion::Foo2 & ami_return_val)
+  ::OldUnion::Foo2 const & ami_return_val)
 {
   if (!this->is_evaluated ())
     {

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_STRUCTS_0590SS_H_
-#define _TAO_IDL_OLD_STRUCTS_0590SS_H_
+#ifndef _TAO_IDL_OLD_STRUCTS_M3ERRX_H_
+#define _TAO_IDL_OLD_STRUCTS_M3ERRX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -283,7 +283,7 @@ static void op_skel (
 
 virtual void op (
     AMH_foo1ResponseHandler_ptr _tao_rh,
-    const ::bar1 & a
+    ::bar1 const & a
   ) = 0;
 
 };
@@ -318,7 +318,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual ::CORBA::Long op (
-    const ::bar1 & a,
+    ::bar1 const & a,
     ::bar2_out b) = 0;
 
   static void op_skel (
@@ -357,7 +357,7 @@ public:
   virtual ~POA_TAO_AMH_foo1ResponseHandler () = default;
   void op (
     ::CORBA::Long return_value,
-    const ::bar2 & b) override;
+    ::bar2 const & b) override;
   void op_excep (
     ::AMH_foo1ExceptionHolder * holder) override;
 };
@@ -393,7 +393,7 @@ public:
   const char* _interface_repository_id () const override;
   virtual void op (
     ::CORBA::Long ami_return_val,
-    const ::bar2 & b) = 0;
+    ::bar2 const & b) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
@@ -461,7 +461,7 @@ static void op2_skel (
 
 virtual void op2 (
     AMH_foo2ResponseHandler_ptr _tao_rh,
-    const ::bar2 & a
+    ::bar2 const & a
   ) = 0;
 
 static void op3_skel (
@@ -506,7 +506,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual ::bar1 * op2 (
-    const ::bar2 & a) = 0;
+    ::bar2 const & a) = 0;
 
   static void op2_skel (
       TAO_ServerRequest &server_request,
@@ -556,7 +556,7 @@ public:
   POA_TAO_AMH_foo2ResponseHandler () = default;
   virtual ~POA_TAO_AMH_foo2ResponseHandler () = default;
   void op2 (
-    const ::bar1 & return_value) override;
+    ::bar1 const & return_value) override;
   void op2_excep (
     ::AMH_foo2ExceptionHolder * holder) override;
   void op3 (
@@ -596,7 +596,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void op2 (
-    const ::bar1 & ami_return_val) = 0;
+    ::bar1 const & ami_return_val) = 0;
 
   static void op2_skel (
       TAO_ServerRequest &server_request,

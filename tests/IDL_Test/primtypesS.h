@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESS_2R8OPE_H_
-#define _TAO_IDL_PRIMTYPESS_2R8OPE_H_
+#ifndef _TAO_IDL_PRIMTYPESS_WODHMB_H_
+#define _TAO_IDL_PRIMTYPESS_WODHMB_H_
 
 #include /**/ "ace/pre.h"
 

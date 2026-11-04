@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONS_GOAZ7R_H_
-#define _TAO_IDL_OLD_UNIONS_GOAZ7R_H_
+#ifndef _TAO_IDL_OLD_UNIONS_IFMQIE_H_
+#define _TAO_IDL_OLD_UNIONS_IFMQIE_H_
 
 #include /**/ "ace/pre.h"
 
@@ -195,7 +195,7 @@ namespace POA_OldUnion
 
   virtual void opA (
       OldUnion::AMH_aResponseHandler_ptr _tao_rh,
-      const ::OldUnion::a::astruct & b
+      ::OldUnion::a::astruct const & b
     ) = 0;
 
 };
@@ -230,7 +230,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual ::OldUnion::Foo2 opA (
-    const ::OldUnion::a::astruct & b) = 0;
+    ::OldUnion::a::astruct const & b) = 0;
 
   static void opA_skel (
       TAO_ServerRequest &server_request,
@@ -267,7 +267,7 @@ public:
   TAO_AMH_aResponseHandler () = default;
   virtual ~TAO_AMH_aResponseHandler () = default;
   void opA (
-    const ::OldUnion::Foo2 & return_value) override;
+    ::OldUnion::Foo2 const & return_value) override;
   void opA_excep (
     ::OldUnion::AMH_aExceptionHolder * holder) override;
 };
@@ -302,7 +302,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void opA (
-    const ::OldUnion::Foo2 & ami_return_val) = 0;
+    ::OldUnion::Foo2 const & ami_return_val) = 0;
 
   static void opA_skel (
       TAO_ServerRequest &server_request,

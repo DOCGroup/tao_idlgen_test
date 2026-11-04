@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REPO_ID_MODA_G5TIK3_H_
-#define _TAO_IDL_REPO_ID_MODA_G5TIK3_H_
+#ifndef _TAO_IDL_REPO_ID_MODA_X9G2VI_H_
+#define _TAO_IDL_REPO_ID_MODA_X9G2VI_H_
 
 #include /**/ "ace/pre.h"
 

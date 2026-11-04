@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDINGC_NP3VP7_H_
-#define _TAO_IDL_INCLUDINGC_NP3VP7_H_
+#ifndef _TAO_IDL_INCLUDINGC_9KQCTE_H_
+#define _TAO_IDL_INCLUDINGC_9KQCTE_H_
 
 #include /**/ "ace/pre.h"
 
@@ -641,11 +641,11 @@ public:
   static MyInt_ptr _nil ();
 
   virtual ::A::MyStructA * op (
-    const ::A::MyStructA & ab);
+    ::A::MyStructA const & ab);
 
   virtual void sendc_op (
     ::AMI_MyIntHandler_ptr ami_handler,
-    const ::A::MyStructA & ab);
+    ::A::MyStructA const & ab);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;
@@ -783,7 +783,7 @@ public:
   static AMH_MyIntResponseHandler_ptr _nil ();
 
   virtual void op (
-    const ::A::MyStructA & return_value) = 0;
+    ::A::MyStructA const & return_value) = 0;
 
   virtual void op_excep (
     ::AMH_MyIntExceptionHolder * holder) = 0;
@@ -841,7 +841,7 @@ public:
   static AMI_MyIntHandler_ptr _nil ();
 
   virtual void op (
-    const ::A::MyStructA & ami_return_val);
+    ::A::MyStructA const & ami_return_val);
 
   static void
   op_reply_stub (

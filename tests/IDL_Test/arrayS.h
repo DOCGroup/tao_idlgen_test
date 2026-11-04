@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAYS_3T2UC7_H_
-#define _TAO_IDL_ARRAYS_3T2UC7_H_
+#ifndef _TAO_IDL_ARRAYS_WYNXU4_H_
+#define _TAO_IDL_ARRAYS_WYNXU4_H_
 
 #include /**/ "ace/pre.h"
 
@@ -555,8 +555,8 @@ static void all_arrays_skel (
 
 virtual void all_arrays (
     AMH_array_argsResponseHandler_ptr _tao_rh,
-    const ::oa1 arg1,
-    const ::oa2 arg2
+    ::oa1 const arg1,
+    ::oa2 const arg2
   ) = 0;
 
 };
@@ -591,8 +591,8 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void all_arrays (
-    const ::oa1 arg1,
-    const ::oa2 arg2) = 0;
+    ::oa1 const arg1,
+    ::oa2 const arg2) = 0;
 
   static void all_arrays_skel (
       TAO_ServerRequest &server_request,
@@ -934,7 +934,7 @@ public:
   TAO_AMH_MyTestResponseHandler () = default;
   virtual ~TAO_AMH_MyTestResponseHandler () = default;
   void test_method (
-    const ::arraytest::myvec2 mystring) override;
+    ::arraytest::myvec2 const mystring) override;
   void test_method_excep (
     ::arraytest::AMH_MyTestExceptionHolder * holder) override;
 };
@@ -969,7 +969,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void test_method (
-    const ::arraytest::myvec2 mystring) = 0;
+    ::arraytest::myvec2 const mystring) = 0;
 
   static void test_method_skel (
       TAO_ServerRequest &server_request,

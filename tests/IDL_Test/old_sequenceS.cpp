@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_RJFMYY_CPP_
-#define _TAO_IDL_OLD_SEQUENCES_RJFMYY_CPP_
+#ifndef _TAO_IDL_OLD_SEQUENCES_BU4PKS_CPP_
+#define _TAO_IDL_OLD_SEQUENCES_BU4PKS_CPP_
 
 #include "old_sequenceS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -432,7 +432,7 @@ POA_TestSeq::_this ()
 
 void
 POA_TAO_AMH_TestSeqResponseHandler::get_fattr (
-  const ::f_unbounded & return_value)
+  ::f_unbounded const & return_value)
 {
   this->_tao_rh_init_reply ();
 

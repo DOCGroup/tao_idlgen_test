@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INHERITS_YA4DXB_CPP_
-#define _TAO_IDL_INHERITS_YA4DXB_CPP_
+#ifndef _TAO_IDL_INHERITS_4ANHHU_CPP_
+#define _TAO_IDL_INHERITS_4ANHHU_CPP_
 
 #include "inheritS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

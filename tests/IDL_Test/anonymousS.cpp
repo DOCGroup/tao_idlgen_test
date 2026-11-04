@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSS_NO26EE_CPP_
-#define _TAO_IDL_ANONYMOUSS_NO26EE_CPP_
+#ifndef _TAO_IDL_ANONYMOUSS_7TXY8K_CPP_
+#define _TAO_IDL_ANONYMOUSS_7TXY8K_CPP_
 
 #include "anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -1200,7 +1200,7 @@ POA_All_Anon::anon_bd_string_test::_this ()
 
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -1228,7 +1228,7 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc_excep (
 }
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc2 (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -1256,7 +1256,7 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc2_excep (
 }
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc3 (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -1284,7 +1284,7 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc3_excep (
 }
 void
 POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc23 (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 

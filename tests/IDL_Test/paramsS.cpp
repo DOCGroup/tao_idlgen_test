@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSS_LSZSFA_CPP_
-#define _TAO_IDL_PARAMSS_LSZSFA_CPP_
+#ifndef _TAO_IDL_PARAMSS_M8XMFE_CPP_
+#define _TAO_IDL_PARAMSS_M8XMFE_CPP_
 
 #include "paramsS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -351,9 +351,9 @@ POA_foo::bar::fooBar::_this ()
 
 void
 POA_foo::bar::TAO_AMH_fooBarResponseHandler::getDate (
-  const ::foo::theDate & return_value,
-  const ::foo::theDate & b,
-  const ::foo::theDate & c)
+  ::foo::theDate const & return_value,
+  ::foo::theDate const & b,
+  ::foo::theDate const & c)
 {
   this->_tao_rh_init_reply ();
 

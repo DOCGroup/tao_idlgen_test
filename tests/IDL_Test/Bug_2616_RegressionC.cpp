@@ -149,7 +149,7 @@ static TAO::TypeCode::Alias<char const *,
 ::CORBA::TypeCode_ptr const Interface1::_tc_Type = std::addressof(_tao_tc_Interface1_Type);
 void
 Interface1::do_it (
-  const ::Interface1::Type & value)
+  ::Interface1::Type const & value)
 {
   if (!this->is_evaluated ())
     {
@@ -181,7 +181,7 @@ Interface1::do_it (
 void
 Interface1::sendc_do_it (
   ::AMI_Interface1Handler_ptr ami_handler,
-  const ::Interface1::Type & value)
+  ::Interface1::Type const & value)
 {
   if (!this->is_evaluated ())
     {
@@ -861,7 +861,7 @@ static TAO::TypeCode::Alias<char const *,
 ::CORBA::TypeCode_ptr const Interface2::_tc_Type = std::addressof(_tao_tc_Interface2_Type);
 void
 Interface2::do_it (
-  const ::Interface2::Type & value)
+  ::Interface2::Type const & value)
 {
   if (!this->is_evaluated ())
     {
@@ -893,7 +893,7 @@ Interface2::do_it (
 void
 Interface2::sendc_do_it (
   ::AMI_Interface2Handler_ptr ami_handler,
-  const ::Interface2::Type & value)
+  ::Interface2::Type const & value)
 {
   if (!this->is_evaluated ())
     {

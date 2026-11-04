@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INTERFACEC_NOX2XS_H_
-#define _TAO_IDL_INTERFACEC_NOX2XS_H_
+#ifndef _TAO_IDL_INTERFACEC_DSJB5Q_H_
+#define _TAO_IDL_INTERFACEC_DSJB5Q_H_
 
 #include /**/ "ace/pre.h"
 
@@ -840,7 +840,7 @@ public:
   static AMH_foostepResponseHandler_ptr _nil ();
 
   virtual void getDate (
-    const ::foo_mod::date & return_value) = 0;
+    ::foo_mod::date const & return_value) = 0;
 
   virtual void getDate_excep (
     ::AMH_foostepExceptionHolder * holder) = 0;
@@ -898,7 +898,7 @@ public:
   static AMI_foostepHandler_ptr _nil ();
 
   virtual void getDate (
-    const ::foo_mod::date & ami_return_val);
+    ::foo_mod::date const & ami_return_val);
 
   static void
   getDate_reply_stub (
@@ -3741,23 +3741,23 @@ public:
   virtual char * a_su ();
 
   virtual void a_su (
-    const char * a_su);
+    char const * a_su);
 
   virtual ::AttributeTester::string_1_slice * a_sb ();
 
   virtual void a_sb (
-    const ::AttributeTester::string_1 a_sb);
+    ::AttributeTester::string_1 const a_sb);
 
   virtual void sendc_set_a_su (
     ::AMI_AttributeTesterHandler_ptr ami_handler,
-    const char * a_su);
+    char const * a_su);
 
   virtual void sendc_get_a_su (
     ::AMI_AttributeTesterHandler_ptr ami_handler);
 
   virtual void sendc_set_a_sb (
     ::AMI_AttributeTesterHandler_ptr ami_handler,
-    const ::AttributeTester::string_1 a_sb);
+    ::AttributeTester::string_1 const a_sb);
 
   virtual void sendc_get_a_sb (
     ::AMI_AttributeTesterHandler_ptr ami_handler);
@@ -3928,7 +3928,7 @@ public:
   static AMH_AttributeTesterResponseHandler_ptr _nil ();
 
   virtual void get_a_su (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void get_a_su_excep (
     ::AMH_AttributeTesterExceptionHolder * holder) = 0;
@@ -3939,7 +3939,7 @@ public:
     ::AMH_AttributeTesterExceptionHolder * holder) = 0;
 
   virtual void get_a_sb (
-    const ::AttributeTester::string_1 return_value) = 0;
+    ::AttributeTester::string_1 const return_value) = 0;
 
   virtual void get_a_sb_excep (
     ::AMH_AttributeTesterExceptionHolder * holder) = 0;
@@ -4002,7 +4002,7 @@ public:
   static AMI_AttributeTesterHandler_ptr _nil ();
 
   virtual void get_a_su (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   get_a_su_reply_stub (
@@ -4025,7 +4025,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void get_a_sb (
-    const ::AttributeTester::string_1 ami_return_val);
+    ::AttributeTester::string_1 const ami_return_val);
 
   static void
   get_a_sb_reply_stub (
@@ -4265,14 +4265,14 @@ namespace ParamMod
     static ::CORBA::TypeCode_ptr const _tc_object_union_type;
 
     virtual ::ParamMod::ParameterTester::object_seq_type * parameter_tester_op (
-      const ::ParamMod::ParameterTester::object_struct_type & inarg,
+      ::ParamMod::ParameterTester::object_struct_type const & inarg,
       ::ParamMod::ParameterTester::object_array_type inoutarg,
       ::ParamMod::ParameterTester::object_union_type_out outarg);
 
     virtual void sendc_parameter_tester_op (
       ::ParamMod::AMI_ParameterTesterHandler_ptr ami_handler,
-      const ::ParamMod::ParameterTester::object_struct_type & inarg,
-      const ::ParamMod::ParameterTester::object_array_type inoutarg);
+      ::ParamMod::ParameterTester::object_struct_type const & inarg,
+      ::ParamMod::ParameterTester::object_array_type const inoutarg);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -4410,9 +4410,9 @@ public:
   static AMH_ParameterTesterResponseHandler_ptr _nil ();
 
   virtual void parameter_tester_op (
-    const ::ParamMod::ParameterTester::object_seq_type & return_value,
-    const ::ParamMod::ParameterTester::object_array_type inoutarg,
-    const ::ParamMod::ParameterTester::object_union_type & outarg) = 0;
+    ::ParamMod::ParameterTester::object_seq_type const & return_value,
+    ::ParamMod::ParameterTester::object_array_type const inoutarg,
+    ::ParamMod::ParameterTester::object_union_type const & outarg) = 0;
 
   virtual void parameter_tester_op_excep (
     ::ParamMod::AMH_ParameterTesterExceptionHolder * holder) = 0;
@@ -4470,9 +4470,9 @@ public:
   static AMI_ParameterTesterHandler_ptr _nil ();
 
   virtual void parameter_tester_op (
-    const ::ParamMod::ParameterTester::object_seq_type & ami_return_val,
-    const ::ParamMod::ParameterTester::object_array_type inoutarg,
-    const ::ParamMod::ParameterTester::object_union_type & outarg);
+    ::ParamMod::ParameterTester::object_seq_type const & ami_return_val,
+    ::ParamMod::ParameterTester::object_array_type const inoutarg,
+    ::ParamMod::ParameterTester::object_union_type const & outarg);
 
   static void
   parameter_tester_op_reply_stub (
@@ -5323,7 +5323,7 @@ public:
   static AMH_if1ResponseHandler_ptr _nil ();
 
   virtual void getStr (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void getStr_excep (
     ::i1::AMH_if1ExceptionHolder * holder) = 0;
@@ -5381,7 +5381,7 @@ public:
   static AMI_if1Handler_ptr _nil ();
 
   virtual void getStr (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   getStr_reply_stub (
@@ -5602,7 +5602,7 @@ public:
   static AMH_if2ResponseHandler_ptr _nil ();
 
   virtual void getstr2 (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void getstr2_excep (
     ::i2::AMH_if2ExceptionHolder * holder) = 0;
@@ -5660,7 +5660,7 @@ public:
   static AMI_if2Handler_ptr _nil ();
 
   virtual void getstr2 (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   getstr2_reply_stub (
@@ -5877,7 +5877,7 @@ public:
   static AMH_if3ResponseHandler_ptr _nil ();
 
   virtual void getstr3 (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void getstr3_excep (
     ::i2::AMH_if3ExceptionHolder * holder) = 0;
@@ -5935,7 +5935,7 @@ public:
   static AMI_if3Handler_ptr _nil ();
 
   virtual void getstr3 (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   getstr3_reply_stub (
@@ -7179,11 +7179,11 @@ namespace call_test
     static iTest_ptr _nil ();
 
     virtual void do_op (
-      const char * call);
+      char const * call);
 
     virtual void sendc_do_op (
       ::call_test::AMI_iTestHandler_ptr ami_handler,
-      const char * call);
+      char const * call);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -7459,11 +7459,11 @@ namespace call_attribute
     virtual char * call ();
 
     virtual void call (
-      const char * call);
+      char const * call);
 
     virtual void sendc_set_call (
       ::call_attribute::AMI_iBarHandler_ptr ami_handler,
-      const char * call);
+      char const * call);
 
     virtual void sendc_get_call (
       ::call_attribute::AMI_iBarHandler_ptr ami_handler);
@@ -7614,7 +7614,7 @@ public:
   static AMH_iBarResponseHandler_ptr _nil ();
 
   virtual void get_call (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void get_call_excep (
     ::call_attribute::AMH_iBarExceptionHolder * holder) = 0;
@@ -7677,7 +7677,7 @@ public:
   static AMI_iBarHandler_ptr _nil ();
 
   virtual void get_call (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   get_call_reply_stub (

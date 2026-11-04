@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPES_HBOLWV_CPP_
-#define _TAO_IDL_NESTED_SCOPES_HBOLWV_CPP_
+#ifndef _TAO_IDL_NESTED_SCOPES_33PNJT_CPP_
+#define _TAO_IDL_NESTED_SCOPES_33PNJT_CPP_
 
 #include "nested_scopeS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

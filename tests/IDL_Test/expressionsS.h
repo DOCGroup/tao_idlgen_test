@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_EXPRESSIONSS_BTFF90_H_
-#define _TAO_IDL_EXPRESSIONSS_BTFF90_H_
+#ifndef _TAO_IDL_EXPRESSIONSS_0WIVOQ_H_
+#define _TAO_IDL_EXPRESSIONSS_0WIVOQ_H_
 
 #include /**/ "ace/pre.h"
 

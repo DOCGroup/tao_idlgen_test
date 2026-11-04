@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIF2S_DTAL4Z_CPP_
-#define _TAO_IDL_DIF2S_DTAL4Z_CPP_
+#ifndef _TAO_IDL_DIF2S_WGV30X_CPP_
+#define _TAO_IDL_DIF2S_WGV30X_CPP_
 
 #include "dif2S.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -4036,7 +4036,7 @@ void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op9 (
   ::CORBA::Octet return_value,
   ::CORBA::Octet o,
-  const char * s,
+  char const * s,
   ::CORBA::Long l)
 {
   this->_tao_rh_init_reply ();
@@ -4068,8 +4068,8 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op9_excep (
 }
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op10 (
-  const char * return_value,
-  const char * ls)
+  char const * return_value,
+  char const * ls)
 {
   this->_tao_rh_init_reply ();
 
@@ -4098,8 +4098,8 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op10_excep (
 }
 void
 POA_OldDif2::TAO_AMH_ex2ResponseHandler::op11 (
-  const char * return_value,
-  const char * ls,
+  char const * return_value,
+  char const * ls,
   ::CORBA::Long l)
 {
   this->_tao_rh_init_reply ();
@@ -9477,7 +9477,7 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_octet_attribute_excep (
 }
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_string_attribute (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -9525,7 +9525,7 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::set_string_attribute_excep (
 }
 void
 POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_limited_string_attribute (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 

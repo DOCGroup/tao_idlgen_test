@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_XV1GOT_CPP_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_XV1GOT_CPP_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_L0JJLL_CPP_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_L0JJLL_CPP_
 
 #include "Bug_2577_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -301,7 +301,7 @@ POA_User_T::_this ()
 
 void
 POA_TAO_AMH_User_TResponseHandler::getLoginTime (
-  const ::DateTime_T & return_value)
+  ::DateTime_T const & return_value)
 {
   this->_tao_rh_init_reply ();
 

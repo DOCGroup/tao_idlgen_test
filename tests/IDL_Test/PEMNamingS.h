@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGS_1QSRX5_H_
-#define _TAO_IDL_PEMNAMINGS_1QSRX5_H_
+#ifndef _TAO_IDL_PEMNAMINGS_EKDFT2_H_
+#define _TAO_IDL_PEMNAMINGS_EKDFT2_H_
 
 #include /**/ "ace/pre.h"
 
@@ -181,7 +181,7 @@ namespace POA_Plesk
 
     virtual void resolve (
         Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr _tao_rh,
-        const char * service_type,
+        char const * service_type,
         ::Plesk::TObjectID sc_id
       ) = 0;
 
@@ -192,8 +192,8 @@ namespace POA_Plesk
 
     virtual void resolve_sc (
         Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr _tao_rh,
-        const char * service_type,
-        const char * version,
+        char const * service_type,
+        char const * version,
         ::Plesk::TObjectID sc_id
       ) = 0;
 
@@ -229,7 +229,7 @@ namespace POA_Plesk
 
     const char* _interface_repository_id () const override;
     virtual ::CORBA::Object_ptr resolve (
-      const char * service_type,
+      char const * service_type,
       ::Plesk::TObjectID & sc_id) = 0;
 
     static void resolve_skel (
@@ -237,8 +237,8 @@ namespace POA_Plesk
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
     virtual ::CORBA::Object_ptr resolve_sc (
-      const char * service_type,
-      const char * version,
+      char const * service_type,
+      char const * version,
       ::Plesk::TObjectID & sc_id) = 0;
 
     static void resolve_sc_skel (

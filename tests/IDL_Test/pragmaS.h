@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRAGMAS_LDNIRQ_H_
-#define _TAO_IDL_PRAGMAS_LDNIRQ_H_
+#ifndef _TAO_IDL_PRAGMAS_Q6KKMT_H_
+#define _TAO_IDL_PRAGMAS_Q6KKMT_H_
 
 #include /**/ "ace/pre.h"
 

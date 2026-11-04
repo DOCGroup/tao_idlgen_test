@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFC_45WSG5_H_
-#define _TAO_IDL_GPERFC_45WSG5_H_
+#ifndef _TAO_IDL_GPERFC_Y5UXZC_H_
+#define _TAO_IDL_GPERFC_Y5UXZC_H_
 
 #include /**/ "ace/pre.h"
 
@@ -256,7 +256,7 @@ public:
   static AMH_testlistitemResponseHandler_ptr _nil ();
 
   virtual void get_name (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void get_name_excep (
     ::AMH_testlistitemExceptionHolder * holder) = 0;
@@ -314,7 +314,7 @@ public:
   static AMI_testlistitemHandler_ptr _nil ();
 
   virtual void get_name (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   get_name_reply_stub (
@@ -392,12 +392,12 @@ public:
   virtual char * stest ();
 
   virtual void stest (
-    const char * stest);
+    char const * stest);
 
   virtual ::CORBA::WChar * wstest ();
 
   virtual void wstest (
-    const ::CORBA::WChar * wstest);
+    ::CORBA::WChar const * wstest);
 
   virtual ::CORBA::LongLong ltest ();
 
@@ -417,7 +417,7 @@ public:
   virtual ::CORBA::WChar * setest ();
 
   virtual void setest (
-    const ::CORBA::WChar * setest);
+    ::CORBA::WChar const * setest);
 
   virtual ::testlistitem_ptr tltest ();
 
@@ -425,18 +425,18 @@ public:
     ::testlistitem_ptr tltest);
 
   virtual ::testlistitem_ptr new_testlistitem (
-    const char * name);
+    char const * name);
 
   virtual void sendc_set_stest (
     ::AMI_testHandler_ptr ami_handler,
-    const char * stest);
+    char const * stest);
 
   virtual void sendc_get_stest (
     ::AMI_testHandler_ptr ami_handler);
 
   virtual void sendc_set_wstest (
     ::AMI_testHandler_ptr ami_handler,
-    const ::CORBA::WChar * wstest);
+    ::CORBA::WChar const * wstest);
 
   virtual void sendc_get_wstest (
     ::AMI_testHandler_ptr ami_handler);
@@ -464,7 +464,7 @@ public:
 
   virtual void sendc_set_setest (
     ::AMI_testHandler_ptr ami_handler,
-    const ::CORBA::WChar * setest);
+    ::CORBA::WChar const * setest);
 
   virtual void sendc_get_setest (
     ::AMI_testHandler_ptr ami_handler);
@@ -478,7 +478,7 @@ public:
 
   virtual void sendc_new_testlistitem (
     ::AMI_testHandler_ptr ami_handler,
-    const char * name);
+    char const * name);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;
@@ -756,7 +756,7 @@ public:
   static AMH_testResponseHandler_ptr _nil ();
 
   virtual void get_stest (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void get_stest_excep (
     ::AMH_testExceptionHolder * holder) = 0;
@@ -767,7 +767,7 @@ public:
     ::AMH_testExceptionHolder * holder) = 0;
 
   virtual void get_wstest (
-    const ::CORBA::WChar * return_value) = 0;
+    ::CORBA::WChar const * return_value) = 0;
 
   virtual void get_wstest_excep (
     ::AMH_testExceptionHolder * holder) = 0;
@@ -811,7 +811,7 @@ public:
     ::AMH_testExceptionHolder * holder) = 0;
 
   virtual void get_setest (
-    const ::CORBA::WChar * return_value) = 0;
+    ::CORBA::WChar const * return_value) = 0;
 
   virtual void get_setest_excep (
     ::AMH_testExceptionHolder * holder) = 0;
@@ -891,7 +891,7 @@ public:
   static AMI_testHandler_ptr _nil ();
 
   virtual void get_stest (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   get_stest_reply_stub (
@@ -914,7 +914,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void get_wstest (
-    const ::CORBA::WChar * ami_return_val);
+    ::CORBA::WChar const * ami_return_val);
 
   static void
   get_wstest_reply_stub (
@@ -1006,7 +1006,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void get_setest (
-    const ::CORBA::WChar * ami_return_val);
+    ::CORBA::WChar const * ami_return_val);
 
   static void
   get_setest_reply_stub (

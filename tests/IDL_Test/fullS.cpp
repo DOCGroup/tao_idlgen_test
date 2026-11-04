@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLS_0QVIIO_CPP_
-#define _TAO_IDL_FULLS_0QVIIO_CPP_
+#ifndef _TAO_IDL_FULLS_HWPMAR_CPP_
+#define _TAO_IDL_FULLS_HWPMAR_CPP_
 
 #include "fullS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -815,7 +815,7 @@ POA_mod2::fwd::_this ()
 
 void
 POA_mod2::TAO_AMH_fwdResponseHandler::get_attr (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -865,8 +865,8 @@ void
 POA_mod2::TAO_AMH_fwdResponseHandler::op (
   ::mod2::full_ptr return_value,
   ::mod2::full_ptr full_arg,
-  const ::mod2::fwd::un & un_arg,
-  const ::mod2::fwd::full_seq & full_seq_arg)
+  ::mod2::fwd::un const & un_arg,
+  ::mod2::fwd::full_seq const & full_seq_arg)
 {
   this->_tao_rh_init_reply ();
 

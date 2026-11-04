@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSC_3ZPQQB_H_
-#define _TAO_IDL_ANONYMOUSC_3ZPQQB_H_
+#ifndef _TAO_IDL_ANONYMOUSC_PA2101_H_
+#define _TAO_IDL_ANONYMOUSC_PA2101_H_
 
 #include /**/ "ace/pre.h"
 
@@ -333,16 +333,16 @@ namespace All_Anon
     virtual char * TestFunc23 ();
 
     virtual void TestFunc4 (
-      const char * inarg);
+      char const * inarg);
 
     virtual void TestFunc41 (
-      const char * inarg);
+      char const * inarg);
 
     virtual void TestFunc42 (
-      const char * inarg);
+      char const * inarg);
 
     virtual void TestFunc43 (
-      const char * inarg);
+      char const * inarg);
 
     virtual void sendc_TestFunc (
       ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler);
@@ -358,19 +358,19 @@ namespace All_Anon
 
     virtual void sendc_TestFunc4 (
       ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-      const char * inarg);
+      char const * inarg);
 
     virtual void sendc_TestFunc41 (
       ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-      const char * inarg);
+      char const * inarg);
 
     virtual void sendc_TestFunc42 (
       ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-      const char * inarg);
+      char const * inarg);
 
     virtual void sendc_TestFunc43 (
       ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-      const char * inarg);
+      char const * inarg);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -576,25 +576,25 @@ public:
   static AMH_anon_bd_string_testResponseHandler_ptr _nil ();
 
   virtual void TestFunc (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void TestFunc_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) = 0;
 
   virtual void TestFunc2 (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void TestFunc2_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) = 0;
 
   virtual void TestFunc3 (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void TestFunc3_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) = 0;
 
   virtual void TestFunc23 (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void TestFunc23_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) = 0;
@@ -671,7 +671,7 @@ public:
   static AMI_anon_bd_string_testHandler_ptr _nil ();
 
   virtual void TestFunc (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   TestFunc_reply_stub (
@@ -683,7 +683,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void TestFunc2 (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   TestFunc2_reply_stub (
@@ -695,7 +695,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void TestFunc3 (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   TestFunc3_reply_stub (
@@ -707,7 +707,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void TestFunc23 (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   TestFunc23_reply_stub (

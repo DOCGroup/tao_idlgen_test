@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESS_ZMK4AI_CPP_
-#define _TAO_IDL_PRIMTYPESS_ZMK4AI_CPP_
+#ifndef _TAO_IDL_PRIMTYPESS_T06GM7_CPP_
+#define _TAO_IDL_PRIMTYPESS_T06GM7_CPP_
 
 #include "primtypesS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

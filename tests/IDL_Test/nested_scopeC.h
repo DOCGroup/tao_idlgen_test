@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPEC_DYZKX8_H_
-#define _TAO_IDL_NESTED_SCOPEC_DYZKX8_H_
+#ifndef _TAO_IDL_NESTED_SCOPEC_L3YODZ_H_
+#define _TAO_IDL_NESTED_SCOPEC_L3YODZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1868,11 +1868,11 @@ namespace Negotiator
     static UAV_Negotiator_Factory_ptr _nil ();
 
     virtual ::Negotiator::UAV_Negotiator_ptr make_negotiator (
-      const char * bitrate_sc);
+      char const * bitrate_sc);
 
     virtual void sendc_make_negotiator (
       ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr ami_handler,
-      const char * bitrate_sc);
+      char const * bitrate_sc);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;

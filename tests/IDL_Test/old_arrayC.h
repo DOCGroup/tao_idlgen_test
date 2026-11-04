@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYC_77CTO5_H_
-#define _TAO_IDL_OLD_ARRAYC_77CTO5_H_
+#ifndef _TAO_IDL_OLD_ARRAYC_R1VM4M_H_
+#define _TAO_IDL_OLD_ARRAYC_R1VM4M_H_
 
 #include /**/ "ace/pre.h"
 
@@ -316,43 +316,43 @@ namespace OldArray
     static A_i_ptr _nil ();
 
     virtual ::OldArray::A op (
-      const ::OldArray::A & a1,
+      ::OldArray::A const & a1,
       ::OldArray::A & a2,
       ::OldArray::A_out a3);
 
     virtual ::OldArray::str22_slice * op2 (
-      const ::OldArray::str22 a1,
+      ::OldArray::str22 const a1,
       ::OldArray::str22 a2,
       ::OldArray::str22_out a3);
 
     virtual ::OldArray::A_matrix_slice * op4 (
-      const ::OldArray::A & a1,
+      ::OldArray::A const & a1,
       ::OldArray::A & a2,
       ::OldArray::A_out a3);
 
     virtual ::OldArray::str22_slice * attribute_array ();
 
     virtual void attribute_array (
-      const ::OldArray::str22 attribute_array);
+      ::OldArray::str22 const attribute_array);
 
     virtual void sendc_op (
       ::OldArray::AMI_A_iHandler_ptr ami_handler,
-      const ::OldArray::A & a1,
-      const ::OldArray::A & a2);
+      ::OldArray::A const & a1,
+      ::OldArray::A const & a2);
 
     virtual void sendc_op2 (
       ::OldArray::AMI_A_iHandler_ptr ami_handler,
-      const ::OldArray::str22 a1,
-      const ::OldArray::str22 a2);
+      ::OldArray::str22 const a1,
+      ::OldArray::str22 const a2);
 
     virtual void sendc_op4 (
       ::OldArray::AMI_A_iHandler_ptr ami_handler,
-      const ::OldArray::A & a1,
-      const ::OldArray::A & a2);
+      ::OldArray::A const & a1,
+      ::OldArray::A const & a2);
 
     virtual void sendc_set_attribute_array (
       ::OldArray::AMI_A_iHandler_ptr ami_handler,
-      const ::OldArray::str22 attribute_array);
+      ::OldArray::str22 const attribute_array);
 
     virtual void sendc_get_attribute_array (
       ::OldArray::AMI_A_iHandler_ptr ami_handler);
@@ -533,31 +533,31 @@ public:
   static AMH_A_iResponseHandler_ptr _nil ();
 
   virtual void op (
-    const ::OldArray::A & return_value,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3) = 0;
+    ::OldArray::A const & return_value,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3) = 0;
 
   virtual void op_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) = 0;
 
   virtual void op2 (
-    const ::OldArray::str22 return_value,
-    const ::OldArray::str22 a2,
-    const ::OldArray::str22 a3) = 0;
+    ::OldArray::str22 const return_value,
+    ::OldArray::str22 const a2,
+    ::OldArray::str22 const a3) = 0;
 
   virtual void op2_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) = 0;
 
   virtual void op4 (
-    const ::OldArray::A_matrix return_value,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3) = 0;
+    ::OldArray::A_matrix const return_value,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3) = 0;
 
   virtual void op4_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) = 0;
 
   virtual void get_attribute_array (
-    const ::OldArray::str22 return_value) = 0;
+    ::OldArray::str22 const return_value) = 0;
 
   virtual void get_attribute_array_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) = 0;
@@ -620,9 +620,9 @@ public:
   static AMI_A_iHandler_ptr _nil ();
 
   virtual void op (
-    const ::OldArray::A & ami_return_val,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3);
+    ::OldArray::A const & ami_return_val,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3);
 
   static void
   op_reply_stub (
@@ -634,9 +634,9 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void op2 (
-    const ::OldArray::str22 ami_return_val,
-    const ::OldArray::str22 a2,
-    const ::OldArray::str22 a3);
+    ::OldArray::str22 const ami_return_val,
+    ::OldArray::str22 const a2,
+    ::OldArray::str22 const a3);
 
   static void
   op2_reply_stub (
@@ -648,9 +648,9 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void op4 (
-    const ::OldArray::A_matrix ami_return_val,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3);
+    ::OldArray::A_matrix const ami_return_val,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3);
 
   static void
   op4_reply_stub (
@@ -662,7 +662,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void get_attribute_array (
-    const ::OldArray::str22 ami_return_val);
+    ::OldArray::str22 const ami_return_val);
 
   static void
   get_attribute_array_reply_stub (

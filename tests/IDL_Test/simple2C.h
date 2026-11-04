@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2C_8MHEZ5_H_
-#define _TAO_IDL_SIMPLE2C_8MHEZ5_H_
+#ifndef _TAO_IDL_SIMPLE2C_DNXUH5_H_
+#define _TAO_IDL_SIMPLE2C_DNXUH5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -252,7 +252,7 @@ public:
     ::simple_out d);
 
   virtual ::CORBA::Any * op4 (
-    const ::CORBA::Any & x,
+    ::CORBA::Any const & x,
     ::CORBA::Any & y,
     ::CORBA::Any_out z);
 
@@ -262,8 +262,8 @@ public:
 
   virtual void sendc_op4 (
     ::AMI_simple3Handler_ptr ami_handler,
-    const ::CORBA::Any & x,
-    const ::CORBA::Any & y);
+    ::CORBA::Any const & x,
+    ::CORBA::Any const & y);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;
@@ -420,9 +420,9 @@ public:
     ::AMH_simple3ExceptionHolder * holder) = 0;
 
   virtual void op4 (
-    const ::CORBA::Any & return_value,
-    const ::CORBA::Any & y,
-    const ::CORBA::Any & z) = 0;
+    ::CORBA::Any const & return_value,
+    ::CORBA::Any const & y,
+    ::CORBA::Any const & z) = 0;
 
   virtual void op4_excep (
     ::AMH_simple3ExceptionHolder * holder) = 0;
@@ -495,9 +495,9 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void op4 (
-    const ::CORBA::Any & ami_return_val,
-    const ::CORBA::Any & y,
-    const ::CORBA::Any & z);
+    ::CORBA::Any const & ami_return_val,
+    ::CORBA::Any const & y,
+    ::CORBA::Any const & z);
 
   static void
   op4_reply_stub (

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONC_I80Y6H_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONC_I80Y6H_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONC_F6PRPJ_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONC_F6PRPJ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -293,7 +293,7 @@ public:
     ::AMH_FieldDevice_TExceptionHolder * holder) = 0;
 
   virtual void getEncoding (
-    const ::Encoding_T & return_value) = 0;
+    ::Encoding_T const & return_value) = 0;
 
   virtual void getEncoding_excep (
     ::AMH_FieldDevice_TExceptionHolder * holder) = 0;
@@ -363,7 +363,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void getEncoding (
-    const ::Encoding_T & ami_return_val);
+    ::Encoding_T const & ami_return_val);
 
   static void
   getEncoding_reply_stub (

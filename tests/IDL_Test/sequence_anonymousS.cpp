@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_LXNRWI_CPP_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_LXNRWI_CPP_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_04KI1B_CPP_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_04KI1B_CPP_
 
 #include "sequence_anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -313,7 +313,7 @@ POA_seqTest::_this ()
 
 void
 POA_TAO_AMH_seqTestResponseHandler::send_dozen (
-  const ::seqTest::dozens & bouquets)
+  ::seqTest::dozens const & bouquets)
 {
   this->_tao_rh_init_reply ();
 

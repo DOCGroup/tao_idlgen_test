@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDEDC_LW7KZY_H_
-#define _TAO_IDL_INCLUDEDC_LW7KZY_H_
+#ifndef _TAO_IDL_INCLUDEDC_J5I59Q_H_
+#define _TAO_IDL_INCLUDEDC_J5I59Q_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1155,7 +1155,7 @@ public:
 public:
   OBV_IncludedBase () = default;
   OBV_IncludedBase (
-      const ::IncludedBase::_tao_seq_CORBA_Long_ & _tao_init_DeprecatedMember
+      ::IncludedBase::_tao_seq_CORBA_Long_ const & _tao_init_DeprecatedMember
     );
   ~OBV_IncludedBase () override;
 

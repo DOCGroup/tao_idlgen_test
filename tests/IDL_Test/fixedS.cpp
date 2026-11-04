@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDS_C8096T_CPP_
-#define _TAO_IDL_FIXEDS_C8096T_CPP_
+#ifndef _TAO_IDL_FIXEDS_LI6Y6G_CPP_
+#define _TAO_IDL_FIXEDS_LI6Y6G_CPP_
 
 #include "fixedS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -440,7 +440,7 @@ POA_FixedPoint::FixedOperations::_this ()
 
 void
 POA_FixedPoint::TAO_AMH_FixedOperationsResponseHandler::get_rate (
-  const ::FixedPoint::Amount & return_value)
+  ::FixedPoint::Amount const & return_value)
 {
   this->_tao_rh_init_reply ();
 

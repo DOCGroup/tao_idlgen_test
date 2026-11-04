@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIF2C_XQSAFB_H_
-#define _TAO_IDL_DIF2C_XQSAFB_H_
+#ifndef _TAO_IDL_DIF2C_2229BD_H_
+#define _TAO_IDL_DIF2C_2229BD_H_
 
 #include /**/ "ace/pre.h"
 
@@ -641,11 +641,11 @@ public:
   virtual ::CORBA::Octet op9 (
     ::CORBA::Octet & o,
     ::CORBA::String_out s,
-    const char * ls,
+    char const * ls,
     ::CORBA::Long & l);
 
   virtual char * op10 (
-    const char * s,
+    char const * s,
     ::CORBA::String_out ls);
 
   virtual char * op11 (
@@ -667,16 +667,16 @@ public:
   virtual void sendc_op9 (
     ::OldDif2::AMI_ex2Handler_ptr ami_handler,
     ::CORBA::Octet o,
-    const char * ls,
+    char const * ls,
     ::CORBA::Long l);
 
   virtual void sendc_op10 (
     ::OldDif2::AMI_ex2Handler_ptr ami_handler,
-    const char * s);
+    char const * s);
 
   virtual void sendc_op11 (
     ::OldDif2::AMI_ex2Handler_ptr ami_handler,
-    const char * ls);
+    char const * ls);
 
   virtual void sendc_op12 (
     ::OldDif2::AMI_ex2Handler_ptr ami_handler,
@@ -883,22 +883,22 @@ public:
   virtual void op9 (
     ::CORBA::Octet return_value,
     ::CORBA::Octet o,
-    const char * s,
+    char const * s,
     ::CORBA::Long l) = 0;
 
   virtual void op9_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) = 0;
 
   virtual void op10 (
-    const char * return_value,
-    const char * ls) = 0;
+    char const * return_value,
+    char const * ls) = 0;
 
   virtual void op10_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) = 0;
 
   virtual void op11 (
-    const char * return_value,
-    const char * ls,
+    char const * return_value,
+    char const * ls,
     ::CORBA::Long l) = 0;
 
   virtual void op11_excep (
@@ -991,7 +991,7 @@ public:
   virtual void op9 (
     ::CORBA::Octet ami_return_val,
     ::CORBA::Octet o,
-    const char * s,
+    char const * s,
     ::CORBA::Long l);
 
   static void
@@ -1004,8 +1004,8 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void op10 (
-    const char * ami_return_val,
-    const char * ls);
+    char const * ami_return_val,
+    char const * ls);
 
   static void
   op10_reply_stub (
@@ -1017,8 +1017,8 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void op11 (
-    const char * ami_return_val,
-    const char * ls,
+    char const * ami_return_val,
+    char const * ls,
     ::CORBA::Long l);
 
   static void
@@ -1593,7 +1593,7 @@ public:
   virtual char * string_attribute ();
 
   virtual void string_attribute (
-    const char * string_attribute);
+    char const * string_attribute);
 
   virtual char * limited_string_attribute ();
 
@@ -1621,7 +1621,7 @@ public:
 
   virtual void sendc_set_string_attribute (
     ::OldDif2::AMI_ex4Handler_ptr ami_handler,
-    const char * string_attribute);
+    char const * string_attribute);
 
   virtual void sendc_get_string_attribute (
     ::OldDif2::AMI_ex4Handler_ptr ami_handler);
@@ -1890,7 +1890,7 @@ public:
     ::OldDif2::AMH_ex4ExceptionHolder * holder) = 0;
 
   virtual void get_string_attribute (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void get_string_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) = 0;
@@ -1901,7 +1901,7 @@ public:
     ::OldDif2::AMH_ex4ExceptionHolder * holder) = 0;
 
   virtual void get_limited_string_attribute (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void get_limited_string_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) = 0;
@@ -2035,7 +2035,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void get_string_attribute (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   get_string_attribute_reply_stub (
@@ -2058,7 +2058,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void get_limited_string_attribute (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   get_limited_string_attribute_reply_stub (

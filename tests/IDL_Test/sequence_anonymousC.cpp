@@ -198,7 +198,7 @@ seqTest::send_dozen (
 void
 seqTest::sendc_send_dozen (
   ::AMI_seqTestHandler_ptr ami_handler,
-  const ::seqTest::dozens & bouquets)
+  ::seqTest::dozens const & bouquets)
 {
   if (!this->is_evaluated ())
     {
@@ -634,7 +634,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 AMI_seqTestHandler::send_dozen (
-  const ::seqTest::dozens & bouquets)
+  ::seqTest::dozens const & bouquets)
 {
   if (!this->is_evaluated ())
     {

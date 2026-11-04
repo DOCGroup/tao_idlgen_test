@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INTERFACES_OIUTFX_H_
-#define _TAO_IDL_INTERFACES_OIUTFX_H_
+#ifndef _TAO_IDL_INTERFACES_H24AFT_H_
+#define _TAO_IDL_INTERFACES_H24AFT_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1887,7 +1887,7 @@ public:
   POA_TAO_AMH_foostepResponseHandler () = default;
   virtual ~POA_TAO_AMH_foostepResponseHandler () = default;
   void getDate (
-    const ::foo_mod::date & return_value) override;
+    ::foo_mod::date const & return_value) override;
   void getDate_excep (
     ::AMH_foostepExceptionHolder * holder) override;
 };
@@ -1922,7 +1922,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void getDate (
-    const ::foo_mod::date & ami_return_val) = 0;
+    ::foo_mod::date const & ami_return_val) = 0;
 
   static void getDate_skel (
       TAO_ServerRequest &server_request,
@@ -3468,7 +3468,7 @@ static void _set_a_su_skel (
 
 virtual void a_su (
     AMH_AttributeTesterResponseHandler_ptr _tao_rh,
-    const char * a_su
+    char const * a_su
   ) = 0;
 
 static void _get_a_sb_skel (
@@ -3487,7 +3487,7 @@ static void _set_a_sb_skel (
 
 virtual void a_sb (
     AMH_AttributeTesterResponseHandler_ptr _tao_rh,
-    const ::AttributeTester::string_1 a_sb
+    ::AttributeTester::string_1 const a_sb
   ) = 0;
 
 };
@@ -3528,7 +3528,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void a_su (
-    const char * a_su) = 0;
+    char const * a_su) = 0;
 
   static void _set_a_su_skel (
       TAO_ServerRequest &server_request,
@@ -3541,7 +3541,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void a_sb (
-    const ::AttributeTester::string_1 a_sb) = 0;
+    ::AttributeTester::string_1 const a_sb) = 0;
 
   static void _set_a_sb_skel (
       TAO_ServerRequest &server_request,
@@ -3590,14 +3590,14 @@ public:
   POA_TAO_AMH_AttributeTesterResponseHandler () = default;
   virtual ~POA_TAO_AMH_AttributeTesterResponseHandler () = default;
   void get_a_su (
-    const char * return_value) override;
+    char const * return_value) override;
   void get_a_su_excep (
     ::AMH_AttributeTesterExceptionHolder * holder) override;
   void set_a_su () override;
   void set_a_su_excep (
     ::AMH_AttributeTesterExceptionHolder * holder) override;
   void get_a_sb (
-    const ::AttributeTester::string_1 return_value) override;
+    ::AttributeTester::string_1 const return_value) override;
   void get_a_sb_excep (
     ::AMH_AttributeTesterExceptionHolder * holder) override;
   void set_a_sb () override;
@@ -3635,7 +3635,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void get_a_su (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void get_a_su_skel (
       TAO_ServerRequest &server_request,
@@ -3662,7 +3662,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void get_a_sb (
-    const ::AttributeTester::string_1 ami_return_val) = 0;
+    ::AttributeTester::string_1 const ami_return_val) = 0;
 
   static void get_a_sb_skel (
       TAO_ServerRequest &server_request,
@@ -3769,8 +3769,8 @@ namespace POA_ParamMod
 
   virtual void parameter_tester_op (
       ParamMod::AMH_ParameterTesterResponseHandler_ptr _tao_rh,
-      const ::ParamMod::ParameterTester::object_struct_type & inarg,
-      const ::ParamMod::ParameterTester::object_array_type inoutarg
+      ::ParamMod::ParameterTester::object_struct_type const & inarg,
+      ::ParamMod::ParameterTester::object_array_type const inoutarg
     ) = 0;
 
 };
@@ -3805,7 +3805,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual ::ParamMod::ParameterTester::object_seq_type * parameter_tester_op (
-    const ::ParamMod::ParameterTester::object_struct_type & inarg,
+    ::ParamMod::ParameterTester::object_struct_type const & inarg,
     ::ParamMod::ParameterTester::object_array_type inoutarg,
     ::ParamMod::ParameterTester::object_union_type_out outarg) = 0;
 
@@ -3844,9 +3844,9 @@ public:
   TAO_AMH_ParameterTesterResponseHandler () = default;
   virtual ~TAO_AMH_ParameterTesterResponseHandler () = default;
   void parameter_tester_op (
-    const ::ParamMod::ParameterTester::object_seq_type & return_value,
-    const ::ParamMod::ParameterTester::object_array_type inoutarg,
-    const ::ParamMod::ParameterTester::object_union_type & outarg) override;
+    ::ParamMod::ParameterTester::object_seq_type const & return_value,
+    ::ParamMod::ParameterTester::object_array_type const inoutarg,
+    ::ParamMod::ParameterTester::object_union_type const & outarg) override;
   void parameter_tester_op_excep (
     ::ParamMod::AMH_ParameterTesterExceptionHolder * holder) override;
 };
@@ -3881,9 +3881,9 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void parameter_tester_op (
-    const ::ParamMod::ParameterTester::object_seq_type & ami_return_val,
-    const ::ParamMod::ParameterTester::object_array_type inoutarg,
-    const ::ParamMod::ParameterTester::object_union_type & outarg) = 0;
+    ::ParamMod::ParameterTester::object_seq_type const & ami_return_val,
+    ::ParamMod::ParameterTester::object_array_type const inoutarg,
+    ::ParamMod::ParameterTester::object_union_type const & outarg) = 0;
 
   static void parameter_tester_op_skel (
       TAO_ServerRequest &server_request,
@@ -4286,7 +4286,7 @@ public:
   TAO_AMH_if1ResponseHandler () = default;
   virtual ~TAO_AMH_if1ResponseHandler () = default;
   void getStr (
-    const char * return_value) override;
+    char const * return_value) override;
   void getStr_excep (
     ::i1::AMH_if1ExceptionHolder * holder) override;
 };
@@ -4321,7 +4321,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void getStr (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void getStr_skel (
       TAO_ServerRequest &server_request,
@@ -4464,7 +4464,7 @@ public:
   TAO_AMH_if2ResponseHandler () = default;
   virtual ~TAO_AMH_if2ResponseHandler () = default;
   void getstr2 (
-    const char * return_value) override;
+    char const * return_value) override;
   void getstr2_excep (
     ::i2::AMH_if2ExceptionHolder * holder) override;
 };
@@ -4499,7 +4499,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void getstr2 (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void getstr2_skel (
       TAO_ServerRequest &server_request,
@@ -4638,7 +4638,7 @@ public:
   TAO_AMH_if3ResponseHandler () = default;
   virtual ~TAO_AMH_if3ResponseHandler () = default;
   void getstr3 (
-    const char * return_value) override;
+    char const * return_value) override;
   void getstr3_excep (
     ::i2::AMH_if3ExceptionHolder * holder) override;
 };
@@ -4673,7 +4673,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void getstr3 (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void getstr3_skel (
       TAO_ServerRequest &server_request,
@@ -5309,7 +5309,7 @@ namespace POA_call_test
 
   virtual void do_op (
       call_test::AMH_iTestResponseHandler_ptr _tao_rh,
-      const char * call
+      char const * call
     ) = 0;
 
 };
@@ -5344,7 +5344,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void do_op (
-    const char * call) = 0;
+    char const * call) = 0;
 
   static void do_op_skel (
       TAO_ServerRequest &server_request,
@@ -5494,7 +5494,7 @@ namespace POA_call_attribute
 
   virtual void call (
       call_attribute::AMH_iBarResponseHandler_ptr _tao_rh,
-      const char * call
+      char const * call
     ) = 0;
 
 };
@@ -5535,7 +5535,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void call (
-    const char * call) = 0;
+    char const * call) = 0;
 
   static void _set_call_skel (
       TAO_ServerRequest &server_request,
@@ -5576,7 +5576,7 @@ public:
   TAO_AMH_iBarResponseHandler () = default;
   virtual ~TAO_AMH_iBarResponseHandler () = default;
   void get_call (
-    const char * return_value) override;
+    char const * return_value) override;
   void get_call_excep (
     ::call_attribute::AMH_iBarExceptionHolder * holder) override;
   void set_call () override;
@@ -5614,7 +5614,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void get_call (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void get_call_skel (
       TAO_ServerRequest &server_request,

@@ -151,7 +151,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::foo::theDate
 foo::bar::fooBar::getDate (
-  const ::foo::theDate & a,
+  ::foo::theDate const & a,
   ::foo::theDate & b,
   ::foo::theDate_out c)
 {
@@ -191,8 +191,8 @@ foo::bar::fooBar::getDate (
 void
 foo::bar::fooBar::sendc_getDate (
   ::foo::bar::AMI_fooBarHandler_ptr ami_handler,
-  const ::foo::theDate & a,
-  const ::foo::theDate & b)
+  ::foo::theDate const & a,
+  ::foo::theDate const & b)
 {
   if (!this->is_evaluated ())
     {
@@ -651,9 +651,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 foo::bar::AMI_fooBarHandler::getDate (
-  const ::foo::theDate & ami_return_val,
-  const ::foo::theDate & b,
-  const ::foo::theDate & c)
+  ::foo::theDate const & ami_return_val,
+  ::foo::theDate const & b,
+  ::foo::theDate const & c)
 {
   if (!this->is_evaluated ())
     {

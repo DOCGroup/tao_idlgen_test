@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYS_B3HUVU_H_
-#define _TAO_IDL_OLD_ARRAYS_B3HUVU_H_
+#ifndef _TAO_IDL_OLD_ARRAYS_ET4HRF_H_
+#define _TAO_IDL_OLD_ARRAYS_ET4HRF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -276,8 +276,8 @@ namespace POA_OldArray
 
   virtual void op (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
-      const ::OldArray::A & a1,
-      const ::OldArray::A & a2
+      ::OldArray::A const & a1,
+      ::OldArray::A const & a2
     ) = 0;
 
   static void op2_skel (
@@ -287,8 +287,8 @@ namespace POA_OldArray
 
   virtual void op2 (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
-      const ::OldArray::str22 a1,
-      const ::OldArray::str22 a2
+      ::OldArray::str22 const a1,
+      ::OldArray::str22 const a2
     ) = 0;
 
   static void op4_skel (
@@ -298,8 +298,8 @@ namespace POA_OldArray
 
   virtual void op4 (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
-      const ::OldArray::A & a1,
-      const ::OldArray::A & a2
+      ::OldArray::A const & a1,
+      ::OldArray::A const & a2
     ) = 0;
 
   static void _get_attribute_array_skel (
@@ -318,7 +318,7 @@ namespace POA_OldArray
 
   virtual void attribute_array (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
-      const ::OldArray::str22 attribute_array
+      ::OldArray::str22 const attribute_array
     ) = 0;
 
 };
@@ -353,7 +353,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual ::OldArray::A op (
-    const ::OldArray::A & a1,
+    ::OldArray::A const & a1,
     ::OldArray::A & a2,
     ::OldArray::A_out a3) = 0;
 
@@ -362,7 +362,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual ::OldArray::str22_slice * op2 (
-    const ::OldArray::str22 a1,
+    ::OldArray::str22 const a1,
     ::OldArray::str22 a2,
     ::OldArray::str22_out a3) = 0;
 
@@ -371,7 +371,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual ::OldArray::A_matrix_slice * op4 (
-    const ::OldArray::A & a1,
+    ::OldArray::A const & a1,
     ::OldArray::A & a2,
     ::OldArray::A_out a3) = 0;
 
@@ -386,7 +386,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void attribute_array (
-    const ::OldArray::str22 attribute_array) = 0;
+    ::OldArray::str22 const attribute_array) = 0;
 
   static void _set_attribute_array_skel (
       TAO_ServerRequest &server_request,
@@ -439,25 +439,25 @@ public:
   TAO_AMH_A_iResponseHandler () = default;
   virtual ~TAO_AMH_A_iResponseHandler () = default;
   void op (
-    const ::OldArray::A & return_value,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3) override;
+    ::OldArray::A const & return_value,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3) override;
   void op_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
   void op2 (
-    const ::OldArray::str22 return_value,
-    const ::OldArray::str22 a2,
-    const ::OldArray::str22 a3) override;
+    ::OldArray::str22 const return_value,
+    ::OldArray::str22 const a2,
+    ::OldArray::str22 const a3) override;
   void op2_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
   void op4 (
-    const ::OldArray::A_matrix return_value,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3) override;
+    ::OldArray::A_matrix const return_value,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3) override;
   void op4_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
   void get_attribute_array (
-    const ::OldArray::str22 return_value) override;
+    ::OldArray::str22 const return_value) override;
   void get_attribute_array_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
   void set_attribute_array () override;
@@ -495,9 +495,9 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void op (
-    const ::OldArray::A & ami_return_val,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3) = 0;
+    ::OldArray::A const & ami_return_val,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
@@ -511,9 +511,9 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void op2 (
-    const ::OldArray::str22 ami_return_val,
-    const ::OldArray::str22 a2,
-    const ::OldArray::str22 a3) = 0;
+    ::OldArray::str22 const ami_return_val,
+    ::OldArray::str22 const a2,
+    ::OldArray::str22 const a3) = 0;
 
   static void op2_skel (
       TAO_ServerRequest &server_request,
@@ -527,9 +527,9 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void op4 (
-    const ::OldArray::A_matrix ami_return_val,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3) = 0;
+    ::OldArray::A_matrix const ami_return_val,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3) = 0;
 
   static void op4_skel (
       TAO_ServerRequest &server_request,
@@ -543,7 +543,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void get_attribute_array (
-    const ::OldArray::str22 ami_return_val) = 0;
+    ::OldArray::str22 const ami_return_val) = 0;
 
   static void get_attribute_array_skel (
       TAO_ServerRequest &server_request,

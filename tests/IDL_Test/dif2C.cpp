@@ -2148,7 +2148,7 @@ OldDif2::ex2::op8 (
 OldDif2::ex2::op9 (
   ::CORBA::Octet & o,
   ::CORBA::String_out s,
-  const char * ls,
+  char const * ls,
   ::CORBA::Long & l)
 {
   if (!this->is_evaluated ())
@@ -2187,7 +2187,7 @@ OldDif2::ex2::op9 (
 }
 char *
 OldDif2::ex2::op10 (
-  const char * s,
+  char const * s,
   ::CORBA::String_out ls)
 {
   if (!this->is_evaluated ())
@@ -2363,7 +2363,7 @@ void
 OldDif2::ex2::sendc_op9 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
   ::CORBA::Octet o,
-  const char * ls,
+  char const * ls,
   ::CORBA::Long l)
 {
   if (!this->is_evaluated ())
@@ -2402,7 +2402,7 @@ OldDif2::ex2::sendc_op9 (
 void
 OldDif2::ex2::sendc_op10 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -2436,7 +2436,7 @@ OldDif2::ex2::sendc_op10 (
 void
 OldDif2::ex2::sendc_op11 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
-  const char * ls)
+  char const * ls)
 {
   if (!this->is_evaluated ())
     {
@@ -3209,7 +3209,7 @@ void
 OldDif2::AMI_ex2Handler::op9 (
   ::CORBA::Octet ami_return_val,
   ::CORBA::Octet o,
-  const char * s,
+  char const * s,
   ::CORBA::Long l)
 {
   if (!this->is_evaluated ())
@@ -3351,8 +3351,8 @@ OldDif2::AMI_ex2Handler::op9_excep (
 }
 void
 OldDif2::AMI_ex2Handler::op10 (
-  const char * ami_return_val,
-  const char * ls)
+  char const * ami_return_val,
+  char const * ls)
 {
   if (!this->is_evaluated ())
     {
@@ -3481,8 +3481,8 @@ OldDif2::AMI_ex2Handler::op10_excep (
 }
 void
 OldDif2::AMI_ex2Handler::op11 (
-  const char * ami_return_val,
-  const char * ls,
+  char const * ami_return_val,
+  char const * ls,
   ::CORBA::Long l)
 {
   if (!this->is_evaluated ())
@@ -5900,7 +5900,7 @@ OldDif2::ex4::string_attribute ()
 }
 void
 OldDif2::ex4::string_attribute (
-  const char * string_attribute)
+  char const * string_attribute)
 {
   if (!this->is_evaluated ())
     {
@@ -6168,7 +6168,7 @@ OldDif2::ex4::sendc_get_octet_attribute (
 void
 OldDif2::ex4::sendc_set_string_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler,
-  const char * string_attribute)
+  char const * string_attribute)
 {
   if (!this->is_evaluated ())
     {
@@ -7496,7 +7496,7 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_excep (
 }
 void
 OldDif2::AMI_ex4Handler::get_string_attribute (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -7734,7 +7734,7 @@ OldDif2::AMI_ex4Handler::set_string_attribute_excep (
 }
 void
 OldDif2::AMI_ex4Handler::get_limited_string_attribute (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {

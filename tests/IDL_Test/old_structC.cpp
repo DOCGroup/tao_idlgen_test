@@ -284,7 +284,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Long
 foo1::op (
-  const ::bar1 & a,
+  ::bar1 const & a,
   ::bar2_out b)
 {
   if (!this->is_evaluated ())
@@ -321,7 +321,7 @@ foo1::op (
 void
 foo1::sendc_op (
   ::AMI_foo1Handler_ptr ami_handler,
-  const ::bar1 & a)
+  ::bar1 const & a)
 {
   if (!this->is_evaluated ())
     {
@@ -758,7 +758,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 void
 AMI_foo1Handler::op (
   ::CORBA::Long ami_return_val,
-  const ::bar2 & b)
+  ::bar2 const & b)
 {
   if (!this->is_evaluated ())
     {
@@ -1006,7 +1006,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::bar1 *
 foo2::op2 (
-  const ::bar2 & a)
+  ::bar2 const & a)
 {
   if (!this->is_evaluated ())
     {
@@ -1075,7 +1075,7 @@ foo2::op3 (
 void
 foo2::sendc_op2 (
   ::AMI_foo2Handler_ptr ami_handler,
-  const ::bar2 & a)
+  ::bar2 const & a)
 {
   if (!this->is_evaluated ())
     {
@@ -1560,7 +1560,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 AMI_foo2Handler::op2 (
-  const ::bar1 & ami_return_val)
+  ::bar1 const & ami_return_val)
 {
   if (!this->is_evaluated ())
     {

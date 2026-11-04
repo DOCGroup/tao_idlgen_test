@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPENED_MODULESS_G3R9H6_CPP_
-#define _TAO_IDL_REOPENED_MODULESS_G3R9H6_CPP_
+#ifndef _TAO_IDL_REOPENED_MODULESS_MWLG2G_CPP_
+#define _TAO_IDL_REOPENED_MODULESS_MWLG2G_CPP_
 
 #include "reopened_modulesS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -6437,7 +6437,7 @@ POA_gather::_this ()
 void
 POA_TAO_AMH_gatherResponseHandler::op (
   ::frag::ret_long return_value,
-  const ::frag::pug & inoutarg,
+  ::frag::pug const & inoutarg,
   ::frag::frag_iface_ptr outarg)
 {
   this->_tao_rh_init_reply ();
@@ -7630,7 +7630,7 @@ POA_A::B::X3::_this ()
 
 void
 POA_A::B::TAO_AMH_X3ResponseHandler::getSeqOfX2 (
-  const ::A::B::X2Seq & return_value)
+  ::A::B::X2Seq const & return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -7658,7 +7658,7 @@ POA_A::B::TAO_AMH_X3ResponseHandler::getSeqOfX2_excep (
 }
 void
 POA_A::B::TAO_AMH_X3ResponseHandler::getX3 (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 

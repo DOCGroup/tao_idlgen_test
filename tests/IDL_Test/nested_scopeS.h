@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPES_MMG1JI_H_
-#define _TAO_IDL_NESTED_SCOPES_MMG1JI_H_
+#ifndef _TAO_IDL_NESTED_SCOPES_G9FTFR_H_
+#define _TAO_IDL_NESTED_SCOPES_G9FTFR_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1321,7 +1321,7 @@ static void make_negotiator_skel (
 
 virtual void make_negotiator (
     Negotiator::AMH_UAV_Negotiator_FactoryResponseHandler_ptr _tao_rh,
-    const char * bitrate_sc
+    char const * bitrate_sc
   ) = 0;
 
 };
@@ -1356,7 +1356,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual ::Negotiator::UAV_Negotiator_ptr make_negotiator (
-    const char * bitrate_sc) = 0;
+    char const * bitrate_sc) = 0;
 
   static void make_negotiator_skel (
       TAO_ServerRequest &server_request,

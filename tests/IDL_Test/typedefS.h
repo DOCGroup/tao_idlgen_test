@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEDEFS_MJNHVE_H_
-#define _TAO_IDL_TYPEDEFS_MJNHVE_H_
+#ifndef _TAO_IDL_TYPEDEFS_KICVGO_H_
+#define _TAO_IDL_TYPEDEFS_KICVGO_H_
 
 #include /**/ "ace/pre.h"
 
@@ -528,7 +528,7 @@ namespace POA_TestModule
 
   virtual void set_typedef_1 (
       TestModule::AMH_TestInterfaceResponseHandler_ptr _tao_rh,
-      const char * typ1
+      char const * typ1
     ) = 0;
 
   static void set_typedef_2_skel (
@@ -538,7 +538,7 @@ namespace POA_TestModule
 
   virtual void set_typedef_2 (
       TestModule::AMH_TestInterfaceResponseHandler_ptr _tao_rh,
-      const char * typ2
+      char const * typ2
     ) = 0;
 
 };
@@ -573,14 +573,14 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void set_typedef_1 (
-    const char * typ1) = 0;
+    char const * typ1) = 0;
 
   static void set_typedef_1_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void set_typedef_2 (
-    const char * typ2) = 0;
+    char const * typ2) = 0;
 
   static void set_typedef_2_skel (
       TAO_ServerRequest &server_request,
@@ -749,7 +749,7 @@ namespace POA_bug_2124
 
   virtual void op1 (
       bug_2124::AMH_FooResponseHandler_ptr _tao_rh,
-      const char * s
+      char const * s
     ) = 0;
 
   static void op2_skel (
@@ -759,7 +759,7 @@ namespace POA_bug_2124
 
   virtual void op2 (
       bug_2124::AMH_FooResponseHandler_ptr _tao_rh,
-      const char * s
+      char const * s
     ) = 0;
 
 };
@@ -794,14 +794,14 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void op1 (
-    const char * s) = 0;
+    char const * s) = 0;
 
   static void op1_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void op2 (
-    const char * s) = 0;
+    char const * s) = 0;
 
   static void op2_skel (
       TAO_ServerRequest &server_request,
@@ -973,7 +973,7 @@ namespace POA_bug_2122
 
     virtual void someOp (
         bug_2122::One::AMH_WhateverResponseHandler_ptr _tao_rh,
-        const char * s
+        char const * s
       ) = 0;
 
   };
@@ -1008,7 +1008,7 @@ namespace POA_bug_2122
 
     const char* _interface_repository_id () const override;
     virtual void someOp (
-      const char * s) = 0;
+      char const * s) = 0;
 
     static void someOp_skel (
         TAO_ServerRequest &server_request,
@@ -1149,7 +1149,7 @@ namespace Two
 
   virtual void someOp (
       bug_2122::Two::AMH_WhoCaresResponseHandler_ptr _tao_rh,
-      const char * s
+      char const * s
     ) = 0;
 
 };
@@ -1184,7 +1184,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void someOp (
-    const char * s) = 0;
+    char const * s) = 0;
 
   static void someOp_skel (
       TAO_ServerRequest &server_request,
@@ -1325,7 +1325,7 @@ namespace Three
 
   virtual void someOp (
       bug_2122::Three::AMH_WhoCaresResponseHandler_ptr _tao_rh,
-      const char * s
+      char const * s
     ) = 0;
 
 };
@@ -1360,7 +1360,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void someOp (
-    const char * s) = 0;
+    char const * s) = 0;
 
   static void someOp_skel (
       TAO_ServerRequest &server_request,

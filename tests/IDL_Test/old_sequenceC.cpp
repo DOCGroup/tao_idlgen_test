@@ -686,7 +686,7 @@ TestSeq::fattr ()
 }
 void
 TestSeq::fattr (
-  const ::f_unbounded & fattr)
+  ::f_unbounded const & fattr)
 {
   if (!this->is_evaluated ())
     {
@@ -772,7 +772,7 @@ static TAO::TypeCode::Alias<char const *,
 void
 TestSeq::sendc_set_fattr (
   ::AMI_TestSeqHandler_ptr ami_handler,
-  const ::f_unbounded & fattr)
+  ::f_unbounded const & fattr)
 {
   if (!this->is_evaluated ())
     {
@@ -1248,7 +1248,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 AMI_TestSeqHandler::get_fattr (
-  const ::f_unbounded & ami_return_val)
+  ::f_unbounded const & ami_return_val)
 {
   if (!this->is_evaluated ())
     {

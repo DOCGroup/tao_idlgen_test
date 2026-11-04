@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONC_A60O9A_H_
-#define _TAO_IDL_BUG_2577_REGRESSIONC_A60O9A_H_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONC_BH5ET2_H_
+#define _TAO_IDL_BUG_2577_REGRESSIONC_BH5ET2_H_
 
 #include /**/ "ace/pre.h"
 
@@ -341,7 +341,7 @@ public:
   static AMH_User_TResponseHandler_ptr _nil ();
 
   virtual void getLoginTime (
-    const ::DateTime_T & return_value) = 0;
+    ::DateTime_T const & return_value) = 0;
 
   virtual void getLoginTime_excep (
     ::AMH_User_TExceptionHolder * holder) = 0;
@@ -399,7 +399,7 @@ public:
   static AMI_User_THandler_ptr _nil ();
 
   virtual void getLoginTime (
-    const ::DateTime_T & ami_return_val);
+    ::DateTime_T const & ami_return_val);
 
   static void
   getLoginTime_reply_stub (
@@ -560,7 +560,7 @@ public:
 public:
   OBV_Data_T () = default;
   OBV_Data_T (
-      const ::WhenLastUpdated_T & _tao_init_whenLastUpdated
+      ::WhenLastUpdated_T const & _tao_init_whenLastUpdated
     );
   ~OBV_Data_T () override;
 

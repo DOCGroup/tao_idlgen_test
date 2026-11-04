@@ -794,7 +794,7 @@ AMI_FieldDevice_THandler::getEncodingID_excep (
 }
 void
 AMI_FieldDevice_THandler::getEncoding (
-  const ::Encoding_T & ami_return_val)
+  ::Encoding_T const & ami_return_val)
 {
   if (!this->is_evaluated ())
     {

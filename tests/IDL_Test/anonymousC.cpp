@@ -429,7 +429,7 @@ All_Anon::anon_bd_string_test::TestFunc23 ()
 }
 void
 All_Anon::anon_bd_string_test::TestFunc4 (
-  const char * inarg)
+  char const * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -459,7 +459,7 @@ All_Anon::anon_bd_string_test::TestFunc4 (
 }
 void
 All_Anon::anon_bd_string_test::TestFunc41 (
-  const char * inarg)
+  char const * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -489,7 +489,7 @@ All_Anon::anon_bd_string_test::TestFunc41 (
 }
 void
 All_Anon::anon_bd_string_test::TestFunc42 (
-  const char * inarg)
+  char const * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -519,7 +519,7 @@ All_Anon::anon_bd_string_test::TestFunc42 (
 }
 void
 All_Anon::anon_bd_string_test::TestFunc43 (
-  const char * inarg)
+  char const * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -655,7 +655,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc23 (
 void
 All_Anon::anon_bd_string_test::sendc_TestFunc4 (
   ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-  const char * inarg)
+  char const * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -689,7 +689,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc4 (
 void
 All_Anon::anon_bd_string_test::sendc_TestFunc41 (
   ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-  const char * inarg)
+  char const * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -723,7 +723,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc41 (
 void
 All_Anon::anon_bd_string_test::sendc_TestFunc42 (
   ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-  const char * inarg)
+  char const * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -757,7 +757,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc42 (
 void
 All_Anon::anon_bd_string_test::sendc_TestFunc43 (
   ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-  const char * inarg)
+  char const * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -1254,7 +1254,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 All_Anon::AMI_anon_bd_string_testHandler::TestFunc (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -1377,7 +1377,7 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc_excep (
 }
 void
 All_Anon::AMI_anon_bd_string_testHandler::TestFunc2 (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -1500,7 +1500,7 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_excep (
 }
 void
 All_Anon::AMI_anon_bd_string_testHandler::TestFunc3 (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -1623,7 +1623,7 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_excep (
 }
 void
 All_Anon::AMI_anon_bd_string_testHandler::TestFunc23 (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {

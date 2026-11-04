@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTEC_J4S4OI_H_
-#define _TAO_IDL_ATTRIBUTEC_J4S4OI_H_
+#ifndef _TAO_IDL_ATTRIBUTEC_0T28E0_H_
+#define _TAO_IDL_ATTRIBUTEC_0T28E0_H_
 
 #include /**/ "ace/pre.h"
 

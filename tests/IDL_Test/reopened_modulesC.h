@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPENED_MODULESC_Y9WZ5U_H_
-#define _TAO_IDL_REOPENED_MODULESC_Y9WZ5U_H_
+#ifndef _TAO_IDL_REOPENED_MODULESC_IQGJJA_H_
+#define _TAO_IDL_REOPENED_MODULESC_IQGJJA_H_
 
 #include /**/ "ace/pre.h"
 
@@ -3344,14 +3344,14 @@ public:
   static gather_ptr _nil ();
 
   virtual ::frag::ret_long op (
-    const ::frag::dub_seq & inarg,
+    ::frag::dub_seq const & inarg,
     ::frag::pug & inoutarg,
     ::frag::frag_iface_out outarg);
 
   virtual void sendc_op (
     ::AMI_gatherHandler_ptr ami_handler,
-    const ::frag::dub_seq & inarg,
-    const ::frag::pug & inoutarg);
+    ::frag::dub_seq const & inarg,
+    ::frag::pug const & inoutarg);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;
@@ -3490,7 +3490,7 @@ public:
 
   virtual void op (
     ::frag::ret_long return_value,
-    const ::frag::pug & inoutarg,
+    ::frag::pug const & inoutarg,
     ::frag::frag_iface_ptr outarg) = 0;
 
   virtual void op_excep (
@@ -3550,7 +3550,7 @@ public:
 
   virtual void op (
     ::frag::ret_long ami_return_val,
-    const ::frag::pug & inoutarg,
+    ::frag::pug const & inoutarg,
     ::frag::frag_iface_ptr outarg);
 
   static void
@@ -3672,11 +3672,11 @@ namespace foo
     static obj_ptr _nil ();
 
     virtual void op (
-      const ::bar & inarg);
+      ::bar const & inarg);
 
     virtual void sendc_op (
       ::foo::AMI_objHandler_ptr ami_handler,
-      const ::bar & inarg);
+      ::bar const & inarg);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -4143,13 +4143,13 @@ public:
   static AMH_X3ResponseHandler_ptr _nil ();
 
   virtual void getSeqOfX2 (
-    const ::A::B::X2Seq & return_value) = 0;
+    ::A::B::X2Seq const & return_value) = 0;
 
   virtual void getSeqOfX2_excep (
     ::A::B::AMH_X3ExceptionHolder * holder) = 0;
 
   virtual void getX3 (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void getX3_excep (
     ::A::B::AMH_X3ExceptionHolder * holder) = 0;
@@ -4208,7 +4208,7 @@ public:
   static AMI_X3Handler_ptr _nil ();
 
   virtual void getSeqOfX2 (
-    const ::A::B::X2Seq & ami_return_val);
+    ::A::B::X2Seq const & ami_return_val);
 
   static void
   getSeqOfX2_reply_stub (
@@ -4220,7 +4220,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void getX3 (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   getX3_reply_stub (

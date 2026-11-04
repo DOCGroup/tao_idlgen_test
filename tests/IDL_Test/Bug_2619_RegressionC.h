@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONC_4VIPM9_H_
-#define _TAO_IDL_BUG_2619_REGRESSIONC_4VIPM9_H_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONC_C3PLL4_H_
+#define _TAO_IDL_BUG_2619_REGRESSIONC_C3PLL4_H_
 
 #include /**/ "ace/pre.h"
 
@@ -343,7 +343,7 @@ public:
   static AMH_TestResponseHandler_ptr _nil ();
 
   virtual void getGroup (
-    const ::Test::Group & return_value) = 0;
+    ::Test::Group const & return_value) = 0;
 
   virtual void getGroup_excep (
     ::AMH_TestExceptionHolder * holder) = 0;
@@ -401,7 +401,7 @@ public:
   static AMI_TestHandler_ptr _nil ();
 
   virtual void getGroup (
-    const ::Test::Group & ami_return_val);
+    ::Test::Group const & ami_return_val);
 
   static void
   getGroup_reply_stub (
@@ -562,7 +562,7 @@ public:
 public:
   OBV_T_Data_T () = default;
   OBV_T_Data_T (
-      const ::Type_T & _tao_init_type
+      ::Type_T const & _tao_init_type
     );
   ~OBV_T_Data_T () override;
 

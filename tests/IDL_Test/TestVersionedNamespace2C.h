@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_EY2WUT_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_EY2WUT_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_T26UFX_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_T26UFX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -132,7 +132,7 @@ namespace M1
     static LI_ptr _nil ();
 
     virtual void op (
-      const ::M1::S1 & s);
+      ::M1::S1 const & s);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -314,7 +314,7 @@ public:
   static L2_ptr _nil ();
 
   virtual void op (
-    const ::M1::S1 & s);
+    ::M1::S1 const & s);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;
@@ -722,7 +722,7 @@ namespace M2
       static L3_ptr _nil ();
 
       virtual void op (
-        const ::M2::M3::S2 & s);
+        ::M2::M3::S2 const & s);
 
       ::CORBA::Boolean _is_a (const char *type_id) override;
       const char* _interface_repository_id () const override;
@@ -942,7 +942,7 @@ namespace M2
     static L4_ptr _nil ();
 
     virtual void op (
-      const ::M2::M3::S2 & s);
+      ::M2::M3::S2 const & s);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -1614,12 +1614,12 @@ public:
 public:
   V () = default;
   V (
-      const char * _tao_init_valString,
-      const ::M1::S1 & _tao_init_valStruct,
+      char const * _tao_init_valString,
+      ::M1::S1 const & _tao_init_valStruct,
       ::M1::LI_ptr _tao_init_valLocalIface,
-      const ::M1::BooleanUnion1 & _tao_init_valBoolUnion1,
-      const ::M1::BooleanUnion2 & _tao_init_valBoolUnion2,
-      const ::M1::X & _tao_init_valX
+      ::M1::BooleanUnion1 const & _tao_init_valBoolUnion1,
+      ::M1::BooleanUnion2 const & _tao_init_valBoolUnion2,
+      ::M1::X const & _tao_init_valX
     );
   ~V () override;
 
@@ -1724,8 +1724,8 @@ public:
 public:
   V2 () = default;
   V2 (
-      const char * _tao_init_valString,
-      const ::M2::M3::S2 & _tao_init_valStruct,
+      char const * _tao_init_valString,
+      ::M2::M3::S2 const & _tao_init_valStruct,
       ::M2::M3::L3_ptr _tao_init_valLocalIface,
       ::M2::M3::L4_ptr _tao_init_valLocalIface3
     );
@@ -1775,8 +1775,8 @@ public:
 public:
   V3 () = default;
   V3 (
-      const char * _tao_init_valString,
-      const ::M1::S1 & _tao_init_valStruct,
+      char const * _tao_init_valString,
+      ::M1::S1 const & _tao_init_valStruct,
       ::M1::L2_ptr _tao_init_valLocalIface
     );
   ~V3 () override;

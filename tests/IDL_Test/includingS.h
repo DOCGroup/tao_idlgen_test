@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDINGS_09MWAV_H_
-#define _TAO_IDL_INCLUDINGS_09MWAV_H_
+#ifndef _TAO_IDL_INCLUDINGS_11ULGD_H_
+#define _TAO_IDL_INCLUDINGS_11ULGD_H_
 
 #include /**/ "ace/pre.h"
 
@@ -519,7 +519,7 @@ static void op_skel (
 
 virtual void op (
     AMH_MyIntResponseHandler_ptr _tao_rh,
-    const ::A::MyStructA & ab
+    ::A::MyStructA const & ab
   ) = 0;
 
 };
@@ -554,7 +554,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual ::A::MyStructA * op (
-    const ::A::MyStructA & ab) = 0;
+    ::A::MyStructA const & ab) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
@@ -591,7 +591,7 @@ public:
   POA_TAO_AMH_MyIntResponseHandler () = default;
   virtual ~POA_TAO_AMH_MyIntResponseHandler () = default;
   void op (
-    const ::A::MyStructA & return_value) override;
+    ::A::MyStructA const & return_value) override;
   void op_excep (
     ::AMH_MyIntExceptionHolder * holder) override;
 };
@@ -626,7 +626,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void op (
-    const ::A::MyStructA & ami_return_val) = 0;
+    ::A::MyStructA const & ami_return_val) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,

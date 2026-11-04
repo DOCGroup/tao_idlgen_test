@@ -3618,7 +3618,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::Negotiator::UAV_Negotiator_ptr
 Negotiator::UAV_Negotiator_Factory::make_negotiator (
-  const char * bitrate_sc)
+  char const * bitrate_sc)
 {
   if (!this->is_evaluated ())
     {
@@ -3652,7 +3652,7 @@ Negotiator::UAV_Negotiator_Factory::make_negotiator (
 void
 Negotiator::UAV_Negotiator_Factory::sendc_make_negotiator (
   ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr ami_handler,
-  const char * bitrate_sc)
+  char const * bitrate_sc)
 {
   if (!this->is_evaluated ())
     {

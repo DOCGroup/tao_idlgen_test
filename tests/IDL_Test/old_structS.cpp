@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_STRUCTS_2GHA2X_CPP_
-#define _TAO_IDL_OLD_STRUCTS_2GHA2X_CPP_
+#ifndef _TAO_IDL_OLD_STRUCTS_DQJ8QB_CPP_
+#define _TAO_IDL_OLD_STRUCTS_DQJ8QB_CPP_
 
 #include "old_structS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -331,7 +331,7 @@ POA_foo1::_this ()
 void
 POA_TAO_AMH_foo1ResponseHandler::op (
   ::CORBA::Long return_value,
-  const ::bar2 & b)
+  ::bar2 const & b)
 {
   this->_tao_rh_init_reply ();
 
@@ -1027,7 +1027,7 @@ POA_foo2::_this ()
 
 void
 POA_TAO_AMH_foo2ResponseHandler::op2 (
-  const ::bar1 & return_value)
+  ::bar1 const & return_value)
 {
   this->_tao_rh_init_reply ();
 

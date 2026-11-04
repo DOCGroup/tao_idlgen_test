@@ -209,7 +209,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 A::AMI_Test::foo (
   ::CORBA::Long_out out_l,
   ::CORBA::Long in_l,
-  const char * in_str)
+  char const * in_str)
 {
   if (!this->is_evaluated ())
     {
@@ -384,7 +384,7 @@ void
 A::AMI_Test::sendc_foo (
   ::A::AMI_AMI_TestHandler_ptr ami_handler,
   ::CORBA::Long in_l,
-  const char * in_str)
+  char const * in_str)
 {
   if (!this->is_evaluated ())
     {
@@ -480,7 +480,7 @@ A::AMI_Test::sendc_get_yadda (
 void
 A::AMI_Test::sendc_inout_arg_test (
   ::A::AMI_AMI_TestHandler_ptr ami_handler,
-  const char * str)
+  char const * str)
 {
   if (!this->is_evaluated ())
     {
@@ -1033,7 +1033,7 @@ A::AMI_AMI_TestHandler::set_yadda_excep (
 }
 void
 A::AMI_AMI_TestHandler::inout_arg_test (
-  const char * str)
+  char const * str)
 {
   if (!this->is_evaluated ())
     {

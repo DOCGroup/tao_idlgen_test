@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_OIWD5B_CPP_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACES_OIWD5B_CPP_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_K4BHT0_CPP_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACES_K4BHT0_CPP_
 
 #include "TestVersionedNamespaceS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLS_C7AKGV_H_
-#define _TAO_IDL_FULLS_C7AKGV_H_
+#ifndef _TAO_IDL_FULLS_H3MTEQ_H_
+#define _TAO_IDL_FULLS_H3MTEQ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -392,7 +392,7 @@ namespace POA_mod2
 
   virtual void attr (
       mod2::AMH_fwdResponseHandler_ptr _tao_rh,
-      const char * attr
+      char const * attr
     ) = 0;
 
   static void op_skel (
@@ -403,8 +403,8 @@ namespace POA_mod2
   virtual void op (
       mod2::AMH_fwdResponseHandler_ptr _tao_rh,
       ::mod2::full_ptr full_arg,
-      const ::mod2::fwd::un & un_arg,
-      const ::mod2::fwd::full_seq & full_seq_arg
+      ::mod2::fwd::un const & un_arg,
+      ::mod2::fwd::full_seq const & full_seq_arg
     ) = 0;
 
 };
@@ -445,7 +445,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void attr (
-    const char * attr) = 0;
+    char const * attr) = 0;
 
   static void _set_attr_skel (
       TAO_ServerRequest &server_request,
@@ -499,7 +499,7 @@ public:
   TAO_AMH_fwdResponseHandler () = default;
   virtual ~TAO_AMH_fwdResponseHandler () = default;
   void get_attr (
-    const char * return_value) override;
+    char const * return_value) override;
   void get_attr_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) override;
   void set_attr () override;
@@ -508,8 +508,8 @@ public:
   void op (
     ::mod2::full_ptr return_value,
     ::mod2::full_ptr full_arg,
-    const ::mod2::fwd::un & un_arg,
-    const ::mod2::fwd::full_seq & full_seq_arg) override;
+    ::mod2::fwd::un const & un_arg,
+    ::mod2::fwd::full_seq const & full_seq_arg) override;
   void op_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) override;
 };
@@ -544,7 +544,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void get_attr (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void get_attr_skel (
       TAO_ServerRequest &server_request,
@@ -573,8 +573,8 @@ public:
   virtual void op (
     ::mod2::full_ptr ami_return_val,
     ::mod2::full_ptr full_arg,
-    const ::mod2::fwd::un & un_arg,
-    const ::mod2::fwd::full_seq & full_seq_arg) = 0;
+    ::mod2::fwd::un const & un_arg,
+    ::mod2::fwd::full_seq const & full_seq_arg) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,

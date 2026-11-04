@@ -106,7 +106,7 @@ FixedPoint::FixedOperations::rate ()
 }
 void
 FixedPoint::FixedOperations::rate (
-  const ::FixedPoint::Amount & rate)
+  ::FixedPoint::Amount const & rate)
 {
   if (!this->is_evaluated ())
     {
@@ -138,7 +138,7 @@ FixedPoint::FixedOperations::rate (
 void
 FixedPoint::FixedOperations::sendc_set_rate (
   ::FixedPoint::AMI_FixedOperationsHandler_ptr ami_handler,
-  const ::FixedPoint::Amount & rate)
+  ::FixedPoint::Amount const & rate)
 {
   if (!this->is_evaluated ())
     {
@@ -577,7 +577,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 FixedPoint::AMI_FixedOperationsHandler::get_rate (
-  const ::FixedPoint::Amount & ami_return_val)
+  ::FixedPoint::Amount const & ami_return_val)
 {
   if (!this->is_evaluated ())
     {

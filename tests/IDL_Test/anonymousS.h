@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSS_40RPET_H_
-#define _TAO_IDL_ANONYMOUSS_40RPET_H_
+#ifndef _TAO_IDL_ANONYMOUSS_GHUQTQ_H_
+#define _TAO_IDL_ANONYMOUSS_GHUQTQ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -525,7 +525,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc4 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      const char * inarg
+      char const * inarg
     ) = 0;
 
   static void TestFunc41_skel (
@@ -535,7 +535,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc41 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      const char * inarg
+      char const * inarg
     ) = 0;
 
   static void TestFunc42_skel (
@@ -545,7 +545,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc42 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      const char * inarg
+      char const * inarg
     ) = 0;
 
   static void TestFunc43_skel (
@@ -555,7 +555,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc43 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      const char * inarg
+      char const * inarg
     ) = 0;
 
 };
@@ -614,28 +614,28 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc4 (
-    const char * inarg) = 0;
+    char const * inarg) = 0;
 
   static void TestFunc4_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc41 (
-    const char * inarg) = 0;
+    char const * inarg) = 0;
 
   static void TestFunc41_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc42 (
-    const char * inarg) = 0;
+    char const * inarg) = 0;
 
   static void TestFunc42_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc43 (
-    const char * inarg) = 0;
+    char const * inarg) = 0;
 
   static void TestFunc43_skel (
       TAO_ServerRequest &server_request,
@@ -700,19 +700,19 @@ public:
   TAO_AMH_anon_bd_string_testResponseHandler () = default;
   virtual ~TAO_AMH_anon_bd_string_testResponseHandler () = default;
   void TestFunc (
-    const char * return_value) override;
+    char const * return_value) override;
   void TestFunc_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
   void TestFunc2 (
-    const char * return_value) override;
+    char const * return_value) override;
   void TestFunc2_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
   void TestFunc3 (
-    const char * return_value) override;
+    char const * return_value) override;
   void TestFunc3_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
   void TestFunc23 (
-    const char * return_value) override;
+    char const * return_value) override;
   void TestFunc23_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
   void TestFunc4 () override;
@@ -759,7 +759,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void TestFunc (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void TestFunc_skel (
       TAO_ServerRequest &server_request,
@@ -773,7 +773,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc2 (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void TestFunc2_skel (
       TAO_ServerRequest &server_request,
@@ -787,7 +787,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc3 (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void TestFunc3_skel (
       TAO_ServerRequest &server_request,
@@ -801,7 +801,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc23 (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void TestFunc23_skel (
       TAO_ServerRequest &server_request,

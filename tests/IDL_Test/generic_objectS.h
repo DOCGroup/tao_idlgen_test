@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_TR34UI_H_
-#define _TAO_IDL_GENERIC_OBJECTS_TR34UI_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_SDQX56_H_
+#define _TAO_IDL_GENERIC_OBJECTS_SDQX56_H_
 
 #include /**/ "ace/pre.h"
 

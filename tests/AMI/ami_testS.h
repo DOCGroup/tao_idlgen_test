@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTS_78WGXQ_H_
-#define _TAO_IDL_AMI_TESTS_78WGXQ_H_
+#ifndef _TAO_IDL_AMI_TESTS_SIMDBA_H_
+#define _TAO_IDL_AMI_TESTS_SIMDBA_H_
 
 #include /**/ "ace/pre.h"
 
@@ -166,7 +166,7 @@ namespace POA_A
     virtual ::CORBA::Long foo (
       ::CORBA::Long_out out_l,
       ::CORBA::Long in_l,
-      const char * in_str) = 0;
+      char const * in_str) = 0;
 
     static void foo_skel (
         TAO_ServerRequest &server_request,
@@ -270,7 +270,7 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
     virtual void inout_arg_test (
-      const char * str) = 0;
+      char const * str) = 0;
 
     static void inout_arg_test_skel (
         TAO_ServerRequest &server_request,

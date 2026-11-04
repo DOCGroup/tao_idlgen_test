@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_Z5I4LM_H_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_Z5I4LM_H_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_S9EB21_H_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_S9EB21_H_
 
 #include /**/ "ace/pre.h"
 
@@ -162,7 +162,7 @@ static void Bug_2350_Regression_excep_skel (
 
 virtual void Bug_2350_Regression_excep (
     AMH_Bug_2350_RegressionResponseHandler_ptr _tao_rh,
-    const ::user_ExceptionHolder & a
+    ::user_ExceptionHolder const & a
   ) = 0;
 
 };
@@ -197,7 +197,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void Bug_2350_Regression_excep (
-    const ::user_ExceptionHolder & a) = 0;
+    ::user_ExceptionHolder const & a) = 0;
 
   static void Bug_2350_Regression_excep_skel (
       TAO_ServerRequest &server_request,

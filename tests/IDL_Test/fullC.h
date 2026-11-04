@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLC_QYUMD9_H_
-#define _TAO_IDL_FULLC_QYUMD9_H_
+#ifndef _TAO_IDL_FULLC_JEWFPX_H_
+#define _TAO_IDL_FULLC_JEWFPX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -390,7 +390,7 @@ namespace mod2
     virtual char * attr ();
 
     virtual void attr (
-      const char * attr);
+      char const * attr);
 
     class un;
     using un_var = ::TAO_Var_Var_T<un>;
@@ -502,7 +502,7 @@ namespace mod2
 
     virtual void sendc_set_attr (
       ::mod2::AMI_fwdHandler_ptr ami_handler,
-      const char * attr);
+      char const * attr);
 
     virtual void sendc_get_attr (
       ::mod2::AMI_fwdHandler_ptr ami_handler);
@@ -510,8 +510,8 @@ namespace mod2
     virtual void sendc_op (
       ::mod2::AMI_fwdHandler_ptr ami_handler,
       ::mod2::full_ptr full_arg,
-      const ::mod2::fwd::un & un_arg,
-      const ::mod2::fwd::full_seq & full_seq_arg);
+      ::mod2::fwd::un const & un_arg,
+      ::mod2::fwd::full_seq const & full_seq_arg);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -669,7 +669,7 @@ public:
   static AMH_fwdResponseHandler_ptr _nil ();
 
   virtual void get_attr (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void get_attr_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) = 0;
@@ -682,8 +682,8 @@ public:
   virtual void op (
     ::mod2::full_ptr return_value,
     ::mod2::full_ptr full_arg,
-    const ::mod2::fwd::un & un_arg,
-    const ::mod2::fwd::full_seq & full_seq_arg) = 0;
+    ::mod2::fwd::un const & un_arg,
+    ::mod2::fwd::full_seq const & full_seq_arg) = 0;
 
   virtual void op_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) = 0;
@@ -741,7 +741,7 @@ public:
   static AMI_fwdHandler_ptr _nil ();
 
   virtual void get_attr (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   get_attr_reply_stub (
@@ -766,8 +766,8 @@ public:
   virtual void op (
     ::mod2::full_ptr ami_return_val,
     ::mod2::full_ptr full_arg,
-    const ::mod2::fwd::un & un_arg,
-    const ::mod2::fwd::full_seq & full_seq_arg);
+    ::mod2::fwd::un const & un_arg,
+    ::mod2::fwd::full_seq const & full_seq_arg);
 
   static void
   op_reply_stub (

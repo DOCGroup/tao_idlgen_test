@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAYS_7CDW5K_CPP_
-#define _TAO_IDL_ARRAYS_7CDW5K_CPP_
+#ifndef _TAO_IDL_ARRAYS_W8RQFX_CPP_
+#define _TAO_IDL_ARRAYS_W8RQFX_CPP_
 
 #include "arrayS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -1028,7 +1028,7 @@ POA_arraytest::MyTest::_this ()
 
 void
 POA_arraytest::TAO_AMH_MyTestResponseHandler::test_method (
-  const ::arraytest::myvec2 mystring)
+  ::arraytest::myvec2 const mystring)
 {
   this->_tao_rh_init_reply ();
 

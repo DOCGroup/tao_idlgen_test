@@ -670,7 +670,7 @@ mod2::fwd::attr ()
 }
 void
 mod2::fwd::attr (
-  const char * attr)
+  char const * attr)
 {
   if (!this->is_evaluated ())
     {
@@ -1043,7 +1043,7 @@ mod2::fwd::op (
 void
 mod2::fwd::sendc_set_attr (
   ::mod2::AMI_fwdHandler_ptr ami_handler,
-  const char * attr)
+  char const * attr)
 {
   if (!this->is_evaluated ())
     {
@@ -1104,8 +1104,8 @@ void
 mod2::fwd::sendc_op (
   ::mod2::AMI_fwdHandler_ptr ami_handler,
   ::mod2::full_ptr full_arg,
-  const ::mod2::fwd::un & un_arg,
-  const ::mod2::fwd::full_seq & full_seq_arg)
+  ::mod2::fwd::un const & un_arg,
+  ::mod2::fwd::full_seq const & full_seq_arg)
 {
   if (!this->is_evaluated ())
     {
@@ -1582,7 +1582,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 mod2::AMI_fwdHandler::get_attr (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -1822,8 +1822,8 @@ void
 mod2::AMI_fwdHandler::op (
   ::mod2::full_ptr ami_return_val,
   ::mod2::full_ptr full_arg,
-  const ::mod2::fwd::un & un_arg,
-  const ::mod2::fwd::full_seq & full_seq_arg)
+  ::mod2::fwd::un const & un_arg,
+  ::mod2::fwd::full_seq const & full_seq_arg)
 {
   if (!this->is_evaluated ())
     {

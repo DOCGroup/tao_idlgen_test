@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFS_FNIS1U_H_
-#define _TAO_IDL_GPERFS_FNIS1U_H_
+#ifndef _TAO_IDL_GPERFS_P96VML_H_
+#define _TAO_IDL_GPERFS_P96VML_H_
 
 #include /**/ "ace/pre.h"
 
@@ -326,7 +326,7 @@ public:
   POA_TAO_AMH_testlistitemResponseHandler () = default;
   virtual ~POA_TAO_AMH_testlistitemResponseHandler () = default;
   void get_name (
-    const char * return_value) override;
+    char const * return_value) override;
   void get_name_excep (
     ::AMH_testlistitemExceptionHolder * holder) override;
 };
@@ -361,7 +361,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void get_name (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void get_name_skel (
       TAO_ServerRequest &server_request,
@@ -437,7 +437,7 @@ static void _set_stest_skel (
 
 virtual void stest (
     AMH_testResponseHandler_ptr _tao_rh,
-    const char * stest
+    char const * stest
   ) = 0;
 
 static void _get_wstest_skel (
@@ -456,7 +456,7 @@ static void _set_wstest_skel (
 
 virtual void wstest (
     AMH_testResponseHandler_ptr _tao_rh,
-    const ::CORBA::WChar * wstest
+    ::CORBA::WChar const * wstest
   ) = 0;
 
 static void _get_ltest_skel (
@@ -532,7 +532,7 @@ static void _set_setest_skel (
 
 virtual void setest (
     AMH_testResponseHandler_ptr _tao_rh,
-    const ::CORBA::WChar * setest
+    ::CORBA::WChar const * setest
   ) = 0;
 
 static void _get_tltest_skel (
@@ -561,7 +561,7 @@ static void new_testlistitem_skel (
 
 virtual void new_testlistitem (
     AMH_testResponseHandler_ptr _tao_rh,
-    const char * name
+    char const * name
   ) = 0;
 
 };
@@ -602,7 +602,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void stest (
-    const char * stest) = 0;
+    char const * stest) = 0;
 
   static void _set_stest_skel (
       TAO_ServerRequest &server_request,
@@ -615,7 +615,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void wstest (
-    const ::CORBA::WChar * wstest) = 0;
+    ::CORBA::WChar const * wstest) = 0;
 
   static void _set_wstest_skel (
       TAO_ServerRequest &server_request,
@@ -667,7 +667,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void setest (
-    const ::CORBA::WChar * setest) = 0;
+    ::CORBA::WChar const * setest) = 0;
 
   static void _set_setest_skel (
       TAO_ServerRequest &server_request,
@@ -687,7 +687,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual ::testlistitem_ptr new_testlistitem (
-    const char * name) = 0;
+    char const * name) = 0;
 
   static void new_testlistitem_skel (
       TAO_ServerRequest &server_request,
@@ -780,14 +780,14 @@ public:
   POA_TAO_AMH_testResponseHandler () = default;
   virtual ~POA_TAO_AMH_testResponseHandler () = default;
   void get_stest (
-    const char * return_value) override;
+    char const * return_value) override;
   void get_stest_excep (
     ::AMH_testExceptionHolder * holder) override;
   void set_stest () override;
   void set_stest_excep (
     ::AMH_testExceptionHolder * holder) override;
   void get_wstest (
-    const ::CORBA::WChar * return_value) override;
+    ::CORBA::WChar const * return_value) override;
   void get_wstest_excep (
     ::AMH_testExceptionHolder * holder) override;
   void set_wstest () override;
@@ -815,7 +815,7 @@ public:
   void set_etest_excep (
     ::AMH_testExceptionHolder * holder) override;
   void get_setest (
-    const ::CORBA::WChar * return_value) override;
+    ::CORBA::WChar const * return_value) override;
   void get_setest_excep (
     ::AMH_testExceptionHolder * holder) override;
   void set_setest () override;
@@ -864,7 +864,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void get_stest (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void get_stest_skel (
       TAO_ServerRequest &server_request,
@@ -891,7 +891,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void get_wstest (
-    const ::CORBA::WChar * ami_return_val) = 0;
+    ::CORBA::WChar const * ami_return_val) = 0;
 
   static void get_wstest_skel (
       TAO_ServerRequest &server_request,
@@ -999,7 +999,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void get_setest (
-    const ::CORBA::WChar * ami_return_val) = 0;
+    ::CORBA::WChar const * ami_return_val) = 0;
 
   static void get_setest_skel (
       TAO_ServerRequest &server_request,

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTES_OMDSQN_CPP_
-#define _TAO_IDL_ATTRIBUTES_OMDSQN_CPP_
+#ifndef _TAO_IDL_ATTRIBUTES_RG0NUK_CPP_
+#define _TAO_IDL_ATTRIBUTES_RG0NUK_CPP_
 
 #include "attributeS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

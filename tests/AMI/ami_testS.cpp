@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTS_VQY90C_CPP_
-#define _TAO_IDL_AMI_TESTS_VQY90C_CPP_
+#ifndef _TAO_IDL_AMI_TESTS_QT1I2V_CPP_
+#define _TAO_IDL_AMI_TESTS_QT1I2V_CPP_
 
 #include "ami_testS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

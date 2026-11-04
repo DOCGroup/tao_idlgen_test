@@ -1237,7 +1237,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::A::MyStructA *
 MyInt::op (
-  const ::A::MyStructA & ab)
+  ::A::MyStructA const & ab)
 {
   if (!this->is_evaluated ())
     {
@@ -1271,7 +1271,7 @@ MyInt::op (
 void
 MyInt::sendc_op (
   ::AMI_MyIntHandler_ptr ami_handler,
-  const ::A::MyStructA & ab)
+  ::A::MyStructA const & ab)
 {
   if (!this->is_evaluated ())
     {
@@ -1707,7 +1707,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 AMI_MyIntHandler::op (
-  const ::A::MyStructA & ami_return_val)
+  ::A::MyStructA const & ami_return_val)
 {
   if (!this->is_evaluated ())
     {

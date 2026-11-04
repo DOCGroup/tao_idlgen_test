@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDS_YOVDPF_H_
-#define _TAO_IDL_FIXEDS_YOVDPF_H_
+#ifndef _TAO_IDL_FIXEDS_1PM96Q_H_
+#define _TAO_IDL_FIXEDS_1PM96Q_H_
 
 #include /**/ "ace/pre.h"
 
@@ -183,7 +183,7 @@ namespace POA_FixedPoint
 
   virtual void rate (
       FixedPoint::AMH_FixedOperationsResponseHandler_ptr _tao_rh,
-      const ::FixedPoint::Amount & rate
+      ::FixedPoint::Amount const & rate
     ) = 0;
 
 };
@@ -224,7 +224,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void rate (
-    const ::FixedPoint::Amount & rate) = 0;
+    ::FixedPoint::Amount const & rate) = 0;
 
   static void _set_rate_skel (
       TAO_ServerRequest &server_request,
@@ -265,7 +265,7 @@ public:
   TAO_AMH_FixedOperationsResponseHandler () = default;
   virtual ~TAO_AMH_FixedOperationsResponseHandler () = default;
   void get_rate (
-    const ::FixedPoint::Amount & return_value) override;
+    ::FixedPoint::Amount const & return_value) override;
   void get_rate_excep (
     ::FixedPoint::AMH_FixedOperationsExceptionHolder * holder) override;
   void set_rate () override;
@@ -303,7 +303,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void get_rate (
-    const ::FixedPoint::Amount & ami_return_val) = 0;
+    ::FixedPoint::Amount const & ami_return_val) = 0;
 
   static void get_rate_skel (
       TAO_ServerRequest &server_request,

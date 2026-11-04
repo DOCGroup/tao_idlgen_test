@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_QBGRBY_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_QBGRBY_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_U8FJDK_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_U8FJDK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -265,7 +265,7 @@ public:
   void getEncodingID_excep (
     ::AMH_FieldDevice_TExceptionHolder * holder) override;
   void getEncoding (
-    const ::Encoding_T & return_value) override;
+    ::Encoding_T const & return_value) override;
   void getEncoding_excep (
     ::AMH_FieldDevice_TExceptionHolder * holder) override;
 };
@@ -314,7 +314,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void getEncoding (
-    const ::Encoding_T & ami_return_val) = 0;
+    ::Encoding_T const & ami_return_val) = 0;
 
   static void getEncoding_skel (
       TAO_ServerRequest &server_request,

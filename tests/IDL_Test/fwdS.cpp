@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FWDS_SUMPVW_CPP_
-#define _TAO_IDL_FWDS_SUMPVW_CPP_
+#ifndef _TAO_IDL_FWDS_JTN1QG_CPP_
+#define _TAO_IDL_FWDS_JTN1QG_CPP_
 
 #include "fwdS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

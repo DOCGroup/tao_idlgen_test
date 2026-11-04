@@ -8504,7 +8504,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::frag::ret_long
 gather::op (
-  const ::frag::dub_seq & inarg,
+  ::frag::dub_seq const & inarg,
   ::frag::pug & inoutarg,
   ::frag::frag_iface_out outarg)
 {
@@ -8544,8 +8544,8 @@ gather::op (
 void
 gather::sendc_op (
   ::AMI_gatherHandler_ptr ami_handler,
-  const ::frag::dub_seq & inarg,
-  const ::frag::pug & inoutarg)
+  ::frag::dub_seq const & inarg,
+  ::frag::pug const & inoutarg)
 {
   if (!this->is_evaluated ())
     {
@@ -8984,7 +8984,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 void
 AMI_gatherHandler::op (
   ::frag::ret_long ami_return_val,
-  const ::frag::pug & inoutarg,
+  ::frag::pug const & inoutarg,
   ::frag::frag_iface_ptr outarg)
 {
   if (!this->is_evaluated ())
@@ -9324,7 +9324,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 foo::obj::op (
-  const ::bar & inarg)
+  ::bar const & inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -9356,7 +9356,7 @@ foo::obj::op (
 void
 foo::obj::sendc_op (
   ::foo::AMI_objHandler_ptr ami_handler,
-  const ::bar & inarg)
+  ::bar const & inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -10660,7 +10660,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 A::B::AMI_X3Handler::getSeqOfX2 (
-  const ::A::B::X2Seq & ami_return_val)
+  ::A::B::X2Seq const & ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -10783,7 +10783,7 @@ A::B::AMI_X3Handler::getSeqOfX2_excep (
 }
 void
 A::B::AMI_X3Handler::getX3 (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {

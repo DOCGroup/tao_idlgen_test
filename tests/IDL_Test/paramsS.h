@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSS_HDAJ9X_H_
-#define _TAO_IDL_PARAMSS_HDAJ9X_H_
+#ifndef _TAO_IDL_PARAMSS_BX4ADJ_H_
+#define _TAO_IDL_PARAMSS_BX4ADJ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -178,8 +178,8 @@ namespace POA_foo
 
     virtual void getDate (
         foo::bar::AMH_fooBarResponseHandler_ptr _tao_rh,
-        const ::foo::theDate & a,
-        const ::foo::theDate & b
+        ::foo::theDate const & a,
+        ::foo::theDate const & b
       ) = 0;
 
   };
@@ -214,7 +214,7 @@ namespace POA_foo
 
     const char* _interface_repository_id () const override;
     virtual ::foo::theDate getDate (
-      const ::foo::theDate & a,
+      ::foo::theDate const & a,
       ::foo::theDate & b,
       ::foo::theDate_out c) = 0;
 
@@ -253,9 +253,9 @@ namespace POA_foo
     TAO_AMH_fooBarResponseHandler () = default;
     virtual ~TAO_AMH_fooBarResponseHandler () = default;
     void getDate (
-      const ::foo::theDate & return_value,
-      const ::foo::theDate & b,
-      const ::foo::theDate & c) override;
+      ::foo::theDate const & return_value,
+      ::foo::theDate const & b,
+      ::foo::theDate const & c) override;
     void getDate_excep (
       ::foo::bar::AMH_fooBarExceptionHolder * holder) override;
   };
@@ -290,9 +290,9 @@ namespace POA_foo
 
     const char* _interface_repository_id () const override;
     virtual void getDate (
-      const ::foo::theDate & ami_return_val,
-      const ::foo::theDate & b,
-      const ::foo::theDate & c) = 0;
+      ::foo::theDate const & ami_return_val,
+      ::foo::theDate const & b,
+      ::foo::theDate const & c) = 0;
 
     static void getDate_skel (
         TAO_ServerRequest &server_request,

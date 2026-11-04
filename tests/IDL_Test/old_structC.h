@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_STRUCTC_OQE7HW_H_
-#define _TAO_IDL_OLD_STRUCTC_OQE7HW_H_
+#ifndef _TAO_IDL_OLD_STRUCTC_6XPDUN_H_
+#define _TAO_IDL_OLD_STRUCTC_6XPDUN_H_
 
 #include /**/ "ace/pre.h"
 
@@ -202,12 +202,12 @@ public:
   static foo1_ptr _nil ();
 
   virtual ::CORBA::Long op (
-    const ::bar1 & a,
+    ::bar1 const & a,
     ::bar2_out b);
 
   virtual void sendc_op (
     ::AMI_foo1Handler_ptr ami_handler,
-    const ::bar1 & a);
+    ::bar1 const & a);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;
@@ -346,7 +346,7 @@ public:
 
   virtual void op (
     ::CORBA::Long return_value,
-    const ::bar2 & b) = 0;
+    ::bar2 const & b) = 0;
 
   virtual void op_excep (
     ::AMH_foo1ExceptionHolder * holder) = 0;
@@ -405,7 +405,7 @@ public:
 
   virtual void op (
     ::CORBA::Long ami_return_val,
-    const ::bar2 & b);
+    ::bar2 const & b);
 
   static void
   op_reply_stub (
@@ -482,7 +482,7 @@ public:
   static foo2_ptr _nil ();
 
   virtual ::bar1 * op2 (
-    const ::bar2 & a);
+    ::bar2 const & a);
 
   virtual ::CORBA::Long op3 (
     ::CORBA::Long a,
@@ -490,7 +490,7 @@ public:
 
   virtual void sendc_op2 (
     ::AMI_foo2Handler_ptr ami_handler,
-    const ::bar2 & a);
+    ::bar2 const & a);
 
   virtual void sendc_op3 (
     ::AMI_foo2Handler_ptr ami_handler,
@@ -642,7 +642,7 @@ public:
   static AMH_foo2ResponseHandler_ptr _nil ();
 
   virtual void op2 (
-    const ::bar1 & return_value) = 0;
+    ::bar1 const & return_value) = 0;
 
   virtual void op2_excep (
     ::AMH_foo2ExceptionHolder * holder) = 0;
@@ -707,7 +707,7 @@ public:
   static AMI_foo2Handler_ptr _nil ();
 
   virtual void op2 (
-    const ::bar1 & ami_return_val);
+    ::bar1 const & ami_return_val);
 
   static void
   op2_reply_stub (

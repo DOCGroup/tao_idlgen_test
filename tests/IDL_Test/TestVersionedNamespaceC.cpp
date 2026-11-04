@@ -347,8 +347,8 @@ M1::V_init::create_for_unmarshal ()
   return ret_val;
 }
 OBV_M1::V::V (
-    const char * _tao_init_valString,
-    const ::M1::S1 & _tao_init_valStruct,
+    char const * _tao_init_valString,
+    ::M1::S1 const & _tao_init_valStruct,
     ::M1::LI_ptr _tao_init_valLocalIface)
 {
   valString (_tao_init_valString);

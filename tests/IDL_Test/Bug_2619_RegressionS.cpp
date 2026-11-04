@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_8ARD08_CPP_
-#define _TAO_IDL_BUG_2619_REGRESSIONS_8ARD08_CPP_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_5ETUW3_CPP_
+#define _TAO_IDL_BUG_2619_REGRESSIONS_5ETUW3_CPP_
 
 #include "Bug_2619_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -301,7 +301,7 @@ POA_Test::_this ()
 
 void
 POA_TAO_AMH_TestResponseHandler::getGroup (
-  const ::Test::Group & return_value)
+  ::Test::Group const & return_value)
 {
   this->_tao_rh_init_reply ();
 

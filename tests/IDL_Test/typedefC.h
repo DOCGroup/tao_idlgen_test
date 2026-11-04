@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEDEFC_4CEQ3O_H_
-#define _TAO_IDL_TYPEDEFC_4CEQ3O_H_
+#ifndef _TAO_IDL_TYPEDEFC_6RCTV9_H_
+#define _TAO_IDL_TYPEDEFC_6RCTV9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -291,18 +291,18 @@ namespace TestModule
     static TestInterface_ptr _nil ();
 
     virtual void set_typedef_1 (
-      const char * typ1);
+      char const * typ1);
 
     virtual void set_typedef_2 (
-      const char * typ2);
+      char const * typ2);
 
     virtual void sendc_set_typedef_1 (
       ::TestModule::AMI_TestInterfaceHandler_ptr ami_handler,
-      const char * typ1);
+      char const * typ1);
 
     virtual void sendc_set_typedef_2 (
       ::TestModule::AMI_TestInterfaceHandler_ptr ami_handler,
-      const char * typ2);
+      char const * typ2);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -604,18 +604,18 @@ namespace bug_2124
     static Foo_ptr _nil ();
 
     virtual void op1 (
-      const char * s);
+      char const * s);
 
     virtual void op2 (
-      const char * s);
+      char const * s);
 
     virtual void sendc_op1 (
       ::bug_2124::AMI_FooHandler_ptr ami_handler,
-      const char * s);
+      char const * s);
 
     virtual void sendc_op2 (
       ::bug_2124::AMI_FooHandler_ptr ami_handler,
-      const char * s);
+      char const * s);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -916,11 +916,11 @@ namespace bug_2122
       static Whatever_ptr _nil ();
 
       virtual void someOp (
-        const char * s);
+        char const * s);
 
       virtual void sendc_someOp (
         ::bug_2122::One::AMI_WhateverHandler_ptr ami_handler,
-        const char * s);
+        char const * s);
 
       ::CORBA::Boolean _is_a (const char *type_id) override;
       const char* _interface_repository_id () const override;
@@ -1193,11 +1193,11 @@ namespace Two
     static WhoCares_ptr _nil ();
 
     virtual void someOp (
-      const char * s);
+      char const * s);
 
     virtual void sendc_someOp (
       ::bug_2122::Two::AMI_WhoCaresHandler_ptr ami_handler,
-      const char * s);
+      char const * s);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -1470,11 +1470,11 @@ namespace Three
     static WhoCares_ptr _nil ();
 
     virtual void someOp (
-      const char * s);
+      char const * s);
 
     virtual void sendc_someOp (
       ::bug_2122::Three::AMI_WhoCaresHandler_ptr ami_handler,
-      const char * s);
+      char const * s);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;

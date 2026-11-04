@@ -933,7 +933,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::OldArray::A
 OldArray::A_i::op (
-  const ::OldArray::A & a1,
+  ::OldArray::A const & a1,
   ::OldArray::A & a2,
   ::OldArray::A_out a3)
 {
@@ -971,7 +971,7 @@ OldArray::A_i::op (
 }
 ::OldArray::str22_slice *
 OldArray::A_i::op2 (
-  const ::OldArray::str22 a1,
+  ::OldArray::str22 const a1,
   ::OldArray::str22 a2,
   ::OldArray::str22_out a3)
 {
@@ -1009,7 +1009,7 @@ OldArray::A_i::op2 (
 }
 ::OldArray::A_matrix_slice *
 OldArray::A_i::op4 (
-  const ::OldArray::A & a1,
+  ::OldArray::A const & a1,
   ::OldArray::A & a2,
   ::OldArray::A_out a3)
 {
@@ -1079,7 +1079,7 @@ OldArray::A_i::attribute_array ()
 }
 void
 OldArray::A_i::attribute_array (
-  const ::OldArray::str22 attribute_array)
+  ::OldArray::str22 const attribute_array)
 {
   if (!this->is_evaluated ())
     {
@@ -1111,8 +1111,8 @@ OldArray::A_i::attribute_array (
 void
 OldArray::A_i::sendc_op (
   ::OldArray::AMI_A_iHandler_ptr ami_handler,
-  const ::OldArray::A & a1,
-  const ::OldArray::A & a2)
+  ::OldArray::A const & a1,
+  ::OldArray::A const & a2)
 {
   if (!this->is_evaluated ())
     {
@@ -1148,8 +1148,8 @@ OldArray::A_i::sendc_op (
 void
 OldArray::A_i::sendc_op2 (
   ::OldArray::AMI_A_iHandler_ptr ami_handler,
-  const ::OldArray::str22 a1,
-  const ::OldArray::str22 a2)
+  ::OldArray::str22 const a1,
+  ::OldArray::str22 const a2)
 {
   if (!this->is_evaluated ())
     {
@@ -1185,8 +1185,8 @@ OldArray::A_i::sendc_op2 (
 void
 OldArray::A_i::sendc_op4 (
   ::OldArray::AMI_A_iHandler_ptr ami_handler,
-  const ::OldArray::A & a1,
-  const ::OldArray::A & a2)
+  ::OldArray::A const & a1,
+  ::OldArray::A const & a2)
 {
   if (!this->is_evaluated ())
     {
@@ -1222,7 +1222,7 @@ OldArray::A_i::sendc_op4 (
 void
 OldArray::A_i::sendc_set_attribute_array (
   ::OldArray::AMI_A_iHandler_ptr ami_handler,
-  const ::OldArray::str22 attribute_array)
+  ::OldArray::str22 const attribute_array)
 {
   if (!this->is_evaluated ())
     {
@@ -1749,9 +1749,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 OldArray::AMI_A_iHandler::op (
-  const ::OldArray::A & ami_return_val,
-  const ::OldArray::A & a2,
-  const ::OldArray::A & a3)
+  ::OldArray::A const & ami_return_val,
+  ::OldArray::A const & a2,
+  ::OldArray::A const & a3)
 {
   if (!this->is_evaluated ())
     {
@@ -1886,9 +1886,9 @@ OldArray::AMI_A_iHandler::op_excep (
 }
 void
 OldArray::AMI_A_iHandler::op2 (
-  const ::OldArray::str22 ami_return_val,
-  const ::OldArray::str22 a2,
-  const ::OldArray::str22 a3)
+  ::OldArray::str22 const ami_return_val,
+  ::OldArray::str22 const a2,
+  ::OldArray::str22 const a3)
 {
   if (!this->is_evaluated ())
     {
@@ -1960,11 +1960,11 @@ OldArray::AMI_A_iHandler::op2_reply_stub (
       // Invoke the call back method.
       _tao_reply_handler_object->op2 (
 
-          (const ::OldArray::str22_slice *) ami_return_val,
+          (::OldArray::str22_slice const *) ami_return_val,
 
-          (const ::OldArray::str22_slice *) a2,
+          (::OldArray::str22_slice const *) a2,
 
-          (const ::OldArray::str22_slice *) a3
+          (::OldArray::str22_slice const *) a3
         );
       break;
     }
@@ -2032,9 +2032,9 @@ OldArray::AMI_A_iHandler::op2_excep (
 }
 void
 OldArray::AMI_A_iHandler::op4 (
-  const ::OldArray::A_matrix ami_return_val,
-  const ::OldArray::A & a2,
-  const ::OldArray::A & a3)
+  ::OldArray::A_matrix const ami_return_val,
+  ::OldArray::A const & a2,
+  ::OldArray::A const & a3)
 {
   if (!this->is_evaluated ())
     {
@@ -2100,7 +2100,7 @@ OldArray::AMI_A_iHandler::op4_reply_stub (
       // Invoke the call back method.
       _tao_reply_handler_object->op4 (
 
-          (const ::OldArray::A_matrix_slice *) ami_return_val,
+          (::OldArray::A_matrix_slice const *) ami_return_val,
 
           a2,
 
@@ -2172,7 +2172,7 @@ OldArray::AMI_A_iHandler::op4_excep (
 }
 void
 OldArray::AMI_A_iHandler::get_attribute_array (
-  const ::OldArray::str22 ami_return_val)
+  ::OldArray::str22 const ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -2230,7 +2230,7 @@ OldArray::AMI_A_iHandler::get_attribute_array_reply_stub (
       // Invoke the call back method.
       _tao_reply_handler_object->get_attribute_array (
 
-          (const ::OldArray::str22_slice *) ami_return_val
+          (::OldArray::str22_slice const *) ami_return_val
         );
       break;
     }

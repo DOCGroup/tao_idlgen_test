@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPENED_MODULESS_DJQN0M_H_
-#define _TAO_IDL_REOPENED_MODULESS_DJQN0M_H_
+#ifndef _TAO_IDL_REOPENED_MODULESS_734XQ2_H_
+#define _TAO_IDL_REOPENED_MODULESS_734XQ2_H_
 
 #include /**/ "ace/pre.h"
 
@@ -3283,8 +3283,8 @@ static void op_skel (
 
 virtual void op (
     AMH_gatherResponseHandler_ptr _tao_rh,
-    const ::frag::dub_seq & inarg,
-    const ::frag::pug & inoutarg
+    ::frag::dub_seq const & inarg,
+    ::frag::pug const & inoutarg
   ) = 0;
 
 };
@@ -3319,7 +3319,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual ::frag::ret_long op (
-    const ::frag::dub_seq & inarg,
+    ::frag::dub_seq const & inarg,
     ::frag::pug & inoutarg,
     ::frag::frag_iface_out outarg) = 0;
 
@@ -3359,7 +3359,7 @@ public:
   virtual ~POA_TAO_AMH_gatherResponseHandler () = default;
   void op (
     ::frag::ret_long return_value,
-    const ::frag::pug & inoutarg,
+    ::frag::pug const & inoutarg,
     ::frag::frag_iface_ptr outarg) override;
   void op_excep (
     ::AMH_gatherExceptionHolder * holder) override;
@@ -3396,7 +3396,7 @@ public:
   const char* _interface_repository_id () const override;
   virtual void op (
     ::frag::ret_long ami_return_val,
-    const ::frag::pug & inoutarg,
+    ::frag::pug const & inoutarg,
     ::frag::frag_iface_ptr outarg) = 0;
 
   static void op_skel (
@@ -3471,7 +3471,7 @@ namespace POA_foo
 
   virtual void op (
       foo::AMH_objResponseHandler_ptr _tao_rh,
-      const ::bar & inarg
+      ::bar const & inarg
     ) = 0;
 
 };
@@ -3506,7 +3506,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void op (
-    const ::bar & inarg) = 0;
+    ::bar const & inarg) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
@@ -3744,11 +3744,11 @@ namespace POA_A
     TAO_AMH_X3ResponseHandler () = default;
     virtual ~TAO_AMH_X3ResponseHandler () = default;
     void getSeqOfX2 (
-      const ::A::B::X2Seq & return_value) override;
+      ::A::B::X2Seq const & return_value) override;
     void getSeqOfX2_excep (
       ::A::B::AMH_X3ExceptionHolder * holder) override;
     void getX3 (
-      const char * return_value) override;
+      char const * return_value) override;
     void getX3_excep (
       ::A::B::AMH_X3ExceptionHolder * holder) override;
   };
@@ -3784,7 +3784,7 @@ namespace POA_A
 
     const char* _interface_repository_id () const override;
     virtual void getSeqOfX2 (
-      const ::A::B::X2Seq & ami_return_val) = 0;
+      ::A::B::X2Seq const & ami_return_val) = 0;
 
     static void getSeqOfX2_skel (
         TAO_ServerRequest &server_request,
@@ -3798,7 +3798,7 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
     virtual void getX3 (
-      const char * ami_return_val) = 0;
+      char const * ami_return_val) = 0;
 
     static void getX3_skel (
         TAO_ServerRequest &server_request,

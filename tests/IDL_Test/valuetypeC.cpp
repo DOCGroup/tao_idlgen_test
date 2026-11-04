@@ -1596,7 +1596,7 @@ ModSelection::SelectionDefns::CriterionExpr_init::tao_repository_id ()
   return ::ModSelection::SelectionDefns::CriterionExpr::_tao_obv_static_repository_id ();
 }
 OBV_MyValueType::OBV_MyValueType (
-    const char * _tao_init_my_string_value)
+    char const * _tao_init_my_string_value)
 {
   my_string_value (_tao_init_my_string_value);
 }
@@ -1708,8 +1708,8 @@ OBV_DefaultInitializedValue::long_value () const
   return this->_pd_long_value;
 }
 OBV_RecValueType::OBV_RecValueType (
-    const ::RecValueType::_tao_seq_RecValueType_ & _tao_init_rec_value_types,
-    const ::RecValueType::_tao_seq_RecValueType__2 & _tao_init_rec_value_types2)
+    ::RecValueType::_tao_seq_RecValueType_ const & _tao_init_rec_value_types,
+    ::RecValueType::_tao_seq_RecValueType__2 const & _tao_init_rec_value_types2)
 {
   rec_value_types (_tao_init_rec_value_types);
   rec_value_types2 (_tao_init_rec_value_types2);
@@ -1822,8 +1822,8 @@ OBV_RecValueType::rec_value_types2 ()
   return this->_pd_rec_value_types2;
 }
 OBV_GetsDeprecatedMember::OBV_GetsDeprecatedMember (
-    const ::IncludedBase::_tao_seq_CORBA_Long_ & _tao_init_DeprecatedMember,
-    const char * _tao_init_StringMember)
+    ::IncludedBase::_tao_seq_CORBA_Long_ const & _tao_init_DeprecatedMember,
+    char const * _tao_init_StringMember)
 {
   DeprecatedMember (_tao_init_DeprecatedMember);
   StringMember (_tao_init_StringMember);
@@ -1873,7 +1873,7 @@ OBV_GetsDeprecatedMember::StringMember () const // get method
 }
 OBV_ModSelection::SelectionDefns::CriterionExpr::CriterionExpr (
     ::ModSelection::SelectionDefns::Criterion * _tao_init_theLeftCriterion,
-    const ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr & _tao_init_theRightCriterionExpr)
+    ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr const & _tao_init_theRightCriterionExpr)
 {
   theLeftCriterion (_tao_init_theLeftCriterion);
   theRightCriterionExpr (_tao_init_theRightCriterionExpr);

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGC_UGPGG9_H_
-#define _TAO_IDL_PEMNAMINGC_UGPGG9_H_
+#ifndef _TAO_IDL_PEMNAMINGC_XW3Q0C_H_
+#define _TAO_IDL_PEMNAMINGC_XW3Q0C_H_
 
 #include /**/ "ace/pre.h"
 
@@ -241,23 +241,23 @@ namespace Plesk
       static ObjectResolver_ptr _nil ();
 
       virtual ::CORBA::Object_ptr resolve (
-        const char * service_type,
+        char const * service_type,
         ::Plesk::TObjectID & sc_id);
 
       virtual ::CORBA::Object_ptr resolve_sc (
-        const char * service_type,
-        const char * version,
+        char const * service_type,
+        char const * version,
         ::Plesk::TObjectID & sc_id);
 
       virtual void sendc_resolve (
         ::Plesk::Naming::AMI_ObjectResolverHandler_ptr ami_handler,
-        const char * service_type,
+        char const * service_type,
         ::Plesk::TObjectID sc_id);
 
       virtual void sendc_resolve_sc (
         ::Plesk::Naming::AMI_ObjectResolverHandler_ptr ami_handler,
-        const char * service_type,
-        const char * version,
+        char const * service_type,
+        char const * version,
         ::Plesk::TObjectID sc_id);
 
       ::CORBA::Boolean _is_a (const char *type_id) override;

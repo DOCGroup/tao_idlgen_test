@@ -750,7 +750,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 AMI_TestHandler::getGroup (
-  const ::Test::Group & ami_return_val)
+  ::Test::Group const & ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -960,7 +960,7 @@ static TAO::TypeCode::Objref<char const *,
 
 ::CORBA::TypeCode_ptr const _tc_AMI_TestHandler = std::addressof(_tao_tc_AMI_TestHandler);
 OBV_T_Data_T::OBV_T_Data_T (
-    const ::Type_T & _tao_init_type)
+    ::Type_T const & _tao_init_type)
 {
   type (_tao_init_type);
 }

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFS_1MVUON_CPP_
-#define _TAO_IDL_GPERFS_1MVUON_CPP_
+#ifndef _TAO_IDL_GPERFS_SHYOBY_CPP_
+#define _TAO_IDL_GPERFS_SHYOBY_CPP_
 
 #include "gperfS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -301,7 +301,7 @@ POA_testlistitem::_this ()
 
 void
 POA_TAO_AMH_testlistitemResponseHandler::get_name (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -2572,7 +2572,7 @@ POA_test::_this ()
 
 void
 POA_TAO_AMH_testResponseHandler::get_stest (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -2620,7 +2620,7 @@ POA_TAO_AMH_testResponseHandler::set_stest_excep (
 }
 void
 POA_TAO_AMH_testResponseHandler::get_wstest (
-  const ::CORBA::WChar * return_value)
+  ::CORBA::WChar const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -2812,7 +2812,7 @@ POA_TAO_AMH_testResponseHandler::set_etest_excep (
 }
 void
 POA_TAO_AMH_testResponseHandler::get_setest (
-  const ::CORBA::WChar * return_value)
+  ::CORBA::WChar const * return_value)
 {
   this->_tao_rh_init_reply ();
 

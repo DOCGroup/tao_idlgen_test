@@ -749,7 +749,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 AMI_User_THandler::getLoginTime (
-  const ::DateTime_T & ami_return_val)
+  ::DateTime_T const & ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -959,7 +959,7 @@ static TAO::TypeCode::Objref<char const *,
 
 ::CORBA::TypeCode_ptr const _tc_AMI_User_THandler = std::addressof(_tao_tc_AMI_User_THandler);
 OBV_Data_T::OBV_Data_T (
-    const ::WhenLastUpdated_T & _tao_init_whenLastUpdated)
+    ::WhenLastUpdated_T const & _tao_init_whenLastUpdated)
 {
   whenLastUpdated (_tao_init_whenLastUpdated);
 }

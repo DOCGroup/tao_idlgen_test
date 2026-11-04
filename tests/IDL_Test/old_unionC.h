@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONC_APK7ZK_H_
-#define _TAO_IDL_OLD_UNIONC_APK7ZK_H_
+#ifndef _TAO_IDL_OLD_UNIONC_TL1FOH_H_
+#define _TAO_IDL_OLD_UNIONC_TL1FOH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -240,11 +240,11 @@ namespace OldUnion
     static ::CORBA::TypeCode_ptr const _tc_astruct;
 
     virtual ::OldUnion::Foo2 opA (
-      const ::OldUnion::a::astruct & b);
+      ::OldUnion::a::astruct const & b);
 
     virtual void sendc_opA (
       ::OldUnion::AMI_aHandler_ptr ami_handler,
-      const ::OldUnion::a::astruct & b);
+      ::OldUnion::a::astruct const & b);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -382,7 +382,7 @@ public:
   static AMH_aResponseHandler_ptr _nil ();
 
   virtual void opA (
-    const ::OldUnion::Foo2 & return_value) = 0;
+    ::OldUnion::Foo2 const & return_value) = 0;
 
   virtual void opA_excep (
     ::OldUnion::AMH_aExceptionHolder * holder) = 0;
@@ -440,7 +440,7 @@ public:
   static AMI_aHandler_ptr _nil ();
 
   virtual void opA (
-    const ::OldUnion::Foo2 & ami_return_val);
+    ::OldUnion::Foo2 const & ami_return_val);
 
   static void
   opA_reply_stub (

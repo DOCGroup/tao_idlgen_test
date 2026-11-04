@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRING_VALUES_WC6QKW_H_
-#define _TAO_IDL_STRING_VALUES_WC6QKW_H_
+#ifndef _TAO_IDL_STRING_VALUES_OWPG02_H_
+#define _TAO_IDL_STRING_VALUES_OWPG02_H_
 
 #include /**/ "ace/pre.h"
 

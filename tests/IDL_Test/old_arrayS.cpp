@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYS_BO6BY3_CPP_
-#define _TAO_IDL_OLD_ARRAYS_BO6BY3_CPP_
+#ifndef _TAO_IDL_OLD_ARRAYS_9DHL1F_CPP_
+#define _TAO_IDL_OLD_ARRAYS_9DHL1F_CPP_
 
 #include "old_arrayS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -175,8 +175,8 @@ POA_OldArray::AMH_A_i::op2_skel (
 
   _tao_impl->op2 (
       safe_rd_.get (),
-      (const ::OldArray::str22_slice *) a1,
-      (const ::OldArray::str22_slice *) a2
+      (::OldArray::str22_slice const *) a1,
+      (::OldArray::str22_slice const *) a2
     );
 }
 void
@@ -304,7 +304,7 @@ POA_OldArray::AMH_A_i::_set_attribute_array_skel (
 
   _tao_impl->attribute_array (
       safe_rd_.get (),
-      (const ::OldArray::str22_slice *) attribute_array
+      (::OldArray::str22_slice const *) attribute_array
     );
 }
 
@@ -938,9 +938,9 @@ POA_OldArray::A_i::_this ()
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op (
-  const ::OldArray::A & return_value,
-  const ::OldArray::A & a2,
-  const ::OldArray::A & a3)
+  ::OldArray::A const & return_value,
+  ::OldArray::A const & a2,
+  ::OldArray::A const & a3)
 {
   this->_tao_rh_init_reply ();
 
@@ -970,9 +970,9 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op_excep (
 }
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op2 (
-  const ::OldArray::str22 return_value,
-  const ::OldArray::str22 a2,
-  const ::OldArray::str22 a3)
+  ::OldArray::str22 const return_value,
+  ::OldArray::str22 const a2,
+  ::OldArray::str22 const a3)
 {
   this->_tao_rh_init_reply ();
 
@@ -1002,9 +1002,9 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op2_excep (
 }
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op4 (
-  const ::OldArray::A_matrix return_value,
-  const ::OldArray::A & a2,
-  const ::OldArray::A & a3)
+  ::OldArray::A_matrix const return_value,
+  ::OldArray::A const & a2,
+  ::OldArray::A const & a3)
 {
   this->_tao_rh_init_reply ();
 
@@ -1034,7 +1034,7 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op4_excep (
 }
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::get_attribute_array (
-  const ::OldArray::str22 return_value)
+  ::OldArray::str22 const return_value)
 {
   this->_tao_rh_init_reply ();
 

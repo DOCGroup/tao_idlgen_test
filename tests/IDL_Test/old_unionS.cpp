@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONS_E7SK4P_CPP_
-#define _TAO_IDL_OLD_UNIONS_E7SK4P_CPP_
+#ifndef _TAO_IDL_OLD_UNIONS_R3Z1DE_CPP_
+#define _TAO_IDL_OLD_UNIONS_R3Z1DE_CPP_
 
 #include "old_unionS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -324,7 +324,7 @@ POA_OldUnion::a::_this ()
 
 void
 POA_OldUnion::TAO_AMH_aResponseHandler::opA (
-  const ::OldUnion::Foo2 & return_value)
+  ::OldUnion::Foo2 const & return_value)
 {
   this->_tao_rh_init_reply ();
 

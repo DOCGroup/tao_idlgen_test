@@ -560,7 +560,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 AMI_testlistitemHandler::get_name (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -834,7 +834,7 @@ test::stest ()
 }
 void
 test::stest (
-  const char * stest)
+  char const * stest)
 {
   if (!this->is_evaluated ())
     {
@@ -896,7 +896,7 @@ test::wstest ()
 }
 void
 test::wstest (
-  const ::CORBA::WChar * wstest)
+  ::CORBA::WChar const * wstest)
 {
   if (!this->is_evaluated ())
     {
@@ -1144,7 +1144,7 @@ test::setest ()
 }
 void
 test::setest (
-  const ::CORBA::WChar * setest)
+  ::CORBA::WChar const * setest)
 {
   if (!this->is_evaluated ())
     {
@@ -1236,7 +1236,7 @@ test::tltest (
 }
 ::testlistitem_ptr
 test::new_testlistitem (
-  const char * name)
+  char const * name)
 {
   if (!this->is_evaluated ())
     {
@@ -1270,7 +1270,7 @@ test::new_testlistitem (
 void
 test::sendc_set_stest (
   ::AMI_testHandler_ptr ami_handler,
-  const char * stest)
+  char const * stest)
 {
   if (!this->is_evaluated ())
     {
@@ -1330,7 +1330,7 @@ test::sendc_get_stest (
 void
 test::sendc_set_wstest (
   ::AMI_testHandler_ptr ami_handler,
-  const ::CORBA::WChar * wstest)
+  ::CORBA::WChar const * wstest)
 {
   if (!this->is_evaluated ())
     {
@@ -1570,7 +1570,7 @@ test::sendc_get_etest (
 void
 test::sendc_set_setest (
   ::AMI_testHandler_ptr ami_handler,
-  const ::CORBA::WChar * setest)
+  ::CORBA::WChar const * setest)
 {
   if (!this->is_evaluated ())
     {
@@ -1690,7 +1690,7 @@ test::sendc_get_tltest (
 void
 test::sendc_new_testlistitem (
   ::AMI_testHandler_ptr ami_handler,
-  const char * name)
+  char const * name)
 {
   if (!this->is_evaluated ())
     {
@@ -2322,7 +2322,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 AMI_testHandler::get_stest (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -2560,7 +2560,7 @@ AMI_testHandler::set_stest_excep (
 }
 void
 AMI_testHandler::get_wstest (
-  const ::CORBA::WChar * ami_return_val)
+  ::CORBA::WChar const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
@@ -3512,7 +3512,7 @@ AMI_testHandler::set_etest_excep (
 }
 void
 AMI_testHandler::get_setest (
-  const ::CORBA::WChar * ami_return_val)
+  ::CORBA::WChar const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {

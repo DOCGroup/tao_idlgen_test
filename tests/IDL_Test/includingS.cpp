@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDINGS_3UZG5U_CPP_
-#define _TAO_IDL_INCLUDINGS_3UZG5U_CPP_
+#ifndef _TAO_IDL_INCLUDINGS_APHZYD_CPP_
+#define _TAO_IDL_INCLUDINGS_APHZYD_CPP_
 
 #include "includingS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -520,7 +520,7 @@ POA_MyInt::_this ()
 
 void
 POA_TAO_AMH_MyIntResponseHandler::op (
-  const ::A::MyStructA & return_value)
+  ::A::MyStructA const & return_value)
 {
   this->_tao_rh_init_reply ();
 

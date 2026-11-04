@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIF2S_F4F5VC_H_
-#define _TAO_IDL_DIF2S_F4F5VC_H_
+#ifndef _TAO_IDL_DIF2S_JUOUEI_H_
+#define _TAO_IDL_DIF2S_JUOUEI_H_
 
 #include /**/ "ace/pre.h"
 
@@ -989,7 +989,7 @@ static void op9_skel (
 virtual void op9 (
     OldDif2::AMH_ex2ResponseHandler_ptr _tao_rh,
     ::CORBA::Octet o,
-    const char * ls,
+    char const * ls,
     ::CORBA::Long l
   ) = 0;
 
@@ -1000,7 +1000,7 @@ static void op10_skel (
 
 virtual void op10 (
     OldDif2::AMH_ex2ResponseHandler_ptr _tao_rh,
-    const char * s
+    char const * s
   ) = 0;
 
 static void op11_skel (
@@ -1010,7 +1010,7 @@ static void op11_skel (
 
 virtual void op11 (
     OldDif2::AMH_ex2ResponseHandler_ptr _tao_rh,
-    const char * ls
+    char const * ls
   ) = 0;
 
 static void op12_skel (
@@ -1074,7 +1074,7 @@ public:
   virtual ::CORBA::Octet op9 (
     ::CORBA::Octet & o,
     ::CORBA::String_out s,
-    const char * ls,
+    char const * ls,
     ::CORBA::Long & l) = 0;
 
   static void op9_skel (
@@ -1082,7 +1082,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual char * op10 (
-    const char * s,
+    char const * s,
     ::CORBA::String_out ls) = 0;
 
   static void op10_skel (
@@ -1169,18 +1169,18 @@ public:
   void op9 (
     ::CORBA::Octet return_value,
     ::CORBA::Octet o,
-    const char * s,
+    char const * s,
     ::CORBA::Long l) override;
   void op9_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) override;
   void op10 (
-    const char * return_value,
-    const char * ls) override;
+    char const * return_value,
+    char const * ls) override;
   void op10_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) override;
   void op11 (
-    const char * return_value,
-    const char * ls,
+    char const * return_value,
+    char const * ls,
     ::CORBA::Long l) override;
   void op11_excep (
     ::OldDif2::AMH_ex2ExceptionHolder * holder) override;
@@ -1253,7 +1253,7 @@ public:
   virtual void op9 (
     ::CORBA::Octet ami_return_val,
     ::CORBA::Octet o,
-    const char * s,
+    char const * s,
     ::CORBA::Long l) = 0;
 
   static void op9_skel (
@@ -1268,8 +1268,8 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void op10 (
-    const char * ami_return_val,
-    const char * ls) = 0;
+    char const * ami_return_val,
+    char const * ls) = 0;
 
   static void op10_skel (
       TAO_ServerRequest &server_request,
@@ -1283,8 +1283,8 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void op11 (
-    const char * ami_return_val,
-    const char * ls,
+    char const * ami_return_val,
+    char const * ls,
     ::CORBA::Long l) = 0;
 
   static void op11_skel (
@@ -1917,7 +1917,7 @@ static void _set_string_attribute_skel (
 
 virtual void string_attribute (
     OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh,
-    const char * string_attribute
+    char const * string_attribute
   ) = 0;
 
 static void _get_limited_string_attribute_skel (
@@ -2015,7 +2015,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void string_attribute (
-    const char * string_attribute) = 0;
+    char const * string_attribute) = 0;
 
   static void _set_string_attribute_skel (
       TAO_ServerRequest &server_request,
@@ -2124,14 +2124,14 @@ public:
   void get_octet_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
   void get_string_attribute (
-    const char * return_value) override;
+    char const * return_value) override;
   void get_string_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
   void set_string_attribute () override;
   void set_string_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
   void get_limited_string_attribute (
-    const char * return_value) override;
+    char const * return_value) override;
   void get_limited_string_attribute_excep (
     ::OldDif2::AMH_ex4ExceptionHolder * holder) override;
   void get_an_object_attribute (
@@ -2253,7 +2253,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void get_string_attribute (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void get_string_attribute_skel (
       TAO_ServerRequest &server_request,
@@ -2280,7 +2280,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void get_limited_string_attribute (
-    const char * ami_return_val) = 0;
+    char const * ami_return_val) = 0;
 
   static void get_limited_string_attribute_skel (
       TAO_ServerRequest &server_request,

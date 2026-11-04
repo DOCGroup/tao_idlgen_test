@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_P1P2J7_H_
-#define _TAO_IDL_BUG_2619_REGRESSIONS_P1P2J7_H_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_CY4Z5B_H_
+#define _TAO_IDL_BUG_2619_REGRESSIONS_CY4Z5B_H_
 
 #include /**/ "ace/pre.h"
 
@@ -249,7 +249,7 @@ public:
   POA_TAO_AMH_TestResponseHandler () = default;
   virtual ~POA_TAO_AMH_TestResponseHandler () = default;
   void getGroup (
-    const ::Test::Group & return_value) override;
+    ::Test::Group const & return_value) override;
   void getGroup_excep (
     ::AMH_TestExceptionHolder * holder) override;
 };
@@ -284,7 +284,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void getGroup (
-    const ::Test::Group & ami_return_val) = 0;
+    ::Test::Group const & ami_return_val) = 0;
 
   static void getGroup_skel (
       TAO_ServerRequest &server_request,

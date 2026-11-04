@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_LWNLDD_CPP_
-#define _TAO_IDL_SIMPLE_TESTS_LWNLDD_CPP_
+#ifndef _TAO_IDL_SIMPLE_TESTS_DP1ZEO_CPP_
+#define _TAO_IDL_SIMPLE_TESTS_DP1ZEO_CPP_
 
 #include "simple_testS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

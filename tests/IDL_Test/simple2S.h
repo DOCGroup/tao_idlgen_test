@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2S_A2U65W_H_
-#define _TAO_IDL_SIMPLE2S_A2U65W_H_
+#ifndef _TAO_IDL_SIMPLE2S_6GVWBL_H_
+#define _TAO_IDL_SIMPLE2S_6GVWBL_H_
 
 #include /**/ "ace/pre.h"
 
@@ -165,8 +165,8 @@ static void op4_skel (
 
 virtual void op4 (
     AMH_simple3ResponseHandler_ptr _tao_rh,
-    const ::CORBA::Any & x,
-    const ::CORBA::Any & y
+    ::CORBA::Any const & x,
+    ::CORBA::Any const & y
   ) = 0;
 
 };
@@ -211,7 +211,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual ::CORBA::Any * op4 (
-    const ::CORBA::Any & x,
+    ::CORBA::Any const & x,
     ::CORBA::Any & y,
     ::CORBA::Any_out z) = 0;
 
@@ -262,9 +262,9 @@ public:
   void op3_excep (
     ::AMH_simple3ExceptionHolder * holder) override;
   void op4 (
-    const ::CORBA::Any & return_value,
-    const ::CORBA::Any & y,
-    const ::CORBA::Any & z) override;
+    ::CORBA::Any const & return_value,
+    ::CORBA::Any const & y,
+    ::CORBA::Any const & z) override;
   void op4_excep (
     ::AMH_simple3ExceptionHolder * holder) override;
 };
@@ -316,9 +316,9 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void op4 (
-    const ::CORBA::Any & ami_return_val,
-    const ::CORBA::Any & y,
-    const ::CORBA::Any & z) = 0;
+    ::CORBA::Any const & ami_return_val,
+    ::CORBA::Any const & y,
+    ::CORBA::Any const & z) = 0;
 
   static void op4_skel (
       TAO_ServerRequest &server_request,

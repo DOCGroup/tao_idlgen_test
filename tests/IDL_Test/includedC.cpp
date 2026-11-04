@@ -1761,7 +1761,7 @@ OBV_VT_Def::VT::_tao_unmarshal__VT_Def_VT (TAO_InputCDR &strm, TAO_ChunkInfo& ci
   return _tao_unmarshal_state (strm, ci);
 }
 OBV_IncludedBase::OBV_IncludedBase (
-    const ::IncludedBase::_tao_seq_CORBA_Long_ & _tao_init_DeprecatedMember)
+    ::IncludedBase::_tao_seq_CORBA_Long_ const & _tao_init_DeprecatedMember)
 {
   DeprecatedMember (_tao_init_DeprecatedMember);
 }

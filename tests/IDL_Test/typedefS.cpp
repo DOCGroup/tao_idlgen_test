@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEDEFS_KY8H9J_CPP_
-#define _TAO_IDL_TYPEDEFS_KY8H9J_CPP_
+#ifndef _TAO_IDL_TYPEDEFS_R1G23L_CPP_
+#define _TAO_IDL_TYPEDEFS_R1G23L_CPP_
 
 #include "typedefS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

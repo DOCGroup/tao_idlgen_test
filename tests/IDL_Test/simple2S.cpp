@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2S_T3GZ5F_CPP_
-#define _TAO_IDL_SIMPLE2S_T3GZ5F_CPP_
+#ifndef _TAO_IDL_SIMPLE2S_VL2DH2_CPP_
+#define _TAO_IDL_SIMPLE2S_VL2DH2_CPP_
 
 #include "simple2S.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -567,9 +567,9 @@ POA_TAO_AMH_simple3ResponseHandler::op3_excep (
 }
 void
 POA_TAO_AMH_simple3ResponseHandler::op4 (
-  const ::CORBA::Any & return_value,
-  const ::CORBA::Any & y,
-  const ::CORBA::Any & z)
+  ::CORBA::Any const & return_value,
+  ::CORBA::Any const & y,
+  ::CORBA::Any const & z)
 {
   this->_tao_rh_init_reply ();
 

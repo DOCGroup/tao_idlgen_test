@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPECODES_LJYB3J_CPP_
-#define _TAO_IDL_TYPECODES_LJYB3J_CPP_
+#ifndef _TAO_IDL_TYPECODES_OBA1P5_CPP_
+#define _TAO_IDL_TYPECODES_OBA1P5_CPP_
 
 #include "typecodeS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

@@ -234,7 +234,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 Testing::foo (
-  const char * _cxx_namespace)
+  char const * _cxx_namespace)
 {
   if (!this->is_evaluated ())
     {
@@ -264,7 +264,7 @@ Testing::foo (
 }
 void
 Testing::bar (
-  const ::Objects & foo)
+  ::Objects const & foo)
 {
   if (!this->is_evaluated ())
     {
@@ -296,7 +296,7 @@ Testing::bar (
 void
 Testing::sendc_foo (
   ::AMI_TestingHandler_ptr ami_handler,
-  const char * _cxx_namespace)
+  char const * _cxx_namespace)
 {
   if (!this->is_evaluated ())
     {
@@ -330,7 +330,7 @@ Testing::sendc_foo (
 void
 Testing::sendc_bar (
   ::AMI_TestingHandler_ptr ami_handler,
-  const ::Objects & foo)
+  ::Objects const & foo)
 {
   if (!this->is_evaluated ())
     {

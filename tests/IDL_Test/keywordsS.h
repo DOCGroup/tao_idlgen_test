@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSS_QNPTOK_H_
-#define _TAO_IDL_KEYWORDSS_QNPTOK_H_
+#ifndef _TAO_IDL_KEYWORDSS_0LA4TX_H_
+#define _TAO_IDL_KEYWORDSS_0LA4TX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -192,7 +192,7 @@ static void foo_skel (
 
 virtual void foo (
     AMH_TestingResponseHandler_ptr _tao_rh,
-    const char * _cxx_namespace
+    char const * _cxx_namespace
   ) = 0;
 
 static void bar_skel (
@@ -202,7 +202,7 @@ static void bar_skel (
 
 virtual void bar (
     AMH_TestingResponseHandler_ptr _tao_rh,
-    const ::Objects & foo
+    ::Objects const & foo
   ) = 0;
 
 };
@@ -237,14 +237,14 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void foo (
-    const char * _cxx_namespace) = 0;
+    char const * _cxx_namespace) = 0;
 
   static void foo_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void bar (
-    const ::Objects & foo) = 0;
+    ::Objects const & foo) = 0;
 
   static void bar_skel (
       TAO_ServerRequest &server_request,

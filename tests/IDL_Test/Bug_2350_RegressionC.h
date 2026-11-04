@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONC_715CTX_H_
-#define _TAO_IDL_BUG_2350_REGRESSIONC_715CTX_H_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONC_PXVVYL_H_
+#define _TAO_IDL_BUG_2350_REGRESSIONC_PXVVYL_H_
 
 #include /**/ "ace/pre.h"
 
@@ -149,11 +149,11 @@ public:
   static Bug_2350_Regression_ptr _nil ();
 
   virtual void Bug_2350_Regression_excep (
-    const ::user_ExceptionHolder & a);
+    ::user_ExceptionHolder const & a);
 
   virtual void sendc_Bug_2350_Regression_excep (
     ::AMI_Bug_2350_RegressionHandler_ptr ami_handler,
-    const ::user_ExceptionHolder & a);
+    ::user_ExceptionHolder const & a);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;

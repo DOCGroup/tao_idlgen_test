@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSC_T811U5_H_
-#define _TAO_IDL_KEYWORDSC_T811U5_H_
+#ifndef _TAO_IDL_KEYWORDSC_9BM3HO_H_
+#define _TAO_IDL_KEYWORDSC_9BM3HO_H_
 
 #include /**/ "ace/pre.h"
 
@@ -195,18 +195,18 @@ public:
   static Testing_ptr _nil ();
 
   virtual void foo (
-    const char * _cxx_namespace);
+    char const * _cxx_namespace);
 
   virtual void bar (
-    const ::Objects & foo);
+    ::Objects const & foo);
 
   virtual void sendc_foo (
     ::AMI_TestingHandler_ptr ami_handler,
-    const char * _cxx_namespace);
+    char const * _cxx_namespace);
 
   virtual void sendc_bar (
     ::AMI_TestingHandler_ptr ami_handler,
-    const ::Objects & foo);
+    ::Objects const & foo);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;

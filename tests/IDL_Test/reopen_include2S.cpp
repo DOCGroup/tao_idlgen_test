@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2S_2B4V4R_CPP_
-#define _TAO_IDL_REOPEN_INCLUDE2S_2B4V4R_CPP_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2S_WM65GY_CPP_
+#define _TAO_IDL_REOPEN_INCLUDE2S_WM65GY_CPP_
 
 #include "reopen_include2S.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -309,7 +309,7 @@ POA_A::B::X2::_this ()
 
 void
 POA_A::B::TAO_AMH_X2ResponseHandler::getX2 (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 

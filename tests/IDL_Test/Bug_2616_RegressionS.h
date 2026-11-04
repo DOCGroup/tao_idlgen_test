@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_UV7YOK_H_
-#define _TAO_IDL_BUG_2616_REGRESSIONS_UV7YOK_H_
+#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_YSC3OX_H_
+#define _TAO_IDL_BUG_2616_REGRESSIONS_YSC3OX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -219,7 +219,7 @@ static void do_it_skel (
 
 virtual void do_it (
     AMH_Interface1ResponseHandler_ptr _tao_rh,
-    const ::Interface1::Type & value
+    ::Interface1::Type const & value
   ) = 0;
 
 };
@@ -254,7 +254,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void do_it (
-    const ::Interface1::Type & value) = 0;
+    ::Interface1::Type const & value) = 0;
 
   static void do_it_skel (
       TAO_ServerRequest &server_request,
@@ -391,7 +391,7 @@ static void do_it_skel (
 
 virtual void do_it (
     AMH_Interface2ResponseHandler_ptr _tao_rh,
-    const ::Interface2::Type & value
+    ::Interface2::Type const & value
   ) = 0;
 
 };
@@ -426,7 +426,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void do_it (
-    const ::Interface2::Type & value) = 0;
+    ::Interface2::Type const & value) = 0;
 
   static void do_it_skel (
       TAO_ServerRequest &server_request,

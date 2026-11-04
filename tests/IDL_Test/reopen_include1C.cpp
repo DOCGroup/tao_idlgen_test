@@ -625,7 +625,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 A::B::AMI_X1Handler::getX1 (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {

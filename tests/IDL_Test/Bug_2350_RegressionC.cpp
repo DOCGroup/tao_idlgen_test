@@ -211,7 +211,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 Bug_2350_Regression::Bug_2350_Regression_excep (
-  const ::user_ExceptionHolder & a)
+  ::user_ExceptionHolder const & a)
 {
   if (!this->is_evaluated ())
     {
@@ -258,7 +258,7 @@ Bug_2350_Regression::Bug_2350_Regression_excep (
 void
 Bug_2350_Regression::sendc_Bug_2350_Regression_excep (
   ::AMI_Bug_2350_RegressionHandler_ptr ami_handler,
-  const ::user_ExceptionHolder & a)
+  ::user_ExceptionHolder const & a)
 {
   if (!this->is_evaluated ())
     {

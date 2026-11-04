@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_ED6U0B_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSC_ED6U0B_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_EABQGX_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSC_EABQGX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -147,7 +147,7 @@ public:
 
   virtual void sendc_send_dozen (
     ::AMI_seqTestHandler_ptr ami_handler,
-    const ::seqTest::dozens & bouquets);
+    ::seqTest::dozens const & bouquets);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;
@@ -285,7 +285,7 @@ public:
   static AMH_seqTestResponseHandler_ptr _nil ();
 
   virtual void send_dozen (
-    const ::seqTest::dozens & bouquets) = 0;
+    ::seqTest::dozens const & bouquets) = 0;
 
   virtual void send_dozen_excep (
     ::AMH_seqTestExceptionHolder * holder) = 0;
@@ -343,7 +343,7 @@ public:
   static AMI_seqTestHandler_ptr _nil ();
 
   virtual void send_dozen (
-    const ::seqTest::dozens & bouquets);
+    ::seqTest::dozens const & bouquets);
 
   static void
   send_dozen_reply_stub (

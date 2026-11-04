@@ -123,7 +123,7 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 void
 M1::LI::op (
-  const ::M1::S1 & s)
+  ::M1::S1 const & s)
 {
   if (!this->is_evaluated ())
     {
@@ -551,7 +551,7 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 void
 M1::L2::op (
-  const ::M1::S1 & s)
+  ::M1::S1 const & s)
 {
   if (!this->is_evaluated ())
     {
@@ -1444,7 +1444,7 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 void
 M2::M3::L3::op (
-  const ::M2::M3::S2 & s)
+  ::M2::M3::S2 const & s)
 {
   if (!this->is_evaluated ())
     {
@@ -2016,7 +2016,7 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 void
 M2::M3::L4::op (
-  const ::M2::M3::S2 & s)
+  ::M2::M3::S2 const & s)
 {
   if (!this->is_evaluated ())
     {
@@ -2824,12 +2824,12 @@ OBV_M1::AMH_L2ExceptionHolder::_tao_unmarshal__M1_AMH_L2ExceptionHolder (TAO_Inp
   return _tao_unmarshal_state (strm, ci);
 }
 OBV_M1::V::V (
-    const char * _tao_init_valString,
-    const ::M1::S1 & _tao_init_valStruct,
+    char const * _tao_init_valString,
+    ::M1::S1 const & _tao_init_valStruct,
     ::M1::LI_ptr _tao_init_valLocalIface,
-    const ::M1::BooleanUnion1 & _tao_init_valBoolUnion1,
-    const ::M1::BooleanUnion2 & _tao_init_valBoolUnion2,
-    const ::M1::X & _tao_init_valX)
+    ::M1::BooleanUnion1 const & _tao_init_valBoolUnion1,
+    ::M1::BooleanUnion2 const & _tao_init_valBoolUnion2,
+    ::M1::X const & _tao_init_valX)
 {
   valString (_tao_init_valString);
   valStruct (_tao_init_valStruct);
@@ -3014,8 +3014,8 @@ OBV_M2::M3::AMH_L4ExceptionHolder::_tao_unmarshal__M2_M3_AMH_L4ExceptionHolder (
   return _tao_unmarshal_state (strm, ci);
 }
 OBV_M2::M3::V2::V2 (
-    const char * _tao_init_valString,
-    const ::M2::M3::S2 & _tao_init_valStruct,
+    char const * _tao_init_valString,
+    ::M2::M3::S2 const & _tao_init_valStruct,
     ::M2::M3::L3_ptr _tao_init_valLocalIface,
     ::M2::M3::L4_ptr _tao_init_valLocalIface3)
 {
@@ -3130,8 +3130,8 @@ OBV_M2::M3::V2::valLocalIface3 () const
   return this->_pd_valLocalIface3.in ();
 }
 OBV_M2::M3::V3::V3 (
-    const char * _tao_init_valString,
-    const ::M1::S1 & _tao_init_valStruct,
+    char const * _tao_init_valString,
+    ::M1::S1 const & _tao_init_valStruct,
     ::M1::L2_ptr _tao_init_valLocalIface)
 {
   valString (_tao_init_valString);

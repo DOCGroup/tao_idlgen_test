@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAYC_WTO126_H_
-#define _TAO_IDL_ARRAYC_WTO126_H_
+#ifndef _TAO_IDL_ARRAYC_TB4HMH_H_
+#define _TAO_IDL_ARRAYC_TB4HMH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -261,13 +261,13 @@ public:
   static array_args_ptr _nil ();
 
   virtual void all_arrays (
-    const ::oa1 arg1,
-    const ::oa2 arg2);
+    ::oa1 const arg1,
+    ::oa2 const arg2);
 
   virtual void sendc_all_arrays (
     ::AMI_array_argsHandler_ptr ami_handler,
-    const ::oa1 arg1,
-    const ::oa2 arg2);
+    ::oa1 const arg1,
+    ::oa2 const arg2);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;
@@ -1233,7 +1233,7 @@ public:
   static AMH_MyTestResponseHandler_ptr _nil ();
 
   virtual void test_method (
-    const ::arraytest::myvec2 mystring) = 0;
+    ::arraytest::myvec2 const mystring) = 0;
 
   virtual void test_method_excep (
     ::arraytest::AMH_MyTestExceptionHolder * holder) = 0;
@@ -1291,7 +1291,7 @@ public:
   static AMI_MyTestHandler_ptr _nil ();
 
   virtual void test_method (
-    const ::arraytest::myvec2 mystring);
+    ::arraytest::myvec2 const mystring);
 
   static void
   test_method_reply_stub (

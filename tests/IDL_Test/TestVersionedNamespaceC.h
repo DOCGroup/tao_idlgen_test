@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_ADBYNK_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_ADBYNK_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_WOSEER_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_WOSEER_H_
 
 #include /**/ "ace/pre.h"
 
@@ -113,7 +113,7 @@ namespace M1
     static LI_ptr _nil ();
 
     virtual void op (
-      const ::M1::S1 & s) = 0;
+      ::M1::S1 const & s) = 0;
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -285,8 +285,8 @@ public:
 public:
   V () = default;
   V (
-      const char * _tao_init_valString,
-      const ::M1::S1 & _tao_init_valStruct,
+      char const * _tao_init_valString,
+      ::M1::S1 const & _tao_init_valStruct,
       ::M1::LI_ptr _tao_init_valLocalIface
     );
   ~V () override;

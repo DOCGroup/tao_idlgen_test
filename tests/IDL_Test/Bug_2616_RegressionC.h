@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2616_REGRESSIONC_WM16DY_H_
-#define _TAO_IDL_BUG_2616_REGRESSIONC_WM16DY_H_
+#ifndef _TAO_IDL_BUG_2616_REGRESSIONC_TSS2FZ_H_
+#define _TAO_IDL_BUG_2616_REGRESSIONC_TSS2FZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -140,11 +140,11 @@ public:
   static ::CORBA::TypeCode_ptr const _tc_Type;
 
   virtual void do_it (
-    const ::Interface1::Type & value);
+    ::Interface1::Type const & value);
 
   virtual void sendc_do_it (
     ::AMI_Interface1Handler_ptr ami_handler,
-    const ::Interface1::Type & value);
+    ::Interface1::Type const & value);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;
@@ -418,11 +418,11 @@ public:
   static ::CORBA::TypeCode_ptr const _tc_Type;
 
   virtual void do_it (
-    const ::Interface2::Type & value);
+    ::Interface2::Type const & value);
 
   virtual void sendc_do_it (
     ::AMI_Interface2Handler_ptr ami_handler,
-    const ::Interface2::Type & value);
+    ::Interface2::Type const & value);
 
   ::CORBA::Boolean _is_a (const char *type_id) override;
   const char* _interface_repository_id () const override;

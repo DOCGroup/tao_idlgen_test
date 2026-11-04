@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_SEQUENCEC_H2J6BN_H_
-#define _TAO_IDL_OLD_SEQUENCEC_H2J6BN_H_
+#ifndef _TAO_IDL_OLD_SEQUENCEC_YKABLF_H_
+#define _TAO_IDL_OLD_SEQUENCEC_YKABLF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -427,7 +427,7 @@ public:
   virtual ::f_unbounded * fattr ();
 
   virtual void fattr (
-    const ::f_unbounded & fattr);
+    ::f_unbounded const & fattr);
 
 #if !defined (_TESTSEQ_ALSO_VEC10_CH_)
 #define _TESTSEQ_ALSO_VEC10_CH_
@@ -463,7 +463,7 @@ public:
 
   virtual void sendc_set_fattr (
     ::AMI_TestSeqHandler_ptr ami_handler,
-    const ::f_unbounded & fattr);
+    ::f_unbounded const & fattr);
 
   virtual void sendc_get_fattr (
     ::AMI_TestSeqHandler_ptr ami_handler);
@@ -614,7 +614,7 @@ public:
   static AMH_TestSeqResponseHandler_ptr _nil ();
 
   virtual void get_fattr (
-    const ::f_unbounded & return_value) = 0;
+    ::f_unbounded const & return_value) = 0;
 
   virtual void get_fattr_excep (
     ::AMH_TestSeqExceptionHolder * holder) = 0;
@@ -677,7 +677,7 @@ public:
   static AMI_TestSeqHandler_ptr _nil ();
 
   virtual void get_fattr (
-    const ::f_unbounded & ami_return_val);
+    ::f_unbounded const & ami_return_val);
 
   static void
   get_fattr_reply_stub (

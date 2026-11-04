@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_MLHE6U_CPP_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_MLHE6U_CPP_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_EIZUFO_CPP_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_EIZUFO_CPP_
 
 #include "Bug_2582_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -446,7 +446,7 @@ POA_TAO_AMH_FieldDevice_TResponseHandler::getEncodingID_excep (
 }
 void
 POA_TAO_AMH_FieldDevice_TResponseHandler::getEncoding (
-  const ::Encoding_T & return_value)
+  ::Encoding_T const & return_value)
 {
   this->_tao_rh_init_reply ();
 

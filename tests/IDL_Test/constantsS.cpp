@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_CONSTANTSS_90RN72_CPP_
-#define _TAO_IDL_CONSTANTSS_90RN72_CPP_
+#ifndef _TAO_IDL_CONSTANTSS_FI41SK_CPP_
+#define _TAO_IDL_CONSTANTSS_FI41SK_CPP_
 
 #include "constantsS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

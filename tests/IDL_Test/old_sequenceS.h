@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_SNJXP8_H_
-#define _TAO_IDL_OLD_SEQUENCES_SNJXP8_H_
+#ifndef _TAO_IDL_OLD_SEQUENCES_00VZ01_H_
+#define _TAO_IDL_OLD_SEQUENCES_00VZ01_H_
 
 #include /**/ "ace/pre.h"
 
@@ -275,7 +275,7 @@ static void _set_fattr_skel (
 
 virtual void fattr (
     AMH_TestSeqResponseHandler_ptr _tao_rh,
-    const ::f_unbounded & fattr
+    ::f_unbounded const & fattr
   ) = 0;
 
 };
@@ -316,7 +316,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void fattr (
-    const ::f_unbounded & fattr) = 0;
+    ::f_unbounded const & fattr) = 0;
 
   static void _set_fattr_skel (
       TAO_ServerRequest &server_request,
@@ -357,7 +357,7 @@ public:
   POA_TAO_AMH_TestSeqResponseHandler () = default;
   virtual ~POA_TAO_AMH_TestSeqResponseHandler () = default;
   void get_fattr (
-    const ::f_unbounded & return_value) override;
+    ::f_unbounded const & return_value) override;
   void get_fattr_excep (
     ::AMH_TestSeqExceptionHolder * holder) override;
   void set_fattr () override;
@@ -395,7 +395,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void get_fattr (
-    const ::f_unbounded & ami_return_val) = 0;
+    ::f_unbounded const & ami_return_val) = 0;
 
   static void get_fattr_skel (
       TAO_ServerRequest &server_request,

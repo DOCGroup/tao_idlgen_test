@@ -398,7 +398,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Object_ptr
 Plesk::Naming::ObjectResolver::resolve (
-  const char * service_type,
+  char const * service_type,
   ::Plesk::TObjectID & sc_id)
 {
   if (!this->is_evaluated ())
@@ -448,8 +448,8 @@ Plesk::Naming::ObjectResolver::resolve (
 }
 ::CORBA::Object_ptr
 Plesk::Naming::ObjectResolver::resolve_sc (
-  const char * service_type,
-  const char * version,
+  char const * service_type,
+  char const * version,
   ::Plesk::TObjectID & sc_id)
 {
   if (!this->is_evaluated ())
@@ -503,7 +503,7 @@ Plesk::Naming::ObjectResolver::resolve_sc (
 void
 Plesk::Naming::ObjectResolver::sendc_resolve (
   ::Plesk::Naming::AMI_ObjectResolverHandler_ptr ami_handler,
-  const char * service_type,
+  char const * service_type,
   ::Plesk::TObjectID sc_id)
 {
   if (!this->is_evaluated ())
@@ -540,8 +540,8 @@ Plesk::Naming::ObjectResolver::sendc_resolve (
 void
 Plesk::Naming::ObjectResolver::sendc_resolve_sc (
   ::Plesk::Naming::AMI_ObjectResolverHandler_ptr ami_handler,
-  const char * service_type,
-  const char * version,
+  char const * service_type,
+  char const * version,
   ::Plesk::TObjectID sc_id)
 {
   if (!this->is_evaluated ())

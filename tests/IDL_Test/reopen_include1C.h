@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE1C_TH1ENC_H_
-#define _TAO_IDL_REOPEN_INCLUDE1C_TH1ENC_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE1C_2IPIRI_H_
+#define _TAO_IDL_REOPEN_INCLUDE1C_2IPIRI_H_
 
 #include /**/ "ace/pre.h"
 
@@ -290,7 +290,7 @@ public:
   static AMH_X1ResponseHandler_ptr _nil ();
 
   virtual void getX1 (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void getX1_excep (
     ::A::B::AMH_X1ExceptionHolder * holder) = 0;
@@ -348,7 +348,7 @@ public:
   static AMI_X1Handler_ptr _nil ();
 
   virtual void getX1 (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   getX1_reply_stub (

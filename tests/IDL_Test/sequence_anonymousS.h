@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_03341L_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_03341L_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_2V8IPB_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_2V8IPB_H_
 
 #include /**/ "ace/pre.h"
 
@@ -194,7 +194,7 @@ static void send_dozen_skel (
 
 virtual void send_dozen (
     AMH_seqTestResponseHandler_ptr _tao_rh,
-    const ::seqTest::dozens & bouquets
+    ::seqTest::dozens const & bouquets
   ) = 0;
 
 };
@@ -266,7 +266,7 @@ public:
   POA_TAO_AMH_seqTestResponseHandler () = default;
   virtual ~POA_TAO_AMH_seqTestResponseHandler () = default;
   void send_dozen (
-    const ::seqTest::dozens & bouquets) override;
+    ::seqTest::dozens const & bouquets) override;
   void send_dozen_excep (
     ::AMH_seqTestExceptionHolder * holder) override;
 };
@@ -301,7 +301,7 @@ public:
 
   const char* _interface_repository_id () const override;
   virtual void send_dozen (
-    const ::seqTest::dozens & bouquets) = 0;
+    ::seqTest::dozens const & bouquets) = 0;
 
   static void send_dozen_skel (
       TAO_ServerRequest &server_request,

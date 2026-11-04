@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_NQUEFN_CPP_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_NQUEFN_CPP_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_8154KP_CPP_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_8154KP_CPP_
 
 #include "array_anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

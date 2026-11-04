@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INTERFACES_5Z8IGU_CPP_
-#define _TAO_IDL_INTERFACES_5Z8IGU_CPP_
+#ifndef _TAO_IDL_INTERFACES_U2Y0DR_CPP_
+#define _TAO_IDL_INTERFACES_U2Y0DR_CPP_
 
 #include "interfaceS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -1332,7 +1332,7 @@ POA_foostep::_this ()
 
 void
 POA_TAO_AMH_foostepResponseHandler::getDate (
-  const ::foo_mod::date & return_value)
+  ::foo_mod::date const & return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -5555,7 +5555,7 @@ POA_AttributeTester::_this ()
 
 void
 POA_TAO_AMH_AttributeTesterResponseHandler::get_a_su (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -5603,7 +5603,7 @@ POA_TAO_AMH_AttributeTesterResponseHandler::set_a_su_excep (
 }
 void
 POA_TAO_AMH_AttributeTesterResponseHandler::get_a_sb (
-  const ::AttributeTester::string_1 return_value)
+  ::AttributeTester::string_1 const return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -6667,9 +6667,9 @@ POA_ParamMod::ParameterTester::_this ()
 
 void
 POA_ParamMod::TAO_AMH_ParameterTesterResponseHandler::parameter_tester_op (
-  const ::ParamMod::ParameterTester::object_seq_type & return_value,
-  const ::ParamMod::ParameterTester::object_array_type inoutarg,
-  const ::ParamMod::ParameterTester::object_union_type & outarg)
+  ::ParamMod::ParameterTester::object_seq_type const & return_value,
+  ::ParamMod::ParameterTester::object_array_type const inoutarg,
+  ::ParamMod::ParameterTester::object_union_type const & outarg)
 {
   this->_tao_rh_init_reply ();
 
@@ -7652,7 +7652,7 @@ POA_i1::if1::_this ()
 
 void
 POA_i1::TAO_AMH_if1ResponseHandler::getStr (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -8184,7 +8184,7 @@ POA_i2::if2::_this ()
 
 void
 POA_i2::TAO_AMH_if2ResponseHandler::getstr2 (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -8723,7 +8723,7 @@ POA_i2::if3::_this ()
 
 void
 POA_i2::TAO_AMH_if3ResponseHandler::getstr3 (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -11024,7 +11024,7 @@ POA_call_attribute::iBar::_this ()
 
 void
 POA_call_attribute::TAO_AMH_iBarResponseHandler::get_call (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 

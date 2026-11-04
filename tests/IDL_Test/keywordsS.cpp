@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSS_YUJBX2_CPP_
-#define _TAO_IDL_KEYWORDSS_YUJBX2_CPP_
+#ifndef _TAO_IDL_KEYWORDSS_NPY743_CPP_
+#define _TAO_IDL_KEYWORDSS_NPY743_CPP_
 
 #include "keywordsS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
