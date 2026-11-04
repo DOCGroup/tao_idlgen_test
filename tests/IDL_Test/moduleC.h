@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_MODULEC_A5YP1B_H_
-#define _TAO_IDL_MODULEC_A5YP1B_H_
+#ifndef _TAO_IDL_MODULEC_1FRABW_H_
+#define _TAO_IDL_MODULEC_1FRABW_H_
 
 #include /**/ "ace/pre.h"
 
@@ -129,10 +129,10 @@ namespace mod1
         ::mod1::mod2::AMI_ex1Handler_ptr ami_handler,
         ::CORBA::Long a);
 
-      ::CORBA::Boolean _is_a (const char *type_id) override;
-      const char* _interface_repository_id () const override;
-      static const char* _desc_repository_id ();
-      static const char* _desc_interface_name ();
+      ::CORBA::Boolean _is_a (char const *type_id) override;
+      char const *_interface_repository_id () const override;
+      static char const *_desc_repository_id ();
+      static char const *_desc_interface_name ();
       ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
@@ -153,9 +153,9 @@ namespace mod1
 
     private:
       // Private and unimplemented for concrete interfaces.
-      ex1 (const ex1 &) = delete;
+      ex1 (ex1 const &) = delete;
       ex1 (ex1 &&) = delete;
-      ex1 &operator= (const ex1 &) = delete;
+      ex1 &operator= (ex1 const &) = delete;
       ex1 &operator= (ex1 &&) = delete;
     };
 
@@ -315,10 +315,10 @@ public:
   virtual void m1_excep (
     ::mod1::mod2::AMH_ex1ExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -329,9 +329,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_ex1ResponseHandler (const AMH_ex1ResponseHandler &) = delete;
+  AMH_ex1ResponseHandler (AMH_ex1ResponseHandler const &) = delete;
   AMH_ex1ResponseHandler (AMH_ex1ResponseHandler &&) = delete;
-  AMH_ex1ResponseHandler &operator= (const AMH_ex1ResponseHandler &) = delete;
+  AMH_ex1ResponseHandler &operator= (AMH_ex1ResponseHandler const &) = delete;
   AMH_ex1ResponseHandler &operator= (AMH_ex1ResponseHandler &&) = delete;
 };
 
@@ -413,10 +413,10 @@ public:
   virtual void m1_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -437,9 +437,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_ex1Handler (const AMI_ex1Handler &) = delete;
+  AMI_ex1Handler (AMI_ex1Handler const &) = delete;
   AMI_ex1Handler (AMI_ex1Handler &&) = delete;
-  AMI_ex1Handler &operator= (const AMI_ex1Handler &) = delete;
+  AMI_ex1Handler &operator= (AMI_ex1Handler const &) = delete;
   AMI_ex1Handler &operator= (AMI_ex1Handler &&) = delete;
 };
 
@@ -497,10 +497,10 @@ public:
     ::mod1::mod2::AMI_ex2Handler_ptr ami_handler,
     ::CORBA::Long a);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -521,9 +521,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  ex2 (const ex2 &) = delete;
+  ex2 (ex2 const &) = delete;
   ex2 (ex2 &&) = delete;
-  ex2 &operator= (const ex2 &) = delete;
+  ex2 &operator= (ex2 const &) = delete;
   ex2 &operator= (ex2 &&) = delete;
 };
 
@@ -668,10 +668,10 @@ public:
   virtual void m2_excep (
     ::mod1::mod2::AMH_ex2ExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -682,9 +682,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_ex2ResponseHandler (const AMH_ex2ResponseHandler &) = delete;
+  AMH_ex2ResponseHandler (AMH_ex2ResponseHandler const &) = delete;
   AMH_ex2ResponseHandler (AMH_ex2ResponseHandler &&) = delete;
-  AMH_ex2ResponseHandler &operator= (const AMH_ex2ResponseHandler &) = delete;
+  AMH_ex2ResponseHandler &operator= (AMH_ex2ResponseHandler const &) = delete;
   AMH_ex2ResponseHandler &operator= (AMH_ex2ResponseHandler &&) = delete;
 };
 
@@ -755,10 +755,10 @@ public:
   virtual void m2_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -779,9 +779,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_ex2Handler (const AMI_ex2Handler &) = delete;
+  AMI_ex2Handler (AMI_ex2Handler const &) = delete;
   AMI_ex2Handler (AMI_ex2Handler &&) = delete;
-  AMI_ex2Handler &operator= (const AMI_ex2Handler &) = delete;
+  AMI_ex2Handler &operator= (AMI_ex2Handler const &) = delete;
   AMI_ex2Handler &operator= (AMI_ex2Handler &&) = delete;
 };
 
@@ -799,7 +799,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -817,7 +817,7 @@ namespace TAO
 #define _MOD1_MOD2_EX1__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod1::mod2::ex1>
+  class  Arg_Traits<::mod1::mod2::ex1>
     : public Object_Arg_Traits_T<
         ::mod1::mod2::ex1_ptr,
         ::mod1::mod2::ex1_var,
@@ -833,7 +833,7 @@ namespace TAO
 #define _MOD1_MOD2_AMH_EX1EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::mod1::mod2::AMH_ex1ExceptionHolder>
+  class Arg_Traits<::mod1::mod2::AMH_ex1ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::mod1::mod2::AMH_ex1ExceptionHolder *,
@@ -851,7 +851,7 @@ namespace TAO
 #define _MOD1_MOD2_AMI_EX1HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod1::mod2::AMI_ex1Handler>
+  class  Arg_Traits<::mod1::mod2::AMI_ex1Handler>
     : public Object_Arg_Traits_T<
         ::mod1::mod2::AMI_ex1Handler_ptr,
         ::mod1::mod2::AMI_ex1Handler_var,
@@ -867,7 +867,7 @@ namespace TAO
 #define _MOD1_MOD2_EX2__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod1::mod2::ex2>
+  class  Arg_Traits<::mod1::mod2::ex2>
     : public Object_Arg_Traits_T<
         ::mod1::mod2::ex2_ptr,
         ::mod1::mod2::ex2_var,
@@ -883,7 +883,7 @@ namespace TAO
 #define _MOD1_MOD2_AMH_EX2EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::mod1::mod2::AMH_ex2ExceptionHolder>
+  class Arg_Traits<::mod1::mod2::AMH_ex2ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::mod1::mod2::AMH_ex2ExceptionHolder *,
@@ -901,7 +901,7 @@ namespace TAO
 #define _MOD1_MOD2_AMI_EX2HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod1::mod2::AMI_ex2Handler>
+  class  Arg_Traits<::mod1::mod2::AMI_ex2Handler>
     : public Object_Arg_Traits_T<
         ::mod1::mod2::AMI_ex2Handler_ptr,
         ::mod1::mod2::AMI_ex2Handler_var,
@@ -931,11 +931,9 @@ namespace OBV_mod1
     ~AMH_ex1ExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__mod1_mod2_AMH_ex1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__mod1_mod2_AMH_ex1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__mod1_mod2_AMH_ex1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__mod1_mod2_AMH_ex1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -955,11 +953,9 @@ protected:
   ~AMH_ex2ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__mod1_mod2_AMH_ex2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__mod1_mod2_AMH_ex2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__mod1_mod2_AMH_ex2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__mod1_mod2_AMH_ex2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -981,7 +977,7 @@ namespace TAO
 #define _MOD1_MOD2_EX1__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod1::mod2::ex1>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod1::mod2::ex1>
   {
     static ::mod1::mod2::ex1_ptr duplicate (::mod1::mod2::ex1_ptr p);
     static void release (::mod1::mod2::ex1_ptr p);
@@ -1008,7 +1004,7 @@ namespace TAO
 #define _MOD1_MOD2_AMH_EX1RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod1::mod2::AMH_ex1ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod1::mod2::AMH_ex1ResponseHandler>
   {
     static ::mod1::mod2::AMH_ex1ResponseHandler_ptr duplicate (::mod1::mod2::AMH_ex1ResponseHandler_ptr p);
     static void release (::mod1::mod2::AMH_ex1ResponseHandler_ptr p);
@@ -1022,7 +1018,7 @@ namespace TAO
 #define _MOD1_MOD2_AMI_EX1HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod1::mod2::AMI_ex1Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod1::mod2::AMI_ex1Handler>
   {
     static ::mod1::mod2::AMI_ex1Handler_ptr duplicate (::mod1::mod2::AMI_ex1Handler_ptr p);
     static void release (::mod1::mod2::AMI_ex1Handler_ptr p);
@@ -1036,7 +1032,7 @@ namespace TAO
 #define _MOD1_MOD2_EX2__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod1::mod2::ex2>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod1::mod2::ex2>
   {
     static ::mod1::mod2::ex2_ptr duplicate (::mod1::mod2::ex2_ptr p);
     static void release (::mod1::mod2::ex2_ptr p);
@@ -1063,7 +1059,7 @@ namespace TAO
 #define _MOD1_MOD2_AMH_EX2RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod1::mod2::AMH_ex2ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod1::mod2::AMH_ex2ResponseHandler>
   {
     static ::mod1::mod2::AMH_ex2ResponseHandler_ptr duplicate (::mod1::mod2::AMH_ex2ResponseHandler_ptr p);
     static void release (::mod1::mod2::AMH_ex2ResponseHandler_ptr p);
@@ -1077,7 +1073,7 @@ namespace TAO
 #define _MOD1_MOD2_AMI_EX2HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod1::mod2::AMI_ex2Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod1::mod2::AMI_ex2Handler>
   {
     static ::mod1::mod2::AMI_ex2Handler_ptr duplicate (::mod1::mod2::AMI_ex2Handler_ptr p);
     static void release (::mod1::mod2::AMI_ex2Handler_ptr p);
@@ -1091,7 +1087,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod1::mod2::ex1_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod1::mod2::ex1_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod1::mod2::ex1_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1114,14 +1110,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod1::mod2::AMI_ex1Handler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod1::mod2::AMI_ex1Handler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod1::mod2::AMI_ex1Handler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod1::mod2::ex2_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod1::mod2::ex2_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod1::mod2::ex2_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1144,7 +1140,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod1::mod2::AMI_ex2Handler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod1::mod2::AMI_ex2Handler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod1::mod2::AMI_ex2Handler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

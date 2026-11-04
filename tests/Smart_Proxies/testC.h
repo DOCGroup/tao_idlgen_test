@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTC_CPBAND_H_
-#define _TAO_IDL_TESTC_CPBAND_H_
+#ifndef _TAO_IDL_TESTC_ZA1NGU_H_
+#define _TAO_IDL_TESTC_ZA1NGU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -97,8 +97,8 @@ public:
 
   virtual void shutdown ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -119,9 +119,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  Test (const Test &) = delete;
+  Test (Test const &) = delete;
   Test (Test &&) = delete;
-  Test &operator= (const Test &) = delete;
+  Test &operator= (Test const &) = delete;
   Test &operator= (Test &&) = delete;
 };
 
@@ -140,9 +140,7 @@ public:
 
   virtual ~TAO_Test_Default_Proxy_Factory ();
 
-  virtual Test_ptr create_proxy (
-      Test_ptr proxy
-    );
+  virtual Test_ptr create_proxy (Test_ptr proxy);
 };
 
 class  TAO_Test_Proxy_Factory_Adapter
@@ -151,101 +149,94 @@ public:
 
   friend class TAO_Singleton<TAO_Test_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
 
-  void register_proxy_factory (
-      TAO_Test_Default_Proxy_Factory *df,
-      bool one_shot_factory = true
-    );
-
+  void register_proxy_factory (TAO_Test_Default_Proxy_Factory *df, bool one_shot_factory = true);
   void unregister_proxy_factory ();
 
-  Test_ptr create_proxy (
-      Test_ptr proxy
-    );
+  Test_ptr create_proxy (Test_ptr proxy);
+  protected:
+    TAO_Test_Proxy_Factory_Adapter ();
+    ~TAO_Test_Proxy_Factory_Adapter ();
+    TAO_Test_Proxy_Factory_Adapter &operator= (
+        TAO_Test_Proxy_Factory_Adapter const &
+      );
+    TAO_Test_Default_Proxy_Factory *proxy_factory_;
+    bool one_shot_factory_;
+    bool disable_factory_;
+    TAO_SYNCH_RECURSIVE_MUTEX lock_;
+  };
 
-protected:
-  TAO_Test_Proxy_Factory_Adapter ();
-  ~TAO_Test_Proxy_Factory_Adapter ();
-  TAO_Test_Proxy_Factory_Adapter &operator= (
-      const TAO_Test_Proxy_Factory_Adapter &
-    );
-  TAO_Test_Default_Proxy_Factory *proxy_factory_;
-  bool one_shot_factory_;
-  bool disable_factory_;
-  TAO_SYNCH_RECURSIVE_MUTEX lock_;
-};
+  using TAO_Test_PROXY_FACTORY_ADAPTER = TAO_Singleton<TAO_Test_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
 
-using TAO_Test_PROXY_FACTORY_ADAPTER = TAO_Singleton<TAO_Test_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
-
-class  TAO_Test_Smart_Proxy_Base
-  : public virtual Test,
-    public virtual TAO_Smart_Proxy_Base
-{
-public:
-  TAO_Test_Smart_Proxy_Base ();
-  ~TAO_Test_Smart_Proxy_Base ();
-  virtual TAO_Stub *_stubobj () const;
-  virtual TAO_Stub *_stubobj ();
-virtual ::CORBA::Short box_prices ();virtual ::CORBA::Long tickets (
-  ::CORBA::Short number);virtual void shutdown ();protected:
-  ::Test_ptr get_proxy ();
-  ::Test_var proxy_;
-};
+  class  TAO_Test_Smart_Proxy_Base
+    : public virtual Test,
+      public virtual TAO_Smart_Proxy_Base
+  {
+  public:
+    TAO_Test_Smart_Proxy_Base ();
+    ~TAO_Test_Smart_Proxy_Base ();
+    virtual TAO_Stub *_stubobj () const;
+    virtual TAO_Stub *_stubobj ();
+      virtual ::CORBA::Short box_prices ();  virtual ::CORBA::Long tickets (
+    ::CORBA::Short number);  virtual void shutdown ();protected:
+    ::Test_ptr get_proxy ();
+    ::Test_var proxy_;
+  };
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-// Arg traits specializations.
-namespace TAO
-{
+  // Arg traits specializations.
+  namespace TAO
+  {
 
 #if !defined (_TEST__ARG_TRAITS_)
 #define _TEST__ARG_TRAITS_
 
-  template<>
-  class  Arg_Traits< ::Test>
-    : public Object_Arg_Traits_T<
-        ::Test_ptr,
-        ::Test_var,
-        ::Test_out,
-        TAO::Objref_Traits<Test>,
-        TAO::Any_Insert_Policy_Noop>
-  {
-  };
+    template<>
+    class  Arg_Traits<::Test>
+      : public Object_Arg_Traits_T<
+          ::Test_ptr,
+          ::Test_var,
+          ::Test_out,
+          TAO::Objref_Traits<Test>,
+          TAO::Any_Insert_Policy_Noop>
+    {
+    };
 
 #endif /* end #if !defined */
-}
+  }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-// Traits specializations.
-namespace TAO
-{
+  // Traits specializations.
+  namespace TAO
+  {
 
 #if !defined (_TEST__TRAITS_)
 #define _TEST__TRAITS_
 
-  template<>
-  struct  Objref_Traits< ::Test>
-  {
-    static ::Test_ptr duplicate (::Test_ptr p);
-    static void release (::Test_ptr p);
-    static ::Test_ptr nil ();
-    static ::CORBA::Boolean marshal (const ::Test_ptr p,TAO_OutputCDR & cdr);
-  };
+    template<>
+    struct  Objref_Traits<::Test>
+    {
+      static ::Test_ptr duplicate (::Test_ptr p);
+      static void release (::Test_ptr p);
+      static ::Test_ptr nil ();
+      static ::CORBA::Boolean marshal (const ::Test_ptr p,TAO_OutputCDR & cdr);
+    };
 
 #endif /* end #if !defined */
-}
+  }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test_ptr );
- ::CORBA::Boolean operator>> (TAO_InputCDR &, Test_ptr &);
+   ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test_ptr const);
+   ::CORBA::Boolean operator>> (TAO_InputCDR &, Test_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-#if defined (__ACE_INLINE__)
+  #if defined (__ACE_INLINE__)
 #include "testC.inl"
 #endif /* defined INLINE */
 

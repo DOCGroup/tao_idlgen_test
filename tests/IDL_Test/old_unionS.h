@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONS_Y41MEK_H_
-#define _TAO_IDL_OLD_UNIONS_Y41MEK_H_
+#ifndef _TAO_IDL_OLD_UNIONS_ZQNTZ6_H_
+#define _TAO_IDL_OLD_UNIONS_ZQNTZ6_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::OldUnion::Bar>
+  class SArg_Traits<::OldUnion::Bar>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::Bar,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldUnion::Foo>
+  class SArg_Traits<::OldUnion::Foo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::Foo,
@@ -94,7 +94,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldUnion::Foo2>
+  class SArg_Traits<::OldUnion::Foo2>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::Foo2,
@@ -107,7 +107,7 @@ namespace TAO
 #define _OLDUNION_A__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldUnion::a>
+  class  SArg_Traits<::OldUnion::a>
     : public Object_SArg_Traits_T<
         ::OldUnion::a_ptr,
         ::OldUnion::a_var,
@@ -119,7 +119,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::OldUnion::a::astruct>
+  class SArg_Traits<::OldUnion::a::astruct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::a::astruct,
@@ -132,7 +132,7 @@ namespace TAO
 #define _OLDUNION_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::OldUnion::AMH_aExceptionHolder>
+  class SArg_Traits<::OldUnion::AMH_aExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldUnion::AMH_aExceptionHolder *,
@@ -149,7 +149,7 @@ namespace TAO
 #define _OLDUNION_AMI_AHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldUnion::AMI_aHandler>
+  class  SArg_Traits<::OldUnion::AMI_aHandler>
     : public Object_SArg_Traits_T<
         ::OldUnion::AMI_aHandler_ptr,
         ::OldUnion::AMI_aHandler_var,
@@ -176,10 +176,10 @@ namespace POA_OldUnion
     AMH_a ();
 
   public:
-    AMH_a (const AMH_a& rhs);
+    AMH_a (AMH_a const &rhs);
     ~AMH_a () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -187,7 +187,7 @@ namespace POA_OldUnion
 
     OldUnion::a *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void opA_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -195,7 +195,7 @@ namespace POA_OldUnion
 
   virtual void opA (
       OldUnion::AMH_aResponseHandler_ptr _tao_rh,
-      const ::OldUnion::a::astruct & b
+      ::OldUnion::a::astruct const & b
     ) = 0;
 
 };
@@ -217,10 +217,10 @@ public:
   using _stub_ptr_type = ::OldUnion::a_ptr;
   using _stub_var_type = ::OldUnion::a_var;
 
-  a (const a& rhs) = default;
+  a (a const &rhs) = default;
   ~a () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -228,9 +228,9 @@ public:
 
   ::OldUnion::a *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::OldUnion::Foo2 opA (
-    const ::OldUnion::a::astruct & b) = 0;
+    ::OldUnion::a::astruct const & b) = 0;
 
   static void opA_skel (
       TAO_ServerRequest &server_request,
@@ -267,7 +267,7 @@ public:
   TAO_AMH_aResponseHandler () = default;
   virtual ~TAO_AMH_aResponseHandler () = default;
   void opA (
-    const ::OldUnion::Foo2 & return_value) override;
+    ::OldUnion::Foo2 const & return_value) override;
   void opA_excep (
     ::OldUnion::AMH_aExceptionHolder * holder) override;
 };
@@ -289,10 +289,10 @@ public:
   using _stub_ptr_type = ::OldUnion::AMI_aHandler_ptr;
   using _stub_var_type = ::OldUnion::AMI_aHandler_var;
 
-  AMI_aHandler (const AMI_aHandler& rhs) = default;
+  AMI_aHandler (AMI_aHandler const &rhs) = default;
   ~AMI_aHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -300,9 +300,9 @@ public:
 
   ::OldUnion::AMI_aHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void opA (
-    const ::OldUnion::Foo2 & ami_return_val) = 0;
+    ::OldUnion::Foo2 const & ami_return_val) = 0;
 
   static void opA_skel (
       TAO_ServerRequest &server_request,

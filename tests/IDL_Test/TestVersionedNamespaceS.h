@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_8U8NEH_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACES_8U8NEH_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_T4M0QU_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACES_T4M0QU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -51,7 +51,7 @@ namespace TAO
 {
 
   template<>
-  class SArg_Traits< ::M1::S1>
+  class SArg_Traits<::M1::S1>
     : public
         Fixed_Size_SArg_Traits_T<
             ::M1::S1,
@@ -64,7 +64,7 @@ namespace TAO
 #define _M1_V__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::M1::V>
+  class SArg_Traits<::M1::V>
     : public
         Object_SArg_Traits_T<
             ::M1::V *,

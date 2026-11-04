@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONC_NJYH8G_H_
-#define _TAO_IDL_OLD_UNIONC_NJYH8G_H_
+#ifndef _TAO_IDL_OLD_UNIONC_1KH9AI_H_
+#define _TAO_IDL_OLD_UNIONC_1KH9AI_H_
 
 #include /**/ "ace/pre.h"
 
@@ -240,16 +240,16 @@ namespace OldUnion
     static ::CORBA::TypeCode_ptr const _tc_astruct;
 
     virtual ::OldUnion::Foo2 opA (
-      const ::OldUnion::a::astruct & b);
+      ::OldUnion::a::astruct const & b);
 
     virtual void sendc_opA (
       ::OldUnion::AMI_aHandler_ptr ami_handler,
-      const ::OldUnion::a::astruct & b);
+      ::OldUnion::a::astruct const & b);
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -270,9 +270,9 @@ namespace OldUnion
 
   private:
     // Private and unimplemented for concrete interfaces.
-    a (const a &) = delete;
+    a (a const &) = delete;
     a (a &&) = delete;
-    a &operator= (const a &) = delete;
+    a &operator= (a const &) = delete;
     a &operator= (a &&) = delete;
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_a;
@@ -382,15 +382,15 @@ public:
   static AMH_aResponseHandler_ptr _nil ();
 
   virtual void opA (
-    const ::OldUnion::Foo2 & return_value) = 0;
+    ::OldUnion::Foo2 const & return_value) = 0;
 
   virtual void opA_excep (
     ::OldUnion::AMH_aExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -401,9 +401,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_aResponseHandler (const AMH_aResponseHandler &) = delete;
+  AMH_aResponseHandler (AMH_aResponseHandler const &) = delete;
   AMH_aResponseHandler (AMH_aResponseHandler &&) = delete;
-  AMH_aResponseHandler &operator= (const AMH_aResponseHandler &) = delete;
+  AMH_aResponseHandler &operator= (AMH_aResponseHandler const &) = delete;
   AMH_aResponseHandler &operator= (AMH_aResponseHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_aResponseHandler;
@@ -440,7 +440,7 @@ public:
   static AMI_aHandler_ptr _nil ();
 
   virtual void opA (
-    const ::OldUnion::Foo2 & ami_return_val);
+    ::OldUnion::Foo2 const & ami_return_val);
 
   static void
   opA_reply_stub (
@@ -451,10 +451,10 @@ public:
   virtual void opA_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -475,9 +475,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_aHandler (const AMI_aHandler &) = delete;
+  AMI_aHandler (AMI_aHandler const &) = delete;
   AMI_aHandler (AMI_aHandler &&) = delete;
-  AMI_aHandler &operator= (const AMI_aHandler &) = delete;
+  AMI_aHandler &operator= (AMI_aHandler const &) = delete;
   AMI_aHandler &operator= (AMI_aHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_aHandler;
@@ -494,7 +494,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -509,7 +509,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::OldUnion::Bar>
+  class Arg_Traits<::OldUnion::Bar>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldUnion::Bar,
@@ -519,7 +519,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldUnion::Foo>
+  class Arg_Traits<::OldUnion::Foo>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldUnion::Foo,
@@ -529,7 +529,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldUnion::Foo2>
+  class Arg_Traits<::OldUnion::Foo2>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldUnion::Foo2,
@@ -542,7 +542,7 @@ namespace TAO
 #define _OLDUNION_A__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldUnion::a>
+  class  Arg_Traits<::OldUnion::a>
     : public Object_Arg_Traits_T<
         ::OldUnion::a_ptr,
         ::OldUnion::a_var,
@@ -555,7 +555,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::OldUnion::a::astruct>
+  class Arg_Traits<::OldUnion::a::astruct>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldUnion::a::astruct,
@@ -568,7 +568,7 @@ namespace TAO
 #define _OLDUNION_AMH_AEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldUnion::AMH_aExceptionHolder>
+  class Arg_Traits<::OldUnion::AMH_aExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldUnion::AMH_aExceptionHolder *,
@@ -586,7 +586,7 @@ namespace TAO
 #define _OLDUNION_AMI_AHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldUnion::AMI_aHandler>
+  class  Arg_Traits<::OldUnion::AMI_aHandler>
     : public Object_Arg_Traits_T<
         ::OldUnion::AMI_aHandler_ptr,
         ::OldUnion::AMI_aHandler_var,
@@ -614,11 +614,9 @@ protected:
   ~AMH_aExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldUnion_AMH_aExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldUnion_AMH_aExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldUnion_AMH_aExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldUnion_AMH_aExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -639,7 +637,7 @@ namespace TAO
 #define _OLDUNION_A__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldUnion::a>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldUnion::a>
   {
     static ::OldUnion::a_ptr duplicate (::OldUnion::a_ptr p);
     static void release (::OldUnion::a_ptr p);
@@ -666,7 +664,7 @@ namespace TAO
 #define _OLDUNION_AMH_ARESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldUnion::AMH_aResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldUnion::AMH_aResponseHandler>
   {
     static ::OldUnion::AMH_aResponseHandler_ptr duplicate (::OldUnion::AMH_aResponseHandler_ptr p);
     static void release (::OldUnion::AMH_aResponseHandler_ptr p);
@@ -680,7 +678,7 @@ namespace TAO
 #define _OLDUNION_AMI_AHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldUnion::AMI_aHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldUnion::AMI_aHandler>
   {
     static ::OldUnion::AMI_aHandler_ptr duplicate (::OldUnion::AMI_aHandler_ptr p);
     static void release (::OldUnion::AMI_aHandler_ptr p);
@@ -724,7 +722,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion::a_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion::a_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldUnion::a_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldUnion::a_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -751,7 +749,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion::AMH_aResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion::AMH_aResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldUnion::AMH_aResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldUnion::AMH_aResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -760,7 +758,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion::AMI_aHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion::AMI_aHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldUnion::AMI_aHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldUnion::AMI_aHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -787,7 +785,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldUnion::a_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldUnion::a_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldUnion::a_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -817,7 +815,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldUnion::AMI_aHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldUnion::AMI_aHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldUnion::AMI_aHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

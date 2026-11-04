@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDINGS_U4ID9K_H_
-#define _TAO_IDL_INCLUDINGS_U4ID9K_H_
+#ifndef _TAO_IDL_INCLUDINGS_80TSSD_H_
+#define _TAO_IDL_INCLUDINGS_80TSSD_H_
 
 #include /**/ "ace/pre.h"
 
@@ -61,7 +61,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -75,7 +75,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::choice>
+  class SArg_Traits<::choice>
     : public
         Basic_SArg_Traits_T<
             ::choice,
@@ -85,7 +85,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::myUnion>
+  class SArg_Traits<::myUnion>
     : public
         Var_Size_SArg_Traits_T<
             ::myUnion,
@@ -95,7 +95,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Bog>
+  class SArg_Traits<::Bog>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Bog,
@@ -108,7 +108,7 @@ namespace TAO
 #define _IFACE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::iface>
+  class  SArg_Traits<::iface>
     : public Object_SArg_Traits_T<
         ::iface_ptr,
         ::iface_var,
@@ -120,7 +120,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::iface::postal>
+  class SArg_Traits<::iface::postal>
     : public
         Basic_SArg_Traits_T<
             ::iface::postal,
@@ -130,7 +130,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::iface::using_incl>
+  class SArg_Traits<::iface::using_incl>
     : public
         Fixed_Size_SArg_Traits_T<
             ::iface::using_incl,
@@ -143,7 +143,7 @@ namespace TAO
 #define _AMH_IFACEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_ifaceExceptionHolder>
+  class SArg_Traits<::AMH_ifaceExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_ifaceExceptionHolder *,
@@ -160,7 +160,7 @@ namespace TAO
 #define _AMI_IFACEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_ifaceHandler>
+  class  SArg_Traits<::AMI_ifaceHandler>
     : public Object_SArg_Traits_T<
         ::AMI_ifaceHandler_ptr,
         ::AMI_ifaceHandler_var,
@@ -172,7 +172,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::VT_Test::VTSeq>
+  class SArg_Traits<::VT_Test::VTSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::VT_Test::VTSeq,
@@ -182,7 +182,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::TestStr>
+  class SArg_Traits<::TestStr>
     : public
         Var_Size_SArg_Traits_T<
             ::TestStr,
@@ -192,7 +192,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::TestUn>
+  class SArg_Traits<::TestUn>
     : public
         Var_Size_SArg_Traits_T<
             ::TestUn,
@@ -205,7 +205,7 @@ namespace TAO
 #define _MYINT__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::MyInt>
+  class  SArg_Traits<::MyInt>
     : public Object_SArg_Traits_T<
         ::MyInt_ptr,
         ::MyInt_var,
@@ -220,7 +220,7 @@ namespace TAO
 #define _AMH_MYINTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_MyIntExceptionHolder>
+  class SArg_Traits<::AMH_MyIntExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_MyIntExceptionHolder *,
@@ -237,7 +237,7 @@ namespace TAO
 #define _AMI_MYINTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_MyIntHandler>
+  class  SArg_Traits<::AMI_MyIntHandler>
     : public Object_SArg_Traits_T<
         ::AMI_MyIntHandler_ptr,
         ::AMI_MyIntHandler_var,
@@ -252,7 +252,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_CHILDIF__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::RootModule::SUBMODULE1::ChildIF>
+  class  SArg_Traits<::RootModule::SUBMODULE1::ChildIF>
     : public Object_SArg_Traits_T<
         ::RootModule::SUBMODULE1::ChildIF_ptr,
         ::RootModule::SUBMODULE1::ChildIF_var,
@@ -264,7 +264,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::RootModule::SUBMODULE1::ChildIF::DifferentMode>
+  class SArg_Traits<::RootModule::SUBMODULE1::ChildIF::DifferentMode>
     : public
         Basic_SArg_Traits_T<
             ::RootModule::SUBMODULE1::ChildIF::DifferentMode,
@@ -277,7 +277,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMH_CHILDIFEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder>
+  class SArg_Traits<::RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder *,
@@ -294,7 +294,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMI_CHILDIFHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::RootModule::SUBMODULE1::AMI_ChildIFHandler>
+  class  SArg_Traits<::RootModule::SUBMODULE1::AMI_ChildIFHandler>
     : public Object_SArg_Traits_T<
         ::RootModule::SUBMODULE1::AMI_ChildIFHandler_ptr,
         ::RootModule::SUBMODULE1::AMI_ChildIFHandler_var,
@@ -309,7 +309,7 @@ namespace TAO
 #define _B__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::B>
+  class  SArg_Traits<::B>
     : public Object_SArg_Traits_T<
         ::B_ptr,
         ::B_var,
@@ -324,7 +324,7 @@ namespace TAO
 #define _AMH_BEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_BExceptionHolder>
+  class SArg_Traits<::AMH_BExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_BExceptionHolder *,
@@ -341,7 +341,7 @@ namespace TAO
 #define _AMI_BHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_BHandler>
+  class  SArg_Traits<::AMI_BHandler>
     : public Object_SArg_Traits_T<
         ::AMI_BHandler_ptr,
         ::AMI_BHandler_var,
@@ -365,10 +365,10 @@ protected:
   POA_AMH_iface ();
 
 public:
-  POA_AMH_iface (const POA_AMH_iface& rhs);
+  POA_AMH_iface (POA_AMH_iface const &rhs);
   ~POA_AMH_iface () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -376,7 +376,7 @@ public:
 
   iface *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 };
 
 class POA_iface;
@@ -396,10 +396,10 @@ public:
   using _stub_ptr_type = ::iface_ptr;
   using _stub_var_type = ::iface_var;
 
-  POA_iface (const POA_iface& rhs) = default;
+  POA_iface (POA_iface const &rhs) = default;
   ~POA_iface () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -407,7 +407,7 @@ public:
 
   ::iface *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -453,10 +453,10 @@ public:
   using _stub_ptr_type = ::AMI_ifaceHandler_ptr;
   using _stub_var_type = ::AMI_ifaceHandler_var;
 
-  POA_AMI_ifaceHandler (const POA_AMI_ifaceHandler& rhs) = default;
+  POA_AMI_ifaceHandler (POA_AMI_ifaceHandler const &rhs) = default;
   ~POA_AMI_ifaceHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -464,7 +464,7 @@ public:
 
   ::AMI_ifaceHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -500,10 +500,10 @@ protected:
   POA_AMH_MyInt ();
 
 public:
-  POA_AMH_MyInt (const POA_AMH_MyInt& rhs);
+  POA_AMH_MyInt (POA_AMH_MyInt const &rhs);
   ~POA_AMH_MyInt () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -511,7 +511,7 @@ public:
 
   MyInt *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -519,7 +519,7 @@ static void op_skel (
 
 virtual void op (
     AMH_MyIntResponseHandler_ptr _tao_rh,
-    const ::A::MyStructA & ab
+    ::A::MyStructA const & ab
   ) = 0;
 
 };
@@ -541,10 +541,10 @@ public:
   using _stub_ptr_type = ::MyInt_ptr;
   using _stub_var_type = ::MyInt_var;
 
-  POA_MyInt (const POA_MyInt& rhs) = default;
+  POA_MyInt (POA_MyInt const &rhs) = default;
   ~POA_MyInt () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -552,9 +552,9 @@ public:
 
   ::MyInt *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::A::MyStructA * op (
-    const ::A::MyStructA & ab) = 0;
+    ::A::MyStructA const & ab) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
@@ -591,7 +591,7 @@ public:
   POA_TAO_AMH_MyIntResponseHandler () = default;
   virtual ~POA_TAO_AMH_MyIntResponseHandler () = default;
   void op (
-    const ::A::MyStructA & return_value) override;
+    ::A::MyStructA const & return_value) override;
   void op_excep (
     ::AMH_MyIntExceptionHolder * holder) override;
 };
@@ -613,10 +613,10 @@ public:
   using _stub_ptr_type = ::AMI_MyIntHandler_ptr;
   using _stub_var_type = ::AMI_MyIntHandler_var;
 
-  POA_AMI_MyIntHandler (const POA_AMI_MyIntHandler& rhs) = default;
+  POA_AMI_MyIntHandler (POA_AMI_MyIntHandler const &rhs) = default;
   ~POA_AMI_MyIntHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -624,9 +624,9 @@ public:
 
   ::AMI_MyIntHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op (
-    const ::A::MyStructA & ami_return_val) = 0;
+    ::A::MyStructA const & ami_return_val) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
@@ -681,10 +681,10 @@ namespace POA_RootModule
       AMH_ChildIF ();
 
     public:
-      AMH_ChildIF (const AMH_ChildIF& rhs);
+      AMH_ChildIF (AMH_ChildIF const &rhs);
       ~AMH_ChildIF () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -692,7 +692,7 @@ namespace POA_RootModule
 
       RootModule::SUBMODULE1::ChildIF *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   class ChildIF;
@@ -712,10 +712,10 @@ namespace POA_RootModule
     using _stub_ptr_type = ::RootModule::SUBMODULE1::ChildIF_ptr;
     using _stub_var_type = ::RootModule::SUBMODULE1::ChildIF_var;
 
-    ChildIF (const ChildIF& rhs) = default;
+    ChildIF (ChildIF const &rhs) = default;
     ~ChildIF () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -723,7 +723,7 @@ namespace POA_RootModule
 
     ::RootModule::SUBMODULE1::ChildIF *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -770,10 +770,10 @@ namespace POA_RootModule
     using _stub_ptr_type = ::RootModule::SUBMODULE1::AMI_ChildIFHandler_ptr;
     using _stub_var_type = ::RootModule::SUBMODULE1::AMI_ChildIFHandler_var;
 
-    AMI_ChildIFHandler (const AMI_ChildIFHandler& rhs) = default;
+    AMI_ChildIFHandler (AMI_ChildIFHandler const &rhs) = default;
     ~AMI_ChildIFHandler () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -781,7 +781,7 @@ namespace POA_RootModule
 
     ::RootModule::SUBMODULE1::AMI_ChildIFHandler *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -812,10 +812,10 @@ protected:
   POA_AMH_B ();
 
 public:
-  POA_AMH_B (const POA_AMH_B& rhs);
+  POA_AMH_B (POA_AMH_B const &rhs);
   ~POA_AMH_B () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -823,7 +823,7 @@ public:
 
   B *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 };
 
 class POA_B;
@@ -843,10 +843,10 @@ public:
   using _stub_ptr_type = ::B_ptr;
   using _stub_var_type = ::B_var;
 
-  POA_B (const POA_B& rhs) = default;
+  POA_B (POA_B const &rhs) = default;
   ~POA_B () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -854,7 +854,7 @@ public:
 
   ::B *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -900,10 +900,10 @@ public:
   using _stub_ptr_type = ::AMI_BHandler_ptr;
   using _stub_var_type = ::AMI_BHandler_var;
 
-  POA_AMI_BHandler (const POA_AMI_BHandler& rhs) = default;
+  POA_AMI_BHandler (POA_AMI_BHandler const &rhs) = default;
   ~POA_AMI_BHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -911,7 +911,7 @@ public:
 
   ::AMI_BHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

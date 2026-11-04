@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFS_A42KW2_CPP_
-#define _TAO_IDL_GPERFS_A42KW2_CPP_
+#ifndef _TAO_IDL_GPERFS_7UNX07_CPP_
+#define _TAO_IDL_GPERFS_7UNX07_CPP_
 
 #include "gperfS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -52,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 class TAO_AMH_testlistitem_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -63,8 +62,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_testlistitem_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_testlistitem_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_testlistitem_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -91,26 +90,22 @@ TAO_AMH_testlistitem_Perfect_Hash_OpTable::hash (const char *str, std::size_t le
 const TAO_operation_db_entry *
 TAO_AMH_testlistitem_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {19};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {15};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {19};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_get_name", std::addressof(POA_testlistitem::_get_name_skel), std::addressof(_TAO_testlistitem_Direct_Proxy_Impl::_get_name)},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
     };
 
@@ -158,9 +153,7 @@ POA_AMH_testlistitem::_get_name_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testlistitemResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testlistitemResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -173,7 +166,7 @@ POA_AMH_testlistitem::_get_name_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_testlistitem::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_testlistitem::_is_a (char const *value)
 {
   return
     (
@@ -182,7 +175,7 @@ POA_AMH_testlistitem::_get_name_skel (
     );
 }
 
-const char* POA_AMH_testlistitem::_interface_repository_id () const
+char const *POA_AMH_testlistitem::_interface_repository_id () const
 {
   return "IDL:testlistitem:1.0";
 }
@@ -197,7 +190,7 @@ testlistitem*
 POA_AMH_testlistitem::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -217,8 +210,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_testlistitem_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_testlistitem_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_testlistitem_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -245,26 +238,22 @@ TAO_testlistitem_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_testlistitem_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {19};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {15};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {19};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_get_name", std::addressof(POA_testlistitem::_get_name_skel), std::addressof(_TAO_testlistitem_Direct_Proxy_Impl::_get_name)},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
     };
 
@@ -306,7 +295,7 @@ _TAO_testlistitem_Direct_Proxy_Impl::_get_name (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< char *>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<char *>::ret_val *) args[0])->arg () =
     _tao_ptr->name (
         );
 }
@@ -332,8 +321,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< char *>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< char *> (
+    TAO::SArg_Traits<char *>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<char *> (
         this->operation_details_,
         this->args_);
 
@@ -351,7 +340,7 @@ void POA_testlistitem::_get_name_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< char *>::ret_val retval;
+  TAO::SArg_Traits<char *>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -375,15 +364,15 @@ void POA_testlistitem::_get_name_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_testlistitem::_is_a (const char* value)
+::CORBA::Boolean POA_testlistitem::_is_a (char const *value)
 {
   return
     (
@@ -392,7 +381,7 @@ void POA_testlistitem::_get_name_skel (
     );
 }
 
-const char* POA_testlistitem::_interface_repository_id () const
+char const *POA_testlistitem::_interface_repository_id () const
 {
   return "IDL:testlistitem:1.0";
 }
@@ -420,7 +409,7 @@ POA_testlistitem::_this ()
 
 void
 POA_TAO_AMH_testlistitemResponseHandler::get_name (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -456,8 +445,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -484,28 +473,24 @@ TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable::hash (const char *str, std::si
 const TAO_operation_db_entry *
 TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {19};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {15};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {19};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"get_name_excep", std::addressof(POA_AMI_testlistitemHandler::get_name_excep_skel), std::addressof(_TAO_AMI_testlistitemHandler_Direct_Proxy_Impl::get_name_excep)},
       {"get_name", std::addressof(POA_AMI_testlistitemHandler::get_name_skel), std::addressof(_TAO_AMI_testlistitemHandler_Direct_Proxy_Impl::get_name)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
     };
 
@@ -548,7 +533,7 @@ _TAO_AMI_testlistitemHandler_Direct_Proxy_Impl::get_name (
     }
 
   _tao_ptr->get_name (
-        ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<char *>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -566,7 +551,7 @@ _TAO_AMI_testlistitemHandler_Direct_Proxy_Impl::get_name_excep (
     }
 
   _tao_ptr->get_name_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -591,8 +576,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< char *>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< char *> (
+    TAO::SArg_Traits<char *>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<char *> (
         this->operation_details_,
         this->args_,
         1);
@@ -611,8 +596,8 @@ void POA_AMI_testlistitemHandler::get_name_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< char *>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<char *>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -637,11 +622,11 @@ void POA_AMI_testlistitemHandler::get_name_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -657,8 +642,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -677,8 +662,8 @@ void POA_AMI_testlistitemHandler::get_name_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -703,15 +688,15 @@ void POA_AMI_testlistitemHandler::get_name_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_AMI_testlistitemHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_testlistitemHandler::_is_a (char const *value)
 {
   return
     (
@@ -721,7 +706,7 @@ void POA_AMI_testlistitemHandler::get_name_excep_skel (
     );
 }
 
-const char* POA_AMI_testlistitemHandler::_interface_repository_id () const
+char const *POA_AMI_testlistitemHandler::_interface_repository_id () const
 {
   return "IDL:AMI_testlistitemHandler:1.0";
 }
@@ -756,8 +741,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_test_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_test_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -784,18 +769,14 @@ TAO_AMH_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {20};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {16};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {16};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {12};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {14};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {25};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {16};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {16};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"_get_stest", std::addressof(POA_test::_get_stest_skel), std::addressof(_TAO_test_Direct_Proxy_Impl::_get_stest)},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
@@ -830,24 +811,24 @@ TAO_AMH_test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
             return nullptr;
           else
             {
               std::size_t const offset = slot > 0
                 ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
                 : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -887,9 +868,7 @@ POA_AMH_test::_get_stest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -933,9 +912,7 @@ POA_AMH_test::_set_stest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -970,9 +947,7 @@ POA_AMH_test::_get_wstest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1016,9 +991,7 @@ POA_AMH_test::_set_wstest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1053,9 +1026,7 @@ POA_AMH_test::_get_ltest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1099,9 +1070,7 @@ POA_AMH_test::_set_ltest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1136,9 +1105,7 @@ POA_AMH_test::_get_ldtest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1182,9 +1149,7 @@ POA_AMH_test::_set_ldtest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1219,9 +1184,7 @@ POA_AMH_test::_get_etest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1265,9 +1228,7 @@ POA_AMH_test::_set_etest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1302,9 +1263,7 @@ POA_AMH_test::_get_setest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1348,9 +1307,7 @@ POA_AMH_test::_set_setest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1385,9 +1342,7 @@ POA_AMH_test::_get_tltest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1431,9 +1386,7 @@ POA_AMH_test::_set_tltest_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1476,9 +1429,7 @@ POA_AMH_test::new_testlistitem_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_testResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1492,7 +1443,7 @@ POA_AMH_test::new_testlistitem_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_test::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_test::_is_a (char const *value)
 {
   return
     (
@@ -1501,7 +1452,7 @@ POA_AMH_test::new_testlistitem_skel (
     );
 }
 
-const char* POA_AMH_test::_interface_repository_id () const
+char const *POA_AMH_test::_interface_repository_id () const
 {
   return "IDL:test:1.0";
 }
@@ -1516,7 +1467,7 @@ test*
 POA_AMH_test::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1536,8 +1487,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_test_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_test_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -1564,18 +1515,14 @@ TAO_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {20};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {16};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {16};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {12};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {14};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {25};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {16};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {16};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"_get_stest", std::addressof(POA_test::_get_stest_skel), std::addressof(_TAO_test_Direct_Proxy_Impl::_get_stest)},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
@@ -1610,24 +1557,24 @@ TAO_test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
             return nullptr;
           else
             {
               std::size_t const offset = slot > 0
                 ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
                 : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -1661,7 +1608,7 @@ _TAO_test_Direct_Proxy_Impl::_get_stest (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< char *>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<char *>::ret_val *) args[0])->arg () =
     _tao_ptr->stest (
         );
 }
@@ -1680,7 +1627,7 @@ _TAO_test_Direct_Proxy_Impl::_set_stest (
     }
 
   _tao_ptr->stest (
-        ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<char *>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1697,7 +1644,7 @@ _TAO_test_Direct_Proxy_Impl::_get_wstest (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::CORBA::WChar *>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::CORBA::WChar *>::ret_val *) args[0])->arg () =
     _tao_ptr->wstest (
         );
 }
@@ -1716,7 +1663,7 @@ _TAO_test_Direct_Proxy_Impl::_set_wstest (
     }
 
   _tao_ptr->wstest (
-        ((TAO::Arg_Traits< ::CORBA::WChar *>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::WChar *>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1733,7 +1680,7 @@ _TAO_test_Direct_Proxy_Impl::_get_ltest (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::CORBA::LongLong>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::CORBA::LongLong>::ret_val *) args[0])->arg () =
     _tao_ptr->ltest (
         );
 }
@@ -1752,7 +1699,7 @@ _TAO_test_Direct_Proxy_Impl::_set_ltest (
     }
 
   _tao_ptr->ltest (
-        ((TAO::Arg_Traits< ::CORBA::LongLong>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::LongLong>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1769,7 +1716,7 @@ _TAO_test_Direct_Proxy_Impl::_get_ldtest (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::CORBA::LongDouble>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::CORBA::LongDouble>::ret_val *) args[0])->arg () =
     _tao_ptr->ldtest (
         );
 }
@@ -1788,7 +1735,7 @@ _TAO_test_Direct_Proxy_Impl::_set_ldtest (
     }
 
   _tao_ptr->ldtest (
-        ((TAO::Arg_Traits< ::CORBA::LongDouble>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::LongDouble>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1805,7 +1752,7 @@ _TAO_test_Direct_Proxy_Impl::_get_etest (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::TestEnum>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::TestEnum>::ret_val *) args[0])->arg () =
     _tao_ptr->etest (
         );
 }
@@ -1824,7 +1771,7 @@ _TAO_test_Direct_Proxy_Impl::_set_etest (
     }
 
   _tao_ptr->etest (
-        ((TAO::Arg_Traits< ::TestEnum>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::TestEnum>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1841,7 +1788,7 @@ _TAO_test_Direct_Proxy_Impl::_get_setest (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::CORBA::WChar *>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::CORBA::WChar *>::ret_val *) args[0])->arg () =
     _tao_ptr->setest (
         );
 }
@@ -1860,7 +1807,7 @@ _TAO_test_Direct_Proxy_Impl::_set_setest (
     }
 
   _tao_ptr->setest (
-        ((TAO::Arg_Traits< ::CORBA::WChar *>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::WChar *>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1877,7 +1824,7 @@ _TAO_test_Direct_Proxy_Impl::_get_tltest (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::testlistitem>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::testlistitem>::ret_val *) args[0])->arg () =
     _tao_ptr->tltest (
         );
 }
@@ -1896,7 +1843,7 @@ _TAO_test_Direct_Proxy_Impl::_set_tltest (
     }
 
   _tao_ptr->tltest (
-        ((TAO::Arg_Traits< ::testlistitem>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::testlistitem>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1913,9 +1860,9 @@ _TAO_test_Direct_Proxy_Impl::new_testlistitem (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::testlistitem>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::testlistitem>::ret_val *) args[0])->arg () =
     _tao_ptr->new_testlistitem (
-          ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
+          ((TAO::Arg_Traits<char *>::in_arg_val *) args[1])->arg ()
         );
 }
 
@@ -1940,8 +1887,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< char *>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< char *> (
+    TAO::SArg_Traits<char *>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<char *> (
         this->operation_details_,
         this->args_);
 
@@ -1959,7 +1906,7 @@ void POA_test::_get_stest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< char *>::ret_val retval;
+  TAO::SArg_Traits<char *>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -1983,11 +1930,11 @@ void POA_test::_get_stest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2003,8 +1950,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< char *>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< char *> (
+    TAO::SArg_Traits<char *>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<char *> (
         this->operation_details_,
         this->args_,
         1);
@@ -2023,8 +1970,8 @@ void POA_test::_set_stest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< char *>::in_arg_val _tao_stest;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<char *>::in_arg_val _tao_stest;
 
   TAO::Argument * const args[] =
     {
@@ -2049,11 +1996,11 @@ void POA_test::_set_stest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2069,8 +2016,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::WChar *>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< ::CORBA::WChar *> (
+    TAO::SArg_Traits<::CORBA::WChar *>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<::CORBA::WChar *> (
         this->operation_details_,
         this->args_);
 
@@ -2088,7 +2035,7 @@ void POA_test::_get_wstest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::CORBA::WChar *>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::WChar *>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -2112,11 +2059,11 @@ void POA_test::_get_wstest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2132,8 +2079,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::WChar *>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::CORBA::WChar *> (
+    TAO::SArg_Traits<::CORBA::WChar *>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::CORBA::WChar *> (
         this->operation_details_,
         this->args_,
         1);
@@ -2152,8 +2099,8 @@ void POA_test::_set_wstest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::WChar *>::in_arg_val _tao_wstest;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::WChar *>::in_arg_val _tao_wstest;
 
   TAO::Argument * const args[] =
     {
@@ -2178,11 +2125,11 @@ void POA_test::_set_wstest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2198,8 +2145,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::LongLong>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< ::CORBA::LongLong> (
+    TAO::SArg_Traits<::CORBA::LongLong>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<::CORBA::LongLong> (
         this->operation_details_,
         this->args_);
 
@@ -2217,7 +2164,7 @@ void POA_test::_get_ltest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::CORBA::LongLong>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::LongLong>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -2241,11 +2188,11 @@ void POA_test::_get_ltest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2261,8 +2208,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::LongLong>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::CORBA::LongLong> (
+    TAO::SArg_Traits<::CORBA::LongLong>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::CORBA::LongLong> (
         this->operation_details_,
         this->args_,
         1);
@@ -2281,8 +2228,8 @@ void POA_test::_set_ltest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::LongLong>::in_arg_val _tao_ltest;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::LongLong>::in_arg_val _tao_ltest;
 
   TAO::Argument * const args[] =
     {
@@ -2307,11 +2254,11 @@ void POA_test::_set_ltest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2327,8 +2274,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::LongDouble>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< ::CORBA::LongDouble> (
+    TAO::SArg_Traits<::CORBA::LongDouble>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<::CORBA::LongDouble> (
         this->operation_details_,
         this->args_);
 
@@ -2346,7 +2293,7 @@ void POA_test::_get_ldtest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::CORBA::LongDouble>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::LongDouble>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -2370,11 +2317,11 @@ void POA_test::_get_ldtest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2390,8 +2337,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::LongDouble>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::CORBA::LongDouble> (
+    TAO::SArg_Traits<::CORBA::LongDouble>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::CORBA::LongDouble> (
         this->operation_details_,
         this->args_,
         1);
@@ -2410,8 +2357,8 @@ void POA_test::_set_ldtest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::LongDouble>::in_arg_val _tao_ldtest;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::LongDouble>::in_arg_val _tao_ldtest;
 
   TAO::Argument * const args[] =
     {
@@ -2436,11 +2383,11 @@ void POA_test::_set_ldtest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2456,8 +2403,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::TestEnum>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< ::TestEnum> (
+    TAO::SArg_Traits<::TestEnum>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<::TestEnum> (
         this->operation_details_,
         this->args_);
 
@@ -2475,7 +2422,7 @@ void POA_test::_get_etest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::TestEnum>::ret_val retval;
+  TAO::SArg_Traits<::TestEnum>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -2499,11 +2446,11 @@ void POA_test::_get_etest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2519,8 +2466,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::TestEnum>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::TestEnum> (
+    TAO::SArg_Traits<::TestEnum>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::TestEnum> (
         this->operation_details_,
         this->args_,
         1);
@@ -2539,8 +2486,8 @@ void POA_test::_set_etest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::TestEnum>::in_arg_val _tao_etest;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::TestEnum>::in_arg_val _tao_etest;
 
   TAO::Argument * const args[] =
     {
@@ -2565,11 +2512,11 @@ void POA_test::_set_etest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2585,8 +2532,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::WChar *>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< ::CORBA::WChar *> (
+    TAO::SArg_Traits<::CORBA::WChar *>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<::CORBA::WChar *> (
         this->operation_details_,
         this->args_);
 
@@ -2604,7 +2551,7 @@ void POA_test::_get_setest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::CORBA::WChar *>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::WChar *>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -2628,11 +2575,11 @@ void POA_test::_get_setest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2648,8 +2595,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::WChar *>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::CORBA::WChar *> (
+    TAO::SArg_Traits<::CORBA::WChar *>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::CORBA::WChar *> (
         this->operation_details_,
         this->args_,
         1);
@@ -2668,8 +2615,8 @@ void POA_test::_set_setest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::WChar *>::in_arg_val _tao_setest;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::WChar *>::in_arg_val _tao_setest;
 
   TAO::Argument * const args[] =
     {
@@ -2694,11 +2641,11 @@ void POA_test::_set_setest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2714,8 +2661,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::testlistitem>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< ::testlistitem> (
+    TAO::SArg_Traits<::testlistitem>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<::testlistitem> (
         this->operation_details_,
         this->args_);
 
@@ -2733,7 +2680,7 @@ void POA_test::_get_tltest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::testlistitem>::ret_val retval;
+  TAO::SArg_Traits<::testlistitem>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -2757,11 +2704,11 @@ void POA_test::_get_tltest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2777,8 +2724,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::testlistitem>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::testlistitem> (
+    TAO::SArg_Traits<::testlistitem>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::testlistitem> (
         this->operation_details_,
         this->args_,
         1);
@@ -2797,8 +2744,8 @@ void POA_test::_set_tltest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::testlistitem>::in_arg_val _tao_tltest;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::testlistitem>::in_arg_val _tao_tltest;
 
   TAO::Argument * const args[] =
     {
@@ -2823,11 +2770,11 @@ void POA_test::_set_tltest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2843,13 +2790,13 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::testlistitem>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< ::testlistitem> (
+    TAO::SArg_Traits<::testlistitem>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<::testlistitem> (
         this->operation_details_,
         this->args_);
 
-    TAO::SArg_Traits< char *>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< char *> (
+    TAO::SArg_Traits<char *>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<char *> (
         this->operation_details_,
         this->args_,
         1);
@@ -2869,8 +2816,8 @@ void POA_test::new_testlistitem_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::testlistitem>::ret_val retval;
-  TAO::SArg_Traits< char *>::in_arg_val _tao_name;
+  TAO::SArg_Traits<::testlistitem>::ret_val retval;
+  TAO::SArg_Traits<char *>::in_arg_val _tao_name;
 
   TAO::Argument * const args[] =
     {
@@ -2895,15 +2842,15 @@ void POA_test::new_testlistitem_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_test::_is_a (const char* value)
+::CORBA::Boolean POA_test::_is_a (char const *value)
 {
   return
     (
@@ -2912,7 +2859,7 @@ void POA_test::new_testlistitem_skel (
     );
 }
 
-const char* POA_test::_interface_repository_id () const
+char const *POA_test::_interface_repository_id () const
 {
   return "IDL:test:1.0";
 }
@@ -2940,7 +2887,7 @@ POA_test::_this ()
 
 void
 POA_TAO_AMH_testResponseHandler::get_stest (
-  const char * return_value)
+  char const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -2988,7 +2935,7 @@ POA_TAO_AMH_testResponseHandler::set_stest_excep (
 }
 void
 POA_TAO_AMH_testResponseHandler::get_wstest (
-  const ::CORBA::WChar * return_value)
+  ::CORBA::WChar const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -3180,7 +3127,7 @@ POA_TAO_AMH_testResponseHandler::set_etest_excep (
 }
 void
 POA_TAO_AMH_testResponseHandler::get_setest (
-  const ::CORBA::WChar * return_value)
+  ::CORBA::WChar const * return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -3312,8 +3259,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_testHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_testHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_testHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -3340,18 +3287,14 @@ TAO_AMI_testHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len
 const TAO_operation_db_entry *
 TAO_AMI_testHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {35};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {22};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {9};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {29};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {21};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {21};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {44};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {22};
+  constexpr int MIN_HASH_VALUE {9};
+  constexpr int MAX_HASH_VALUE {29};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
             {"set_stest", std::addressof(POA_AMI_testHandler::set_stest_skel), std::addressof(_TAO_AMI_testHandler_Direct_Proxy_Impl::set_stest)},
       {"set_etest", std::addressof(POA_AMI_testHandler::set_etest_skel), std::addressof(_TAO_AMI_testHandler_Direct_Proxy_Impl::set_etest)},
       {"set_ltest", std::addressof(POA_AMI_testHandler::set_ltest_skel), std::addressof(_TAO_AMI_testHandler_Direct_Proxy_Impl::set_ltest)},
@@ -3521,7 +3464,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_stest (
     }
 
   _tao_ptr->get_stest (
-        ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<char *>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3539,7 +3482,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_stest_excep (
     }
 
   _tao_ptr->get_stest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3574,7 +3517,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_stest_excep (
     }
 
   _tao_ptr->set_stest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3592,7 +3535,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_wstest (
     }
 
   _tao_ptr->get_wstest (
-        ((TAO::Arg_Traits< ::CORBA::WChar *>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::WChar *>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3610,7 +3553,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_wstest_excep (
     }
 
   _tao_ptr->get_wstest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3645,7 +3588,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_wstest_excep (
     }
 
   _tao_ptr->set_wstest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3663,7 +3606,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ltest (
     }
 
   _tao_ptr->get_ltest (
-        ((TAO::Arg_Traits< ::CORBA::LongLong>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::LongLong>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3681,7 +3624,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ltest_excep (
     }
 
   _tao_ptr->get_ltest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3716,7 +3659,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_ltest_excep (
     }
 
   _tao_ptr->set_ltest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3734,7 +3677,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ldtest (
     }
 
   _tao_ptr->get_ldtest (
-        ((TAO::Arg_Traits< ::CORBA::LongDouble>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::LongDouble>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3752,7 +3695,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_ldtest_excep (
     }
 
   _tao_ptr->get_ldtest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3787,7 +3730,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_ldtest_excep (
     }
 
   _tao_ptr->set_ldtest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3805,7 +3748,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_etest (
     }
 
   _tao_ptr->get_etest (
-        ((TAO::Arg_Traits< ::TestEnum>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::TestEnum>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3823,7 +3766,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_etest_excep (
     }
 
   _tao_ptr->get_etest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3858,7 +3801,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_etest_excep (
     }
 
   _tao_ptr->set_etest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3876,7 +3819,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_setest (
     }
 
   _tao_ptr->get_setest (
-        ((TAO::Arg_Traits< ::CORBA::WChar *>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::WChar *>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3894,7 +3837,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_setest_excep (
     }
 
   _tao_ptr->get_setest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3929,7 +3872,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_setest_excep (
     }
 
   _tao_ptr->set_setest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3947,7 +3890,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_tltest (
     }
 
   _tao_ptr->get_tltest (
-        ((TAO::Arg_Traits< ::testlistitem>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::testlistitem>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3965,7 +3908,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::get_tltest_excep (
     }
 
   _tao_ptr->get_tltest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -4000,7 +3943,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::set_tltest_excep (
     }
 
   _tao_ptr->set_tltest_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -4018,7 +3961,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::new_testlistitem (
     }
 
   _tao_ptr->new_testlistitem (
-        ((TAO::Arg_Traits< ::testlistitem>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::testlistitem>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -4036,7 +3979,7 @@ _TAO_AMI_testHandler_Direct_Proxy_Impl::new_testlistitem_excep (
     }
 
   _tao_ptr->new_testlistitem_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -4061,8 +4004,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< char *>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< char *> (
+    TAO::SArg_Traits<char *>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<char *> (
         this->operation_details_,
         this->args_,
         1);
@@ -4081,8 +4024,8 @@ void POA_AMI_testHandler::get_stest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< char *>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<char *>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -4107,11 +4050,11 @@ void POA_AMI_testHandler::get_stest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4127,8 +4070,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -4147,8 +4090,8 @@ void POA_AMI_testHandler::get_stest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -4173,11 +4116,11 @@ void POA_AMI_testHandler::get_stest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4200,7 +4143,7 @@ void POA_AMI_testHandler::set_stest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -4221,11 +4164,11 @@ void POA_AMI_testHandler::set_stest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4241,8 +4184,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -4261,8 +4204,8 @@ void POA_AMI_testHandler::set_stest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -4287,11 +4230,11 @@ void POA_AMI_testHandler::set_stest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4307,8 +4250,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::WChar *>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::CORBA::WChar *> (
+    TAO::SArg_Traits<::CORBA::WChar *>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::CORBA::WChar *> (
         this->operation_details_,
         this->args_,
         1);
@@ -4327,8 +4270,8 @@ void POA_AMI_testHandler::get_wstest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::WChar *>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::WChar *>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -4353,11 +4296,11 @@ void POA_AMI_testHandler::get_wstest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4373,8 +4316,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -4393,8 +4336,8 @@ void POA_AMI_testHandler::get_wstest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -4419,11 +4362,11 @@ void POA_AMI_testHandler::get_wstest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4446,7 +4389,7 @@ void POA_AMI_testHandler::set_wstest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -4467,11 +4410,11 @@ void POA_AMI_testHandler::set_wstest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4487,8 +4430,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -4507,8 +4450,8 @@ void POA_AMI_testHandler::set_wstest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -4533,11 +4476,11 @@ void POA_AMI_testHandler::set_wstest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4553,8 +4496,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::LongLong>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::CORBA::LongLong> (
+    TAO::SArg_Traits<::CORBA::LongLong>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::CORBA::LongLong> (
         this->operation_details_,
         this->args_,
         1);
@@ -4573,8 +4516,8 @@ void POA_AMI_testHandler::get_ltest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::LongLong>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::LongLong>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -4599,11 +4542,11 @@ void POA_AMI_testHandler::get_ltest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4619,8 +4562,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -4639,8 +4582,8 @@ void POA_AMI_testHandler::get_ltest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -4665,11 +4608,11 @@ void POA_AMI_testHandler::get_ltest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4692,7 +4635,7 @@ void POA_AMI_testHandler::set_ltest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -4713,11 +4656,11 @@ void POA_AMI_testHandler::set_ltest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4733,8 +4676,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -4753,8 +4696,8 @@ void POA_AMI_testHandler::set_ltest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -4779,11 +4722,11 @@ void POA_AMI_testHandler::set_ltest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4799,8 +4742,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::LongDouble>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::CORBA::LongDouble> (
+    TAO::SArg_Traits<::CORBA::LongDouble>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::CORBA::LongDouble> (
         this->operation_details_,
         this->args_,
         1);
@@ -4819,8 +4762,8 @@ void POA_AMI_testHandler::get_ldtest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::LongDouble>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::LongDouble>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -4845,11 +4788,11 @@ void POA_AMI_testHandler::get_ldtest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4865,8 +4808,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -4885,8 +4828,8 @@ void POA_AMI_testHandler::get_ldtest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -4911,11 +4854,11 @@ void POA_AMI_testHandler::get_ldtest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4938,7 +4881,7 @@ void POA_AMI_testHandler::set_ldtest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -4959,11 +4902,11 @@ void POA_AMI_testHandler::set_ldtest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4979,8 +4922,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -4999,8 +4942,8 @@ void POA_AMI_testHandler::set_ldtest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -5025,11 +4968,11 @@ void POA_AMI_testHandler::set_ldtest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5045,8 +4988,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::TestEnum>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::TestEnum> (
+    TAO::SArg_Traits<::TestEnum>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::TestEnum> (
         this->operation_details_,
         this->args_,
         1);
@@ -5065,8 +5008,8 @@ void POA_AMI_testHandler::get_etest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::TestEnum>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::TestEnum>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -5091,11 +5034,11 @@ void POA_AMI_testHandler::get_etest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5111,8 +5054,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -5131,8 +5074,8 @@ void POA_AMI_testHandler::get_etest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -5157,11 +5100,11 @@ void POA_AMI_testHandler::get_etest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5184,7 +5127,7 @@ void POA_AMI_testHandler::set_etest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -5205,11 +5148,11 @@ void POA_AMI_testHandler::set_etest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5225,8 +5168,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -5245,8 +5188,8 @@ void POA_AMI_testHandler::set_etest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -5271,11 +5214,11 @@ void POA_AMI_testHandler::set_etest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5291,8 +5234,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::CORBA::WChar *>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::CORBA::WChar *> (
+    TAO::SArg_Traits<::CORBA::WChar *>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::CORBA::WChar *> (
         this->operation_details_,
         this->args_,
         1);
@@ -5311,8 +5254,8 @@ void POA_AMI_testHandler::get_setest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::WChar *>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::WChar *>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -5337,11 +5280,11 @@ void POA_AMI_testHandler::get_setest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5357,8 +5300,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -5377,8 +5320,8 @@ void POA_AMI_testHandler::get_setest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -5403,11 +5346,11 @@ void POA_AMI_testHandler::get_setest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5430,7 +5373,7 @@ void POA_AMI_testHandler::set_setest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -5451,11 +5394,11 @@ void POA_AMI_testHandler::set_setest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5471,8 +5414,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -5491,8 +5434,8 @@ void POA_AMI_testHandler::set_setest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -5517,11 +5460,11 @@ void POA_AMI_testHandler::set_setest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5537,8 +5480,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::testlistitem>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::testlistitem> (
+    TAO::SArg_Traits<::testlistitem>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::testlistitem> (
         this->operation_details_,
         this->args_,
         1);
@@ -5557,8 +5500,8 @@ void POA_AMI_testHandler::get_tltest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::testlistitem>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::testlistitem>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -5583,11 +5526,11 @@ void POA_AMI_testHandler::get_tltest_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5603,8 +5546,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -5623,8 +5566,8 @@ void POA_AMI_testHandler::get_tltest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -5649,11 +5592,11 @@ void POA_AMI_testHandler::get_tltest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5676,7 +5619,7 @@ void POA_AMI_testHandler::set_tltest_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -5697,11 +5640,11 @@ void POA_AMI_testHandler::set_tltest_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5717,8 +5660,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -5737,8 +5680,8 @@ void POA_AMI_testHandler::set_tltest_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -5763,11 +5706,11 @@ void POA_AMI_testHandler::set_tltest_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5783,8 +5726,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::testlistitem>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::testlistitem> (
+    TAO::SArg_Traits<::testlistitem>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::testlistitem> (
         this->operation_details_,
         this->args_,
         1);
@@ -5803,8 +5746,8 @@ void POA_AMI_testHandler::new_testlistitem_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::testlistitem>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::testlistitem>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -5829,11 +5772,11 @@ void POA_AMI_testHandler::new_testlistitem_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5849,8 +5792,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -5869,8 +5812,8 @@ void POA_AMI_testHandler::new_testlistitem_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -5895,15 +5838,15 @@ void POA_AMI_testHandler::new_testlistitem_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_AMI_testHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_testHandler::_is_a (char const *value)
 {
   return
     (
@@ -5913,7 +5856,7 @@ void POA_AMI_testHandler::new_testlistitem_excep_skel (
     );
 }
 
-const char* POA_AMI_testHandler::_interface_repository_id () const
+char const *POA_AMI_testHandler::_interface_repository_id () const
 {
   return "IDL:AMI_testHandler:1.0";
 }
@@ -5948,8 +5891,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Simple_Server_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Simple_Server_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_Simple_Server_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -5976,18 +5919,14 @@ TAO_AMH_Simple_Server_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
 const TAO_operation_db_entry *
 TAO_AMH_Simple_Server_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {23};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {18};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {28};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {24};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {13};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {28};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {18};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {28};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"shutdown", std::addressof(POA_AMH_Simple_Server::shutdown_skel), std::addressof(_TAO_Simple_Server_Direct_Proxy_Impl::shutdown)},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -6026,24 +5965,24 @@ TAO_AMH_Simple_Server_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
             return nullptr;
           else
             {
               std::size_t const offset = slot > 0
                 ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
                 : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -6083,9 +6022,7 @@ POA_AMH_Simple_Server::ackConfBasData_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6119,9 +6056,7 @@ POA_AMH_Simple_Server::ackConfMosData_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6155,9 +6090,7 @@ POA_AMH_Simple_Server::ackConfTwmData_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6191,9 +6124,7 @@ POA_AMH_Simple_Server::ackConfArchData_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6227,9 +6158,7 @@ POA_AMH_Simple_Server::ackConfVonData_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6263,9 +6192,7 @@ POA_AMH_Simple_Server::ackConfFftData_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6299,9 +6226,7 @@ POA_AMH_Simple_Server::ackConfSosData_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6335,9 +6260,7 @@ POA_AMH_Simple_Server::ackConfSscData_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6371,9 +6294,7 @@ POA_AMH_Simple_Server::ackConfCsData_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6407,9 +6328,7 @@ POA_AMH_Simple_Server::ackConfR10Data_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6443,9 +6362,7 @@ POA_AMH_Simple_Server::ackConfR11Data_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6479,9 +6396,7 @@ POA_AMH_Simple_Server::ackConfR12Data_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6515,9 +6430,7 @@ POA_AMH_Simple_Server::ackConfR13Data_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6551,9 +6464,7 @@ POA_AMH_Simple_Server::ackConfR14Data_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6587,9 +6498,7 @@ POA_AMH_Simple_Server::ackConfR15Data_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6623,9 +6532,7 @@ POA_AMH_Simple_Server::shutdown_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6659,9 +6566,7 @@ POA_AMH_Simple_Server::transferTriggerDb_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6695,9 +6600,7 @@ POA_AMH_Simple_Server::transferTriggerTdc_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_Simple_ServerResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -6710,7 +6613,7 @@ POA_AMH_Simple_Server::transferTriggerTdc_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_Simple_Server::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_Simple_Server::_is_a (char const *value)
 {
   return
     (
@@ -6719,7 +6622,7 @@ POA_AMH_Simple_Server::transferTriggerTdc_skel (
     );
 }
 
-const char* POA_AMH_Simple_Server::_interface_repository_id () const
+char const *POA_AMH_Simple_Server::_interface_repository_id () const
 {
   return "IDL:Simple_Server:1.0";
 }
@@ -6734,7 +6637,7 @@ Simple_Server*
 POA_AMH_Simple_Server::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -6754,8 +6657,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Simple_Server_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Simple_Server_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Simple_Server_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -6782,18 +6685,14 @@ TAO_Simple_Server_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_Simple_Server_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {23};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {18};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {28};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {24};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {13};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {28};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {18};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {28};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"shutdown", std::addressof(POA_Simple_Server::shutdown_skel), std::addressof(_TAO_Simple_Server_Direct_Proxy_Impl::shutdown)},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -6832,24 +6731,24 @@ TAO_Simple_Server_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
             return nullptr;
           else
             {
               std::size_t const offset = slot > 0
                 ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
                 : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -7204,7 +7103,7 @@ void POA_Simple_Server::ackConfBasData_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7225,11 +7124,11 @@ void POA_Simple_Server::ackConfBasData_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7252,7 +7151,7 @@ void POA_Simple_Server::ackConfMosData_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7273,11 +7172,11 @@ void POA_Simple_Server::ackConfMosData_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7300,7 +7199,7 @@ void POA_Simple_Server::ackConfTwmData_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7321,11 +7220,11 @@ void POA_Simple_Server::ackConfTwmData_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7348,7 +7247,7 @@ void POA_Simple_Server::ackConfArchData_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7369,11 +7268,11 @@ void POA_Simple_Server::ackConfArchData_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7396,7 +7295,7 @@ void POA_Simple_Server::ackConfVonData_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7417,11 +7316,11 @@ void POA_Simple_Server::ackConfVonData_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7444,7 +7343,7 @@ void POA_Simple_Server::ackConfFftData_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7465,11 +7364,11 @@ void POA_Simple_Server::ackConfFftData_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7492,7 +7391,7 @@ void POA_Simple_Server::ackConfSosData_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7513,11 +7412,11 @@ void POA_Simple_Server::ackConfSosData_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7540,7 +7439,7 @@ void POA_Simple_Server::ackConfSscData_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7561,11 +7460,11 @@ void POA_Simple_Server::ackConfSscData_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7588,7 +7487,7 @@ void POA_Simple_Server::ackConfCsData_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7609,11 +7508,11 @@ void POA_Simple_Server::ackConfCsData_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7636,7 +7535,7 @@ void POA_Simple_Server::ackConfR10Data_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7657,11 +7556,11 @@ void POA_Simple_Server::ackConfR10Data_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7684,7 +7583,7 @@ void POA_Simple_Server::ackConfR11Data_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7705,11 +7604,11 @@ void POA_Simple_Server::ackConfR11Data_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7732,7 +7631,7 @@ void POA_Simple_Server::ackConfR12Data_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7753,11 +7652,11 @@ void POA_Simple_Server::ackConfR12Data_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7780,7 +7679,7 @@ void POA_Simple_Server::ackConfR13Data_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7801,11 +7700,11 @@ void POA_Simple_Server::ackConfR13Data_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7828,7 +7727,7 @@ void POA_Simple_Server::ackConfR14Data_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7849,11 +7748,11 @@ void POA_Simple_Server::ackConfR14Data_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7876,7 +7775,7 @@ void POA_Simple_Server::ackConfR15Data_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7897,11 +7796,11 @@ void POA_Simple_Server::ackConfR15Data_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7924,7 +7823,7 @@ void POA_Simple_Server::shutdown_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7945,11 +7844,11 @@ void POA_Simple_Server::shutdown_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7972,7 +7871,7 @@ void POA_Simple_Server::transferTriggerDb_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -7993,11 +7892,11 @@ void POA_Simple_Server::transferTriggerDb_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -8020,7 +7919,7 @@ void POA_Simple_Server::transferTriggerTdc_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -8041,15 +7940,15 @@ void POA_Simple_Server::transferTriggerTdc_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Simple_Server::_is_a (const char* value)
+::CORBA::Boolean POA_Simple_Server::_is_a (char const *value)
 {
   return
     (
@@ -8058,7 +7957,7 @@ void POA_Simple_Server::transferTriggerTdc_skel (
     );
 }
 
-const char* POA_Simple_Server::_interface_repository_id () const
+char const *POA_Simple_Server::_interface_repository_id () const
 {
   return "IDL:Simple_Server:1.0";
 }
@@ -8454,8 +8353,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -8482,22 +8381,18 @@ TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable::hash (const char *str, std::s
 const TAO_operation_db_entry *
 TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -8538,7 +8433,7 @@ POA_AMI_Simple_ServerHandler::POA_AMI_Simple_ServerHandler ()
   this->optable_ = std::addressof (tao_AMI_Simple_ServerHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_Simple_ServerHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_Simple_ServerHandler::_is_a (char const *value)
 {
   return
     (
@@ -8548,7 +8443,7 @@ POA_AMI_Simple_ServerHandler::POA_AMI_Simple_ServerHandler ()
     );
 }
 
-const char* POA_AMI_Simple_ServerHandler::_interface_repository_id () const
+char const *POA_AMI_Simple_ServerHandler::_interface_repository_id () const
 {
   return "IDL:AMI_Simple_ServerHandler:1.0";
 }

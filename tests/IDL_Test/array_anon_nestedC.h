@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANON_NESTEDC_QQS8VB_H_
-#define _TAO_IDL_ARRAY_ANON_NESTEDC_QQS8VB_H_
+#ifndef _TAO_IDL_ARRAY_ANON_NESTEDC_370E7O_H_
+#define _TAO_IDL_ARRAY_ANON_NESTEDC_370E7O_H_
 
 #include /**/ "ace/pre.h"
 
@@ -131,7 +131,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -146,7 +146,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::teststruct>
+  class Arg_Traits<::teststruct>
     : public
         Fixed_Size_Arg_Traits_T<
             ::teststruct,
@@ -156,7 +156,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::teststruct::embeddedstruct>
+  class Arg_Traits<::teststruct::embeddedstruct>
     : public
         Fixed_Size_Arg_Traits_T<
             ::teststruct::embeddedstruct,

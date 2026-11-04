@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_KDAEEC_H_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_KDAEEC_H_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_2KS6BZ_H_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_2KS6BZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::DateTime_T>
+  class SArg_Traits<::DateTime_T>
     : public
         Fixed_Size_SArg_Traits_T<
             ::DateTime_T,
@@ -87,7 +87,7 @@ namespace TAO
 #define _DATA_T__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Data_T>
+  class SArg_Traits<::Data_T>
     : public
         Object_SArg_Traits_T<
             ::Data_T *,
@@ -104,7 +104,7 @@ namespace TAO
 #define _USER_T__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::User_T>
+  class  SArg_Traits<::User_T>
     : public Object_SArg_Traits_T<
         ::User_T_ptr,
         ::User_T_var,
@@ -119,7 +119,7 @@ namespace TAO
 #define _AMH_USER_TEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_User_TExceptionHolder>
+  class SArg_Traits<::AMH_User_TExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_User_TExceptionHolder *,
@@ -136,7 +136,7 @@ namespace TAO
 #define _AMI_USER_THANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_User_THandler>
+  class  SArg_Traits<::AMI_User_THandler>
     : public Object_SArg_Traits_T<
         ::AMI_User_THandler_ptr,
         ::AMI_User_THandler_var,
@@ -160,10 +160,10 @@ protected:
   POA_AMH_User_T ();
 
 public:
-  POA_AMH_User_T (const POA_AMH_User_T& rhs);
+  POA_AMH_User_T (POA_AMH_User_T const &rhs);
   ~POA_AMH_User_T () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -171,7 +171,7 @@ public:
 
   User_T *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void getLoginTime_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -200,10 +200,10 @@ public:
   using _stub_ptr_type = ::User_T_ptr;
   using _stub_var_type = ::User_T_var;
 
-  POA_User_T (const POA_User_T& rhs) = default;
+  POA_User_T (POA_User_T const &rhs) = default;
   ~POA_User_T () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -211,7 +211,7 @@ public:
 
   ::User_T *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::DateTime_T getLoginTime () = 0;
 
   static void getLoginTime_skel (
@@ -249,7 +249,7 @@ public:
   POA_TAO_AMH_User_TResponseHandler () = default;
   virtual ~POA_TAO_AMH_User_TResponseHandler () = default;
   void getLoginTime (
-    const ::DateTime_T & return_value) override;
+    ::DateTime_T const & return_value) override;
   void getLoginTime_excep (
     ::AMH_User_TExceptionHolder * holder) override;
 };
@@ -271,10 +271,10 @@ public:
   using _stub_ptr_type = ::AMI_User_THandler_ptr;
   using _stub_var_type = ::AMI_User_THandler_var;
 
-  POA_AMI_User_THandler (const POA_AMI_User_THandler& rhs) = default;
+  POA_AMI_User_THandler (POA_AMI_User_THandler const &rhs) = default;
   ~POA_AMI_User_THandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -282,9 +282,9 @@ public:
 
   ::AMI_User_THandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void getLoginTime (
-    const ::DateTime_T & ami_return_val) = 0;
+    ::DateTime_T const & ami_return_val) = 0;
 
   static void getLoginTime_skel (
       TAO_ServerRequest &server_request,

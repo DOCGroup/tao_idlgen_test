@@ -36,7 +36,6 @@
 #include "tao/AnyTypeCode/Value_TypeCode_Static.h"
 #include "tao/AnyTypeCode/TypeCode_Value_Field.h"
 #include "tao/CDR.h"
-#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "TestVersionedNamespaceC.inl"
@@ -49,7 +48,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M1_S1[] =
       {
-        { "o", &CORBA::_tc_octet }
+        { "o", std::addressof (CORBA::_tc_octet) }
       };
 
 static TAO::TypeCode::Struct<
@@ -96,7 +95,7 @@ TAO::Objref_Traits<M1::LI>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<M1::LI>::marshal (const M1::LI_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<M1::LI>::marshal (M1::LI_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -145,13 +144,11 @@ M1::LI::_tao_release (LI_ptr obj)
 }
 
 ::CORBA::Boolean
-M1::LI::_is_a (const char *value)
+M1::LI::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -161,7 +158,7 @@ M1::LI::_is_a (const char *value)
     }
 }
 
-const char* M1::LI::_interface_repository_id () const
+char const *M1::LI::_interface_repository_id () const
 {
   return "IDL:M1/LI:1.0";
 }
@@ -184,9 +181,9 @@ namespace M1
 }
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_M1_V[] =
   {
-    { "valString", &CORBA::_tc_string, ::CORBA::PUBLIC_MEMBER },
-    { "valStruct", &M1::_tc_S1, ::CORBA::PUBLIC_MEMBER },
-    { "valLocalIface", &M1::_tc_LI, ::CORBA::PUBLIC_MEMBER }
+    { "valString", std::addressof (CORBA::_tc_string), ::CORBA::PUBLIC_MEMBER },
+    { "valStruct", std::addressof (M1::_tc_S1), ::CORBA::PUBLIC_MEMBER },
+    { "valLocalIface", std::addressof (M1::_tc_LI), ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -198,7 +195,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:M1/V:1.0",
     "V",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_M1_V,
     3);
 
@@ -350,8 +347,8 @@ M1::V_init::create_for_unmarshal ()
   return ret_val;
 }
 OBV_M1::V::V (
-    const char * _tao_init_valString,
-    const ::M1::S1 & _tao_init_valStruct,
+    char const * _tao_init_valString,
+    ::M1::S1 const & _tao_init_valStruct,
     ::M1::LI_ptr _tao_init_valLocalIface)
 {
   valString (_tao_init_valString);
@@ -427,7 +424,7 @@ void
 OBV_M1::V::valLocalIface (M1::LI_ptr val)
 {
   this->_pd_valLocalIface =
-    TAO::Objref_Traits< ::M1::LI>::duplicate (val);
+    TAO::Objref_Traits<::M1::LI>::duplicate (val);
 }
 
 /// Retrieve the member.

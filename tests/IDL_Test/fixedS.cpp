@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDS_YH9WIA_CPP_
-#define _TAO_IDL_FIXEDS_YH9WIA_CPP_
+#ifndef _TAO_IDL_FIXEDS_L4LLH3_CPP_
+#define _TAO_IDL_FIXEDS_L4LLH3_CPP_
 
 #include "fixedS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -52,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 class TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
@@ -63,8 +62,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -91,18 +90,14 @@ TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::hash (const char *str, 
 const TAO_operation_db_entry *
 TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"_get_rate", std::addressof(POA_FixedPoint::FixedOperations::_get_rate_skel), std::addressof(POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_get_rate)},
       {"_set_rate", std::addressof(POA_FixedPoint::FixedOperations::_set_rate_skel), std::addressof(POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_set_rate)},
@@ -124,24 +119,24 @@ TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::lookup (const char *str
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
             return nullptr;
           else
             {
               std::size_t const offset = slot > 0
                 ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
                 : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -181,9 +176,7 @@ POA_FixedPoint::AMH_FixedOperations::_get_rate_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_FixedPoint::TAO_AMH_FixedOperationsResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_FixedPoint::TAO_AMH_FixedOperationsResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -227,9 +220,7 @@ POA_FixedPoint::AMH_FixedOperations::_set_rate_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_FixedPoint::TAO_AMH_FixedOperationsResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_FixedPoint::TAO_AMH_FixedOperationsResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -243,7 +234,7 @@ POA_FixedPoint::AMH_FixedOperations::_set_rate_skel (
     );
 }
 
-::CORBA::Boolean POA_FixedPoint::AMH_FixedOperations::_is_a (const char* value)
+::CORBA::Boolean POA_FixedPoint::AMH_FixedOperations::_is_a (char const *value)
 {
   return
     (
@@ -252,7 +243,7 @@ POA_FixedPoint::AMH_FixedOperations::_set_rate_skel (
     );
 }
 
-const char* POA_FixedPoint::AMH_FixedOperations::_interface_repository_id () const
+char const *POA_FixedPoint::AMH_FixedOperations::_interface_repository_id () const
 {
   return "IDL:FixedPoint/FixedOperations:1.0";
 }
@@ -267,7 +258,7 @@ FixedPoint::FixedOperations*
 POA_FixedPoint::AMH_FixedOperations::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -287,8 +278,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -315,18 +306,14 @@ TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::hash (const char *str, std:
 const TAO_operation_db_entry *
 TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"_get_rate", std::addressof(POA_FixedPoint::FixedOperations::_get_rate_skel), std::addressof(POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_get_rate)},
       {"_set_rate", std::addressof(POA_FixedPoint::FixedOperations::_set_rate_skel), std::addressof(POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_set_rate)},
@@ -348,24 +335,24 @@ TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (const char *str, st
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
             return nullptr;
           else
             {
               std::size_t const offset = slot > 0
                 ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
                 : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -399,7 +386,7 @@ POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_get_rate (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::ACE_CDR::Fixed>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::ACE_CDR::Fixed>::ret_val *) args[0])->arg () =
     _tao_ptr->rate (
         );
 }
@@ -418,7 +405,7 @@ POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_set_rate (
     }
 
   _tao_ptr->rate (
-        ((TAO::Arg_Traits< ::ACE_CDR::Fixed>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::ACE_CDR::Fixed>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -446,8 +433,8 @@ namespace POA_FixedPoint
 
     void execute () override
     {
-      TAO::SArg_Traits< ::ACE_CDR::Fixed>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg< ::ACE_CDR::Fixed> (
+      TAO::SArg_Traits<::ACE_CDR::Fixed>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg<::ACE_CDR::Fixed> (
           this->operation_details_,
           this->args_);
 
@@ -466,7 +453,7 @@ void POA_FixedPoint::FixedOperations::_get_rate_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::ACE_CDR::Fixed>::ret_val retval;
+  TAO::SArg_Traits<::ACE_CDR::Fixed>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -490,11 +477,11 @@ void POA_FixedPoint::FixedOperations::_get_rate_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -513,8 +500,8 @@ namespace POA_FixedPoint
 
     void execute () override
     {
-      TAO::SArg_Traits< ::ACE_CDR::Fixed>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::ACE_CDR::Fixed> (
+      TAO::SArg_Traits<::ACE_CDR::Fixed>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::ACE_CDR::Fixed> (
           this->operation_details_,
           this->args_,
           1);
@@ -534,8 +521,8 @@ void POA_FixedPoint::FixedOperations::_set_rate_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::ACE_CDR::Fixed>::in_arg_val _tao_rate;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::ACE_CDR::Fixed>::in_arg_val _tao_rate;
 
   TAO::Argument * const args[] =
     {
@@ -560,15 +547,15 @@ void POA_FixedPoint::FixedOperations::_set_rate_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_FixedPoint::FixedOperations::_is_a (const char* value)
+::CORBA::Boolean POA_FixedPoint::FixedOperations::_is_a (char const *value)
 {
   return
     (
@@ -577,7 +564,7 @@ void POA_FixedPoint::FixedOperations::_set_rate_skel (
     );
 }
 
-const char* POA_FixedPoint::FixedOperations::_interface_repository_id () const
+char const *POA_FixedPoint::FixedOperations::_interface_repository_id () const
 {
   return "IDL:FixedPoint/FixedOperations:1.0";
 }
@@ -605,7 +592,7 @@ POA_FixedPoint::FixedOperations::_this ()
 
 void
 POA_FixedPoint::TAO_AMH_FixedOperationsResponseHandler::get_rate (
-  const ::FixedPoint::Amount & return_value)
+  ::FixedPoint::Amount const & return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -661,8 +648,8 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -689,31 +676,27 @@ TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::hash (const char
 const TAO_operation_db_entry *
 TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {24};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {20};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {24};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"set_rate", std::addressof(POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_skel), std::addressof(POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::set_rate)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"get_rate", std::addressof(POA_FixedPoint::AMI_FixedOperationsHandler::get_rate_skel), std::addressof(POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate)},
       {"set_rate_excep", std::addressof(POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_excep_skel), std::addressof(POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::set_rate_excep)},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"get_rate_excep", std::addressof(POA_FixedPoint::AMI_FixedOperationsHandler::get_rate_excep_skel), std::addressof(POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate_excep)},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
     };
 
@@ -756,7 +739,7 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate (
     }
 
   _tao_ptr->get_rate (
-        ((TAO::Arg_Traits< ::ACE_CDR::Fixed>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::ACE_CDR::Fixed>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -774,7 +757,7 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate_exce
     }
 
   _tao_ptr->get_rate_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -809,7 +792,7 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::set_rate_exce
     }
 
   _tao_ptr->set_rate_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -837,8 +820,8 @@ namespace POA_FixedPoint
 
     void execute () override
     {
-      TAO::SArg_Traits< ::ACE_CDR::Fixed>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::ACE_CDR::Fixed> (
+      TAO::SArg_Traits<::ACE_CDR::Fixed>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::ACE_CDR::Fixed> (
           this->operation_details_,
           this->args_,
           1);
@@ -858,8 +841,8 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::get_rate_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::ACE_CDR::Fixed>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::ACE_CDR::Fixed>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -884,11 +867,11 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::get_rate_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -907,8 +890,8 @@ namespace POA_FixedPoint
 
     void execute () override
     {
-      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -928,8 +911,8 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::get_rate_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -954,11 +937,11 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::get_rate_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -985,7 +968,7 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -1006,11 +989,11 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1029,8 +1012,8 @@ namespace POA_FixedPoint
 
     void execute () override
     {
-      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -1050,8 +1033,8 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1076,15 +1059,15 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_FixedPoint::AMI_FixedOperationsHandler::_is_a (const char* value)
+::CORBA::Boolean POA_FixedPoint::AMI_FixedOperationsHandler::_is_a (char const *value)
 {
   return
     (
@@ -1094,7 +1077,7 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_excep_skel (
     );
 }
 
-const char* POA_FixedPoint::AMI_FixedOperationsHandler::_interface_repository_id () const
+char const *POA_FixedPoint::AMI_FixedOperationsHandler::_interface_repository_id () const
 {
   return "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0";
 }

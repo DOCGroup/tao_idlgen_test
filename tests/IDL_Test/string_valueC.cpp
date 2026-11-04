@@ -42,7 +42,7 @@
 #endif /* !defined INLINE */
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_include_test_StringTest[] =
   {
-    { "my_string_value", &CORBA::_tc_StringValue, ::CORBA::PUBLIC_MEMBER }
+    { "my_string_value", std::addressof (CORBA::_tc_StringValue), ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -54,7 +54,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:include_test/StringTest:1.0",
     "StringTest",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_include_test_StringTest,
     1);
 

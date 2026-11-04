@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDA_89NUD4_H_
-#define _TAO_IDL_FIXEDA_89NUD4_H_
+#ifndef _TAO_IDL_FIXEDA_JGTOA9_H_
+#define _TAO_IDL_FIXEDA_JGTOA9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -63,7 +63,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FixedPoint::FixedOperations_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FixedPoint::FixedOperations_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, FixedPoint::FixedOperations_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, FixedPoint::FixedOperations_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -81,7 +81,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FixedPoint::AMH_FixedOperationsResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FixedPoint::AMH_FixedOperationsResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, FixedPoint::AMH_FixedOperationsResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, FixedPoint::AMH_FixedOperationsResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -90,7 +90,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FixedPoint::AMI_FixedOperationsHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FixedPoint::AMI_FixedOperationsHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, FixedPoint::AMI_FixedOperationsHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, FixedPoint::AMI_FixedOperationsHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ONLYS_PHI6JE_H_
-#define _TAO_IDL_ARRAY_ONLYS_PHI6JE_H_
+#ifndef _TAO_IDL_ARRAY_ONLYS_K0V8VX_H_
+#define _TAO_IDL_ARRAY_ONLYS_K0V8VX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,7 +52,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -66,7 +66,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::TEST_TYPE_tag>
+  class SArg_Traits<::TEST_TYPE_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::TEST_TYPE_var,

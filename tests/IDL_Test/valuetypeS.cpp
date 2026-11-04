@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_VALUETYPES_WY5X9A_CPP_
-#define _TAO_IDL_VALUETYPES_WY5X9A_CPP_
+#ifndef _TAO_IDL_VALUETYPES_TLQ4EG_CPP_
+#define _TAO_IDL_VALUETYPES_TLQ4EG_CPP_
 
 #include "valuetypeS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -52,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 #endif /* ifndef */
 

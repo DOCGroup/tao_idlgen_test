@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_NGLKZP_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_NGLKZP_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_Y759Z0_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_Y759Z0_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::EncodingID_T>
+  class SArg_Traits<::EncodingID_T>
     : public
         Basic_SArg_Traits_T<
             ::EncodingID_T,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Encoding_T>
+  class SArg_Traits<::Encoding_T>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Encoding_T,
@@ -97,7 +97,7 @@ namespace TAO
 #define _FIELDDEVICE_T__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::FieldDevice_T>
+  class  SArg_Traits<::FieldDevice_T>
     : public Object_SArg_Traits_T<
         ::FieldDevice_T_ptr,
         ::FieldDevice_T_var,
@@ -112,7 +112,7 @@ namespace TAO
 #define _AMH_FIELDDEVICE_TEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_FieldDevice_TExceptionHolder>
+  class SArg_Traits<::AMH_FieldDevice_TExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_FieldDevice_TExceptionHolder *,
@@ -129,7 +129,7 @@ namespace TAO
 #define _AMI_FIELDDEVICE_THANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_FieldDevice_THandler>
+  class  SArg_Traits<::AMI_FieldDevice_THandler>
     : public Object_SArg_Traits_T<
         ::AMI_FieldDevice_THandler_ptr,
         ::AMI_FieldDevice_THandler_var,
@@ -153,10 +153,10 @@ protected:
   POA_AMH_FieldDevice_T ();
 
 public:
-  POA_AMH_FieldDevice_T (const POA_AMH_FieldDevice_T& rhs);
+  POA_AMH_FieldDevice_T (POA_AMH_FieldDevice_T const &rhs);
   ~POA_AMH_FieldDevice_T () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -164,7 +164,7 @@ public:
 
   FieldDevice_T *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void getEncodingID_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -202,10 +202,10 @@ public:
   using _stub_ptr_type = ::FieldDevice_T_ptr;
   using _stub_var_type = ::FieldDevice_T_var;
 
-  POA_FieldDevice_T (const POA_FieldDevice_T& rhs) = default;
+  POA_FieldDevice_T (POA_FieldDevice_T const &rhs) = default;
   ~POA_FieldDevice_T () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -213,7 +213,7 @@ public:
 
   ::FieldDevice_T *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::EncodingID2_T getEncodingID () = 0;
 
   static void getEncodingID_skel (
@@ -265,7 +265,7 @@ public:
   void getEncodingID_excep (
     ::AMH_FieldDevice_TExceptionHolder * holder) override;
   void getEncoding (
-    const ::Encoding_T & return_value) override;
+    ::Encoding_T const & return_value) override;
   void getEncoding_excep (
     ::AMH_FieldDevice_TExceptionHolder * holder) override;
 };
@@ -287,10 +287,10 @@ public:
   using _stub_ptr_type = ::AMI_FieldDevice_THandler_ptr;
   using _stub_var_type = ::AMI_FieldDevice_THandler_var;
 
-  POA_AMI_FieldDevice_THandler (const POA_AMI_FieldDevice_THandler& rhs) = default;
+  POA_AMI_FieldDevice_THandler (POA_AMI_FieldDevice_THandler const &rhs) = default;
   ~POA_AMI_FieldDevice_THandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -298,7 +298,7 @@ public:
 
   ::AMI_FieldDevice_THandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void getEncodingID (
     ::EncodingID2_T ami_return_val) = 0;
 
@@ -314,7 +314,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void getEncoding (
-    const ::Encoding_T & ami_return_val) = 0;
+    ::Encoding_T const & ami_return_val) = 0;
 
   static void getEncoding_skel (
       TAO_ServerRequest &server_request,

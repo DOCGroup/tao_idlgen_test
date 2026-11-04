@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_CONSTANTSC_99SG59_H_
-#define _TAO_IDL_CONSTANTSC_99SG59_H_
+#ifndef _TAO_IDL_CONSTANTSC_9T19OR_H_
+#define _TAO_IDL_CONSTANTSC_9T19OR_H_
 
 #include /**/ "ace/pre.h"
 
@@ -222,10 +222,10 @@ namespace ClassConstants
 
     static const CORBA::WChar *const iface_wstr;
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -246,9 +246,9 @@ namespace ClassConstants
 
   private:
     // Private and unimplemented for concrete interfaces.
-    Iface (const Iface &) = delete;
+    Iface (Iface const &) = delete;
     Iface (Iface &&) = delete;
-    Iface &operator= (const Iface &) = delete;
+    Iface &operator= (Iface const &) = delete;
     Iface &operator= (Iface &&) = delete;
   };
 
@@ -362,10 +362,10 @@ namespace ClassConstants
     static AMH_IfaceResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMH_IfaceResponseHandler_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -376,9 +376,9 @@ namespace ClassConstants
 
   private:
     // Private and unimplemented for concrete interfaces.
-    AMH_IfaceResponseHandler (const AMH_IfaceResponseHandler &) = delete;
+    AMH_IfaceResponseHandler (AMH_IfaceResponseHandler const &) = delete;
     AMH_IfaceResponseHandler (AMH_IfaceResponseHandler &&) = delete;
-    AMH_IfaceResponseHandler &operator= (const AMH_IfaceResponseHandler &) = delete;
+    AMH_IfaceResponseHandler &operator= (AMH_IfaceResponseHandler const &) = delete;
     AMH_IfaceResponseHandler &operator= (AMH_IfaceResponseHandler &&) = delete;
   };
 
@@ -413,10 +413,10 @@ namespace ClassConstants
     static AMI_IfaceHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_IfaceHandler_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -437,9 +437,9 @@ namespace ClassConstants
 
   private:
     // Private and unimplemented for concrete interfaces.
-    AMI_IfaceHandler (const AMI_IfaceHandler &) = delete;
+    AMI_IfaceHandler (AMI_IfaceHandler const &) = delete;
     AMI_IfaceHandler (AMI_IfaceHandler &&) = delete;
-    AMI_IfaceHandler &operator= (const AMI_IfaceHandler &) = delete;
+    AMI_IfaceHandler &operator= (AMI_IfaceHandler const &) = delete;
     AMI_IfaceHandler &operator= (AMI_IfaceHandler &&) = delete;
   };
 
@@ -568,7 +568,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -583,7 +583,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::m_a::enum_a>
+  class Arg_Traits<::m_a::enum_a>
     : public
         Basic_Arg_Traits_T<
             ::m_a::enum_a,
@@ -596,7 +596,7 @@ namespace TAO
 #define _CLASSCONSTANTS_IFACE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::ClassConstants::Iface>
+  class  Arg_Traits<::ClassConstants::Iface>
     : public Object_Arg_Traits_T<
         ::ClassConstants::Iface_ptr,
         ::ClassConstants::Iface_var,
@@ -612,7 +612,7 @@ namespace TAO
 #define _CLASSCONSTANTS_AMH_IFACEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::ClassConstants::AMH_IfaceExceptionHolder>
+  class Arg_Traits<::ClassConstants::AMH_IfaceExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::ClassConstants::AMH_IfaceExceptionHolder *,
@@ -630,7 +630,7 @@ namespace TAO
 #define _CLASSCONSTANTS_AMI_IFACEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::ClassConstants::AMI_IfaceHandler>
+  class  Arg_Traits<::ClassConstants::AMI_IfaceHandler>
     : public Object_Arg_Traits_T<
         ::ClassConstants::AMI_IfaceHandler_ptr,
         ::ClassConstants::AMI_IfaceHandler_var,
@@ -646,7 +646,7 @@ namespace TAO
 #define _CLASSCONSTANTS_VT__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::ClassConstants::Vt>
+  class Arg_Traits<::ClassConstants::Vt>
     : public
         Object_Arg_Traits_T<
             ::ClassConstants::Vt *,
@@ -680,11 +680,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__ClassConstants_AMH_IfaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__ClassConstants_AMH_IfaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__ClassConstants_AMH_IfaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__ClassConstants_AMH_IfaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -716,11 +714,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__ClassConstants_Vt (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__ClassConstants_Vt (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__ClassConstants_Vt (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__ClassConstants_Vt (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -741,7 +737,7 @@ namespace TAO
 #define _CLASSCONSTANTS_IFACE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::ClassConstants::Iface>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::ClassConstants::Iface>
   {
     static ::ClassConstants::Iface_ptr duplicate (::ClassConstants::Iface_ptr p);
     static void release (::ClassConstants::Iface_ptr p);
@@ -768,7 +764,7 @@ namespace TAO
 #define _CLASSCONSTANTS_AMH_IFACERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::ClassConstants::AMH_IfaceResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::ClassConstants::AMH_IfaceResponseHandler>
   {
     static ::ClassConstants::AMH_IfaceResponseHandler_ptr duplicate (::ClassConstants::AMH_IfaceResponseHandler_ptr p);
     static void release (::ClassConstants::AMH_IfaceResponseHandler_ptr p);
@@ -782,7 +778,7 @@ namespace TAO
 #define _CLASSCONSTANTS_AMI_IFACEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::ClassConstants::AMI_IfaceHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::ClassConstants::AMI_IfaceHandler>
   {
     static ::ClassConstants::AMI_IfaceHandler_ptr duplicate (::ClassConstants::AMI_IfaceHandler_ptr p);
     static void release (::ClassConstants::AMI_IfaceHandler_ptr p);
@@ -816,7 +812,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ClassConstants::Iface_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ClassConstants::Iface_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ClassConstants::Iface_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -839,7 +835,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ClassConstants::AMI_IfaceHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ClassConstants::AMI_IfaceHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ClassConstants::AMI_IfaceHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

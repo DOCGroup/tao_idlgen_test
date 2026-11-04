@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSS_ZGPTHD_H_
-#define _TAO_IDL_KEYWORDSS_ZGPTHD_H_
+#ifndef _TAO_IDL_KEYWORDSS_H5J4HO_H_
+#define _TAO_IDL_KEYWORDSS_H5J4HO_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::Keywords>
+  class SArg_Traits<::Keywords>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Keywords,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Object>
+  class SArg_Traits<::Object>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Object,
@@ -94,7 +94,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::ObjectSeq>
+  class SArg_Traits<::ObjectSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::ObjectSeq,
@@ -104,7 +104,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Objects>
+  class SArg_Traits<::Objects>
     : public
         Var_Size_SArg_Traits_T<
             ::Objects,
@@ -117,7 +117,7 @@ namespace TAO
 #define _TESTING__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Testing>
+  class  SArg_Traits<::Testing>
     : public Object_SArg_Traits_T<
         ::Testing_ptr,
         ::Testing_var,
@@ -132,7 +132,7 @@ namespace TAO
 #define _AMH_TESTINGEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_TestingExceptionHolder>
+  class SArg_Traits<::AMH_TestingExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_TestingExceptionHolder *,
@@ -149,7 +149,7 @@ namespace TAO
 #define _AMI_TESTINGHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_TestingHandler>
+  class  SArg_Traits<::AMI_TestingHandler>
     : public Object_SArg_Traits_T<
         ::AMI_TestingHandler_ptr,
         ::AMI_TestingHandler_var,
@@ -173,10 +173,10 @@ protected:
   POA_AMH_Testing ();
 
 public:
-  POA_AMH_Testing (const POA_AMH_Testing& rhs);
+  POA_AMH_Testing (POA_AMH_Testing const &rhs);
   ~POA_AMH_Testing () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -184,7 +184,7 @@ public:
 
   Testing *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void foo_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -192,7 +192,7 @@ static void foo_skel (
 
 virtual void foo (
     AMH_TestingResponseHandler_ptr _tao_rh,
-    const char * _cxx_namespace
+    char const * _cxx_namespace
   ) = 0;
 
 static void bar_skel (
@@ -202,7 +202,7 @@ static void bar_skel (
 
 virtual void bar (
     AMH_TestingResponseHandler_ptr _tao_rh,
-    const ::Objects & foo
+    ::Objects const & foo
   ) = 0;
 
 };
@@ -224,10 +224,10 @@ public:
   using _stub_ptr_type = ::Testing_ptr;
   using _stub_var_type = ::Testing_var;
 
-  POA_Testing (const POA_Testing& rhs) = default;
+  POA_Testing (POA_Testing const &rhs) = default;
   ~POA_Testing () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -235,16 +235,16 @@ public:
 
   ::Testing *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void foo (
-    const char * _cxx_namespace) = 0;
+    char const * _cxx_namespace) = 0;
 
   static void foo_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void bar (
-    const ::Objects & foo) = 0;
+    ::Objects const & foo) = 0;
 
   static void bar_skel (
       TAO_ServerRequest &server_request,
@@ -309,10 +309,10 @@ public:
   using _stub_ptr_type = ::AMI_TestingHandler_ptr;
   using _stub_var_type = ::AMI_TestingHandler_var;
 
-  POA_AMI_TestingHandler (const POA_AMI_TestingHandler& rhs) = default;
+  POA_AMI_TestingHandler (POA_AMI_TestingHandler const &rhs) = default;
   ~POA_AMI_TestingHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -320,7 +320,7 @@ public:
 
   ::AMI_TestingHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void foo () = 0;
 
   static void foo_skel (

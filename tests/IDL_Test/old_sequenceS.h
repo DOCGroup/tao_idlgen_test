@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_EYIMWC_H_
-#define _TAO_IDL_OLD_SEQUENCES_EYIMWC_H_
+#ifndef _TAO_IDL_OLD_SEQUENCES_HSEOO9_H_
+#define _TAO_IDL_OLD_SEQUENCES_HSEOO9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -63,7 +63,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::c20>
+  class SArg_Traits<::c20>
     : public
         Var_Size_SArg_Traits_T<
             ::c20,
@@ -87,7 +87,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::cc23>
+  class SArg_Traits<::cc23>
     : public
         Var_Size_SArg_Traits_T<
             ::cc23,
@@ -97,7 +97,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::c24>
+  class SArg_Traits<::c24>
     : public
         Var_Size_SArg_Traits_T<
             ::c24,
@@ -107,7 +107,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::c30>
+  class SArg_Traits<::c30>
     : public
         Var_Size_SArg_Traits_T<
             ::c30,
@@ -117,7 +117,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::cstring>
+  class SArg_Traits<::cstring>
     : public
         Var_Size_SArg_Traits_T<
             ::cstring,
@@ -127,7 +127,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::TProgram>
+  class SArg_Traits<::TProgram>
     : public
         Var_Size_SArg_Traits_T<
             ::TProgram,
@@ -137,7 +137,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::sfoo>
+  class SArg_Traits<::sfoo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::sfoo,
@@ -147,7 +147,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::sfoo_ar_tag>
+  class SArg_Traits<::sfoo_ar_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::sfoo_ar_var,
@@ -158,7 +158,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::f_unbounded>
+  class SArg_Traits<::f_unbounded>
     : public
         Var_Size_SArg_Traits_T<
             ::f_unbounded,
@@ -168,7 +168,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::f_ar_unbounded>
+  class SArg_Traits<::f_ar_unbounded>
     : public
         Var_Size_SArg_Traits_T<
             ::f_ar_unbounded,
@@ -181,7 +181,7 @@ namespace TAO
 #define _TESTSEQ__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::TestSeq>
+  class  SArg_Traits<::TestSeq>
     : public Object_SArg_Traits_T<
         ::TestSeq_ptr,
         ::TestSeq_var,
@@ -193,7 +193,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::TestSeq::also_vec10>
+  class SArg_Traits<::TestSeq::also_vec10>
     : public
         Var_Size_SArg_Traits_T<
             ::TestSeq::also_vec10,
@@ -206,7 +206,7 @@ namespace TAO
 #define _AMH_TESTSEQEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_TestSeqExceptionHolder>
+  class SArg_Traits<::AMH_TestSeqExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_TestSeqExceptionHolder *,
@@ -223,7 +223,7 @@ namespace TAO
 #define _AMI_TESTSEQHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_TestSeqHandler>
+  class  SArg_Traits<::AMI_TestSeqHandler>
     : public Object_SArg_Traits_T<
         ::AMI_TestSeqHandler_ptr,
         ::AMI_TestSeqHandler_var,
@@ -247,10 +247,10 @@ protected:
   POA_AMH_TestSeq ();
 
 public:
-  POA_AMH_TestSeq (const POA_AMH_TestSeq& rhs);
+  POA_AMH_TestSeq (POA_AMH_TestSeq const &rhs);
   ~POA_AMH_TestSeq () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -258,7 +258,7 @@ public:
 
   TestSeq *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void _get_fattr_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -275,7 +275,7 @@ static void _set_fattr_skel (
 
 virtual void fattr (
     AMH_TestSeqResponseHandler_ptr _tao_rh,
-    const ::f_unbounded & fattr
+    ::f_unbounded const & fattr
   ) = 0;
 
 };
@@ -297,10 +297,10 @@ public:
   using _stub_ptr_type = ::TestSeq_ptr;
   using _stub_var_type = ::TestSeq_var;
 
-  POA_TestSeq (const POA_TestSeq& rhs) = default;
+  POA_TestSeq (POA_TestSeq const &rhs) = default;
   ~POA_TestSeq () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -308,7 +308,7 @@ public:
 
   ::TestSeq *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::f_unbounded * fattr () = 0;
 
   static void _get_fattr_skel (
@@ -316,7 +316,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void fattr (
-    const ::f_unbounded & fattr) = 0;
+    ::f_unbounded const & fattr) = 0;
 
   static void _set_fattr_skel (
       TAO_ServerRequest &server_request,
@@ -357,7 +357,7 @@ public:
   POA_TAO_AMH_TestSeqResponseHandler () = default;
   virtual ~POA_TAO_AMH_TestSeqResponseHandler () = default;
   void get_fattr (
-    const ::f_unbounded & return_value) override;
+    ::f_unbounded const & return_value) override;
   void get_fattr_excep (
     ::AMH_TestSeqExceptionHolder * holder) override;
   void set_fattr () override;
@@ -382,10 +382,10 @@ public:
   using _stub_ptr_type = ::AMI_TestSeqHandler_ptr;
   using _stub_var_type = ::AMI_TestSeqHandler_var;
 
-  POA_AMI_TestSeqHandler (const POA_AMI_TestSeqHandler& rhs) = default;
+  POA_AMI_TestSeqHandler (POA_AMI_TestSeqHandler const &rhs) = default;
   ~POA_AMI_TestSeqHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -393,9 +393,9 @@ public:
 
   ::AMI_TestSeqHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void get_fattr (
-    const ::f_unbounded & ami_return_val) = 0;
+    ::f_unbounded const & ami_return_val) = 0;
 
   static void get_fattr_skel (
       TAO_ServerRequest &server_request,

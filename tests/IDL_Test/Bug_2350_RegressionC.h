@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONC_CLZJV2_H_
-#define _TAO_IDL_BUG_2350_REGRESSIONC_CLZJV2_H_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONC_TLY2SM_H_
+#define _TAO_IDL_BUG_2350_REGRESSIONC_TLY2SM_H_
 
 #include /**/ "ace/pre.h"
 
@@ -149,16 +149,16 @@ public:
   static Bug_2350_Regression_ptr _nil ();
 
   virtual void Bug_2350_Regression_excep (
-    const ::user_ExceptionHolder & a);
+    ::user_ExceptionHolder const & a);
 
   virtual void sendc_Bug_2350_Regression_excep (
     ::AMI_Bug_2350_RegressionHandler_ptr ami_handler,
-    const ::user_ExceptionHolder & a);
+    ::user_ExceptionHolder const & a);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -179,9 +179,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  Bug_2350_Regression (const Bug_2350_Regression &) = delete;
+  Bug_2350_Regression (Bug_2350_Regression const &) = delete;
   Bug_2350_Regression (Bug_2350_Regression &&) = delete;
-  Bug_2350_Regression &operator= (const Bug_2350_Regression &) = delete;
+  Bug_2350_Regression &operator= (Bug_2350_Regression const &) = delete;
   Bug_2350_Regression &operator= (Bug_2350_Regression &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Bug_2350_Regression;
@@ -295,10 +295,10 @@ public:
   virtual void Bug_2350_Regression_excep_excep (
     ::AMH_Bug_2350_RegressionExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -309,9 +309,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_Bug_2350_RegressionResponseHandler (const AMH_Bug_2350_RegressionResponseHandler &) = delete;
+  AMH_Bug_2350_RegressionResponseHandler (AMH_Bug_2350_RegressionResponseHandler const &) = delete;
   AMH_Bug_2350_RegressionResponseHandler (AMH_Bug_2350_RegressionResponseHandler &&) = delete;
-  AMH_Bug_2350_RegressionResponseHandler &operator= (const AMH_Bug_2350_RegressionResponseHandler &) = delete;
+  AMH_Bug_2350_RegressionResponseHandler &operator= (AMH_Bug_2350_RegressionResponseHandler const &) = delete;
   AMH_Bug_2350_RegressionResponseHandler &operator= (AMH_Bug_2350_RegressionResponseHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_Bug_2350_RegressionResponseHandler;
@@ -358,10 +358,10 @@ public:
   virtual void Bug_2350_Regression_excep_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -382,9 +382,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_Bug_2350_RegressionHandler (const AMI_Bug_2350_RegressionHandler &) = delete;
+  AMI_Bug_2350_RegressionHandler (AMI_Bug_2350_RegressionHandler const &) = delete;
   AMI_Bug_2350_RegressionHandler (AMI_Bug_2350_RegressionHandler &&) = delete;
-  AMI_Bug_2350_RegressionHandler &operator= (const AMI_Bug_2350_RegressionHandler &) = delete;
+  AMI_Bug_2350_RegressionHandler &operator= (AMI_Bug_2350_RegressionHandler const &) = delete;
   AMI_Bug_2350_RegressionHandler &operator= (AMI_Bug_2350_RegressionHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_Bug_2350_RegressionHandler;
@@ -399,7 +399,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -414,7 +414,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::user_ExceptionHolder>
+  class Arg_Traits<::user_ExceptionHolder>
     : public
         Fixed_Size_Arg_Traits_T<
             ::user_ExceptionHolder,
@@ -427,7 +427,7 @@ namespace TAO
 #define _BUG_2350_REGRESSION__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Bug_2350_Regression>
+  class  Arg_Traits<::Bug_2350_Regression>
     : public Object_Arg_Traits_T<
         ::Bug_2350_Regression_ptr,
         ::Bug_2350_Regression_var,
@@ -443,7 +443,7 @@ namespace TAO
 #define _AMH_BUG_2350_REGRESSIONEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_Bug_2350_RegressionExceptionHolder>
+  class Arg_Traits<::AMH_Bug_2350_RegressionExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_Bug_2350_RegressionExceptionHolder *,
@@ -461,7 +461,7 @@ namespace TAO
 #define _AMI_BUG_2350_REGRESSIONHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_Bug_2350_RegressionHandler>
+  class  Arg_Traits<::AMI_Bug_2350_RegressionHandler>
     : public Object_Arg_Traits_T<
         ::AMI_Bug_2350_RegressionHandler_ptr,
         ::AMI_Bug_2350_RegressionHandler_var,
@@ -486,11 +486,9 @@ protected:
   ~OBV_AMH_Bug_2350_RegressionExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -510,7 +508,7 @@ namespace TAO
 #define _BUG_2350_REGRESSION__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Bug_2350_Regression>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Bug_2350_Regression>
   {
     static ::Bug_2350_Regression_ptr duplicate (::Bug_2350_Regression_ptr p);
     static void release (::Bug_2350_Regression_ptr p);
@@ -537,7 +535,7 @@ namespace TAO
 #define _AMH_BUG_2350_REGRESSIONRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_Bug_2350_RegressionResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_Bug_2350_RegressionResponseHandler>
   {
     static ::AMH_Bug_2350_RegressionResponseHandler_ptr duplicate (::AMH_Bug_2350_RegressionResponseHandler_ptr p);
     static void release (::AMH_Bug_2350_RegressionResponseHandler_ptr p);
@@ -551,7 +549,7 @@ namespace TAO
 #define _AMI_BUG_2350_REGRESSIONHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_Bug_2350_RegressionHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_Bug_2350_RegressionHandler>
   {
     static ::AMI_Bug_2350_RegressionHandler_ptr duplicate (::AMI_Bug_2350_RegressionHandler_ptr p);
     static void release (::AMI_Bug_2350_RegressionHandler_ptr p);
@@ -586,7 +584,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Bug_2350_Regression_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Bug_2350_Regression_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Bug_2350_Regression_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Bug_2350_Regression_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -604,7 +602,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_Bug_2350_RegressionResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_Bug_2350_RegressionResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMH_Bug_2350_RegressionResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMH_Bug_2350_RegressionResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -613,7 +611,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_Bug_2350_RegressionHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_Bug_2350_RegressionHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMI_Bug_2350_RegressionHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMI_Bug_2350_RegressionHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -633,7 +631,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Bug_2350_Regression_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Bug_2350_Regression_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Bug_2350_Regression_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -656,7 +654,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_Bug_2350_RegressionHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMI_Bug_2350_RegressionHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_Bug_2350_RegressionHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

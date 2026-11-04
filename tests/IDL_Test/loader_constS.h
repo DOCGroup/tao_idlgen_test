@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_LOADER_CONSTS_CVXBRX_H_
-#define _TAO_IDL_LOADER_CONSTS_CVXBRX_H_
+#ifndef _TAO_IDL_LOADER_CONSTS_SQKTO4_H_
+#define _TAO_IDL_LOADER_CONSTS_SQKTO4_H_
 
 #include /**/ "ace/pre.h"
 
@@ -83,7 +83,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,

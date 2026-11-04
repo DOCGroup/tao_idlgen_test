@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANYUNIONS_0ANG8U_CPP_
-#define _TAO_IDL_ANYUNIONS_0ANG8U_CPP_
+#ifndef _TAO_IDL_ANYUNIONS_5CMMUB_CPP_
+#define _TAO_IDL_ANYUNIONS_5CMMUB_CPP_
 
 #include "anyunionS.h"
 

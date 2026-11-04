@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_3821_REGRESSIONC_T6H6IK_H_
-#define _TAO_IDL_BUG_3821_REGRESSIONC_T6H6IK_H_
+#ifndef _TAO_IDL_BUG_3821_REGRESSIONC_C1T3US_H_
+#define _TAO_IDL_BUG_3821_REGRESSIONC_C1T3US_H_
 
 #include /**/ "ace/pre.h"
 
@@ -829,7 +829,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -844,7 +844,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::test::Enumeration>
+  class Arg_Traits<::test::Enumeration>
     : public
         Basic_Arg_Traits_T<
             ::test::Enumeration,
@@ -854,7 +854,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionAllCovered_EnumerationDiscriminant>
+  class Arg_Traits<::test::UnionAllCovered_EnumerationDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionAllCovered_EnumerationDiscriminant,
@@ -864,7 +864,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionAllCoveredWithDefault_EnumerationDiscriminant>
+  class Arg_Traits<::test::UnionAllCoveredWithDefault_EnumerationDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionAllCoveredWithDefault_EnumerationDiscriminant,
@@ -874,7 +874,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionWithDefault_EnumerationDiscriminant>
+  class Arg_Traits<::test::UnionWithDefault_EnumerationDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionWithDefault_EnumerationDiscriminant,
@@ -884,7 +884,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionWithImplicitDefault_EnumerationDiscriminant>
+  class Arg_Traits<::test::UnionWithImplicitDefault_EnumerationDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionWithImplicitDefault_EnumerationDiscriminant,
@@ -894,7 +894,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionAllCovered_TypedefedEnumerationDiscriminant>
+  class Arg_Traits<::test::UnionAllCovered_TypedefedEnumerationDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionAllCovered_TypedefedEnumerationDiscriminant,
@@ -904,7 +904,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant>
+  class Arg_Traits<::test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant,
@@ -914,7 +914,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionWithDefault_TypedefedEnumerationDiscriminant>
+  class Arg_Traits<::test::UnionWithDefault_TypedefedEnumerationDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionWithDefault_TypedefedEnumerationDiscriminant,
@@ -924,7 +924,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant>
+  class Arg_Traits<::test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant,
@@ -934,7 +934,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionAllCovered_BooleanDiscriminant>
+  class Arg_Traits<::test::UnionAllCovered_BooleanDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionAllCovered_BooleanDiscriminant,
@@ -944,7 +944,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionWithDefault_BooleanDiscriminant>
+  class Arg_Traits<::test::UnionWithDefault_BooleanDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionWithDefault_BooleanDiscriminant,
@@ -954,7 +954,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionWithImplicitDefault_BooleanDiscriminant>
+  class Arg_Traits<::test::UnionWithImplicitDefault_BooleanDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionWithImplicitDefault_BooleanDiscriminant,
@@ -964,7 +964,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionAllCovered_CharDiscriminant>
+  class Arg_Traits<::test::UnionAllCovered_CharDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionAllCovered_CharDiscriminant,
@@ -974,7 +974,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionWithDefault_CharDiscriminant>
+  class Arg_Traits<::test::UnionWithDefault_CharDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionWithDefault_CharDiscriminant,
@@ -984,7 +984,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionWithImplicitDefault_CharDiscriminant>
+  class Arg_Traits<::test::UnionWithImplicitDefault_CharDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionWithImplicitDefault_CharDiscriminant,
@@ -994,7 +994,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionWithDefault_LongDiscriminant>
+  class Arg_Traits<::test::UnionWithDefault_LongDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionWithDefault_LongDiscriminant,
@@ -1004,7 +1004,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::test::UnionWithImplicitDefault_LongDiscriminant>
+  class Arg_Traits<::test::UnionWithImplicitDefault_LongDiscriminant>
     : public
         Fixed_Size_Arg_Traits_T<
             ::test::UnionWithImplicitDefault_LongDiscriminant,

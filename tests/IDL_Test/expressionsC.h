@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_EXPRESSIONSC_I5PDBO_H_
-#define _TAO_IDL_EXPRESSIONSC_I5PDBO_H_
+#ifndef _TAO_IDL_EXPRESSIONSC_0IEY9Z_H_
+#define _TAO_IDL_EXPRESSIONSC_0IEY9Z_H_
 
 #include /**/ "ace/pre.h"
 
@@ -157,7 +157,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,

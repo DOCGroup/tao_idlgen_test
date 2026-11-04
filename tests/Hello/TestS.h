@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_4X82NF_H_
-#define _TAO_IDL_TESTS_4X82NF_H_
+#ifndef _TAO_IDL_TESTS_IZB226_H_
+#define _TAO_IDL_TESTS_IZB226_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,7 +52,7 @@ namespace TAO
 #define _TEST_HELLO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Test::Hello>
+  class  SArg_Traits<::Test::Hello>
     : public Object_SArg_Traits_T<
         ::Test::Hello_ptr,
         ::Test::Hello_var,
@@ -84,10 +84,10 @@ namespace POA_Test
     using _stub_ptr_type = ::Test::Hello_ptr;
     using _stub_var_type = ::Test::Hello_var;
 
-    Hello (const Hello& rhs) = default;
+    Hello (Hello const &rhs) = default;
     ~Hello () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -95,7 +95,7 @@ namespace POA_Test
 
     ::Test::Hello *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual char * get_string () = 0;
 
     static void get_string_skel (

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_GWC66S_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_GWC66S_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_QXJYD4_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_QXJYD4_H_
 
 #include /**/ "ace/pre.h"
 
@@ -113,10 +113,10 @@ namespace M1
     static LI_ptr _nil ();
 
     virtual void op (
-      const ::M1::S1 & s) = 0;
+      ::M1::S1 const & s) = 0;
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -127,9 +127,9 @@ namespace M1
 
   private:
     // Private and unimplemented for concrete interfaces.
-    LI (const LI &) = delete;
+    LI (LI const &) = delete;
     LI (LI &&) = delete;
-    LI &operator= (const LI &) = delete;
+    LI &operator= (LI const &) = delete;
     LI &operator= (LI &&) = delete;
   };
   extern  ::CORBA::TypeCode_ptr const _tc_LI;
@@ -226,7 +226,7 @@ namespace TAO
 {
 
   template<>
-  class Arg_Traits< ::M1::S1>
+  class Arg_Traits<::M1::S1>
     : public
         Fixed_Size_Arg_Traits_T<
             ::M1::S1,
@@ -239,7 +239,7 @@ namespace TAO
 #define _M1_V__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::M1::V>
+  class Arg_Traits<::M1::V>
     : public
         Object_Arg_Traits_T<
             ::M1::V *,
@@ -285,8 +285,8 @@ public:
 public:
   V () = default;
   V (
-      const char * _tao_init_valString,
-      const ::M1::S1 & _tao_init_valStruct,
+      char const * _tao_init_valString,
+      ::M1::S1 const & _tao_init_valStruct,
       ::M1::LI_ptr _tao_init_valLocalIface
     );
   ~V () override;
@@ -311,7 +311,7 @@ namespace TAO
 #define _M1_LI__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::M1::LI>
+  struct  Objref_Traits<::M1::LI>
   {
     static ::M1::LI_ptr duplicate (::M1::LI_ptr p);
     static void release (::M1::LI_ptr p);

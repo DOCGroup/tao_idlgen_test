@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_VALUETYPEC_SJVDFI_H_
-#define _TAO_IDL_VALUETYPEC_SJVDFI_H_
+#ifndef _TAO_IDL_VALUETYPEC_FDMFRL_H_
+#define _TAO_IDL_VALUETYPEC_FDMFRL_H_
 
 #include /**/ "ace/pre.h"
 
@@ -701,7 +701,7 @@ namespace ModSelection
 
     public:
       virtual ::CORBA::Boolean isValid (
-          const ::CORBA::WChar *
+          ::CORBA::WChar const *
         ) = 0;
 
     protected:
@@ -852,7 +852,7 @@ namespace ModSelection
 
       virtual CriterionExpr* createWithCriterionLink (
         ::ModSelection::SelectionDefns::Criterion * theLeftCriterion,
-        const char * link,
+        char const * link,
         ::ModSelection::SelectionDefns::CriterionExpr * theRightCriterion) = 0;
 
       virtual CriterionExpr* createWithSingleCriterion (
@@ -886,7 +886,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -904,7 +904,7 @@ namespace TAO
 #define _MYVALUETYPE__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::MyValueType>
+  class Arg_Traits<::MyValueType>
     : public
         Object_Arg_Traits_T<
             ::MyValueType *,
@@ -922,7 +922,7 @@ namespace TAO
 #define _DEFAULTINITIALIZEDVALUE__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::DefaultInitializedValue>
+  class Arg_Traits<::DefaultInitializedValue>
     : public
         Object_Arg_Traits_T<
             ::DefaultInitializedValue *,
@@ -937,7 +937,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::ValueSort2>
+  class Arg_Traits<::ValueSort2>
     : public
         Basic_Arg_Traits_T<
             ::ValueSort2,
@@ -947,7 +947,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::MyValueTypeUnion>
+  class Arg_Traits<::MyValueTypeUnion>
     : public
         Var_Size_Arg_Traits_T<
             ::MyValueTypeUnion,
@@ -960,7 +960,7 @@ namespace TAO
 #define _RECVALUETYPE__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::RecValueType>
+  class Arg_Traits<::RecValueType>
     : public
         Object_Arg_Traits_T<
             ::RecValueType *,
@@ -978,7 +978,7 @@ namespace TAO
 #define _GETSDEPRECATEDMEMBER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::GetsDeprecatedMember>
+  class Arg_Traits<::GetsDeprecatedMember>
     : public
         Object_Arg_Traits_T<
             ::GetsDeprecatedMember *,
@@ -996,7 +996,7 @@ namespace TAO
 #define _X_VALUETYPE_AXXX__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::X_VALUETYPE::AXXX>
+  class Arg_Traits<::X_VALUETYPE::AXXX>
     : public
         Object_Arg_Traits_T<
             ::X_VALUETYPE::AXXX *,
@@ -1014,7 +1014,7 @@ namespace TAO
 #define _X_VALUETYPE_BXXX__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::X_VALUETYPE::BXXX>
+  class Arg_Traits<::X_VALUETYPE::BXXX>
     : public
         Object_Arg_Traits_T<
             ::X_VALUETYPE::BXXX *,
@@ -1029,7 +1029,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::X_VALUETYPE::BSeq>
+  class Arg_Traits<::X_VALUETYPE::BSeq>
     : public
         Var_Size_Arg_Traits_T<
             ::X_VALUETYPE::BSeq,
@@ -1042,7 +1042,7 @@ namespace TAO
 #define _MODSELECTION_SELECTIONDEFNS_CRITERION__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::ModSelection::SelectionDefns::Criterion>
+  class Arg_Traits<::ModSelection::SelectionDefns::Criterion>
     : public
         Object_Arg_Traits_T<
             ::ModSelection::SelectionDefns::Criterion *,
@@ -1060,7 +1060,7 @@ namespace TAO
 #define _MODSELECTION_SELECTIONDEFNS_CRITERIONEXPR__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::ModSelection::SelectionDefns::CriterionExpr>
+  class Arg_Traits<::ModSelection::SelectionDefns::CriterionExpr>
     : public
         Object_Arg_Traits_T<
             ::ModSelection::SelectionDefns::CriterionExpr *,
@@ -1075,7 +1075,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionInfos>
+  class Arg_Traits<::ModSelection::SelectionDefns::CriterionExpr::RightCriterionInfos>
     : public
         Var_Size_Arg_Traits_T<
             ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionInfos,
@@ -1085,7 +1085,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr>
+  class Arg_Traits<::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr>
     : public
         Var_Size_Arg_Traits_T<
             ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr,
@@ -1113,16 +1113,14 @@ public:
 public:
   OBV_MyValueType () = default;
   OBV_MyValueType (
-      const char * _tao_init_my_string_value
+      char const * _tao_init_my_string_value
     );
   ~OBV_MyValueType () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__MyValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__MyValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__MyValueType (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__MyValueType (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1159,11 +1157,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__DefaultInitializedValue (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__DefaultInitializedValue (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__DefaultInitializedValue (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__DefaultInitializedValue (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1194,8 +1190,8 @@ protected:
 public:
   OBV_RecValueType () = default;
   OBV_RecValueType (
-      const ::RecValueType::_tao_seq_RecValueType_ & _tao_init_rec_value_types,
-      const ::RecValueType::_tao_seq_RecValueType__2 & _tao_init_rec_value_types2
+      ::RecValueType::_tao_seq_RecValueType_ const & _tao_init_rec_value_types,
+      ::RecValueType::_tao_seq_RecValueType__2 const & _tao_init_rec_value_types2
     );
   ~OBV_RecValueType () override;
 
@@ -1203,11 +1199,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__RecValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__RecValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__RecValueType (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__RecValueType (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1234,17 +1228,15 @@ public:
 public:
   OBV_GetsDeprecatedMember () = default;
   OBV_GetsDeprecatedMember (
-      const ::IncludedBase::_tao_seq_CORBA_Long_ & _tao_init_DeprecatedMember,
-      const char * _tao_init_StringMember
+      ::IncludedBase::_tao_seq_CORBA_Long_ const & _tao_init_DeprecatedMember,
+      char const * _tao_init_StringMember
     );
   ~OBV_GetsDeprecatedMember () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__GetsDeprecatedMember (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__GetsDeprecatedMember (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__GetsDeprecatedMember (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__GetsDeprecatedMember (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1288,16 +1280,14 @@ namespace OBV_ModSelection
     CriterionExpr () = default;
     CriterionExpr (
         ::ModSelection::SelectionDefns::Criterion * _tao_init_theLeftCriterion,
-        const ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr & _tao_init_theRightCriterionExpr
+        ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr const & _tao_init_theRightCriterionExpr
       );
     ~CriterionExpr () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__ModSelection_SelectionDefns_CriterionExpr (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__ModSelection_SelectionDefns_CriterionExpr (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__ModSelection_SelectionDefns_CriterionExpr (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__ModSelection_SelectionDefns_CriterionExpr (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1589,11 +1579,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    RecValueType::_tao_seq_RecValueType_ const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  RecValueType::_tao_seq_RecValueType_ const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    RecValueType::_tao_seq_RecValueType_ &_tao_sequence);
+  TAO_InputCDR &strm,
+  RecValueType::_tao_seq_RecValueType_ &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1604,11 +1594,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    RecValueType::_tao_seq_RecValueType__2 const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  RecValueType::_tao_seq_RecValueType__2 const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    RecValueType::_tao_seq_RecValueType__2 &_tao_sequence);
+  TAO_InputCDR &strm,
+  RecValueType::_tao_seq_RecValueType__2 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1666,12 +1656,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_X_VALUETYPE_BSeq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    X_VALUETYPE::BSeq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    X_VALUETYPE::BSeq &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, X_VALUETYPE::BSeq const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, X_VALUETYPE::BSeq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

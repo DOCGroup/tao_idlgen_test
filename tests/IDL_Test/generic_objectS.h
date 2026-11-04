@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_L8HL8T_H_
-#define _TAO_IDL_GENERIC_OBJECTS_L8HL8T_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_2LQSA5_H_
+#define _TAO_IDL_GENERIC_OBJECTS_2LQSA5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::ObjectType>
+  class SArg_Traits<::ObjectType>
     : public
         Basic_SArg_Traits_T<
             ::ObjectType,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Selecter>
+  class SArg_Traits<::Selecter>
     : public
         Var_Size_SArg_Traits_T<
             ::Selecter,
@@ -97,7 +97,7 @@ namespace TAO
 #define _GENERIC__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::generic>
+  class  SArg_Traits<::generic>
     : public Object_SArg_Traits_T<
         ::generic_ptr,
         ::generic_var,
@@ -112,7 +112,7 @@ namespace TAO
 #define _AMH_GENERICEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_genericExceptionHolder>
+  class SArg_Traits<::AMH_genericExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_genericExceptionHolder *,
@@ -129,7 +129,7 @@ namespace TAO
 #define _AMI_GENERICHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_genericHandler>
+  class  SArg_Traits<::AMI_genericHandler>
     : public Object_SArg_Traits_T<
         ::AMI_genericHandler_ptr,
         ::AMI_genericHandler_var,
@@ -153,10 +153,10 @@ protected:
   POA_AMH_generic ();
 
 public:
-  POA_AMH_generic (const POA_AMH_generic& rhs);
+  POA_AMH_generic (POA_AMH_generic const &rhs);
   ~POA_AMH_generic () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -164,7 +164,7 @@ public:
 
   generic *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -195,10 +195,10 @@ public:
   using _stub_ptr_type = ::generic_ptr;
   using _stub_var_type = ::generic_var;
 
-  POA_generic (const POA_generic& rhs) = default;
+  POA_generic (POA_generic const &rhs) = default;
   ~POA_generic () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -206,7 +206,7 @@ public:
 
   ::generic *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::CORBA::Object_ptr op (
     ::CORBA::Object_ptr inarg,
     ::CORBA::Object_ptr & inoutarg,
@@ -271,10 +271,10 @@ public:
   using _stub_ptr_type = ::AMI_genericHandler_ptr;
   using _stub_var_type = ::AMI_genericHandler_var;
 
-  POA_AMI_genericHandler (const POA_AMI_genericHandler& rhs) = default;
+  POA_AMI_genericHandler (POA_AMI_genericHandler const &rhs) = default;
   ~POA_AMI_genericHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -282,7 +282,7 @@ public:
 
   ::AMI_genericHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op (
     ::CORBA::Object_ptr ami_return_val,
     ::CORBA::Object_ptr inoutarg,

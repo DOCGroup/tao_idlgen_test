@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REPO_ID_MODS_NHVN2I_CPP_
-#define _TAO_IDL_REPO_ID_MODS_NHVN2I_CPP_
+#ifndef _TAO_IDL_REPO_ID_MODS_EFVCTK_CPP_
+#define _TAO_IDL_REPO_ID_MODS_EFVCTK_CPP_
 
 #include "repo_id_modS.h"
 

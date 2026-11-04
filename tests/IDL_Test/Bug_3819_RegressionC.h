@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_3819_REGRESSIONC_1Z5UOV_H_
-#define _TAO_IDL_BUG_3819_REGRESSIONC_1Z5UOV_H_
+#ifndef _TAO_IDL_BUG_3819_REGRESSIONC_VPIZAR_H_
+#define _TAO_IDL_BUG_3819_REGRESSIONC_VPIZAR_H_
 
 #include /**/ "ace/pre.h"
 
@@ -117,7 +117,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -135,7 +135,7 @@ namespace TAO
 #define _ORANGE_APPLE_FOO__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::orange::apple::Foo>
+  class Arg_Traits<::orange::apple::Foo>
     : public
         Object_Arg_Traits_T<
             ::orange::apple::Foo *,
@@ -153,7 +153,7 @@ namespace TAO
 #define _ORANGE_APPLE_FOO__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::orange::apple::Foo>
+  class Arg_Traits<::orange::apple::Foo>
     : public
         Object_Arg_Traits_T<
             ::orange::apple::Foo *,
@@ -171,7 +171,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::orange::apple::Bar>
+  class  Arg_Traits<::orange::apple::Bar>
     : public Object_Arg_Traits_T<
         ::orange::apple::Bar_ptr,
         ::orange::apple::Bar_var,
@@ -187,7 +187,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::orange::apple::Bar>
+  class  Arg_Traits<::orange::apple::Bar>
     : public Object_Arg_Traits_T<
         ::orange::apple::Bar_ptr,
         ::orange::apple::Bar_var,
@@ -245,7 +245,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::orange::apple::Bar>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::orange::apple::Bar>
   {
     static ::orange::apple::Bar_ptr duplicate (::orange::apple::Bar_ptr p);
     static void release (::orange::apple::Bar_ptr p);
@@ -259,7 +259,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::orange::apple::Bar>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::orange::apple::Bar>
   {
     static ::orange::apple::Bar_ptr duplicate (::orange::apple::Bar_ptr p);
     static void release (::orange::apple::Bar_ptr p);
