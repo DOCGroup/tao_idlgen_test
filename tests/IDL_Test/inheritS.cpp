@@ -1102,7 +1102,6 @@ TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::lookup (const char *str, std
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {15};
-  constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1132,7 +1131,7 @@ TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::lookup (const char *str, std
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -2447,7 +2446,6 @@ TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::lookup (const char *str, st
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {28};
-  constexpr std::size_t WORDLIST_SIZE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -2482,7 +2480,7 @@ TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::lookup (const char *str, st
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -3143,7 +3141,6 @@ TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::lookup (const char *str, st
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {28};
-  constexpr std::size_t WORDLIST_SIZE {20};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -3180,7 +3177,7 @@ TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::lookup (const char *str, st
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 

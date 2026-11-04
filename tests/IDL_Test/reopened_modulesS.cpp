@@ -1178,7 +1178,6 @@ TAO_AA_BB_CC_AMI_x2Handler_Perfect_Hash_OpTable::lookup (const char *str, std::s
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {3};
   constexpr std::size_t MAX_HASH_VALUE {18};
-  constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1210,7 +1209,7 @@ TAO_AA_BB_CC_AMI_x2Handler_Perfect_Hash_OpTable::lookup (const char *str, std::s
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -1851,7 +1850,6 @@ TAO_dot_AMH_Person_Perfect_Hash_OpTable::lookup (const char *str, std::size_t le
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {19};
-  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1879,7 +1877,7 @@ TAO_dot_AMH_Person_Perfect_Hash_OpTable::lookup (const char *str, std::size_t le
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -2068,7 +2066,6 @@ TAO_dot_Person_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {19};
-  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -2096,7 +2093,7 @@ TAO_dot_Person_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -2903,7 +2900,6 @@ TAO_dot_AMH_Party_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len
   constexpr std::size_t MAX_WORD_LENGTH {15};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {15};
-  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -2931,7 +2927,7 @@ TAO_dot_AMH_Party_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -3120,7 +3116,6 @@ TAO_dot_Party_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
   constexpr std::size_t MAX_WORD_LENGTH {15};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {15};
-  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -3148,7 +3143,7 @@ TAO_dot_Party_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -7430,7 +7425,6 @@ TAO_XX_AMI_blah0Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {3};
   constexpr std::size_t MAX_HASH_VALUE {15};
-  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -7460,7 +7454,7 @@ TAO_XX_AMI_blah0Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -10076,7 +10070,6 @@ TAO_A_B_AMI_X3Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
   constexpr std::size_t MAX_WORD_LENGTH {16};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {25};
-  constexpr std::size_t WORDLIST_SIZE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -10110,7 +10103,7 @@ TAO_A_B_AMI_X3Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -10602,7 +10595,6 @@ TAO_mA_AMH_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {15};
-  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -10630,7 +10622,7 @@ TAO_mA_AMH_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -10819,7 +10811,6 @@ TAO_mA_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {15};
-  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -10847,7 +10838,7 @@ TAO_mA_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -11654,7 +11645,6 @@ TAO_mB_AMH_B_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {19};
-  constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -11684,7 +11674,7 @@ TAO_mB_AMH_B_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -11874,7 +11864,6 @@ TAO_mB_B_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {19};
-  constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -11904,7 +11893,7 @@ TAO_mB_B_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -12248,7 +12237,6 @@ TAO_mB_AMI_BHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {28};
-  constexpr std::size_t WORDLIST_SIZE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -12283,7 +12271,7 @@ TAO_mB_AMI_BHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -12739,7 +12727,6 @@ TAO_mC_AMH_C_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {19};
-  constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -12769,7 +12756,7 @@ TAO_mC_AMH_C_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -12881,7 +12868,6 @@ TAO_mC_C_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {19};
-  constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -12911,7 +12897,7 @@ TAO_mC_C_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
@@ -13035,7 +13021,6 @@ TAO_mC_AMI_CHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr std::size_t MIN_HASH_VALUE {5};
   constexpr std::size_t MAX_HASH_VALUE {28};
-  constexpr std::size_t WORDLIST_SIZE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -13070,7 +13055,7 @@ TAO_mC_AMI_CHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
         {
           int const slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+          if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
               const char *s = wordlist[slot].opname;
 
