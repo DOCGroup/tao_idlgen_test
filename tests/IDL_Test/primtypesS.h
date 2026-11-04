@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESS_204K84_H_
-#define _TAO_IDL_PRIMTYPESS_204K84_H_
+#ifndef _TAO_IDL_PRIMTYPESS_2R8OPE_H_
+#define _TAO_IDL_PRIMTYPESS_2R8OPE_H_
 
 #include /**/ "ace/pre.h"
 
@@ -61,7 +61,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -78,7 +78,7 @@ namespace TAO
 #define _OLDPRIMTYPES_EX1__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldPrimTypes::ex1>
+  class  SArg_Traits<::OldPrimTypes::ex1>
     : public Object_SArg_Traits_T<
         ::OldPrimTypes::ex1_ptr,
         ::OldPrimTypes::ex1_var,
@@ -93,7 +93,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMH_EX1EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::OldPrimTypes::AMH_ex1ExceptionHolder>
+  class SArg_Traits<::OldPrimTypes::AMH_ex1ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldPrimTypes::AMH_ex1ExceptionHolder *,
@@ -110,7 +110,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMI_EX1HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldPrimTypes::AMI_ex1Handler>
+  class  SArg_Traits<::OldPrimTypes::AMI_ex1Handler>
     : public Object_SArg_Traits_T<
         ::OldPrimTypes::AMI_ex1Handler_ptr,
         ::OldPrimTypes::AMI_ex1Handler_var,
@@ -125,7 +125,7 @@ namespace TAO
 #define _OLDPRIMTYPES_EX2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldPrimTypes::ex2>
+  class  SArg_Traits<::OldPrimTypes::ex2>
     : public Object_SArg_Traits_T<
         ::OldPrimTypes::ex2_ptr,
         ::OldPrimTypes::ex2_var,
@@ -140,7 +140,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMH_EX2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::OldPrimTypes::AMH_ex2ExceptionHolder>
+  class SArg_Traits<::OldPrimTypes::AMH_ex2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldPrimTypes::AMH_ex2ExceptionHolder *,
@@ -157,7 +157,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMI_EX2HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldPrimTypes::AMI_ex2Handler>
+  class  SArg_Traits<::OldPrimTypes::AMI_ex2Handler>
     : public Object_SArg_Traits_T<
         ::OldPrimTypes::AMI_ex2Handler_ptr,
         ::OldPrimTypes::AMI_ex2Handler_var,

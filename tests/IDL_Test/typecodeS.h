@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPECODES_1WR8XT_H_
-#define _TAO_IDL_TYPECODES_1WR8XT_H_
+#ifndef _TAO_IDL_TYPECODES_F8YM0G_H_
+#define _TAO_IDL_TYPECODES_F8YM0G_H_
 
 #include /**/ "ace/pre.h"
 
@@ -84,7 +84,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -98,7 +98,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::MyModule::TypeCodeList>
+  class SArg_Traits<::MyModule::TypeCodeList>
     : public
         Var_Size_SArg_Traits_T<
             ::MyModule::TypeCodeList,

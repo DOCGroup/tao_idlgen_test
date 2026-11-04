@@ -23,6 +23,7 @@
  **/
 
 #include "inheritC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
@@ -30,7 +31,6 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "inheritC.inl"
@@ -74,7 +74,7 @@ OldInherit::one::op_one ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -170,10 +170,8 @@ OldInherit::one::_tao_release (one_ptr obj)
 ::CORBA::Boolean
 OldInherit::one::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -338,14 +336,14 @@ OldInherit::AMH_oneExceptionHolder::_tao_unmarshal (
 void
 OldInherit::AMH_oneExceptionHolder::raise_op_one ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 OldInherit::AMH_oneExceptionHolder::raise_sendc_op_one ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -428,11 +426,9 @@ OldInherit::AMH_oneResponseHandler::_tao_release (AMH_oneResponseHandler_ptr obj
 ::CORBA::Boolean
 OldInherit::AMH_oneResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/AMH_oneResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/AMH_oneResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -501,7 +497,7 @@ OldInherit::AMI_oneHandler::op_one ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -587,8 +583,8 @@ OldInherit::AMI_oneHandler::op_one_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -656,11 +652,9 @@ OldInherit::AMI_oneHandler::_tao_release (AMI_oneHandler_ptr obj)
 ::CORBA::Boolean
 OldInherit::AMI_oneHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -729,7 +723,7 @@ OldInherit::two::op_two ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -825,11 +819,9 @@ OldInherit::two::_tao_release (two_ptr obj)
 ::CORBA::Boolean
 OldInherit::two::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -994,14 +986,14 @@ OldInherit::AMH_twoExceptionHolder::_tao_unmarshal (
 void
 OldInherit::AMH_twoExceptionHolder::raise_op_two ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 OldInherit::AMH_twoExceptionHolder::raise_sendc_op_two ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -1084,11 +1076,9 @@ OldInherit::AMH_twoResponseHandler::_tao_release (AMH_twoResponseHandler_ptr obj
 ::CORBA::Boolean
 OldInherit::AMH_twoResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/AMH_twoResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/AMH_twoResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1157,7 +1147,7 @@ OldInherit::AMI_twoHandler::op_two ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1243,8 +1233,8 @@ OldInherit::AMI_twoHandler::op_two_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1312,12 +1302,10 @@ OldInherit::AMI_twoHandler::_tao_release (AMI_twoHandler_ptr obj)
 ::CORBA::Boolean
 OldInherit::AMI_twoHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1386,7 +1374,7 @@ OldInherit::three::op_three ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1482,11 +1470,9 @@ OldInherit::three::_tao_release (three_ptr obj)
 ::CORBA::Boolean
 OldInherit::three::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1651,14 +1637,14 @@ OldInherit::AMH_threeExceptionHolder::_tao_unmarshal (
 void
 OldInherit::AMH_threeExceptionHolder::raise_op_three ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 OldInherit::AMH_threeExceptionHolder::raise_sendc_op_three ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -1741,11 +1727,9 @@ OldInherit::AMH_threeResponseHandler::_tao_release (AMH_threeResponseHandler_ptr
 ::CORBA::Boolean
 OldInherit::AMH_threeResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/AMH_threeResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/AMH_threeResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1814,7 +1798,7 @@ OldInherit::AMI_threeHandler::op_three ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1900,8 +1884,8 @@ OldInherit::AMI_threeHandler::op_three_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1969,12 +1953,10 @@ OldInherit::AMI_threeHandler::_tao_release (AMI_threeHandler_ptr obj)
 ::CORBA::Boolean
 OldInherit::AMI_threeHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2043,7 +2025,7 @@ OldInherit::four::op_four ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2139,13 +2121,11 @@ OldInherit::four::_tao_release (four_ptr obj)
 ::CORBA::Boolean
 OldInherit::four::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2310,14 +2290,14 @@ OldInherit::AMH_fourExceptionHolder::_tao_unmarshal (
 void
 OldInherit::AMH_fourExceptionHolder::raise_op_four ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 OldInherit::AMH_fourExceptionHolder::raise_sendc_op_four ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -2400,11 +2380,9 @@ OldInherit::AMH_fourResponseHandler::_tao_release (AMH_fourResponseHandler_ptr o
 ::CORBA::Boolean
 OldInherit::AMH_fourResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/AMH_fourResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/AMH_fourResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2473,7 +2451,7 @@ OldInherit::AMI_fourHandler::op_four ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2559,8 +2537,8 @@ OldInherit::AMI_fourHandler::op_four_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2628,14 +2606,12 @@ OldInherit::AMI_fourHandler::_tao_release (AMI_fourHandler_ptr obj)
 ::CORBA::Boolean
 OldInherit::AMI_fourHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_fourHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2704,7 +2680,7 @@ OldInherit::five::op_five ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2800,14 +2776,12 @@ OldInherit::five::_tao_release (five_ptr obj)
 ::CORBA::Boolean
 OldInherit::five::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/five:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2972,14 +2946,14 @@ OldInherit::AMH_fiveExceptionHolder::_tao_unmarshal (
 void
 OldInherit::AMH_fiveExceptionHolder::raise_op_five ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 OldInherit::AMH_fiveExceptionHolder::raise_sendc_op_five ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -3062,11 +3036,9 @@ OldInherit::AMH_fiveResponseHandler::_tao_release (AMH_fiveResponseHandler_ptr o
 ::CORBA::Boolean
 OldInherit::AMH_fiveResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/AMH_fiveResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/AMH_fiveResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -3135,7 +3107,7 @@ OldInherit::AMI_fiveHandler::op_five ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3221,8 +3193,8 @@ OldInherit::AMI_fiveHandler::op_five_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3290,15 +3262,13 @@ OldInherit::AMI_fiveHandler::_tao_release (AMI_fiveHandler_ptr obj)
 ::CORBA::Boolean
 OldInherit::AMI_fiveHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_fourHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_fiveHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -3421,7 +3391,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::one>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::one>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3513,7 +3483,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::AMI_oneHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::AMI_oneHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3542,7 +3512,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::two>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::two>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3634,7 +3604,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::AMI_twoHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::AMI_twoHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3663,7 +3633,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::three>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::three>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3755,7 +3725,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::AMI_threeHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::AMI_threeHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3784,7 +3754,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::four>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::four>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3876,7 +3846,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::AMI_fourHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::AMI_fourHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3905,7 +3875,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::five>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::five>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3997,7 +3967,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::AMI_fiveHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::AMI_fiveHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

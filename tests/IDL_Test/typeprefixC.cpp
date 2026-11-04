@@ -23,6 +23,7 @@
  **/
 
 #include "typeprefixC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -40,7 +41,6 @@
 #include "tao/CDR.h"
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "typeprefixC.inl"
@@ -123,10 +123,8 @@ A::B::_tao_release (B_ptr obj)
 ::CORBA::Boolean
 A::B::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:TAO/A/B:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:TAO/A/B:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -167,7 +165,7 @@ namespace A
 {
   ::CORBA::TypeCode_ptr const _tc_B = std::addressof(_tao_tc_A_B);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_AMH_BExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_AMH_BExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -177,7 +175,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:TAO/A/AMH_BExceptionHolder:1.0",
     "AMH_BExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_A_AMH_BExceptionHolder,
     0);
 
@@ -434,11 +432,9 @@ A::AMH_BResponseHandler::_tao_release (AMH_BResponseHandler_ptr obj)
 ::CORBA::Boolean
 A::AMH_BResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:TAO/A/AMH_BResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:TAO/A/AMH_BResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -557,11 +553,9 @@ A::AMI_BHandler::_tao_release (AMI_BHandler_ptr obj)
 ::CORBA::Boolean
 A::AMI_BHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:TAO/A/AMI_BHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -642,8 +636,8 @@ A::C::op (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::A::B>::in_arg_val _tao_a (a);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::A::B>::in_arg_val _tao_a (a);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -675,7 +669,7 @@ A::C::sendc_op (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::A::B>::in_arg_val _tao_a (a);
+  TAO::Arg_Traits<::A::B>::in_arg_val _tao_a (a);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -745,10 +739,8 @@ A::C::_tao_release (C_ptr obj)
 ::CORBA::Boolean
 A::C::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:TAO/A/C:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:TAO/A/C:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -789,7 +781,7 @@ namespace A
 {
   ::CORBA::TypeCode_ptr const _tc_C = std::addressof(_tao_tc_A_C);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_AMH_CExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_AMH_CExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -799,7 +791,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:TAO/A/AMH_CExceptionHolder:1.0",
     "AMH_CExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_A_AMH_CExceptionHolder,
     0);
 
@@ -948,14 +940,14 @@ A::AMH_CExceptionHolder::_tao_unmarshal (
 void
 A::AMH_CExceptionHolder::raise_op ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 A::AMH_CExceptionHolder::raise_sendc_op ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -1038,11 +1030,9 @@ A::AMH_CResponseHandler::_tao_release (AMH_CResponseHandler_ptr obj)
 ::CORBA::Boolean
 A::AMH_CResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:TAO/A/AMH_CResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:TAO/A/AMH_CResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1122,7 +1112,7 @@ A::AMI_CHandler::op ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1208,8 +1198,8 @@ A::AMI_CHandler::op_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1277,11 +1267,9 @@ A::AMI_CHandler::_tao_release (AMI_CHandler_ptr obj)
 ::CORBA::Boolean
 A::AMI_CHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:TAO/A/AMI_CHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1900,7 +1888,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::A::B>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::A::B>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -1992,7 +1980,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::A::AMI_BHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::A::AMI_BHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -2021,7 +2009,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::A::C>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::A::C>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -2113,7 +2101,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::A::AMI_CHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::A::AMI_CHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

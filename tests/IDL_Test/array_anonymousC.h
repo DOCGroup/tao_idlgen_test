@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSC_S4YOBG_H_
-#define _TAO_IDL_ARRAY_ANONYMOUSC_S4YOBG_H_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSC_Y7E438_H_
+#define _TAO_IDL_ARRAY_ANONYMOUSC_Y7E438_H_
 
 #include /**/ "ace/pre.h"
 
@@ -112,14 +112,9 @@ public:
   using Bytes_slice = ::CORBA::Octet;
   struct Bytes_tag {};
 
-  using Bytes_var =
-    TAO_FixedArray_Var_T<
-        Bytes,
-        Bytes_slice,
-        Bytes_tag
-      >;
+  using Bytes_var = TAO_FixedArray_Var_T<Bytes, Bytes_slice, Bytes_tag>;
 
-    using Bytes_out = Bytes;
+  using Bytes_out = Bytes;
 
   using Bytes_forany = TAO_Array_Forany_T<Bytes, Bytes_slice, Bytes_tag>;
 
@@ -495,7 +490,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -513,7 +508,7 @@ namespace TAO
 #define _TDEF__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::tdef>
+  class  Arg_Traits<::tdef>
     : public Object_Arg_Traits_T<
         ::tdef_ptr,
         ::tdef_var,
@@ -526,7 +521,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::tdef::Bytes_tag>
+  class Arg_Traits<::tdef::Bytes_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::tdef::Bytes_var,
@@ -537,7 +532,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::tdef::bytes_or_longs>
+  class Arg_Traits<::tdef::bytes_or_longs>
     : public
         Fixed_Size_Arg_Traits_T<
             ::tdef::bytes_or_longs,
@@ -550,7 +545,7 @@ namespace TAO
 #define _AMH_TDEFEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_tdefExceptionHolder>
+  class Arg_Traits<::AMH_tdefExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_tdefExceptionHolder *,
@@ -568,7 +563,7 @@ namespace TAO
 #define _AMI_TDEFHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_tdefHandler>
+  class  Arg_Traits<::AMI_tdefHandler>
     : public Object_Arg_Traits_T<
         ::AMI_tdefHandler_ptr,
         ::AMI_tdefHandler_var,
@@ -581,7 +576,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::ABCModule::RmtPhysicalInfo>
+  class Arg_Traits<::ABCModule::RmtPhysicalInfo>
     : public
         Fixed_Size_Arg_Traits_T<
             ::ABCModule::RmtPhysicalInfo,
@@ -591,7 +586,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::ABCModule::bbbBubBubBubBaby>
+  class Arg_Traits<::ABCModule::bbbBubBubBubBaby>
     : public
         Fixed_Size_Arg_Traits_T<
             ::ABCModule::bbbBubBubBubBaby,
@@ -617,11 +612,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_tdefExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_tdefExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_tdefExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_tdefExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -641,7 +634,7 @@ namespace TAO
 #define _TDEF__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::tdef>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::tdef>
   {
     static ::tdef_ptr duplicate (::tdef_ptr p);
     static void release (::tdef_ptr p);
@@ -700,7 +693,7 @@ namespace TAO
 #define _AMH_TDEFRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_tdefResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_tdefResponseHandler>
   {
     static ::AMH_tdefResponseHandler_ptr duplicate (::AMH_tdefResponseHandler_ptr p);
     static void release (::AMH_tdefResponseHandler_ptr p);
@@ -714,7 +707,7 @@ namespace TAO
 #define _AMI_TDEFHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_tdefHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_tdefHandler>
   {
     static ::AMI_tdefHandler_ptr duplicate (::AMI_tdefHandler_ptr p);
     static void release (::AMI_tdefHandler_ptr p);

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTC_TXN4Y7_H_
-#define _TAO_IDL_AMI_TESTC_TXN4Y7_H_
+#ifndef _TAO_IDL_AMI_TESTC_S8YU62_H_
+#define _TAO_IDL_AMI_TESTC_S8YU62_H_
 
 #include /**/ "ace/pre.h"
 
@@ -460,7 +460,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -478,7 +478,7 @@ namespace TAO
 #define _A_AMI_TEST__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::A::AMI_Test>
+  class  Arg_Traits<::A::AMI_Test>
     : public Object_Arg_Traits_T<
         ::A::AMI_Test_ptr,
         ::A::AMI_Test_var,
@@ -494,7 +494,7 @@ namespace TAO
 #define _A_AMI_AMI_TESTHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::A::AMI_AMI_TestHandler>
+  class  Arg_Traits<::A::AMI_AMI_TestHandler>
     : public Object_Arg_Traits_T<
         ::A::AMI_AMI_TestHandler_ptr,
         ::A::AMI_AMI_TestHandler_var,
@@ -510,7 +510,7 @@ namespace TAO
 #define _A_TEST_CHILD__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::A::Test_Child>
+  class  Arg_Traits<::A::Test_Child>
     : public Object_Arg_Traits_T<
         ::A::Test_Child_ptr,
         ::A::Test_Child_var,
@@ -526,7 +526,7 @@ namespace TAO
 #define _A_AMI_TEST_CHILDHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::A::AMI_Test_ChildHandler>
+  class  Arg_Traits<::A::AMI_Test_ChildHandler>
     : public Object_Arg_Traits_T<
         ::A::AMI_Test_ChildHandler_ptr,
         ::A::AMI_Test_ChildHandler_var,
@@ -555,7 +555,7 @@ namespace TAO
 #define _A_AMI_TEST__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::A::AMI_Test>
+  struct  Objref_Traits<::A::AMI_Test>
   {
     static ::A::AMI_Test_ptr duplicate (::A::AMI_Test_ptr p);
     static void release (::A::AMI_Test_ptr p);
@@ -569,7 +569,7 @@ namespace TAO
 #define _A_AMI_AMI_TESTHANDLER__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::A::AMI_AMI_TestHandler>
+  struct  Objref_Traits<::A::AMI_AMI_TestHandler>
   {
     static ::A::AMI_AMI_TestHandler_ptr duplicate (::A::AMI_AMI_TestHandler_ptr p);
     static void release (::A::AMI_AMI_TestHandler_ptr p);
@@ -583,7 +583,7 @@ namespace TAO
 #define _A_TEST_CHILD__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::A::Test_Child>
+  struct  Objref_Traits<::A::Test_Child>
   {
     static ::A::Test_Child_ptr duplicate (::A::Test_Child_ptr p);
     static void release (::A::Test_Child_ptr p);
@@ -597,7 +597,7 @@ namespace TAO
 #define _A_AMI_TEST_CHILDHANDLER__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::A::AMI_Test_ChildHandler>
+  struct  Objref_Traits<::A::AMI_Test_ChildHandler>
   {
     static ::A::AMI_Test_ChildHandler_ptr duplicate (::A::AMI_Test_ChildHandler_ptr p);
     static void release (::A::AMI_Test_ChildHandler_ptr p);

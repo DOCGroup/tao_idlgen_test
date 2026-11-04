@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLS_TN3RDS_H_
-#define _TAO_IDL_FULLS_TN3RDS_H_
+#ifndef _TAO_IDL_FULLS_C7AKGV_H_
+#define _TAO_IDL_FULLS_C7AKGV_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #define _SCOPE_TEST_I_SCOPE_TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::scope_test::i_scope_test>
+  class  SArg_Traits<::scope_test::i_scope_test>
     : public Object_SArg_Traits_T<
         ::scope_test::i_scope_test_ptr,
         ::scope_test::i_scope_test_var,
@@ -92,7 +92,7 @@ namespace TAO
 #define _SCOPE_TEST_AMH_I_SCOPE_TESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::scope_test::AMH_i_scope_testExceptionHolder>
+  class SArg_Traits<::scope_test::AMH_i_scope_testExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::scope_test::AMH_i_scope_testExceptionHolder *,
@@ -109,7 +109,7 @@ namespace TAO
 #define _SCOPE_TEST_AMI_I_SCOPE_TESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::scope_test::AMI_i_scope_testHandler>
+  class  SArg_Traits<::scope_test::AMI_i_scope_testHandler>
     : public Object_SArg_Traits_T<
         ::scope_test::AMI_i_scope_testHandler_ptr,
         ::scope_test::AMI_i_scope_testHandler_var,
@@ -124,7 +124,7 @@ namespace TAO
 #define _MOD2_FWD__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod2::fwd>
+  class  SArg_Traits<::mod2::fwd>
     : public Object_SArg_Traits_T<
         ::mod2::fwd_ptr,
         ::mod2::fwd_var,
@@ -136,7 +136,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::mod2::fwd::un>
+  class SArg_Traits<::mod2::fwd::un>
     : public
         Var_Size_SArg_Traits_T<
             ::mod2::fwd::un,
@@ -149,7 +149,7 @@ namespace TAO
 #define _MOD2_FULL__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod2::full>
+  class  SArg_Traits<::mod2::full>
     : public Object_SArg_Traits_T<
         ::mod2::full_ptr,
         ::mod2::full_var,
@@ -161,7 +161,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::mod2::fwd::full_seq>
+  class SArg_Traits<::mod2::fwd::full_seq>
     : public
         Var_Size_SArg_Traits_T<
             ::mod2::fwd::full_seq,
@@ -174,7 +174,7 @@ namespace TAO
 #define _MOD2_AMH_FWDEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::mod2::AMH_fwdExceptionHolder>
+  class SArg_Traits<::mod2::AMH_fwdExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::mod2::AMH_fwdExceptionHolder *,
@@ -191,7 +191,7 @@ namespace TAO
 #define _MOD2_AMI_FWDHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod2::AMI_fwdHandler>
+  class  SArg_Traits<::mod2::AMI_fwdHandler>
     : public Object_SArg_Traits_T<
         ::mod2::AMI_fwdHandler_ptr,
         ::mod2::AMI_fwdHandler_var,
@@ -206,7 +206,7 @@ namespace TAO
 #define _MOD2_FULL__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod2::full>
+  class  SArg_Traits<::mod2::full>
     : public Object_SArg_Traits_T<
         ::mod2::full_ptr,
         ::mod2::full_var,

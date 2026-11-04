@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEDEFA_URI8K7_H_
-#define _TAO_IDL_TYPEDEFA_URI8K7_H_
+#ifndef _TAO_IDL_TYPEDEFA_K3F1UT_H_
+#define _TAO_IDL_TYPEDEFA_K3F1UT_H_
 
 #include /**/ "ace/pre.h"
 

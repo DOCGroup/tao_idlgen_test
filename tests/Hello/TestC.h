@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTC_561SBQ_H_
-#define _TAO_IDL_TESTC_561SBQ_H_
+#ifndef _TAO_IDL_TESTC_SUHD94_H_
+#define _TAO_IDL_TESTC_SUHD94_H_
 
 #include /**/ "ace/pre.h"
 
@@ -137,7 +137,7 @@ namespace TAO
 #define _TEST_HELLO__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Test::Hello>
+  class  Arg_Traits<::Test::Hello>
     : public Object_Arg_Traits_T<
         ::Test::Hello_ptr,
         ::Test::Hello_var,
@@ -162,7 +162,7 @@ namespace TAO
 #define _TEST_HELLO__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::Test::Hello>
+  struct  Objref_Traits<::Test::Hello>
   {
     static ::Test::Hello_ptr duplicate (::Test::Hello_ptr p);
     static void release (::Test::Hello_ptr p);

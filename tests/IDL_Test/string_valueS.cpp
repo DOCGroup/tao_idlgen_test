@@ -22,11 +22,11 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRING_VALUES_MLKI89_CPP_
-#define _TAO_IDL_STRING_VALUES_MLKI89_CPP_
+#ifndef _TAO_IDL_STRING_VALUES_GHCWAQ_CPP_
+#define _TAO_IDL_STRING_VALUES_GHCWAQ_CPP_
 
 #include "string_valueS.h"
-#include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
 #include <cstddef>
 #include <cstring>
 #include <memory>

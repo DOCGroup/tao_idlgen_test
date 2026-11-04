@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEDEFC_JTZG7D_H_
-#define _TAO_IDL_TYPEDEFC_JTZG7D_H_
+#ifndef _TAO_IDL_TYPEDEFC_4CEQ3O_H_
+#define _TAO_IDL_TYPEDEFC_4CEQ3O_H_
 
 #include /**/ "ace/pre.h"
 
@@ -79,14 +79,9 @@ using TAO_A5 = ::CORBA::Char[5];
 using TAO_A5_slice = ::CORBA::Char;
 struct TAO_A5_tag {};
 
-using TAO_A5_var =
-  TAO_FixedArray_Var_T<
-      TAO_A5,
-      TAO_A5_slice,
-      TAO_A5_tag
-    >;
+using TAO_A5_var = TAO_FixedArray_Var_T<TAO_A5, TAO_A5_slice, TAO_A5_tag>;
 
-  using TAO_A5_out = TAO_A5;
+using TAO_A5_out = TAO_A5;
 
 using TAO_A5_forany = TAO_Array_Forany_T<TAO_A5, TAO_A5_slice, TAO_A5_tag>;
 
@@ -174,14 +169,9 @@ using TAO_M5 = TAO_J5[5];
 using TAO_M5_slice = TAO_J5;
 struct TAO_M5_tag {};
 
-using TAO_M5_var =
-  TAO_FixedArray_Var_T<
-      TAO_M5,
-      TAO_M5_slice,
-      TAO_M5_tag
-    >;
+using TAO_M5_var = TAO_FixedArray_Var_T<TAO_M5, TAO_M5_slice, TAO_M5_tag>;
 
-  using TAO_M5_out = TAO_M5;
+using TAO_M5_out = TAO_M5;
 
 using TAO_M5_forany = TAO_Array_Forany_T<TAO_M5, TAO_M5_slice, TAO_M5_tag>;
 
@@ -245,14 +235,9 @@ using TAO_Z5 = TAO_V5[5];
 using TAO_Z5_slice = TAO_V5;
 struct TAO_Z5_tag {};
 
-using TAO_Z5_var =
-  TAO_FixedArray_Var_T<
-      TAO_Z5,
-      TAO_Z5_slice,
-      TAO_Z5_tag
-    >;
+using TAO_Z5_var = TAO_FixedArray_Var_T<TAO_Z5, TAO_Z5_slice, TAO_Z5_tag>;
 
-  using TAO_Z5_out = TAO_Z5;
+using TAO_Z5_out = TAO_Z5;
 
 using TAO_Z5_forany = TAO_Array_Forany_T<TAO_Z5, TAO_Z5_slice, TAO_Z5_tag>;
 
@@ -1743,7 +1728,7 @@ namespace CommaList
 
   class TAO_IDL_TEST_STUB_Export Foo
     : public
-        ::TAO::unbounded_value_sequence< ::CORBA::Double>
+        ::TAO::unbounded_value_sequence<::CORBA::Double>
   {
   public:
     Foo () = default;
@@ -1776,7 +1761,7 @@ namespace CommaList
 
   class TAO_IDL_TEST_STUB_Export Dubble
     : public
-        ::TAO::unbounded_value_sequence< ::CORBA::Double>
+        ::TAO::unbounded_value_sequence<::CORBA::Double>
   {
   public:
     Dubble () = default;
@@ -1809,7 +1794,7 @@ namespace CommaList
 
   class TAO_IDL_TEST_STUB_Export Dubbel
     : public
-        ::TAO::unbounded_value_sequence< ::CORBA::Double>
+        ::TAO::unbounded_value_sequence<::CORBA::Double>
   {
   public:
     Dubbel () = default;
@@ -1842,7 +1827,7 @@ namespace CommaList
 
   class TAO_IDL_TEST_STUB_Export Toil
     : public
-        ::TAO::unbounded_value_sequence< ::CORBA::Double>
+        ::TAO::unbounded_value_sequence<::CORBA::Double>
   {
   public:
     Toil () = default;
@@ -1875,7 +1860,7 @@ namespace CommaList
 
   class TAO_IDL_TEST_STUB_Export Trouble
     : public
-        ::TAO::unbounded_value_sequence< ::CORBA::Double>
+        ::TAO::unbounded_value_sequence<::CORBA::Double>
   {
   public:
     Trouble () = default;
@@ -1911,7 +1896,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -1926,7 +1911,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::TAO_A5_tag>
+  class Arg_Traits<::TAO_A5_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::TAO_A5_var,
@@ -1937,7 +1922,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::TAO_M5_tag>
+  class Arg_Traits<::TAO_M5_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::TAO_M5_var,
@@ -1948,7 +1933,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::TAO_Z5_tag>
+  class Arg_Traits<::TAO_Z5_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::TAO_Z5_var,
@@ -1998,7 +1983,7 @@ namespace TAO
 #define _TESTMODULE_TESTINTERFACE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::TestModule::TestInterface>
+  class  Arg_Traits<::TestModule::TestInterface>
     : public Object_Arg_Traits_T<
         ::TestModule::TestInterface_ptr,
         ::TestModule::TestInterface_var,
@@ -2014,7 +1999,7 @@ namespace TAO
 #define _TESTMODULE_AMH_TESTINTERFACEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::TestModule::AMH_TestInterfaceExceptionHolder>
+  class Arg_Traits<::TestModule::AMH_TestInterfaceExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::TestModule::AMH_TestInterfaceExceptionHolder *,
@@ -2032,7 +2017,7 @@ namespace TAO
 #define _TESTMODULE_AMI_TESTINTERFACEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::TestModule::AMI_TestInterfaceHandler>
+  class  Arg_Traits<::TestModule::AMI_TestInterfaceHandler>
     : public Object_Arg_Traits_T<
         ::TestModule::AMI_TestInterfaceHandler_ptr,
         ::TestModule::AMI_TestInterfaceHandler_var,
@@ -2084,7 +2069,7 @@ namespace TAO
 #define _BUG_2124_FOO__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_2124::Foo>
+  class  Arg_Traits<::bug_2124::Foo>
     : public Object_Arg_Traits_T<
         ::bug_2124::Foo_ptr,
         ::bug_2124::Foo_var,
@@ -2100,7 +2085,7 @@ namespace TAO
 #define _BUG_2124_AMH_FOOEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::bug_2124::AMH_FooExceptionHolder>
+  class Arg_Traits<::bug_2124::AMH_FooExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::bug_2124::AMH_FooExceptionHolder *,
@@ -2118,7 +2103,7 @@ namespace TAO
 #define _BUG_2124_AMI_FOOHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_2124::AMI_FooHandler>
+  class  Arg_Traits<::bug_2124::AMI_FooHandler>
     : public Object_Arg_Traits_T<
         ::bug_2124::AMI_FooHandler_ptr,
         ::bug_2124::AMI_FooHandler_var,
@@ -2152,7 +2137,7 @@ namespace TAO
 #define _BUG_2122_ONE_WHATEVER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_2122::One::Whatever>
+  class  Arg_Traits<::bug_2122::One::Whatever>
     : public Object_Arg_Traits_T<
         ::bug_2122::One::Whatever_ptr,
         ::bug_2122::One::Whatever_var,
@@ -2168,7 +2153,7 @@ namespace TAO
 #define _BUG_2122_ONE_AMH_WHATEVEREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::bug_2122::One::AMH_WhateverExceptionHolder>
+  class Arg_Traits<::bug_2122::One::AMH_WhateverExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::bug_2122::One::AMH_WhateverExceptionHolder *,
@@ -2186,7 +2171,7 @@ namespace TAO
 #define _BUG_2122_ONE_AMI_WHATEVERHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_2122::One::AMI_WhateverHandler>
+  class  Arg_Traits<::bug_2122::One::AMI_WhateverHandler>
     : public Object_Arg_Traits_T<
         ::bug_2122::One::AMI_WhateverHandler_ptr,
         ::bug_2122::One::AMI_WhateverHandler_var,
@@ -2220,7 +2205,7 @@ namespace TAO
 #define _BUG_2122_TWO_WHOCARES__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_2122::Two::WhoCares>
+  class  Arg_Traits<::bug_2122::Two::WhoCares>
     : public Object_Arg_Traits_T<
         ::bug_2122::Two::WhoCares_ptr,
         ::bug_2122::Two::WhoCares_var,
@@ -2236,7 +2221,7 @@ namespace TAO
 #define _BUG_2122_TWO_AMH_WHOCARESEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::bug_2122::Two::AMH_WhoCaresExceptionHolder>
+  class Arg_Traits<::bug_2122::Two::AMH_WhoCaresExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::bug_2122::Two::AMH_WhoCaresExceptionHolder *,
@@ -2254,7 +2239,7 @@ namespace TAO
 #define _BUG_2122_TWO_AMI_WHOCARESHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_2122::Two::AMI_WhoCaresHandler>
+  class  Arg_Traits<::bug_2122::Two::AMI_WhoCaresHandler>
     : public Object_Arg_Traits_T<
         ::bug_2122::Two::AMI_WhoCaresHandler_ptr,
         ::bug_2122::Two::AMI_WhoCaresHandler_var,
@@ -2288,7 +2273,7 @@ namespace TAO
 #define _BUG_2122_THREE_WHOCARES__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_2122::Three::WhoCares>
+  class  Arg_Traits<::bug_2122::Three::WhoCares>
     : public Object_Arg_Traits_T<
         ::bug_2122::Three::WhoCares_ptr,
         ::bug_2122::Three::WhoCares_var,
@@ -2304,7 +2289,7 @@ namespace TAO
 #define _BUG_2122_THREE_AMH_WHOCARESEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::bug_2122::Three::AMH_WhoCaresExceptionHolder>
+  class Arg_Traits<::bug_2122::Three::AMH_WhoCaresExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::bug_2122::Three::AMH_WhoCaresExceptionHolder *,
@@ -2322,7 +2307,7 @@ namespace TAO
 #define _BUG_2122_THREE_AMI_WHOCARESHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_2122::Three::AMI_WhoCaresHandler>
+  class  Arg_Traits<::bug_2122::Three::AMI_WhoCaresHandler>
     : public Object_Arg_Traits_T<
         ::bug_2122::Three::AMI_WhoCaresHandler_ptr,
         ::bug_2122::Three::AMI_WhoCaresHandler_var,
@@ -2353,7 +2338,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::CommaList::Foo>
+  class Arg_Traits<::CommaList::Foo>
     : public
         Var_Size_Arg_Traits_T<
             ::CommaList::Foo,
@@ -2363,7 +2348,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::CommaList::Dubble>
+  class Arg_Traits<::CommaList::Dubble>
     : public
         Var_Size_Arg_Traits_T<
             ::CommaList::Dubble,
@@ -2388,11 +2373,9 @@ protected:
   ~AMH_TestInterfaceExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__TestModule_AMH_TestInterfaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__TestModule_AMH_TestInterfaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__TestModule_AMH_TestInterfaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__TestModule_AMH_TestInterfaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2415,11 +2398,9 @@ protected:
   ~AMH_FooExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__bug_2124_AMH_FooExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__bug_2124_AMH_FooExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__bug_2124_AMH_FooExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__bug_2124_AMH_FooExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2444,11 +2425,9 @@ namespace OBV_bug_2122
     ~AMH_WhateverExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__bug_2122_One_AMH_WhateverExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__bug_2122_One_AMH_WhateverExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__bug_2122_One_AMH_WhateverExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__bug_2122_One_AMH_WhateverExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2471,11 +2450,9 @@ protected:
   ~AMH_WhoCaresExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__bug_2122_Two_AMH_WhoCaresExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__bug_2122_Two_AMH_WhoCaresExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__bug_2122_Two_AMH_WhoCaresExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__bug_2122_Two_AMH_WhoCaresExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2498,11 +2475,9 @@ protected:
   ~AMH_WhoCaresExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__bug_2122_Three_AMH_WhoCaresExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__bug_2122_Three_AMH_WhoCaresExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__bug_2122_Three_AMH_WhoCaresExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__bug_2122_Three_AMH_WhoCaresExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2572,7 +2547,7 @@ namespace TAO
 #define _TESTMODULE_TESTINTERFACE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::TestModule::TestInterface>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::TestModule::TestInterface>
   {
     static ::TestModule::TestInterface_ptr duplicate (::TestModule::TestInterface_ptr p);
     static void release (::TestModule::TestInterface_ptr p);
@@ -2599,7 +2574,7 @@ namespace TAO
 #define _TESTMODULE_AMH_TESTINTERFACERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::TestModule::AMH_TestInterfaceResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::TestModule::AMH_TestInterfaceResponseHandler>
   {
     static ::TestModule::AMH_TestInterfaceResponseHandler_ptr duplicate (::TestModule::AMH_TestInterfaceResponseHandler_ptr p);
     static void release (::TestModule::AMH_TestInterfaceResponseHandler_ptr p);
@@ -2613,7 +2588,7 @@ namespace TAO
 #define _TESTMODULE_AMI_TESTINTERFACEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::TestModule::AMI_TestInterfaceHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::TestModule::AMI_TestInterfaceHandler>
   {
     static ::TestModule::AMI_TestInterfaceHandler_ptr duplicate (::TestModule::AMI_TestInterfaceHandler_ptr p);
     static void release (::TestModule::AMI_TestInterfaceHandler_ptr p);
@@ -2627,7 +2602,7 @@ namespace TAO
 #define _BUG_2124_FOO__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2124::Foo>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2124::Foo>
   {
     static ::bug_2124::Foo_ptr duplicate (::bug_2124::Foo_ptr p);
     static void release (::bug_2124::Foo_ptr p);
@@ -2654,7 +2629,7 @@ namespace TAO
 #define _BUG_2124_AMH_FOORESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2124::AMH_FooResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2124::AMH_FooResponseHandler>
   {
     static ::bug_2124::AMH_FooResponseHandler_ptr duplicate (::bug_2124::AMH_FooResponseHandler_ptr p);
     static void release (::bug_2124::AMH_FooResponseHandler_ptr p);
@@ -2668,7 +2643,7 @@ namespace TAO
 #define _BUG_2124_AMI_FOOHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2124::AMI_FooHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2124::AMI_FooHandler>
   {
     static ::bug_2124::AMI_FooHandler_ptr duplicate (::bug_2124::AMI_FooHandler_ptr p);
     static void release (::bug_2124::AMI_FooHandler_ptr p);
@@ -2682,7 +2657,7 @@ namespace TAO
 #define _BUG_2122_ONE_WHATEVER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2122::One::Whatever>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2122::One::Whatever>
   {
     static ::bug_2122::One::Whatever_ptr duplicate (::bug_2122::One::Whatever_ptr p);
     static void release (::bug_2122::One::Whatever_ptr p);
@@ -2709,7 +2684,7 @@ namespace TAO
 #define _BUG_2122_ONE_AMH_WHATEVERRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2122::One::AMH_WhateverResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2122::One::AMH_WhateverResponseHandler>
   {
     static ::bug_2122::One::AMH_WhateverResponseHandler_ptr duplicate (::bug_2122::One::AMH_WhateverResponseHandler_ptr p);
     static void release (::bug_2122::One::AMH_WhateverResponseHandler_ptr p);
@@ -2723,7 +2698,7 @@ namespace TAO
 #define _BUG_2122_ONE_AMI_WHATEVERHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2122::One::AMI_WhateverHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2122::One::AMI_WhateverHandler>
   {
     static ::bug_2122::One::AMI_WhateverHandler_ptr duplicate (::bug_2122::One::AMI_WhateverHandler_ptr p);
     static void release (::bug_2122::One::AMI_WhateverHandler_ptr p);
@@ -2737,7 +2712,7 @@ namespace TAO
 #define _BUG_2122_TWO_WHOCARES__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2122::Two::WhoCares>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2122::Two::WhoCares>
   {
     static ::bug_2122::Two::WhoCares_ptr duplicate (::bug_2122::Two::WhoCares_ptr p);
     static void release (::bug_2122::Two::WhoCares_ptr p);
@@ -2764,7 +2739,7 @@ namespace TAO
 #define _BUG_2122_TWO_AMH_WHOCARESRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2122::Two::AMH_WhoCaresResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2122::Two::AMH_WhoCaresResponseHandler>
   {
     static ::bug_2122::Two::AMH_WhoCaresResponseHandler_ptr duplicate (::bug_2122::Two::AMH_WhoCaresResponseHandler_ptr p);
     static void release (::bug_2122::Two::AMH_WhoCaresResponseHandler_ptr p);
@@ -2778,7 +2753,7 @@ namespace TAO
 #define _BUG_2122_TWO_AMI_WHOCARESHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2122::Two::AMI_WhoCaresHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2122::Two::AMI_WhoCaresHandler>
   {
     static ::bug_2122::Two::AMI_WhoCaresHandler_ptr duplicate (::bug_2122::Two::AMI_WhoCaresHandler_ptr p);
     static void release (::bug_2122::Two::AMI_WhoCaresHandler_ptr p);
@@ -2792,7 +2767,7 @@ namespace TAO
 #define _BUG_2122_THREE_WHOCARES__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2122::Three::WhoCares>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2122::Three::WhoCares>
   {
     static ::bug_2122::Three::WhoCares_ptr duplicate (::bug_2122::Three::WhoCares_ptr p);
     static void release (::bug_2122::Three::WhoCares_ptr p);
@@ -2819,7 +2794,7 @@ namespace TAO
 #define _BUG_2122_THREE_AMH_WHOCARESRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2122::Three::AMH_WhoCaresResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2122::Three::AMH_WhoCaresResponseHandler>
   {
     static ::bug_2122::Three::AMH_WhoCaresResponseHandler_ptr duplicate (::bug_2122::Three::AMH_WhoCaresResponseHandler_ptr p);
     static void release (::bug_2122::Three::AMH_WhoCaresResponseHandler_ptr p);
@@ -2833,7 +2808,7 @@ namespace TAO
 #define _BUG_2122_THREE_AMI_WHOCARESHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_2122::Three::AMI_WhoCaresHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_2122::Three::AMI_WhoCaresHandler>
   {
     static ::bug_2122::Three::AMI_WhoCaresHandler_ptr duplicate (::bug_2122::Three::AMI_WhoCaresHandler_ptr p);
     static void release (::bug_2122::Three::AMI_WhoCaresHandler_ptr p);
@@ -3020,12 +2995,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_CommaList_Foo_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    CommaList::Foo const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    CommaList::Foo &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, CommaList::Foo const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, CommaList::Foo &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -3035,12 +3006,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_CommaList_Trouble_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    CommaList::Trouble const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    CommaList::Trouble &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, CommaList::Trouble const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, CommaList::Trouble &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

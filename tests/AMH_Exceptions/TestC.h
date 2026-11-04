@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTC_599VDX_H_
-#define _TAO_IDL_TESTC_599VDX_H_
+#ifndef _TAO_IDL_TESTC_8MJADY_H_
+#define _TAO_IDL_TESTC_8MJADY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -400,7 +400,7 @@ namespace TAO
 #define _TEST_RED_HERRING__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Test::Red_Herring>
+  class Arg_Traits<::Test::Red_Herring>
     : public
         Object_Arg_Traits_T<
             ::Test::Red_Herring *,
@@ -418,7 +418,7 @@ namespace TAO
 #define _TEST_ROUNDTRIP__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Test::Roundtrip>
+  class  Arg_Traits<::Test::Roundtrip>
     : public Object_Arg_Traits_T<
         ::Test::Roundtrip_ptr,
         ::Test::Roundtrip_var,
@@ -434,7 +434,7 @@ namespace TAO
 #define _TEST_AMH_ROUNDTRIPEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Test::AMH_RoundtripExceptionHolder>
+  class Arg_Traits<::Test::AMH_RoundtripExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Test::AMH_RoundtripExceptionHolder *,
@@ -464,11 +464,9 @@ protected:
   ~Red_Herring () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__Test_Red_Herring (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Test_Red_Herring (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__Test_Red_Herring (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Test_Red_Herring (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -488,11 +486,9 @@ protected:
   ~AMH_RoundtripExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__Test_AMH_RoundtripExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Test_AMH_RoundtripExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__Test_AMH_RoundtripExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Test_AMH_RoundtripExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -526,7 +522,7 @@ namespace TAO
 #define _TEST_ROUNDTRIP__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::Test::Roundtrip>
+  struct  Objref_Traits<::Test::Roundtrip>
   {
     static ::Test::Roundtrip_ptr duplicate (::Test::Roundtrip_ptr p);
     static void release (::Test::Roundtrip_ptr p);
@@ -553,7 +549,7 @@ namespace TAO
 #define _TEST_AMH_ROUNDTRIPRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::Test::AMH_RoundtripResponseHandler>
+  struct  Objref_Traits<::Test::AMH_RoundtripResponseHandler>
   {
     static ::Test::AMH_RoundtripResponseHandler_ptr duplicate (::Test::AMH_RoundtripResponseHandler_ptr p);
     static void release (::Test::AMH_RoundtripResponseHandler_ptr p);

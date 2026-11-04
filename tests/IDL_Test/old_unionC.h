@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONC_EHOUPI_H_
-#define _TAO_IDL_OLD_UNIONC_EHOUPI_H_
+#ifndef _TAO_IDL_OLD_UNIONC_APK7ZK_H_
+#define _TAO_IDL_OLD_UNIONC_APK7ZK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -494,7 +494,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -509,7 +509,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::OldUnion::Bar>
+  class Arg_Traits<::OldUnion::Bar>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldUnion::Bar,
@@ -519,7 +519,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldUnion::Foo>
+  class Arg_Traits<::OldUnion::Foo>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldUnion::Foo,
@@ -529,7 +529,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldUnion::Foo2>
+  class Arg_Traits<::OldUnion::Foo2>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldUnion::Foo2,
@@ -542,7 +542,7 @@ namespace TAO
 #define _OLDUNION_A__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldUnion::a>
+  class  Arg_Traits<::OldUnion::a>
     : public Object_Arg_Traits_T<
         ::OldUnion::a_ptr,
         ::OldUnion::a_var,
@@ -555,7 +555,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::OldUnion::a::astruct>
+  class Arg_Traits<::OldUnion::a::astruct>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldUnion::a::astruct,
@@ -568,7 +568,7 @@ namespace TAO
 #define _OLDUNION_AMH_AEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldUnion::AMH_aExceptionHolder>
+  class Arg_Traits<::OldUnion::AMH_aExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldUnion::AMH_aExceptionHolder *,
@@ -586,7 +586,7 @@ namespace TAO
 #define _OLDUNION_AMI_AHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldUnion::AMI_aHandler>
+  class  Arg_Traits<::OldUnion::AMI_aHandler>
     : public Object_Arg_Traits_T<
         ::OldUnion::AMI_aHandler_ptr,
         ::OldUnion::AMI_aHandler_var,
@@ -614,11 +614,9 @@ protected:
   ~AMH_aExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldUnion_AMH_aExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldUnion_AMH_aExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldUnion_AMH_aExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldUnion_AMH_aExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -639,7 +637,7 @@ namespace TAO
 #define _OLDUNION_A__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldUnion::a>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldUnion::a>
   {
     static ::OldUnion::a_ptr duplicate (::OldUnion::a_ptr p);
     static void release (::OldUnion::a_ptr p);
@@ -666,7 +664,7 @@ namespace TAO
 #define _OLDUNION_AMH_ARESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldUnion::AMH_aResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldUnion::AMH_aResponseHandler>
   {
     static ::OldUnion::AMH_aResponseHandler_ptr duplicate (::OldUnion::AMH_aResponseHandler_ptr p);
     static void release (::OldUnion::AMH_aResponseHandler_ptr p);
@@ -680,7 +678,7 @@ namespace TAO
 #define _OLDUNION_AMI_AHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldUnion::AMI_aHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldUnion::AMI_aHandler>
   {
     static ::OldUnion::AMI_aHandler_ptr duplicate (::OldUnion::AMI_aHandler_ptr p);
     static void release (::OldUnion::AMI_aHandler_ptr p);

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEDEFS_Q5EV3W_H_
-#define _TAO_IDL_TYPEDEFS_Q5EV3W_H_
+#ifndef _TAO_IDL_TYPEDEFS_MJNHVE_H_
+#define _TAO_IDL_TYPEDEFS_MJNHVE_H_
 
 #include /**/ "ace/pre.h"
 
@@ -64,7 +64,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -78,7 +78,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::TAO_A5_tag>
+  class SArg_Traits<::TAO_A5_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::TAO_A5_var,
@@ -89,7 +89,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::TAO_M5_tag>
+  class SArg_Traits<::TAO_M5_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::TAO_M5_var,
@@ -100,7 +100,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::TAO_Z5_tag>
+  class SArg_Traits<::TAO_Z5_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::TAO_Z5_var,
@@ -146,7 +146,7 @@ namespace TAO
 #define _TESTMODULE_TESTINTERFACE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::TestModule::TestInterface>
+  class  SArg_Traits<::TestModule::TestInterface>
     : public Object_SArg_Traits_T<
         ::TestModule::TestInterface_ptr,
         ::TestModule::TestInterface_var,
@@ -161,7 +161,7 @@ namespace TAO
 #define _TESTMODULE_AMH_TESTINTERFACEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::TestModule::AMH_TestInterfaceExceptionHolder>
+  class SArg_Traits<::TestModule::AMH_TestInterfaceExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::TestModule::AMH_TestInterfaceExceptionHolder *,
@@ -178,7 +178,7 @@ namespace TAO
 #define _TESTMODULE_AMI_TESTINTERFACEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::TestModule::AMI_TestInterfaceHandler>
+  class  SArg_Traits<::TestModule::AMI_TestInterfaceHandler>
     : public Object_SArg_Traits_T<
         ::TestModule::AMI_TestInterfaceHandler_ptr,
         ::TestModule::AMI_TestInterfaceHandler_var,
@@ -225,7 +225,7 @@ namespace TAO
 #define _BUG_2124_FOO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_2124::Foo>
+  class  SArg_Traits<::bug_2124::Foo>
     : public Object_SArg_Traits_T<
         ::bug_2124::Foo_ptr,
         ::bug_2124::Foo_var,
@@ -240,7 +240,7 @@ namespace TAO
 #define _BUG_2124_AMH_FOOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::bug_2124::AMH_FooExceptionHolder>
+  class SArg_Traits<::bug_2124::AMH_FooExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::bug_2124::AMH_FooExceptionHolder *,
@@ -257,7 +257,7 @@ namespace TAO
 #define _BUG_2124_AMI_FOOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_2124::AMI_FooHandler>
+  class  SArg_Traits<::bug_2124::AMI_FooHandler>
     : public Object_SArg_Traits_T<
         ::bug_2124::AMI_FooHandler_ptr,
         ::bug_2124::AMI_FooHandler_var,
@@ -288,7 +288,7 @@ namespace TAO
 #define _BUG_2122_ONE_WHATEVER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_2122::One::Whatever>
+  class  SArg_Traits<::bug_2122::One::Whatever>
     : public Object_SArg_Traits_T<
         ::bug_2122::One::Whatever_ptr,
         ::bug_2122::One::Whatever_var,
@@ -303,7 +303,7 @@ namespace TAO
 #define _BUG_2122_ONE_AMH_WHATEVEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::bug_2122::One::AMH_WhateverExceptionHolder>
+  class SArg_Traits<::bug_2122::One::AMH_WhateverExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::bug_2122::One::AMH_WhateverExceptionHolder *,
@@ -320,7 +320,7 @@ namespace TAO
 #define _BUG_2122_ONE_AMI_WHATEVERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_2122::One::AMI_WhateverHandler>
+  class  SArg_Traits<::bug_2122::One::AMI_WhateverHandler>
     : public Object_SArg_Traits_T<
         ::bug_2122::One::AMI_WhateverHandler_ptr,
         ::bug_2122::One::AMI_WhateverHandler_var,
@@ -351,7 +351,7 @@ namespace TAO
 #define _BUG_2122_TWO_WHOCARES__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_2122::Two::WhoCares>
+  class  SArg_Traits<::bug_2122::Two::WhoCares>
     : public Object_SArg_Traits_T<
         ::bug_2122::Two::WhoCares_ptr,
         ::bug_2122::Two::WhoCares_var,
@@ -366,7 +366,7 @@ namespace TAO
 #define _BUG_2122_TWO_AMH_WHOCARESEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::bug_2122::Two::AMH_WhoCaresExceptionHolder>
+  class SArg_Traits<::bug_2122::Two::AMH_WhoCaresExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::bug_2122::Two::AMH_WhoCaresExceptionHolder *,
@@ -383,7 +383,7 @@ namespace TAO
 #define _BUG_2122_TWO_AMI_WHOCARESHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_2122::Two::AMI_WhoCaresHandler>
+  class  SArg_Traits<::bug_2122::Two::AMI_WhoCaresHandler>
     : public Object_SArg_Traits_T<
         ::bug_2122::Two::AMI_WhoCaresHandler_ptr,
         ::bug_2122::Two::AMI_WhoCaresHandler_var,
@@ -414,7 +414,7 @@ namespace TAO
 #define _BUG_2122_THREE_WHOCARES__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_2122::Three::WhoCares>
+  class  SArg_Traits<::bug_2122::Three::WhoCares>
     : public Object_SArg_Traits_T<
         ::bug_2122::Three::WhoCares_ptr,
         ::bug_2122::Three::WhoCares_var,
@@ -429,7 +429,7 @@ namespace TAO
 #define _BUG_2122_THREE_AMH_WHOCARESEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::bug_2122::Three::AMH_WhoCaresExceptionHolder>
+  class SArg_Traits<::bug_2122::Three::AMH_WhoCaresExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::bug_2122::Three::AMH_WhoCaresExceptionHolder *,
@@ -446,7 +446,7 @@ namespace TAO
 #define _BUG_2122_THREE_AMI_WHOCARESHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_2122::Three::AMI_WhoCaresHandler>
+  class  SArg_Traits<::bug_2122::Three::AMI_WhoCaresHandler>
     : public Object_SArg_Traits_T<
         ::bug_2122::Three::AMI_WhoCaresHandler_ptr,
         ::bug_2122::Three::AMI_WhoCaresHandler_var,
@@ -474,7 +474,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::CommaList::Foo>
+  class SArg_Traits<::CommaList::Foo>
     : public
         Var_Size_SArg_Traits_T<
             ::CommaList::Foo,
@@ -484,7 +484,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::CommaList::Dubble>
+  class SArg_Traits<::CommaList::Dubble>
     : public
         Var_Size_SArg_Traits_T<
             ::CommaList::Dubble,

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSS_2RG44W_H_
-#define _TAO_IDL_ANONYMOUSS_2RG44W_H_
+#ifndef _TAO_IDL_ANONYMOUSS_40RPET_H_
+#define _TAO_IDL_ANONYMOUSS_40RPET_H_
 
 #include /**/ "ace/pre.h"
 
@@ -64,7 +64,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -78,7 +78,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::Not_Anon::short_seq>
+  class SArg_Traits<::Not_Anon::short_seq>
     : public
         Var_Size_SArg_Traits_T<
             ::Not_Anon::short_seq,
@@ -88,7 +88,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Half_Anon::char_seq_array_tag>
+  class SArg_Traits<::Half_Anon::char_seq_array_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::Half_Anon::char_seq_array_out,
@@ -99,7 +99,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Half_Anon::bd_ulong_seq_array_tag>
+  class SArg_Traits<::Half_Anon::bd_ulong_seq_array_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::Half_Anon::bd_ulong_seq_array_out,
@@ -110,7 +110,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Half_Anon::ushort_seq_array_tag>
+  class SArg_Traits<::Half_Anon::ushort_seq_array_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::Half_Anon::ushort_seq_array_out,
@@ -121,7 +121,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Half_Anon::bd_ushort_seq_array_tag>
+  class SArg_Traits<::Half_Anon::bd_ushort_seq_array_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::Half_Anon::bd_ushort_seq_array_out,
@@ -135,7 +135,7 @@ namespace TAO
 #define _ALL_ANON_ANON_BD_STRING_TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::All_Anon::anon_bd_string_test>
+  class  SArg_Traits<::All_Anon::anon_bd_string_test>
     : public Object_SArg_Traits_T<
         ::All_Anon::anon_bd_string_test_ptr,
         ::All_Anon::anon_bd_string_test_var,
@@ -338,7 +338,7 @@ class SArg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc43_inarg>
 #define _ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__SARG_TRAITS_
 
 template<>
-class SArg_Traits< ::All_Anon::AMH_anon_bd_string_testExceptionHolder>
+class SArg_Traits<::All_Anon::AMH_anon_bd_string_testExceptionHolder>
   : public
       Object_SArg_Traits_T<
           ::All_Anon::AMH_anon_bd_string_testExceptionHolder *,
@@ -355,7 +355,7 @@ class SArg_Traits< ::All_Anon::AMH_anon_bd_string_testExceptionHolder>
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__SARG_TRAITS_
 
 template<>
-class  SArg_Traits< ::All_Anon::AMI_anon_bd_string_testHandler>
+class  SArg_Traits<::All_Anon::AMI_anon_bd_string_testHandler>
   : public Object_SArg_Traits_T<
       ::All_Anon::AMI_anon_bd_string_testHandler_ptr,
       ::All_Anon::AMI_anon_bd_string_testHandler_var,

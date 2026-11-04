@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONC_G2OXEM_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONC_G2OXEM_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONC_I80Y6H_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONC_I80Y6H_H_
 
 #include /**/ "ace/pre.h"
 
@@ -415,7 +415,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -430,7 +430,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::EncodingID_T>
+  class Arg_Traits<::EncodingID_T>
     : public
         Basic_Arg_Traits_T<
             ::EncodingID_T,
@@ -440,7 +440,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Encoding_T>
+  class Arg_Traits<::Encoding_T>
     : public
         Fixed_Size_Arg_Traits_T<
             ::Encoding_T,
@@ -453,7 +453,7 @@ namespace TAO
 #define _FIELDDEVICE_T__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::FieldDevice_T>
+  class  Arg_Traits<::FieldDevice_T>
     : public Object_Arg_Traits_T<
         ::FieldDevice_T_ptr,
         ::FieldDevice_T_var,
@@ -469,7 +469,7 @@ namespace TAO
 #define _AMH_FIELDDEVICE_TEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_FieldDevice_TExceptionHolder>
+  class Arg_Traits<::AMH_FieldDevice_TExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_FieldDevice_TExceptionHolder *,
@@ -487,7 +487,7 @@ namespace TAO
 #define _AMI_FIELDDEVICE_THANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_FieldDevice_THandler>
+  class  Arg_Traits<::AMI_FieldDevice_THandler>
     : public Object_Arg_Traits_T<
         ::AMI_FieldDevice_THandler_ptr,
         ::AMI_FieldDevice_THandler_var,
@@ -512,11 +512,9 @@ protected:
   ~OBV_AMH_FieldDevice_TExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_FieldDevice_TExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_FieldDevice_TExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_FieldDevice_TExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_FieldDevice_TExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -536,7 +534,7 @@ namespace TAO
 #define _FIELDDEVICE_T__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::FieldDevice_T>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::FieldDevice_T>
   {
     static ::FieldDevice_T_ptr duplicate (::FieldDevice_T_ptr p);
     static void release (::FieldDevice_T_ptr p);
@@ -563,7 +561,7 @@ namespace TAO
 #define _AMH_FIELDDEVICE_TRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_FieldDevice_TResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_FieldDevice_TResponseHandler>
   {
     static ::AMH_FieldDevice_TResponseHandler_ptr duplicate (::AMH_FieldDevice_TResponseHandler_ptr p);
     static void release (::AMH_FieldDevice_TResponseHandler_ptr p);
@@ -577,7 +575,7 @@ namespace TAO
 #define _AMI_FIELDDEVICE_THANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_FieldDevice_THandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_FieldDevice_THandler>
   {
     static ::AMI_FieldDevice_THandler_ptr duplicate (::AMI_FieldDevice_THandler_ptr p);
     static void release (::AMI_FieldDevice_THandler_ptr p);

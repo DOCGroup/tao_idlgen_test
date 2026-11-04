@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGC_CIQXOW_H_
-#define _TAO_IDL_PEMNAMINGC_CIQXOW_H_
+#ifndef _TAO_IDL_PEMNAMINGC_UGPGG9_H_
+#define _TAO_IDL_PEMNAMINGC_UGPGG9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -118,7 +118,7 @@ namespace Plesk
 
   class TAO_IDL_TEST_STUB_Export TPropertyList
     : public
-        ::TAO::unbounded_value_sequence< TProperty>
+        ::TAO::unbounded_value_sequence<TProperty>
   {
   public:
     TPropertyList () = default;
@@ -539,7 +539,7 @@ namespace TAO
 {
 
   template<>
-  class Arg_Traits< ::Plesk::TBool>
+  class Arg_Traits<::Plesk::TBool>
     : public
         Basic_Arg_Traits_T<
             ::Plesk::TBool,
@@ -549,7 +549,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Plesk::TProperty>
+  class Arg_Traits<::Plesk::TProperty>
     : public
         Var_Size_Arg_Traits_T<
             ::Plesk::TProperty,
@@ -559,7 +559,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Plesk::TPropertyList>
+  class Arg_Traits<::Plesk::TPropertyList>
     : public
         Var_Size_Arg_Traits_T<
             ::Plesk::TPropertyList,
@@ -569,7 +569,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Plesk::Naming::NamingContext>
+  class Arg_Traits<::Plesk::Naming::NamingContext>
     : public
         Var_Size_Arg_Traits_T<
             ::Plesk::Naming::NamingContext,
@@ -582,7 +582,7 @@ namespace TAO
 #define _PLESK_NAMING_OBJECTRESOLVER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Plesk::Naming::ObjectResolver>
+  class  Arg_Traits<::Plesk::Naming::ObjectResolver>
     : public Object_Arg_Traits_T<
         ::Plesk::Naming::ObjectResolver_ptr,
         ::Plesk::Naming::ObjectResolver_var,
@@ -598,7 +598,7 @@ namespace TAO
 #define _PLESK_NAMING_AMH_OBJECTRESOLVEREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Plesk::Naming::AMH_ObjectResolverExceptionHolder>
+  class Arg_Traits<::Plesk::Naming::AMH_ObjectResolverExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Plesk::Naming::AMH_ObjectResolverExceptionHolder *,
@@ -616,7 +616,7 @@ namespace TAO
 #define _PLESK_NAMING_AMI_OBJECTRESOLVERHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Plesk::Naming::AMI_ObjectResolverHandler>
+  class  Arg_Traits<::Plesk::Naming::AMI_ObjectResolverHandler>
     : public Object_Arg_Traits_T<
         ::Plesk::Naming::AMI_ObjectResolverHandler_ptr,
         ::Plesk::Naming::AMI_ObjectResolverHandler_var,
@@ -646,11 +646,9 @@ namespace OBV_Plesk
     ~AMH_ObjectResolverExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__Plesk_Naming_AMH_ObjectResolverExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__Plesk_Naming_AMH_ObjectResolverExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__Plesk_Naming_AMH_ObjectResolverExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__Plesk_Naming_AMH_ObjectResolverExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -672,7 +670,7 @@ namespace TAO
 #define _PLESK_NAMING_OBJECTRESOLVER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Plesk::Naming::ObjectResolver>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Plesk::Naming::ObjectResolver>
   {
     static ::Plesk::Naming::ObjectResolver_ptr duplicate (::Plesk::Naming::ObjectResolver_ptr p);
     static void release (::Plesk::Naming::ObjectResolver_ptr p);
@@ -699,7 +697,7 @@ namespace TAO
 #define _PLESK_NAMING_AMH_OBJECTRESOLVERRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Plesk::Naming::AMH_ObjectResolverResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Plesk::Naming::AMH_ObjectResolverResponseHandler>
   {
     static ::Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr duplicate (::Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr p);
     static void release (::Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr p);
@@ -713,7 +711,7 @@ namespace TAO
 #define _PLESK_NAMING_AMI_OBJECTRESOLVERHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Plesk::Naming::AMI_ObjectResolverHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Plesk::Naming::AMI_ObjectResolverHandler>
   {
     static ::Plesk::Naming::AMI_ObjectResolverHandler_ptr duplicate (::Plesk::Naming::AMI_ObjectResolverHandler_ptr p);
     static void release (::Plesk::Naming::AMI_ObjectResolverHandler_ptr p);
@@ -823,12 +821,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_Plesk_TPropertyList_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Plesk::TPropertyList const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Plesk::TPropertyList &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Plesk::TPropertyList const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Plesk::TPropertyList &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_0I54EQ_H_
-#define _TAO_IDL_BUG_2619_REGRESSIONS_0I54EQ_H_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_P1P2J7_H_
+#define _TAO_IDL_BUG_2619_REGRESSIONS_P1P2J7_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::Type_T>
+  class SArg_Traits<::Type_T>
     : public
         Var_Size_SArg_Traits_T<
             ::Type_T,
@@ -87,7 +87,7 @@ namespace TAO
 #define _T_DATA_T__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::T_Data_T>
+  class SArg_Traits<::T_Data_T>
     : public
         Object_SArg_Traits_T<
             ::T_Data_T *,
@@ -104,7 +104,7 @@ namespace TAO
 #define _TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Test>
+  class  SArg_Traits<::Test>
     : public Object_SArg_Traits_T<
         ::Test_ptr,
         ::Test_var,
@@ -119,7 +119,7 @@ namespace TAO
 #define _AMH_TESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_TestExceptionHolder>
+  class SArg_Traits<::AMH_TestExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_TestExceptionHolder *,
@@ -136,7 +136,7 @@ namespace TAO
 #define _AMI_TESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_TestHandler>
+  class  SArg_Traits<::AMI_TestHandler>
     : public Object_SArg_Traits_T<
         ::AMI_TestHandler_ptr,
         ::AMI_TestHandler_var,

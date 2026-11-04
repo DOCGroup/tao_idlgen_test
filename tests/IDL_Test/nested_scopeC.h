@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPEC_AW4F3K_H_
-#define _TAO_IDL_NESTED_SCOPEC_AW4F3K_H_
+#ifndef _TAO_IDL_NESTED_SCOPEC_DYZKX8_H_
+#define _TAO_IDL_NESTED_SCOPEC_DYZKX8_H_
 
 #include /**/ "ace/pre.h"
 
@@ -465,7 +465,7 @@ namespace pre_u_skip
 
     class TAO_IDL_TEST_STUB_Export pre_u_skip
       : public
-          ::TAO::unbounded_value_sequence< ::CORBA::Long>
+          ::TAO::unbounded_value_sequence<::CORBA::Long>
     {
     public:
       pre_u_skip () = default;
@@ -507,7 +507,7 @@ namespace pre_b_skip
 
     class TAO_IDL_TEST_STUB_Export pre_b_skip
       : public
-          ::TAO::bounded_value_sequence< ::CORBA::Long,3>
+          ::TAO::bounded_value_sequence<::CORBA::Long,3>
     {
     public:
       pre_b_skip () = default;
@@ -2451,7 +2451,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -2466,7 +2466,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::skip::hump::skip>
+  class Arg_Traits<::skip::hump::skip>
     : public
         Fixed_Size_Arg_Traits_T<
             ::skip::hump::skip,
@@ -2476,7 +2476,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::u_skip::u_hump::u_skip>
+  class Arg_Traits<::u_skip::u_hump::u_skip>
     : public
         Fixed_Size_Arg_Traits_T<
             ::u_skip::u_hump::u_skip,
@@ -2489,7 +2489,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_I_SKIP__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::i_skip::i_hump::i_skip>
+  class  Arg_Traits<::i_skip::i_hump::i_skip>
     : public Object_Arg_Traits_T<
         ::i_skip::i_hump::i_skip_ptr,
         ::i_skip::i_hump::i_skip_var,
@@ -2505,7 +2505,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_AMH_I_SKIPEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::i_skip::i_hump::AMH_i_skipExceptionHolder>
+  class Arg_Traits<::i_skip::i_hump::AMH_i_skipExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::i_skip::i_hump::AMH_i_skipExceptionHolder *,
@@ -2523,7 +2523,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_AMI_I_SKIPHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::i_skip::i_hump::AMI_i_skipHandler>
+  class  Arg_Traits<::i_skip::i_hump::AMI_i_skipHandler>
     : public Object_Arg_Traits_T<
         ::i_skip::i_hump::AMI_i_skipHandler_ptr,
         ::i_skip::i_hump::AMI_i_skipHandler_var,
@@ -2536,7 +2536,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::pre_u_skip::pre_u_hump::pre_u_skip>
+  class Arg_Traits<::pre_u_skip::pre_u_hump::pre_u_skip>
     : public
         Var_Size_Arg_Traits_T<
             ::pre_u_skip::pre_u_hump::pre_u_skip,
@@ -2546,7 +2546,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::pre_b_skip::pre_b_hump::pre_b_skip>
+  class Arg_Traits<::pre_b_skip::pre_b_hump::pre_b_skip>
     : public
         Var_Size_Arg_Traits_T<
             ::pre_b_skip::pre_b_hump::pre_b_skip,
@@ -2556,7 +2556,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::str_u_skip::str_u_hump::str_u_skip>
+  class Arg_Traits<::str_u_skip::str_u_hump::str_u_skip>
     : public
         Var_Size_Arg_Traits_T<
             ::str_u_skip::str_u_hump::str_u_skip,
@@ -2566,7 +2566,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::str_b_skip::str_b_hump::str_b_skip>
+  class Arg_Traits<::str_b_skip::str_b_hump::str_b_skip>
     : public
         Var_Size_Arg_Traits_T<
             ::str_b_skip::str_b_hump::str_b_skip,
@@ -2576,7 +2576,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::wstr_u_skip::wstr_u_hump::wstr_u_skip>
+  class Arg_Traits<::wstr_u_skip::wstr_u_hump::wstr_u_skip>
     : public
         Var_Size_Arg_Traits_T<
             ::wstr_u_skip::wstr_u_hump::wstr_u_skip,
@@ -2586,7 +2586,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::wstr_b_skip::wstr_b_hump::wstr_b_skip>
+  class Arg_Traits<::wstr_b_skip::wstr_b_hump::wstr_b_skip>
     : public
         Var_Size_Arg_Traits_T<
             ::wstr_b_skip::wstr_b_hump::wstr_b_skip,
@@ -2599,7 +2599,7 @@ namespace TAO
 #define _BLOO__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bloo>
+  class  Arg_Traits<::bloo>
     : public Object_Arg_Traits_T<
         ::bloo_ptr,
         ::bloo_var,
@@ -2615,7 +2615,7 @@ namespace TAO
 #define _AMH_BLOOEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_blooExceptionHolder>
+  class Arg_Traits<::AMH_blooExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_blooExceptionHolder *,
@@ -2633,7 +2633,7 @@ namespace TAO
 #define _AMI_BLOOHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_blooHandler>
+  class  Arg_Traits<::AMI_blooHandler>
     : public Object_Arg_Traits_T<
         ::AMI_blooHandler_ptr,
         ::AMI_blooHandler_var,
@@ -2646,7 +2646,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::obj_u_skip::obj_u_hump::obj_u_skip>
+  class Arg_Traits<::obj_u_skip::obj_u_hump::obj_u_skip>
     : public
         Var_Size_Arg_Traits_T<
             ::obj_u_skip::obj_u_hump::obj_u_skip,
@@ -2656,7 +2656,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::obj_b_skip::obj_b_hump::obj_b_skip>
+  class Arg_Traits<::obj_b_skip::obj_b_hump::obj_b_skip>
     : public
         Var_Size_Arg_Traits_T<
             ::obj_b_skip::obj_b_hump::obj_b_skip,
@@ -2669,7 +2669,7 @@ namespace TAO
 #define _BUG_1985_A_B_SOMETHING__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_1985_a::b::something>
+  class  Arg_Traits<::bug_1985_a::b::something>
     : public Object_Arg_Traits_T<
         ::bug_1985_a::b::something_ptr,
         ::bug_1985_a::b::something_var,
@@ -2685,7 +2685,7 @@ namespace TAO
 #define _BUG_1985_A_B_AMH_SOMETHINGEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::bug_1985_a::b::AMH_somethingExceptionHolder>
+  class Arg_Traits<::bug_1985_a::b::AMH_somethingExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::bug_1985_a::b::AMH_somethingExceptionHolder *,
@@ -2703,7 +2703,7 @@ namespace TAO
 #define _BUG_1985_A_B_AMI_SOMETHINGHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_1985_a::b::AMI_somethingHandler>
+  class  Arg_Traits<::bug_1985_a::b::AMI_somethingHandler>
     : public Object_Arg_Traits_T<
         ::bug_1985_a::b::AMI_somethingHandler_ptr,
         ::bug_1985_a::b::AMI_somethingHandler_var,
@@ -2719,7 +2719,7 @@ namespace TAO
 #define _BUG_1985_C_D_SOMETHING__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_1985_c::d::something>
+  class  Arg_Traits<::bug_1985_c::d::something>
     : public Object_Arg_Traits_T<
         ::bug_1985_c::d::something_ptr,
         ::bug_1985_c::d::something_var,
@@ -2735,7 +2735,7 @@ namespace TAO
 #define _BUG_1985_C_D_AMH_SOMETHINGEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::bug_1985_c::d::AMH_somethingExceptionHolder>
+  class Arg_Traits<::bug_1985_c::d::AMH_somethingExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::bug_1985_c::d::AMH_somethingExceptionHolder *,
@@ -2753,7 +2753,7 @@ namespace TAO
 #define _BUG_1985_C_D_AMI_SOMETHINGHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::bug_1985_c::d::AMI_somethingHandler>
+  class  Arg_Traits<::bug_1985_c::d::AMI_somethingHandler>
     : public Object_Arg_Traits_T<
         ::bug_1985_c::d::AMI_somethingHandler_ptr,
         ::bug_1985_c::d::AMI_somethingHandler_var,
@@ -2769,7 +2769,7 @@ namespace TAO
 #define _NEGOTIATOR_UAV_NEGOTIATOR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Negotiator::UAV_Negotiator>
+  class  Arg_Traits<::Negotiator::UAV_Negotiator>
     : public Object_Arg_Traits_T<
         ::Negotiator::UAV_Negotiator_ptr,
         ::Negotiator::UAV_Negotiator_var,
@@ -2785,7 +2785,7 @@ namespace TAO
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Negotiator::AMH_UAV_NegotiatorExceptionHolder>
+  class Arg_Traits<::Negotiator::AMH_UAV_NegotiatorExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Negotiator::AMH_UAV_NegotiatorExceptionHolder *,
@@ -2803,7 +2803,7 @@ namespace TAO
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATORHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Negotiator::AMI_UAV_NegotiatorHandler>
+  class  Arg_Traits<::Negotiator::AMI_UAV_NegotiatorHandler>
     : public Object_Arg_Traits_T<
         ::Negotiator::AMI_UAV_NegotiatorHandler_ptr,
         ::Negotiator::AMI_UAV_NegotiatorHandler_var,
@@ -2819,7 +2819,7 @@ namespace TAO
 #define _NEGOTIATOR_UAV_NEGOTIATOR_FACTORY__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Negotiator::UAV_Negotiator_Factory>
+  class  Arg_Traits<::Negotiator::UAV_Negotiator_Factory>
     : public Object_Arg_Traits_T<
         ::Negotiator::UAV_Negotiator_Factory_ptr,
         ::Negotiator::UAV_Negotiator_Factory_var,
@@ -2835,7 +2835,7 @@ namespace TAO
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder>
+  class Arg_Traits<::Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder *,
@@ -2853,7 +2853,7 @@ namespace TAO
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATOR_FACTORYHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Negotiator::AMI_UAV_Negotiator_FactoryHandler>
+  class  Arg_Traits<::Negotiator::AMI_UAV_Negotiator_FactoryHandler>
     : public Object_Arg_Traits_T<
         ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr,
         ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_var,
@@ -2866,7 +2866,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::bug_2125::Bar::Stuff>
+  class Arg_Traits<::bug_2125::Bar::Stuff>
     : public
         Basic_Arg_Traits_T<
             ::bug_2125::Bar::Stuff,
@@ -2879,7 +2879,7 @@ namespace TAO
 #define _WOW_BUG_2125_MYINTERFACE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Wow::bug_2125::MyInterface>
+  class  Arg_Traits<::Wow::bug_2125::MyInterface>
     : public Object_Arg_Traits_T<
         ::Wow::bug_2125::MyInterface_ptr,
         ::Wow::bug_2125::MyInterface_var,
@@ -2895,7 +2895,7 @@ namespace TAO
 #define _WOW_BUG_2125_AMH_MYINTERFACEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Wow::bug_2125::AMH_MyInterfaceExceptionHolder>
+  class Arg_Traits<::Wow::bug_2125::AMH_MyInterfaceExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Wow::bug_2125::AMH_MyInterfaceExceptionHolder *,
@@ -2913,7 +2913,7 @@ namespace TAO
 #define _WOW_BUG_2125_AMI_MYINTERFACEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Wow::bug_2125::AMI_MyInterfaceHandler>
+  class  Arg_Traits<::Wow::bug_2125::AMI_MyInterfaceHandler>
     : public Object_Arg_Traits_T<
         ::Wow::bug_2125::AMI_MyInterfaceHandler_ptr,
         ::Wow::bug_2125::AMI_MyInterfaceHandler_var,
@@ -2926,7 +2926,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::Company::CORBA::Inner::Foo>
+  class Arg_Traits<::Company::CORBA::Inner::Foo>
     : public
         Fixed_Size_Arg_Traits_T<
             ::Company::CORBA::Inner::Foo,
@@ -2957,11 +2957,9 @@ namespace OBV_i_skip
     ::CORBA::ValueBase *_copy_value () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__i_skip_i_hump_AMH_i_skipExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__i_skip_i_hump_AMH_i_skipExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__i_skip_i_hump_AMH_i_skipExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__i_skip_i_hump_AMH_i_skipExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2987,11 +2985,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_blooExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_blooExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_blooExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_blooExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -3019,11 +3015,9 @@ namespace OBV_bug_1985_a
     ::CORBA::ValueBase *_copy_value () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__bug_1985_a_b_AMH_somethingExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__bug_1985_a_b_AMH_somethingExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__bug_1985_a_b_AMH_somethingExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__bug_1985_a_b_AMH_somethingExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -3053,11 +3047,9 @@ namespace OBV_bug_1985_c
     ::CORBA::ValueBase *_copy_value () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__bug_1985_c_d_AMH_somethingExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__bug_1985_c_d_AMH_somethingExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__bug_1985_c_d_AMH_somethingExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__bug_1985_c_d_AMH_somethingExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -3085,11 +3077,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__Negotiator_AMH_UAV_NegotiatorExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Negotiator_AMH_UAV_NegotiatorExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__Negotiator_AMH_UAV_NegotiatorExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Negotiator_AMH_UAV_NegotiatorExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -3109,11 +3099,9 @@ protected:
   ~AMH_UAV_Negotiator_FactoryExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__Negotiator_AMH_UAV_Negotiator_FactoryExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Negotiator_AMH_UAV_Negotiator_FactoryExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__Negotiator_AMH_UAV_Negotiator_FactoryExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Negotiator_AMH_UAV_Negotiator_FactoryExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -3138,11 +3126,9 @@ namespace OBV_Wow
     ~AMH_MyInterfaceExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__Wow_bug_2125_AMH_MyInterfaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__Wow_bug_2125_AMH_MyInterfaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__Wow_bug_2125_AMH_MyInterfaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__Wow_bug_2125_AMH_MyInterfaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -3164,7 +3150,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_I_SKIP__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i_skip::i_hump::i_skip>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i_skip::i_hump::i_skip>
   {
     static ::i_skip::i_hump::i_skip_ptr duplicate (::i_skip::i_hump::i_skip_ptr p);
     static void release (::i_skip::i_hump::i_skip_ptr p);
@@ -3191,7 +3177,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_AMH_I_SKIPRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i_skip::i_hump::AMH_i_skipResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i_skip::i_hump::AMH_i_skipResponseHandler>
   {
     static ::i_skip::i_hump::AMH_i_skipResponseHandler_ptr duplicate (::i_skip::i_hump::AMH_i_skipResponseHandler_ptr p);
     static void release (::i_skip::i_hump::AMH_i_skipResponseHandler_ptr p);
@@ -3205,7 +3191,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_AMI_I_SKIPHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i_skip::i_hump::AMI_i_skipHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i_skip::i_hump::AMI_i_skipHandler>
   {
     static ::i_skip::i_hump::AMI_i_skipHandler_ptr duplicate (::i_skip::i_hump::AMI_i_skipHandler_ptr p);
     static void release (::i_skip::i_hump::AMI_i_skipHandler_ptr p);
@@ -3219,7 +3205,7 @@ namespace TAO
 #define _BLOO__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bloo>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bloo>
   {
     static ::bloo_ptr duplicate (::bloo_ptr p);
     static void release (::bloo_ptr p);
@@ -3246,7 +3232,7 @@ namespace TAO
 #define _AMH_BLOORESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_blooResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_blooResponseHandler>
   {
     static ::AMH_blooResponseHandler_ptr duplicate (::AMH_blooResponseHandler_ptr p);
     static void release (::AMH_blooResponseHandler_ptr p);
@@ -3260,7 +3246,7 @@ namespace TAO
 #define _AMI_BLOOHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_blooHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_blooHandler>
   {
     static ::AMI_blooHandler_ptr duplicate (::AMI_blooHandler_ptr p);
     static void release (::AMI_blooHandler_ptr p);
@@ -3274,7 +3260,7 @@ namespace TAO
 #define _BUG_1985_A_B_SOMETHING__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_1985_a::b::something>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_1985_a::b::something>
   {
     static ::bug_1985_a::b::something_ptr duplicate (::bug_1985_a::b::something_ptr p);
     static void release (::bug_1985_a::b::something_ptr p);
@@ -3301,7 +3287,7 @@ namespace TAO
 #define _BUG_1985_A_B_AMH_SOMETHINGRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_1985_a::b::AMH_somethingResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_1985_a::b::AMH_somethingResponseHandler>
   {
     static ::bug_1985_a::b::AMH_somethingResponseHandler_ptr duplicate (::bug_1985_a::b::AMH_somethingResponseHandler_ptr p);
     static void release (::bug_1985_a::b::AMH_somethingResponseHandler_ptr p);
@@ -3315,7 +3301,7 @@ namespace TAO
 #define _BUG_1985_A_B_AMI_SOMETHINGHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_1985_a::b::AMI_somethingHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_1985_a::b::AMI_somethingHandler>
   {
     static ::bug_1985_a::b::AMI_somethingHandler_ptr duplicate (::bug_1985_a::b::AMI_somethingHandler_ptr p);
     static void release (::bug_1985_a::b::AMI_somethingHandler_ptr p);
@@ -3329,7 +3315,7 @@ namespace TAO
 #define _BUG_1985_C_D_SOMETHING__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_1985_c::d::something>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_1985_c::d::something>
   {
     static ::bug_1985_c::d::something_ptr duplicate (::bug_1985_c::d::something_ptr p);
     static void release (::bug_1985_c::d::something_ptr p);
@@ -3356,7 +3342,7 @@ namespace TAO
 #define _BUG_1985_C_D_AMH_SOMETHINGRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_1985_c::d::AMH_somethingResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_1985_c::d::AMH_somethingResponseHandler>
   {
     static ::bug_1985_c::d::AMH_somethingResponseHandler_ptr duplicate (::bug_1985_c::d::AMH_somethingResponseHandler_ptr p);
     static void release (::bug_1985_c::d::AMH_somethingResponseHandler_ptr p);
@@ -3370,7 +3356,7 @@ namespace TAO
 #define _BUG_1985_C_D_AMI_SOMETHINGHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::bug_1985_c::d::AMI_somethingHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::bug_1985_c::d::AMI_somethingHandler>
   {
     static ::bug_1985_c::d::AMI_somethingHandler_ptr duplicate (::bug_1985_c::d::AMI_somethingHandler_ptr p);
     static void release (::bug_1985_c::d::AMI_somethingHandler_ptr p);
@@ -3384,7 +3370,7 @@ namespace TAO
 #define _NEGOTIATOR_UAV_NEGOTIATOR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Negotiator::UAV_Negotiator>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Negotiator::UAV_Negotiator>
   {
     static ::Negotiator::UAV_Negotiator_ptr duplicate (::Negotiator::UAV_Negotiator_ptr p);
     static void release (::Negotiator::UAV_Negotiator_ptr p);
@@ -3411,7 +3397,7 @@ namespace TAO
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATORRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Negotiator::AMH_UAV_NegotiatorResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Negotiator::AMH_UAV_NegotiatorResponseHandler>
   {
     static ::Negotiator::AMH_UAV_NegotiatorResponseHandler_ptr duplicate (::Negotiator::AMH_UAV_NegotiatorResponseHandler_ptr p);
     static void release (::Negotiator::AMH_UAV_NegotiatorResponseHandler_ptr p);
@@ -3425,7 +3411,7 @@ namespace TAO
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATORHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Negotiator::AMI_UAV_NegotiatorHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Negotiator::AMI_UAV_NegotiatorHandler>
   {
     static ::Negotiator::AMI_UAV_NegotiatorHandler_ptr duplicate (::Negotiator::AMI_UAV_NegotiatorHandler_ptr p);
     static void release (::Negotiator::AMI_UAV_NegotiatorHandler_ptr p);
@@ -3439,7 +3425,7 @@ namespace TAO
 #define _NEGOTIATOR_UAV_NEGOTIATOR_FACTORY__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Negotiator::UAV_Negotiator_Factory>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Negotiator::UAV_Negotiator_Factory>
   {
     static ::Negotiator::UAV_Negotiator_Factory_ptr duplicate (::Negotiator::UAV_Negotiator_Factory_ptr p);
     static void release (::Negotiator::UAV_Negotiator_Factory_ptr p);
@@ -3466,7 +3452,7 @@ namespace TAO
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Negotiator::AMH_UAV_Negotiator_FactoryResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Negotiator::AMH_UAV_Negotiator_FactoryResponseHandler>
   {
     static ::Negotiator::AMH_UAV_Negotiator_FactoryResponseHandler_ptr duplicate (::Negotiator::AMH_UAV_Negotiator_FactoryResponseHandler_ptr p);
     static void release (::Negotiator::AMH_UAV_Negotiator_FactoryResponseHandler_ptr p);
@@ -3480,7 +3466,7 @@ namespace TAO
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATOR_FACTORYHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Negotiator::AMI_UAV_Negotiator_FactoryHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Negotiator::AMI_UAV_Negotiator_FactoryHandler>
   {
     static ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr duplicate (::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr p);
     static void release (::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr p);
@@ -3494,7 +3480,7 @@ namespace TAO
 #define _WOW_BUG_2125_MYINTERFACE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Wow::bug_2125::MyInterface>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Wow::bug_2125::MyInterface>
   {
     static ::Wow::bug_2125::MyInterface_ptr duplicate (::Wow::bug_2125::MyInterface_ptr p);
     static void release (::Wow::bug_2125::MyInterface_ptr p);
@@ -3521,7 +3507,7 @@ namespace TAO
 #define _WOW_BUG_2125_AMH_MYINTERFACERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Wow::bug_2125::AMH_MyInterfaceResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Wow::bug_2125::AMH_MyInterfaceResponseHandler>
   {
     static ::Wow::bug_2125::AMH_MyInterfaceResponseHandler_ptr duplicate (::Wow::bug_2125::AMH_MyInterfaceResponseHandler_ptr p);
     static void release (::Wow::bug_2125::AMH_MyInterfaceResponseHandler_ptr p);
@@ -3535,7 +3521,7 @@ namespace TAO
 #define _WOW_BUG_2125_AMI_MYINTERFACEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Wow::bug_2125::AMI_MyInterfaceHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Wow::bug_2125::AMI_MyInterfaceHandler>
   {
     static ::Wow::bug_2125::AMI_MyInterfaceHandler_ptr duplicate (::Wow::bug_2125::AMI_MyInterfaceHandler_ptr p);
     static void release (::Wow::bug_2125::AMI_MyInterfaceHandler_ptr p);
@@ -3971,11 +3957,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    pre_u_skip::pre_u_hump::pre_u_skip const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  pre_u_skip::pre_u_hump::pre_u_skip const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    pre_u_skip::pre_u_hump::pre_u_skip &_tao_sequence);
+  TAO_InputCDR &strm,
+  pre_u_skip::pre_u_hump::pre_u_skip &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -3986,11 +3972,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    pre_b_skip::pre_b_hump::pre_b_skip const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  pre_b_skip::pre_b_hump::pre_b_skip const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    pre_b_skip::pre_b_hump::pre_b_skip &_tao_sequence);
+  TAO_InputCDR &strm,
+  pre_b_skip::pre_b_hump::pre_b_skip &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -4001,11 +3987,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    str_u_skip::str_u_hump::str_u_skip const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  str_u_skip::str_u_hump::str_u_skip const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    str_u_skip::str_u_hump::str_u_skip &_tao_sequence);
+  TAO_InputCDR &strm,
+  str_u_skip::str_u_hump::str_u_skip &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -4016,11 +4002,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    str_b_skip::str_b_hump::str_b_skip const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  str_b_skip::str_b_hump::str_b_skip const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    str_b_skip::str_b_hump::str_b_skip &_tao_sequence);
+  TAO_InputCDR &strm,
+  str_b_skip::str_b_hump::str_b_skip &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -4031,11 +4017,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    wstr_u_skip::wstr_u_hump::wstr_u_skip const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  wstr_u_skip::wstr_u_hump::wstr_u_skip const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    wstr_u_skip::wstr_u_hump::wstr_u_skip &_tao_sequence);
+  TAO_InputCDR &strm,
+  wstr_u_skip::wstr_u_hump::wstr_u_skip &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -4046,11 +4032,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    wstr_b_skip::wstr_b_hump::wstr_b_skip const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  wstr_b_skip::wstr_b_hump::wstr_b_skip const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    wstr_b_skip::wstr_b_hump::wstr_b_skip &_tao_sequence);
+  TAO_InputCDR &strm,
+  wstr_b_skip::wstr_b_hump::wstr_b_skip &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -4091,11 +4077,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    obj_u_skip::obj_u_hump::obj_u_skip const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  obj_u_skip::obj_u_hump::obj_u_skip const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    obj_u_skip::obj_u_hump::obj_u_skip &_tao_sequence);
+  TAO_InputCDR &strm,
+  obj_u_skip::obj_u_hump::obj_u_skip &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -4106,11 +4092,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    obj_b_skip::obj_b_hump::obj_b_skip const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  obj_b_skip::obj_b_hump::obj_b_skip const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    obj_b_skip::obj_b_hump::obj_b_skip &_tao_sequence);
+  TAO_InputCDR &strm,
+  obj_b_skip::obj_b_hump::obj_b_skip &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

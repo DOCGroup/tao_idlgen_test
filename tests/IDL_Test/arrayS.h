@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAYS_74MPK6_H_
-#define _TAO_IDL_ARRAYS_74MPK6_H_
+#ifndef _TAO_IDL_ARRAYS_3T2UC7_H_
+#define _TAO_IDL_ARRAYS_3T2UC7_H_
 
 #include /**/ "ace/pre.h"
 
@@ -62,7 +62,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -76,7 +76,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::TwoDArray_tag>
+  class SArg_Traits<::TwoDArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::TwoDArray_var,
@@ -87,7 +87,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::ThreeDArray_tag>
+  class SArg_Traits<::ThreeDArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::ThreeDArray_var,
@@ -98,7 +98,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::FourDArray_tag>
+  class SArg_Traits<::FourDArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::FourDArray_var,
@@ -109,7 +109,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::inside_array_tag>
+  class SArg_Traits<::inside_array_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::inside_array_var,
@@ -120,7 +120,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::wrap>
+  class SArg_Traits<::wrap>
     : public
         Fixed_Size_SArg_Traits_T<
             ::wrap,
@@ -130,7 +130,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::outside_array_tag>
+  class SArg_Traits<::outside_array_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::outside_array_var,
@@ -141,7 +141,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::oa1_tag>
+  class SArg_Traits<::oa1_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::oa1_var,
@@ -152,7 +152,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::oa2_tag>
+  class SArg_Traits<::oa2_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::oa2_var,
@@ -166,7 +166,7 @@ namespace TAO
 #define _ARRAY_ARGS__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::array_args>
+  class  SArg_Traits<::array_args>
     : public Object_SArg_Traits_T<
         ::array_args_ptr,
         ::array_args_var,
@@ -181,7 +181,7 @@ namespace TAO
 #define _AMH_ARRAY_ARGSEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_array_argsExceptionHolder>
+  class SArg_Traits<::AMH_array_argsExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_array_argsExceptionHolder *,
@@ -198,7 +198,7 @@ namespace TAO
 #define _AMI_ARRAY_ARGSHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_array_argsHandler>
+  class  SArg_Traits<::AMI_array_argsHandler>
     : public Object_SArg_Traits_T<
         ::AMI_array_argsHandler_ptr,
         ::AMI_array_argsHandler_var,
@@ -210,7 +210,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::string_array::ArrayOfString_tag>
+  class SArg_Traits<::string_array::ArrayOfString_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::string_array::ArrayOfString_out,
@@ -221,7 +221,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::string_array::ArrayOfMyString_tag>
+  class SArg_Traits<::string_array::ArrayOfMyString_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::string_array::ArrayOfMyString_out,
@@ -235,7 +235,7 @@ namespace TAO
 #define _TESTDATA__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::testdata>
+  class  SArg_Traits<::testdata>
     : public Object_SArg_Traits_T<
         ::testdata_ptr,
         ::testdata_var,
@@ -247,7 +247,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::testdata::Arraychar_tag>
+  class SArg_Traits<::testdata::Arraychar_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::testdata::Arraychar_var,
@@ -258,7 +258,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::testdata::struct2>
+  class SArg_Traits<::testdata::struct2>
     : public
         Fixed_Size_SArg_Traits_T<
             ::testdata::struct2,
@@ -268,7 +268,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::testdata::ArraycharList>
+  class SArg_Traits<::testdata::ArraycharList>
     : public
         Var_Size_SArg_Traits_T<
             ::testdata::ArraycharList,
@@ -278,7 +278,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::testdata::BdArraycharList>
+  class SArg_Traits<::testdata::BdArraycharList>
     : public
         Var_Size_SArg_Traits_T<
             ::testdata::BdArraycharList,
@@ -288,7 +288,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::testdata::ArrayDeCharList>
+  class SArg_Traits<::testdata::ArrayDeCharList>
     : public
         Var_Size_SArg_Traits_T<
             ::testdata::ArrayDeCharList,
@@ -298,7 +298,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::testdata::BdArrayDeCharList>
+  class SArg_Traits<::testdata::BdArrayDeCharList>
     : public
         Var_Size_SArg_Traits_T<
             ::testdata::BdArrayDeCharList,
@@ -311,7 +311,7 @@ namespace TAO
 #define _AMH_TESTDATAEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_testdataExceptionHolder>
+  class SArg_Traits<::AMH_testdataExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_testdataExceptionHolder *,
@@ -328,7 +328,7 @@ namespace TAO
 #define _AMI_TESTDATAHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_testdataHandler>
+  class  SArg_Traits<::AMI_testdataHandler>
     : public Object_SArg_Traits_T<
         ::AMI_testdataHandler_ptr,
         ::AMI_testdataHandler_var,
@@ -340,7 +340,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::arraytest::myvec2_tag>
+  class SArg_Traits<::arraytest::myvec2_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::arraytest::myvec2_out,
@@ -351,7 +351,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::arraytest::myvec3_tag>
+  class SArg_Traits<::arraytest::myvec3_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::arraytest::myvec3_out,
@@ -365,7 +365,7 @@ namespace TAO
 #define _ARRAYTEST_MYTEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::arraytest::MyTest>
+  class  SArg_Traits<::arraytest::MyTest>
     : public Object_SArg_Traits_T<
         ::arraytest::MyTest_ptr,
         ::arraytest::MyTest_var,
@@ -380,7 +380,7 @@ namespace TAO
 #define _ARRAYTEST_AMH_MYTESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::arraytest::AMH_MyTestExceptionHolder>
+  class SArg_Traits<::arraytest::AMH_MyTestExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::arraytest::AMH_MyTestExceptionHolder *,
@@ -397,7 +397,7 @@ namespace TAO
 #define _ARRAYTEST_AMI_MYTESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::arraytest::AMI_MyTestHandler>
+  class  SArg_Traits<::arraytest::AMI_MyTestHandler>
     : public Object_SArg_Traits_T<
         ::arraytest::AMI_MyTestHandler_ptr,
         ::arraytest::AMI_MyTestHandler_var,
@@ -409,7 +409,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::bug_2126::FirstUnion>
+  class SArg_Traits<::bug_2126::FirstUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bug_2126::FirstUnion,
@@ -419,7 +419,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::bug_2126::FirstUnionArray_tag>
+  class SArg_Traits<::bug_2126::FirstUnionArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::bug_2126::FirstUnionArray_var,
@@ -430,7 +430,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::bug_2126::MyStruct>
+  class SArg_Traits<::bug_2126::MyStruct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bug_2126::MyStruct,
@@ -440,7 +440,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::bug_2126::SecondUnion>
+  class SArg_Traits<::bug_2126::SecondUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bug_2126::SecondUnion,
@@ -450,7 +450,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::bug_2126::BdFirstUnionArray_tag>
+  class SArg_Traits<::bug_2126::BdFirstUnionArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::bug_2126::BdFirstUnionArray_var,
@@ -461,7 +461,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::bug_2126::BdMyStruct>
+  class SArg_Traits<::bug_2126::BdMyStruct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bug_2126::BdMyStruct,
@@ -471,7 +471,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::bug_2126::BdSecondUnion>
+  class SArg_Traits<::bug_2126::BdSecondUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bug_2126::BdSecondUnion,
@@ -481,7 +481,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::B41_tag>
+  class SArg_Traits<::B41_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::B41_var,
@@ -492,7 +492,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::B42_tag>
+  class SArg_Traits<::B42_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::B42_var,
@@ -503,7 +503,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::B43_tag>
+  class SArg_Traits<::B43_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::B43_var,
@@ -514,7 +514,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::B85>
+  class SArg_Traits<::B85>
     : public
         Fixed_Size_SArg_Traits_T<
             ::B85,

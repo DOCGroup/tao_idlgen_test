@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDEDS_0SYZV6_H_
-#define _TAO_IDL_INCLUDEDS_0SYZV6_H_
+#ifndef _TAO_IDL_INCLUDEDS_I02BKU_H_
+#define _TAO_IDL_INCLUDEDS_I02BKU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -59,7 +59,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -73,7 +73,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::Aok::Seq1Type>
+  class SArg_Traits<::Aok::Seq1Type>
     : public
         Var_Size_SArg_Traits_T<
             ::Aok::Seq1Type,
@@ -83,7 +83,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Agog>
+  class SArg_Traits<::Agog>
     : public
         Basic_SArg_Traits_T<
             ::Agog,
@@ -96,7 +96,7 @@ namespace TAO
 #define _VT_DEF_VT__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::VT_Def::VT>
+  class SArg_Traits<::VT_Def::VT>
     : public
         Object_SArg_Traits_T<
             ::VT_Def::VT *,
@@ -113,7 +113,7 @@ namespace TAO
 #define _INCLUDEDBASE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::IncludedBase>
+  class SArg_Traits<::IncludedBase>
     : public
         Object_SArg_Traits_T<
             ::IncludedBase *,
@@ -127,7 +127,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::A::MySeqA>
+  class SArg_Traits<::A::MySeqA>
     : public
         Var_Size_SArg_Traits_T<
             ::A::MySeqA,
@@ -137,7 +137,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::A::MyStructA>
+  class SArg_Traits<::A::MyStructA>
     : public
         Var_Size_SArg_Traits_T<
             ::A::MyStructA,
@@ -150,7 +150,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_PARENTIF__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::RootModule::SUBMODULE1::ParentIF>
+  class  SArg_Traits<::RootModule::SUBMODULE1::ParentIF>
     : public Object_SArg_Traits_T<
         ::RootModule::SUBMODULE1::ParentIF_ptr,
         ::RootModule::SUBMODULE1::ParentIF_var,
@@ -162,7 +162,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::RootModule::SUBMODULE1::ParentIF::Mode>
+  class SArg_Traits<::RootModule::SUBMODULE1::ParentIF::Mode>
     : public
         Basic_SArg_Traits_T<
             ::RootModule::SUBMODULE1::ParentIF::Mode,
@@ -175,7 +175,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMH_PARENTIFEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder>
+  class SArg_Traits<::RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder *,
@@ -192,7 +192,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMI_PARENTIFHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::RootModule::SUBMODULE1::AMI_ParentIFHandler>
+  class  SArg_Traits<::RootModule::SUBMODULE1::AMI_ParentIFHandler>
     : public Object_SArg_Traits_T<
         ::RootModule::SUBMODULE1::AMI_ParentIFHandler_ptr,
         ::RootModule::SUBMODULE1::AMI_ParentIFHandler_var,
@@ -207,7 +207,7 @@ namespace TAO
 #define _AAA__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AAA>
+  class  SArg_Traits<::AAA>
     : public Object_SArg_Traits_T<
         ::AAA_ptr,
         ::AAA_var,
@@ -222,7 +222,7 @@ namespace TAO
 #define _AMH_AAAEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_AAAExceptionHolder>
+  class SArg_Traits<::AMH_AAAExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_AAAExceptionHolder *,
@@ -239,7 +239,7 @@ namespace TAO
 #define _AMI_AAAHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_AAAHandler>
+  class  SArg_Traits<::AMI_AAAHandler>
     : public Object_SArg_Traits_T<
         ::AMI_AAAHandler_ptr,
         ::AMI_AAAHandler_var,

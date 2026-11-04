@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIAMONDS_73M977_H_
-#define _TAO_IDL_DIAMONDS_73M977_H_
+#ifndef _TAO_IDL_DIAMONDS_HU5G4O_H_
+#define _TAO_IDL_DIAMONDS_HU5G4O_H_
 
 #include /**/ "ace/pre.h"
 
@@ -57,7 +57,7 @@ namespace TAO
 #define _DIAMOND_TOP__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Diamond::Top>
+  class  SArg_Traits<::Diamond::Top>
     : public Object_SArg_Traits_T<
         ::Diamond::Top_ptr,
         ::Diamond::Top_var,
@@ -72,7 +72,7 @@ namespace TAO
 #define _DIAMOND_LEFT__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Diamond::Left>
+  class  SArg_Traits<::Diamond::Left>
     : public Object_SArg_Traits_T<
         ::Diamond::Left_ptr,
         ::Diamond::Left_var,
@@ -87,7 +87,7 @@ namespace TAO
 #define _DIAMOND_RIGHT__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Diamond::Right>
+  class  SArg_Traits<::Diamond::Right>
     : public Object_SArg_Traits_T<
         ::Diamond::Right_ptr,
         ::Diamond::Right_var,
@@ -102,7 +102,7 @@ namespace TAO
 #define _DIAMOND_BUTTOM__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Diamond::Buttom>
+  class  SArg_Traits<::Diamond::Buttom>
     : public Object_SArg_Traits_T<
         ::Diamond::Buttom_ptr,
         ::Diamond::Buttom_var,

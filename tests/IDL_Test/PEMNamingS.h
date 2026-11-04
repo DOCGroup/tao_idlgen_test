@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGS_W4FQP3_H_
-#define _TAO_IDL_PEMNAMINGS_W4FQP3_H_
+#ifndef _TAO_IDL_PEMNAMINGS_1QSRX5_H_
+#define _TAO_IDL_PEMNAMINGS_1QSRX5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -57,7 +57,7 @@ namespace TAO
 {
 
   template<>
-  class SArg_Traits< ::Plesk::TBool>
+  class SArg_Traits<::Plesk::TBool>
     : public
         Basic_SArg_Traits_T<
             ::Plesk::TBool,
@@ -67,7 +67,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Plesk::TProperty>
+  class SArg_Traits<::Plesk::TProperty>
     : public
         Var_Size_SArg_Traits_T<
             ::Plesk::TProperty,
@@ -77,7 +77,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Plesk::TPropertyList>
+  class SArg_Traits<::Plesk::TPropertyList>
     : public
         Var_Size_SArg_Traits_T<
             ::Plesk::TPropertyList,
@@ -87,7 +87,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Plesk::Naming::NamingContext>
+  class SArg_Traits<::Plesk::Naming::NamingContext>
     : public
         Var_Size_SArg_Traits_T<
             ::Plesk::Naming::NamingContext,
@@ -100,7 +100,7 @@ namespace TAO
 #define _PLESK_NAMING_OBJECTRESOLVER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Plesk::Naming::ObjectResolver>
+  class  SArg_Traits<::Plesk::Naming::ObjectResolver>
     : public Object_SArg_Traits_T<
         ::Plesk::Naming::ObjectResolver_ptr,
         ::Plesk::Naming::ObjectResolver_var,
@@ -115,7 +115,7 @@ namespace TAO
 #define _PLESK_NAMING_AMH_OBJECTRESOLVEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Plesk::Naming::AMH_ObjectResolverExceptionHolder>
+  class SArg_Traits<::Plesk::Naming::AMH_ObjectResolverExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Plesk::Naming::AMH_ObjectResolverExceptionHolder *,
@@ -132,7 +132,7 @@ namespace TAO
 #define _PLESK_NAMING_AMI_OBJECTRESOLVERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Plesk::Naming::AMI_ObjectResolverHandler>
+  class  SArg_Traits<::Plesk::Naming::AMI_ObjectResolverHandler>
     : public Object_SArg_Traits_T<
         ::Plesk::Naming::AMI_ObjectResolverHandler_ptr,
         ::Plesk::Naming::AMI_ObjectResolverHandler_var,

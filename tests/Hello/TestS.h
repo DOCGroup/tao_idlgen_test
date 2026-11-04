@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_I4TGW1_H_
-#define _TAO_IDL_TESTS_I4TGW1_H_
+#ifndef _TAO_IDL_TESTS_60YLTL_H_
+#define _TAO_IDL_TESTS_60YLTL_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,7 +52,7 @@ namespace TAO
 #define _TEST_HELLO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Test::Hello>
+  class  SArg_Traits<::Test::Hello>
     : public Object_SArg_Traits_T<
         ::Test::Hello_ptr,
         ::Test::Hello_var,

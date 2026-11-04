@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDINGC_GYRMXO_H_
-#define _TAO_IDL_INCLUDINGC_GYRMXO_H_
+#ifndef _TAO_IDL_INCLUDINGC_NP3VP7_H_
+#define _TAO_IDL_INCLUDINGC_NP3VP7_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1443,7 +1443,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -1458,7 +1458,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::choice>
+  class Arg_Traits<::choice>
     : public
         Basic_Arg_Traits_T<
             ::choice,
@@ -1468,7 +1468,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::myUnion>
+  class Arg_Traits<::myUnion>
     : public
         Var_Size_Arg_Traits_T<
             ::myUnion,
@@ -1478,7 +1478,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Bog>
+  class Arg_Traits<::Bog>
     : public
         Fixed_Size_Arg_Traits_T<
             ::Bog,
@@ -1491,7 +1491,7 @@ namespace TAO
 #define _IFACE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::iface>
+  class  Arg_Traits<::iface>
     : public Object_Arg_Traits_T<
         ::iface_ptr,
         ::iface_var,
@@ -1504,7 +1504,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::iface::postal>
+  class Arg_Traits<::iface::postal>
     : public
         Basic_Arg_Traits_T<
             ::iface::postal,
@@ -1514,7 +1514,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::iface::using_incl>
+  class Arg_Traits<::iface::using_incl>
     : public
         Fixed_Size_Arg_Traits_T<
             ::iface::using_incl,
@@ -1527,7 +1527,7 @@ namespace TAO
 #define _AMH_IFACEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_ifaceExceptionHolder>
+  class Arg_Traits<::AMH_ifaceExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_ifaceExceptionHolder *,
@@ -1545,7 +1545,7 @@ namespace TAO
 #define _AMI_IFACEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_ifaceHandler>
+  class  Arg_Traits<::AMI_ifaceHandler>
     : public Object_Arg_Traits_T<
         ::AMI_ifaceHandler_ptr,
         ::AMI_ifaceHandler_var,
@@ -1558,7 +1558,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::VT_Test::VTSeq>
+  class Arg_Traits<::VT_Test::VTSeq>
     : public
         Var_Size_Arg_Traits_T<
             ::VT_Test::VTSeq,
@@ -1568,7 +1568,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::TestStr>
+  class Arg_Traits<::TestStr>
     : public
         Var_Size_Arg_Traits_T<
             ::TestStr,
@@ -1578,7 +1578,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::TestUn>
+  class Arg_Traits<::TestUn>
     : public
         Var_Size_Arg_Traits_T<
             ::TestUn,
@@ -1591,7 +1591,7 @@ namespace TAO
 #define _MYINT__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::MyInt>
+  class  Arg_Traits<::MyInt>
     : public Object_Arg_Traits_T<
         ::MyInt_ptr,
         ::MyInt_var,
@@ -1607,7 +1607,7 @@ namespace TAO
 #define _AMH_MYINTEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_MyIntExceptionHolder>
+  class Arg_Traits<::AMH_MyIntExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_MyIntExceptionHolder *,
@@ -1625,7 +1625,7 @@ namespace TAO
 #define _AMI_MYINTHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_MyIntHandler>
+  class  Arg_Traits<::AMI_MyIntHandler>
     : public Object_Arg_Traits_T<
         ::AMI_MyIntHandler_ptr,
         ::AMI_MyIntHandler_var,
@@ -1641,7 +1641,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_CHILDIF__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::RootModule::SUBMODULE1::ChildIF>
+  class  Arg_Traits<::RootModule::SUBMODULE1::ChildIF>
     : public Object_Arg_Traits_T<
         ::RootModule::SUBMODULE1::ChildIF_ptr,
         ::RootModule::SUBMODULE1::ChildIF_var,
@@ -1654,7 +1654,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::RootModule::SUBMODULE1::ChildIF::DifferentMode>
+  class Arg_Traits<::RootModule::SUBMODULE1::ChildIF::DifferentMode>
     : public
         Basic_Arg_Traits_T<
             ::RootModule::SUBMODULE1::ChildIF::DifferentMode,
@@ -1667,7 +1667,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMH_CHILDIFEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder>
+  class Arg_Traits<::RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder *,
@@ -1685,7 +1685,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMI_CHILDIFHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::RootModule::SUBMODULE1::AMI_ChildIFHandler>
+  class  Arg_Traits<::RootModule::SUBMODULE1::AMI_ChildIFHandler>
     : public Object_Arg_Traits_T<
         ::RootModule::SUBMODULE1::AMI_ChildIFHandler_ptr,
         ::RootModule::SUBMODULE1::AMI_ChildIFHandler_var,
@@ -1701,7 +1701,7 @@ namespace TAO
 #define _B__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::B>
+  class  Arg_Traits<::B>
     : public Object_Arg_Traits_T<
         ::B_ptr,
         ::B_var,
@@ -1717,7 +1717,7 @@ namespace TAO
 #define _AMH_BEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_BExceptionHolder>
+  class Arg_Traits<::AMH_BExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_BExceptionHolder *,
@@ -1735,7 +1735,7 @@ namespace TAO
 #define _AMI_BHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_BHandler>
+  class  Arg_Traits<::AMI_BHandler>
     : public Object_Arg_Traits_T<
         ::AMI_BHandler_ptr,
         ::AMI_BHandler_var,
@@ -1764,11 +1764,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_ifaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_ifaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_ifaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_ifaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1788,11 +1786,9 @@ protected:
   ~OBV_AMH_MyIntExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_MyIntExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_MyIntExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_MyIntExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_MyIntExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1820,11 +1816,9 @@ namespace OBV_RootModule
     ::CORBA::ValueBase *_copy_value () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__RootModule_SUBMODULE1_AMH_ChildIFExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__RootModule_SUBMODULE1_AMH_ChildIFExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__RootModule_SUBMODULE1_AMH_ChildIFExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__RootModule_SUBMODULE1_AMH_ChildIFExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1850,11 +1844,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_BExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_BExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_BExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_BExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1874,7 +1866,7 @@ namespace TAO
 #define _IFACE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::iface>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::iface>
   {
     static ::iface_ptr duplicate (::iface_ptr p);
     static void release (::iface_ptr p);
@@ -1901,7 +1893,7 @@ namespace TAO
 #define _AMH_IFACERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_ifaceResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_ifaceResponseHandler>
   {
     static ::AMH_ifaceResponseHandler_ptr duplicate (::AMH_ifaceResponseHandler_ptr p);
     static void release (::AMH_ifaceResponseHandler_ptr p);
@@ -1915,7 +1907,7 @@ namespace TAO
 #define _AMI_IFACEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_ifaceHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_ifaceHandler>
   {
     static ::AMI_ifaceHandler_ptr duplicate (::AMI_ifaceHandler_ptr p);
     static void release (::AMI_ifaceHandler_ptr p);
@@ -1929,7 +1921,7 @@ namespace TAO
 #define _MYINT__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::MyInt>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::MyInt>
   {
     static ::MyInt_ptr duplicate (::MyInt_ptr p);
     static void release (::MyInt_ptr p);
@@ -1956,7 +1948,7 @@ namespace TAO
 #define _AMH_MYINTRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_MyIntResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_MyIntResponseHandler>
   {
     static ::AMH_MyIntResponseHandler_ptr duplicate (::AMH_MyIntResponseHandler_ptr p);
     static void release (::AMH_MyIntResponseHandler_ptr p);
@@ -1970,7 +1962,7 @@ namespace TAO
 #define _AMI_MYINTHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_MyIntHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_MyIntHandler>
   {
     static ::AMI_MyIntHandler_ptr duplicate (::AMI_MyIntHandler_ptr p);
     static void release (::AMI_MyIntHandler_ptr p);
@@ -1984,7 +1976,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_CHILDIF__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::RootModule::SUBMODULE1::ChildIF>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::RootModule::SUBMODULE1::ChildIF>
   {
     static ::RootModule::SUBMODULE1::ChildIF_ptr duplicate (::RootModule::SUBMODULE1::ChildIF_ptr p);
     static void release (::RootModule::SUBMODULE1::ChildIF_ptr p);
@@ -2011,7 +2003,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMH_CHILDIFRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::RootModule::SUBMODULE1::AMH_ChildIFResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::RootModule::SUBMODULE1::AMH_ChildIFResponseHandler>
   {
     static ::RootModule::SUBMODULE1::AMH_ChildIFResponseHandler_ptr duplicate (::RootModule::SUBMODULE1::AMH_ChildIFResponseHandler_ptr p);
     static void release (::RootModule::SUBMODULE1::AMH_ChildIFResponseHandler_ptr p);
@@ -2025,7 +2017,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMI_CHILDIFHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::RootModule::SUBMODULE1::AMI_ChildIFHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::RootModule::SUBMODULE1::AMI_ChildIFHandler>
   {
     static ::RootModule::SUBMODULE1::AMI_ChildIFHandler_ptr duplicate (::RootModule::SUBMODULE1::AMI_ChildIFHandler_ptr p);
     static void release (::RootModule::SUBMODULE1::AMI_ChildIFHandler_ptr p);
@@ -2039,7 +2031,7 @@ namespace TAO
 #define _B__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::B>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::B>
   {
     static ::B_ptr duplicate (::B_ptr p);
     static void release (::B_ptr p);
@@ -2066,7 +2058,7 @@ namespace TAO
 #define _AMH_BRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_BResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_BResponseHandler>
   {
     static ::AMH_BResponseHandler_ptr duplicate (::AMH_BResponseHandler_ptr p);
     static void release (::AMH_BResponseHandler_ptr p);
@@ -2080,7 +2072,7 @@ namespace TAO
 #define _AMI_BHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_BHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_BHandler>
   {
     static ::AMI_BHandler_ptr duplicate (::AMI_BHandler_ptr p);
     static void release (::AMI_BHandler_ptr p);
@@ -2392,12 +2384,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_VT_Test_VTSeq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    VT_Test::VTSeq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    VT_Test::VTSeq &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, VT_Test::VTSeq const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, VT_Test::VTSeq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

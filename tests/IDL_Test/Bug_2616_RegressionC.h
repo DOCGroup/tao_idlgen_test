@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2616_REGRESSIONC_ZS27XH_H_
-#define _TAO_IDL_BUG_2616_REGRESSIONC_ZS27XH_H_
+#ifndef _TAO_IDL_BUG_2616_REGRESSIONC_WM16DY_H_
+#define _TAO_IDL_BUG_2616_REGRESSIONC_WM16DY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -668,7 +668,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -683,7 +683,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::AA>
+  class Arg_Traits<::AA>
     : public
         Fixed_Size_Arg_Traits_T<
             ::AA,
@@ -693,7 +693,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::BB>
+  class Arg_Traits<::BB>
     : public
         Fixed_Size_Arg_Traits_T<
             ::BB,
@@ -706,7 +706,7 @@ namespace TAO
 #define _INTERFACE1__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Interface1>
+  class  Arg_Traits<::Interface1>
     : public Object_Arg_Traits_T<
         ::Interface1_ptr,
         ::Interface1_var,
@@ -722,7 +722,7 @@ namespace TAO
 #define _AMH_INTERFACE1EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_Interface1ExceptionHolder>
+  class Arg_Traits<::AMH_Interface1ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_Interface1ExceptionHolder *,
@@ -740,7 +740,7 @@ namespace TAO
 #define _AMI_INTERFACE1HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_Interface1Handler>
+  class  Arg_Traits<::AMI_Interface1Handler>
     : public Object_Arg_Traits_T<
         ::AMI_Interface1Handler_ptr,
         ::AMI_Interface1Handler_var,
@@ -756,7 +756,7 @@ namespace TAO
 #define _INTERFACE2__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Interface2>
+  class  Arg_Traits<::Interface2>
     : public Object_Arg_Traits_T<
         ::Interface2_ptr,
         ::Interface2_var,
@@ -772,7 +772,7 @@ namespace TAO
 #define _AMH_INTERFACE2EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_Interface2ExceptionHolder>
+  class Arg_Traits<::AMH_Interface2ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_Interface2ExceptionHolder *,
@@ -790,7 +790,7 @@ namespace TAO
 #define _AMI_INTERFACE2HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_Interface2Handler>
+  class  Arg_Traits<::AMI_Interface2Handler>
     : public Object_Arg_Traits_T<
         ::AMI_Interface2Handler_ptr,
         ::AMI_Interface2Handler_var,
@@ -815,11 +815,9 @@ protected:
   ~OBV_AMH_Interface1ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_Interface1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_Interface1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_Interface1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_Interface1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -839,11 +837,9 @@ protected:
   ~OBV_AMH_Interface2ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_Interface2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_Interface2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_Interface2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_Interface2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -863,7 +859,7 @@ namespace TAO
 #define _INTERFACE1__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Interface1>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Interface1>
   {
     static ::Interface1_ptr duplicate (::Interface1_ptr p);
     static void release (::Interface1_ptr p);
@@ -890,7 +886,7 @@ namespace TAO
 #define _AMH_INTERFACE1RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_Interface1ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_Interface1ResponseHandler>
   {
     static ::AMH_Interface1ResponseHandler_ptr duplicate (::AMH_Interface1ResponseHandler_ptr p);
     static void release (::AMH_Interface1ResponseHandler_ptr p);
@@ -904,7 +900,7 @@ namespace TAO
 #define _AMI_INTERFACE1HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_Interface1Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_Interface1Handler>
   {
     static ::AMI_Interface1Handler_ptr duplicate (::AMI_Interface1Handler_ptr p);
     static void release (::AMI_Interface1Handler_ptr p);
@@ -918,7 +914,7 @@ namespace TAO
 #define _INTERFACE2__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Interface2>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Interface2>
   {
     static ::Interface2_ptr duplicate (::Interface2_ptr p);
     static void release (::Interface2_ptr p);
@@ -945,7 +941,7 @@ namespace TAO
 #define _AMH_INTERFACE2RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_Interface2ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_Interface2ResponseHandler>
   {
     static ::AMH_Interface2ResponseHandler_ptr duplicate (::AMH_Interface2ResponseHandler_ptr p);
     static void release (::AMH_Interface2ResponseHandler_ptr p);
@@ -959,7 +955,7 @@ namespace TAO
 #define _AMI_INTERFACE2HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_Interface2Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_Interface2Handler>
   {
     static ::AMI_Interface2Handler_ptr duplicate (::AMI_Interface2Handler_ptr p);
     static void release (::AMI_Interface2Handler_ptr p);

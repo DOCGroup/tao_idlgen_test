@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_UNION_ANONYMOUSS_RP2BA8_H_
-#define _TAO_IDL_UNION_ANONYMOUSS_RP2BA8_H_
+#ifndef _TAO_IDL_UNION_ANONYMOUSS_S91GP4_H_
+#define _TAO_IDL_UNION_ANONYMOUSS_S91GP4_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,7 +52,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -66,7 +66,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::Element>
+  class SArg_Traits<::Element>
     : public
         Var_Size_SArg_Traits_T<
             ::Element,
@@ -76,7 +76,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Element::ValueUnion>
+  class SArg_Traits<::Element::ValueUnion>
     : public
         Var_Size_SArg_Traits_T<
             ::Element::ValueUnion,
@@ -86,7 +86,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::NamedLongArray_tag>
+  class SArg_Traits<::NamedLongArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::NamedLongArray_var,
@@ -97,7 +97,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::decl_heavy_union>
+  class SArg_Traits<::decl_heavy_union>
     : public
         Fixed_Size_SArg_Traits_T<
             ::decl_heavy_union,
@@ -107,7 +107,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::decl_heavy_union::which>
+  class SArg_Traits<::decl_heavy_union::which>
     : public
         Basic_SArg_Traits_T<
             ::decl_heavy_union::which,

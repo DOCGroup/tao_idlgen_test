@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLES_6WRS9L_H_
-#define _TAO_IDL_SIMPLES_6WRS9L_H_
+#ifndef _TAO_IDL_SIMPLES_YQS27H_H_
+#define _TAO_IDL_SIMPLES_YQS27H_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::vec10>
+  class SArg_Traits<::vec10>
     : public
         Var_Size_SArg_Traits_T<
             ::vec10,
@@ -87,7 +87,7 @@ namespace TAO
 #define _SIMPLE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::simple>
+  class  SArg_Traits<::simple>
     : public Object_SArg_Traits_T<
         ::simple_ptr,
         ::simple_var,
@@ -102,7 +102,7 @@ namespace TAO
 #define _AMH_SIMPLEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_simpleExceptionHolder>
+  class SArg_Traits<::AMH_simpleExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_simpleExceptionHolder *,
@@ -119,7 +119,7 @@ namespace TAO
 #define _AMI_SIMPLEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_simpleHandler>
+  class  SArg_Traits<::AMI_simpleHandler>
     : public Object_SArg_Traits_T<
         ::AMI_simpleHandler_ptr,
         ::AMI_simpleHandler_var,
@@ -134,7 +134,7 @@ namespace TAO
 #define _SIMPLE2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::simple2>
+  class  SArg_Traits<::simple2>
     : public Object_SArg_Traits_T<
         ::simple2_ptr,
         ::simple2_var,
@@ -149,7 +149,7 @@ namespace TAO
 #define _AMH_SIMPLE2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_simple2ExceptionHolder>
+  class SArg_Traits<::AMH_simple2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_simple2ExceptionHolder *,
@@ -166,7 +166,7 @@ namespace TAO
 #define _AMI_SIMPLE2HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_simple2Handler>
+  class  SArg_Traits<::AMI_simple2Handler>
     : public Object_SArg_Traits_T<
         ::AMI_simple2Handler_ptr,
         ::AMI_simple2Handler_var,

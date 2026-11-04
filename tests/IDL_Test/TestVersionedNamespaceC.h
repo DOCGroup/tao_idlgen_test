@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_W12OUZ_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_W12OUZ_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_ADBYNK_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_ADBYNK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -226,7 +226,7 @@ namespace TAO
 {
 
   template<>
-  class Arg_Traits< ::M1::S1>
+  class Arg_Traits<::M1::S1>
     : public
         Fixed_Size_Arg_Traits_T<
             ::M1::S1,
@@ -239,7 +239,7 @@ namespace TAO
 #define _M1_V__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::M1::V>
+  class Arg_Traits<::M1::V>
     : public
         Object_Arg_Traits_T<
             ::M1::V *,
@@ -311,7 +311,7 @@ namespace TAO
 #define _M1_LI__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::M1::LI>
+  struct  Objref_Traits<::M1::LI>
   {
     static ::M1::LI_ptr duplicate (::M1::LI_ptr p);
     static void release (::M1::LI_ptr p);

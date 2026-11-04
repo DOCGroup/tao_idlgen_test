@@ -22,11 +22,11 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_BVD3PG_CPP_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_BVD3PG_CPP_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_LXNRWI_CPP_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_LXNRWI_CPP_
 
 #include "sequence_anonymousS.h"
-#include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -53,77 +53,24 @@
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
 
-class TAO_AMH_seqTest_Perfect_Hash_OpTable
-  : public TAO_Perfect_Hash_OpTable
-{
-private:
-  std::size_t hash (const char *str, std::size_t len) override;
-public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+static const TAO_operation_db_entry AMH_seqTest_operations [] = {
+  {"send_dozen", std::addressof(POA_AMH_seqTest::send_dozen_skel), std::addressof(_TAO_seqTest_Direct_Proxy_Impl::send_dozen)},
+  {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
+  {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
+  {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
+  {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
+  {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr}
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_seqTest_Perfect_Hash_OpTable -N lookup */
-
-std::size_t
-TAO_AMH_seqTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
-{
-  static constexpr unsigned char asso_values[] =
-    {
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16,  0, 16,  0, 16, 16,
-      0,  5, 16, 16, 16, 16, 16, 16, 16, 16,
-      2, 16, 16, 16, 16,  0,  0, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16,
-    };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
-}
-
-const TAO_operation_db_entry *
-TAO_AMH_seqTest_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
-{
-  constexpr std::size_t MIN_WORD_LENGTH {5};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr int MIN_HASH_VALUE {5};
-  constexpr int MAX_HASH_VALUE {15};
-
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
-      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
-      {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
-      {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",nullptr,nullptr},
-      {"send_dozen", std::addressof(POA_AMH_seqTest::send_dozen_skel), std::addressof(_TAO_seqTest_Direct_Proxy_Impl::send_dozen)},
-      {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
-      {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
-      {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-    };
-
-  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
-    {
-      std::size_t const key = hash (str, len);
-
-      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
-        {
-          const char *s = wordlist[key].opname;
-
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
-        }
-    }
-  return nullptr;
-}
-
-static TAO_AMH_seqTest_Perfect_Hash_OpTable tao_AMH_seqTest_optable;
+static const ::CORBA::Long _tao_AMH_seqTest_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (18);
+static char _tao_AMH_seqTest_optable_pool [_tao_AMH_seqTest_optable_size];
+static ACE_Static_Allocator_Base _tao_AMH_seqTest_allocator (_tao_AMH_seqTest_optable_pool, _tao_AMH_seqTest_optable_size);
+static TAO_Dynamic_Hash_OpTable tao_AMH_seqTest_optable (
+    AMH_seqTest_operations,
+    6,
+    12,
+    &_tao_AMH_seqTest_allocator
+  );
 
 POA_AMH_seqTest::POA_AMH_seqTest ()
 {
@@ -160,9 +107,7 @@ POA_AMH_seqTest::send_dozen_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_seqTestResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_seqTestResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -200,7 +145,7 @@ seqTest*
 POA_AMH_seqTest::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -211,77 +156,24 @@ POA_AMH_seqTest::_this ()
   return {};
 }
 
-class TAO_seqTest_Perfect_Hash_OpTable
-  : public TAO_Perfect_Hash_OpTable
-{
-private:
-  std::size_t hash (const char *str, std::size_t len) override;
-public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+static const TAO_operation_db_entry seqTest_operations [] = {
+  {"send_dozen", std::addressof(POA_seqTest::send_dozen_skel), std::addressof(_TAO_seqTest_Direct_Proxy_Impl::send_dozen)},
+  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_seqTest_Perfect_Hash_OpTable -N lookup */
-
-std::size_t
-TAO_seqTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
-{
-  static constexpr unsigned char asso_values[] =
-    {
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16,  0, 16,  0, 16, 16,
-      0,  5, 16, 16, 16, 16, 16, 16, 16, 16,
-      2, 16, 16, 16, 16,  0,  0, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16,
-    };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
-}
-
-const TAO_operation_db_entry *
-TAO_seqTest_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
-{
-  constexpr std::size_t MIN_WORD_LENGTH {5};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr int MIN_HASH_VALUE {5};
-  constexpr int MAX_HASH_VALUE {15};
-
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
-      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
-      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
-      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",nullptr,nullptr},
-      {"send_dozen", std::addressof(POA_seqTest::send_dozen_skel), std::addressof(_TAO_seqTest_Direct_Proxy_Impl::send_dozen)},
-      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
-      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-    };
-
-  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
-    {
-      std::size_t const key = hash (str, len);
-
-      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
-        {
-          const char *s = wordlist[key].opname;
-
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
-        }
-    }
-  return nullptr;
-}
-
-static TAO_seqTest_Perfect_Hash_OpTable tao_seqTest_optable;
+static const ::CORBA::Long _tao_seqTest_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (18);
+static char _tao_seqTest_optable_pool [_tao_seqTest_optable_size];
+static ACE_Static_Allocator_Base _tao_seqTest_allocator (_tao_seqTest_optable_pool, _tao_seqTest_optable_size);
+static TAO_Dynamic_Hash_OpTable tao_seqTest_optable (
+    seqTest_operations,
+    6,
+    12,
+    &_tao_seqTest_allocator
+  );
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation
@@ -305,7 +197,7 @@ _TAO_seqTest_Direct_Proxy_Impl::send_dozen (
     }
 
   _tao_ptr->send_dozen (
-        ((TAO::Arg_Traits< ::seqTest::dozens>::inout_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::seqTest::dozens>::inout_arg_val *) args[1])->arg ()
       );
 }
 
@@ -330,8 +222,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::seqTest::dozens>::inout_arg_type arg_1 =
-      TAO::Portable_Server::get_inout_arg< ::seqTest::dozens> (
+    TAO::SArg_Traits<::seqTest::dozens>::inout_arg_type arg_1 =
+      TAO::Portable_Server::get_inout_arg<::seqTest::dozens> (
         this->operation_details_,
         this->args_,
         1);
@@ -350,8 +242,8 @@ void POA_seqTest::send_dozen_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::seqTest::dozens>::inout_arg_val _tao_bouquets;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::seqTest::dozens>::inout_arg_val _tao_bouquets;
 
   TAO::Argument * const args[] =
     {
@@ -376,11 +268,11 @@ void POA_seqTest::send_dozen_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -448,78 +340,25 @@ POA_TAO_AMH_seqTestResponseHandler::send_dozen_excep (
   }
 }
 
-class TAO_AMI_seqTestHandler_Perfect_Hash_OpTable
-  : public TAO_Perfect_Hash_OpTable
-{
-private:
-  std::size_t hash (const char *str, std::size_t len) override;
-public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+static const TAO_operation_db_entry AMI_seqTestHandler_operations [] = {
+  {"send_dozen", std::addressof(POA_AMI_seqTestHandler::send_dozen_skel), std::addressof(_TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen)},
+  {"send_dozen_excep", std::addressof(POA_AMI_seqTestHandler::send_dozen_excep_skel), std::addressof(_TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen_excep)},
+  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_seqTestHandler_Perfect_Hash_OpTable -N lookup */
-
-std::size_t
-TAO_AMI_seqTestHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
-{
-  static constexpr unsigned char asso_values[] =
-    {
-     17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
-     17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
-     17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
-     17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
-     17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
-     17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
-     17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
-     17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
-     17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
-     17, 17, 17, 17, 17,  0, 17,  0, 17, 17,
-      0,  5, 17, 17, 17, 17, 17, 17, 17, 17,
-      2, 17,  0, 17, 17,  0,  0, 17, 17, 17,
-     17, 17, 17, 17, 17, 17, 17, 17,
-    };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
-}
-
-const TAO_operation_db_entry *
-TAO_AMI_seqTestHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
-{
-  constexpr std::size_t MIN_WORD_LENGTH {5};
-  constexpr std::size_t MAX_WORD_LENGTH {16};
-  constexpr int MIN_HASH_VALUE {5};
-  constexpr int MAX_HASH_VALUE {16};
-
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
-      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
-      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
-      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",nullptr,nullptr},
-      {"send_dozen", std::addressof(POA_AMI_seqTestHandler::send_dozen_skel), std::addressof(_TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen)},
-      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
-      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"send_dozen_excep", std::addressof(POA_AMI_seqTestHandler::send_dozen_excep_skel), std::addressof(_TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen_excep)},
-    };
-
-  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
-    {
-      std::size_t const key = hash (str, len);
-
-      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
-        {
-          const char *s = wordlist[key].opname;
-
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
-        }
-    }
-  return nullptr;
-}
-
-static TAO_AMI_seqTestHandler_Perfect_Hash_OpTable tao_AMI_seqTestHandler_optable;
+static const ::CORBA::Long _tao_AMI_seqTestHandler_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (21);
+static char _tao_AMI_seqTestHandler_optable_pool [_tao_AMI_seqTestHandler_optable_size];
+static ACE_Static_Allocator_Base _tao_AMI_seqTestHandler_allocator (_tao_AMI_seqTestHandler_optable_pool, _tao_AMI_seqTestHandler_optable_size);
+static TAO_Dynamic_Hash_OpTable tao_AMI_seqTestHandler_optable (
+    AMI_seqTestHandler_operations,
+    7,
+    14,
+    &_tao_AMI_seqTestHandler_allocator
+  );
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation
@@ -543,7 +382,7 @@ _TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen (
     }
 
   _tao_ptr->send_dozen (
-        ((TAO::Arg_Traits< ::seqTest::dozens>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::seqTest::dozens>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -561,7 +400,7 @@ _TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen_excep (
     }
 
   _tao_ptr->send_dozen_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -586,8 +425,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::seqTest::dozens>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::seqTest::dozens> (
+    TAO::SArg_Traits<::seqTest::dozens>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::seqTest::dozens> (
         this->operation_details_,
         this->args_,
         1);
@@ -606,8 +445,8 @@ void POA_AMI_seqTestHandler::send_dozen_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::seqTest::dozens>::in_arg_val _tao_bouquets;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::seqTest::dozens>::in_arg_val _tao_bouquets;
 
   TAO::Argument * const args[] =
     {
@@ -632,11 +471,11 @@ void POA_AMI_seqTestHandler::send_dozen_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -652,8 +491,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -672,8 +511,8 @@ void POA_AMI_seqTestHandler::send_dozen_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -698,11 +537,11 @@ void POA_AMI_seqTestHandler::send_dozen_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

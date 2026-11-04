@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEPREFIXS_KG8WC4_H_
-#define _TAO_IDL_TYPEPREFIXS_KG8WC4_H_
+#ifndef _TAO_IDL_TYPEPREFIXS_K5B5OB_H_
+#define _TAO_IDL_TYPEPREFIXS_K5B5OB_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #define _A_B__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::B>
+  class  SArg_Traits<::A::B>
     : public Object_SArg_Traits_T<
         ::A::B_ptr,
         ::A::B_var,
@@ -92,7 +92,7 @@ namespace TAO
 #define _A_AMH_BEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::A::AMH_BExceptionHolder>
+  class SArg_Traits<::A::AMH_BExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::A::AMH_BExceptionHolder *,
@@ -109,7 +109,7 @@ namespace TAO
 #define _A_AMI_BHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::AMI_BHandler>
+  class  SArg_Traits<::A::AMI_BHandler>
     : public Object_SArg_Traits_T<
         ::A::AMI_BHandler_ptr,
         ::A::AMI_BHandler_var,
@@ -124,7 +124,7 @@ namespace TAO
 #define _A_C__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::C>
+  class  SArg_Traits<::A::C>
     : public Object_SArg_Traits_T<
         ::A::C_ptr,
         ::A::C_var,
@@ -139,7 +139,7 @@ namespace TAO
 #define _A_AMH_CEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::A::AMH_CExceptionHolder>
+  class SArg_Traits<::A::AMH_CExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::A::AMH_CExceptionHolder *,
@@ -156,7 +156,7 @@ namespace TAO
 #define _A_AMI_CHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::AMI_CHandler>
+  class  SArg_Traits<::A::AMI_CHandler>
     : public Object_SArg_Traits_T<
         ::A::AMI_CHandler_ptr,
         ::A::AMI_CHandler_var,

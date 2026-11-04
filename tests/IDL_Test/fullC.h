@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLC_O67XSR_H_
-#define _TAO_IDL_FULLC_O67XSR_H_
+#ifndef _TAO_IDL_FULLC_QYUMD9_H_
+#define _TAO_IDL_FULLC_QYUMD9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -834,7 +834,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -852,7 +852,7 @@ namespace TAO
 #define _SCOPE_TEST_I_SCOPE_TEST__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::scope_test::i_scope_test>
+  class  Arg_Traits<::scope_test::i_scope_test>
     : public Object_Arg_Traits_T<
         ::scope_test::i_scope_test_ptr,
         ::scope_test::i_scope_test_var,
@@ -868,7 +868,7 @@ namespace TAO
 #define _SCOPE_TEST_AMH_I_SCOPE_TESTEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::scope_test::AMH_i_scope_testExceptionHolder>
+  class Arg_Traits<::scope_test::AMH_i_scope_testExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::scope_test::AMH_i_scope_testExceptionHolder *,
@@ -886,7 +886,7 @@ namespace TAO
 #define _SCOPE_TEST_AMI_I_SCOPE_TESTHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::scope_test::AMI_i_scope_testHandler>
+  class  Arg_Traits<::scope_test::AMI_i_scope_testHandler>
     : public Object_Arg_Traits_T<
         ::scope_test::AMI_i_scope_testHandler_ptr,
         ::scope_test::AMI_i_scope_testHandler_var,
@@ -902,7 +902,7 @@ namespace TAO
 #define _MOD2_FWD__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod2::fwd>
+  class  Arg_Traits<::mod2::fwd>
     : public Object_Arg_Traits_T<
         ::mod2::fwd_ptr,
         ::mod2::fwd_var,
@@ -915,7 +915,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::mod2::fwd::un>
+  class Arg_Traits<::mod2::fwd::un>
     : public
         Var_Size_Arg_Traits_T<
             ::mod2::fwd::un,
@@ -928,7 +928,7 @@ namespace TAO
 #define _MOD2_FULL__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod2::full>
+  class  Arg_Traits<::mod2::full>
     : public Object_Arg_Traits_T<
         ::mod2::full_ptr,
         ::mod2::full_var,
@@ -941,7 +941,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::mod2::fwd::full_seq>
+  class Arg_Traits<::mod2::fwd::full_seq>
     : public
         Var_Size_Arg_Traits_T<
             ::mod2::fwd::full_seq,
@@ -954,7 +954,7 @@ namespace TAO
 #define _MOD2_AMH_FWDEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::mod2::AMH_fwdExceptionHolder>
+  class Arg_Traits<::mod2::AMH_fwdExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::mod2::AMH_fwdExceptionHolder *,
@@ -972,7 +972,7 @@ namespace TAO
 #define _MOD2_AMI_FWDHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod2::AMI_fwdHandler>
+  class  Arg_Traits<::mod2::AMI_fwdHandler>
     : public Object_Arg_Traits_T<
         ::mod2::AMI_fwdHandler_ptr,
         ::mod2::AMI_fwdHandler_var,
@@ -988,7 +988,7 @@ namespace TAO
 #define _MOD2_FULL__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod2::full>
+  class  Arg_Traits<::mod2::full>
     : public Object_Arg_Traits_T<
         ::mod2::full_ptr,
         ::mod2::full_var,
@@ -1020,11 +1020,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1047,11 +1045,9 @@ protected:
   ~AMH_fwdExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__mod2_AMH_fwdExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__mod2_AMH_fwdExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__mod2_AMH_fwdExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__mod2_AMH_fwdExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1072,7 +1068,7 @@ namespace TAO
 #define _SCOPE_TEST_I_SCOPE_TEST__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::scope_test::i_scope_test>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::scope_test::i_scope_test>
   {
     static ::scope_test::i_scope_test_ptr duplicate (::scope_test::i_scope_test_ptr p);
     static void release (::scope_test::i_scope_test_ptr p);
@@ -1099,7 +1095,7 @@ namespace TAO
 #define _SCOPE_TEST_AMH_I_SCOPE_TESTRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::scope_test::AMH_i_scope_testResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::scope_test::AMH_i_scope_testResponseHandler>
   {
     static ::scope_test::AMH_i_scope_testResponseHandler_ptr duplicate (::scope_test::AMH_i_scope_testResponseHandler_ptr p);
     static void release (::scope_test::AMH_i_scope_testResponseHandler_ptr p);
@@ -1113,7 +1109,7 @@ namespace TAO
 #define _SCOPE_TEST_AMI_I_SCOPE_TESTHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::scope_test::AMI_i_scope_testHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::scope_test::AMI_i_scope_testHandler>
   {
     static ::scope_test::AMI_i_scope_testHandler_ptr duplicate (::scope_test::AMI_i_scope_testHandler_ptr p);
     static void release (::scope_test::AMI_i_scope_testHandler_ptr p);
@@ -1127,7 +1123,7 @@ namespace TAO
 #define _MOD2_FULL__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::full>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::full>
   {
     static ::mod2::full_ptr duplicate (::mod2::full_ptr p);
     static void release (::mod2::full_ptr p);
@@ -1141,7 +1137,7 @@ namespace TAO
 #define _MOD2_FWD__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::fwd>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::fwd>
   {
     static ::mod2::fwd_ptr duplicate (::mod2::fwd_ptr p);
     static void release (::mod2::fwd_ptr p);
@@ -1168,7 +1164,7 @@ namespace TAO
 #define _MOD2_AMH_FWDRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::AMH_fwdResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::AMH_fwdResponseHandler>
   {
     static ::mod2::AMH_fwdResponseHandler_ptr duplicate (::mod2::AMH_fwdResponseHandler_ptr p);
     static void release (::mod2::AMH_fwdResponseHandler_ptr p);
@@ -1182,7 +1178,7 @@ namespace TAO
 #define _MOD2_AMI_FWDHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::AMI_fwdHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::AMI_fwdHandler>
   {
     static ::mod2::AMI_fwdHandler_ptr duplicate (::mod2::AMI_fwdHandler_ptr p);
     static void release (::mod2::AMI_fwdHandler_ptr p);
@@ -1196,7 +1192,7 @@ namespace TAO
 #define _MOD2_FULL__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::full>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::full>
   {
     static ::mod2::full_ptr duplicate (::mod2::full_ptr p);
     static void release (::mod2::full_ptr p);
@@ -1380,12 +1376,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_mod2_fwd_full_seq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    mod2::fwd::full_seq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    mod2::fwd::full_seq &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, mod2::fwd::full_seq const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, mod2::fwd::full_seq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

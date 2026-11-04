@@ -23,6 +23,7 @@
  **/
 
 #include "generic_objectC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/CDR.h"
@@ -31,7 +32,6 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "generic_objectC.inl"
@@ -180,10 +180,10 @@ generic::op (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< ::CORBA::Object>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_inarg (inarg);
-  TAO::Arg_Traits< ::CORBA::Object>::inout_arg_val _tao_inoutarg (inoutarg);
-  TAO::Arg_Traits< ::CORBA::Object>::out_arg_val _tao_outarg (outarg);
+  TAO::Arg_Traits<::CORBA::Object>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits<::CORBA::Object>::inout_arg_val _tao_inoutarg (inoutarg);
+  TAO::Arg_Traits<::CORBA::Object>::out_arg_val _tao_outarg (outarg);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -220,8 +220,8 @@ generic::sendc_op (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_inarg (inarg);
-  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_inoutarg (inoutarg);
+  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_inoutarg (inoutarg);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -292,10 +292,8 @@ generic::_tao_release (generic_ptr obj)
 ::CORBA::Boolean
 generic::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:generic:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:generic:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -460,14 +458,14 @@ AMH_genericExceptionHolder::_tao_unmarshal (
 void
 AMH_genericExceptionHolder::raise_op ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_genericExceptionHolder::raise_sendc_op ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -550,11 +548,9 @@ AMH_genericResponseHandler::_tao_release (AMH_genericResponseHandler_ptr obj)
 ::CORBA::Boolean
 AMH_genericResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:AMH_genericResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:AMH_genericResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -626,10 +622,10 @@ AMI_genericHandler::op (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_inoutarg (inoutarg);
-  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_outarg (outarg);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_inoutarg (inoutarg);
+  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_outarg (outarg);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -731,8 +727,8 @@ AMI_genericHandler::op_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -800,11 +796,9 @@ AMI_genericHandler::_tao_release (AMI_genericHandler_ptr obj)
 ::CORBA::Boolean
 AMI_genericHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_genericHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -853,7 +847,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ObjectType _tao_enumerator)
 {
-  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ObjectType & _tao_enumerator)
@@ -973,7 +967,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::generic>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::generic>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -1065,7 +1059,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::AMI_genericHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::AMI_genericHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

@@ -23,12 +23,12 @@
  **/
 
 #include "constantsC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "constantsC.inl"
@@ -121,10 +121,8 @@ ClassConstants::Iface::_tao_release (Iface_ptr obj)
 ::CORBA::Boolean
 ClassConstants::Iface::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:ClassConstants/Iface:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:ClassConstants/Iface:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -397,11 +395,9 @@ ClassConstants::AMH_IfaceResponseHandler::_tao_release (AMH_IfaceResponseHandler
 ::CORBA::Boolean
 ClassConstants::AMH_IfaceResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:ClassConstants/AMH_IfaceResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:ClassConstants/AMH_IfaceResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -509,11 +505,9 @@ ClassConstants::AMI_IfaceHandler::_tao_release (AMI_IfaceHandler_ptr obj)
 ::CORBA::Boolean
 ClassConstants::AMI_IfaceHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:ClassConstants/AMI_IfaceHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -748,7 +742,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, m_a::enum_a _tao_enumerator)
 {
-  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, m_a::enum_a & _tao_enumerator)
@@ -788,7 +782,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::ClassConstants::Iface>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::ClassConstants::Iface>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -880,7 +874,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::ClassConstants::AMI_IfaceHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::ClassConstants::AMI_IfaceHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

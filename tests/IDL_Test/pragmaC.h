@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRAGMAC_C5T6P5_H_
-#define _TAO_IDL_PRAGMAC_C5T6P5_H_
+#ifndef _TAO_IDL_PRAGMAC_UFJSUF_H_
+#define _TAO_IDL_PRAGMAC_UFJSUF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1444,7 +1444,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -1462,7 +1462,7 @@ namespace TAO
 #define _HELLO__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::hello>
+  class  Arg_Traits<::hello>
     : public Object_Arg_Traits_T<
         ::hello_ptr,
         ::hello_var,
@@ -1478,7 +1478,7 @@ namespace TAO
 #define _AMH_HELLOEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_helloExceptionHolder>
+  class Arg_Traits<::AMH_helloExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_helloExceptionHolder *,
@@ -1496,7 +1496,7 @@ namespace TAO
 #define _AMI_HELLOHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_helloHandler>
+  class  Arg_Traits<::AMI_helloHandler>
     : public Object_Arg_Traits_T<
         ::AMI_helloHandler_ptr,
         ::AMI_helloHandler_var,
@@ -1509,7 +1509,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::ClusterFu>
+  class Arg_Traits<::ClusterFu>
     : public
         Basic_Arg_Traits_T<
             ::ClusterFu,
@@ -1522,7 +1522,7 @@ namespace TAO
 #define _ALOHA__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::aloha>
+  class  Arg_Traits<::aloha>
     : public Object_Arg_Traits_T<
         ::aloha_ptr,
         ::aloha_var,
@@ -1538,7 +1538,7 @@ namespace TAO
 #define _GOODBYE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::goodbye>
+  class  Arg_Traits<::goodbye>
     : public Object_Arg_Traits_T<
         ::goodbye_ptr,
         ::goodbye_var,
@@ -1554,7 +1554,7 @@ namespace TAO
 #define _AMH_GOODBYEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_goodbyeExceptionHolder>
+  class Arg_Traits<::AMH_goodbyeExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_goodbyeExceptionHolder *,
@@ -1572,7 +1572,7 @@ namespace TAO
 #define _AMI_GOODBYEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_goodbyeHandler>
+  class  Arg_Traits<::AMI_goodbyeHandler>
     : public Object_Arg_Traits_T<
         ::AMI_goodbyeHandler_ptr,
         ::AMI_goodbyeHandler_var,
@@ -1588,7 +1588,7 @@ namespace TAO
 #define _SALUTATION_SAYONARA__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::salutation::sayonara>
+  class  Arg_Traits<::salutation::sayonara>
     : public Object_Arg_Traits_T<
         ::salutation::sayonara_ptr,
         ::salutation::sayonara_var,
@@ -1604,7 +1604,7 @@ namespace TAO
 #define _SALUTATION_AMH_SAYONARAEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::salutation::AMH_sayonaraExceptionHolder>
+  class Arg_Traits<::salutation::AMH_sayonaraExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::salutation::AMH_sayonaraExceptionHolder *,
@@ -1622,7 +1622,7 @@ namespace TAO
 #define _SALUTATION_AMI_SAYONARAHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::salutation::AMI_sayonaraHandler>
+  class  Arg_Traits<::salutation::AMI_sayonaraHandler>
     : public Object_Arg_Traits_T<
         ::salutation::AMI_sayonaraHandler_ptr,
         ::salutation::AMI_sayonaraHandler_var,
@@ -1638,7 +1638,7 @@ namespace TAO
 #define _CIAO__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::ciao>
+  class  Arg_Traits<::ciao>
     : public Object_Arg_Traits_T<
         ::ciao_ptr,
         ::ciao_var,
@@ -1654,7 +1654,7 @@ namespace TAO
 #define _AMH_CIAOEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_ciaoExceptionHolder>
+  class Arg_Traits<::AMH_ciaoExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_ciaoExceptionHolder *,
@@ -1672,7 +1672,7 @@ namespace TAO
 #define _AMI_CIAOHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_ciaoHandler>
+  class  Arg_Traits<::AMI_ciaoHandler>
     : public Object_Arg_Traits_T<
         ::AMI_ciaoHandler_ptr,
         ::AMI_ciaoHandler_var,
@@ -1688,7 +1688,7 @@ namespace TAO
 #define _AMH_ALOHAEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_alohaExceptionHolder>
+  class Arg_Traits<::AMH_alohaExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_alohaExceptionHolder *,
@@ -1706,7 +1706,7 @@ namespace TAO
 #define _AMI_ALOHAHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_alohaHandler>
+  class  Arg_Traits<::AMI_alohaHandler>
     : public Object_Arg_Traits_T<
         ::AMI_alohaHandler_ptr,
         ::AMI_alohaHandler_var,
@@ -1719,7 +1719,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::DCPS_Test::Sample>
+  class Arg_Traits<::DCPS_Test::Sample>
     : public
         Fixed_Size_Arg_Traits_T<
             ::DCPS_Test::Sample,
@@ -1745,11 +1745,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_helloExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_helloExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_helloExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_helloExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1773,11 +1771,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_goodbyeExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_goodbyeExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_goodbyeExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_goodbyeExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1803,11 +1799,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__salutation_AMH_sayonaraExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__salutation_AMH_sayonaraExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__salutation_AMH_sayonaraExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__salutation_AMH_sayonaraExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1832,11 +1826,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_ciaoExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_ciaoExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_ciaoExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_ciaoExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1860,11 +1852,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_alohaExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_alohaExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_alohaExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_alohaExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1884,7 +1874,7 @@ namespace TAO
 #define _HELLO__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::hello>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::hello>
   {
     static ::hello_ptr duplicate (::hello_ptr p);
     static void release (::hello_ptr p);
@@ -1911,7 +1901,7 @@ namespace TAO
 #define _AMH_HELLORESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_helloResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_helloResponseHandler>
   {
     static ::AMH_helloResponseHandler_ptr duplicate (::AMH_helloResponseHandler_ptr p);
     static void release (::AMH_helloResponseHandler_ptr p);
@@ -1925,7 +1915,7 @@ namespace TAO
 #define _AMI_HELLOHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_helloHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_helloHandler>
   {
     static ::AMI_helloHandler_ptr duplicate (::AMI_helloHandler_ptr p);
     static void release (::AMI_helloHandler_ptr p);
@@ -1939,7 +1929,7 @@ namespace TAO
 #define _GOODBYE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::goodbye>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::goodbye>
   {
     static ::goodbye_ptr duplicate (::goodbye_ptr p);
     static void release (::goodbye_ptr p);
@@ -1966,7 +1956,7 @@ namespace TAO
 #define _AMH_GOODBYERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_goodbyeResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_goodbyeResponseHandler>
   {
     static ::AMH_goodbyeResponseHandler_ptr duplicate (::AMH_goodbyeResponseHandler_ptr p);
     static void release (::AMH_goodbyeResponseHandler_ptr p);
@@ -1980,7 +1970,7 @@ namespace TAO
 #define _AMI_GOODBYEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_goodbyeHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_goodbyeHandler>
   {
     static ::AMI_goodbyeHandler_ptr duplicate (::AMI_goodbyeHandler_ptr p);
     static void release (::AMI_goodbyeHandler_ptr p);
@@ -1994,7 +1984,7 @@ namespace TAO
 #define _SALUTATION_SAYONARA__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::salutation::sayonara>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::salutation::sayonara>
   {
     static ::salutation::sayonara_ptr duplicate (::salutation::sayonara_ptr p);
     static void release (::salutation::sayonara_ptr p);
@@ -2021,7 +2011,7 @@ namespace TAO
 #define _SALUTATION_AMH_SAYONARARESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::salutation::AMH_sayonaraResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::salutation::AMH_sayonaraResponseHandler>
   {
     static ::salutation::AMH_sayonaraResponseHandler_ptr duplicate (::salutation::AMH_sayonaraResponseHandler_ptr p);
     static void release (::salutation::AMH_sayonaraResponseHandler_ptr p);
@@ -2035,7 +2025,7 @@ namespace TAO
 #define _SALUTATION_AMI_SAYONARAHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::salutation::AMI_sayonaraHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::salutation::AMI_sayonaraHandler>
   {
     static ::salutation::AMI_sayonaraHandler_ptr duplicate (::salutation::AMI_sayonaraHandler_ptr p);
     static void release (::salutation::AMI_sayonaraHandler_ptr p);
@@ -2049,7 +2039,7 @@ namespace TAO
 #define _CIAO__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::ciao>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::ciao>
   {
     static ::ciao_ptr duplicate (::ciao_ptr p);
     static void release (::ciao_ptr p);
@@ -2076,7 +2066,7 @@ namespace TAO
 #define _AMH_CIAORESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_ciaoResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_ciaoResponseHandler>
   {
     static ::AMH_ciaoResponseHandler_ptr duplicate (::AMH_ciaoResponseHandler_ptr p);
     static void release (::AMH_ciaoResponseHandler_ptr p);
@@ -2090,7 +2080,7 @@ namespace TAO
 #define _AMI_CIAOHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_ciaoHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_ciaoHandler>
   {
     static ::AMI_ciaoHandler_ptr duplicate (::AMI_ciaoHandler_ptr p);
     static void release (::AMI_ciaoHandler_ptr p);
@@ -2104,7 +2094,7 @@ namespace TAO
 #define _ALOHA__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::aloha>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::aloha>
   {
     static ::aloha_ptr duplicate (::aloha_ptr p);
     static void release (::aloha_ptr p);
@@ -2131,7 +2121,7 @@ namespace TAO
 #define _AMH_ALOHARESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_alohaResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_alohaResponseHandler>
   {
     static ::AMH_alohaResponseHandler_ptr duplicate (::AMH_alohaResponseHandler_ptr p);
     static void release (::AMH_alohaResponseHandler_ptr p);
@@ -2145,7 +2135,7 @@ namespace TAO
 #define _AMI_ALOHAHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_alohaHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_alohaHandler>
   {
     static ::AMI_alohaHandler_ptr duplicate (::AMI_alohaHandler_ptr p);
     static void release (::AMI_alohaHandler_ptr p);

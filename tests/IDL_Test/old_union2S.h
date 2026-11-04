@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNION2S_1KDI5H_H_
-#define _TAO_IDL_OLD_UNION2S_1KDI5H_H_
+#ifndef _TAO_IDL_OLD_UNION2S_FKY121_H_
+#define _TAO_IDL_OLD_UNION2S_FKY121_H_
 
 #include /**/ "ace/pre.h"
 
@@ -51,7 +51,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -65,7 +65,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::OldUnion2::FooDisc>
+  class SArg_Traits<::OldUnion2::FooDisc>
     : public
         Basic_SArg_Traits_T<
             ::OldUnion2::FooDisc,
@@ -75,7 +75,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldUnion2::Foo>
+  class SArg_Traits<::OldUnion2::Foo>
     : public
         Var_Size_SArg_Traits_T<
             ::OldUnion2::Foo,
@@ -85,7 +85,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldUnion2::Bar>
+  class SArg_Traits<::OldUnion2::Bar>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion2::Bar,
@@ -95,7 +95,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldUnion2::Bar::BarDisc>
+  class SArg_Traits<::OldUnion2::Bar::BarDisc>
     : public
         Basic_SArg_Traits_T<
             ::OldUnion2::Bar::BarDisc,
@@ -105,7 +105,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldUnion2::Bar::Foo>
+  class SArg_Traits<::OldUnion2::Bar::Foo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion2::Bar::Foo,

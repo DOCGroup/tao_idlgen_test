@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONC_AA6618_H_
-#define _TAO_IDL_BUG_2350_REGRESSIONC_AA6618_H_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONC_715CTX_H_
+#define _TAO_IDL_BUG_2350_REGRESSIONC_715CTX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -399,7 +399,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -414,7 +414,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::user_ExceptionHolder>
+  class Arg_Traits<::user_ExceptionHolder>
     : public
         Fixed_Size_Arg_Traits_T<
             ::user_ExceptionHolder,
@@ -427,7 +427,7 @@ namespace TAO
 #define _BUG_2350_REGRESSION__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Bug_2350_Regression>
+  class  Arg_Traits<::Bug_2350_Regression>
     : public Object_Arg_Traits_T<
         ::Bug_2350_Regression_ptr,
         ::Bug_2350_Regression_var,
@@ -443,7 +443,7 @@ namespace TAO
 #define _AMH_BUG_2350_REGRESSIONEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_Bug_2350_RegressionExceptionHolder>
+  class Arg_Traits<::AMH_Bug_2350_RegressionExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_Bug_2350_RegressionExceptionHolder *,
@@ -461,7 +461,7 @@ namespace TAO
 #define _AMI_BUG_2350_REGRESSIONHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_Bug_2350_RegressionHandler>
+  class  Arg_Traits<::AMI_Bug_2350_RegressionHandler>
     : public Object_Arg_Traits_T<
         ::AMI_Bug_2350_RegressionHandler_ptr,
         ::AMI_Bug_2350_RegressionHandler_var,
@@ -486,11 +486,9 @@ protected:
   ~OBV_AMH_Bug_2350_RegressionExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_Bug_2350_RegressionExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -510,7 +508,7 @@ namespace TAO
 #define _BUG_2350_REGRESSION__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Bug_2350_Regression>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Bug_2350_Regression>
   {
     static ::Bug_2350_Regression_ptr duplicate (::Bug_2350_Regression_ptr p);
     static void release (::Bug_2350_Regression_ptr p);
@@ -537,7 +535,7 @@ namespace TAO
 #define _AMH_BUG_2350_REGRESSIONRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_Bug_2350_RegressionResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_Bug_2350_RegressionResponseHandler>
   {
     static ::AMH_Bug_2350_RegressionResponseHandler_ptr duplicate (::AMH_Bug_2350_RegressionResponseHandler_ptr p);
     static void release (::AMH_Bug_2350_RegressionResponseHandler_ptr p);
@@ -551,7 +549,7 @@ namespace TAO
 #define _AMI_BUG_2350_REGRESSIONHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_Bug_2350_RegressionHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_Bug_2350_RegressionHandler>
   {
     static ::AMI_Bug_2350_RegressionHandler_ptr duplicate (::AMI_Bug_2350_RegressionHandler_ptr p);
     static void release (::AMI_Bug_2350_RegressionHandler_ptr p);

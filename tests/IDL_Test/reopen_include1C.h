@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE1C_JPF9YD_H_
-#define _TAO_IDL_REOPEN_INCLUDE1C_JPF9YD_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE1C_TH1ENC_H_
+#define _TAO_IDL_REOPEN_INCLUDE1C_TH1ENC_H_
 
 #include /**/ "ace/pre.h"
 
@@ -85,7 +85,7 @@ namespace frag
 
   class TAO_IDL_TEST_STUB_Export dub_seq
     : public
-        ::TAO::unbounded_value_sequence< ::CORBA::Double>
+        ::TAO::unbounded_value_sequence<::CORBA::Double>
   {
   public:
     dub_seq () = default;
@@ -404,7 +404,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -419,7 +419,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::frag::dub_seq>
+  class Arg_Traits<::frag::dub_seq>
     : public
         Var_Size_Arg_Traits_T<
             ::frag::dub_seq,
@@ -432,7 +432,7 @@ namespace TAO
 #define _A_B_X1__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::A::B::X1>
+  class  Arg_Traits<::A::B::X1>
     : public Object_Arg_Traits_T<
         ::A::B::X1_ptr,
         ::A::B::X1_var,
@@ -448,7 +448,7 @@ namespace TAO
 #define _A_B_AMH_X1EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::A::B::AMH_X1ExceptionHolder>
+  class Arg_Traits<::A::B::AMH_X1ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::A::B::AMH_X1ExceptionHolder *,
@@ -466,7 +466,7 @@ namespace TAO
 #define _A_B_AMI_X1HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::A::B::AMI_X1Handler>
+  class  Arg_Traits<::A::B::AMI_X1Handler>
     : public Object_Arg_Traits_T<
         ::A::B::AMI_X1Handler_ptr,
         ::A::B::AMI_X1Handler_var,
@@ -496,11 +496,9 @@ namespace OBV_A
     ~AMH_X1ExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__A_B_AMH_X1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__A_B_AMH_X1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__A_B_AMH_X1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__A_B_AMH_X1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -522,7 +520,7 @@ namespace TAO
 #define _A_B_X1__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::A::B::X1>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::A::B::X1>
   {
     static ::A::B::X1_ptr duplicate (::A::B::X1_ptr p);
     static void release (::A::B::X1_ptr p);
@@ -549,7 +547,7 @@ namespace TAO
 #define _A_B_AMH_X1RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::A::B::AMH_X1ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::A::B::AMH_X1ResponseHandler>
   {
     static ::A::B::AMH_X1ResponseHandler_ptr duplicate (::A::B::AMH_X1ResponseHandler_ptr p);
     static void release (::A::B::AMH_X1ResponseHandler_ptr p);
@@ -563,7 +561,7 @@ namespace TAO
 #define _A_B_AMI_X1HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::A::B::AMI_X1Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::A::B::AMI_X1Handler>
   {
     static ::A::B::AMI_X1Handler_ptr duplicate (::A::B::AMI_X1Handler_ptr p);
     static void release (::A::B::AMI_X1Handler_ptr p);
@@ -624,12 +622,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_frag_dub_seq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    frag::dub_seq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    frag::dub_seq &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, frag::dub_seq const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, frag::dub_seq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

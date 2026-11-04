@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSC_EDBHD7_H_
-#define _TAO_IDL_PARAMSC_EDBHD7_H_
+#ifndef _TAO_IDL_PARAMSC_KLBBKR_H_
+#define _TAO_IDL_PARAMSC_KLBBKR_H_
 
 #include /**/ "ace/pre.h"
 
@@ -406,7 +406,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -421,7 +421,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::foo::theDate>
+  class Arg_Traits<::foo::theDate>
     : public
         Fixed_Size_Arg_Traits_T<
             ::foo::theDate,
@@ -431,7 +431,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::foo::bar::theDate>
+  class Arg_Traits<::foo::bar::theDate>
     : public
         Fixed_Size_Arg_Traits_T<
             ::foo::bar::theDate,
@@ -444,7 +444,7 @@ namespace TAO
 #define _FOO_BAR_FOOBAR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::foo::bar::fooBar>
+  class  Arg_Traits<::foo::bar::fooBar>
     : public Object_Arg_Traits_T<
         ::foo::bar::fooBar_ptr,
         ::foo::bar::fooBar_var,
@@ -460,7 +460,7 @@ namespace TAO
 #define _FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::foo::bar::AMH_fooBarExceptionHolder>
+  class Arg_Traits<::foo::bar::AMH_fooBarExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::foo::bar::AMH_fooBarExceptionHolder *,
@@ -478,7 +478,7 @@ namespace TAO
 #define _FOO_BAR_AMI_FOOBARHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::foo::bar::AMI_fooBarHandler>
+  class  Arg_Traits<::foo::bar::AMI_fooBarHandler>
     : public Object_Arg_Traits_T<
         ::foo::bar::AMI_fooBarHandler_ptr,
         ::foo::bar::AMI_fooBarHandler_var,
@@ -508,11 +508,9 @@ namespace OBV_foo
     ~AMH_fooBarExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__foo_bar_AMH_fooBarExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__foo_bar_AMH_fooBarExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__foo_bar_AMH_fooBarExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__foo_bar_AMH_fooBarExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -534,7 +532,7 @@ namespace TAO
 #define _FOO_BAR_FOOBAR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::foo::bar::fooBar>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::foo::bar::fooBar>
   {
     static ::foo::bar::fooBar_ptr duplicate (::foo::bar::fooBar_ptr p);
     static void release (::foo::bar::fooBar_ptr p);
@@ -561,7 +559,7 @@ namespace TAO
 #define _FOO_BAR_AMH_FOOBARRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::foo::bar::AMH_fooBarResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::foo::bar::AMH_fooBarResponseHandler>
   {
     static ::foo::bar::AMH_fooBarResponseHandler_ptr duplicate (::foo::bar::AMH_fooBarResponseHandler_ptr p);
     static void release (::foo::bar::AMH_fooBarResponseHandler_ptr p);
@@ -575,7 +573,7 @@ namespace TAO
 #define _FOO_BAR_AMI_FOOBARHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::foo::bar::AMI_fooBarHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::foo::bar::AMI_fooBarHandler>
   {
     static ::foo::bar::AMI_fooBarHandler_ptr duplicate (::foo::bar::AMI_fooBarHandler_ptr p);
     static void release (::foo::bar::AMI_fooBarHandler_ptr p);

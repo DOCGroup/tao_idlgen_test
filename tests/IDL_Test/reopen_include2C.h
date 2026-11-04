@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2C_HEA9XO_H_
-#define _TAO_IDL_REOPEN_INCLUDE2C_HEA9XO_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2C_82ZGRO_H_
+#define _TAO_IDL_REOPEN_INCLUDE2C_82ZGRO_H_
 
 #include /**/ "ace/pre.h"
 
@@ -393,7 +393,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -408,7 +408,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::frag::pug>
+  class Arg_Traits<::frag::pug>
     : public
         Fixed_Size_Arg_Traits_T<
             ::frag::pug,
@@ -421,7 +421,7 @@ namespace TAO
 #define _A_B_X2__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::A::B::X2>
+  class  Arg_Traits<::A::B::X2>
     : public Object_Arg_Traits_T<
         ::A::B::X2_ptr,
         ::A::B::X2_var,
@@ -437,7 +437,7 @@ namespace TAO
 #define _A_B_AMH_X2EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::A::B::AMH_X2ExceptionHolder>
+  class Arg_Traits<::A::B::AMH_X2ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::A::B::AMH_X2ExceptionHolder *,
@@ -455,7 +455,7 @@ namespace TAO
 #define _A_B_AMI_X2HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::A::B::AMI_X2Handler>
+  class  Arg_Traits<::A::B::AMI_X2Handler>
     : public Object_Arg_Traits_T<
         ::A::B::AMI_X2Handler_ptr,
         ::A::B::AMI_X2Handler_var,
@@ -485,11 +485,9 @@ namespace OBV_A
     ~AMH_X2ExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__A_B_AMH_X2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__A_B_AMH_X2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__A_B_AMH_X2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__A_B_AMH_X2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -511,7 +509,7 @@ namespace TAO
 #define _A_B_X2__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::A::B::X2>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::A::B::X2>
   {
     static ::A::B::X2_ptr duplicate (::A::B::X2_ptr p);
     static void release (::A::B::X2_ptr p);
@@ -538,7 +536,7 @@ namespace TAO
 #define _A_B_AMH_X2RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::A::B::AMH_X2ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::A::B::AMH_X2ResponseHandler>
   {
     static ::A::B::AMH_X2ResponseHandler_ptr duplicate (::A::B::AMH_X2ResponseHandler_ptr p);
     static void release (::A::B::AMH_X2ResponseHandler_ptr p);
@@ -552,7 +550,7 @@ namespace TAO
 #define _A_B_AMI_X2HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::A::B::AMI_X2Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::A::B::AMI_X2Handler>
   {
     static ::A::B::AMI_X2Handler_ptr duplicate (::A::B::AMI_X2Handler_ptr p);
     static void release (::A::B::AMI_X2Handler_ptr p);

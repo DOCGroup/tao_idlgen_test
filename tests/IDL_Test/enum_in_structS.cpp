@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ENUM_IN_STRUCTS_XYNSG1_CPP_
-#define _TAO_IDL_ENUM_IN_STRUCTS_XYNSG1_CPP_
+#ifndef _TAO_IDL_ENUM_IN_STRUCTS_B0UIHS_CPP_
+#define _TAO_IDL_ENUM_IN_STRUCTS_B0UIHS_CPP_
 
 #include "enum_in_structS.h"
 

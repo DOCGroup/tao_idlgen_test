@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FWDC_C2QPI0_H_
-#define _TAO_IDL_FWDC_C2QPI0_H_
+#ifndef _TAO_IDL_FWDC_ZURCDP_H_
+#define _TAO_IDL_FWDC_ZURCDP_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1296,7 +1296,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -1314,7 +1314,7 @@ namespace TAO
 #define _SCOPE_TEST_I_SCOPE_TEST__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::scope_test::i_scope_test>
+  class  Arg_Traits<::scope_test::i_scope_test>
     : public Object_Arg_Traits_T<
         ::scope_test::i_scope_test_ptr,
         ::scope_test::i_scope_test_var,
@@ -1327,7 +1327,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::scope_test::same_scope_struct>
+  class Arg_Traits<::scope_test::same_scope_struct>
     : public
         Var_Size_Arg_Traits_T<
             ::scope_test::same_scope_struct,
@@ -1337,7 +1337,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::mod2::scope_struct>
+  class Arg_Traits<::mod2::scope_struct>
     : public
         Var_Size_Arg_Traits_T<
             ::mod2::scope_struct,
@@ -1350,7 +1350,7 @@ namespace TAO
 #define _MOD2_FWD__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod2::fwd>
+  class  Arg_Traits<::mod2::fwd>
     : public Object_Arg_Traits_T<
         ::mod2::fwd_ptr,
         ::mod2::fwd_var,
@@ -1366,7 +1366,7 @@ namespace TAO
 #define _MOD2_FULL__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod2::full>
+  class  Arg_Traits<::mod2::full>
     : public Object_Arg_Traits_T<
         ::mod2::full_ptr,
         ::mod2::full_var,
@@ -1382,7 +1382,7 @@ namespace TAO
 #define _MOD2_AMH_FULLEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::mod2::AMH_fullExceptionHolder>
+  class Arg_Traits<::mod2::AMH_fullExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::mod2::AMH_fullExceptionHolder *,
@@ -1400,7 +1400,7 @@ namespace TAO
 #define _MOD2_AMI_FULLHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod2::AMI_fullHandler>
+  class  Arg_Traits<::mod2::AMI_fullHandler>
     : public Object_Arg_Traits_T<
         ::mod2::AMI_fullHandler_ptr,
         ::mod2::AMI_fullHandler_var,
@@ -1413,7 +1413,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::mod2::full_seq2>
+  class Arg_Traits<::mod2::full_seq2>
     : public
         Var_Size_Arg_Traits_T<
             ::mod2::full_seq2,
@@ -1426,7 +1426,7 @@ namespace TAO
 #define _MOD2_FWD__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mod2::fwd>
+  class  Arg_Traits<::mod2::fwd>
     : public Object_Arg_Traits_T<
         ::mod2::fwd_ptr,
         ::mod2::fwd_var,
@@ -1442,7 +1442,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_PARENTS__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::fwd_mixed_intf::mixed_parents>
+  class  Arg_Traits<::fwd_mixed_intf::mixed_parents>
     : public Object_Arg_Traits_T<
         ::fwd_mixed_intf::mixed_parents_ptr,
         ::fwd_mixed_intf::mixed_parents_var,
@@ -1458,7 +1458,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_CONCRETE_PARENT__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::fwd_mixed_intf::concrete_parent>
+  class  Arg_Traits<::fwd_mixed_intf::concrete_parent>
     : public Object_Arg_Traits_T<
         ::fwd_mixed_intf::concrete_parent_ptr,
         ::fwd_mixed_intf::concrete_parent_var,
@@ -1474,7 +1474,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMH_CONCRETE_PARENTEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::fwd_mixed_intf::AMH_concrete_parentExceptionHolder>
+  class Arg_Traits<::fwd_mixed_intf::AMH_concrete_parentExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::fwd_mixed_intf::AMH_concrete_parentExceptionHolder *,
@@ -1492,7 +1492,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_CONCRETE_PARENTHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::fwd_mixed_intf::AMI_concrete_parentHandler>
+  class  Arg_Traits<::fwd_mixed_intf::AMI_concrete_parentHandler>
     : public Object_Arg_Traits_T<
         ::fwd_mixed_intf::AMI_concrete_parentHandler_ptr,
         ::fwd_mixed_intf::AMI_concrete_parentHandler_var,
@@ -1508,7 +1508,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_ABSTRACT_PARENT__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::fwd_mixed_intf::abstract_parent>
+  class  Arg_Traits<::fwd_mixed_intf::abstract_parent>
     : public Object_Arg_Traits_T<
         ::fwd_mixed_intf::abstract_parent_ptr,
         ::fwd_mixed_intf::abstract_parent_var,
@@ -1524,7 +1524,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_ABS_FIRST__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::fwd_mixed_intf::mixed_abs_first>
+  class  Arg_Traits<::fwd_mixed_intf::mixed_abs_first>
     : public Object_Arg_Traits_T<
         ::fwd_mixed_intf::mixed_abs_first_ptr,
         ::fwd_mixed_intf::mixed_abs_first_var,
@@ -1540,7 +1540,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_MIXED_ABS_FIRSTHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::fwd_mixed_intf::AMI_mixed_abs_firstHandler>
+  class  Arg_Traits<::fwd_mixed_intf::AMI_mixed_abs_firstHandler>
     : public Object_Arg_Traits_T<
         ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr,
         ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_var,
@@ -1556,7 +1556,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_CONC_FIRST__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::fwd_mixed_intf::mixed_conc_first>
+  class  Arg_Traits<::fwd_mixed_intf::mixed_conc_first>
     : public Object_Arg_Traits_T<
         ::fwd_mixed_intf::mixed_conc_first_ptr,
         ::fwd_mixed_intf::mixed_conc_first_var,
@@ -1572,7 +1572,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_MIXED_CONC_FIRSTHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::fwd_mixed_intf::AMI_mixed_conc_firstHandler>
+  class  Arg_Traits<::fwd_mixed_intf::AMI_mixed_conc_firstHandler>
     : public Object_Arg_Traits_T<
         ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr,
         ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_var,
@@ -1588,7 +1588,7 @@ namespace TAO
 #define _OBV_FWD_FORWARDEDTYPE__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::obv_fwd::ForwardedType>
+  class Arg_Traits<::obv_fwd::ForwardedType>
     : public
         Object_Arg_Traits_T<
             ::obv_fwd::ForwardedType *,
@@ -1606,7 +1606,7 @@ namespace TAO
 #define _OBV_FWD_ENCLOSINGTYPE__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::obv_fwd::EnclosingType>
+  class Arg_Traits<::obv_fwd::EnclosingType>
     : public
         Object_Arg_Traits_T<
             ::obv_fwd::EnclosingType *,
@@ -1624,7 +1624,7 @@ namespace TAO
 #define _OBV_FWD_FORWARDEDTYPE__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::obv_fwd::ForwardedType>
+  class Arg_Traits<::obv_fwd::ForwardedType>
     : public
         Object_Arg_Traits_T<
             ::obv_fwd::ForwardedType *,
@@ -1669,11 +1669,9 @@ protected:
   ~AMH_fullExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__mod2_AMH_fullExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__mod2_AMH_fullExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__mod2_AMH_fullExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__mod2_AMH_fullExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1700,11 +1698,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__fwd_mixed_intf_AMH_concrete_parentExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__fwd_mixed_intf_AMH_concrete_parentExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__fwd_mixed_intf_AMH_concrete_parentExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__fwd_mixed_intf_AMH_concrete_parentExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1741,11 +1737,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__obv_fwd_EnclosingType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__obv_fwd_EnclosingType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__obv_fwd_EnclosingType (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__obv_fwd_EnclosingType (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1780,11 +1774,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__obv_fwd_ForwardedType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__obv_fwd_ForwardedType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__obv_fwd_ForwardedType (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__obv_fwd_ForwardedType (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1806,7 +1798,7 @@ namespace TAO
 #define _SCOPE_TEST_I_SCOPE_TEST__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::scope_test::i_scope_test>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::scope_test::i_scope_test>
   {
     static ::scope_test::i_scope_test_ptr duplicate (::scope_test::i_scope_test_ptr p);
     static void release (::scope_test::i_scope_test_ptr p);
@@ -1820,7 +1812,7 @@ namespace TAO
 #define _MOD2_FWD__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::fwd>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::fwd>
   {
     static ::mod2::fwd_ptr duplicate (::mod2::fwd_ptr p);
     static void release (::mod2::fwd_ptr p);
@@ -1834,7 +1826,7 @@ namespace TAO
 #define _MOD2_FULL__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::full>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::full>
   {
     static ::mod2::full_ptr duplicate (::mod2::full_ptr p);
     static void release (::mod2::full_ptr p);
@@ -1861,7 +1853,7 @@ namespace TAO
 #define _MOD2_AMH_FULLRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::AMH_fullResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::AMH_fullResponseHandler>
   {
     static ::mod2::AMH_fullResponseHandler_ptr duplicate (::mod2::AMH_fullResponseHandler_ptr p);
     static void release (::mod2::AMH_fullResponseHandler_ptr p);
@@ -1875,7 +1867,7 @@ namespace TAO
 #define _MOD2_AMI_FULLHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::AMI_fullHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::AMI_fullHandler>
   {
     static ::mod2::AMI_fullHandler_ptr duplicate (::mod2::AMI_fullHandler_ptr p);
     static void release (::mod2::AMI_fullHandler_ptr p);
@@ -1889,7 +1881,7 @@ namespace TAO
 #define _MOD2_FWD__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::fwd>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::fwd>
   {
     static ::mod2::fwd_ptr duplicate (::mod2::fwd_ptr p);
     static void release (::mod2::fwd_ptr p);
@@ -1903,7 +1895,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_PARENTS__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::fwd_mixed_intf::mixed_parents>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::fwd_mixed_intf::mixed_parents>
   {
     static ::fwd_mixed_intf::mixed_parents_ptr duplicate (::fwd_mixed_intf::mixed_parents_ptr p);
     static void release (::fwd_mixed_intf::mixed_parents_ptr p);
@@ -1917,7 +1909,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_CONCRETE_PARENT__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::fwd_mixed_intf::concrete_parent>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::fwd_mixed_intf::concrete_parent>
   {
     static ::fwd_mixed_intf::concrete_parent_ptr duplicate (::fwd_mixed_intf::concrete_parent_ptr p);
     static void release (::fwd_mixed_intf::concrete_parent_ptr p);
@@ -1944,7 +1936,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMH_CONCRETE_PARENTRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::fwd_mixed_intf::AMH_concrete_parentResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::fwd_mixed_intf::AMH_concrete_parentResponseHandler>
   {
     static ::fwd_mixed_intf::AMH_concrete_parentResponseHandler_ptr duplicate (::fwd_mixed_intf::AMH_concrete_parentResponseHandler_ptr p);
     static void release (::fwd_mixed_intf::AMH_concrete_parentResponseHandler_ptr p);
@@ -1958,7 +1950,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_CONCRETE_PARENTHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::fwd_mixed_intf::AMI_concrete_parentHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::fwd_mixed_intf::AMI_concrete_parentHandler>
   {
     static ::fwd_mixed_intf::AMI_concrete_parentHandler_ptr duplicate (::fwd_mixed_intf::AMI_concrete_parentHandler_ptr p);
     static void release (::fwd_mixed_intf::AMI_concrete_parentHandler_ptr p);
@@ -1972,7 +1964,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_ABSTRACT_PARENT__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::fwd_mixed_intf::abstract_parent>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::fwd_mixed_intf::abstract_parent>
   {
     static ::fwd_mixed_intf::abstract_parent_ptr duplicate (::fwd_mixed_intf::abstract_parent_ptr p);
     static void release (::fwd_mixed_intf::abstract_parent_ptr p);
@@ -1986,7 +1978,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_ABS_FIRST__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::fwd_mixed_intf::mixed_abs_first>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::fwd_mixed_intf::mixed_abs_first>
   {
     static ::fwd_mixed_intf::mixed_abs_first_ptr duplicate (::fwd_mixed_intf::mixed_abs_first_ptr p);
     static void release (::fwd_mixed_intf::mixed_abs_first_ptr p);
@@ -2000,7 +1992,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_MIXED_ABS_FIRSTHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::fwd_mixed_intf::AMI_mixed_abs_firstHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::fwd_mixed_intf::AMI_mixed_abs_firstHandler>
   {
     static ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr duplicate (::fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr p);
     static void release (::fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr p);
@@ -2014,7 +2006,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_CONC_FIRST__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::fwd_mixed_intf::mixed_conc_first>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::fwd_mixed_intf::mixed_conc_first>
   {
     static ::fwd_mixed_intf::mixed_conc_first_ptr duplicate (::fwd_mixed_intf::mixed_conc_first_ptr p);
     static void release (::fwd_mixed_intf::mixed_conc_first_ptr p);
@@ -2028,7 +2020,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_MIXED_CONC_FIRSTHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::fwd_mixed_intf::AMI_mixed_conc_firstHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::fwd_mixed_intf::AMI_mixed_conc_firstHandler>
   {
     static ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr duplicate (::fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr p);
     static void release (::fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr p);
@@ -2364,12 +2356,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_mod2_full_seq2_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    mod2::full_seq2 const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    mod2::full_seq2 &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, mod2::full_seq2 const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, mod2::full_seq2 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

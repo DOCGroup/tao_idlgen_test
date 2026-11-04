@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_SEQUENCEC_ATT5HY_H_
-#define _TAO_IDL_OLD_SEQUENCEC_ATT5HY_H_
+#ifndef _TAO_IDL_OLD_SEQUENCEC_H2J6BN_H_
+#define _TAO_IDL_OLD_SEQUENCEC_H2J6BN_H_
 
 #include /**/ "ace/pre.h"
 
@@ -89,7 +89,7 @@ using c20_out = ::TAO_Seq_Out_T<c20>;
 
 class TAO_IDL_TEST_STUB_Export c20
   : public
-      ::TAO::bounded_value_sequence< ::CORBA::Char,20>
+      ::TAO::bounded_value_sequence<::CORBA::Char,20>
 {
 public:
   c20 () = default;
@@ -121,7 +121,7 @@ using cc23_out = ::TAO_Seq_Out_T<cc23>;
 
 class TAO_IDL_TEST_STUB_Export cc23
   : public
-      ::TAO::bounded_value_sequence< c20,23>
+      ::TAO::bounded_value_sequence<c20,23>
 {
 public:
   cc23 () = default;
@@ -153,7 +153,7 @@ using c24_out = ::TAO_Seq_Out_T<c24>;
 
 class TAO_IDL_TEST_STUB_Export c24
   : public
-      ::TAO::bounded_value_sequence< ::CORBA::Char,24>
+      ::TAO::bounded_value_sequence<::CORBA::Char,24>
 {
 public:
   c24 () = default;
@@ -181,7 +181,7 @@ extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_c24;
 
 class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_Long__10
   : public
-      ::TAO::bounded_value_sequence< ::CORBA::Long,10>
+      ::TAO::bounded_value_sequence<::CORBA::Long,10>
 {
 public:
   _tao_seq_CORBA_Long__10 () = default;
@@ -208,7 +208,7 @@ using c30_out = ::TAO_Seq_Out_T<c30>;
 
 class TAO_IDL_TEST_STUB_Export c30
   : public
-      ::TAO::bounded_value_sequence< _tao_seq_CORBA_Long__10,10>
+      ::TAO::bounded_value_sequence<_tao_seq_CORBA_Long__10,10>
 {
 public:
   c30 () = default;
@@ -304,14 +304,9 @@ using sfoo_ar = sfoo[20];
 using sfoo_ar_slice = sfoo;
 struct sfoo_ar_tag {};
 
-using sfoo_ar_var =
-  TAO_FixedArray_Var_T<
-      sfoo_ar,
-      sfoo_ar_slice,
-      sfoo_ar_tag
-    >;
+using sfoo_ar_var = TAO_FixedArray_Var_T<sfoo_ar, sfoo_ar_slice, sfoo_ar_tag>;
 
-  using sfoo_ar_out = sfoo_ar;
+using sfoo_ar_out = sfoo_ar;
 
 using sfoo_ar_forany = TAO_Array_Forany_T<sfoo_ar, sfoo_ar_slice, sfoo_ar_tag>;
 
@@ -333,7 +328,7 @@ using f_unbounded_out = ::TAO_Seq_Out_T<f_unbounded>;
 
 class TAO_IDL_TEST_STUB_Export f_unbounded
   : public
-      ::TAO::unbounded_value_sequence< sfoo>
+      ::TAO::unbounded_value_sequence<sfoo>
 {
 public:
   f_unbounded () = default;
@@ -443,7 +438,7 @@ public:
 
   class TAO_IDL_TEST_STUB_Export also_vec10
     : public
-        ::TAO::bounded_value_sequence< ::CORBA::Long,10>
+        ::TAO::bounded_value_sequence<::CORBA::Long,10>
   {
   public:
     also_vec10 () = default;
@@ -745,7 +740,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -760,7 +755,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::c20>
+  class Arg_Traits<::c20>
     : public
         Var_Size_Arg_Traits_T<
             ::c20,
@@ -770,7 +765,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::cc23>
+  class Arg_Traits<::cc23>
     : public
         Var_Size_Arg_Traits_T<
             ::cc23,
@@ -780,7 +775,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::c24>
+  class Arg_Traits<::c24>
     : public
         Var_Size_Arg_Traits_T<
             ::c24,
@@ -790,7 +785,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::c30>
+  class Arg_Traits<::c30>
     : public
         Var_Size_Arg_Traits_T<
             ::c30,
@@ -800,7 +795,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::cstring>
+  class Arg_Traits<::cstring>
     : public
         Var_Size_Arg_Traits_T<
             ::cstring,
@@ -810,7 +805,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::TProgram>
+  class Arg_Traits<::TProgram>
     : public
         Var_Size_Arg_Traits_T<
             ::TProgram,
@@ -820,7 +815,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::sfoo>
+  class Arg_Traits<::sfoo>
     : public
         Fixed_Size_Arg_Traits_T<
             ::sfoo,
@@ -830,7 +825,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::sfoo_ar_tag>
+  class Arg_Traits<::sfoo_ar_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::sfoo_ar_var,
@@ -841,7 +836,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::f_unbounded>
+  class Arg_Traits<::f_unbounded>
     : public
         Var_Size_Arg_Traits_T<
             ::f_unbounded,
@@ -851,7 +846,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::f_ar_unbounded>
+  class Arg_Traits<::f_ar_unbounded>
     : public
         Var_Size_Arg_Traits_T<
             ::f_ar_unbounded,
@@ -864,7 +859,7 @@ namespace TAO
 #define _TESTSEQ__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::TestSeq>
+  class  Arg_Traits<::TestSeq>
     : public Object_Arg_Traits_T<
         ::TestSeq_ptr,
         ::TestSeq_var,
@@ -877,7 +872,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::TestSeq::also_vec10>
+  class Arg_Traits<::TestSeq::also_vec10>
     : public
         Var_Size_Arg_Traits_T<
             ::TestSeq::also_vec10,
@@ -890,7 +885,7 @@ namespace TAO
 #define _AMH_TESTSEQEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_TestSeqExceptionHolder>
+  class Arg_Traits<::AMH_TestSeqExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_TestSeqExceptionHolder *,
@@ -908,7 +903,7 @@ namespace TAO
 #define _AMI_TESTSEQHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_TestSeqHandler>
+  class  Arg_Traits<::AMI_TestSeqHandler>
     : public Object_Arg_Traits_T<
         ::AMI_TestSeqHandler_ptr,
         ::AMI_TestSeqHandler_var,
@@ -933,11 +928,9 @@ protected:
   ~OBV_AMH_TestSeqExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_TestSeqExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_TestSeqExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_TestSeqExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_TestSeqExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -973,7 +966,7 @@ namespace TAO
 #define _TESTSEQ__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::TestSeq>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::TestSeq>
   {
     static ::TestSeq_ptr duplicate (::TestSeq_ptr p);
     static void release (::TestSeq_ptr p);
@@ -1000,7 +993,7 @@ namespace TAO
 #define _AMH_TESTSEQRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_TestSeqResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_TestSeqResponseHandler>
   {
     static ::AMH_TestSeqResponseHandler_ptr duplicate (::AMH_TestSeqResponseHandler_ptr p);
     static void release (::AMH_TestSeqResponseHandler_ptr p);
@@ -1014,7 +1007,7 @@ namespace TAO
 #define _AMI_TESTSEQHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_TestSeqHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_TestSeqHandler>
   {
     static ::AMI_TestSeqHandler_ptr duplicate (::AMI_TestSeqHandler_ptr p);
     static void release (::AMI_TestSeqHandler_ptr p);
@@ -1164,12 +1157,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_c20_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    c20 const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    c20 &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, c20 const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, c20 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1179,12 +1168,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_cc23_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    cc23 const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    cc23 &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, cc23 const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, cc23 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1194,12 +1179,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_c24_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    c24 const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    c24 &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, c24 const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, c24 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1210,11 +1191,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    _tao_seq_CORBA_Long__10 const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    _tao_seq_CORBA_Long__10 &_tao_sequence);
+  TAO_OutputCDR &strm,
+  _tao_seq_CORBA_Long__10 const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, _tao_seq_CORBA_Long__10 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1224,12 +1203,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_c30_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    c30 const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    c30 &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, c30 const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, c30 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1239,12 +1214,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_cstring_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    cstring const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    cstring &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, cstring const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, cstring &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1275,12 +1246,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_f_unbounded_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    f_unbounded const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    f_unbounded &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, f_unbounded const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, f_unbounded &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1290,12 +1257,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_f_ar_unbounded_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    f_ar_unbounded const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    f_ar_unbounded &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, f_ar_unbounded const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, f_ar_unbounded &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1312,12 +1275,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_TestSeq_also_vec10_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    TestSeq::also_vec10 const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    TestSeq::also_vec10 &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, TestSeq::also_vec10 const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, TestSeq::also_vec10 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

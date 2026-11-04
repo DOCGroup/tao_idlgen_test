@@ -23,12 +23,12 @@
  **/
 
 #include "TestC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Object_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "TestC.inl"
@@ -72,7 +72,7 @@ Test::Hello::get_string ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< char *>::ret_val _tao_retval;
+  TAO::Arg_Traits<char *>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -104,7 +104,7 @@ Test::Hello::shutdown ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -166,10 +166,8 @@ Test::Hello::_tao_release (Hello_ptr obj)
 ::CORBA::Boolean
 Test::Hello::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:Test/Hello:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:Test/Hello:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -212,7 +210,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::Test::Hello>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::Test::Hello>::unchecked_narrow (obj.in ());
 
   return true;
 }

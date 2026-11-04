@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSS_Y85C6L_H_
-#define _TAO_IDL_PARAMSS_Y85C6L_H_
+#ifndef _TAO_IDL_PARAMSS_HDAJ9X_H_
+#define _TAO_IDL_PARAMSS_HDAJ9X_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::foo::theDate>
+  class SArg_Traits<::foo::theDate>
     : public
         Fixed_Size_SArg_Traits_T<
             ::foo::theDate,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::foo::bar::theDate>
+  class SArg_Traits<::foo::bar::theDate>
     : public
         Fixed_Size_SArg_Traits_T<
             ::foo::bar::theDate,
@@ -97,7 +97,7 @@ namespace TAO
 #define _FOO_BAR_FOOBAR__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::foo::bar::fooBar>
+  class  SArg_Traits<::foo::bar::fooBar>
     : public Object_SArg_Traits_T<
         ::foo::bar::fooBar_ptr,
         ::foo::bar::fooBar_var,
@@ -112,7 +112,7 @@ namespace TAO
 #define _FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::foo::bar::AMH_fooBarExceptionHolder>
+  class SArg_Traits<::foo::bar::AMH_fooBarExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::foo::bar::AMH_fooBarExceptionHolder *,
@@ -129,7 +129,7 @@ namespace TAO
 #define _FOO_BAR_AMI_FOOBARHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::foo::bar::AMI_fooBarHandler>
+  class  SArg_Traits<::foo::bar::AMI_fooBarHandler>
     : public Object_SArg_Traits_T<
         ::foo::bar::AMI_fooBarHandler_ptr,
         ::foo::bar::AMI_fooBarHandler_var,

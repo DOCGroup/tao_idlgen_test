@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FWDS_WT4RM4_H_
-#define _TAO_IDL_FWDS_WT4RM4_H_
+#ifndef _TAO_IDL_FWDS_URRYDX_H_
+#define _TAO_IDL_FWDS_URRYDX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #define _SCOPE_TEST_I_SCOPE_TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::scope_test::i_scope_test>
+  class  SArg_Traits<::scope_test::i_scope_test>
     : public Object_SArg_Traits_T<
         ::scope_test::i_scope_test_ptr,
         ::scope_test::i_scope_test_var,
@@ -89,7 +89,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::scope_test::same_scope_struct>
+  class SArg_Traits<::scope_test::same_scope_struct>
     : public
         Var_Size_SArg_Traits_T<
             ::scope_test::same_scope_struct,
@@ -99,7 +99,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::mod2::scope_struct>
+  class SArg_Traits<::mod2::scope_struct>
     : public
         Var_Size_SArg_Traits_T<
             ::mod2::scope_struct,
@@ -112,7 +112,7 @@ namespace TAO
 #define _MOD2_FWD__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod2::fwd>
+  class  SArg_Traits<::mod2::fwd>
     : public Object_SArg_Traits_T<
         ::mod2::fwd_ptr,
         ::mod2::fwd_var,
@@ -127,7 +127,7 @@ namespace TAO
 #define _MOD2_FULL__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod2::full>
+  class  SArg_Traits<::mod2::full>
     : public Object_SArg_Traits_T<
         ::mod2::full_ptr,
         ::mod2::full_var,
@@ -142,7 +142,7 @@ namespace TAO
 #define _MOD2_AMH_FULLEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::mod2::AMH_fullExceptionHolder>
+  class SArg_Traits<::mod2::AMH_fullExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::mod2::AMH_fullExceptionHolder *,
@@ -159,7 +159,7 @@ namespace TAO
 #define _MOD2_AMI_FULLHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod2::AMI_fullHandler>
+  class  SArg_Traits<::mod2::AMI_fullHandler>
     : public Object_SArg_Traits_T<
         ::mod2::AMI_fullHandler_ptr,
         ::mod2::AMI_fullHandler_var,
@@ -171,7 +171,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::mod2::full_seq2>
+  class SArg_Traits<::mod2::full_seq2>
     : public
         Var_Size_SArg_Traits_T<
             ::mod2::full_seq2,
@@ -184,7 +184,7 @@ namespace TAO
 #define _MOD2_FWD__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod2::fwd>
+  class  SArg_Traits<::mod2::fwd>
     : public Object_SArg_Traits_T<
         ::mod2::fwd_ptr,
         ::mod2::fwd_var,
@@ -199,7 +199,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_PARENTS__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::fwd_mixed_intf::mixed_parents>
+  class  SArg_Traits<::fwd_mixed_intf::mixed_parents>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::mixed_parents_ptr,
         ::fwd_mixed_intf::mixed_parents_var,
@@ -214,7 +214,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_CONCRETE_PARENT__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::fwd_mixed_intf::concrete_parent>
+  class  SArg_Traits<::fwd_mixed_intf::concrete_parent>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::concrete_parent_ptr,
         ::fwd_mixed_intf::concrete_parent_var,
@@ -229,7 +229,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMH_CONCRETE_PARENTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::fwd_mixed_intf::AMH_concrete_parentExceptionHolder>
+  class SArg_Traits<::fwd_mixed_intf::AMH_concrete_parentExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::fwd_mixed_intf::AMH_concrete_parentExceptionHolder *,
@@ -246,7 +246,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_CONCRETE_PARENTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::fwd_mixed_intf::AMI_concrete_parentHandler>
+  class  SArg_Traits<::fwd_mixed_intf::AMI_concrete_parentHandler>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::AMI_concrete_parentHandler_ptr,
         ::fwd_mixed_intf::AMI_concrete_parentHandler_var,
@@ -261,7 +261,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_ABSTRACT_PARENT__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::fwd_mixed_intf::abstract_parent>
+  class  SArg_Traits<::fwd_mixed_intf::abstract_parent>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::abstract_parent_ptr,
         ::fwd_mixed_intf::abstract_parent_var,
@@ -276,7 +276,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_ABS_FIRST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::fwd_mixed_intf::mixed_abs_first>
+  class  SArg_Traits<::fwd_mixed_intf::mixed_abs_first>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::mixed_abs_first_ptr,
         ::fwd_mixed_intf::mixed_abs_first_var,
@@ -291,7 +291,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_MIXED_ABS_FIRSTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::fwd_mixed_intf::AMI_mixed_abs_firstHandler>
+  class  SArg_Traits<::fwd_mixed_intf::AMI_mixed_abs_firstHandler>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr,
         ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_var,
@@ -306,7 +306,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_CONC_FIRST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::fwd_mixed_intf::mixed_conc_first>
+  class  SArg_Traits<::fwd_mixed_intf::mixed_conc_first>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::mixed_conc_first_ptr,
         ::fwd_mixed_intf::mixed_conc_first_var,
@@ -321,7 +321,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_MIXED_CONC_FIRSTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::fwd_mixed_intf::AMI_mixed_conc_firstHandler>
+  class  SArg_Traits<::fwd_mixed_intf::AMI_mixed_conc_firstHandler>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr,
         ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_var,
@@ -336,7 +336,7 @@ namespace TAO
 #define _OBV_FWD_FORWARDEDTYPE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::obv_fwd::ForwardedType>
+  class SArg_Traits<::obv_fwd::ForwardedType>
     : public
         Object_SArg_Traits_T<
             ::obv_fwd::ForwardedType *,
@@ -353,7 +353,7 @@ namespace TAO
 #define _OBV_FWD_ENCLOSINGTYPE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::obv_fwd::EnclosingType>
+  class SArg_Traits<::obv_fwd::EnclosingType>
     : public
         Object_SArg_Traits_T<
             ::obv_fwd::EnclosingType *,
@@ -370,7 +370,7 @@ namespace TAO
 #define _OBV_FWD_FORWARDEDTYPE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::obv_fwd::ForwardedType>
+  class SArg_Traits<::obv_fwd::ForwardedType>
     : public
         Object_SArg_Traits_T<
             ::obv_fwd::ForwardedType *,

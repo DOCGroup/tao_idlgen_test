@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTEC_K4L2VW_H_
-#define _TAO_IDL_ATTRIBUTEC_K4L2VW_H_
+#ifndef _TAO_IDL_ATTRIBUTEC_J4S4OI_H_
+#define _TAO_IDL_ATTRIBUTEC_J4S4OI_H_
 
 #include /**/ "ace/pre.h"
 
@@ -683,7 +683,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -701,7 +701,7 @@ namespace TAO
 #define _HELLO_MYFOO__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Hello::MyFoo>
+  class  Arg_Traits<::Hello::MyFoo>
     : public Object_Arg_Traits_T<
         ::Hello::MyFoo_ptr,
         ::Hello::MyFoo_var,
@@ -717,7 +717,7 @@ namespace TAO
 #define _HELLO_AMH_MYFOOEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Hello::AMH_MyFooExceptionHolder>
+  class Arg_Traits<::Hello::AMH_MyFooExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Hello::AMH_MyFooExceptionHolder *,
@@ -735,7 +735,7 @@ namespace TAO
 #define _HELLO_AMI_MYFOOHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Hello::AMI_MyFooHandler>
+  class  Arg_Traits<::Hello::AMI_MyFooHandler>
     : public Object_Arg_Traits_T<
         ::Hello::AMI_MyFooHandler_ptr,
         ::Hello::AMI_MyFooHandler_var,
@@ -763,11 +763,9 @@ protected:
   ~AMH_MyFooExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__Hello_AMH_MyFooExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Hello_AMH_MyFooExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__Hello_AMH_MyFooExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Hello_AMH_MyFooExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -788,7 +786,7 @@ namespace TAO
 #define _HELLO_MYFOO__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Hello::MyFoo>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Hello::MyFoo>
   {
     static ::Hello::MyFoo_ptr duplicate (::Hello::MyFoo_ptr p);
     static void release (::Hello::MyFoo_ptr p);
@@ -815,7 +813,7 @@ namespace TAO
 #define _HELLO_AMH_MYFOORESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Hello::AMH_MyFooResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Hello::AMH_MyFooResponseHandler>
   {
     static ::Hello::AMH_MyFooResponseHandler_ptr duplicate (::Hello::AMH_MyFooResponseHandler_ptr p);
     static void release (::Hello::AMH_MyFooResponseHandler_ptr p);
@@ -829,7 +827,7 @@ namespace TAO
 #define _HELLO_AMI_MYFOOHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Hello::AMI_MyFooHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Hello::AMI_MyFooHandler>
   {
     static ::Hello::AMI_MyFooHandler_ptr duplicate (::Hello::AMI_MyFooHandler_ptr p);
     static void release (::Hello::AMI_MyFooHandler_ptr p);

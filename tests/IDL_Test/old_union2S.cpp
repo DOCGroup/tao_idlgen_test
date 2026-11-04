@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNION2S_GM7LW4_CPP_
-#define _TAO_IDL_OLD_UNION2S_GM7LW4_CPP_
+#ifndef _TAO_IDL_OLD_UNION2S_YW9BBD_CPP_
+#define _TAO_IDL_OLD_UNION2S_YW9BBD_CPP_
 
 #include "old_union2S.h"
 

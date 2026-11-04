@@ -23,6 +23,7 @@
  **/
 
 #include "includedC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -46,7 +47,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "includedC.inl"
@@ -56,13 +56,13 @@
 #define _AOK_SEQ1TYPE_CS_
 
 Aok::Seq1Type::Seq1Type (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
+  : ::TAO::unbounded_value_sequence<::CORBA::Double> (max) {}
 
 Aok::Seq1Type::Seq1Type (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::Double * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double>
+  : ::TAO::unbounded_value_sequence<::CORBA::Double>
     (max, length, buffer, release)
 {}
 
@@ -86,11 +86,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Aok_Seq1Type_0 (
-        ::CORBA::tk_sequence, &CORBA::_tc_double, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Aok_Seq1Type_0 (
+        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_double), 0U);
 
     ::CORBA::TypeCode_ptr const tc_Aok_Seq1Type_0 =
-      &Aok_Seq1Type_0;
+      std::addressof (Aok_Seq1Type_0);
   }
 }
 }
@@ -106,7 +106,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Aok/Seq1Type:1.0",
     "Seq1Type",
-    &TAO::TypeCode::tc_Aok_Seq1Type_0);
+    std::addressof (TAO::TypeCode::tc_Aok_Seq1Type_0));
 
 namespace Aok
 {
@@ -119,7 +119,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Aok/Me:1.0",
     "Me",
-    &CORBA::_tc_long);
+    std::addressof (CORBA::_tc_long));
 
 namespace Aok
 {
@@ -142,7 +142,7 @@ static TAO::TypeCode::Enum<char const *,
     3);
 
 ::CORBA::TypeCode_ptr const _tc_Agog = std::addressof(_tao_tc_Agog);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_VT_Def_VT = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_VT_Def_VT {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -152,7 +152,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:VT_Def/VT:1.0",
     "VT",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_VT_Def_VT,
     0);
 
@@ -320,11 +320,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> IncludedBase__tao_seq_CORBA_Long__0 (
-        ::CORBA::tk_sequence, &CORBA::_tc_long, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> IncludedBase__tao_seq_CORBA_Long__0 (
+        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_long), 0U);
 
     ::CORBA::TypeCode_ptr const tc_IncludedBase__tao_seq_CORBA_Long__0 =
-      &IncludedBase__tao_seq_CORBA_Long__0;
+      std::addressof (IncludedBase__tao_seq_CORBA_Long__0);
   }
 }
 }
@@ -335,7 +335,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_IncludedBase[] =
   {
-    { "DeprecatedMember", &TAO::TypeCode::tc_IncludedBase__tao_seq_CORBA_Long__0, ::CORBA::PUBLIC_MEMBER }
+    { "DeprecatedMember", std::addressof (TAO::TypeCode::tc_IncludedBase__tao_seq_CORBA_Long__0), ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -347,7 +347,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:IncludedBase:1.0",
     "IncludedBase",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_IncludedBase,
     1);
 
@@ -505,13 +505,13 @@ IncludedBase_init::create_for_unmarshal ()
 #define _A_MYSEQA_CS_
 
 A::MySeqA::MySeqA (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< MyStructA> (max) {}
+  : ::TAO::unbounded_value_sequence<MyStructA> (max) {}
 
 A::MySeqA::MySeqA (::CORBA::ULong max,
   ::CORBA::ULong length,
   A::MyStructA * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< MyStructA>
+  : ::TAO::unbounded_value_sequence<MyStructA>
     (max, length, buffer, release)
 {}
 
@@ -535,11 +535,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> A_MySeqA_0 (
-        ::CORBA::tk_sequence, &A::_tc_MyStructA, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> A_MySeqA_0 (
+        ::CORBA::tk_sequence, std::addressof (A::_tc_MyStructA), 0U);
 
     ::CORBA::TypeCode_ptr const tc_A_MySeqA_0 =
-      &A_MySeqA_0;
+      std::addressof (A_MySeqA_0);
   }
 }
 }
@@ -555,7 +555,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:A/MySeqA:1.0",
     "MySeqA",
-    &TAO::TypeCode::tc_A_MySeqA_0);
+    std::addressof (TAO::TypeCode::tc_A_MySeqA_0));
 
 namespace A
 {
@@ -567,8 +567,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_A_MyStructA[] =
       {
-        { "str", &CORBA::_tc_string },
-        { "recursive_member", &A::_tc_MySeqA }
+        { "str", std::addressof (CORBA::_tc_string) },
+        { "recursive_member", std::addressof (A::_tc_MySeqA) }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -595,9 +595,7 @@ namespace A
   ::CORBA::TypeCode_ptr const _tc_MyStructA = std::addressof(_tao_tc_A_MyStructA);
 }
 
-void
-A::MyStructA::_tao_any_destructor (
-    void *_tao_void_pointer)
+void A::MyStructA::_tao_any_destructor (void *_tao_void_pointer)
 {
   MyStructA *tmp = static_cast<MyStructA *> (_tao_void_pointer);
   delete tmp;
@@ -698,10 +696,8 @@ RootModule::SUBMODULE1::ParentIF::_tao_release (ParentIF_ptr obj)
 ::CORBA::Boolean
 RootModule::SUBMODULE1::ParentIF::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:RootModule/SUBMODULE1/ParentIF:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:RootModule/SUBMODULE1/ParentIF:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -746,7 +742,7 @@ namespace RootModule
     ::CORBA::TypeCode_ptr const _tc_ParentIF = std::addressof(_tao_tc_RootModule_SUBMODULE1_ParentIF);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_RootModule_SUBMODULE1_AMH_ParentIFExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_RootModule_SUBMODULE1_AMH_ParentIFExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -756,7 +752,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:RootModule/SUBMODULE1/AMH_ParentIFExceptionHolder:1.0",
     "AMH_ParentIFExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_RootModule_SUBMODULE1_AMH_ParentIFExceptionHolder,
     0);
 
@@ -1017,11 +1013,9 @@ RootModule::SUBMODULE1::AMH_ParentIFResponseHandler::_tao_release (AMH_ParentIFR
 ::CORBA::Boolean
 RootModule::SUBMODULE1::AMH_ParentIFResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:RootModule/SUBMODULE1/AMH_ParentIFResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:RootModule/SUBMODULE1/AMH_ParentIFResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1144,11 +1138,9 @@ RootModule::SUBMODULE1::AMI_ParentIFHandler::_tao_release (AMI_ParentIFHandler_p
 ::CORBA::Boolean
 RootModule::SUBMODULE1::AMI_ParentIFHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:RootModule/SUBMODULE1/AMI_ParentIFHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1231,7 +1223,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:AAA/my_long_type:1.0",
     "my_long_type",
-    &CORBA::_tc_long);
+    std::addressof (CORBA::_tc_long));
 
 ::CORBA::TypeCode_ptr const AAA::_tc_my_long_type = std::addressof(_tao_tc_AAA_my_long_type);
 
@@ -1282,10 +1274,8 @@ AAA::_tao_release (AAA_ptr obj)
 ::CORBA::Boolean
 AAA::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:AAA:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:AAA:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1323,7 +1313,7 @@ static TAO::TypeCode::Objref<char const *,
     "AAA");
 
 ::CORBA::TypeCode_ptr const _tc_AAA = std::addressof(_tao_tc_AAA);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_AAAExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_AAAExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1333,7 +1323,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_AAAExceptionHolder:1.0",
     "AMH_AAAExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_AAAExceptionHolder,
     0);
 
@@ -1587,11 +1577,9 @@ AMH_AAAResponseHandler::_tao_release (AMH_AAAResponseHandler_ptr obj)
 ::CORBA::Boolean
 AMH_AAAResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:AMH_AAAResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:AMH_AAAResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1707,11 +1695,9 @@ AMI_AAAHandler::_tao_release (AMI_AAAHandler_ptr obj)
 ::CORBA::Boolean
 AMI_AAAHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_AAAHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1812,13 +1798,13 @@ OBV_IncludedBase::_tao_unmarshal__IncludedBase (TAO_InputCDR &strm, TAO_ChunkInf
 #define _INCLUDEDBASE__TAO_SEQ_CORBA_LONG__CS_
 
 IncludedBase::_tao_seq_CORBA_Long_::_tao_seq_CORBA_Long_ (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Long> (max) {}
+  : ::TAO::unbounded_value_sequence<::CORBA::Long> (max) {}
 
 IncludedBase::_tao_seq_CORBA_Long_::_tao_seq_CORBA_Long_ (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::Long * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Long>
+  : ::TAO::unbounded_value_sequence<::CORBA::Long>
     (max, length, buffer, release)
 {}
 
@@ -1902,7 +1888,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Aok::Seq1Type const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Aok::Seq1Type>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Aok::Seq1Type>::insert_copy (
     _tao_any,
     ::Aok::Seq1Type::_tao_any_destructor,
     ::Aok::_tc_Seq1Type,
@@ -1914,7 +1900,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Aok::Seq1Type *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Aok::Seq1Type>::insert (
+  TAO::Any_Dual_Impl_T<::Aok::Seq1Type>::insert (
     _tao_any,
     ::Aok::Seq1Type::_tao_any_destructor,
     ::Aok::_tc_Seq1Type,
@@ -1926,7 +1912,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Aok::Seq1Type const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Aok::Seq1Type>::extract (
+  return TAO::Any_Dual_Impl_T<::Aok::Seq1Type>::extract (
     _tao_any,
     ::Aok::Seq1Type::_tao_any_destructor,
     ::Aok::_tc_Seq1Type,
@@ -2107,7 +2093,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::A::MySeqA const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::A::MySeqA>::insert_copy (
+  TAO::Any_Dual_Impl_T<::A::MySeqA>::insert_copy (
     _tao_any,
     ::A::MySeqA::_tao_any_destructor,
     ::A::_tc_MySeqA,
@@ -2119,7 +2105,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::A::MySeqA *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::A::MySeqA>::insert (
+  TAO::Any_Dual_Impl_T<::A::MySeqA>::insert (
     _tao_any,
     ::A::MySeqA::_tao_any_destructor,
     ::A::_tc_MySeqA,
@@ -2131,7 +2117,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::A::MySeqA const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::A::MySeqA>::extract (
+  return TAO::Any_Dual_Impl_T<::A::MySeqA>::extract (
     _tao_any,
     ::A::MySeqA::_tao_any_destructor,
     ::A::_tc_MySeqA,
@@ -2148,7 +2134,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::A::MyStructA const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::A::MyStructA>::insert_copy (
+  TAO::Any_Dual_Impl_T<::A::MyStructA>::insert_copy (
     _tao_any,
     ::A::MyStructA::_tao_any_destructor,
     A::_tc_MyStructA,
@@ -2160,7 +2146,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::A::MyStructA *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::A::MyStructA>::insert (
+  TAO::Any_Dual_Impl_T<::A::MyStructA>::insert (
     _tao_any,
     ::A::MyStructA::_tao_any_destructor,
     A::_tc_MyStructA,
@@ -2172,7 +2158,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::A::MyStructA const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::A::MyStructA>::extract (
+  return TAO::Any_Dual_Impl_T<::A::MyStructA>::extract (
     _tao_any,
     ::A::MyStructA::_tao_any_destructor,
     A::_tc_MyStructA,
@@ -2754,7 +2740,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Agog _tao_enumerator)
 {
-  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Agog & _tao_enumerator)
@@ -2996,7 +2982,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, RootModule::SUBMODULE1::ParentIF::Mode _tao_enumerator)
 {
-  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, RootModule::SUBMODULE1::ParentIF::Mode & _tao_enumerator)
@@ -3036,7 +3022,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::RootModule::SUBMODULE1::ParentIF>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::RootModule::SUBMODULE1::ParentIF>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3128,7 +3114,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::RootModule::SUBMODULE1::AMI_ParentIFHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::RootModule::SUBMODULE1::AMI_ParentIFHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3157,7 +3143,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::AAA>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::AAA>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3249,7 +3235,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::AMI_AAAHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::AMI_AAAHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

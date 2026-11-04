@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2S_6A53JB_H_
-#define _TAO_IDL_REOPEN_INCLUDE2S_6A53JB_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2S_A38132_H_
+#define _TAO_IDL_REOPEN_INCLUDE2S_A38132_H_
 
 #include /**/ "ace/pre.h"
 
@@ -61,7 +61,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -75,7 +75,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::frag::pug>
+  class SArg_Traits<::frag::pug>
     : public
         Fixed_Size_SArg_Traits_T<
             ::frag::pug,
@@ -88,7 +88,7 @@ namespace TAO
 #define _A_B_X2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::B::X2>
+  class  SArg_Traits<::A::B::X2>
     : public Object_SArg_Traits_T<
         ::A::B::X2_ptr,
         ::A::B::X2_var,
@@ -103,7 +103,7 @@ namespace TAO
 #define _A_B_AMH_X2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::A::B::AMH_X2ExceptionHolder>
+  class SArg_Traits<::A::B::AMH_X2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::A::B::AMH_X2ExceptionHolder *,
@@ -120,7 +120,7 @@ namespace TAO
 #define _A_B_AMI_X2HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::B::AMI_X2Handler>
+  class  SArg_Traits<::A::B::AMI_X2Handler>
     : public Object_SArg_Traits_T<
         ::A::B::AMI_X2Handler_ptr,
         ::A::B::AMI_X2Handler_var,

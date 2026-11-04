@@ -23,12 +23,12 @@
  **/
 
 #include "repo_id_modC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Valuetype/ValueFactory.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "repo_id_modC.inl"
@@ -113,11 +113,9 @@ gleep::schmooze::_tao_release (schmooze_ptr obj)
 ::CORBA::Boolean
 gleep::schmooze::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:gleep_prefix/gleep/schmooze:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:gleep_prefix/gleep/schmooze:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -227,11 +225,9 @@ gleep::schmeer::_tao_release (schmeer_ptr obj)
 ::CORBA::Boolean
 gleep::schmeer::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:gleep_prefix/gleep/schmeer:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:gleep_prefix/gleep/schmeer:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -341,11 +337,9 @@ gleep::schlemiel::_tao_release (schlemiel_ptr obj)
 ::CORBA::Boolean
 gleep::schlemiel::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:gleep_prefix/gleep/schlemiel:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:gleep_prefix/gleep/schlemiel:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -455,11 +449,9 @@ gleep::spilkis::_tao_release (spilkis_ptr obj)
 ::CORBA::Boolean
 gleep::spilkis::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:gleep_prefix/gleep/spilkis:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:gleep_prefix/gleep/spilkis:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -569,11 +561,9 @@ gleep::floop::schmuck::_tao_release (schmuck_ptr obj)
 ::CORBA::Boolean
 gleep::floop::schmuck::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "ABRA:cadabra/hocus/pocus:1.23") == 0 ||
+  if (std::strcmp (value, "ABRA:cadabra/hocus/pocus:1.23") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -683,11 +673,9 @@ gleep::floop::schmendrick::_tao_release (schmendrick_ptr obj)
 ::CORBA::Boolean
 gleep::floop::schmendrick::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:floop_prefix/gleep/floop/schmendrick:524.23") == 0 ||
+  if (std::strcmp (value, "IDL:floop_prefix/gleep/floop/schmendrick:524.23") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -797,11 +785,9 @@ gleep::floop::verklempt::schlemazel::_tao_release (schlemazel_ptr obj)
 ::CORBA::Boolean
 gleep::floop::verklempt::schlemazel::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:verklempt_prefix/gleep/floop/verklempt/schlemazel:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:verklempt_prefix/gleep/floop/verklempt/schlemazel:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -911,11 +897,9 @@ gleep::schmegegging::_tao_release (schmegegging_ptr obj)
 ::CORBA::Boolean
 gleep::schmegegging::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:gleep_prefix/gleep/schmegegging:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:gleep_prefix/gleep/schmegegging:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }

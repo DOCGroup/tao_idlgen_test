@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYC_K48FGM_H_
-#define _TAO_IDL_OLD_ARRAYC_K48FGM_H_
+#ifndef _TAO_IDL_OLD_ARRAYC_77CTO5_H_
+#define _TAO_IDL_OLD_ARRAYC_77CTO5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -82,14 +82,9 @@ namespace OldArray
   using str22_slice = ::CORBA::Char[2];
   struct str22_tag {};
 
-  using str22_var =
-    TAO_FixedArray_Var_T<
-        str22,
-        str22_slice,
-        str22_tag
-      >;
+  using str22_var = TAO_FixedArray_Var_T<str22, str22_slice, str22_tag>;
 
-    using str22_out = str22;
+  using str22_out = str22;
 
   using str22_forany = TAO_Array_Forany_T<str22, str22_slice, str22_tag>;
 
@@ -106,14 +101,9 @@ namespace OldArray
   using boolarray_slice = ::CORBA::Boolean[40];
   struct boolarray_tag {};
 
-  using boolarray_var =
-    TAO_FixedArray_Var_T<
-        boolarray,
-        boolarray_slice,
-        boolarray_tag
-      >;
+  using boolarray_var = TAO_FixedArray_Var_T<boolarray, boolarray_slice, boolarray_tag>;
 
-    using boolarray_out = boolarray;
+  using boolarray_out = boolarray;
 
   using boolarray_forany = TAO_Array_Forany_T<boolarray, boolarray_slice, boolarray_tag>;
 
@@ -130,14 +120,9 @@ namespace OldArray
   using char_17_slice = ::CORBA::Char;
   struct char_17_tag {};
 
-  using char_17_var =
-    TAO_FixedArray_Var_T<
-        char_17,
-        char_17_slice,
-        char_17_tag
-      >;
+  using char_17_var = TAO_FixedArray_Var_T<char_17, char_17_slice, char_17_tag>;
 
-    using char_17_out = char_17;
+  using char_17_out = char_17;
 
   using char_17_forany = TAO_Array_Forany_T<char_17, char_17_slice, char_17_tag>;
 
@@ -154,14 +139,9 @@ namespace OldArray
   using char_10_2_slice = ::CORBA::Char[2];
   struct char_10_2_tag {};
 
-  using char_10_2_var =
-    TAO_FixedArray_Var_T<
-        char_10_2,
-        char_10_2_slice,
-        char_10_2_tag
-      >;
+  using char_10_2_var = TAO_FixedArray_Var_T<char_10_2, char_10_2_slice, char_10_2_tag>;
 
-    using char_10_2_out = char_10_2;
+  using char_10_2_out = char_10_2;
 
   using char_10_2_forany = TAO_Array_Forany_T<char_10_2, char_10_2_slice, char_10_2_tag>;
 
@@ -230,14 +210,9 @@ namespace OldArray
   using A_matrix_slice = A[3][4];
   struct A_matrix_tag {};
 
-  using A_matrix_var =
-    TAO_FixedArray_Var_T<
-        A_matrix,
-        A_matrix_slice,
-        A_matrix_tag
-      >;
+  using A_matrix_var = TAO_FixedArray_Var_T<A_matrix, A_matrix_slice, A_matrix_tag>;
 
-    using A_matrix_out = A_matrix;
+  using A_matrix_out = A_matrix;
 
   using A_matrix_forany = TAO_Array_Forany_T<A_matrix, A_matrix_slice, A_matrix_tag>;
 
@@ -254,14 +229,9 @@ namespace OldArray
   using B_matrix_slice = B[3][4];
   struct B_matrix_tag {};
 
-  using B_matrix_var =
-    TAO_FixedArray_Var_T<
-        B_matrix,
-        B_matrix_slice,
-        B_matrix_tag
-      >;
+  using B_matrix_var = TAO_FixedArray_Var_T<B_matrix, B_matrix_slice, B_matrix_tag>;
 
-    using B_matrix_out = B_matrix;
+  using B_matrix_out = B_matrix;
 
   using B_matrix_forany = TAO_Array_Forany_T<B_matrix, B_matrix_slice, B_matrix_tag>;
 
@@ -278,14 +248,9 @@ namespace OldArray
   using C_matrix_slice = C[3][4];
   struct C_matrix_tag {};
 
-  using C_matrix_var =
-    TAO_FixedArray_Var_T<
-        C_matrix,
-        C_matrix_slice,
-        C_matrix_tag
-      >;
+  using C_matrix_var = TAO_FixedArray_Var_T<C_matrix, C_matrix_slice, C_matrix_tag>;
 
-    using C_matrix_out = C_matrix;
+  using C_matrix_out = C_matrix;
 
   using C_matrix_forany = TAO_Array_Forany_T<C_matrix, C_matrix_slice, C_matrix_tag>;
 
@@ -302,14 +267,9 @@ namespace OldArray
   using A_rmatrix_slice = A_matrix[3][4][5];
   struct A_rmatrix_tag {};
 
-  using A_rmatrix_var =
-    TAO_FixedArray_Var_T<
-        A_rmatrix,
-        A_rmatrix_slice,
-        A_rmatrix_tag
-      >;
+  using A_rmatrix_var = TAO_FixedArray_Var_T<A_rmatrix, A_rmatrix_slice, A_rmatrix_tag>;
 
-    using A_rmatrix_out = A_rmatrix;
+  using A_rmatrix_out = A_rmatrix;
 
   using A_rmatrix_forany = TAO_Array_Forany_T<A_rmatrix, A_rmatrix_slice, A_rmatrix_tag>;
 
@@ -767,7 +727,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -782,7 +742,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::OldArray::str22_tag>
+  class Arg_Traits<::OldArray::str22_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::str22_var,
@@ -793,7 +753,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldArray::boolarray_tag>
+  class Arg_Traits<::OldArray::boolarray_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::boolarray_var,
@@ -804,7 +764,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldArray::char_17_tag>
+  class Arg_Traits<::OldArray::char_17_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::char_17_var,
@@ -815,7 +775,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldArray::char_10_2_tag>
+  class Arg_Traits<::OldArray::char_10_2_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::char_10_2_var,
@@ -826,7 +786,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldArray::A>
+  class Arg_Traits<::OldArray::A>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldArray::A,
@@ -836,7 +796,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldArray::B>
+  class Arg_Traits<::OldArray::B>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldArray::B,
@@ -846,7 +806,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldArray::C>
+  class Arg_Traits<::OldArray::C>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldArray::C,
@@ -856,7 +816,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldArray::A_matrix_tag>
+  class Arg_Traits<::OldArray::A_matrix_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::A_matrix_var,
@@ -867,7 +827,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldArray::B_matrix_tag>
+  class Arg_Traits<::OldArray::B_matrix_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::B_matrix_var,
@@ -878,7 +838,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldArray::C_matrix_tag>
+  class Arg_Traits<::OldArray::C_matrix_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::C_matrix_var,
@@ -889,7 +849,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldArray::A_rmatrix_tag>
+  class Arg_Traits<::OldArray::A_rmatrix_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::A_rmatrix_var,
@@ -903,7 +863,7 @@ namespace TAO
 #define _OLDARRAY_A_I__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldArray::A_i>
+  class  Arg_Traits<::OldArray::A_i>
     : public Object_Arg_Traits_T<
         ::OldArray::A_i_ptr,
         ::OldArray::A_i_var,
@@ -919,7 +879,7 @@ namespace TAO
 #define _OLDARRAY_AMH_A_IEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldArray::AMH_A_iExceptionHolder>
+  class Arg_Traits<::OldArray::AMH_A_iExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldArray::AMH_A_iExceptionHolder *,
@@ -937,7 +897,7 @@ namespace TAO
 #define _OLDARRAY_AMI_A_IHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldArray::AMI_A_iHandler>
+  class  Arg_Traits<::OldArray::AMI_A_iHandler>
     : public Object_Arg_Traits_T<
         ::OldArray::AMI_A_iHandler_ptr,
         ::OldArray::AMI_A_iHandler_var,
@@ -965,11 +925,9 @@ protected:
   ~AMH_A_iExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldArray_AMH_A_iExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldArray_AMH_A_iExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldArray_AMH_A_iExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldArray_AMH_A_iExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1118,7 +1076,7 @@ namespace TAO
 #define _OLDARRAY_A_I__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldArray::A_i>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldArray::A_i>
   {
     static ::OldArray::A_i_ptr duplicate (::OldArray::A_i_ptr p);
     static void release (::OldArray::A_i_ptr p);
@@ -1145,7 +1103,7 @@ namespace TAO
 #define _OLDARRAY_AMH_A_IRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldArray::AMH_A_iResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldArray::AMH_A_iResponseHandler>
   {
     static ::OldArray::AMH_A_iResponseHandler_ptr duplicate (::OldArray::AMH_A_iResponseHandler_ptr p);
     static void release (::OldArray::AMH_A_iResponseHandler_ptr p);
@@ -1159,7 +1117,7 @@ namespace TAO
 #define _OLDARRAY_AMI_A_IHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldArray::AMI_A_iHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldArray::AMI_A_iHandler>
   {
     static ::OldArray::AMI_A_iHandler_ptr duplicate (::OldArray::AMI_A_iHandler_ptr p);
     static void release (::OldArray::AMI_A_iHandler_ptr p);

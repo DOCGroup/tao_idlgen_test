@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTS_4JTR8W_H_
-#define _TAO_IDL_AMI_TESTS_4JTR8W_H_
+#ifndef _TAO_IDL_AMI_TESTS_78WGXQ_H_
+#define _TAO_IDL_AMI_TESTS_78WGXQ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -57,7 +57,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #define _A_AMI_TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::AMI_Test>
+  class  SArg_Traits<::A::AMI_Test>
     : public Object_SArg_Traits_T<
         ::A::AMI_Test_ptr,
         ::A::AMI_Test_var,
@@ -89,7 +89,7 @@ namespace TAO
 #define _A_AMI_AMI_TESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::AMI_AMI_TestHandler>
+  class  SArg_Traits<::A::AMI_AMI_TestHandler>
     : public Object_SArg_Traits_T<
         ::A::AMI_AMI_TestHandler_ptr,
         ::A::AMI_AMI_TestHandler_var,
@@ -104,7 +104,7 @@ namespace TAO
 #define _A_TEST_CHILD__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::Test_Child>
+  class  SArg_Traits<::A::Test_Child>
     : public Object_SArg_Traits_T<
         ::A::Test_Child_ptr,
         ::A::Test_Child_var,
@@ -119,7 +119,7 @@ namespace TAO
 #define _A_AMI_TEST_CHILDHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::AMI_Test_ChildHandler>
+  class  SArg_Traits<::A::AMI_Test_ChildHandler>
     : public Object_SArg_Traits_T<
         ::A::AMI_Test_ChildHandler_ptr,
         ::A::AMI_Test_ChildHandler_var,

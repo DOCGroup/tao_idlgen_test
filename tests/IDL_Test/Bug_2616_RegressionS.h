@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_BQIPJ8_H_
-#define _TAO_IDL_BUG_2616_REGRESSIONS_BQIPJ8_H_
+#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_UV7YOK_H_
+#define _TAO_IDL_BUG_2616_REGRESSIONS_UV7YOK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::AA>
+  class SArg_Traits<::AA>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AA,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::BB>
+  class SArg_Traits<::BB>
     : public
         Fixed_Size_SArg_Traits_T<
             ::BB,
@@ -97,7 +97,7 @@ namespace TAO
 #define _INTERFACE1__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Interface1>
+  class  SArg_Traits<::Interface1>
     : public Object_SArg_Traits_T<
         ::Interface1_ptr,
         ::Interface1_var,
@@ -112,7 +112,7 @@ namespace TAO
 #define _AMH_INTERFACE1EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_Interface1ExceptionHolder>
+  class SArg_Traits<::AMH_Interface1ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_Interface1ExceptionHolder *,
@@ -129,7 +129,7 @@ namespace TAO
 #define _AMI_INTERFACE1HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_Interface1Handler>
+  class  SArg_Traits<::AMI_Interface1Handler>
     : public Object_SArg_Traits_T<
         ::AMI_Interface1Handler_ptr,
         ::AMI_Interface1Handler_var,
@@ -144,7 +144,7 @@ namespace TAO
 #define _INTERFACE2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Interface2>
+  class  SArg_Traits<::Interface2>
     : public Object_SArg_Traits_T<
         ::Interface2_ptr,
         ::Interface2_var,
@@ -159,7 +159,7 @@ namespace TAO
 #define _AMH_INTERFACE2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_Interface2ExceptionHolder>
+  class SArg_Traits<::AMH_Interface2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_Interface2ExceptionHolder *,
@@ -176,7 +176,7 @@ namespace TAO
 #define _AMI_INTERFACE2HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_Interface2Handler>
+  class  SArg_Traits<::AMI_Interface2Handler>
     : public Object_SArg_Traits_T<
         ::AMI_Interface2Handler_ptr,
         ::AMI_Interface2Handler_var,

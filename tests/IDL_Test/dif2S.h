@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIF2S_MXWVOI_H_
-#define _TAO_IDL_DIF2S_MXWVOI_H_
+#ifndef _TAO_IDL_DIF2S_F4F5VC_H_
+#define _TAO_IDL_DIF2S_F4F5VC_H_
 
 #include /**/ "ace/pre.h"
 
@@ -63,7 +63,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -80,7 +80,7 @@ namespace TAO
 #define _OLDDIF2_EX1__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldDif2::ex1>
+  class  SArg_Traits<::OldDif2::ex1>
     : public Object_SArg_Traits_T<
         ::OldDif2::ex1_ptr,
         ::OldDif2::ex1_var,
@@ -95,7 +95,7 @@ namespace TAO
 #define _OLDDIF2_AMH_EX1EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::OldDif2::AMH_ex1ExceptionHolder>
+  class SArg_Traits<::OldDif2::AMH_ex1ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldDif2::AMH_ex1ExceptionHolder *,
@@ -112,7 +112,7 @@ namespace TAO
 #define _OLDDIF2_AMI_EX1HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldDif2::AMI_ex1Handler>
+  class  SArg_Traits<::OldDif2::AMI_ex1Handler>
     : public Object_SArg_Traits_T<
         ::OldDif2::AMI_ex1Handler_ptr,
         ::OldDif2::AMI_ex1Handler_var,
@@ -127,7 +127,7 @@ namespace TAO
 #define _OLDDIF2_EX2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldDif2::ex2>
+  class  SArg_Traits<::OldDif2::ex2>
     : public Object_SArg_Traits_T<
         ::OldDif2::ex2_ptr,
         ::OldDif2::ex2_var,
@@ -237,7 +237,7 @@ class SArg_Traits<OldDif2_ex2_sendc_op11_ls>
 #define _OLDDIF2_AMH_EX2EXCEPTIONHOLDER__SARG_TRAITS_
 
 template<>
-class SArg_Traits< ::OldDif2::AMH_ex2ExceptionHolder>
+class SArg_Traits<::OldDif2::AMH_ex2ExceptionHolder>
   : public
       Object_SArg_Traits_T<
           ::OldDif2::AMH_ex2ExceptionHolder *,
@@ -254,7 +254,7 @@ class SArg_Traits< ::OldDif2::AMH_ex2ExceptionHolder>
 #define _OLDDIF2_AMI_EX2HANDLER__SARG_TRAITS_
 
 template<>
-class  SArg_Traits< ::OldDif2::AMI_ex2Handler>
+class  SArg_Traits<::OldDif2::AMI_ex2Handler>
   : public Object_SArg_Traits_T<
       ::OldDif2::AMI_ex2Handler_ptr,
       ::OldDif2::AMI_ex2Handler_var,
@@ -317,7 +317,7 @@ class SArg_Traits<OldDif2_AMI_ex2Handler_op11_ls>
 #define _OLDDIF2_EX3__SARG_TRAITS_
 
 template<>
-class  SArg_Traits< ::OldDif2::ex3>
+class  SArg_Traits<::OldDif2::ex3>
   : public Object_SArg_Traits_T<
       ::OldDif2::ex3_ptr,
       ::OldDif2::ex3_var,
@@ -332,7 +332,7 @@ class  SArg_Traits< ::OldDif2::ex3>
 #define _OLDDIF2_AMH_EX3EXCEPTIONHOLDER__SARG_TRAITS_
 
 template<>
-class SArg_Traits< ::OldDif2::AMH_ex3ExceptionHolder>
+class SArg_Traits<::OldDif2::AMH_ex3ExceptionHolder>
   : public
       Object_SArg_Traits_T<
           ::OldDif2::AMH_ex3ExceptionHolder *,
@@ -349,7 +349,7 @@ class SArg_Traits< ::OldDif2::AMH_ex3ExceptionHolder>
 #define _OLDDIF2_AMI_EX3HANDLER__SARG_TRAITS_
 
 template<>
-class  SArg_Traits< ::OldDif2::AMI_ex3Handler>
+class  SArg_Traits<::OldDif2::AMI_ex3Handler>
   : public Object_SArg_Traits_T<
       ::OldDif2::AMI_ex3Handler_ptr,
       ::OldDif2::AMI_ex3Handler_var,
@@ -364,7 +364,7 @@ class  SArg_Traits< ::OldDif2::AMI_ex3Handler>
 #define _OLDDIF2_EX4__SARG_TRAITS_
 
 template<>
-class  SArg_Traits< ::OldDif2::ex4>
+class  SArg_Traits<::OldDif2::ex4>
   : public Object_SArg_Traits_T<
       ::OldDif2::ex4_ptr,
       ::OldDif2::ex4_var,
@@ -393,7 +393,7 @@ class SArg_Traits<OldDif2_ex4_limited_string_attribute>
 #define _OLDDIF2_AMH_EX4EXCEPTIONHOLDER__SARG_TRAITS_
 
 template<>
-class SArg_Traits< ::OldDif2::AMH_ex4ExceptionHolder>
+class SArg_Traits<::OldDif2::AMH_ex4ExceptionHolder>
   : public
       Object_SArg_Traits_T<
           ::OldDif2::AMH_ex4ExceptionHolder *,
@@ -410,7 +410,7 @@ class SArg_Traits< ::OldDif2::AMH_ex4ExceptionHolder>
 #define _OLDDIF2_AMI_EX4HANDLER__SARG_TRAITS_
 
 template<>
-class  SArg_Traits< ::OldDif2::AMI_ex4Handler>
+class  SArg_Traits<::OldDif2::AMI_ex4Handler>
   : public Object_SArg_Traits_T<
       ::OldDif2::AMI_ex4Handler_ptr,
       ::OldDif2::AMI_ex4Handler_var,

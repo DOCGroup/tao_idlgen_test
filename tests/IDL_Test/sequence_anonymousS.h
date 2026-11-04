@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_LDIY9Q_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_LDIY9Q_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_03341L_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_03341L_H_
 
 #include /**/ "ace/pre.h"
 
@@ -62,7 +62,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -79,7 +79,7 @@ namespace TAO
 #define _SEQTEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::seqTest>
+  class  SArg_Traits<::seqTest>
     : public Object_SArg_Traits_T<
         ::seqTest_ptr,
         ::seqTest_var,
@@ -91,7 +91,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::seqTest::dozens>
+  class SArg_Traits<::seqTest::dozens>
     : public
         Var_Size_SArg_Traits_T<
             ::seqTest::dozens,
@@ -104,7 +104,7 @@ namespace TAO
 #define _AMH_SEQTESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_seqTestExceptionHolder>
+  class SArg_Traits<::AMH_seqTestExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_seqTestExceptionHolder *,
@@ -121,7 +121,7 @@ namespace TAO
 #define _AMI_SEQTESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_seqTestHandler>
+  class  SArg_Traits<::AMI_seqTestHandler>
     : public Object_SArg_Traits_T<
         ::AMI_seqTestHandler_ptr,
         ::AMI_seqTestHandler_var,
@@ -133,7 +133,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::twinStruct>
+  class SArg_Traits<::twinStruct>
     : public
         Var_Size_SArg_Traits_T<
             ::twinStruct,
@@ -143,7 +143,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::outside>
+  class SArg_Traits<::outside>
     : public
         Var_Size_SArg_Traits_T<
             ::outside,
@@ -153,7 +153,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::nestedSeqStruct>
+  class SArg_Traits<::nestedSeqStruct>
     : public
         Var_Size_SArg_Traits_T<
             ::nestedSeqStruct,

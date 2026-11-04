@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INHERITC_CFT87J_H_
-#define _TAO_IDL_INHERITC_CFT87J_H_
+#ifndef _TAO_IDL_INHERITC_BA42ZW_H_
+#define _TAO_IDL_INHERITC_BA42ZW_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1432,7 +1432,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -1450,7 +1450,7 @@ namespace TAO
 #define _OLDINHERIT_ONE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::one>
+  class  Arg_Traits<::OldInherit::one>
     : public Object_Arg_Traits_T<
         ::OldInherit::one_ptr,
         ::OldInherit::one_var,
@@ -1466,7 +1466,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_ONEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldInherit::AMH_oneExceptionHolder>
+  class Arg_Traits<::OldInherit::AMH_oneExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldInherit::AMH_oneExceptionHolder *,
@@ -1484,7 +1484,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_ONEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::AMI_oneHandler>
+  class  Arg_Traits<::OldInherit::AMI_oneHandler>
     : public Object_Arg_Traits_T<
         ::OldInherit::AMI_oneHandler_ptr,
         ::OldInherit::AMI_oneHandler_var,
@@ -1500,7 +1500,7 @@ namespace TAO
 #define _OLDINHERIT_TWO__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::two>
+  class  Arg_Traits<::OldInherit::two>
     : public Object_Arg_Traits_T<
         ::OldInherit::two_ptr,
         ::OldInherit::two_var,
@@ -1516,7 +1516,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_TWOEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldInherit::AMH_twoExceptionHolder>
+  class Arg_Traits<::OldInherit::AMH_twoExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldInherit::AMH_twoExceptionHolder *,
@@ -1534,7 +1534,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_TWOHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::AMI_twoHandler>
+  class  Arg_Traits<::OldInherit::AMI_twoHandler>
     : public Object_Arg_Traits_T<
         ::OldInherit::AMI_twoHandler_ptr,
         ::OldInherit::AMI_twoHandler_var,
@@ -1550,7 +1550,7 @@ namespace TAO
 #define _OLDINHERIT_THREE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::three>
+  class  Arg_Traits<::OldInherit::three>
     : public Object_Arg_Traits_T<
         ::OldInherit::three_ptr,
         ::OldInherit::three_var,
@@ -1566,7 +1566,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_THREEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldInherit::AMH_threeExceptionHolder>
+  class Arg_Traits<::OldInherit::AMH_threeExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldInherit::AMH_threeExceptionHolder *,
@@ -1584,7 +1584,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_THREEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::AMI_threeHandler>
+  class  Arg_Traits<::OldInherit::AMI_threeHandler>
     : public Object_Arg_Traits_T<
         ::OldInherit::AMI_threeHandler_ptr,
         ::OldInherit::AMI_threeHandler_var,
@@ -1600,7 +1600,7 @@ namespace TAO
 #define _OLDINHERIT_FOUR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::four>
+  class  Arg_Traits<::OldInherit::four>
     : public Object_Arg_Traits_T<
         ::OldInherit::four_ptr,
         ::OldInherit::four_var,
@@ -1616,7 +1616,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_FOUREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldInherit::AMH_fourExceptionHolder>
+  class Arg_Traits<::OldInherit::AMH_fourExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldInherit::AMH_fourExceptionHolder *,
@@ -1634,7 +1634,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_FOURHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::AMI_fourHandler>
+  class  Arg_Traits<::OldInherit::AMI_fourHandler>
     : public Object_Arg_Traits_T<
         ::OldInherit::AMI_fourHandler_ptr,
         ::OldInherit::AMI_fourHandler_var,
@@ -1650,7 +1650,7 @@ namespace TAO
 #define _OLDINHERIT_FIVE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::five>
+  class  Arg_Traits<::OldInherit::five>
     : public Object_Arg_Traits_T<
         ::OldInherit::five_ptr,
         ::OldInherit::five_var,
@@ -1666,7 +1666,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_FIVEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldInherit::AMH_fiveExceptionHolder>
+  class Arg_Traits<::OldInherit::AMH_fiveExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldInherit::AMH_fiveExceptionHolder *,
@@ -1684,7 +1684,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_FIVEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::AMI_fiveHandler>
+  class  Arg_Traits<::OldInherit::AMI_fiveHandler>
     : public Object_Arg_Traits_T<
         ::OldInherit::AMI_fiveHandler_ptr,
         ::OldInherit::AMI_fiveHandler_var,
@@ -1712,11 +1712,9 @@ protected:
   ~AMH_oneExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldInherit_AMH_oneExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldInherit_AMH_oneExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldInherit_AMH_oneExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldInherit_AMH_oneExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1736,11 +1734,9 @@ protected:
   ~AMH_twoExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldInherit_AMH_twoExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldInherit_AMH_twoExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldInherit_AMH_twoExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldInherit_AMH_twoExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1760,11 +1756,9 @@ protected:
   ~AMH_threeExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldInherit_AMH_threeExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldInherit_AMH_threeExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldInherit_AMH_threeExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldInherit_AMH_threeExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1784,11 +1778,9 @@ protected:
   ~AMH_fourExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldInherit_AMH_fourExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldInherit_AMH_fourExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldInherit_AMH_fourExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldInherit_AMH_fourExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1808,11 +1800,9 @@ protected:
   ~AMH_fiveExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldInherit_AMH_fiveExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldInherit_AMH_fiveExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldInherit_AMH_fiveExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldInherit_AMH_fiveExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1833,7 +1823,7 @@ namespace TAO
 #define _OLDINHERIT_ONE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::one>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::one>
   {
     static ::OldInherit::one_ptr duplicate (::OldInherit::one_ptr p);
     static void release (::OldInherit::one_ptr p);
@@ -1860,7 +1850,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_ONERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMH_oneResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMH_oneResponseHandler>
   {
     static ::OldInherit::AMH_oneResponseHandler_ptr duplicate (::OldInherit::AMH_oneResponseHandler_ptr p);
     static void release (::OldInherit::AMH_oneResponseHandler_ptr p);
@@ -1874,7 +1864,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_ONEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMI_oneHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMI_oneHandler>
   {
     static ::OldInherit::AMI_oneHandler_ptr duplicate (::OldInherit::AMI_oneHandler_ptr p);
     static void release (::OldInherit::AMI_oneHandler_ptr p);
@@ -1888,7 +1878,7 @@ namespace TAO
 #define _OLDINHERIT_TWO__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::two>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::two>
   {
     static ::OldInherit::two_ptr duplicate (::OldInherit::two_ptr p);
     static void release (::OldInherit::two_ptr p);
@@ -1915,7 +1905,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_TWORESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMH_twoResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMH_twoResponseHandler>
   {
     static ::OldInherit::AMH_twoResponseHandler_ptr duplicate (::OldInherit::AMH_twoResponseHandler_ptr p);
     static void release (::OldInherit::AMH_twoResponseHandler_ptr p);
@@ -1929,7 +1919,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_TWOHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMI_twoHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMI_twoHandler>
   {
     static ::OldInherit::AMI_twoHandler_ptr duplicate (::OldInherit::AMI_twoHandler_ptr p);
     static void release (::OldInherit::AMI_twoHandler_ptr p);
@@ -1943,7 +1933,7 @@ namespace TAO
 #define _OLDINHERIT_THREE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::three>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::three>
   {
     static ::OldInherit::three_ptr duplicate (::OldInherit::three_ptr p);
     static void release (::OldInherit::three_ptr p);
@@ -1970,7 +1960,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_THREERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMH_threeResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMH_threeResponseHandler>
   {
     static ::OldInherit::AMH_threeResponseHandler_ptr duplicate (::OldInherit::AMH_threeResponseHandler_ptr p);
     static void release (::OldInherit::AMH_threeResponseHandler_ptr p);
@@ -1984,7 +1974,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_THREEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMI_threeHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMI_threeHandler>
   {
     static ::OldInherit::AMI_threeHandler_ptr duplicate (::OldInherit::AMI_threeHandler_ptr p);
     static void release (::OldInherit::AMI_threeHandler_ptr p);
@@ -1998,7 +1988,7 @@ namespace TAO
 #define _OLDINHERIT_FOUR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::four>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::four>
   {
     static ::OldInherit::four_ptr duplicate (::OldInherit::four_ptr p);
     static void release (::OldInherit::four_ptr p);
@@ -2025,7 +2015,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_FOURRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMH_fourResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMH_fourResponseHandler>
   {
     static ::OldInherit::AMH_fourResponseHandler_ptr duplicate (::OldInherit::AMH_fourResponseHandler_ptr p);
     static void release (::OldInherit::AMH_fourResponseHandler_ptr p);
@@ -2039,7 +2029,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_FOURHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMI_fourHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMI_fourHandler>
   {
     static ::OldInherit::AMI_fourHandler_ptr duplicate (::OldInherit::AMI_fourHandler_ptr p);
     static void release (::OldInherit::AMI_fourHandler_ptr p);
@@ -2053,7 +2043,7 @@ namespace TAO
 #define _OLDINHERIT_FIVE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::five>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::five>
   {
     static ::OldInherit::five_ptr duplicate (::OldInherit::five_ptr p);
     static void release (::OldInherit::five_ptr p);
@@ -2080,7 +2070,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_FIVERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMH_fiveResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMH_fiveResponseHandler>
   {
     static ::OldInherit::AMH_fiveResponseHandler_ptr duplicate (::OldInherit::AMH_fiveResponseHandler_ptr p);
     static void release (::OldInherit::AMH_fiveResponseHandler_ptr p);
@@ -2094,7 +2084,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_FIVEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMI_fiveHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMI_fiveHandler>
   {
     static ::OldInherit::AMI_fiveHandler_ptr duplicate (::OldInherit::AMI_fiveHandler_ptr p);
     static void release (::OldInherit::AMI_fiveHandler_ptr p);

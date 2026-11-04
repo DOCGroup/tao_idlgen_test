@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_CONSTANTSC_31Y4C0_H_
-#define _TAO_IDL_CONSTANTSC_31Y4C0_H_
+#ifndef _TAO_IDL_CONSTANTSC_QNXSBU_H_
+#define _TAO_IDL_CONSTANTSC_QNXSBU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -568,7 +568,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -583,7 +583,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::m_a::enum_a>
+  class Arg_Traits<::m_a::enum_a>
     : public
         Basic_Arg_Traits_T<
             ::m_a::enum_a,
@@ -596,7 +596,7 @@ namespace TAO
 #define _CLASSCONSTANTS_IFACE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::ClassConstants::Iface>
+  class  Arg_Traits<::ClassConstants::Iface>
     : public Object_Arg_Traits_T<
         ::ClassConstants::Iface_ptr,
         ::ClassConstants::Iface_var,
@@ -612,7 +612,7 @@ namespace TAO
 #define _CLASSCONSTANTS_AMH_IFACEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::ClassConstants::AMH_IfaceExceptionHolder>
+  class Arg_Traits<::ClassConstants::AMH_IfaceExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::ClassConstants::AMH_IfaceExceptionHolder *,
@@ -630,7 +630,7 @@ namespace TAO
 #define _CLASSCONSTANTS_AMI_IFACEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::ClassConstants::AMI_IfaceHandler>
+  class  Arg_Traits<::ClassConstants::AMI_IfaceHandler>
     : public Object_Arg_Traits_T<
         ::ClassConstants::AMI_IfaceHandler_ptr,
         ::ClassConstants::AMI_IfaceHandler_var,
@@ -646,7 +646,7 @@ namespace TAO
 #define _CLASSCONSTANTS_VT__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::ClassConstants::Vt>
+  class Arg_Traits<::ClassConstants::Vt>
     : public
         Object_Arg_Traits_T<
             ::ClassConstants::Vt *,
@@ -680,11 +680,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__ClassConstants_AMH_IfaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__ClassConstants_AMH_IfaceExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__ClassConstants_AMH_IfaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__ClassConstants_AMH_IfaceExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -716,11 +714,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__ClassConstants_Vt (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__ClassConstants_Vt (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__ClassConstants_Vt (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__ClassConstants_Vt (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -741,7 +737,7 @@ namespace TAO
 #define _CLASSCONSTANTS_IFACE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::ClassConstants::Iface>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::ClassConstants::Iface>
   {
     static ::ClassConstants::Iface_ptr duplicate (::ClassConstants::Iface_ptr p);
     static void release (::ClassConstants::Iface_ptr p);
@@ -768,7 +764,7 @@ namespace TAO
 #define _CLASSCONSTANTS_AMH_IFACERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::ClassConstants::AMH_IfaceResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::ClassConstants::AMH_IfaceResponseHandler>
   {
     static ::ClassConstants::AMH_IfaceResponseHandler_ptr duplicate (::ClassConstants::AMH_IfaceResponseHandler_ptr p);
     static void release (::ClassConstants::AMH_IfaceResponseHandler_ptr p);
@@ -782,7 +778,7 @@ namespace TAO
 #define _CLASSCONSTANTS_AMI_IFACEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::ClassConstants::AMI_IfaceHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::ClassConstants::AMI_IfaceHandler>
   {
     static ::ClassConstants::AMI_IfaceHandler_ptr duplicate (::ClassConstants::AMI_IfaceHandler_ptr p);
     static void release (::ClassConstants::AMI_IfaceHandler_ptr p);

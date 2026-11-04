@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONC_ONYYNH_H_
-#define _TAO_IDL_BUG_2619_REGRESSIONC_ONYYNH_H_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONC_4VIPM9_H_
+#define _TAO_IDL_BUG_2619_REGRESSIONC_4VIPM9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -453,7 +453,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -468,7 +468,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::Type_T>
+  class Arg_Traits<::Type_T>
     : public
         Var_Size_Arg_Traits_T<
             ::Type_T,
@@ -481,7 +481,7 @@ namespace TAO
 #define _T_DATA_T__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::T_Data_T>
+  class Arg_Traits<::T_Data_T>
     : public
         Object_Arg_Traits_T<
             ::T_Data_T *,
@@ -499,7 +499,7 @@ namespace TAO
 #define _TEST__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Test>
+  class  Arg_Traits<::Test>
     : public Object_Arg_Traits_T<
         ::Test_ptr,
         ::Test_var,
@@ -515,7 +515,7 @@ namespace TAO
 #define _AMH_TESTEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_TestExceptionHolder>
+  class Arg_Traits<::AMH_TestExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_TestExceptionHolder *,
@@ -533,7 +533,7 @@ namespace TAO
 #define _AMI_TESTHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_TestHandler>
+  class  Arg_Traits<::AMI_TestHandler>
     : public Object_Arg_Traits_T<
         ::AMI_TestHandler_ptr,
         ::AMI_TestHandler_var,
@@ -570,11 +570,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__T_Data_T (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__T_Data_T (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__T_Data_T (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__T_Data_T (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -595,11 +593,9 @@ protected:
   ~OBV_AMH_TestExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_TestExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_TestExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_TestExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_TestExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -632,7 +628,7 @@ namespace TAO
 #define _TEST__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Test>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Test>
   {
     static ::Test_ptr duplicate (::Test_ptr p);
     static void release (::Test_ptr p);
@@ -659,7 +655,7 @@ namespace TAO
 #define _AMH_TESTRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_TestResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_TestResponseHandler>
   {
     static ::AMH_TestResponseHandler_ptr duplicate (::AMH_TestResponseHandler_ptr p);
     static void release (::AMH_TestResponseHandler_ptr p);
@@ -673,7 +669,7 @@ namespace TAO
 #define _AMI_TESTHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_TestHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_TestHandler>
   {
     static ::AMI_TestHandler_ptr duplicate (::AMI_TestHandler_ptr p);
     static void release (::AMI_TestHandler_ptr p);

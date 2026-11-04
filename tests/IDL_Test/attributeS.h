@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTES_OS1BS2_H_
-#define _TAO_IDL_ATTRIBUTES_OS1BS2_H_
+#ifndef _TAO_IDL_ATTRIBUTES_R8HONE_H_
+#define _TAO_IDL_ATTRIBUTES_R8HONE_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #define _HELLO_MYFOO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Hello::MyFoo>
+  class  SArg_Traits<::Hello::MyFoo>
     : public Object_SArg_Traits_T<
         ::Hello::MyFoo_ptr,
         ::Hello::MyFoo_var,
@@ -92,7 +92,7 @@ namespace TAO
 #define _HELLO_AMH_MYFOOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Hello::AMH_MyFooExceptionHolder>
+  class SArg_Traits<::Hello::AMH_MyFooExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Hello::AMH_MyFooExceptionHolder *,
@@ -109,7 +109,7 @@ namespace TAO
 #define _HELLO_AMI_MYFOOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Hello::AMI_MyFooHandler>
+  class  SArg_Traits<::Hello::AMI_MyFooHandler>
     : public Object_SArg_Traits_T<
         ::Hello::AMI_MyFooHandler_ptr,
         ::Hello::AMI_MyFooHandler_var,

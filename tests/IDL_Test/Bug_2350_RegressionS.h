@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_JHDO55_H_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_JHDO55_H_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_Z5I4LM_H_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_Z5I4LM_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::user_ExceptionHolder>
+  class SArg_Traits<::user_ExceptionHolder>
     : public
         Fixed_Size_SArg_Traits_T<
             ::user_ExceptionHolder,
@@ -87,7 +87,7 @@ namespace TAO
 #define _BUG_2350_REGRESSION__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Bug_2350_Regression>
+  class  SArg_Traits<::Bug_2350_Regression>
     : public Object_SArg_Traits_T<
         ::Bug_2350_Regression_ptr,
         ::Bug_2350_Regression_var,
@@ -102,7 +102,7 @@ namespace TAO
 #define _AMH_BUG_2350_REGRESSIONEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_Bug_2350_RegressionExceptionHolder>
+  class SArg_Traits<::AMH_Bug_2350_RegressionExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_Bug_2350_RegressionExceptionHolder *,
@@ -119,7 +119,7 @@ namespace TAO
 #define _AMI_BUG_2350_REGRESSIONHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_Bug_2350_RegressionHandler>
+  class  SArg_Traits<::AMI_Bug_2350_RegressionHandler>
     : public Object_SArg_Traits_T<
         ::AMI_Bug_2350_RegressionHandler_ptr,
         ::AMI_Bug_2350_RegressionHandler_var,

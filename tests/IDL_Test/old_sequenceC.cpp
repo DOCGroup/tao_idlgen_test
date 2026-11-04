@@ -23,6 +23,7 @@
  **/
 
 #include "old_sequenceC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -46,7 +47,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "old_sequenceC.inl"
@@ -58,7 +58,7 @@
 c20::c20 (::CORBA::ULong length,
   ::CORBA::Char * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::bounded_value_sequence< ::CORBA::Char,20>
+  : ::TAO::bounded_value_sequence<::CORBA::Char,20>
     (length, buffer, release)
 {}
 
@@ -82,11 +82,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> c20_20 (
-        ::CORBA::tk_sequence, &CORBA::_tc_char, 20U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> c20_20 (
+        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_char), 20U);
 
     ::CORBA::TypeCode_ptr const tc_c20_20 =
-      &c20_20;
+      std::addressof (c20_20);
   }
 }
 }
@@ -102,7 +102,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:c20:1.0",
     "c20",
-    &TAO::TypeCode::tc_c20_20);
+    std::addressof (TAO::TypeCode::tc_c20_20));
 
 ::CORBA::TypeCode_ptr const _tc_c20 = std::addressof(_tao_tc_c20);
 
@@ -112,7 +112,7 @@ static TAO::TypeCode::Alias<char const *,
 cc23::cc23 (::CORBA::ULong length,
   c20 * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::bounded_value_sequence< c20,23>
+  : ::TAO::bounded_value_sequence<c20,23>
     (length, buffer, release)
 {}
 
@@ -136,11 +136,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> cc23_23 (
-        ::CORBA::tk_sequence, &_tc_c20, 23U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> cc23_23 (
+        ::CORBA::tk_sequence, std::addressof (_tc_c20), 23U);
 
     ::CORBA::TypeCode_ptr const tc_cc23_23 =
-      &cc23_23;
+      std::addressof (cc23_23);
   }
 }
 }
@@ -156,7 +156,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:cc23:1.0",
     "cc23",
-    &TAO::TypeCode::tc_cc23_23);
+    std::addressof (TAO::TypeCode::tc_cc23_23));
 
 ::CORBA::TypeCode_ptr const _tc_cc23 = std::addressof(_tao_tc_cc23);
 
@@ -166,7 +166,7 @@ static TAO::TypeCode::Alias<char const *,
 c24::c24 (::CORBA::ULong length,
   ::CORBA::Char * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::bounded_value_sequence< ::CORBA::Char,24>
+  : ::TAO::bounded_value_sequence<::CORBA::Char,24>
     (length, buffer, release)
 {}
 
@@ -190,11 +190,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> c24_24 (
-        ::CORBA::tk_sequence, &CORBA::_tc_char, 24U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> c24_24 (
+        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_char), 24U);
 
     ::CORBA::TypeCode_ptr const tc_c24_24 =
-      &c24_24;
+      std::addressof (c24_24);
   }
 }
 }
@@ -210,7 +210,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:c24:1.0",
     "c24",
-    &TAO::TypeCode::tc_c24_24);
+    std::addressof (TAO::TypeCode::tc_c24_24));
 
 ::CORBA::TypeCode_ptr const _tc_c24 = std::addressof(_tao_tc_c24);
 
@@ -220,7 +220,7 @@ static TAO::TypeCode::Alias<char const *,
 _tao_seq_CORBA_Long__10::_tao_seq_CORBA_Long__10 (::CORBA::ULong length,
   ::CORBA::Long * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::bounded_value_sequence< ::CORBA::Long,10>
+  : ::TAO::bounded_value_sequence<::CORBA::Long,10>
     (length, buffer, release)
 {}
 
@@ -232,7 +232,7 @@ _tao_seq_CORBA_Long__10::_tao_seq_CORBA_Long__10 (::CORBA::ULong length,
 c30::c30 (::CORBA::ULong length,
   _tao_seq_CORBA_Long__10 * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::bounded_value_sequence< _tao_seq_CORBA_Long__10,10>
+  : ::TAO::bounded_value_sequence<_tao_seq_CORBA_Long__10,10>
     (length, buffer, release)
 {}
 
@@ -256,11 +256,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> _tao_seq_CORBA_Long__10_10 (
-        ::CORBA::tk_sequence, &CORBA::_tc_long, 10U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> _tao_seq_CORBA_Long__10_10 (
+        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_long), 10U);
 
     ::CORBA::TypeCode_ptr const tc__tao_seq_CORBA_Long__10_10 =
-      &_tao_seq_CORBA_Long__10_10;
+      std::addressof (_tao_seq_CORBA_Long__10_10);
   }
 }
 }
@@ -280,11 +280,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> c30_10 (
-        ::CORBA::tk_sequence, &TAO::TypeCode::tc__tao_seq_CORBA_Long__10_10, 10U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> c30_10 (
+        ::CORBA::tk_sequence, std::addressof (TAO::TypeCode::tc__tao_seq_CORBA_Long__10_10), 10U);
 
     ::CORBA::TypeCode_ptr const tc_c30_10 =
-      &c30_10;
+      std::addressof (c30_10);
   }
 }
 }
@@ -300,7 +300,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:c30:1.0",
     "c30",
-    &TAO::TypeCode::tc_c30_10);
+    std::addressof (TAO::TypeCode::tc_c30_10));
 
 ::CORBA::TypeCode_ptr const _tc_c30 = std::addressof(_tao_tc_c30);
 
@@ -338,11 +338,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> cstring_0 (
-        ::CORBA::tk_sequence, &CORBA::_tc_string, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> cstring_0 (
+        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_string), 0U);
 
     ::CORBA::TypeCode_ptr const tc_cstring_0 =
-      &cstring_0;
+      std::addressof (cstring_0);
   }
 }
 }
@@ -358,7 +358,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:cstring:1.0",
     "cstring",
-    &TAO::TypeCode::tc_cstring_0);
+    std::addressof (TAO::TypeCode::tc_cstring_0));
 
 ::CORBA::TypeCode_ptr const _tc_cstring = std::addressof(_tao_tc_cstring);
 
@@ -367,9 +367,9 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_TProgram[] =
       {
-        { "path", &CORBA::_tc_string },
-        { "argv", &_tc_cstring },
-        { "envp", &_tc_cstring }
+        { "path", std::addressof (CORBA::_tc_string) },
+        { "argv", std::addressof (_tc_cstring) },
+        { "envp", std::addressof (_tc_cstring) }
       };
 
 static TAO::TypeCode::Struct<
@@ -388,9 +388,7 @@ _tao_tc_TProgram (
 
 ::CORBA::TypeCode_ptr const _tc_TProgram = std::addressof(_tao_tc_TProgram);
 
-void
-TProgram::_tao_any_destructor (
-    void *_tao_void_pointer)
+void TProgram::_tao_any_destructor (void *_tao_void_pointer)
 {
   TProgram *tmp = static_cast<TProgram *> (_tao_void_pointer);
   delete tmp;
@@ -400,8 +398,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_sfoo[] =
       {
-        { "f1", &CORBA::_tc_long },
-        { "f2", &CORBA::_tc_char }
+        { "f1", std::addressof (CORBA::_tc_long) },
+        { "f2", std::addressof (CORBA::_tc_char) }
       };
 
 static TAO::TypeCode::Struct<
@@ -420,9 +418,7 @@ _tao_tc_sfoo (
 
 ::CORBA::TypeCode_ptr const _tc_sfoo = std::addressof(_tao_tc_sfoo);
 
-void
-sfoo::_tao_any_destructor (
-    void *_tao_void_pointer)
+void sfoo::_tao_any_destructor (void *_tao_void_pointer)
 {
   sfoo *tmp = static_cast<sfoo *> (_tao_void_pointer);
   delete tmp;
@@ -477,13 +473,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> sfoo_ar_20 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> sfoo_ar_20 (
         ::CORBA::tk_array,
-        &_tc_sfoo,
+        std::addressof (_tc_sfoo),
         20U);
 
     ::CORBA::TypeCode_ptr const tc_sfoo_ar =
-      &sfoo_ar_20;
+      std::addressof (sfoo_ar_20);
   }
 }
 }
@@ -498,7 +494,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:sfoo_ar:1.0",
     "sfoo_ar",
-    &TAO::TypeCode::tc_sfoo_ar);
+    std::addressof (TAO::TypeCode::tc_sfoo_ar));
 
 ::CORBA::TypeCode_ptr const _tc_sfoo_ar = std::addressof(_tao_tc_sfoo_ar);
 
@@ -506,13 +502,13 @@ static TAO::TypeCode::Alias<char const *,
 #define _F_UNBOUNDED_CS_
 
 f_unbounded::f_unbounded (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< sfoo> (max) {}
+  : ::TAO::unbounded_value_sequence<sfoo> (max) {}
 
 f_unbounded::f_unbounded (::CORBA::ULong max,
   ::CORBA::ULong length,
   sfoo * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< sfoo>
+  : ::TAO::unbounded_value_sequence<sfoo>
     (max, length, buffer, release)
 {}
 
@@ -536,11 +532,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> f_unbounded_0 (
-        ::CORBA::tk_sequence, &_tc_sfoo, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> f_unbounded_0 (
+        ::CORBA::tk_sequence, std::addressof (_tc_sfoo), 0U);
 
     ::CORBA::TypeCode_ptr const tc_f_unbounded_0 =
-      &f_unbounded_0;
+      std::addressof (f_unbounded_0);
   }
 }
 }
@@ -556,7 +552,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:f_unbounded:1.0",
     "f_unbounded",
-    &TAO::TypeCode::tc_f_unbounded_0);
+    std::addressof (TAO::TypeCode::tc_f_unbounded_0));
 
 ::CORBA::TypeCode_ptr const _tc_f_unbounded = std::addressof(_tao_tc_f_unbounded);
 
@@ -602,11 +598,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> f_ar_unbounded_0 (
-        ::CORBA::tk_sequence, &_tc_sfoo_ar, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> f_ar_unbounded_0 (
+        ::CORBA::tk_sequence, std::addressof (_tc_sfoo_ar), 0U);
 
     ::CORBA::TypeCode_ptr const tc_f_ar_unbounded_0 =
-      &f_ar_unbounded_0;
+      std::addressof (f_ar_unbounded_0);
   }
 }
 }
@@ -622,7 +618,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:f_ar_unbounded:1.0",
     "f_ar_unbounded",
-    &TAO::TypeCode::tc_f_ar_unbounded_0);
+    std::addressof (TAO::TypeCode::tc_f_ar_unbounded_0));
 
 ::CORBA::TypeCode_ptr const _tc_f_ar_unbounded = std::addressof(_tao_tc_f_ar_unbounded);
 
@@ -664,7 +660,7 @@ TestSeq::fattr ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< ::f_unbounded>::ret_val _tao_retval;
+  TAO::Arg_Traits<::f_unbounded>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -697,8 +693,8 @@ TestSeq::fattr (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::f_unbounded>::in_arg_val _tao_fattr (fattr);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::f_unbounded>::in_arg_val _tao_fattr (fattr);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -725,7 +721,7 @@ TestSeq::fattr (
 TestSeq::also_vec10::also_vec10 (::CORBA::ULong length,
   ::CORBA::Long * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::bounded_value_sequence< ::CORBA::Long,10>
+  : ::TAO::bounded_value_sequence<::CORBA::Long,10>
     (length, buffer, release)
 {}
 
@@ -749,11 +745,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> TestSeq_also_vec10_10 (
-        ::CORBA::tk_sequence, &CORBA::_tc_long, 10U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> TestSeq_also_vec10_10 (
+        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_long), 10U);
 
     ::CORBA::TypeCode_ptr const tc_TestSeq_also_vec10_10 =
-      &TestSeq_also_vec10_10;
+      std::addressof (TestSeq_also_vec10_10);
   }
 }
 }
@@ -769,7 +765,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:TestSeq/also_vec10:1.0",
     "also_vec10",
-    &TAO::TypeCode::tc_TestSeq_also_vec10_10);
+    std::addressof (TAO::TypeCode::tc_TestSeq_also_vec10_10));
 
 ::CORBA::TypeCode_ptr const TestSeq::_tc_also_vec10 = std::addressof(_tao_tc_TestSeq_also_vec10);
 
@@ -784,7 +780,7 @@ TestSeq::sendc_set_fattr (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::f_unbounded>::in_arg_val _tao_fattr (fattr);
+  TAO::Arg_Traits<::f_unbounded>::in_arg_val _tao_fattr (fattr);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -880,10 +876,8 @@ TestSeq::_tao_release (TestSeq_ptr obj)
 ::CORBA::Boolean
 TestSeq::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:TestSeq:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:TestSeq:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -921,7 +915,7 @@ static TAO::TypeCode::Objref<char const *,
     "TestSeq");
 
 ::CORBA::TypeCode_ptr const _tc_TestSeq = std::addressof(_tao_tc_TestSeq);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_TestSeqExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_TestSeqExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -931,7 +925,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_TestSeqExceptionHolder:1.0",
     "AMH_TestSeqExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_TestSeqExceptionHolder,
     0);
 
@@ -1077,28 +1071,28 @@ AMH_TestSeqExceptionHolder::_tao_unmarshal (
 void
 AMH_TestSeqExceptionHolder::raise_get_fattr ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_TestSeqExceptionHolder::raise_set_fattr ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_TestSeqExceptionHolder::raise_sendc_set_fattr ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_TestSeqExceptionHolder::raise_sendc_get_fattr ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -1181,11 +1175,9 @@ AMH_TestSeqResponseHandler::_tao_release (AMH_TestSeqResponseHandler_ptr obj)
 ::CORBA::Boolean
 AMH_TestSeqResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:AMH_TestSeqResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:AMH_TestSeqResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1263,8 +1255,8 @@ AMI_TestSeqHandler::get_fattr (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::f_unbounded>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::f_unbounded>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1356,8 +1348,8 @@ AMI_TestSeqHandler::get_fattr_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1385,7 +1377,7 @@ AMI_TestSeqHandler::set_fattr ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1471,8 +1463,8 @@ AMI_TestSeqHandler::set_fattr_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1540,11 +1532,9 @@ AMI_TestSeqHandler::_tao_release (AMI_TestSeqHandler_ptr obj)
 ::CORBA::Boolean
 AMI_TestSeqHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_TestSeqHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1605,7 +1595,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::c20 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::c20>::insert_copy (
+  TAO::Any_Dual_Impl_T<::c20>::insert_copy (
     _tao_any,
     ::c20::_tao_any_destructor,
     ::_tc_c20,
@@ -1617,7 +1607,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::c20 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::c20>::insert (
+  TAO::Any_Dual_Impl_T<::c20>::insert (
     _tao_any,
     ::c20::_tao_any_destructor,
     ::_tc_c20,
@@ -1629,7 +1619,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::c20 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::c20>::extract (
+  return TAO::Any_Dual_Impl_T<::c20>::extract (
     _tao_any,
     ::c20::_tao_any_destructor,
     ::_tc_c20,
@@ -1646,7 +1636,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::cc23 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::cc23>::insert_copy (
+  TAO::Any_Dual_Impl_T<::cc23>::insert_copy (
     _tao_any,
     ::cc23::_tao_any_destructor,
     ::_tc_cc23,
@@ -1658,7 +1648,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::cc23 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::cc23>::insert (
+  TAO::Any_Dual_Impl_T<::cc23>::insert (
     _tao_any,
     ::cc23::_tao_any_destructor,
     ::_tc_cc23,
@@ -1670,7 +1660,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::cc23 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::cc23>::extract (
+  return TAO::Any_Dual_Impl_T<::cc23>::extract (
     _tao_any,
     ::cc23::_tao_any_destructor,
     ::_tc_cc23,
@@ -1687,7 +1677,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::c24 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::c24>::insert_copy (
+  TAO::Any_Dual_Impl_T<::c24>::insert_copy (
     _tao_any,
     ::c24::_tao_any_destructor,
     ::_tc_c24,
@@ -1699,7 +1689,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::c24 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::c24>::insert (
+  TAO::Any_Dual_Impl_T<::c24>::insert (
     _tao_any,
     ::c24::_tao_any_destructor,
     ::_tc_c24,
@@ -1711,7 +1701,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::c24 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::c24>::extract (
+  return TAO::Any_Dual_Impl_T<::c24>::extract (
     _tao_any,
     ::c24::_tao_any_destructor,
     ::_tc_c24,
@@ -1728,7 +1718,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::c30 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::c30>::insert_copy (
+  TAO::Any_Dual_Impl_T<::c30>::insert_copy (
     _tao_any,
     ::c30::_tao_any_destructor,
     ::_tc_c30,
@@ -1740,7 +1730,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::c30 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::c30>::insert (
+  TAO::Any_Dual_Impl_T<::c30>::insert (
     _tao_any,
     ::c30::_tao_any_destructor,
     ::_tc_c30,
@@ -1752,7 +1742,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::c30 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::c30>::extract (
+  return TAO::Any_Dual_Impl_T<::c30>::extract (
     _tao_any,
     ::c30::_tao_any_destructor,
     ::_tc_c30,
@@ -1769,7 +1759,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::cstring const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::cstring>::insert_copy (
+  TAO::Any_Dual_Impl_T<::cstring>::insert_copy (
     _tao_any,
     ::cstring::_tao_any_destructor,
     ::_tc_cstring,
@@ -1781,7 +1771,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::cstring *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::cstring>::insert (
+  TAO::Any_Dual_Impl_T<::cstring>::insert (
     _tao_any,
     ::cstring::_tao_any_destructor,
     ::_tc_cstring,
@@ -1793,7 +1783,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::cstring const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::cstring>::extract (
+  return TAO::Any_Dual_Impl_T<::cstring>::extract (
     _tao_any,
     ::cstring::_tao_any_destructor,
     ::_tc_cstring,
@@ -1810,7 +1800,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::TProgram const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::TProgram>::insert_copy (
+  TAO::Any_Dual_Impl_T<::TProgram>::insert_copy (
     _tao_any,
     ::TProgram::_tao_any_destructor,
     _tc_TProgram,
@@ -1822,7 +1812,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::TProgram *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::TProgram>::insert (
+  TAO::Any_Dual_Impl_T<::TProgram>::insert (
     _tao_any,
     ::TProgram::_tao_any_destructor,
     _tc_TProgram,
@@ -1834,7 +1824,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::TProgram const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::TProgram>::extract (
+  return TAO::Any_Dual_Impl_T<::TProgram>::extract (
     _tao_any,
     ::TProgram::_tao_any_destructor,
     _tc_TProgram,
@@ -1851,7 +1841,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::sfoo const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::sfoo>::insert_copy (
+  TAO::Any_Dual_Impl_T<::sfoo>::insert_copy (
     _tao_any,
     ::sfoo::_tao_any_destructor,
     _tc_sfoo,
@@ -1863,7 +1853,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::sfoo *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::sfoo>::insert (
+  TAO::Any_Dual_Impl_T<::sfoo>::insert (
     _tao_any,
     ::sfoo::_tao_any_destructor,
     _tc_sfoo,
@@ -1875,7 +1865,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::sfoo const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::sfoo>::extract (
+  return TAO::Any_Dual_Impl_T<::sfoo>::extract (
     _tao_any,
     ::sfoo::_tao_any_destructor,
     _tc_sfoo,
@@ -1931,7 +1921,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::f_unbounded const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::f_unbounded>::insert_copy (
+  TAO::Any_Dual_Impl_T<::f_unbounded>::insert_copy (
     _tao_any,
     ::f_unbounded::_tao_any_destructor,
     ::_tc_f_unbounded,
@@ -1943,7 +1933,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::f_unbounded *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::f_unbounded>::insert (
+  TAO::Any_Dual_Impl_T<::f_unbounded>::insert (
     _tao_any,
     ::f_unbounded::_tao_any_destructor,
     ::_tc_f_unbounded,
@@ -1955,7 +1945,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::f_unbounded const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::f_unbounded>::extract (
+  return TAO::Any_Dual_Impl_T<::f_unbounded>::extract (
     _tao_any,
     ::f_unbounded::_tao_any_destructor,
     ::_tc_f_unbounded,
@@ -1972,7 +1962,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::f_ar_unbounded const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::f_ar_unbounded>::insert_copy (
+  TAO::Any_Dual_Impl_T<::f_ar_unbounded>::insert_copy (
     _tao_any,
     ::f_ar_unbounded::_tao_any_destructor,
     ::_tc_f_ar_unbounded,
@@ -1984,7 +1974,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::f_ar_unbounded *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::f_ar_unbounded>::insert (
+  TAO::Any_Dual_Impl_T<::f_ar_unbounded>::insert (
     _tao_any,
     ::f_ar_unbounded::_tao_any_destructor,
     ::_tc_f_ar_unbounded,
@@ -1996,7 +1986,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::f_ar_unbounded const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::f_ar_unbounded>::extract (
+  return TAO::Any_Dual_Impl_T<::f_ar_unbounded>::extract (
     _tao_any,
     ::f_ar_unbounded::_tao_any_destructor,
     ::_tc_f_ar_unbounded,
@@ -2071,7 +2061,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::TestSeq::also_vec10 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::TestSeq::also_vec10>::insert_copy (
+  TAO::Any_Dual_Impl_T<::TestSeq::also_vec10>::insert_copy (
     _tao_any,
     ::TestSeq::also_vec10::_tao_any_destructor,
     ::TestSeq::_tc_also_vec10,
@@ -2083,7 +2073,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::TestSeq::also_vec10 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::TestSeq::also_vec10>::insert (
+  TAO::Any_Dual_Impl_T<::TestSeq::also_vec10>::insert (
     _tao_any,
     ::TestSeq::also_vec10::_tao_any_destructor,
     ::TestSeq::_tc_also_vec10,
@@ -2095,7 +2085,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::TestSeq::also_vec10 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::TestSeq::also_vec10>::extract (
+  return TAO::Any_Dual_Impl_T<::TestSeq::also_vec10>::extract (
     _tao_any,
     ::TestSeq::also_vec10::_tao_any_destructor,
     ::TestSeq::_tc_also_vec10,
@@ -2608,7 +2598,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::TestSeq>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::TestSeq>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -2700,7 +2690,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::AMI_TestSeqHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::AMI_TestSeqHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

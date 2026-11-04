@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPENED_MODULESS_CLCS7J_H_
-#define _TAO_IDL_REOPENED_MODULESS_CLCS7J_H_
+#ifndef _TAO_IDL_REOPENED_MODULESS_DJQN0M_H_
+#define _TAO_IDL_REOPENED_MODULESS_DJQN0M_H_
 
 #include /**/ "ace/pre.h"
 
@@ -63,7 +63,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -80,7 +80,7 @@ namespace TAO
 #define _AA_BB_X1__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AA::BB::x1>
+  class  SArg_Traits<::AA::BB::x1>
     : public Object_SArg_Traits_T<
         ::AA::BB::x1_ptr,
         ::AA::BB::x1_var,
@@ -95,7 +95,7 @@ namespace TAO
 #define _AA_BB_AMH_X1EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AA::BB::AMH_x1ExceptionHolder>
+  class SArg_Traits<::AA::BB::AMH_x1ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AA::BB::AMH_x1ExceptionHolder *,
@@ -112,7 +112,7 @@ namespace TAO
 #define _AA_BB_AMI_X1HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AA::BB::AMI_x1Handler>
+  class  SArg_Traits<::AA::BB::AMI_x1Handler>
     : public Object_SArg_Traits_T<
         ::AA::BB::AMI_x1Handler_ptr,
         ::AA::BB::AMI_x1Handler_var,
@@ -127,7 +127,7 @@ namespace TAO
 #define _AA_BB_CC_X2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AA::BB::CC::x2>
+  class  SArg_Traits<::AA::BB::CC::x2>
     : public Object_SArg_Traits_T<
         ::AA::BB::CC::x2_ptr,
         ::AA::BB::CC::x2_var,
@@ -142,7 +142,7 @@ namespace TAO
 #define _AA_BB_CC_AMH_X2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AA::BB::CC::AMH_x2ExceptionHolder>
+  class SArg_Traits<::AA::BB::CC::AMH_x2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AA::BB::CC::AMH_x2ExceptionHolder *,
@@ -159,7 +159,7 @@ namespace TAO
 #define _AA_BB_CC_AMI_X2HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AA::BB::CC::AMI_x2Handler>
+  class  SArg_Traits<::AA::BB::CC::AMI_x2Handler>
     : public Object_SArg_Traits_T<
         ::AA::BB::CC::AMI_x2Handler_ptr,
         ::AA::BB::CC::AMI_x2Handler_var,
@@ -174,7 +174,7 @@ namespace TAO
 #define _DOT_PARTY__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::dot::Party>
+  class  SArg_Traits<::dot::Party>
     : public Object_SArg_Traits_T<
         ::dot::Party_ptr,
         ::dot::Party_var,
@@ -189,7 +189,7 @@ namespace TAO
 #define _DOT_PERSON__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::dot::Person>
+  class  SArg_Traits<::dot::Person>
     : public Object_SArg_Traits_T<
         ::dot::Person_ptr,
         ::dot::Person_var,
@@ -204,7 +204,7 @@ namespace TAO
 #define _DOT_AMH_PERSONEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::dot::AMH_PersonExceptionHolder>
+  class SArg_Traits<::dot::AMH_PersonExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::dot::AMH_PersonExceptionHolder *,
@@ -221,7 +221,7 @@ namespace TAO
 #define _DOT_AMI_PERSONHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::dot::AMI_PersonHandler>
+  class  SArg_Traits<::dot::AMI_PersonHandler>
     : public Object_SArg_Traits_T<
         ::dot::AMI_PersonHandler_ptr,
         ::dot::AMI_PersonHandler_var,
@@ -236,7 +236,7 @@ namespace TAO
 #define _DOT_PARTY__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::dot::Party>
+  class  SArg_Traits<::dot::Party>
     : public Object_SArg_Traits_T<
         ::dot::Party_ptr,
         ::dot::Party_var,
@@ -251,7 +251,7 @@ namespace TAO
 #define _DOT_AMH_PARTYEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::dot::AMH_PartyExceptionHolder>
+  class SArg_Traits<::dot::AMH_PartyExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::dot::AMH_PartyExceptionHolder *,
@@ -268,7 +268,7 @@ namespace TAO
 #define _DOT_AMI_PARTYHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::dot::AMI_PartyHandler>
+  class  SArg_Traits<::dot::AMI_PartyHandler>
     : public Object_SArg_Traits_T<
         ::dot::AMI_PartyHandler_ptr,
         ::dot::AMI_PartyHandler_var,
@@ -283,7 +283,7 @@ namespace TAO
 #define _OPHOLDER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OpHolder>
+  class  SArg_Traits<::OpHolder>
     : public Object_SArg_Traits_T<
         ::OpHolder_ptr,
         ::OpHolder_var,
@@ -298,7 +298,7 @@ namespace TAO
 #define _AMH_OPHOLDEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_OpHolderExceptionHolder>
+  class SArg_Traits<::AMH_OpHolderExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_OpHolderExceptionHolder *,
@@ -315,7 +315,7 @@ namespace TAO
 #define _AMI_OPHOLDERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_OpHolderHandler>
+  class  SArg_Traits<::AMI_OpHolderHandler>
     : public Object_SArg_Traits_T<
         ::AMI_OpHolderHandler_ptr,
         ::AMI_OpHolderHandler_var,
@@ -330,7 +330,7 @@ namespace TAO
 #define _COM_IFACE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::com::IFace>
+  class  SArg_Traits<::com::IFace>
     : public Object_SArg_Traits_T<
         ::com::IFace_ptr,
         ::com::IFace_var,
@@ -345,7 +345,7 @@ namespace TAO
 #define _COM_AMH_IFACEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::com::AMH_IFaceExceptionHolder>
+  class SArg_Traits<::com::AMH_IFaceExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::com::AMH_IFaceExceptionHolder *,
@@ -362,7 +362,7 @@ namespace TAO
 #define _COM_AMI_IFACEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::com::AMI_IFaceHandler>
+  class  SArg_Traits<::com::AMI_IFaceHandler>
     : public Object_SArg_Traits_T<
         ::com::AMI_IFaceHandler_ptr,
         ::com::AMI_IFaceHandler_var,
@@ -377,7 +377,7 @@ namespace TAO
 #define _Y_Z__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Y::Z>
+  class  SArg_Traits<::Y::Z>
     : public Object_SArg_Traits_T<
         ::Y::Z_ptr,
         ::Y::Z_var,
@@ -392,7 +392,7 @@ namespace TAO
 #define _Y_AMH_ZEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Y::AMH_ZExceptionHolder>
+  class SArg_Traits<::Y::AMH_ZExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Y::AMH_ZExceptionHolder *,
@@ -409,7 +409,7 @@ namespace TAO
 #define _Y_AMI_ZHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Y::AMI_ZHandler>
+  class  SArg_Traits<::Y::AMI_ZHandler>
     : public Object_SArg_Traits_T<
         ::Y::AMI_ZHandler_ptr,
         ::Y::AMI_ZHandler_var,
@@ -424,7 +424,7 @@ namespace TAO
 #define _X_BI__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::X::BI>
+  class  SArg_Traits<::X::BI>
     : public Object_SArg_Traits_T<
         ::X::BI_ptr,
         ::X::BI_var,
@@ -439,7 +439,7 @@ namespace TAO
 #define _X_AMH_BIEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::X::AMH_BIExceptionHolder>
+  class SArg_Traits<::X::AMH_BIExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::X::AMH_BIExceptionHolder *,
@@ -456,7 +456,7 @@ namespace TAO
 #define _X_AMI_BIHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::X::AMI_BIHandler>
+  class  SArg_Traits<::X::AMI_BIHandler>
     : public Object_SArg_Traits_T<
         ::X::AMI_BIHandler_ptr,
         ::X::AMI_BIHandler_var,
@@ -471,7 +471,7 @@ namespace TAO
 #define _XX_BLAH_INTFC__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::XX::blah_intfc>
+  class  SArg_Traits<::XX::blah_intfc>
     : public Object_SArg_Traits_T<
         ::XX::blah_intfc_ptr,
         ::XX::blah_intfc_var,
@@ -486,7 +486,7 @@ namespace TAO
 #define _XX_AMH_BLAH_INTFCEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::XX::AMH_blah_intfcExceptionHolder>
+  class SArg_Traits<::XX::AMH_blah_intfcExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::XX::AMH_blah_intfcExceptionHolder *,
@@ -503,7 +503,7 @@ namespace TAO
 #define _XX_AMI_BLAH_INTFCHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::XX::AMI_blah_intfcHandler>
+  class  SArg_Traits<::XX::AMI_blah_intfcHandler>
     : public Object_SArg_Traits_T<
         ::XX::AMI_blah_intfcHandler_ptr,
         ::XX::AMI_blah_intfcHandler_var,
@@ -518,7 +518,7 @@ namespace TAO
 #define _XX_BLAH0__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::XX::blah0>
+  class  SArg_Traits<::XX::blah0>
     : public Object_SArg_Traits_T<
         ::XX::blah0_ptr,
         ::XX::blah0_var,
@@ -533,7 +533,7 @@ namespace TAO
 #define _XX_AMH_BLAH0EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::XX::AMH_blah0ExceptionHolder>
+  class SArg_Traits<::XX::AMH_blah0ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::XX::AMH_blah0ExceptionHolder *,
@@ -550,7 +550,7 @@ namespace TAO
 #define _XX_AMI_BLAH0HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::XX::AMI_blah0Handler>
+  class  SArg_Traits<::XX::AMI_blah0Handler>
     : public Object_SArg_Traits_T<
         ::XX::AMI_blah0Handler_ptr,
         ::XX::AMI_blah0Handler_var,
@@ -565,7 +565,7 @@ namespace TAO
 #define _FRAG_FRAG_IFACE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::frag::frag_iface>
+  class  SArg_Traits<::frag::frag_iface>
     : public Object_SArg_Traits_T<
         ::frag::frag_iface_ptr,
         ::frag::frag_iface_var,
@@ -580,7 +580,7 @@ namespace TAO
 #define _FRAG_AMH_FRAG_IFACEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::frag::AMH_frag_ifaceExceptionHolder>
+  class SArg_Traits<::frag::AMH_frag_ifaceExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::frag::AMH_frag_ifaceExceptionHolder *,
@@ -597,7 +597,7 @@ namespace TAO
 #define _FRAG_AMI_FRAG_IFACEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::frag::AMI_frag_ifaceHandler>
+  class  SArg_Traits<::frag::AMI_frag_ifaceHandler>
     : public Object_SArg_Traits_T<
         ::frag::AMI_frag_ifaceHandler_ptr,
         ::frag::AMI_frag_ifaceHandler_var,
@@ -612,7 +612,7 @@ namespace TAO
 #define _GATHER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::gather>
+  class  SArg_Traits<::gather>
     : public Object_SArg_Traits_T<
         ::gather_ptr,
         ::gather_var,
@@ -627,7 +627,7 @@ namespace TAO
 #define _AMH_GATHEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_gatherExceptionHolder>
+  class SArg_Traits<::AMH_gatherExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_gatherExceptionHolder *,
@@ -644,7 +644,7 @@ namespace TAO
 #define _AMI_GATHERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_gatherHandler>
+  class  SArg_Traits<::AMI_gatherHandler>
     : public Object_SArg_Traits_T<
         ::AMI_gatherHandler_ptr,
         ::AMI_gatherHandler_var,
@@ -656,7 +656,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::bar>
+  class SArg_Traits<::bar>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bar,
@@ -666,7 +666,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::foo::foo_struct>
+  class SArg_Traits<::foo::foo_struct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::foo::foo_struct,
@@ -679,7 +679,7 @@ namespace TAO
 #define _FOO_OBJ__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::foo::obj>
+  class  SArg_Traits<::foo::obj>
     : public Object_SArg_Traits_T<
         ::foo::obj_ptr,
         ::foo::obj_var,
@@ -694,7 +694,7 @@ namespace TAO
 #define _FOO_AMH_OBJEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::foo::AMH_objExceptionHolder>
+  class SArg_Traits<::foo::AMH_objExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::foo::AMH_objExceptionHolder *,
@@ -711,7 +711,7 @@ namespace TAO
 #define _FOO_AMI_OBJHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::foo::AMI_objHandler>
+  class  SArg_Traits<::foo::AMI_objHandler>
     : public Object_SArg_Traits_T<
         ::foo::AMI_objHandler_ptr,
         ::foo::AMI_objHandler_var,
@@ -723,7 +723,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::A::B::X2Seq>
+  class SArg_Traits<::A::B::X2Seq>
     : public
         Var_Size_SArg_Traits_T<
             ::A::B::X2Seq,
@@ -736,7 +736,7 @@ namespace TAO
 #define _A_B_X3__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::B::X3>
+  class  SArg_Traits<::A::B::X3>
     : public Object_SArg_Traits_T<
         ::A::B::X3_ptr,
         ::A::B::X3_var,
@@ -751,7 +751,7 @@ namespace TAO
 #define _A_B_AMH_X3EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::A::B::AMH_X3ExceptionHolder>
+  class SArg_Traits<::A::B::AMH_X3ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::A::B::AMH_X3ExceptionHolder *,
@@ -768,7 +768,7 @@ namespace TAO
 #define _A_B_AMI_X3HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::B::AMI_X3Handler>
+  class  SArg_Traits<::A::B::AMI_X3Handler>
     : public Object_SArg_Traits_T<
         ::A::B::AMI_X3Handler_ptr,
         ::A::B::AMI_X3Handler_var,
@@ -783,7 +783,7 @@ namespace TAO
 #define _MB_B__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mB::B>
+  class  SArg_Traits<::mB::B>
     : public Object_SArg_Traits_T<
         ::mB::B_ptr,
         ::mB::B_var,
@@ -798,7 +798,7 @@ namespace TAO
 #define _MA_A__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mA::A>
+  class  SArg_Traits<::mA::A>
     : public Object_SArg_Traits_T<
         ::mA::A_ptr,
         ::mA::A_var,
@@ -813,7 +813,7 @@ namespace TAO
 #define _MA_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::mA::AMH_AExceptionHolder>
+  class SArg_Traits<::mA::AMH_AExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::mA::AMH_AExceptionHolder *,
@@ -830,7 +830,7 @@ namespace TAO
 #define _MA_AMI_AHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mA::AMI_AHandler>
+  class  SArg_Traits<::mA::AMI_AHandler>
     : public Object_SArg_Traits_T<
         ::mA::AMI_AHandler_ptr,
         ::mA::AMI_AHandler_var,
@@ -845,7 +845,7 @@ namespace TAO
 #define _MB_B__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mB::B>
+  class  SArg_Traits<::mB::B>
     : public Object_SArg_Traits_T<
         ::mB::B_ptr,
         ::mB::B_var,
@@ -860,7 +860,7 @@ namespace TAO
 #define _MB_AMH_BEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::mB::AMH_BExceptionHolder>
+  class SArg_Traits<::mB::AMH_BExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::mB::AMH_BExceptionHolder *,
@@ -877,7 +877,7 @@ namespace TAO
 #define _MB_AMI_BHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mB::AMI_BHandler>
+  class  SArg_Traits<::mB::AMI_BHandler>
     : public Object_SArg_Traits_T<
         ::mB::AMI_BHandler_ptr,
         ::mB::AMI_BHandler_var,
@@ -892,7 +892,7 @@ namespace TAO
 #define _MC_C__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mC::C>
+  class  SArg_Traits<::mC::C>
     : public Object_SArg_Traits_T<
         ::mC::C_ptr,
         ::mC::C_var,
@@ -907,7 +907,7 @@ namespace TAO
 #define _MC_AMH_CEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::mC::AMH_CExceptionHolder>
+  class SArg_Traits<::mC::AMH_CExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::mC::AMH_CExceptionHolder *,
@@ -924,7 +924,7 @@ namespace TAO
 #define _MC_AMI_CHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mC::AMI_CHandler>
+  class  SArg_Traits<::mC::AMI_CHandler>
     : public Object_SArg_Traits_T<
         ::mC::AMI_CHandler_ptr,
         ::mC::AMI_CHandler_var,
@@ -939,7 +939,7 @@ namespace TAO
 #define _SCHMOIK_FOO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Schmoik::foo>
+  class  SArg_Traits<::Schmoik::foo>
     : public Object_SArg_Traits_T<
         ::Schmoik::foo_ptr,
         ::Schmoik::foo_var,
@@ -954,7 +954,7 @@ namespace TAO
 #define _SCHMOIK_AMH_FOOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Schmoik::AMH_fooExceptionHolder>
+  class SArg_Traits<::Schmoik::AMH_fooExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Schmoik::AMH_fooExceptionHolder *,
@@ -971,7 +971,7 @@ namespace TAO
 #define _SCHMOIK_AMI_FOOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Schmoik::AMI_fooHandler>
+  class  SArg_Traits<::Schmoik::AMI_fooHandler>
     : public Object_SArg_Traits_T<
         ::Schmoik::AMI_fooHandler_ptr,
         ::Schmoik::AMI_fooHandler_var,
@@ -983,7 +983,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::Schmoik::bar>
+  class SArg_Traits<::Schmoik::bar>
     : public
         Var_Size_SArg_Traits_T<
             ::Schmoik::bar,
@@ -996,7 +996,7 @@ namespace TAO
 #define _THWOIK_TESTTYPE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Thwoik::TestType>
+  class  SArg_Traits<::Thwoik::TestType>
     : public Object_SArg_Traits_T<
         ::Thwoik::TestType_ptr,
         ::Thwoik::TestType_var,
@@ -1008,7 +1008,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::Thwoik::ub_TestTypeSeq>
+  class SArg_Traits<::Thwoik::ub_TestTypeSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::Thwoik::ub_TestTypeSeq,
@@ -1018,7 +1018,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Thwoik::bd_TestTypeSeq>
+  class SArg_Traits<::Thwoik::bd_TestTypeSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::Thwoik::bd_TestTypeSeq,
@@ -1031,7 +1031,7 @@ namespace TAO
 #define _THWOIK_TESTTYPE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Thwoik::TestType>
+  class  SArg_Traits<::Thwoik::TestType>
     : public Object_SArg_Traits_T<
         ::Thwoik::TestType_ptr,
         ::Thwoik::TestType_var,
@@ -1046,7 +1046,7 @@ namespace TAO
 #define _THWOIK_AMH_TESTTYPEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Thwoik::AMH_TestTypeExceptionHolder>
+  class SArg_Traits<::Thwoik::AMH_TestTypeExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Thwoik::AMH_TestTypeExceptionHolder *,
@@ -1063,7 +1063,7 @@ namespace TAO
 #define _THWOIK_AMI_TESTTYPEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Thwoik::AMI_TestTypeHandler>
+  class  SArg_Traits<::Thwoik::AMI_TestTypeHandler>
     : public Object_SArg_Traits_T<
         ::Thwoik::AMI_TestTypeHandler_ptr,
         ::Thwoik::AMI_TestTypeHandler_var,
@@ -1078,7 +1078,7 @@ namespace TAO
 #define _A_MOD_FOO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A_mod::Foo>
+  class  SArg_Traits<::A_mod::Foo>
     : public Object_SArg_Traits_T<
         ::A_mod::Foo_ptr,
         ::A_mod::Foo_var,
@@ -1093,7 +1093,7 @@ namespace TAO
 #define _A_MOD_AMH_FOOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::A_mod::AMH_FooExceptionHolder>
+  class SArg_Traits<::A_mod::AMH_FooExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::A_mod::AMH_FooExceptionHolder *,
@@ -1110,7 +1110,7 @@ namespace TAO
 #define _A_MOD_AMI_FOOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A_mod::AMI_FooHandler>
+  class  SArg_Traits<::A_mod::AMI_FooHandler>
     : public Object_SArg_Traits_T<
         ::A_mod::AMI_FooHandler_ptr,
         ::A_mod::AMI_FooHandler_var,
@@ -1125,7 +1125,7 @@ namespace TAO
 #define _A_MOD_B_MOD_FOO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A_mod::B_mod::Foo>
+  class  SArg_Traits<::A_mod::B_mod::Foo>
     : public Object_SArg_Traits_T<
         ::A_mod::B_mod::Foo_ptr,
         ::A_mod::B_mod::Foo_var,
@@ -1140,7 +1140,7 @@ namespace TAO
 #define _A_MOD_B_MOD_AMH_FOOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::A_mod::B_mod::AMH_FooExceptionHolder>
+  class SArg_Traits<::A_mod::B_mod::AMH_FooExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::A_mod::B_mod::AMH_FooExceptionHolder *,
@@ -1157,7 +1157,7 @@ namespace TAO
 #define _A_MOD_B_MOD_AMI_FOOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A_mod::B_mod::AMI_FooHandler>
+  class  SArg_Traits<::A_mod::B_mod::AMI_FooHandler>
     : public Object_SArg_Traits_T<
         ::A_mod::B_mod::AMI_FooHandler_ptr,
         ::A_mod::B_mod::AMI_FooHandler_var,

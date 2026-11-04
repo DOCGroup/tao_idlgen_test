@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCES_F7HBAD_CPP_
-#define _TAO_IDL_SEQUENCES_F7HBAD_CPP_
+#ifndef _TAO_IDL_SEQUENCES_9OJTOL_CPP_
+#define _TAO_IDL_SEQUENCES_9OJTOL_CPP_
 
 #include "sequenceS.h"
 

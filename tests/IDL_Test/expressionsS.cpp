@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_EXPRESSIONSS_NDWZFH_CPP_
-#define _TAO_IDL_EXPRESSIONSS_NDWZFH_CPP_
+#ifndef _TAO_IDL_EXPRESSIONSS_ZTLQXN_CPP_
+#define _TAO_IDL_EXPRESSIONSS_ZTLQXN_CPP_
 
 #include "expressionsS.h"
 

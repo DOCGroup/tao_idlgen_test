@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTC_0EW5ZQ_H_
-#define _TAO_IDL_GENERIC_OBJECTC_0EW5ZQ_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTC_2RP7D5_H_
+#define _TAO_IDL_GENERIC_OBJECTC_2RP7D5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -411,7 +411,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -426,7 +426,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::ObjectType>
+  class Arg_Traits<::ObjectType>
     : public
         Basic_Arg_Traits_T<
             ::ObjectType,
@@ -436,7 +436,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Selecter>
+  class Arg_Traits<::Selecter>
     : public
         Var_Size_Arg_Traits_T<
             ::Selecter,
@@ -449,7 +449,7 @@ namespace TAO
 #define _GENERIC__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::generic>
+  class  Arg_Traits<::generic>
     : public Object_Arg_Traits_T<
         ::generic_ptr,
         ::generic_var,
@@ -465,7 +465,7 @@ namespace TAO
 #define _AMH_GENERICEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_genericExceptionHolder>
+  class Arg_Traits<::AMH_genericExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_genericExceptionHolder *,
@@ -483,7 +483,7 @@ namespace TAO
 #define _AMI_GENERICHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_genericHandler>
+  class  Arg_Traits<::AMI_genericHandler>
     : public Object_Arg_Traits_T<
         ::AMI_genericHandler_ptr,
         ::AMI_genericHandler_var,
@@ -508,11 +508,9 @@ protected:
   ~OBV_AMH_genericExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_genericExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_genericExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_genericExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_genericExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -532,7 +530,7 @@ namespace TAO
 #define _GENERIC__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::generic>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::generic>
   {
     static ::generic_ptr duplicate (::generic_ptr p);
     static void release (::generic_ptr p);
@@ -559,7 +557,7 @@ namespace TAO
 #define _AMH_GENERICRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_genericResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_genericResponseHandler>
   {
     static ::AMH_genericResponseHandler_ptr duplicate (::AMH_genericResponseHandler_ptr p);
     static void release (::AMH_genericResponseHandler_ptr p);
@@ -573,7 +571,7 @@ namespace TAO
 #define _AMI_GENERICHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_genericHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_genericHandler>
   {
     static ::AMI_genericHandler_ptr duplicate (::AMI_genericHandler_ptr p);
     static void release (::AMI_genericHandler_ptr p);

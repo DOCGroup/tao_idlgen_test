@@ -23,13 +23,13 @@
  **/
 
 #include "pragmaC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
 #include "tao/SystemException.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "pragmaC.inl"
@@ -112,10 +112,8 @@ hello::_tao_release (hello_ptr obj)
 ::CORBA::Boolean
 hello::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:anvil.com/hello:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:anvil.com/hello:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -388,11 +386,9 @@ AMH_helloResponseHandler::_tao_release (AMH_helloResponseHandler_ptr obj)
 ::CORBA::Boolean
 AMH_helloResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:anvil.com/AMH_helloResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:anvil.com/AMH_helloResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -500,11 +496,9 @@ AMI_helloHandler::_tao_release (AMI_helloHandler_ptr obj)
 ::CORBA::Boolean
 AMI_helloHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:anvil.com/AMI_helloHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -686,10 +680,8 @@ goodbye::_tao_release (goodbye_ptr obj)
 ::CORBA::Boolean
 goodbye::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:anvil.com/goodbye:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:anvil.com/goodbye:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -962,11 +954,9 @@ AMH_goodbyeResponseHandler::_tao_release (AMH_goodbyeResponseHandler_ptr obj)
 ::CORBA::Boolean
 AMH_goodbyeResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:anvil.com/AMH_goodbyeResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:anvil.com/AMH_goodbyeResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1074,11 +1064,9 @@ AMI_goodbyeHandler::_tao_release (AMI_goodbyeHandler_ptr obj)
 ::CORBA::Boolean
 AMI_goodbyeHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:anvil.com/AMI_goodbyeHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1260,10 +1248,8 @@ salutation::sayonara::_tao_release (sayonara_ptr obj)
 ::CORBA::Boolean
 salutation::sayonara::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:hammer.com/salutation/sayonara:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:hammer.com/salutation/sayonara:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1536,11 +1522,9 @@ salutation::AMH_sayonaraResponseHandler::_tao_release (AMH_sayonaraResponseHandl
 ::CORBA::Boolean
 salutation::AMH_sayonaraResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:hammer.com/salutation/AMH_sayonaraResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:hammer.com/salutation/AMH_sayonaraResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1648,11 +1632,9 @@ salutation::AMI_sayonaraHandler::_tao_release (AMI_sayonaraHandler_ptr obj)
 ::CORBA::Boolean
 salutation::AMI_sayonaraHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:hammer.com/salutation/AMI_sayonaraHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1760,10 +1742,8 @@ ciao::_tao_release (ciao_ptr obj)
 ::CORBA::Boolean
 ciao::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:anvil.com/ciao:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:anvil.com/ciao:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2036,11 +2016,9 @@ AMH_ciaoResponseHandler::_tao_release (AMH_ciaoResponseHandler_ptr obj)
 ::CORBA::Boolean
 AMH_ciaoResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:anvil.com/AMH_ciaoResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:anvil.com/AMH_ciaoResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2148,11 +2126,9 @@ AMI_ciaoHandler::_tao_release (AMI_ciaoHandler_ptr obj)
 ::CORBA::Boolean
 AMI_ciaoHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:anvil.com/AMI_ciaoHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2260,10 +2236,8 @@ aloha::_tao_release (aloha_ptr obj)
 ::CORBA::Boolean
 aloha::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:anvil.com/aloha:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:anvil.com/aloha:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2536,11 +2510,9 @@ AMH_alohaResponseHandler::_tao_release (AMH_alohaResponseHandler_ptr obj)
 ::CORBA::Boolean
 AMH_alohaResponseHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:anvil.com/AMH_alohaResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:anvil.com/AMH_alohaResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2648,11 +2620,9 @@ AMI_alohaHandler::_tao_release (AMI_alohaHandler_ptr obj)
 ::CORBA::Boolean
 AMI_alohaHandler::_is_a (const char *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:anvil.com/AMI_alohaHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2683,9 +2653,7 @@ AMI_alohaHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 
-void
-DCPS_Test::Sample::_tao_any_destructor (
-    void *_tao_void_pointer)
+void DCPS_Test::Sample::_tao_any_destructor (void *_tao_void_pointer)
 {
   Sample *tmp = static_cast<Sample *> (_tao_void_pointer);
   delete tmp;
@@ -2838,7 +2806,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::hello>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::hello>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -2930,7 +2898,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::AMI_helloHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::AMI_helloHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -2941,7 +2909,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ClusterFu _tao_enumerator)
 {
-  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ClusterFu & _tao_enumerator)
@@ -3000,7 +2968,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::goodbye>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::goodbye>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3092,7 +3060,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::AMI_goodbyeHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::AMI_goodbyeHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3140,7 +3108,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::salutation::sayonara>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::salutation::sayonara>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3232,7 +3200,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::salutation::AMI_sayonaraHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::salutation::AMI_sayonaraHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3261,7 +3229,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::ciao>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::ciao>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3353,7 +3321,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::AMI_ciaoHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::AMI_ciaoHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3382,7 +3350,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::aloha>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::aloha>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3474,7 +3442,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::AMI_alohaHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::AMI_alohaHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

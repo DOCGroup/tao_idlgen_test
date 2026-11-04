@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INTERFACEC_11H8RA_H_
-#define _TAO_IDL_INTERFACEC_11H8RA_H_
+#ifndef _TAO_IDL_INTERFACEC_NOX2XS_H_
+#define _TAO_IDL_INTERFACEC_NOX2XS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -3723,137 +3723,126 @@ public:
   using string_1_slice = ::TAO::String_Manager;
   struct string_1_tag {};
 
-  using string_1_var =
-    TAO_VarArray_Var_T<
-        string_1,
-        string_1_slice,
-        string_1_tag
-      >;
+  using string_1_var = TAO_VarArray_Var_T<string_1, string_1_slice, string_1_tag>;
 
-    using string_1_out =
-      TAO_Array_Out_T<
-          string_1,
-          string_1_var,
-          string_1_slice,
-          string_1_tag
-        >;
+  using string_1_out = TAO_Array_Out_T<string_1, string_1_var, string_1_slice, string_1_tag>;
 
-      using string_1_forany = TAO_Array_Forany_T<string_1, string_1_slice, string_1_tag>;
+  using string_1_forany = TAO_Array_Forany_T<string_1, string_1_slice, string_1_tag>;
 
-      static string_1_slice *string_1_alloc ();
+  static string_1_slice *string_1_alloc ();
 
-      static void string_1_free (string_1_slice *_tao_slice);
+  static void string_1_free (string_1_slice *_tao_slice);
 
-      static string_1_slice *string_1_dup (const string_1_slice *_tao_slice);
+  static string_1_slice *string_1_dup (const string_1_slice *_tao_slice);
 
-      static void string_1_copy (string_1_slice *_tao_to, const string_1_slice *_tao_from);
-      static ::CORBA::TypeCode_ptr const _tc_string_1;
+  static void string_1_copy (string_1_slice *_tao_to, const string_1_slice *_tao_from);
+  static ::CORBA::TypeCode_ptr const _tc_string_1;
 
-      virtual char * a_su ();
+  virtual char * a_su ();
 
-      virtual void a_su (
-        const char * a_su);
+  virtual void a_su (
+    const char * a_su);
 
-      virtual ::AttributeTester::string_1_slice * a_sb ();
+  virtual ::AttributeTester::string_1_slice * a_sb ();
 
-      virtual void a_sb (
-        const ::AttributeTester::string_1 a_sb);
+  virtual void a_sb (
+    const ::AttributeTester::string_1 a_sb);
 
-      virtual void sendc_set_a_su (
-        ::AMI_AttributeTesterHandler_ptr ami_handler,
-        const char * a_su);
+  virtual void sendc_set_a_su (
+    ::AMI_AttributeTesterHandler_ptr ami_handler,
+    const char * a_su);
 
-      virtual void sendc_get_a_su (
-        ::AMI_AttributeTesterHandler_ptr ami_handler);
+  virtual void sendc_get_a_su (
+    ::AMI_AttributeTesterHandler_ptr ami_handler);
 
-      virtual void sendc_set_a_sb (
-        ::AMI_AttributeTesterHandler_ptr ami_handler,
-        const ::AttributeTester::string_1 a_sb);
+  virtual void sendc_set_a_sb (
+    ::AMI_AttributeTesterHandler_ptr ami_handler,
+    const ::AttributeTester::string_1 a_sb);
 
-      virtual void sendc_get_a_sb (
-        ::AMI_AttributeTesterHandler_ptr ami_handler);
+  virtual void sendc_get_a_sb (
+    ::AMI_AttributeTesterHandler_ptr ami_handler);
 
-      ::CORBA::Boolean _is_a (const char *type_id) override;
-      const char* _interface_repository_id () const override;
-      static const char* _desc_repository_id ();
-      static const char* _desc_interface_name ();
-      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
+  static const char* _desc_repository_id ();
+  static const char* _desc_interface_name ();
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
-    protected:
-      // Concrete interface only.
-      AttributeTester ();
+protected:
+  // Concrete interface only.
+  AttributeTester ();
 
-      // Concrete non-local interface only.
-      AttributeTester (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
+  // Concrete non-local interface only.
+  AttributeTester (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
 
-      // Non-local interface only.
-      AttributeTester (
-          TAO_Stub *objref,
-          ::CORBA::Boolean _tao_collocated = false,
-          TAO_Abstract_ServantBase *servant = nullptr,
-          TAO_ORB_Core *orb_core = nullptr);
+  // Non-local interface only.
+  AttributeTester (
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
-      ~AttributeTester () override = default;
+  ~AttributeTester () override = default;
 
-    private:
-      // Private and unimplemented for concrete interfaces.
-      AttributeTester (const AttributeTester &) = delete;
-      AttributeTester (AttributeTester &&) = delete;
-      AttributeTester &operator= (const AttributeTester &) = delete;
-      AttributeTester &operator= (AttributeTester &&) = delete;
-    };
-    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AttributeTester;
+private:
+  // Private and unimplemented for concrete interfaces.
+  AttributeTester (const AttributeTester &) = delete;
+  AttributeTester (AttributeTester &&) = delete;
+  AttributeTester &operator= (const AttributeTester &) = delete;
+  AttributeTester &operator= (AttributeTester &&) = delete;
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AttributeTester;
 
 #if !defined (_AMH_ATTRIBUTETESTEREXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _AMH_ATTRIBUTETESTEREXCEPTIONHOLDER__VAR_OUT_CH_
 
-    class AMH_AttributeTesterExceptionHolder;
-    using AMH_AttributeTesterExceptionHolder_var = TAO_Value_Var_T<AMH_AttributeTesterExceptionHolder>;
-    using AMH_AttributeTesterExceptionHolder_out = TAO_Value_Out_T<AMH_AttributeTesterExceptionHolder>;
+class AMH_AttributeTesterExceptionHolder;
+using AMH_AttributeTesterExceptionHolder_var = TAO_Value_Var_T<AMH_AttributeTesterExceptionHolder>;
+using AMH_AttributeTesterExceptionHolder_out = TAO_Value_Out_T<AMH_AttributeTesterExceptionHolder>;
 
 #endif /* end #if !defined */
 
-    class TAO_IDL_TEST_STUB_Export AMH_AttributeTesterExceptionHolder
-      : public virtual ::CORBA::DefaultValueRefCountBase
-    {
-    public:
-      using _ptr_type = AMH_AttributeTesterExceptionHolder*;
-      using _var_type = AMH_AttributeTesterExceptionHolder_var;
-      using _out_type = AMH_AttributeTesterExceptionHolder_out;
+class TAO_IDL_TEST_STUB_Export AMH_AttributeTesterExceptionHolder
+  : public virtual ::CORBA::DefaultValueRefCountBase
+{
+public:
+  using _ptr_type = AMH_AttributeTesterExceptionHolder*;
+  using _var_type = AMH_AttributeTesterExceptionHolder_var;
+  using _out_type = AMH_AttributeTesterExceptionHolder_out;
 
-      static void _tao_any_destructor (void *);
+  static void _tao_any_destructor (void *);
 
-      AMH_AttributeTesterExceptionHolder (::CORBA::Exception *ex)
-        : exception (ex)
-      {}
+  AMH_AttributeTesterExceptionHolder (::CORBA::Exception *ex)
+    : exception (ex)
+  {}
 
-      ~AMH_AttributeTesterExceptionHolder () override;
-      ::CORBA::ValueBase *_copy_value () override;
+  ~AMH_AttributeTesterExceptionHolder () override;
+  ::CORBA::ValueBase *_copy_value () override;
 
-      static AMH_AttributeTesterExceptionHolder* _downcast (::CORBA::ValueBase *v);
+  static AMH_AttributeTesterExceptionHolder* _downcast (::CORBA::ValueBase *v);
 
-      /// TAO extensions or internals
-      static ::CORBA::Boolean _tao_unmarshal (
-          TAO_InputCDR &strm,
-          AMH_AttributeTesterExceptionHolder *&new_object);
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      AMH_AttributeTesterExceptionHolder *&new_object);
 
-      char const * _tao_obv_repository_id () const override;
+  char const * _tao_obv_repository_id () const override;
 
-      void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
-      static char const * _tao_obv_static_repository_id ();
+  static char const * _tao_obv_static_repository_id ();
 
-      ::CORBA::TypeCode_ptr _tao_type () const override;
+  ::CORBA::TypeCode_ptr _tao_type () const override;
 
-    public:
+public:
 
-    public:
-      virtual void raise_get_a_su ();
+public:
+  virtual void raise_get_a_su ();
 
-  public:
+public:
 
-  public:
-    virtual void raise_set_a_su ();
+public:
+  virtual void raise_set_a_su ();
 
 public:
 
@@ -4194,316 +4183,96 @@ namespace ParamMod
     using object_array_type_slice = ParamMod::ParameterTester_var;
     struct object_array_type_tag {};
 
-    using object_array_type_var =
-      TAO_VarArray_Var_T<
-          object_array_type,
-          object_array_type_slice,
-          object_array_type_tag
-        >;
+    using object_array_type_var = TAO_VarArray_Var_T<object_array_type, object_array_type_slice, object_array_type_tag>;
 
-      using object_array_type_out =
-        TAO_Array_Out_T<
-            object_array_type,
-            object_array_type_var,
-            object_array_type_slice,
-            object_array_type_tag
-          >;
+    using object_array_type_out = TAO_Array_Out_T<object_array_type, object_array_type_var, object_array_type_slice, object_array_type_tag>;
 
-        using object_array_type_forany = TAO_Array_Forany_T<object_array_type, object_array_type_slice, object_array_type_tag>;
+    using object_array_type_forany = TAO_Array_Forany_T<object_array_type, object_array_type_slice, object_array_type_tag>;
 
-        static object_array_type_slice *object_array_type_alloc ();
+    static object_array_type_slice *object_array_type_alloc ();
 
-        static void object_array_type_free (object_array_type_slice *_tao_slice);
+    static void object_array_type_free (object_array_type_slice *_tao_slice);
 
-        static object_array_type_slice *object_array_type_dup (const object_array_type_slice *_tao_slice);
+    static object_array_type_slice *object_array_type_dup (const object_array_type_slice *_tao_slice);
 
-        static void object_array_type_copy (object_array_type_slice *_tao_to, const object_array_type_slice *_tao_from);
-        static ::CORBA::TypeCode_ptr const _tc_object_array_type;
+    static void object_array_type_copy (object_array_type_slice *_tao_to, const object_array_type_slice *_tao_from);
+    static ::CORBA::TypeCode_ptr const _tc_object_array_type;
 
-        struct object_struct_type;
-        using object_struct_type_var = ::TAO_Var_Var_T<object_struct_type>;
-        using object_struct_type_out = ::TAO_Out_T<object_struct_type>;
+    struct object_struct_type;
+    using object_struct_type_var = ::TAO_Var_Var_T<object_struct_type>;
+    using object_struct_type_out = ::TAO_Out_T<object_struct_type>;
 
-        struct TAO_IDL_TEST_STUB_Export object_struct_type
-        {
+    struct TAO_IDL_TEST_STUB_Export object_struct_type
+    {
 
-          using _var_type = object_struct_type_var;
-          using _out_type = object_struct_type_out;
+      using _var_type = object_struct_type_var;
+      using _out_type = object_struct_type_out;
 
-          static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-          ::CORBA::Octet o1 {};
-          ParamMod::ParameterTester_var p1 {};
-          ::CORBA::Long l1 {};
-        };
-        static ::CORBA::TypeCode_ptr const _tc_object_struct_type;
+      ::CORBA::Octet o1 {};
+      ParamMod::ParameterTester_var p1 {};
+      ::CORBA::Long l1 {};
+    };
+    static ::CORBA::TypeCode_ptr const _tc_object_struct_type;
 
-        class object_union_type;
-        using object_union_type_var = ::TAO_Var_Var_T<object_union_type>;
-        using object_union_type_out = ::TAO_Out_T<object_union_type>;
+    class object_union_type;
+    using object_union_type_var = ::TAO_Var_Var_T<object_union_type>;
+    using object_union_type_out = ::TAO_Out_T<object_union_type>;
 
-        class TAO_IDL_TEST_STUB_Export object_union_type
-        {
-        public:
-          object_union_type ();
-          object_union_type (object_union_type const &);
-          ~object_union_type ();
+    class TAO_IDL_TEST_STUB_Export object_union_type
+    {
+    public:
+      object_union_type ();
+      object_union_type (object_union_type const &);
+      ~object_union_type ();
 
-          object_union_type &operator= (object_union_type const &);
+      object_union_type &operator= (object_union_type const &);
 
-          void _d ( ::CORBA::Long);
-          ::CORBA::Long _d () const;
+      void _d ( ::CORBA::Long);
+      ::CORBA::Long _d () const;
 
-          using _var_type = object_union_type_var;
-          using _out_type = object_union_type_out;
+      using _var_type = object_union_type_var;
+      using _out_type = object_union_type_out;
 
-          static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-          void str (char *);
-          void str (char const *);
-          void str (::CORBA::String_var const&);
-          char const *str () const;
+      void str (char *);
+      void str (char const *);
+      void str (::CORBA::String_var const&);
+      char const *str () const;
 
-          void pt (ParamMod::ParameterTester_ptr);
-          ParamMod::ParameterTester_ptr pt () const;
+      void pt (ParamMod::ParameterTester_ptr);
+      ParamMod::ParameterTester_ptr pt () const;
 
-          void _default ();
-        private:
-          static unsigned long _tao_member_index (::CORBA::Long);
-          ::CORBA::Long disc_;
+      void _default ();
+    private:
+      static unsigned long _tao_member_index (::CORBA::Long);
+      ::CORBA::Long disc_;
 
-          union _tao_union_storage
-          {
-            _tao_union_storage () {}
-
-            char *str_;
-
-            ParamMod::ParameterTester_var *pt_;
-          } u_;
-
-          /// TAO extension - frees any allocated storage.
-          void _reset ();
-        };
-        static ::CORBA::TypeCode_ptr const _tc_object_union_type;
-
-        virtual ::ParamMod::ParameterTester::object_seq_type * parameter_tester_op (
-          const ::ParamMod::ParameterTester::object_struct_type & inarg,
-          ::ParamMod::ParameterTester::object_array_type inoutarg,
-          ::ParamMod::ParameterTester::object_union_type_out outarg);
-
-        virtual void sendc_parameter_tester_op (
-          ::ParamMod::AMI_ParameterTesterHandler_ptr ami_handler,
-          const ::ParamMod::ParameterTester::object_struct_type & inarg,
-          const ::ParamMod::ParameterTester::object_array_type inoutarg);
-
-        ::CORBA::Boolean _is_a (const char *type_id) override;
-        const char* _interface_repository_id () const override;
-        static const char* _desc_repository_id ();
-        static const char* _desc_interface_name ();
-        ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
-
-      protected:
-        // Concrete interface only.
-        ParameterTester ();
-
-        // Concrete non-local interface only.
-        ParameterTester (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
-
-        // Non-local interface only.
-        ParameterTester (
-            TAO_Stub *objref,
-            ::CORBA::Boolean _tao_collocated = false,
-            TAO_Abstract_ServantBase *servant = nullptr,
-            TAO_ORB_Core *orb_core = nullptr);
-
-        ~ParameterTester () override = default;
-
-      private:
-        // Private and unimplemented for concrete interfaces.
-        ParameterTester (const ParameterTester &) = delete;
-        ParameterTester (ParameterTester &&) = delete;
-        ParameterTester &operator= (const ParameterTester &) = delete;
-        ParameterTester &operator= (ParameterTester &&) = delete;
-      };
-      extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ParameterTester;
-
-#if !defined (_PARAMMOD_AMH_PARAMETERTESTEREXCEPTIONHOLDER__VAR_OUT_CH_)
-#define _PARAMMOD_AMH_PARAMETERTESTEREXCEPTIONHOLDER__VAR_OUT_CH_
-
-      class AMH_ParameterTesterExceptionHolder;
-      using AMH_ParameterTesterExceptionHolder_var = TAO_Value_Var_T<AMH_ParameterTesterExceptionHolder>;
-      using AMH_ParameterTesterExceptionHolder_out = TAO_Value_Out_T<AMH_ParameterTesterExceptionHolder>;
-
-#endif /* end #if !defined */
-
-      class TAO_IDL_TEST_STUB_Export AMH_ParameterTesterExceptionHolder
-        : public virtual ::CORBA::DefaultValueRefCountBase
+      union _tao_union_storage
       {
-      public:
-        using _ptr_type = AMH_ParameterTesterExceptionHolder*;
-        using _var_type = AMH_ParameterTesterExceptionHolder_var;
-        using _out_type = AMH_ParameterTesterExceptionHolder_out;
+        _tao_union_storage () {}
 
-        static void _tao_any_destructor (void *);
+        char *str_;
 
-        AMH_ParameterTesterExceptionHolder (::CORBA::Exception *ex)
-          : exception (ex)
-        {}
+        ParamMod::ParameterTester_var *pt_;
+      } u_;
 
-        ~AMH_ParameterTesterExceptionHolder () override;
-        ::CORBA::ValueBase *_copy_value () override;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    static ::CORBA::TypeCode_ptr const _tc_object_union_type;
 
-        static AMH_ParameterTesterExceptionHolder* _downcast (::CORBA::ValueBase *v);
+    virtual ::ParamMod::ParameterTester::object_seq_type * parameter_tester_op (
+      const ::ParamMod::ParameterTester::object_struct_type & inarg,
+      ::ParamMod::ParameterTester::object_array_type inoutarg,
+      ::ParamMod::ParameterTester::object_union_type_out outarg);
 
-        /// TAO extensions or internals
-        static ::CORBA::Boolean _tao_unmarshal (
-            TAO_InputCDR &strm,
-            AMH_ParameterTesterExceptionHolder *&new_object);
-
-        char const * _tao_obv_repository_id () const override;
-
-        void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
-
-        static char const * _tao_obv_static_repository_id ();
-
-        ::CORBA::TypeCode_ptr _tao_type () const override;
-
-      public:
-
-      public:
-        virtual void raise_parameter_tester_op ();
-
-    public:
-
-    public:
-      virtual void raise_sendc_parameter_tester_op ();
-
-  protected:
-    AMH_ParameterTesterExceptionHolder ();
-    ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
-    ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
-    ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
-
-  private:
-    AMH_ParameterTesterExceptionHolder (const AMH_ParameterTesterExceptionHolder &);
-    void operator= (const AMH_ParameterTesterExceptionHolder &);
-
-    ::CORBA::Exception *exception;
-
-  protected:
-    virtual ::CORBA::Boolean
-    _tao_marshal__ParamMod_AMH_ParameterTesterExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const;
-
-    virtual ::CORBA::Boolean
-    _tao_unmarshal__ParamMod_AMH_ParameterTesterExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
-  };
-  extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ParameterTesterExceptionHolder;
-
-#if !defined (_PARAMMOD_AMH_PARAMETERTESTERRESPONSEHANDLER__VAR_OUT_CH_)
-#define _PARAMMOD_AMH_PARAMETERTESTERRESPONSEHANDLER__VAR_OUT_CH_
-
-  class AMI_AMH_ParameterTesterResponseHandlerHandler;
-  using AMI_AMH_ParameterTesterResponseHandlerHandler_ptr = AMI_AMH_ParameterTesterResponseHandlerHandler *;
-
-  class AMH_ParameterTesterResponseHandler;
-  using AMH_ParameterTesterResponseHandler_ptr = AMH_ParameterTesterResponseHandler*;
-  using AMH_ParameterTesterResponseHandler_var = TAO_Objref_Var_T<AMH_ParameterTesterResponseHandler>;
-  using AMH_ParameterTesterResponseHandler_out = TAO_Objref_Out_T<AMH_ParameterTesterResponseHandler>;
-
-#endif /* end #if !defined */
-
-  class TAO_IDL_TEST_STUB_Export AMH_ParameterTesterResponseHandler
-    : public virtual ::CORBA::Object
-  {
-  public:
-    using _ptr_type = AMH_ParameterTesterResponseHandler_ptr;
-    using _var_type = AMH_ParameterTesterResponseHandler_var;
-    using _out_type = AMH_ParameterTesterResponseHandler_out;
-
-    static void _tao_any_destructor (void *);
-
-    // The static operations.
-    static AMH_ParameterTesterResponseHandler_ptr _duplicate (AMH_ParameterTesterResponseHandler_ptr obj);
-
-    static void _tao_release (AMH_ParameterTesterResponseHandler_ptr obj);
-
-    static AMH_ParameterTesterResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
-    static AMH_ParameterTesterResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
-    static AMH_ParameterTesterResponseHandler_ptr _nil ();
-
-    virtual void parameter_tester_op (
-      const ::ParamMod::ParameterTester::object_seq_type & return_value,
-      const ::ParamMod::ParameterTester::object_array_type inoutarg,
-      const ::ParamMod::ParameterTester::object_union_type & outarg) = 0;
-
-    virtual void parameter_tester_op_excep (
-      ::ParamMod::AMH_ParameterTesterExceptionHolder * holder) = 0;
-
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
-
-  protected:
-    // Abstract or local interface only.
-    AMH_ParameterTesterResponseHandler ();
-
-    ~AMH_ParameterTesterResponseHandler () override = default;
-
-  private:
-    // Private and unimplemented for concrete interfaces.
-    AMH_ParameterTesterResponseHandler (const AMH_ParameterTesterResponseHandler &) = delete;
-    AMH_ParameterTesterResponseHandler (AMH_ParameterTesterResponseHandler &&) = delete;
-    AMH_ParameterTesterResponseHandler &operator= (const AMH_ParameterTesterResponseHandler &) = delete;
-    AMH_ParameterTesterResponseHandler &operator= (AMH_ParameterTesterResponseHandler &&) = delete;
-  };
-  extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ParameterTesterResponseHandler;
-
-#if !defined (_PARAMMOD_AMI_PARAMETERTESTERHANDLER__VAR_OUT_CH_)
-#define _PARAMMOD_AMI_PARAMETERTESTERHANDLER__VAR_OUT_CH_
-
-  class AMI_ParameterTesterHandler;
-  using AMI_ParameterTesterHandler_ptr = AMI_ParameterTesterHandler*;
-  using AMI_ParameterTesterHandler_var = TAO_Objref_Var_T<AMI_ParameterTesterHandler>;
-  using AMI_ParameterTesterHandler_out = TAO_Objref_Out_T<AMI_ParameterTesterHandler>;
-
-#endif /* end #if !defined */
-
-  class TAO_IDL_TEST_STUB_Export AMI_ParameterTesterHandler
-    : public virtual ::Messaging::ReplyHandler
-
-  {
-  public:
-    friend class TAO::Narrow_Utils<AMI_ParameterTesterHandler>;
-    using _ptr_type = AMI_ParameterTesterHandler_ptr;
-    using _var_type = AMI_ParameterTesterHandler_var;
-    using _out_type = AMI_ParameterTesterHandler_out;
-
-    static void _tao_any_destructor (void *);
-
-    // The static operations.
-    static AMI_ParameterTesterHandler_ptr _duplicate (AMI_ParameterTesterHandler_ptr obj);
-
-    static void _tao_release (AMI_ParameterTesterHandler_ptr obj);
-
-    static AMI_ParameterTesterHandler_ptr _narrow (::CORBA::Object_ptr obj);
-    static AMI_ParameterTesterHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
-    static AMI_ParameterTesterHandler_ptr _nil ();
-
-    virtual void parameter_tester_op (
-      const ::ParamMod::ParameterTester::object_seq_type & ami_return_val,
-      const ::ParamMod::ParameterTester::object_array_type inoutarg,
-      const ::ParamMod::ParameterTester::object_union_type & outarg);
-
-    static void
-    parameter_tester_op_reply_stub (
-      TAO_InputCDR &_tao_reply_cdr,
-      ::Messaging::ReplyHandler_ptr _tao_reply_handler,
-      ::CORBA::ULong reply_status);
-
-    virtual void parameter_tester_op_excep (
-      ::Messaging::ExceptionHolder * excep_holder);
+    virtual void sendc_parameter_tester_op (
+      ::ParamMod::AMI_ParameterTesterHandler_ptr ami_handler,
+      const ::ParamMod::ParameterTester::object_struct_type & inarg,
+      const ::ParamMod::ParameterTester::object_array_type inoutarg);
 
     ::CORBA::Boolean _is_a (const char *type_id) override;
     const char* _interface_repository_id () const override;
@@ -4513,28 +4282,237 @@ namespace ParamMod
 
   protected:
     // Concrete interface only.
-    AMI_ParameterTesterHandler ();
+    ParameterTester ();
 
     // Concrete non-local interface only.
-    AMI_ParameterTesterHandler (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
+    ParameterTester (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
 
     // Non-local interface only.
-    AMI_ParameterTesterHandler (
+    ParameterTester (
         TAO_Stub *objref,
         ::CORBA::Boolean _tao_collocated = false,
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    ~AMI_ParameterTesterHandler () override = default;
+    ~ParameterTester () override = default;
 
   private:
     // Private and unimplemented for concrete interfaces.
-    AMI_ParameterTesterHandler (const AMI_ParameterTesterHandler &) = delete;
-    AMI_ParameterTesterHandler (AMI_ParameterTesterHandler &&) = delete;
-    AMI_ParameterTesterHandler &operator= (const AMI_ParameterTesterHandler &) = delete;
-    AMI_ParameterTesterHandler &operator= (AMI_ParameterTesterHandler &&) = delete;
+    ParameterTester (const ParameterTester &) = delete;
+    ParameterTester (ParameterTester &&) = delete;
+    ParameterTester &operator= (const ParameterTester &) = delete;
+    ParameterTester &operator= (ParameterTester &&) = delete;
   };
-  extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_ParameterTesterHandler;
+  extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ParameterTester;
+
+#if !defined (_PARAMMOD_AMH_PARAMETERTESTEREXCEPTIONHOLDER__VAR_OUT_CH_)
+#define _PARAMMOD_AMH_PARAMETERTESTEREXCEPTIONHOLDER__VAR_OUT_CH_
+
+  class AMH_ParameterTesterExceptionHolder;
+  using AMH_ParameterTesterExceptionHolder_var = TAO_Value_Var_T<AMH_ParameterTesterExceptionHolder>;
+  using AMH_ParameterTesterExceptionHolder_out = TAO_Value_Out_T<AMH_ParameterTesterExceptionHolder>;
+
+#endif /* end #if !defined */
+
+  class TAO_IDL_TEST_STUB_Export AMH_ParameterTesterExceptionHolder
+    : public virtual ::CORBA::DefaultValueRefCountBase
+  {
+  public:
+    using _ptr_type = AMH_ParameterTesterExceptionHolder*;
+    using _var_type = AMH_ParameterTesterExceptionHolder_var;
+    using _out_type = AMH_ParameterTesterExceptionHolder_out;
+
+    static void _tao_any_destructor (void *);
+
+    AMH_ParameterTesterExceptionHolder (::CORBA::Exception *ex)
+      : exception (ex)
+    {}
+
+    ~AMH_ParameterTesterExceptionHolder () override;
+    ::CORBA::ValueBase *_copy_value () override;
+
+    static AMH_ParameterTesterExceptionHolder* _downcast (::CORBA::ValueBase *v);
+
+    /// TAO extensions or internals
+    static ::CORBA::Boolean _tao_unmarshal (
+        TAO_InputCDR &strm,
+        AMH_ParameterTesterExceptionHolder *&new_object);
+
+    char const * _tao_obv_repository_id () const override;
+
+    void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+    static char const * _tao_obv_static_repository_id ();
+
+    ::CORBA::TypeCode_ptr _tao_type () const override;
+
+  public:
+
+  public:
+    virtual void raise_parameter_tester_op ();
+
+public:
+
+public:
+  virtual void raise_sendc_parameter_tester_op ();
+
+protected:
+  AMH_ParameterTesterExceptionHolder ();
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  AMH_ParameterTesterExceptionHolder (const AMH_ParameterTesterExceptionHolder &);
+  void operator= (const AMH_ParameterTesterExceptionHolder &);
+
+  ::CORBA::Exception *exception;
+
+protected:
+  virtual ::CORBA::Boolean
+  _tao_marshal__ParamMod_AMH_ParameterTesterExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+
+  virtual ::CORBA::Boolean
+  _tao_unmarshal__ParamMod_AMH_ParameterTesterExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &);
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ParameterTesterExceptionHolder;
+
+#if !defined (_PARAMMOD_AMH_PARAMETERTESTERRESPONSEHANDLER__VAR_OUT_CH_)
+#define _PARAMMOD_AMH_PARAMETERTESTERRESPONSEHANDLER__VAR_OUT_CH_
+
+class AMI_AMH_ParameterTesterResponseHandlerHandler;
+using AMI_AMH_ParameterTesterResponseHandlerHandler_ptr = AMI_AMH_ParameterTesterResponseHandlerHandler *;
+
+class AMH_ParameterTesterResponseHandler;
+using AMH_ParameterTesterResponseHandler_ptr = AMH_ParameterTesterResponseHandler*;
+using AMH_ParameterTesterResponseHandler_var = TAO_Objref_Var_T<AMH_ParameterTesterResponseHandler>;
+using AMH_ParameterTesterResponseHandler_out = TAO_Objref_Out_T<AMH_ParameterTesterResponseHandler>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export AMH_ParameterTesterResponseHandler
+  : public virtual ::CORBA::Object
+{
+public:
+  using _ptr_type = AMH_ParameterTesterResponseHandler_ptr;
+  using _var_type = AMH_ParameterTesterResponseHandler_var;
+  using _out_type = AMH_ParameterTesterResponseHandler_out;
+
+  static void _tao_any_destructor (void *);
+
+  // The static operations.
+  static AMH_ParameterTesterResponseHandler_ptr _duplicate (AMH_ParameterTesterResponseHandler_ptr obj);
+
+  static void _tao_release (AMH_ParameterTesterResponseHandler_ptr obj);
+
+  static AMH_ParameterTesterResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
+  static AMH_ParameterTesterResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+  static AMH_ParameterTesterResponseHandler_ptr _nil ();
+
+  virtual void parameter_tester_op (
+    const ::ParamMod::ParameterTester::object_seq_type & return_value,
+    const ::ParamMod::ParameterTester::object_array_type inoutarg,
+    const ::ParamMod::ParameterTester::object_union_type & outarg) = 0;
+
+  virtual void parameter_tester_op_excep (
+    ::ParamMod::AMH_ParameterTesterExceptionHolder * holder) = 0;
+
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
+  static const char* _desc_repository_id ();
+  static const char* _desc_interface_name ();
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+
+protected:
+  // Abstract or local interface only.
+  AMH_ParameterTesterResponseHandler ();
+
+  ~AMH_ParameterTesterResponseHandler () override = default;
+
+private:
+  // Private and unimplemented for concrete interfaces.
+  AMH_ParameterTesterResponseHandler (const AMH_ParameterTesterResponseHandler &) = delete;
+  AMH_ParameterTesterResponseHandler (AMH_ParameterTesterResponseHandler &&) = delete;
+  AMH_ParameterTesterResponseHandler &operator= (const AMH_ParameterTesterResponseHandler &) = delete;
+  AMH_ParameterTesterResponseHandler &operator= (AMH_ParameterTesterResponseHandler &&) = delete;
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ParameterTesterResponseHandler;
+
+#if !defined (_PARAMMOD_AMI_PARAMETERTESTERHANDLER__VAR_OUT_CH_)
+#define _PARAMMOD_AMI_PARAMETERTESTERHANDLER__VAR_OUT_CH_
+
+class AMI_ParameterTesterHandler;
+using AMI_ParameterTesterHandler_ptr = AMI_ParameterTesterHandler*;
+using AMI_ParameterTesterHandler_var = TAO_Objref_Var_T<AMI_ParameterTesterHandler>;
+using AMI_ParameterTesterHandler_out = TAO_Objref_Out_T<AMI_ParameterTesterHandler>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export AMI_ParameterTesterHandler
+  : public virtual ::Messaging::ReplyHandler
+
+{
+public:
+  friend class TAO::Narrow_Utils<AMI_ParameterTesterHandler>;
+  using _ptr_type = AMI_ParameterTesterHandler_ptr;
+  using _var_type = AMI_ParameterTesterHandler_var;
+  using _out_type = AMI_ParameterTesterHandler_out;
+
+  static void _tao_any_destructor (void *);
+
+  // The static operations.
+  static AMI_ParameterTesterHandler_ptr _duplicate (AMI_ParameterTesterHandler_ptr obj);
+
+  static void _tao_release (AMI_ParameterTesterHandler_ptr obj);
+
+  static AMI_ParameterTesterHandler_ptr _narrow (::CORBA::Object_ptr obj);
+  static AMI_ParameterTesterHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+  static AMI_ParameterTesterHandler_ptr _nil ();
+
+  virtual void parameter_tester_op (
+    const ::ParamMod::ParameterTester::object_seq_type & ami_return_val,
+    const ::ParamMod::ParameterTester::object_array_type inoutarg,
+    const ::ParamMod::ParameterTester::object_union_type & outarg);
+
+  static void
+  parameter_tester_op_reply_stub (
+    TAO_InputCDR &_tao_reply_cdr,
+    ::Messaging::ReplyHandler_ptr _tao_reply_handler,
+    ::CORBA::ULong reply_status);
+
+  virtual void parameter_tester_op_excep (
+    ::Messaging::ExceptionHolder * excep_holder);
+
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
+  static const char* _desc_repository_id ();
+  static const char* _desc_interface_name ();
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+
+protected:
+  // Concrete interface only.
+  AMI_ParameterTesterHandler ();
+
+  // Concrete non-local interface only.
+  AMI_ParameterTesterHandler (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
+
+  // Non-local interface only.
+  AMI_ParameterTesterHandler (
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
+
+  ~AMI_ParameterTesterHandler () override = default;
+
+private:
+  // Private and unimplemented for concrete interfaces.
+  AMI_ParameterTesterHandler (const AMI_ParameterTesterHandler &) = delete;
+  AMI_ParameterTesterHandler (AMI_ParameterTesterHandler &&) = delete;
+  AMI_ParameterTesterHandler &operator= (const AMI_ParameterTesterHandler &) = delete;
+  AMI_ParameterTesterHandler &operator= (AMI_ParameterTesterHandler &&) = delete;
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_ParameterTesterHandler;
 
 } // module ParamMod
 
@@ -7764,7 +7742,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -7782,7 +7760,7 @@ namespace TAO
 #define _BASE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Base>
+  class  Arg_Traits<::Base>
     : public Object_Arg_Traits_T<
         ::Base_ptr,
         ::Base_var,
@@ -7798,7 +7776,7 @@ namespace TAO
 #define _AMH_BASEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_BaseExceptionHolder>
+  class Arg_Traits<::AMH_BaseExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_BaseExceptionHolder *,
@@ -7816,7 +7794,7 @@ namespace TAO
 #define _AMI_BASEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_BaseHandler>
+  class  Arg_Traits<::AMI_BaseHandler>
     : public Object_Arg_Traits_T<
         ::AMI_BaseHandler_ptr,
         ::AMI_BaseHandler_var,
@@ -7832,7 +7810,7 @@ namespace TAO
 #define _DERIVED__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Derived>
+  class  Arg_Traits<::Derived>
     : public Object_Arg_Traits_T<
         ::Derived_ptr,
         ::Derived_var,
@@ -7848,7 +7826,7 @@ namespace TAO
 #define _AMH_DERIVEDEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_DerivedExceptionHolder>
+  class Arg_Traits<::AMH_DerivedExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_DerivedExceptionHolder *,
@@ -7866,7 +7844,7 @@ namespace TAO
 #define _AMI_DERIVEDHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_DerivedHandler>
+  class  Arg_Traits<::AMI_DerivedHandler>
     : public Object_Arg_Traits_T<
         ::AMI_DerivedHandler_ptr,
         ::AMI_DerivedHandler_var,
@@ -7879,7 +7857,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::foo_mod::date>
+  class Arg_Traits<::foo_mod::date>
     : public
         Fixed_Size_Arg_Traits_T<
             ::foo_mod::date,
@@ -7892,7 +7870,7 @@ namespace TAO
 #define _FOOSTEP__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::foostep>
+  class  Arg_Traits<::foostep>
     : public Object_Arg_Traits_T<
         ::foostep_ptr,
         ::foostep_var,
@@ -7908,7 +7886,7 @@ namespace TAO
 #define _AMH_FOOSTEPEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_foostepExceptionHolder>
+  class Arg_Traits<::AMH_foostepExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_foostepExceptionHolder *,
@@ -7926,7 +7904,7 @@ namespace TAO
 #define _AMI_FOOSTEPHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_foostepHandler>
+  class  Arg_Traits<::AMI_foostepHandler>
     : public Object_Arg_Traits_T<
         ::AMI_foostepHandler_ptr,
         ::AMI_foostepHandler_var,
@@ -7942,7 +7920,7 @@ namespace TAO
 #define _MOTHER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::mother>
+  class  Arg_Traits<::mother>
     : public Object_Arg_Traits_T<
         ::mother_ptr,
         ::mother_var,
@@ -7955,7 +7933,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::mother::member>
+  class Arg_Traits<::mother::member>
     : public
         Fixed_Size_Arg_Traits_T<
             ::mother::member,
@@ -7968,7 +7946,7 @@ namespace TAO
 #define _AMH_MOTHEREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_motherExceptionHolder>
+  class Arg_Traits<::AMH_motherExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_motherExceptionHolder *,
@@ -7986,7 +7964,7 @@ namespace TAO
 #define _AMI_MOTHERHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_motherHandler>
+  class  Arg_Traits<::AMI_motherHandler>
     : public Object_Arg_Traits_T<
         ::AMI_motherHandler_ptr,
         ::AMI_motherHandler_var,
@@ -8002,7 +7980,7 @@ namespace TAO
 #define _FATHER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::father>
+  class  Arg_Traits<::father>
     : public Object_Arg_Traits_T<
         ::father_ptr,
         ::father_var,
@@ -8015,7 +7993,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::father::member>
+  class Arg_Traits<::father::member>
     : public
         Fixed_Size_Arg_Traits_T<
             ::father::member,
@@ -8028,7 +8006,7 @@ namespace TAO
 #define _AMH_FATHEREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_fatherExceptionHolder>
+  class Arg_Traits<::AMH_fatherExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_fatherExceptionHolder *,
@@ -8046,7 +8024,7 @@ namespace TAO
 #define _AMI_FATHERHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_fatherHandler>
+  class  Arg_Traits<::AMI_fatherHandler>
     : public Object_Arg_Traits_T<
         ::AMI_fatherHandler_ptr,
         ::AMI_fatherHandler_var,
@@ -8062,7 +8040,7 @@ namespace TAO
 #define _CHILD__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::child>
+  class  Arg_Traits<::child>
     : public Object_Arg_Traits_T<
         ::child_ptr,
         ::child_var,
@@ -8078,7 +8056,7 @@ namespace TAO
 #define _AMH_CHILDEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_childExceptionHolder>
+  class Arg_Traits<::AMH_childExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_childExceptionHolder *,
@@ -8096,7 +8074,7 @@ namespace TAO
 #define _AMI_CHILDHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_childHandler>
+  class  Arg_Traits<::AMI_childHandler>
     : public Object_Arg_Traits_T<
         ::AMI_childHandler_ptr,
         ::AMI_childHandler_var,
@@ -8112,7 +8090,7 @@ namespace TAO
 #define _TRY__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::_cxx_try>
+  class  Arg_Traits<::_cxx_try>
     : public Object_Arg_Traits_T<
         ::_cxx_try_ptr,
         ::_cxx_try_var,
@@ -8128,7 +8106,7 @@ namespace TAO
 #define _AMH__CXX_TRYEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH__cxx_tryExceptionHolder>
+  class Arg_Traits<::AMH__cxx_tryExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH__cxx_tryExceptionHolder *,
@@ -8146,7 +8124,7 @@ namespace TAO
 #define _AMI__CXX_TRYHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI__cxx_tryHandler>
+  class  Arg_Traits<::AMI__cxx_tryHandler>
     : public Object_Arg_Traits_T<
         ::AMI__cxx_tryHandler_ptr,
         ::AMI__cxx_tryHandler_var,
@@ -8162,7 +8140,7 @@ namespace TAO
 #define _LATER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::later>
+  class  Arg_Traits<::later>
     : public Object_Arg_Traits_T<
         ::later_ptr,
         ::later_var,
@@ -8178,7 +8156,7 @@ namespace TAO
 #define _LATER_USER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::later_user>
+  class  Arg_Traits<::later_user>
     : public Object_Arg_Traits_T<
         ::later_user_ptr,
         ::later_user_var,
@@ -8194,7 +8172,7 @@ namespace TAO
 #define _AMH_LATER_USEREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_later_userExceptionHolder>
+  class Arg_Traits<::AMH_later_userExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_later_userExceptionHolder *,
@@ -8212,7 +8190,7 @@ namespace TAO
 #define _AMI_LATER_USERHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_later_userHandler>
+  class  Arg_Traits<::AMI_later_userHandler>
     : public Object_Arg_Traits_T<
         ::AMI_later_userHandler_ptr,
         ::AMI_later_userHandler_var,
@@ -8225,7 +8203,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::later_holder>
+  class Arg_Traits<::later_holder>
     : public
         Var_Size_Arg_Traits_T<
             ::later_holder,
@@ -8238,7 +8216,7 @@ namespace TAO
 #define _AMH_LATEREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_laterExceptionHolder>
+  class Arg_Traits<::AMH_laterExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_laterExceptionHolder *,
@@ -8256,7 +8234,7 @@ namespace TAO
 #define _AMI_LATERHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_laterHandler>
+  class  Arg_Traits<::AMI_laterHandler>
     : public Object_Arg_Traits_T<
         ::AMI_laterHandler_ptr,
         ::AMI_laterHandler_var,
@@ -8272,7 +8250,7 @@ namespace TAO
 #define _BEGIN__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Begin>
+  class  Arg_Traits<::Begin>
     : public Object_Arg_Traits_T<
         ::Begin_ptr,
         ::Begin_var,
@@ -8288,7 +8266,7 @@ namespace TAO
 #define _AMH_BEGINEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_BeginExceptionHolder>
+  class Arg_Traits<::AMH_BeginExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_BeginExceptionHolder *,
@@ -8306,7 +8284,7 @@ namespace TAO
 #define _AMI_BEGINHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_BeginHandler>
+  class  Arg_Traits<::AMI_BeginHandler>
     : public Object_Arg_Traits_T<
         ::AMI_BeginHandler_ptr,
         ::AMI_BeginHandler_var,
@@ -8322,7 +8300,7 @@ namespace TAO
 #define _MIDDLE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Middle>
+  class  Arg_Traits<::Middle>
     : public Object_Arg_Traits_T<
         ::Middle_ptr,
         ::Middle_var,
@@ -8338,7 +8316,7 @@ namespace TAO
 #define _AMH_MIDDLEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_MiddleExceptionHolder>
+  class Arg_Traits<::AMH_MiddleExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_MiddleExceptionHolder *,
@@ -8356,7 +8334,7 @@ namespace TAO
 #define _AMI_MIDDLEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_MiddleHandler>
+  class  Arg_Traits<::AMI_MiddleHandler>
     : public Object_Arg_Traits_T<
         ::AMI_MiddleHandler_ptr,
         ::AMI_MiddleHandler_var,
@@ -8372,7 +8350,7 @@ namespace TAO
 #define _END__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::End>
+  class  Arg_Traits<::End>
     : public Object_Arg_Traits_T<
         ::End_ptr,
         ::End_var,
@@ -8388,7 +8366,7 @@ namespace TAO
 #define _AMH_ENDEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_EndExceptionHolder>
+  class Arg_Traits<::AMH_EndExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_EndExceptionHolder *,
@@ -8406,7 +8384,7 @@ namespace TAO
 #define _AMI_ENDHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_EndHandler>
+  class  Arg_Traits<::AMI_EndHandler>
     : public Object_Arg_Traits_T<
         ::AMI_EndHandler_ptr,
         ::AMI_EndHandler_var,
@@ -8422,7 +8400,7 @@ namespace TAO
 #define _CLIENT__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Client>
+  class  Arg_Traits<::Client>
     : public Object_Arg_Traits_T<
         ::Client_ptr,
         ::Client_var,
@@ -8438,7 +8416,7 @@ namespace TAO
 #define _AMH_CLIENTEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_ClientExceptionHolder>
+  class Arg_Traits<::AMH_ClientExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_ClientExceptionHolder *,
@@ -8456,7 +8434,7 @@ namespace TAO
 #define _AMI_CLIENTHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_ClientHandler>
+  class  Arg_Traits<::AMI_ClientHandler>
     : public Object_Arg_Traits_T<
         ::AMI_ClientHandler_ptr,
         ::AMI_ClientHandler_var,
@@ -8472,7 +8450,7 @@ namespace TAO
 #define _ATTRIBUTETESTER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AttributeTester>
+  class  Arg_Traits<::AttributeTester>
     : public Object_Arg_Traits_T<
         ::AttributeTester_ptr,
         ::AttributeTester_var,
@@ -8485,7 +8463,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::AttributeTester::string_1_tag>
+  class Arg_Traits<::AttributeTester::string_1_tag>
     : public
         Var_Array_Arg_Traits_T<
             ::AttributeTester::string_1_out,
@@ -8499,7 +8477,7 @@ namespace TAO
 #define _AMH_ATTRIBUTETESTEREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_AttributeTesterExceptionHolder>
+  class Arg_Traits<::AMH_AttributeTesterExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_AttributeTesterExceptionHolder *,
@@ -8517,7 +8495,7 @@ namespace TAO
 #define _AMI_ATTRIBUTETESTERHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_AttributeTesterHandler>
+  class  Arg_Traits<::AMI_AttributeTesterHandler>
     : public Object_Arg_Traits_T<
         ::AMI_AttributeTesterHandler_ptr,
         ::AMI_AttributeTesterHandler_var,
@@ -8533,7 +8511,7 @@ namespace TAO
 #define _PARAMMOD_PARAMETERTESTER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::ParamMod::ParameterTester>
+  class  Arg_Traits<::ParamMod::ParameterTester>
     : public Object_Arg_Traits_T<
         ::ParamMod::ParameterTester_ptr,
         ::ParamMod::ParameterTester_var,
@@ -8546,7 +8524,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::ParamMod::ParameterTester::object_seq_type>
+  class Arg_Traits<::ParamMod::ParameterTester::object_seq_type>
     : public
         Var_Size_Arg_Traits_T<
             ::ParamMod::ParameterTester::object_seq_type,
@@ -8556,7 +8534,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::ParamMod::ParameterTester::object_array_type_tag>
+  class Arg_Traits<::ParamMod::ParameterTester::object_array_type_tag>
     : public
         Var_Array_Arg_Traits_T<
             ::ParamMod::ParameterTester::object_array_type_out,
@@ -8567,7 +8545,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::ParamMod::ParameterTester::object_struct_type>
+  class Arg_Traits<::ParamMod::ParameterTester::object_struct_type>
     : public
         Var_Size_Arg_Traits_T<
             ::ParamMod::ParameterTester::object_struct_type,
@@ -8577,7 +8555,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::ParamMod::ParameterTester::object_union_type>
+  class Arg_Traits<::ParamMod::ParameterTester::object_union_type>
     : public
         Var_Size_Arg_Traits_T<
             ::ParamMod::ParameterTester::object_union_type,
@@ -8590,7 +8568,7 @@ namespace TAO
 #define _PARAMMOD_AMH_PARAMETERTESTEREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::ParamMod::AMH_ParameterTesterExceptionHolder>
+  class Arg_Traits<::ParamMod::AMH_ParameterTesterExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::ParamMod::AMH_ParameterTesterExceptionHolder *,
@@ -8608,7 +8586,7 @@ namespace TAO
 #define _PARAMMOD_AMI_PARAMETERTESTERHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::ParamMod::AMI_ParameterTesterHandler>
+  class  Arg_Traits<::ParamMod::AMI_ParameterTesterHandler>
     : public Object_Arg_Traits_T<
         ::ParamMod::AMI_ParameterTesterHandler_ptr,
         ::ParamMod::AMI_ParameterTesterHandler_var,
@@ -8624,7 +8602,7 @@ namespace TAO
 #define _A__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::A>
+  class  Arg_Traits<::A>
     : public Object_Arg_Traits_T<
         ::A_ptr,
         ::A_var,
@@ -8637,7 +8615,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::A::U>
+  class Arg_Traits<::A::U>
     : public
         Var_Size_Arg_Traits_T<
             ::A::U,
@@ -8650,7 +8628,7 @@ namespace TAO
 #define _AMH_AEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_AExceptionHolder>
+  class Arg_Traits<::AMH_AExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_AExceptionHolder *,
@@ -8668,7 +8646,7 @@ namespace TAO
 #define _AMI_AHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_AHandler>
+  class  Arg_Traits<::AMI_AHandler>
     : public Object_Arg_Traits_T<
         ::AMI_AHandler_ptr,
         ::AMI_AHandler_var,
@@ -8684,7 +8662,7 @@ namespace TAO
 #define _M_A__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::M::A>
+  class  Arg_Traits<::M::A>
     : public Object_Arg_Traits_T<
         ::M::A_ptr,
         ::M::A_var,
@@ -8700,7 +8678,7 @@ namespace TAO
 #define _M_A__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::M::A>
+  class  Arg_Traits<::M::A>
     : public Object_Arg_Traits_T<
         ::M::A_ptr,
         ::M::A_var,
@@ -8716,7 +8694,7 @@ namespace TAO
 #define _M_AMH_AEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::M::AMH_AExceptionHolder>
+  class Arg_Traits<::M::AMH_AExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::M::AMH_AExceptionHolder *,
@@ -8734,7 +8712,7 @@ namespace TAO
 #define _M_AMI_AHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::M::AMI_AHandler>
+  class  Arg_Traits<::M::AMI_AHandler>
     : public Object_Arg_Traits_T<
         ::M::AMI_AHandler_ptr,
         ::M::AMI_AHandler_var,
@@ -8750,7 +8728,7 @@ namespace TAO
 #define _I1_IF1__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::i1::if1>
+  class  Arg_Traits<::i1::if1>
     : public Object_Arg_Traits_T<
         ::i1::if1_ptr,
         ::i1::if1_var,
@@ -8766,7 +8744,7 @@ namespace TAO
 #define _I1_AMH_IF1EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::i1::AMH_if1ExceptionHolder>
+  class Arg_Traits<::i1::AMH_if1ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::i1::AMH_if1ExceptionHolder *,
@@ -8784,7 +8762,7 @@ namespace TAO
 #define _I1_AMI_IF1HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::i1::AMI_if1Handler>
+  class  Arg_Traits<::i1::AMI_if1Handler>
     : public Object_Arg_Traits_T<
         ::i1::AMI_if1Handler_ptr,
         ::i1::AMI_if1Handler_var,
@@ -8800,7 +8778,7 @@ namespace TAO
 #define _I2_IF2__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::i2::if2>
+  class  Arg_Traits<::i2::if2>
     : public Object_Arg_Traits_T<
         ::i2::if2_ptr,
         ::i2::if2_var,
@@ -8816,7 +8794,7 @@ namespace TAO
 #define _I2_AMH_IF2EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::i2::AMH_if2ExceptionHolder>
+  class Arg_Traits<::i2::AMH_if2ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::i2::AMH_if2ExceptionHolder *,
@@ -8834,7 +8812,7 @@ namespace TAO
 #define _I2_AMI_IF2HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::i2::AMI_if2Handler>
+  class  Arg_Traits<::i2::AMI_if2Handler>
     : public Object_Arg_Traits_T<
         ::i2::AMI_if2Handler_ptr,
         ::i2::AMI_if2Handler_var,
@@ -8850,7 +8828,7 @@ namespace TAO
 #define _I2_IF3__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::i2::if3>
+  class  Arg_Traits<::i2::if3>
     : public Object_Arg_Traits_T<
         ::i2::if3_ptr,
         ::i2::if3_var,
@@ -8866,7 +8844,7 @@ namespace TAO
 #define _I2_AMH_IF3EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::i2::AMH_if3ExceptionHolder>
+  class Arg_Traits<::i2::AMH_if3ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::i2::AMH_if3ExceptionHolder *,
@@ -8884,7 +8862,7 @@ namespace TAO
 #define _I2_AMI_IF3HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::i2::AMI_if3Handler>
+  class  Arg_Traits<::i2::AMI_if3Handler>
     : public Object_Arg_Traits_T<
         ::i2::AMI_if3Handler_ptr,
         ::i2::AMI_if3Handler_var,
@@ -8900,7 +8878,7 @@ namespace TAO
 #define _REDEFS_BASE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::redefs::base>
+  class  Arg_Traits<::redefs::base>
     : public Object_Arg_Traits_T<
         ::redefs::base_ptr,
         ::redefs::base_var,
@@ -8913,7 +8891,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::redefs::base::foo>
+  class Arg_Traits<::redefs::base::foo>
     : public
         Fixed_Size_Arg_Traits_T<
             ::redefs::base::foo,
@@ -8926,7 +8904,7 @@ namespace TAO
 #define _REDEFS_AMH_BASEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::redefs::AMH_baseExceptionHolder>
+  class Arg_Traits<::redefs::AMH_baseExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::redefs::AMH_baseExceptionHolder *,
@@ -8944,7 +8922,7 @@ namespace TAO
 #define _REDEFS_AMI_BASEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::redefs::AMI_baseHandler>
+  class  Arg_Traits<::redefs::AMI_baseHandler>
     : public Object_Arg_Traits_T<
         ::redefs::AMI_baseHandler_ptr,
         ::redefs::AMI_baseHandler_var,
@@ -8960,7 +8938,7 @@ namespace TAO
 #define _REDEFS_DERIVED__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::redefs::derived>
+  class  Arg_Traits<::redefs::derived>
     : public Object_Arg_Traits_T<
         ::redefs::derived_ptr,
         ::redefs::derived_var,
@@ -8973,7 +8951,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::redefs::derived::foo>
+  class Arg_Traits<::redefs::derived::foo>
     : public
         Var_Size_Arg_Traits_T<
             ::redefs::derived::foo,
@@ -8986,7 +8964,7 @@ namespace TAO
 #define _REDEFS_AMH_DERIVEDEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::redefs::AMH_derivedExceptionHolder>
+  class Arg_Traits<::redefs::AMH_derivedExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::redefs::AMH_derivedExceptionHolder *,
@@ -9004,7 +8982,7 @@ namespace TAO
 #define _REDEFS_AMI_DERIVEDHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::redefs::AMI_derivedHandler>
+  class  Arg_Traits<::redefs::AMI_derivedHandler>
     : public Object_Arg_Traits_T<
         ::redefs::AMI_derivedHandler_ptr,
         ::redefs::AMI_derivedHandler_var,
@@ -9020,7 +8998,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_BASE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Rec_Arg_Traits::base>
+  class  Arg_Traits<::Rec_Arg_Traits::base>
     : public Object_Arg_Traits_T<
         ::Rec_Arg_Traits::base_ptr,
         ::Rec_Arg_Traits::base_var,
@@ -9036,7 +9014,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMH_BASEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Rec_Arg_Traits::AMH_baseExceptionHolder>
+  class Arg_Traits<::Rec_Arg_Traits::AMH_baseExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Rec_Arg_Traits::AMH_baseExceptionHolder *,
@@ -9054,7 +9032,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMI_BASEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Rec_Arg_Traits::AMI_baseHandler>
+  class  Arg_Traits<::Rec_Arg_Traits::AMI_baseHandler>
     : public Object_Arg_Traits_T<
         ::Rec_Arg_Traits::AMI_baseHandler_ptr,
         ::Rec_Arg_Traits::AMI_baseHandler_var,
@@ -9070,7 +9048,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_DERIVED__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Rec_Arg_Traits::derived>
+  class  Arg_Traits<::Rec_Arg_Traits::derived>
     : public Object_Arg_Traits_T<
         ::Rec_Arg_Traits::derived_ptr,
         ::Rec_Arg_Traits::derived_var,
@@ -9086,7 +9064,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMH_DERIVEDEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Rec_Arg_Traits::AMH_derivedExceptionHolder>
+  class Arg_Traits<::Rec_Arg_Traits::AMH_derivedExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Rec_Arg_Traits::AMH_derivedExceptionHolder *,
@@ -9104,7 +9082,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMI_DERIVEDHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Rec_Arg_Traits::AMI_derivedHandler>
+  class  Arg_Traits<::Rec_Arg_Traits::AMI_derivedHandler>
     : public Object_Arg_Traits_T<
         ::Rec_Arg_Traits::AMI_derivedHandler_ptr,
         ::Rec_Arg_Traits::AMI_derivedHandler_var,
@@ -9120,7 +9098,7 @@ namespace TAO
 #define _CALL_TEST_ITEST__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::call_test::iTest>
+  class  Arg_Traits<::call_test::iTest>
     : public Object_Arg_Traits_T<
         ::call_test::iTest_ptr,
         ::call_test::iTest_var,
@@ -9136,7 +9114,7 @@ namespace TAO
 #define _CALL_TEST_AMH_ITESTEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::call_test::AMH_iTestExceptionHolder>
+  class Arg_Traits<::call_test::AMH_iTestExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::call_test::AMH_iTestExceptionHolder *,
@@ -9154,7 +9132,7 @@ namespace TAO
 #define _CALL_TEST_AMI_ITESTHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::call_test::AMI_iTestHandler>
+  class  Arg_Traits<::call_test::AMI_iTestHandler>
     : public Object_Arg_Traits_T<
         ::call_test::AMI_iTestHandler_ptr,
         ::call_test::AMI_iTestHandler_var,
@@ -9170,7 +9148,7 @@ namespace TAO
 #define _CALL_ATTRIBUTE_IBAR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::call_attribute::iBar>
+  class  Arg_Traits<::call_attribute::iBar>
     : public Object_Arg_Traits_T<
         ::call_attribute::iBar_ptr,
         ::call_attribute::iBar_var,
@@ -9186,7 +9164,7 @@ namespace TAO
 #define _CALL_ATTRIBUTE_AMH_IBAREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::call_attribute::AMH_iBarExceptionHolder>
+  class Arg_Traits<::call_attribute::AMH_iBarExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::call_attribute::AMH_iBarExceptionHolder *,
@@ -9204,7 +9182,7 @@ namespace TAO
 #define _CALL_ATTRIBUTE_AMI_IBARHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::call_attribute::AMI_iBarHandler>
+  class  Arg_Traits<::call_attribute::AMI_iBarHandler>
     : public Object_Arg_Traits_T<
         ::call_attribute::AMI_iBarHandler_ptr,
         ::call_attribute::AMI_iBarHandler_var,
@@ -9229,11 +9207,9 @@ protected:
   ~OBV_AMH_BaseExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_BaseExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_BaseExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_BaseExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_BaseExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9257,11 +9233,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_DerivedExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_DerivedExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_DerivedExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_DerivedExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9281,11 +9255,9 @@ protected:
   ~OBV_AMH_foostepExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_foostepExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_foostepExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_foostepExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_foostepExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9309,11 +9281,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_motherExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_motherExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_motherExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_motherExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9337,11 +9307,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_fatherExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_fatherExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_fatherExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_fatherExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9365,11 +9333,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_childExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_childExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_childExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_childExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9393,11 +9359,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH__cxx_tryExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH__cxx_tryExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH__cxx_tryExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH__cxx_tryExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9417,11 +9381,9 @@ protected:
   ~OBV_AMH_later_userExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_later_userExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_later_userExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_later_userExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_later_userExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9445,11 +9407,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_laterExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_laterExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_laterExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_laterExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9473,11 +9433,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_BeginExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_BeginExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_BeginExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_BeginExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9501,11 +9459,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_MiddleExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_MiddleExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_MiddleExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_MiddleExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9529,11 +9485,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_EndExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_EndExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_EndExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_EndExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9553,11 +9507,9 @@ protected:
   ~OBV_AMH_ClientExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_ClientExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_ClientExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_ClientExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_ClientExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9577,11 +9529,9 @@ protected:
   ~OBV_AMH_AttributeTesterExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_AttributeTesterExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_AttributeTesterExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_AttributeTesterExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_AttributeTesterExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9603,11 +9553,9 @@ protected:
   ~AMH_ParameterTesterExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__ParamMod_AMH_ParameterTesterExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__ParamMod_AMH_ParameterTesterExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__ParamMod_AMH_ParameterTesterExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__ParamMod_AMH_ParameterTesterExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9632,11 +9580,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_AExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_AExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_AExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_AExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9662,11 +9608,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M_AMH_AExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M_AMH_AExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M_AMH_AExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M_AMH_AExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9689,11 +9633,9 @@ protected:
   ~AMH_if1ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__i1_AMH_if1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__i1_AMH_if1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__i1_AMH_if1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__i1_AMH_if1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9716,11 +9658,9 @@ protected:
   ~AMH_if2ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__i2_AMH_if2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__i2_AMH_if2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__i2_AMH_if2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__i2_AMH_if2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9740,11 +9680,9 @@ protected:
   ~AMH_if3ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__i2_AMH_if3ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__i2_AMH_if3ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__i2_AMH_if3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__i2_AMH_if3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9771,11 +9709,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__redefs_AMH_baseExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__redefs_AMH_baseExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__redefs_AMH_baseExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__redefs_AMH_baseExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9799,11 +9735,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__redefs_AMH_derivedExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__redefs_AMH_derivedExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__redefs_AMH_derivedExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__redefs_AMH_derivedExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9830,11 +9764,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__Rec_Arg_Traits_AMH_baseExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Rec_Arg_Traits_AMH_baseExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__Rec_Arg_Traits_AMH_baseExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Rec_Arg_Traits_AMH_baseExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9854,11 +9786,9 @@ protected:
   ~AMH_derivedExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__Rec_Arg_Traits_AMH_derivedExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Rec_Arg_Traits_AMH_derivedExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__Rec_Arg_Traits_AMH_derivedExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Rec_Arg_Traits_AMH_derivedExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9881,11 +9811,9 @@ protected:
   ~AMH_iTestExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__call_test_AMH_iTestExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__call_test_AMH_iTestExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__call_test_AMH_iTestExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__call_test_AMH_iTestExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9908,11 +9836,9 @@ protected:
   ~AMH_iBarExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__call_attribute_AMH_iBarExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__call_attribute_AMH_iBarExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__call_attribute_AMH_iBarExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__call_attribute_AMH_iBarExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -9933,7 +9859,7 @@ namespace TAO
 #define _BASE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Base>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Base>
   {
     static ::Base_ptr duplicate (::Base_ptr p);
     static void release (::Base_ptr p);
@@ -9960,7 +9886,7 @@ namespace TAO
 #define _AMH_BASERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_BaseResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_BaseResponseHandler>
   {
     static ::AMH_BaseResponseHandler_ptr duplicate (::AMH_BaseResponseHandler_ptr p);
     static void release (::AMH_BaseResponseHandler_ptr p);
@@ -9974,7 +9900,7 @@ namespace TAO
 #define _AMI_BASEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_BaseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_BaseHandler>
   {
     static ::AMI_BaseHandler_ptr duplicate (::AMI_BaseHandler_ptr p);
     static void release (::AMI_BaseHandler_ptr p);
@@ -9988,7 +9914,7 @@ namespace TAO
 #define _DERIVED__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Derived>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Derived>
   {
     static ::Derived_ptr duplicate (::Derived_ptr p);
     static void release (::Derived_ptr p);
@@ -10015,7 +9941,7 @@ namespace TAO
 #define _AMH_DERIVEDRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_DerivedResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_DerivedResponseHandler>
   {
     static ::AMH_DerivedResponseHandler_ptr duplicate (::AMH_DerivedResponseHandler_ptr p);
     static void release (::AMH_DerivedResponseHandler_ptr p);
@@ -10029,7 +9955,7 @@ namespace TAO
 #define _AMI_DERIVEDHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_DerivedHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_DerivedHandler>
   {
     static ::AMI_DerivedHandler_ptr duplicate (::AMI_DerivedHandler_ptr p);
     static void release (::AMI_DerivedHandler_ptr p);
@@ -10043,7 +9969,7 @@ namespace TAO
 #define _FOOSTEP__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::foostep>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::foostep>
   {
     static ::foostep_ptr duplicate (::foostep_ptr p);
     static void release (::foostep_ptr p);
@@ -10070,7 +9996,7 @@ namespace TAO
 #define _AMH_FOOSTEPRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_foostepResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_foostepResponseHandler>
   {
     static ::AMH_foostepResponseHandler_ptr duplicate (::AMH_foostepResponseHandler_ptr p);
     static void release (::AMH_foostepResponseHandler_ptr p);
@@ -10084,7 +10010,7 @@ namespace TAO
 #define _AMI_FOOSTEPHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_foostepHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_foostepHandler>
   {
     static ::AMI_foostepHandler_ptr duplicate (::AMI_foostepHandler_ptr p);
     static void release (::AMI_foostepHandler_ptr p);
@@ -10098,7 +10024,7 @@ namespace TAO
 #define _MOTHER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mother>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mother>
   {
     static ::mother_ptr duplicate (::mother_ptr p);
     static void release (::mother_ptr p);
@@ -10125,7 +10051,7 @@ namespace TAO
 #define _AMH_MOTHERRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_motherResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_motherResponseHandler>
   {
     static ::AMH_motherResponseHandler_ptr duplicate (::AMH_motherResponseHandler_ptr p);
     static void release (::AMH_motherResponseHandler_ptr p);
@@ -10139,7 +10065,7 @@ namespace TAO
 #define _AMI_MOTHERHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_motherHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_motherHandler>
   {
     static ::AMI_motherHandler_ptr duplicate (::AMI_motherHandler_ptr p);
     static void release (::AMI_motherHandler_ptr p);
@@ -10153,7 +10079,7 @@ namespace TAO
 #define _FATHER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::father>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::father>
   {
     static ::father_ptr duplicate (::father_ptr p);
     static void release (::father_ptr p);
@@ -10180,7 +10106,7 @@ namespace TAO
 #define _AMH_FATHERRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_fatherResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_fatherResponseHandler>
   {
     static ::AMH_fatherResponseHandler_ptr duplicate (::AMH_fatherResponseHandler_ptr p);
     static void release (::AMH_fatherResponseHandler_ptr p);
@@ -10194,7 +10120,7 @@ namespace TAO
 #define _AMI_FATHERHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_fatherHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_fatherHandler>
   {
     static ::AMI_fatherHandler_ptr duplicate (::AMI_fatherHandler_ptr p);
     static void release (::AMI_fatherHandler_ptr p);
@@ -10208,7 +10134,7 @@ namespace TAO
 #define _CHILD__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::child>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::child>
   {
     static ::child_ptr duplicate (::child_ptr p);
     static void release (::child_ptr p);
@@ -10235,7 +10161,7 @@ namespace TAO
 #define _AMH_CHILDRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_childResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_childResponseHandler>
   {
     static ::AMH_childResponseHandler_ptr duplicate (::AMH_childResponseHandler_ptr p);
     static void release (::AMH_childResponseHandler_ptr p);
@@ -10249,7 +10175,7 @@ namespace TAO
 #define _AMI_CHILDHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_childHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_childHandler>
   {
     static ::AMI_childHandler_ptr duplicate (::AMI_childHandler_ptr p);
     static void release (::AMI_childHandler_ptr p);
@@ -10263,7 +10189,7 @@ namespace TAO
 #define _TRY__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::_cxx_try>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::_cxx_try>
   {
     static ::_cxx_try_ptr duplicate (::_cxx_try_ptr p);
     static void release (::_cxx_try_ptr p);
@@ -10290,7 +10216,7 @@ namespace TAO
 #define _AMH__CXX_TRYRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH__cxx_tryResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH__cxx_tryResponseHandler>
   {
     static ::AMH__cxx_tryResponseHandler_ptr duplicate (::AMH__cxx_tryResponseHandler_ptr p);
     static void release (::AMH__cxx_tryResponseHandler_ptr p);
@@ -10304,7 +10230,7 @@ namespace TAO
 #define _AMI__CXX_TRYHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI__cxx_tryHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI__cxx_tryHandler>
   {
     static ::AMI__cxx_tryHandler_ptr duplicate (::AMI__cxx_tryHandler_ptr p);
     static void release (::AMI__cxx_tryHandler_ptr p);
@@ -10318,7 +10244,7 @@ namespace TAO
 #define _LATER_USER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::later_user>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::later_user>
   {
     static ::later_user_ptr duplicate (::later_user_ptr p);
     static void release (::later_user_ptr p);
@@ -10345,7 +10271,7 @@ namespace TAO
 #define _AMH_LATER_USERRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_later_userResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_later_userResponseHandler>
   {
     static ::AMH_later_userResponseHandler_ptr duplicate (::AMH_later_userResponseHandler_ptr p);
     static void release (::AMH_later_userResponseHandler_ptr p);
@@ -10359,7 +10285,7 @@ namespace TAO
 #define _AMI_LATER_USERHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_later_userHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_later_userHandler>
   {
     static ::AMI_later_userHandler_ptr duplicate (::AMI_later_userHandler_ptr p);
     static void release (::AMI_later_userHandler_ptr p);
@@ -10373,7 +10299,7 @@ namespace TAO
 #define _LATER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::later>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::later>
   {
     static ::later_ptr duplicate (::later_ptr p);
     static void release (::later_ptr p);
@@ -10400,7 +10326,7 @@ namespace TAO
 #define _AMH_LATERRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_laterResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_laterResponseHandler>
   {
     static ::AMH_laterResponseHandler_ptr duplicate (::AMH_laterResponseHandler_ptr p);
     static void release (::AMH_laterResponseHandler_ptr p);
@@ -10414,7 +10340,7 @@ namespace TAO
 #define _AMI_LATERHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_laterHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_laterHandler>
   {
     static ::AMI_laterHandler_ptr duplicate (::AMI_laterHandler_ptr p);
     static void release (::AMI_laterHandler_ptr p);
@@ -10428,7 +10354,7 @@ namespace TAO
 #define _BEGIN__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Begin>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Begin>
   {
     static ::Begin_ptr duplicate (::Begin_ptr p);
     static void release (::Begin_ptr p);
@@ -10455,7 +10381,7 @@ namespace TAO
 #define _AMH_BEGINRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_BeginResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_BeginResponseHandler>
   {
     static ::AMH_BeginResponseHandler_ptr duplicate (::AMH_BeginResponseHandler_ptr p);
     static void release (::AMH_BeginResponseHandler_ptr p);
@@ -10469,7 +10395,7 @@ namespace TAO
 #define _AMI_BEGINHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_BeginHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_BeginHandler>
   {
     static ::AMI_BeginHandler_ptr duplicate (::AMI_BeginHandler_ptr p);
     static void release (::AMI_BeginHandler_ptr p);
@@ -10483,7 +10409,7 @@ namespace TAO
 #define _MIDDLE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Middle>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Middle>
   {
     static ::Middle_ptr duplicate (::Middle_ptr p);
     static void release (::Middle_ptr p);
@@ -10510,7 +10436,7 @@ namespace TAO
 #define _AMH_MIDDLERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_MiddleResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_MiddleResponseHandler>
   {
     static ::AMH_MiddleResponseHandler_ptr duplicate (::AMH_MiddleResponseHandler_ptr p);
     static void release (::AMH_MiddleResponseHandler_ptr p);
@@ -10524,7 +10450,7 @@ namespace TAO
 #define _AMI_MIDDLEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_MiddleHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_MiddleHandler>
   {
     static ::AMI_MiddleHandler_ptr duplicate (::AMI_MiddleHandler_ptr p);
     static void release (::AMI_MiddleHandler_ptr p);
@@ -10538,7 +10464,7 @@ namespace TAO
 #define _END__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::End>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::End>
   {
     static ::End_ptr duplicate (::End_ptr p);
     static void release (::End_ptr p);
@@ -10565,7 +10491,7 @@ namespace TAO
 #define _AMH_ENDRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_EndResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_EndResponseHandler>
   {
     static ::AMH_EndResponseHandler_ptr duplicate (::AMH_EndResponseHandler_ptr p);
     static void release (::AMH_EndResponseHandler_ptr p);
@@ -10579,7 +10505,7 @@ namespace TAO
 #define _AMI_ENDHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_EndHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_EndHandler>
   {
     static ::AMI_EndHandler_ptr duplicate (::AMI_EndHandler_ptr p);
     static void release (::AMI_EndHandler_ptr p);
@@ -10593,7 +10519,7 @@ namespace TAO
 #define _CLIENT__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Client>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Client>
   {
     static ::Client_ptr duplicate (::Client_ptr p);
     static void release (::Client_ptr p);
@@ -10620,7 +10546,7 @@ namespace TAO
 #define _AMH_CLIENTRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_ClientResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_ClientResponseHandler>
   {
     static ::AMH_ClientResponseHandler_ptr duplicate (::AMH_ClientResponseHandler_ptr p);
     static void release (::AMH_ClientResponseHandler_ptr p);
@@ -10634,7 +10560,7 @@ namespace TAO
 #define _AMI_CLIENTHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_ClientHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_ClientHandler>
   {
     static ::AMI_ClientHandler_ptr duplicate (::AMI_ClientHandler_ptr p);
     static void release (::AMI_ClientHandler_ptr p);
@@ -10648,7 +10574,7 @@ namespace TAO
 #define _ATTRIBUTETESTER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AttributeTester>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AttributeTester>
   {
     static ::AttributeTester_ptr duplicate (::AttributeTester_ptr p);
     static void release (::AttributeTester_ptr p);
@@ -10691,7 +10617,7 @@ namespace TAO
 #define _AMH_ATTRIBUTETESTERRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_AttributeTesterResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_AttributeTesterResponseHandler>
   {
     static ::AMH_AttributeTesterResponseHandler_ptr duplicate (::AMH_AttributeTesterResponseHandler_ptr p);
     static void release (::AMH_AttributeTesterResponseHandler_ptr p);
@@ -10705,7 +10631,7 @@ namespace TAO
 #define _AMI_ATTRIBUTETESTERHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_AttributeTesterHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_AttributeTesterHandler>
   {
     static ::AMI_AttributeTesterHandler_ptr duplicate (::AMI_AttributeTesterHandler_ptr p);
     static void release (::AMI_AttributeTesterHandler_ptr p);
@@ -10719,7 +10645,7 @@ namespace TAO
 #define _PARAMMOD_PARAMETERTESTER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::ParamMod::ParameterTester>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::ParamMod::ParameterTester>
   {
     static ::ParamMod::ParameterTester_ptr duplicate (::ParamMod::ParameterTester_ptr p);
     static void release (::ParamMod::ParameterTester_ptr p);
@@ -10762,7 +10688,7 @@ namespace TAO
 #define _PARAMMOD_AMH_PARAMETERTESTERRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::ParamMod::AMH_ParameterTesterResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::ParamMod::AMH_ParameterTesterResponseHandler>
   {
     static ::ParamMod::AMH_ParameterTesterResponseHandler_ptr duplicate (::ParamMod::AMH_ParameterTesterResponseHandler_ptr p);
     static void release (::ParamMod::AMH_ParameterTesterResponseHandler_ptr p);
@@ -10776,7 +10702,7 @@ namespace TAO
 #define _PARAMMOD_AMI_PARAMETERTESTERHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::ParamMod::AMI_ParameterTesterHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::ParamMod::AMI_ParameterTesterHandler>
   {
     static ::ParamMod::AMI_ParameterTesterHandler_ptr duplicate (::ParamMod::AMI_ParameterTesterHandler_ptr p);
     static void release (::ParamMod::AMI_ParameterTesterHandler_ptr p);
@@ -10790,7 +10716,7 @@ namespace TAO
 #define _TESTLOCAL__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::testlocal>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::testlocal>
   {
     static ::testlocal_ptr duplicate (::testlocal_ptr p);
     static void release (::testlocal_ptr p);
@@ -10804,7 +10730,7 @@ namespace TAO
 #define _A__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::A>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::A>
   {
     static ::A_ptr duplicate (::A_ptr p);
     static void release (::A_ptr p);
@@ -10831,7 +10757,7 @@ namespace TAO
 #define _AMH_ARESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_AResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_AResponseHandler>
   {
     static ::AMH_AResponseHandler_ptr duplicate (::AMH_AResponseHandler_ptr p);
     static void release (::AMH_AResponseHandler_ptr p);
@@ -10845,7 +10771,7 @@ namespace TAO
 #define _AMI_AHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_AHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_AHandler>
   {
     static ::AMI_AHandler_ptr duplicate (::AMI_AHandler_ptr p);
     static void release (::AMI_AHandler_ptr p);
@@ -10859,7 +10785,7 @@ namespace TAO
 #define _M_A__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::M::A>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::M::A>
   {
     static ::M::A_ptr duplicate (::M::A_ptr p);
     static void release (::M::A_ptr p);
@@ -10873,7 +10799,7 @@ namespace TAO
 #define _M_A__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::M::A>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::M::A>
   {
     static ::M::A_ptr duplicate (::M::A_ptr p);
     static void release (::M::A_ptr p);
@@ -10900,7 +10826,7 @@ namespace TAO
 #define _M_AMH_ARESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::M::AMH_AResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::M::AMH_AResponseHandler>
   {
     static ::M::AMH_AResponseHandler_ptr duplicate (::M::AMH_AResponseHandler_ptr p);
     static void release (::M::AMH_AResponseHandler_ptr p);
@@ -10914,7 +10840,7 @@ namespace TAO
 #define _M_AMI_AHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::M::AMI_AHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::M::AMI_AHandler>
   {
     static ::M::AMI_AHandler_ptr duplicate (::M::AMI_AHandler_ptr p);
     static void release (::M::AMI_AHandler_ptr p);
@@ -10928,7 +10854,7 @@ namespace TAO
 #define _I1_IF1__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i1::if1>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i1::if1>
   {
     static ::i1::if1_ptr duplicate (::i1::if1_ptr p);
     static void release (::i1::if1_ptr p);
@@ -10955,7 +10881,7 @@ namespace TAO
 #define _I1_AMH_IF1RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i1::AMH_if1ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i1::AMH_if1ResponseHandler>
   {
     static ::i1::AMH_if1ResponseHandler_ptr duplicate (::i1::AMH_if1ResponseHandler_ptr p);
     static void release (::i1::AMH_if1ResponseHandler_ptr p);
@@ -10969,7 +10895,7 @@ namespace TAO
 #define _I1_AMI_IF1HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i1::AMI_if1Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i1::AMI_if1Handler>
   {
     static ::i1::AMI_if1Handler_ptr duplicate (::i1::AMI_if1Handler_ptr p);
     static void release (::i1::AMI_if1Handler_ptr p);
@@ -10983,7 +10909,7 @@ namespace TAO
 #define _I2_IF2__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i2::if2>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i2::if2>
   {
     static ::i2::if2_ptr duplicate (::i2::if2_ptr p);
     static void release (::i2::if2_ptr p);
@@ -11010,7 +10936,7 @@ namespace TAO
 #define _I2_AMH_IF2RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i2::AMH_if2ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i2::AMH_if2ResponseHandler>
   {
     static ::i2::AMH_if2ResponseHandler_ptr duplicate (::i2::AMH_if2ResponseHandler_ptr p);
     static void release (::i2::AMH_if2ResponseHandler_ptr p);
@@ -11024,7 +10950,7 @@ namespace TAO
 #define _I2_AMI_IF2HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i2::AMI_if2Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i2::AMI_if2Handler>
   {
     static ::i2::AMI_if2Handler_ptr duplicate (::i2::AMI_if2Handler_ptr p);
     static void release (::i2::AMI_if2Handler_ptr p);
@@ -11038,7 +10964,7 @@ namespace TAO
 #define _I2_IF3__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i2::if3>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i2::if3>
   {
     static ::i2::if3_ptr duplicate (::i2::if3_ptr p);
     static void release (::i2::if3_ptr p);
@@ -11065,7 +10991,7 @@ namespace TAO
 #define _I2_AMH_IF3RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i2::AMH_if3ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i2::AMH_if3ResponseHandler>
   {
     static ::i2::AMH_if3ResponseHandler_ptr duplicate (::i2::AMH_if3ResponseHandler_ptr p);
     static void release (::i2::AMH_if3ResponseHandler_ptr p);
@@ -11079,7 +11005,7 @@ namespace TAO
 #define _I2_AMI_IF3HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::i2::AMI_if3Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::i2::AMI_if3Handler>
   {
     static ::i2::AMI_if3Handler_ptr duplicate (::i2::AMI_if3Handler_ptr p);
     static void release (::i2::AMI_if3Handler_ptr p);
@@ -11093,7 +11019,7 @@ namespace TAO
 #define _REDEFS_BASE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::redefs::base>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::redefs::base>
   {
     static ::redefs::base_ptr duplicate (::redefs::base_ptr p);
     static void release (::redefs::base_ptr p);
@@ -11120,7 +11046,7 @@ namespace TAO
 #define _REDEFS_AMH_BASERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::redefs::AMH_baseResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::redefs::AMH_baseResponseHandler>
   {
     static ::redefs::AMH_baseResponseHandler_ptr duplicate (::redefs::AMH_baseResponseHandler_ptr p);
     static void release (::redefs::AMH_baseResponseHandler_ptr p);
@@ -11134,7 +11060,7 @@ namespace TAO
 #define _REDEFS_AMI_BASEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::redefs::AMI_baseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::redefs::AMI_baseHandler>
   {
     static ::redefs::AMI_baseHandler_ptr duplicate (::redefs::AMI_baseHandler_ptr p);
     static void release (::redefs::AMI_baseHandler_ptr p);
@@ -11148,7 +11074,7 @@ namespace TAO
 #define _REDEFS_DERIVED__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::redefs::derived>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::redefs::derived>
   {
     static ::redefs::derived_ptr duplicate (::redefs::derived_ptr p);
     static void release (::redefs::derived_ptr p);
@@ -11175,7 +11101,7 @@ namespace TAO
 #define _REDEFS_AMH_DERIVEDRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::redefs::AMH_derivedResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::redefs::AMH_derivedResponseHandler>
   {
     static ::redefs::AMH_derivedResponseHandler_ptr duplicate (::redefs::AMH_derivedResponseHandler_ptr p);
     static void release (::redefs::AMH_derivedResponseHandler_ptr p);
@@ -11189,7 +11115,7 @@ namespace TAO
 #define _REDEFS_AMI_DERIVEDHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::redefs::AMI_derivedHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::redefs::AMI_derivedHandler>
   {
     static ::redefs::AMI_derivedHandler_ptr duplicate (::redefs::AMI_derivedHandler_ptr p);
     static void release (::redefs::AMI_derivedHandler_ptr p);
@@ -11203,7 +11129,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_BASE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Rec_Arg_Traits::base>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Rec_Arg_Traits::base>
   {
     static ::Rec_Arg_Traits::base_ptr duplicate (::Rec_Arg_Traits::base_ptr p);
     static void release (::Rec_Arg_Traits::base_ptr p);
@@ -11230,7 +11156,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMH_BASERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Rec_Arg_Traits::AMH_baseResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Rec_Arg_Traits::AMH_baseResponseHandler>
   {
     static ::Rec_Arg_Traits::AMH_baseResponseHandler_ptr duplicate (::Rec_Arg_Traits::AMH_baseResponseHandler_ptr p);
     static void release (::Rec_Arg_Traits::AMH_baseResponseHandler_ptr p);
@@ -11244,7 +11170,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMI_BASEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Rec_Arg_Traits::AMI_baseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Rec_Arg_Traits::AMI_baseHandler>
   {
     static ::Rec_Arg_Traits::AMI_baseHandler_ptr duplicate (::Rec_Arg_Traits::AMI_baseHandler_ptr p);
     static void release (::Rec_Arg_Traits::AMI_baseHandler_ptr p);
@@ -11258,7 +11184,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_DERIVED__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Rec_Arg_Traits::derived>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Rec_Arg_Traits::derived>
   {
     static ::Rec_Arg_Traits::derived_ptr duplicate (::Rec_Arg_Traits::derived_ptr p);
     static void release (::Rec_Arg_Traits::derived_ptr p);
@@ -11285,7 +11211,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMH_DERIVEDRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Rec_Arg_Traits::AMH_derivedResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Rec_Arg_Traits::AMH_derivedResponseHandler>
   {
     static ::Rec_Arg_Traits::AMH_derivedResponseHandler_ptr duplicate (::Rec_Arg_Traits::AMH_derivedResponseHandler_ptr p);
     static void release (::Rec_Arg_Traits::AMH_derivedResponseHandler_ptr p);
@@ -11299,7 +11225,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMI_DERIVEDHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Rec_Arg_Traits::AMI_derivedHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Rec_Arg_Traits::AMI_derivedHandler>
   {
     static ::Rec_Arg_Traits::AMI_derivedHandler_ptr duplicate (::Rec_Arg_Traits::AMI_derivedHandler_ptr p);
     static void release (::Rec_Arg_Traits::AMI_derivedHandler_ptr p);
@@ -11313,7 +11239,7 @@ namespace TAO
 #define _CALL_TEST_ITEST__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::call_test::iTest>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::call_test::iTest>
   {
     static ::call_test::iTest_ptr duplicate (::call_test::iTest_ptr p);
     static void release (::call_test::iTest_ptr p);
@@ -11340,7 +11266,7 @@ namespace TAO
 #define _CALL_TEST_AMH_ITESTRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::call_test::AMH_iTestResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::call_test::AMH_iTestResponseHandler>
   {
     static ::call_test::AMH_iTestResponseHandler_ptr duplicate (::call_test::AMH_iTestResponseHandler_ptr p);
     static void release (::call_test::AMH_iTestResponseHandler_ptr p);
@@ -11354,7 +11280,7 @@ namespace TAO
 #define _CALL_TEST_AMI_ITESTHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::call_test::AMI_iTestHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::call_test::AMI_iTestHandler>
   {
     static ::call_test::AMI_iTestHandler_ptr duplicate (::call_test::AMI_iTestHandler_ptr p);
     static void release (::call_test::AMI_iTestHandler_ptr p);
@@ -11368,7 +11294,7 @@ namespace TAO
 #define _CALL_ATTRIBUTE_IBAR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::call_attribute::iBar>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::call_attribute::iBar>
   {
     static ::call_attribute::iBar_ptr duplicate (::call_attribute::iBar_ptr p);
     static void release (::call_attribute::iBar_ptr p);
@@ -11395,7 +11321,7 @@ namespace TAO
 #define _CALL_ATTRIBUTE_AMH_IBARRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::call_attribute::AMH_iBarResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::call_attribute::AMH_iBarResponseHandler>
   {
     static ::call_attribute::AMH_iBarResponseHandler_ptr duplicate (::call_attribute::AMH_iBarResponseHandler_ptr p);
     static void release (::call_attribute::AMH_iBarResponseHandler_ptr p);
@@ -11409,7 +11335,7 @@ namespace TAO
 #define _CALL_ATTRIBUTE_AMI_IBARHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::call_attribute::AMI_iBarHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::call_attribute::AMI_iBarHandler>
   {
     static ::call_attribute::AMI_iBarHandler_ptr duplicate (::call_attribute::AMI_iBarHandler_ptr p);
     static void release (::call_attribute::AMI_iBarHandler_ptr p);
@@ -12982,11 +12908,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    ParamMod::ParameterTester::object_seq_type const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  ParamMod::ParameterTester::object_seq_type const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    ParamMod::ParameterTester::object_seq_type &_tao_sequence);
+  TAO_InputCDR &strm,
+  ParamMod::ParameterTester::object_seq_type &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

@@ -22,11 +22,11 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_1JF4DN_CPP_
-#define _TAO_IDL_TESTS_1JF4DN_CPP_
+#ifndef _TAO_IDL_TESTS_NO9PPQ_CPP_
+#define _TAO_IDL_TESTS_NO9PPQ_CPP_
 
 #include "TestS.h"
-#include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -50,79 +50,25 @@
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
 
-class TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable
-  : public TAO_Perfect_Hash_OpTable
-{
-private:
-  std::size_t hash (const char *str, std::size_t len) override;
-public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+static const TAO_operation_db_entry Test_AMH_Roundtrip_operations [] = {
+  {"test_method", std::addressof(POA_Test::AMH_Roundtrip::test_method_skel), nullptr},
+  {"shutdown", std::addressof(POA_Test::AMH_Roundtrip::shutdown_skel), nullptr},
+  {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
+  {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
+  {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
+  {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
+  {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr}
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable -N lookup */
-
-std::size_t
-TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
-{
-  static constexpr unsigned char asso_values[] =
-    {
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16,  0, 16,  0, 16, 16,
-      0,  5, 16, 16, 16, 16, 16, 16, 16, 16,
-      0, 16, 16, 16, 16,  0,  0, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16,
-    };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
-}
-
-const TAO_operation_db_entry *
-TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
-{
-  constexpr std::size_t MIN_WORD_LENGTH {5};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr int MIN_HASH_VALUE {5};
-  constexpr int MAX_HASH_VALUE {15};
-
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
-      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
-      {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",nullptr,nullptr},{"",nullptr,nullptr},
-      {"shutdown", std::addressof(POA_Test::AMH_Roundtrip::shutdown_skel), nullptr},
-      {"",nullptr,nullptr},
-      {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"test_method", std::addressof(POA_Test::AMH_Roundtrip::test_method_skel), nullptr},
-      {"",nullptr,nullptr},
-      {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
-      {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
-      {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-    };
-
-  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
-    {
-      std::size_t const key = hash (str, len);
-
-      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
-        {
-          const char *s = wordlist[key].opname;
-
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
-        }
-    }
-  return nullptr;
-}
-
-static TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable tao_Test_AMH_Roundtrip_optable;
+static const ::CORBA::Long _tao_Test_AMH_Roundtrip_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (21);
+static char _tao_Test_AMH_Roundtrip_optable_pool [_tao_Test_AMH_Roundtrip_optable_size];
+static ACE_Static_Allocator_Base _tao_Test_AMH_Roundtrip_allocator (_tao_Test_AMH_Roundtrip_optable_pool, _tao_Test_AMH_Roundtrip_optable_size);
+static TAO_Dynamic_Hash_OpTable tao_Test_AMH_Roundtrip_optable (
+    Test_AMH_Roundtrip_operations,
+    7,
+    14,
+    &_tao_Test_AMH_Roundtrip_allocator
+  );
 
 POA_Test::AMH_Roundtrip::AMH_Roundtrip ()
 {
@@ -159,9 +105,7 @@ POA_Test::AMH_Roundtrip::test_method_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -196,9 +140,7 @@ POA_Test::AMH_Roundtrip::shutdown_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -235,7 +177,7 @@ Test::Roundtrip*
 POA_Test::AMH_Roundtrip::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -246,79 +188,25 @@ POA_Test::AMH_Roundtrip::_this ()
   return {};
 }
 
-class TAO_Test_Roundtrip_Perfect_Hash_OpTable
-  : public TAO_Perfect_Hash_OpTable
-{
-private:
-  std::size_t hash (const char *str, std::size_t len) override;
-public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+static const TAO_operation_db_entry Test_Roundtrip_operations [] = {
+  {"test_method", std::addressof(POA_Test::Roundtrip::test_method_skel), nullptr},
+  {"shutdown", std::addressof(POA_Test::Roundtrip::shutdown_skel), nullptr},
+  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Test_Roundtrip_Perfect_Hash_OpTable -N lookup */
-
-std::size_t
-TAO_Test_Roundtrip_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
-{
-  static constexpr unsigned char asso_values[] =
-    {
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
-     16, 16, 16, 16, 16,  0, 16,  0, 16, 16,
-      0,  5, 16, 16, 16, 16, 16, 16, 16, 16,
-      0, 16, 16, 16, 16,  0,  0, 16, 16, 16,
-     16, 16, 16, 16, 16, 16, 16, 16,
-    };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
-}
-
-const TAO_operation_db_entry *
-TAO_Test_Roundtrip_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
-{
-  constexpr std::size_t MIN_WORD_LENGTH {5};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr int MIN_HASH_VALUE {5};
-  constexpr int MAX_HASH_VALUE {15};
-
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
-      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
-      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",nullptr,nullptr},{"",nullptr,nullptr},
-      {"shutdown", std::addressof(POA_Test::Roundtrip::shutdown_skel), nullptr},
-      {"",nullptr,nullptr},
-      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"test_method", std::addressof(POA_Test::Roundtrip::test_method_skel), nullptr},
-      {"",nullptr,nullptr},
-      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
-      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-    };
-
-  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
-    {
-      std::size_t const key = hash (str, len);
-
-      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
-        {
-          const char *s = wordlist[key].opname;
-
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
-        }
-    }
-  return nullptr;
-}
-
-static TAO_Test_Roundtrip_Perfect_Hash_OpTable tao_Test_Roundtrip_optable;
+static const ::CORBA::Long _tao_Test_Roundtrip_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (21);
+static char _tao_Test_Roundtrip_optable_pool [_tao_Test_Roundtrip_optable_size];
+static ACE_Static_Allocator_Base _tao_Test_Roundtrip_allocator (_tao_Test_Roundtrip_optable_pool, _tao_Test_Roundtrip_optable_size);
+static TAO_Dynamic_Hash_OpTable tao_Test_Roundtrip_optable (
+    Test_Roundtrip_operations,
+    7,
+    14,
+    &_tao_Test_Roundtrip_allocator
+  );
 
 POA_Test::Roundtrip::Roundtrip ()
 {
@@ -340,13 +228,13 @@ namespace POA_Test
 
     void execute () override
     {
-      TAO::SArg_Traits< ::CORBA::ULongLong>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg< ::CORBA::ULongLong> (
+      TAO::SArg_Traits<::CORBA::ULongLong>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg<::CORBA::ULongLong> (
           this->operation_details_,
           this->args_);
 
-      TAO::SArg_Traits< ::CORBA::ULongLong>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::CORBA::ULongLong> (
+      TAO::SArg_Traits<::CORBA::ULongLong>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::CORBA::ULongLong> (
           this->operation_details_,
           this->args_,
           1);
@@ -367,18 +255,16 @@ void POA_Test::Roundtrip::test_method_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Test::_tc_InvalidTimestamp,
       Test::_tc_ServerOverload
     };
+  #endif /* TAO_HAS_INTERCEPTORS */
 
-#endif /* TAO_HAS_INTERCEPTORS */
-
-  TAO::SArg_Traits< ::CORBA::ULongLong>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::ULongLong>::in_arg_val _tao_send_time;
+  TAO::SArg_Traits<::CORBA::ULongLong>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::ULongLong>::in_arg_val _tao_send_time;
 
   TAO::Argument * const args[] =
     {
@@ -403,11 +289,11 @@ void POA_Test::Roundtrip::test_method_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 2
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -434,7 +320,7 @@ void POA_Test::Roundtrip::shutdown_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -455,11 +341,11 @@ void POA_Test::Roundtrip::shutdown_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

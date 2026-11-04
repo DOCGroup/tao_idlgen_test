@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDINGS_68YB0N_H_
-#define _TAO_IDL_INCLUDINGS_68YB0N_H_
+#ifndef _TAO_IDL_INCLUDINGS_09MWAV_H_
+#define _TAO_IDL_INCLUDINGS_09MWAV_H_
 
 #include /**/ "ace/pre.h"
 
@@ -61,7 +61,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -75,7 +75,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::choice>
+  class SArg_Traits<::choice>
     : public
         Basic_SArg_Traits_T<
             ::choice,
@@ -85,7 +85,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::myUnion>
+  class SArg_Traits<::myUnion>
     : public
         Var_Size_SArg_Traits_T<
             ::myUnion,
@@ -95,7 +95,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Bog>
+  class SArg_Traits<::Bog>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Bog,
@@ -108,7 +108,7 @@ namespace TAO
 #define _IFACE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::iface>
+  class  SArg_Traits<::iface>
     : public Object_SArg_Traits_T<
         ::iface_ptr,
         ::iface_var,
@@ -120,7 +120,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::iface::postal>
+  class SArg_Traits<::iface::postal>
     : public
         Basic_SArg_Traits_T<
             ::iface::postal,
@@ -130,7 +130,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::iface::using_incl>
+  class SArg_Traits<::iface::using_incl>
     : public
         Fixed_Size_SArg_Traits_T<
             ::iface::using_incl,
@@ -143,7 +143,7 @@ namespace TAO
 #define _AMH_IFACEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_ifaceExceptionHolder>
+  class SArg_Traits<::AMH_ifaceExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_ifaceExceptionHolder *,
@@ -160,7 +160,7 @@ namespace TAO
 #define _AMI_IFACEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_ifaceHandler>
+  class  SArg_Traits<::AMI_ifaceHandler>
     : public Object_SArg_Traits_T<
         ::AMI_ifaceHandler_ptr,
         ::AMI_ifaceHandler_var,
@@ -172,7 +172,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::VT_Test::VTSeq>
+  class SArg_Traits<::VT_Test::VTSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::VT_Test::VTSeq,
@@ -182,7 +182,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::TestStr>
+  class SArg_Traits<::TestStr>
     : public
         Var_Size_SArg_Traits_T<
             ::TestStr,
@@ -192,7 +192,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::TestUn>
+  class SArg_Traits<::TestUn>
     : public
         Var_Size_SArg_Traits_T<
             ::TestUn,
@@ -205,7 +205,7 @@ namespace TAO
 #define _MYINT__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::MyInt>
+  class  SArg_Traits<::MyInt>
     : public Object_SArg_Traits_T<
         ::MyInt_ptr,
         ::MyInt_var,
@@ -220,7 +220,7 @@ namespace TAO
 #define _AMH_MYINTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_MyIntExceptionHolder>
+  class SArg_Traits<::AMH_MyIntExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_MyIntExceptionHolder *,
@@ -237,7 +237,7 @@ namespace TAO
 #define _AMI_MYINTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_MyIntHandler>
+  class  SArg_Traits<::AMI_MyIntHandler>
     : public Object_SArg_Traits_T<
         ::AMI_MyIntHandler_ptr,
         ::AMI_MyIntHandler_var,
@@ -252,7 +252,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_CHILDIF__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::RootModule::SUBMODULE1::ChildIF>
+  class  SArg_Traits<::RootModule::SUBMODULE1::ChildIF>
     : public Object_SArg_Traits_T<
         ::RootModule::SUBMODULE1::ChildIF_ptr,
         ::RootModule::SUBMODULE1::ChildIF_var,
@@ -264,7 +264,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::RootModule::SUBMODULE1::ChildIF::DifferentMode>
+  class SArg_Traits<::RootModule::SUBMODULE1::ChildIF::DifferentMode>
     : public
         Basic_SArg_Traits_T<
             ::RootModule::SUBMODULE1::ChildIF::DifferentMode,
@@ -277,7 +277,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMH_CHILDIFEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder>
+  class SArg_Traits<::RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder *,
@@ -294,7 +294,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMI_CHILDIFHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::RootModule::SUBMODULE1::AMI_ChildIFHandler>
+  class  SArg_Traits<::RootModule::SUBMODULE1::AMI_ChildIFHandler>
     : public Object_SArg_Traits_T<
         ::RootModule::SUBMODULE1::AMI_ChildIFHandler_ptr,
         ::RootModule::SUBMODULE1::AMI_ChildIFHandler_var,
@@ -309,7 +309,7 @@ namespace TAO
 #define _B__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::B>
+  class  SArg_Traits<::B>
     : public Object_SArg_Traits_T<
         ::B_ptr,
         ::B_var,
@@ -324,7 +324,7 @@ namespace TAO
 #define _AMH_BEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_BExceptionHolder>
+  class SArg_Traits<::AMH_BExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_BExceptionHolder *,
@@ -341,7 +341,7 @@ namespace TAO
 #define _AMI_BHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_BHandler>
+  class  SArg_Traits<::AMI_BHandler>
     : public Object_SArg_Traits_T<
         ::AMI_BHandler_ptr,
         ::AMI_BHandler_var,

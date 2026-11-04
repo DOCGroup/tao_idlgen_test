@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_8RAIJR_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_8RAIJR_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_QBGRBY_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_QBGRBY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::EncodingID_T>
+  class SArg_Traits<::EncodingID_T>
     : public
         Basic_SArg_Traits_T<
             ::EncodingID_T,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Encoding_T>
+  class SArg_Traits<::Encoding_T>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Encoding_T,
@@ -97,7 +97,7 @@ namespace TAO
 #define _FIELDDEVICE_T__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::FieldDevice_T>
+  class  SArg_Traits<::FieldDevice_T>
     : public Object_SArg_Traits_T<
         ::FieldDevice_T_ptr,
         ::FieldDevice_T_var,
@@ -112,7 +112,7 @@ namespace TAO
 #define _AMH_FIELDDEVICE_TEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_FieldDevice_TExceptionHolder>
+  class SArg_Traits<::AMH_FieldDevice_TExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_FieldDevice_TExceptionHolder *,
@@ -129,7 +129,7 @@ namespace TAO
 #define _AMI_FIELDDEVICE_THANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_FieldDevice_THandler>
+  class  SArg_Traits<::AMI_FieldDevice_THandler>
     : public Object_SArg_Traits_T<
         ::AMI_FieldDevice_THandler_ptr,
         ::AMI_FieldDevice_THandler_var,

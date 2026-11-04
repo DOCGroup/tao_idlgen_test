@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSS_ELUA6H_H_
-#define _TAO_IDL_KEYWORDSS_ELUA6H_H_
+#ifndef _TAO_IDL_KEYWORDSS_QNPTOK_H_
+#define _TAO_IDL_KEYWORDSS_QNPTOK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::Keywords>
+  class SArg_Traits<::Keywords>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Keywords,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Object>
+  class SArg_Traits<::Object>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Object,
@@ -94,7 +94,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::ObjectSeq>
+  class SArg_Traits<::ObjectSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::ObjectSeq,
@@ -104,7 +104,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Objects>
+  class SArg_Traits<::Objects>
     : public
         Var_Size_SArg_Traits_T<
             ::Objects,
@@ -117,7 +117,7 @@ namespace TAO
 #define _TESTING__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Testing>
+  class  SArg_Traits<::Testing>
     : public Object_SArg_Traits_T<
         ::Testing_ptr,
         ::Testing_var,
@@ -132,7 +132,7 @@ namespace TAO
 #define _AMH_TESTINGEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_TestingExceptionHolder>
+  class SArg_Traits<::AMH_TestingExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_TestingExceptionHolder *,
@@ -149,7 +149,7 @@ namespace TAO
 #define _AMI_TESTINGHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_TestingHandler>
+  class  SArg_Traits<::AMI_TestingHandler>
     : public Object_SArg_Traits_T<
         ::AMI_TestingHandler_ptr,
         ::AMI_TestingHandler_var,

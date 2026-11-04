@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_MODULES_OPNPZ9_H_
-#define _TAO_IDL_MODULES_OPNPZ9_H_
+#ifndef _TAO_IDL_MODULES_W2IDRG_H_
+#define _TAO_IDL_MODULES_W2IDRG_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #define _MOD1_MOD2_EX1__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod1::mod2::ex1>
+  class  SArg_Traits<::mod1::mod2::ex1>
     : public Object_SArg_Traits_T<
         ::mod1::mod2::ex1_ptr,
         ::mod1::mod2::ex1_var,
@@ -92,7 +92,7 @@ namespace TAO
 #define _MOD1_MOD2_AMH_EX1EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::mod1::mod2::AMH_ex1ExceptionHolder>
+  class SArg_Traits<::mod1::mod2::AMH_ex1ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::mod1::mod2::AMH_ex1ExceptionHolder *,
@@ -109,7 +109,7 @@ namespace TAO
 #define _MOD1_MOD2_AMI_EX1HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod1::mod2::AMI_ex1Handler>
+  class  SArg_Traits<::mod1::mod2::AMI_ex1Handler>
     : public Object_SArg_Traits_T<
         ::mod1::mod2::AMI_ex1Handler_ptr,
         ::mod1::mod2::AMI_ex1Handler_var,
@@ -124,7 +124,7 @@ namespace TAO
 #define _MOD1_MOD2_EX2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod1::mod2::ex2>
+  class  SArg_Traits<::mod1::mod2::ex2>
     : public Object_SArg_Traits_T<
         ::mod1::mod2::ex2_ptr,
         ::mod1::mod2::ex2_var,
@@ -139,7 +139,7 @@ namespace TAO
 #define _MOD1_MOD2_AMH_EX2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::mod1::mod2::AMH_ex2ExceptionHolder>
+  class SArg_Traits<::mod1::mod2::AMH_ex2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::mod1::mod2::AMH_ex2ExceptionHolder *,
@@ -156,7 +156,7 @@ namespace TAO
 #define _MOD1_MOD2_AMI_EX2HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mod1::mod2::AMI_ex2Handler>
+  class  SArg_Traits<::mod1::mod2::AMI_ex2Handler>
     : public Object_SArg_Traits_T<
         ::mod1::mod2::AMI_ex2Handler_ptr,
         ::mod1::mod2::AMI_ex2Handler_var,

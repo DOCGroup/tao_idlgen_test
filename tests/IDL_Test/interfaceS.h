@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INTERFACES_LRJSX4_H_
-#define _TAO_IDL_INTERFACES_LRJSX4_H_
+#ifndef _TAO_IDL_INTERFACES_OIUTFX_H_
+#define _TAO_IDL_INTERFACES_OIUTFX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -63,7 +63,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -80,7 +80,7 @@ namespace TAO
 #define _BASE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Base>
+  class  SArg_Traits<::Base>
     : public Object_SArg_Traits_T<
         ::Base_ptr,
         ::Base_var,
@@ -95,7 +95,7 @@ namespace TAO
 #define _AMH_BASEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_BaseExceptionHolder>
+  class SArg_Traits<::AMH_BaseExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_BaseExceptionHolder *,
@@ -112,7 +112,7 @@ namespace TAO
 #define _AMI_BASEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_BaseHandler>
+  class  SArg_Traits<::AMI_BaseHandler>
     : public Object_SArg_Traits_T<
         ::AMI_BaseHandler_ptr,
         ::AMI_BaseHandler_var,
@@ -127,7 +127,7 @@ namespace TAO
 #define _DERIVED__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Derived>
+  class  SArg_Traits<::Derived>
     : public Object_SArg_Traits_T<
         ::Derived_ptr,
         ::Derived_var,
@@ -142,7 +142,7 @@ namespace TAO
 #define _AMH_DERIVEDEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_DerivedExceptionHolder>
+  class SArg_Traits<::AMH_DerivedExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_DerivedExceptionHolder *,
@@ -159,7 +159,7 @@ namespace TAO
 #define _AMI_DERIVEDHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_DerivedHandler>
+  class  SArg_Traits<::AMI_DerivedHandler>
     : public Object_SArg_Traits_T<
         ::AMI_DerivedHandler_ptr,
         ::AMI_DerivedHandler_var,
@@ -171,7 +171,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::foo_mod::date>
+  class SArg_Traits<::foo_mod::date>
     : public
         Fixed_Size_SArg_Traits_T<
             ::foo_mod::date,
@@ -184,7 +184,7 @@ namespace TAO
 #define _FOOSTEP__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::foostep>
+  class  SArg_Traits<::foostep>
     : public Object_SArg_Traits_T<
         ::foostep_ptr,
         ::foostep_var,
@@ -199,7 +199,7 @@ namespace TAO
 #define _AMH_FOOSTEPEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_foostepExceptionHolder>
+  class SArg_Traits<::AMH_foostepExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_foostepExceptionHolder *,
@@ -216,7 +216,7 @@ namespace TAO
 #define _AMI_FOOSTEPHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_foostepHandler>
+  class  SArg_Traits<::AMI_foostepHandler>
     : public Object_SArg_Traits_T<
         ::AMI_foostepHandler_ptr,
         ::AMI_foostepHandler_var,
@@ -231,7 +231,7 @@ namespace TAO
 #define _MOTHER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::mother>
+  class  SArg_Traits<::mother>
     : public Object_SArg_Traits_T<
         ::mother_ptr,
         ::mother_var,
@@ -243,7 +243,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::mother::member>
+  class SArg_Traits<::mother::member>
     : public
         Fixed_Size_SArg_Traits_T<
             ::mother::member,
@@ -256,7 +256,7 @@ namespace TAO
 #define _AMH_MOTHEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_motherExceptionHolder>
+  class SArg_Traits<::AMH_motherExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_motherExceptionHolder *,
@@ -273,7 +273,7 @@ namespace TAO
 #define _AMI_MOTHERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_motherHandler>
+  class  SArg_Traits<::AMI_motherHandler>
     : public Object_SArg_Traits_T<
         ::AMI_motherHandler_ptr,
         ::AMI_motherHandler_var,
@@ -288,7 +288,7 @@ namespace TAO
 #define _FATHER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::father>
+  class  SArg_Traits<::father>
     : public Object_SArg_Traits_T<
         ::father_ptr,
         ::father_var,
@@ -300,7 +300,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::father::member>
+  class SArg_Traits<::father::member>
     : public
         Fixed_Size_SArg_Traits_T<
             ::father::member,
@@ -313,7 +313,7 @@ namespace TAO
 #define _AMH_FATHEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_fatherExceptionHolder>
+  class SArg_Traits<::AMH_fatherExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_fatherExceptionHolder *,
@@ -330,7 +330,7 @@ namespace TAO
 #define _AMI_FATHERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_fatherHandler>
+  class  SArg_Traits<::AMI_fatherHandler>
     : public Object_SArg_Traits_T<
         ::AMI_fatherHandler_ptr,
         ::AMI_fatherHandler_var,
@@ -345,7 +345,7 @@ namespace TAO
 #define _CHILD__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::child>
+  class  SArg_Traits<::child>
     : public Object_SArg_Traits_T<
         ::child_ptr,
         ::child_var,
@@ -360,7 +360,7 @@ namespace TAO
 #define _AMH_CHILDEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_childExceptionHolder>
+  class SArg_Traits<::AMH_childExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_childExceptionHolder *,
@@ -377,7 +377,7 @@ namespace TAO
 #define _AMI_CHILDHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_childHandler>
+  class  SArg_Traits<::AMI_childHandler>
     : public Object_SArg_Traits_T<
         ::AMI_childHandler_ptr,
         ::AMI_childHandler_var,
@@ -392,7 +392,7 @@ namespace TAO
 #define _TRY__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::_cxx_try>
+  class  SArg_Traits<::_cxx_try>
     : public Object_SArg_Traits_T<
         ::_cxx_try_ptr,
         ::_cxx_try_var,
@@ -407,7 +407,7 @@ namespace TAO
 #define _AMH__CXX_TRYEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH__cxx_tryExceptionHolder>
+  class SArg_Traits<::AMH__cxx_tryExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH__cxx_tryExceptionHolder *,
@@ -424,7 +424,7 @@ namespace TAO
 #define _AMI__CXX_TRYHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI__cxx_tryHandler>
+  class  SArg_Traits<::AMI__cxx_tryHandler>
     : public Object_SArg_Traits_T<
         ::AMI__cxx_tryHandler_ptr,
         ::AMI__cxx_tryHandler_var,
@@ -439,7 +439,7 @@ namespace TAO
 #define _LATER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::later>
+  class  SArg_Traits<::later>
     : public Object_SArg_Traits_T<
         ::later_ptr,
         ::later_var,
@@ -454,7 +454,7 @@ namespace TAO
 #define _LATER_USER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::later_user>
+  class  SArg_Traits<::later_user>
     : public Object_SArg_Traits_T<
         ::later_user_ptr,
         ::later_user_var,
@@ -469,7 +469,7 @@ namespace TAO
 #define _AMH_LATER_USEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_later_userExceptionHolder>
+  class SArg_Traits<::AMH_later_userExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_later_userExceptionHolder *,
@@ -486,7 +486,7 @@ namespace TAO
 #define _AMI_LATER_USERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_later_userHandler>
+  class  SArg_Traits<::AMI_later_userHandler>
     : public Object_SArg_Traits_T<
         ::AMI_later_userHandler_ptr,
         ::AMI_later_userHandler_var,
@@ -498,7 +498,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::later_holder>
+  class SArg_Traits<::later_holder>
     : public
         Var_Size_SArg_Traits_T<
             ::later_holder,
@@ -511,7 +511,7 @@ namespace TAO
 #define _AMH_LATEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_laterExceptionHolder>
+  class SArg_Traits<::AMH_laterExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_laterExceptionHolder *,
@@ -528,7 +528,7 @@ namespace TAO
 #define _AMI_LATERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_laterHandler>
+  class  SArg_Traits<::AMI_laterHandler>
     : public Object_SArg_Traits_T<
         ::AMI_laterHandler_ptr,
         ::AMI_laterHandler_var,
@@ -543,7 +543,7 @@ namespace TAO
 #define _BEGIN__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Begin>
+  class  SArg_Traits<::Begin>
     : public Object_SArg_Traits_T<
         ::Begin_ptr,
         ::Begin_var,
@@ -558,7 +558,7 @@ namespace TAO
 #define _AMH_BEGINEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_BeginExceptionHolder>
+  class SArg_Traits<::AMH_BeginExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_BeginExceptionHolder *,
@@ -575,7 +575,7 @@ namespace TAO
 #define _AMI_BEGINHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_BeginHandler>
+  class  SArg_Traits<::AMI_BeginHandler>
     : public Object_SArg_Traits_T<
         ::AMI_BeginHandler_ptr,
         ::AMI_BeginHandler_var,
@@ -590,7 +590,7 @@ namespace TAO
 #define _MIDDLE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Middle>
+  class  SArg_Traits<::Middle>
     : public Object_SArg_Traits_T<
         ::Middle_ptr,
         ::Middle_var,
@@ -605,7 +605,7 @@ namespace TAO
 #define _AMH_MIDDLEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_MiddleExceptionHolder>
+  class SArg_Traits<::AMH_MiddleExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_MiddleExceptionHolder *,
@@ -622,7 +622,7 @@ namespace TAO
 #define _AMI_MIDDLEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_MiddleHandler>
+  class  SArg_Traits<::AMI_MiddleHandler>
     : public Object_SArg_Traits_T<
         ::AMI_MiddleHandler_ptr,
         ::AMI_MiddleHandler_var,
@@ -637,7 +637,7 @@ namespace TAO
 #define _END__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::End>
+  class  SArg_Traits<::End>
     : public Object_SArg_Traits_T<
         ::End_ptr,
         ::End_var,
@@ -652,7 +652,7 @@ namespace TAO
 #define _AMH_ENDEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_EndExceptionHolder>
+  class SArg_Traits<::AMH_EndExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_EndExceptionHolder *,
@@ -669,7 +669,7 @@ namespace TAO
 #define _AMI_ENDHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_EndHandler>
+  class  SArg_Traits<::AMI_EndHandler>
     : public Object_SArg_Traits_T<
         ::AMI_EndHandler_ptr,
         ::AMI_EndHandler_var,
@@ -684,7 +684,7 @@ namespace TAO
 #define _CLIENT__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Client>
+  class  SArg_Traits<::Client>
     : public Object_SArg_Traits_T<
         ::Client_ptr,
         ::Client_var,
@@ -699,7 +699,7 @@ namespace TAO
 #define _AMH_CLIENTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_ClientExceptionHolder>
+  class SArg_Traits<::AMH_ClientExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_ClientExceptionHolder *,
@@ -716,7 +716,7 @@ namespace TAO
 #define _AMI_CLIENTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_ClientHandler>
+  class  SArg_Traits<::AMI_ClientHandler>
     : public Object_SArg_Traits_T<
         ::AMI_ClientHandler_ptr,
         ::AMI_ClientHandler_var,
@@ -731,7 +731,7 @@ namespace TAO
 #define _ATTRIBUTETESTER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AttributeTester>
+  class  SArg_Traits<::AttributeTester>
     : public Object_SArg_Traits_T<
         ::AttributeTester_ptr,
         ::AttributeTester_var,
@@ -743,7 +743,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::AttributeTester::string_1_tag>
+  class SArg_Traits<::AttributeTester::string_1_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::AttributeTester::string_1_out,
@@ -757,7 +757,7 @@ namespace TAO
 #define _AMH_ATTRIBUTETESTEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_AttributeTesterExceptionHolder>
+  class SArg_Traits<::AMH_AttributeTesterExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_AttributeTesterExceptionHolder *,
@@ -774,7 +774,7 @@ namespace TAO
 #define _AMI_ATTRIBUTETESTERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_AttributeTesterHandler>
+  class  SArg_Traits<::AMI_AttributeTesterHandler>
     : public Object_SArg_Traits_T<
         ::AMI_AttributeTesterHandler_ptr,
         ::AMI_AttributeTesterHandler_var,
@@ -789,7 +789,7 @@ namespace TAO
 #define _PARAMMOD_PARAMETERTESTER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::ParamMod::ParameterTester>
+  class  SArg_Traits<::ParamMod::ParameterTester>
     : public Object_SArg_Traits_T<
         ::ParamMod::ParameterTester_ptr,
         ::ParamMod::ParameterTester_var,
@@ -801,7 +801,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::ParamMod::ParameterTester::object_seq_type>
+  class SArg_Traits<::ParamMod::ParameterTester::object_seq_type>
     : public
         Var_Size_SArg_Traits_T<
             ::ParamMod::ParameterTester::object_seq_type,
@@ -811,7 +811,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::ParamMod::ParameterTester::object_array_type_tag>
+  class SArg_Traits<::ParamMod::ParameterTester::object_array_type_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::ParamMod::ParameterTester::object_array_type_out,
@@ -822,7 +822,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::ParamMod::ParameterTester::object_struct_type>
+  class SArg_Traits<::ParamMod::ParameterTester::object_struct_type>
     : public
         Var_Size_SArg_Traits_T<
             ::ParamMod::ParameterTester::object_struct_type,
@@ -832,7 +832,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::ParamMod::ParameterTester::object_union_type>
+  class SArg_Traits<::ParamMod::ParameterTester::object_union_type>
     : public
         Var_Size_SArg_Traits_T<
             ::ParamMod::ParameterTester::object_union_type,
@@ -845,7 +845,7 @@ namespace TAO
 #define _PARAMMOD_AMH_PARAMETERTESTEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::ParamMod::AMH_ParameterTesterExceptionHolder>
+  class SArg_Traits<::ParamMod::AMH_ParameterTesterExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::ParamMod::AMH_ParameterTesterExceptionHolder *,
@@ -862,7 +862,7 @@ namespace TAO
 #define _PARAMMOD_AMI_PARAMETERTESTERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::ParamMod::AMI_ParameterTesterHandler>
+  class  SArg_Traits<::ParamMod::AMI_ParameterTesterHandler>
     : public Object_SArg_Traits_T<
         ::ParamMod::AMI_ParameterTesterHandler_ptr,
         ::ParamMod::AMI_ParameterTesterHandler_var,
@@ -877,7 +877,7 @@ namespace TAO
 #define _A__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A>
+  class  SArg_Traits<::A>
     : public Object_SArg_Traits_T<
         ::A_ptr,
         ::A_var,
@@ -889,7 +889,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::A::U>
+  class SArg_Traits<::A::U>
     : public
         Var_Size_SArg_Traits_T<
             ::A::U,
@@ -902,7 +902,7 @@ namespace TAO
 #define _AMH_AEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_AExceptionHolder>
+  class SArg_Traits<::AMH_AExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_AExceptionHolder *,
@@ -919,7 +919,7 @@ namespace TAO
 #define _AMI_AHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_AHandler>
+  class  SArg_Traits<::AMI_AHandler>
     : public Object_SArg_Traits_T<
         ::AMI_AHandler_ptr,
         ::AMI_AHandler_var,
@@ -934,7 +934,7 @@ namespace TAO
 #define _M_A__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::M::A>
+  class  SArg_Traits<::M::A>
     : public Object_SArg_Traits_T<
         ::M::A_ptr,
         ::M::A_var,
@@ -949,7 +949,7 @@ namespace TAO
 #define _M_A__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::M::A>
+  class  SArg_Traits<::M::A>
     : public Object_SArg_Traits_T<
         ::M::A_ptr,
         ::M::A_var,
@@ -964,7 +964,7 @@ namespace TAO
 #define _M_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::M::AMH_AExceptionHolder>
+  class SArg_Traits<::M::AMH_AExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::M::AMH_AExceptionHolder *,
@@ -981,7 +981,7 @@ namespace TAO
 #define _M_AMI_AHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::M::AMI_AHandler>
+  class  SArg_Traits<::M::AMI_AHandler>
     : public Object_SArg_Traits_T<
         ::M::AMI_AHandler_ptr,
         ::M::AMI_AHandler_var,
@@ -996,7 +996,7 @@ namespace TAO
 #define _I1_IF1__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::i1::if1>
+  class  SArg_Traits<::i1::if1>
     : public Object_SArg_Traits_T<
         ::i1::if1_ptr,
         ::i1::if1_var,
@@ -1011,7 +1011,7 @@ namespace TAO
 #define _I1_AMH_IF1EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::i1::AMH_if1ExceptionHolder>
+  class SArg_Traits<::i1::AMH_if1ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::i1::AMH_if1ExceptionHolder *,
@@ -1028,7 +1028,7 @@ namespace TAO
 #define _I1_AMI_IF1HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::i1::AMI_if1Handler>
+  class  SArg_Traits<::i1::AMI_if1Handler>
     : public Object_SArg_Traits_T<
         ::i1::AMI_if1Handler_ptr,
         ::i1::AMI_if1Handler_var,
@@ -1043,7 +1043,7 @@ namespace TAO
 #define _I2_IF2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::i2::if2>
+  class  SArg_Traits<::i2::if2>
     : public Object_SArg_Traits_T<
         ::i2::if2_ptr,
         ::i2::if2_var,
@@ -1058,7 +1058,7 @@ namespace TAO
 #define _I2_AMH_IF2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::i2::AMH_if2ExceptionHolder>
+  class SArg_Traits<::i2::AMH_if2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::i2::AMH_if2ExceptionHolder *,
@@ -1075,7 +1075,7 @@ namespace TAO
 #define _I2_AMI_IF2HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::i2::AMI_if2Handler>
+  class  SArg_Traits<::i2::AMI_if2Handler>
     : public Object_SArg_Traits_T<
         ::i2::AMI_if2Handler_ptr,
         ::i2::AMI_if2Handler_var,
@@ -1090,7 +1090,7 @@ namespace TAO
 #define _I2_IF3__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::i2::if3>
+  class  SArg_Traits<::i2::if3>
     : public Object_SArg_Traits_T<
         ::i2::if3_ptr,
         ::i2::if3_var,
@@ -1105,7 +1105,7 @@ namespace TAO
 #define _I2_AMH_IF3EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::i2::AMH_if3ExceptionHolder>
+  class SArg_Traits<::i2::AMH_if3ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::i2::AMH_if3ExceptionHolder *,
@@ -1122,7 +1122,7 @@ namespace TAO
 #define _I2_AMI_IF3HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::i2::AMI_if3Handler>
+  class  SArg_Traits<::i2::AMI_if3Handler>
     : public Object_SArg_Traits_T<
         ::i2::AMI_if3Handler_ptr,
         ::i2::AMI_if3Handler_var,
@@ -1137,7 +1137,7 @@ namespace TAO
 #define _REDEFS_BASE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::redefs::base>
+  class  SArg_Traits<::redefs::base>
     : public Object_SArg_Traits_T<
         ::redefs::base_ptr,
         ::redefs::base_var,
@@ -1149,7 +1149,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::redefs::base::foo>
+  class SArg_Traits<::redefs::base::foo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::redefs::base::foo,
@@ -1162,7 +1162,7 @@ namespace TAO
 #define _REDEFS_AMH_BASEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::redefs::AMH_baseExceptionHolder>
+  class SArg_Traits<::redefs::AMH_baseExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::redefs::AMH_baseExceptionHolder *,
@@ -1179,7 +1179,7 @@ namespace TAO
 #define _REDEFS_AMI_BASEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::redefs::AMI_baseHandler>
+  class  SArg_Traits<::redefs::AMI_baseHandler>
     : public Object_SArg_Traits_T<
         ::redefs::AMI_baseHandler_ptr,
         ::redefs::AMI_baseHandler_var,
@@ -1194,7 +1194,7 @@ namespace TAO
 #define _REDEFS_DERIVED__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::redefs::derived>
+  class  SArg_Traits<::redefs::derived>
     : public Object_SArg_Traits_T<
         ::redefs::derived_ptr,
         ::redefs::derived_var,
@@ -1206,7 +1206,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::redefs::derived::foo>
+  class SArg_Traits<::redefs::derived::foo>
     : public
         Var_Size_SArg_Traits_T<
             ::redefs::derived::foo,
@@ -1219,7 +1219,7 @@ namespace TAO
 #define _REDEFS_AMH_DERIVEDEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::redefs::AMH_derivedExceptionHolder>
+  class SArg_Traits<::redefs::AMH_derivedExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::redefs::AMH_derivedExceptionHolder *,
@@ -1236,7 +1236,7 @@ namespace TAO
 #define _REDEFS_AMI_DERIVEDHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::redefs::AMI_derivedHandler>
+  class  SArg_Traits<::redefs::AMI_derivedHandler>
     : public Object_SArg_Traits_T<
         ::redefs::AMI_derivedHandler_ptr,
         ::redefs::AMI_derivedHandler_var,
@@ -1251,7 +1251,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_BASE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Rec_Arg_Traits::base>
+  class  SArg_Traits<::Rec_Arg_Traits::base>
     : public Object_SArg_Traits_T<
         ::Rec_Arg_Traits::base_ptr,
         ::Rec_Arg_Traits::base_var,
@@ -1266,7 +1266,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMH_BASEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Rec_Arg_Traits::AMH_baseExceptionHolder>
+  class SArg_Traits<::Rec_Arg_Traits::AMH_baseExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Rec_Arg_Traits::AMH_baseExceptionHolder *,
@@ -1283,7 +1283,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMI_BASEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Rec_Arg_Traits::AMI_baseHandler>
+  class  SArg_Traits<::Rec_Arg_Traits::AMI_baseHandler>
     : public Object_SArg_Traits_T<
         ::Rec_Arg_Traits::AMI_baseHandler_ptr,
         ::Rec_Arg_Traits::AMI_baseHandler_var,
@@ -1298,7 +1298,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_DERIVED__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Rec_Arg_Traits::derived>
+  class  SArg_Traits<::Rec_Arg_Traits::derived>
     : public Object_SArg_Traits_T<
         ::Rec_Arg_Traits::derived_ptr,
         ::Rec_Arg_Traits::derived_var,
@@ -1313,7 +1313,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMH_DERIVEDEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Rec_Arg_Traits::AMH_derivedExceptionHolder>
+  class SArg_Traits<::Rec_Arg_Traits::AMH_derivedExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Rec_Arg_Traits::AMH_derivedExceptionHolder *,
@@ -1330,7 +1330,7 @@ namespace TAO
 #define _REC_ARG_TRAITS_AMI_DERIVEDHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Rec_Arg_Traits::AMI_derivedHandler>
+  class  SArg_Traits<::Rec_Arg_Traits::AMI_derivedHandler>
     : public Object_SArg_Traits_T<
         ::Rec_Arg_Traits::AMI_derivedHandler_ptr,
         ::Rec_Arg_Traits::AMI_derivedHandler_var,
@@ -1345,7 +1345,7 @@ namespace TAO
 #define _CALL_TEST_ITEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::call_test::iTest>
+  class  SArg_Traits<::call_test::iTest>
     : public Object_SArg_Traits_T<
         ::call_test::iTest_ptr,
         ::call_test::iTest_var,
@@ -1360,7 +1360,7 @@ namespace TAO
 #define _CALL_TEST_AMH_ITESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::call_test::AMH_iTestExceptionHolder>
+  class SArg_Traits<::call_test::AMH_iTestExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::call_test::AMH_iTestExceptionHolder *,
@@ -1377,7 +1377,7 @@ namespace TAO
 #define _CALL_TEST_AMI_ITESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::call_test::AMI_iTestHandler>
+  class  SArg_Traits<::call_test::AMI_iTestHandler>
     : public Object_SArg_Traits_T<
         ::call_test::AMI_iTestHandler_ptr,
         ::call_test::AMI_iTestHandler_var,
@@ -1392,7 +1392,7 @@ namespace TAO
 #define _CALL_ATTRIBUTE_IBAR__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::call_attribute::iBar>
+  class  SArg_Traits<::call_attribute::iBar>
     : public Object_SArg_Traits_T<
         ::call_attribute::iBar_ptr,
         ::call_attribute::iBar_var,
@@ -1407,7 +1407,7 @@ namespace TAO
 #define _CALL_ATTRIBUTE_AMH_IBAREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::call_attribute::AMH_iBarExceptionHolder>
+  class SArg_Traits<::call_attribute::AMH_iBarExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::call_attribute::AMH_iBarExceptionHolder *,
@@ -1424,7 +1424,7 @@ namespace TAO
 #define _CALL_ATTRIBUTE_AMI_IBARHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::call_attribute::AMI_iBarHandler>
+  class  SArg_Traits<::call_attribute::AMI_iBarHandler>
     : public Object_SArg_Traits_T<
         ::call_attribute::AMI_iBarHandler_ptr,
         ::call_attribute::AMI_iBarHandler_var,

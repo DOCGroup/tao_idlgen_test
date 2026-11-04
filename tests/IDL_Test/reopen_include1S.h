@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE1S_I5DM07_H_
-#define _TAO_IDL_REOPEN_INCLUDE1S_I5DM07_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE1S_RG0862_H_
+#define _TAO_IDL_REOPEN_INCLUDE1S_RG0862_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::frag::dub_seq>
+  class SArg_Traits<::frag::dub_seq>
     : public
         Var_Size_SArg_Traits_T<
             ::frag::dub_seq,
@@ -87,7 +87,7 @@ namespace TAO
 #define _A_B_X1__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::B::X1>
+  class  SArg_Traits<::A::B::X1>
     : public Object_SArg_Traits_T<
         ::A::B::X1_ptr,
         ::A::B::X1_var,
@@ -102,7 +102,7 @@ namespace TAO
 #define _A_B_AMH_X1EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::A::B::AMH_X1ExceptionHolder>
+  class SArg_Traits<::A::B::AMH_X1ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::A::B::AMH_X1ExceptionHolder *,
@@ -119,7 +119,7 @@ namespace TAO
 #define _A_B_AMI_X1HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::B::AMI_X1Handler>
+  class  SArg_Traits<::A::B::AMI_X1Handler>
     : public Object_SArg_Traits_T<
         ::A::B::AMI_X1Handler_ptr,
         ::A::B::AMI_X1Handler_var,

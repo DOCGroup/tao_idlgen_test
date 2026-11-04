@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_SZAVD7_H_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_SZAVD7_H_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_GE4QKY_H_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_GE4QKY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -61,7 +61,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -78,7 +78,7 @@ namespace TAO
 #define _TDEF__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::tdef>
+  class  SArg_Traits<::tdef>
     : public Object_SArg_Traits_T<
         ::tdef_ptr,
         ::tdef_var,
@@ -90,7 +90,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::tdef::Bytes_tag>
+  class SArg_Traits<::tdef::Bytes_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::tdef::Bytes_var,
@@ -101,7 +101,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::tdef::bytes_or_longs>
+  class SArg_Traits<::tdef::bytes_or_longs>
     : public
         Fixed_Size_SArg_Traits_T<
             ::tdef::bytes_or_longs,
@@ -114,7 +114,7 @@ namespace TAO
 #define _AMH_TDEFEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_tdefExceptionHolder>
+  class SArg_Traits<::AMH_tdefExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_tdefExceptionHolder *,
@@ -131,7 +131,7 @@ namespace TAO
 #define _AMI_TDEFHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_tdefHandler>
+  class  SArg_Traits<::AMI_tdefHandler>
     : public Object_SArg_Traits_T<
         ::AMI_tdefHandler_ptr,
         ::AMI_tdefHandler_var,
@@ -143,7 +143,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::ABCModule::RmtPhysicalInfo>
+  class SArg_Traits<::ABCModule::RmtPhysicalInfo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::ABCModule::RmtPhysicalInfo,
@@ -153,7 +153,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::ABCModule::bbbBubBubBubBaby>
+  class SArg_Traits<::ABCModule::bbbBubBubBubBaby>
     : public
         Fixed_Size_SArg_Traits_T<
             ::ABCModule::bbbBubBubBubBaby,

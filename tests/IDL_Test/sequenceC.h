@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCEC_GBUTIU_H_
-#define _TAO_IDL_SEQUENCEC_GBUTIU_H_
+#ifndef _TAO_IDL_SEQUENCEC_84ZOR7_H_
+#define _TAO_IDL_SEQUENCEC_84ZOR7_H_
 
 #include /**/ "ace/pre.h"
 
@@ -78,7 +78,7 @@ using myfoostructseq_out = ::TAO_Seq_Out_T<myfoostructseq>;
 
 class TAO_IDL_TEST_STUB_Export myfoostructseq
   : public
-      ::TAO::unbounded_value_sequence< myfoostruct>
+      ::TAO::unbounded_value_sequence<myfoostruct>
 {
 public:
   myfoostructseq () = default;
@@ -159,7 +159,7 @@ using OctetSeqSeq_out = ::TAO_Seq_Out_T<OctetSeqSeq>;
 
 class TAO_IDL_TEST_STUB_Export OctetSeqSeq
   : public
-      ::TAO::unbounded_value_sequence< CORBA::OctetSeq>
+      ::TAO::unbounded_value_sequence<CORBA::OctetSeq>
 {
 public:
   OctetSeqSeq () = default;
@@ -286,7 +286,7 @@ namespace Deployment
 
   class TAO_IDL_TEST_STUB_Export ComponentPackageDescriptions
     : public
-        ::TAO::unbounded_value_sequence< ComponentPackageDescription>
+        ::TAO::unbounded_value_sequence<ComponentPackageDescription>
   {
   public:
     ComponentPackageDescriptions () = default;
@@ -336,7 +336,7 @@ namespace Deployment
 
   class TAO_IDL_TEST_STUB_Export ComponentAssemblyDescriptions
     : public
-        ::TAO::unbounded_value_sequence< ComponentAssemblyDescription>
+        ::TAO::unbounded_value_sequence<ComponentAssemblyDescription>
   {
   public:
     ComponentAssemblyDescriptions () = default;
@@ -374,7 +374,7 @@ namespace Deployment
 
   class TAO_IDL_TEST_STUB_Export NamedImplementationArtifacts
     : public
-        ::TAO::unbounded_value_sequence< NamedImplementationArtifact>
+        ::TAO::unbounded_value_sequence<NamedImplementationArtifact>
   {
   public:
     NamedImplementationArtifacts () = default;
@@ -437,7 +437,7 @@ namespace Deployment
 
   class TAO_IDL_TEST_STUB_Export MonolithicImplementationDescriptions
     : public
-        ::TAO::unbounded_value_sequence< MonolithicImplementationDescription>
+        ::TAO::unbounded_value_sequence<MonolithicImplementationDescription>
   {
   public:
     MonolithicImplementationDescriptions () = default;
@@ -488,7 +488,7 @@ namespace Deployment
 
   class TAO_IDL_TEST_STUB_Export PackagedComponentImplementations
     : public
-        ::TAO::unbounded_value_sequence< PackagedComponentImplementation>
+        ::TAO::unbounded_value_sequence<PackagedComponentImplementation>
   {
   public:
     PackagedComponentImplementations () = default;
@@ -538,7 +538,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -553,7 +553,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::myfoostructseq>
+  class Arg_Traits<::myfoostructseq>
     : public
         Var_Size_Arg_Traits_T<
             ::myfoostructseq,
@@ -563,7 +563,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::myfoostruct>
+  class Arg_Traits<::myfoostruct>
     : public
         Var_Size_Arg_Traits_T<
             ::myfoostruct,
@@ -573,7 +573,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OctetSeqSeq>
+  class Arg_Traits<::OctetSeqSeq>
     : public
         Var_Size_Arg_Traits_T<
             ::OctetSeqSeq,
@@ -583,7 +583,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::seqLocalSeq>
+  class Arg_Traits<::seqLocalSeq>
     : public
         Var_Size_Arg_Traits_T<
             ::seqLocalSeq,
@@ -593,7 +593,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Deployment::ComponentPackageDescriptions>
+  class Arg_Traits<::Deployment::ComponentPackageDescriptions>
     : public
         Var_Size_Arg_Traits_T<
             ::Deployment::ComponentPackageDescriptions,
@@ -603,7 +603,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Deployment::ComponentAssemblyDescription>
+  class Arg_Traits<::Deployment::ComponentAssemblyDescription>
     : public
         Var_Size_Arg_Traits_T<
             ::Deployment::ComponentAssemblyDescription,
@@ -613,7 +613,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Deployment::ComponentAssemblyDescriptions>
+  class Arg_Traits<::Deployment::ComponentAssemblyDescriptions>
     : public
         Var_Size_Arg_Traits_T<
             ::Deployment::ComponentAssemblyDescriptions,
@@ -623,7 +623,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Deployment::NamedImplementationArtifacts>
+  class Arg_Traits<::Deployment::NamedImplementationArtifacts>
     : public
         Var_Size_Arg_Traits_T<
             ::Deployment::NamedImplementationArtifacts,
@@ -633,7 +633,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Deployment::NamedImplementationArtifact>
+  class Arg_Traits<::Deployment::NamedImplementationArtifact>
     : public
         Var_Size_Arg_Traits_T<
             ::Deployment::NamedImplementationArtifact,
@@ -643,7 +643,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Deployment::MonolithicImplementationDescription>
+  class Arg_Traits<::Deployment::MonolithicImplementationDescription>
     : public
         Var_Size_Arg_Traits_T<
             ::Deployment::MonolithicImplementationDescription,
@@ -653,7 +653,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Deployment::MonolithicImplementationDescriptions>
+  class Arg_Traits<::Deployment::MonolithicImplementationDescriptions>
     : public
         Var_Size_Arg_Traits_T<
             ::Deployment::MonolithicImplementationDescriptions,
@@ -663,7 +663,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Deployment::PackagedComponentImplementation>
+  class Arg_Traits<::Deployment::PackagedComponentImplementation>
     : public
         Var_Size_Arg_Traits_T<
             ::Deployment::PackagedComponentImplementation,
@@ -673,7 +673,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Deployment::PackagedComponentImplementations>
+  class Arg_Traits<::Deployment::PackagedComponentImplementations>
     : public
         Var_Size_Arg_Traits_T<
             ::Deployment::PackagedComponentImplementations,
@@ -683,7 +683,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Deployment::ComponentPackageDescription>
+  class Arg_Traits<::Deployment::ComponentPackageDescription>
     : public
         Var_Size_Arg_Traits_T<
             ::Deployment::ComponentPackageDescription,
@@ -705,7 +705,7 @@ namespace TAO
 #define _SEQLOCAL__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::seqLocal>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::seqLocal>
   {
     static ::seqLocal_ptr duplicate (::seqLocal_ptr p);
     static void release (::seqLocal_ptr p);
@@ -865,12 +865,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_myfoostructseq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    myfoostructseq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    myfoostructseq &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, myfoostructseq const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, myfoostructseq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -894,12 +890,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_OctetSeqSeq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    OctetSeqSeq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    OctetSeqSeq &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OctetSeqSeq const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, OctetSeqSeq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -910,11 +902,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Deployment::ComponentPackageDescriptions const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  Deployment::ComponentPackageDescriptions const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Deployment::ComponentPackageDescriptions &_tao_sequence);
+  TAO_InputCDR &strm,
+  Deployment::ComponentPackageDescriptions &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -932,11 +924,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Deployment::ComponentAssemblyDescriptions const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  Deployment::ComponentAssemblyDescriptions const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Deployment::ComponentAssemblyDescriptions &_tao_sequence);
+  TAO_InputCDR &strm,
+  Deployment::ComponentAssemblyDescriptions &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -947,11 +939,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Deployment::NamedImplementationArtifacts const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  Deployment::NamedImplementationArtifacts const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Deployment::NamedImplementationArtifacts &_tao_sequence);
+  TAO_InputCDR &strm,
+  Deployment::NamedImplementationArtifacts &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -976,11 +968,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Deployment::MonolithicImplementationDescriptions const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  Deployment::MonolithicImplementationDescriptions const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Deployment::MonolithicImplementationDescriptions &_tao_sequence);
+  TAO_InputCDR &strm,
+  Deployment::MonolithicImplementationDescriptions &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -998,11 +990,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Deployment::PackagedComponentImplementations const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  Deployment::PackagedComponentImplementations const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Deployment::PackagedComponentImplementations &_tao_sequence);
+  TAO_InputCDR &strm,
+  Deployment::PackagedComponentImplementations &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

@@ -45,7 +45,7 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_one = std::addressof(_tao_tc_OldInherit_one);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_oneExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_oneExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -55,7 +55,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:OldInherit/AMH_oneExceptionHolder:1.0",
     "AMH_oneExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_OldInherit_AMH_oneExceptionHolder,
     0);
 
@@ -101,7 +101,7 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_two = std::addressof(_tao_tc_OldInherit_two);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_twoExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_twoExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -111,7 +111,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:OldInherit/AMH_twoExceptionHolder:1.0",
     "AMH_twoExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_OldInherit_AMH_twoExceptionHolder,
     0);
 
@@ -157,7 +157,7 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_three = std::addressof(_tao_tc_OldInherit_three);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_threeExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_threeExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -167,7 +167,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:OldInherit/AMH_threeExceptionHolder:1.0",
     "AMH_threeExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_OldInherit_AMH_threeExceptionHolder,
     0);
 
@@ -213,7 +213,7 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_four = std::addressof(_tao_tc_OldInherit_four);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_fourExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_fourExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -223,7 +223,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:OldInherit/AMH_fourExceptionHolder:1.0",
     "AMH_fourExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_OldInherit_AMH_fourExceptionHolder,
     0);
 
@@ -269,7 +269,7 @@ namespace OldInherit
 {
   ::CORBA::TypeCode_ptr const _tc_five = std::addressof(_tao_tc_OldInherit_five);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_fiveExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldInherit_AMH_fiveExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -279,7 +279,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:OldInherit/AMH_fiveExceptionHolder:1.0",
     "AMH_fiveExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_OldInherit_AMH_fiveExceptionHolder,
     0);
 

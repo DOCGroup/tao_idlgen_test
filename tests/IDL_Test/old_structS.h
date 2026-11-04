@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_STRUCTS_WUEBDA_H_
-#define _TAO_IDL_OLD_STRUCTS_WUEBDA_H_
+#ifndef _TAO_IDL_OLD_STRUCTS_0590SS_H_
+#define _TAO_IDL_OLD_STRUCTS_0590SS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -63,7 +63,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::string_20_tag>
+  class SArg_Traits<::string_20_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::string_20_out,
@@ -88,7 +88,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::bar1>
+  class SArg_Traits<::bar1>
     : public
         Var_Size_SArg_Traits_T<
             ::bar1,
@@ -98,7 +98,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::bar2>
+  class SArg_Traits<::bar2>
     : public
         Var_Size_SArg_Traits_T<
             ::bar2,
@@ -108,7 +108,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::bar3>
+  class SArg_Traits<::bar3>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bar3,
@@ -118,7 +118,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::bar4>
+  class SArg_Traits<::bar4>
     : public
         Var_Size_SArg_Traits_T<
             ::bar4,
@@ -131,7 +131,7 @@ namespace TAO
 #define _FOO1__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::foo1>
+  class  SArg_Traits<::foo1>
     : public Object_SArg_Traits_T<
         ::foo1_ptr,
         ::foo1_var,
@@ -146,7 +146,7 @@ namespace TAO
 #define _AMH_FOO1EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_foo1ExceptionHolder>
+  class SArg_Traits<::AMH_foo1ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_foo1ExceptionHolder *,
@@ -163,7 +163,7 @@ namespace TAO
 #define _AMI_FOO1HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_foo1Handler>
+  class  SArg_Traits<::AMI_foo1Handler>
     : public Object_SArg_Traits_T<
         ::AMI_foo1Handler_ptr,
         ::AMI_foo1Handler_var,
@@ -178,7 +178,7 @@ namespace TAO
 #define _FOO2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::foo2>
+  class  SArg_Traits<::foo2>
     : public Object_SArg_Traits_T<
         ::foo2_ptr,
         ::foo2_var,
@@ -193,7 +193,7 @@ namespace TAO
 #define _AMH_FOO2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_foo2ExceptionHolder>
+  class SArg_Traits<::AMH_foo2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_foo2ExceptionHolder *,
@@ -210,7 +210,7 @@ namespace TAO
 #define _AMI_FOO2HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_foo2Handler>
+  class  SArg_Traits<::AMI_foo2Handler>
     : public Object_SArg_Traits_T<
         ::AMI_foo2Handler_ptr,
         ::AMI_foo2Handler_var,
@@ -222,7 +222,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::CellPos>
+  class SArg_Traits<::CellPos>
     : public
         Fixed_Size_SArg_Traits_T<
             ::CellPos,
@@ -232,7 +232,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::CellPos2>
+  class SArg_Traits<::CellPos2>
     : public
         Fixed_Size_SArg_Traits_T<
             ::CellPos2,
@@ -242,7 +242,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::CellPos3>
+  class SArg_Traits<::CellPos3>
     : public
         Fixed_Size_SArg_Traits_T<
             ::CellPos3,

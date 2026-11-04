@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2C_3CXPQM_H_
-#define _TAO_IDL_SIMPLE2C_3CXPQM_H_
+#ifndef _TAO_IDL_SIMPLE2C_8MHEZ5_H_
+#define _TAO_IDL_SIMPLE2C_8MHEZ5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -549,7 +549,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -567,7 +567,7 @@ namespace TAO
 #define _SIMPLE3__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::simple3>
+  class  Arg_Traits<::simple3>
     : public Object_Arg_Traits_T<
         ::simple3_ptr,
         ::simple3_var,
@@ -583,7 +583,7 @@ namespace TAO
 #define _AMH_SIMPLE3EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_simple3ExceptionHolder>
+  class Arg_Traits<::AMH_simple3ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_simple3ExceptionHolder *,
@@ -601,7 +601,7 @@ namespace TAO
 #define _AMI_SIMPLE3HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_simple3Handler>
+  class  Arg_Traits<::AMI_simple3Handler>
     : public Object_Arg_Traits_T<
         ::AMI_simple3Handler_ptr,
         ::AMI_simple3Handler_var,
@@ -626,11 +626,9 @@ protected:
   ~OBV_AMH_simple3ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_simple3ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_simple3ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_simple3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_simple3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -650,7 +648,7 @@ namespace TAO
 #define _SIMPLE3__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::simple3>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::simple3>
   {
     static ::simple3_ptr duplicate (::simple3_ptr p);
     static void release (::simple3_ptr p);
@@ -677,7 +675,7 @@ namespace TAO
 #define _AMH_SIMPLE3RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_simple3ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_simple3ResponseHandler>
   {
     static ::AMH_simple3ResponseHandler_ptr duplicate (::AMH_simple3ResponseHandler_ptr p);
     static void release (::AMH_simple3ResponseHandler_ptr p);
@@ -691,7 +689,7 @@ namespace TAO
 #define _AMI_SIMPLE3HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_simple3Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_simple3Handler>
   {
     static ::AMI_simple3Handler_ptr duplicate (::AMI_simple3Handler_ptr p);
     static void release (::AMI_simple3Handler_ptr p);

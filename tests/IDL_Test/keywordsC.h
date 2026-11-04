@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSC_BVOGK1_H_
-#define _TAO_IDL_KEYWORDSC_BVOGK1_H_
+#ifndef _TAO_IDL_KEYWORDSC_T811U5_H_
+#define _TAO_IDL_KEYWORDSC_T811U5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -120,7 +120,7 @@ using ObjectSeq_out = ::TAO_Seq_Out_T<ObjectSeq>;
 
 class TAO_IDL_TEST_STUB_Export ObjectSeq
   : public
-      ::TAO::unbounded_value_sequence< Object>
+      ::TAO::unbounded_value_sequence<Object>
 {
 public:
   ObjectSeq () = default;
@@ -478,7 +478,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -493,7 +493,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::Keywords>
+  class Arg_Traits<::Keywords>
     : public
         Fixed_Size_Arg_Traits_T<
             ::Keywords,
@@ -503,7 +503,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Object>
+  class Arg_Traits<::Object>
     : public
         Fixed_Size_Arg_Traits_T<
             ::Object,
@@ -513,7 +513,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::ObjectSeq>
+  class Arg_Traits<::ObjectSeq>
     : public
         Var_Size_Arg_Traits_T<
             ::ObjectSeq,
@@ -523,7 +523,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Objects>
+  class Arg_Traits<::Objects>
     : public
         Var_Size_Arg_Traits_T<
             ::Objects,
@@ -536,7 +536,7 @@ namespace TAO
 #define _TESTING__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Testing>
+  class  Arg_Traits<::Testing>
     : public Object_Arg_Traits_T<
         ::Testing_ptr,
         ::Testing_var,
@@ -552,7 +552,7 @@ namespace TAO
 #define _AMH_TESTINGEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_TestingExceptionHolder>
+  class Arg_Traits<::AMH_TestingExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_TestingExceptionHolder *,
@@ -570,7 +570,7 @@ namespace TAO
 #define _AMI_TESTINGHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_TestingHandler>
+  class  Arg_Traits<::AMI_TestingHandler>
     : public Object_Arg_Traits_T<
         ::AMI_TestingHandler_ptr,
         ::AMI_TestingHandler_var,
@@ -595,11 +595,9 @@ protected:
   ~OBV_AMH_TestingExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_TestingExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_TestingExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_TestingExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_TestingExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -619,7 +617,7 @@ namespace TAO
 #define _TESTING__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Testing>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Testing>
   {
     static ::Testing_ptr duplicate (::Testing_ptr p);
     static void release (::Testing_ptr p);
@@ -646,7 +644,7 @@ namespace TAO
 #define _AMH_TESTINGRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_TestingResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_TestingResponseHandler>
   {
     static ::AMH_TestingResponseHandler_ptr duplicate (::AMH_TestingResponseHandler_ptr p);
     static void release (::AMH_TestingResponseHandler_ptr p);
@@ -660,7 +658,7 @@ namespace TAO
 #define _AMI_TESTINGHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_TestingHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_TestingHandler>
   {
     static ::AMI_TestingHandler_ptr duplicate (::AMI_TestingHandler_ptr p);
     static void release (::AMI_TestingHandler_ptr p);
@@ -762,12 +760,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_ObjectSeq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    ObjectSeq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    ObjectSeq &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ObjectSeq const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ObjectSeq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

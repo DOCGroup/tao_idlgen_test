@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONS_T4VJLQ_H_
-#define _TAO_IDL_OLD_UNIONS_T4VJLQ_H_
+#ifndef _TAO_IDL_OLD_UNIONS_GOAZ7R_H_
+#define _TAO_IDL_OLD_UNIONS_GOAZ7R_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::OldUnion::Bar>
+  class SArg_Traits<::OldUnion::Bar>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::Bar,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldUnion::Foo>
+  class SArg_Traits<::OldUnion::Foo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::Foo,
@@ -94,7 +94,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldUnion::Foo2>
+  class SArg_Traits<::OldUnion::Foo2>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::Foo2,
@@ -107,7 +107,7 @@ namespace TAO
 #define _OLDUNION_A__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldUnion::a>
+  class  SArg_Traits<::OldUnion::a>
     : public Object_SArg_Traits_T<
         ::OldUnion::a_ptr,
         ::OldUnion::a_var,
@@ -119,7 +119,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::OldUnion::a::astruct>
+  class SArg_Traits<::OldUnion::a::astruct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::a::astruct,
@@ -132,7 +132,7 @@ namespace TAO
 #define _OLDUNION_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::OldUnion::AMH_aExceptionHolder>
+  class SArg_Traits<::OldUnion::AMH_aExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldUnion::AMH_aExceptionHolder *,
@@ -149,7 +149,7 @@ namespace TAO
 #define _OLDUNION_AMI_AHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldUnion::AMI_aHandler>
+  class  SArg_Traits<::OldUnion::AMI_aHandler>
     : public Object_SArg_Traits_T<
         ::OldUnion::AMI_aHandler_ptr,
         ::OldUnion::AMI_aHandler_var,

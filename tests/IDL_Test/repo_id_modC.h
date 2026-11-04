@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REPO_ID_MODC_VQR77L_H_
-#define _TAO_IDL_REPO_ID_MODC_VQR77L_H_
+#ifndef _TAO_IDL_REPO_ID_MODC_QIFMZY_H_
+#define _TAO_IDL_REPO_ID_MODC_QIFMZY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -503,7 +503,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -530,7 +530,7 @@ namespace TAO
 #define _GLEEP_SCHMOOZE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::gleep::schmooze>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::gleep::schmooze>
   {
     static ::gleep::schmooze_ptr duplicate (::gleep::schmooze_ptr p);
     static void release (::gleep::schmooze_ptr p);
@@ -544,7 +544,7 @@ namespace TAO
 #define _GLEEP_SCHMEER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::gleep::schmeer>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::gleep::schmeer>
   {
     static ::gleep::schmeer_ptr duplicate (::gleep::schmeer_ptr p);
     static void release (::gleep::schmeer_ptr p);
@@ -558,7 +558,7 @@ namespace TAO
 #define _GLEEP_SCHLEMIEL__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::gleep::schlemiel>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::gleep::schlemiel>
   {
     static ::gleep::schlemiel_ptr duplicate (::gleep::schlemiel_ptr p);
     static void release (::gleep::schlemiel_ptr p);
@@ -572,7 +572,7 @@ namespace TAO
 #define _GLEEP_SPILKIS__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::gleep::spilkis>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::gleep::spilkis>
   {
     static ::gleep::spilkis_ptr duplicate (::gleep::spilkis_ptr p);
     static void release (::gleep::spilkis_ptr p);
@@ -586,7 +586,7 @@ namespace TAO
 #define _GLEEP_FLOOP_SCHMUCK__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::gleep::floop::schmuck>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::gleep::floop::schmuck>
   {
     static ::gleep::floop::schmuck_ptr duplicate (::gleep::floop::schmuck_ptr p);
     static void release (::gleep::floop::schmuck_ptr p);
@@ -600,7 +600,7 @@ namespace TAO
 #define _GLEEP_FLOOP_SCHMENDRICK__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::gleep::floop::schmendrick>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::gleep::floop::schmendrick>
   {
     static ::gleep::floop::schmendrick_ptr duplicate (::gleep::floop::schmendrick_ptr p);
     static void release (::gleep::floop::schmendrick_ptr p);
@@ -614,7 +614,7 @@ namespace TAO
 #define _GLEEP_FLOOP_VERKLEMPT_SCHLEMAZEL__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::gleep::floop::verklempt::schlemazel>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::gleep::floop::verklempt::schlemazel>
   {
     static ::gleep::floop::verklempt::schlemazel_ptr duplicate (::gleep::floop::verklempt::schlemazel_ptr p);
     static void release (::gleep::floop::verklempt::schlemazel_ptr p);
@@ -628,7 +628,7 @@ namespace TAO
 #define _GLEEP_SCHMEGEGGING__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::gleep::schmegegging>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::gleep::schmegegging>
   {
     static ::gleep::schmegegging_ptr duplicate (::gleep::schmegegging_ptr p);
     static void release (::gleep::schmegegging_ptr p);

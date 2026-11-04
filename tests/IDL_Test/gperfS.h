@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFS_RKB3M1_H_
-#define _TAO_IDL_GPERFS_RKB3M1_H_
+#ifndef _TAO_IDL_GPERFS_FNIS1U_H_
+#define _TAO_IDL_GPERFS_FNIS1U_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::TestEnum>
+  class SArg_Traits<::TestEnum>
     : public
         Basic_SArg_Traits_T<
             ::TestEnum,
@@ -87,7 +87,7 @@ namespace TAO
 #define _TESTLISTITEM__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::testlistitem>
+  class  SArg_Traits<::testlistitem>
     : public Object_SArg_Traits_T<
         ::testlistitem_ptr,
         ::testlistitem_var,
@@ -102,7 +102,7 @@ namespace TAO
 #define _AMH_TESTLISTITEMEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_testlistitemExceptionHolder>
+  class SArg_Traits<::AMH_testlistitemExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_testlistitemExceptionHolder *,
@@ -119,7 +119,7 @@ namespace TAO
 #define _AMI_TESTLISTITEMHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_testlistitemHandler>
+  class  SArg_Traits<::AMI_testlistitemHandler>
     : public Object_SArg_Traits_T<
         ::AMI_testlistitemHandler_ptr,
         ::AMI_testlistitemHandler_var,
@@ -134,7 +134,7 @@ namespace TAO
 #define _TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::test>
+  class  SArg_Traits<::test>
     : public Object_SArg_Traits_T<
         ::test_ptr,
         ::test_var,
@@ -149,7 +149,7 @@ namespace TAO
 #define _AMH_TESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_testExceptionHolder>
+  class SArg_Traits<::AMH_testExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_testExceptionHolder *,
@@ -166,7 +166,7 @@ namespace TAO
 #define _AMI_TESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_testHandler>
+  class  SArg_Traits<::AMI_testHandler>
     : public Object_SArg_Traits_T<
         ::AMI_testHandler_ptr,
         ::AMI_testHandler_var,
@@ -181,7 +181,7 @@ namespace TAO
 #define _SIMPLE_SERVER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Simple_Server>
+  class  SArg_Traits<::Simple_Server>
     : public Object_SArg_Traits_T<
         ::Simple_Server_ptr,
         ::Simple_Server_var,
@@ -196,7 +196,7 @@ namespace TAO
 #define _AMH_SIMPLE_SERVEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_Simple_ServerExceptionHolder>
+  class SArg_Traits<::AMH_Simple_ServerExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_Simple_ServerExceptionHolder *,
@@ -213,7 +213,7 @@ namespace TAO
 #define _AMI_SIMPLE_SERVERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_Simple_ServerHandler>
+  class  SArg_Traits<::AMI_Simple_ServerHandler>
     : public Object_SArg_Traits_T<
         ::AMI_Simple_ServerHandler_ptr,
         ::AMI_Simple_ServerHandler_var,

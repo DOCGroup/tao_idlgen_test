@@ -23,6 +23,7 @@
  **/
 
 #include "old_union2C.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -46,7 +47,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "old_union2C.inl"
@@ -152,13 +152,13 @@ void OldUnion2::Foo::_reset ()
     break;
   }
 }
-static TAO::TypeCode::Case_T<OldUnion2::FooDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Foo__0 (OldUnion2::FOO1, "x", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<OldUnion2::FooDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Foo__1 (OldUnion2::FOO2, "y", &CORBA::_tc_string);
+static TAO::TypeCode::Case_T<OldUnion2::FooDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Foo__0 (OldUnion2::FOO1, "x", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<OldUnion2::FooDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Foo__1 (OldUnion2::FOO2, "y", std::addressof (CORBA::_tc_string));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_OldUnion2_Foo[] =
   {
-    &_tao_cases_OldUnion2_Foo__0,
-    &_tao_cases_OldUnion2_Foo__1
+    std::addressof (_tao_cases_OldUnion2_Foo__0),
+    std::addressof (_tao_cases_OldUnion2_Foo__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -168,7 +168,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_OldUnion2_Foo (
     "IDL:OldUnion2/Foo:1.0",
     "Foo",
-    &OldUnion2::_tc_FooDisc,
+    std::addressof (OldUnion2::_tc_FooDisc),
     _tao_cases_OldUnion2_Foo,
     sizeof (_tao_cases_OldUnion2_Foo)/sizeof (_tao_cases_OldUnion2_Foo[0]),
     -1);
@@ -182,8 +182,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldUnion2_Bar[] =
       {
-        { "kind", &OldUnion2::Bar::_tc_BarDisc },
-        { "addr", &OldUnion2::Bar::_tc_Foo }
+        { "kind", std::addressof (OldUnion2::Bar::_tc_BarDisc) },
+        { "addr", std::addressof (OldUnion2::Bar::_tc_Foo) }
       };
 
 static TAO::TypeCode::Struct<
@@ -205,9 +205,7 @@ namespace OldUnion2
   ::CORBA::TypeCode_ptr const _tc_Bar = std::addressof(_tao_tc_OldUnion2_Bar);
 }
 
-void
-OldUnion2::Bar::_tao_any_destructor (
-    void *_tao_void_pointer)
+void OldUnion2::Bar::_tao_any_destructor (void *_tao_void_pointer)
 {
   Bar *tmp = static_cast<Bar *> (_tao_void_pointer);
   delete tmp;
@@ -296,13 +294,13 @@ OldUnion2::Bar::Foo::operator= (::OldUnion2::Bar::Foo const &u)
 void OldUnion2::Bar::Foo::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<OldUnion2::Bar::BarDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Bar_Foo__0 (OldUnion2::Bar::BAR1, "x", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<OldUnion2::Bar::BarDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Bar_Foo__1 (OldUnion2::Bar::BAR2, "y", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<OldUnion2::Bar::BarDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Bar_Foo__0 (OldUnion2::Bar::BAR1, "x", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<OldUnion2::Bar::BarDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Bar_Foo__1 (OldUnion2::Bar::BAR2, "y", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_OldUnion2_Bar_Foo[] =
   {
-    &_tao_cases_OldUnion2_Bar_Foo__0,
-    &_tao_cases_OldUnion2_Bar_Foo__1
+    std::addressof (_tao_cases_OldUnion2_Bar_Foo__0),
+    std::addressof (_tao_cases_OldUnion2_Bar_Foo__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -312,7 +310,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_OldUnion2_Bar_Foo (
     "IDL:OldUnion2/Bar/Foo:1.0",
     "Foo",
-    &OldUnion2::Bar::_tc_BarDisc,
+    std::addressof (OldUnion2::Bar::_tc_BarDisc),
     _tao_cases_OldUnion2_Bar_Foo,
     sizeof (_tao_cases_OldUnion2_Bar_Foo)/sizeof (_tao_cases_OldUnion2_Bar_Foo[0]),
     -1);
@@ -402,7 +400,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::OldUnion2::Bar const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::OldUnion2::Bar>::insert_copy (
+  TAO::Any_Dual_Impl_T<::OldUnion2::Bar>::insert_copy (
     _tao_any,
     ::OldUnion2::Bar::_tao_any_destructor,
     OldUnion2::_tc_Bar,
@@ -414,7 +412,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::OldUnion2::Bar *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::OldUnion2::Bar>::insert (
+  TAO::Any_Dual_Impl_T<::OldUnion2::Bar>::insert (
     _tao_any,
     ::OldUnion2::Bar::_tao_any_destructor,
     OldUnion2::_tc_Bar,
@@ -426,7 +424,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::OldUnion2::Bar const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::OldUnion2::Bar>::extract (
+  return TAO::Any_Dual_Impl_T<::OldUnion2::Bar>::extract (
     _tao_any,
     ::OldUnion2::Bar::_tao_any_destructor,
     OldUnion2::_tc_Bar,
@@ -514,7 +512,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OldUnion2::FooDisc _tao_enumerator)
 {
-  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, OldUnion2::FooDisc & _tao_enumerator)
@@ -616,7 +614,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OldUnion2::Bar::BarDisc _tao_enumerator)
 {
-  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, OldUnion2::Bar::BarDisc & _tao_enumerator)

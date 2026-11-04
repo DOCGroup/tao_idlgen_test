@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTC_LEPVDW_H_
-#define _TAO_IDL_SIMPLE_TESTC_LEPVDW_H_
+#ifndef _TAO_IDL_SIMPLE_TESTC_RG3CIZ_H_
+#define _TAO_IDL_SIMPLE_TESTC_RG3CIZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -132,7 +132,7 @@ namespace TAO
 #define _SIMPLE_SERVER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Simple_Server>
+  class  Arg_Traits<::Simple_Server>
     : public Object_Arg_Traits_T<
         ::Simple_Server_ptr,
         ::Simple_Server_var,
@@ -157,7 +157,7 @@ namespace TAO
 #define _SIMPLE_SERVER__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::Simple_Server>
+  struct  Objref_Traits<::Simple_Server>
   {
     static ::Simple_Server_ptr duplicate (::Simple_Server_ptr p);
     static void release (::Simple_Server_ptr p);

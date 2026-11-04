@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2583_REGRESSIONC_LS1BHL_H_
-#define _TAO_IDL_BUG_2583_REGRESSIONC_LS1BHL_H_
+#ifndef _TAO_IDL_BUG_2583_REGRESSIONC_2LP1T8_H_
+#define _TAO_IDL_BUG_2583_REGRESSIONC_2LP1T8_H_
 
 #include /**/ "ace/pre.h"
 
@@ -142,7 +142,7 @@ namespace Test
 
   class TAO_IDL_TEST_STUB_Export NameDynAnyPairSeq
     : public
-        ::TAO::unbounded_value_sequence< NameDynAnyPair>
+        ::TAO::unbounded_value_sequence<NameDynAnyPair>
   {
   public:
     NameDynAnyPairSeq () = default;
@@ -179,7 +179,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -194,7 +194,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::Test::NameDynAnyPair>
+  class Arg_Traits<::Test::NameDynAnyPair>
     : public
         Var_Size_Arg_Traits_T<
             ::Test::NameDynAnyPair,
@@ -204,7 +204,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Test::NameDynAnyPairSeq>
+  class Arg_Traits<::Test::NameDynAnyPairSeq>
     : public
         Var_Size_Arg_Traits_T<
             ::Test::NameDynAnyPairSeq,
@@ -226,7 +226,7 @@ namespace TAO
 #define _TEST_DYNANY__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Test::DynAny>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Test::DynAny>
   {
     static ::Test::DynAny_ptr duplicate (::Test::DynAny_ptr p);
     static void release (::Test::DynAny_ptr p);

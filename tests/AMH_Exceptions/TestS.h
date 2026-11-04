@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_GELSQL_H_
-#define _TAO_IDL_TESTS_GELSQL_H_
+#ifndef _TAO_IDL_TESTS_IJ6VE6_H_
+#define _TAO_IDL_TESTS_IJ6VE6_H_
 
 #include /**/ "ace/pre.h"
 
@@ -57,7 +57,7 @@ namespace TAO
 #define _TEST_RED_HERRING__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Test::Red_Herring>
+  class SArg_Traits<::Test::Red_Herring>
     : public
         Object_SArg_Traits_T<
             ::Test::Red_Herring *,
@@ -74,7 +74,7 @@ namespace TAO
 #define _TEST_ROUNDTRIP__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Test::Roundtrip>
+  class  SArg_Traits<::Test::Roundtrip>
     : public Object_SArg_Traits_T<
         ::Test::Roundtrip_ptr,
         ::Test::Roundtrip_var,
@@ -89,7 +89,7 @@ namespace TAO
 #define _TEST_AMH_ROUNDTRIPEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Test::AMH_RoundtripExceptionHolder>
+  class SArg_Traits<::Test::AMH_RoundtripExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Test::AMH_RoundtripExceptionHolder *,

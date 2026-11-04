@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_SEWDPK_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_SEWDPK_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_EY2WUT_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_EY2WUT_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1284,7 +1284,7 @@ namespace TAO
 {
 
   template<>
-  class Arg_Traits< ::M1::S1>
+  class Arg_Traits<::M1::S1>
     : public
         Fixed_Size_Arg_Traits_T<
             ::M1::S1,
@@ -1297,7 +1297,7 @@ namespace TAO
 #define _M1_LI__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::M1::LI>
+  class  Arg_Traits<::M1::LI>
     : public Object_Arg_Traits_T<
         ::M1::LI_ptr,
         ::M1::LI_var,
@@ -1313,7 +1313,7 @@ namespace TAO
 #define _M1_AMH_LIEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::M1::AMH_LIExceptionHolder>
+  class Arg_Traits<::M1::AMH_LIExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::M1::AMH_LIExceptionHolder *,
@@ -1331,7 +1331,7 @@ namespace TAO
 #define _M1_L2__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::M1::L2>
+  class  Arg_Traits<::M1::L2>
     : public Object_Arg_Traits_T<
         ::M1::L2_ptr,
         ::M1::L2_var,
@@ -1347,7 +1347,7 @@ namespace TAO
 #define _M1_AMH_L2EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::M1::AMH_L2ExceptionHolder>
+  class Arg_Traits<::M1::AMH_L2ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::M1::AMH_L2ExceptionHolder *,
@@ -1362,7 +1362,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::M1::X>
+  class Arg_Traits<::M1::X>
     : public
         Var_Size_Arg_Traits_T<
             ::M1::X,
@@ -1372,7 +1372,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::M1::BooleanUnion1>
+  class Arg_Traits<::M1::BooleanUnion1>
     : public
         Var_Size_Arg_Traits_T<
             ::M1::BooleanUnion1,
@@ -1382,7 +1382,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::M1::BooleanUnion2>
+  class Arg_Traits<::M1::BooleanUnion2>
     : public
         Var_Size_Arg_Traits_T<
             ::M1::BooleanUnion2,
@@ -1395,7 +1395,7 @@ namespace TAO
 #define _M1_V__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::M1::V>
+  class Arg_Traits<::M1::V>
     : public
         Object_Arg_Traits_T<
             ::M1::V *,
@@ -1410,7 +1410,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::M2::M3::S2>
+  class Arg_Traits<::M2::M3::S2>
     : public
         Fixed_Size_Arg_Traits_T<
             ::M2::M3::S2,
@@ -1423,7 +1423,7 @@ namespace TAO
 #define _M2_M3_L3__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::M2::M3::L3>
+  class  Arg_Traits<::M2::M3::L3>
     : public Object_Arg_Traits_T<
         ::M2::M3::L3_ptr,
         ::M2::M3::L3_var,
@@ -1439,7 +1439,7 @@ namespace TAO
 #define _M2_M3_AMH_L3EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::M2::M3::AMH_L3ExceptionHolder>
+  class Arg_Traits<::M2::M3::AMH_L3ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::M2::M3::AMH_L3ExceptionHolder *,
@@ -1457,7 +1457,7 @@ namespace TAO
 #define _M2_M3_L4__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::M2::M3::L4>
+  class  Arg_Traits<::M2::M3::L4>
     : public Object_Arg_Traits_T<
         ::M2::M3::L4_ptr,
         ::M2::M3::L4_var,
@@ -1473,7 +1473,7 @@ namespace TAO
 #define _M2_M3_AMH_L4EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::M2::M3::AMH_L4ExceptionHolder>
+  class Arg_Traits<::M2::M3::AMH_L4ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::M2::M3::AMH_L4ExceptionHolder *,
@@ -1491,7 +1491,7 @@ namespace TAO
 #define _M2_M3_V2__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::M2::M3::V2>
+  class Arg_Traits<::M2::M3::V2>
     : public
         Object_Arg_Traits_T<
             ::M2::M3::V2 *,
@@ -1509,7 +1509,7 @@ namespace TAO
 #define _M2_M3_V3__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::M2::M3::V3>
+  class Arg_Traits<::M2::M3::V3>
     : public
         Object_Arg_Traits_T<
             ::M2::M3::V3 *,
@@ -1541,11 +1541,9 @@ protected:
   ~AMH_LIExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M1_AMH_LIExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M1_AMH_LIExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M1_AMH_LIExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M1_AMH_LIExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1565,11 +1563,9 @@ protected:
   ~AMH_L2ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M1_AMH_L2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M1_AMH_L2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M1_AMH_L2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M1_AMH_L2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1631,11 +1627,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M1_V (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M1_V (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M1_V (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M1_V (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1668,11 +1662,9 @@ namespace OBV_M2
     ~AMH_L3ExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__M2_M3_AMH_L3ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__M2_M3_AMH_L3ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__M2_M3_AMH_L3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__M2_M3_AMH_L3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1692,11 +1684,9 @@ protected:
   ~AMH_L4ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M2_M3_AMH_L4ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M2_M3_AMH_L4ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M2_M3_AMH_L4ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M2_M3_AMH_L4ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1745,11 +1735,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M2_M3_V2 (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M2_M3_V2 (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M2_M3_V2 (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M2_M3_V2 (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1797,11 +1785,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M2_M3_V3 (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M2_M3_V3 (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M2_M3_V3 (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M2_M3_V3 (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1828,7 +1814,7 @@ namespace TAO
 #define _M1_LI__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::M1::LI>
+  struct  Objref_Traits<::M1::LI>
   {
     static ::M1::LI_ptr duplicate (::M1::LI_ptr p);
     static void release (::M1::LI_ptr p);
@@ -1855,7 +1841,7 @@ namespace TAO
 #define _M1_AMH_LIRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::M1::AMH_LIResponseHandler>
+  struct  Objref_Traits<::M1::AMH_LIResponseHandler>
   {
     static ::M1::AMH_LIResponseHandler_ptr duplicate (::M1::AMH_LIResponseHandler_ptr p);
     static void release (::M1::AMH_LIResponseHandler_ptr p);
@@ -1869,7 +1855,7 @@ namespace TAO
 #define _M1_L2__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::M1::L2>
+  struct  Objref_Traits<::M1::L2>
   {
     static ::M1::L2_ptr duplicate (::M1::L2_ptr p);
     static void release (::M1::L2_ptr p);
@@ -1896,7 +1882,7 @@ namespace TAO
 #define _M1_AMH_L2RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::M1::AMH_L2ResponseHandler>
+  struct  Objref_Traits<::M1::AMH_L2ResponseHandler>
   {
     static ::M1::AMH_L2ResponseHandler_ptr duplicate (::M1::AMH_L2ResponseHandler_ptr p);
     static void release (::M1::AMH_L2ResponseHandler_ptr p);
@@ -1923,7 +1909,7 @@ namespace TAO
 #define _M2_M3_L3__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::M2::M3::L3>
+  struct  Objref_Traits<::M2::M3::L3>
   {
     static ::M2::M3::L3_ptr duplicate (::M2::M3::L3_ptr p);
     static void release (::M2::M3::L3_ptr p);
@@ -1950,7 +1936,7 @@ namespace TAO
 #define _M2_M3_AMH_L3RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::M2::M3::AMH_L3ResponseHandler>
+  struct  Objref_Traits<::M2::M3::AMH_L3ResponseHandler>
   {
     static ::M2::M3::AMH_L3ResponseHandler_ptr duplicate (::M2::M3::AMH_L3ResponseHandler_ptr p);
     static void release (::M2::M3::AMH_L3ResponseHandler_ptr p);
@@ -1964,7 +1950,7 @@ namespace TAO
 #define _M2_M3_L4__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::M2::M3::L4>
+  struct  Objref_Traits<::M2::M3::L4>
   {
     static ::M2::M3::L4_ptr duplicate (::M2::M3::L4_ptr p);
     static void release (::M2::M3::L4_ptr p);
@@ -1991,7 +1977,7 @@ namespace TAO
 #define _M2_M3_AMH_L4RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::M2::M3::AMH_L4ResponseHandler>
+  struct  Objref_Traits<::M2::M3::AMH_L4ResponseHandler>
   {
     static ::M2::M3::AMH_L4ResponseHandler_ptr duplicate (::M2::M3::AMH_L4ResponseHandler_ptr p);
     static void release (::M2::M3::AMH_L4ResponseHandler_ptr p);

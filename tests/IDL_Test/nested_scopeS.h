@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPES_IMINQC_H_
-#define _TAO_IDL_NESTED_SCOPES_IMINQC_H_
+#ifndef _TAO_IDL_NESTED_SCOPES_MMG1JI_H_
+#define _TAO_IDL_NESTED_SCOPES_MMG1JI_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::skip::hump::skip>
+  class SArg_Traits<::skip::hump::skip>
     : public
         Fixed_Size_SArg_Traits_T<
             ::skip::hump::skip,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::u_skip::u_hump::u_skip>
+  class SArg_Traits<::u_skip::u_hump::u_skip>
     : public
         Fixed_Size_SArg_Traits_T<
             ::u_skip::u_hump::u_skip,
@@ -97,7 +97,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_I_SKIP__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::i_skip::i_hump::i_skip>
+  class  SArg_Traits<::i_skip::i_hump::i_skip>
     : public Object_SArg_Traits_T<
         ::i_skip::i_hump::i_skip_ptr,
         ::i_skip::i_hump::i_skip_var,
@@ -112,7 +112,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_AMH_I_SKIPEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::i_skip::i_hump::AMH_i_skipExceptionHolder>
+  class SArg_Traits<::i_skip::i_hump::AMH_i_skipExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::i_skip::i_hump::AMH_i_skipExceptionHolder *,
@@ -129,7 +129,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_AMI_I_SKIPHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::i_skip::i_hump::AMI_i_skipHandler>
+  class  SArg_Traits<::i_skip::i_hump::AMI_i_skipHandler>
     : public Object_SArg_Traits_T<
         ::i_skip::i_hump::AMI_i_skipHandler_ptr,
         ::i_skip::i_hump::AMI_i_skipHandler_var,
@@ -141,7 +141,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::pre_u_skip::pre_u_hump::pre_u_skip>
+  class SArg_Traits<::pre_u_skip::pre_u_hump::pre_u_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::pre_u_skip::pre_u_hump::pre_u_skip,
@@ -151,7 +151,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::pre_b_skip::pre_b_hump::pre_b_skip>
+  class SArg_Traits<::pre_b_skip::pre_b_hump::pre_b_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::pre_b_skip::pre_b_hump::pre_b_skip,
@@ -161,7 +161,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::str_u_skip::str_u_hump::str_u_skip>
+  class SArg_Traits<::str_u_skip::str_u_hump::str_u_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::str_u_skip::str_u_hump::str_u_skip,
@@ -171,7 +171,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::str_b_skip::str_b_hump::str_b_skip>
+  class SArg_Traits<::str_b_skip::str_b_hump::str_b_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::str_b_skip::str_b_hump::str_b_skip,
@@ -181,7 +181,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::wstr_u_skip::wstr_u_hump::wstr_u_skip>
+  class SArg_Traits<::wstr_u_skip::wstr_u_hump::wstr_u_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::wstr_u_skip::wstr_u_hump::wstr_u_skip,
@@ -191,7 +191,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::wstr_b_skip::wstr_b_hump::wstr_b_skip>
+  class SArg_Traits<::wstr_b_skip::wstr_b_hump::wstr_b_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::wstr_b_skip::wstr_b_hump::wstr_b_skip,
@@ -204,7 +204,7 @@ namespace TAO
 #define _BLOO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bloo>
+  class  SArg_Traits<::bloo>
     : public Object_SArg_Traits_T<
         ::bloo_ptr,
         ::bloo_var,
@@ -219,7 +219,7 @@ namespace TAO
 #define _AMH_BLOOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_blooExceptionHolder>
+  class SArg_Traits<::AMH_blooExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_blooExceptionHolder *,
@@ -236,7 +236,7 @@ namespace TAO
 #define _AMI_BLOOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_blooHandler>
+  class  SArg_Traits<::AMI_blooHandler>
     : public Object_SArg_Traits_T<
         ::AMI_blooHandler_ptr,
         ::AMI_blooHandler_var,
@@ -248,7 +248,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::obj_u_skip::obj_u_hump::obj_u_skip>
+  class SArg_Traits<::obj_u_skip::obj_u_hump::obj_u_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::obj_u_skip::obj_u_hump::obj_u_skip,
@@ -258,7 +258,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::obj_b_skip::obj_b_hump::obj_b_skip>
+  class SArg_Traits<::obj_b_skip::obj_b_hump::obj_b_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::obj_b_skip::obj_b_hump::obj_b_skip,
@@ -271,7 +271,7 @@ namespace TAO
 #define _BUG_1985_A_B_SOMETHING__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_1985_a::b::something>
+  class  SArg_Traits<::bug_1985_a::b::something>
     : public Object_SArg_Traits_T<
         ::bug_1985_a::b::something_ptr,
         ::bug_1985_a::b::something_var,
@@ -286,7 +286,7 @@ namespace TAO
 #define _BUG_1985_A_B_AMH_SOMETHINGEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::bug_1985_a::b::AMH_somethingExceptionHolder>
+  class SArg_Traits<::bug_1985_a::b::AMH_somethingExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::bug_1985_a::b::AMH_somethingExceptionHolder *,
@@ -303,7 +303,7 @@ namespace TAO
 #define _BUG_1985_A_B_AMI_SOMETHINGHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_1985_a::b::AMI_somethingHandler>
+  class  SArg_Traits<::bug_1985_a::b::AMI_somethingHandler>
     : public Object_SArg_Traits_T<
         ::bug_1985_a::b::AMI_somethingHandler_ptr,
         ::bug_1985_a::b::AMI_somethingHandler_var,
@@ -318,7 +318,7 @@ namespace TAO
 #define _BUG_1985_C_D_SOMETHING__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_1985_c::d::something>
+  class  SArg_Traits<::bug_1985_c::d::something>
     : public Object_SArg_Traits_T<
         ::bug_1985_c::d::something_ptr,
         ::bug_1985_c::d::something_var,
@@ -333,7 +333,7 @@ namespace TAO
 #define _BUG_1985_C_D_AMH_SOMETHINGEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::bug_1985_c::d::AMH_somethingExceptionHolder>
+  class SArg_Traits<::bug_1985_c::d::AMH_somethingExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::bug_1985_c::d::AMH_somethingExceptionHolder *,
@@ -350,7 +350,7 @@ namespace TAO
 #define _BUG_1985_C_D_AMI_SOMETHINGHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::bug_1985_c::d::AMI_somethingHandler>
+  class  SArg_Traits<::bug_1985_c::d::AMI_somethingHandler>
     : public Object_SArg_Traits_T<
         ::bug_1985_c::d::AMI_somethingHandler_ptr,
         ::bug_1985_c::d::AMI_somethingHandler_var,
@@ -365,7 +365,7 @@ namespace TAO
 #define _NEGOTIATOR_UAV_NEGOTIATOR__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Negotiator::UAV_Negotiator>
+  class  SArg_Traits<::Negotiator::UAV_Negotiator>
     : public Object_SArg_Traits_T<
         ::Negotiator::UAV_Negotiator_ptr,
         ::Negotiator::UAV_Negotiator_var,
@@ -380,7 +380,7 @@ namespace TAO
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Negotiator::AMH_UAV_NegotiatorExceptionHolder>
+  class SArg_Traits<::Negotiator::AMH_UAV_NegotiatorExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Negotiator::AMH_UAV_NegotiatorExceptionHolder *,
@@ -397,7 +397,7 @@ namespace TAO
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATORHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Negotiator::AMI_UAV_NegotiatorHandler>
+  class  SArg_Traits<::Negotiator::AMI_UAV_NegotiatorHandler>
     : public Object_SArg_Traits_T<
         ::Negotiator::AMI_UAV_NegotiatorHandler_ptr,
         ::Negotiator::AMI_UAV_NegotiatorHandler_var,
@@ -412,7 +412,7 @@ namespace TAO
 #define _NEGOTIATOR_UAV_NEGOTIATOR_FACTORY__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Negotiator::UAV_Negotiator_Factory>
+  class  SArg_Traits<::Negotiator::UAV_Negotiator_Factory>
     : public Object_SArg_Traits_T<
         ::Negotiator::UAV_Negotiator_Factory_ptr,
         ::Negotiator::UAV_Negotiator_Factory_var,
@@ -427,7 +427,7 @@ namespace TAO
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder>
+  class SArg_Traits<::Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder *,
@@ -444,7 +444,7 @@ namespace TAO
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATOR_FACTORYHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Negotiator::AMI_UAV_Negotiator_FactoryHandler>
+  class  SArg_Traits<::Negotiator::AMI_UAV_Negotiator_FactoryHandler>
     : public Object_SArg_Traits_T<
         ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr,
         ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_var,
@@ -456,7 +456,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::bug_2125::Bar::Stuff>
+  class SArg_Traits<::bug_2125::Bar::Stuff>
     : public
         Basic_SArg_Traits_T<
             ::bug_2125::Bar::Stuff,
@@ -469,7 +469,7 @@ namespace TAO
 #define _WOW_BUG_2125_MYINTERFACE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Wow::bug_2125::MyInterface>
+  class  SArg_Traits<::Wow::bug_2125::MyInterface>
     : public Object_SArg_Traits_T<
         ::Wow::bug_2125::MyInterface_ptr,
         ::Wow::bug_2125::MyInterface_var,
@@ -484,7 +484,7 @@ namespace TAO
 #define _WOW_BUG_2125_AMH_MYINTERFACEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Wow::bug_2125::AMH_MyInterfaceExceptionHolder>
+  class SArg_Traits<::Wow::bug_2125::AMH_MyInterfaceExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Wow::bug_2125::AMH_MyInterfaceExceptionHolder *,
@@ -501,7 +501,7 @@ namespace TAO
 #define _WOW_BUG_2125_AMI_MYINTERFACEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Wow::bug_2125::AMI_MyInterfaceHandler>
+  class  SArg_Traits<::Wow::bug_2125::AMI_MyInterfaceHandler>
     : public Object_SArg_Traits_T<
         ::Wow::bug_2125::AMI_MyInterfaceHandler_ptr,
         ::Wow::bug_2125::AMI_MyInterfaceHandler_var,
@@ -513,7 +513,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::Company::CORBA::Inner::Foo>
+  class SArg_Traits<::Company::CORBA::Inner::Foo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Company::CORBA::Inner::Foo,

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLEC_3Y5JJB_H_
-#define _TAO_IDL_SIMPLEC_3Y5JJB_H_
+#ifndef _TAO_IDL_SIMPLEC_73FQL7_H_
+#define _TAO_IDL_SIMPLEC_73FQL7_H_
 
 #include /**/ "ace/pre.h"
 
@@ -83,7 +83,7 @@ using vec10_out = ::TAO_Seq_Out_T<vec10>;
 
 class TAO_IDL_TEST_STUB_Export vec10
   : public
-      ::TAO::bounded_value_sequence< ::CORBA::Long,10>
+      ::TAO::bounded_value_sequence<::CORBA::Long,10>
 {
 public:
   vec10 () = default;
@@ -745,7 +745,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -760,7 +760,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::vec10>
+  class Arg_Traits<::vec10>
     : public
         Var_Size_Arg_Traits_T<
             ::vec10,
@@ -773,7 +773,7 @@ namespace TAO
 #define _SIMPLE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::simple>
+  class  Arg_Traits<::simple>
     : public Object_Arg_Traits_T<
         ::simple_ptr,
         ::simple_var,
@@ -789,7 +789,7 @@ namespace TAO
 #define _AMH_SIMPLEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_simpleExceptionHolder>
+  class Arg_Traits<::AMH_simpleExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_simpleExceptionHolder *,
@@ -807,7 +807,7 @@ namespace TAO
 #define _AMI_SIMPLEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_simpleHandler>
+  class  Arg_Traits<::AMI_simpleHandler>
     : public Object_Arg_Traits_T<
         ::AMI_simpleHandler_ptr,
         ::AMI_simpleHandler_var,
@@ -823,7 +823,7 @@ namespace TAO
 #define _SIMPLE2__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::simple2>
+  class  Arg_Traits<::simple2>
     : public Object_Arg_Traits_T<
         ::simple2_ptr,
         ::simple2_var,
@@ -839,7 +839,7 @@ namespace TAO
 #define _AMH_SIMPLE2EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_simple2ExceptionHolder>
+  class Arg_Traits<::AMH_simple2ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_simple2ExceptionHolder *,
@@ -857,7 +857,7 @@ namespace TAO
 #define _AMI_SIMPLE2HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_simple2Handler>
+  class  Arg_Traits<::AMI_simple2Handler>
     : public Object_Arg_Traits_T<
         ::AMI_simple2Handler_ptr,
         ::AMI_simple2Handler_var,
@@ -882,11 +882,9 @@ protected:
   ~OBV_AMH_simpleExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_simpleExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_simpleExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_simpleExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_simpleExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -906,11 +904,9 @@ protected:
   ~OBV_AMH_simple2ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_simple2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_simple2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_simple2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_simple2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -930,7 +926,7 @@ namespace TAO
 #define _SIMPLE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::simple>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::simple>
   {
     static ::simple_ptr duplicate (::simple_ptr p);
     static void release (::simple_ptr p);
@@ -957,7 +953,7 @@ namespace TAO
 #define _AMH_SIMPLERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_simpleResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_simpleResponseHandler>
   {
     static ::AMH_simpleResponseHandler_ptr duplicate (::AMH_simpleResponseHandler_ptr p);
     static void release (::AMH_simpleResponseHandler_ptr p);
@@ -971,7 +967,7 @@ namespace TAO
 #define _AMI_SIMPLEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_simpleHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_simpleHandler>
   {
     static ::AMI_simpleHandler_ptr duplicate (::AMI_simpleHandler_ptr p);
     static void release (::AMI_simpleHandler_ptr p);
@@ -985,7 +981,7 @@ namespace TAO
 #define _SIMPLE2__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::simple2>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::simple2>
   {
     static ::simple2_ptr duplicate (::simple2_ptr p);
     static void release (::simple2_ptr p);
@@ -1012,7 +1008,7 @@ namespace TAO
 #define _AMH_SIMPLE2RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_simple2ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_simple2ResponseHandler>
   {
     static ::AMH_simple2ResponseHandler_ptr duplicate (::AMH_simple2ResponseHandler_ptr p);
     static void release (::AMH_simple2ResponseHandler_ptr p);
@@ -1026,7 +1022,7 @@ namespace TAO
 #define _AMI_SIMPLE2HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_simple2Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_simple2Handler>
   {
     static ::AMI_simple2Handler_ptr duplicate (::AMI_simple2Handler_ptr p);
     static void release (::AMI_simple2Handler_ptr p);
@@ -1141,12 +1137,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_vec10_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    vec10 const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    vec10 &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, vec10 const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, vec10 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

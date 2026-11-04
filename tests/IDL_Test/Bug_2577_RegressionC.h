@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONC_CLSW51_H_
-#define _TAO_IDL_BUG_2577_REGRESSIONC_CLSW51_H_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONC_A60O9A_H_
+#define _TAO_IDL_BUG_2577_REGRESSIONC_A60O9A_H_
 
 #include /**/ "ace/pre.h"
 
@@ -451,7 +451,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -466,7 +466,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::DateTime_T>
+  class Arg_Traits<::DateTime_T>
     : public
         Fixed_Size_Arg_Traits_T<
             ::DateTime_T,
@@ -479,7 +479,7 @@ namespace TAO
 #define _DATA_T__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Data_T>
+  class Arg_Traits<::Data_T>
     : public
         Object_Arg_Traits_T<
             ::Data_T *,
@@ -497,7 +497,7 @@ namespace TAO
 #define _USER_T__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::User_T>
+  class  Arg_Traits<::User_T>
     : public Object_Arg_Traits_T<
         ::User_T_ptr,
         ::User_T_var,
@@ -513,7 +513,7 @@ namespace TAO
 #define _AMH_USER_TEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_User_TExceptionHolder>
+  class Arg_Traits<::AMH_User_TExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_User_TExceptionHolder *,
@@ -531,7 +531,7 @@ namespace TAO
 #define _AMI_USER_THANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_User_THandler>
+  class  Arg_Traits<::AMI_User_THandler>
     : public Object_Arg_Traits_T<
         ::AMI_User_THandler_ptr,
         ::AMI_User_THandler_var,
@@ -568,11 +568,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__Data_T (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Data_T (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__Data_T (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Data_T (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -593,11 +591,9 @@ protected:
   ~OBV_AMH_User_TExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_User_TExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_User_TExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_User_TExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_User_TExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -630,7 +626,7 @@ namespace TAO
 #define _USER_T__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::User_T>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::User_T>
   {
     static ::User_T_ptr duplicate (::User_T_ptr p);
     static void release (::User_T_ptr p);
@@ -657,7 +653,7 @@ namespace TAO
 #define _AMH_USER_TRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_User_TResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_User_TResponseHandler>
   {
     static ::AMH_User_TResponseHandler_ptr duplicate (::AMH_User_TResponseHandler_ptr p);
     static void release (::AMH_User_TResponseHandler_ptr p);
@@ -671,7 +667,7 @@ namespace TAO
 #define _AMI_USER_THANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_User_THandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_User_THandler>
   {
     static ::AMI_User_THandler_ptr duplicate (::AMI_User_THandler_ptr p);
     static void release (::AMI_User_THandler_ptr p);

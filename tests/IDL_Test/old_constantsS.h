@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_CONSTANTSS_2TASR6_H_
-#define _TAO_IDL_OLD_CONSTANTSS_2TASR6_H_
+#ifndef _TAO_IDL_OLD_CONSTANTSS_SO69R3_H_
+#define _TAO_IDL_OLD_CONSTANTSS_SO69R3_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::OldConstants::N>
+  class SArg_Traits<::OldConstants::N>
     : public
         Basic_SArg_Traits_T<
             ::OldConstants::N,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldConstants::M::N>
+  class SArg_Traits<::OldConstants::M::N>
     : public
         Basic_SArg_Traits_T<
             ::OldConstants::M::N,
@@ -97,7 +97,7 @@ namespace TAO
 #define _OLDCONSTANTS_M_A__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldConstants::M::A>
+  class  SArg_Traits<::OldConstants::M::A>
     : public Object_SArg_Traits_T<
         ::OldConstants::M::A_ptr,
         ::OldConstants::M::A_var,
@@ -109,7 +109,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::OldConstants::M::A::N>
+  class SArg_Traits<::OldConstants::M::A::N>
     : public
         Basic_SArg_Traits_T<
             ::OldConstants::M::A::N,
@@ -122,7 +122,7 @@ namespace TAO
 #define _OLDCONSTANTS_M_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::OldConstants::M::AMH_AExceptionHolder>
+  class SArg_Traits<::OldConstants::M::AMH_AExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldConstants::M::AMH_AExceptionHolder *,
@@ -139,7 +139,7 @@ namespace TAO
 #define _OLDCONSTANTS_M_AMI_AHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldConstants::M::AMI_AHandler>
+  class  SArg_Traits<::OldConstants::M::AMI_AHandler>
     : public Object_SArg_Traits_T<
         ::OldConstants::M::AMI_AHandler_ptr,
         ::OldConstants::M::AMI_AHandler_var,

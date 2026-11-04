@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESC_GZOGBZ_H_
-#define _TAO_IDL_PRIMTYPESC_GZOGBZ_H_
+#ifndef _TAO_IDL_PRIMTYPESC_ET4BN0_H_
+#define _TAO_IDL_PRIMTYPESC_ET4BN0_H_
 
 #include /**/ "ace/pre.h"
 
@@ -857,7 +857,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -875,7 +875,7 @@ namespace TAO
 #define _OLDPRIMTYPES_EX1__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldPrimTypes::ex1>
+  class  Arg_Traits<::OldPrimTypes::ex1>
     : public Object_Arg_Traits_T<
         ::OldPrimTypes::ex1_ptr,
         ::OldPrimTypes::ex1_var,
@@ -891,7 +891,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMH_EX1EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldPrimTypes::AMH_ex1ExceptionHolder>
+  class Arg_Traits<::OldPrimTypes::AMH_ex1ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldPrimTypes::AMH_ex1ExceptionHolder *,
@@ -909,7 +909,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMI_EX1HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldPrimTypes::AMI_ex1Handler>
+  class  Arg_Traits<::OldPrimTypes::AMI_ex1Handler>
     : public Object_Arg_Traits_T<
         ::OldPrimTypes::AMI_ex1Handler_ptr,
         ::OldPrimTypes::AMI_ex1Handler_var,
@@ -925,7 +925,7 @@ namespace TAO
 #define _OLDPRIMTYPES_EX2__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldPrimTypes::ex2>
+  class  Arg_Traits<::OldPrimTypes::ex2>
     : public Object_Arg_Traits_T<
         ::OldPrimTypes::ex2_ptr,
         ::OldPrimTypes::ex2_var,
@@ -941,7 +941,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMH_EX2EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldPrimTypes::AMH_ex2ExceptionHolder>
+  class Arg_Traits<::OldPrimTypes::AMH_ex2ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldPrimTypes::AMH_ex2ExceptionHolder *,
@@ -959,7 +959,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMI_EX2HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldPrimTypes::AMI_ex2Handler>
+  class  Arg_Traits<::OldPrimTypes::AMI_ex2Handler>
     : public Object_Arg_Traits_T<
         ::OldPrimTypes::AMI_ex2Handler_ptr,
         ::OldPrimTypes::AMI_ex2Handler_var,
@@ -987,11 +987,9 @@ protected:
   ~AMH_ex1ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldPrimTypes_AMH_ex1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldPrimTypes_AMH_ex1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldPrimTypes_AMH_ex1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldPrimTypes_AMH_ex1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1011,11 +1009,9 @@ protected:
   ~AMH_ex2ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldPrimTypes_AMH_ex2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldPrimTypes_AMH_ex2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldPrimTypes_AMH_ex2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldPrimTypes_AMH_ex2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1036,7 +1032,7 @@ namespace TAO
 #define _OLDPRIMTYPES_EX1__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldPrimTypes::ex1>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldPrimTypes::ex1>
   {
     static ::OldPrimTypes::ex1_ptr duplicate (::OldPrimTypes::ex1_ptr p);
     static void release (::OldPrimTypes::ex1_ptr p);
@@ -1063,7 +1059,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMH_EX1RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldPrimTypes::AMH_ex1ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldPrimTypes::AMH_ex1ResponseHandler>
   {
     static ::OldPrimTypes::AMH_ex1ResponseHandler_ptr duplicate (::OldPrimTypes::AMH_ex1ResponseHandler_ptr p);
     static void release (::OldPrimTypes::AMH_ex1ResponseHandler_ptr p);
@@ -1077,7 +1073,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMI_EX1HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldPrimTypes::AMI_ex1Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldPrimTypes::AMI_ex1Handler>
   {
     static ::OldPrimTypes::AMI_ex1Handler_ptr duplicate (::OldPrimTypes::AMI_ex1Handler_ptr p);
     static void release (::OldPrimTypes::AMI_ex1Handler_ptr p);
@@ -1091,7 +1087,7 @@ namespace TAO
 #define _OLDPRIMTYPES_EX2__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldPrimTypes::ex2>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldPrimTypes::ex2>
   {
     static ::OldPrimTypes::ex2_ptr duplicate (::OldPrimTypes::ex2_ptr p);
     static void release (::OldPrimTypes::ex2_ptr p);
@@ -1118,7 +1114,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMH_EX2RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldPrimTypes::AMH_ex2ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldPrimTypes::AMH_ex2ResponseHandler>
   {
     static ::OldPrimTypes::AMH_ex2ResponseHandler_ptr duplicate (::OldPrimTypes::AMH_ex2ResponseHandler_ptr p);
     static void release (::OldPrimTypes::AMH_ex2ResponseHandler_ptr p);
@@ -1132,7 +1128,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMI_EX2HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldPrimTypes::AMI_ex2Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldPrimTypes::AMI_ex2Handler>
   {
     static ::OldPrimTypes::AMI_ex2Handler_ptr duplicate (::OldPrimTypes::AMI_ex2Handler_ptr p);
     static void release (::OldPrimTypes::AMI_ex2Handler_ptr p);

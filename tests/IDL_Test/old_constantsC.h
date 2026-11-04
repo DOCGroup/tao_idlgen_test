@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_CONSTANTSC_AHH8ZW_H_
-#define _TAO_IDL_OLD_CONSTANTSC_AHH8ZW_H_
+#ifndef _TAO_IDL_OLD_CONSTANTSC_5ENIG8_H_
+#define _TAO_IDL_OLD_CONSTANTSC_5ENIG8_H_
 
 #include /**/ "ace/pre.h"
 
@@ -506,7 +506,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -521,7 +521,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::OldConstants::N>
+  class Arg_Traits<::OldConstants::N>
     : public
         Basic_Arg_Traits_T<
             ::OldConstants::N,
@@ -531,7 +531,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldConstants::M::N>
+  class Arg_Traits<::OldConstants::M::N>
     : public
         Basic_Arg_Traits_T<
             ::OldConstants::M::N,
@@ -544,7 +544,7 @@ namespace TAO
 #define _OLDCONSTANTS_M_A__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldConstants::M::A>
+  class  Arg_Traits<::OldConstants::M::A>
     : public Object_Arg_Traits_T<
         ::OldConstants::M::A_ptr,
         ::OldConstants::M::A_var,
@@ -557,7 +557,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::OldConstants::M::A::N>
+  class Arg_Traits<::OldConstants::M::A::N>
     : public
         Basic_Arg_Traits_T<
             ::OldConstants::M::A::N,
@@ -570,7 +570,7 @@ namespace TAO
 #define _OLDCONSTANTS_M_AMH_AEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldConstants::M::AMH_AExceptionHolder>
+  class Arg_Traits<::OldConstants::M::AMH_AExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldConstants::M::AMH_AExceptionHolder *,
@@ -588,7 +588,7 @@ namespace TAO
 #define _OLDCONSTANTS_M_AMI_AHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldConstants::M::AMI_AHandler>
+  class  Arg_Traits<::OldConstants::M::AMI_AHandler>
     : public Object_Arg_Traits_T<
         ::OldConstants::M::AMI_AHandler_ptr,
         ::OldConstants::M::AMI_AHandler_var,
@@ -618,11 +618,9 @@ namespace OBV_OldConstants
     ~AMH_AExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__OldConstants_M_AMH_AExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__OldConstants_M_AMH_AExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__OldConstants_M_AMH_AExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__OldConstants_M_AMH_AExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -644,7 +642,7 @@ namespace TAO
 #define _OLDCONSTANTS_M_A__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldConstants::M::A>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldConstants::M::A>
   {
     static ::OldConstants::M::A_ptr duplicate (::OldConstants::M::A_ptr p);
     static void release (::OldConstants::M::A_ptr p);
@@ -671,7 +669,7 @@ namespace TAO
 #define _OLDCONSTANTS_M_AMH_ARESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldConstants::M::AMH_AResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldConstants::M::AMH_AResponseHandler>
   {
     static ::OldConstants::M::AMH_AResponseHandler_ptr duplicate (::OldConstants::M::AMH_AResponseHandler_ptr p);
     static void release (::OldConstants::M::AMH_AResponseHandler_ptr p);
@@ -685,7 +683,7 @@ namespace TAO
 #define _OLDCONSTANTS_M_AMI_AHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldConstants::M::AMI_AHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldConstants::M::AMI_AHandler>
   {
     static ::OldConstants::M::AMI_AHandler_ptr duplicate (::OldConstants::M::AMI_AHandler_ptr p);
     static void release (::OldConstants::M::AMI_AHandler_ptr p);

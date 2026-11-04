@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYS_BLYIYJ_H_
-#define _TAO_IDL_OLD_ARRAYS_BLYIYJ_H_
+#ifndef _TAO_IDL_OLD_ARRAYS_B3HUVU_H_
+#define _TAO_IDL_OLD_ARRAYS_B3HUVU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -63,7 +63,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::OldArray::str22_tag>
+  class SArg_Traits<::OldArray::str22_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::str22_var,
@@ -88,7 +88,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::boolarray_tag>
+  class SArg_Traits<::OldArray::boolarray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::boolarray_var,
@@ -99,7 +99,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::char_17_tag>
+  class SArg_Traits<::OldArray::char_17_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::char_17_var,
@@ -110,7 +110,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::char_10_2_tag>
+  class SArg_Traits<::OldArray::char_10_2_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::char_10_2_var,
@@ -121,7 +121,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::A>
+  class SArg_Traits<::OldArray::A>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldArray::A,
@@ -131,7 +131,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::B>
+  class SArg_Traits<::OldArray::B>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldArray::B,
@@ -141,7 +141,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::C>
+  class SArg_Traits<::OldArray::C>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldArray::C,
@@ -151,7 +151,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::A_matrix_tag>
+  class SArg_Traits<::OldArray::A_matrix_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::A_matrix_var,
@@ -162,7 +162,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::B_matrix_tag>
+  class SArg_Traits<::OldArray::B_matrix_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::B_matrix_var,
@@ -173,7 +173,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::C_matrix_tag>
+  class SArg_Traits<::OldArray::C_matrix_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::C_matrix_var,
@@ -184,7 +184,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::A_rmatrix_tag>
+  class SArg_Traits<::OldArray::A_rmatrix_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::A_rmatrix_var,
@@ -198,7 +198,7 @@ namespace TAO
 #define _OLDARRAY_A_I__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldArray::A_i>
+  class  SArg_Traits<::OldArray::A_i>
     : public Object_SArg_Traits_T<
         ::OldArray::A_i_ptr,
         ::OldArray::A_i_var,
@@ -213,7 +213,7 @@ namespace TAO
 #define _OLDARRAY_AMH_A_IEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::OldArray::AMH_A_iExceptionHolder>
+  class SArg_Traits<::OldArray::AMH_A_iExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldArray::AMH_A_iExceptionHolder *,
@@ -230,7 +230,7 @@ namespace TAO
 #define _OLDARRAY_AMI_A_IHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldArray::AMI_A_iHandler>
+  class  SArg_Traits<::OldArray::AMI_A_iHandler>
     : public Object_SArg_Traits_T<
         ::OldArray::AMI_A_iHandler_ptr,
         ::OldArray::AMI_A_iHandler_var,

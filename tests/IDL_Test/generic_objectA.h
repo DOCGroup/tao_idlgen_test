@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTA_C9WYM4_H_
-#define _TAO_IDL_GENERIC_OBJECTA_C9WYM4_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTA_MSSX4P_H_
+#define _TAO_IDL_GENERIC_OBJECTA_MSSX4P_H_
 
 #include /**/ "ace/pre.h"
 

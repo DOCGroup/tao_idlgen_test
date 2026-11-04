@@ -22,11 +22,11 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_7GVMU1_CPP_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACES_7GVMU1_CPP_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_OIWD5B_CPP_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACES_OIWD5B_CPP_
 
 #include "TestVersionedNamespaceS.h"
-#include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
 #include <cstddef>
 #include <cstring>
 #include <memory>

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_K3K0LV_H_
-#define _TAO_IDL_SIMPLE_TESTS_K3K0LV_H_
+#ifndef _TAO_IDL_SIMPLE_TESTS_OPC1Y9_H_
+#define _TAO_IDL_SIMPLE_TESTS_OPC1Y9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -56,7 +56,7 @@ namespace TAO
 #define _SIMPLE_SERVER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Simple_Server>
+  class  SArg_Traits<::Simple_Server>
     : public Object_SArg_Traits_T<
         ::Simple_Server_ptr,
         ::Simple_Server_var,

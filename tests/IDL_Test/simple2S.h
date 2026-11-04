@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2S_AR2J03_H_
-#define _TAO_IDL_SIMPLE2S_AR2J03_H_
+#ifndef _TAO_IDL_SIMPLE2S_A2U65W_H_
+#define _TAO_IDL_SIMPLE2S_A2U65W_H_
 
 #include /**/ "ace/pre.h"
 
@@ -62,7 +62,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -79,7 +79,7 @@ namespace TAO
 #define _SIMPLE3__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::simple3>
+  class  SArg_Traits<::simple3>
     : public Object_SArg_Traits_T<
         ::simple3_ptr,
         ::simple3_var,
@@ -94,7 +94,7 @@ namespace TAO
 #define _AMH_SIMPLE3EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_simple3ExceptionHolder>
+  class SArg_Traits<::AMH_simple3ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_simple3ExceptionHolder *,
@@ -111,7 +111,7 @@ namespace TAO
 #define _AMI_SIMPLE3HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_simple3Handler>
+  class  SArg_Traits<::AMI_simple3Handler>
     : public Object_SArg_Traits_T<
         ::AMI_simple3Handler_ptr,
         ::AMI_simple3Handler_var,

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRAGMAS_QQ0R2R_H_
-#define _TAO_IDL_PRAGMAS_QQ0R2R_H_
+#ifndef _TAO_IDL_PRAGMAS_LDNIRQ_H_
+#define _TAO_IDL_PRAGMAS_LDNIRQ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -59,7 +59,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -76,7 +76,7 @@ namespace TAO
 #define _HELLO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::hello>
+  class  SArg_Traits<::hello>
     : public Object_SArg_Traits_T<
         ::hello_ptr,
         ::hello_var,
@@ -91,7 +91,7 @@ namespace TAO
 #define _AMH_HELLOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_helloExceptionHolder>
+  class SArg_Traits<::AMH_helloExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_helloExceptionHolder *,
@@ -108,7 +108,7 @@ namespace TAO
 #define _AMI_HELLOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_helloHandler>
+  class  SArg_Traits<::AMI_helloHandler>
     : public Object_SArg_Traits_T<
         ::AMI_helloHandler_ptr,
         ::AMI_helloHandler_var,
@@ -120,7 +120,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::ClusterFu>
+  class SArg_Traits<::ClusterFu>
     : public
         Basic_SArg_Traits_T<
             ::ClusterFu,
@@ -133,7 +133,7 @@ namespace TAO
 #define _ALOHA__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::aloha>
+  class  SArg_Traits<::aloha>
     : public Object_SArg_Traits_T<
         ::aloha_ptr,
         ::aloha_var,
@@ -148,7 +148,7 @@ namespace TAO
 #define _GOODBYE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::goodbye>
+  class  SArg_Traits<::goodbye>
     : public Object_SArg_Traits_T<
         ::goodbye_ptr,
         ::goodbye_var,
@@ -163,7 +163,7 @@ namespace TAO
 #define _AMH_GOODBYEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_goodbyeExceptionHolder>
+  class SArg_Traits<::AMH_goodbyeExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_goodbyeExceptionHolder *,
@@ -180,7 +180,7 @@ namespace TAO
 #define _AMI_GOODBYEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_goodbyeHandler>
+  class  SArg_Traits<::AMI_goodbyeHandler>
     : public Object_SArg_Traits_T<
         ::AMI_goodbyeHandler_ptr,
         ::AMI_goodbyeHandler_var,
@@ -195,7 +195,7 @@ namespace TAO
 #define _SALUTATION_SAYONARA__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::salutation::sayonara>
+  class  SArg_Traits<::salutation::sayonara>
     : public Object_SArg_Traits_T<
         ::salutation::sayonara_ptr,
         ::salutation::sayonara_var,
@@ -210,7 +210,7 @@ namespace TAO
 #define _SALUTATION_AMH_SAYONARAEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::salutation::AMH_sayonaraExceptionHolder>
+  class SArg_Traits<::salutation::AMH_sayonaraExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::salutation::AMH_sayonaraExceptionHolder *,
@@ -227,7 +227,7 @@ namespace TAO
 #define _SALUTATION_AMI_SAYONARAHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::salutation::AMI_sayonaraHandler>
+  class  SArg_Traits<::salutation::AMI_sayonaraHandler>
     : public Object_SArg_Traits_T<
         ::salutation::AMI_sayonaraHandler_ptr,
         ::salutation::AMI_sayonaraHandler_var,
@@ -242,7 +242,7 @@ namespace TAO
 #define _CIAO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::ciao>
+  class  SArg_Traits<::ciao>
     : public Object_SArg_Traits_T<
         ::ciao_ptr,
         ::ciao_var,
@@ -257,7 +257,7 @@ namespace TAO
 #define _AMH_CIAOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_ciaoExceptionHolder>
+  class SArg_Traits<::AMH_ciaoExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_ciaoExceptionHolder *,
@@ -274,7 +274,7 @@ namespace TAO
 #define _AMI_CIAOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_ciaoHandler>
+  class  SArg_Traits<::AMI_ciaoHandler>
     : public Object_SArg_Traits_T<
         ::AMI_ciaoHandler_ptr,
         ::AMI_ciaoHandler_var,
@@ -289,7 +289,7 @@ namespace TAO
 #define _AMH_ALOHAEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_alohaExceptionHolder>
+  class SArg_Traits<::AMH_alohaExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_alohaExceptionHolder *,
@@ -306,7 +306,7 @@ namespace TAO
 #define _AMI_ALOHAHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_alohaHandler>
+  class  SArg_Traits<::AMI_alohaHandler>
     : public Object_SArg_Traits_T<
         ::AMI_alohaHandler_ptr,
         ::AMI_alohaHandler_var,
@@ -318,7 +318,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::DCPS_Test::Sample>
+  class SArg_Traits<::DCPS_Test::Sample>
     : public
         Fixed_Size_SArg_Traits_T<
             ::DCPS_Test::Sample,

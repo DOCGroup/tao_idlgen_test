@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_YMYGFP_H_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_YMYGFP_H_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_V1S5K6_H_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_V1S5K6_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::DateTime_T>
+  class SArg_Traits<::DateTime_T>
     : public
         Fixed_Size_SArg_Traits_T<
             ::DateTime_T,
@@ -87,7 +87,7 @@ namespace TAO
 #define _DATA_T__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Data_T>
+  class SArg_Traits<::Data_T>
     : public
         Object_SArg_Traits_T<
             ::Data_T *,
@@ -104,7 +104,7 @@ namespace TAO
 #define _USER_T__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::User_T>
+  class  SArg_Traits<::User_T>
     : public Object_SArg_Traits_T<
         ::User_T_ptr,
         ::User_T_var,
@@ -119,7 +119,7 @@ namespace TAO
 #define _AMH_USER_TEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_User_TExceptionHolder>
+  class SArg_Traits<::AMH_User_TExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_User_TExceptionHolder *,
@@ -136,7 +136,7 @@ namespace TAO
 #define _AMI_USER_THANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_User_THandler>
+  class  SArg_Traits<::AMI_User_THandler>
     : public Object_SArg_Traits_T<
         ::AMI_User_THandler_ptr,
         ::AMI_User_THandler_var,

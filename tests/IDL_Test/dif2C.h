@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIF2C_D6PHDX_H_
-#define _TAO_IDL_DIF2C_D6PHDX_H_
+#ifndef _TAO_IDL_DIF2C_XQSAFB_H_
+#define _TAO_IDL_DIF2C_XQSAFB_H_
 
 #include /**/ "ace/pre.h"
 
@@ -2123,7 +2123,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -2141,7 +2141,7 @@ namespace TAO
 #define _OLDDIF2_EX1__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldDif2::ex1>
+  class  Arg_Traits<::OldDif2::ex1>
     : public Object_Arg_Traits_T<
         ::OldDif2::ex1_ptr,
         ::OldDif2::ex1_var,
@@ -2157,7 +2157,7 @@ namespace TAO
 #define _OLDDIF2_AMH_EX1EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldDif2::AMH_ex1ExceptionHolder>
+  class Arg_Traits<::OldDif2::AMH_ex1ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldDif2::AMH_ex1ExceptionHolder *,
@@ -2175,7 +2175,7 @@ namespace TAO
 #define _OLDDIF2_AMI_EX1HANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldDif2::AMI_ex1Handler>
+  class  Arg_Traits<::OldDif2::AMI_ex1Handler>
     : public Object_Arg_Traits_T<
         ::OldDif2::AMI_ex1Handler_ptr,
         ::OldDif2::AMI_ex1Handler_var,
@@ -2191,7 +2191,7 @@ namespace TAO
 #define _OLDDIF2_EX2__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldDif2::ex2>
+  class  Arg_Traits<::OldDif2::ex2>
     : public Object_Arg_Traits_T<
         ::OldDif2::ex2_ptr,
         ::OldDif2::ex2_var,
@@ -2314,7 +2314,7 @@ class Arg_Traits<OldDif2_ex2_sendc_op11_ls>
 #define _OLDDIF2_AMH_EX2EXCEPTIONHOLDER__ARG_TRAITS_
 
 template<>
-class Arg_Traits< ::OldDif2::AMH_ex2ExceptionHolder>
+class Arg_Traits<::OldDif2::AMH_ex2ExceptionHolder>
   : public
       Object_Arg_Traits_T<
           ::OldDif2::AMH_ex2ExceptionHolder *,
@@ -2332,7 +2332,7 @@ class Arg_Traits< ::OldDif2::AMH_ex2ExceptionHolder>
 #define _OLDDIF2_AMI_EX2HANDLER__ARG_TRAITS_
 
 template<>
-class  Arg_Traits< ::OldDif2::AMI_ex2Handler>
+class  Arg_Traits<::OldDif2::AMI_ex2Handler>
   : public Object_Arg_Traits_T<
       ::OldDif2::AMI_ex2Handler_ptr,
       ::OldDif2::AMI_ex2Handler_var,
@@ -2402,7 +2402,7 @@ class Arg_Traits<OldDif2_AMI_ex2Handler_op11_ls>
 #define _OLDDIF2_EX3__ARG_TRAITS_
 
 template<>
-class  Arg_Traits< ::OldDif2::ex3>
+class  Arg_Traits<::OldDif2::ex3>
   : public Object_Arg_Traits_T<
       ::OldDif2::ex3_ptr,
       ::OldDif2::ex3_var,
@@ -2418,7 +2418,7 @@ class  Arg_Traits< ::OldDif2::ex3>
 #define _OLDDIF2_AMH_EX3EXCEPTIONHOLDER__ARG_TRAITS_
 
 template<>
-class Arg_Traits< ::OldDif2::AMH_ex3ExceptionHolder>
+class Arg_Traits<::OldDif2::AMH_ex3ExceptionHolder>
   : public
       Object_Arg_Traits_T<
           ::OldDif2::AMH_ex3ExceptionHolder *,
@@ -2436,7 +2436,7 @@ class Arg_Traits< ::OldDif2::AMH_ex3ExceptionHolder>
 #define _OLDDIF2_AMI_EX3HANDLER__ARG_TRAITS_
 
 template<>
-class  Arg_Traits< ::OldDif2::AMI_ex3Handler>
+class  Arg_Traits<::OldDif2::AMI_ex3Handler>
   : public Object_Arg_Traits_T<
       ::OldDif2::AMI_ex3Handler_ptr,
       ::OldDif2::AMI_ex3Handler_var,
@@ -2452,7 +2452,7 @@ class  Arg_Traits< ::OldDif2::AMI_ex3Handler>
 #define _OLDDIF2_EX4__ARG_TRAITS_
 
 template<>
-class  Arg_Traits< ::OldDif2::ex4>
+class  Arg_Traits<::OldDif2::ex4>
   : public Object_Arg_Traits_T<
       ::OldDif2::ex4_ptr,
       ::OldDif2::ex4_var,
@@ -2484,7 +2484,7 @@ class Arg_Traits<OldDif2_ex4_limited_string_attribute>
 #define _OLDDIF2_AMH_EX4EXCEPTIONHOLDER__ARG_TRAITS_
 
 template<>
-class Arg_Traits< ::OldDif2::AMH_ex4ExceptionHolder>
+class Arg_Traits<::OldDif2::AMH_ex4ExceptionHolder>
   : public
       Object_Arg_Traits_T<
           ::OldDif2::AMH_ex4ExceptionHolder *,
@@ -2502,7 +2502,7 @@ class Arg_Traits< ::OldDif2::AMH_ex4ExceptionHolder>
 #define _OLDDIF2_AMI_EX4HANDLER__ARG_TRAITS_
 
 template<>
-class  Arg_Traits< ::OldDif2::AMI_ex4Handler>
+class  Arg_Traits<::OldDif2::AMI_ex4Handler>
   : public Object_Arg_Traits_T<
       ::OldDif2::AMI_ex4Handler_ptr,
       ::OldDif2::AMI_ex4Handler_var,
@@ -2548,11 +2548,9 @@ protected:
   ~AMH_ex1ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldDif2_AMH_ex1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldDif2_AMH_ex1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldDif2_AMH_ex1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldDif2_AMH_ex1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2572,11 +2570,9 @@ protected:
   ~AMH_ex2ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldDif2_AMH_ex2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldDif2_AMH_ex2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldDif2_AMH_ex2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldDif2_AMH_ex2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2596,11 +2592,9 @@ protected:
   ~AMH_ex3ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldDif2_AMH_ex3ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldDif2_AMH_ex3ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldDif2_AMH_ex3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldDif2_AMH_ex3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2620,11 +2614,9 @@ protected:
   ~AMH_ex4ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldDif2_AMH_ex4ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldDif2_AMH_ex4ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldDif2_AMH_ex4ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldDif2_AMH_ex4ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2645,7 +2637,7 @@ namespace TAO
 #define _OLDDIF2_EX1__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::ex1>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::ex1>
   {
     static ::OldDif2::ex1_ptr duplicate (::OldDif2::ex1_ptr p);
     static void release (::OldDif2::ex1_ptr p);
@@ -2672,7 +2664,7 @@ namespace TAO
 #define _OLDDIF2_AMH_EX1RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::AMH_ex1ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::AMH_ex1ResponseHandler>
   {
     static ::OldDif2::AMH_ex1ResponseHandler_ptr duplicate (::OldDif2::AMH_ex1ResponseHandler_ptr p);
     static void release (::OldDif2::AMH_ex1ResponseHandler_ptr p);
@@ -2686,7 +2678,7 @@ namespace TAO
 #define _OLDDIF2_AMI_EX1HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::AMI_ex1Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::AMI_ex1Handler>
   {
     static ::OldDif2::AMI_ex1Handler_ptr duplicate (::OldDif2::AMI_ex1Handler_ptr p);
     static void release (::OldDif2::AMI_ex1Handler_ptr p);
@@ -2700,7 +2692,7 @@ namespace TAO
 #define _OLDDIF2_EX2__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::ex2>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::ex2>
   {
     static ::OldDif2::ex2_ptr duplicate (::OldDif2::ex2_ptr p);
     static void release (::OldDif2::ex2_ptr p);
@@ -2727,7 +2719,7 @@ namespace TAO
 #define _OLDDIF2_AMH_EX2RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::AMH_ex2ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::AMH_ex2ResponseHandler>
   {
     static ::OldDif2::AMH_ex2ResponseHandler_ptr duplicate (::OldDif2::AMH_ex2ResponseHandler_ptr p);
     static void release (::OldDif2::AMH_ex2ResponseHandler_ptr p);
@@ -2741,7 +2733,7 @@ namespace TAO
 #define _OLDDIF2_AMI_EX2HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::AMI_ex2Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::AMI_ex2Handler>
   {
     static ::OldDif2::AMI_ex2Handler_ptr duplicate (::OldDif2::AMI_ex2Handler_ptr p);
     static void release (::OldDif2::AMI_ex2Handler_ptr p);
@@ -2755,7 +2747,7 @@ namespace TAO
 #define _OLDDIF2_EX3__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::ex3>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::ex3>
   {
     static ::OldDif2::ex3_ptr duplicate (::OldDif2::ex3_ptr p);
     static void release (::OldDif2::ex3_ptr p);
@@ -2782,7 +2774,7 @@ namespace TAO
 #define _OLDDIF2_AMH_EX3RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::AMH_ex3ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::AMH_ex3ResponseHandler>
   {
     static ::OldDif2::AMH_ex3ResponseHandler_ptr duplicate (::OldDif2::AMH_ex3ResponseHandler_ptr p);
     static void release (::OldDif2::AMH_ex3ResponseHandler_ptr p);
@@ -2796,7 +2788,7 @@ namespace TAO
 #define _OLDDIF2_AMI_EX3HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::AMI_ex3Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::AMI_ex3Handler>
   {
     static ::OldDif2::AMI_ex3Handler_ptr duplicate (::OldDif2::AMI_ex3Handler_ptr p);
     static void release (::OldDif2::AMI_ex3Handler_ptr p);
@@ -2810,7 +2802,7 @@ namespace TAO
 #define _OLDDIF2_EX4__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::ex4>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::ex4>
   {
     static ::OldDif2::ex4_ptr duplicate (::OldDif2::ex4_ptr p);
     static void release (::OldDif2::ex4_ptr p);
@@ -2837,7 +2829,7 @@ namespace TAO
 #define _OLDDIF2_AMH_EX4RESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::AMH_ex4ResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::AMH_ex4ResponseHandler>
   {
     static ::OldDif2::AMH_ex4ResponseHandler_ptr duplicate (::OldDif2::AMH_ex4ResponseHandler_ptr p);
     static void release (::OldDif2::AMH_ex4ResponseHandler_ptr p);
@@ -2851,7 +2843,7 @@ namespace TAO
 #define _OLDDIF2_AMI_EX4HANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldDif2::AMI_ex4Handler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldDif2::AMI_ex4Handler>
   {
     static ::OldDif2::AMI_ex4Handler_ptr duplicate (::OldDif2::AMI_ex4Handler_ptr p);
     static void release (::OldDif2::AMI_ex4Handler_ptr p);

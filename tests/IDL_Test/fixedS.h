@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDS_EGJPR5_H_
-#define _TAO_IDL_FIXEDS_EGJPR5_H_
+#ifndef _TAO_IDL_FIXEDS_YOVDPF_H_
+#define _TAO_IDL_FIXEDS_YOVDPF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::ACE_CDR::Fixed>
+  class SArg_Traits<::ACE_CDR::Fixed>
     : public Basic_SArg_Traits_T<
       ::ACE_CDR::Fixed,
       TAO::Any_Insert_Policy_Noop
@@ -83,7 +83,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::FixedPoint::FixedValues>
+  class SArg_Traits<::FixedPoint::FixedValues>
     : public
         Var_Size_SArg_Traits_T<
             ::FixedPoint::FixedValues,
@@ -96,7 +96,7 @@ namespace TAO
 #define _FIXEDPOINT_FIXEDOPERATIONS__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::FixedPoint::FixedOperations>
+  class  SArg_Traits<::FixedPoint::FixedOperations>
     : public Object_SArg_Traits_T<
         ::FixedPoint::FixedOperations_ptr,
         ::FixedPoint::FixedOperations_var,
@@ -111,7 +111,7 @@ namespace TAO
 #define _FIXEDPOINT_AMH_FIXEDOPERATIONSEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::FixedPoint::AMH_FixedOperationsExceptionHolder>
+  class SArg_Traits<::FixedPoint::AMH_FixedOperationsExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::FixedPoint::AMH_FixedOperationsExceptionHolder *,
@@ -128,7 +128,7 @@ namespace TAO
 #define _FIXEDPOINT_AMI_FIXEDOPERATIONSHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::FixedPoint::AMI_FixedOperationsHandler>
+  class  SArg_Traits<::FixedPoint::AMI_FixedOperationsHandler>
     : public Object_SArg_Traits_T<
         ::FixedPoint::AMI_FixedOperationsHandler_ptr,
         ::FixedPoint::AMI_FixedOperationsHandler_var,

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_CXW6BJ_H_
-#define _TAO_IDL_OLD_SEQUENCES_CXW6BJ_H_
+#ifndef _TAO_IDL_OLD_SEQUENCES_SNJXP8_H_
+#define _TAO_IDL_OLD_SEQUENCES_SNJXP8_H_
 
 #include /**/ "ace/pre.h"
 
@@ -63,7 +63,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::c20>
+  class SArg_Traits<::c20>
     : public
         Var_Size_SArg_Traits_T<
             ::c20,
@@ -87,7 +87,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::cc23>
+  class SArg_Traits<::cc23>
     : public
         Var_Size_SArg_Traits_T<
             ::cc23,
@@ -97,7 +97,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::c24>
+  class SArg_Traits<::c24>
     : public
         Var_Size_SArg_Traits_T<
             ::c24,
@@ -107,7 +107,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::c30>
+  class SArg_Traits<::c30>
     : public
         Var_Size_SArg_Traits_T<
             ::c30,
@@ -117,7 +117,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::cstring>
+  class SArg_Traits<::cstring>
     : public
         Var_Size_SArg_Traits_T<
             ::cstring,
@@ -127,7 +127,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::TProgram>
+  class SArg_Traits<::TProgram>
     : public
         Var_Size_SArg_Traits_T<
             ::TProgram,
@@ -137,7 +137,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::sfoo>
+  class SArg_Traits<::sfoo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::sfoo,
@@ -147,7 +147,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::sfoo_ar_tag>
+  class SArg_Traits<::sfoo_ar_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::sfoo_ar_var,
@@ -158,7 +158,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::f_unbounded>
+  class SArg_Traits<::f_unbounded>
     : public
         Var_Size_SArg_Traits_T<
             ::f_unbounded,
@@ -168,7 +168,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::f_ar_unbounded>
+  class SArg_Traits<::f_ar_unbounded>
     : public
         Var_Size_SArg_Traits_T<
             ::f_ar_unbounded,
@@ -181,7 +181,7 @@ namespace TAO
 #define _TESTSEQ__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::TestSeq>
+  class  SArg_Traits<::TestSeq>
     : public Object_SArg_Traits_T<
         ::TestSeq_ptr,
         ::TestSeq_var,
@@ -193,7 +193,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::TestSeq::also_vec10>
+  class SArg_Traits<::TestSeq::also_vec10>
     : public
         Var_Size_SArg_Traits_T<
             ::TestSeq::also_vec10,
@@ -206,7 +206,7 @@ namespace TAO
 #define _AMH_TESTSEQEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_TestSeqExceptionHolder>
+  class SArg_Traits<::AMH_TestSeqExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_TestSeqExceptionHolder *,
@@ -223,7 +223,7 @@ namespace TAO
 #define _AMI_TESTSEQHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_TestSeqHandler>
+  class  SArg_Traits<::AMI_TestSeqHandler>
     : public Object_SArg_Traits_T<
         ::AMI_TestSeqHandler_ptr,
         ::AMI_TestSeqHandler_var,
