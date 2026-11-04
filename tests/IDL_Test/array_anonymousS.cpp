@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_X8OHNB_CPP_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_X8OHNB_CPP_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_FSKEXH_CPP_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_FSKEXH_CPP_
 
 #include "array_anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -76,7 +76,7 @@ POA_AMH_tdef::POA_AMH_tdef ()
   this->optable_ = std::addressof (tao_AMH_tdef_optable);
 }
 
-::CORBA::Boolean POA_AMH_tdef::_is_a (char const *value)
+::CORBA::Boolean POA_AMH_tdef::_is_a (const char* value)
 {
   return
     (
@@ -85,7 +85,7 @@ POA_AMH_tdef::POA_AMH_tdef ()
     );
 }
 
-char const *POA_AMH_tdef::_interface_repository_id () const
+const char* POA_AMH_tdef::_interface_repository_id () const
 {
   return "IDL:tdef:1.0";
 }
@@ -100,7 +100,7 @@ tdef*
 POA_AMH_tdef::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -146,7 +146,7 @@ POA_tdef::POA_tdef ()
   this->optable_ = std::addressof (tao_tdef_optable);
 }
 
-::CORBA::Boolean POA_tdef::_is_a (char const *value)
+::CORBA::Boolean POA_tdef::_is_a (const char* value)
 {
   return
     (
@@ -155,7 +155,7 @@ POA_tdef::POA_tdef ()
     );
 }
 
-char const *POA_tdef::_interface_repository_id () const
+const char* POA_tdef::_interface_repository_id () const
 {
   return "IDL:tdef:1.0";
 }
@@ -217,7 +217,7 @@ POA_AMI_tdefHandler::POA_AMI_tdefHandler ()
   this->optable_ = std::addressof (tao_AMI_tdefHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_tdefHandler::_is_a (char const *value)
+::CORBA::Boolean POA_AMI_tdefHandler::_is_a (const char* value)
 {
   return
     (
@@ -227,7 +227,7 @@ POA_AMI_tdefHandler::POA_AMI_tdefHandler ()
     );
 }
 
-char const *POA_AMI_tdefHandler::_interface_repository_id () const
+const char* POA_AMI_tdefHandler::_interface_repository_id () const
 {
   return "IDL:AMI_tdefHandler:1.0";
 }

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYS_WHSE8W_CPP_
-#define _TAO_IDL_OLD_ARRAYS_WHSE8W_CPP_
+#ifndef _TAO_IDL_OLD_ARRAYS_TQX68Y_CPP_
+#define _TAO_IDL_OLD_ARRAYS_TQX68Y_CPP_
 
 #include "old_arrayS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -113,7 +113,9 @@ POA_OldArray::AMH_A_i::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -165,7 +167,9 @@ POA_OldArray::AMH_A_i::op2_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -175,8 +179,8 @@ POA_OldArray::AMH_A_i::op2_skel (
 
   _tao_impl->op2 (
       safe_rd_.get (),
-      (::OldArray::str22_slice const *) a1,
-      (::OldArray::str22_slice const *) a2
+      (const ::OldArray::str22_slice *) a1,
+      (const ::OldArray::str22_slice *) a2
     );
 }
 void
@@ -211,7 +215,9 @@ POA_OldArray::AMH_A_i::op4_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -247,7 +253,9 @@ POA_OldArray::AMH_A_i::_get_attribute_array_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -294,7 +302,9 @@ POA_OldArray::AMH_A_i::_set_attribute_array_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -304,11 +314,11 @@ POA_OldArray::AMH_A_i::_set_attribute_array_skel (
 
   _tao_impl->attribute_array (
       safe_rd_.get (),
-      (::OldArray::str22_slice const *) attribute_array
+      (const ::OldArray::str22_slice *) attribute_array
     );
 }
 
-::CORBA::Boolean POA_OldArray::AMH_A_i::_is_a (char const *value)
+::CORBA::Boolean POA_OldArray::AMH_A_i::_is_a (const char* value)
 {
   return
     (
@@ -317,7 +327,7 @@ POA_OldArray::AMH_A_i::_set_attribute_array_skel (
     );
 }
 
-char const *POA_OldArray::AMH_A_i::_interface_repository_id () const
+const char* POA_OldArray::AMH_A_i::_interface_repository_id () const
 {
   return "IDL:OldArray/A_i:1.0";
 }
@@ -332,7 +342,7 @@ OldArray::A_i*
 POA_OldArray::AMH_A_i::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -387,11 +397,11 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<::OldArray::A>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< ::OldArray::A>::ret_val *) args[0])->arg () =
     _tao_ptr->op (
-          ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::OldArray::A>::inout_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::OldArray::A>::out_arg_val *) args[3])->arg ()
+          ((TAO::Arg_Traits< ::OldArray::A>::in_arg_val *) args[1])->arg (),
+          ((TAO::Arg_Traits< ::OldArray::A>::inout_arg_val *) args[2])->arg (),
+          ((TAO::Arg_Traits< ::OldArray::A>::out_arg_val *) args[3])->arg ()
         );
 }
 
@@ -408,11 +418,11 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op2 (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<::OldArray::str22_tag>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< ::OldArray::str22_tag>::ret_val *) args[0])->arg () =
     _tao_ptr->op2 (
-          ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::OldArray::str22_tag>::inout_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::OldArray::str22_tag>::out_arg_val *) args[3])->arg ()
+          ((TAO::Arg_Traits< ::OldArray::str22_tag>::in_arg_val *) args[1])->arg (),
+          ((TAO::Arg_Traits< ::OldArray::str22_tag>::inout_arg_val *) args[2])->arg (),
+          ((TAO::Arg_Traits< ::OldArray::str22_tag>::out_arg_val *) args[3])->arg ()
         );
 }
 
@@ -429,11 +439,11 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op4 (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<::OldArray::A_matrix_tag>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< ::OldArray::A_matrix_tag>::ret_val *) args[0])->arg () =
     _tao_ptr->op4 (
-          ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::OldArray::A>::inout_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::OldArray::A>::out_arg_val *) args[3])->arg ()
+          ((TAO::Arg_Traits< ::OldArray::A>::in_arg_val *) args[1])->arg (),
+          ((TAO::Arg_Traits< ::OldArray::A>::inout_arg_val *) args[2])->arg (),
+          ((TAO::Arg_Traits< ::OldArray::A>::out_arg_val *) args[3])->arg ()
         );
 }
 
@@ -450,7 +460,7 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_get_attribute_array (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<::OldArray::str22_tag>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< ::OldArray::str22_tag>::ret_val *) args[0])->arg () =
     _tao_ptr->attribute_array (
         );
 }
@@ -469,7 +479,7 @@ POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_set_attribute_array (
     }
 
   _tao_ptr->attribute_array (
-        ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::OldArray::str22_tag>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -497,25 +507,25 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::A>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_);
 
-      TAO::SArg_Traits<::OldArray::A>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_,
           1);
 
-      TAO::SArg_Traits<::OldArray::A>::inout_arg_type arg_2 =
-        TAO::Portable_Server::get_inout_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::inout_arg_type arg_2 =
+        TAO::Portable_Server::get_inout_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_,
           2);
 
-      TAO::SArg_Traits<::OldArray::A>::out_arg_type arg_3 =
-        TAO::Portable_Server::get_out_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::out_arg_type arg_3 =
+        TAO::Portable_Server::get_out_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_,
           3);
@@ -538,10 +548,10 @@ void POA_OldArray::A_i::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<::OldArray::A>::ret_val retval;
-  TAO::SArg_Traits<::OldArray::A>::in_arg_val _tao_a1;
-  TAO::SArg_Traits<::OldArray::A>::inout_arg_val _tao_a2;
-  TAO::SArg_Traits<::OldArray::A>::out_arg_val _tao_a3;
+  TAO::SArg_Traits< ::OldArray::A>::ret_val retval;
+  TAO::SArg_Traits< ::OldArray::A>::in_arg_val _tao_a1;
+  TAO::SArg_Traits< ::OldArray::A>::inout_arg_val _tao_a2;
+  TAO::SArg_Traits< ::OldArray::A>::out_arg_val _tao_a3;
 
   TAO::Argument * const args[] =
     {
@@ -568,11 +578,11 @@ void POA_OldArray::A_i::op_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -591,25 +601,25 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::str22_tag>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::OldArray::str22_tag> (
+      TAO::SArg_Traits< ::OldArray::str22_tag>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg< ::OldArray::str22_tag> (
           this->operation_details_,
           this->args_);
 
-      TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::OldArray::str22_tag> (
+      TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::str22_tag> (
           this->operation_details_,
           this->args_,
           1);
 
-      TAO::SArg_Traits<::OldArray::str22_tag>::inout_arg_type arg_2 =
-        TAO::Portable_Server::get_inout_arg<::OldArray::str22_tag> (
+      TAO::SArg_Traits< ::OldArray::str22_tag>::inout_arg_type arg_2 =
+        TAO::Portable_Server::get_inout_arg< ::OldArray::str22_tag> (
           this->operation_details_,
           this->args_,
           2);
 
-      TAO::SArg_Traits<::OldArray::str22_tag>::out_arg_type arg_3 =
-        TAO::Portable_Server::get_out_arg<::OldArray::str22_tag> (
+      TAO::SArg_Traits< ::OldArray::str22_tag>::out_arg_type arg_3 =
+        TAO::Portable_Server::get_out_arg< ::OldArray::str22_tag> (
           this->operation_details_,
           this->args_,
           3);
@@ -632,10 +642,10 @@ void POA_OldArray::A_i::op2_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<::OldArray::str22_tag>::ret_val retval;
-  TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_val _tao_a1;
-  TAO::SArg_Traits<::OldArray::str22_tag>::inout_arg_val _tao_a2;
-  TAO::SArg_Traits<::OldArray::str22_tag>::out_arg_val _tao_a3;
+  TAO::SArg_Traits< ::OldArray::str22_tag>::ret_val retval;
+  TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_val _tao_a1;
+  TAO::SArg_Traits< ::OldArray::str22_tag>::inout_arg_val _tao_a2;
+  TAO::SArg_Traits< ::OldArray::str22_tag>::out_arg_val _tao_a3;
 
   TAO::Argument * const args[] =
     {
@@ -662,11 +672,11 @@ void POA_OldArray::A_i::op2_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -685,25 +695,25 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::A_matrix_tag>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::OldArray::A_matrix_tag> (
+      TAO::SArg_Traits< ::OldArray::A_matrix_tag>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg< ::OldArray::A_matrix_tag> (
           this->operation_details_,
           this->args_);
 
-      TAO::SArg_Traits<::OldArray::A>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_,
           1);
 
-      TAO::SArg_Traits<::OldArray::A>::inout_arg_type arg_2 =
-        TAO::Portable_Server::get_inout_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::inout_arg_type arg_2 =
+        TAO::Portable_Server::get_inout_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_,
           2);
 
-      TAO::SArg_Traits<::OldArray::A>::out_arg_type arg_3 =
-        TAO::Portable_Server::get_out_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::out_arg_type arg_3 =
+        TAO::Portable_Server::get_out_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_,
           3);
@@ -726,10 +736,10 @@ void POA_OldArray::A_i::op4_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<::OldArray::A_matrix_tag>::ret_val retval;
-  TAO::SArg_Traits<::OldArray::A>::in_arg_val _tao_a1;
-  TAO::SArg_Traits<::OldArray::A>::inout_arg_val _tao_a2;
-  TAO::SArg_Traits<::OldArray::A>::out_arg_val _tao_a3;
+  TAO::SArg_Traits< ::OldArray::A_matrix_tag>::ret_val retval;
+  TAO::SArg_Traits< ::OldArray::A>::in_arg_val _tao_a1;
+  TAO::SArg_Traits< ::OldArray::A>::inout_arg_val _tao_a2;
+  TAO::SArg_Traits< ::OldArray::A>::out_arg_val _tao_a3;
 
   TAO::Argument * const args[] =
     {
@@ -756,11 +766,11 @@ void POA_OldArray::A_i::op4_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -779,8 +789,8 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::str22_tag>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::OldArray::str22_tag> (
+      TAO::SArg_Traits< ::OldArray::str22_tag>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg< ::OldArray::str22_tag> (
           this->operation_details_,
           this->args_);
 
@@ -799,7 +809,7 @@ void POA_OldArray::A_i::_get_attribute_array_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<::OldArray::str22_tag>::ret_val retval;
+  TAO::SArg_Traits< ::OldArray::str22_tag>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -823,11 +833,11 @@ void POA_OldArray::A_i::_get_attribute_array_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -846,8 +856,8 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::OldArray::str22_tag> (
+      TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::str22_tag> (
           this->operation_details_,
           this->args_,
           1);
@@ -867,8 +877,8 @@ void POA_OldArray::A_i::_set_attribute_array_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_val _tao_attribute_array;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_val _tao_attribute_array;
 
   TAO::Argument * const args[] =
     {
@@ -893,15 +903,15 @@ void POA_OldArray::A_i::_set_attribute_array_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldArray::A_i::_is_a (char const *value)
+::CORBA::Boolean POA_OldArray::A_i::_is_a (const char* value)
 {
   return
     (
@@ -910,7 +920,7 @@ void POA_OldArray::A_i::_set_attribute_array_skel (
     );
 }
 
-char const *POA_OldArray::A_i::_interface_repository_id () const
+const char* POA_OldArray::A_i::_interface_repository_id () const
 {
   return "IDL:OldArray/A_i:1.0";
 }
@@ -938,9 +948,9 @@ POA_OldArray::A_i::_this ()
 
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op (
-  ::OldArray::A const & return_value,
-  ::OldArray::A const & a2,
-  ::OldArray::A const & a3)
+  const ::OldArray::A & return_value,
+  const ::OldArray::A & a2,
+  const ::OldArray::A & a3)
 {
   this->_tao_rh_init_reply ();
 
@@ -970,9 +980,9 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op_excep (
 }
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op2 (
-  ::OldArray::str22 const return_value,
-  ::OldArray::str22 const a2,
-  ::OldArray::str22 const a3)
+  const ::OldArray::str22 return_value,
+  const ::OldArray::str22 a2,
+  const ::OldArray::str22 a3)
 {
   this->_tao_rh_init_reply ();
 
@@ -1002,9 +1012,9 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op2_excep (
 }
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::op4 (
-  ::OldArray::A_matrix const return_value,
-  ::OldArray::A const & a2,
-  ::OldArray::A const & a3)
+  const ::OldArray::A_matrix return_value,
+  const ::OldArray::A & a2,
+  const ::OldArray::A & a3)
 {
   this->_tao_rh_init_reply ();
 
@@ -1034,7 +1044,7 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::op4_excep (
 }
 void
 POA_OldArray::TAO_AMH_A_iResponseHandler::get_attribute_array (
-  ::OldArray::str22 const return_value)
+  const ::OldArray::str22 return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -1131,9 +1141,9 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op (
     }
 
   _tao_ptr->op (
-        ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[3])->arg ()
+        ((TAO::Arg_Traits< ::OldArray::A>::in_arg_val *) args[1])->arg (),
+        ((TAO::Arg_Traits< ::OldArray::A>::in_arg_val *) args[2])->arg (),
+        ((TAO::Arg_Traits< ::OldArray::A>::in_arg_val *) args[3])->arg ()
       );
 }
 
@@ -1151,7 +1161,7 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op_excep (
     }
 
   _tao_ptr->op_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1169,9 +1179,9 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2 (
     }
 
   _tao_ptr->op2 (
-        ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[3])->arg ()
+        ((TAO::Arg_Traits< ::OldArray::str22_tag>::in_arg_val *) args[1])->arg (),
+        ((TAO::Arg_Traits< ::OldArray::str22_tag>::in_arg_val *) args[2])->arg (),
+        ((TAO::Arg_Traits< ::OldArray::str22_tag>::in_arg_val *) args[3])->arg ()
       );
 }
 
@@ -1189,7 +1199,7 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2_excep (
     }
 
   _tao_ptr->op2_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1207,9 +1217,9 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4 (
     }
 
   _tao_ptr->op4 (
-        ((TAO::Arg_Traits<::OldArray::A_matrix_tag>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[3])->arg ()
+        ((TAO::Arg_Traits< ::OldArray::A_matrix_tag>::in_arg_val *) args[1])->arg (),
+        ((TAO::Arg_Traits< ::OldArray::A>::in_arg_val *) args[2])->arg (),
+        ((TAO::Arg_Traits< ::OldArray::A>::in_arg_val *) args[3])->arg ()
       );
 }
 
@@ -1227,7 +1237,7 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4_excep (
     }
 
   _tao_ptr->op4_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1245,7 +1255,7 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array (
     }
 
   _tao_ptr->get_attribute_array (
-        ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::OldArray::str22_tag>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1263,7 +1273,7 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array_excep (
     }
 
   _tao_ptr->get_attribute_array_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1298,7 +1308,7 @@ POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array_excep (
     }
 
   _tao_ptr->set_attribute_array_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1326,20 +1336,20 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::A>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_,
           1);
 
-      TAO::SArg_Traits<::OldArray::A>::in_arg_type arg_2 =
-        TAO::Portable_Server::get_in_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::in_arg_type arg_2 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_,
           2);
 
-      TAO::SArg_Traits<::OldArray::A>::in_arg_type arg_3 =
-        TAO::Portable_Server::get_in_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::in_arg_type arg_3 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_,
           3);
@@ -1361,10 +1371,10 @@ void POA_OldArray::AMI_A_iHandler::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::OldArray::A>::in_arg_val _tao_ami_return_val;
-  TAO::SArg_Traits<::OldArray::A>::in_arg_val _tao_a2;
-  TAO::SArg_Traits<::OldArray::A>::in_arg_val _tao_a3;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::OldArray::A>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits< ::OldArray::A>::in_arg_val _tao_a2;
+  TAO::SArg_Traits< ::OldArray::A>::in_arg_val _tao_a3;
 
   TAO::Argument * const args[] =
     {
@@ -1391,11 +1401,11 @@ void POA_OldArray::AMI_A_iHandler::op_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1414,8 +1424,8 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -1435,8 +1445,8 @@ void POA_OldArray::AMI_A_iHandler::op_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1461,11 +1471,11 @@ void POA_OldArray::AMI_A_iHandler::op_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1484,20 +1494,20 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::OldArray::str22_tag> (
+      TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::str22_tag> (
           this->operation_details_,
           this->args_,
           1);
 
-      TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_type arg_2 =
-        TAO::Portable_Server::get_in_arg<::OldArray::str22_tag> (
+      TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_type arg_2 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::str22_tag> (
           this->operation_details_,
           this->args_,
           2);
 
-      TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_type arg_3 =
-        TAO::Portable_Server::get_in_arg<::OldArray::str22_tag> (
+      TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_type arg_3 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::str22_tag> (
           this->operation_details_,
           this->args_,
           3);
@@ -1519,10 +1529,10 @@ void POA_OldArray::AMI_A_iHandler::op2_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_val _tao_ami_return_val;
-  TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_val _tao_a2;
-  TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_val _tao_a3;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_val _tao_a2;
+  TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_val _tao_a3;
 
   TAO::Argument * const args[] =
     {
@@ -1549,11 +1559,11 @@ void POA_OldArray::AMI_A_iHandler::op2_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1572,8 +1582,8 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -1593,8 +1603,8 @@ void POA_OldArray::AMI_A_iHandler::op2_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1619,11 +1629,11 @@ void POA_OldArray::AMI_A_iHandler::op2_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1642,20 +1652,20 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::A_matrix_tag>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::OldArray::A_matrix_tag> (
+      TAO::SArg_Traits< ::OldArray::A_matrix_tag>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::A_matrix_tag> (
           this->operation_details_,
           this->args_,
           1);
 
-      TAO::SArg_Traits<::OldArray::A>::in_arg_type arg_2 =
-        TAO::Portable_Server::get_in_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::in_arg_type arg_2 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_,
           2);
 
-      TAO::SArg_Traits<::OldArray::A>::in_arg_type arg_3 =
-        TAO::Portable_Server::get_in_arg<::OldArray::A> (
+      TAO::SArg_Traits< ::OldArray::A>::in_arg_type arg_3 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::A> (
           this->operation_details_,
           this->args_,
           3);
@@ -1677,10 +1687,10 @@ void POA_OldArray::AMI_A_iHandler::op4_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::OldArray::A_matrix_tag>::in_arg_val _tao_ami_return_val;
-  TAO::SArg_Traits<::OldArray::A>::in_arg_val _tao_a2;
-  TAO::SArg_Traits<::OldArray::A>::in_arg_val _tao_a3;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::OldArray::A_matrix_tag>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits< ::OldArray::A>::in_arg_val _tao_a2;
+  TAO::SArg_Traits< ::OldArray::A>::in_arg_val _tao_a3;
 
   TAO::Argument * const args[] =
     {
@@ -1707,11 +1717,11 @@ void POA_OldArray::AMI_A_iHandler::op4_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1730,8 +1740,8 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -1751,8 +1761,8 @@ void POA_OldArray::AMI_A_iHandler::op4_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1777,11 +1787,11 @@ void POA_OldArray::AMI_A_iHandler::op4_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1800,8 +1810,8 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::OldArray::str22_tag> (
+      TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::OldArray::str22_tag> (
           this->operation_details_,
           this->args_,
           1);
@@ -1821,8 +1831,8 @@ void POA_OldArray::AMI_A_iHandler::get_attribute_array_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::OldArray::str22_tag>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -1847,11 +1857,11 @@ void POA_OldArray::AMI_A_iHandler::get_attribute_array_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1870,8 +1880,8 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -1891,8 +1901,8 @@ void POA_OldArray::AMI_A_iHandler::get_attribute_array_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1917,11 +1927,11 @@ void POA_OldArray::AMI_A_iHandler::get_attribute_array_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1948,7 +1958,7 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -1969,11 +1979,11 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1992,8 +2002,8 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -2013,8 +2023,8 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -2039,15 +2049,15 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldArray::AMI_A_iHandler::_is_a (char const *value)
+::CORBA::Boolean POA_OldArray::AMI_A_iHandler::_is_a (const char* value)
 {
   return
     (
@@ -2057,7 +2067,7 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel (
     );
 }
 
-char const *POA_OldArray::AMI_A_iHandler::_interface_repository_id () const
+const char* POA_OldArray::AMI_A_iHandler::_interface_repository_id () const
 {
   return "IDL:OldArray/AMI_A_iHandler:1.0";
 }

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRUCTC_Z6DC3H_H_
-#define _TAO_IDL_STRUCTC_Z6DC3H_H_
+#ifndef _TAO_IDL_STRUCTC_UN0RQ3_H_
+#define _TAO_IDL_STRUCTC_UN0RQ3_H_
 
 #include /**/ "ace/pre.h"
 
@@ -95,7 +95,7 @@ namespace Test
 
   class TAO_IDL_TEST_STUB_Export TS3Seq
     : public
-        ::TAO::unbounded_value_sequence<S3>
+        ::TAO::unbounded_value_sequence< S3>
   {
   public:
     TS3Seq () = default;
@@ -146,7 +146,7 @@ namespace Test
 
   class TAO_IDL_TEST_STUB_Export TS4Seq
     : public
-        ::TAO::unbounded_value_sequence<S4>
+        ::TAO::unbounded_value_sequence< S4>
   {
   public:
     TS4Seq () = default;
@@ -184,7 +184,7 @@ namespace Test
 
   class TAO_IDL_TEST_STUB_Export TS5Seq
     : public
-        ::TAO::unbounded_value_sequence<S5>
+        ::TAO::unbounded_value_sequence< S5>
   {
   public:
     TS5Seq () = default;
@@ -265,9 +265,14 @@ namespace Test
   using S90Array_slice = S90;
   struct S90Array_tag {};
 
-  using S90Array_var = TAO_FixedArray_Var_T<S90Array, S90Array_slice, S90Array_tag>;
+  using S90Array_var =
+    TAO_FixedArray_Var_T<
+        S90Array,
+        S90Array_slice,
+        S90Array_tag
+      >;
 
-  using S90Array_out = S90Array;
+    using S90Array_out = S90Array;
 
   using S90Array_forany = TAO_Array_Forany_T<S90Array, S90Array_slice, S90Array_tag>;
 
@@ -284,9 +289,14 @@ namespace Test
   using S42_slice = ::CORBA::Long;
   struct S42_tag {};
 
-  using S42_var = TAO_FixedArray_Var_T<S42, S42_slice, S42_tag>;
+  using S42_var =
+    TAO_FixedArray_Var_T<
+        S42,
+        S42_slice,
+        S42_tag
+      >;
 
-  using S42_out = S42;
+    using S42_out = S42;
 
   using S42_forany = TAO_Array_Forany_T<S42, S42_slice, S42_tag>;
 
@@ -303,512 +313,528 @@ namespace Test
   using SString43_slice = ::TAO::String_Manager;
   struct SString43_tag {};
 
-  using SString43_var = TAO_VarArray_Var_T<SString43, SString43_slice, SString43_tag>;
+  using SString43_var =
+    TAO_VarArray_Var_T<
+        SString43,
+        SString43_slice,
+        SString43_tag
+      >;
 
-  using SString43_out = TAO_Array_Out_T<SString43, SString43_var, SString43_slice, SString43_tag>;
+    using SString43_out =
+      TAO_Array_Out_T<
+          SString43,
+          SString43_var,
+          SString43_slice,
+          SString43_tag
+        >;
 
-  using SString43_forany = TAO_Array_Forany_T<SString43, SString43_slice, SString43_tag>;
+      using SString43_forany = TAO_Array_Forany_T<SString43, SString43_slice, SString43_tag>;
 
-  extern TAO_IDL_TEST_STUB_Export SString43_slice *SString43_alloc ();
+      extern TAO_IDL_TEST_STUB_Export SString43_slice *SString43_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void SString43_free (SString43_slice *_tao_slice);
+      extern TAO_IDL_TEST_STUB_Export void SString43_free (SString43_slice *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export SString43_slice *SString43_dup (const SString43_slice *_tao_slice);
+      extern TAO_IDL_TEST_STUB_Export SString43_slice *SString43_dup (const SString43_slice *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export void SString43_copy (SString43_slice *_tao_to, const SString43_slice *_tao_from);
-  extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_SString43;
+      extern TAO_IDL_TEST_STUB_Export void SString43_copy (SString43_slice *_tao_to, const SString43_slice *_tao_from);
+      extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_SString43;
 
-  using S4Array = S4[2];
-  using S4Array_slice = S4;
-  struct S4Array_tag {};
+      using S4Array = S4[2];
+      using S4Array_slice = S4;
+      struct S4Array_tag {};
 
-  using S4Array_var = TAO_FixedArray_Var_T<S4Array, S4Array_slice, S4Array_tag>;
+      using S4Array_var =
+        TAO_FixedArray_Var_T<
+            S4Array,
+            S4Array_slice,
+            S4Array_tag
+          >;
 
-  using S4Array_out = S4Array;
+        using S4Array_out = S4Array;
 
-  using S4Array_forany = TAO_Array_Forany_T<S4Array, S4Array_slice, S4Array_tag>;
+      using S4Array_forany = TAO_Array_Forany_T<S4Array, S4Array_slice, S4Array_tag>;
 
-  extern TAO_IDL_TEST_STUB_Export S4Array_slice *S4Array_alloc ();
+      extern TAO_IDL_TEST_STUB_Export S4Array_slice *S4Array_alloc ();
 
-  extern TAO_IDL_TEST_STUB_Export void S4Array_free (S4Array_slice *_tao_slice);
+      extern TAO_IDL_TEST_STUB_Export void S4Array_free (S4Array_slice *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export S4Array_slice *S4Array_dup (const S4Array_slice *_tao_slice);
+      extern TAO_IDL_TEST_STUB_Export S4Array_slice *S4Array_dup (const S4Array_slice *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export void S4Array_copy (S4Array_slice *_tao_to, const S4Array_slice *_tao_from);
-  extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_S4Array;
+      extern TAO_IDL_TEST_STUB_Export void S4Array_copy (S4Array_slice *_tao_to, const S4Array_slice *_tao_from);
+      extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_S4Array;
 
-  struct S10;
-  using S10_var = ::TAO_Var_Var_T<S10>;
-  using S10_out = ::TAO_Out_T<S10>;
+      struct S10;
+      using S10_var = ::TAO_Var_Var_T<S10>;
+      using S10_out = ::TAO_Out_T<S10>;
 
-  struct TAO_IDL_TEST_STUB_Export S10
-  {
+      struct TAO_IDL_TEST_STUB_Export S10
+      {
 
-    using _var_type = S10_var;
-    using _out_type = S10_out;
+        using _var_type = S10_var;
+        using _out_type = S10_out;
 
-    static void _tao_any_destructor (void *);
+        static void _tao_any_destructor (void *);
 
-    Test::S90 s10_1 {};
-    Test::S42 s10_2 {};
-    Test::SString43 s10_3 {};
-    Test::S4 s10_4 {};
-  };
-  extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_S10;
+        Test::S90 s10_1 {};
+        Test::S42 s10_2 {};
+        Test::SString43 s10_3 {};
+        Test::S4 s10_4 {};
+      };
+      extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_S10;
 
-  struct DefaultInitialized;
-  using DefaultInitialized_var = ::TAO_Fixed_Var_T<DefaultInitialized>;
-  using DefaultInitialized_out = DefaultInitialized&;
+      struct DefaultInitialized;
+      using DefaultInitialized_var = ::TAO_Fixed_Var_T<DefaultInitialized>;
+      using DefaultInitialized_out = DefaultInitialized&;
 
-  struct TAO_IDL_TEST_STUB_Export DefaultInitialized
-  {
+      struct TAO_IDL_TEST_STUB_Export DefaultInitialized
+      {
 
-    using _var_type = DefaultInitialized_var;
-    using _out_type = DefaultInitialized_out;
+        using _var_type = DefaultInitialized_var;
+        using _out_type = DefaultInitialized_out;
 
-    static void _tao_any_destructor (void *);
+        static void _tao_any_destructor (void *);
 
-    ::CORBA::Boolean boolean_value {};
-    ::CORBA::Long long_value {};
-    ::CORBA::Double double_value {};
-    Test::S90 enum_value {};
-    Test::S42 array_value {};
-    Test::S4 nested_value {};
-  };
-  extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitialized;
+        ::CORBA::Boolean boolean_value {};
+        ::CORBA::Long long_value {};
+        ::CORBA::Double double_value {};
+        Test::S90 enum_value {};
+        Test::S42 array_value {};
+        Test::S4 nested_value {};
+      };
+      extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitialized;
 
-  class TAO_IDL_TEST_STUB_Export DefaultInitializedException : public ::CORBA::UserException
-  {
-  public:
-    ::CORBA::Boolean boolean_value {};
-    ::CORBA::Long long_value {};
+      class TAO_IDL_TEST_STUB_Export DefaultInitializedException : public ::CORBA::UserException
+      {
+      public:
+        ::CORBA::Boolean boolean_value {};
+        ::CORBA::Long long_value {};
 
-    DefaultInitializedException ();
-    DefaultInitializedException (const DefaultInitializedException &);
-    ~DefaultInitializedException () override = default;
+        DefaultInitializedException ();
+        DefaultInitializedException (const DefaultInitializedException &);
+        ~DefaultInitializedException () override = default;
 
-    DefaultInitializedException &operator= (const DefaultInitializedException &);
+        DefaultInitializedException &operator= (const DefaultInitializedException &);
 
-    static void _tao_any_destructor (void *);
+        static void _tao_any_destructor (void *);
 
-    static DefaultInitializedException *_downcast (::CORBA::Exception *);
-    static const DefaultInitializedException *_downcast (::CORBA::Exception const *);
+        static DefaultInitializedException *_downcast (::CORBA::Exception *);
+        static const DefaultInitializedException *_downcast (::CORBA::Exception const *);
 
-    static ::CORBA::Exception *_alloc ();
+        static ::CORBA::Exception *_alloc ();
 
-    ::CORBA::Exception *_tao_duplicate () const override;
+        ::CORBA::Exception *_tao_duplicate () const override;
 
-    void _raise () const override;
+        void _raise () const override;
 
-    void _tao_encode (TAO_OutputCDR &cdr) const override;
-    void _tao_decode (TAO_InputCDR &cdr) override;
+        void _tao_encode (TAO_OutputCDR &cdr) const override;
+        void _tao_decode (TAO_InputCDR &cdr) override;
 
-    DefaultInitializedException (
-        ::CORBA::Boolean _tao_boolean_value,
-        ::CORBA::Long _tao_long_value);
+        DefaultInitializedException (
+            ::CORBA::Boolean _tao_boolean_value,
+            ::CORBA::Long _tao_long_value);
 
-    ::CORBA::TypeCode_ptr _tao_type () const override;
-  };
-  extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedException;
+        ::CORBA::TypeCode_ptr _tao_type () const override;
+      };
+      extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedException;
 
-} // module Test
+    } // module Test
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-// Arg traits specializations.
-namespace TAO
-{
+    // Arg traits specializations.
+    namespace TAO
+    {
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
-  template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
-    : public
-        Object_Arg_Traits_T<
-            ::Messaging::ExceptionHolder *,
-            ::Messaging::ExceptionHolder_var,
-            ::Messaging::ExceptionHolder_out,
-            TAO::Value_Traits<Messaging::ExceptionHolder>,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Messaging::ExceptionHolder>
+        : public
+            Object_Arg_Traits_T<
+                ::Messaging::ExceptionHolder *,
+                ::Messaging::ExceptionHolder_var,
+                ::Messaging::ExceptionHolder_out,
+                TAO::Value_Traits<Messaging::ExceptionHolder>,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
 #endif /* end #if !defined */
 
-  template<>
-  class Arg_Traits<::Test::S1>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::Test::S1,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::S1>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::Test::S1,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::TS3Seq>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::Test::TS3Seq,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::TS3Seq>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::Test::TS3Seq,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::S3>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::Test::S3,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::S3>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::Test::S3,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::TS4Seq>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::Test::TS4Seq,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::TS4Seq>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::Test::TS4Seq,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::TS5Seq>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::Test::TS5Seq,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::TS5Seq>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::Test::TS5Seq,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::S4>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::Test::S4,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::S4>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::Test::S4,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::S5>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::Test::S5,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::S5>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::Test::S5,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::FooStruct>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::Test::FooStruct,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::FooStruct>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::Test::FooStruct,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::S90>
-    : public
-        Basic_Arg_Traits_T<
-            ::Test::S90,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::S90>
+        : public
+            Basic_Arg_Traits_T<
+                ::Test::S90,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::S90Array_tag>
-    : public
-        Fixed_Array_Arg_Traits_T<
-            ::Test::S90Array_var,
-            ::Test::S90Array_forany,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::S90Array_tag>
+        : public
+            Fixed_Array_Arg_Traits_T<
+                ::Test::S90Array_var,
+                ::Test::S90Array_forany,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::S42_tag>
-    : public
-        Fixed_Array_Arg_Traits_T<
-            ::Test::S42_var,
-            ::Test::S42_forany,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::S42_tag>
+        : public
+            Fixed_Array_Arg_Traits_T<
+                ::Test::S42_var,
+                ::Test::S42_forany,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::SString43_tag>
-    : public
-        Var_Array_Arg_Traits_T<
-            ::Test::SString43_out,
-            ::Test::SString43_forany,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::SString43_tag>
+        : public
+            Var_Array_Arg_Traits_T<
+                ::Test::SString43_out,
+                ::Test::SString43_forany,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::S4Array_tag>
-    : public
-        Fixed_Array_Arg_Traits_T<
-            ::Test::S4Array_var,
-            ::Test::S4Array_forany,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::S4Array_tag>
+        : public
+            Fixed_Array_Arg_Traits_T<
+                ::Test::S4Array_var,
+                ::Test::S4Array_forany,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::S10>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::Test::S10,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Test::S10>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::Test::S10,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
-  template<>
-  class Arg_Traits<::Test::DefaultInitialized>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::Test::DefaultInitialized,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-}
+      template<>
+      class Arg_Traits< ::Test::DefaultInitialized>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::Test::DefaultInitialized,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+    }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-// Traits specializations.
-namespace TAO
-{
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Array_Traits<
-      Test::S90Array_forany
-    >
-  {
-    static void free (
-        Test::S90Array_slice * _tao_slice);
-    static Test::S90Array_slice * dup (
-        const Test::S90Array_slice * _tao_slice);
-    static void copy (
-        Test::S90Array_slice * _tao_to,
-        const Test::S90Array_slice * _tao_from);
-    static Test::S90Array_slice * alloc ();
-    static void zero (
-        Test::S90Array_slice * _tao_slice);
-  };
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Array_Traits<
-      Test::S42_forany
-    >
-  {
-    static void free (
-        Test::S42_slice * _tao_slice);
-    static Test::S42_slice * dup (
-        const Test::S42_slice * _tao_slice);
-    static void copy (
-        Test::S42_slice * _tao_to,
-        const Test::S42_slice * _tao_from);
-    static Test::S42_slice * alloc ();
-    static void zero (
-        Test::S42_slice * _tao_slice);
-  };
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Array_Traits<
-      Test::SString43_forany
-    >
-  {
-    static void free (
-        Test::SString43_slice * _tao_slice);
-    static Test::SString43_slice * dup (
-        const Test::SString43_slice * _tao_slice);
-    static void copy (
-        Test::SString43_slice * _tao_to,
-        const Test::SString43_slice * _tao_from);
-    static Test::SString43_slice * alloc ();
-    static void zero (
-        Test::SString43_slice * _tao_slice);
-  };
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Array_Traits<
-      Test::S4Array_forany
-    >
-  {
-    static void free (
-        Test::S4Array_slice * _tao_slice);
-    static Test::S4Array_slice * dup (
-        const Test::S4Array_slice * _tao_slice);
-    static void copy (
-        Test::S4Array_slice * _tao_to,
-        const Test::S4Array_slice * _tao_from);
-    static Test::S4Array_slice * alloc ();
-    static void zero (
-        Test::S4Array_slice * _tao_slice);
-  };
+    // Traits specializations.
+    namespace TAO
+    {
+      template<>
+      struct TAO_IDL_TEST_STUB_Export Array_Traits<
+          Test::S90Array_forany
+        >
+      {
+        static void free (
+            Test::S90Array_slice * _tao_slice);
+        static Test::S90Array_slice * dup (
+            const Test::S90Array_slice * _tao_slice);
+        static void copy (
+            Test::S90Array_slice * _tao_to,
+            const Test::S90Array_slice * _tao_from);
+        static Test::S90Array_slice * alloc ();
+        static void zero (
+            Test::S90Array_slice * _tao_slice);
+      };
+      template<>
+      struct TAO_IDL_TEST_STUB_Export Array_Traits<
+          Test::S42_forany
+        >
+      {
+        static void free (
+            Test::S42_slice * _tao_slice);
+        static Test::S42_slice * dup (
+            const Test::S42_slice * _tao_slice);
+        static void copy (
+            Test::S42_slice * _tao_to,
+            const Test::S42_slice * _tao_from);
+        static Test::S42_slice * alloc ();
+        static void zero (
+            Test::S42_slice * _tao_slice);
+      };
+      template<>
+      struct TAO_IDL_TEST_STUB_Export Array_Traits<
+          Test::SString43_forany
+        >
+      {
+        static void free (
+            Test::SString43_slice * _tao_slice);
+        static Test::SString43_slice * dup (
+            const Test::SString43_slice * _tao_slice);
+        static void copy (
+            Test::SString43_slice * _tao_to,
+            const Test::SString43_slice * _tao_from);
+        static Test::SString43_slice * alloc ();
+        static void zero (
+            Test::SString43_slice * _tao_slice);
+      };
+      template<>
+      struct TAO_IDL_TEST_STUB_Export Array_Traits<
+          Test::S4Array_forany
+        >
+      {
+        static void free (
+            Test::S4Array_slice * _tao_slice);
+        static Test::S4Array_slice * dup (
+            const Test::S4Array_slice * _tao_slice);
+        static void copy (
+            Test::S4Array_slice * _tao_to,
+            const Test::S4Array_slice * _tao_from);
+        static Test::S4Array_slice * alloc ();
+        static void zero (
+            Test::S4Array_slice * _tao_slice);
+      };
+    }
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S1 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S1*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::S1 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S1 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S1*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::S1 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS3Seq const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS3Seq*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::TS3Seq const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS3Seq const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS3Seq*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::TS3Seq const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S3 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S3*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::S3 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S3 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S3*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::S3 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS4Seq const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS4Seq*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::TS4Seq const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS4Seq const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS4Seq*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::TS4Seq const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS5Seq const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS5Seq*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::TS5Seq const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS5Seq const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::TS5Seq*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::TS5Seq const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S4 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S4*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::S4 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S4 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S4*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::S4 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S5 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S5*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::S5 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S5 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S5*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::S5 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::FooStruct const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::FooStruct*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::FooStruct const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::FooStruct const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::FooStruct*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::FooStruct const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Test::S90);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::S90 &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Test::S90);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::S90 &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Test::S90Array_forany &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::S90Array_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Test::S90Array_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::S90Array_forany &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Test::S42_forany &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::S42_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Test::S42_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::S42_forany &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Test::SString43_forany &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::SString43_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Test::SString43_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::SString43_forany &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Test::S4Array_forany &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::S4Array_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Test::S4Array_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::S4Array_forany &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S10 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S10*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::S10 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S10 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::S10*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::S10 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::DefaultInitialized const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::DefaultInitialized*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::DefaultInitialized const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::DefaultInitialized const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Test::DefaultInitialized*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Test::DefaultInitialized const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Test::DefaultInitializedException &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Test::DefaultInitializedException*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const Test::DefaultInitializedException *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Test::DefaultInitializedException &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Test::DefaultInitializedException*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const Test::DefaultInitializedException *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::S1 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S1 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::S1 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S1 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -816,8 +842,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_Test_TS3Seq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Test::TS3Seq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Test::TS3Seq &_tao_sequence);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
+        TAO_OutputCDR &strm,
+        Test::TS3Seq const &_tao_sequence);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
+        TAO_InputCDR &strm,
+        Test::TS3Seq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -825,8 +855,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::S3 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S3 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::S3 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S3 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -834,8 +864,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_Test_TS4Seq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Test::TS4Seq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Test::TS4Seq &_tao_sequence);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
+        TAO_OutputCDR &strm,
+        Test::TS4Seq const &_tao_sequence);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
+        TAO_InputCDR &strm,
+        Test::TS4Seq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -845,8 +879,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_Test_TS5Seq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Test::TS5Seq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Test::TS5Seq &_tao_sequence);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
+        TAO_OutputCDR &strm,
+        Test::TS5Seq const &_tao_sequence);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
+        TAO_InputCDR &strm,
+        Test::TS5Seq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -854,82 +892,82 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::S4 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S4 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::S4 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S4 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::S5 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S5 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::S5 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S5 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::FooStruct const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::FooStruct &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::FooStruct const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::FooStruct &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Test::S90 _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Test::S90 &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Test::S90 _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Test::S90 &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Test::S90Array_forany &_tao_array);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S90Array_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Test::S90Array_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S90Array_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Test::S42_forany &_tao_array);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S42_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Test::S42_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S42_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Test::SString43_forany &_tao_array);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::SString43_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Test::SString43_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::SString43_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Test::S4Array_forany &_tao_array);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S4Array_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Test::S4Array_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S4Array_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::S10 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S10 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::S10 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::S10 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::DefaultInitialized const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::DefaultInitialized &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::DefaultInitialized const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::DefaultInitialized &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::DefaultInitializedException &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::DefaultInitializedException &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::DefaultInitializedException &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::DefaultInitializedException &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-#if defined (__ACE_INLINE__)
+    #if defined (__ACE_INLINE__)
 #include "structC.inl"
 #endif /* defined INLINE */
 

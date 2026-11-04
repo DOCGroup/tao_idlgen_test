@@ -23,7 +23,6 @@
  **/
 
 #include "TestC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -43,6 +42,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "TestC.inl"
@@ -130,7 +130,7 @@ void Test::InvalidTimestamp::_tao_decode (TAO_InputCDR &cdr)
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_Test_InvalidTimestamp {};
+    _tao_fields_Test_InvalidTimestamp = nullptr;
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -233,7 +233,7 @@ void Test::ServerOverload::_tao_decode (TAO_InputCDR &cdr)
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_Test_ServerOverload {};
+    _tao_fields_Test_ServerOverload = nullptr;
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -260,13 +260,13 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/Timestamp:1.0",
     "Timestamp",
-    std::addressof (CORBA::_tc_ulonglong));
+    &CORBA::_tc_ulonglong);
 
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_Timestamp = std::addressof(_tao_tc_Test_Timestamp);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Test_Red_Herring {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Test_Red_Herring = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -276,7 +276,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Test/Red_Herring:1.0",
     "Red_Herring",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_Test_Red_Herring,
     0);
 
@@ -425,7 +425,7 @@ TAO::Objref_Traits<Test::Roundtrip>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test::Roundtrip>::marshal (Test::Roundtrip_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test::Roundtrip>::marshal (const Test::Roundtrip_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -441,8 +441,8 @@ Test::Roundtrip::test_method (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::CORBA::ULongLong>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::ULongLong>::in_arg_val _tao_send_time (send_time);
+  TAO::Arg_Traits< ::CORBA::ULongLong>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::CORBA::ULongLong>::in_arg_val _tao_send_time (send_time);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -495,7 +495,7 @@ Test::Roundtrip::shutdown ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -562,10 +562,12 @@ Test::Roundtrip::_tao_release (Roundtrip_ptr obj)
 }
 
 ::CORBA::Boolean
-Test::Roundtrip::_is_a (char const *value)
+Test::Roundtrip::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:Test/Roundtrip:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+  if (
+      std::strcmp (value, "IDL:Test/Roundtrip:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -575,7 +577,7 @@ Test::Roundtrip::_is_a (char const *value)
     }
 }
 
-char const *Test::Roundtrip::_interface_repository_id () const
+const char* Test::Roundtrip::_interface_repository_id () const
 {
   return "IDL:Test/Roundtrip:1.0";
 }
@@ -596,7 +598,7 @@ namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_Roundtrip = std::addressof(_tao_tc_Test_Roundtrip);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Test_AMH_RoundtripExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Test_AMH_RoundtripExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -606,7 +608,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Test/AMH_RoundtripExceptionHolder:1.0",
     "AMH_RoundtripExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_Test_AMH_RoundtripExceptionHolder,
     0);
 
@@ -755,14 +757,14 @@ Test::AMH_RoundtripExceptionHolder::_tao_unmarshal (
 void
 Test::AMH_RoundtripExceptionHolder::raise_test_method ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 Test::AMH_RoundtripExceptionHolder::raise_shutdown ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -789,7 +791,7 @@ TAO::Objref_Traits<Test::AMH_RoundtripResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test::AMH_RoundtripResponseHandler>::marshal (Test::AMH_RoundtripResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test::AMH_RoundtripResponseHandler>::marshal (const Test::AMH_RoundtripResponseHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -843,11 +845,13 @@ Test::AMH_RoundtripResponseHandler::_tao_release (AMH_RoundtripResponseHandler_p
 }
 
 ::CORBA::Boolean
-Test::AMH_RoundtripResponseHandler::_is_a (char const *value)
+Test::AMH_RoundtripResponseHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:Test/AMH_RoundtripResponseHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:Test/AMH_RoundtripResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -857,7 +861,7 @@ Test::AMH_RoundtripResponseHandler::_is_a (char const *value)
     }
 }
 
-char const *Test::AMH_RoundtripResponseHandler::_interface_repository_id () const
+const char* Test::AMH_RoundtripResponseHandler::_interface_repository_id () const
 {
   return "IDL:Test/AMH_RoundtripResponseHandler:1.0";
 }
@@ -1158,7 +1162,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     Test::Roundtrip_ptr &_tao_elem)
 {
   return
@@ -1300,7 +1304,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     Test::AMH_RoundtripResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1419,7 +1423,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    Test::Roundtrip_ptr const _tao_objref)
+    const Test::Roundtrip_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1437,7 +1441,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::Test::Roundtrip>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::Test::Roundtrip>::unchecked_narrow (obj.in ());
 
   return true;
 }

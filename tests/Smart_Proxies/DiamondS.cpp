@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIAMONDS_BYXKB4_CPP_
-#define _TAO_IDL_DIAMONDS_BYXKB4_CPP_
+#ifndef _TAO_IDL_DIAMONDS_B4QF7Q_CPP_
+#define _TAO_IDL_DIAMONDS_B4QF7Q_CPP_
 
 #include "DiamondS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -87,7 +87,7 @@ POA_Diamond::_TAO_Top_Direct_Proxy_Impl::shape (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<char *>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< char *>::ret_val *) args[0])->arg () =
     _tao_ptr->shape (
         );
 }
@@ -116,8 +116,8 @@ namespace POA_Diamond
 
     void execute () override
     {
-      TAO::SArg_Traits<char *>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<char *> (
+      TAO::SArg_Traits< char *>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg< char *> (
           this->operation_details_,
           this->args_);
 
@@ -136,7 +136,7 @@ void POA_Diamond::Top::shape_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<char *>::ret_val retval;
+  TAO::SArg_Traits< char *>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -160,15 +160,15 @@ void POA_Diamond::Top::shape_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Diamond::Top::_is_a (char const *value)
+::CORBA::Boolean POA_Diamond::Top::_is_a (const char* value)
 {
   return
     (
@@ -177,7 +177,7 @@ void POA_Diamond::Top::shape_skel (
     );
 }
 
-char const *POA_Diamond::Top::_interface_repository_id () const
+const char* POA_Diamond::Top::_interface_repository_id () const
 {
   return "IDL:Diamond/Top:1.0";
 }
@@ -244,7 +244,7 @@ POA_Diamond::_TAO_Left_Direct_Proxy_Impl::color (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<char *>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< char *>::ret_val *) args[0])->arg () =
     _tao_ptr->color (
         );
 }
@@ -273,8 +273,8 @@ namespace POA_Diamond
 
     void execute () override
     {
-      TAO::SArg_Traits<char *>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<char *> (
+      TAO::SArg_Traits< char *>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg< char *> (
           this->operation_details_,
           this->args_);
 
@@ -293,7 +293,7 @@ void POA_Diamond::Left::color_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<char *>::ret_val retval;
+  TAO::SArg_Traits< char *>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -317,15 +317,15 @@ void POA_Diamond::Left::color_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Diamond::Left::_is_a (char const *value)
+::CORBA::Boolean POA_Diamond::Left::_is_a (const char* value)
 {
   return
     (
@@ -335,7 +335,7 @@ void POA_Diamond::Left::color_skel (
     );
 }
 
-char const *POA_Diamond::Left::_interface_repository_id () const
+const char* POA_Diamond::Left::_interface_repository_id () const
 {
   return "IDL:Diamond/Left:1.0";
 }
@@ -402,7 +402,7 @@ POA_Diamond::_TAO_Right_Direct_Proxy_Impl::width (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<::CORBA::Long>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< ::CORBA::Long>::ret_val *) args[0])->arg () =
     _tao_ptr->width (
         );
 }
@@ -431,8 +431,8 @@ namespace POA_Diamond
 
     void execute () override
     {
-      TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
+      TAO::SArg_Traits< ::CORBA::Long>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg< ::CORBA::Long> (
           this->operation_details_,
           this->args_);
 
@@ -451,7 +451,7 @@ void POA_Diamond::Right::width_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<::CORBA::Long>::ret_val retval;
+  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -475,15 +475,15 @@ void POA_Diamond::Right::width_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Diamond::Right::_is_a (char const *value)
+::CORBA::Boolean POA_Diamond::Right::_is_a (const char* value)
 {
   return
     (
@@ -493,7 +493,7 @@ void POA_Diamond::Right::width_skel (
     );
 }
 
-char const *POA_Diamond::Right::_interface_repository_id () const
+const char* POA_Diamond::Right::_interface_repository_id () const
 {
   return "IDL:Diamond/Right:1.0";
 }
@@ -562,7 +562,7 @@ POA_Diamond::_TAO_Buttom_Direct_Proxy_Impl::name (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<char *>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< char *>::ret_val *) args[0])->arg () =
     _tao_ptr->name (
         );
 }
@@ -591,8 +591,8 @@ namespace POA_Diamond
 
     void execute () override
     {
-      TAO::SArg_Traits<char *>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<char *> (
+      TAO::SArg_Traits< char *>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg< char *> (
           this->operation_details_,
           this->args_);
 
@@ -611,7 +611,7 @@ void POA_Diamond::Buttom::name_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<char *>::ret_val retval;
+  TAO::SArg_Traits< char *>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -635,15 +635,15 @@ void POA_Diamond::Buttom::name_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Diamond::Buttom::_is_a (char const *value)
+::CORBA::Boolean POA_Diamond::Buttom::_is_a (const char* value)
 {
   return
     (
@@ -655,7 +655,7 @@ void POA_Diamond::Buttom::name_skel (
     );
 }
 
-char const *POA_Diamond::Buttom::_interface_repository_id () const
+const char* POA_Diamond::Buttom::_interface_repository_id () const
 {
   return "IDL:Diamond/Buttom:1.0";
 }

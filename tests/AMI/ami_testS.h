@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTS_YMIAWW_H_
-#define _TAO_IDL_AMI_TESTS_YMIAWW_H_
+#ifndef _TAO_IDL_AMI_TESTS_MM8QVL_H_
+#define _TAO_IDL_AMI_TESTS_MM8QVL_H_
 
 #include /**/ "ace/pre.h"
 
@@ -57,7 +57,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #define _A_AMI_TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::A::AMI_Test>
+  class  SArg_Traits< ::A::AMI_Test>
     : public Object_SArg_Traits_T<
         ::A::AMI_Test_ptr,
         ::A::AMI_Test_var,
@@ -89,7 +89,7 @@ namespace TAO
 #define _A_AMI_AMI_TESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::A::AMI_AMI_TestHandler>
+  class  SArg_Traits< ::A::AMI_AMI_TestHandler>
     : public Object_SArg_Traits_T<
         ::A::AMI_AMI_TestHandler_ptr,
         ::A::AMI_AMI_TestHandler_var,
@@ -104,7 +104,7 @@ namespace TAO
 #define _A_TEST_CHILD__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::A::Test_Child>
+  class  SArg_Traits< ::A::Test_Child>
     : public Object_SArg_Traits_T<
         ::A::Test_Child_ptr,
         ::A::Test_Child_var,
@@ -119,7 +119,7 @@ namespace TAO
 #define _A_AMI_TEST_CHILDHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::A::AMI_Test_ChildHandler>
+  class  SArg_Traits< ::A::AMI_Test_ChildHandler>
     : public Object_SArg_Traits_T<
         ::A::AMI_Test_ChildHandler_ptr,
         ::A::AMI_Test_ChildHandler_var,
@@ -151,10 +151,10 @@ namespace POA_A
     using _stub_ptr_type = ::A::AMI_Test_ptr;
     using _stub_var_type = ::A::AMI_Test_var;
 
-    AMI_Test (AMI_Test const &rhs) = default;
+    AMI_Test (const AMI_Test& rhs) = default;
     ~AMI_Test () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -162,11 +162,11 @@ namespace POA_A
 
     ::A::AMI_Test *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual ::CORBA::Long foo (
       ::CORBA::Long_out out_l,
       ::CORBA::Long in_l,
-      char const * in_str) = 0;
+      const char * in_str) = 0;
 
     static void foo_skel (
         TAO_ServerRequest &server_request,
@@ -215,10 +215,10 @@ namespace POA_A
     using _stub_ptr_type = ::A::AMI_AMI_TestHandler_ptr;
     using _stub_var_type = ::A::AMI_AMI_TestHandler_var;
 
-    AMI_AMI_TestHandler (AMI_AMI_TestHandler const &rhs) = default;
+    AMI_AMI_TestHandler (const AMI_AMI_TestHandler& rhs) = default;
     ~AMI_AMI_TestHandler () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -226,7 +226,7 @@ namespace POA_A
 
     ::A::AMI_AMI_TestHandler *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual void foo (
       ::CORBA::Long ami_return_val,
       ::CORBA::Long out_l) = 0;
@@ -270,7 +270,7 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
     virtual void inout_arg_test (
-      char const * str) = 0;
+      const char * str) = 0;
 
     static void inout_arg_test_skel (
         TAO_ServerRequest &server_request,
@@ -300,10 +300,10 @@ namespace POA_A
     using _stub_ptr_type = ::A::Test_Child_ptr;
     using _stub_var_type = ::A::Test_Child_var;
 
-    Test_Child (Test_Child const &rhs) = default;
+    Test_Child (const Test_Child& rhs) = default;
     ~Test_Child () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -311,7 +311,7 @@ namespace POA_A
 
     ::A::Test_Child *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual void child_op () = 0;
 
     static void child_op_skel (
@@ -335,10 +335,10 @@ namespace POA_A
     using _stub_ptr_type = ::A::AMI_Test_ChildHandler_ptr;
     using _stub_var_type = ::A::AMI_Test_ChildHandler_var;
 
-    AMI_Test_ChildHandler (AMI_Test_ChildHandler const &rhs) = default;
+    AMI_Test_ChildHandler (const AMI_Test_ChildHandler& rhs) = default;
     ~AMI_Test_ChildHandler () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -346,7 +346,7 @@ namespace POA_A
 
     ::A::AMI_Test_ChildHandler *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual void child_op () = 0;
 
     static void child_op_skel (

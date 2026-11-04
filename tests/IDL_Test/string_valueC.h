@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRING_VALUEC_VCNCQ7_H_
-#define _TAO_IDL_STRING_VALUEC_VCNCQ7_H_
+#ifndef _TAO_IDL_STRING_VALUEC_7OPA5U_H_
+#define _TAO_IDL_STRING_VALUEC_7OPA5U_H_
 
 #include /**/ "ace/pre.h"
 
@@ -152,7 +152,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -170,7 +170,7 @@ namespace TAO
 #define _INCLUDE_TEST_STRINGTEST__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::include_test::StringTest>
+  class Arg_Traits< ::include_test::StringTest>
     : public
         Object_Arg_Traits_T<
             ::include_test::StringTest *,
@@ -211,9 +211,11 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean _tao_marshal__include_test_StringTest (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean
+  _tao_marshal__include_test_StringTest (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean _tao_unmarshal__include_test_StringTest (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean
+  _tao_unmarshal__include_test_StringTest (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

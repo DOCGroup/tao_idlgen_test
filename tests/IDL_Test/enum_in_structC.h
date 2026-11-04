@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ENUM_IN_STRUCTC_82T5YC_H_
-#define _TAO_IDL_ENUM_IN_STRUCTC_82T5YC_H_
+#ifndef _TAO_IDL_ENUM_IN_STRUCTC_792MYF_H_
+#define _TAO_IDL_ENUM_IN_STRUCTC_792MYF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -282,7 +282,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -297,7 +297,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::UnNamed>
+  class Arg_Traits< ::UnNamed>
     : public
         Basic_Arg_Traits_T<
             ::UnNamed,
@@ -307,7 +307,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::HoldsEnum>
+  class Arg_Traits< ::HoldsEnum>
     : public
         Fixed_Size_Arg_Traits_T<
             ::HoldsEnum,
@@ -317,7 +317,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::HoldsEnum::Named>
+  class Arg_Traits< ::HoldsEnum::Named>
     : public
         Basic_Arg_Traits_T<
             ::HoldsEnum::Named,
@@ -327,7 +327,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::decl_heavy_struct>
+  class Arg_Traits< ::decl_heavy_struct>
     : public
         Fixed_Size_Arg_Traits_T<
             ::decl_heavy_struct,

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESA_GF8O7K_H_
-#define _TAO_IDL_PRIMTYPESA_GF8O7K_H_
+#ifndef _TAO_IDL_PRIMTYPESA_N61DQZ_H_
+#define _TAO_IDL_PRIMTYPESA_N61DQZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,7 +50,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::ex1_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::ex1_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldPrimTypes::ex1_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldPrimTypes::ex1_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -68,7 +68,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::AMH_ex1ResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::AMH_ex1ResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldPrimTypes::AMH_ex1ResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldPrimTypes::AMH_ex1ResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -77,7 +77,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::AMI_ex1Handler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::AMI_ex1Handler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldPrimTypes::AMI_ex1Handler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldPrimTypes::AMI_ex1Handler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -86,7 +86,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::ex2_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::ex2_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldPrimTypes::ex2_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldPrimTypes::ex2_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -104,7 +104,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::AMH_ex2ResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::AMH_ex2ResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldPrimTypes::AMH_ex2ResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldPrimTypes::AMH_ex2ResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -113,7 +113,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::AMI_ex2Handler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldPrimTypes::AMI_ex2Handler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldPrimTypes::AMI_ex2Handler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldPrimTypes::AMI_ex2Handler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_UNIONC_MI1W3D_H_
-#define _TAO_IDL_UNIONC_MI1W3D_H_
+#ifndef _TAO_IDL_UNIONC_7JFVCO_H_
+#define _TAO_IDL_UNIONC_7JFVCO_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1504,9 +1504,14 @@ using U41 = ::CORBA::Long[2][3];
 using U41_slice = ::CORBA::Long[3];
 struct U41_tag {};
 
-using U41_var = TAO_FixedArray_Var_T<U41, U41_slice, U41_tag>;
+using U41_var =
+  TAO_FixedArray_Var_T<
+      U41,
+      U41_slice,
+      U41_tag
+    >;
 
-using U41_out = U41;
+  using U41_out = U41;
 
 using U41_forany = TAO_Array_Forany_T<U41, U41_slice, U41_tag>;
 
@@ -1523,9 +1528,14 @@ using U42 = ::CORBA::Long[2];
 using U42_slice = ::CORBA::Long;
 struct U42_tag {};
 
-using U42_var = TAO_FixedArray_Var_T<U42, U42_slice, U42_tag>;
+using U42_var =
+  TAO_FixedArray_Var_T<
+      U42,
+      U42_slice,
+      U42_tag
+    >;
 
-using U42_out = U42;
+  using U42_out = U42;
 
 using U42_forany = TAO_Array_Forany_T<U42, U42_slice, U42_tag>;
 
@@ -1588,2785 +1598,2811 @@ using UString = ::TAO::String_Manager[2];
 using UString_slice = ::TAO::String_Manager;
 struct UString_tag {};
 
-using UString_var = TAO_VarArray_Var_T<UString, UString_slice, UString_tag>;
+using UString_var =
+  TAO_VarArray_Var_T<
+      UString,
+      UString_slice,
+      UString_tag
+    >;
 
-using UString_out = TAO_Array_Out_T<UString, UString_var, UString_slice, UString_tag>;
+  using UString_out =
+    TAO_Array_Out_T<
+        UString,
+        UString_var,
+        UString_slice,
+        UString_tag
+      >;
 
-using UString_forany = TAO_Array_Forany_T<UString, UString_slice, UString_tag>;
+    using UString_forany = TAO_Array_Forany_T<UString, UString_slice, UString_tag>;
 
-TAO_IDL_TEST_STUB_Export UString_slice *UString_alloc ();
+    TAO_IDL_TEST_STUB_Export UString_slice *UString_alloc ();
 
-TAO_IDL_TEST_STUB_Export void UString_free (UString_slice *_tao_slice);
+    TAO_IDL_TEST_STUB_Export void UString_free (UString_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export UString_slice *UString_dup (const UString_slice *_tao_slice);
+    TAO_IDL_TEST_STUB_Export UString_slice *UString_dup (const UString_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void UString_copy (UString_slice *_tao_to, const UString_slice *_tao_from);
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UString;
+    TAO_IDL_TEST_STUB_Export void UString_copy (UString_slice *_tao_to, const UString_slice *_tao_from);
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UString;
 
-class U86;
-using U86_var = ::TAO_Var_Var_T<U86>;
-using U86_out = ::TAO_Out_T<U86>;
+    class U86;
+    using U86_var = ::TAO_Var_Var_T<U86>;
+    using U86_out = ::TAO_Out_T<U86>;
 
-class TAO_IDL_TEST_STUB_Export U86
-{
-public:
-  U86 ();
-  U86 (U86 const &);
-  ~U86 ();
+    class TAO_IDL_TEST_STUB_Export U86
+    {
+    public:
+      U86 ();
+      U86 (U86 const &);
+      ~U86 ();
 
-  U86 &operator= (U86 const &);
+      U86 &operator= (U86 const &);
 
-  void _d ( ::CORBA::Long);
-  ::CORBA::Long _d () const;
+      void _d ( ::CORBA::Long);
+      ::CORBA::Long _d () const;
 
-  using _var_type = U86_var;
-  using _out_type = U86_out;
+      using _var_type = U86_var;
+      using _out_type = U86_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void b_86_1 (char *);
-  void b_86_1 (char const *);
-  void b_86_1 (::CORBA::String_var const&);
-  char const *b_86_1 () const;
+      void b_86_1 (char *);
+      void b_86_1 (char const *);
+      void b_86_1 (::CORBA::String_var const&);
+      char const *b_86_1 () const;
 
-  void b_86_2 ( ::CORBA::Long);
-  ::CORBA::Long b_86_2 () const;
+      void b_86_2 ( ::CORBA::Long);
+      ::CORBA::Long b_86_2 () const;
 
-  void _default ();
-private:
-  static unsigned long _tao_member_index (::CORBA::Long);
-  ::CORBA::Long disc_;
+      void _default ();
+    private:
+      static unsigned long _tao_member_index (::CORBA::Long);
+      ::CORBA::Long disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    char *b_86_1_;
+        char *b_86_1_;
 
-    ::CORBA::Long b_86_2_;
-  } u_;
+        ::CORBA::Long b_86_2_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U86;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U86;
 
-class U88;
-using U88_var = ::TAO_Var_Var_T<U88>;
-using U88_out = ::TAO_Out_T<U88>;
+    class U88;
+    using U88_var = ::TAO_Var_Var_T<U88>;
+    using U88_out = ::TAO_Out_T<U88>;
 
-class TAO_IDL_TEST_STUB_Export U88
-{
-public:
-  U88 ();
-  U88 (U88 const &);
-  ~U88 ();
+    class TAO_IDL_TEST_STUB_Export U88
+    {
+    public:
+      U88 ();
+      U88 (U88 const &);
+      ~U88 ();
 
-  U88 &operator= (U88 const &);
+      U88 &operator= (U88 const &);
 
-  void _d ( ::CORBA::Long);
-  ::CORBA::Long _d () const;
+      void _d ( ::CORBA::Long);
+      ::CORBA::Long _d () const;
 
-  using _var_type = U88_var;
-  using _out_type = U88_out;
+      using _var_type = U88_var;
+      using _out_type = U88_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void b_86_1 (UString);
-  UString_slice * b_86_1 () const;
+      void b_86_1 (UString);
+      UString_slice * b_86_1 () const;
 
-  void b_86_2 ( ::CORBA::Long);
-  ::CORBA::Long b_86_2 () const;
+      void b_86_2 ( ::CORBA::Long);
+      ::CORBA::Long b_86_2 () const;
 
-  void _default ();
-private:
-  static unsigned long _tao_member_index (::CORBA::Long);
-  ::CORBA::Long disc_;
+      void _default ();
+    private:
+      static unsigned long _tao_member_index (::CORBA::Long);
+      ::CORBA::Long disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    UString_slice *b_86_1_;
+        UString_slice *b_86_1_;
 
-    ::CORBA::Long b_86_2_;
-  } u_;
+        ::CORBA::Long b_86_2_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U88;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U88;
 
-struct UBar;
-using UBar_var = ::TAO_Fixed_Var_T<UBar>;
-using UBar_out = UBar&;
+    struct UBar;
+    using UBar_var = ::TAO_Fixed_Var_T<UBar>;
+    using UBar_out = UBar&;
 
-struct TAO_IDL_TEST_STUB_Export UBar
-{
+    struct TAO_IDL_TEST_STUB_Export UBar
+    {
 
-  using _var_type = UBar_var;
-  using _out_type = UBar_out;
+      using _var_type = UBar_var;
+      using _out_type = UBar_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  ::CORBA::Long foo {};
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UBar;
+      ::CORBA::Long foo {};
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UBar;
 
-using UBarArray = UBar[2];
-using UBarArray_slice = UBar;
-struct UBarArray_tag {};
+    using UBarArray = UBar[2];
+    using UBarArray_slice = UBar;
+    struct UBarArray_tag {};
 
-using UBarArray_var = TAO_FixedArray_Var_T<UBarArray, UBarArray_slice, UBarArray_tag>;
+    using UBarArray_var =
+      TAO_FixedArray_Var_T<
+          UBarArray,
+          UBarArray_slice,
+          UBarArray_tag
+        >;
 
-using UBarArray_out = UBarArray;
+      using UBarArray_out = UBarArray;
 
-using UBarArray_forany = TAO_Array_Forany_T<UBarArray, UBarArray_slice, UBarArray_tag>;
+    using UBarArray_forany = TAO_Array_Forany_T<UBarArray, UBarArray_slice, UBarArray_tag>;
 
-TAO_IDL_TEST_STUB_Export UBarArray_slice *UBarArray_alloc ();
+    TAO_IDL_TEST_STUB_Export UBarArray_slice *UBarArray_alloc ();
 
-TAO_IDL_TEST_STUB_Export void UBarArray_free (UBarArray_slice *_tao_slice);
+    TAO_IDL_TEST_STUB_Export void UBarArray_free (UBarArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export UBarArray_slice *UBarArray_dup (const UBarArray_slice *_tao_slice);
+    TAO_IDL_TEST_STUB_Export UBarArray_slice *UBarArray_dup (const UBarArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void UBarArray_copy (UBarArray_slice *_tao_to, const UBarArray_slice *_tao_from);
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UBarArray;
+    TAO_IDL_TEST_STUB_Export void UBarArray_copy (UBarArray_slice *_tao_to, const UBarArray_slice *_tao_from);
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_UBarArray;
 
-class U87;
-using U87_var = ::TAO_Fixed_Var_T<U87>;
-using U87_out = U87&;
+    class U87;
+    using U87_var = ::TAO_Fixed_Var_T<U87>;
+    using U87_out = U87&;
 
-class TAO_IDL_TEST_STUB_Export U87
-{
-public:
-  U87 ();
-  U87 (U87 const &);
-  ~U87 ();
+    class TAO_IDL_TEST_STUB_Export U87
+    {
+    public:
+      U87 ();
+      U87 (U87 const &);
+      ~U87 ();
 
-  U87 &operator= (U87 const &);
+      U87 &operator= (U87 const &);
 
-  void _d ( ::CORBA::Long);
-  ::CORBA::Long _d () const;
+      void _d ( ::CORBA::Long);
+      ::CORBA::Long _d () const;
 
-  using _var_type = U87_var;
-  using _out_type = U87_out;
+      using _var_type = U87_var;
+      using _out_type = U87_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void b_87_1 (UBar const &);
-  UBar const &b_87_1 () const;
-  UBar &b_87_1 ();
+      void b_87_1 (UBar const &);
+      UBar const &b_87_1 () const;
+      UBar &b_87_1 ();
 
-  void b_87_2 ( ::CORBA::Long);
-  ::CORBA::Long b_87_2 () const;
+      void b_87_2 ( ::CORBA::Long);
+      ::CORBA::Long b_87_2 () const;
 
-  void _default ();
-private:
-  static unsigned long _tao_member_index (::CORBA::Long);
-  ::CORBA::Long disc_;
+      void _default ();
+    private:
+      static unsigned long _tao_member_index (::CORBA::Long);
+      ::CORBA::Long disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    UBar b_87_1_;
+        UBar b_87_1_;
 
-    ::CORBA::Long b_87_2_;
-  } u_;
+        ::CORBA::Long b_87_2_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U87;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U87;
 
-class U89;
-using U89_var = ::TAO_Fixed_Var_T<U89>;
-using U89_out = U89&;
+    class U89;
+    using U89_var = ::TAO_Fixed_Var_T<U89>;
+    using U89_out = U89&;
 
-class TAO_IDL_TEST_STUB_Export U89
-{
-public:
-  U89 ();
-  U89 (U89 const &);
-  ~U89 ();
+    class TAO_IDL_TEST_STUB_Export U89
+    {
+    public:
+      U89 ();
+      U89 (U89 const &);
+      ~U89 ();
 
-  U89 &operator= (U89 const &);
+      U89 &operator= (U89 const &);
 
-  void _d ( ::CORBA::Long);
-  ::CORBA::Long _d () const;
+      void _d ( ::CORBA::Long);
+      ::CORBA::Long _d () const;
 
-  using _var_type = U89_var;
-  using _out_type = U89_out;
+      using _var_type = U89_var;
+      using _out_type = U89_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void b_87_1 (UBarArray);
-  UBarArray_slice * b_87_1 () const;
+      void b_87_1 (UBarArray);
+      UBarArray_slice * b_87_1 () const;
 
-  void b_87_2 ( ::CORBA::Long);
-  ::CORBA::Long b_87_2 () const;
+      void b_87_2 ( ::CORBA::Long);
+      ::CORBA::Long b_87_2 () const;
 
-  void _default ();
-private:
-  static unsigned long _tao_member_index (::CORBA::Long);
-  ::CORBA::Long disc_;
+      void _default ();
+    private:
+      static unsigned long _tao_member_index (::CORBA::Long);
+      ::CORBA::Long disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    UBarArray_slice *b_87_1_;
+        UBarArray_slice *b_87_1_;
 
-    ::CORBA::Long b_87_2_;
-  } u_;
+        ::CORBA::Long b_87_2_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U89;
-enum U90
-{
-  U90_1,
-  U90_2
-};
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U89;
+    enum U90
+    {
+      U90_1,
+      U90_2
+    };
 
-using U90_out = U90 &;
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U90;
+    using U90_out = U90 &;
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U90;
 
-using U90Array = U90[2];
-using U90Array_slice = U90;
-struct U90Array_tag {};
+    using U90Array = U90[2];
+    using U90Array_slice = U90;
+    struct U90Array_tag {};
 
-using U90Array_var = TAO_FixedArray_Var_T<U90Array, U90Array_slice, U90Array_tag>;
+    using U90Array_var =
+      TAO_FixedArray_Var_T<
+          U90Array,
+          U90Array_slice,
+          U90Array_tag
+        >;
 
-using U90Array_out = U90Array;
+      using U90Array_out = U90Array;
 
-using U90Array_forany = TAO_Array_Forany_T<U90Array, U90Array_slice, U90Array_tag>;
+    using U90Array_forany = TAO_Array_Forany_T<U90Array, U90Array_slice, U90Array_tag>;
 
-TAO_IDL_TEST_STUB_Export U90Array_slice *U90Array_alloc ();
+    TAO_IDL_TEST_STUB_Export U90Array_slice *U90Array_alloc ();
 
-TAO_IDL_TEST_STUB_Export void U90Array_free (U90Array_slice *_tao_slice);
+    TAO_IDL_TEST_STUB_Export void U90Array_free (U90Array_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export U90Array_slice *U90Array_dup (const U90Array_slice *_tao_slice);
+    TAO_IDL_TEST_STUB_Export U90Array_slice *U90Array_dup (const U90Array_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void U90Array_copy (U90Array_slice *_tao_to, const U90Array_slice *_tao_from);
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U90Array;
+    TAO_IDL_TEST_STUB_Export void U90Array_copy (U90Array_slice *_tao_to, const U90Array_slice *_tao_from);
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U90Array;
 
-class U91;
-using U91_var = ::TAO_Fixed_Var_T<U91>;
-using U91_out = U91&;
+    class U91;
+    using U91_var = ::TAO_Fixed_Var_T<U91>;
+    using U91_out = U91&;
 
-class TAO_IDL_TEST_STUB_Export U91
-{
-public:
-  U91 ();
-  U91 (U91 const &);
-  ~U91 ();
+    class TAO_IDL_TEST_STUB_Export U91
+    {
+    public:
+      U91 ();
+      U91 (U91 const &);
+      ~U91 ();
 
-  U91 &operator= (U91 const &);
+      U91 &operator= (U91 const &);
 
-  void _d ( ::CORBA::Long);
-  ::CORBA::Long _d () const;
+      void _d ( ::CORBA::Long);
+      ::CORBA::Long _d () const;
 
-  using _var_type = U91_var;
-  using _out_type = U91_out;
+      using _var_type = U91_var;
+      using _out_type = U91_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void b_91_1 (U90Array);
-  U90Array_slice * b_91_1 () const;
+      void b_91_1 (U90Array);
+      U90Array_slice * b_91_1 () const;
 
-  void b_92_2 ( ::CORBA::Long);
-  ::CORBA::Long b_92_2 () const;
+      void b_92_2 ( ::CORBA::Long);
+      ::CORBA::Long b_92_2 () const;
 
-  void _default ();
-private:
-  static unsigned long _tao_member_index (::CORBA::Long);
-  ::CORBA::Long disc_;
+      void _default ();
+    private:
+      static unsigned long _tao_member_index (::CORBA::Long);
+      ::CORBA::Long disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    U90Array_slice *b_91_1_;
+        U90Array_slice *b_91_1_;
 
-    ::CORBA::Long b_92_2_;
-  } u_;
+        ::CORBA::Long b_92_2_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U91;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U91;
 
-class U92;
-using U92_var = ::TAO_Fixed_Var_T<U92>;
-using U92_out = U92&;
+    class U92;
+    using U92_var = ::TAO_Fixed_Var_T<U92>;
+    using U92_out = U92&;
 
-class TAO_IDL_TEST_STUB_Export U92
-{
-public:
-  U92 ();
-  U92 (U92 const &);
-  ~U92 ();
+    class TAO_IDL_TEST_STUB_Export U92
+    {
+    public:
+      U92 ();
+      U92 (U92 const &);
+      ~U92 ();
 
-  U92 &operator= (U92 const &);
+      U92 &operator= (U92 const &);
 
-  void _d ( ::CORBA::Long);
-  ::CORBA::Long _d () const;
+      void _d ( ::CORBA::Long);
+      ::CORBA::Long _d () const;
 
-  using _var_type = U92_var;
-  using _out_type = U92_out;
+      using _var_type = U92_var;
+      using _out_type = U92_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void b_92_1 (UBar const &);
-  UBar const &b_92_1 () const;
-  UBar &b_92_1 ();
+      void b_92_1 (UBar const &);
+      UBar const &b_92_1 () const;
+      UBar &b_92_1 ();
 
-  void b_92_2 ( ::CORBA::Long);
-  ::CORBA::Long b_92_2 () const;
+      void b_92_2 ( ::CORBA::Long);
+      ::CORBA::Long b_92_2 () const;
 
-  void b_92_3 (UBar const &);
-  UBar const &b_92_3 () const;
-  UBar &b_92_3 ();
-private:
-  static unsigned long _tao_member_index (::CORBA::Long);
-  ::CORBA::Long disc_;
+      void b_92_3 (UBar const &);
+      UBar const &b_92_3 () const;
+      UBar &b_92_3 ();
+    private:
+      static unsigned long _tao_member_index (::CORBA::Long);
+      ::CORBA::Long disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    UBar b_92_1_;
+        UBar b_92_1_;
 
-    ::CORBA::Long b_92_2_;
+        ::CORBA::Long b_92_2_;
 
-    UBar b_92_3_;
-  } u_;
+        UBar b_92_3_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U92;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U92;
 
-class U93;
-using U93_var = ::TAO_Fixed_Var_T<U93>;
-using U93_out = U93&;
+    class U93;
+    using U93_var = ::TAO_Fixed_Var_T<U93>;
+    using U93_out = U93&;
 
-class TAO_IDL_TEST_STUB_Export U93
-{
-public:
-  U93 ();
-  U93 (U93 const &);
-  ~U93 ();
+    class TAO_IDL_TEST_STUB_Export U93
+    {
+    public:
+      U93 ();
+      U93 (U93 const &);
+      ~U93 ();
 
-  U93 &operator= (U93 const &);
+      U93 &operator= (U93 const &);
 
-  void _d ( ::CORBA::Long);
-  ::CORBA::Long _d () const;
+      void _d ( ::CORBA::Long);
+      ::CORBA::Long _d () const;
 
-  using _var_type = U93_var;
-  using _out_type = U93_out;
+      using _var_type = U93_var;
+      using _out_type = U93_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void b_93_1 (UBarArray);
-  UBarArray_slice * b_93_1 () const;
+      void b_93_1 (UBarArray);
+      UBarArray_slice * b_93_1 () const;
 
-  void b_93_2 ( ::CORBA::Long);
-  ::CORBA::Long b_93_2 () const;
+      void b_93_2 ( ::CORBA::Long);
+      ::CORBA::Long b_93_2 () const;
 
-  void b_93_3 (UBarArray);
-  UBarArray_slice * b_93_3 () const;
-private:
-  static unsigned long _tao_member_index (::CORBA::Long);
-  ::CORBA::Long disc_;
+      void b_93_3 (UBarArray);
+      UBarArray_slice * b_93_3 () const;
+    private:
+      static unsigned long _tao_member_index (::CORBA::Long);
+      ::CORBA::Long disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    UBarArray_slice *b_93_1_;
+        UBarArray_slice *b_93_1_;
 
-    ::CORBA::Long b_93_2_;
+        ::CORBA::Long b_93_2_;
 
-    UBarArray_slice *b_93_3_;
-  } u_;
+        UBarArray_slice *b_93_3_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U93;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U93;
 
-class U94;
-using U94_var = ::TAO_Fixed_Var_T<U94>;
-using U94_out = U94&;
+    class U94;
+    using U94_var = ::TAO_Fixed_Var_T<U94>;
+    using U94_out = U94&;
 
-class TAO_IDL_TEST_STUB_Export U94
-{
-public:
-  U94 ();
-  U94 (U94 const &);
-  ~U94 ();
+    class TAO_IDL_TEST_STUB_Export U94
+    {
+    public:
+      U94 ();
+      U94 (U94 const &);
+      ~U94 ();
 
-  U94 &operator= (U94 const &);
+      U94 &operator= (U94 const &);
 
-  void _d ( ::CORBA::Long);
-  ::CORBA::Long _d () const;
+      void _d ( ::CORBA::Long);
+      ::CORBA::Long _d () const;
 
-  using _var_type = U94_var;
-  using _out_type = U94_out;
+      using _var_type = U94_var;
+      using _out_type = U94_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void b_94_1 (U90Array);
-  U90Array_slice * b_94_1 () const;
+      void b_94_1 (U90Array);
+      U90Array_slice * b_94_1 () const;
 
-  void b_94_2 ( ::CORBA::Long);
-  ::CORBA::Long b_94_2 () const;
+      void b_94_2 ( ::CORBA::Long);
+      ::CORBA::Long b_94_2 () const;
 
-  void b_94_3 (U90Array);
-  U90Array_slice * b_94_3 () const;
-private:
-  static unsigned long _tao_member_index (::CORBA::Long);
-  ::CORBA::Long disc_;
+      void b_94_3 (U90Array);
+      U90Array_slice * b_94_3 () const;
+    private:
+      static unsigned long _tao_member_index (::CORBA::Long);
+      ::CORBA::Long disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    U90Array_slice *b_94_1_;
+        U90Array_slice *b_94_1_;
 
-    ::CORBA::Long b_94_2_;
+        ::CORBA::Long b_94_2_;
 
-    U90Array_slice *b_94_3_;
-  } u_;
+        U90Array_slice *b_94_3_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U94;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_U94;
 
-using DefaultInitializedLongArray = ::CORBA::Long[2];
-using DefaultInitializedLongArray_slice = ::CORBA::Long;
-struct DefaultInitializedLongArray_tag {};
+    using DefaultInitializedLongArray = ::CORBA::Long[2];
+    using DefaultInitializedLongArray_slice = ::CORBA::Long;
+    struct DefaultInitializedLongArray_tag {};
 
-using DefaultInitializedLongArray_var = TAO_FixedArray_Var_T<DefaultInitializedLongArray, DefaultInitializedLongArray_slice, DefaultInitializedLongArray_tag>;
+    using DefaultInitializedLongArray_var =
+      TAO_FixedArray_Var_T<
+          DefaultInitializedLongArray,
+          DefaultInitializedLongArray_slice,
+          DefaultInitializedLongArray_tag
+        >;
 
-using DefaultInitializedLongArray_out = DefaultInitializedLongArray;
+      using DefaultInitializedLongArray_out = DefaultInitializedLongArray;
 
-using DefaultInitializedLongArray_forany = TAO_Array_Forany_T<DefaultInitializedLongArray, DefaultInitializedLongArray_slice, DefaultInitializedLongArray_tag>;
+    using DefaultInitializedLongArray_forany = TAO_Array_Forany_T<DefaultInitializedLongArray, DefaultInitializedLongArray_slice, DefaultInitializedLongArray_tag>;
 
-TAO_IDL_TEST_STUB_Export DefaultInitializedLongArray_slice *DefaultInitializedLongArray_alloc ();
+    TAO_IDL_TEST_STUB_Export DefaultInitializedLongArray_slice *DefaultInitializedLongArray_alloc ();
 
-TAO_IDL_TEST_STUB_Export void DefaultInitializedLongArray_free (DefaultInitializedLongArray_slice *_tao_slice);
+    TAO_IDL_TEST_STUB_Export void DefaultInitializedLongArray_free (DefaultInitializedLongArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export DefaultInitializedLongArray_slice *DefaultInitializedLongArray_dup (const DefaultInitializedLongArray_slice *_tao_slice);
+    TAO_IDL_TEST_STUB_Export DefaultInitializedLongArray_slice *DefaultInitializedLongArray_dup (const DefaultInitializedLongArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void DefaultInitializedLongArray_copy (DefaultInitializedLongArray_slice *_tao_to, const DefaultInitializedLongArray_slice *_tao_from);
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedLongArray;
+    TAO_IDL_TEST_STUB_Export void DefaultInitializedLongArray_copy (DefaultInitializedLongArray_slice *_tao_to, const DefaultInitializedLongArray_slice *_tao_from);
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedLongArray;
 
-class DefaultInitializedStructUnion;
-using DefaultInitializedStructUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedStructUnion>;
-using DefaultInitializedStructUnion_out = DefaultInitializedStructUnion&;
+    class DefaultInitializedStructUnion;
+    using DefaultInitializedStructUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedStructUnion>;
+    using DefaultInitializedStructUnion_out = DefaultInitializedStructUnion&;
 
-class TAO_IDL_TEST_STUB_Export DefaultInitializedStructUnion
-{
-public:
-  DefaultInitializedStructUnion ();
-  DefaultInitializedStructUnion (DefaultInitializedStructUnion const &);
-  ~DefaultInitializedStructUnion ();
+    class TAO_IDL_TEST_STUB_Export DefaultInitializedStructUnion
+    {
+    public:
+      DefaultInitializedStructUnion ();
+      DefaultInitializedStructUnion (DefaultInitializedStructUnion const &);
+      ~DefaultInitializedStructUnion ();
 
-  DefaultInitializedStructUnion &operator= (DefaultInitializedStructUnion const &);
+      DefaultInitializedStructUnion &operator= (DefaultInitializedStructUnion const &);
 
-  void _d ( ::CORBA::Boolean);
-  ::CORBA::Boolean _d () const;
+      void _d ( ::CORBA::Boolean);
+      ::CORBA::Boolean _d () const;
 
-  using _var_type = DefaultInitializedStructUnion_var;
-  using _out_type = DefaultInitializedStructUnion_out;
+      using _var_type = DefaultInitializedStructUnion_var;
+      using _out_type = DefaultInitializedStructUnion_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void value (UBar const &);
-  UBar const &value () const;
-  UBar &value ();
-private:
-  static unsigned long _tao_member_index (::CORBA::Boolean);
-  ::CORBA::Boolean disc_;
+      void value (UBar const &);
+      UBar const &value () const;
+      UBar &value ();
+    private:
+      static unsigned long _tao_member_index (::CORBA::Boolean);
+      ::CORBA::Boolean disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    UBar value_;
-  } u_;
+        UBar value_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedStructUnion;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedStructUnion;
 
-class DefaultInitializedBooleanUnion;
-using DefaultInitializedBooleanUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedBooleanUnion>;
-using DefaultInitializedBooleanUnion_out = DefaultInitializedBooleanUnion&;
+    class DefaultInitializedBooleanUnion;
+    using DefaultInitializedBooleanUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedBooleanUnion>;
+    using DefaultInitializedBooleanUnion_out = DefaultInitializedBooleanUnion&;
 
-class TAO_IDL_TEST_STUB_Export DefaultInitializedBooleanUnion
-{
-public:
-  DefaultInitializedBooleanUnion ();
-  DefaultInitializedBooleanUnion (DefaultInitializedBooleanUnion const &);
-  ~DefaultInitializedBooleanUnion ();
+    class TAO_IDL_TEST_STUB_Export DefaultInitializedBooleanUnion
+    {
+    public:
+      DefaultInitializedBooleanUnion ();
+      DefaultInitializedBooleanUnion (DefaultInitializedBooleanUnion const &);
+      ~DefaultInitializedBooleanUnion ();
 
-  DefaultInitializedBooleanUnion &operator= (DefaultInitializedBooleanUnion const &);
+      DefaultInitializedBooleanUnion &operator= (DefaultInitializedBooleanUnion const &);
 
-  void _d ( ::CORBA::Boolean);
-  ::CORBA::Boolean _d () const;
+      void _d ( ::CORBA::Boolean);
+      ::CORBA::Boolean _d () const;
 
-  using _var_type = DefaultInitializedBooleanUnion_var;
-  using _out_type = DefaultInitializedBooleanUnion_out;
+      using _var_type = DefaultInitializedBooleanUnion_var;
+      using _out_type = DefaultInitializedBooleanUnion_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void value ( ::CORBA::Boolean);
-  ::CORBA::Boolean value () const;
-private:
-  static unsigned long _tao_member_index (::CORBA::Boolean);
-  ::CORBA::Boolean disc_;
+      void value ( ::CORBA::Boolean);
+      ::CORBA::Boolean value () const;
+    private:
+      static unsigned long _tao_member_index (::CORBA::Boolean);
+      ::CORBA::Boolean disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    ::CORBA::Boolean value_;
-  } u_;
+        ::CORBA::Boolean value_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedBooleanUnion;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedBooleanUnion;
 
-class DefaultInitializedLongUnion;
-using DefaultInitializedLongUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedLongUnion>;
-using DefaultInitializedLongUnion_out = DefaultInitializedLongUnion&;
+    class DefaultInitializedLongUnion;
+    using DefaultInitializedLongUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedLongUnion>;
+    using DefaultInitializedLongUnion_out = DefaultInitializedLongUnion&;
 
-class TAO_IDL_TEST_STUB_Export DefaultInitializedLongUnion
-{
-public:
-  DefaultInitializedLongUnion ();
-  DefaultInitializedLongUnion (DefaultInitializedLongUnion const &);
-  ~DefaultInitializedLongUnion ();
+    class TAO_IDL_TEST_STUB_Export DefaultInitializedLongUnion
+    {
+    public:
+      DefaultInitializedLongUnion ();
+      DefaultInitializedLongUnion (DefaultInitializedLongUnion const &);
+      ~DefaultInitializedLongUnion ();
 
-  DefaultInitializedLongUnion &operator= (DefaultInitializedLongUnion const &);
+      DefaultInitializedLongUnion &operator= (DefaultInitializedLongUnion const &);
 
-  void _d ( ::CORBA::Boolean);
-  ::CORBA::Boolean _d () const;
+      void _d ( ::CORBA::Boolean);
+      ::CORBA::Boolean _d () const;
 
-  using _var_type = DefaultInitializedLongUnion_var;
-  using _out_type = DefaultInitializedLongUnion_out;
+      using _var_type = DefaultInitializedLongUnion_var;
+      using _out_type = DefaultInitializedLongUnion_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void value ( ::CORBA::Long);
-  ::CORBA::Long value () const;
-private:
-  static unsigned long _tao_member_index (::CORBA::Boolean);
-  ::CORBA::Boolean disc_;
+      void value ( ::CORBA::Long);
+      ::CORBA::Long value () const;
+    private:
+      static unsigned long _tao_member_index (::CORBA::Boolean);
+      ::CORBA::Boolean disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    ::CORBA::Long value_;
-  } u_;
+        ::CORBA::Long value_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedLongUnion;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedLongUnion;
 
-class DefaultInitializedDoubleUnion;
-using DefaultInitializedDoubleUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedDoubleUnion>;
-using DefaultInitializedDoubleUnion_out = DefaultInitializedDoubleUnion&;
+    class DefaultInitializedDoubleUnion;
+    using DefaultInitializedDoubleUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedDoubleUnion>;
+    using DefaultInitializedDoubleUnion_out = DefaultInitializedDoubleUnion&;
 
-class TAO_IDL_TEST_STUB_Export DefaultInitializedDoubleUnion
-{
-public:
-  DefaultInitializedDoubleUnion ();
-  DefaultInitializedDoubleUnion (DefaultInitializedDoubleUnion const &);
-  ~DefaultInitializedDoubleUnion ();
+    class TAO_IDL_TEST_STUB_Export DefaultInitializedDoubleUnion
+    {
+    public:
+      DefaultInitializedDoubleUnion ();
+      DefaultInitializedDoubleUnion (DefaultInitializedDoubleUnion const &);
+      ~DefaultInitializedDoubleUnion ();
 
-  DefaultInitializedDoubleUnion &operator= (DefaultInitializedDoubleUnion const &);
+      DefaultInitializedDoubleUnion &operator= (DefaultInitializedDoubleUnion const &);
 
-  void _d ( ::CORBA::Boolean);
-  ::CORBA::Boolean _d () const;
+      void _d ( ::CORBA::Boolean);
+      ::CORBA::Boolean _d () const;
 
-  using _var_type = DefaultInitializedDoubleUnion_var;
-  using _out_type = DefaultInitializedDoubleUnion_out;
+      using _var_type = DefaultInitializedDoubleUnion_var;
+      using _out_type = DefaultInitializedDoubleUnion_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void value ( ::CORBA::Double);
-  ::CORBA::Double value () const;
-private:
-  static unsigned long _tao_member_index (::CORBA::Boolean);
-  ::CORBA::Boolean disc_;
+      void value ( ::CORBA::Double);
+      ::CORBA::Double value () const;
+    private:
+      static unsigned long _tao_member_index (::CORBA::Boolean);
+      ::CORBA::Boolean disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    ::CORBA::Double value_;
-  } u_;
+        ::CORBA::Double value_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedDoubleUnion;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedDoubleUnion;
 
-class DefaultInitializedEnumUnion;
-using DefaultInitializedEnumUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedEnumUnion>;
-using DefaultInitializedEnumUnion_out = DefaultInitializedEnumUnion&;
+    class DefaultInitializedEnumUnion;
+    using DefaultInitializedEnumUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedEnumUnion>;
+    using DefaultInitializedEnumUnion_out = DefaultInitializedEnumUnion&;
 
-class TAO_IDL_TEST_STUB_Export DefaultInitializedEnumUnion
-{
-public:
-  DefaultInitializedEnumUnion ();
-  DefaultInitializedEnumUnion (DefaultInitializedEnumUnion const &);
-  ~DefaultInitializedEnumUnion ();
+    class TAO_IDL_TEST_STUB_Export DefaultInitializedEnumUnion
+    {
+    public:
+      DefaultInitializedEnumUnion ();
+      DefaultInitializedEnumUnion (DefaultInitializedEnumUnion const &);
+      ~DefaultInitializedEnumUnion ();
 
-  DefaultInitializedEnumUnion &operator= (DefaultInitializedEnumUnion const &);
+      DefaultInitializedEnumUnion &operator= (DefaultInitializedEnumUnion const &);
 
-  void _d ( ::CORBA::Boolean);
-  ::CORBA::Boolean _d () const;
+      void _d ( ::CORBA::Boolean);
+      ::CORBA::Boolean _d () const;
 
-  using _var_type = DefaultInitializedEnumUnion_var;
-  using _out_type = DefaultInitializedEnumUnion_out;
+      using _var_type = DefaultInitializedEnumUnion_var;
+      using _out_type = DefaultInitializedEnumUnion_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void value (U90);
-  U90 value () const;
-private:
-  static unsigned long _tao_member_index (::CORBA::Boolean);
-  ::CORBA::Boolean disc_;
+      void value (U90);
+      U90 value () const;
+    private:
+      static unsigned long _tao_member_index (::CORBA::Boolean);
+      ::CORBA::Boolean disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    U90 value_;
-  } u_;
+        U90 value_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedEnumUnion;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedEnumUnion;
 
-class DefaultInitializedArrayUnion;
-using DefaultInitializedArrayUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedArrayUnion>;
-using DefaultInitializedArrayUnion_out = DefaultInitializedArrayUnion&;
+    class DefaultInitializedArrayUnion;
+    using DefaultInitializedArrayUnion_var = ::TAO_Fixed_Var_T<DefaultInitializedArrayUnion>;
+    using DefaultInitializedArrayUnion_out = DefaultInitializedArrayUnion&;
 
-class TAO_IDL_TEST_STUB_Export DefaultInitializedArrayUnion
-{
-public:
-  DefaultInitializedArrayUnion ();
-  DefaultInitializedArrayUnion (DefaultInitializedArrayUnion const &);
-  ~DefaultInitializedArrayUnion ();
+    class TAO_IDL_TEST_STUB_Export DefaultInitializedArrayUnion
+    {
+    public:
+      DefaultInitializedArrayUnion ();
+      DefaultInitializedArrayUnion (DefaultInitializedArrayUnion const &);
+      ~DefaultInitializedArrayUnion ();
 
-  DefaultInitializedArrayUnion &operator= (DefaultInitializedArrayUnion const &);
+      DefaultInitializedArrayUnion &operator= (DefaultInitializedArrayUnion const &);
 
-  void _d ( ::CORBA::Boolean);
-  ::CORBA::Boolean _d () const;
+      void _d ( ::CORBA::Boolean);
+      ::CORBA::Boolean _d () const;
 
-  using _var_type = DefaultInitializedArrayUnion_var;
-  using _out_type = DefaultInitializedArrayUnion_out;
+      using _var_type = DefaultInitializedArrayUnion_var;
+      using _out_type = DefaultInitializedArrayUnion_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void value (DefaultInitializedLongArray);
-  DefaultInitializedLongArray_slice * value () const;
-private:
-  static unsigned long _tao_member_index (::CORBA::Boolean);
-  ::CORBA::Boolean disc_;
+      void value (DefaultInitializedLongArray);
+      DefaultInitializedLongArray_slice * value () const;
+    private:
+      static unsigned long _tao_member_index (::CORBA::Boolean);
+      ::CORBA::Boolean disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    DefaultInitializedLongArray_slice *value_;
-  } u_;
+        DefaultInitializedLongArray_slice *value_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedArrayUnion;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedArrayUnion;
 
-class DefaultInitializedStringUnion;
-using DefaultInitializedStringUnion_var = ::TAO_Var_Var_T<DefaultInitializedStringUnion>;
-using DefaultInitializedStringUnion_out = ::TAO_Out_T<DefaultInitializedStringUnion>;
+    class DefaultInitializedStringUnion;
+    using DefaultInitializedStringUnion_var = ::TAO_Var_Var_T<DefaultInitializedStringUnion>;
+    using DefaultInitializedStringUnion_out = ::TAO_Out_T<DefaultInitializedStringUnion>;
 
-class TAO_IDL_TEST_STUB_Export DefaultInitializedStringUnion
-{
-public:
-  DefaultInitializedStringUnion ();
-  DefaultInitializedStringUnion (DefaultInitializedStringUnion const &);
-  ~DefaultInitializedStringUnion ();
+    class TAO_IDL_TEST_STUB_Export DefaultInitializedStringUnion
+    {
+    public:
+      DefaultInitializedStringUnion ();
+      DefaultInitializedStringUnion (DefaultInitializedStringUnion const &);
+      ~DefaultInitializedStringUnion ();
 
-  DefaultInitializedStringUnion &operator= (DefaultInitializedStringUnion const &);
+      DefaultInitializedStringUnion &operator= (DefaultInitializedStringUnion const &);
 
-  void _d ( ::CORBA::Boolean);
-  ::CORBA::Boolean _d () const;
+      void _d ( ::CORBA::Boolean);
+      ::CORBA::Boolean _d () const;
 
-  using _var_type = DefaultInitializedStringUnion_var;
-  using _out_type = DefaultInitializedStringUnion_out;
+      using _var_type = DefaultInitializedStringUnion_var;
+      using _out_type = DefaultInitializedStringUnion_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void value (char *);
-  void value (char const *);
-  void value (::CORBA::String_var const&);
-  char const *value () const;
-private:
-  static unsigned long _tao_member_index (::CORBA::Boolean);
-  ::CORBA::Boolean disc_;
+      void value (char *);
+      void value (char const *);
+      void value (::CORBA::String_var const&);
+      char const *value () const;
+    private:
+      static unsigned long _tao_member_index (::CORBA::Boolean);
+      ::CORBA::Boolean disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    char *value_;
-  } u_;
+        char *value_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedStringUnion;
-enum ResetDiscriminator
-{
-  RESET_STRING,
-  RESET_LONG,
-  RESET_DEFAULT
-};
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DefaultInitializedStringUnion;
+    enum ResetDiscriminator
+    {
+      RESET_STRING,
+      RESET_LONG,
+      RESET_DEFAULT
+    };
 
-using ResetDiscriminator_out = ResetDiscriminator &;
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ResetDiscriminator;
+    using ResetDiscriminator_out = ResetDiscriminator &;
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ResetDiscriminator;
 
-class ResetWithNoopBranches;
-using ResetWithNoopBranches_var = ::TAO_Var_Var_T<ResetWithNoopBranches>;
-using ResetWithNoopBranches_out = ::TAO_Out_T<ResetWithNoopBranches>;
+    class ResetWithNoopBranches;
+    using ResetWithNoopBranches_var = ::TAO_Var_Var_T<ResetWithNoopBranches>;
+    using ResetWithNoopBranches_out = ::TAO_Out_T<ResetWithNoopBranches>;
 
-class TAO_IDL_TEST_STUB_Export ResetWithNoopBranches
-{
-public:
-  ResetWithNoopBranches ();
-  ResetWithNoopBranches (ResetWithNoopBranches const &);
-  ~ResetWithNoopBranches ();
+    class TAO_IDL_TEST_STUB_Export ResetWithNoopBranches
+    {
+    public:
+      ResetWithNoopBranches ();
+      ResetWithNoopBranches (ResetWithNoopBranches const &);
+      ~ResetWithNoopBranches ();
 
-  ResetWithNoopBranches &operator= (ResetWithNoopBranches const &);
+      ResetWithNoopBranches &operator= (ResetWithNoopBranches const &);
 
-  void _d (ResetDiscriminator);
-  ResetDiscriminator _d () const;
+      void _d (ResetDiscriminator);
+      ResetDiscriminator _d () const;
 
-  using _var_type = ResetWithNoopBranches_var;
-  using _out_type = ResetWithNoopBranches_out;
+      using _var_type = ResetWithNoopBranches_var;
+      using _out_type = ResetWithNoopBranches_out;
 
-  static void _tao_any_destructor (void *);
+      static void _tao_any_destructor (void *);
 
-  void string_value (char *);
-  void string_value (char const *);
-  void string_value (::CORBA::String_var const&);
-  char const *string_value () const;
+      void string_value (char *);
+      void string_value (char const *);
+      void string_value (::CORBA::String_var const&);
+      char const *string_value () const;
 
-  void long_value ( ::CORBA::Long);
-  ::CORBA::Long long_value () const;
+      void long_value ( ::CORBA::Long);
+      ::CORBA::Long long_value () const;
 
-  void struct_value (UBar const &);
-  UBar const &struct_value () const;
-  UBar &struct_value ();
-private:
-  static unsigned long _tao_member_index (ResetDiscriminator);
-  ResetDiscriminator disc_;
+      void struct_value (UBar const &);
+      UBar const &struct_value () const;
+      UBar &struct_value ();
+    private:
+      static unsigned long _tao_member_index (ResetDiscriminator);
+      ResetDiscriminator disc_;
 
-  union _tao_union_storage
-  {
-    _tao_union_storage () {}
+      union _tao_union_storage
+      {
+        _tao_union_storage () {}
 
-    char *string_value_;
+        char *string_value_;
 
-    ::CORBA::Long long_value_;
+        ::CORBA::Long long_value_;
 
-    UBar struct_value_;
-  } u_;
+        UBar struct_value_;
+      } u_;
 
-  /// TAO extension - frees any allocated storage.
-  void _reset ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ResetWithNoopBranches;
+      /// TAO extension - frees any allocated storage.
+      void _reset ();
+    };
+    extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ResetWithNoopBranches;
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-// Arg traits specializations.
-namespace TAO
-{
+    // Arg traits specializations.
+    namespace TAO
+    {
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
-  template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
-    : public
-        Object_Arg_Traits_T<
-            ::Messaging::ExceptionHolder *,
-            ::Messaging::ExceptionHolder_var,
-            ::Messaging::ExceptionHolder_out,
-            TAO::Value_Traits<Messaging::ExceptionHolder>,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
+      template<>
+      class Arg_Traits< ::Messaging::ExceptionHolder>
+        : public
+            Object_Arg_Traits_T<
+                ::Messaging::ExceptionHolder *,
+                ::Messaging::ExceptionHolder_var,
+                ::Messaging::ExceptionHolder_out,
+                TAO::Value_Traits<Messaging::ExceptionHolder>,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
 
 #endif /* end #if !defined */
 
-  template<>
-  class Arg_Traits<::DataType>
-    : public
-        Basic_Arg_Traits_T<
-            ::DataType,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::Data>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::Data,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::Necessary::Kind>
-    : public
-        Basic_Arg_Traits_T<
-            ::Necessary::Kind,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::Necessary::WhichResult>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::Necessary::WhichResult,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::foo>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::foo,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::UnionDiscTest::BooleanUnion>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::UnionDiscTest::BooleanUnion,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::UnionDiscTest::CharUnion>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::UnionDiscTest::CharUnion,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::OneBranchT>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::OneBranchT,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::OneBranchF>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::OneBranchF,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::OneBranchD>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::OneBranchD,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::OneBranchTF>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::OneBranchTF,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::OneBranchFT>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::OneBranchFT,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::OneBranchTD>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::OneBranchTD,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::OneBranchDT>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::OneBranchDT,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::OneBranchFD>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::OneBranchFD,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::OneBranchDF>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::OneBranchDF,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::TwoBranchesTF>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::TwoBranchesTF,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::TwoBranchesFT>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::TwoBranchesFT,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::TwoBranchesTD>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::TwoBranchesTD,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::TwoBranchesDT>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::TwoBranchesDT,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::TwoBranchesFD>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::TwoBranchesFD,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::AllBoolUnions::TwoBranchesDF>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::AllBoolUnions::TwoBranchesDF,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::disc1>
-    : public
-        Basic_Arg_Traits_T<
-            ::disc1,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::disc2>
-    : public
-        Basic_Arg_Traits_T<
-            ::disc2,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::disc_outer>
-    : public
-        Basic_Arg_Traits_T<
-            ::disc_outer,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::inner1>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::inner1,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::inner2>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::inner2,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::outer>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::outer,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::UnionTest3::ValChoice>
-    : public
-        Basic_Arg_Traits_T<
-            ::UnionTest3::ValChoice,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::UnionTest3::ValType>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::UnionTest3::ValType,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::UnionTest3::UpType>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::UnionTest3::UpType,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::UnionTest3::DownType>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::UnionTest3::DownType,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::UnionTest3::IndChoice>
-    : public
-        Basic_Arg_Traits_T<
-            ::UnionTest3::IndChoice,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::UnionTest3::IndType>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::UnionTest3::IndType,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::XType>
-    : public
-        Basic_Arg_Traits_T<
-            ::XType,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::ZType>
-    : public
-        Basic_Arg_Traits_T<
-            ::ZType,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::X>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::X,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::X::Y>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::X::Y,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::X::Y::Z>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::X::Y::Z,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::FieldType>
-    : public
-        Basic_Arg_Traits_T<
-            ::FieldType,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::FieldValue>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::FieldValue,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::Field>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::Field,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::TestOneEnum>
-    : public
-        Basic_Arg_Traits_T<
-            ::TestOneEnum,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::TestTwoEnum>
-    : public
-        Basic_Arg_Traits_T<
-            ::TestTwoEnum,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::TestUnion>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::TestUnion,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U41_tag>
-    : public
-        Fixed_Array_Arg_Traits_T<
-            ::U41_var,
-            ::U41_forany,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U42_tag>
-    : public
-        Fixed_Array_Arg_Traits_T<
-            ::U42_var,
-            ::U42_forany,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U85>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::U85,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::UString_tag>
-    : public
-        Var_Array_Arg_Traits_T<
-            ::UString_out,
-            ::UString_forany,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U86>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::U86,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U88>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::U88,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::UBar>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::UBar,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::UBarArray_tag>
-    : public
-        Fixed_Array_Arg_Traits_T<
-            ::UBarArray_var,
-            ::UBarArray_forany,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U87>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::U87,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U89>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::U89,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U90>
-    : public
-        Basic_Arg_Traits_T<
-            ::U90,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U90Array_tag>
-    : public
-        Fixed_Array_Arg_Traits_T<
-            ::U90Array_var,
-            ::U90Array_forany,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U91>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::U91,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U92>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::U92,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U93>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::U93,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::U94>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::U94,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::DefaultInitializedLongArray_tag>
-    : public
-        Fixed_Array_Arg_Traits_T<
-            ::DefaultInitializedLongArray_var,
-            ::DefaultInitializedLongArray_forany,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::DefaultInitializedStructUnion>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::DefaultInitializedStructUnion,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::DefaultInitializedBooleanUnion>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::DefaultInitializedBooleanUnion,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::DefaultInitializedLongUnion>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::DefaultInitializedLongUnion,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::DefaultInitializedDoubleUnion>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::DefaultInitializedDoubleUnion,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::DefaultInitializedEnumUnion>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::DefaultInitializedEnumUnion,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::DefaultInitializedArrayUnion>
-    : public
-        Fixed_Size_Arg_Traits_T<
-            ::DefaultInitializedArrayUnion,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::DefaultInitializedStringUnion>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::DefaultInitializedStringUnion,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::ResetDiscriminator>
-    : public
-        Basic_Arg_Traits_T<
-            ::ResetDiscriminator,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
-  class Arg_Traits<::ResetWithNoopBranches>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::ResetWithNoopBranches,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-}
-
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-// Traits specializations.
-namespace TAO
-{
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Array_Traits<
-      U41_forany
-    >
-  {
-    static void free (
-        U41_slice * _tao_slice);
-    static U41_slice * dup (
-        const U41_slice * _tao_slice);
-    static void copy (
-        U41_slice * _tao_to,
-        const U41_slice * _tao_from);
-    static U41_slice * alloc ();
-    static void zero (
-        U41_slice * _tao_slice);
-  };
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Array_Traits<
-      U42_forany
-    >
-  {
-    static void free (
-        U42_slice * _tao_slice);
-    static U42_slice * dup (
-        const U42_slice * _tao_slice);
-    static void copy (
-        U42_slice * _tao_to,
-        const U42_slice * _tao_from);
-    static U42_slice * alloc ();
-    static void zero (
-        U42_slice * _tao_slice);
-  };
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Array_Traits<
-      UString_forany
-    >
-  {
-    static void free (
-        UString_slice * _tao_slice);
-    static UString_slice * dup (
-        const UString_slice * _tao_slice);
-    static void copy (
-        UString_slice * _tao_to,
-        const UString_slice * _tao_from);
-    static UString_slice * alloc ();
-    static void zero (
-        UString_slice * _tao_slice);
-  };
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Array_Traits<
-      UBarArray_forany
-    >
-  {
-    static void free (
-        UBarArray_slice * _tao_slice);
-    static UBarArray_slice * dup (
-        const UBarArray_slice * _tao_slice);
-    static void copy (
-        UBarArray_slice * _tao_to,
-        const UBarArray_slice * _tao_from);
-    static UBarArray_slice * alloc ();
-    static void zero (
-        UBarArray_slice * _tao_slice);
-  };
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Array_Traits<
-      U90Array_forany
-    >
-  {
-    static void free (
-        U90Array_slice * _tao_slice);
-    static U90Array_slice * dup (
-        const U90Array_slice * _tao_slice);
-    static void copy (
-        U90Array_slice * _tao_to,
-        const U90Array_slice * _tao_from);
-    static U90Array_slice * alloc ();
-    static void zero (
-        U90Array_slice * _tao_slice);
-  };
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Array_Traits<
-      DefaultInitializedLongArray_forany
-    >
-  {
-    static void free (
-        DefaultInitializedLongArray_slice * _tao_slice);
-    static DefaultInitializedLongArray_slice * dup (
-        const DefaultInitializedLongArray_slice * _tao_slice);
-    static void copy (
-        DefaultInitializedLongArray_slice * _tao_to,
-        const DefaultInitializedLongArray_slice * _tao_from);
-    static DefaultInitializedLongArray_slice * alloc ();
-    static void zero (
-        DefaultInitializedLongArray_slice * _tao_slice);
-  };
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DataType);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, DataType &);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Data const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Data*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Data const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Necessary::Kind);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Necessary::Kind &);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Necessary::WhichResult const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Necessary::WhichResult*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Necessary::WhichResult const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, foo const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionDiscTest::BooleanUnion const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionDiscTest::BooleanUnion*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, UnionDiscTest::BooleanUnion const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionDiscTest::CharUnion const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionDiscTest::CharUnion*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, UnionDiscTest::CharUnion const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchT const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchT*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchT const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchF const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchF*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchF const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchD const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchD*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchD const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchTF const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchTF*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchTF const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchFT const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchFT*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchFT const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchTD const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchTD*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchTD const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchDT const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchDT*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchDT const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchFD const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchFD*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchFD const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchDF const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchDF*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchDF const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesTF const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesTF*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesTF const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesFT const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesFT*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesFT const *&);
+      template<>
+      class Arg_Traits< ::DataType>
+        : public
+            Basic_Arg_Traits_T<
+                ::DataType,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::Data>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::Data,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::Necessary::Kind>
+        : public
+            Basic_Arg_Traits_T<
+                ::Necessary::Kind,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::Necessary::WhichResult>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::Necessary::WhichResult,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::foo>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::foo,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::UnionDiscTest::BooleanUnion>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::UnionDiscTest::BooleanUnion,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::UnionDiscTest::CharUnion>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::UnionDiscTest::CharUnion,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::OneBranchT>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::OneBranchT,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::OneBranchF>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::OneBranchF,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::OneBranchD>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::OneBranchD,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::OneBranchTF>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::OneBranchTF,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::OneBranchFT>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::OneBranchFT,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::OneBranchTD>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::OneBranchTD,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::OneBranchDT>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::OneBranchDT,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::OneBranchFD>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::OneBranchFD,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::OneBranchDF>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::OneBranchDF,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::TwoBranchesTF>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::TwoBranchesTF,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::TwoBranchesFT>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::TwoBranchesFT,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::TwoBranchesTD>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::TwoBranchesTD,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::TwoBranchesDT>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::TwoBranchesDT,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::TwoBranchesFD>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::TwoBranchesFD,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::AllBoolUnions::TwoBranchesDF>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::AllBoolUnions::TwoBranchesDF,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::disc1>
+        : public
+            Basic_Arg_Traits_T<
+                ::disc1,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::disc2>
+        : public
+            Basic_Arg_Traits_T<
+                ::disc2,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::disc_outer>
+        : public
+            Basic_Arg_Traits_T<
+                ::disc_outer,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::inner1>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::inner1,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::inner2>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::inner2,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::outer>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::outer,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::UnionTest3::ValChoice>
+        : public
+            Basic_Arg_Traits_T<
+                ::UnionTest3::ValChoice,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::UnionTest3::ValType>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::UnionTest3::ValType,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::UnionTest3::UpType>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::UnionTest3::UpType,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::UnionTest3::DownType>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::UnionTest3::DownType,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::UnionTest3::IndChoice>
+        : public
+            Basic_Arg_Traits_T<
+                ::UnionTest3::IndChoice,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::UnionTest3::IndType>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::UnionTest3::IndType,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::XType>
+        : public
+            Basic_Arg_Traits_T<
+                ::XType,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::ZType>
+        : public
+            Basic_Arg_Traits_T<
+                ::ZType,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::X>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::X,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::X::Y>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::X::Y,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::X::Y::Z>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::X::Y::Z,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::FieldType>
+        : public
+            Basic_Arg_Traits_T<
+                ::FieldType,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::FieldValue>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::FieldValue,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::Field>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::Field,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::TestOneEnum>
+        : public
+            Basic_Arg_Traits_T<
+                ::TestOneEnum,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::TestTwoEnum>
+        : public
+            Basic_Arg_Traits_T<
+                ::TestTwoEnum,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::TestUnion>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::TestUnion,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U41_tag>
+        : public
+            Fixed_Array_Arg_Traits_T<
+                ::U41_var,
+                ::U41_forany,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U42_tag>
+        : public
+            Fixed_Array_Arg_Traits_T<
+                ::U42_var,
+                ::U42_forany,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U85>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::U85,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::UString_tag>
+        : public
+            Var_Array_Arg_Traits_T<
+                ::UString_out,
+                ::UString_forany,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U86>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::U86,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U88>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::U88,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::UBar>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::UBar,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::UBarArray_tag>
+        : public
+            Fixed_Array_Arg_Traits_T<
+                ::UBarArray_var,
+                ::UBarArray_forany,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U87>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::U87,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U89>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::U89,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U90>
+        : public
+            Basic_Arg_Traits_T<
+                ::U90,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U90Array_tag>
+        : public
+            Fixed_Array_Arg_Traits_T<
+                ::U90Array_var,
+                ::U90Array_forany,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U91>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::U91,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U92>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::U92,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U93>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::U93,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::U94>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::U94,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::DefaultInitializedLongArray_tag>
+        : public
+            Fixed_Array_Arg_Traits_T<
+                ::DefaultInitializedLongArray_var,
+                ::DefaultInitializedLongArray_forany,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::DefaultInitializedStructUnion>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::DefaultInitializedStructUnion,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::DefaultInitializedBooleanUnion>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::DefaultInitializedBooleanUnion,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::DefaultInitializedLongUnion>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::DefaultInitializedLongUnion,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::DefaultInitializedDoubleUnion>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::DefaultInitializedDoubleUnion,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::DefaultInitializedEnumUnion>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::DefaultInitializedEnumUnion,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::DefaultInitializedArrayUnion>
+        : public
+            Fixed_Size_Arg_Traits_T<
+                ::DefaultInitializedArrayUnion,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::DefaultInitializedStringUnion>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::DefaultInitializedStringUnion,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::ResetDiscriminator>
+        : public
+            Basic_Arg_Traits_T<
+                ::ResetDiscriminator,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+
+      template<>
+      class Arg_Traits< ::ResetWithNoopBranches>
+        : public
+            Var_Size_Arg_Traits_T<
+                ::ResetWithNoopBranches,
+                TAO::Any_Insert_Policy_Stream
+              >
+      {
+      };
+    }
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+    // Traits specializations.
+    namespace TAO
+    {
+      template<>
+      struct TAO_IDL_TEST_STUB_Export Array_Traits<
+          U41_forany
+        >
+      {
+        static void free (
+            U41_slice * _tao_slice);
+        static U41_slice * dup (
+            const U41_slice * _tao_slice);
+        static void copy (
+            U41_slice * _tao_to,
+            const U41_slice * _tao_from);
+        static U41_slice * alloc ();
+        static void zero (
+            U41_slice * _tao_slice);
+      };
+      template<>
+      struct TAO_IDL_TEST_STUB_Export Array_Traits<
+          U42_forany
+        >
+      {
+        static void free (
+            U42_slice * _tao_slice);
+        static U42_slice * dup (
+            const U42_slice * _tao_slice);
+        static void copy (
+            U42_slice * _tao_to,
+            const U42_slice * _tao_from);
+        static U42_slice * alloc ();
+        static void zero (
+            U42_slice * _tao_slice);
+      };
+      template<>
+      struct TAO_IDL_TEST_STUB_Export Array_Traits<
+          UString_forany
+        >
+      {
+        static void free (
+            UString_slice * _tao_slice);
+        static UString_slice * dup (
+            const UString_slice * _tao_slice);
+        static void copy (
+            UString_slice * _tao_to,
+            const UString_slice * _tao_from);
+        static UString_slice * alloc ();
+        static void zero (
+            UString_slice * _tao_slice);
+      };
+      template<>
+      struct TAO_IDL_TEST_STUB_Export Array_Traits<
+          UBarArray_forany
+        >
+      {
+        static void free (
+            UBarArray_slice * _tao_slice);
+        static UBarArray_slice * dup (
+            const UBarArray_slice * _tao_slice);
+        static void copy (
+            UBarArray_slice * _tao_to,
+            const UBarArray_slice * _tao_from);
+        static UBarArray_slice * alloc ();
+        static void zero (
+            UBarArray_slice * _tao_slice);
+      };
+      template<>
+      struct TAO_IDL_TEST_STUB_Export Array_Traits<
+          U90Array_forany
+        >
+      {
+        static void free (
+            U90Array_slice * _tao_slice);
+        static U90Array_slice * dup (
+            const U90Array_slice * _tao_slice);
+        static void copy (
+            U90Array_slice * _tao_to,
+            const U90Array_slice * _tao_from);
+        static U90Array_slice * alloc ();
+        static void zero (
+            U90Array_slice * _tao_slice);
+      };
+      template<>
+      struct TAO_IDL_TEST_STUB_Export Array_Traits<
+          DefaultInitializedLongArray_forany
+        >
+      {
+        static void free (
+            DefaultInitializedLongArray_slice * _tao_slice);
+        static DefaultInitializedLongArray_slice * dup (
+            const DefaultInitializedLongArray_slice * _tao_slice);
+        static void copy (
+            DefaultInitializedLongArray_slice * _tao_to,
+            const DefaultInitializedLongArray_slice * _tao_from);
+        static DefaultInitializedLongArray_slice * alloc ();
+        static void zero (
+            DefaultInitializedLongArray_slice * _tao_slice);
+      };
+    }
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DataType);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, DataType &);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Data const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Data*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Data const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Necessary::Kind);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Necessary::Kind &);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Necessary::WhichResult const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Necessary::WhichResult*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Necessary::WhichResult const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, foo const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionDiscTest::BooleanUnion const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionDiscTest::BooleanUnion*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, UnionDiscTest::BooleanUnion const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionDiscTest::CharUnion const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionDiscTest::CharUnion*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, UnionDiscTest::CharUnion const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchT const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchT*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchT const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchF const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchF*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchF const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchD const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchD*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchD const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchTF const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchTF*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchTF const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchFT const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchFT*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchFT const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchTD const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchTD*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchTD const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchDT const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchDT*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchDT const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchFD const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchFD*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchFD const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchDF const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::OneBranchDF*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::OneBranchDF const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesTF const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesTF*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesTF const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesFT const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesFT*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesFT const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesTD const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesTD*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesTD const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesTD const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesTD*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesTD const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesDT const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesDT*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesDT const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesDT const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesDT*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesDT const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesFD const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesFD*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesFD const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesFD const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesFD*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesFD const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesDF const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesDF*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesDF const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesDF const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AllBoolUnions::TwoBranchesDF*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AllBoolUnions::TwoBranchesDF const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, disc1);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, disc1 &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, disc1);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, disc1 &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, disc2);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, disc2 &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, disc2);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, disc2 &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, disc_outer);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, disc_outer &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, disc_outer);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, disc_outer &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, inner1 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, inner1*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, inner1 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, inner1 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, inner1*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, inner1 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, inner2 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, inner2*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, inner2 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, inner2 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, inner2*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, inner2 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, outer const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, outer*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, outer const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, outer const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, outer*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, outer const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::ValChoice);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UnionTest3::ValChoice &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::ValChoice);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UnionTest3::ValChoice &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::ValType const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::ValType*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, UnionTest3::ValType const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::ValType const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::ValType*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, UnionTest3::ValType const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UnionTest3::UpType const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UnionTest3::UpType*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::UnionTest3::UpType const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UnionTest3::UpType const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UnionTest3::UpType*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::UnionTest3::UpType const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UnionTest3::DownType const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UnionTest3::DownType*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::UnionTest3::DownType const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UnionTest3::DownType const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UnionTest3::DownType*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::UnionTest3::DownType const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::IndChoice);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UnionTest3::IndChoice &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::IndChoice);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UnionTest3::IndChoice &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::IndType const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::IndType*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, UnionTest3::IndType const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::IndType const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnionTest3::IndType*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, UnionTest3::IndType const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, XType);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, XType &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, XType);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, XType &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ZType);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ZType &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ZType);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ZType &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, X const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, X const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::X::Y const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::X::Y*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::X::Y const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::X::Y const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::X::Y*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::X::Y const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X::Y::Z const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X::Y::Z*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, X::Y::Z const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X::Y::Z const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, X::Y::Z*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, X::Y::Z const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FieldType);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, FieldType &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FieldType);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, FieldType &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FieldValue const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FieldValue*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, FieldValue const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FieldValue const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FieldValue*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, FieldValue const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Field const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Field*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Field const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Field const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Field*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Field const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestOneEnum);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TestOneEnum &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestOneEnum);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TestOneEnum &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestTwoEnum);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TestTwoEnum &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestTwoEnum);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TestTwoEnum &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestUnion const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestUnion*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, TestUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestUnion const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TestUnion*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, TestUnion const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const U41_forany &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, U41_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const U41_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, U41_forany &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const U42_forany &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, U42_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const U42_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, U42_forany &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U85 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U85*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U85 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U85 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U85*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U85 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const UString_forany &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UString_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const UString_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UString_forany &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U86 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U86*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U86 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U86 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U86*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U86 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U88 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U88*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U88 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U88 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U88*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U88 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UBar const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UBar*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::UBar const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UBar const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::UBar*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::UBar const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const UBarArray_forany &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UBarArray_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const UBarArray_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UBarArray_forany &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U87 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U87*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U87 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U87 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U87*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U87 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U89 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U89*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U89 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U89 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U89*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U89 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U90);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, U90 &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U90);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, U90 &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const U90Array_forany &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, U90Array_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const U90Array_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, U90Array_forany &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U91 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U91*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U91 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U91 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U91*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U91 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U92 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U92*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U92 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U92 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U92*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U92 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U93 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U93*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U93 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U93 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U93*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U93 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U94 const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U94*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U94 const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U94 const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, U94*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, U94 const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const DefaultInitializedLongArray_forany &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, DefaultInitializedLongArray_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const DefaultInitializedLongArray_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, DefaultInitializedLongArray_forany &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedStructUnion const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedStructUnion*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedStructUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedStructUnion const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedStructUnion*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedStructUnion const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedBooleanUnion const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedBooleanUnion*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedBooleanUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedBooleanUnion const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedBooleanUnion*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedBooleanUnion const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedLongUnion const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedLongUnion*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedLongUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedLongUnion const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedLongUnion*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedLongUnion const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedDoubleUnion const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedDoubleUnion*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedDoubleUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedDoubleUnion const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedDoubleUnion*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedDoubleUnion const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedEnumUnion const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedEnumUnion*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedEnumUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedEnumUnion const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedEnumUnion*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedEnumUnion const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedArrayUnion const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedArrayUnion*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedArrayUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedArrayUnion const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedArrayUnion*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedArrayUnion const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedStringUnion const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedStringUnion*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedStringUnion const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedStringUnion const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, DefaultInitializedStringUnion*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, DefaultInitializedStringUnion const *&);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ResetDiscriminator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ResetDiscriminator &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ResetDiscriminator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ResetDiscriminator &);
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ResetWithNoopBranches const &); // copying version
+    TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ResetWithNoopBranches*); // noncopying version
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ResetWithNoopBranches const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ResetWithNoopBranches const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ResetWithNoopBranches*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ResetWithNoopBranches const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, DataType _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, DataType &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, DataType _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, DataType &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Data const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Data &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Data const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Data &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Necessary::Kind _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Necessary::Kind &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Necessary::Kind _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Necessary::Kind &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Necessary::WhichResult const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Necessary::WhichResult &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Necessary::WhichResult const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Necessary::WhichResult &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, foo const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, foo &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, foo const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, foo &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionDiscTest::BooleanUnion const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionDiscTest::BooleanUnion &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionDiscTest::BooleanUnion const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionDiscTest::BooleanUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionDiscTest::CharUnion const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionDiscTest::CharUnion &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionDiscTest::CharUnion const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionDiscTest::CharUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchT const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchT &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchT const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchT &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchF const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchF &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchF const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchF &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchD const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchD &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchD const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchD &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchTF const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchTF &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchTF const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchTF &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchFT const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchFT &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchFT const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchFT &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchTD const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchTD &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchTD const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchTD &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchDT const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchDT &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchDT const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchDT &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchFD const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchFD &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchFD const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchFD &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchDF const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchDF &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::OneBranchDF const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::OneBranchDF &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesTF const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesTF &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesTF const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesTF &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesFT const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesFT &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesFT const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesFT &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesTD const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesTD &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesTD const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesTD &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesDT const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesDT &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesDT const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesDT &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesFD const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesFD &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesFD const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesFD &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesDF const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesDF &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AllBoolUnions::TwoBranchesDF const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AllBoolUnions::TwoBranchesDF &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, disc1 _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, disc1 &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, disc1 _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, disc1 &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, disc2 _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, disc2 &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, disc2 _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, disc2 &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, disc_outer _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, disc_outer &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, disc_outer _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, disc_outer &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, inner1 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, inner1 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, inner1 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, inner1 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, inner2 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, inner2 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, inner2 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, inner2 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, outer const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, outer &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, outer const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, outer &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, UnionTest3::ValChoice _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, UnionTest3::ValChoice &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, UnionTest3::ValChoice _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, UnionTest3::ValChoice &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionTest3::ValType const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionTest3::ValType &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionTest3::ValType const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionTest3::ValType &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionTest3::UpType const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionTest3::UpType &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionTest3::UpType const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionTest3::UpType &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionTest3::DownType const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionTest3::DownType &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionTest3::DownType const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionTest3::DownType &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, UnionTest3::IndChoice _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, UnionTest3::IndChoice &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, UnionTest3::IndChoice _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, UnionTest3::IndChoice &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionTest3::IndType const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionTest3::IndType &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UnionTest3::IndType const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UnionTest3::IndType &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, XType _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, XType &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, XType _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, XType &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ZType _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ZType &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ZType _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ZType &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, X const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, X const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, X::Y const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X::Y &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, X::Y const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X::Y &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, X::Y::Z const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X::Y::Z &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, X::Y::Z const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X::Y::Z &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, FieldType _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, FieldType &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, FieldType _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, FieldType &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, FieldValue const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, FieldValue &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, FieldValue const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, FieldValue &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Field const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Field &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Field const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Field &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, TestOneEnum _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, TestOneEnum &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, TestOneEnum _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, TestOneEnum &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, TestTwoEnum _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, TestTwoEnum &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, TestTwoEnum _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, TestTwoEnum &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, TestUnion const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, TestUnion &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, TestUnion const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, TestUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::U41_forany &_tao_array);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::U41_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::U41_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::U41_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::U42_forany &_tao_array);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::U42_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::U42_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::U42_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U85 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U85 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U85 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U85 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::UString_forany &_tao_array);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::UString_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::UString_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::UString_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U86 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U86 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U86 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U86 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U88 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U88 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U88 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U88 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UBar const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UBar &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, UBar const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, UBar &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::UBarArray_forany &_tao_array);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::UBarArray_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::UBarArray_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::UBarArray_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U87 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U87 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U87 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U87 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U89 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U89 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U89 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U89 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, U90 _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, U90 &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, U90 _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, U90 &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::U90Array_forany &_tao_array);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::U90Array_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::U90Array_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::U90Array_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U91 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U91 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U91 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U91 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U92 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U92 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U92 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U92 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U93 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U93 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U93 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U93 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U94 const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U94 &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, U94 const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, U94 &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::DefaultInitializedLongArray_forany &_tao_array);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::DefaultInitializedLongArray_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::DefaultInitializedLongArray_forany &_tao_array);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::DefaultInitializedLongArray_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedStructUnion const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedStructUnion &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedStructUnion const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedStructUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedBooleanUnion const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedBooleanUnion &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedBooleanUnion const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedBooleanUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedLongUnion const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedLongUnion &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedLongUnion const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedLongUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedDoubleUnion const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedDoubleUnion &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedDoubleUnion const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedDoubleUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedEnumUnion const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedEnumUnion &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedEnumUnion const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedEnumUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedArrayUnion const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedArrayUnion &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedArrayUnion const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedArrayUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedStringUnion const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedStringUnion &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedStringUnion const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedStringUnion &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ResetDiscriminator _tao_enumerator);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ResetDiscriminator &_tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ResetDiscriminator _tao_enumerator);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ResetDiscriminator &_tao_enumerator);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ResetWithNoopBranches const &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ResetWithNoopBranches &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ResetWithNoopBranches const &);
+    TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ResetWithNoopBranches &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-#if defined (__ACE_INLINE__)
+    #if defined (__ACE_INLINE__)
 #include "unionC.inl"
 #endif /* defined INLINE */
 

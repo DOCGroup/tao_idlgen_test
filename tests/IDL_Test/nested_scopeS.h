@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPES_2UJT4X_H_
-#define _TAO_IDL_NESTED_SCOPES_2UJT4X_H_
+#ifndef _TAO_IDL_NESTED_SCOPES_OENSY8_H_
+#define _TAO_IDL_NESTED_SCOPES_OENSY8_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::skip::hump::skip>
+  class SArg_Traits< ::skip::hump::skip>
     : public
         Fixed_Size_SArg_Traits_T<
             ::skip::hump::skip,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::u_skip::u_hump::u_skip>
+  class SArg_Traits< ::u_skip::u_hump::u_skip>
     : public
         Fixed_Size_SArg_Traits_T<
             ::u_skip::u_hump::u_skip,
@@ -97,7 +97,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_I_SKIP__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::i_skip::i_hump::i_skip>
+  class  SArg_Traits< ::i_skip::i_hump::i_skip>
     : public Object_SArg_Traits_T<
         ::i_skip::i_hump::i_skip_ptr,
         ::i_skip::i_hump::i_skip_var,
@@ -112,7 +112,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_AMH_I_SKIPEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::i_skip::i_hump::AMH_i_skipExceptionHolder>
+  class SArg_Traits< ::i_skip::i_hump::AMH_i_skipExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::i_skip::i_hump::AMH_i_skipExceptionHolder *,
@@ -129,7 +129,7 @@ namespace TAO
 #define _I_SKIP_I_HUMP_AMI_I_SKIPHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::i_skip::i_hump::AMI_i_skipHandler>
+  class  SArg_Traits< ::i_skip::i_hump::AMI_i_skipHandler>
     : public Object_SArg_Traits_T<
         ::i_skip::i_hump::AMI_i_skipHandler_ptr,
         ::i_skip::i_hump::AMI_i_skipHandler_var,
@@ -141,7 +141,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::pre_u_skip::pre_u_hump::pre_u_skip>
+  class SArg_Traits< ::pre_u_skip::pre_u_hump::pre_u_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::pre_u_skip::pre_u_hump::pre_u_skip,
@@ -151,7 +151,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::pre_b_skip::pre_b_hump::pre_b_skip>
+  class SArg_Traits< ::pre_b_skip::pre_b_hump::pre_b_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::pre_b_skip::pre_b_hump::pre_b_skip,
@@ -161,7 +161,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::str_u_skip::str_u_hump::str_u_skip>
+  class SArg_Traits< ::str_u_skip::str_u_hump::str_u_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::str_u_skip::str_u_hump::str_u_skip,
@@ -171,7 +171,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::str_b_skip::str_b_hump::str_b_skip>
+  class SArg_Traits< ::str_b_skip::str_b_hump::str_b_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::str_b_skip::str_b_hump::str_b_skip,
@@ -181,7 +181,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::wstr_u_skip::wstr_u_hump::wstr_u_skip>
+  class SArg_Traits< ::wstr_u_skip::wstr_u_hump::wstr_u_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::wstr_u_skip::wstr_u_hump::wstr_u_skip,
@@ -191,7 +191,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::wstr_b_skip::wstr_b_hump::wstr_b_skip>
+  class SArg_Traits< ::wstr_b_skip::wstr_b_hump::wstr_b_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::wstr_b_skip::wstr_b_hump::wstr_b_skip,
@@ -204,7 +204,7 @@ namespace TAO
 #define _BLOO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::bloo>
+  class  SArg_Traits< ::bloo>
     : public Object_SArg_Traits_T<
         ::bloo_ptr,
         ::bloo_var,
@@ -219,7 +219,7 @@ namespace TAO
 #define _AMH_BLOOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::AMH_blooExceptionHolder>
+  class SArg_Traits< ::AMH_blooExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_blooExceptionHolder *,
@@ -236,7 +236,7 @@ namespace TAO
 #define _AMI_BLOOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AMI_blooHandler>
+  class  SArg_Traits< ::AMI_blooHandler>
     : public Object_SArg_Traits_T<
         ::AMI_blooHandler_ptr,
         ::AMI_blooHandler_var,
@@ -248,7 +248,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::obj_u_skip::obj_u_hump::obj_u_skip>
+  class SArg_Traits< ::obj_u_skip::obj_u_hump::obj_u_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::obj_u_skip::obj_u_hump::obj_u_skip,
@@ -258,7 +258,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::obj_b_skip::obj_b_hump::obj_b_skip>
+  class SArg_Traits< ::obj_b_skip::obj_b_hump::obj_b_skip>
     : public
         Var_Size_SArg_Traits_T<
             ::obj_b_skip::obj_b_hump::obj_b_skip,
@@ -271,7 +271,7 @@ namespace TAO
 #define _BUG_1985_A_B_SOMETHING__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::bug_1985_a::b::something>
+  class  SArg_Traits< ::bug_1985_a::b::something>
     : public Object_SArg_Traits_T<
         ::bug_1985_a::b::something_ptr,
         ::bug_1985_a::b::something_var,
@@ -286,7 +286,7 @@ namespace TAO
 #define _BUG_1985_A_B_AMH_SOMETHINGEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::bug_1985_a::b::AMH_somethingExceptionHolder>
+  class SArg_Traits< ::bug_1985_a::b::AMH_somethingExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::bug_1985_a::b::AMH_somethingExceptionHolder *,
@@ -303,7 +303,7 @@ namespace TAO
 #define _BUG_1985_A_B_AMI_SOMETHINGHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::bug_1985_a::b::AMI_somethingHandler>
+  class  SArg_Traits< ::bug_1985_a::b::AMI_somethingHandler>
     : public Object_SArg_Traits_T<
         ::bug_1985_a::b::AMI_somethingHandler_ptr,
         ::bug_1985_a::b::AMI_somethingHandler_var,
@@ -318,7 +318,7 @@ namespace TAO
 #define _BUG_1985_C_D_SOMETHING__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::bug_1985_c::d::something>
+  class  SArg_Traits< ::bug_1985_c::d::something>
     : public Object_SArg_Traits_T<
         ::bug_1985_c::d::something_ptr,
         ::bug_1985_c::d::something_var,
@@ -333,7 +333,7 @@ namespace TAO
 #define _BUG_1985_C_D_AMH_SOMETHINGEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::bug_1985_c::d::AMH_somethingExceptionHolder>
+  class SArg_Traits< ::bug_1985_c::d::AMH_somethingExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::bug_1985_c::d::AMH_somethingExceptionHolder *,
@@ -350,7 +350,7 @@ namespace TAO
 #define _BUG_1985_C_D_AMI_SOMETHINGHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::bug_1985_c::d::AMI_somethingHandler>
+  class  SArg_Traits< ::bug_1985_c::d::AMI_somethingHandler>
     : public Object_SArg_Traits_T<
         ::bug_1985_c::d::AMI_somethingHandler_ptr,
         ::bug_1985_c::d::AMI_somethingHandler_var,
@@ -365,7 +365,7 @@ namespace TAO
 #define _NEGOTIATOR_UAV_NEGOTIATOR__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Negotiator::UAV_Negotiator>
+  class  SArg_Traits< ::Negotiator::UAV_Negotiator>
     : public Object_SArg_Traits_T<
         ::Negotiator::UAV_Negotiator_ptr,
         ::Negotiator::UAV_Negotiator_var,
@@ -380,7 +380,7 @@ namespace TAO
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Negotiator::AMH_UAV_NegotiatorExceptionHolder>
+  class SArg_Traits< ::Negotiator::AMH_UAV_NegotiatorExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Negotiator::AMH_UAV_NegotiatorExceptionHolder *,
@@ -397,7 +397,7 @@ namespace TAO
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATORHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Negotiator::AMI_UAV_NegotiatorHandler>
+  class  SArg_Traits< ::Negotiator::AMI_UAV_NegotiatorHandler>
     : public Object_SArg_Traits_T<
         ::Negotiator::AMI_UAV_NegotiatorHandler_ptr,
         ::Negotiator::AMI_UAV_NegotiatorHandler_var,
@@ -412,7 +412,7 @@ namespace TAO
 #define _NEGOTIATOR_UAV_NEGOTIATOR_FACTORY__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Negotiator::UAV_Negotiator_Factory>
+  class  SArg_Traits< ::Negotiator::UAV_Negotiator_Factory>
     : public Object_SArg_Traits_T<
         ::Negotiator::UAV_Negotiator_Factory_ptr,
         ::Negotiator::UAV_Negotiator_Factory_var,
@@ -427,7 +427,7 @@ namespace TAO
 #define _NEGOTIATOR_AMH_UAV_NEGOTIATOR_FACTORYEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder>
+  class SArg_Traits< ::Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder *,
@@ -444,7 +444,7 @@ namespace TAO
 #define _NEGOTIATOR_AMI_UAV_NEGOTIATOR_FACTORYHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Negotiator::AMI_UAV_Negotiator_FactoryHandler>
+  class  SArg_Traits< ::Negotiator::AMI_UAV_Negotiator_FactoryHandler>
     : public Object_SArg_Traits_T<
         ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr,
         ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_var,
@@ -456,7 +456,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::bug_2125::Bar::Stuff>
+  class SArg_Traits< ::bug_2125::Bar::Stuff>
     : public
         Basic_SArg_Traits_T<
             ::bug_2125::Bar::Stuff,
@@ -469,7 +469,7 @@ namespace TAO
 #define _WOW_BUG_2125_MYINTERFACE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Wow::bug_2125::MyInterface>
+  class  SArg_Traits< ::Wow::bug_2125::MyInterface>
     : public Object_SArg_Traits_T<
         ::Wow::bug_2125::MyInterface_ptr,
         ::Wow::bug_2125::MyInterface_var,
@@ -484,7 +484,7 @@ namespace TAO
 #define _WOW_BUG_2125_AMH_MYINTERFACEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Wow::bug_2125::AMH_MyInterfaceExceptionHolder>
+  class SArg_Traits< ::Wow::bug_2125::AMH_MyInterfaceExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Wow::bug_2125::AMH_MyInterfaceExceptionHolder *,
@@ -501,7 +501,7 @@ namespace TAO
 #define _WOW_BUG_2125_AMI_MYINTERFACEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Wow::bug_2125::AMI_MyInterfaceHandler>
+  class  SArg_Traits< ::Wow::bug_2125::AMI_MyInterfaceHandler>
     : public Object_SArg_Traits_T<
         ::Wow::bug_2125::AMI_MyInterfaceHandler_ptr,
         ::Wow::bug_2125::AMI_MyInterfaceHandler_var,
@@ -513,7 +513,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::Company::CORBA::Inner::Foo>
+  class SArg_Traits< ::Company::CORBA::Inner::Foo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Company::CORBA::Inner::Foo,
@@ -568,10 +568,10 @@ namespace POA_i_skip
       AMH_i_skip ();
 
     public:
-      AMH_i_skip (AMH_i_skip const &rhs);
+      AMH_i_skip (const AMH_i_skip& rhs);
       ~AMH_i_skip () override = default;
 
-      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -579,7 +579,7 @@ namespace POA_i_skip
 
       i_skip::i_hump::i_skip *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   class i_skip;
@@ -599,10 +599,10 @@ namespace POA_i_skip
     using _stub_ptr_type = ::i_skip::i_hump::i_skip_ptr;
     using _stub_var_type = ::i_skip::i_hump::i_skip_var;
 
-    i_skip (i_skip const &rhs) = default;
+    i_skip (const i_skip& rhs) = default;
     ~i_skip () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -610,7 +610,7 @@ namespace POA_i_skip
 
     ::i_skip::i_hump::i_skip *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -656,10 +656,10 @@ namespace POA_i_skip
     using _stub_ptr_type = ::i_skip::i_hump::AMI_i_skipHandler_ptr;
     using _stub_var_type = ::i_skip::i_hump::AMI_i_skipHandler_var;
 
-    AMI_i_skipHandler (AMI_i_skipHandler const &rhs) = default;
+    AMI_i_skipHandler (const AMI_i_skipHandler& rhs) = default;
     ~AMI_i_skipHandler () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -667,7 +667,7 @@ namespace POA_i_skip
 
     ::i_skip::i_hump::AMI_i_skipHandler *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -752,10 +752,10 @@ protected:
   POA_AMH_bloo ();
 
 public:
-  POA_AMH_bloo (POA_AMH_bloo const &rhs);
+  POA_AMH_bloo (const POA_AMH_bloo& rhs);
   ~POA_AMH_bloo () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -763,7 +763,7 @@ public:
 
   bloo *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 };
 
 class POA_bloo;
@@ -783,10 +783,10 @@ public:
   using _stub_ptr_type = ::bloo_ptr;
   using _stub_var_type = ::bloo_var;
 
-  POA_bloo (POA_bloo const &rhs) = default;
+  POA_bloo (const POA_bloo& rhs) = default;
   ~POA_bloo () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -794,7 +794,7 @@ public:
 
   ::bloo *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -840,10 +840,10 @@ public:
   using _stub_ptr_type = ::AMI_blooHandler_ptr;
   using _stub_var_type = ::AMI_blooHandler_var;
 
-  POA_AMI_blooHandler (POA_AMI_blooHandler const &rhs) = default;
+  POA_AMI_blooHandler (const POA_AMI_blooHandler& rhs) = default;
   ~POA_AMI_blooHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -851,7 +851,7 @@ public:
 
   ::AMI_blooHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -903,10 +903,10 @@ namespace POA_bug_1985_a
       AMH_something ();
 
     public:
-      AMH_something (AMH_something const &rhs);
+      AMH_something (const AMH_something& rhs);
       ~AMH_something () override = default;
 
-      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -914,7 +914,7 @@ namespace POA_bug_1985_a
 
       bug_1985_a::b::something *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   class something;
@@ -934,10 +934,10 @@ namespace POA_bug_1985_a
     using _stub_ptr_type = ::bug_1985_a::b::something_ptr;
     using _stub_var_type = ::bug_1985_a::b::something_var;
 
-    something (something const &rhs) = default;
+    something (const something& rhs) = default;
     ~something () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -945,7 +945,7 @@ namespace POA_bug_1985_a
 
     ::bug_1985_a::b::something *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -991,10 +991,10 @@ namespace POA_bug_1985_a
     using _stub_ptr_type = ::bug_1985_a::b::AMI_somethingHandler_ptr;
     using _stub_var_type = ::bug_1985_a::b::AMI_somethingHandler_var;
 
-    AMI_somethingHandler (AMI_somethingHandler const &rhs) = default;
+    AMI_somethingHandler (const AMI_somethingHandler& rhs) = default;
     ~AMI_somethingHandler () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -1002,7 +1002,7 @@ namespace POA_bug_1985_a
 
     ::bug_1985_a::b::AMI_somethingHandler *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -1040,10 +1040,10 @@ namespace POA_bug_1985_c
       AMH_something ();
 
     public:
-      AMH_something (AMH_something const &rhs);
+      AMH_something (const AMH_something& rhs);
       ~AMH_something () override = default;
 
-      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -1051,7 +1051,7 @@ namespace POA_bug_1985_c
 
       bug_1985_c::d::something *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   class something;
@@ -1071,10 +1071,10 @@ namespace POA_bug_1985_c
     using _stub_ptr_type = ::bug_1985_c::d::something_ptr;
     using _stub_var_type = ::bug_1985_c::d::something_var;
 
-    something (something const &rhs) = default;
+    something (const something& rhs) = default;
     ~something () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -1082,7 +1082,7 @@ namespace POA_bug_1985_c
 
     ::bug_1985_c::d::something *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -1129,10 +1129,10 @@ namespace POA_bug_1985_c
     using _stub_ptr_type = ::bug_1985_c::d::AMI_somethingHandler_ptr;
     using _stub_var_type = ::bug_1985_c::d::AMI_somethingHandler_var;
 
-    AMI_somethingHandler (AMI_somethingHandler const &rhs) = default;
+    AMI_somethingHandler (const AMI_somethingHandler& rhs) = default;
     ~AMI_somethingHandler () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -1140,7 +1140,7 @@ namespace POA_bug_1985_c
 
     ::bug_1985_c::d::AMI_somethingHandler *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -1174,10 +1174,10 @@ namespace POA_Negotiator
     AMH_UAV_Negotiator ();
 
   public:
-    AMH_UAV_Negotiator (AMH_UAV_Negotiator const &rhs);
+    AMH_UAV_Negotiator (const AMH_UAV_Negotiator& rhs);
     ~AMH_UAV_Negotiator () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -1185,7 +1185,7 @@ namespace POA_Negotiator
 
     Negotiator::UAV_Negotiator *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 class UAV_Negotiator;
@@ -1205,10 +1205,10 @@ public:
   using _stub_ptr_type = ::Negotiator::UAV_Negotiator_ptr;
   using _stub_var_type = ::Negotiator::UAV_Negotiator_var;
 
-  UAV_Negotiator (UAV_Negotiator const &rhs) = default;
+  UAV_Negotiator (const UAV_Negotiator& rhs) = default;
   ~UAV_Negotiator () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1216,7 +1216,7 @@ public:
 
   ::Negotiator::UAV_Negotiator *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -1262,10 +1262,10 @@ public:
   using _stub_ptr_type = ::Negotiator::AMI_UAV_NegotiatorHandler_ptr;
   using _stub_var_type = ::Negotiator::AMI_UAV_NegotiatorHandler_var;
 
-  AMI_UAV_NegotiatorHandler (AMI_UAV_NegotiatorHandler const &rhs) = default;
+  AMI_UAV_NegotiatorHandler (const AMI_UAV_NegotiatorHandler& rhs) = default;
   ~AMI_UAV_NegotiatorHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1273,7 +1273,7 @@ public:
 
   ::Negotiator::AMI_UAV_NegotiatorHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -1302,10 +1302,10 @@ protected:
   AMH_UAV_Negotiator_Factory ();
 
 public:
-  AMH_UAV_Negotiator_Factory (AMH_UAV_Negotiator_Factory const &rhs);
+  AMH_UAV_Negotiator_Factory (const AMH_UAV_Negotiator_Factory& rhs);
   ~AMH_UAV_Negotiator_Factory () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -1313,7 +1313,7 @@ public:
 
   Negotiator::UAV_Negotiator_Factory *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void make_negotiator_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1321,7 +1321,7 @@ static void make_negotiator_skel (
 
 virtual void make_negotiator (
     Negotiator::AMH_UAV_Negotiator_FactoryResponseHandler_ptr _tao_rh,
-    char const * bitrate_sc
+    const char * bitrate_sc
   ) = 0;
 
 };
@@ -1343,10 +1343,10 @@ public:
   using _stub_ptr_type = ::Negotiator::UAV_Negotiator_Factory_ptr;
   using _stub_var_type = ::Negotiator::UAV_Negotiator_Factory_var;
 
-  UAV_Negotiator_Factory (UAV_Negotiator_Factory const &rhs) = default;
+  UAV_Negotiator_Factory (const UAV_Negotiator_Factory& rhs) = default;
   ~UAV_Negotiator_Factory () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1354,9 +1354,9 @@ public:
 
   ::Negotiator::UAV_Negotiator_Factory *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual ::Negotiator::UAV_Negotiator_ptr make_negotiator (
-    char const * bitrate_sc) = 0;
+    const char * bitrate_sc) = 0;
 
   static void make_negotiator_skel (
       TAO_ServerRequest &server_request,
@@ -1416,10 +1416,10 @@ public:
   using _stub_ptr_type = ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr;
   using _stub_var_type = ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_var;
 
-  AMI_UAV_Negotiator_FactoryHandler (AMI_UAV_Negotiator_FactoryHandler const &rhs) = default;
+  AMI_UAV_Negotiator_FactoryHandler (const AMI_UAV_Negotiator_FactoryHandler& rhs) = default;
   ~AMI_UAV_Negotiator_FactoryHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1427,7 +1427,7 @@ public:
 
   ::Negotiator::AMI_UAV_Negotiator_FactoryHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void make_negotiator (
     ::Negotiator::UAV_Negotiator_ptr ami_return_val) = 0;
 
@@ -1493,10 +1493,10 @@ namespace POA_Wow
       AMH_MyInterface ();
 
     public:
-      AMH_MyInterface (AMH_MyInterface const &rhs);
+      AMH_MyInterface (const AMH_MyInterface& rhs);
       ~AMH_MyInterface () override = default;
 
-      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -1504,7 +1504,7 @@ namespace POA_Wow
 
       Wow::bug_2125::MyInterface *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     static void op2_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1534,10 +1534,10 @@ namespace POA_Wow
     using _stub_ptr_type = ::Wow::bug_2125::MyInterface_ptr;
     using _stub_var_type = ::Wow::bug_2125::MyInterface_var;
 
-    MyInterface (MyInterface const &rhs) = default;
+    MyInterface (const MyInterface& rhs) = default;
     ~MyInterface () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -1545,7 +1545,7 @@ namespace POA_Wow
 
     ::Wow::bug_2125::MyInterface *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual void op2 (
       ::bug_2125::Bar::Stuff fbs) = 0;
 
@@ -1605,10 +1605,10 @@ namespace POA_Wow
     using _stub_ptr_type = ::Wow::bug_2125::AMI_MyInterfaceHandler_ptr;
     using _stub_var_type = ::Wow::bug_2125::AMI_MyInterfaceHandler_var;
 
-    AMI_MyInterfaceHandler (AMI_MyInterfaceHandler const &rhs) = default;
+    AMI_MyInterfaceHandler (const AMI_MyInterfaceHandler& rhs) = default;
     ~AMI_MyInterfaceHandler () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -1616,7 +1616,7 @@ namespace POA_Wow
 
     ::Wow::bug_2125::AMI_MyInterfaceHandler *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual void op2 () = 0;
 
     static void op2_skel (

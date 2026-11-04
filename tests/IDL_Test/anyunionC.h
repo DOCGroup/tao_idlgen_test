@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANYUNIONC_XRYEIY_H_
-#define _TAO_IDL_ANYUNIONC_XRYEIY_H_
+#ifndef _TAO_IDL_ANYUNIONC_8QFIF7_H_
+#define _TAO_IDL_ANYUNIONC_8QFIF7_H_
 
 #include /**/ "ace/pre.h"
 
@@ -117,7 +117,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -132,7 +132,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::AnyUnionEnum>
+  class Arg_Traits< ::AnyUnionEnum>
     : public
         Basic_Arg_Traits_T<
             ::AnyUnionEnum,
@@ -142,7 +142,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::MyAnyUnion>
+  class Arg_Traits< ::MyAnyUnion>
     : public
         Var_Size_Arg_Traits_T<
             ::MyAnyUnion,

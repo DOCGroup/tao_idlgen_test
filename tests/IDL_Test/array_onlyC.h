@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ONLYC_41PNCY_H_
-#define _TAO_IDL_ARRAY_ONLYC_41PNCY_H_
+#ifndef _TAO_IDL_ARRAY_ONLYC_ERNS64_H_
+#define _TAO_IDL_ARRAY_ONLYC_ERNS64_H_
 
 #include /**/ "ace/pre.h"
 
@@ -58,9 +58,14 @@ using TEST_TYPE = ::CORBA::Char[10];
 using TEST_TYPE_slice = ::CORBA::Char;
 struct TEST_TYPE_tag {};
 
-using TEST_TYPE_var = TAO_FixedArray_Var_T<TEST_TYPE, TEST_TYPE_slice, TEST_TYPE_tag>;
+using TEST_TYPE_var =
+  TAO_FixedArray_Var_T<
+      TEST_TYPE,
+      TEST_TYPE_slice,
+      TEST_TYPE_tag
+    >;
 
-using TEST_TYPE_out = TEST_TYPE;
+  using TEST_TYPE_out = TEST_TYPE;
 
 using TEST_TYPE_forany = TAO_Array_Forany_T<TEST_TYPE, TEST_TYPE_slice, TEST_TYPE_tag>;
 
@@ -82,7 +87,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -97,7 +102,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::TEST_TYPE_tag>
+  class Arg_Traits< ::TEST_TYPE_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::TEST_TYPE_var,

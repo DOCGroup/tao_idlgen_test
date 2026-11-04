@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIAMONDC_5YM5RC_H_
-#define _TAO_IDL_DIAMONDC_5YM5RC_H_
+#ifndef _TAO_IDL_DIAMONDC_4FKX5I_H_
+#define _TAO_IDL_DIAMONDC_4FKX5I_H_
 
 #include /**/ "ace/pre.h"
 
@@ -97,8 +97,8 @@ namespace Diamond
 
     virtual char * shape ();
 
-    ::CORBA::Boolean _is_a (char const *type_id) override;
-    char const *_interface_repository_id () const override;
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -119,9 +119,9 @@ namespace Diamond
 
   private:
     // Private and unimplemented for concrete interfaces.
-    Top (Top const &) = delete;
+    Top (const Top &) = delete;
     Top (Top &&) = delete;
-    Top &operator= (Top const &) = delete;
+    Top &operator= (const Top &) = delete;
     Top &operator= (Top &&) = delete;
   };
 
@@ -140,7 +140,9 @@ namespace Diamond
 
     virtual ~TAO_Diamond_Top_Default_Proxy_Factory ();
 
-    virtual Top_ptr create_proxy (Top_ptr proxy);
+    virtual Top_ptr create_proxy (
+        Top_ptr proxy
+      );
   };
 
 class MY_Stub_Export TAO_Diamond_Top_Proxy_Factory_Adapter
@@ -149,553 +151,587 @@ class MY_Stub_Export TAO_Diamond_Top_Proxy_Factory_Adapter
 
     friend class TAO_Singleton<TAO_Diamond_Top_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
 
-    void register_proxy_factory (TAO_Diamond_Top_Default_Proxy_Factory *df, bool one_shot_factory = true);
+    void register_proxy_factory (
+        TAO_Diamond_Top_Default_Proxy_Factory *df,
+        bool one_shot_factory = true
+      );
+
     void unregister_proxy_factory ();
 
-    Top_ptr create_proxy (Top_ptr proxy);
-    protected:
-      TAO_Diamond_Top_Proxy_Factory_Adapter ();
-      ~TAO_Diamond_Top_Proxy_Factory_Adapter ();
-      TAO_Diamond_Top_Proxy_Factory_Adapter &operator= (
-          TAO_Diamond_Top_Proxy_Factory_Adapter const &
-        );
-      TAO_Diamond_Top_Default_Proxy_Factory *proxy_factory_;
-      bool one_shot_factory_;
-      bool disable_factory_;
-      TAO_SYNCH_RECURSIVE_MUTEX lock_;
-    };
+    Top_ptr create_proxy (
+        Top_ptr proxy
+      );
 
-    using TAO_Diamond_Top_PROXY_FACTORY_ADAPTER = TAO_Singleton<TAO_Diamond_Top_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
+  protected:
+    TAO_Diamond_Top_Proxy_Factory_Adapter ();
+    ~TAO_Diamond_Top_Proxy_Factory_Adapter ();
+    TAO_Diamond_Top_Proxy_Factory_Adapter &operator= (
+        const TAO_Diamond_Top_Proxy_Factory_Adapter &
+      );
+    TAO_Diamond_Top_Default_Proxy_Factory *proxy_factory_;
+    bool one_shot_factory_;
+    bool disable_factory_;
+    TAO_SYNCH_RECURSIVE_MUTEX lock_;
+  };
 
-    class MY_Stub_Export TAO_Diamond_Top_Smart_Proxy_Base
-      : public virtual Diamond::Top,
-        public virtual TAO_Smart_Proxy_Base
-    {
-    public:
-      TAO_Diamond_Top_Smart_Proxy_Base ();
-      ~TAO_Diamond_Top_Smart_Proxy_Base ();
-      virtual TAO_Stub *_stubobj () const;
-      virtual TAO_Stub *_stubobj ();
-            virtual char * shape ();protected:
-      ::Diamond::Top_ptr get_proxy ();
-      ::Diamond::Top_var proxy_;
-    };
+  using TAO_Diamond_Top_PROXY_FACTORY_ADAPTER = TAO_Singleton<TAO_Diamond_Top_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
+
+  class MY_Stub_Export TAO_Diamond_Top_Smart_Proxy_Base
+    : public virtual Diamond::Top,
+      public virtual TAO_Smart_Proxy_Base
+  {
+  public:
+    TAO_Diamond_Top_Smart_Proxy_Base ();
+    ~TAO_Diamond_Top_Smart_Proxy_Base ();
+    virtual TAO_Stub *_stubobj () const;
+    virtual TAO_Stub *_stubobj ();
+      virtual char * shape ();protected:
+    ::Diamond::Top_ptr get_proxy ();
+    ::Diamond::Top_var proxy_;
+  };
 
 #if !defined (_DIAMOND_LEFT__VAR_OUT_CH_)
 #define _DIAMOND_LEFT__VAR_OUT_CH_
 
-    class Left;
-    using Left_ptr = Left*;
-    using Left_var = TAO_Objref_Var_T<Left>;
-    using Left_out = TAO_Objref_Out_T<Left>;
+  class Left;
+  using Left_ptr = Left*;
+  using Left_var = TAO_Objref_Var_T<Left>;
+  using Left_out = TAO_Objref_Out_T<Left>;
 
 #endif /* end #if !defined */
 
-    class MY_Stub_Export Left
-      : public virtual ::Diamond::Top
+  class MY_Stub_Export Left
+    : public virtual ::Diamond::Top
 
-    {
-    public:
-      friend class TAO::Narrow_Utils<Left>;
-      using _ptr_type = Left_ptr;
-      using _var_type = Left_var;
-      using _out_type = Left_out;
+  {
+  public:
+    friend class TAO::Narrow_Utils<Left>;
+    using _ptr_type = Left_ptr;
+    using _var_type = Left_var;
+    using _out_type = Left_out;
 
-      // The static operations.
-      static Left_ptr _duplicate (Left_ptr obj);
+    // The static operations.
+    static Left_ptr _duplicate (Left_ptr obj);
 
-      static void _tao_release (Left_ptr obj);
+    static void _tao_release (Left_ptr obj);
 
-      static Left_ptr _narrow (::CORBA::Object_ptr obj);
-      static Left_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
-      static Left_ptr _nil ();
+    static Left_ptr _narrow (::CORBA::Object_ptr obj);
+    static Left_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+    static Left_ptr _nil ();
 
-      virtual char * color ();
+    virtual char * color ();
 
-      ::CORBA::Boolean _is_a (char const *type_id) override;
-      char const *_interface_repository_id () const override;
-      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
-    protected:
-      // Concrete interface only.
-      Left ();
+  protected:
+    // Concrete interface only.
+    Left ();
 
-      // Concrete non-local interface only.
-      Left (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
+    // Concrete non-local interface only.
+    Left (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
 
-      // Non-local interface only.
-      Left (
-          TAO_Stub *objref,
-          ::CORBA::Boolean _tao_collocated = false,
-          TAO_Abstract_ServantBase *servant = nullptr,
-          TAO_ORB_Core *orb_core = nullptr);
+    // Non-local interface only.
+    Left (
+        TAO_Stub *objref,
+        ::CORBA::Boolean _tao_collocated = false,
+        TAO_Abstract_ServantBase *servant = nullptr,
+        TAO_ORB_Core *orb_core = nullptr);
 
-      ~Left () override = default;
+    ~Left () override = default;
 
-    private:
-      // Private and unimplemented for concrete interfaces.
-      Left (Left const &) = delete;
-      Left (Left &&) = delete;
-      Left &operator= (Left const &) = delete;
-      Left &operator= (Left &&) = delete;
-    };
+  private:
+    // Private and unimplemented for concrete interfaces.
+    Left (const Left &) = delete;
+    Left (Left &&) = delete;
+    Left &operator= (const Left &) = delete;
+    Left &operator= (Left &&) = delete;
+  };
 
-    class MY_Stub_Export TAO_Diamond_Left_Default_Proxy_Factory
-    {
-    public:
+  class MY_Stub_Export TAO_Diamond_Left_Default_Proxy_Factory
+  {
+  public:
 
-      TAO_Diamond_Left_Default_Proxy_Factory (bool permanent = true);
-      // <permanent> signifies that the proxy factory will remain
-      // registered with the Proxy Factory Adapter until the program
-      // terminates. That is, it will be a one-shot factory for the
-      // interface.  If this value is set to false, then the factory will
-      // be unregistered after the first invocation providing the
-      // flexibility of having a different smart proxy per object
-      // instead of per interface.
+    TAO_Diamond_Left_Default_Proxy_Factory (bool permanent = true);
+    // <permanent> signifies that the proxy factory will remain
+    // registered with the Proxy Factory Adapter until the program
+    // terminates. That is, it will be a one-shot factory for the
+    // interface.  If this value is set to false, then the factory will
+    // be unregistered after the first invocation providing the
+    // flexibility of having a different smart proxy per object
+    // instead of per interface.
 
-      virtual ~TAO_Diamond_Left_Default_Proxy_Factory ();
+    virtual ~TAO_Diamond_Left_Default_Proxy_Factory ();
 
-      virtual Left_ptr create_proxy (Left_ptr proxy);
-    };
+    virtual Left_ptr create_proxy (
+        Left_ptr proxy
+      );
+  };
 
 class MY_Stub_Export TAO_Diamond_Left_Proxy_Factory_Adapter
-    {
-    public:
+  {
+  public:
 
-      friend class TAO_Singleton<TAO_Diamond_Left_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
+    friend class TAO_Singleton<TAO_Diamond_Left_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
 
-      void register_proxy_factory (TAO_Diamond_Left_Default_Proxy_Factory *df, bool one_shot_factory = true);
-      void unregister_proxy_factory ();
+    void register_proxy_factory (
+        TAO_Diamond_Left_Default_Proxy_Factory *df,
+        bool one_shot_factory = true
+      );
 
-      Left_ptr create_proxy (Left_ptr proxy);
-      protected:
-        TAO_Diamond_Left_Proxy_Factory_Adapter ();
-        ~TAO_Diamond_Left_Proxy_Factory_Adapter ();
-        TAO_Diamond_Left_Proxy_Factory_Adapter &operator= (
-            TAO_Diamond_Left_Proxy_Factory_Adapter const &
-          );
-        TAO_Diamond_Left_Default_Proxy_Factory *proxy_factory_;
-        bool one_shot_factory_;
-        bool disable_factory_;
-        TAO_SYNCH_RECURSIVE_MUTEX lock_;
-      };
+    void unregister_proxy_factory ();
 
-      using TAO_Diamond_Left_PROXY_FACTORY_ADAPTER = TAO_Singleton<TAO_Diamond_Left_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
+    Left_ptr create_proxy (
+        Left_ptr proxy
+      );
 
-      class MY_Stub_Export TAO_Diamond_Left_Smart_Proxy_Base
-        : public virtual Diamond::Left,
-          public virtual TAO_Diamond_Top_Smart_Proxy_Base
-      {
-      public:
-        TAO_Diamond_Left_Smart_Proxy_Base ();
-        ~TAO_Diamond_Left_Smart_Proxy_Base ();
-        virtual TAO_Stub *_stubobj () const;
-        virtual TAO_Stub *_stubobj ();
-                  virtual char * color ();protected:
-        ::Diamond::Left_ptr get_proxy ();
-        ::Diamond::Left_var proxy_;
-      };
+  protected:
+    TAO_Diamond_Left_Proxy_Factory_Adapter ();
+    ~TAO_Diamond_Left_Proxy_Factory_Adapter ();
+    TAO_Diamond_Left_Proxy_Factory_Adapter &operator= (
+        const TAO_Diamond_Left_Proxy_Factory_Adapter &
+      );
+    TAO_Diamond_Left_Default_Proxy_Factory *proxy_factory_;
+    bool one_shot_factory_;
+    bool disable_factory_;
+    TAO_SYNCH_RECURSIVE_MUTEX lock_;
+  };
+
+  using TAO_Diamond_Left_PROXY_FACTORY_ADAPTER = TAO_Singleton<TAO_Diamond_Left_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
+
+  class MY_Stub_Export TAO_Diamond_Left_Smart_Proxy_Base
+    : public virtual Diamond::Left,
+      public virtual TAO_Diamond_Top_Smart_Proxy_Base
+  {
+  public:
+    TAO_Diamond_Left_Smart_Proxy_Base ();
+    ~TAO_Diamond_Left_Smart_Proxy_Base ();
+    virtual TAO_Stub *_stubobj () const;
+    virtual TAO_Stub *_stubobj ();
+      virtual char * color ();protected:
+    ::Diamond::Left_ptr get_proxy ();
+    ::Diamond::Left_var proxy_;
+  };
 
 #if !defined (_DIAMOND_RIGHT__VAR_OUT_CH_)
 #define _DIAMOND_RIGHT__VAR_OUT_CH_
 
-      class Right;
-      using Right_ptr = Right*;
-      using Right_var = TAO_Objref_Var_T<Right>;
-      using Right_out = TAO_Objref_Out_T<Right>;
+  class Right;
+  using Right_ptr = Right*;
+  using Right_var = TAO_Objref_Var_T<Right>;
+  using Right_out = TAO_Objref_Out_T<Right>;
 
 #endif /* end #if !defined */
 
-      class MY_Stub_Export Right
-        : public virtual ::Diamond::Top
+  class MY_Stub_Export Right
+    : public virtual ::Diamond::Top
 
-      {
-      public:
-        friend class TAO::Narrow_Utils<Right>;
-        using _ptr_type = Right_ptr;
-        using _var_type = Right_var;
-        using _out_type = Right_out;
+  {
+  public:
+    friend class TAO::Narrow_Utils<Right>;
+    using _ptr_type = Right_ptr;
+    using _var_type = Right_var;
+    using _out_type = Right_out;
 
-        // The static operations.
-        static Right_ptr _duplicate (Right_ptr obj);
+    // The static operations.
+    static Right_ptr _duplicate (Right_ptr obj);
 
-        static void _tao_release (Right_ptr obj);
+    static void _tao_release (Right_ptr obj);
 
-        static Right_ptr _narrow (::CORBA::Object_ptr obj);
-        static Right_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
-        static Right_ptr _nil ();
+    static Right_ptr _narrow (::CORBA::Object_ptr obj);
+    static Right_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+    static Right_ptr _nil ();
 
-        virtual ::CORBA::Long width ();
+    virtual ::CORBA::Long width ();
 
-        ::CORBA::Boolean _is_a (char const *type_id) override;
-        char const *_interface_repository_id () const override;
-        ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
-      protected:
-        // Concrete interface only.
-        Right ();
+  protected:
+    // Concrete interface only.
+    Right ();
 
-        // Concrete non-local interface only.
-        Right (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
+    // Concrete non-local interface only.
+    Right (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
 
-        // Non-local interface only.
-        Right (
-            TAO_Stub *objref,
-            ::CORBA::Boolean _tao_collocated = false,
-            TAO_Abstract_ServantBase *servant = nullptr,
-            TAO_ORB_Core *orb_core = nullptr);
+    // Non-local interface only.
+    Right (
+        TAO_Stub *objref,
+        ::CORBA::Boolean _tao_collocated = false,
+        TAO_Abstract_ServantBase *servant = nullptr,
+        TAO_ORB_Core *orb_core = nullptr);
 
-        ~Right () override = default;
+    ~Right () override = default;
 
-      private:
-        // Private and unimplemented for concrete interfaces.
-        Right (Right const &) = delete;
-        Right (Right &&) = delete;
-        Right &operator= (Right const &) = delete;
-        Right &operator= (Right &&) = delete;
-      };
+  private:
+    // Private and unimplemented for concrete interfaces.
+    Right (const Right &) = delete;
+    Right (Right &&) = delete;
+    Right &operator= (const Right &) = delete;
+    Right &operator= (Right &&) = delete;
+  };
 
-      class MY_Stub_Export TAO_Diamond_Right_Default_Proxy_Factory
-      {
-      public:
+  class MY_Stub_Export TAO_Diamond_Right_Default_Proxy_Factory
+  {
+  public:
 
-        TAO_Diamond_Right_Default_Proxy_Factory (bool permanent = true);
-        // <permanent> signifies that the proxy factory will remain
-        // registered with the Proxy Factory Adapter until the program
-        // terminates. That is, it will be a one-shot factory for the
-        // interface.  If this value is set to false, then the factory will
-        // be unregistered after the first invocation providing the
-        // flexibility of having a different smart proxy per object
-        // instead of per interface.
+    TAO_Diamond_Right_Default_Proxy_Factory (bool permanent = true);
+    // <permanent> signifies that the proxy factory will remain
+    // registered with the Proxy Factory Adapter until the program
+    // terminates. That is, it will be a one-shot factory for the
+    // interface.  If this value is set to false, then the factory will
+    // be unregistered after the first invocation providing the
+    // flexibility of having a different smart proxy per object
+    // instead of per interface.
 
-        virtual ~TAO_Diamond_Right_Default_Proxy_Factory ();
+    virtual ~TAO_Diamond_Right_Default_Proxy_Factory ();
 
-        virtual Right_ptr create_proxy (Right_ptr proxy);
-      };
+    virtual Right_ptr create_proxy (
+        Right_ptr proxy
+      );
+  };
 
 class MY_Stub_Export TAO_Diamond_Right_Proxy_Factory_Adapter
-      {
-      public:
+  {
+  public:
 
-        friend class TAO_Singleton<TAO_Diamond_Right_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
+    friend class TAO_Singleton<TAO_Diamond_Right_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
 
-        void register_proxy_factory (TAO_Diamond_Right_Default_Proxy_Factory *df, bool one_shot_factory = true);
-        void unregister_proxy_factory ();
+    void register_proxy_factory (
+        TAO_Diamond_Right_Default_Proxy_Factory *df,
+        bool one_shot_factory = true
+      );
 
-        Right_ptr create_proxy (Right_ptr proxy);
-        protected:
-          TAO_Diamond_Right_Proxy_Factory_Adapter ();
-          ~TAO_Diamond_Right_Proxy_Factory_Adapter ();
-          TAO_Diamond_Right_Proxy_Factory_Adapter &operator= (
-              TAO_Diamond_Right_Proxy_Factory_Adapter const &
-            );
-          TAO_Diamond_Right_Default_Proxy_Factory *proxy_factory_;
-          bool one_shot_factory_;
-          bool disable_factory_;
-          TAO_SYNCH_RECURSIVE_MUTEX lock_;
-        };
+    void unregister_proxy_factory ();
 
-        using TAO_Diamond_Right_PROXY_FACTORY_ADAPTER = TAO_Singleton<TAO_Diamond_Right_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
+    Right_ptr create_proxy (
+        Right_ptr proxy
+      );
 
-        class MY_Stub_Export TAO_Diamond_Right_Smart_Proxy_Base
-          : public virtual Diamond::Right,
-            public virtual TAO_Diamond_Top_Smart_Proxy_Base
-        {
-        public:
-          TAO_Diamond_Right_Smart_Proxy_Base ();
-          ~TAO_Diamond_Right_Smart_Proxy_Base ();
-          virtual TAO_Stub *_stubobj () const;
-          virtual TAO_Stub *_stubobj ();
-                        virtual ::CORBA::Long width ();protected:
-          ::Diamond::Right_ptr get_proxy ();
-          ::Diamond::Right_var proxy_;
-        };
+  protected:
+    TAO_Diamond_Right_Proxy_Factory_Adapter ();
+    ~TAO_Diamond_Right_Proxy_Factory_Adapter ();
+    TAO_Diamond_Right_Proxy_Factory_Adapter &operator= (
+        const TAO_Diamond_Right_Proxy_Factory_Adapter &
+      );
+    TAO_Diamond_Right_Default_Proxy_Factory *proxy_factory_;
+    bool one_shot_factory_;
+    bool disable_factory_;
+    TAO_SYNCH_RECURSIVE_MUTEX lock_;
+  };
+
+  using TAO_Diamond_Right_PROXY_FACTORY_ADAPTER = TAO_Singleton<TAO_Diamond_Right_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
+
+  class MY_Stub_Export TAO_Diamond_Right_Smart_Proxy_Base
+    : public virtual Diamond::Right,
+      public virtual TAO_Diamond_Top_Smart_Proxy_Base
+  {
+  public:
+    TAO_Diamond_Right_Smart_Proxy_Base ();
+    ~TAO_Diamond_Right_Smart_Proxy_Base ();
+    virtual TAO_Stub *_stubobj () const;
+    virtual TAO_Stub *_stubobj ();
+      virtual ::CORBA::Long width ();protected:
+    ::Diamond::Right_ptr get_proxy ();
+    ::Diamond::Right_var proxy_;
+  };
 
 #if !defined (_DIAMOND_BUTTOM__VAR_OUT_CH_)
 #define _DIAMOND_BUTTOM__VAR_OUT_CH_
 
-        class Buttom;
-        using Buttom_ptr = Buttom*;
-        using Buttom_var = TAO_Objref_Var_T<Buttom>;
-        using Buttom_out = TAO_Objref_Out_T<Buttom>;
+  class Buttom;
+  using Buttom_ptr = Buttom*;
+  using Buttom_var = TAO_Objref_Var_T<Buttom>;
+  using Buttom_out = TAO_Objref_Out_T<Buttom>;
 
 #endif /* end #if !defined */
 
-        class MY_Stub_Export Buttom
-          : public virtual ::Diamond::Left,
-            public virtual ::Diamond::Right
+  class MY_Stub_Export Buttom
+    : public virtual ::Diamond::Left,
+      public virtual ::Diamond::Right
 
-        {
-        public:
-          friend class TAO::Narrow_Utils<Buttom>;
-          using _ptr_type = Buttom_ptr;
-          using _var_type = Buttom_var;
-          using _out_type = Buttom_out;
+  {
+  public:
+    friend class TAO::Narrow_Utils<Buttom>;
+    using _ptr_type = Buttom_ptr;
+    using _var_type = Buttom_var;
+    using _out_type = Buttom_out;
 
-          // The static operations.
-          static Buttom_ptr _duplicate (Buttom_ptr obj);
+    // The static operations.
+    static Buttom_ptr _duplicate (Buttom_ptr obj);
 
-          static void _tao_release (Buttom_ptr obj);
+    static void _tao_release (Buttom_ptr obj);
 
-          static Buttom_ptr _narrow (::CORBA::Object_ptr obj);
-          static Buttom_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
-          static Buttom_ptr _nil ();
+    static Buttom_ptr _narrow (::CORBA::Object_ptr obj);
+    static Buttom_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+    static Buttom_ptr _nil ();
 
-          virtual char * name ();
+    virtual char * name ();
 
-          ::CORBA::Boolean _is_a (char const *type_id) override;
-          char const *_interface_repository_id () const override;
-          ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
-        protected:
-          // Concrete interface only.
-          Buttom ();
+  protected:
+    // Concrete interface only.
+    Buttom ();
 
-          // Concrete non-local interface only.
-          Buttom (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
+    // Concrete non-local interface only.
+    Buttom (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
 
-          // Non-local interface only.
-          Buttom (
-              TAO_Stub *objref,
-              ::CORBA::Boolean _tao_collocated = false,
-              TAO_Abstract_ServantBase *servant = nullptr,
-              TAO_ORB_Core *orb_core = nullptr);
+    // Non-local interface only.
+    Buttom (
+        TAO_Stub *objref,
+        ::CORBA::Boolean _tao_collocated = false,
+        TAO_Abstract_ServantBase *servant = nullptr,
+        TAO_ORB_Core *orb_core = nullptr);
 
-          ~Buttom () override = default;
+    ~Buttom () override = default;
 
-        private:
-          // Private and unimplemented for concrete interfaces.
-          Buttom (Buttom const &) = delete;
-          Buttom (Buttom &&) = delete;
-          Buttom &operator= (Buttom const &) = delete;
-          Buttom &operator= (Buttom &&) = delete;
-        };
+  private:
+    // Private and unimplemented for concrete interfaces.
+    Buttom (const Buttom &) = delete;
+    Buttom (Buttom &&) = delete;
+    Buttom &operator= (const Buttom &) = delete;
+    Buttom &operator= (Buttom &&) = delete;
+  };
 
-        class MY_Stub_Export TAO_Diamond_Buttom_Default_Proxy_Factory
-        {
-        public:
+  class MY_Stub_Export TAO_Diamond_Buttom_Default_Proxy_Factory
+  {
+  public:
 
-          TAO_Diamond_Buttom_Default_Proxy_Factory (bool permanent = true);
-          // <permanent> signifies that the proxy factory will remain
-          // registered with the Proxy Factory Adapter until the program
-          // terminates. That is, it will be a one-shot factory for the
-          // interface.  If this value is set to false, then the factory will
-          // be unregistered after the first invocation providing the
-          // flexibility of having a different smart proxy per object
-          // instead of per interface.
+    TAO_Diamond_Buttom_Default_Proxy_Factory (bool permanent = true);
+    // <permanent> signifies that the proxy factory will remain
+    // registered with the Proxy Factory Adapter until the program
+    // terminates. That is, it will be a one-shot factory for the
+    // interface.  If this value is set to false, then the factory will
+    // be unregistered after the first invocation providing the
+    // flexibility of having a different smart proxy per object
+    // instead of per interface.
 
-          virtual ~TAO_Diamond_Buttom_Default_Proxy_Factory ();
+    virtual ~TAO_Diamond_Buttom_Default_Proxy_Factory ();
 
-          virtual Buttom_ptr create_proxy (Buttom_ptr proxy);
-        };
+    virtual Buttom_ptr create_proxy (
+        Buttom_ptr proxy
+      );
+  };
 
 class MY_Stub_Export TAO_Diamond_Buttom_Proxy_Factory_Adapter
-        {
-        public:
+  {
+  public:
 
-          friend class TAO_Singleton<TAO_Diamond_Buttom_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
+    friend class TAO_Singleton<TAO_Diamond_Buttom_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
 
-          void register_proxy_factory (TAO_Diamond_Buttom_Default_Proxy_Factory *df, bool one_shot_factory = true);
-          void unregister_proxy_factory ();
+    void register_proxy_factory (
+        TAO_Diamond_Buttom_Default_Proxy_Factory *df,
+        bool one_shot_factory = true
+      );
 
-          Buttom_ptr create_proxy (Buttom_ptr proxy);
-          protected:
-            TAO_Diamond_Buttom_Proxy_Factory_Adapter ();
-            ~TAO_Diamond_Buttom_Proxy_Factory_Adapter ();
-            TAO_Diamond_Buttom_Proxy_Factory_Adapter &operator= (
-                TAO_Diamond_Buttom_Proxy_Factory_Adapter const &
-              );
-            TAO_Diamond_Buttom_Default_Proxy_Factory *proxy_factory_;
-            bool one_shot_factory_;
-            bool disable_factory_;
-            TAO_SYNCH_RECURSIVE_MUTEX lock_;
-          };
+    void unregister_proxy_factory ();
 
-          using TAO_Diamond_Buttom_PROXY_FACTORY_ADAPTER = TAO_Singleton<TAO_Diamond_Buttom_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
+    Buttom_ptr create_proxy (
+        Buttom_ptr proxy
+      );
 
-          class MY_Stub_Export TAO_Diamond_Buttom_Smart_Proxy_Base
-            : public virtual Diamond::Buttom,
-              public virtual TAO_Diamond_Left_Smart_Proxy_Base,
-              public virtual TAO_Diamond_Right_Smart_Proxy_Base
-          {
-          public:
-            TAO_Diamond_Buttom_Smart_Proxy_Base ();
-            ~TAO_Diamond_Buttom_Smart_Proxy_Base ();
-            virtual TAO_Stub *_stubobj () const;
-            virtual TAO_Stub *_stubobj ();
-                              virtual char * name ();protected:
-            ::Diamond::Buttom_ptr get_proxy ();
-            ::Diamond::Buttom_var proxy_;
-          };
+  protected:
+    TAO_Diamond_Buttom_Proxy_Factory_Adapter ();
+    ~TAO_Diamond_Buttom_Proxy_Factory_Adapter ();
+    TAO_Diamond_Buttom_Proxy_Factory_Adapter &operator= (
+        const TAO_Diamond_Buttom_Proxy_Factory_Adapter &
+      );
+    TAO_Diamond_Buttom_Default_Proxy_Factory *proxy_factory_;
+    bool one_shot_factory_;
+    bool disable_factory_;
+    TAO_SYNCH_RECURSIVE_MUTEX lock_;
+  };
 
-        } // module Diamond
+  using TAO_Diamond_Buttom_PROXY_FACTORY_ADAPTER = TAO_Singleton<TAO_Diamond_Buttom_Proxy_Factory_Adapter, TAO_SYNCH_RECURSIVE_MUTEX>;
+
+  class MY_Stub_Export TAO_Diamond_Buttom_Smart_Proxy_Base
+    : public virtual Diamond::Buttom,
+      public virtual TAO_Diamond_Left_Smart_Proxy_Base,
+      public virtual TAO_Diamond_Right_Smart_Proxy_Base
+  {
+  public:
+    TAO_Diamond_Buttom_Smart_Proxy_Base ();
+    ~TAO_Diamond_Buttom_Smart_Proxy_Base ();
+    virtual TAO_Stub *_stubobj () const;
+    virtual TAO_Stub *_stubobj ();
+      virtual char * name ();protected:
+    ::Diamond::Buttom_ptr get_proxy ();
+    ::Diamond::Buttom_var proxy_;
+  };
+
+} // module Diamond
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-        // Arg traits specializations.
-        namespace TAO
-        {
+// Arg traits specializations.
+namespace TAO
+{
 
 #if !defined (_DIAMOND_TOP__ARG_TRAITS_)
 #define _DIAMOND_TOP__ARG_TRAITS_
 
-          template<>
-          class  Arg_Traits<::Diamond::Top>
-            : public Object_Arg_Traits_T<
-                ::Diamond::Top_ptr,
-                ::Diamond::Top_var,
-                ::Diamond::Top_out,
-                TAO::Objref_Traits<Diamond::Top>,
-                TAO::Any_Insert_Policy_Noop>
-          {
-          };
+  template<>
+  class  Arg_Traits< ::Diamond::Top>
+    : public Object_Arg_Traits_T<
+        ::Diamond::Top_ptr,
+        ::Diamond::Top_var,
+        ::Diamond::Top_out,
+        TAO::Objref_Traits<Diamond::Top>,
+        TAO::Any_Insert_Policy_Noop>
+  {
+  };
 
 #endif /* end #if !defined */
 
 #if !defined (_DIAMOND_LEFT__ARG_TRAITS_)
 #define _DIAMOND_LEFT__ARG_TRAITS_
 
-          template<>
-          class  Arg_Traits<::Diamond::Left>
-            : public Object_Arg_Traits_T<
-                ::Diamond::Left_ptr,
-                ::Diamond::Left_var,
-                ::Diamond::Left_out,
-                TAO::Objref_Traits<Diamond::Left>,
-                TAO::Any_Insert_Policy_Noop>
-          {
-          };
+  template<>
+  class  Arg_Traits< ::Diamond::Left>
+    : public Object_Arg_Traits_T<
+        ::Diamond::Left_ptr,
+        ::Diamond::Left_var,
+        ::Diamond::Left_out,
+        TAO::Objref_Traits<Diamond::Left>,
+        TAO::Any_Insert_Policy_Noop>
+  {
+  };
 
 #endif /* end #if !defined */
 
 #if !defined (_DIAMOND_RIGHT__ARG_TRAITS_)
 #define _DIAMOND_RIGHT__ARG_TRAITS_
 
-          template<>
-          class  Arg_Traits<::Diamond::Right>
-            : public Object_Arg_Traits_T<
-                ::Diamond::Right_ptr,
-                ::Diamond::Right_var,
-                ::Diamond::Right_out,
-                TAO::Objref_Traits<Diamond::Right>,
-                TAO::Any_Insert_Policy_Noop>
-          {
-          };
+  template<>
+  class  Arg_Traits< ::Diamond::Right>
+    : public Object_Arg_Traits_T<
+        ::Diamond::Right_ptr,
+        ::Diamond::Right_var,
+        ::Diamond::Right_out,
+        TAO::Objref_Traits<Diamond::Right>,
+        TAO::Any_Insert_Policy_Noop>
+  {
+  };
 
 #endif /* end #if !defined */
 
 #if !defined (_DIAMOND_BUTTOM__ARG_TRAITS_)
 #define _DIAMOND_BUTTOM__ARG_TRAITS_
 
-          template<>
-          class  Arg_Traits<::Diamond::Buttom>
-            : public Object_Arg_Traits_T<
-                ::Diamond::Buttom_ptr,
-                ::Diamond::Buttom_var,
-                ::Diamond::Buttom_out,
-                TAO::Objref_Traits<Diamond::Buttom>,
-                TAO::Any_Insert_Policy_Noop>
-          {
-          };
+  template<>
+  class  Arg_Traits< ::Diamond::Buttom>
+    : public Object_Arg_Traits_T<
+        ::Diamond::Buttom_ptr,
+        ::Diamond::Buttom_var,
+        ::Diamond::Buttom_out,
+        TAO::Objref_Traits<Diamond::Buttom>,
+        TAO::Any_Insert_Policy_Noop>
+  {
+  };
 
 #endif /* end #if !defined */
-        }
+}
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-        // Traits specializations.
-        namespace TAO
-        {
+// Traits specializations.
+namespace TAO
+{
 
 #if !defined (_DIAMOND_TOP__TRAITS_)
 #define _DIAMOND_TOP__TRAITS_
 
-          template<>
-          struct MY_Stub_Export Objref_Traits<::Diamond::Top>
-          {
-            static ::Diamond::Top_ptr duplicate (::Diamond::Top_ptr p);
-            static void release (::Diamond::Top_ptr p);
-            static ::Diamond::Top_ptr nil ();
-            static ::CORBA::Boolean marshal (const ::Diamond::Top_ptr p,TAO_OutputCDR & cdr);
-          };
+  template<>
+  struct MY_Stub_Export Objref_Traits< ::Diamond::Top>
+  {
+    static ::Diamond::Top_ptr duplicate (::Diamond::Top_ptr p);
+    static void release (::Diamond::Top_ptr p);
+    static ::Diamond::Top_ptr nil ();
+    static ::CORBA::Boolean marshal (const ::Diamond::Top_ptr p,TAO_OutputCDR & cdr);
+  };
 
 #endif /* end #if !defined */
 
 #if !defined (_DIAMOND_LEFT__TRAITS_)
 #define _DIAMOND_LEFT__TRAITS_
 
-          template<>
-          struct MY_Stub_Export Objref_Traits<::Diamond::Left>
-          {
-            static ::Diamond::Left_ptr duplicate (::Diamond::Left_ptr p);
-            static void release (::Diamond::Left_ptr p);
-            static ::Diamond::Left_ptr nil ();
-            static ::CORBA::Boolean marshal (const ::Diamond::Left_ptr p,TAO_OutputCDR & cdr);
-          };
+  template<>
+  struct MY_Stub_Export Objref_Traits< ::Diamond::Left>
+  {
+    static ::Diamond::Left_ptr duplicate (::Diamond::Left_ptr p);
+    static void release (::Diamond::Left_ptr p);
+    static ::Diamond::Left_ptr nil ();
+    static ::CORBA::Boolean marshal (const ::Diamond::Left_ptr p,TAO_OutputCDR & cdr);
+  };
 
 #endif /* end #if !defined */
 
 #if !defined (_DIAMOND_RIGHT__TRAITS_)
 #define _DIAMOND_RIGHT__TRAITS_
 
-          template<>
-          struct MY_Stub_Export Objref_Traits<::Diamond::Right>
-          {
-            static ::Diamond::Right_ptr duplicate (::Diamond::Right_ptr p);
-            static void release (::Diamond::Right_ptr p);
-            static ::Diamond::Right_ptr nil ();
-            static ::CORBA::Boolean marshal (const ::Diamond::Right_ptr p,TAO_OutputCDR & cdr);
-          };
+  template<>
+  struct MY_Stub_Export Objref_Traits< ::Diamond::Right>
+  {
+    static ::Diamond::Right_ptr duplicate (::Diamond::Right_ptr p);
+    static void release (::Diamond::Right_ptr p);
+    static ::Diamond::Right_ptr nil ();
+    static ::CORBA::Boolean marshal (const ::Diamond::Right_ptr p,TAO_OutputCDR & cdr);
+  };
 
 #endif /* end #if !defined */
 
 #if !defined (_DIAMOND_BUTTOM__TRAITS_)
 #define _DIAMOND_BUTTOM__TRAITS_
 
-          template<>
-          struct MY_Stub_Export Objref_Traits<::Diamond::Buttom>
-          {
-            static ::Diamond::Buttom_ptr duplicate (::Diamond::Buttom_ptr p);
-            static void release (::Diamond::Buttom_ptr p);
-            static ::Diamond::Buttom_ptr nil ();
-            static ::CORBA::Boolean marshal (const ::Diamond::Buttom_ptr p,TAO_OutputCDR & cdr);
-          };
+  template<>
+  struct MY_Stub_Export Objref_Traits< ::Diamond::Buttom>
+  {
+    static ::Diamond::Buttom_ptr duplicate (::Diamond::Buttom_ptr p);
+    static void release (::Diamond::Buttom_ptr p);
+    static ::Diamond::Buttom_ptr nil ();
+    static ::CORBA::Boolean marshal (const ::Diamond::Buttom_ptr p,TAO_OutputCDR & cdr);
+  };
 
 #endif /* end #if !defined */
-        }
+}
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Diamond::Top_ptr const);
-        MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Top_ptr &);
-
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Diamond::Left_ptr const);
-        MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Left_ptr &);
+MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Diamond::Top_ptr );
+MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Top_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Diamond::Right_ptr const);
-        MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Right_ptr &);
+MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Diamond::Left_ptr );
+MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Left_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Diamond::Buttom_ptr const);
-        MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Buttom_ptr &);
+MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Diamond::Right_ptr );
+MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Right_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-        #if defined (__ACE_INLINE__)
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Diamond::Buttom_ptr );
+MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Buttom_ptr &);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+#if defined (__ACE_INLINE__)
 #include "DiamondC.inl"
 #endif /* defined INLINE */
 

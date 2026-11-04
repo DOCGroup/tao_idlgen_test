@@ -23,7 +23,6 @@
  **/
 
 #include "PEMNamingC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -49,6 +48,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "PEMNamingC.inl"
@@ -60,7 +60,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Plesk/TObjectID:1.0",
     "TObjectID",
-    std::addressof (CORBA::_tc_long));
+    &CORBA::_tc_long);
 
 namespace Plesk
 {
@@ -91,8 +91,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Plesk_TProperty[] =
       {
-        { "name", std::addressof (CORBA::_tc_string) },
-        { "value", std::addressof (CORBA::_tc_string) }
+        { "name", &CORBA::_tc_string },
+        { "value", &CORBA::_tc_string }
       };
 
 static TAO::TypeCode::Struct<
@@ -114,7 +114,9 @@ namespace Plesk
   ::CORBA::TypeCode_ptr const _tc_TProperty = std::addressof(_tao_tc_Plesk_TProperty);
 }
 
-void Plesk::TProperty::_tao_any_destructor (void *_tao_void_pointer)
+void
+Plesk::TProperty::_tao_any_destructor (
+    void *_tao_void_pointer)
 {
   TProperty *tmp = static_cast<TProperty *> (_tao_void_pointer);
   delete tmp;
@@ -124,13 +126,13 @@ void Plesk::TProperty::_tao_any_destructor (void *_tao_void_pointer)
 #define _PLESK_TPROPERTYLIST_CS_
 
 Plesk::TPropertyList::TPropertyList (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence<TProperty> (max) {}
+  : ::TAO::unbounded_value_sequence< TProperty> (max) {}
 
 Plesk::TPropertyList::TPropertyList (::CORBA::ULong max,
   ::CORBA::ULong length,
   Plesk::TProperty * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence<TProperty>
+  : ::TAO::unbounded_value_sequence< TProperty>
     (max, length, buffer, release)
 {}
 
@@ -154,11 +156,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Plesk_TPropertyList_0 (
-        ::CORBA::tk_sequence, std::addressof (Plesk::_tc_TProperty), 0U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Plesk_TPropertyList_0 (
+        ::CORBA::tk_sequence, &Plesk::_tc_TProperty, 0U);
 
     ::CORBA::TypeCode_ptr const tc_Plesk_TPropertyList_0 =
-      std::addressof (Plesk_TPropertyList_0);
+      &Plesk_TPropertyList_0;
   }
 }
 }
@@ -174,7 +176,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Plesk/TPropertyList:1.0",
     "TPropertyList",
-    std::addressof (TAO::TypeCode::tc_Plesk_TPropertyList_0));
+    &TAO::TypeCode::tc_Plesk_TPropertyList_0);
 
 namespace Plesk
 {
@@ -302,13 +304,13 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Plesk_ExSystem[] =
       {
-        { "module_id", std::addressof (CORBA::_tc_string) },
-        { "extype_id", std::addressof (CORBA::_tc_long) },
-        { "errcode", std::addressof (CORBA::_tc_long) },
-        { "errcode_minor", std::addressof (CORBA::_tc_long) },
-        { "errmsg", std::addressof (CORBA::_tc_string) },
-        { "props", std::addressof (Plesk::_tc_TPropertyList) },
-        { "transient", std::addressof (Plesk::_tc_TBool) }
+        { "module_id", &CORBA::_tc_string },
+        { "extype_id", &CORBA::_tc_long },
+        { "errcode", &CORBA::_tc_long },
+        { "errcode_minor", &CORBA::_tc_long },
+        { "errmsg", &CORBA::_tc_string },
+        { "props", &Plesk::_tc_TPropertyList },
+        { "transient", &Plesk::_tc_TBool }
       };
 
 static TAO::TypeCode::Struct<
@@ -334,7 +336,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Plesk_Naming_NamingContext[] =
       {
-        { "kernel_resolver_ior", std::addressof (CORBA::_tc_string) }
+        { "kernel_resolver_ior", &CORBA::_tc_string }
       };
 
 static TAO::TypeCode::Struct<
@@ -360,7 +362,9 @@ namespace Plesk
   }
 }
 
-void Plesk::Naming::NamingContext::_tao_any_destructor (void *_tao_void_pointer)
+void
+Plesk::Naming::NamingContext::_tao_any_destructor (
+    void *_tao_void_pointer)
 {
   NamingContext *tmp = static_cast<NamingContext *> (_tao_void_pointer);
   delete tmp;
@@ -389,7 +393,7 @@ TAO::Objref_Traits<Plesk::Naming::ObjectResolver>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Plesk::Naming::ObjectResolver>::marshal (Plesk::Naming::ObjectResolver_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Plesk::Naming::ObjectResolver>::marshal (const Plesk::Naming::ObjectResolver_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -398,7 +402,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Object_ptr
 Plesk::Naming::ObjectResolver::resolve (
-  char const * service_type,
+  const char * service_type,
   ::Plesk::TObjectID & sc_id)
 {
   if (!this->is_evaluated ())
@@ -406,9 +410,9 @@ Plesk::Naming::ObjectResolver::resolve (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::CORBA::Object>::ret_val _tao_retval;
-  TAO::Arg_Traits<char *>::in_arg_val _tao_service_type (service_type);
-  TAO::Arg_Traits<::CORBA::Long>::inout_arg_val _tao_sc_id (sc_id);
+  TAO::Arg_Traits< ::CORBA::Object>::ret_val _tao_retval;
+  TAO::Arg_Traits< char *>::in_arg_val _tao_service_type (service_type);
+  TAO::Arg_Traits< ::CORBA::Long>::inout_arg_val _tao_sc_id (sc_id);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -448,8 +452,8 @@ Plesk::Naming::ObjectResolver::resolve (
 }
 ::CORBA::Object_ptr
 Plesk::Naming::ObjectResolver::resolve_sc (
-  char const * service_type,
-  char const * version,
+  const char * service_type,
+  const char * version,
   ::Plesk::TObjectID & sc_id)
 {
   if (!this->is_evaluated ())
@@ -457,10 +461,10 @@ Plesk::Naming::ObjectResolver::resolve_sc (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::CORBA::Object>::ret_val _tao_retval;
-  TAO::Arg_Traits<char *>::in_arg_val _tao_service_type (service_type);
-  TAO::Arg_Traits<char *>::in_arg_val _tao_version (version);
-  TAO::Arg_Traits<::CORBA::Long>::inout_arg_val _tao_sc_id (sc_id);
+  TAO::Arg_Traits< ::CORBA::Object>::ret_val _tao_retval;
+  TAO::Arg_Traits< char *>::in_arg_val _tao_service_type (service_type);
+  TAO::Arg_Traits< char *>::in_arg_val _tao_version (version);
+  TAO::Arg_Traits< ::CORBA::Long>::inout_arg_val _tao_sc_id (sc_id);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -503,7 +507,7 @@ Plesk::Naming::ObjectResolver::resolve_sc (
 void
 Plesk::Naming::ObjectResolver::sendc_resolve (
   ::Plesk::Naming::AMI_ObjectResolverHandler_ptr ami_handler,
-  char const * service_type,
+  const char * service_type,
   ::Plesk::TObjectID sc_id)
 {
   if (!this->is_evaluated ())
@@ -512,8 +516,8 @@ Plesk::Naming::ObjectResolver::sendc_resolve (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<char *>::in_arg_val _tao_service_type (service_type);
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_sc_id (sc_id);
+  TAO::Arg_Traits< char *>::in_arg_val _tao_service_type (service_type);
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_sc_id (sc_id);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -540,8 +544,8 @@ Plesk::Naming::ObjectResolver::sendc_resolve (
 void
 Plesk::Naming::ObjectResolver::sendc_resolve_sc (
   ::Plesk::Naming::AMI_ObjectResolverHandler_ptr ami_handler,
-  char const * service_type,
-  char const * version,
+  const char * service_type,
+  const char * version,
   ::Plesk::TObjectID sc_id)
 {
   if (!this->is_evaluated ())
@@ -550,9 +554,9 @@ Plesk::Naming::ObjectResolver::sendc_resolve_sc (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<char *>::in_arg_val _tao_service_type (service_type);
-  TAO::Arg_Traits<char *>::in_arg_val _tao_version (version);
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_sc_id (sc_id);
+  TAO::Arg_Traits< char *>::in_arg_val _tao_service_type (service_type);
+  TAO::Arg_Traits< char *>::in_arg_val _tao_version (version);
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_sc_id (sc_id);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -622,10 +626,12 @@ Plesk::Naming::ObjectResolver::_tao_release (ObjectResolver_ptr obj)
 }
 
 ::CORBA::Boolean
-Plesk::Naming::ObjectResolver::_is_a (char const *value)
+Plesk::Naming::ObjectResolver::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:Plesk/Naming/ObjectResolver:1.2") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+  if (
+      std::strcmp (value, "IDL:Plesk/Naming/ObjectResolver:1.2") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -635,17 +641,17 @@ Plesk::Naming::ObjectResolver::_is_a (char const *value)
     }
 }
 
-char const *Plesk::Naming::ObjectResolver::_interface_repository_id () const
+const char* Plesk::Naming::ObjectResolver::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
 
-char const *Plesk::Naming::ObjectResolver::_desc_repository_id ()
+const char* Plesk::Naming::ObjectResolver::_desc_repository_id ()
 {
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
 
-char const *Plesk::Naming::ObjectResolver::_desc_interface_name ()
+const char* Plesk::Naming::ObjectResolver::_desc_interface_name ()
 {
   return "ObjectResolver";
 }
@@ -670,7 +676,7 @@ namespace Plesk
     ::CORBA::TypeCode_ptr const _tc_ObjectResolver = std::addressof(_tao_tc_Plesk_Naming_ObjectResolver);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Plesk_Naming_AMH_ObjectResolverExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Plesk_Naming_AMH_ObjectResolverExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -680,7 +686,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Plesk/Naming/AMH_ObjectResolverExceptionHolder:1.0",
     "AMH_ObjectResolverExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_Plesk_Naming_AMH_ObjectResolverExceptionHolder,
     0);
 
@@ -833,28 +839,28 @@ Plesk::Naming::AMH_ObjectResolverExceptionHolder::_tao_unmarshal (
 void
 Plesk::Naming::AMH_ObjectResolverExceptionHolder::raise_resolve ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 Plesk::Naming::AMH_ObjectResolverExceptionHolder::raise_resolve_sc ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 Plesk::Naming::AMH_ObjectResolverExceptionHolder::raise_sendc_resolve ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 Plesk::Naming::AMH_ObjectResolverExceptionHolder::raise_sendc_resolve_sc ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -881,7 +887,7 @@ TAO::Objref_Traits<Plesk::Naming::AMH_ObjectResolverResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Plesk::Naming::AMH_ObjectResolverResponseHandler>::marshal (Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Plesk::Naming::AMH_ObjectResolverResponseHandler>::marshal (const Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -935,11 +941,13 @@ Plesk::Naming::AMH_ObjectResolverResponseHandler::_tao_release (AMH_ObjectResolv
 }
 
 ::CORBA::Boolean
-Plesk::Naming::AMH_ObjectResolverResponseHandler::_is_a (char const *value)
+Plesk::Naming::AMH_ObjectResolverResponseHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:Plesk/Naming/AMH_ObjectResolverResponseHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:Plesk/Naming/AMH_ObjectResolverResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -949,17 +957,17 @@ Plesk::Naming::AMH_ObjectResolverResponseHandler::_is_a (char const *value)
     }
 }
 
-char const *Plesk::Naming::AMH_ObjectResolverResponseHandler::_interface_repository_id () const
+const char* Plesk::Naming::AMH_ObjectResolverResponseHandler::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/AMH_ObjectResolverResponseHandler:1.0";
 }
 
-char const *Plesk::Naming::AMH_ObjectResolverResponseHandler::_desc_repository_id ()
+const char* Plesk::Naming::AMH_ObjectResolverResponseHandler::_desc_repository_id ()
 {
   return "IDL:Plesk/Naming/AMH_ObjectResolverResponseHandler:1.0";
 }
 
-char const *Plesk::Naming::AMH_ObjectResolverResponseHandler::_desc_interface_name ()
+const char* Plesk::Naming::AMH_ObjectResolverResponseHandler::_desc_interface_name ()
 {
   return "AMH_ObjectResolverResponseHandler";
 }
@@ -1008,7 +1016,7 @@ TAO::Objref_Traits<Plesk::Naming::AMI_ObjectResolverHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Plesk::Naming::AMI_ObjectResolverHandler>::marshal (Plesk::Naming::AMI_ObjectResolverHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Plesk::Naming::AMI_ObjectResolverHandler>::marshal (const Plesk::Naming::AMI_ObjectResolverHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1025,9 +1033,9 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_sc_id (sc_id);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_sc_id (sc_id);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1151,8 +1159,8 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1197,9 +1205,9 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_sc_id (sc_id);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_sc_id (sc_id);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1323,8 +1331,8 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1405,11 +1413,13 @@ Plesk::Naming::AMI_ObjectResolverHandler::_tao_release (AMI_ObjectResolverHandle
 }
 
 ::CORBA::Boolean
-Plesk::Naming::AMI_ObjectResolverHandler::_is_a (char const *value)
+Plesk::Naming::AMI_ObjectResolverHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -1419,17 +1429,17 @@ Plesk::Naming::AMI_ObjectResolverHandler::_is_a (char const *value)
     }
 }
 
-char const *Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_id () const
+const char* Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0";
 }
 
-char const *Plesk::Naming::AMI_ObjectResolverHandler::_desc_repository_id ()
+const char* Plesk::Naming::AMI_ObjectResolverHandler::_desc_repository_id ()
 {
   return "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0";
 }
 
-char const *Plesk::Naming::AMI_ObjectResolverHandler::_desc_interface_name ()
+const char* Plesk::Naming::AMI_ObjectResolverHandler::_desc_interface_name ()
 {
   return "AMI_ObjectResolverHandler";
 }
@@ -1507,7 +1517,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Plesk::TProperty const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::Plesk::TProperty>::insert_copy (
+  TAO::Any_Dual_Impl_T< ::Plesk::TProperty>::insert_copy (
     _tao_any,
     ::Plesk::TProperty::_tao_any_destructor,
     Plesk::_tc_TProperty,
@@ -1519,7 +1529,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Plesk::TProperty *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::Plesk::TProperty>::insert (
+  TAO::Any_Dual_Impl_T< ::Plesk::TProperty>::insert (
     _tao_any,
     ::Plesk::TProperty::_tao_any_destructor,
     Plesk::_tc_TProperty,
@@ -1531,7 +1541,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Plesk::TProperty const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T<::Plesk::TProperty>::extract (
+  return TAO::Any_Dual_Impl_T< ::Plesk::TProperty>::extract (
     _tao_any,
     ::Plesk::TProperty::_tao_any_destructor,
     Plesk::_tc_TProperty,
@@ -1548,7 +1558,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Plesk::TPropertyList const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::Plesk::TPropertyList>::insert_copy (
+  TAO::Any_Dual_Impl_T< ::Plesk::TPropertyList>::insert_copy (
     _tao_any,
     ::Plesk::TPropertyList::_tao_any_destructor,
     ::Plesk::_tc_TPropertyList,
@@ -1560,7 +1570,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Plesk::TPropertyList *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::Plesk::TPropertyList>::insert (
+  TAO::Any_Dual_Impl_T< ::Plesk::TPropertyList>::insert (
     _tao_any,
     ::Plesk::TPropertyList::_tao_any_destructor,
     ::Plesk::_tc_TPropertyList,
@@ -1572,7 +1582,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Plesk::TPropertyList const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T<::Plesk::TPropertyList>::extract (
+  return TAO::Any_Dual_Impl_T< ::Plesk::TPropertyList>::extract (
     _tao_any,
     ::Plesk::TPropertyList::_tao_any_destructor,
     ::Plesk::_tc_TPropertyList,
@@ -1659,7 +1669,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Plesk::Naming::NamingContext const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::Plesk::Naming::NamingContext>::insert_copy (
+  TAO::Any_Dual_Impl_T< ::Plesk::Naming::NamingContext>::insert_copy (
     _tao_any,
     ::Plesk::Naming::NamingContext::_tao_any_destructor,
     Plesk::Naming::_tc_NamingContext,
@@ -1671,7 +1681,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Plesk::Naming::NamingContext *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::Plesk::Naming::NamingContext>::insert (
+  TAO::Any_Dual_Impl_T< ::Plesk::Naming::NamingContext>::insert (
     _tao_any,
     ::Plesk::Naming::NamingContext::_tao_any_destructor,
     Plesk::Naming::_tc_NamingContext,
@@ -1683,7 +1693,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Plesk::Naming::NamingContext const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T<::Plesk::Naming::NamingContext>::extract (
+  return TAO::Any_Dual_Impl_T< ::Plesk::Naming::NamingContext>::extract (
     _tao_any,
     ::Plesk::Naming::NamingContext::_tao_any_destructor,
     Plesk::Naming::_tc_NamingContext,
@@ -1736,7 +1746,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     Plesk::Naming::ObjectResolver_ptr &_tao_elem)
 {
   return
@@ -1878,7 +1888,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1936,7 +1946,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     Plesk::Naming::AMI_ObjectResolverHandler_ptr &_tao_elem)
 {
   return
@@ -1954,7 +1964,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Plesk::TBool _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Plesk::TBool & _tao_enumerator)
@@ -2089,7 +2099,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    Plesk::Naming::ObjectResolver_ptr const _tao_objref)
+    const Plesk::Naming::ObjectResolver_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2107,7 +2117,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::Plesk::Naming::ObjectResolver>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::Plesk::Naming::ObjectResolver>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -2181,7 +2191,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    Plesk::Naming::AMI_ObjectResolverHandler_ptr const _tao_objref)
+    const Plesk::Naming::AMI_ObjectResolverHandler_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2199,7 +2209,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::Plesk::Naming::AMI_ObjectResolverHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::Plesk::Naming::AMI_ObjectResolverHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

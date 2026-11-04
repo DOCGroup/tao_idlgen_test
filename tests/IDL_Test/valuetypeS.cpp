@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_VALUETYPES_B5M36J_CPP_
-#define _TAO_IDL_VALUETYPES_B5M36J_CPP_
+#ifndef _TAO_IDL_VALUETYPES_S1Y014_CPP_
+#define _TAO_IDL_VALUETYPES_S1Y014_CPP_
 
 #include "valuetypeS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"

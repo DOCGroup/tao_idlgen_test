@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_9QTAXB_CPP_
-#define _TAO_IDL_TESTS_9QTAXB_CPP_
+#ifndef _TAO_IDL_TESTS_DT7VTD_CPP_
+#define _TAO_IDL_TESTS_DT7VTD_CPP_
 
 #include "testS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -47,8 +47,7 @@
 #include "ace/Malloc_Allocator.h"
 
 static const TAO_operation_db_entry Test_operations [] = {
-  {"box_prices", std::addressof(POA_Test::box_prices_skel), nullptr},
-  {"tickets", std::addressof(POA_Test::tickets_skel), nullptr},
+  {"method", std::addressof(POA_Test::method_skel), nullptr},
   {"shutdown", std::addressof(POA_Test::shutdown_skel), nullptr},
   {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
   {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
@@ -57,13 +56,13 @@ static const TAO_operation_db_entry Test_operations [] = {
   {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
 };
 
-static const ::CORBA::Long _tao_Test_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (24);
+static const ::CORBA::Long _tao_Test_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (21);
 static char _tao_Test_optable_pool [_tao_Test_optable_size];
 static ACE_Static_Allocator_Base _tao_Test_allocator (_tao_Test_optable_pool, _tao_Test_optable_size);
 static TAO_Dynamic_Hash_OpTable tao_Test_optable (
     Test_operations,
-    8,
-    16,
+    7,
+    14,
     &_tao_Test_allocator
   );
 
@@ -72,10 +71,10 @@ POA_Test::POA_Test ()
   this->optable_ = std::addressof (tao_Test_optable);
 }
 
-class box_prices_Test : public TAO::Upcall_Command
+class method_Test : public TAO::Upcall_Command
 {
 public:
-  inline box_prices_Test (POA_Test * servant,
+  inline method_Test (POA_Test * servant,
     TAO_Operation_Details const * operation_details,
     TAO::Argument * const args[])
     : servant_ (servant)
@@ -84,82 +83,19 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::CORBA::Short>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::CORBA::Short> (
+    TAO::SArg_Traits< ::CORBA::Short>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg< ::CORBA::Short> (
         this->operation_details_,
         this->args_);
 
-    retval =
-      this->servant_->box_prices ();
-  }
-
-private:
-  POA_Test * const servant_;
-  TAO_Operation_Details const * const operation_details_;
-  TAO::Argument * const * const args_;
-};
-void POA_Test::box_prices_skel (
-  TAO_ServerRequest & server_request,
-  TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
-  TAO_ServantBase *servant)
-{
-  TAO::SArg_Traits<::CORBA::Short>::ret_val retval;
-
-  TAO::Argument * const args[] =
-    {
-      std::addressof(retval)
-    };
-
-  POA_Test * const impl = dynamic_cast<POA_Test *> (servant);
-
-  if (!impl)
-    {
-      throw ::CORBA::INTERNAL ();
-    }
-
-  box_prices_Test command (
-    impl,
-    server_request.operation_details (),
-    args);
-
-  TAO::Upcall_Wrapper upcall_wrapper;
-  upcall_wrapper.upcall (server_request
-                         , args
-                         , 1
-                         , command
-  #if TAO_HAS_INTERCEPTORS == 1
-                         , servant_upcall
-                         , nullptr
-                         , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
-                         );
-}
-
-class tickets_Test : public TAO::Upcall_Command
-{
-public:
-  inline tickets_Test (POA_Test * servant,
-    TAO_Operation_Details const * operation_details,
-    TAO::Argument * const args[])
-    : servant_ (servant)
-      , operation_details_ (operation_details)
-      , args_ (args) {}
-
-  void execute () override
-  {
-    TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
-        this->operation_details_,
-        this->args_);
-
-    TAO::SArg_Traits<::CORBA::Short>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::CORBA::Short> (
+    TAO::SArg_Traits< ::CORBA::Short>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::CORBA::Short> (
         this->operation_details_,
         this->args_,
         1);
 
     retval =
-      this->servant_->tickets (
+      this->servant_->method (
         arg_1);
   }
 
@@ -168,18 +104,18 @@ private:
   TAO_Operation_Details const * const operation_details_;
   TAO::Argument * const * const args_;
 };
-void POA_Test::tickets_skel (
+void POA_Test::method_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<::CORBA::Long>::ret_val retval;
-  TAO::SArg_Traits<::CORBA::Short>::in_arg_val _tao_number;
+  TAO::SArg_Traits< ::CORBA::Short>::ret_val retval;
+  TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_boo;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval),
-      std::addressof(_tao_number)
+      std::addressof(_tao_boo)
     };
 
   POA_Test * const impl = dynamic_cast<POA_Test *> (servant);
@@ -189,7 +125,7 @@ void POA_Test::tickets_skel (
       throw ::CORBA::INTERNAL ();
     }
 
-  tickets_Test command (
+  method_Test command (
     impl,
     server_request.operation_details (),
     args);
@@ -199,11 +135,11 @@ void POA_Test::tickets_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -226,7 +162,7 @@ void POA_Test::shutdown_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -247,15 +183,15 @@ void POA_Test::shutdown_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Test::_is_a (char const *value)
+::CORBA::Boolean POA_Test::_is_a (const char* value)
 {
   return
     (
@@ -264,7 +200,7 @@ void POA_Test::shutdown_skel (
     );
 }
 
-char const *POA_Test::_interface_repository_id () const
+const char* POA_Test::_interface_repository_id () const
 {
   return "IDL:Test:1.0";
 }

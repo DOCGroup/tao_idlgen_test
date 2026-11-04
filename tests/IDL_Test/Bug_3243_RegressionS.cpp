@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_3243_REGRESSIONS_F113CM_CPP_
-#define _TAO_IDL_BUG_3243_REGRESSIONS_F113CM_CPP_
+#ifndef _TAO_IDL_BUG_3243_REGRESSIONS_5LV6JS_CPP_
+#define _TAO_IDL_BUG_3243_REGRESSIONS_5LV6JS_CPP_
 
 #include "Bug_3243_RegressionS.h"
 

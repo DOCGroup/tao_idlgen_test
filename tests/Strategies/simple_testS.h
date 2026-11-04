@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_VZRYHH_H_
-#define _TAO_IDL_SIMPLE_TESTS_VZRYHH_H_
+#ifndef _TAO_IDL_SIMPLE_TESTS_JLJ7Q4_H_
+#define _TAO_IDL_SIMPLE_TESTS_JLJ7Q4_H_
 
 #include /**/ "ace/pre.h"
 
@@ -56,7 +56,7 @@ namespace TAO
 #define _SIMPLE_SERVER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Simple_Server>
+  class  SArg_Traits< ::Simple_Server>
     : public Object_SArg_Traits_T<
         ::Simple_Server_ptr,
         ::Simple_Server_var,
@@ -85,10 +85,10 @@ public:
   using _stub_ptr_type = ::Simple_Server_ptr;
   using _stub_var_type = ::Simple_Server_var;
 
-  POA_Simple_Server (POA_Simple_Server const &rhs) = default;
+  POA_Simple_Server (const POA_Simple_Server& rhs) = default;
   ~POA_Simple_Server () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -96,7 +96,7 @@ public:
 
   ::Simple_Server *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Boolean print_status () = 0;
 
   static void print_status_skel (

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2S_43Q1RV_H_
-#define _TAO_IDL_REOPEN_INCLUDE2S_43Q1RV_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2S_32RDOY_H_
+#define _TAO_IDL_REOPEN_INCLUDE2S_32RDOY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -61,7 +61,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -75,7 +75,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::frag::pug>
+  class SArg_Traits< ::frag::pug>
     : public
         Fixed_Size_SArg_Traits_T<
             ::frag::pug,
@@ -88,7 +88,7 @@ namespace TAO
 #define _A_B_X2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::A::B::X2>
+  class  SArg_Traits< ::A::B::X2>
     : public Object_SArg_Traits_T<
         ::A::B::X2_ptr,
         ::A::B::X2_var,
@@ -103,7 +103,7 @@ namespace TAO
 #define _A_B_AMH_X2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::A::B::AMH_X2ExceptionHolder>
+  class SArg_Traits< ::A::B::AMH_X2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::A::B::AMH_X2ExceptionHolder *,
@@ -120,7 +120,7 @@ namespace TAO
 #define _A_B_AMI_X2HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::A::B::AMI_X2Handler>
+  class  SArg_Traits< ::A::B::AMI_X2Handler>
     : public Object_SArg_Traits_T<
         ::A::B::AMI_X2Handler_ptr,
         ::A::B::AMI_X2Handler_var,
@@ -158,10 +158,10 @@ namespace POA_A
       AMH_X2 ();
 
     public:
-      AMH_X2 (AMH_X2 const &rhs);
+      AMH_X2 (const AMH_X2& rhs);
       ~AMH_X2 () override = default;
 
-      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -169,7 +169,7 @@ namespace POA_A
 
       A::B::X2 *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     static void getX2_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -198,10 +198,10 @@ namespace POA_A
     using _stub_ptr_type = ::A::B::X2_ptr;
     using _stub_var_type = ::A::B::X2_var;
 
-    X2 (X2 const &rhs) = default;
+    X2 (const X2& rhs) = default;
     ~X2 () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -209,7 +209,7 @@ namespace POA_A
 
     ::A::B::X2 *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual char * getX2 () = 0;
 
     static void getX2_skel (
@@ -247,7 +247,7 @@ namespace POA_A
     TAO_AMH_X2ResponseHandler () = default;
     virtual ~TAO_AMH_X2ResponseHandler () = default;
     void getX2 (
-      char const * return_value) override;
+      const char * return_value) override;
     void getX2_excep (
       ::A::B::AMH_X2ExceptionHolder * holder) override;
   };
@@ -269,10 +269,10 @@ namespace POA_A
     using _stub_ptr_type = ::A::B::AMI_X2Handler_ptr;
     using _stub_var_type = ::A::B::AMI_X2Handler_var;
 
-    AMI_X2Handler (AMI_X2Handler const &rhs) = default;
+    AMI_X2Handler (const AMI_X2Handler& rhs) = default;
     ~AMI_X2Handler () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -280,9 +280,9 @@ namespace POA_A
 
     ::A::B::AMI_X2Handler *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual void getX2 (
-      char const * ami_return_val) = 0;
+      const char * ami_return_val) = 0;
 
     static void getX2_skel (
         TAO_ServerRequest &server_request,

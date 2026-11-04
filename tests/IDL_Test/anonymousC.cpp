@@ -23,7 +23,6 @@
  **/
 
 #include "anonymousC.h"
-#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
@@ -32,6 +31,7 @@
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
 #include "tao/SystemException.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "anonymousC.inl"
@@ -41,13 +41,13 @@
 #define _NOT_ANON_SHORT_SEQ_CS_
 
 Not_Anon::short_seq::short_seq (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence<::CORBA::Short> (max) {}
+  : ::TAO::unbounded_value_sequence< ::CORBA::Short> (max) {}
 
 Not_Anon::short_seq::short_seq (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::Short * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence<::CORBA::Short>
+  : ::TAO::unbounded_value_sequence< ::CORBA::Short>
     (max, length, buffer, release)
 {}
 
@@ -102,13 +102,13 @@ Half_Anon::char_seq_array_copy (
 #define _HALF_ANON__TAO_SEQ_CORBA_CHAR__CS_
 
 Half_Anon::_tao_seq_CORBA_Char_::_tao_seq_CORBA_Char_ (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence<::CORBA::Char> (max) {}
+  : ::TAO::unbounded_value_sequence< ::CORBA::Char> (max) {}
 
 Half_Anon::_tao_seq_CORBA_Char_::_tao_seq_CORBA_Char_ (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::Char * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence<::CORBA::Char>
+  : ::TAO::unbounded_value_sequence< ::CORBA::Char>
     (max, length, buffer, release)
 {}
 
@@ -158,7 +158,7 @@ Half_Anon::bd_ulong_seq_array_copy (
 Half_Anon::_tao_seq_CORBA_ULong__18::_tao_seq_CORBA_ULong__18 (::CORBA::ULong length,
   ::CORBA::ULong * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::bounded_value_sequence<::CORBA::ULong,18>
+  : ::TAO::bounded_value_sequence< ::CORBA::ULong,18>
     (length, buffer, release)
 {}
 
@@ -206,13 +206,13 @@ Half_Anon::ushort_seq_array_copy (
 #define _HALF_ANON__TAO_SEQ_CORBA_USHORT__CS_
 
 Half_Anon::_tao_seq_CORBA_UShort_::_tao_seq_CORBA_UShort_ (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence<::CORBA::UShort> (max) {}
+  : ::TAO::unbounded_value_sequence< ::CORBA::UShort> (max) {}
 
 Half_Anon::_tao_seq_CORBA_UShort_::_tao_seq_CORBA_UShort_ (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::UShort * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence<::CORBA::UShort>
+  : ::TAO::unbounded_value_sequence< ::CORBA::UShort>
     (max, length, buffer, release)
 {}
 
@@ -262,7 +262,7 @@ Half_Anon::bd_ushort_seq_array_copy (
 Half_Anon::_tao_seq_CORBA_UShort__7::_tao_seq_CORBA_UShort__7 (::CORBA::ULong length,
   ::CORBA::UShort * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::bounded_value_sequence<::CORBA::UShort,7>
+  : ::TAO::bounded_value_sequence< ::CORBA::UShort,7>
     (length, buffer, release)
 {}
 
@@ -291,7 +291,7 @@ TAO::Objref_Traits<All_Anon::anon_bd_string_test>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<All_Anon::anon_bd_string_test>::marshal (All_Anon::anon_bd_string_test_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<All_Anon::anon_bd_string_test>::marshal (const All_Anon::anon_bd_string_test_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -307,7 +307,7 @@ All_Anon::anon_bd_string_test::TestFunc ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -339,7 +339,7 @@ All_Anon::anon_bd_string_test::TestFunc2 ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc2>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc2>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -371,7 +371,7 @@ All_Anon::anon_bd_string_test::TestFunc3 ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc3>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc3>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -403,7 +403,7 @@ All_Anon::anon_bd_string_test::TestFunc23 ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc23>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc23>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -429,15 +429,15 @@ All_Anon::anon_bd_string_test::TestFunc23 ()
 }
 void
 All_Anon::anon_bd_string_test::TestFunc4 (
-  char const * inarg)
+  const char * inarg)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc4_inarg>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc4_inarg>::in_arg_val _tao_inarg (inarg);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -459,15 +459,15 @@ All_Anon::anon_bd_string_test::TestFunc4 (
 }
 void
 All_Anon::anon_bd_string_test::TestFunc41 (
-  char const * inarg)
+  const char * inarg)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc41_inarg>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc41_inarg>::in_arg_val _tao_inarg (inarg);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -489,15 +489,15 @@ All_Anon::anon_bd_string_test::TestFunc41 (
 }
 void
 All_Anon::anon_bd_string_test::TestFunc42 (
-  char const * inarg)
+  const char * inarg)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc42_inarg>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc42_inarg>::in_arg_val _tao_inarg (inarg);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -519,15 +519,15 @@ All_Anon::anon_bd_string_test::TestFunc42 (
 }
 void
 All_Anon::anon_bd_string_test::TestFunc43 (
-  char const * inarg)
+  const char * inarg)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc43_inarg>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc43_inarg>::in_arg_val _tao_inarg (inarg);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -655,7 +655,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc23 (
 void
 All_Anon::anon_bd_string_test::sendc_TestFunc4 (
   ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-  char const * inarg)
+  const char * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -663,7 +663,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc4 (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc4_inarg>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc4_inarg>::in_arg_val _tao_inarg (inarg);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -689,7 +689,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc4 (
 void
 All_Anon::anon_bd_string_test::sendc_TestFunc41 (
   ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-  char const * inarg)
+  const char * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -697,7 +697,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc41 (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc41_inarg>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc41_inarg>::in_arg_val _tao_inarg (inarg);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -723,7 +723,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc41 (
 void
 All_Anon::anon_bd_string_test::sendc_TestFunc42 (
   ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-  char const * inarg)
+  const char * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -731,7 +731,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc42 (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc42_inarg>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc42_inarg>::in_arg_val _tao_inarg (inarg);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -757,7 +757,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc42 (
 void
 All_Anon::anon_bd_string_test::sendc_TestFunc43 (
   ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-  char const * inarg)
+  const char * inarg)
 {
   if (!this->is_evaluated ())
     {
@@ -765,7 +765,7 @@ All_Anon::anon_bd_string_test::sendc_TestFunc43 (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc43_inarg>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits< ::TAO::All_Anon_anon_bd_string_test_TestFunc43_inarg>::in_arg_val _tao_inarg (inarg);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -833,10 +833,12 @@ All_Anon::anon_bd_string_test::_tao_release (anon_bd_string_test_ptr obj)
 }
 
 ::CORBA::Boolean
-All_Anon::anon_bd_string_test::_is_a (char const *value)
+All_Anon::anon_bd_string_test::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:All_Anon/anon_bd_string_test:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+  if (
+      std::strcmp (value, "IDL:All_Anon/anon_bd_string_test:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -846,17 +848,17 @@ All_Anon::anon_bd_string_test::_is_a (char const *value)
     }
 }
 
-char const *All_Anon::anon_bd_string_test::_interface_repository_id () const
+const char* All_Anon::anon_bd_string_test::_interface_repository_id () const
 {
   return "IDL:All_Anon/anon_bd_string_test:1.0";
 }
 
-char const *All_Anon::anon_bd_string_test::_desc_repository_id ()
+const char* All_Anon::anon_bd_string_test::_desc_repository_id ()
 {
   return "IDL:All_Anon/anon_bd_string_test:1.0";
 }
 
-char const *All_Anon::anon_bd_string_test::_desc_interface_name ()
+const char* All_Anon::anon_bd_string_test::_desc_interface_name ()
 {
   return "anon_bd_string_test";
 }
@@ -1001,112 +1003,112 @@ All_Anon::AMH_anon_bd_string_testExceptionHolder::_tao_unmarshal (
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_TestFunc ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_TestFunc2 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_TestFunc3 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_TestFunc23 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_TestFunc4 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_TestFunc41 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_TestFunc42 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_TestFunc43 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_sendc_TestFunc ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_sendc_TestFunc2 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_sendc_TestFunc3 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_sendc_TestFunc23 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_sendc_TestFunc4 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_sendc_TestFunc41 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_sendc_TestFunc42 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 All_Anon::AMH_anon_bd_string_testExceptionHolder::raise_sendc_TestFunc43 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -1133,7 +1135,7 @@ TAO::Objref_Traits<All_Anon::AMH_anon_bd_string_testResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<All_Anon::AMH_anon_bd_string_testResponseHandler>::marshal (All_Anon::AMH_anon_bd_string_testResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<All_Anon::AMH_anon_bd_string_testResponseHandler>::marshal (const All_Anon::AMH_anon_bd_string_testResponseHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1187,11 +1189,13 @@ All_Anon::AMH_anon_bd_string_testResponseHandler::_tao_release (AMH_anon_bd_stri
 }
 
 ::CORBA::Boolean
-All_Anon::AMH_anon_bd_string_testResponseHandler::_is_a (char const *value)
+All_Anon::AMH_anon_bd_string_testResponseHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:All_Anon/AMH_anon_bd_string_testResponseHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:All_Anon/AMH_anon_bd_string_testResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -1201,17 +1205,17 @@ All_Anon::AMH_anon_bd_string_testResponseHandler::_is_a (char const *value)
     }
 }
 
-char const *All_Anon::AMH_anon_bd_string_testResponseHandler::_interface_repository_id () const
+const char* All_Anon::AMH_anon_bd_string_testResponseHandler::_interface_repository_id () const
 {
   return "IDL:All_Anon/AMH_anon_bd_string_testResponseHandler:1.0";
 }
 
-char const *All_Anon::AMH_anon_bd_string_testResponseHandler::_desc_repository_id ()
+const char* All_Anon::AMH_anon_bd_string_testResponseHandler::_desc_repository_id ()
 {
   return "IDL:All_Anon/AMH_anon_bd_string_testResponseHandler:1.0";
 }
 
-char const *All_Anon::AMH_anon_bd_string_testResponseHandler::_desc_interface_name ()
+const char* All_Anon::AMH_anon_bd_string_testResponseHandler::_desc_interface_name ()
 {
   return "AMH_anon_bd_string_testResponseHandler";
 }
@@ -1245,7 +1249,7 @@ TAO::Objref_Traits<All_Anon::AMI_anon_bd_string_testHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<All_Anon::AMI_anon_bd_string_testHandler>::marshal (All_Anon::AMI_anon_bd_string_testHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<All_Anon::AMI_anon_bd_string_testHandler>::marshal (const All_Anon::AMI_anon_bd_string_testHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1254,15 +1258,15 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 All_Anon::AMI_anon_bd_string_testHandler::TestFunc (
-  char const * ami_return_val)
+  const char * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1354,8 +1358,8 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1377,15 +1381,15 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc_excep (
 }
 void
 All_Anon::AMI_anon_bd_string_testHandler::TestFunc2 (
-  char const * ami_return_val)
+  const char * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc2_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc2_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1477,8 +1481,8 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1500,15 +1504,15 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_excep (
 }
 void
 All_Anon::AMI_anon_bd_string_testHandler::TestFunc3 (
-  char const * ami_return_val)
+  const char * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc3_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc3_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1600,8 +1604,8 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1623,15 +1627,15 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_excep (
 }
 void
 All_Anon::AMI_anon_bd_string_testHandler::TestFunc23 (
-  char const * ami_return_val)
+  const char * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc23_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc23_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1723,8 +1727,8 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc23_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1752,7 +1756,7 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc4 ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1838,8 +1842,8 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc4_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1867,7 +1871,7 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc41 ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1953,8 +1957,8 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc41_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1982,7 +1986,7 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc42 ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2068,8 +2072,8 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc42_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2097,7 +2101,7 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc43 ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2183,8 +2187,8 @@ All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2250,11 +2254,13 @@ All_Anon::AMI_anon_bd_string_testHandler::_tao_release (AMI_anon_bd_string_testH
 }
 
 ::CORBA::Boolean
-All_Anon::AMI_anon_bd_string_testHandler::_is_a (char const *value)
+All_Anon::AMI_anon_bd_string_testHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:All_Anon/AMI_anon_bd_string_testHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -2264,17 +2270,17 @@ All_Anon::AMI_anon_bd_string_testHandler::_is_a (char const *value)
     }
 }
 
-char const *All_Anon::AMI_anon_bd_string_testHandler::_interface_repository_id () const
+const char* All_Anon::AMI_anon_bd_string_testHandler::_interface_repository_id () const
 {
   return "IDL:All_Anon/AMI_anon_bd_string_testHandler:1.0";
 }
 
-char const *All_Anon::AMI_anon_bd_string_testHandler::_desc_repository_id ()
+const char* All_Anon::AMI_anon_bd_string_testHandler::_desc_repository_id ()
 {
   return "IDL:All_Anon/AMI_anon_bd_string_testHandler:1.0";
 }
 
-char const *All_Anon::AMI_anon_bd_string_testHandler::_desc_interface_name ()
+const char* All_Anon::AMI_anon_bd_string_testHandler::_desc_interface_name ()
 {
   return "AMI_anon_bd_string_testHandler";
 }
@@ -2327,13 +2333,13 @@ All_Anon::Nested_Anon::_float_seq_array_copy (
 #define _ALL_ANON_NESTED_ANON__TAO_SEQ_CORBA_FLOAT__CS_
 
 All_Anon::Nested_Anon::_tao_seq_CORBA_Float_::_tao_seq_CORBA_Float_ (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence<::CORBA::Float> (max) {}
+  : ::TAO::unbounded_value_sequence< ::CORBA::Float> (max) {}
 
 All_Anon::Nested_Anon::_tao_seq_CORBA_Float_::_tao_seq_CORBA_Float_ (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::Float * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence<::CORBA::Float>
+  : ::TAO::unbounded_value_sequence< ::CORBA::Float>
     (max, length, buffer, release)
 {}
 
@@ -2381,13 +2387,13 @@ All_Anon::Nested_Anon::_another_fsa_copy (
 #define _ALL_ANON_NESTED_ANON__TAO_SEQ_CORBA_FLOAT__CS_
 
 All_Anon::Nested_Anon::_tao_seq_CORBA_Float_::_tao_seq_CORBA_Float_ (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence<::CORBA::Float> (max) {}
+  : ::TAO::unbounded_value_sequence< ::CORBA::Float> (max) {}
 
 All_Anon::Nested_Anon::_tao_seq_CORBA_Float_::_tao_seq_CORBA_Float_ (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::Float * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence<::CORBA::Float>
+  : ::TAO::unbounded_value_sequence< ::CORBA::Float>
     (max, length, buffer, release)
 {}
 
@@ -2827,7 +2833,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    All_Anon::anon_bd_string_test_ptr const _tao_objref)
+    const All_Anon::anon_bd_string_test_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2845,7 +2851,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::All_Anon::anon_bd_string_test>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::All_Anon::anon_bd_string_test>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -2919,7 +2925,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    All_Anon::AMI_anon_bd_string_testHandler_ptr const _tao_objref)
+    const All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2937,7 +2943,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::All_Anon::AMI_anon_bd_string_testHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::All_Anon::AMI_anon_bd_string_testHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

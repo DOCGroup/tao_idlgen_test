@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_VE7G0N_CPP_
-#define _TAO_IDL_TESTS_VE7G0N_CPP_
+#ifndef _TAO_IDL_TESTS_XO70PQ_CPP_
+#define _TAO_IDL_TESTS_XO70PQ_CPP_
 
 #include "TestS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -84,8 +84,8 @@ namespace POA_Test
 
     void execute () override
     {
-      TAO::SArg_Traits<char *>::ret_arg_type retval =
-        static_cast<TAO::SArg_Traits<char *>::ret_val *> (this->args_[0])->arg ();
+      TAO::SArg_Traits< char *>::ret_arg_type retval =
+        static_cast<TAO::SArg_Traits< char *>::ret_val *> (this->args_[0])->arg ();
 
       retval =
         this->servant_->get_string ();
@@ -101,7 +101,7 @@ void POA_Test::Hello::get_string_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<char *>::ret_val retval;
+  TAO::SArg_Traits< char *>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -122,11 +122,11 @@ void POA_Test::Hello::get_string_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -153,7 +153,7 @@ void POA_Test::Hello::shutdown_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -174,15 +174,15 @@ void POA_Test::Hello::shutdown_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Test::Hello::_is_a (char const *value)
+::CORBA::Boolean POA_Test::Hello::_is_a (const char* value)
 {
   return
     (
@@ -191,7 +191,7 @@ void POA_Test::Hello::shutdown_skel (
     );
 }
 
-char const *POA_Test::Hello::_interface_repository_id () const
+const char* POA_Test::Hello::_interface_repository_id () const
 {
   return "IDL:Test/Hello:1.0";
 }

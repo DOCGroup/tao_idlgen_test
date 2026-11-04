@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLS_M9B9FA_H_
-#define _TAO_IDL_FULLS_M9B9FA_H_
+#ifndef _TAO_IDL_FULLS_ACC4NJ_H_
+#define _TAO_IDL_FULLS_ACC4NJ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #define _SCOPE_TEST_I_SCOPE_TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::scope_test::i_scope_test>
+  class  SArg_Traits< ::scope_test::i_scope_test>
     : public Object_SArg_Traits_T<
         ::scope_test::i_scope_test_ptr,
         ::scope_test::i_scope_test_var,
@@ -92,7 +92,7 @@ namespace TAO
 #define _SCOPE_TEST_AMH_I_SCOPE_TESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::scope_test::AMH_i_scope_testExceptionHolder>
+  class SArg_Traits< ::scope_test::AMH_i_scope_testExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::scope_test::AMH_i_scope_testExceptionHolder *,
@@ -109,7 +109,7 @@ namespace TAO
 #define _SCOPE_TEST_AMI_I_SCOPE_TESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::scope_test::AMI_i_scope_testHandler>
+  class  SArg_Traits< ::scope_test::AMI_i_scope_testHandler>
     : public Object_SArg_Traits_T<
         ::scope_test::AMI_i_scope_testHandler_ptr,
         ::scope_test::AMI_i_scope_testHandler_var,
@@ -124,7 +124,7 @@ namespace TAO
 #define _MOD2_FWD__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::mod2::fwd>
+  class  SArg_Traits< ::mod2::fwd>
     : public Object_SArg_Traits_T<
         ::mod2::fwd_ptr,
         ::mod2::fwd_var,
@@ -136,7 +136,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::mod2::fwd::un>
+  class SArg_Traits< ::mod2::fwd::un>
     : public
         Var_Size_SArg_Traits_T<
             ::mod2::fwd::un,
@@ -149,7 +149,7 @@ namespace TAO
 #define _MOD2_FULL__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::mod2::full>
+  class  SArg_Traits< ::mod2::full>
     : public Object_SArg_Traits_T<
         ::mod2::full_ptr,
         ::mod2::full_var,
@@ -161,7 +161,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::mod2::fwd::full_seq>
+  class SArg_Traits< ::mod2::fwd::full_seq>
     : public
         Var_Size_SArg_Traits_T<
             ::mod2::fwd::full_seq,
@@ -174,7 +174,7 @@ namespace TAO
 #define _MOD2_AMH_FWDEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::mod2::AMH_fwdExceptionHolder>
+  class SArg_Traits< ::mod2::AMH_fwdExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::mod2::AMH_fwdExceptionHolder *,
@@ -191,7 +191,7 @@ namespace TAO
 #define _MOD2_AMI_FWDHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::mod2::AMI_fwdHandler>
+  class  SArg_Traits< ::mod2::AMI_fwdHandler>
     : public Object_SArg_Traits_T<
         ::mod2::AMI_fwdHandler_ptr,
         ::mod2::AMI_fwdHandler_var,
@@ -206,7 +206,7 @@ namespace TAO
 #define _MOD2_FULL__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::mod2::full>
+  class  SArg_Traits< ::mod2::full>
     : public Object_SArg_Traits_T<
         ::mod2::full_ptr,
         ::mod2::full_var,
@@ -233,10 +233,10 @@ namespace POA_scope_test
     AMH_i_scope_test ();
 
   public:
-    AMH_i_scope_test (AMH_i_scope_test const &rhs);
+    AMH_i_scope_test (const AMH_i_scope_test& rhs);
     ~AMH_i_scope_test () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -244,7 +244,7 @@ namespace POA_scope_test
 
     scope_test::i_scope_test *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 class i_scope_test;
@@ -264,10 +264,10 @@ public:
   using _stub_ptr_type = ::scope_test::i_scope_test_ptr;
   using _stub_var_type = ::scope_test::i_scope_test_var;
 
-  i_scope_test (i_scope_test const &rhs) = default;
+  i_scope_test (const i_scope_test& rhs) = default;
   ~i_scope_test () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -275,7 +275,7 @@ public:
 
   ::scope_test::i_scope_test *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -321,10 +321,10 @@ public:
   using _stub_ptr_type = ::scope_test::AMI_i_scope_testHandler_ptr;
   using _stub_var_type = ::scope_test::AMI_i_scope_testHandler_var;
 
-  AMI_i_scope_testHandler (AMI_i_scope_testHandler const &rhs) = default;
+  AMI_i_scope_testHandler (const AMI_i_scope_testHandler& rhs) = default;
   ~AMI_i_scope_testHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -332,7 +332,7 @@ public:
 
   ::scope_test::AMI_i_scope_testHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -364,10 +364,10 @@ namespace POA_mod2
     AMH_fwd ();
 
   public:
-    AMH_fwd (AMH_fwd const &rhs);
+    AMH_fwd (const AMH_fwd& rhs);
     ~AMH_fwd () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -375,7 +375,7 @@ namespace POA_mod2
 
     mod2::fwd *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   static void _get_attr_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -392,7 +392,7 @@ namespace POA_mod2
 
   virtual void attr (
       mod2::AMH_fwdResponseHandler_ptr _tao_rh,
-      char const * attr
+      const char * attr
     ) = 0;
 
   static void op_skel (
@@ -403,8 +403,8 @@ namespace POA_mod2
   virtual void op (
       mod2::AMH_fwdResponseHandler_ptr _tao_rh,
       ::mod2::full_ptr full_arg,
-      ::mod2::fwd::un const & un_arg,
-      ::mod2::fwd::full_seq const & full_seq_arg
+      const ::mod2::fwd::un & un_arg,
+      const ::mod2::fwd::full_seq & full_seq_arg
     ) = 0;
 
 };
@@ -426,10 +426,10 @@ public:
   using _stub_ptr_type = ::mod2::fwd_ptr;
   using _stub_var_type = ::mod2::fwd_var;
 
-  fwd (fwd const &rhs) = default;
+  fwd (const fwd& rhs) = default;
   ~fwd () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -437,7 +437,7 @@ public:
 
   ::mod2::fwd *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual char * attr () = 0;
 
   static void _get_attr_skel (
@@ -445,7 +445,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void attr (
-    char const * attr) = 0;
+    const char * attr) = 0;
 
   static void _set_attr_skel (
       TAO_ServerRequest &server_request,
@@ -499,7 +499,7 @@ public:
   TAO_AMH_fwdResponseHandler () = default;
   virtual ~TAO_AMH_fwdResponseHandler () = default;
   void get_attr (
-    char const * return_value) override;
+    const char * return_value) override;
   void get_attr_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) override;
   void set_attr () override;
@@ -508,8 +508,8 @@ public:
   void op (
     ::mod2::full_ptr return_value,
     ::mod2::full_ptr full_arg,
-    ::mod2::fwd::un const & un_arg,
-    ::mod2::fwd::full_seq const & full_seq_arg) override;
+    const ::mod2::fwd::un & un_arg,
+    const ::mod2::fwd::full_seq & full_seq_arg) override;
   void op_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) override;
 };
@@ -531,10 +531,10 @@ public:
   using _stub_ptr_type = ::mod2::AMI_fwdHandler_ptr;
   using _stub_var_type = ::mod2::AMI_fwdHandler_var;
 
-  AMI_fwdHandler (AMI_fwdHandler const &rhs) = default;
+  AMI_fwdHandler (const AMI_fwdHandler& rhs) = default;
   ~AMI_fwdHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -542,9 +542,9 @@ public:
 
   ::mod2::AMI_fwdHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void get_attr (
-    char const * ami_return_val) = 0;
+    const char * ami_return_val) = 0;
 
   static void get_attr_skel (
       TAO_ServerRequest &server_request,
@@ -573,8 +573,8 @@ public:
   virtual void op (
     ::mod2::full_ptr ami_return_val,
     ::mod2::full_ptr full_arg,
-    ::mod2::fwd::un const & un_arg,
-    ::mod2::fwd::full_seq const & full_seq_arg) = 0;
+    const ::mod2::fwd::un & un_arg,
+    const ::mod2::fwd::full_seq & full_seq_arg) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESS_E54WGI_H_
-#define _TAO_IDL_PRIMTYPESS_E54WGI_H_
+#ifndef _TAO_IDL_PRIMTYPESS_3DDEP3_H_
+#define _TAO_IDL_PRIMTYPESS_3DDEP3_H_
 
 #include /**/ "ace/pre.h"
 
@@ -61,7 +61,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -78,7 +78,7 @@ namespace TAO
 #define _OLDPRIMTYPES_EX1__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldPrimTypes::ex1>
+  class  SArg_Traits< ::OldPrimTypes::ex1>
     : public Object_SArg_Traits_T<
         ::OldPrimTypes::ex1_ptr,
         ::OldPrimTypes::ex1_var,
@@ -93,7 +93,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMH_EX1EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::OldPrimTypes::AMH_ex1ExceptionHolder>
+  class SArg_Traits< ::OldPrimTypes::AMH_ex1ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldPrimTypes::AMH_ex1ExceptionHolder *,
@@ -110,7 +110,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMI_EX1HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldPrimTypes::AMI_ex1Handler>
+  class  SArg_Traits< ::OldPrimTypes::AMI_ex1Handler>
     : public Object_SArg_Traits_T<
         ::OldPrimTypes::AMI_ex1Handler_ptr,
         ::OldPrimTypes::AMI_ex1Handler_var,
@@ -125,7 +125,7 @@ namespace TAO
 #define _OLDPRIMTYPES_EX2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldPrimTypes::ex2>
+  class  SArg_Traits< ::OldPrimTypes::ex2>
     : public Object_SArg_Traits_T<
         ::OldPrimTypes::ex2_ptr,
         ::OldPrimTypes::ex2_var,
@@ -140,7 +140,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMH_EX2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::OldPrimTypes::AMH_ex2ExceptionHolder>
+  class SArg_Traits< ::OldPrimTypes::AMH_ex2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldPrimTypes::AMH_ex2ExceptionHolder *,
@@ -157,7 +157,7 @@ namespace TAO
 #define _OLDPRIMTYPES_AMI_EX2HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldPrimTypes::AMI_ex2Handler>
+  class  SArg_Traits< ::OldPrimTypes::AMI_ex2Handler>
     : public Object_SArg_Traits_T<
         ::OldPrimTypes::AMI_ex2Handler_ptr,
         ::OldPrimTypes::AMI_ex2Handler_var,
@@ -184,10 +184,10 @@ namespace POA_OldPrimTypes
     AMH_ex1 ();
 
   public:
-    AMH_ex1 (AMH_ex1 const &rhs);
+    AMH_ex1 (const AMH_ex1& rhs);
     ~AMH_ex1 () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -195,7 +195,7 @@ namespace POA_OldPrimTypes
 
     OldPrimTypes::ex1 *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   static void _get_l1_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -267,10 +267,10 @@ public:
   using _stub_ptr_type = ::OldPrimTypes::ex1_ptr;
   using _stub_var_type = ::OldPrimTypes::ex1_var;
 
-  ex1 (ex1 const &rhs) = default;
+  ex1 (const ex1& rhs) = default;
   ~ex1 () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -278,7 +278,7 @@ public:
 
   ::OldPrimTypes::ex1 *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Long l1 () = 0;
 
   static void _get_l1_skel (
@@ -416,10 +416,10 @@ public:
   using _stub_ptr_type = ::OldPrimTypes::AMI_ex1Handler_ptr;
   using _stub_var_type = ::OldPrimTypes::AMI_ex1Handler_var;
 
-  AMI_ex1Handler (AMI_ex1Handler const &rhs) = default;
+  AMI_ex1Handler (const AMI_ex1Handler& rhs) = default;
   ~AMI_ex1Handler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -427,7 +427,7 @@ public:
 
   ::OldPrimTypes::AMI_ex1Handler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void get_l1 (
     ::CORBA::Long ami_return_val) = 0;
 
@@ -557,10 +557,10 @@ protected:
   AMH_ex2 ();
 
 public:
-  AMH_ex2 (AMH_ex2 const &rhs);
+  AMH_ex2 (const AMH_ex2& rhs);
   ~AMH_ex2 () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -568,7 +568,7 @@ public:
 
   OldPrimTypes::ex2 *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void _get_l2_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -616,10 +616,10 @@ public:
   using _stub_ptr_type = ::OldPrimTypes::ex2_ptr;
   using _stub_var_type = ::OldPrimTypes::ex2_var;
 
-  ex2 (ex2 const &rhs) = default;
+  ex2 (const ex2& rhs) = default;
   ~ex2 () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -627,7 +627,7 @@ public:
 
   ::OldPrimTypes::ex2 *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Long l2 () = 0;
 
   static void _get_l2_skel (
@@ -718,10 +718,10 @@ public:
   using _stub_ptr_type = ::OldPrimTypes::AMI_ex2Handler_ptr;
   using _stub_var_type = ::OldPrimTypes::AMI_ex2Handler_var;
 
-  AMI_ex2Handler (AMI_ex2Handler const &rhs) = default;
+  AMI_ex2Handler (const AMI_ex2Handler& rhs) = default;
   ~AMI_ex2Handler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -729,7 +729,7 @@ public:
 
   ::OldPrimTypes::AMI_ex2Handler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void get_l2 (
     ::CORBA::Long ami_return_val) = 0;
 

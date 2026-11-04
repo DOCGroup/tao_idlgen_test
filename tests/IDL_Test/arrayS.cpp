@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAYS_H9CKRM_CPP_
-#define _TAO_IDL_ARRAYS_H9CKRM_CPP_
+#ifndef _TAO_IDL_ARRAYS_HAJYL4_CPP_
+#define _TAO_IDL_ARRAYS_HAJYL4_CPP_
 
 #include "arrayS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -115,7 +115,9 @@ POA_AMH_array_args::all_arrays_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_array_argsResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_TAO_AMH_array_argsResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -130,7 +132,7 @@ POA_AMH_array_args::all_arrays_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_array_args::_is_a (char const *value)
+::CORBA::Boolean POA_AMH_array_args::_is_a (const char* value)
 {
   return
     (
@@ -139,7 +141,7 @@ POA_AMH_array_args::all_arrays_skel (
     );
 }
 
-char const *POA_AMH_array_args::_interface_repository_id () const
+const char* POA_AMH_array_args::_interface_repository_id () const
 {
   return "IDL:array_args:1.0";
 }
@@ -154,7 +156,7 @@ array_args*
 POA_AMH_array_args::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -206,8 +208,8 @@ _TAO_array_args_Direct_Proxy_Impl::all_arrays (
     }
 
   _tao_ptr->all_arrays (
-        ((TAO::Arg_Traits<::oa1_tag>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::oa2_tag>::in_arg_val *) args[2])->arg ()
+        ((TAO::Arg_Traits< ::oa1_tag>::in_arg_val *) args[1])->arg (),
+        ((TAO::Arg_Traits< ::oa2_tag>::in_arg_val *) args[2])->arg ()
       );
 }
 
@@ -232,14 +234,14 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::oa1_tag>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::oa1_tag> (
+    TAO::SArg_Traits< ::oa1_tag>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::oa1_tag> (
         this->operation_details_,
         this->args_,
         1);
 
-    TAO::SArg_Traits<::oa2_tag>::in_arg_type arg_2 =
-      TAO::Portable_Server::get_in_arg<::oa2_tag> (
+    TAO::SArg_Traits< ::oa2_tag>::in_arg_type arg_2 =
+      TAO::Portable_Server::get_in_arg< ::oa2_tag> (
         this->operation_details_,
         this->args_,
         2);
@@ -259,9 +261,9 @@ void POA_array_args::all_arrays_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::oa1_tag>::in_arg_val _tao_arg1;
-  TAO::SArg_Traits<::oa2_tag>::in_arg_val _tao_arg2;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::oa1_tag>::in_arg_val _tao_arg1;
+  TAO::SArg_Traits< ::oa2_tag>::in_arg_val _tao_arg2;
 
   TAO::Argument * const args[] =
     {
@@ -287,15 +289,15 @@ void POA_array_args::all_arrays_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_array_args::_is_a (char const *value)
+::CORBA::Boolean POA_array_args::_is_a (const char* value)
 {
   return
     (
@@ -304,7 +306,7 @@ void POA_array_args::all_arrays_skel (
     );
 }
 
-char const *POA_array_args::_interface_repository_id () const
+const char* POA_array_args::_interface_repository_id () const
 {
   return "IDL:array_args:1.0";
 }
@@ -410,7 +412,7 @@ _TAO_AMI_array_argsHandler_Direct_Proxy_Impl::all_arrays_excep (
     }
 
   _tao_ptr->all_arrays_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -442,7 +444,7 @@ void POA_AMI_array_argsHandler::all_arrays_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -463,11 +465,11 @@ void POA_AMI_array_argsHandler::all_arrays_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -483,8 +485,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -503,8 +505,8 @@ void POA_AMI_array_argsHandler::all_arrays_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -529,15 +531,15 @@ void POA_AMI_array_argsHandler::all_arrays_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_AMI_array_argsHandler::_is_a (char const *value)
+::CORBA::Boolean POA_AMI_array_argsHandler::_is_a (const char* value)
 {
   return
     (
@@ -547,7 +549,7 @@ void POA_AMI_array_argsHandler::all_arrays_excep_skel (
     );
 }
 
-char const *POA_AMI_array_argsHandler::_interface_repository_id () const
+const char* POA_AMI_array_argsHandler::_interface_repository_id () const
 {
   return "IDL:AMI_array_argsHandler:1.0";
 }
@@ -596,7 +598,7 @@ POA_AMH_testdata::POA_AMH_testdata ()
   this->optable_ = std::addressof (tao_AMH_testdata_optable);
 }
 
-::CORBA::Boolean POA_AMH_testdata::_is_a (char const *value)
+::CORBA::Boolean POA_AMH_testdata::_is_a (const char* value)
 {
   return
     (
@@ -605,7 +607,7 @@ POA_AMH_testdata::POA_AMH_testdata ()
     );
 }
 
-char const *POA_AMH_testdata::_interface_repository_id () const
+const char* POA_AMH_testdata::_interface_repository_id () const
 {
   return "IDL:testdata:1.0";
 }
@@ -620,7 +622,7 @@ testdata*
 POA_AMH_testdata::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -666,7 +668,7 @@ POA_testdata::POA_testdata ()
   this->optable_ = std::addressof (tao_testdata_optable);
 }
 
-::CORBA::Boolean POA_testdata::_is_a (char const *value)
+::CORBA::Boolean POA_testdata::_is_a (const char* value)
 {
   return
     (
@@ -675,7 +677,7 @@ POA_testdata::POA_testdata ()
     );
 }
 
-char const *POA_testdata::_interface_repository_id () const
+const char* POA_testdata::_interface_repository_id () const
 {
   return "IDL:testdata:1.0";
 }
@@ -737,7 +739,7 @@ POA_AMI_testdataHandler::POA_AMI_testdataHandler ()
   this->optable_ = std::addressof (tao_AMI_testdataHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_testdataHandler::_is_a (char const *value)
+::CORBA::Boolean POA_AMI_testdataHandler::_is_a (const char* value)
 {
   return
     (
@@ -747,7 +749,7 @@ POA_AMI_testdataHandler::POA_AMI_testdataHandler ()
     );
 }
 
-char const *POA_AMI_testdataHandler::_interface_repository_id () const
+const char* POA_AMI_testdataHandler::_interface_repository_id () const
 {
   return "IDL:AMI_testdataHandler:1.0";
 }
@@ -819,7 +821,9 @@ POA_arraytest::AMH_MyTest::test_method_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_arraytest::TAO_AMH_MyTestResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_arraytest::TAO_AMH_MyTestResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -832,7 +836,7 @@ POA_arraytest::AMH_MyTest::test_method_skel (
     );
 }
 
-::CORBA::Boolean POA_arraytest::AMH_MyTest::_is_a (char const *value)
+::CORBA::Boolean POA_arraytest::AMH_MyTest::_is_a (const char* value)
 {
   return
     (
@@ -841,7 +845,7 @@ POA_arraytest::AMH_MyTest::test_method_skel (
     );
 }
 
-char const *POA_arraytest::AMH_MyTest::_interface_repository_id () const
+const char* POA_arraytest::AMH_MyTest::_interface_repository_id () const
 {
   return "IDL:arraytest/MyTest:1.0";
 }
@@ -856,7 +860,7 @@ arraytest::MyTest*
 POA_arraytest::AMH_MyTest::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -908,7 +912,7 @@ POA_arraytest::_TAO_MyTest_Direct_Proxy_Impl::test_method (
     }
 
   _tao_ptr->test_method (
-        ((TAO::Arg_Traits<::arraytest::myvec2_tag>::out_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::arraytest::myvec2_tag>::out_arg_val *) args[1])->arg ()
       );
 }
 
@@ -936,8 +940,8 @@ namespace POA_arraytest
 
     void execute () override
     {
-      TAO::SArg_Traits<::arraytest::myvec2_tag>::out_arg_type arg_1 =
-        TAO::Portable_Server::get_out_arg<::arraytest::myvec2_tag> (
+      TAO::SArg_Traits< ::arraytest::myvec2_tag>::out_arg_type arg_1 =
+        TAO::Portable_Server::get_out_arg< ::arraytest::myvec2_tag> (
           this->operation_details_,
           this->args_,
           1);
@@ -957,8 +961,8 @@ void POA_arraytest::MyTest::test_method_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::arraytest::myvec2_tag>::out_arg_val _tao_mystring;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::arraytest::myvec2_tag>::out_arg_val _tao_mystring;
 
   TAO::Argument * const args[] =
     {
@@ -983,15 +987,15 @@ void POA_arraytest::MyTest::test_method_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_arraytest::MyTest::_is_a (char const *value)
+::CORBA::Boolean POA_arraytest::MyTest::_is_a (const char* value)
 {
   return
     (
@@ -1000,7 +1004,7 @@ void POA_arraytest::MyTest::test_method_skel (
     );
 }
 
-char const *POA_arraytest::MyTest::_interface_repository_id () const
+const char* POA_arraytest::MyTest::_interface_repository_id () const
 {
   return "IDL:arraytest/MyTest:1.0";
 }
@@ -1028,7 +1032,7 @@ POA_arraytest::MyTest::_this ()
 
 void
 POA_arraytest::TAO_AMH_MyTestResponseHandler::test_method (
-  ::arraytest::myvec2 const mystring)
+  const ::arraytest::myvec2 mystring)
 {
   this->_tao_rh_init_reply ();
 
@@ -1097,7 +1101,7 @@ POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::test_method (
     }
 
   _tao_ptr->test_method (
-        ((TAO::Arg_Traits<::arraytest::myvec2_tag>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::arraytest::myvec2_tag>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1115,7 +1119,7 @@ POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::test_method_excep (
     }
 
   _tao_ptr->test_method_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1143,8 +1147,8 @@ namespace POA_arraytest
 
     void execute () override
     {
-      TAO::SArg_Traits<::arraytest::myvec2_tag>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::arraytest::myvec2_tag> (
+      TAO::SArg_Traits< ::arraytest::myvec2_tag>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::arraytest::myvec2_tag> (
           this->operation_details_,
           this->args_,
           1);
@@ -1164,8 +1168,8 @@ void POA_arraytest::AMI_MyTestHandler::test_method_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::arraytest::myvec2_tag>::in_arg_val _tao_mystring;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::arraytest::myvec2_tag>::in_arg_val _tao_mystring;
 
   TAO::Argument * const args[] =
     {
@@ -1190,11 +1194,11 @@ void POA_arraytest::AMI_MyTestHandler::test_method_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1213,8 +1217,8 @@ namespace POA_arraytest
 
     void execute () override
     {
-      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -1234,8 +1238,8 @@ void POA_arraytest::AMI_MyTestHandler::test_method_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1260,15 +1264,15 @@ void POA_arraytest::AMI_MyTestHandler::test_method_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_arraytest::AMI_MyTestHandler::_is_a (char const *value)
+::CORBA::Boolean POA_arraytest::AMI_MyTestHandler::_is_a (const char* value)
 {
   return
     (
@@ -1278,7 +1282,7 @@ void POA_arraytest::AMI_MyTestHandler::test_method_excep_skel (
     );
 }
 
-char const *POA_arraytest::AMI_MyTestHandler::_interface_repository_id () const
+const char* POA_arraytest::AMI_MyTestHandler::_interface_repository_id () const
 {
   return "IDL:arraytest/AMI_MyTestHandler:1.0";
 }

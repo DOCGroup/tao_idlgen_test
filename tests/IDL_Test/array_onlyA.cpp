@@ -47,13 +47,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> TEST_TYPE_10 (
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> TEST_TYPE_10 (
         ::CORBA::tk_array,
-        std::addressof (CORBA::_tc_char),
+        &CORBA::_tc_char,
         10U);
 
     ::CORBA::TypeCode_ptr const tc_TEST_TYPE =
-      std::addressof (TEST_TYPE_10);
+      &TEST_TYPE_10;
   }
 }
 }
@@ -68,7 +68,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:TEST_TYPE:1.0",
     "TEST_TYPE",
-    std::addressof (TAO::TypeCode::tc_TEST_TYPE));
+    &TAO::TypeCode::tc_TEST_TYPE);
 
 ::CORBA::TypeCode_ptr const _tc_TEST_TYPE = std::addressof(_tao_tc_TEST_TYPE);
 

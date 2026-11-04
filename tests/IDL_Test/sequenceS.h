@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCES_VFVP13_H_
-#define _TAO_IDL_SEQUENCES_VFVP13_H_
+#ifndef _TAO_IDL_SEQUENCES_3J1V64_H_
+#define _TAO_IDL_SEQUENCES_3J1V64_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,7 +52,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -66,7 +66,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::myfoostructseq>
+  class SArg_Traits< ::myfoostructseq>
     : public
         Var_Size_SArg_Traits_T<
             ::myfoostructseq,
@@ -76,7 +76,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::myfoostruct>
+  class SArg_Traits< ::myfoostruct>
     : public
         Var_Size_SArg_Traits_T<
             ::myfoostruct,
@@ -86,7 +86,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::OctetSeqSeq>
+  class SArg_Traits< ::OctetSeqSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::OctetSeqSeq,
@@ -96,7 +96,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::seqLocalSeq>
+  class SArg_Traits< ::seqLocalSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::seqLocalSeq,
@@ -106,7 +106,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Deployment::ComponentPackageDescriptions>
+  class SArg_Traits< ::Deployment::ComponentPackageDescriptions>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::ComponentPackageDescriptions,
@@ -116,7 +116,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Deployment::ComponentAssemblyDescription>
+  class SArg_Traits< ::Deployment::ComponentAssemblyDescription>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::ComponentAssemblyDescription,
@@ -126,7 +126,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Deployment::ComponentAssemblyDescriptions>
+  class SArg_Traits< ::Deployment::ComponentAssemblyDescriptions>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::ComponentAssemblyDescriptions,
@@ -136,7 +136,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Deployment::NamedImplementationArtifacts>
+  class SArg_Traits< ::Deployment::NamedImplementationArtifacts>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::NamedImplementationArtifacts,
@@ -146,7 +146,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Deployment::NamedImplementationArtifact>
+  class SArg_Traits< ::Deployment::NamedImplementationArtifact>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::NamedImplementationArtifact,
@@ -156,7 +156,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Deployment::MonolithicImplementationDescription>
+  class SArg_Traits< ::Deployment::MonolithicImplementationDescription>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::MonolithicImplementationDescription,
@@ -166,7 +166,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Deployment::MonolithicImplementationDescriptions>
+  class SArg_Traits< ::Deployment::MonolithicImplementationDescriptions>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::MonolithicImplementationDescriptions,
@@ -176,7 +176,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Deployment::PackagedComponentImplementation>
+  class SArg_Traits< ::Deployment::PackagedComponentImplementation>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::PackagedComponentImplementation,
@@ -186,7 +186,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Deployment::PackagedComponentImplementations>
+  class SArg_Traits< ::Deployment::PackagedComponentImplementations>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::PackagedComponentImplementations,
@@ -196,7 +196,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Deployment::ComponentPackageDescription>
+  class SArg_Traits< ::Deployment::ComponentPackageDescription>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::ComponentPackageDescription,

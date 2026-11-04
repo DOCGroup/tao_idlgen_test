@@ -23,7 +23,6 @@
  **/
 
 #include "array_anonymousC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -44,6 +43,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "array_anonymousC.inl"
@@ -72,7 +72,7 @@ TAO::Objref_Traits<tdef>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<tdef>::marshal (tdef_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<tdef>::marshal (const tdef_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -130,13 +130,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> tdef_Bytes_13 (
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> tdef_Bytes_13 (
         ::CORBA::tk_array,
-        std::addressof (CORBA::_tc_octet),
+        &CORBA::_tc_octet,
         13U);
 
     ::CORBA::TypeCode_ptr const tc_tdef_Bytes =
-      std::addressof (tdef_Bytes_13);
+      &tdef_Bytes_13;
   }
 }
 }
@@ -151,7 +151,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:tdef/Bytes:1.0",
     "Bytes",
-    std::addressof (TAO::TypeCode::tc_tdef_Bytes));
+    &TAO::TypeCode::tc_tdef_Bytes);
 
 ::CORBA::TypeCode_ptr const tdef::_tc_Bytes = std::addressof(_tao_tc_tdef_Bytes);
 
@@ -166,13 +166,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> tdef_bytes_or_longs_Longs_12 (
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> tdef_bytes_or_longs_Longs_12 (
         ::CORBA::tk_array,
-        std::addressof (CORBA::_tc_long),
+        &CORBA::_tc_long,
         12U);
 
     ::CORBA::TypeCode_ptr const tc_tdef_bytes_or_longs_Longs =
-      std::addressof (tdef_bytes_or_longs_Longs_12);
+      &tdef_bytes_or_longs_Longs_12;
   }
 }
 }
@@ -185,8 +185,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_tdef_bytes_or_longs[] =
       {
-        { "the_bytes", std::addressof (tdef::_tc_Bytes) },
-        { "Longs", std::addressof (TAO::TypeCode::tc_tdef_bytes_or_longs_Longs) }
+        { "the_bytes", &tdef::_tc_Bytes },
+        { "Longs", &TAO::TypeCode::tc_tdef_bytes_or_longs_Longs }
       };
 
 static TAO::TypeCode::Struct<
@@ -205,7 +205,9 @@ _tao_tc_tdef_bytes_or_longs (
 
 ::CORBA::TypeCode_ptr const tdef::_tc_bytes_or_longs = std::addressof(_tao_tc_tdef_bytes_or_longs);
 
-void tdef::bytes_or_longs::_tao_any_destructor (void *_tao_void_pointer)
+void
+tdef::bytes_or_longs::_tao_any_destructor (
+    void *_tao_void_pointer)
 {
   bytes_or_longs *tmp = static_cast<bytes_or_longs *> (_tao_void_pointer);
   delete tmp;
@@ -294,10 +296,12 @@ tdef::_tao_release (tdef_ptr obj)
 }
 
 ::CORBA::Boolean
-tdef::_is_a (char const *value)
+tdef::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:tdef:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+  if (
+      std::strcmp (value, "IDL:tdef:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -307,17 +311,17 @@ tdef::_is_a (char const *value)
     }
 }
 
-char const *tdef::_interface_repository_id () const
+const char* tdef::_interface_repository_id () const
 {
   return "IDL:tdef:1.0";
 }
 
-char const *tdef::_desc_repository_id ()
+const char* tdef::_desc_repository_id ()
 {
   return "IDL:tdef:1.0";
 }
 
-char const *tdef::_desc_interface_name ()
+const char* tdef::_desc_interface_name ()
 {
   return "tdef";
 }
@@ -335,7 +339,7 @@ static TAO::TypeCode::Objref<char const *,
     "tdef");
 
 ::CORBA::TypeCode_ptr const _tc_tdef = std::addressof(_tao_tc_tdef);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_tdefExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_tdefExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -345,7 +349,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_tdefExceptionHolder:1.0",
     "AMH_tdefExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_tdefExceptionHolder,
     0);
 
@@ -543,7 +547,7 @@ TAO::Objref_Traits<AMH_tdefResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_tdefResponseHandler>::marshal (AMH_tdefResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_tdefResponseHandler>::marshal (const AMH_tdefResponseHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -597,11 +601,13 @@ AMH_tdefResponseHandler::_tao_release (AMH_tdefResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMH_tdefResponseHandler::_is_a (char const *value)
+AMH_tdefResponseHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:AMH_tdefResponseHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:AMH_tdefResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -611,17 +617,17 @@ AMH_tdefResponseHandler::_is_a (char const *value)
     }
 }
 
-char const *AMH_tdefResponseHandler::_interface_repository_id () const
+const char* AMH_tdefResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_tdefResponseHandler:1.0";
 }
 
-char const *AMH_tdefResponseHandler::_desc_repository_id ()
+const char* AMH_tdefResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_tdefResponseHandler:1.0";
 }
 
-char const *AMH_tdefResponseHandler::_desc_interface_name ()
+const char* AMH_tdefResponseHandler::_desc_interface_name ()
 {
   return "AMH_tdefResponseHandler";
 }
@@ -663,7 +669,7 @@ TAO::Objref_Traits<AMI_tdefHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_tdefHandler>::marshal (AMI_tdefHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_tdefHandler>::marshal (const AMI_tdefHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -715,11 +721,13 @@ AMI_tdefHandler::_tao_release (AMI_tdefHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_tdefHandler::_is_a (char const *value)
+AMI_tdefHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_tdefHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -729,17 +737,17 @@ AMI_tdefHandler::_is_a (char const *value)
     }
 }
 
-char const *AMI_tdefHandler::_interface_repository_id () const
+const char* AMI_tdefHandler::_interface_repository_id () const
 {
   return "IDL:AMI_tdefHandler:1.0";
 }
 
-char const *AMI_tdefHandler::_desc_repository_id ()
+const char* AMI_tdefHandler::_desc_repository_id ()
 {
   return "IDL:AMI_tdefHandler:1.0";
 }
 
-char const *AMI_tdefHandler::_desc_interface_name ()
+const char* AMI_tdefHandler::_desc_interface_name ()
 {
   return "AMI_tdefHandler";
 }
@@ -769,13 +777,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_RmtPhysicalInfo_rmtNodeId_22 (
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_RmtPhysicalInfo_rmtNodeId_22 (
         ::CORBA::tk_array,
-        std::addressof (CORBA::_tc_octet),
+        &CORBA::_tc_octet,
         22U);
 
     ::CORBA::TypeCode_ptr const tc_ABCModule_RmtPhysicalInfo_rmtNodeId =
-      std::addressof (ABCModule_RmtPhysicalInfo_rmtNodeId_22);
+      &ABCModule_RmtPhysicalInfo_rmtNodeId_22;
   }
 }
 }
@@ -795,13 +803,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_RmtPhysicalInfo_rmtDetails_22 (
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_RmtPhysicalInfo_rmtDetails_22 (
         ::CORBA::tk_array,
-        std::addressof (CORBA::_tc_octet),
+        &CORBA::_tc_octet,
         22U);
 
     ::CORBA::TypeCode_ptr const tc_ABCModule_RmtPhysicalInfo_rmtDetails =
-      std::addressof (ABCModule_RmtPhysicalInfo_rmtDetails_22);
+      &ABCModule_RmtPhysicalInfo_rmtDetails_22;
   }
 }
 }
@@ -814,8 +822,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_ABCModule_RmtPhysicalInfo[] =
       {
-        { "rmtNodeId", std::addressof (TAO::TypeCode::tc_ABCModule_RmtPhysicalInfo_rmtNodeId) },
-        { "rmtDetails", std::addressof (TAO::TypeCode::tc_ABCModule_RmtPhysicalInfo_rmtDetails) }
+        { "rmtNodeId", &TAO::TypeCode::tc_ABCModule_RmtPhysicalInfo_rmtNodeId },
+        { "rmtDetails", &TAO::TypeCode::tc_ABCModule_RmtPhysicalInfo_rmtDetails }
       };
 
 static TAO::TypeCode::Struct<
@@ -837,7 +845,9 @@ namespace ABCModule
   ::CORBA::TypeCode_ptr const _tc_RmtPhysicalInfo = std::addressof(_tao_tc_ABCModule_RmtPhysicalInfo);
 }
 
-void ABCModule::RmtPhysicalInfo::_tao_any_destructor (void *_tao_void_pointer)
+void
+ABCModule::RmtPhysicalInfo::_tao_any_destructor (
+    void *_tao_void_pointer)
 {
   RmtPhysicalInfo *tmp = static_cast<RmtPhysicalInfo *> (_tao_void_pointer);
   delete tmp;
@@ -930,13 +940,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_bbbBubBubBubBaby_rmtNodeId_22 (
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_bbbBubBubBubBaby_rmtNodeId_22 (
         ::CORBA::tk_array,
-        std::addressof (CORBA::_tc_octet),
+        &CORBA::_tc_octet,
         22U);
 
     ::CORBA::TypeCode_ptr const tc_ABCModule_bbbBubBubBubBaby_rmtNodeId =
-      std::addressof (ABCModule_bbbBubBubBubBaby_rmtNodeId_22);
+      &ABCModule_bbbBubBubBubBaby_rmtNodeId_22;
   }
 }
 }
@@ -956,13 +966,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_bbbBubBubBubBaby_rmtDetails_22 (
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ABCModule_bbbBubBubBubBaby_rmtDetails_22 (
         ::CORBA::tk_array,
-        std::addressof (CORBA::_tc_octet),
+        &CORBA::_tc_octet,
         22U);
 
     ::CORBA::TypeCode_ptr const tc_ABCModule_bbbBubBubBubBaby_rmtDetails =
-      std::addressof (ABCModule_bbbBubBubBubBaby_rmtDetails_22);
+      &ABCModule_bbbBubBubBubBaby_rmtDetails_22;
   }
 }
 }
@@ -975,8 +985,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_ABCModule_bbbBubBubBubBaby[] =
       {
-        { "rmtNodeId", std::addressof (TAO::TypeCode::tc_ABCModule_bbbBubBubBubBaby_rmtNodeId) },
-        { "rmtDetails", std::addressof (TAO::TypeCode::tc_ABCModule_bbbBubBubBubBaby_rmtDetails) }
+        { "rmtNodeId", &TAO::TypeCode::tc_ABCModule_bbbBubBubBubBaby_rmtNodeId },
+        { "rmtDetails", &TAO::TypeCode::tc_ABCModule_bbbBubBubBubBaby_rmtDetails }
       };
 
 static TAO::TypeCode::Struct<
@@ -998,7 +1008,9 @@ namespace ABCModule
   ::CORBA::TypeCode_ptr const _tc_bbbBubBubBubBaby = std::addressof(_tao_tc_ABCModule_bbbBubBubBubBaby);
 }
 
-void ABCModule::bbbBubBubBubBaby::_tao_any_destructor (void *_tao_void_pointer)
+void
+ABCModule::bbbBubBubBubBaby::_tao_any_destructor (
+    void *_tao_void_pointer)
 {
   bbbBubBubBubBaby *tmp = static_cast<bbbBubBubBubBaby *> (_tao_void_pointer);
   delete tmp;
@@ -1149,7 +1161,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     tdef_ptr &_tao_elem)
 {
   return
@@ -1210,7 +1222,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::tdef::bytes_or_longs const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::tdef::bytes_or_longs>::insert_copy (
+  TAO::Any_Dual_Impl_T< ::tdef::bytes_or_longs>::insert_copy (
     _tao_any,
     ::tdef::bytes_or_longs::_tao_any_destructor,
     tdef::_tc_bytes_or_longs,
@@ -1222,7 +1234,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::tdef::bytes_or_longs *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::tdef::bytes_or_longs>::insert (
+  TAO::Any_Dual_Impl_T< ::tdef::bytes_or_longs>::insert (
     _tao_any,
     ::tdef::bytes_or_longs::_tao_any_destructor,
     tdef::_tc_bytes_or_longs,
@@ -1234,7 +1246,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::tdef::bytes_or_longs const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T<::tdef::bytes_or_longs>::extract (
+  return TAO::Any_Dual_Impl_T< ::tdef::bytes_or_longs>::extract (
     _tao_any,
     ::tdef::bytes_or_longs::_tao_any_destructor,
     tdef::_tc_bytes_or_longs,
@@ -1371,7 +1383,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     AMH_tdefResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1429,7 +1441,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     AMI_tdefHandler_ptr &_tao_elem)
 {
   return
@@ -1451,7 +1463,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::ABCModule::RmtPhysicalInfo const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::ABCModule::RmtPhysicalInfo>::insert_copy (
+  TAO::Any_Dual_Impl_T< ::ABCModule::RmtPhysicalInfo>::insert_copy (
     _tao_any,
     ::ABCModule::RmtPhysicalInfo::_tao_any_destructor,
     ABCModule::_tc_RmtPhysicalInfo,
@@ -1463,7 +1475,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::ABCModule::RmtPhysicalInfo *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::ABCModule::RmtPhysicalInfo>::insert (
+  TAO::Any_Dual_Impl_T< ::ABCModule::RmtPhysicalInfo>::insert (
     _tao_any,
     ::ABCModule::RmtPhysicalInfo::_tao_any_destructor,
     ABCModule::_tc_RmtPhysicalInfo,
@@ -1475,7 +1487,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::ABCModule::RmtPhysicalInfo const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T<::ABCModule::RmtPhysicalInfo>::extract (
+  return TAO::Any_Dual_Impl_T< ::ABCModule::RmtPhysicalInfo>::extract (
     _tao_any,
     ::ABCModule::RmtPhysicalInfo::_tao_any_destructor,
     ABCModule::_tc_RmtPhysicalInfo,
@@ -1492,7 +1504,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::ABCModule::bbbBubBubBubBaby const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::ABCModule::bbbBubBubBubBaby>::insert_copy (
+  TAO::Any_Dual_Impl_T< ::ABCModule::bbbBubBubBubBaby>::insert_copy (
     _tao_any,
     ::ABCModule::bbbBubBubBubBaby::_tao_any_destructor,
     ABCModule::_tc_bbbBubBubBubBaby,
@@ -1504,7 +1516,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::ABCModule::bbbBubBubBubBaby *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::ABCModule::bbbBubBubBubBaby>::insert (
+  TAO::Any_Dual_Impl_T< ::ABCModule::bbbBubBubBubBaby>::insert (
     _tao_any,
     ::ABCModule::bbbBubBubBubBaby::_tao_any_destructor,
     ABCModule::_tc_bbbBubBubBubBaby,
@@ -1516,7 +1528,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::ABCModule::bbbBubBubBubBaby const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T<::ABCModule::bbbBubBubBubBaby>::extract (
+  return TAO::Any_Dual_Impl_T< ::ABCModule::bbbBubBubBubBaby>::extract (
     _tao_any,
     ::ABCModule::bbbBubBubBubBaby::_tao_any_destructor,
     ABCModule::_tc_bbbBubBubBubBaby,
@@ -1609,7 +1621,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    tdef_ptr const _tao_objref)
+    const tdef_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1627,7 +1639,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::tdef>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::tdef>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -1701,7 +1713,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    AMI_tdefHandler_ptr const _tao_objref)
+    const AMI_tdefHandler_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1719,7 +1731,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::AMI_tdefHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::AMI_tdefHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

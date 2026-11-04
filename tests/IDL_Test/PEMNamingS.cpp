@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGS_MAQTPF_CPP_
-#define _TAO_IDL_PEMNAMINGS_MAQTPF_CPP_
+#ifndef _TAO_IDL_PEMNAMINGS_H33W5J_CPP_
+#define _TAO_IDL_PEMNAMINGS_H33W5J_CPP_
 
 #include "PEMNamingS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -110,7 +110,9 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -158,7 +160,9 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_Plesk::Naming::TAO_AMH_ObjectResolverResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -174,7 +178,7 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
     );
 }
 
-::CORBA::Boolean POA_Plesk::Naming::AMH_ObjectResolver::_is_a (char const *value)
+::CORBA::Boolean POA_Plesk::Naming::AMH_ObjectResolver::_is_a (const char* value)
 {
   return
     (
@@ -183,7 +187,7 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
     );
 }
 
-char const *POA_Plesk::Naming::AMH_ObjectResolver::_interface_repository_id () const
+const char* POA_Plesk::Naming::AMH_ObjectResolver::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
@@ -198,7 +202,7 @@ Plesk::Naming::ObjectResolver*
 POA_Plesk::Naming::AMH_ObjectResolver::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -250,10 +254,10 @@ POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<::CORBA::Object>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< ::CORBA::Object>::ret_val *) args[0])->arg () =
     _tao_ptr->resolve (
-          ((TAO::Arg_Traits<char *>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::CORBA::Long>::inout_arg_val *) args[2])->arg ()
+          ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg (),
+          ((TAO::Arg_Traits< ::CORBA::Long>::inout_arg_val *) args[2])->arg ()
         );
 }
 
@@ -270,11 +274,11 @@ POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve_sc (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<::CORBA::Object>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< ::CORBA::Object>::ret_val *) args[0])->arg () =
     _tao_ptr->resolve_sc (
-          ((TAO::Arg_Traits<char *>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<char *>::in_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::CORBA::Long>::inout_arg_val *) args[3])->arg ()
+          ((TAO::Arg_Traits< char *>::in_arg_val *) args[1])->arg (),
+          ((TAO::Arg_Traits< char *>::in_arg_val *) args[2])->arg (),
+          ((TAO::Arg_Traits< ::CORBA::Long>::inout_arg_val *) args[3])->arg ()
         );
 }
 
@@ -305,19 +309,19 @@ namespace POA_Plesk
 
       void execute () override
       {
-        TAO::SArg_Traits<::CORBA::Object>::ret_arg_type retval =
-          TAO::Portable_Server::get_ret_arg<::CORBA::Object> (
+        TAO::SArg_Traits< ::CORBA::Object>::ret_arg_type retval =
+          TAO::Portable_Server::get_ret_arg< ::CORBA::Object> (
             this->operation_details_,
             this->args_);
 
-        TAO::SArg_Traits<char *>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg<char *> (
+        TAO::SArg_Traits< char *>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg< char *> (
             this->operation_details_,
             this->args_,
             1);
 
-        TAO::SArg_Traits<::CORBA::Long>::inout_arg_type arg_2 =
-          TAO::Portable_Server::get_inout_arg<::CORBA::Long> (
+        TAO::SArg_Traits< ::CORBA::Long>::inout_arg_type arg_2 =
+          TAO::Portable_Server::get_inout_arg< ::CORBA::Long> (
             this->operation_details_,
             this->args_,
             2);
@@ -340,16 +344,18 @@ void POA_Plesk::Naming::ObjectResolver::resolve_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<::CORBA::Object>::ret_val retval;
-  TAO::SArg_Traits<char *>::in_arg_val _tao_service_type;
-  TAO::SArg_Traits<::CORBA::Long>::inout_arg_val _tao_sc_id;
+#endif /* TAO_HAS_INTERCEPTORS */
+
+  TAO::SArg_Traits< ::CORBA::Object>::ret_val retval;
+  TAO::SArg_Traits< char *>::in_arg_val _tao_service_type;
+  TAO::SArg_Traits< ::CORBA::Long>::inout_arg_val _tao_sc_id;
 
   TAO::Argument * const args[] =
     {
@@ -375,11 +381,11 @@ void POA_Plesk::Naming::ObjectResolver::resolve_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -401,25 +407,25 @@ namespace POA_Plesk
 
       void execute () override
       {
-        TAO::SArg_Traits<::CORBA::Object>::ret_arg_type retval =
-          TAO::Portable_Server::get_ret_arg<::CORBA::Object> (
+        TAO::SArg_Traits< ::CORBA::Object>::ret_arg_type retval =
+          TAO::Portable_Server::get_ret_arg< ::CORBA::Object> (
             this->operation_details_,
             this->args_);
 
-        TAO::SArg_Traits<char *>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg<char *> (
+        TAO::SArg_Traits< char *>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg< char *> (
             this->operation_details_,
             this->args_,
             1);
 
-        TAO::SArg_Traits<char *>::in_arg_type arg_2 =
-          TAO::Portable_Server::get_in_arg<char *> (
+        TAO::SArg_Traits< char *>::in_arg_type arg_2 =
+          TAO::Portable_Server::get_in_arg< char *> (
             this->operation_details_,
             this->args_,
             2);
 
-        TAO::SArg_Traits<::CORBA::Long>::inout_arg_type arg_3 =
-          TAO::Portable_Server::get_inout_arg<::CORBA::Long> (
+        TAO::SArg_Traits< ::CORBA::Long>::inout_arg_type arg_3 =
+          TAO::Portable_Server::get_inout_arg< ::CORBA::Long> (
             this->operation_details_,
             this->args_,
             3);
@@ -443,17 +449,19 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<::CORBA::Object>::ret_val retval;
-  TAO::SArg_Traits<char *>::in_arg_val _tao_service_type;
-  TAO::SArg_Traits<char *>::in_arg_val _tao_version;
-  TAO::SArg_Traits<::CORBA::Long>::inout_arg_val _tao_sc_id;
+#endif /* TAO_HAS_INTERCEPTORS */
+
+  TAO::SArg_Traits< ::CORBA::Object>::ret_val retval;
+  TAO::SArg_Traits< char *>::in_arg_val _tao_service_type;
+  TAO::SArg_Traits< char *>::in_arg_val _tao_version;
+  TAO::SArg_Traits< ::CORBA::Long>::inout_arg_val _tao_sc_id;
 
   TAO::Argument * const args[] =
     {
@@ -480,15 +488,15 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Plesk::Naming::ObjectResolver::_is_a (char const *value)
+::CORBA::Boolean POA_Plesk::Naming::ObjectResolver::_is_a (const char* value)
 {
   return
     (
@@ -497,7 +505,7 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
     );
 }
 
-char const *POA_Plesk::Naming::ObjectResolver::_interface_repository_id () const
+const char* POA_Plesk::Naming::ObjectResolver::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
@@ -628,8 +636,8 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve (
     }
 
   _tao_ptr->resolve (
-        ((TAO::Arg_Traits<::CORBA::Object>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[2])->arg ()
+        ((TAO::Arg_Traits< ::CORBA::Object>::in_arg_val *) args[1])->arg (),
+        ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[2])->arg ()
       );
 }
 
@@ -647,7 +655,7 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_exc
     }
 
   _tao_ptr->resolve_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -665,8 +673,8 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc 
     }
 
   _tao_ptr->resolve_sc (
-        ((TAO::Arg_Traits<::CORBA::Object>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[2])->arg ()
+        ((TAO::Arg_Traits< ::CORBA::Object>::in_arg_val *) args[1])->arg (),
+        ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[2])->arg ()
       );
 }
 
@@ -684,7 +692,7 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc_
     }
 
   _tao_ptr->resolve_sc_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -715,14 +723,14 @@ namespace POA_Plesk
 
       void execute () override
       {
-        TAO::SArg_Traits<::CORBA::Object>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg<::CORBA::Object> (
+        TAO::SArg_Traits< ::CORBA::Object>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg< ::CORBA::Object> (
             this->operation_details_,
             this->args_,
             1);
 
-        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_2 =
-          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
+        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_2 =
+          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
             this->operation_details_,
             this->args_,
             2);
@@ -744,16 +752,18 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::CORBA::Object>::in_arg_val _tao_ami_return_val;
-  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_sc_id;
+#endif /* TAO_HAS_INTERCEPTORS */
+
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::CORBA::Object>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_sc_id;
 
   TAO::Argument * const args[] =
     {
@@ -779,11 +789,11 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -805,8 +815,8 @@ namespace POA_Plesk
 
       void execute () override
       {
-        TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+        TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
             this->operation_details_,
             this->args_,
             1);
@@ -844,15 +854,17 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+#endif /* TAO_HAS_INTERCEPTORS */
+
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -877,11 +889,11 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -903,14 +915,14 @@ namespace POA_Plesk
 
       void execute () override
       {
-        TAO::SArg_Traits<::CORBA::Object>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg<::CORBA::Object> (
+        TAO::SArg_Traits< ::CORBA::Object>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg< ::CORBA::Object> (
             this->operation_details_,
             this->args_,
             1);
 
-        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_2 =
-          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
+        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_2 =
+          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
             this->operation_details_,
             this->args_,
             2);
@@ -932,16 +944,18 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::CORBA::Object>::in_arg_val _tao_ami_return_val;
-  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_sc_id;
+#endif /* TAO_HAS_INTERCEPTORS */
+
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::CORBA::Object>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_sc_id;
 
   TAO::Argument * const args[] =
     {
@@ -967,11 +981,11 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -993,8 +1007,8 @@ namespace POA_Plesk
 
       void execute () override
       {
-        TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+        TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
             this->operation_details_,
             this->args_,
             1);
@@ -1032,15 +1046,17 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+#endif /* TAO_HAS_INTERCEPTORS */
+
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1065,15 +1081,15 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Plesk::Naming::AMI_ObjectResolverHandler::_is_a (char const *value)
+::CORBA::Boolean POA_Plesk::Naming::AMI_ObjectResolverHandler::_is_a (const char* value)
 {
   return
     (
@@ -1083,7 +1099,7 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
     );
 }
 
-char const *POA_Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_id () const
+const char* POA_Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0";
 }

@@ -23,7 +23,6 @@
  **/
 
 #include "enum_in_structC.h"
-#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -49,6 +48,7 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "enum_in_structC.inl"
@@ -75,8 +75,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_HoldsEnum[] =
       {
-        { "named_enum", std::addressof (HoldsEnum::_tc_Named) },
-        { "unnamed_enum", std::addressof (_tc_UnNamed) }
+        { "named_enum", &HoldsEnum::_tc_Named },
+        { "unnamed_enum", &_tc_UnNamed }
       };
 
 static TAO::TypeCode::Struct<
@@ -95,7 +95,9 @@ _tao_tc_HoldsEnum (
 
 ::CORBA::TypeCode_ptr const _tc_HoldsEnum = std::addressof(_tao_tc_HoldsEnum);
 
-void HoldsEnum::_tao_any_destructor (void *_tao_void_pointer)
+void
+HoldsEnum::_tao_any_destructor (
+    void *_tao_void_pointer)
 {
   HoldsEnum *tmp = static_cast<HoldsEnum *> (_tao_void_pointer);
   delete tmp;
@@ -129,13 +131,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_en_10 (
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_en_10 (
         ::CORBA::tk_array,
-        std::addressof (decl_heavy_struct::_tc_str_en),
+        &decl_heavy_struct::_tc_str_en,
         10U);
 
     ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_en =
-      std::addressof (decl_heavy_struct_m_en_10);
+      &decl_heavy_struct_m_en_10;
   }
 }
 }
@@ -155,13 +157,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_st_10 (
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_st_10 (
         ::CORBA::tk_array,
-        std::addressof (decl_heavy_struct::_tc_st),
+        &decl_heavy_struct::_tc_st,
         10U);
 
     ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_st =
-      std::addressof (decl_heavy_struct_m_st_10);
+      &decl_heavy_struct_m_st_10;
   }
 }
 }
@@ -181,13 +183,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_un_10 (
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_un_10 (
         ::CORBA::tk_array,
-        std::addressof (decl_heavy_struct::_tc_un),
+        &decl_heavy_struct::_tc_un,
         10U);
 
     ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_un =
-      std::addressof (decl_heavy_struct_m_un_10);
+      &decl_heavy_struct_m_un_10;
   }
 }
 }
@@ -200,9 +202,9 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_decl_heavy_struct[] =
       {
-        { "m_en", std::addressof (TAO::TypeCode::tc_decl_heavy_struct_m_en) },
-        { "m_st", std::addressof (TAO::TypeCode::tc_decl_heavy_struct_m_st) },
-        { "m_un", std::addressof (TAO::TypeCode::tc_decl_heavy_struct_m_un) }
+        { "m_en", &TAO::TypeCode::tc_decl_heavy_struct_m_en },
+        { "m_st", &TAO::TypeCode::tc_decl_heavy_struct_m_st },
+        { "m_un", &TAO::TypeCode::tc_decl_heavy_struct_m_un }
       };
 
 static TAO::TypeCode::Struct<
@@ -221,7 +223,9 @@ _tao_tc_decl_heavy_struct (
 
 ::CORBA::TypeCode_ptr const _tc_decl_heavy_struct = std::addressof(_tao_tc_decl_heavy_struct);
 
-void decl_heavy_struct::_tao_any_destructor (void *_tao_void_pointer)
+void
+decl_heavy_struct::_tao_any_destructor (
+    void *_tao_void_pointer)
 {
   decl_heavy_struct *tmp = static_cast<decl_heavy_struct *> (_tao_void_pointer);
   delete tmp;
@@ -324,8 +328,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_decl_heavy_struct_st[] =
       {
-        { "a", std::addressof (CORBA::_tc_long) },
-        { "b", std::addressof (CORBA::_tc_char) }
+        { "a", &CORBA::_tc_long },
+        { "b", &CORBA::_tc_char }
       };
 
 static TAO::TypeCode::Struct<
@@ -344,7 +348,9 @@ _tao_tc_decl_heavy_struct_st (
 
 ::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_st = std::addressof(_tao_tc_decl_heavy_struct_st);
 
-void decl_heavy_struct::st::_tao_any_destructor (void *_tao_void_pointer)
+void
+decl_heavy_struct::st::_tao_any_destructor (
+    void *_tao_void_pointer)
 {
   st *tmp = static_cast<st *> (_tao_void_pointer);
   delete tmp;
@@ -455,13 +461,13 @@ decl_heavy_struct::un::operator= (::decl_heavy_struct::un const &u)
 void decl_heavy_struct::un::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__0 (1, "a", std::addressof (CORBA::_tc_long));
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__1 (2, "b", std::addressof (CORBA::_tc_char));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__0 (1, "a", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__1 (2, "b", &CORBA::_tc_char);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_decl_heavy_struct_un[] =
   {
-    std::addressof (_tao_cases_decl_heavy_struct_un__0),
-    std::addressof (_tao_cases_decl_heavy_struct_un__1)
+    &_tao_cases_decl_heavy_struct_un__0,
+    &_tao_cases_decl_heavy_struct_un__1
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -471,7 +477,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_decl_heavy_struct_un (
     "IDL:decl_heavy_struct/un:1.0",
     "un",
-    std::addressof (CORBA::_tc_long),
+    &CORBA::_tc_long,
     _tao_cases_decl_heavy_struct_un,
     sizeof (_tao_cases_decl_heavy_struct_un)/sizeof (_tao_cases_decl_heavy_struct_un[0]),
     -1);
@@ -594,7 +600,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_ErrorException[] =
       {
-        { "reason", std::addressof (ErrorException::_tc_ReasonCode) }
+        { "reason", &ErrorException::_tc_ReasonCode }
       };
 
 static TAO::TypeCode::Struct<
@@ -651,7 +657,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::HoldsEnum const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::HoldsEnum>::insert_copy (
+  TAO::Any_Dual_Impl_T< ::HoldsEnum>::insert_copy (
     _tao_any,
     ::HoldsEnum::_tao_any_destructor,
     _tc_HoldsEnum,
@@ -663,7 +669,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::HoldsEnum *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::HoldsEnum>::insert (
+  TAO::Any_Dual_Impl_T< ::HoldsEnum>::insert (
     _tao_any,
     ::HoldsEnum::_tao_any_destructor,
     _tc_HoldsEnum,
@@ -675,7 +681,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::HoldsEnum const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T<::HoldsEnum>::extract (
+  return TAO::Any_Dual_Impl_T< ::HoldsEnum>::extract (
     _tao_any,
     ::HoldsEnum::_tao_any_destructor,
     _tc_HoldsEnum,
@@ -722,7 +728,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::decl_heavy_struct const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::decl_heavy_struct>::insert_copy (
+  TAO::Any_Dual_Impl_T< ::decl_heavy_struct>::insert_copy (
     _tao_any,
     ::decl_heavy_struct::_tao_any_destructor,
     _tc_decl_heavy_struct,
@@ -734,7 +740,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::decl_heavy_struct *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::decl_heavy_struct>::insert (
+  TAO::Any_Dual_Impl_T< ::decl_heavy_struct>::insert (
     _tao_any,
     ::decl_heavy_struct::_tao_any_destructor,
     _tc_decl_heavy_struct,
@@ -746,7 +752,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::decl_heavy_struct const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T<::decl_heavy_struct>::extract (
+  return TAO::Any_Dual_Impl_T< ::decl_heavy_struct>::extract (
     _tao_any,
     ::decl_heavy_struct::_tao_any_destructor,
     _tc_decl_heavy_struct,
@@ -829,7 +835,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, UnNamed _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, UnNamed & _tao_enumerator)
@@ -851,7 +857,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, HoldsEnum::Named _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, HoldsEnum::Named & _tao_enumerator)
@@ -897,7 +903,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_struct::str_en _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, decl_heavy_struct::str_en & _tao_enumerator)
@@ -1014,7 +1020,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_union._d ())
   {
@@ -1039,13 +1045,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     decl_heavy_struct::un &_tao_union)
 {
-  CORBA::Long _tao_discriminant;
+  CORBA::Long _tao_discriminant {};
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_discriminant)
   {
@@ -1164,7 +1170,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ErrorException::ReasonCode _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ErrorException::ReasonCode & _tao_enumerator)

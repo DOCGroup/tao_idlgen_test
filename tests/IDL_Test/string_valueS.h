@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRING_VALUES_Y9ZIBM_H_
-#define _TAO_IDL_STRING_VALUES_Y9ZIBM_H_
+#ifndef _TAO_IDL_STRING_VALUES_OEB7EV_H_
+#define _TAO_IDL_STRING_VALUES_OEB7EV_H_
 
 #include /**/ "ace/pre.h"
 
@@ -51,7 +51,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -68,7 +68,7 @@ namespace TAO
 #define _INCLUDE_TEST_STRINGTEST__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::include_test::StringTest>
+  class SArg_Traits< ::include_test::StringTest>
     : public
         Object_SArg_Traits_T<
             ::include_test::StringTest *,

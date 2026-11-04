@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REPO_ID_MODS_15KS9C_H_
-#define _TAO_IDL_REPO_ID_MODS_15KS9C_H_
+#ifndef _TAO_IDL_REPO_ID_MODS_1JL2PK_H_
+#define _TAO_IDL_REPO_ID_MODS_1JL2PK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -50,7 +50,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,

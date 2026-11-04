@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_UNION_ANONYMOUSS_8DZBQH_CPP_
-#define _TAO_IDL_UNION_ANONYMOUSS_8DZBQH_CPP_
+#ifndef _TAO_IDL_UNION_ANONYMOUSS_NJ09HL_CPP_
+#define _TAO_IDL_UNION_ANONYMOUSS_NJ09HL_CPP_
 
 #include "union_anonymousS.h"
 

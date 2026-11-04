@@ -23,7 +23,6 @@
  **/
 
 #include "generic_objectC.h"
-#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/CDR.h"
@@ -32,6 +31,7 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "generic_objectC.inl"
@@ -162,7 +162,7 @@ TAO::Objref_Traits<generic>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<generic>::marshal (generic_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<generic>::marshal (const generic_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -180,10 +180,10 @@ generic::op (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::CORBA::Object>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_inarg (inarg);
-  TAO::Arg_Traits<::CORBA::Object>::inout_arg_val _tao_inoutarg (inoutarg);
-  TAO::Arg_Traits<::CORBA::Object>::out_arg_val _tao_outarg (outarg);
+  TAO::Arg_Traits< ::CORBA::Object>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits< ::CORBA::Object>::inout_arg_val _tao_inoutarg (inoutarg);
+  TAO::Arg_Traits< ::CORBA::Object>::out_arg_val _tao_outarg (outarg);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -220,8 +220,8 @@ generic::sendc_op (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_inarg (inarg);
-  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_inoutarg (inoutarg);
+  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_inarg (inarg);
+  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_inoutarg (inoutarg);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -290,10 +290,12 @@ generic::_tao_release (generic_ptr obj)
 }
 
 ::CORBA::Boolean
-generic::_is_a (char const *value)
+generic::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:generic:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+  if (
+      std::strcmp (value, "IDL:generic:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -303,17 +305,17 @@ generic::_is_a (char const *value)
     }
 }
 
-char const *generic::_interface_repository_id () const
+const char* generic::_interface_repository_id () const
 {
   return "IDL:generic:1.0";
 }
 
-char const *generic::_desc_repository_id ()
+const char* generic::_desc_repository_id ()
 {
   return "IDL:generic:1.0";
 }
 
-char const *generic::_desc_interface_name ()
+const char* generic::_desc_interface_name ()
 {
   return "generic";
 }
@@ -458,14 +460,14 @@ AMH_genericExceptionHolder::_tao_unmarshal (
 void
 AMH_genericExceptionHolder::raise_op ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_genericExceptionHolder::raise_sendc_op ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -492,7 +494,7 @@ TAO::Objref_Traits<AMH_genericResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_genericResponseHandler>::marshal (AMH_genericResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_genericResponseHandler>::marshal (const AMH_genericResponseHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -546,11 +548,13 @@ AMH_genericResponseHandler::_tao_release (AMH_genericResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMH_genericResponseHandler::_is_a (char const *value)
+AMH_genericResponseHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:AMH_genericResponseHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:AMH_genericResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -560,17 +564,17 @@ AMH_genericResponseHandler::_is_a (char const *value)
     }
 }
 
-char const *AMH_genericResponseHandler::_interface_repository_id () const
+const char* AMH_genericResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_genericResponseHandler:1.0";
 }
 
-char const *AMH_genericResponseHandler::_desc_repository_id ()
+const char* AMH_genericResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_genericResponseHandler:1.0";
 }
 
-char const *AMH_genericResponseHandler::_desc_interface_name ()
+const char* AMH_genericResponseHandler::_desc_interface_name ()
 {
   return "AMH_genericResponseHandler";
 }
@@ -604,7 +608,7 @@ TAO::Objref_Traits<AMI_genericHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_genericHandler>::marshal (AMI_genericHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_genericHandler>::marshal (const AMI_genericHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -622,10 +626,10 @@ AMI_genericHandler::op (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_inoutarg (inoutarg);
-  TAO::Arg_Traits<::CORBA::Object>::in_arg_val _tao_outarg (outarg);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_inoutarg (inoutarg);
+  TAO::Arg_Traits< ::CORBA::Object>::in_arg_val _tao_outarg (outarg);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -727,8 +731,8 @@ AMI_genericHandler::op_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -794,11 +798,13 @@ AMI_genericHandler::_tao_release (AMI_genericHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_genericHandler::_is_a (char const *value)
+AMI_genericHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_genericHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -808,17 +814,17 @@ AMI_genericHandler::_is_a (char const *value)
     }
 }
 
-char const *AMI_genericHandler::_interface_repository_id () const
+const char* AMI_genericHandler::_interface_repository_id () const
 {
   return "IDL:AMI_genericHandler:1.0";
 }
 
-char const *AMI_genericHandler::_desc_repository_id ()
+const char* AMI_genericHandler::_desc_repository_id ()
 {
   return "IDL:AMI_genericHandler:1.0";
 }
 
-char const *AMI_genericHandler::_desc_interface_name ()
+const char* AMI_genericHandler::_desc_interface_name ()
 {
   return "AMI_genericHandler";
 }
@@ -847,7 +853,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, ObjectType _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ObjectType & _tao_enumerator)
@@ -876,7 +882,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_union._d ())
   {
@@ -901,13 +907,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     Selecter &_tao_union)
 {
-  ObjectType _tao_discriminant;
+  ObjectType _tao_discriminant {};
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_discriminant)
   {
@@ -949,7 +955,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    generic_ptr const _tao_objref)
+    const generic_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -967,7 +973,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::generic>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::generic>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -1041,7 +1047,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    AMI_genericHandler_ptr const _tao_objref)
+    const AMI_genericHandler_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1059,7 +1065,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::AMI_genericHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::AMI_genericHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSA_DTS5W8_H_
-#define _TAO_IDL_ANONYMOUSA_DTS5W8_H_
+#ifndef _TAO_IDL_ANONYMOUSA_HP2MHI_H_
+#define _TAO_IDL_ANONYMOUSA_HP2MHI_H_
 
 #include /**/ "ace/pre.h"
 
@@ -109,7 +109,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::anon_bd_string_test_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::anon_bd_string_test_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, All_Anon::anon_bd_string_test_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, All_Anon::anon_bd_string_test_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -127,7 +127,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::AMH_anon_bd_string_testResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::AMH_anon_bd_string_testResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, All_Anon::AMH_anon_bd_string_testResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, All_Anon::AMH_anon_bd_string_testResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -136,7 +136,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::AMI_anon_bd_string_testHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::AMI_anon_bd_string_testHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, All_Anon::AMI_anon_bd_string_testHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, All_Anon::AMI_anon_bd_string_testHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

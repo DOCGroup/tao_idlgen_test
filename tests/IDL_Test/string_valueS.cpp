@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRING_VALUES_YO89IW_CPP_
-#define _TAO_IDL_STRING_VALUES_YO89IW_CPP_
+#ifndef _TAO_IDL_STRING_VALUES_SOUQUK_CPP_
+#define _TAO_IDL_STRING_VALUES_SOUQUK_CPP_
 
 #include "string_valueS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
