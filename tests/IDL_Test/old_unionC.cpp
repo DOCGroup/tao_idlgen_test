@@ -23,6 +23,7 @@
  **/
 
 #include "old_unionC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -46,7 +47,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "old_unionC.inl"
@@ -1562,7 +1563,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -1590,13 +1591,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     OldUnion::Foo &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -1653,7 +1654,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -1678,14 +1679,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     OldUnion::Foo2 &_tao_union)
 {
-  CORBA::Char _tao_discriminant {};
+  CORBA::Char _tao_discriminant;
   ::ACE_InputCDR::to_char tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {

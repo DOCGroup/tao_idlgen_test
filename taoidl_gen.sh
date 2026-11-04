@@ -1,4 +1,8 @@
 export TAO_IDLGEN_ROOT=`pwd`
+pushd $ACE_ROOT/apps/gperf/src
+$ACE_ROOT/bin/mwc.pl -type gnuace -workers 8
+make realclean && make -j 8
+popd
 pushd $TAO_ROOT
 declare -a tests=("tests/AMI"
                   "tests/AMH_Exceptions"

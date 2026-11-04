@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEPREFIXS_T777KJ_H_
-#define _TAO_IDL_TYPEPREFIXS_T777KJ_H_
+#ifndef _TAO_IDL_TYPEPREFIXS_8OHUC8_H_
+#define _TAO_IDL_TYPEPREFIXS_8OHUC8_H_
 
 #include /**/ "ace/pre.h"
 

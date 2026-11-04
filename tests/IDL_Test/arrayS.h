@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAYS_IQ86AG_H_
-#define _TAO_IDL_ARRAYS_IQ86AG_H_
+#ifndef _TAO_IDL_ARRAYS_3DNPR1_H_
+#define _TAO_IDL_ARRAYS_3DNPR1_H_
 
 #include /**/ "ace/pre.h"
 

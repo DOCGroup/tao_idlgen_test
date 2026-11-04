@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_MODULEA_D7415X_H_
-#define _TAO_IDL_MODULEA_D7415X_H_
+#ifndef _TAO_IDL_MODULEA_MNO6EU_H_
+#define _TAO_IDL_MODULEA_MNO6EU_H_
 
 #include /**/ "ace/pre.h"
 

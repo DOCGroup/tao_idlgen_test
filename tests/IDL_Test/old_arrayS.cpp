@@ -22,11 +22,11 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYS_TQX68Y_CPP_
-#define _TAO_IDL_OLD_ARRAYS_TQX68Y_CPP_
+#ifndef _TAO_IDL_OLD_ARRAYS_OHU28Q_CPP_
+#define _TAO_IDL_OLD_ARRAYS_OHU28Q_CPP_
 
 #include "old_arrayS.h"
-#include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
+#include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -52,29 +52,110 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
-static const TAO_operation_db_entry OldArray_AMH_A_i_operations [] = {
-  {"op", std::addressof(POA_OldArray::AMH_A_i::op_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op)},
-  {"op2", std::addressof(POA_OldArray::AMH_A_i::op2_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op2)},
-  {"op4", std::addressof(POA_OldArray::AMH_A_i::op4_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op4)},
-  {"_get_attribute_array", std::addressof(POA_OldArray::AMH_A_i::_get_attribute_array_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_get_attribute_array)},
-  {"_set_attribute_array", std::addressof(POA_OldArray::AMH_A_i::_set_attribute_array_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_set_attribute_array)},
-  {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
-  {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-  {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr}
+class TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldArray_AMH_A_i_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (30);
-static char _tao_OldArray_AMH_A_i_optable_pool [_tao_OldArray_AMH_A_i_optable_size];
-static ACE_Static_Allocator_Base _tao_OldArray_AMH_A_i_allocator (_tao_OldArray_AMH_A_i_optable_pool, _tao_OldArray_AMH_A_i_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldArray_AMH_A_i_optable (
-    OldArray_AMH_A_i_operations,
-    10,
-    20,
-    &_tao_OldArray_AMH_A_i_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+      5, 21,  0, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21,  0, 21,  0, 21, 21,
+      0,  5, 21, 21, 21, 21, 21, 21, 21, 21,
+     21,  0,  0, 21, 21, 21,  0, 21, 21, 21,
+     21,  0, 21, 21, 21, 21, 21, 21,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {10};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {20};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {20};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {19};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},
+      {"op", std::addressof(POA_OldArray::AMH_A_i::op_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op)},
+      {"op4", std::addressof(POA_OldArray::AMH_A_i::op4_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op4)},
+      {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
+      {"op2", std::addressof(POA_OldArray::AMH_A_i::op2_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op2)},
+      {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
+      {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
+      {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
+      {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
+      {"_get_attribute_array", std::addressof(POA_OldArray::A_i::_get_attribute_array_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_get_attribute_array)},
+      {"_set_attribute_array", std::addressof(POA_OldArray::A_i::_set_attribute_array_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_set_attribute_array)},
+    };
+
+  static constexpr signed char lookup[] =
+    {
+       -1,  -1,   2,   3,  -1,   4,  -1,  -1,   5,  -1,   6,  -1,  -1,   7,
+        8,   9,  -1,  -1, -10,  -2, -22,
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          int slot = lookup[key];
+
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+            {
+              const char *s = wordlist[slot].opname;
+
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+                return std::addressof (wordlist[slot]);
+            }
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+            return nullptr;
+          else
+            {
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+
+              while (--ptr >= base)
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  return ptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable tao_OldArray_AMH_A_i_optable;
 
 POA_OldArray::AMH_A_i::AMH_A_i ()
 {
@@ -353,28 +434,108 @@ POA_OldArray::AMH_A_i::_this ()
   return {};
 }
 
-static const TAO_operation_db_entry OldArray_A_i_operations [] = {
-  {"op", std::addressof(POA_OldArray::A_i::op_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op)},
-  {"op2", std::addressof(POA_OldArray::A_i::op2_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op2)},
-  {"op4", std::addressof(POA_OldArray::A_i::op4_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op4)},
-  {"_get_attribute_array", std::addressof(POA_OldArray::A_i::_get_attribute_array_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_get_attribute_array)},
-  {"_set_attribute_array", std::addressof(POA_OldArray::A_i::_set_attribute_array_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_set_attribute_array)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_OldArray_A_i_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldArray_A_i_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (30);
-static char _tao_OldArray_A_i_optable_pool [_tao_OldArray_A_i_optable_size];
-static ACE_Static_Allocator_Base _tao_OldArray_A_i_allocator (_tao_OldArray_A_i_optable_pool, _tao_OldArray_A_i_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldArray_A_i_optable (
-    OldArray_A_i_operations,
-    10,
-    20,
-    &_tao_OldArray_A_i_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_A_i_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldArray_A_i_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+      5, 21,  0, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+     21, 21, 21, 21, 21,  0, 21,  0, 21, 21,
+      0,  5, 21, 21, 21, 21, 21, 21, 21, 21,
+     21,  0,  0, 21, 21, 21,  0, 21, 21, 21,
+     21,  0, 21, 21, 21, 21, 21, 21,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldArray_A_i_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {10};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {20};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {20};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {19};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},
+      {"op", std::addressof(POA_OldArray::A_i::op_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op)},
+      {"op4", std::addressof(POA_OldArray::A_i::op4_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op4)},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"op2", std::addressof(POA_OldArray::A_i::op2_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op2)},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"_get_attribute_array", std::addressof(POA_OldArray::A_i::_get_attribute_array_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_get_attribute_array)},
+      {"_set_attribute_array", std::addressof(POA_OldArray::A_i::_set_attribute_array_skel), std::addressof(POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_set_attribute_array)},
+    };
+
+  static constexpr signed char lookup[] =
+    {
+       -1,  -1,   2,   3,  -1,   4,  -1,  -1,   5,  -1,   6,  -1,  -1,   7,
+        8,   9,  -1,  -1, -10,  -2, -22,
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          int slot = lookup[key];
+
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+            {
+              const char *s = wordlist[slot].opname;
+
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+                return std::addressof (wordlist[slot]);
+            }
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+            return nullptr;
+          else
+            {
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+
+              while (--ptr >= base)
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  return ptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldArray_A_i_Perfect_Hash_OpTable tao_OldArray_A_i_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation
@@ -1091,33 +1252,114 @@ POA_OldArray::TAO_AMH_A_iResponseHandler::set_attribute_array_excep (
   }
 }
 
-static const TAO_operation_db_entry OldArray_AMI_A_iHandler_operations [] = {
-  {"op", std::addressof(POA_OldArray::AMI_A_iHandler::op_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op)},
-  {"op_excep", std::addressof(POA_OldArray::AMI_A_iHandler::op_excep_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op_excep)},
-  {"op2", std::addressof(POA_OldArray::AMI_A_iHandler::op2_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2)},
-  {"op2_excep", std::addressof(POA_OldArray::AMI_A_iHandler::op2_excep_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2_excep)},
-  {"op4", std::addressof(POA_OldArray::AMI_A_iHandler::op4_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4)},
-  {"op4_excep", std::addressof(POA_OldArray::AMI_A_iHandler::op4_excep_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4_excep)},
-  {"get_attribute_array", std::addressof(POA_OldArray::AMI_A_iHandler::get_attribute_array_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array)},
-  {"get_attribute_array_excep", std::addressof(POA_OldArray::AMI_A_iHandler::get_attribute_array_excep_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array_excep)},
-  {"set_attribute_array", std::addressof(POA_OldArray::AMI_A_iHandler::set_attribute_array_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array)},
-  {"set_attribute_array_excep", std::addressof(POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array_excep)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldArray_AMI_A_iHandler_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (45);
-static char _tao_OldArray_AMI_A_iHandler_optable_pool [_tao_OldArray_AMI_A_iHandler_optable_size];
-static ACE_Static_Allocator_Base _tao_OldArray_AMI_A_iHandler_allocator (_tao_OldArray_AMI_A_iHandler_optable_pool, _tao_OldArray_AMI_A_iHandler_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldArray_AMI_A_iHandler_optable (
-    OldArray_AMI_A_iHandler_operations,
-    15,
-    30,
-    &_tao_OldArray_AMI_A_iHandler_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     31, 31, 31, 31, 31, 31, 31, 31, 31, 31,
+     31, 31, 31, 31, 31, 31, 31, 31, 31, 31,
+     31, 31, 31, 31, 31, 31, 31, 31, 31, 31,
+     31, 31, 31, 31, 31, 31, 31, 31, 31, 31,
+     31, 31, 31, 31, 31, 31, 31, 31, 31, 31,
+     15, 31,  0, 31, 31, 31, 31, 31, 31, 31,
+     31, 31, 31, 31, 31, 31, 31, 31, 31, 31,
+     31, 31, 31, 31, 31, 31, 31, 31, 31, 31,
+     31, 31, 31, 31, 31, 31, 31, 31, 31, 31,
+     31, 31, 31, 31, 31,  0, 31,  0, 31, 31,
+      0,  5, 31,  5, 31, 31, 31, 31, 31, 31,
+     31,  0,  0, 31, 31,  0,  0, 31, 31, 31,
+     31,  0, 31, 31, 31, 31, 31, 31,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {15};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {25};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {30};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {29};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {17};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},
+      {"op", std::addressof(POA_OldArray::AMI_A_iHandler::op_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op)},
+      {"op4", std::addressof(POA_OldArray::AMI_A_iHandler::op4_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4)},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"op_excep", std::addressof(POA_OldArray::AMI_A_iHandler::op_excep_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op_excep)},
+      {"op2_excep", std::addressof(POA_OldArray::AMI_A_iHandler::op2_excep_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2_excep)},
+      {"op4_excep", std::addressof(POA_OldArray::AMI_A_iHandler::op4_excep_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4_excep)},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"op2", std::addressof(POA_OldArray::AMI_A_iHandler::op2_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2)},
+      {"set_attribute_array", std::addressof(POA_OldArray::AMI_A_iHandler::set_attribute_array_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array)},
+      {"get_attribute_array", std::addressof(POA_OldArray::AMI_A_iHandler::get_attribute_array_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array)},
+      {"set_attribute_array_excep", std::addressof(POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array_excep)},
+      {"get_attribute_array_excep", std::addressof(POA_OldArray::AMI_A_iHandler::get_attribute_array_excep_skel), std::addressof(POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array_excep)},
+    };
+
+  static constexpr signed char lookup[] =
+    {
+       -1,  -1,   2,   3,  -1,   4,  -6,  -2,   5, -33,   8,  -1,  -1,   9,
+       10,  11,  -1,  -1,  12,  13,  -1,  -1,  -1,  -1,  14,  15,  -1,  -1,
+       -1,  -1,  16,
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          int slot = lookup[key];
+
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+            {
+              const char *s = wordlist[slot].opname;
+
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+                return std::addressof (wordlist[slot]);
+            }
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+            return nullptr;
+          else
+            {
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+
+              while (--ptr >= base)
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  return ptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable tao_OldArray_AMI_A_iHandler_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation

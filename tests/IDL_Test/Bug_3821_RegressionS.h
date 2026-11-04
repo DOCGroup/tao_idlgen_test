@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_3821_REGRESSIONS_95X457_H_
-#define _TAO_IDL_BUG_3821_REGRESSIONS_95X457_H_
+#ifndef _TAO_IDL_BUG_3821_REGRESSIONS_0U378N_H_
+#define _TAO_IDL_BUG_3821_REGRESSIONS_0U378N_H_
 
 #include /**/ "ace/pre.h"
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCES_PEBAMY_CPP_
-#define _TAO_IDL_SEQUENCES_PEBAMY_CPP_
+#ifndef _TAO_IDL_SEQUENCES_OOCH0K_CPP_
+#define _TAO_IDL_SEQUENCES_OOCH0K_CPP_
 
 #include "sequenceS.h"
 

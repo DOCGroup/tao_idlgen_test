@@ -23,6 +23,7 @@
  **/
 
 #include "TestVersionedNamespaceC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -35,7 +36,7 @@
 #include "tao/AnyTypeCode/Value_TypeCode_Static.h"
 #include "tao/AnyTypeCode/TypeCode_Value_Field.h"
 #include "tao/CDR.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "TestVersionedNamespaceC.inl"

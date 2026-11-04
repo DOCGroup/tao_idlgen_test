@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIAMONDS_DQ5M2B_H_
-#define _TAO_IDL_DIAMONDS_DQ5M2B_H_
+#ifndef _TAO_IDL_DIAMONDS_J7TR99_H_
+#define _TAO_IDL_DIAMONDS_J7TR99_H_
 
 #include /**/ "ace/pre.h"
 

@@ -23,6 +23,7 @@
  **/
 
 #include "TestVersionedNamespace2C.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -46,7 +47,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "TestVersionedNamespace2C.inl"
@@ -4972,7 +4973,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_union._d ())
     {
@@ -4990,14 +4991,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     M1::BooleanUnion1 &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (!_tao_discriminant)
     {
@@ -5036,7 +5037,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_union._d ())
     {
@@ -5050,14 +5051,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     M1::BooleanUnion2 &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (!_tao_discriminant)
     {

@@ -22,11 +22,11 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSS_YPI9V2_CPP_
-#define _TAO_IDL_ANONYMOUSS_YPI9V2_CPP_
+#ifndef _TAO_IDL_ANONYMOUSS_I6LFRG_CPP_
+#define _TAO_IDL_ANONYMOUSS_I6LFRG_CPP_
 
 #include "anonymousS.h"
-#include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
+#include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -52,32 +52,114 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
-static const TAO_operation_db_entry All_Anon_AMH_anon_bd_string_test_operations [] = {
-  {"TestFunc", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc)},
-  {"TestFunc2", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc2_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc2)},
-  {"TestFunc3", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc3_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc3)},
-  {"TestFunc23", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc23_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc23)},
-  {"TestFunc4", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc4_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc4)},
-  {"TestFunc41", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc41_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc41)},
-  {"TestFunc42", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc42_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc42)},
-  {"TestFunc43", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc43_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc43)},
-  {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
-  {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-  {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr}
+class TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_All_Anon_AMH_anon_bd_string_test_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (39);
-static char _tao_All_Anon_AMH_anon_bd_string_test_optable_pool [_tao_All_Anon_AMH_anon_bd_string_test_optable_size];
-static ACE_Static_Allocator_Base _tao_All_Anon_AMH_anon_bd_string_test_allocator (_tao_All_Anon_AMH_anon_bd_string_test_optable_pool, _tao_All_Anon_AMH_anon_bd_string_test_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_All_Anon_AMH_anon_bd_string_test_optable (
-    All_Anon_AMH_anon_bd_string_test_operations,
-    13,
-    26,
-    &_tao_All_Anon_AMH_anon_bd_string_test_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 10,
+      5,  0, 10, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30,  0, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30,  0, 30,  0, 30,  0,
+     15, 14, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 15, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {13};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {29};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {25};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {18};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
+      {"TestFunc", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc)},
+      {"TestFunc3", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc3_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc3)},
+      {"TestFunc23", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc23_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc23)},
+      {"TestFunc43", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc43_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc43)},
+      {"TestFunc2", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc2_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc2)},
+      {"TestFunc42", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc42_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc42)},
+      {"TestFunc4", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc4_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc4)},
+      {"TestFunc41", std::addressof(POA_All_Anon::AMH_anon_bd_string_test::TestFunc41_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc41)},
+      {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
+      {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
+      {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
+      {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
+    };
+
+  static constexpr signed char lookup[] =
+    {
+       -1,  -1,  -1,  -1,  -1,   5,  -8,  -2,   6,   7, -33,  -1,  -1,  -1,
+       10,  11,  -1,  -1,  -1,  12,  13,  -1,  -1,  -1,  14,  15,  -1,  -1,
+       16,  17,
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          int slot = lookup[key];
+
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+            {
+              const char *s = wordlist[slot].opname;
+
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+                return std::addressof (wordlist[slot]);
+            }
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+            return nullptr;
+          else
+            {
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+
+              while (--ptr >= base)
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  return ptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable tao_All_Anon_AMH_anon_bd_string_test_optable;
 
 POA_All_Anon::AMH_anon_bd_string_test::AMH_anon_bd_string_test ()
 {
@@ -444,31 +526,112 @@ POA_All_Anon::AMH_anon_bd_string_test::_this ()
   return {};
 }
 
-static const TAO_operation_db_entry All_Anon_anon_bd_string_test_operations [] = {
-  {"TestFunc", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc)},
-  {"TestFunc2", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc2_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc2)},
-  {"TestFunc3", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc3_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc3)},
-  {"TestFunc23", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc23_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc23)},
-  {"TestFunc4", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc4_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc4)},
-  {"TestFunc41", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc41_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc41)},
-  {"TestFunc42", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc42_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc42)},
-  {"TestFunc43", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc43_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc43)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_All_Anon_anon_bd_string_test_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (39);
-static char _tao_All_Anon_anon_bd_string_test_optable_pool [_tao_All_Anon_anon_bd_string_test_optable_size];
-static ACE_Static_Allocator_Base _tao_All_Anon_anon_bd_string_test_allocator (_tao_All_Anon_anon_bd_string_test_optable_pool, _tao_All_Anon_anon_bd_string_test_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_All_Anon_anon_bd_string_test_optable (
-    All_Anon_anon_bd_string_test_operations,
-    13,
-    26,
-    &_tao_All_Anon_anon_bd_string_test_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 10,
+      5,  0, 10, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30,  0, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30,  0, 30,  0, 30,  0,
+     15, 14, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 15, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {13};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {29};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {25};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {18};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"TestFunc", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc)},
+      {"TestFunc3", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc3_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc3)},
+      {"TestFunc23", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc23_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc23)},
+      {"TestFunc43", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc43_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc43)},
+      {"TestFunc2", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc2_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc2)},
+      {"TestFunc42", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc42_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc42)},
+      {"TestFunc4", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc4_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc4)},
+      {"TestFunc41", std::addressof(POA_All_Anon::anon_bd_string_test::TestFunc41_skel), std::addressof(POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc41)},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+    };
+
+  static constexpr signed char lookup[] =
+    {
+       -1,  -1,  -1,  -1,  -1,   5,  -8,  -2,   6,   7, -33,  -1,  -1,  -1,
+       10,  11,  -1,  -1,  -1,  12,  13,  -1,  -1,  -1,  14,  15,  -1,  -1,
+       16,  17,
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          int slot = lookup[key];
+
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+            {
+              const char *s = wordlist[slot].opname;
+
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+                return std::addressof (wordlist[slot]);
+            }
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+            return nullptr;
+          else
+            {
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+
+              while (--ptr >= base)
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  return ptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable tao_All_Anon_anon_bd_string_test_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation
@@ -1407,39 +1570,120 @@ POA_All_Anon::TAO_AMH_anon_bd_string_testResponseHandler::TestFunc43_excep (
   }
 }
 
-static const TAO_operation_db_entry All_Anon_AMI_anon_bd_string_testHandler_operations [] = {
-  {"TestFunc", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc)},
-  {"TestFunc_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc_excep)},
-  {"TestFunc2", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc2)},
-  {"TestFunc2_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc2_excep)},
-  {"TestFunc3", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc3)},
-  {"TestFunc3_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc3_excep)},
-  {"TestFunc23", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc23_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc23)},
-  {"TestFunc23_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc23_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc23_excep)},
-  {"TestFunc4", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc4_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc4)},
-  {"TestFunc4_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc4_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc4_excep)},
-  {"TestFunc41", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc41_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc41)},
-  {"TestFunc41_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc41_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc41_excep)},
-  {"TestFunc42", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc42_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc42)},
-  {"TestFunc42_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc42_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc42_excep)},
-  {"TestFunc43", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43)},
-  {"TestFunc43_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43_excep)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_All_Anon_AMI_anon_bd_string_testHandler_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (63);
-static char _tao_All_Anon_AMI_anon_bd_string_testHandler_optable_pool [_tao_All_Anon_AMI_anon_bd_string_testHandler_optable_size];
-static ACE_Static_Allocator_Base _tao_All_Anon_AMI_anon_bd_string_testHandler_allocator (_tao_All_Anon_AMI_anon_bd_string_testHandler_optable_pool, _tao_All_Anon_AMI_anon_bd_string_testHandler_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_All_Anon_AMI_anon_bd_string_testHandler_optable (
-    All_Anon_AMI_anon_bd_string_testHandler_operations,
-    21,
-    42,
-    &_tao_All_Anon_AMI_anon_bd_string_testHandler_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 15,
+     10,  0, 15, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30, 30, 30,  0, 30, 30, 30, 30, 30,
+     30, 30, 30, 30, 30,  0, 30,  0, 30,  0,
+     15,  3, 30, 30, 30, 30, 30, 30, 30, 30,
+     30, 30,  0, 30, 30, 30,  8, 30, 30, 30,
+     30, 30, 30, 30, 30, 30, 30, 30,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {21};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {16};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {29};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {25};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {7};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {26};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"TestFunc", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc)},
+      {"TestFunc3", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc3)},
+      {"TestFunc23", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc23_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc23)},
+      {"TestFunc43", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43)},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"TestFunc_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc_excep)},
+      {"TestFunc2_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc2_excep)},
+      {"TestFunc4_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc4_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc4_excep)},
+      {"TestFunc3_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc3_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc3_excep)},
+      {"TestFunc23_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc23_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc23_excep)},
+      {"TestFunc43_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43_excep)},
+      {"TestFunc42_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc42_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc42_excep)},
+      {"TestFunc41_excep", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc41_excep_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc41_excep)},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"TestFunc2", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc2_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc2)},
+      {"TestFunc42", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc42_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc42)},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+      {"TestFunc4", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc4_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc4)},
+      {"TestFunc41", std::addressof(POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc41_skel), std::addressof(POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc41)},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+    };
+
+  static constexpr signed char lookup[] =
+    {
+       -1,  -1,  -1,  -8,  -2,   5, -12,  -3,   6,   7, -36, -15,  -4,  10,
+       11, -38, -34,  -1,  19,  20,  21,  22,  -1,  -1,  23,  24,  -1,  -1,
+       -1,  25,
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          int slot = lookup[key];
+
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+            {
+              const char *s = wordlist[slot].opname;
+
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+                return std::addressof (wordlist[slot]);
+            }
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+            return nullptr;
+          else
+            {
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+
+              while (--ptr >= base)
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  return ptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable tao_All_Anon_AMI_anon_bd_string_testHandler_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation

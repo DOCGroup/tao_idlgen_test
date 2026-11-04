@@ -23,6 +23,7 @@
  **/
 
 #include "generic_objectC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/CDR.h"
@@ -31,7 +32,7 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "generic_objectC.inl"
@@ -858,8 +859,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ObjectType & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -882,7 +883,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -907,13 +908,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     Selecter &_tao_union)
 {
-  ObjectType _tao_discriminant {};
+  ObjectType _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {

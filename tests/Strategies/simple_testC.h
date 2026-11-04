@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTC_KP7ADH_H_
-#define _TAO_IDL_SIMPLE_TESTC_KP7ADH_H_
+#ifndef _TAO_IDL_SIMPLE_TESTC_ST5GIK_H_
+#define _TAO_IDL_SIMPLE_TESTC_ST5GIK_H_
 
 #include /**/ "ace/pre.h"
 

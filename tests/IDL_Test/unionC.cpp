@@ -23,6 +23,7 @@
  **/
 
 #include "unionC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -48,7 +49,7 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "unionC.inl"
@@ -8267,8 +8268,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, DataType & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -8291,7 +8292,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -8316,13 +8317,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     Data &_tao_union)
 {
-  DataType _tao_discriminant {};
+  DataType _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -8369,8 +8370,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Necessary::Kind & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -8393,7 +8394,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -8416,13 +8417,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     Necessary::WhichResult &_tao_union)
 {
-  Necessary::Kind _tao_discriminant {};
+  Necessary::Kind _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -8466,7 +8467,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -8496,13 +8497,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     foo &_tao_union)
 {
-  CORBA::Short _tao_discriminant {};
+  CORBA::Short _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -8560,7 +8561,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_union._d ())
     {
@@ -8574,14 +8575,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     UnionDiscTest::BooleanUnion &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (!_tao_discriminant)
     {
@@ -8616,7 +8617,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -8636,14 +8637,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     UnionDiscTest::CharUnion &_tao_union)
 {
-  CORBA::Char _tao_discriminant {};
+  CORBA::Char _tao_discriminant;
   ::ACE_InputCDR::to_char tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -8682,7 +8683,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_union._d ())
     {
@@ -8696,14 +8697,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::OneBranchT &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (!_tao_discriminant)
     {
@@ -8739,7 +8740,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (!_tao_union._d ())
     {
@@ -8753,14 +8754,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::OneBranchF &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_discriminant)
     {
@@ -8796,7 +8797,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << ::ACE_OutputCDR::from_octet (_tao_union.val ());
   return result;
@@ -8806,14 +8807,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::OneBranchD &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   ::CORBA::Octet _tao_union_tmp;
   ::ACE_InputCDR::to_octet _tao_union_helper (_tao_union_tmp);
@@ -8840,7 +8841,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << ::ACE_OutputCDR::from_octet (_tao_union.val ());
   return result;
@@ -8850,14 +8851,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::OneBranchTF &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   ::CORBA::Octet _tao_union_tmp;
   ::ACE_InputCDR::to_octet _tao_union_helper (_tao_union_tmp);
@@ -8884,7 +8885,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << ::ACE_OutputCDR::from_octet (_tao_union.val ());
   return result;
@@ -8894,14 +8895,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::OneBranchFT &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   ::CORBA::Octet _tao_union_tmp;
   ::ACE_InputCDR::to_octet _tao_union_helper (_tao_union_tmp);
@@ -8928,7 +8929,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << ::ACE_OutputCDR::from_octet (_tao_union.val ());
   return result;
@@ -8938,14 +8939,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::OneBranchTD &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   ::CORBA::Octet _tao_union_tmp;
   ::ACE_InputCDR::to_octet _tao_union_helper (_tao_union_tmp);
@@ -8972,7 +8973,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << ::ACE_OutputCDR::from_octet (_tao_union.val ());
   return result;
@@ -8982,14 +8983,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::OneBranchDT &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   ::CORBA::Octet _tao_union_tmp;
   ::ACE_InputCDR::to_octet _tao_union_helper (_tao_union_tmp);
@@ -9016,7 +9017,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << ::ACE_OutputCDR::from_octet (_tao_union.val ());
   return result;
@@ -9026,14 +9027,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::OneBranchFD &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   ::CORBA::Octet _tao_union_tmp;
   ::ACE_InputCDR::to_octet _tao_union_helper (_tao_union_tmp);
@@ -9060,7 +9061,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << ::ACE_OutputCDR::from_octet (_tao_union.val ());
   return result;
@@ -9070,14 +9071,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::OneBranchDF &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   ::CORBA::Octet _tao_union_tmp;
   ::ACE_InputCDR::to_octet _tao_union_helper (_tao_union_tmp);
@@ -9104,7 +9105,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_union._d ())
     {
@@ -9123,14 +9124,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::TwoBranchesTF &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_discriminant)
     {
@@ -9173,7 +9174,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (!_tao_union._d ())
     {
@@ -9192,14 +9193,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::TwoBranchesFT &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (!_tao_discriminant)
     {
@@ -9242,7 +9243,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_union._d ())
     {
@@ -9261,14 +9262,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::TwoBranchesTD &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_discriminant)
     {
@@ -9311,7 +9312,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (!_tao_union._d ())
     {
@@ -9330,14 +9331,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::TwoBranchesDT &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (!_tao_discriminant)
     {
@@ -9380,7 +9381,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (!_tao_union._d ())
     {
@@ -9399,14 +9400,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::TwoBranchesFD &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (!_tao_discriminant)
     {
@@ -9449,7 +9450,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_union._d ())
     {
@@ -9468,14 +9469,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     AllBoolUnions::TwoBranchesDF &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_discriminant)
     {
@@ -9515,8 +9516,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, disc1 & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -9537,8 +9538,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, disc2 & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -9559,8 +9560,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, disc_outer & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -9583,7 +9584,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -9608,13 +9609,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     inner1 &_tao_union)
 {
-  disc1 _tao_discriminant {};
+  disc1 _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -9663,7 +9664,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -9688,13 +9689,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     inner2 &_tao_union)
 {
-  disc2 _tao_discriminant {};
+  disc2 _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -9744,7 +9745,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -9769,13 +9770,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     outer &_tao_union)
 {
-  disc_outer _tao_discriminant {};
+  disc_outer _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -9824,8 +9825,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, UnionTest3::ValChoice & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -9848,7 +9849,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -9873,13 +9874,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     UnionTest3::ValType &_tao_union)
 {
-  UnionTest3::ValChoice _tao_discriminant {};
+  UnionTest3::ValChoice _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -9974,8 +9975,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, UnionTest3::IndChoice & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -9998,7 +9999,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -10023,13 +10024,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     UnionTest3::IndType &_tao_union)
 {
-  UnionTest3::IndChoice _tao_discriminant {};
+  UnionTest3::IndChoice _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -10076,8 +10077,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, XType & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -10098,8 +10099,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ZType & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -10122,7 +10123,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -10142,13 +10143,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     X::Y::Z &_tao_union)
 {
-  ZType _tao_discriminant {};
+  ZType _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -10208,7 +10209,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -10228,13 +10229,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     X &_tao_union)
 {
-  XType _tao_discriminant {};
+  XType _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -10270,8 +10271,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, FieldType & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -10294,7 +10295,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -10318,13 +10319,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     FieldValue &_tao_union)
 {
-  FieldType _tao_discriminant {};
+  FieldType _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -10389,8 +10390,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, TestOneEnum & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -10411,8 +10412,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, TestTwoEnum & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -10435,7 +10436,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -10460,13 +10461,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     TestUnion &_tao_union)
 {
-  CORBA::Short _tao_discriminant {};
+  CORBA::Short _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -10561,7 +10562,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -10592,13 +10593,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     U85 &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -10685,7 +10686,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -10710,13 +10711,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     U86 &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -10765,7 +10766,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -10793,13 +10794,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     U88 &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -10905,7 +10906,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -10930,13 +10931,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     U87 &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -10985,7 +10986,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -11013,13 +11014,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     U89 &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -11069,8 +11070,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, U90 & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -11125,7 +11126,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -11153,13 +11154,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     U91 &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -11211,7 +11212,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -11239,13 +11240,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     U92 &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -11300,7 +11301,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -11334,13 +11335,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     U93 &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -11401,7 +11402,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -11435,13 +11436,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     U94 &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -11525,7 +11526,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << _tao_union.value ();
   return result;
@@ -11535,14 +11536,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     DefaultInitializedStructUnion &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   UBar _tao_union_tmp;
   result = strm >> _tao_union_tmp;
@@ -11568,7 +11569,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << ::ACE_OutputCDR::from_boolean (_tao_union.value ());
   return result;
@@ -11578,14 +11579,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     DefaultInitializedBooleanUnion &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   ::CORBA::Boolean _tao_union_tmp;
   ::ACE_InputCDR::to_boolean _tao_union_helper (_tao_union_tmp);
@@ -11612,7 +11613,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << _tao_union.value ();
   return result;
@@ -11622,14 +11623,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     DefaultInitializedLongUnion &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   CORBA::Long _tao_union_tmp;
   result = strm >> _tao_union_tmp;
@@ -11655,7 +11656,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << _tao_union.value ();
   return result;
@@ -11665,14 +11666,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     DefaultInitializedDoubleUnion &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   CORBA::Double _tao_union_tmp;
   result = strm >> _tao_union_tmp;
@@ -11698,7 +11699,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << _tao_union.value ();
   return result;
@@ -11708,14 +11709,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     DefaultInitializedEnumUnion &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   U90 _tao_union_tmp =
     static_cast<U90> (0UL);
@@ -11742,7 +11743,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   DefaultInitializedLongArray_forany _tao_union_tmp (
       _tao_union.value ()
@@ -11755,14 +11756,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     DefaultInitializedArrayUnion &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   DefaultInitializedLongArray _tao_union_tmp;
   DefaultInitializedLongArray_forany _tao_union_helper (
@@ -11791,7 +11792,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   result = strm << _tao_union.value ();
   return result;
@@ -11801,14 +11802,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     DefaultInitializedStringUnion &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   ::CORBA::String_var _tao_union_tmp;
   result = strm >> _tao_union_tmp.out ();
@@ -11831,8 +11832,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ResetDiscriminator & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -11855,7 +11856,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -11883,13 +11884,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     ResetWithNoopBranches &_tao_union)
 {
-  ResetDiscriminator _tao_discriminant {};
+  ResetDiscriminator _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {

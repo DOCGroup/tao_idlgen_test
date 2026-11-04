@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_CONSTANTSC_V4OPI8_H_
-#define _TAO_IDL_CONSTANTSC_V4OPI8_H_
+#ifndef _TAO_IDL_CONSTANTSC_99SG59_H_
+#define _TAO_IDL_CONSTANTSC_99SG59_H_
 
 #include /**/ "ace/pre.h"
 

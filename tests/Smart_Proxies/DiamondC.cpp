@@ -23,12 +23,13 @@
  **/
 
 #include "DiamondC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "DiamondC.inl"
@@ -197,12 +198,17 @@ Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::TAO_Diamond_Top_Proxy_Factory_Ad
 Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::~TAO_Diamond_Top_Proxy_Factory_Adapter ()
 {
   // Making sure the factory which the adapter has is destroyed with it.
-  std::unique_ptr<TAO_Diamond_Top_Default_Proxy_Factory> proxy_factory {this->proxy_factory_};
+  if (this->proxy_factory_ != nullptr)
+    {
+      delete this->proxy_factory_;
+    }
 }
 
 void
 Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::register_proxy_factory (
-    TAO_Diamond_Top_Default_Proxy_Factory *df, bool one_shot_factory)
+    TAO_Diamond_Top_Default_Proxy_Factory *df,
+    bool one_shot_factory
+  )
 {
   ACE_MT (
       ACE_GUARD (
@@ -472,12 +478,17 @@ Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::TAO_Diamond_Left_Proxy_Factory_
 Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::~TAO_Diamond_Left_Proxy_Factory_Adapter ()
 {
   // Making sure the factory which the adapter has is destroyed with it.
-  std::unique_ptr<TAO_Diamond_Left_Default_Proxy_Factory> proxy_factory {this->proxy_factory_};
+  if (this->proxy_factory_ != nullptr)
+    {
+      delete this->proxy_factory_;
+    }
 }
 
 void
 Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::register_proxy_factory (
-    TAO_Diamond_Left_Default_Proxy_Factory *df, bool one_shot_factory)
+    TAO_Diamond_Left_Default_Proxy_Factory *df,
+    bool one_shot_factory
+  )
 {
   ACE_MT (
       ACE_GUARD (
@@ -747,12 +758,17 @@ Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::TAO_Diamond_Right_Proxy_Factor
 Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::~TAO_Diamond_Right_Proxy_Factory_Adapter ()
 {
   // Making sure the factory which the adapter has is destroyed with it.
-  std::unique_ptr<TAO_Diamond_Right_Default_Proxy_Factory> proxy_factory {this->proxy_factory_};
+  if (this->proxy_factory_ != nullptr)
+    {
+      delete this->proxy_factory_;
+    }
 }
 
 void
 Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::register_proxy_factory (
-    TAO_Diamond_Right_Default_Proxy_Factory *df, bool one_shot_factory)
+    TAO_Diamond_Right_Default_Proxy_Factory *df,
+    bool one_shot_factory
+  )
 {
   ACE_MT (
       ACE_GUARD (
@@ -1024,12 +1040,17 @@ Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::TAO_Diamond_Buttom_Proxy_Fact
 Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::~TAO_Diamond_Buttom_Proxy_Factory_Adapter ()
 {
   // Making sure the factory which the adapter has is destroyed with it.
-  std::unique_ptr<TAO_Diamond_Buttom_Default_Proxy_Factory> proxy_factory {this->proxy_factory_};
+  if (this->proxy_factory_ != nullptr)
+    {
+      delete this->proxy_factory_;
+    }
 }
 
 void
 Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::register_proxy_factory (
-    TAO_Diamond_Buttom_Default_Proxy_Factory *df, bool one_shot_factory)
+    TAO_Diamond_Buttom_Default_Proxy_Factory *df,
+    bool one_shot_factory
+  )
 {
   ACE_MT (
       ACE_GUARD (

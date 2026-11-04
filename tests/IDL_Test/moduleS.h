@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_MODULES_E11UJM_H_
-#define _TAO_IDL_MODULES_E11UJM_H_
+#ifndef _TAO_IDL_MODULES_MPLF40_H_
+#define _TAO_IDL_MODULES_MPLF40_H_
 
 #include /**/ "ace/pre.h"
 

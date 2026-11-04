@@ -23,6 +23,7 @@
  **/
 
 #include "arrayC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -49,7 +50,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "arrayC.inl"
@@ -7135,7 +7136,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_union._d ())
     {
@@ -7154,14 +7155,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     bug_2126::FirstUnion &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_discriminant)
     {
@@ -7262,7 +7263,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_union._d ())
     {
@@ -7281,14 +7282,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     bug_2126::SecondUnion &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_discriminant)
     {
@@ -7389,7 +7390,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_union._d ())
     {
@@ -7408,14 +7409,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     bug_2126::BdSecondUnion &_tao_union)
 {
-  CORBA::Boolean _tao_discriminant {};
+  CORBA::Boolean _tao_discriminant;
   ::ACE_InputCDR::to_boolean tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   if (_tao_discriminant)
     {
@@ -7521,7 +7522,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -7560,13 +7561,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     B85 &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {

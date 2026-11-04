@@ -23,6 +23,7 @@
  **/
 
 #include "old_constantsC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -46,7 +47,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "old_constantsC.inl"
@@ -1822,8 +1823,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, OldConstants::N & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -1876,8 +1877,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, OldConstants::M::N & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -1930,8 +1931,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, OldConstants::M::A::N & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp {};
-  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp = 0;
+  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {

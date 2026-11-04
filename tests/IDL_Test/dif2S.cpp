@@ -22,11 +22,11 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIF2S_UILXAP_CPP_
-#define _TAO_IDL_DIF2S_UILXAP_CPP_
+#ifndef _TAO_IDL_DIF2S_TX3Z6N_CPP_
+#define _TAO_IDL_DIF2S_TX3Z6N_CPP_
 
 #include "dif2S.h"
-#include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
+#include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -52,31 +52,91 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
-static const TAO_operation_db_entry OldDif2_AMH_ex1_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::AMH_ex1::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
-  {"op1", std::addressof(POA_OldDif2::AMH_ex1::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
-  {"op2", std::addressof(POA_OldDif2::AMH_ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
-  {"op3", std::addressof(POA_OldDif2::AMH_ex1::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
-  {"op4", std::addressof(POA_OldDif2::AMH_ex1::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
-  {"op5", std::addressof(POA_OldDif2::AMH_ex1::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
-  {"op6", std::addressof(POA_OldDif2::AMH_ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
-  {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
-  {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-  {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr}
+class TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_AMH_ex1_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (36);
-static char _tao_OldDif2_AMH_ex1_optable_pool [_tao_OldDif2_AMH_ex1_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_AMH_ex1_allocator (_tao_OldDif2_AMH_ex1_optable_pool, _tao_OldDif2_AMH_ex1_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_AMH_ex1_optable (
-    OldDif2_AMH_ex1_operations,
-    12,
-    24,
-    &_tao_OldDif2_AMH_ex1_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19,  5,  3,
+     15,  4,  9, 14,  0, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19,  0, 19,  0, 19, 19,
+      0,  5, 19, 19, 19, 19, 19, 19, 19, 19,
+     19,  0, 19, 19, 19, 19,  0, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {12};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {16};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {15};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op6", std::addressof(POA_OldDif2::AMH_ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
+      {"",0,0},
+      {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
+      {"op1", std::addressof(POA_OldDif2::AMH_ex1::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
+      {"op3", std::addressof(POA_OldDif2::AMH_ex1::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
+      {"op0", std::addressof(POA_OldDif2::AMH_ex1::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
+      {"",0,0},
+      {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
+      {"",0,0},
+      {"op4", std::addressof(POA_OldDif2::AMH_ex1::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
+      {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
+      {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
+      {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
+      {"",0,0},
+      {"op5", std::addressof(POA_OldDif2::AMH_ex1::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
+      {"op2", std::addressof(POA_OldDif2::AMH_ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          const char *s = wordlist[key].opname;
+
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+            return std::addressof (wordlist[key]);
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable tao_OldDif2_AMH_ex1_optable;
 
 POA_OldDif2::AMH_ex1::AMH_ex1 ()
 {
@@ -443,30 +503,89 @@ POA_OldDif2::AMH_ex1::_this ()
   return {};
 }
 
-static const TAO_operation_db_entry OldDif2_ex1_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::ex1::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
-  {"op1", std::addressof(POA_OldDif2::ex1::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
-  {"op2", std::addressof(POA_OldDif2::ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
-  {"op3", std::addressof(POA_OldDif2::ex1::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
-  {"op4", std::addressof(POA_OldDif2::ex1::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
-  {"op5", std::addressof(POA_OldDif2::ex1::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
-  {"op6", std::addressof(POA_OldDif2::ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_OldDif2_ex1_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_ex1_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (36);
-static char _tao_OldDif2_ex1_optable_pool [_tao_OldDif2_ex1_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_ex1_allocator (_tao_OldDif2_ex1_optable_pool, _tao_OldDif2_ex1_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_ex1_optable (
-    OldDif2_ex1_operations,
-    12,
-    24,
-    &_tao_OldDif2_ex1_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex1_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19,  5,  3,
+     15,  4,  9, 14,  0, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19,  0, 19,  0, 19, 19,
+      0,  5, 19, 19, 19, 19, 19, 19, 19, 19,
+     19,  0, 19, 19, 19, 19,  0, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_ex1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {12};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {16};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {15};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op6", std::addressof(POA_OldDif2::ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
+      {"",0,0},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"op1", std::addressof(POA_OldDif2::ex1::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
+      {"op3", std::addressof(POA_OldDif2::ex1::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
+      {"op0", std::addressof(POA_OldDif2::ex1::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
+      {"",0,0},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"",0,0},
+      {"op4", std::addressof(POA_OldDif2::ex1::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"",0,0},
+      {"op5", std::addressof(POA_OldDif2::ex1::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
+      {"op2", std::addressof(POA_OldDif2::ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          const char *s = wordlist[key].opname;
+
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+            return std::addressof (wordlist[key]);
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_ex1_Perfect_Hash_OpTable tao_OldDif2_ex1_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation
@@ -1492,37 +1611,117 @@ POA_OldDif2::TAO_AMH_ex1ResponseHandler::op6_excep (
   }
 }
 
-static const TAO_operation_db_entry OldDif2_AMI_ex1Handler_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::AMI_ex1Handler::op0_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0)},
-  {"op0_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op0_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep)},
-  {"op1", std::addressof(POA_OldDif2::AMI_ex1Handler::op1_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1)},
-  {"op1_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op1_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep)},
-  {"op2", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2)},
-  {"op2_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep)},
-  {"op3", std::addressof(POA_OldDif2::AMI_ex1Handler::op3_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3)},
-  {"op3_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op3_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep)},
-  {"op4", std::addressof(POA_OldDif2::AMI_ex1Handler::op4_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4)},
-  {"op4_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op4_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep)},
-  {"op5", std::addressof(POA_OldDif2::AMI_ex1Handler::op5_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5)},
-  {"op5_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op5_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep)},
-  {"op6", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6)},
-  {"op6_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6_excep)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_AMI_ex1Handler_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (57);
-static char _tao_OldDif2_AMI_ex1Handler_optable_pool [_tao_OldDif2_AMI_ex1Handler_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_AMI_ex1Handler_allocator (_tao_OldDif2_AMI_ex1Handler_optable_pool, _tao_OldDif2_AMI_ex1Handler_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_AMI_ex1Handler_optable (
-    OldDif2_AMI_ex1Handler_operations,
-    19,
-    38,
-    &_tao_OldDif2_AMI_ex1Handler_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19,  5,  3,
+     15,  4,  9, 14,  0, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
+     19, 19, 19, 19, 19,  0, 19,  0, 19, 19,
+      0,  5, 19, 19, 19, 19, 19, 19, 19, 19,
+     19,  0,  0, 19, 19, 19,  0, 19, 19, 19,
+     19, 19, 19, 19, 19, 19, 19, 19,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {19};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {16};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {7};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {22};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op6", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6)},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"op1", std::addressof(POA_OldDif2::AMI_ex1Handler::op1_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1)},
+      {"op3", std::addressof(POA_OldDif2::AMI_ex1Handler::op3_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3)},
+      {"op0", std::addressof(POA_OldDif2::AMI_ex1Handler::op0_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0)},
+      {"op0_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op0_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep)},
+      {"op6_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6_excep)},
+      {"op5_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op5_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep)},
+      {"op4_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op4_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep)},
+      {"op3_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op3_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep)},
+      {"op2_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep)},
+      {"op1_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op1_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep)},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"op4", std::addressof(POA_OldDif2::AMI_ex1Handler::op4_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4)},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"op5", std::addressof(POA_OldDif2::AMI_ex1Handler::op5_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5)},
+      {"op2", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2)},
+    };
+
+  static constexpr signed char lookup[] =
+    {
+       -1,  -8,  -7,   3,  -1,   4,   5,   6,   7, -26,  15,  -1,  16,  17,
+       18,  19,  -1,  20,  21,
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          int slot = lookup[key];
+
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+            {
+              const char *s = wordlist[slot].opname;
+
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+                return std::addressof (wordlist[slot]);
+            }
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+            return nullptr;
+          else
+            {
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+
+              while (--ptr >= base)
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  return ptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex1Handler_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation
@@ -2910,36 +3109,97 @@ POA_OldDif2::AMI_ex1Handler::_this ()
   return {};
 }
 
-static const TAO_operation_db_entry OldDif2_AMH_ex2_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::AMH_ex2::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
-  {"op1", std::addressof(POA_OldDif2::AMH_ex2::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
-  {"op2", std::addressof(POA_OldDif2::AMH_ex2::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
-  {"op3", std::addressof(POA_OldDif2::AMH_ex2::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
-  {"op4", std::addressof(POA_OldDif2::AMH_ex2::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
-  {"op5", std::addressof(POA_OldDif2::AMH_ex2::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
-  {"op6", std::addressof(POA_OldDif2::AMH_ex2::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
-  {"op7", std::addressof(POA_OldDif2::AMH_ex2::op7_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op7)},
-  {"op8", std::addressof(POA_OldDif2::AMH_ex2::op8_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8)},
-  {"op9", std::addressof(POA_OldDif2::AMH_ex2::op9_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op9)},
-  {"op10", std::addressof(POA_OldDif2::AMH_ex2::op10_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10)},
-  {"op11", std::addressof(POA_OldDif2::AMH_ex2::op11_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11)},
-  {"op12", std::addressof(POA_OldDif2::AMH_ex2::op12_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op12)},
-  {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
-  {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-  {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr}
+class TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_AMH_ex2_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (54);
-static char _tao_OldDif2_AMH_ex2_optable_pool [_tao_OldDif2_AMH_ex2_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_AMH_ex2_allocator (_tao_OldDif2_AMH_ex2_optable_pool, _tao_OldDif2_AMH_ex2_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_AMH_ex2_optable (
-    OldDif2_AMH_ex2_operations,
-    18,
-    36,
-    &_tao_OldDif2_AMH_ex2_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34,  5, 18,
+      0, 20, 25, 30,  3,  8, 13, 15, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34,  0, 34,  0, 34, 34,
+      0,  5, 34, 34, 34, 34, 34, 34, 34, 34,
+     34,  0, 34, 34, 34, 34,  0, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {18};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {33};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {31};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {21};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op2", std::addressof(POA_OldDif2::AMH_ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
+      {"op12", std::addressof(POA_OldDif2::AMH_ex2::op12_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op12)},
+      {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
+      {"op6", std::addressof(POA_OldDif2::AMH_ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
+      {"",0,0},
+      {"op0", std::addressof(POA_OldDif2::AMH_ex1::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
+      {"op10", std::addressof(POA_OldDif2::AMH_ex2::op10_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10)},
+      {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
+      {"op7", std::addressof(POA_OldDif2::AMH_ex2::op7_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op7)},
+      {"",0,0},
+      {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
+      {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
+      {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
+      {"op8", std::addressof(POA_OldDif2::AMH_ex2::op8_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8)},
+      {"",0,0},
+      {"op9", std::addressof(POA_OldDif2::AMH_ex2::op9_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op9)},
+      {"",0,0},{"",0,0},
+      {"op1", std::addressof(POA_OldDif2::AMH_ex1::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
+      {"op11", std::addressof(POA_OldDif2::AMH_ex2::op11_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11)},
+      {"op3", std::addressof(POA_OldDif2::AMH_ex1::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
+      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"op4", std::addressof(POA_OldDif2::AMH_ex1::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
+      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"op5", std::addressof(POA_OldDif2::AMH_ex1::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          const char *s = wordlist[key].opname;
+
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+            return std::addressof (wordlist[key]);
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable tao_OldDif2_AMH_ex2_optable;
 
 POA_OldDif2::AMH_ex2::AMH_ex2 ()
 {
@@ -3262,36 +3522,97 @@ POA_OldDif2::AMH_ex2::_this ()
   return {};
 }
 
-static const TAO_operation_db_entry OldDif2_ex2_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::ex2::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
-  {"op1", std::addressof(POA_OldDif2::ex2::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
-  {"op2", std::addressof(POA_OldDif2::ex2::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
-  {"op3", std::addressof(POA_OldDif2::ex2::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
-  {"op4", std::addressof(POA_OldDif2::ex2::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
-  {"op5", std::addressof(POA_OldDif2::ex2::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
-  {"op6", std::addressof(POA_OldDif2::ex2::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
-  {"op7", std::addressof(POA_OldDif2::ex2::op7_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op7)},
-  {"op8", std::addressof(POA_OldDif2::ex2::op8_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8)},
-  {"op9", std::addressof(POA_OldDif2::ex2::op9_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op9)},
-  {"op10", std::addressof(POA_OldDif2::ex2::op10_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10)},
-  {"op11", std::addressof(POA_OldDif2::ex2::op11_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11)},
-  {"op12", std::addressof(POA_OldDif2::ex2::op12_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op12)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_OldDif2_ex2_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_ex2_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (54);
-static char _tao_OldDif2_ex2_optable_pool [_tao_OldDif2_ex2_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_ex2_allocator (_tao_OldDif2_ex2_optable_pool, _tao_OldDif2_ex2_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_ex2_optable (
-    OldDif2_ex2_operations,
-    18,
-    36,
-    &_tao_OldDif2_ex2_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex2_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34,  5, 18,
+      0, 20, 25, 30,  3,  8, 13, 15, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34, 34, 34,
+     34, 34, 34, 34, 34,  0, 34,  0, 34, 34,
+      0,  5, 34, 34, 34, 34, 34, 34, 34, 34,
+     34,  0, 34, 34, 34, 34,  0, 34, 34, 34,
+     34, 34, 34, 34, 34, 34, 34, 34,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_ex2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {18};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {33};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {31};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {21};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op2", std::addressof(POA_OldDif2::ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
+      {"op12", std::addressof(POA_OldDif2::ex2::op12_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op12)},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"op6", std::addressof(POA_OldDif2::ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
+      {"",0,0},
+      {"op0", std::addressof(POA_OldDif2::ex1::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
+      {"op10", std::addressof(POA_OldDif2::ex2::op10_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10)},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"op7", std::addressof(POA_OldDif2::ex2::op7_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op7)},
+      {"",0,0},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"op8", std::addressof(POA_OldDif2::ex2::op8_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8)},
+      {"",0,0},
+      {"op9", std::addressof(POA_OldDif2::ex2::op9_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op9)},
+      {"",0,0},{"",0,0},
+      {"op1", std::addressof(POA_OldDif2::ex1::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
+      {"op11", std::addressof(POA_OldDif2::ex2::op11_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11)},
+      {"op3", std::addressof(POA_OldDif2::ex1::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
+      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"op4", std::addressof(POA_OldDif2::ex1::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
+      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"op5", std::addressof(POA_OldDif2::ex1::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          const char *s = wordlist[key].opname;
+
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+            return std::addressof (wordlist[key]);
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_ex2_Perfect_Hash_OpTable tao_OldDif2_ex2_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation
@@ -4183,49 +4504,130 @@ POA_OldDif2::TAO_AMH_ex2ResponseHandler::op12_excep (
   }
 }
 
-static const TAO_operation_db_entry OldDif2_AMI_ex2Handler_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::AMI_ex2Handler::op0_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0)},
-  {"op0_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op0_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep)},
-  {"op1", std::addressof(POA_OldDif2::AMI_ex2Handler::op1_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1)},
-  {"op1_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op1_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep)},
-  {"op2", std::addressof(POA_OldDif2::AMI_ex2Handler::op2_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2)},
-  {"op2_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op2_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep)},
-  {"op3", std::addressof(POA_OldDif2::AMI_ex2Handler::op3_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3)},
-  {"op3_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op3_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep)},
-  {"op4", std::addressof(POA_OldDif2::AMI_ex2Handler::op4_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4)},
-  {"op4_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op4_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep)},
-  {"op5", std::addressof(POA_OldDif2::AMI_ex2Handler::op5_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5)},
-  {"op5_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op5_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep)},
-  {"op6", std::addressof(POA_OldDif2::AMI_ex2Handler::op6_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6)},
-  {"op6_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op6_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6_excep)},
-  {"op7", std::addressof(POA_OldDif2::AMI_ex2Handler::op7_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7)},
-  {"op7_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op7_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7_excep)},
-  {"op8", std::addressof(POA_OldDif2::AMI_ex2Handler::op8_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8)},
-  {"op8_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op8_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8_excep)},
-  {"op9", std::addressof(POA_OldDif2::AMI_ex2Handler::op9_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9)},
-  {"op9_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op9_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9_excep)},
-  {"op10", std::addressof(POA_OldDif2::AMI_ex2Handler::op10_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10)},
-  {"op10_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op10_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10_excep)},
-  {"op11", std::addressof(POA_OldDif2::AMI_ex2Handler::op11_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11)},
-  {"op11_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op11_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11_excep)},
-  {"op12", std::addressof(POA_OldDif2::AMI_ex2Handler::op12_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12)},
-  {"op12_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op12_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12_excep)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_AMI_ex2Handler_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (93);
-static char _tao_OldDif2_AMI_ex2Handler_optable_pool [_tao_OldDif2_AMI_ex2Handler_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_AMI_ex2Handler_allocator (_tao_OldDif2_AMI_ex2Handler_optable_pool, _tao_OldDif2_AMI_ex2Handler_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_AMI_ex2Handler_optable (
-    OldDif2_AMI_ex2Handler_operations,
-    31,
-    62,
-    &_tao_OldDif2_AMI_ex2Handler_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     39, 39, 39, 39, 39, 39, 39, 39, 39, 39,
+     39, 39, 39, 39, 39, 39, 39, 39, 39, 39,
+     39, 39, 39, 39, 39, 39, 39, 39, 39, 39,
+     39, 39, 39, 39, 39, 39, 39, 39, 39, 39,
+     39, 39, 39, 39, 39, 39, 39, 39, 18, 15,
+      0,  5, 20, 25, 30,  3,  8, 13, 39, 39,
+     39, 39, 39, 39, 39, 39, 39, 39, 39, 39,
+     39, 39, 39, 39, 39, 39, 39, 39, 39, 39,
+     39, 39, 39, 39, 39, 39, 39, 39, 39, 39,
+     39, 39, 39, 39, 39,  0, 39,  0, 39, 39,
+      0,  5, 39, 39, 39, 39, 39, 39, 39, 39,
+     39,  0,  0, 39, 39, 39, 25, 39, 39, 39,
+     39, 39, 39, 39, 39, 39, 39, 39,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {31};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {38};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {36};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {12};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {34};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op2", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2)},
+      {"op12", std::addressof(POA_OldDif2::AMI_ex2Handler::op12_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12)},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"op7", std::addressof(POA_OldDif2::AMI_ex2Handler::op7_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7)},
+      {"op3", std::addressof(POA_OldDif2::AMI_ex1Handler::op3_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3)},
+      {"op0_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op0_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep)},
+      {"op9_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op9_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9_excep)},
+      {"op8_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op8_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8_excep)},
+      {"op7_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op7_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7_excep)},
+      {"op6_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6_excep)},
+      {"op5_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op5_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep)},
+      {"op4_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op4_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep)},
+      {"op3_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op3_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep)},
+      {"op2_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep)},
+      {"op1_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op1_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep)},
+      {"op10_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op10_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10_excep)},
+      {"op12_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op12_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12_excep)},
+      {"op11_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op11_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11_excep)},
+      {"op8", std::addressof(POA_OldDif2::AMI_ex2Handler::op8_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8)},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"op9", std::addressof(POA_OldDif2::AMI_ex2Handler::op9_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9)},
+      {"op1", std::addressof(POA_OldDif2::AMI_ex1Handler::op1_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1)},
+      {"op11", std::addressof(POA_OldDif2::AMI_ex2Handler::op11_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11)},
+      {"op0", std::addressof(POA_OldDif2::AMI_ex1Handler::op0_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0)},
+      {"op10", std::addressof(POA_OldDif2::AMI_ex2Handler::op10_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10)},
+      {"op4", std::addressof(POA_OldDif2::AMI_ex1Handler::op4_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4)},
+      {"op5", std::addressof(POA_OldDif2::AMI_ex1Handler::op5_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5)},
+      {"op6", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6)},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+    };
+
+  static constexpr signed char lookup[] =
+    {
+       -1, -18,  -3,   3,   4,   5,   6,  -1,   7,  41, -47,  21,  -8, -10,
+       22,  23,  24,  -1,  25,  26,  -1,  27,  28,  29,  -1,  -1,  -1,  -1,
+       30,  -1,  -1,  -1,  -1,  31,  -1,  32,  -1,  -1,  33,
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          int slot = lookup[key];
+
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+            {
+              const char *s = wordlist[slot].opname;
+
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+                return std::addressof (wordlist[slot]);
+            }
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+            return nullptr;
+          else
+            {
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+
+              while (--ptr >= base)
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  return ptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex2Handler_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation
@@ -5427,37 +5829,118 @@ POA_OldDif2::AMI_ex2Handler::_this ()
   return {};
 }
 
-static const TAO_operation_db_entry OldDif2_AMH_ex3_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::AMH_ex3::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
-  {"op1", std::addressof(POA_OldDif2::AMH_ex3::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
-  {"op2", std::addressof(POA_OldDif2::AMH_ex3::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
-  {"op3", std::addressof(POA_OldDif2::AMH_ex3::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
-  {"op4", std::addressof(POA_OldDif2::AMH_ex3::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
-  {"op5", std::addressof(POA_OldDif2::AMH_ex3::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
-  {"op6", std::addressof(POA_OldDif2::AMH_ex3::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
-  {"_get_float_attribute", std::addressof(POA_OldDif2::AMH_ex3::_get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_float_attribute)},
-  {"_get_double_attribute", std::addressof(POA_OldDif2::AMH_ex3::_get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute)},
-  {"_set_double_attribute", std::addressof(POA_OldDif2::AMH_ex3::_set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_double_attribute)},
-  {"_get_long_attribute", std::addressof(POA_OldDif2::AMH_ex3::_get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute)},
-  {"_get_short_attribute", std::addressof(POA_OldDif2::AMH_ex3::_get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_short_attribute)},
-  {"_set_short_attribute", std::addressof(POA_OldDif2::AMH_ex3::_set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute)},
-  {"_get_unsigned_long_attribute", std::addressof(POA_OldDif2::AMH_ex3::_get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_unsigned_long_attribute)},
-  {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
-  {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-  {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr}
+class TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_AMH_ex3_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (57);
-static char _tao_OldDif2_AMH_ex3_optable_pool [_tao_OldDif2_AMH_ex3_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_AMH_ex3_allocator (_tao_OldDif2_AMH_ex3_optable_pool, _tao_OldDif2_AMH_ex3_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_AMH_ex3_optable (
-    OldDif2_AMH_ex3_operations,
-    19,
-    38,
-    &_tao_OldDif2_AMH_ex3_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29,  4,  9,
+     14,  3,  5, 10,  0, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29,  0, 29,  0, 29, 29,
+      0,  0, 29, 29, 29, 29, 29, 29, 29, 29,
+     29,  0, 29, 29, 29, 29,  5, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {19};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {28};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {28};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {26};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {4};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {22};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op6", std::addressof(POA_OldDif2::AMH_ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
+      {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
+      {"op3", std::addressof(POA_OldDif2::AMH_ex1::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
+      {"op0", std::addressof(POA_OldDif2::AMH_ex1::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
+      {"op4", std::addressof(POA_OldDif2::AMH_ex1::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
+      {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
+      {"op1", std::addressof(POA_OldDif2::AMH_ex1::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
+      {"op5", std::addressof(POA_OldDif2::AMH_ex1::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
+      {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
+      {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
+      {"op2", std::addressof(POA_OldDif2::AMH_ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
+      {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
+      {"_get_long_attribute", std::addressof(POA_OldDif2::ex3::_get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute)},
+      {"_get_float_attribute", std::addressof(POA_OldDif2::ex3::_get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_float_attribute)},
+      {"_set_short_attribute", std::addressof(POA_OldDif2::ex3::_set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute)},
+      {"_get_short_attribute", std::addressof(POA_OldDif2::ex3::_get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_short_attribute)},
+      {"_get_double_attribute", std::addressof(POA_OldDif2::ex3::_get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute)},
+      {"_set_double_attribute", std::addressof(POA_OldDif2::ex3::_set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_double_attribute)},
+      {"_get_unsigned_long_attribute", std::addressof(POA_OldDif2::ex3::_get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_unsigned_long_attribute)},
+    };
+
+  static constexpr signed char lookup[] =
+    {
+       -1, -19,  -2,   3,  -1,   4,   5,   6,   7,  -1,   8,  -1,   9,  10,
+       11,  12,  -1,  13,  14,  15,  30, -48, -16,  -3,  -1,  -1,  -1,  -1,
+       21,
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          int slot = lookup[key];
+
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+            {
+              const char *s = wordlist[slot].opname;
+
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+                return std::addressof (wordlist[slot]);
+            }
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+            return nullptr;
+          else
+            {
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+
+              while (--ptr >= base)
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  return ptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable tao_OldDif2_AMH_ex3_optable;
 
 POA_OldDif2::AMH_ex3::AMH_ex3 ()
 {
@@ -5775,37 +6258,118 @@ POA_OldDif2::AMH_ex3::_this ()
   return {};
 }
 
-static const TAO_operation_db_entry OldDif2_ex3_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::ex3::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
-  {"op1", std::addressof(POA_OldDif2::ex3::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
-  {"op2", std::addressof(POA_OldDif2::ex3::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
-  {"op3", std::addressof(POA_OldDif2::ex3::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
-  {"op4", std::addressof(POA_OldDif2::ex3::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
-  {"op5", std::addressof(POA_OldDif2::ex3::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
-  {"op6", std::addressof(POA_OldDif2::ex3::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
-  {"_get_float_attribute", std::addressof(POA_OldDif2::ex3::_get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_float_attribute)},
-  {"_get_double_attribute", std::addressof(POA_OldDif2::ex3::_get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute)},
-  {"_set_double_attribute", std::addressof(POA_OldDif2::ex3::_set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_double_attribute)},
-  {"_get_long_attribute", std::addressof(POA_OldDif2::ex3::_get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute)},
-  {"_get_short_attribute", std::addressof(POA_OldDif2::ex3::_get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_short_attribute)},
-  {"_set_short_attribute", std::addressof(POA_OldDif2::ex3::_set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute)},
-  {"_get_unsigned_long_attribute", std::addressof(POA_OldDif2::ex3::_get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_unsigned_long_attribute)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_OldDif2_ex3_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_ex3_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (57);
-static char _tao_OldDif2_ex3_optable_pool [_tao_OldDif2_ex3_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_ex3_allocator (_tao_OldDif2_ex3_optable_pool, _tao_OldDif2_ex3_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_ex3_optable (
-    OldDif2_ex3_operations,
-    19,
-    38,
-    &_tao_OldDif2_ex3_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex3_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_ex3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29,  4,  9,
+     14,  3,  5, 10,  0, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+     29, 29, 29, 29, 29,  0, 29,  0, 29, 29,
+      0,  0, 29, 29, 29, 29, 29, 29, 29, 29,
+     29,  0, 29, 29, 29, 29,  5, 29, 29, 29,
+     29, 29, 29, 29, 29, 29, 29, 29,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_ex3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {19};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {28};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {28};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {26};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {4};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {22};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op6", std::addressof(POA_OldDif2::ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"op3", std::addressof(POA_OldDif2::ex1::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
+      {"op0", std::addressof(POA_OldDif2::ex1::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
+      {"op4", std::addressof(POA_OldDif2::ex1::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"op1", std::addressof(POA_OldDif2::ex1::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
+      {"op5", std::addressof(POA_OldDif2::ex1::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"op2", std::addressof(POA_OldDif2::ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+      {"_get_long_attribute", std::addressof(POA_OldDif2::ex3::_get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute)},
+      {"_get_float_attribute", std::addressof(POA_OldDif2::ex3::_get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_float_attribute)},
+      {"_set_short_attribute", std::addressof(POA_OldDif2::ex3::_set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute)},
+      {"_get_short_attribute", std::addressof(POA_OldDif2::ex3::_get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_short_attribute)},
+      {"_get_double_attribute", std::addressof(POA_OldDif2::ex3::_get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute)},
+      {"_set_double_attribute", std::addressof(POA_OldDif2::ex3::_set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_double_attribute)},
+      {"_get_unsigned_long_attribute", std::addressof(POA_OldDif2::ex3::_get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_unsigned_long_attribute)},
+    };
+
+  static constexpr signed char lookup[] =
+    {
+       -1, -19,  -2,   3,  -1,   4,   5,   6,   7,  -1,   8,  -1,   9,  10,
+       11,  12,  -1,  13,  14,  15,  30, -48, -16,  -3,  -1,  -1,  -1,  -1,
+       21,
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          int slot = lookup[key];
+
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+            {
+              const char *s = wordlist[slot].opname;
+
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+                return std::addressof (wordlist[slot]);
+            }
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+            return nullptr;
+          else
+            {
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+
+              while (--ptr >= base)
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  return ptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_ex3_Perfect_Hash_OpTable tao_OldDif2_ex3_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation
@@ -6642,51 +7206,133 @@ POA_OldDif2::TAO_AMH_ex3ResponseHandler::get_unsigned_long_attribute_excep (
   }
 }
 
-static const TAO_operation_db_entry OldDif2_AMI_ex3Handler_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::AMI_ex3Handler::op0_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0)},
-  {"op0_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::op0_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep)},
-  {"op1", std::addressof(POA_OldDif2::AMI_ex3Handler::op1_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1)},
-  {"op1_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::op1_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep)},
-  {"op2", std::addressof(POA_OldDif2::AMI_ex3Handler::op2_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2)},
-  {"op2_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::op2_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep)},
-  {"op3", std::addressof(POA_OldDif2::AMI_ex3Handler::op3_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3)},
-  {"op3_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::op3_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep)},
-  {"op4", std::addressof(POA_OldDif2::AMI_ex3Handler::op4_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4)},
-  {"op4_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::op4_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep)},
-  {"op5", std::addressof(POA_OldDif2::AMI_ex3Handler::op5_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5)},
-  {"op5_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::op5_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep)},
-  {"op6", std::addressof(POA_OldDif2::AMI_ex3Handler::op6_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6)},
-  {"op6_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::op6_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6_excep)},
-  {"get_float_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute)},
-  {"get_float_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_float_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute_excep)},
-  {"get_double_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute)},
-  {"get_double_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_double_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute_excep)},
-  {"set_double_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute)},
-  {"set_double_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::set_double_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute_excep)},
-  {"get_long_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute)},
-  {"get_long_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_long_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute_excep)},
-  {"get_short_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute)},
-  {"get_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute_excep)},
-  {"set_short_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute)},
-  {"set_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::set_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute_excep)},
-  {"get_unsigned_long_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute)},
-  {"get_unsigned_long_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute_excep)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_AMI_ex3Handler_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (99);
-static char _tao_OldDif2_AMI_ex3Handler_optable_pool [_tao_OldDif2_AMI_ex3Handler_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_AMI_ex3Handler_allocator (_tao_OldDif2_AMI_ex3Handler_optable_pool, _tao_OldDif2_AMI_ex3Handler_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_AMI_ex3Handler_optable (
-    OldDif2_AMI_ex3Handler_operations,
-    33,
-    66,
-    &_tao_OldDif2_AMI_ex3Handler_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     44, 44, 44, 44, 44, 44, 44, 44, 44, 44,
+     44, 44, 44, 44, 44, 44, 44, 44, 44, 44,
+     44, 44, 44, 44, 44, 44, 44, 44, 44, 44,
+     44, 44, 44, 44, 44, 44, 44, 44, 44, 44,
+     44, 44, 44, 44, 44, 44, 44, 44,  5, 10,
+     20, 25,  3,  8,  0, 44, 44, 44, 44, 44,
+     44, 44, 44, 44, 44, 44, 44, 44, 44, 44,
+     44, 44, 44, 44, 44, 44, 44, 44, 44, 44,
+     44, 44, 44, 44, 44, 44, 44, 44, 44, 44,
+     44, 44, 44, 44, 44,  0, 44,  0, 44, 44,
+      0,  0, 44,  0, 44, 44, 44, 44, 44, 44,
+     44,  0,  0, 44, 44, 10, 30, 44, 44, 44,
+     44, 44, 44, 44, 44, 44, 44, 44,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {33};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {33};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {43};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {41};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {9};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {36};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op6", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6)},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"op4", std::addressof(POA_OldDif2::AMI_ex1Handler::op4_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4)},
+      {"op0", std::addressof(POA_OldDif2::AMI_ex1Handler::op0_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0)},
+      {"op0_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op0_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep)},
+      {"op6_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6_excep)},
+      {"op5_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op5_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep)},
+      {"op4_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op4_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep)},
+      {"op3_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op3_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep)},
+      {"op2_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep)},
+      {"op1_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op1_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep)},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"op5", std::addressof(POA_OldDif2::AMI_ex1Handler::op5_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5)},
+      {"op1", std::addressof(POA_OldDif2::AMI_ex1Handler::op1_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1)},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+      {"get_long_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute)},
+      {"get_float_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute)},
+      {"get_short_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute)},
+      {"get_double_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute)},
+      {"op2", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2)},
+      {"get_long_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_long_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute_excep)},
+      {"get_float_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_float_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute_excep)},
+      {"get_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute_excep)},
+      {"get_double_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_double_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute_excep)},
+      {"get_unsigned_long_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute)},
+      {"op3", std::addressof(POA_OldDif2::AMI_ex1Handler::op3_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3)},
+      {"set_short_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute)},
+      {"set_double_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute)},
+      {"get_unsigned_long_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute_excep)},
+      {"set_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::set_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute_excep)},
+      {"set_double_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::set_double_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute_excep)},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+    };
+
+  static constexpr signed char lookup[] =
+    {
+       -1,  -7,  -7,   3,  -1,   4,   5,  -1,   6, -51,  14,  15,  -1,  16,
+       17,  -1, -19,  -2,  18, -46,  21, -24,  -2,  22,  23, -47,  26,  27,
+       28,  29,  30,  -1,  -1,  31,  -1,  32,  33,  -1,  -1,  -1,  34,  -1,
+       -1,  35,
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+          int slot = lookup[key];
+
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
+            {
+              const char *s = wordlist[slot].opname;
+
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+                return std::addressof (wordlist[slot]);
+            }
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+            return nullptr;
+          else
+            {
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+
+              while (--ptr >= base)
+                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  return ptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex3Handler_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation
@@ -7936,53 +8582,195 @@ POA_OldDif2::AMI_ex3Handler::_this ()
   return {};
 }
 
-static const TAO_operation_db_entry OldDif2_AMH_ex4_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::AMH_ex4::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
-  {"op1", std::addressof(POA_OldDif2::AMH_ex4::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
-  {"op2", std::addressof(POA_OldDif2::AMH_ex4::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
-  {"op3", std::addressof(POA_OldDif2::AMH_ex4::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
-  {"op4", std::addressof(POA_OldDif2::AMH_ex4::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
-  {"op5", std::addressof(POA_OldDif2::AMH_ex4::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
-  {"op6", std::addressof(POA_OldDif2::AMH_ex4::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
-  {"op7", std::addressof(POA_OldDif2::AMH_ex4::op7_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op7)},
-  {"op8", std::addressof(POA_OldDif2::AMH_ex4::op8_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8)},
-  {"op9", std::addressof(POA_OldDif2::AMH_ex4::op9_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op9)},
-  {"op10", std::addressof(POA_OldDif2::AMH_ex4::op10_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10)},
-  {"op11", std::addressof(POA_OldDif2::AMH_ex4::op11_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11)},
-  {"op12", std::addressof(POA_OldDif2::AMH_ex4::op12_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op12)},
-  {"_get_float_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_float_attribute)},
-  {"_get_double_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute)},
-  {"_set_double_attribute", std::addressof(POA_OldDif2::AMH_ex4::_set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_double_attribute)},
-  {"_get_long_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute)},
-  {"_get_short_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_short_attribute)},
-  {"_set_short_attribute", std::addressof(POA_OldDif2::AMH_ex4::_set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute)},
-  {"_get_unsigned_long_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_unsigned_long_attribute)},
-  {"_get_unsigned_short_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_unsigned_short_attribute)},
-  {"_set_unsigned_short_attribute", std::addressof(POA_OldDif2::AMH_ex4::_set_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_unsigned_short_attribute)},
-  {"_get_char_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_char_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_char_attribute)},
-  {"_get_boolean_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_boolean_attribute)},
-  {"_set_boolean_attribute", std::addressof(POA_OldDif2::AMH_ex4::_set_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_boolean_attribute)},
-  {"_get_octet_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_octet_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_octet_attribute)},
-  {"_get_string_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_string_attribute)},
-  {"_set_string_attribute", std::addressof(POA_OldDif2::AMH_ex4::_set_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_string_attribute)},
-  {"_get_limited_string_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_limited_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_limited_string_attribute)},
-  {"_get_an_object_attribute", std::addressof(POA_OldDif2::AMH_ex4::_get_an_object_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_an_object_attribute)},
-  {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
-  {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-  {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr}
+class TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_AMH_ex4_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (105);
-static char _tao_OldDif2_AMH_ex4_optable_pool [_tao_OldDif2_AMH_ex4_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_AMH_ex4_allocator (_tao_OldDif2_AMH_ex4_optable_pool, _tao_OldDif2_AMH_ex4_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_AMH_ex4_optable (
-    OldDif2_AMH_ex4_operations,
-    35,
-    70,
-    &_tao_OldDif2_AMH_ex4_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35,  5, 30,
+      0,  8, 13, 23, 28, 10, 20,  3, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35,  0, 35,  0, 35, 35,
+      0,  0, 35, 35, 35, 35, 35, 35, 35, 35,
+     35,  0, 35, 35, 35, 35,  5, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {35};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {29};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {34};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {32};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {11};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {38};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op2", std::addressof(POA_OldDif2::AMH_ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
+      {"op12", std::addressof(POA_OldDif2::AMH_ex2::op12_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op12)},
+      {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
+      {"op9", std::addressof(POA_OldDif2::AMH_ex2::op9_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op9)},
+      {"op0", std::addressof(POA_OldDif2::AMH_ex1::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
+      {"op10", std::addressof(POA_OldDif2::AMH_ex2::op10_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10)},
+      {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
+      {"op3", std::addressof(POA_OldDif2::AMH_ex1::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
+      {"op7", std::addressof(POA_OldDif2::AMH_ex2::op7_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op7)},
+      {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
+      {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
+      {"op4", std::addressof(POA_OldDif2::AMH_ex1::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
+      {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
+      {"_get_long_attribute", std::addressof(POA_OldDif2::ex3::_get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute)},
+      {"_get_char_attribute", std::addressof(POA_OldDif2::ex4::_get_char_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_char_attribute)},
+      {"_get_float_attribute", std::addressof(POA_OldDif2::ex3::_get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_float_attribute)},
+      {"_get_octet_attribute", std::addressof(POA_OldDif2::ex4::_get_octet_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_octet_attribute)},
+      {"_set_short_attribute", std::addressof(POA_OldDif2::ex3::_set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute)},
+      {"_get_short_attribute", std::addressof(POA_OldDif2::ex3::_get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_short_attribute)},
+      {"_get_double_attribute", std::addressof(POA_OldDif2::ex3::_get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute)},
+      {"_set_string_attribute", std::addressof(POA_OldDif2::ex4::_set_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_string_attribute)},
+      {"_get_string_attribute", std::addressof(POA_OldDif2::ex4::_get_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_string_attribute)},
+      {"_set_double_attribute", std::addressof(POA_OldDif2::ex3::_set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_double_attribute)},
+      {"_get_boolean_attribute", std::addressof(POA_OldDif2::ex4::_get_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_boolean_attribute)},
+      {"_set_boolean_attribute", std::addressof(POA_OldDif2::ex4::_set_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_boolean_attribute)},
+      {"op8", std::addressof(POA_OldDif2::AMH_ex2::op8_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8)},
+      {"_get_an_object_attribute", std::addressof(POA_OldDif2::ex4::_get_an_object_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_an_object_attribute)},
+      {"op5", std::addressof(POA_OldDif2::AMH_ex1::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
+      {"_get_unsigned_long_attribute", std::addressof(POA_OldDif2::ex3::_get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_unsigned_long_attribute)},
+      {"_get_unsigned_short_attribute", std::addressof(POA_OldDif2::ex4::_get_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_unsigned_short_attribute)},
+      {"_get_limited_string_attribute", std::addressof(POA_OldDif2::ex4::_get_limited_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_limited_string_attribute)},
+      {"_set_unsigned_short_attribute", std::addressof(POA_OldDif2::ex4::_set_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_unsigned_short_attribute)},
+      {"op6", std::addressof(POA_OldDif2::AMH_ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
+      {"op1", std::addressof(POA_OldDif2::AMH_ex1::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
+      {"op11", std::addressof(POA_OldDif2::AMH_ex2::op11_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11)},
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+            {
+              const TAO_operation_db_entry  *resword;
+
+              switch (key)
+                {
+                case   3:
+                  resword = std::addressof (wordlist[3]); break;
+                case   4:
+                  resword = std::addressof (wordlist[4]); break;
+                case   5:
+                  resword = std::addressof (wordlist[5]); break;
+                case   6:
+                  resword = std::addressof (wordlist[6]); break;
+                case   8:
+                  resword = std::addressof (wordlist[7]); break;
+                case   9:
+                  resword = std::addressof (wordlist[8]); break;
+                case  10:
+                  resword = std::addressof (wordlist[9]); break;
+                case  11:
+                  resword = std::addressof (wordlist[10]); break;
+                case  13:
+                  resword = std::addressof (wordlist[11]); break;
+                case  14:
+                  resword = std::addressof (wordlist[12]); break;
+                case  15:
+                  resword = std::addressof (wordlist[13]); break;
+                case  16:
+                  resword = std::addressof (wordlist[14]); break;
+                case  18:
+                  resword = std::addressof (wordlist[15]); break;
+                case  19:
+                  resword = std::addressof (wordlist[16]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[17]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  20:
+                  resword = std::addressof (wordlist[18]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[19]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[20]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[21]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  21:
+                  resword = std::addressof (wordlist[22]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[23]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[24]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[25]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  22:
+                  resword = std::addressof (wordlist[26]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[27]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  23:
+                  resword = std::addressof (wordlist[28]); break;
+                case  24:
+                  resword = std::addressof (wordlist[29]); break;
+                case  26:
+                  resword = std::addressof (wordlist[30]); break;
+                case  28:
+                  resword = std::addressof (wordlist[31]); break;
+                case  29:
+                  resword = std::addressof (wordlist[32]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[33]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[34]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  31:
+                  resword = std::addressof (wordlist[35]); break;
+                case  33:
+                  resword = std::addressof (wordlist[36]); break;
+                case  34:
+                  resword = std::addressof (wordlist[37]); break;
+                default: return nullptr;
+                }
+              if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
+                return resword;
+              return nullptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable tao_OldDif2_AMH_ex4_optable;
 
 POA_OldDif2::AMH_ex4::AMH_ex4 ()
 {
@@ -8421,53 +9209,195 @@ POA_OldDif2::AMH_ex4::_this ()
   return {};
 }
 
-static const TAO_operation_db_entry OldDif2_ex4_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::ex4::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
-  {"op1", std::addressof(POA_OldDif2::ex4::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
-  {"op2", std::addressof(POA_OldDif2::ex4::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
-  {"op3", std::addressof(POA_OldDif2::ex4::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
-  {"op4", std::addressof(POA_OldDif2::ex4::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
-  {"op5", std::addressof(POA_OldDif2::ex4::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
-  {"op6", std::addressof(POA_OldDif2::ex4::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
-  {"op7", std::addressof(POA_OldDif2::ex4::op7_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op7)},
-  {"op8", std::addressof(POA_OldDif2::ex4::op8_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8)},
-  {"op9", std::addressof(POA_OldDif2::ex4::op9_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op9)},
-  {"op10", std::addressof(POA_OldDif2::ex4::op10_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10)},
-  {"op11", std::addressof(POA_OldDif2::ex4::op11_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11)},
-  {"op12", std::addressof(POA_OldDif2::ex4::op12_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op12)},
-  {"_get_float_attribute", std::addressof(POA_OldDif2::ex4::_get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_float_attribute)},
-  {"_get_double_attribute", std::addressof(POA_OldDif2::ex4::_get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute)},
-  {"_set_double_attribute", std::addressof(POA_OldDif2::ex4::_set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_double_attribute)},
-  {"_get_long_attribute", std::addressof(POA_OldDif2::ex4::_get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute)},
-  {"_get_short_attribute", std::addressof(POA_OldDif2::ex4::_get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_short_attribute)},
-  {"_set_short_attribute", std::addressof(POA_OldDif2::ex4::_set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute)},
-  {"_get_unsigned_long_attribute", std::addressof(POA_OldDif2::ex4::_get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_unsigned_long_attribute)},
-  {"_get_unsigned_short_attribute", std::addressof(POA_OldDif2::ex4::_get_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_unsigned_short_attribute)},
-  {"_set_unsigned_short_attribute", std::addressof(POA_OldDif2::ex4::_set_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_unsigned_short_attribute)},
-  {"_get_char_attribute", std::addressof(POA_OldDif2::ex4::_get_char_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_char_attribute)},
-  {"_get_boolean_attribute", std::addressof(POA_OldDif2::ex4::_get_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_boolean_attribute)},
-  {"_set_boolean_attribute", std::addressof(POA_OldDif2::ex4::_set_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_boolean_attribute)},
-  {"_get_octet_attribute", std::addressof(POA_OldDif2::ex4::_get_octet_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_octet_attribute)},
-  {"_get_string_attribute", std::addressof(POA_OldDif2::ex4::_get_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_string_attribute)},
-  {"_set_string_attribute", std::addressof(POA_OldDif2::ex4::_set_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_string_attribute)},
-  {"_get_limited_string_attribute", std::addressof(POA_OldDif2::ex4::_get_limited_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_limited_string_attribute)},
-  {"_get_an_object_attribute", std::addressof(POA_OldDif2::ex4::_get_an_object_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_an_object_attribute)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_OldDif2_ex4_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_ex4_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (105);
-static char _tao_OldDif2_ex4_optable_pool [_tao_OldDif2_ex4_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_ex4_allocator (_tao_OldDif2_ex4_optable_pool, _tao_OldDif2_ex4_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_ex4_optable (
-    OldDif2_ex4_operations,
-    35,
-    70,
-    &_tao_OldDif2_ex4_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_ex4_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_ex4_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35,  5, 30,
+      0,  8, 13, 23, 28, 10, 20,  3, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+     35, 35, 35, 35, 35,  0, 35,  0, 35, 35,
+      0,  0, 35, 35, 35, 35, 35, 35, 35, 35,
+     35,  0, 35, 35, 35, 35,  5, 35, 35, 35,
+     35, 35, 35, 35, 35, 35, 35, 35,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_ex4_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {35};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {29};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {34};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {32};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {11};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {38};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op2", std::addressof(POA_OldDif2::ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
+      {"op12", std::addressof(POA_OldDif2::ex2::op12_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op12)},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"op9", std::addressof(POA_OldDif2::ex2::op9_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op9)},
+      {"op0", std::addressof(POA_OldDif2::ex1::op0_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op0)},
+      {"op10", std::addressof(POA_OldDif2::ex2::op10_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op10)},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"op3", std::addressof(POA_OldDif2::ex1::op3_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op3)},
+      {"op7", std::addressof(POA_OldDif2::ex2::op7_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op7)},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"op4", std::addressof(POA_OldDif2::ex1::op4_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op4)},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+      {"_get_long_attribute", std::addressof(POA_OldDif2::ex3::_get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_long_attribute)},
+      {"_get_char_attribute", std::addressof(POA_OldDif2::ex4::_get_char_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_char_attribute)},
+      {"_get_float_attribute", std::addressof(POA_OldDif2::ex3::_get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_float_attribute)},
+      {"_get_octet_attribute", std::addressof(POA_OldDif2::ex4::_get_octet_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_octet_attribute)},
+      {"_set_short_attribute", std::addressof(POA_OldDif2::ex3::_set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_short_attribute)},
+      {"_get_short_attribute", std::addressof(POA_OldDif2::ex3::_get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_short_attribute)},
+      {"_get_double_attribute", std::addressof(POA_OldDif2::ex3::_get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_double_attribute)},
+      {"_set_string_attribute", std::addressof(POA_OldDif2::ex4::_set_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_string_attribute)},
+      {"_get_string_attribute", std::addressof(POA_OldDif2::ex4::_get_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_string_attribute)},
+      {"_set_double_attribute", std::addressof(POA_OldDif2::ex3::_set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_set_double_attribute)},
+      {"_get_boolean_attribute", std::addressof(POA_OldDif2::ex4::_get_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_boolean_attribute)},
+      {"_set_boolean_attribute", std::addressof(POA_OldDif2::ex4::_set_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_boolean_attribute)},
+      {"op8", std::addressof(POA_OldDif2::ex2::op8_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op8)},
+      {"_get_an_object_attribute", std::addressof(POA_OldDif2::ex4::_get_an_object_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_an_object_attribute)},
+      {"op5", std::addressof(POA_OldDif2::ex1::op5_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op5)},
+      {"_get_unsigned_long_attribute", std::addressof(POA_OldDif2::ex3::_get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex3_Direct_Proxy_Impl::_get_unsigned_long_attribute)},
+      {"_get_unsigned_short_attribute", std::addressof(POA_OldDif2::ex4::_get_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_unsigned_short_attribute)},
+      {"_get_limited_string_attribute", std::addressof(POA_OldDif2::ex4::_get_limited_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_get_limited_string_attribute)},
+      {"_set_unsigned_short_attribute", std::addressof(POA_OldDif2::ex4::_set_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_ex4_Direct_Proxy_Impl::_set_unsigned_short_attribute)},
+      {"op6", std::addressof(POA_OldDif2::ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
+      {"op1", std::addressof(POA_OldDif2::ex1::op1_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op1)},
+      {"op11", std::addressof(POA_OldDif2::ex2::op11_skel), std::addressof(POA_OldDif2::_TAO_ex2_Direct_Proxy_Impl::op11)},
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+            {
+              const TAO_operation_db_entry  *resword;
+
+              switch (key)
+                {
+                case   3:
+                  resword = std::addressof (wordlist[3]); break;
+                case   4:
+                  resword = std::addressof (wordlist[4]); break;
+                case   5:
+                  resword = std::addressof (wordlist[5]); break;
+                case   6:
+                  resword = std::addressof (wordlist[6]); break;
+                case   8:
+                  resword = std::addressof (wordlist[7]); break;
+                case   9:
+                  resword = std::addressof (wordlist[8]); break;
+                case  10:
+                  resword = std::addressof (wordlist[9]); break;
+                case  11:
+                  resword = std::addressof (wordlist[10]); break;
+                case  13:
+                  resword = std::addressof (wordlist[11]); break;
+                case  14:
+                  resword = std::addressof (wordlist[12]); break;
+                case  15:
+                  resword = std::addressof (wordlist[13]); break;
+                case  16:
+                  resword = std::addressof (wordlist[14]); break;
+                case  18:
+                  resword = std::addressof (wordlist[15]); break;
+                case  19:
+                  resword = std::addressof (wordlist[16]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[17]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  20:
+                  resword = std::addressof (wordlist[18]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[19]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[20]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[21]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  21:
+                  resword = std::addressof (wordlist[22]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[23]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[24]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[25]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  22:
+                  resword = std::addressof (wordlist[26]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[27]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  23:
+                  resword = std::addressof (wordlist[28]); break;
+                case  24:
+                  resword = std::addressof (wordlist[29]); break;
+                case  26:
+                  resword = std::addressof (wordlist[30]); break;
+                case  28:
+                  resword = std::addressof (wordlist[31]); break;
+                case  29:
+                  resword = std::addressof (wordlist[32]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[33]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[34]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  31:
+                  resword = std::addressof (wordlist[35]); break;
+                case  33:
+                  resword = std::addressof (wordlist[36]); break;
+                case  34:
+                  resword = std::addressof (wordlist[37]); break;
+                default: return nullptr;
+                }
+              if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
+                return resword;
+              return nullptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_ex4_Perfect_Hash_OpTable tao_OldDif2_ex4_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation
@@ -9640,83 +10570,299 @@ POA_OldDif2::TAO_AMH_ex4ResponseHandler::get_an_object_attribute_excep (
   }
 }
 
-static const TAO_operation_db_entry OldDif2_AMI_ex4Handler_operations [] = {
-  {"op0", std::addressof(POA_OldDif2::AMI_ex4Handler::op0_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0)},
-  {"op0_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op0_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep)},
-  {"op1", std::addressof(POA_OldDif2::AMI_ex4Handler::op1_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1)},
-  {"op1_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op1_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep)},
-  {"op2", std::addressof(POA_OldDif2::AMI_ex4Handler::op2_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2)},
-  {"op2_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op2_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep)},
-  {"op3", std::addressof(POA_OldDif2::AMI_ex4Handler::op3_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3)},
-  {"op3_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op3_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep)},
-  {"op4", std::addressof(POA_OldDif2::AMI_ex4Handler::op4_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4)},
-  {"op4_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op4_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep)},
-  {"op5", std::addressof(POA_OldDif2::AMI_ex4Handler::op5_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5)},
-  {"op5_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op5_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep)},
-  {"op6", std::addressof(POA_OldDif2::AMI_ex4Handler::op6_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6)},
-  {"op6_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op6_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6_excep)},
-  {"op7", std::addressof(POA_OldDif2::AMI_ex4Handler::op7_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7)},
-  {"op7_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op7_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7_excep)},
-  {"op8", std::addressof(POA_OldDif2::AMI_ex4Handler::op8_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8)},
-  {"op8_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op8_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8_excep)},
-  {"op9", std::addressof(POA_OldDif2::AMI_ex4Handler::op9_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9)},
-  {"op9_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op9_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9_excep)},
-  {"op10", std::addressof(POA_OldDif2::AMI_ex4Handler::op10_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10)},
-  {"op10_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op10_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10_excep)},
-  {"op11", std::addressof(POA_OldDif2::AMI_ex4Handler::op11_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11)},
-  {"op11_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op11_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11_excep)},
-  {"op12", std::addressof(POA_OldDif2::AMI_ex4Handler::op12_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12)},
-  {"op12_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::op12_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12_excep)},
-  {"get_float_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute)},
-  {"get_float_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_float_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute_excep)},
-  {"get_double_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute)},
-  {"get_double_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_double_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute_excep)},
-  {"set_double_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute)},
-  {"set_double_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::set_double_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute_excep)},
-  {"get_long_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute)},
-  {"get_long_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_long_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute_excep)},
-  {"get_short_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute)},
-  {"get_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute_excep)},
-  {"set_short_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute)},
-  {"set_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::set_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute_excep)},
-  {"get_unsigned_long_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute)},
-  {"get_unsigned_long_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_unsigned_long_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute_excep)},
-  {"get_unsigned_short_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_unsigned_short_attribute)},
-  {"get_unsigned_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_unsigned_short_attribute_excep)},
-  {"set_unsigned_short_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_unsigned_short_attribute)},
-  {"set_unsigned_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_unsigned_short_attribute_excep)},
-  {"get_char_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_char_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_char_attribute)},
-  {"get_char_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_char_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_char_attribute_excep)},
-  {"get_boolean_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_boolean_attribute)},
-  {"get_boolean_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_boolean_attribute_excep)},
-  {"set_boolean_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_boolean_attribute)},
-  {"set_boolean_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_boolean_attribute_excep)},
-  {"get_octet_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_octet_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_octet_attribute)},
-  {"get_octet_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_octet_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_octet_attribute_excep)},
-  {"get_string_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_string_attribute)},
-  {"get_string_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_string_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_string_attribute_excep)},
-  {"set_string_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::set_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_string_attribute)},
-  {"set_string_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::set_string_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_string_attribute_excep)},
-  {"get_limited_string_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_limited_string_attribute)},
-  {"get_limited_string_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_limited_string_attribute_excep)},
-  {"get_an_object_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_an_object_attribute)},
-  {"get_an_object_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_an_object_attribute_excep)},
-  {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-  {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
-  {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-  {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-  {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr}
+class TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable
+  : public TAO_Perfect_Hash_OpTable
+{
+private:
+  std::size_t hash (const char *str, std::size_t len) override;
+public:
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-static const ::CORBA::Long _tao_OldDif2_AMI_ex4Handler_optable_size = sizeof (ACE_Hash_Map_Entry<const char *, TAO::Operation_Skeletons>) * (195);
-static char _tao_OldDif2_AMI_ex4Handler_optable_pool [_tao_OldDif2_AMI_ex4Handler_optable_size];
-static ACE_Static_Allocator_Base _tao_OldDif2_AMI_ex4Handler_allocator (_tao_OldDif2_AMI_ex4Handler_optable_pool, _tao_OldDif2_AMI_ex4Handler_optable_size);
-static TAO_Dynamic_Hash_OpTable tao_OldDif2_AMI_ex4Handler_optable (
-    OldDif2_AMI_ex4Handler_operations,
-    65,
-    130,
-    &_tao_OldDif2_AMI_ex4Handler_allocator
-  );
+/* C++ code produced by gperf version 2.8 (ACE version) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable -N lookup */
+
+std::size_t
+TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+{
+  static constexpr unsigned char asso_values[] =
+    {
+     69, 69, 69, 69, 69, 69, 69, 69, 69, 69,
+     69, 69, 69, 69, 69, 69, 69, 69, 69, 69,
+     69, 69, 69, 69, 69, 69, 69, 69, 69, 69,
+     69, 69, 69, 69, 69, 69, 69, 69, 69, 69,
+     69, 69, 69, 69, 69, 69, 69, 69, 11, 15,
+      0,  5, 20, 25, 50, 60, 51, 56, 69, 69,
+     69, 69, 69, 69, 69, 69, 69, 69, 69, 69,
+     69, 69, 69, 69, 69, 69, 69, 69, 69, 69,
+     69, 69, 69, 69, 69, 69, 69, 69, 69, 69,
+     69, 69, 69, 69, 69,  0, 69,  0, 69, 69,
+     50, 20, 69,  0, 69, 69, 69, 69, 69, 69,
+     69,  0,  0, 69, 69, 10, 55, 69, 69, 69,
+     69, 69, 69, 69, 69, 69, 69, 69,
+    };
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+}
+
+const TAO_operation_db_entry *
+TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+{
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {65};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {34};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {68};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {66};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {24};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {68};
+
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
+      {"",0,0},{"",0,0},{"",0,0},
+      {"op2", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2)},
+      {"op12", std::addressof(POA_OldDif2::AMI_ex2Handler::op12_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12)},
+      {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
+      {"op3", std::addressof(POA_OldDif2::AMI_ex1Handler::op3_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3)},
+      {"op0_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op0_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0_excep)},
+      {"op9_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op9_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9_excep)},
+      {"op8_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op8_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8_excep)},
+      {"op7_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op7_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7_excep)},
+      {"op6_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6_excep)},
+      {"op5_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op5_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5_excep)},
+      {"op4_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op4_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4_excep)},
+      {"op3_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op3_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op3_excep)},
+      {"op2_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2_excep)},
+      {"op1_excep", std::addressof(POA_OldDif2::AMI_ex1Handler::op1_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1_excep)},
+      {"op10_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op10_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10_excep)},
+      {"op12_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op12_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op12_excep)},
+      {"op11_excep", std::addressof(POA_OldDif2::AMI_ex2Handler::op11_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11_excep)},
+      {"op0", std::addressof(POA_OldDif2::AMI_ex1Handler::op0_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op0)},
+      {"op10", std::addressof(POA_OldDif2::AMI_ex2Handler::op10_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op10)},
+      {"op1", std::addressof(POA_OldDif2::AMI_ex1Handler::op1_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op1)},
+      {"op11", std::addressof(POA_OldDif2::AMI_ex2Handler::op11_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op11)},
+      {"op4", std::addressof(POA_OldDif2::AMI_ex1Handler::op4_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op4)},
+      {"get_long_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_long_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute_excep)},
+      {"get_char_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_char_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_char_attribute_excep)},
+      {"get_float_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_float_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute_excep)},
+      {"get_octet_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_octet_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_octet_attribute_excep)},
+      {"get_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute_excep)},
+      {"get_double_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_double_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute_excep)},
+      {"get_string_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_string_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_string_attribute_excep)},
+      {"get_boolean_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_boolean_attribute_excep)},
+      {"op5", std::addressof(POA_OldDif2::AMI_ex1Handler::op5_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op5)},
+      {"get_an_object_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_an_object_attribute_excep)},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
+      {"get_unsigned_long_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute_excep)},
+      {"get_unsigned_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_unsigned_short_attribute_excep)},
+      {"get_limited_string_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_limited_string_attribute_excep)},
+      {"set_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::set_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute_excep)},
+      {"set_double_attribute_excep", std::addressof(POA_OldDif2::AMI_ex3Handler::set_double_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute_excep)},
+      {"set_string_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::set_string_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_string_attribute_excep)},
+      {"set_boolean_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_boolean_attribute_excep)},
+      {"get_long_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_long_attribute)},
+      {"get_char_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_char_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_char_attribute)},
+      {"get_float_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_float_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_float_attribute)},
+      {"get_octet_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_octet_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_octet_attribute)},
+      {"get_short_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_short_attribute)},
+      {"get_double_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_double_attribute)},
+      {"get_string_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_string_attribute)},
+      {"get_boolean_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_boolean_attribute)},
+      {"get_an_object_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_an_object_attribute)},
+      {"set_unsigned_short_attribute_excep", std::addressof(POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_unsigned_short_attribute_excep)},
+      {"get_unsigned_long_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::get_unsigned_long_attribute)},
+      {"get_unsigned_short_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_unsigned_short_attribute)},
+      {"get_limited_string_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::get_limited_string_attribute)},
+      {"set_short_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::set_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_short_attribute)},
+      {"set_double_attribute", std::addressof(POA_OldDif2::AMI_ex3Handler::set_double_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex3Handler_Direct_Proxy_Impl::set_double_attribute)},
+      {"set_string_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::set_string_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_string_attribute)},
+      {"set_boolean_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_boolean_attribute)},
+      {"op6", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6)},
+      {"op8", std::addressof(POA_OldDif2::AMI_ex2Handler::op8_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op8)},
+      {"set_unsigned_short_attribute", std::addressof(POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex4Handler_Direct_Proxy_Impl::set_unsigned_short_attribute)},
+      {"op9", std::addressof(POA_OldDif2::AMI_ex2Handler::op9_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op9)},
+      {"op7", std::addressof(POA_OldDif2::AMI_ex2Handler::op7_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::op7)},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+    };
+
+  if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
+    {
+      std::size_t const key = hash (str, len);
+
+      if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
+        {
+            {
+              const TAO_operation_db_entry  *resword;
+
+              switch (key)
+                {
+                case   3:
+                  resword = std::addressof (wordlist[3]); break;
+                case   4:
+                  resword = std::addressof (wordlist[4]); break;
+                case   5:
+                  resword = std::addressof (wordlist[5]); break;
+                case   8:
+                  resword = std::addressof (wordlist[6]); break;
+                case   9:
+                  resword = std::addressof (wordlist[7]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[8]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[9]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[10]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[11]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[12]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[13]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[14]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[15]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[16]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  10:
+                  resword = std::addressof (wordlist[17]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[18]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[19]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  14:
+                  resword = std::addressof (wordlist[20]); break;
+                case  15:
+                  resword = std::addressof (wordlist[21]); break;
+                case  18:
+                  resword = std::addressof (wordlist[22]); break;
+                case  19:
+                  resword = std::addressof (wordlist[23]); break;
+                case  23:
+                  resword = std::addressof (wordlist[24]); break;
+                case  24:
+                  resword = std::addressof (wordlist[25]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[26]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  25:
+                  resword = std::addressof (wordlist[27]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[28]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[29]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  26:
+                  resword = std::addressof (wordlist[30]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[31]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  27:
+                  resword = std::addressof (wordlist[32]); break;
+                case  28:
+                  resword = std::addressof (wordlist[33]); break;
+                case  29:
+                  resword = std::addressof (wordlist[34]); break;
+                case  30:
+                  resword = std::addressof (wordlist[35]); break;
+                case  33:
+                  resword = std::addressof (wordlist[36]); break;
+                case  34:
+                  resword = std::addressof (wordlist[37]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[38]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  35:
+                  resword = std::addressof (wordlist[39]); break;
+                case  36:
+                  resword = std::addressof (wordlist[40]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[41]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  37:
+                  resword = std::addressof (wordlist[42]); break;
+                case  38:
+                  resword = std::addressof (wordlist[43]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[44]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  39:
+                  resword = std::addressof (wordlist[45]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[46]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[47]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  40:
+                  resword = std::addressof (wordlist[48]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[49]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  41:
+                  resword = std::addressof (wordlist[50]); break;
+                case  43:
+                  resword = std::addressof (wordlist[51]); break;
+                case  44:
+                  resword = std::addressof (wordlist[52]); break;
+                case  47:
+                  resword = std::addressof (wordlist[53]); break;
+                case  48:
+                  resword = std::addressof (wordlist[54]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[55]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  49:
+                  resword = std::addressof (wordlist[56]); break;
+                case  50:
+                  resword = std::addressof (wordlist[57]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  resword = std::addressof (wordlist[58]);
+                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1)) return resword;
+                  return nullptr;
+                case  51:
+                  resword = std::addressof (wordlist[59]); break;
+                case  53:
+                  resword = std::addressof (wordlist[60]); break;
+                case  54:
+                  resword = std::addressof (wordlist[61]); break;
+                case  58:
+                  resword = std::addressof (wordlist[62]); break;
+                case  59:
+                  resword = std::addressof (wordlist[63]); break;
+                case  63:
+                  resword = std::addressof (wordlist[64]); break;
+                case  64:
+                  resword = std::addressof (wordlist[65]); break;
+                case  65:
+                  resword = std::addressof (wordlist[66]); break;
+                case  68:
+                  resword = std::addressof (wordlist[67]); break;
+                default: return nullptr;
+                }
+              if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
+                return resword;
+              return nullptr;
+            }
+        }
+    }
+  return nullptr;
+}
+
+static TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable tao_OldDif2_AMI_ex4Handler_optable;
 
 ///////////////////////////////////////////////////////////////////////
 //                 Direct Proxy  Implementation

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRUCTS_W3R8RD_CPP_
-#define _TAO_IDL_STRUCTS_W3R8RD_CPP_
+#ifndef _TAO_IDL_STRUCTS_OX2EIV_CPP_
+#define _TAO_IDL_STRUCTS_OX2EIV_CPP_
 
 #include "structS.h"
 

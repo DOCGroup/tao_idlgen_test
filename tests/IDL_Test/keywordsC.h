@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSC_JZEL1P_H_
-#define _TAO_IDL_KEYWORDSC_JZEL1P_H_
+#ifndef _TAO_IDL_KEYWORDSC_YRG8YS_H_
+#define _TAO_IDL_KEYWORDSC_YRG8YS_H_
 
 #include /**/ "ace/pre.h"
 

@@ -23,12 +23,13 @@
  **/
 
 #include "simple_testC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Object_T.h"
-#include <cstring>
+#include "ace/OS_NS_string.h"
 
 #if !defined (__ACE_INLINE__)
 #include "simple_testC.inl"

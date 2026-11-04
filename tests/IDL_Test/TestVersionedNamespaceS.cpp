@@ -22,11 +22,11 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_YAJO76_CPP_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACES_YAJO76_CPP_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_6KOUUR_CPP_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACES_6KOUUR_CPP_
 
 #include "TestVersionedNamespaceS.h"
-#include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
+#include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -45,6 +45,7 @@
 #include "tao/PortableInterceptor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
+#include "ace/OS_NS_string.h"
 
 BEGIN_USER_VERSIONED_NAMESPACE
 

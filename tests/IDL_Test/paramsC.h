@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSC_4AKZ6R_H_
-#define _TAO_IDL_PARAMSC_4AKZ6R_H_
+#ifndef _TAO_IDL_PARAMSC_TIS40Q_H_
+#define _TAO_IDL_PARAMSC_TIS40Q_H_
 
 #include /**/ "ace/pre.h"
 
