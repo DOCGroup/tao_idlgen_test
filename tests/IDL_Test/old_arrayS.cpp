@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYS_WN8FWG_CPP_
-#define _TAO_IDL_OLD_ARRAYS_WN8FWG_CPP_
+#ifndef _TAO_IDL_OLD_ARRAYS_T8YB5F_CPP_
+#define _TAO_IDL_OLD_ARRAYS_T8YB5F_CPP_
 
 #include "old_arrayS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -62,7 +62,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -92,8 +92,8 @@ TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::lookup (const char *str, std::size_t 
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {20};
-  constexpr std::size_t MIN_HASH_VALUE {2};
-  constexpr std::size_t MAX_HASH_VALUE {20};
+  constexpr int MIN_HASH_VALUE {2};
+  constexpr int MAX_HASH_VALUE {20};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -131,7 +131,7 @@ TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::lookup (const char *str, std::size_t 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
             return nullptr;
           else
             {
@@ -189,7 +189,9 @@ POA_OldArray::AMH_A_i::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -241,7 +243,9 @@ POA_OldArray::AMH_A_i::op2_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -287,7 +291,9 @@ POA_OldArray::AMH_A_i::op4_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -323,7 +329,9 @@ POA_OldArray::AMH_A_i::_get_attribute_array_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -370,7 +378,9 @@ POA_OldArray::AMH_A_i::_set_attribute_array_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_OldArray::TAO_AMH_A_iResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -408,7 +418,7 @@ OldArray::A_i*
 POA_OldArray::AMH_A_i::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -428,7 +438,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_A_i_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -458,8 +468,8 @@ TAO_OldArray_A_i_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {20};
-  constexpr std::size_t MIN_HASH_VALUE {2};
-  constexpr std::size_t MAX_HASH_VALUE {20};
+  constexpr int MIN_HASH_VALUE {2};
+  constexpr int MAX_HASH_VALUE {20};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -497,7 +507,7 @@ TAO_OldArray_A_i_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
             return nullptr;
           else
             {
@@ -720,11 +730,11 @@ void POA_OldArray::A_i::op_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -814,11 +824,11 @@ void POA_OldArray::A_i::op2_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -908,11 +918,11 @@ void POA_OldArray::A_i::op4_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -975,11 +985,11 @@ void POA_OldArray::A_i::_get_attribute_array_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1045,11 +1055,11 @@ void POA_OldArray::A_i::_set_attribute_array_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1242,7 +1252,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -1272,8 +1282,8 @@ TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::lookup (const char *str, std::
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {25};
-  constexpr std::size_t MIN_HASH_VALUE {2};
-  constexpr std::size_t MAX_HASH_VALUE {30};
+  constexpr int MIN_HASH_VALUE {2};
+  constexpr int MAX_HASH_VALUE {30};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1317,7 +1327,7 @@ TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::lookup (const char *str, std::
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
+          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
             return nullptr;
           else
             {
@@ -1620,11 +1630,11 @@ void POA_OldArray::AMI_A_iHandler::op_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1690,11 +1700,11 @@ void POA_OldArray::AMI_A_iHandler::op_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1778,11 +1788,11 @@ void POA_OldArray::AMI_A_iHandler::op2_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1848,11 +1858,11 @@ void POA_OldArray::AMI_A_iHandler::op2_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1936,11 +1946,11 @@ void POA_OldArray::AMI_A_iHandler::op4_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2006,11 +2016,11 @@ void POA_OldArray::AMI_A_iHandler::op4_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2076,11 +2086,11 @@ void POA_OldArray::AMI_A_iHandler::get_attribute_array_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2146,11 +2156,11 @@ void POA_OldArray::AMI_A_iHandler::get_attribute_array_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2198,11 +2208,11 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2268,11 +2278,11 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

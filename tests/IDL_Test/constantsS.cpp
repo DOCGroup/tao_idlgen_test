@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_CONSTANTSS_UJ2O80_CPP_
-#define _TAO_IDL_CONSTANTSS_UJ2O80_CPP_
+#ifndef _TAO_IDL_CONSTANTSS_5MACDS_CPP_
+#define _TAO_IDL_CONSTANTSS_5MACDS_CPP_
 
 #include "constantsS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -62,7 +62,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -92,8 +92,8 @@ TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable::lookup (const char *str, std:
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {5};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -153,7 +153,7 @@ ClassConstants::Iface*
 POA_ClassConstants::AMH_Iface::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -173,7 +173,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_ClassConstants_Iface_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -203,8 +203,8 @@ TAO_ClassConstants_Iface_Perfect_Hash_OpTable::lookup (const char *str, std::siz
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {5};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -296,7 +296,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -326,8 +326,8 @@ TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable::lookup (const char *st
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {5};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {

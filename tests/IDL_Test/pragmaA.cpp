@@ -48,7 +48,7 @@ static TAO::TypeCode::Objref<char const *,
     "hello");
 
 ::CORBA::TypeCode_ptr const _tc_hello = std::addressof(_tao_tc_hello);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_helloExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_helloExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -58,7 +58,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:anvil.com/AMH_helloExceptionHolder:1.0",
     "AMH_helloExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_helloExceptionHolder,
     0);
 
@@ -91,7 +91,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:anvil.com/FuBar:1.0",
     "FuBar",
-    std::addressof (CORBA::_tc_string));
+    &CORBA::_tc_string);
 
 ::CORBA::TypeCode_ptr const _tc_FuBar = std::addressof(_tao_tc_FuBar);
 static char const * const _tao_enumerators_ClusterFu[] =
@@ -119,7 +119,7 @@ static TAO::TypeCode::Enum<char const *,
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_Riot {};
+    _tao_fields_Riot = nullptr;
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -144,7 +144,7 @@ static TAO::TypeCode::Objref<char const *,
     "goodbye");
 
 ::CORBA::TypeCode_ptr const _tc_goodbye = std::addressof(_tao_tc_goodbye);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_goodbyeExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_goodbyeExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -154,7 +154,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:anvil.com/AMH_goodbyeExceptionHolder:1.0",
     "AMH_goodbyeExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_goodbyeExceptionHolder,
     0);
 
@@ -189,7 +189,7 @@ static TAO::TypeCode::Objref<char const *,
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_A_my_exception {};
+    _tao_fields_A_my_exception = nullptr;
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -220,7 +220,7 @@ namespace salutation
 {
   ::CORBA::TypeCode_ptr const _tc_sayonara = std::addressof(_tao_tc_salutation_sayonara);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_salutation_AMH_sayonaraExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_salutation_AMH_sayonaraExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -230,7 +230,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:hammer.com/salutation/AMH_sayonaraExceptionHolder:1.0",
     "AMH_sayonaraExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_salutation_AMH_sayonaraExceptionHolder,
     0);
 
@@ -273,7 +273,7 @@ static TAO::TypeCode::Objref<char const *,
     "ciao");
 
 ::CORBA::TypeCode_ptr const _tc_ciao = std::addressof(_tao_tc_ciao);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_ciaoExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_ciaoExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -283,7 +283,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:anvil.com/AMH_ciaoExceptionHolder:1.0",
     "AMH_ciaoExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_ciaoExceptionHolder,
     0);
 
@@ -317,7 +317,7 @@ static TAO::TypeCode::Objref<char const *,
     "aloha");
 
 ::CORBA::TypeCode_ptr const _tc_aloha = std::addressof(_tao_tc_aloha);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_alohaExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_alohaExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -327,7 +327,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:anvil.com/AMH_alohaExceptionHolder:1.0",
     "AMH_alohaExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_alohaExceptionHolder,
     0);
 
@@ -358,7 +358,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_DCPS_Test_Sample[] =
       {
-        { "key", std::addressof (CORBA::_tc_long) }
+        { "key", &CORBA::_tc_long }
       };
 
 static TAO::TypeCode::Struct<

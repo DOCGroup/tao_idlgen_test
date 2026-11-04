@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_KVISW2_CPP_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_KVISW2_CPP_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_U59VPM_CPP_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_U59VPM_CPP_
 
 #include "TestVersionedNamespace2S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -61,7 +61,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_AMH_LI_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -91,8 +91,8 @@ TAO_M1_AMH_LI_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {2};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {2};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -160,7 +160,9 @@ POA_M1::AMH_LI::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_M1::TAO_AMH_LIResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_M1::TAO_AMH_LIResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -198,7 +200,7 @@ M1::LI*
 POA_M1::AMH_LI::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -218,7 +220,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_LI_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -248,8 +250,8 @@ TAO_M1_LI_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {2};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {2};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -349,11 +351,11 @@ void POA_M1::LI::op_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -422,7 +424,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_AMH_L2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -452,8 +454,8 @@ TAO_M1_AMH_L2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {2};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {2};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -521,7 +523,9 @@ POA_M1::AMH_L2::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_M1::TAO_AMH_L2ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_M1::TAO_AMH_L2ResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -559,7 +563,7 @@ M1::L2*
 POA_M1::AMH_L2::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -579,7 +583,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_L2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -609,8 +613,8 @@ TAO_M1_L2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {2};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {2};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -710,11 +714,11 @@ void POA_M1::L2::op_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -783,7 +787,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -813,8 +817,8 @@ TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {2};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {2};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -882,7 +886,9 @@ POA_M2::M3::AMH_L3::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_M2::M3::TAO_AMH_L3ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_M2::M3::TAO_AMH_L3ResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -920,7 +926,7 @@ M2::M3::L3*
 POA_M2::M3::AMH_L3::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -940,7 +946,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_L3_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -970,8 +976,8 @@ TAO_M2_M3_L3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {2};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {2};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1075,11 +1081,11 @@ void POA_M2::M3::L3::op_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1148,7 +1154,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -1178,8 +1184,8 @@ TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {2};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {2};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1247,7 +1253,9 @@ POA_M2::M3::AMH_L4::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_M2::M3::TAO_AMH_L4ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_M2::M3::TAO_AMH_L4ResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1285,7 +1293,7 @@ M2::M3::L4*
 POA_M2::M3::AMH_L4::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1305,7 +1313,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_L4_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -1335,8 +1343,8 @@ TAO_M2_M3_L4_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {2};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {2};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -1414,12 +1422,14 @@ void POA_M2::M3::L4::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       M2::M3::_tc_E1
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::M2::M3::S2>::in_arg_val _tao_s;
@@ -1447,11 +1457,11 @@ void POA_M2::M3::L4::op_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

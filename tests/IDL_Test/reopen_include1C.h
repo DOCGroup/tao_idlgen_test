@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE1C_H26IDG_H_
-#define _TAO_IDL_REOPEN_INCLUDE1C_H26IDG_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE1C_JPF9YD_H_
+#define _TAO_IDL_REOPEN_INCLUDE1C_JPF9YD_H_
 
 #include /**/ "ace/pre.h"
 
@@ -496,9 +496,11 @@ namespace OBV_A
     ~AMH_X1ExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean _tao_marshal__A_B_AMH_X1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean
+    _tao_marshal__A_B_AMH_X1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean _tao_unmarshal__A_B_AMH_X1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean
+    _tao_unmarshal__A_B_AMH_X1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

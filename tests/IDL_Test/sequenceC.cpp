@@ -23,7 +23,6 @@
  **/
 
 #include "sequenceC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -46,6 +45,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "sequenceC.inl"
@@ -86,10 +86,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> myfoostructseq_0 (
-        ::CORBA::tk_sequence, std::addressof (_tc_myfoostruct), 0U);
+        ::CORBA::tk_sequence, &_tc_myfoostruct, 0U);
 
     ::CORBA::TypeCode_ptr const tc_myfoostructseq_0 =
-      std::addressof (myfoostructseq_0);
+      &myfoostructseq_0;
   }
 }
 }
@@ -105,7 +105,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:myfoostructseq:1.0",
     "myfoostructseq",
-    std::addressof (TAO::TypeCode::tc_myfoostructseq_0));
+    &TAO::TypeCode::tc_myfoostructseq_0);
 
 ::CORBA::TypeCode_ptr const _tc_myfoostructseq = std::addressof(_tao_tc_myfoostructseq);
 
@@ -114,8 +114,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_myfoostruct[] =
       {
-        { "str_mem", std::addressof (CORBA::_tc_string) },
-        { "rec_mem", std::addressof (_tc_myfoostructseq) }
+        { "str_mem", &CORBA::_tc_string },
+        { "rec_mem", &_tc_myfoostructseq }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -247,8 +247,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_nasty[] =
       {
-        { "id", std::addressof (CORBA::_tc_string) },
-        { "rec_info", std::addressof (_tc_myfoostruct) }
+        { "id", &CORBA::_tc_string },
+        { "rec_info", &_tc_myfoostruct }
       };
 
 static TAO::TypeCode::Struct<
@@ -302,10 +302,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> OctetSeqSeq_0 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_OctetSeq), 0U);
+        ::CORBA::tk_sequence, &CORBA::_tc_OctetSeq, 0U);
 
     ::CORBA::TypeCode_ptr const tc_OctetSeqSeq_0 =
-      std::addressof (OctetSeqSeq_0);
+      &OctetSeqSeq_0;
   }
 }
 }
@@ -321,7 +321,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:OctetSeqSeq:1.0",
     "OctetSeqSeq",
-    std::addressof (TAO::TypeCode::tc_OctetSeqSeq_0));
+    &TAO::TypeCode::tc_OctetSeqSeq_0);
 
 ::CORBA::TypeCode_ptr const _tc_OctetSeqSeq = std::addressof(_tao_tc_OctetSeqSeq);
 
@@ -482,10 +482,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> seqLocalSeq_0 (
-        ::CORBA::tk_sequence, std::addressof (_tc_seqLocal), 0U);
+        ::CORBA::tk_sequence, &_tc_seqLocal, 0U);
 
     ::CORBA::TypeCode_ptr const tc_seqLocalSeq_0 =
-      std::addressof (seqLocalSeq_0);
+      &seqLocalSeq_0;
   }
 }
 }
@@ -501,7 +501,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:seqLocalSeq:1.0",
     "seqLocalSeq",
-    std::addressof (TAO::TypeCode::tc_seqLocalSeq_0));
+    &TAO::TypeCode::tc_seqLocalSeq_0);
 
 ::CORBA::TypeCode_ptr const _tc_seqLocalSeq = std::addressof(_tao_tc_seqLocalSeq);
 
@@ -540,10 +540,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_ComponentPackageDescriptions_0 (
-        ::CORBA::tk_sequence, std::addressof (Deployment::_tc_ComponentPackageDescription), 0U);
+        ::CORBA::tk_sequence, &Deployment::_tc_ComponentPackageDescription, 0U);
 
     ::CORBA::TypeCode_ptr const tc_Deployment_ComponentPackageDescriptions_0 =
-      std::addressof (Deployment_ComponentPackageDescriptions_0);
+      &Deployment_ComponentPackageDescriptions_0;
   }
 }
 }
@@ -559,7 +559,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Deployment/ComponentPackageDescriptions:1.0",
     "ComponentPackageDescriptions",
-    std::addressof (TAO::TypeCode::tc_Deployment_ComponentPackageDescriptions_0));
+    &TAO::TypeCode::tc_Deployment_ComponentPackageDescriptions_0);
 
 namespace Deployment
 {
@@ -571,7 +571,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_ComponentAssemblyDescription[] =
       {
-        { "instance", std::addressof (Deployment::_tc_ComponentPackageDescriptions) }
+        { "instance", &Deployment::_tc_ComponentPackageDescriptions }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -641,10 +641,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_ComponentAssemblyDescriptions_0 (
-        ::CORBA::tk_sequence, std::addressof (Deployment::_tc_ComponentAssemblyDescription), 0U);
+        ::CORBA::tk_sequence, &Deployment::_tc_ComponentAssemblyDescription, 0U);
 
     ::CORBA::TypeCode_ptr const tc_Deployment_ComponentAssemblyDescriptions_0 =
-      std::addressof (Deployment_ComponentAssemblyDescriptions_0);
+      &Deployment_ComponentAssemblyDescriptions_0;
   }
 }
 }
@@ -660,7 +660,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Deployment/ComponentAssemblyDescriptions:1.0",
     "ComponentAssemblyDescriptions",
-    std::addressof (TAO::TypeCode::tc_Deployment_ComponentAssemblyDescriptions_0));
+    &TAO::TypeCode::tc_Deployment_ComponentAssemblyDescriptions_0);
 
 namespace Deployment
 {
@@ -702,10 +702,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_NamedImplementationArtifacts_0 (
-        ::CORBA::tk_sequence, std::addressof (Deployment::_tc_NamedImplementationArtifact), 0U);
+        ::CORBA::tk_sequence, &Deployment::_tc_NamedImplementationArtifact, 0U);
 
     ::CORBA::TypeCode_ptr const tc_Deployment_NamedImplementationArtifacts_0 =
-      std::addressof (Deployment_NamedImplementationArtifacts_0);
+      &Deployment_NamedImplementationArtifacts_0;
   }
 }
 }
@@ -721,7 +721,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Deployment/NamedImplementationArtifacts:1.0",
     "NamedImplementationArtifacts",
-    std::addressof (TAO::TypeCode::tc_Deployment_NamedImplementationArtifacts_0));
+    &TAO::TypeCode::tc_Deployment_NamedImplementationArtifacts_0);
 
 namespace Deployment
 {
@@ -733,8 +733,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_NamedImplementationArtifact[] =
       {
-        { "str", std::addressof (CORBA::_tc_string) },
-        { "dependsOn", std::addressof (Deployment::_tc_NamedImplementationArtifacts) }
+        { "str", &CORBA::_tc_string },
+        { "dependsOn", &Deployment::_tc_NamedImplementationArtifacts }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -774,7 +774,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_MonolithicImplementationDescription[] =
       {
-        { "primaryArtifact", std::addressof (Deployment::_tc_NamedImplementationArtifacts) }
+        { "primaryArtifact", &Deployment::_tc_NamedImplementationArtifacts }
       };
 
 static TAO::TypeCode::Struct<
@@ -839,10 +839,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_MonolithicImplementationDescriptions_0 (
-        ::CORBA::tk_sequence, std::addressof (Deployment::_tc_MonolithicImplementationDescription), 0U);
+        ::CORBA::tk_sequence, &Deployment::_tc_MonolithicImplementationDescription, 0U);
 
     ::CORBA::TypeCode_ptr const tc_Deployment_MonolithicImplementationDescriptions_0 =
-      std::addressof (Deployment_MonolithicImplementationDescriptions_0);
+      &Deployment_MonolithicImplementationDescriptions_0;
   }
 }
 }
@@ -858,7 +858,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Deployment/MonolithicImplementationDescriptions:1.0",
     "MonolithicImplementationDescriptions",
-    std::addressof (TAO::TypeCode::tc_Deployment_MonolithicImplementationDescriptions_0));
+    &TAO::TypeCode::tc_Deployment_MonolithicImplementationDescriptions_0);
 
 namespace Deployment
 {
@@ -870,8 +870,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_PackagedComponentImplementation[] =
       {
-        { "assemblyImpl", std::addressof (Deployment::_tc_ComponentAssemblyDescriptions) },
-        { "monolithicImpl", std::addressof (Deployment::_tc_MonolithicImplementationDescriptions) }
+        { "assemblyImpl", &Deployment::_tc_ComponentAssemblyDescriptions },
+        { "monolithicImpl", &Deployment::_tc_MonolithicImplementationDescriptions }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -941,10 +941,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_PackagedComponentImplementations_0 (
-        ::CORBA::tk_sequence, std::addressof (Deployment::_tc_PackagedComponentImplementation), 0U);
+        ::CORBA::tk_sequence, &Deployment::_tc_PackagedComponentImplementation, 0U);
 
     ::CORBA::TypeCode_ptr const tc_Deployment_PackagedComponentImplementations_0 =
-      std::addressof (Deployment_PackagedComponentImplementations_0);
+      &Deployment_PackagedComponentImplementations_0;
   }
 }
 }
@@ -960,7 +960,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Deployment/PackagedComponentImplementations:1.0",
     "PackagedComponentImplementations",
-    std::addressof (TAO::TypeCode::tc_Deployment_PackagedComponentImplementations_0));
+    &TAO::TypeCode::tc_Deployment_PackagedComponentImplementations_0);
 
 namespace Deployment
 {
@@ -972,8 +972,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_ComponentPackageDescription[] =
       {
-        { "str", std::addressof (CORBA::_tc_string) },
-        { "implementation", std::addressof (Deployment::_tc_PackagedComponentImplementations) }
+        { "str", &CORBA::_tc_string },
+        { "implementation", &Deployment::_tc_PackagedComponentImplementations }
       };
 
 static TAO::TypeCode::Recursive_Type<

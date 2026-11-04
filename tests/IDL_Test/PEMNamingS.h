@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGS_3XPMZW_H_
-#define _TAO_IDL_PEMNAMINGS_3XPMZW_H_
+#ifndef _TAO_IDL_PEMNAMINGS_W4FQP3_H_
+#define _TAO_IDL_PEMNAMINGS_W4FQP3_H_
 
 #include /**/ "ace/pre.h"
 

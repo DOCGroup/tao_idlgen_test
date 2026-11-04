@@ -23,7 +23,6 @@
  **/
 
 #include "structC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -48,6 +47,7 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "structC.inl"
@@ -57,7 +57,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S1[] =
       {
-        { "hello", std::addressof (CORBA::_tc_string) }
+        { "hello", &CORBA::_tc_string }
       };
 
 static TAO::TypeCode::Struct<
@@ -122,10 +122,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_TS3Seq_0 (
-        ::CORBA::tk_sequence, std::addressof (Test::_tc_S3), 0U);
+        ::CORBA::tk_sequence, &Test::_tc_S3, 0U);
 
     ::CORBA::TypeCode_ptr const tc_Test_TS3Seq_0 =
-      std::addressof (Test_TS3Seq_0);
+      &Test_TS3Seq_0;
   }
 }
 }
@@ -141,7 +141,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/TS3Seq:1.0",
     "TS3Seq",
-    std::addressof (TAO::TypeCode::tc_Test_TS3Seq_0));
+    &TAO::TypeCode::tc_Test_TS3Seq_0);
 
 namespace Test
 {
@@ -153,8 +153,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S3[] =
       {
-        { "m_seq", std::addressof (Test::_tc_TS3Seq) },
-        { "m_has_more", std::addressof (CORBA::_tc_boolean) }
+        { "m_seq", &Test::_tc_TS3Seq },
+        { "m_has_more", &CORBA::_tc_boolean }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -224,10 +224,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_TS4Seq_0 (
-        ::CORBA::tk_sequence, std::addressof (Test::_tc_S4), 0U);
+        ::CORBA::tk_sequence, &Test::_tc_S4, 0U);
 
     ::CORBA::TypeCode_ptr const tc_Test_TS4Seq_0 =
-      std::addressof (Test_TS4Seq_0);
+      &Test_TS4Seq_0;
   }
 }
 }
@@ -243,7 +243,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/TS4Seq:1.0",
     "TS4Seq",
-    std::addressof (TAO::TypeCode::tc_Test_TS4Seq_0));
+    &TAO::TypeCode::tc_Test_TS4Seq_0);
 
 namespace Test
 {
@@ -285,10 +285,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_TS5Seq_0 (
-        ::CORBA::tk_sequence, std::addressof (Test::_tc_S5), 0U);
+        ::CORBA::tk_sequence, &Test::_tc_S5, 0U);
 
     ::CORBA::TypeCode_ptr const tc_Test_TS5Seq_0 =
-      std::addressof (Test_TS5Seq_0);
+      &Test_TS5Seq_0;
   }
 }
 }
@@ -304,7 +304,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/TS5Seq:1.0",
     "TS5Seq",
-    std::addressof (TAO::TypeCode::tc_Test_TS5Seq_0));
+    &TAO::TypeCode::tc_Test_TS5Seq_0);
 
 namespace Test
 {
@@ -315,7 +315,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S4[] =
       {
-        { "a", std::addressof (CORBA::_tc_boolean) }
+        { "a", &CORBA::_tc_boolean }
       };
 
 static TAO::TypeCode::Struct<
@@ -349,7 +349,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S5[] =
       {
-        { "b", std::addressof (CORBA::_tc_boolean) }
+        { "b", &CORBA::_tc_boolean }
       };
 
 static TAO::TypeCode::Struct<
@@ -385,7 +385,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/FooType:1.0",
     "FooType",
-    std::addressof (CORBA::_tc_long));
+    &CORBA::_tc_long);
 
 namespace Test
 {
@@ -396,8 +396,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_FooStruct[] =
       {
-        { "Foo1", std::addressof (Test::_tc_FooType) },
-        { "Foo2", std::addressof (Test::_tc_FooType) }
+        { "Foo1", &Test::_tc_FooType },
+        { "Foo2", &Test::_tc_FooType }
       };
 
 static TAO::TypeCode::Struct<
@@ -497,11 +497,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_S90Array_2 (
         ::CORBA::tk_array,
-        std::addressof (Test::_tc_S90),
+        &Test::_tc_S90,
         2U);
 
     ::CORBA::TypeCode_ptr const tc_Test_S90Array =
-      std::addressof (Test_S90Array_2);
+      &Test_S90Array_2;
   }
 }
 }
@@ -516,7 +516,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/S90Array:1.0",
     "S90Array",
-    std::addressof (TAO::TypeCode::tc_Test_S90Array));
+    &TAO::TypeCode::tc_Test_S90Array);
 
 namespace Test
 {
@@ -574,11 +574,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_S42_2 (
         ::CORBA::tk_array,
-        std::addressof (CORBA::_tc_long),
+        &CORBA::_tc_long,
         2U);
 
     ::CORBA::TypeCode_ptr const tc_Test_S42 =
-      std::addressof (Test_S42_2);
+      &Test_S42_2;
   }
 }
 }
@@ -593,7 +593,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/S42:1.0",
     "S42",
-    std::addressof (TAO::TypeCode::tc_Test_S42));
+    &TAO::TypeCode::tc_Test_S42);
 
 namespace Test
 {
@@ -651,11 +651,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_SString43_2 (
         ::CORBA::tk_array,
-        std::addressof (CORBA::_tc_string),
+        &CORBA::_tc_string,
         2U);
 
     ::CORBA::TypeCode_ptr const tc_Test_SString43 =
-      std::addressof (Test_SString43_2);
+      &Test_SString43_2;
   }
 }
 }
@@ -670,7 +670,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/SString43:1.0",
     "SString43",
-    std::addressof (TAO::TypeCode::tc_Test_SString43));
+    &TAO::TypeCode::tc_Test_SString43);
 
 namespace Test
 {
@@ -728,11 +728,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_S4Array_2 (
         ::CORBA::tk_array,
-        std::addressof (Test::_tc_S4),
+        &Test::_tc_S4,
         2U);
 
     ::CORBA::TypeCode_ptr const tc_Test_S4Array =
-      std::addressof (Test_S4Array_2);
+      &Test_S4Array_2;
   }
 }
 }
@@ -747,7 +747,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/S4Array:1.0",
     "S4Array",
-    std::addressof (TAO::TypeCode::tc_Test_S4Array));
+    &TAO::TypeCode::tc_Test_S4Array);
 
 namespace Test
 {
@@ -759,10 +759,10 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S10[] =
       {
-        { "s10_1", std::addressof (Test::_tc_S90) },
-        { "s10_2", std::addressof (Test::_tc_S42) },
-        { "s10_3", std::addressof (Test::_tc_SString43) },
-        { "s10_4", std::addressof (Test::_tc_S4) }
+        { "s10_1", &Test::_tc_S90 },
+        { "s10_2", &Test::_tc_S42 },
+        { "s10_3", &Test::_tc_SString43 },
+        { "s10_4", &Test::_tc_S4 }
       };
 
 static TAO::TypeCode::Struct<
@@ -797,12 +797,12 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_DefaultInitialized[] =
       {
-        { "boolean_value", std::addressof (CORBA::_tc_boolean) },
-        { "long_value", std::addressof (CORBA::_tc_long) },
-        { "double_value", std::addressof (CORBA::_tc_double) },
-        { "enum_value", std::addressof (Test::_tc_S90) },
-        { "array_value", std::addressof (Test::_tc_S42) },
-        { "nested_value", std::addressof (Test::_tc_S4) }
+        { "boolean_value", &CORBA::_tc_boolean },
+        { "long_value", &CORBA::_tc_long },
+        { "double_value", &CORBA::_tc_double },
+        { "enum_value", &Test::_tc_S90 },
+        { "array_value", &Test::_tc_S42 },
+        { "nested_value", &Test::_tc_S4 }
       };
 
 static TAO::TypeCode::Struct<
@@ -932,8 +932,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_DefaultInitializedException[] =
       {
-        { "boolean_value", std::addressof (CORBA::_tc_boolean) },
-        { "long_value", std::addressof (CORBA::_tc_long) }
+        { "boolean_value", &CORBA::_tc_boolean },
+        { "long_value", &CORBA::_tc_long }
       };
 
 static TAO::TypeCode::Struct<

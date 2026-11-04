@@ -23,7 +23,6 @@
  **/
 
 #include "Bug_2582_RegressionC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -46,6 +45,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_2582_RegressionC.inl"
@@ -70,7 +70,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Encoding_T[] =
       {
-        { "id", std::addressof (_tc_EncodingID_T) }
+        { "id", &_tc_EncodingID_T }
       };
 
 static TAO::TypeCode::Struct<
@@ -103,7 +103,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:EncodingID2_T:1.0",
     "EncodingID2_T",
-    std::addressof (_tc_EncodingID_T));
+    &_tc_EncodingID_T);
 
 ::CORBA::TypeCode_ptr const _tc_EncodingID2_T = std::addressof(_tao_tc_EncodingID2_T);
 
@@ -342,7 +342,7 @@ static TAO::TypeCode::Objref<char const *,
     "FieldDevice_T");
 
 ::CORBA::TypeCode_ptr const _tc_FieldDevice_T = std::addressof(_tao_tc_FieldDevice_T);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_FieldDevice_TExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_FieldDevice_TExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -352,7 +352,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_FieldDevice_TExceptionHolder:1.0",
     "AMH_FieldDevice_TExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_FieldDevice_TExceptionHolder,
     0);
 

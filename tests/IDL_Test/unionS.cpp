@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_UNIONS_PLUELK_CPP_
-#define _TAO_IDL_UNIONS_PLUELK_CPP_
+#ifndef _TAO_IDL_UNIONS_6R2ODM_CPP_
+#define _TAO_IDL_UNIONS_6R2ODM_CPP_
 
 #include "unionS.h"
 

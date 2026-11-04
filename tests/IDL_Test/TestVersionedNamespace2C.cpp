@@ -23,7 +23,6 @@
  **/
 
 #include "TestVersionedNamespace2C.h"
-#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -47,6 +46,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "TestVersionedNamespace2C.inl"
@@ -59,7 +59,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M1_S1[] =
       {
-        { "o", std::addressof (CORBA::_tc_octet) }
+        { "o", &CORBA::_tc_octet }
       };
 
 static TAO::TypeCode::Struct<
@@ -235,7 +235,7 @@ namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_LI = std::addressof(_tao_tc_M1_LI);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M1_AMH_LIExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M1_AMH_LIExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -245,7 +245,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:M1/AMH_LIExceptionHolder:1.0",
     "AMH_LIExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_M1_AMH_LIExceptionHolder,
     0);
 
@@ -667,7 +667,7 @@ namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_L2 = std::addressof(_tao_tc_M1_L2);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M1_AMH_L2ExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M1_AMH_L2ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -677,7 +677,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:M1/AMH_L2ExceptionHolder:1.0",
     "AMH_L2ExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_M1_AMH_L2ExceptionHolder,
     0);
 
@@ -957,9 +957,9 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M1_X[] =
       {
-        { "valString", std::addressof (CORBA::_tc_string) },
-        { "valStruct", std::addressof (M1::_tc_S1) },
-        { "valLocalIface", std::addressof (M1::_tc_L2) }
+        { "valString", &CORBA::_tc_string },
+        { "valStruct", &M1::_tc_S1 },
+        { "valLocalIface", &M1::_tc_L2 }
       };
 
 static TAO::TypeCode::Struct<
@@ -1088,11 +1088,11 @@ void M1::BooleanUnion1::_reset ()
     break;
   }
 }
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_M1_BooleanUnion1__0 (true, "valLocalIface", std::addressof (M1::_tc_L2));
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_M1_BooleanUnion1__0 (true, "valLocalIface", &M1::_tc_L2);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_M1_BooleanUnion1[] =
   {
-    std::addressof (_tao_cases_M1_BooleanUnion1__0)
+    &_tao_cases_M1_BooleanUnion1__0
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -1102,7 +1102,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_M1_BooleanUnion1 (
     "IDL:M1/BooleanUnion1:1.0",
     "BooleanUnion1",
-    std::addressof (CORBA::_tc_boolean),
+    &CORBA::_tc_boolean,
     _tao_cases_M1_BooleanUnion1,
     sizeof (_tao_cases_M1_BooleanUnion1)/sizeof (_tao_cases_M1_BooleanUnion1[0]),
     -1);
@@ -1181,11 +1181,11 @@ void M1::BooleanUnion2::_reset ()
     break;
   }
 }
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_M1_BooleanUnion2__0 (true, "valLocalIface", std::addressof (CORBA::_tc_string));
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_M1_BooleanUnion2__0 (true, "valLocalIface", &CORBA::_tc_string);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_M1_BooleanUnion2[] =
   {
-    std::addressof (_tao_cases_M1_BooleanUnion2__0)
+    &_tao_cases_M1_BooleanUnion2__0
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -1195,7 +1195,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_M1_BooleanUnion2 (
     "IDL:M1/BooleanUnion2:1.0",
     "BooleanUnion2",
-    std::addressof (CORBA::_tc_boolean),
+    &CORBA::_tc_boolean,
     _tao_cases_M1_BooleanUnion2,
     sizeof (_tao_cases_M1_BooleanUnion2)/sizeof (_tao_cases_M1_BooleanUnion2[0]),
     -1);
@@ -1206,12 +1206,12 @@ namespace M1
 }
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_M1_V[] =
   {
-    { "valString", std::addressof (CORBA::_tc_string), ::CORBA::PUBLIC_MEMBER },
-    { "valStruct", std::addressof (M1::_tc_S1), ::CORBA::PUBLIC_MEMBER },
-    { "valLocalIface", std::addressof (M1::_tc_LI), ::CORBA::PUBLIC_MEMBER },
-    { "valBoolUnion1", std::addressof (M1::_tc_BooleanUnion1), ::CORBA::PUBLIC_MEMBER },
-    { "valBoolUnion2", std::addressof (M1::_tc_BooleanUnion2), ::CORBA::PUBLIC_MEMBER },
-    { "valX", std::addressof (M1::_tc_X), ::CORBA::PUBLIC_MEMBER }
+    { "valString", &CORBA::_tc_string, ::CORBA::PUBLIC_MEMBER },
+    { "valStruct", &M1::_tc_S1, ::CORBA::PUBLIC_MEMBER },
+    { "valLocalIface", &M1::_tc_LI, ::CORBA::PUBLIC_MEMBER },
+    { "valBoolUnion1", &M1::_tc_BooleanUnion1, ::CORBA::PUBLIC_MEMBER },
+    { "valBoolUnion2", &M1::_tc_BooleanUnion2, ::CORBA::PUBLIC_MEMBER },
+    { "valX", &M1::_tc_X, ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -1223,7 +1223,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:M1/V:1.0",
     "V",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_M1_V,
     6);
 
@@ -1388,7 +1388,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M2_M3_S2[] =
       {
-        { "o", std::addressof (CORBA::_tc_octet) }
+        { "o", &CORBA::_tc_octet }
       };
 
 static TAO::TypeCode::Struct<
@@ -1572,7 +1572,7 @@ namespace M2
     ::CORBA::TypeCode_ptr const _tc_L3 = std::addressof(_tao_tc_M2_M3_L3);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M2_M3_AMH_L3ExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M2_M3_AMH_L3ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1582,7 +1582,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:M2/M3/AMH_L3ExceptionHolder:1.0",
     "AMH_L3ExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_M2_M3_AMH_L3ExceptionHolder,
     0);
 
@@ -1970,9 +1970,9 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M2_M3_E1[] =
       {
-        { "val2", std::addressof (M2::M3::_tc_L3) },
-        { "bool1", std::addressof (M1::_tc_BooleanUnion1) },
-        { "bool2", std::addressof (M1::_tc_BooleanUnion2) }
+        { "val2", &M2::M3::_tc_L3 },
+        { "bool1", &M1::_tc_BooleanUnion1 },
+        { "bool2", &M1::_tc_BooleanUnion2 }
       };
 
 static TAO::TypeCode::Struct<
@@ -2163,7 +2163,7 @@ namespace M2
     ::CORBA::TypeCode_ptr const _tc_L4 = std::addressof(_tao_tc_M2_M3_L4);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M2_M3_AMH_L4ExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_M2_M3_AMH_L4ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -2173,7 +2173,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:M2/M3/AMH_L4ExceptionHolder:1.0",
     "AMH_L4ExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_M2_M3_AMH_L4ExceptionHolder,
     0);
 
@@ -2458,10 +2458,10 @@ namespace M2
 }
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_M2_M3_V2[] =
   {
-    { "valString", std::addressof (CORBA::_tc_string), ::CORBA::PUBLIC_MEMBER },
-    { "valStruct", std::addressof (M2::M3::_tc_S2), ::CORBA::PUBLIC_MEMBER },
-    { "valLocalIface", std::addressof (M2::M3::_tc_L3), ::CORBA::PUBLIC_MEMBER },
-    { "valLocalIface3", std::addressof (M2::M3::_tc_L4), ::CORBA::PUBLIC_MEMBER }
+    { "valString", &CORBA::_tc_string, ::CORBA::PUBLIC_MEMBER },
+    { "valStruct", &M2::M3::_tc_S2, ::CORBA::PUBLIC_MEMBER },
+    { "valLocalIface", &M2::M3::_tc_L3, ::CORBA::PUBLIC_MEMBER },
+    { "valLocalIface3", &M2::M3::_tc_L4, ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -2473,7 +2473,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:M2/M3/V2:1.0",
     "V2",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_M2_M3_V2,
     4);
 
@@ -2639,9 +2639,9 @@ M2::M3::V2_init::create_for_unmarshal ()
 }
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_M2_M3_V3[] =
   {
-    { "valString", std::addressof (CORBA::_tc_string), ::CORBA::PUBLIC_MEMBER },
-    { "valStruct", std::addressof (M1::_tc_S1), ::CORBA::PUBLIC_MEMBER },
-    { "valLocalIface", std::addressof (M1::_tc_L2), ::CORBA::PUBLIC_MEMBER }
+    { "valString", &CORBA::_tc_string, ::CORBA::PUBLIC_MEMBER },
+    { "valStruct", &M1::_tc_S1, ::CORBA::PUBLIC_MEMBER },
+    { "valLocalIface", &M1::_tc_L2, ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -2653,7 +2653,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:M2/M3/V3:1.0",
     "V3",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_M2_M3_V3,
     3);
 

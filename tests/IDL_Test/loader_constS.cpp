@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_LOADER_CONSTS_7VCVJG_CPP_
-#define _TAO_IDL_LOADER_CONSTS_7VCVJG_CPP_
+#ifndef _TAO_IDL_LOADER_CONSTS_H2ZQQD_CPP_
+#define _TAO_IDL_LOADER_CONSTS_H2ZQQD_CPP_
 
 #include "loader_constS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

@@ -23,7 +23,6 @@
  **/
 
 #include "nested_scopeC.h"
-#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -52,6 +51,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "nested_scopeC.inl"
@@ -61,7 +61,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_skip_hump_skip[] =
       {
-        { "s", std::addressof (CORBA::_tc_short) }
+        { "s", &CORBA::_tc_short }
       };
 
 static TAO::TypeCode::Struct<
@@ -152,11 +152,11 @@ u_skip::u_hump::u_skip::operator= (::u_skip::u_hump::u_skip const &u)
 void u_skip::u_hump::u_skip::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_u_skip_u_hump_u_skip__0 (0, "s", std::addressof (CORBA::_tc_short));
+static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_u_skip_u_hump_u_skip__0 (0, "s", &CORBA::_tc_short);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_u_skip_u_hump_u_skip[] =
   {
-    std::addressof (_tao_cases_u_skip_u_hump_u_skip__0)
+    &_tao_cases_u_skip_u_hump_u_skip__0
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -166,7 +166,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_u_skip_u_hump_u_skip (
     "IDL:u_skip/u_hump/u_skip:1.0",
     "u_skip",
-    std::addressof (CORBA::_tc_short),
+    &CORBA::_tc_short,
     _tao_cases_u_skip_u_hump_u_skip,
     sizeof (_tao_cases_u_skip_u_hump_u_skip)/sizeof (_tao_cases_u_skip_u_hump_u_skip[0]),
     -1);
@@ -262,7 +262,7 @@ void e_skip::e_hump::e_skip::_tao_decode (TAO_InputCDR &cdr)
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_e_skip_e_hump_e_skip {};
+    _tao_fields_e_skip_e_hump_e_skip = nullptr;
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -412,7 +412,7 @@ namespace i_skip
     ::CORBA::TypeCode_ptr const _tc_i_skip = std::addressof(_tao_tc_i_skip_i_hump_i_skip);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_i_skip_i_hump_AMH_i_skipExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_i_skip_i_hump_AMH_i_skipExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -422,7 +422,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:i_skip/i_hump/AMH_i_skipExceptionHolder:1.0",
     "AMH_i_skipExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_i_skip_i_hump_AMH_i_skipExceptionHolder,
     0);
 
@@ -895,10 +895,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> pre_u_skip_pre_u_hump_pre_u_skip_0 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_long), 0U);
+        ::CORBA::tk_sequence, &CORBA::_tc_long, 0U);
 
     ::CORBA::TypeCode_ptr const tc_pre_u_skip_pre_u_hump_pre_u_skip_0 =
-      std::addressof (pre_u_skip_pre_u_hump_pre_u_skip_0);
+      &pre_u_skip_pre_u_hump_pre_u_skip_0;
   }
 }
 }
@@ -914,7 +914,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:pre_u_skip/pre_u_hump/pre_u_skip:1.0",
     "pre_u_skip",
-    std::addressof (TAO::TypeCode::tc_pre_u_skip_pre_u_hump_pre_u_skip_0));
+    &TAO::TypeCode::tc_pre_u_skip_pre_u_hump_pre_u_skip_0);
 
 namespace pre_u_skip
 {
@@ -956,10 +956,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> pre_b_skip_pre_b_hump_pre_b_skip_3 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_long), 3U);
+        ::CORBA::tk_sequence, &CORBA::_tc_long, 3U);
 
     ::CORBA::TypeCode_ptr const tc_pre_b_skip_pre_b_hump_pre_b_skip_3 =
-      std::addressof (pre_b_skip_pre_b_hump_pre_b_skip_3);
+      &pre_b_skip_pre_b_hump_pre_b_skip_3;
   }
 }
 }
@@ -975,7 +975,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:pre_b_skip/pre_b_hump/pre_b_skip:1.0",
     "pre_b_skip",
-    std::addressof (TAO::TypeCode::tc_pre_b_skip_pre_b_hump_pre_b_skip_3));
+    &TAO::TypeCode::tc_pre_b_skip_pre_b_hump_pre_b_skip_3);
 
 namespace pre_b_skip
 {
@@ -1021,10 +1021,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> str_u_skip_str_u_hump_str_u_skip_0 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_string), 0U);
+        ::CORBA::tk_sequence, &CORBA::_tc_string, 0U);
 
     ::CORBA::TypeCode_ptr const tc_str_u_skip_str_u_hump_str_u_skip_0 =
-      std::addressof (str_u_skip_str_u_hump_str_u_skip_0);
+      &str_u_skip_str_u_hump_str_u_skip_0;
   }
 }
 }
@@ -1040,7 +1040,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:str_u_skip/str_u_hump/str_u_skip:1.0",
     "str_u_skip",
-    std::addressof (TAO::TypeCode::tc_str_u_skip_str_u_hump_str_u_skip_0));
+    &TAO::TypeCode::tc_str_u_skip_str_u_hump_str_u_skip_0);
 
 namespace str_u_skip
 {
@@ -1082,10 +1082,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> str_b_skip_str_b_hump_str_b_skip_3 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_string), 3U);
+        ::CORBA::tk_sequence, &CORBA::_tc_string, 3U);
 
     ::CORBA::TypeCode_ptr const tc_str_b_skip_str_b_hump_str_b_skip_3 =
-      std::addressof (str_b_skip_str_b_hump_str_b_skip_3);
+      &str_b_skip_str_b_hump_str_b_skip_3;
   }
 }
 }
@@ -1101,7 +1101,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:str_b_skip/str_b_hump/str_b_skip:1.0",
     "str_b_skip",
-    std::addressof (TAO::TypeCode::tc_str_b_skip_str_b_hump_str_b_skip_3));
+    &TAO::TypeCode::tc_str_b_skip_str_b_hump_str_b_skip_3);
 
 namespace str_b_skip
 {
@@ -1147,10 +1147,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> wstr_u_skip_wstr_u_hump_wstr_u_skip_0 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_wstring), 0U);
+        ::CORBA::tk_sequence, &CORBA::_tc_wstring, 0U);
 
     ::CORBA::TypeCode_ptr const tc_wstr_u_skip_wstr_u_hump_wstr_u_skip_0 =
-      std::addressof (wstr_u_skip_wstr_u_hump_wstr_u_skip_0);
+      &wstr_u_skip_wstr_u_hump_wstr_u_skip_0;
   }
 }
 }
@@ -1166,7 +1166,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:wstr_u_skip/wstr_u_hump/wstr_u_skip:1.0",
     "wstr_u_skip",
-    std::addressof (TAO::TypeCode::tc_wstr_u_skip_wstr_u_hump_wstr_u_skip_0));
+    &TAO::TypeCode::tc_wstr_u_skip_wstr_u_hump_wstr_u_skip_0);
 
 namespace wstr_u_skip
 {
@@ -1208,10 +1208,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> wstr_b_skip_wstr_b_hump_wstr_b_skip_3 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_wstring), 3U);
+        ::CORBA::tk_sequence, &CORBA::_tc_wstring, 3U);
 
     ::CORBA::TypeCode_ptr const tc_wstr_b_skip_wstr_b_hump_wstr_b_skip_3 =
-      std::addressof (wstr_b_skip_wstr_b_hump_wstr_b_skip_3);
+      &wstr_b_skip_wstr_b_hump_wstr_b_skip_3;
   }
 }
 }
@@ -1227,7 +1227,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:wstr_b_skip/wstr_b_hump/wstr_b_skip:1.0",
     "wstr_b_skip",
-    std::addressof (TAO::TypeCode::tc_wstr_b_skip_wstr_b_hump_wstr_b_skip_3));
+    &TAO::TypeCode::tc_wstr_b_skip_wstr_b_hump_wstr_b_skip_3);
 
 namespace wstr_b_skip
 {
@@ -1356,7 +1356,7 @@ static TAO::TypeCode::Objref<char const *,
     "bloo");
 
 ::CORBA::TypeCode_ptr const _tc_bloo = std::addressof(_tao_tc_bloo);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_blooExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_blooExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1366,7 +1366,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_blooExceptionHolder:1.0",
     "AMH_blooExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_blooExceptionHolder,
     0);
 
@@ -1818,10 +1818,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> obj_u_skip_obj_u_hump_obj_u_skip_0 (
-        ::CORBA::tk_sequence, std::addressof (_tc_bloo), 0U);
+        ::CORBA::tk_sequence, &_tc_bloo, 0U);
 
     ::CORBA::TypeCode_ptr const tc_obj_u_skip_obj_u_hump_obj_u_skip_0 =
-      std::addressof (obj_u_skip_obj_u_hump_obj_u_skip_0);
+      &obj_u_skip_obj_u_hump_obj_u_skip_0;
   }
 }
 }
@@ -1837,7 +1837,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:obj_u_skip/obj_u_hump/obj_u_skip:1.0",
     "obj_u_skip",
-    std::addressof (TAO::TypeCode::tc_obj_u_skip_obj_u_hump_obj_u_skip_0));
+    &TAO::TypeCode::tc_obj_u_skip_obj_u_hump_obj_u_skip_0);
 
 namespace obj_u_skip
 {
@@ -1883,10 +1883,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> obj_b_skip_obj_b_hump_obj_b_skip_0 (
-        ::CORBA::tk_sequence, std::addressof (_tc_bloo), 0U);
+        ::CORBA::tk_sequence, &_tc_bloo, 0U);
 
     ::CORBA::TypeCode_ptr const tc_obj_b_skip_obj_b_hump_obj_b_skip_0 =
-      std::addressof (obj_b_skip_obj_b_hump_obj_b_skip_0);
+      &obj_b_skip_obj_b_hump_obj_b_skip_0;
   }
 }
 }
@@ -1902,7 +1902,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:obj_b_skip/obj_b_hump/obj_b_skip:1.0",
     "obj_b_skip",
-    std::addressof (TAO::TypeCode::tc_obj_b_skip_obj_b_hump_obj_b_skip_0));
+    &TAO::TypeCode::tc_obj_b_skip_obj_b_hump_obj_b_skip_0);
 
 namespace obj_b_skip
 {
@@ -2038,7 +2038,7 @@ namespace bug_1985_a
     ::CORBA::TypeCode_ptr const _tc_something = std::addressof(_tao_tc_bug_1985_a_b_something);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_bug_1985_a_b_AMH_somethingExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_bug_1985_a_b_AMH_somethingExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -2048,7 +2048,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:bug_1985_a/b/AMH_somethingExceptionHolder:1.0",
     "AMH_somethingExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_bug_1985_a_b_AMH_somethingExceptionHolder,
     0);
 
@@ -2612,7 +2612,7 @@ namespace bug_1985_c
     ::CORBA::TypeCode_ptr const _tc_something = std::addressof(_tao_tc_bug_1985_c_d_something);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_bug_1985_c_d_AMH_somethingExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_bug_1985_c_d_AMH_somethingExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -2622,7 +2622,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:bug_1985_c/d/AMH_somethingExceptionHolder:1.0",
     "AMH_somethingExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_bug_1985_c_d_AMH_somethingExceptionHolder,
     0);
 
@@ -3182,7 +3182,7 @@ namespace Negotiator
 {
   ::CORBA::TypeCode_ptr const _tc_UAV_Negotiator = std::addressof(_tao_tc_Negotiator_UAV_Negotiator);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Negotiator_AMH_UAV_NegotiatorExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Negotiator_AMH_UAV_NegotiatorExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -3192,7 +3192,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Negotiator/AMH_UAV_NegotiatorExceptionHolder:1.0",
     "AMH_UAV_NegotiatorExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_Negotiator_AMH_UAV_NegotiatorExceptionHolder,
     0);
 
@@ -3807,7 +3807,7 @@ namespace Negotiator
 {
   ::CORBA::TypeCode_ptr const _tc_UAV_Negotiator_Factory = std::addressof(_tao_tc_Negotiator_UAV_Negotiator_Factory);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Negotiator_AMH_UAV_Negotiator_FactoryExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Negotiator_AMH_UAV_Negotiator_FactoryExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -3817,7 +3817,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Negotiator/AMH_UAV_Negotiator_FactoryExceptionHolder:1.0",
     "AMH_UAV_Negotiator_FactoryExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_Negotiator_AMH_UAV_Negotiator_FactoryExceptionHolder,
     0);
 
@@ -4563,7 +4563,7 @@ namespace Wow
     ::CORBA::TypeCode_ptr const _tc_MyInterface = std::addressof(_tao_tc_Wow_bug_2125_MyInterface);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Wow_bug_2125_AMH_MyInterfaceExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Wow_bug_2125_AMH_MyInterfaceExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -4573,7 +4573,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Wow/bug_2125/AMH_MyInterfaceExceptionHolder:1.0",
     "AMH_MyInterfaceExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_Wow_bug_2125_AMH_MyInterfaceExceptionHolder,
     0);
 
@@ -5115,7 +5115,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Company/CORBA/LongU:1.0",
     "LongU",
-    std::addressof (CORBA::_tc_ulong));
+    &CORBA::_tc_ulong);
 
 namespace Company
 {
@@ -5130,7 +5130,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Company_CORBA_Inner_Foo[] =
       {
-        { "x", std::addressof (CORBA::_tc_boolean) }
+        { "x", &CORBA::_tc_boolean }
       };
 
 static TAO::TypeCode::Struct<

@@ -23,7 +23,6 @@
  **/
 
 #include "typeprefixC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -41,6 +40,7 @@
 #include "tao/CDR.h"
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "typeprefixC.inl"
@@ -167,7 +167,7 @@ namespace A
 {
   ::CORBA::TypeCode_ptr const _tc_B = std::addressof(_tao_tc_A_B);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_AMH_BExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_AMH_BExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -177,7 +177,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:TAO/A/AMH_BExceptionHolder:1.0",
     "AMH_BExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_A_AMH_BExceptionHolder,
     0);
 
@@ -789,7 +789,7 @@ namespace A
 {
   ::CORBA::TypeCode_ptr const _tc_C = std::addressof(_tao_tc_A_C);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_AMH_CExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_AMH_CExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -799,7 +799,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:TAO/A/AMH_CExceptionHolder:1.0",
     "AMH_CExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_A_AMH_CExceptionHolder,
     0);
 

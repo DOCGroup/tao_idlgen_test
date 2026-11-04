@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_3821_REGRESSIONS_2JWG6L_CPP_
-#define _TAO_IDL_BUG_3821_REGRESSIONS_2JWG6L_CPP_
+#ifndef _TAO_IDL_BUG_3821_REGRESSIONS_YASML6_CPP_
+#define _TAO_IDL_BUG_3821_REGRESSIONS_YASML6_CPP_
 
 #include "Bug_3821_RegressionS.h"
 

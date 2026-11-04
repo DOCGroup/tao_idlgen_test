@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ONLYS_WI1HM4_CPP_
-#define _TAO_IDL_ARRAY_ONLYS_WI1HM4_CPP_
+#ifndef _TAO_IDL_ARRAY_ONLYS_J4ZGPD_CPP_
+#define _TAO_IDL_ARRAY_ONLYS_J4ZGPD_CPP_
 
 #include "array_onlyS.h"
 

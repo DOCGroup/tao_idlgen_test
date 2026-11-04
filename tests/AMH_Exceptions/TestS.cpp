@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_N1B8KP_CPP_
-#define _TAO_IDL_TESTS_N1B8KP_CPP_
+#ifndef _TAO_IDL_TESTS_1JF4DN_CPP_
+#define _TAO_IDL_TESTS_1JF4DN_CPP_
 
 #include "TestS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -59,7 +59,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -89,8 +89,8 @@ TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable::lookup (const char *str, std::size_
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {5};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -159,7 +159,9 @@ POA_Test::AMH_Roundtrip::test_method_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -194,7 +196,9 @@ POA_Test::AMH_Roundtrip::shutdown_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -231,7 +235,7 @@ Test::Roundtrip*
 POA_Test::AMH_Roundtrip::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -251,7 +255,7 @@ public:
   const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Test_Roundtrip_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
@@ -281,8 +285,8 @@ TAO_Test_Roundtrip_Perfect_Hash_OpTable::lookup (const char *str, std::size_t le
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr std::size_t MIN_HASH_VALUE {5};
-  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
@@ -363,13 +367,15 @@ void POA_Test::Roundtrip::test_method_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Test::_tc_InvalidTimestamp,
       Test::_tc_ServerOverload
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< ::CORBA::ULongLong>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::ULongLong>::in_arg_val _tao_send_time;
@@ -397,11 +403,11 @@ void POA_Test::Roundtrip::test_method_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 2
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -449,11 +455,11 @@ void POA_Test::Roundtrip::shutdown_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_CONSTANTSC_SBO6IW_H_
-#define _TAO_IDL_OLD_CONSTANTSC_SBO6IW_H_
+#ifndef _TAO_IDL_OLD_CONSTANTSC_AHH8ZW_H_
+#define _TAO_IDL_OLD_CONSTANTSC_AHH8ZW_H_
 
 #include /**/ "ace/pre.h"
 
@@ -618,9 +618,11 @@ namespace OBV_OldConstants
     ~AMH_AExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean _tao_marshal__OldConstants_M_AMH_AExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean
+    _tao_marshal__OldConstants_M_AMH_AExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean _tao_unmarshal__OldConstants_M_AMH_AExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean
+    _tao_unmarshal__OldConstants_M_AMH_AExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

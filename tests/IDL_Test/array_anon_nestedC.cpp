@@ -60,11 +60,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> teststruct_b_4 (
         ::CORBA::tk_array,
-        std::addressof (CORBA::_tc_char),
+        &CORBA::_tc_char,
         4U);
 
     ::CORBA::TypeCode_ptr const tc_teststruct_b =
-      std::addressof (teststruct_b_4);
+      &teststruct_b_4;
   }
 }
 }
@@ -77,8 +77,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_teststruct[] =
       {
-        { "b", std::addressof (TAO::TypeCode::tc_teststruct_b) },
-        { "estruct", std::addressof (teststruct::_tc_embeddedstruct) }
+        { "b", &TAO::TypeCode::tc_teststruct_b },
+        { "estruct", &teststruct::_tc_embeddedstruct }
       };
 
 static TAO::TypeCode::Struct<
@@ -156,11 +156,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> teststruct_embeddedstruct_a_4 (
         ::CORBA::tk_array,
-        std::addressof (CORBA::_tc_char),
+        &CORBA::_tc_char,
         4U);
 
     ::CORBA::TypeCode_ptr const tc_teststruct_embeddedstruct_a =
-      std::addressof (teststruct_embeddedstruct_a_4);
+      &teststruct_embeddedstruct_a_4;
   }
 }
 }
@@ -173,7 +173,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_teststruct_embeddedstruct[] =
       {
-        { "a", std::addressof (TAO::TypeCode::tc_teststruct_embeddedstruct_a) }
+        { "a", &TAO::TypeCode::tc_teststruct_embeddedstruct_a }
       };
 
 static TAO::TypeCode::Struct<
@@ -244,7 +244,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:tstruct:1.0",
     "tstruct",
-    std::addressof (_tc_teststruct));
+    &_tc_teststruct);
 
 ::CORBA::TypeCode_ptr const _tc_tstruct = std::addressof(_tao_tc_tstruct);
 

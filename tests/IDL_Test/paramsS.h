@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSS_3J462O_H_
-#define _TAO_IDL_PARAMSS_3J462O_H_
+#ifndef _TAO_IDL_PARAMSS_Y85C6L_H_
+#define _TAO_IDL_PARAMSS_Y85C6L_H_
 
 #include /**/ "ace/pre.h"
 

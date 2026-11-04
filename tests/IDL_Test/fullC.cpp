@@ -23,7 +23,6 @@
  **/
 
 #include "fullC.h"
-#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -50,6 +49,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "fullC.inl"
@@ -176,7 +176,7 @@ namespace scope_test
 {
   ::CORBA::TypeCode_ptr const _tc_i_scope_test = std::addressof(_tao_tc_scope_test_i_scope_test);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_scope_test_AMH_i_scope_testExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_scope_test_AMH_i_scope_testExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -186,7 +186,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:scope_test/AMH_i_scope_testExceptionHolder:1.0",
     "AMH_i_scope_testExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_scope_test_AMH_i_scope_testExceptionHolder,
     0);
 
@@ -809,11 +809,11 @@ namespace mod2
 {
   extern ::CORBA::TypeCode_ptr const _tc_full;
 }
-static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_mod2_fwd_un__0 (0, "full_mem", std::addressof (mod2::_tc_full));
+static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_mod2_fwd_un__0 (0, "full_mem", &mod2::_tc_full);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_mod2_fwd_un[] =
   {
-    std::addressof (_tao_cases_mod2_fwd_un__0)
+    &_tao_cases_mod2_fwd_un__0
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -823,7 +823,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_mod2_fwd_un (
     "IDL:mod2/fwd/un:1.0",
     "un",
-    std::addressof (CORBA::_tc_short),
+    &CORBA::_tc_short,
     _tao_cases_mod2_fwd_un,
     sizeof (_tao_cases_mod2_fwd_un)/sizeof (_tao_cases_mod2_fwd_un[0]),
     -1);
@@ -870,10 +870,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> mod2_fwd_full_seq_0 (
-        ::CORBA::tk_sequence, std::addressof (mod2::_tc_full), 0U);
+        ::CORBA::tk_sequence, &mod2::_tc_full, 0U);
 
     ::CORBA::TypeCode_ptr const tc_mod2_fwd_full_seq_0 =
-      std::addressof (mod2_fwd_full_seq_0);
+      &mod2_fwd_full_seq_0;
   }
 }
 }
@@ -889,7 +889,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:mod2/fwd/full_seq:1.0",
     "full_seq",
-    std::addressof (TAO::TypeCode::tc_mod2_fwd_full_seq_0));
+    &TAO::TypeCode::tc_mod2_fwd_full_seq_0);
 
 ::CORBA::TypeCode_ptr const mod2::fwd::_tc_full_seq = std::addressof(_tao_tc_mod2_fwd_full_seq);
 mod2::fwd::bar::bar ()
@@ -975,7 +975,7 @@ void mod2::fwd::bar::_tao_decode (TAO_InputCDR &cdr)
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_mod2_fwd_bar {};
+    _tao_fields_mod2_fwd_bar = nullptr;
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -1237,7 +1237,7 @@ namespace mod2
 {
   ::CORBA::TypeCode_ptr const _tc_fwd = std::addressof(_tao_tc_mod2_fwd);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_mod2_AMH_fwdExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_mod2_AMH_fwdExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1247,7 +1247,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:mod2/AMH_fwdExceptionHolder:1.0",
     "AMH_fwdExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_mod2_AMH_fwdExceptionHolder,
     0);
 

@@ -23,7 +23,6 @@
  **/
 
 #include "includedC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -47,6 +46,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "includedC.inl"
@@ -87,10 +87,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Aok_Seq1Type_0 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_double), 0U);
+        ::CORBA::tk_sequence, &CORBA::_tc_double, 0U);
 
     ::CORBA::TypeCode_ptr const tc_Aok_Seq1Type_0 =
-      std::addressof (Aok_Seq1Type_0);
+      &Aok_Seq1Type_0;
   }
 }
 }
@@ -106,7 +106,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Aok/Seq1Type:1.0",
     "Seq1Type",
-    std::addressof (TAO::TypeCode::tc_Aok_Seq1Type_0));
+    &TAO::TypeCode::tc_Aok_Seq1Type_0);
 
 namespace Aok
 {
@@ -119,7 +119,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Aok/Me:1.0",
     "Me",
-    std::addressof (CORBA::_tc_long));
+    &CORBA::_tc_long);
 
 namespace Aok
 {
@@ -142,7 +142,7 @@ static TAO::TypeCode::Enum<char const *,
     3);
 
 ::CORBA::TypeCode_ptr const _tc_Agog = std::addressof(_tao_tc_Agog);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_VT_Def_VT {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_VT_Def_VT = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -152,7 +152,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:VT_Def/VT:1.0",
     "VT",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_VT_Def_VT,
     0);
 
@@ -321,10 +321,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> IncludedBase__tao_seq_CORBA_Long__0 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_long), 0U);
+        ::CORBA::tk_sequence, &CORBA::_tc_long, 0U);
 
     ::CORBA::TypeCode_ptr const tc_IncludedBase__tao_seq_CORBA_Long__0 =
-      std::addressof (IncludedBase__tao_seq_CORBA_Long__0);
+      &IncludedBase__tao_seq_CORBA_Long__0;
   }
 }
 }
@@ -335,7 +335,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_IncludedBase[] =
   {
-    { "DeprecatedMember", std::addressof (TAO::TypeCode::tc_IncludedBase__tao_seq_CORBA_Long__0), ::CORBA::PUBLIC_MEMBER }
+    { "DeprecatedMember", &TAO::TypeCode::tc_IncludedBase__tao_seq_CORBA_Long__0, ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -347,7 +347,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:IncludedBase:1.0",
     "IncludedBase",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_IncludedBase,
     1);
 
@@ -536,10 +536,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> A_MySeqA_0 (
-        ::CORBA::tk_sequence, std::addressof (A::_tc_MyStructA), 0U);
+        ::CORBA::tk_sequence, &A::_tc_MyStructA, 0U);
 
     ::CORBA::TypeCode_ptr const tc_A_MySeqA_0 =
-      std::addressof (A_MySeqA_0);
+      &A_MySeqA_0;
   }
 }
 }
@@ -555,7 +555,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:A/MySeqA:1.0",
     "MySeqA",
-    std::addressof (TAO::TypeCode::tc_A_MySeqA_0));
+    &TAO::TypeCode::tc_A_MySeqA_0);
 
 namespace A
 {
@@ -567,8 +567,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_A_MyStructA[] =
       {
-        { "str", std::addressof (CORBA::_tc_string) },
-        { "recursive_member", std::addressof (A::_tc_MySeqA) }
+        { "str", &CORBA::_tc_string },
+        { "recursive_member", &A::_tc_MySeqA }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -746,7 +746,7 @@ namespace RootModule
     ::CORBA::TypeCode_ptr const _tc_ParentIF = std::addressof(_tao_tc_RootModule_SUBMODULE1_ParentIF);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_RootModule_SUBMODULE1_AMH_ParentIFExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_RootModule_SUBMODULE1_AMH_ParentIFExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -756,7 +756,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:RootModule/SUBMODULE1/AMH_ParentIFExceptionHolder:1.0",
     "AMH_ParentIFExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_RootModule_SUBMODULE1_AMH_ParentIFExceptionHolder,
     0);
 
@@ -1231,7 +1231,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:AAA/my_long_type:1.0",
     "my_long_type",
-    std::addressof (CORBA::_tc_long));
+    &CORBA::_tc_long);
 
 ::CORBA::TypeCode_ptr const AAA::_tc_my_long_type = std::addressof(_tao_tc_AAA_my_long_type);
 
@@ -1323,7 +1323,7 @@ static TAO::TypeCode::Objref<char const *,
     "AAA");
 
 ::CORBA::TypeCode_ptr const _tc_AAA = std::addressof(_tao_tc_AAA);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_AAAExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_AAAExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1333,7 +1333,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_AAAExceptionHolder:1.0",
     "AMH_AAAExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_AAAExceptionHolder,
     0);
 

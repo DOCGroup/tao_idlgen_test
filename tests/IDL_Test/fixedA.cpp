@@ -43,7 +43,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
   _tao_tc_fixed_3_0 (
     3,
     0);
-  static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_0_ptr = std::addressof (_tao_tc_fixed_3_0);
+  static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_0_ptr = &_tao_tc_fixed_3_0;
   #endif /* _TAO_TYPECODE_FIXED_3_0_GUARD */
 
   #ifndef _TAO_TYPECODE_FIXED_3_0_GUARD
@@ -52,7 +52,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
     _tao_tc_fixed_3_0 (
       3,
       0);
-    static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_0_ptr = std::addressof (_tao_tc_fixed_3_0;
+    static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_0_ptr = &_tao_tc_fixed_3_0;
     #endif /* _TAO_TYPECODE_FIXED_3_0_GUARD */
 
     static TAO::TypeCode::Alias<char const *,
@@ -62,7 +62,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
         ::CORBA::tk_alias,
         "IDL:FixedPoint/WholeNumber:1.0",
         "WholeNumber",
-        std::addressof (_tao_tc_fixed_3_0_ptr));
+        &_tao_tc_fixed_3_0_ptr);
 
     namespace FixedPoint
     {
@@ -74,7 +74,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
       _tao_tc_fixed_3_3 (
         3,
         3);
-      static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_3_ptr = std::addressof (_tao_tc_fixed_3_3);
+      static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_3_ptr = &_tao_tc_fixed_3_3;
       #endif /* _TAO_TYPECODE_FIXED_3_3_GUARD */
 
       #ifndef _TAO_TYPECODE_FIXED_3_3_GUARD
@@ -83,7 +83,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
         _tao_tc_fixed_3_3 (
           3,
           3);
-        static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_3_ptr = std::addressof (_tao_tc_fixed_3_3;
+        static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_3_ptr = &_tao_tc_fixed_3_3;
         #endif /* _TAO_TYPECODE_FIXED_3_3_GUARD */
 
         static TAO::TypeCode::Alias<char const *,
@@ -93,7 +93,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
             ::CORBA::tk_alias,
             "IDL:FixedPoint/Fraction:1.0",
             "Fraction",
-            std::addressof (_tao_tc_fixed_3_3_ptr));
+            &_tao_tc_fixed_3_3_ptr);
 
         namespace FixedPoint
         {
@@ -105,7 +105,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
           _tao_tc_fixed_10_3 (
             10,
             3);
-          static ::CORBA::TypeCode_ptr const _tao_tc_fixed_10_3_ptr = std::addressof (_tao_tc_fixed_10_3);
+          static ::CORBA::TypeCode_ptr const _tao_tc_fixed_10_3_ptr = &_tao_tc_fixed_10_3;
           #endif /* _TAO_TYPECODE_FIXED_10_3_GUARD */
 
           #ifndef _TAO_TYPECODE_FIXED_10_3_GUARD
@@ -114,7 +114,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
             _tao_tc_fixed_10_3 (
               10,
               3);
-            static ::CORBA::TypeCode_ptr const _tao_tc_fixed_10_3_ptr = std::addressof (_tao_tc_fixed_10_3;
+            static ::CORBA::TypeCode_ptr const _tao_tc_fixed_10_3_ptr = &_tao_tc_fixed_10_3;
             #endif /* _TAO_TYPECODE_FIXED_10_3_GUARD */
 
             static TAO::TypeCode::Alias<char const *,
@@ -124,7 +124,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                 ::CORBA::tk_alias,
                 "IDL:FixedPoint/Amount:1.0",
                 "Amount",
-                std::addressof (_tao_tc_fixed_10_3_ptr));
+                &_tao_tc_fixed_10_3_ptr);
 
             namespace FixedPoint
             {
@@ -136,7 +136,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
               _tao_tc_fixed_31_0 (
                 31,
                 0);
-              static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_0_ptr = std::addressof (_tao_tc_fixed_31_0);
+              static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_0_ptr = &_tao_tc_fixed_31_0;
               #endif /* _TAO_TYPECODE_FIXED_31_0_GUARD */
 
               #ifndef _TAO_TYPECODE_FIXED_31_0_GUARD
@@ -145,7 +145,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                 _tao_tc_fixed_31_0 (
                   31,
                   0);
-                static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_0_ptr = std::addressof (_tao_tc_fixed_31_0;
+                static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_0_ptr = &_tao_tc_fixed_31_0;
                 #endif /* _TAO_TYPECODE_FIXED_31_0_GUARD */
 
                 static TAO::TypeCode::Alias<char const *,
@@ -155,7 +155,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                     ::CORBA::tk_alias,
                     "IDL:FixedPoint/MaximumDigits:1.0",
                     "MaximumDigits",
-                    std::addressof (_tao_tc_fixed_31_0_ptr));
+                    &_tao_tc_fixed_31_0_ptr);
 
                 namespace FixedPoint
                 {
@@ -167,7 +167,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                   _tao_tc_fixed_31_31 (
                     31,
                     31);
-                  static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_31_ptr = std::addressof (_tao_tc_fixed_31_31);
+                  static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_31_ptr = &_tao_tc_fixed_31_31;
                   #endif /* _TAO_TYPECODE_FIXED_31_31_GUARD */
 
                   #ifndef _TAO_TYPECODE_FIXED_31_31_GUARD
@@ -176,7 +176,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                     _tao_tc_fixed_31_31 (
                       31,
                       31);
-                    static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_31_ptr = std::addressof (_tao_tc_fixed_31_31;
+                    static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_31_ptr = &_tao_tc_fixed_31_31;
                     #endif /* _TAO_TYPECODE_FIXED_31_31_GUARD */
 
                     static TAO::TypeCode::Alias<char const *,
@@ -186,7 +186,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                         ::CORBA::tk_alias,
                         "IDL:FixedPoint/MaximumScale:1.0",
                         "MaximumScale",
-                        std::addressof (_tao_tc_fixed_31_31_ptr));
+                        &_tao_tc_fixed_31_31_ptr);
 
                     namespace FixedPoint
                     {
@@ -198,7 +198,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                       _tao_tc_fixed_3_0 (
                         3,
                         0);
-                      static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_0_ptr = std::addressof (_tao_tc_fixed_3_0;
+                      static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_0_ptr = &_tao_tc_fixed_3_0;
                       #endif /* _TAO_TYPECODE_FIXED_3_0_GUARD */
 
                       #ifndef _TAO_TYPECODE_FIXED_3_3_GUARD
@@ -207,7 +207,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                         _tao_tc_fixed_3_3 (
                           3,
                           3);
-                        static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_3_ptr = std::addressof (_tao_tc_fixed_3_3;
+                        static ::CORBA::TypeCode_ptr const _tao_tc_fixed_3_3_ptr = &_tao_tc_fixed_3_3;
                         #endif /* _TAO_TYPECODE_FIXED_3_3_GUARD */
 
                         #ifndef _TAO_TYPECODE_FIXED_10_3_GUARD
@@ -216,7 +216,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                           _tao_tc_fixed_10_3 (
                             10,
                             3);
-                          static ::CORBA::TypeCode_ptr const _tao_tc_fixed_10_3_ptr = std::addressof (_tao_tc_fixed_10_3;
+                          static ::CORBA::TypeCode_ptr const _tao_tc_fixed_10_3_ptr = &_tao_tc_fixed_10_3;
                           #endif /* _TAO_TYPECODE_FIXED_10_3_GUARD */
 
                           #ifndef _TAO_TYPECODE_FIXED_31_0_GUARD
@@ -225,7 +225,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                             _tao_tc_fixed_31_0 (
                               31,
                               0);
-                            static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_0_ptr = std::addressof (_tao_tc_fixed_31_0;
+                            static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_0_ptr = &_tao_tc_fixed_31_0;
                             #endif /* _TAO_TYPECODE_FIXED_31_0_GUARD */
 
                             #ifndef _TAO_TYPECODE_FIXED_31_31_GUARD
@@ -234,7 +234,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               _tao_tc_fixed_31_31 (
                                 31,
                                 31);
-                              static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_31_ptr = std::addressof (_tao_tc_fixed_31_31;
+                              static ::CORBA::TypeCode_ptr const _tao_tc_fixed_31_31_ptr = &_tao_tc_fixed_31_31;
                               #endif /* _TAO_TYPECODE_FIXED_31_31_GUARD */
 
                               static TAO::TypeCode::Struct_Field<
@@ -242,11 +242,11 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                                 ::CORBA::TypeCode_ptr const *> const
                                   _tao_fields_FixedPoint_FixedValues[] =
                                     {
-                                      { "whole_value", std::addressof (FixedPoint::_tc_WholeNumber) },
-                                      { "fractional_value", std::addressof (FixedPoint::_tc_Fraction) },
-                                      { "monetary_value", std::addressof (FixedPoint::_tc_Amount) },
-                                      { "maximum_digits_value", std::addressof (FixedPoint::_tc_MaximumDigits) },
-                                      { "maximum_scale_value", std::addressof (FixedPoint::_tc_MaximumScale) }
+                                      { "whole_value", &FixedPoint::_tc_WholeNumber },
+                                      { "fractional_value", &FixedPoint::_tc_Fraction },
+                                      { "monetary_value", &FixedPoint::_tc_Amount },
+                                      { "maximum_digits_value", &FixedPoint::_tc_MaximumDigits },
+                                      { "maximum_scale_value", &FixedPoint::_tc_MaximumScale }
                                     };
 
                               static TAO::TypeCode::Struct<
@@ -278,7 +278,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                               {
                                 ::CORBA::TypeCode_ptr const _tc_FixedOperations = std::addressof(_tao_tc_FixedPoint_FixedOperations);
                               }
-                              static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_FixedPoint_AMH_FixedOperationsExceptionHolder {};
+                              static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_FixedPoint_AMH_FixedOperationsExceptionHolder = nullptr;
                               static TAO::TypeCode::Value<char const *,
                                                    ::CORBA::TypeCode_ptr const *,
                                                    TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -288,7 +288,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                                   "IDL:FixedPoint/AMH_FixedOperationsExceptionHolder:1.0",
                                   "AMH_FixedOperationsExceptionHolder",
                                   ::CORBA::VM_NONE,
-                                  std::addressof (::CORBA::_tc_null),
+                                  &::CORBA::_tc_null,
                                   _tao_fields_FixedPoint_AMH_FixedOperationsExceptionHolder,
                                   0);
 
@@ -330,7 +330,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                                   ::CORBA::tk_alias,
                                   "IDL:FixedPoint/AmountAlias:1.0",
                                   "AmountAlias",
-                                  std::addressof (FixedPoint::_tc_Amount));
+                                  &FixedPoint::_tc_Amount);
 
                               namespace FixedPoint
                               {
@@ -343,7 +343,7 @@ static TAO::TypeCode::Fixed<TAO::Null_RefCount_Policy>
                                   ::CORBA::tk_alias,
                                   "IDL:FixedPoint/AmountAlias2:1.0",
                                   "AmountAlias2",
-                                  std::addressof (FixedPoint::_tc_AmountAlias));
+                                  &FixedPoint::_tc_AmountAlias);
 
                               namespace FixedPoint
                               {

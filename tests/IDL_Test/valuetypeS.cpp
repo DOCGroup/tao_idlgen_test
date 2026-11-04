@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_VALUETYPES_8C97ME_CPP_
-#define _TAO_IDL_VALUETYPES_8C97ME_CPP_
+#ifndef _TAO_IDL_VALUETYPES_HY8K3J_CPP_
+#define _TAO_IDL_VALUETYPES_HY8K3J_CPP_
 
 #include "valuetypeS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

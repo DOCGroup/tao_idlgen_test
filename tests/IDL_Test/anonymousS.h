@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSS_LGA7T3_H_
-#define _TAO_IDL_ANONYMOUSS_LGA7T3_H_
+#ifndef _TAO_IDL_ANONYMOUSS_2RG44W_H_
+#define _TAO_IDL_ANONYMOUSS_2RG44W_H_
 
 #include /**/ "ace/pre.h"
 

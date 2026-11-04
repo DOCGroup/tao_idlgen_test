@@ -23,7 +23,6 @@
  **/
 
 #include "reopen_include2C.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -45,6 +44,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "reopen_include2C.inl"
@@ -54,7 +54,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_frag_pug[] =
       {
-        { "leash", std::addressof (CORBA::_tc_short) }
+        { "leash", &CORBA::_tc_short }
       };
 
 static TAO::TypeCode::Struct<
@@ -90,7 +90,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:XX/whah:1.0",
     "whah",
-    std::addressof (CORBA::_tc_long));
+    &CORBA::_tc_long);
 
 namespace XX
 {
@@ -281,7 +281,7 @@ namespace A
     ::CORBA::TypeCode_ptr const _tc_X2 = std::addressof(_tao_tc_A_B_X2);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_B_AMH_X2ExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_B_AMH_X2ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -291,7 +291,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:A/B/AMH_X2ExceptionHolder:1.0",
     "AMH_X2ExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_A_B_AMH_X2ExceptionHolder,
     0);
 

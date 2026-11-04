@@ -23,7 +23,6 @@
  **/
 
 #include "Bug_2577_RegressionC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -44,6 +43,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_2577_RegressionC.inl"
@@ -53,7 +53,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_DateTime_T[] =
       {
-        { "t", std::addressof (CORBA::_tc_short) }
+        { "t", &CORBA::_tc_short }
       };
 
 static TAO::TypeCode::Struct<
@@ -86,12 +86,12 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:WhenLastUpdated_T:1.0",
     "WhenLastUpdated_T",
-    std::addressof (_tc_DateTime_T));
+    &_tc_DateTime_T);
 
 ::CORBA::TypeCode_ptr const _tc_WhenLastUpdated_T = std::addressof(_tao_tc_WhenLastUpdated_T);
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_Data_T[] =
   {
-    { "whenLastUpdated", std::addressof (_tc_WhenLastUpdated_T), ::CORBA::PUBLIC_MEMBER }
+    { "whenLastUpdated", &_tc_WhenLastUpdated_T, ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -103,7 +103,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Data_T:1.0",
     "Data_T",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_Data_T,
     1);
 
@@ -434,7 +434,7 @@ static TAO::TypeCode::Objref<char const *,
     "User_T");
 
 ::CORBA::TypeCode_ptr const _tc_User_T = std::addressof(_tao_tc_User_T);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_User_TExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_User_TExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -444,7 +444,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_User_TExceptionHolder:1.0",
     "AMH_User_TExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_User_TExceptionHolder,
     0);
 

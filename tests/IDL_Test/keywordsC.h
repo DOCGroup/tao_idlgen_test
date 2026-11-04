@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSC_8Z02B9_H_
-#define _TAO_IDL_KEYWORDSC_8Z02B9_H_
+#ifndef _TAO_IDL_KEYWORDSC_BVOGK1_H_
+#define _TAO_IDL_KEYWORDSC_BVOGK1_H_
 
 #include /**/ "ace/pre.h"
 
@@ -595,9 +595,11 @@ protected:
   ~OBV_AMH_TestingExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean _tao_marshal__AMH_TestingExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean
+  _tao_marshal__AMH_TestingExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean _tao_unmarshal__AMH_TestingExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean
+  _tao_unmarshal__AMH_TestingExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

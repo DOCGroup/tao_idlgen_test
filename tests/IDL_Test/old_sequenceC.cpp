@@ -23,7 +23,6 @@
  **/
 
 #include "old_sequenceC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -47,6 +46,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "old_sequenceC.inl"
@@ -83,10 +83,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> c20_20 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_char), 20U);
+        ::CORBA::tk_sequence, &CORBA::_tc_char, 20U);
 
     ::CORBA::TypeCode_ptr const tc_c20_20 =
-      std::addressof (c20_20);
+      &c20_20;
   }
 }
 }
@@ -102,7 +102,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:c20:1.0",
     "c20",
-    std::addressof (TAO::TypeCode::tc_c20_20));
+    &TAO::TypeCode::tc_c20_20);
 
 ::CORBA::TypeCode_ptr const _tc_c20 = std::addressof(_tao_tc_c20);
 
@@ -137,10 +137,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> cc23_23 (
-        ::CORBA::tk_sequence, std::addressof (_tc_c20), 23U);
+        ::CORBA::tk_sequence, &_tc_c20, 23U);
 
     ::CORBA::TypeCode_ptr const tc_cc23_23 =
-      std::addressof (cc23_23);
+      &cc23_23;
   }
 }
 }
@@ -156,7 +156,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:cc23:1.0",
     "cc23",
-    std::addressof (TAO::TypeCode::tc_cc23_23));
+    &TAO::TypeCode::tc_cc23_23);
 
 ::CORBA::TypeCode_ptr const _tc_cc23 = std::addressof(_tao_tc_cc23);
 
@@ -191,10 +191,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> c24_24 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_char), 24U);
+        ::CORBA::tk_sequence, &CORBA::_tc_char, 24U);
 
     ::CORBA::TypeCode_ptr const tc_c24_24 =
-      std::addressof (c24_24);
+      &c24_24;
   }
 }
 }
@@ -210,7 +210,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:c24:1.0",
     "c24",
-    std::addressof (TAO::TypeCode::tc_c24_24));
+    &TAO::TypeCode::tc_c24_24);
 
 ::CORBA::TypeCode_ptr const _tc_c24 = std::addressof(_tao_tc_c24);
 
@@ -257,10 +257,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> _tao_seq_CORBA_Long__10_10 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_long), 10U);
+        ::CORBA::tk_sequence, &CORBA::_tc_long, 10U);
 
     ::CORBA::TypeCode_ptr const tc__tao_seq_CORBA_Long__10_10 =
-      std::addressof (_tao_seq_CORBA_Long__10_10);
+      &_tao_seq_CORBA_Long__10_10;
   }
 }
 }
@@ -281,10 +281,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> c30_10 (
-        ::CORBA::tk_sequence, std::addressof (TAO::TypeCode::tc__tao_seq_CORBA_Long__10_10), 10U);
+        ::CORBA::tk_sequence, &TAO::TypeCode::tc__tao_seq_CORBA_Long__10_10, 10U);
 
     ::CORBA::TypeCode_ptr const tc_c30_10 =
-      std::addressof (c30_10);
+      &c30_10;
   }
 }
 }
@@ -300,7 +300,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:c30:1.0",
     "c30",
-    std::addressof (TAO::TypeCode::tc_c30_10));
+    &TAO::TypeCode::tc_c30_10);
 
 ::CORBA::TypeCode_ptr const _tc_c30 = std::addressof(_tao_tc_c30);
 
@@ -339,10 +339,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> cstring_0 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_string), 0U);
+        ::CORBA::tk_sequence, &CORBA::_tc_string, 0U);
 
     ::CORBA::TypeCode_ptr const tc_cstring_0 =
-      std::addressof (cstring_0);
+      &cstring_0;
   }
 }
 }
@@ -358,7 +358,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:cstring:1.0",
     "cstring",
-    std::addressof (TAO::TypeCode::tc_cstring_0));
+    &TAO::TypeCode::tc_cstring_0);
 
 ::CORBA::TypeCode_ptr const _tc_cstring = std::addressof(_tao_tc_cstring);
 
@@ -367,9 +367,9 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_TProgram[] =
       {
-        { "path", std::addressof (CORBA::_tc_string) },
-        { "argv", std::addressof (_tc_cstring) },
-        { "envp", std::addressof (_tc_cstring) }
+        { "path", &CORBA::_tc_string },
+        { "argv", &_tc_cstring },
+        { "envp", &_tc_cstring }
       };
 
 static TAO::TypeCode::Struct<
@@ -400,8 +400,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_sfoo[] =
       {
-        { "f1", std::addressof (CORBA::_tc_long) },
-        { "f2", std::addressof (CORBA::_tc_char) }
+        { "f1", &CORBA::_tc_long },
+        { "f2", &CORBA::_tc_char }
       };
 
 static TAO::TypeCode::Struct<
@@ -479,11 +479,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> sfoo_ar_20 (
         ::CORBA::tk_array,
-        std::addressof (_tc_sfoo),
+        &_tc_sfoo,
         20U);
 
     ::CORBA::TypeCode_ptr const tc_sfoo_ar =
-      std::addressof (sfoo_ar_20);
+      &sfoo_ar_20;
   }
 }
 }
@@ -498,7 +498,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:sfoo_ar:1.0",
     "sfoo_ar",
-    std::addressof (TAO::TypeCode::tc_sfoo_ar));
+    &TAO::TypeCode::tc_sfoo_ar);
 
 ::CORBA::TypeCode_ptr const _tc_sfoo_ar = std::addressof(_tao_tc_sfoo_ar);
 
@@ -537,10 +537,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> f_unbounded_0 (
-        ::CORBA::tk_sequence, std::addressof (_tc_sfoo), 0U);
+        ::CORBA::tk_sequence, &_tc_sfoo, 0U);
 
     ::CORBA::TypeCode_ptr const tc_f_unbounded_0 =
-      std::addressof (f_unbounded_0);
+      &f_unbounded_0;
   }
 }
 }
@@ -556,7 +556,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:f_unbounded:1.0",
     "f_unbounded",
-    std::addressof (TAO::TypeCode::tc_f_unbounded_0));
+    &TAO::TypeCode::tc_f_unbounded_0);
 
 ::CORBA::TypeCode_ptr const _tc_f_unbounded = std::addressof(_tao_tc_f_unbounded);
 
@@ -603,10 +603,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> f_ar_unbounded_0 (
-        ::CORBA::tk_sequence, std::addressof (_tc_sfoo_ar), 0U);
+        ::CORBA::tk_sequence, &_tc_sfoo_ar, 0U);
 
     ::CORBA::TypeCode_ptr const tc_f_ar_unbounded_0 =
-      std::addressof (f_ar_unbounded_0);
+      &f_ar_unbounded_0;
   }
 }
 }
@@ -622,7 +622,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:f_ar_unbounded:1.0",
     "f_ar_unbounded",
-    std::addressof (TAO::TypeCode::tc_f_ar_unbounded_0));
+    &TAO::TypeCode::tc_f_ar_unbounded_0);
 
 ::CORBA::TypeCode_ptr const _tc_f_ar_unbounded = std::addressof(_tao_tc_f_ar_unbounded);
 
@@ -750,10 +750,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> TestSeq_also_vec10_10 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_long), 10U);
+        ::CORBA::tk_sequence, &CORBA::_tc_long, 10U);
 
     ::CORBA::TypeCode_ptr const tc_TestSeq_also_vec10_10 =
-      std::addressof (TestSeq_also_vec10_10);
+      &TestSeq_also_vec10_10;
   }
 }
 }
@@ -769,7 +769,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:TestSeq/also_vec10:1.0",
     "also_vec10",
-    std::addressof (TAO::TypeCode::tc_TestSeq_also_vec10_10));
+    &TAO::TypeCode::tc_TestSeq_also_vec10_10);
 
 ::CORBA::TypeCode_ptr const TestSeq::_tc_also_vec10 = std::addressof(_tao_tc_TestSeq_also_vec10);
 
@@ -921,7 +921,7 @@ static TAO::TypeCode::Objref<char const *,
     "TestSeq");
 
 ::CORBA::TypeCode_ptr const _tc_TestSeq = std::addressof(_tao_tc_TestSeq);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_TestSeqExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_TestSeqExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -931,7 +931,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_TestSeqExceptionHolder:1.0",
     "AMH_TestSeqExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_TestSeqExceptionHolder,
     0);
 

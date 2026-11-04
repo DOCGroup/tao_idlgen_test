@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGC_7YAOQH_H_
-#define _TAO_IDL_PEMNAMINGC_7YAOQH_H_
+#ifndef _TAO_IDL_PEMNAMINGC_CIQXOW_H_
+#define _TAO_IDL_PEMNAMINGC_CIQXOW_H_
 
 #include /**/ "ace/pre.h"
 
@@ -646,9 +646,11 @@ namespace OBV_Plesk
     ~AMH_ObjectResolverExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean _tao_marshal__Plesk_Naming_AMH_ObjectResolverExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean
+    _tao_marshal__Plesk_Naming_AMH_ObjectResolverExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean _tao_unmarshal__Plesk_Naming_AMH_ObjectResolverExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean
+    _tao_unmarshal__Plesk_Naming_AMH_ObjectResolverExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

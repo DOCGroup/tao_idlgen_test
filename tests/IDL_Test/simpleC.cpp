@@ -23,7 +23,6 @@
  **/
 
 #include "simpleC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -46,6 +45,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "simpleC.inl"
@@ -82,10 +82,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> vec10_10 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_long), 10U);
+        ::CORBA::tk_sequence, &CORBA::_tc_long, 10U);
 
     ::CORBA::TypeCode_ptr const tc_vec10_10 =
-      std::addressof (vec10_10);
+      &vec10_10;
   }
 }
 }
@@ -101,7 +101,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:vec10:1.0",
     "vec10",
-    std::addressof (TAO::TypeCode::tc_vec10_10));
+    &TAO::TypeCode::tc_vec10_10);
 
 ::CORBA::TypeCode_ptr const _tc_vec10 = std::addressof(_tao_tc_vec10);
 
@@ -201,7 +201,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple_error[] =
       {
-        { "reason", std::addressof (CORBA::_tc_long) }
+        { "reason", &CORBA::_tc_long }
       };
 
 static TAO::TypeCode::Struct<
@@ -429,7 +429,7 @@ static TAO::TypeCode::Objref<char const *,
     "simple");
 
 ::CORBA::TypeCode_ptr const _tc_simple = std::addressof(_tao_tc_simple);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_simpleExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_simpleExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -439,7 +439,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_simpleExceptionHolder:1.0",
     "AMH_simpleExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_simpleExceptionHolder,
     0);
 
@@ -1144,7 +1144,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple2_simple2_error[] =
       {
-        { "reason2", std::addressof (CORBA::_tc_long) }
+        { "reason2", &CORBA::_tc_long }
       };
 
 static TAO::TypeCode::Struct<
@@ -1342,7 +1342,7 @@ static TAO::TypeCode::Objref<char const *,
     "simple2");
 
 ::CORBA::TypeCode_ptr const _tc_simple2 = std::addressof(_tao_tc_simple2);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_simple2ExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_simple2ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1352,7 +1352,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_simple2ExceptionHolder:1.0",
     "AMH_simple2ExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_simple2ExceptionHolder,
     0);
 
