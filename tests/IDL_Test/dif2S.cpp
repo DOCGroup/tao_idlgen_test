@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIF2S_54TQAA_CPP_
-#define _TAO_IDL_DIF2S_54TQAA_CPP_
+#ifndef _TAO_IDL_DIF2S_G1F967_CPP_
+#define _TAO_IDL_DIF2S_G1F967_CPP_
 
 #include "dif2S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

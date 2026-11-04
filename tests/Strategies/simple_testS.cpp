@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_4YOMK7_CPP_
-#define _TAO_IDL_SIMPLE_TESTS_4YOMK7_CPP_
+#ifndef _TAO_IDL_SIMPLE_TESTS_YP7M8I_CPP_
+#define _TAO_IDL_SIMPLE_TESTS_YP7M8I_CPP_
 
 #include "simple_testS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

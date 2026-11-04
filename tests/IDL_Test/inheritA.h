@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INHERITA_Z8SS1U_H_
-#define _TAO_IDL_INHERITA_Z8SS1U_H_
+#ifndef _TAO_IDL_INHERITA_UZYKDC_H_
+#define _TAO_IDL_INHERITA_UZYKDC_H_
 
 #include /**/ "ace/pre.h"
 

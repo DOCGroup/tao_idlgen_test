@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INTERFACES_4Z5CTI_H_
-#define _TAO_IDL_INTERFACES_4Z5CTI_H_
+#ifndef _TAO_IDL_INTERFACES_STFQZX_H_
+#define _TAO_IDL_INTERFACES_STFQZX_H_
 
 #include /**/ "ace/pre.h"
 

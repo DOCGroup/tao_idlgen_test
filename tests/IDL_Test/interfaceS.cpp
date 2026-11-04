@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INTERFACES_KSIZDD_CPP_
-#define _TAO_IDL_INTERFACES_KSIZDD_CPP_
+#ifndef _TAO_IDL_INTERFACES_W1NLIW_CPP_
+#define _TAO_IDL_INTERFACES_W1NLIW_CPP_
 
 #include "interfaceS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

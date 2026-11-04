@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTS_KUUQK2_CPP_
-#define _TAO_IDL_AMI_TESTS_KUUQK2_CPP_
+#ifndef _TAO_IDL_AMI_TESTS_DZDBTD_CPP_
+#define _TAO_IDL_AMI_TESTS_DZDBTD_CPP_
 
 #include "ami_testS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

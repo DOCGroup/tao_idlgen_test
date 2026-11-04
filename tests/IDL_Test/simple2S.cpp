@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2S_UML9VX_CPP_
-#define _TAO_IDL_SIMPLE2S_UML9VX_CPP_
+#ifndef _TAO_IDL_SIMPLE2S_JLAZNP_CPP_
+#define _TAO_IDL_SIMPLE2S_JLAZNP_CPP_
 
 #include "simple2S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_7RFYOR_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_7RFYOR_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_PO3XJH_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_PO3XJH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -117,7 +117,7 @@ namespace M1
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.

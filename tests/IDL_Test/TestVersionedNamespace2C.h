@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_JKDH7N_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_JKDH7N_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_XKO9PN_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_XKO9PN_H_
 
 #include /**/ "ace/pre.h"
 
@@ -136,7 +136,7 @@ namespace M1
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -266,7 +266,7 @@ public:
 
   ::CORBA::Boolean _is_a (char const *type_id) override;
   char const *_interface_repository_id () const override;
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -318,7 +318,7 @@ public:
 
   ::CORBA::Boolean _is_a (char const *type_id) override;
   char const *_interface_repository_id () const override;
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -448,7 +448,7 @@ public:
 
   ::CORBA::Boolean _is_a (char const *type_id) override;
   char const *_interface_repository_id () const override;
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -726,7 +726,7 @@ namespace M2
 
       ::CORBA::Boolean _is_a (char const *type_id) override;
       char const *_interface_repository_id () const override;
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Concrete interface only.
@@ -856,7 +856,7 @@ namespace M2
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -946,7 +946,7 @@ namespace M2
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -1076,7 +1076,7 @@ public:
 
   ::CORBA::Boolean _is_a (char const *type_id) override;
   char const *_interface_repository_id () const override;
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.

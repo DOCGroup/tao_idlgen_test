@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCES_EWL285_CPP_
-#define _TAO_IDL_SEQUENCES_EWL285_CPP_
+#ifndef _TAO_IDL_SEQUENCES_3J0CNC_CPP_
+#define _TAO_IDL_SEQUENCES_3J0CNC_CPP_
 
 #include "sequenceS.h"
 

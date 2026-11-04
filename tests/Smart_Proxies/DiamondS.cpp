@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIAMONDS_0O6YJD_CPP_
-#define _TAO_IDL_DIAMONDS_0O6YJD_CPP_
+#ifndef _TAO_IDL_DIAMONDS_OHXSA5_CPP_
+#define _TAO_IDL_DIAMONDS_OHXSA5_CPP_
 
 #include "DiamondS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

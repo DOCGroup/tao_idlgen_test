@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLS_RORZPV_CPP_
-#define _TAO_IDL_FULLS_RORZPV_CPP_
+#ifndef _TAO_IDL_FULLS_K9XN2G_CPP_
+#define _TAO_IDL_FULLS_K9XN2G_CPP_
 
 #include "fullS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

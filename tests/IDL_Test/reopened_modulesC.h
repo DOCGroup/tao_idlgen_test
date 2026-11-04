@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPENED_MODULESC_SSRZ4C_H_
-#define _TAO_IDL_REOPENED_MODULESC_SSRZ4C_H_
+#ifndef _TAO_IDL_REOPENED_MODULESC_0RB7W8_H_
+#define _TAO_IDL_REOPENED_MODULESC_0RB7W8_H_
 
 #include /**/ "ace/pre.h"
 
@@ -122,7 +122,7 @@ namespace AA
       char const *_interface_repository_id () const override;
       static char const *_desc_repository_id ();
       static char const *_desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Concrete interface only.
@@ -264,7 +264,7 @@ namespace AA
       char const *_interface_repository_id () const override;
       static char const *_desc_repository_id ();
       static char const *_desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Abstract or local interface only.
@@ -316,7 +316,7 @@ namespace AA
       char const *_interface_repository_id () const override;
       static char const *_desc_repository_id ();
       static char const *_desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Concrete interface only.
@@ -411,7 +411,7 @@ namespace AA
         char const *_interface_repository_id () const override;
         static char const *_desc_repository_id ();
         static char const *_desc_interface_name ();
-        virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+        ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
       protected:
         // Concrete interface only.
@@ -581,7 +581,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -666,7 +666,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -763,7 +763,7 @@ namespace dot
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -919,7 +919,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -994,7 +994,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -1074,7 +1074,7 @@ namespace dot
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -1230,7 +1230,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -1305,7 +1305,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -1402,7 +1402,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -1544,7 +1544,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -1609,7 +1609,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -1691,7 +1691,7 @@ namespace com
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -1832,7 +1832,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -1896,7 +1896,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -1964,7 +1964,7 @@ namespace Y
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -2106,7 +2106,7 @@ namespace Y
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -2158,7 +2158,7 @@ namespace Y
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -2260,7 +2260,7 @@ namespace X
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -2400,7 +2400,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -2463,7 +2463,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -2536,7 +2536,7 @@ namespace XX
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -2676,7 +2676,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -2739,7 +2739,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -2809,7 +2809,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -2949,7 +2949,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -3012,7 +3012,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -3080,7 +3080,7 @@ namespace frag
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -3222,7 +3222,7 @@ namespace frag
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -3274,7 +3274,7 @@ namespace frag
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -3357,7 +3357,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -3500,7 +3500,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -3566,7 +3566,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -3682,7 +3682,7 @@ namespace foo
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -3822,7 +3822,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -3885,7 +3885,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -4001,7 +4001,7 @@ namespace A
       char const *_interface_repository_id () const override;
       static char const *_desc_repository_id ();
       static char const *_desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Concrete interface only.
@@ -4158,7 +4158,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -4235,7 +4235,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -4334,7 +4334,7 @@ namespace mA
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -4490,7 +4490,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -4565,7 +4565,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -4646,7 +4646,7 @@ namespace mB
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -4802,7 +4802,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -4877,7 +4877,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -4946,7 +4946,7 @@ namespace mC
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -5088,7 +5088,7 @@ namespace mC
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -5140,7 +5140,7 @@ namespace mC
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -5212,7 +5212,7 @@ namespace Schmoik
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -5354,7 +5354,7 @@ namespace Schmoik
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -5406,7 +5406,7 @@ namespace Schmoik
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -5589,7 +5589,7 @@ namespace Thwoik
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -5731,7 +5731,7 @@ namespace Thwoik
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -5783,7 +5783,7 @@ namespace Thwoik
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -5851,7 +5851,7 @@ namespace A_mod
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -5993,7 +5993,7 @@ namespace A_mod
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -6045,7 +6045,7 @@ namespace A_mod
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -6112,7 +6112,7 @@ namespace A_mod
       char const *_interface_repository_id () const override;
       static char const *_desc_repository_id ();
       static char const *_desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Concrete interface only.
@@ -6254,7 +6254,7 @@ namespace A_mod
       char const *_interface_repository_id () const override;
       static char const *_desc_repository_id ();
       static char const *_desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Abstract or local interface only.
@@ -6306,7 +6306,7 @@ namespace A_mod
       char const *_interface_repository_id () const override;
       static char const *_desc_repository_id ();
       static char const *_desc_interface_name ();
-      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Concrete interface only.

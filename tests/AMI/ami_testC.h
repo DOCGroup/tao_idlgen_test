@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTC_DT3KN3_H_
-#define _TAO_IDL_AMI_TESTC_DT3KN3_H_
+#ifndef _TAO_IDL_AMI_TESTC_PNFGFY_H_
+#define _TAO_IDL_AMI_TESTC_PNFGFY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -174,7 +174,7 @@ namespace A
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -282,7 +282,7 @@ namespace A
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -350,7 +350,7 @@ namespace A
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -421,7 +421,7 @@ namespace A
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_OLST7I_CPP_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_OLST7I_CPP_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_IK8XKJ_CPP_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_IK8XKJ_CPP_
 
 #include "sequence_anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

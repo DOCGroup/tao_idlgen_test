@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2S_7ANEZJ_CPP_
-#define _TAO_IDL_REOPEN_INCLUDE2S_7ANEZJ_CPP_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2S_ZNHFIW_CPP_
+#define _TAO_IDL_REOPEN_INCLUDE2S_ZNHFIW_CPP_
 
 #include "reopen_include2S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTC_PTDPBD_H_
-#define _TAO_IDL_TESTC_PTDPBD_H_
+#ifndef _TAO_IDL_TESTC_SAMX2E_H_
+#define _TAO_IDL_TESTC_SAMX2E_H_
 
 #include /**/ "ace/pre.h"
 
@@ -99,7 +99,7 @@ public:
 
   ::CORBA::Boolean _is_a (char const *type_id) override;
   char const *_interface_repository_id () const override;
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.

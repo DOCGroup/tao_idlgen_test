@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFS_VZ4X6I_CPP_
-#define _TAO_IDL_GPERFS_VZ4X6I_CPP_
+#ifndef _TAO_IDL_GPERFS_J3VDAW_CPP_
+#define _TAO_IDL_GPERFS_J3VDAW_CPP_
 
 #include "gperfS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRAGMAS_24WOBJ_CPP_
-#define _TAO_IDL_PRAGMAS_24WOBJ_CPP_
+#ifndef _TAO_IDL_PRAGMAS_KFRBHY_CPP_
+#define _TAO_IDL_PRAGMAS_KFRBHY_CPP_
 
 #include "pragmaS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_CONSTANTSS_EUBQD9_CPP_
-#define _TAO_IDL_OLD_CONSTANTSS_EUBQD9_CPP_
+#ifndef _TAO_IDL_OLD_CONSTANTSS_2C4072_CPP_
+#define _TAO_IDL_OLD_CONSTANTSS_2C4072_CPP_
 
 #include "old_constantsS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

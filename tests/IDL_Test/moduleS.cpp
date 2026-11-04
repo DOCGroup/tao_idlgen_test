@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_MODULES_1ZZ3OG_CPP_
-#define _TAO_IDL_MODULES_1ZZ3OG_CPP_
+#ifndef _TAO_IDL_MODULES_TMOVN8_CPP_
+#define _TAO_IDL_MODULES_TMOVN8_CPP_
 
 #include "moduleS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
