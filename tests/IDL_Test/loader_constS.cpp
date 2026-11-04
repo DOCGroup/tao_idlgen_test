@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_LOADER_CONSTS_3SY88P_CPP_
-#define _TAO_IDL_LOADER_CONSTS_3SY88P_CPP_
+#ifndef _TAO_IDL_LOADER_CONSTS_5051NP_CPP_
+#define _TAO_IDL_LOADER_CONSTS_5051NP_CPP_
 
 #include "loader_constS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -52,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 #endif /* ifndef */
 

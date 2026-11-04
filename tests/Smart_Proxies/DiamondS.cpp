@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIAMONDS_QCZ5BD_CPP_
-#define _TAO_IDL_DIAMONDS_QCZ5BD_CPP_
+#ifndef _TAO_IDL_DIAMONDS_06VEX0_CPP_
+#define _TAO_IDL_DIAMONDS_06VEX0_CPP_
 
 #include "DiamondS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -46,7 +46,6 @@
 #include "tao/PortableInterceptor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 class TAO_Diamond_Top_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPES_1IBT5W_CPP_
-#define _TAO_IDL_NESTED_SCOPES_1IBT5W_CPP_
+#ifndef _TAO_IDL_NESTED_SCOPES_ZAAX9C_CPP_
+#define _TAO_IDL_NESTED_SCOPES_ZAAX9C_CPP_
 
 #include "nested_scopeS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -52,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 class TAO_i_skip_i_hump_AMH_i_skip_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

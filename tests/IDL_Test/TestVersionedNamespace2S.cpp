@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_LGC2CI_CPP_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_LGC2CI_CPP_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_J7TZ2C_CPP_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_J7TZ2C_CPP_
 
 #include "TestVersionedNamespace2S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -49,7 +49,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 BEGIN_USER_VERSIONED_NAMESPACE
 

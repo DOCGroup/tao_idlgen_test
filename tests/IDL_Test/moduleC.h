@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_MODULEC_YUG3Z6_H_
-#define _TAO_IDL_MODULEC_YUG3Z6_H_
+#ifndef _TAO_IDL_MODULEC_P5Q8CD_H_
+#define _TAO_IDL_MODULEC_P5Q8CD_H_
 
 #include /**/ "ace/pre.h"
 

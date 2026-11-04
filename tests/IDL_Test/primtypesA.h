@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESA_P2T3Z5_H_
-#define _TAO_IDL_PRIMTYPESA_P2T3Z5_H_
+#ifndef _TAO_IDL_PRIMTYPESA_5T4YPF_H_
+#define _TAO_IDL_PRIMTYPESA_5T4YPF_H_
 
 #include /**/ "ace/pre.h"
 

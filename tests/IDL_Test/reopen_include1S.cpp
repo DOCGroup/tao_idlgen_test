@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE1S_J2EWT1_CPP_
-#define _TAO_IDL_REOPEN_INCLUDE1S_J2EWT1_CPP_
+#ifndef _TAO_IDL_REOPEN_INCLUDE1S_Q6LOG5_CPP_
+#define _TAO_IDL_REOPEN_INCLUDE1S_Q6LOG5_CPP_
 
 #include "reopen_include1S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -52,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 class TAO_A_B_AMH_X1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

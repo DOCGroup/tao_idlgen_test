@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_DRIIEB_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_DRIIEB_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_JU8L41_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_JU8L41_H_
 
 #include /**/ "ace/pre.h"
 

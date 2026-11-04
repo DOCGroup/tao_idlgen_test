@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTC_6TLD5W_H_
-#define _TAO_IDL_TESTC_6TLD5W_H_
+#ifndef _TAO_IDL_TESTC_C51LXH_H_
+#define _TAO_IDL_TESTC_C51LXH_H_
 
 #include /**/ "ace/pre.h"
 

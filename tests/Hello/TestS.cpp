@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_CDWI4F_CPP_
-#define _TAO_IDL_TESTS_CDWI4F_CPP_
+#ifndef _TAO_IDL_TESTS_NSZ6VR_CPP_
+#define _TAO_IDL_TESTS_NSZ6VR_CPP_
 
 #include "TestS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -45,7 +45,6 @@
 #include "tao/PortableInterceptor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 class TAO_Test_Hello_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

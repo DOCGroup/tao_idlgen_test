@@ -23,13 +23,13 @@
  **/
 
 #include "testC.h"
-#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Object_T.h"
-#include "ace/OS_NS_string.h"
+#include "tao/SystemException.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "testC.inl"
@@ -65,8 +65,89 @@ TAO::Objref_Traits<Test>::marshal (const Test_ptr p,TAO_OutputCDR & cdr)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
+Test::Oops::Oops (
+    const char * _tao_reason)
+  : ::CORBA::UserException (
+        "IDL:Test/Oops:1.0",
+        "Oops")
+{
+  this->reason = ::CORBA::string_dup (_tao_reason);
+}
+
+Test::Oops::Oops ()
+  : ::CORBA::UserException (
+        "IDL:Test/Oops:1.0",
+        "Oops")
+{
+}
+
+Test::Oops::Oops (const ::Test::Oops &_tao_excp)
+  : ::CORBA::UserException (
+        _tao_excp._rep_id (),
+        _tao_excp._name ())
+{
+  this->reason = ::CORBA::string_dup (_tao_excp.reason.in ());
+}
+
+Test::Oops&
+Test::Oops::operator= (const ::Test::Oops &_tao_excp)
+{
+  this->::CORBA::UserException::operator= (_tao_excp);
+  this->reason = ::CORBA::string_dup (_tao_excp.reason.in ());
+  return *this;
+}
+
+Test::Oops *
+Test::Oops::_downcast (::CORBA::Exception *_tao_excp)
+{
+  return dynamic_cast<Oops *> (_tao_excp);
+}
+
+const Test::Oops *
+Test::Oops::_downcast (::CORBA::Exception const *_tao_excp)
+{
+  return dynamic_cast<const Oops *> (_tao_excp);
+}
+
+::CORBA::Exception *Test::Oops::_alloc ()
+{
+  ::CORBA::Exception *retval {};
+  ACE_NEW_RETURN (retval, ::Test::Oops, nullptr);
+  return retval;
+}
+
+::CORBA::Exception *
+Test::Oops::_tao_duplicate () const
+{
+  ::CORBA::Exception *result {};
+  ACE_NEW_RETURN (result, ::Test::Oops (*this), nullptr);
+  return result;
+}
+
+void Test::Oops::_raise () const
+{
+  throw *this;
+}
+
+void Test::Oops::_tao_encode (TAO_OutputCDR &cdr) const
+{
+  if (!(cdr << *this))
+    {
+      throw ::CORBA::MARSHAL ();
+    }
+}
+
+void Test::Oops::_tao_decode (TAO_InputCDR &cdr)
+{
+  if (!(cdr >> *this))
+    {
+      throw ::CORBA::MARSHAL ();
+    }
+}
+
 ::CORBA::Short
-Test::box_prices ()
+Test::method (
+  ::CORBA::Short boo)
 {
   if (!this->is_evaluated ())
     {
@@ -74,58 +155,40 @@ Test::box_prices ()
     }
 
   TAO::Arg_Traits< ::CORBA::Short>::ret_val _tao_retval;
-
-  TAO::Argument *_the_tao_operation_signature [] =
-    {
-      std::addressof(_tao_retval)
-    };
-
-  TAO::Invocation_Adapter _invocation_call (
-      this,
-      _the_tao_operation_signature,
-      1,
-      "box_prices",
-      10,
-      TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
-      TAO::TAO_SYNCHRONOUS_INVOCATION,
-      false
-    );
-
-  _invocation_call.invoke (nullptr, 0);
-
-  return _tao_retval.retn ();
-}
-::CORBA::Long
-Test::tickets (
-  ::CORBA::Short number)
-{
-  if (!this->is_evaluated ())
-    {
-      ::CORBA::Object::tao_object_initialize (this);
-    }
-
-  TAO::Arg_Traits< ::CORBA::Long>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_number (number);
+  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_boo (boo);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
       std::addressof(_tao_retval),
-      std::addressof(_tao_number)
+      std::addressof(_tao_boo)
+    };
+
+  static TAO::Exception_Data
+  _tao_Test_method_exceptiondata [] =
+    {
+      {
+        "IDL:Test/Oops:1.0",
+        Test::Oops::_alloc
+#if TAO_HAS_INTERCEPTORS == 1
+        , nullptr
+#endif /* TAO_HAS_INTERCEPTORS */
+      }
     };
 
   TAO::Invocation_Adapter _invocation_call (
       this,
       _the_tao_operation_signature,
       2,
-      "tickets",
-      7,
+      "method",
+      6,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
 
     );
 
-  _invocation_call.invoke (nullptr, 0);
+  _invocation_call.invoke (
+      _tao_Test_method_exceptiondata,
+      1
+    );
 
   return _tao_retval.retn ();
 }
@@ -353,18 +416,11 @@ TAO_Test_Smart_Proxy_Base::_stubobj ()
   return this->base_proxy_->_stubobj ();
 }
 
-::CORBA::Short TAO_Test_Smart_Proxy_Base::box_prices  (){
-  return this->get_proxy ()->box_prices (
+::CORBA::Short TAO_Test_Smart_Proxy_Base::method  (
+  ::CORBA::Short boo){
+  return this->get_proxy ()->method (
 
-    );
-
-}
-
-::CORBA::Long TAO_Test_Smart_Proxy_Base::tickets  (
-  ::CORBA::Short number){
-  return this->get_proxy ()->tickets (
-
-      number
+      boo
     );
 
 }
@@ -390,6 +446,38 @@ TAO_Test_Smart_Proxy_Base::get_proxy ()
     }
   return this->proxy_.in ();
 }
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+::CORBA::Boolean operator<< (
+    TAO_OutputCDR &strm,
+    const Test::Oops &_tao_aggregate)
+{
+  // First marshal the repository ID.
+  if (strm << _tao_aggregate._rep_id ())
+    {
+      // Now marshal the members (if any).
+      return (
+        (strm << _tao_aggregate.reason.in ())
+       );
+    }
+  else
+    {
+      return false;
+    }
+}
+
+::CORBA::Boolean operator>> (
+    TAO_InputCDR &strm,
+    Test::Oops &_tao_aggregate)
+{
+  // Demarshal the members.
+  return (
+    (strm >> _tao_aggregate.reason.out ())
+  );
+}
+
+TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_9VDRMU_CPP_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_9VDRMU_CPP_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_OC11F1_CPP_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_OC11F1_CPP_
 
 #include "array_anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -52,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 class TAO_AMH_tdef_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

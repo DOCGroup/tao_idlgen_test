@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_CONSTANTSC_RMKWBK_H_
-#define _TAO_IDL_OLD_CONSTANTSC_RMKWBK_H_
+#ifndef _TAO_IDL_OLD_CONSTANTSC_89D7FA_H_
+#define _TAO_IDL_OLD_CONSTANTSC_89D7FA_H_
 
 #include /**/ "ace/pre.h"
 

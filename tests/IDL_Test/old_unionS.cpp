@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONS_H91ZZ4_CPP_
-#define _TAO_IDL_OLD_UNIONS_H91ZZ4_CPP_
+#ifndef _TAO_IDL_OLD_UNIONS_LIBR8Y_CPP_
+#define _TAO_IDL_OLD_UNIONS_LIBR8Y_CPP_
 
 #include "old_unionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -52,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 class TAO_OldUnion_AMH_a_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

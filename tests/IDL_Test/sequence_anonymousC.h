@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_1DNER9_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSC_1DNER9_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_KABARE_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSC_KABARE_H_
 
 #include /**/ "ace/pre.h"
 

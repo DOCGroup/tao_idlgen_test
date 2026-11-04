@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_1RQM11_CPP_
-#define _TAO_IDL_BUG_2616_REGRESSIONS_1RQM11_CPP_
+#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_R4I3QC_CPP_
+#define _TAO_IDL_BUG_2616_REGRESSIONS_R4I3QC_CPP_
 
 #include "Bug_2616_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -52,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 class TAO_AMH_Interface1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

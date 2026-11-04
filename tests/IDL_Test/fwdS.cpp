@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FWDS_WF7P1O_CPP_
-#define _TAO_IDL_FWDS_WF7P1O_CPP_
+#ifndef _TAO_IDL_FWDS_Z0VIB7_CPP_
+#define _TAO_IDL_FWDS_Z0VIB7_CPP_
 
 #include "fwdS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -52,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 class TAO_mod2_AMH_full_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable

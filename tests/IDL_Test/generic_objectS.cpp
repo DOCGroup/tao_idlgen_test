@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_QNG2B7_CPP_
-#define _TAO_IDL_GENERIC_OBJECTS_QNG2B7_CPP_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_HQD1E3_CPP_
+#define _TAO_IDL_GENERIC_OBJECTS_HQD1E3_CPP_
 
 #include "generic_objectS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -52,7 +52,6 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include "ace/OS_NS_string.h"
 
 class TAO_AMH_generic_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
