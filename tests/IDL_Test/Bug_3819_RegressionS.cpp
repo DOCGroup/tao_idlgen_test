@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_3819_REGRESSIONS_ZX8EJ1_CPP_
-#define _TAO_IDL_BUG_3819_REGRESSIONS_ZX8EJ1_CPP_
+#ifndef _TAO_IDL_BUG_3819_REGRESSIONS_ZKVL0Y_CPP_
+#define _TAO_IDL_BUG_3819_REGRESSIONS_ZKVL0Y_CPP_
 
 #include "Bug_3819_RegressionS.h"
 

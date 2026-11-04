@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPECODES_IVDSHZ_CPP_
-#define _TAO_IDL_TYPECODES_IVDSHZ_CPP_
+#ifndef _TAO_IDL_TYPECODES_A3PMZ1_CPP_
+#define _TAO_IDL_TYPECODES_A3PMZ1_CPP_
 
 #include "typecodeS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

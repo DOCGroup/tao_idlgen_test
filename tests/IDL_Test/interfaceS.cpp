@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INTERFACES_T5EFXS_CPP_
-#define _TAO_IDL_INTERFACES_T5EFXS_CPP_
+#ifndef _TAO_IDL_INTERFACES_DTQ1TZ_CPP_
+#define _TAO_IDL_INTERFACES_DTQ1TZ_CPP_
 
 #include "interfaceS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -63,7 +63,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Base_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_Base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -90,18 +90,15 @@ TAO_AMH_Base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_Base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {3};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {18};
+  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"_get_value", std::addressof(POA_Base::_get_value_skel), std::addressof(_TAO_Base_Direct_Proxy_Impl::_get_value)},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -123,7 +120,7 @@ TAO_AMH_Base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -136,9 +133,11 @@ TAO_AMH_Base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -281,7 +280,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Base_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -308,18 +307,15 @@ TAO_Base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_Base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {3};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {18};
+  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"_get_value", std::addressof(POA_Base::_get_value_skel), std::addressof(_TAO_Base_Direct_Proxy_Impl::_get_value)},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -341,7 +337,7 @@ TAO_Base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -354,9 +350,11 @@ TAO_Base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -645,7 +643,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_BaseHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_BaseHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_BaseHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -672,30 +670,26 @@ TAO_AMI_BaseHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len
 const TAO_operation_db_entry *
 TAO_AMI_BaseHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {15};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {30};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {26};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {15};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {30};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"set_value", std::addressof(POA_AMI_BaseHandler::set_value_skel), std::addressof(_TAO_AMI_BaseHandler_Direct_Proxy_Impl::set_value)},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"get_value", std::addressof(POA_AMI_BaseHandler::get_value_skel), std::addressof(_TAO_AMI_BaseHandler_Direct_Proxy_Impl::get_value)},
       {"set_value_excep", std::addressof(POA_AMI_BaseHandler::set_value_excep_skel), std::addressof(_TAO_AMI_BaseHandler_Direct_Proxy_Impl::set_value_excep)},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"get_value_excep", std::addressof(POA_AMI_BaseHandler::get_value_excep_skel), std::addressof(_TAO_AMI_BaseHandler_Direct_Proxy_Impl::get_value_excep)},
     };
 
@@ -1096,7 +1090,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Derived_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_Derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -1123,18 +1117,15 @@ TAO_AMH_Derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_Derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {3};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {18};
+  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"_get_value", std::addressof(POA_Base::_get_value_skel), std::addressof(_TAO_Base_Direct_Proxy_Impl::_get_value)},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -1156,7 +1147,7 @@ TAO_AMH_Derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -1169,9 +1160,11 @@ TAO_AMH_Derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -1236,7 +1229,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Derived_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -1263,18 +1256,15 @@ TAO_Derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_Derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {3};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {18};
+  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"_get_value", std::addressof(POA_Base::_get_value_skel), std::addressof(_TAO_Base_Direct_Proxy_Impl::_get_value)},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -1296,7 +1286,7 @@ TAO_Derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -1309,9 +1299,11 @@ TAO_Derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -1388,7 +1380,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_DerivedHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_DerivedHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_DerivedHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -1415,30 +1407,26 @@ TAO_AMI_DerivedHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t 
 const TAO_operation_db_entry *
 TAO_AMI_DerivedHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {15};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {30};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {26};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {15};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {30};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"set_value", std::addressof(POA_AMI_BaseHandler::set_value_skel), std::addressof(_TAO_AMI_BaseHandler_Direct_Proxy_Impl::set_value)},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"get_value", std::addressof(POA_AMI_BaseHandler::get_value_skel), std::addressof(_TAO_AMI_BaseHandler_Direct_Proxy_Impl::get_value)},
       {"set_value_excep", std::addressof(POA_AMI_BaseHandler::set_value_excep_skel), std::addressof(_TAO_AMI_BaseHandler_Direct_Proxy_Impl::set_value_excep)},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"get_value_excep", std::addressof(POA_AMI_BaseHandler::get_value_excep_skel), std::addressof(_TAO_AMI_BaseHandler_Direct_Proxy_Impl::get_value_excep)},
     };
 
@@ -1524,7 +1512,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_foostep_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_foostep_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_foostep_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -1551,22 +1539,18 @@ TAO_AMH_foostep_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_foostep_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"getDate", std::addressof(POA_AMH_foostep::getDate_skel), std::addressof(_TAO_foostep_Direct_Proxy_Impl::getDate)},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
@@ -1675,7 +1659,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_foostep_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_foostep_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_foostep_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -1702,22 +1686,18 @@ TAO_foostep_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_foostep_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"getDate", std::addressof(POA_foostep::getDate_skel), std::addressof(_TAO_foostep_Direct_Proxy_Impl::getDate)},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
@@ -1913,7 +1893,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_foostepHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_foostepHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_foostepHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -1940,27 +1920,23 @@ TAO_AMI_foostepHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t 
 const TAO_operation_db_entry *
 TAO_AMI_foostepHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"getDate", std::addressof(POA_AMI_foostepHandler::getDate_skel), std::addressof(_TAO_AMI_foostepHandler_Direct_Proxy_Impl::getDate)},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"getDate_excep", std::addressof(POA_AMI_foostepHandler::getDate_excep_skel), std::addressof(_TAO_AMI_foostepHandler_Direct_Proxy_Impl::getDate_excep)},
     };
 
@@ -2212,7 +2188,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_mother_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_mother_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_mother_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -2239,22 +2215,18 @@ TAO_AMH_mother_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_mother_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -2327,7 +2299,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_mother_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_mother_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_mother_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -2354,22 +2326,18 @@ TAO_mother_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_mother_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -2454,7 +2422,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_motherHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_motherHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_motherHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -2481,22 +2449,18 @@ TAO_AMI_motherHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
 const TAO_operation_db_entry *
 TAO_AMI_motherHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -2583,7 +2547,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_father_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_father_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_father_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -2610,22 +2574,18 @@ TAO_AMH_father_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_father_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -2698,7 +2658,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_father_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_father_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_father_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -2725,22 +2685,18 @@ TAO_father_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_father_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -2825,7 +2781,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_fatherHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_fatherHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_fatherHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -2852,22 +2808,18 @@ TAO_AMI_fatherHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
 const TAO_operation_db_entry *
 TAO_AMI_fatherHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -2954,7 +2906,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_child_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_child_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_child_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -2981,22 +2933,18 @@ TAO_AMH_child_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_child_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -3072,7 +3020,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_child_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_child_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_child_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -3099,22 +3047,18 @@ TAO_child_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_child_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -3202,7 +3146,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_childHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_childHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_childHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -3229,22 +3173,18 @@ TAO_AMI_childHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t le
 const TAO_operation_db_entry *
 TAO_AMI_childHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -3333,7 +3273,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_try_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_try_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_try_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -3360,22 +3300,18 @@ TAO_AMH_try_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_try_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -3449,7 +3385,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_try_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_try_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_try_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -3476,22 +3412,18 @@ TAO_try_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_try_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -3577,7 +3509,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -3604,22 +3536,18 @@ TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t
 const TAO_operation_db_entry *
 TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -3706,7 +3634,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_later_user_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_later_user_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_later_user_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -3733,25 +3661,21 @@ TAO_AMH_later_user_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_later_user_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {9};
+  constexpr std::size_t MIN_WORD_LENGTH {2};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {2};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_AMH_later_user::op_skel), std::addressof(_TAO_later_user_Direct_Proxy_Impl::op)},
       {"op2", std::addressof(POA_AMH_later_user::op2_skel), std::addressof(_TAO_later_user_Direct_Proxy_Impl::op2)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -3914,7 +3838,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_later_user_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_later_user_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_later_user_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -3941,25 +3865,21 @@ TAO_later_user_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_later_user_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {9};
+  constexpr std::size_t MIN_WORD_LENGTH {2};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {2};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_later_user::op_skel), std::addressof(_TAO_later_user_Direct_Proxy_Impl::op)},
       {"op2", std::addressof(POA_later_user::op2_skel), std::addressof(_TAO_later_user_Direct_Proxy_Impl::op2)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -4292,7 +4212,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_later_userHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_later_userHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_later_userHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -4319,27 +4239,23 @@ TAO_AMI_later_userHandler_Perfect_Hash_OpTable::hash (const char *str, std::size
 const TAO_operation_db_entry *
 TAO_AMI_later_userHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {2};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {2};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_AMI_later_userHandler::op_skel), std::addressof(_TAO_AMI_later_userHandler_Direct_Proxy_Impl::op)},
       {"op2", std::addressof(POA_AMI_later_userHandler::op2_skel), std::addressof(_TAO_AMI_later_userHandler_Direct_Proxy_Impl::op2)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op_excep", std::addressof(POA_AMI_later_userHandler::op_excep_skel), std::addressof(_TAO_AMI_later_userHandler_Direct_Proxy_Impl::op_excep)},
       {"op2_excep", std::addressof(POA_AMI_later_userHandler::op2_excep_skel), std::addressof(_TAO_AMI_later_userHandler_Direct_Proxy_Impl::op2_excep)},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -4762,7 +4678,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_later_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_later_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_later_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -4789,22 +4705,18 @@ TAO_AMH_later_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_later_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -4878,7 +4790,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_later_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_later_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_later_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -4905,22 +4817,18 @@ TAO_later_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_later_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -5006,7 +4914,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_laterHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_laterHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_laterHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -5033,22 +4941,18 @@ TAO_AMI_laterHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t le
 const TAO_operation_db_entry *
 TAO_AMI_laterHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -5135,7 +5039,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Begin_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Begin_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_Begin_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -5162,22 +5066,18 @@ TAO_AMH_Begin_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_Begin_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -5250,7 +5150,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Begin_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Begin_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Begin_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -5277,22 +5177,18 @@ TAO_Begin_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_Begin_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -5377,7 +5273,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_BeginHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_BeginHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_BeginHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -5404,22 +5300,18 @@ TAO_AMI_BeginHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t le
 const TAO_operation_db_entry *
 TAO_AMI_BeginHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -5506,7 +5398,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Middle_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Middle_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_Middle_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -5533,22 +5425,18 @@ TAO_AMH_Middle_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_Middle_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -5623,7 +5511,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Middle_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Middle_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Middle_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -5650,22 +5538,18 @@ TAO_Middle_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_Middle_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -5752,7 +5636,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_MiddleHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_MiddleHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_MiddleHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -5779,22 +5663,18 @@ TAO_AMI_MiddleHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
 const TAO_operation_db_entry *
 TAO_AMI_MiddleHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -5882,7 +5762,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_End_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_End_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_End_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -5909,22 +5789,18 @@ TAO_AMH_End_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_End_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -6000,7 +5876,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_End_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_End_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_End_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -6027,22 +5903,18 @@ TAO_End_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_End_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -6130,7 +6002,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_EndHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_EndHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_EndHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -6157,22 +6029,18 @@ TAO_AMI_EndHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMI_EndHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -6261,7 +6129,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Client_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Client_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_Client_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -6288,18 +6156,15 @@ TAO_AMH_Client_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_Client_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"_get_v", std::addressof(POA_Client::_get_v_skel), std::addressof(_TAO_Client_Direct_Proxy_Impl::_get_v)},
       {"_set_v", std::addressof(POA_Client::_set_v_skel), std::addressof(_TAO_Client_Direct_Proxy_Impl::_set_v)},
@@ -6321,7 +6186,7 @@ TAO_AMH_Client_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -6334,9 +6199,11 @@ TAO_AMH_Client_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -6479,7 +6346,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Client_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Client_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Client_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -6506,18 +6373,15 @@ TAO_Client_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_Client_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"_get_v", std::addressof(POA_Client::_get_v_skel), std::addressof(_TAO_Client_Direct_Proxy_Impl::_get_v)},
       {"_set_v", std::addressof(POA_Client::_set_v_skel), std::addressof(_TAO_Client_Direct_Proxy_Impl::_set_v)},
@@ -6539,7 +6403,7 @@ TAO_Client_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -6552,9 +6416,11 @@ TAO_Client_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -6843,7 +6709,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_ClientHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_ClientHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_ClientHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -6870,30 +6736,26 @@ TAO_AMI_ClientHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
 const TAO_operation_db_entry *
 TAO_AMI_ClientHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {25};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {21};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {25};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"set_v", std::addressof(POA_AMI_ClientHandler::set_v_skel), std::addressof(_TAO_AMI_ClientHandler_Direct_Proxy_Impl::set_v)},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
       {"set_v_excep", std::addressof(POA_AMI_ClientHandler::set_v_excep_skel), std::addressof(_TAO_AMI_ClientHandler_Direct_Proxy_Impl::set_v_excep)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"get_v", std::addressof(POA_AMI_ClientHandler::get_v_skel), std::addressof(_TAO_AMI_ClientHandler_Direct_Proxy_Impl::get_v)},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"get_v_excep", std::addressof(POA_AMI_ClientHandler::get_v_excep_skel), std::addressof(_TAO_AMI_ClientHandler_Direct_Proxy_Impl::get_v_excep)},
     };
 
@@ -7294,7 +7156,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_AttributeTester_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_AttributeTester_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_AttributeTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -7321,18 +7183,15 @@ TAO_AMH_AttributeTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t
 const TAO_operation_db_entry *
 TAO_AMH_AttributeTester_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {19};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {15};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {3};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {19};
+  constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"_get_a_su", std::addressof(POA_AttributeTester::_get_a_su_skel), std::addressof(_TAO_AttributeTester_Direct_Proxy_Impl::_get_a_su)},
       {"_set_a_su", std::addressof(POA_AttributeTester::_set_a_su_skel), std::addressof(_TAO_AttributeTester_Direct_Proxy_Impl::_set_a_su)},
@@ -7356,7 +7215,7 @@ TAO_AMH_AttributeTester_Perfect_Hash_OpTable::lookup (const char *str, std::size
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -7369,9 +7228,11 @@ TAO_AMH_AttributeTester_Perfect_Hash_OpTable::lookup (const char *str, std::size
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -7596,7 +7457,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AttributeTester_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AttributeTester_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AttributeTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -7623,18 +7484,15 @@ TAO_AttributeTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t len
 const TAO_operation_db_entry *
 TAO_AttributeTester_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {19};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {15};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {3};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {19};
+  constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"_get_a_su", std::addressof(POA_AttributeTester::_get_a_su_skel), std::addressof(_TAO_AttributeTester_Direct_Proxy_Impl::_get_a_su)},
       {"_set_a_su", std::addressof(POA_AttributeTester::_set_a_su_skel), std::addressof(_TAO_AttributeTester_Direct_Proxy_Impl::_set_a_su)},
@@ -7658,7 +7516,7 @@ TAO_AttributeTester_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -7671,9 +7529,11 @@ TAO_AttributeTester_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -8175,7 +8035,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -8202,18 +8062,15 @@ TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable::hash (const char *str, std:
 const TAO_operation_db_entry *
 TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {13};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {28};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {24};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {3};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {18};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {28};
+  constexpr std::size_t WORDLIST_SIZE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"set_a_su", std::addressof(POA_AMI_AttributeTesterHandler::set_a_su_skel), std::addressof(_TAO_AMI_AttributeTesterHandler_Direct_Proxy_Impl::set_a_su)},
       {"get_a_su", std::addressof(POA_AMI_AttributeTesterHandler::get_a_su_skel), std::addressof(_TAO_AMI_AttributeTesterHandler_Direct_Proxy_Impl::get_a_su)},
@@ -8242,7 +8099,7 @@ TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable::lookup (const char *str, st
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -8255,9 +8112,11 @@ TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable::lookup (const char *str, st
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -8967,7 +8826,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -8994,26 +8853,22 @@ TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable::hash (const char *str, st
 const TAO_operation_db_entry *
 TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {19};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {19};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {15};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {19};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {19};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"parameter_tester_op", std::addressof(POA_ParamMod::AMH_ParameterTester::parameter_tester_op_skel), std::addressof(POA_ParamMod::_TAO_ParameterTester_Direct_Proxy_Impl::parameter_tester_op)},
     };
 
@@ -9134,7 +8989,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -9161,26 +9016,22 @@ TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable::hash (const char *str, std::s
 const TAO_operation_db_entry *
 TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {19};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {19};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {15};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {19};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {19};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"parameter_tester_op", std::addressof(POA_ParamMod::ParameterTester::parameter_tester_op_skel), std::addressof(POA_ParamMod::_TAO_ParameterTester_Direct_Proxy_Impl::parameter_tester_op)},
     };
 
@@ -9418,7 +9269,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -9445,28 +9296,24 @@ TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable::hash (const char *
 const TAO_operation_db_entry *
 TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {25};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {25};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {21};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {25};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {25};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"parameter_tester_op", std::addressof(POA_ParamMod::AMI_ParameterTesterHandler::parameter_tester_op_skel), std::addressof(POA_ParamMod::_TAO_AMI_ParameterTesterHandler_Direct_Proxy_Impl::parameter_tester_op)},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"parameter_tester_op_excep", std::addressof(POA_ParamMod::AMI_ParameterTesterHandler::parameter_tester_op_excep_skel), std::addressof(POA_ParamMod::_TAO_AMI_ParameterTesterHandler_Direct_Proxy_Impl::parameter_tester_op_excep)},
     };
 
@@ -9777,7 +9624,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_A_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_A_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -9804,22 +9651,18 @@ TAO_AMH_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMH_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -9892,7 +9735,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -9919,22 +9762,18 @@ TAO_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -10019,7 +9858,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_AHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_AHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_AHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -10046,22 +9885,18 @@ TAO_AMI_AHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_AMI_AHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -10148,7 +9983,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_M_AMH_A_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M_AMH_A_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_M_AMH_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -10175,22 +10010,18 @@ TAO_M_AMH_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_M_AMH_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -10264,7 +10095,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_M_A_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M_A_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_M_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -10291,22 +10122,18 @@ TAO_M_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_M_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -10392,7 +10219,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_M_AMI_AHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M_AMI_AHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_M_AMI_AHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -10419,22 +10246,18 @@ TAO_M_AMI_AHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_M_AMI_AHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -10521,7 +10344,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i1_AMH_if1_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i1_AMH_if1_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_i1_AMH_if1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -10548,23 +10371,19 @@ TAO_i1_AMH_if1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_i1_AMH_if1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"getStr", std::addressof(POA_i1::AMH_if1::getStr_skel), std::addressof(POA_i1::_TAO_if1_Direct_Proxy_Impl::getStr)},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -10672,7 +10491,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i1_if1_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i1_if1_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_i1_if1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -10699,23 +10518,19 @@ TAO_i1_if1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_i1_if1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"getStr", std::addressof(POA_i1::if1::getStr_skel), std::addressof(POA_i1::_TAO_if1_Direct_Proxy_Impl::getStr)},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -10914,7 +10729,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -10941,23 +10756,19 @@ TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
 const TAO_operation_db_entry *
 TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"getStr", std::addressof(POA_i1::AMI_if1Handler::getStr_skel), std::addressof(POA_i1::_TAO_AMI_if1Handler_Direct_Proxy_Impl::getStr)},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"getStr_excep", std::addressof(POA_i1::AMI_if1Handler::getStr_excep_skel), std::addressof(POA_i1::_TAO_AMI_if1Handler_Direct_Proxy_Impl::getStr_excep)},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
@@ -11220,7 +11031,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMH_if2_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMH_if2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_i2_AMH_if2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -11247,24 +11058,20 @@ TAO_i2_AMH_if2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_i2_AMH_if2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"getStr", std::addressof(POA_i1::AMH_if1::getStr_skel), std::addressof(POA_i1::_TAO_if1_Direct_Proxy_Impl::getStr)},
       {"getstr2", std::addressof(POA_i2::AMH_if2::getstr2_skel), std::addressof(POA_i2::_TAO_if2_Direct_Proxy_Impl::getstr2)},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -11373,7 +11180,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i2_if2_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_if2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_i2_if2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -11400,24 +11207,20 @@ TAO_i2_if2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_i2_if2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"getStr", std::addressof(POA_i1::if1::getStr_skel), std::addressof(POA_i1::_TAO_if1_Direct_Proxy_Impl::getStr)},
       {"getstr2", std::addressof(POA_i2::if2::getstr2_skel), std::addressof(POA_i2::_TAO_if2_Direct_Proxy_Impl::getstr2)},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -11617,7 +11420,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -11644,28 +11447,24 @@ TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
 const TAO_operation_db_entry *
 TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {18};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"getStr", std::addressof(POA_i1::AMI_if1Handler::getStr_skel), std::addressof(POA_i1::_TAO_AMI_if1Handler_Direct_Proxy_Impl::getStr)},
       {"getstr2", std::addressof(POA_i2::AMI_if2Handler::getstr2_skel), std::addressof(POA_i2::_TAO_AMI_if2Handler_Direct_Proxy_Impl::getstr2)},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"getStr_excep", std::addressof(POA_i1::AMI_if1Handler::getStr_excep_skel), std::addressof(POA_i1::_TAO_AMI_if1Handler_Direct_Proxy_Impl::getStr_excep)},
       {"getstr2_excep", std::addressof(POA_i2::AMI_if2Handler::getstr2_excep_skel), std::addressof(POA_i2::_TAO_AMI_if2Handler_Direct_Proxy_Impl::getstr2_excep)},
     };
@@ -11927,7 +11726,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMH_if3_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMH_if3_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_i2_AMH_if3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -11954,24 +11753,20 @@ TAO_i2_AMH_if3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_i2_AMH_if3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {8};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {13};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"getStr", std::addressof(POA_i1::AMH_if1::getStr_skel), std::addressof(POA_i1::_TAO_if1_Direct_Proxy_Impl::getStr)},
       {"getstr3", std::addressof(POA_i2::AMH_if3::getstr3_skel), std::addressof(POA_i2::_TAO_if3_Direct_Proxy_Impl::getstr3)},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"getstr2", std::addressof(POA_i2::AMH_if2::getstr2_skel), std::addressof(POA_i2::_TAO_if2_Direct_Proxy_Impl::getstr2)},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
@@ -12082,7 +11877,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i2_if3_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_if3_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_i2_if3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -12109,24 +11904,20 @@ TAO_i2_if3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_i2_if3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {8};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {13};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"getStr", std::addressof(POA_i1::if1::getStr_skel), std::addressof(POA_i1::_TAO_if1_Direct_Proxy_Impl::getStr)},
       {"getstr3", std::addressof(POA_i2::if3::getstr3_skel), std::addressof(POA_i2::_TAO_if3_Direct_Proxy_Impl::getstr3)},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"getstr2", std::addressof(POA_i2::if2::getstr2_skel), std::addressof(POA_i2::_TAO_if2_Direct_Proxy_Impl::getstr2)},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
@@ -12328,7 +12119,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -12355,18 +12146,15 @@ TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
 const TAO_operation_db_entry *
 TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {11};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {18};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {16};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {18};
+  constexpr std::size_t WORDLIST_SIZE {16};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"getStr", std::addressof(POA_i1::AMI_if1Handler::getStr_skel), std::addressof(POA_i1::_TAO_AMI_if1Handler_Direct_Proxy_Impl::getStr)},
       {"getstr3", std::addressof(POA_i2::AMI_if3Handler::getstr3_skel), std::addressof(POA_i2::_TAO_AMI_if3Handler_Direct_Proxy_Impl::getstr3)},
@@ -12392,7 +12180,7 @@ TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -12405,9 +12193,11 @@ TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -12661,7 +12451,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMH_base_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMH_base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_redefs_AMH_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -12688,22 +12478,18 @@ TAO_redefs_AMH_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len
 const TAO_operation_db_entry *
 TAO_redefs_AMH_base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -12776,7 +12562,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_redefs_base_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_redefs_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -12803,22 +12589,18 @@ TAO_redefs_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_redefs_base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -12903,7 +12685,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -12930,22 +12712,18 @@ TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable::hash (const char *str, std::siz
 const TAO_operation_db_entry *
 TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -13032,7 +12810,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMH_derived_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMH_derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_redefs_AMH_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -13059,22 +12837,18 @@ TAO_redefs_AMH_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t 
 const TAO_operation_db_entry *
 TAO_redefs_AMH_derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -13148,7 +12922,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_redefs_derived_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_redefs_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -13175,22 +12949,18 @@ TAO_redefs_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_redefs_derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -13276,7 +13046,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -13303,22 +13073,18 @@ TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable::hash (const char *str, std::
 const TAO_operation_db_entry *
 TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -13406,7 +13172,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -13433,22 +13199,18 @@ TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable::hash (const char *str, std::si
 const TAO_operation_db_entry *
 TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -13521,7 +13283,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -13548,22 +13310,18 @@ TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t
 const TAO_operation_db_entry *
 TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -13648,7 +13406,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -13675,22 +13433,18 @@ TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable::hash (const char *str, 
 const TAO_operation_db_entry *
 TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {5};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {10};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -13777,7 +13531,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -13804,23 +13558,19 @@ TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable::hash (const char *str, std:
 const TAO_operation_db_entry *
 TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
       {"remove_task", std::addressof(POA_Rec_Arg_Traits::AMH_derived::remove_task_skel), std::addressof(POA_Rec_Arg_Traits::_TAO_derived_Direct_Proxy_Impl::remove_task)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -13938,7 +13688,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -13965,23 +13715,19 @@ TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable::hash (const char *str, std::siz
 const TAO_operation_db_entry *
 TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
       {"remove_task", std::addressof(POA_Rec_Arg_Traits::derived::remove_task_skel), std::addressof(POA_Rec_Arg_Traits::_TAO_derived_Direct_Proxy_Impl::remove_task)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -14176,7 +13922,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -14203,27 +13949,23 @@ TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable::hash (const char *st
 const TAO_operation_db_entry *
 TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {17};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {17};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {13};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {17};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {17};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
       {"remove_task", std::addressof(POA_Rec_Arg_Traits::AMI_derivedHandler::remove_task_skel), std::addressof(POA_Rec_Arg_Traits::_TAO_AMI_derivedHandler_Direct_Proxy_Impl::remove_task)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"remove_task_excep", std::addressof(POA_Rec_Arg_Traits::AMI_derivedHandler::remove_task_excep_skel), std::addressof(POA_Rec_Arg_Traits::_TAO_AMI_derivedHandler_Direct_Proxy_Impl::remove_task_excep)},
     };
 
@@ -14465,7 +14207,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_call_test_AMH_iTest_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_test_AMH_iTest_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_call_test_AMH_iTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -14492,24 +14234,20 @@ TAO_call_test_AMH_iTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t
 const TAO_operation_db_entry *
 TAO_call_test_AMH_iTest_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"do_op", std::addressof(POA_call_test::AMH_iTest::do_op_skel), std::addressof(POA_call_test::_TAO_iTest_Direct_Proxy_Impl::do_op)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
@@ -14626,7 +14364,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_call_test_iTest_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_test_iTest_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_call_test_iTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -14653,24 +14391,20 @@ TAO_call_test_iTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len
 const TAO_operation_db_entry *
 TAO_call_test_iTest_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"do_op", std::addressof(POA_call_test::iTest::do_op_skel), std::addressof(POA_call_test::_TAO_iTest_Direct_Proxy_Impl::do_op)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -14864,7 +14598,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -14891,25 +14625,21 @@ TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable::hash (const char *str, std:
 const TAO_operation_db_entry *
 TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"do_op", std::addressof(POA_call_test::AMI_iTestHandler::do_op_skel), std::addressof(POA_call_test::_TAO_AMI_iTestHandler_Direct_Proxy_Impl::do_op)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
       {"do_op_excep", std::addressof(POA_call_test::AMI_iTestHandler::do_op_excep_skel), std::addressof(POA_call_test::_TAO_AMI_iTestHandler_Direct_Proxy_Impl::do_op_excep)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
@@ -15152,7 +14882,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -15179,18 +14909,15 @@ TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable::hash (const char *str, std::si
 const TAO_operation_db_entry *
 TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"_get_call", std::addressof(POA_call_attribute::iBar::_get_call_skel), std::addressof(POA_call_attribute::_TAO_iBar_Direct_Proxy_Impl::_get_call)},
       {"_set_call", std::addressof(POA_call_attribute::iBar::_set_call_skel), std::addressof(POA_call_attribute::_TAO_iBar_Direct_Proxy_Impl::_set_call)},
@@ -15212,7 +14939,7 @@ TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable::lookup (const char *str, std::
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -15225,9 +14952,11 @@ TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable::lookup (const char *str, std::
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -15370,7 +15099,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_call_attribute_iBar_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_attribute_iBar_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_call_attribute_iBar_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -15397,18 +15126,15 @@ TAO_call_attribute_iBar_Perfect_Hash_OpTable::hash (const char *str, std::size_t
 const TAO_operation_db_entry *
 TAO_call_attribute_iBar_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {11};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {15};
+  constexpr std::size_t WORDLIST_SIZE {12};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"_get_call", std::addressof(POA_call_attribute::iBar::_get_call_skel), std::addressof(POA_call_attribute::_TAO_iBar_Direct_Proxy_Impl::_get_call)},
       {"_set_call", std::addressof(POA_call_attribute::iBar::_set_call_skel), std::addressof(POA_call_attribute::_TAO_iBar_Direct_Proxy_Impl::_set_call)},
@@ -15430,7 +15156,7 @@ TAO_call_attribute_iBar_Perfect_Hash_OpTable::lookup (const char *str, std::size
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -15443,9 +15169,11 @@ TAO_call_attribute_iBar_Perfect_Hash_OpTable::lookup (const char *str, std::size
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -15742,7 +15470,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -15769,31 +15497,27 @@ TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable::hash (const char *str, 
 const TAO_operation_db_entry *
 TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {24};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {20};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {24};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"set_call", std::addressof(POA_call_attribute::AMI_iBarHandler::set_call_skel), std::addressof(POA_call_attribute::_TAO_AMI_iBarHandler_Direct_Proxy_Impl::set_call)},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"set_call_excep", std::addressof(POA_call_attribute::AMI_iBarHandler::set_call_excep_skel), std::addressof(POA_call_attribute::_TAO_AMI_iBarHandler_Direct_Proxy_Impl::set_call_excep)},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"get_call", std::addressof(POA_call_attribute::AMI_iBarHandler::get_call_skel), std::addressof(POA_call_attribute::_TAO_AMI_iBarHandler_Direct_Proxy_Impl::get_call)},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"get_call_excep", std::addressof(POA_call_attribute::AMI_iBarHandler::get_call_excep_skel), std::addressof(POA_call_attribute::_TAO_AMI_iBarHandler_Direct_Proxy_Impl::get_call_excep)},
     };
 

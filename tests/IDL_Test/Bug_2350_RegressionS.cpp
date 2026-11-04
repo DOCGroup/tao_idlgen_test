@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_SP7K8N_CPP_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_SP7K8N_CPP_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_ZJ53AB_CPP_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_ZJ53AB_CPP_
 
 #include "Bug_2350_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -63,7 +63,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -90,26 +90,22 @@ TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::hash (const char *str, std::si
 const TAO_operation_db_entry *
 TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {25};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {25};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {21};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {25};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {25};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"Bug_2350_Regression_excep", std::addressof(POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel), std::addressof(_TAO_Bug_2350_Regression_Direct_Proxy_Impl::Bug_2350_Regression_excep)},
     };
 
@@ -224,7 +220,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Bug_2350_Regression_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -251,26 +247,22 @@ TAO_Bug_2350_Regression_Perfect_Hash_OpTable::hash (const char *str, std::size_t
 const TAO_operation_db_entry *
 TAO_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {25};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {25};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {21};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {25};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {25};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"Bug_2350_Regression_excep", std::addressof(POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel), std::addressof(_TAO_Bug_2350_Regression_Direct_Proxy_Impl::Bug_2350_Regression_excep)},
     };
 
@@ -465,7 +457,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -492,28 +484,24 @@ TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::hash (const char *str, 
 const TAO_operation_db_entry *
 TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {31};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {31};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {27};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {31};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {31};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"Bug_2350_Regression_excep", std::addressof(POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_skel), std::addressof(_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep)},
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"Bug_2350_Regression_excep_excep", std::addressof(POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel), std::addressof(_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep_excep)},
     };
 

@@ -47,7 +47,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "old_structC.inl"

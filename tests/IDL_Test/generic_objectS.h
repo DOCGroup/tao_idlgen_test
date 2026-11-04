@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_87DX22_H_
-#define _TAO_IDL_GENERIC_OBJECTS_87DX22_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_FLB12E_H_
+#define _TAO_IDL_GENERIC_OBJECTS_FLB12E_H_
 
 #include /**/ "ace/pre.h"
 

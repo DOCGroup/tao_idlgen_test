@@ -29,7 +29,6 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Valuetype/ValueFactory.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "repo_id_modC.inl"

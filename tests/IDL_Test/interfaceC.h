@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INTERFACEC_CXGV91_H_
-#define _TAO_IDL_INTERFACEC_CXGV91_H_
+#ifndef _TAO_IDL_INTERFACEC_VL35US_H_
+#define _TAO_IDL_INTERFACEC_VL35US_H_
 
 #include /**/ "ace/pre.h"
 

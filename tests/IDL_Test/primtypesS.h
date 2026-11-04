@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESS_J1X87T_H_
-#define _TAO_IDL_PRIMTYPESS_J1X87T_H_
+#ifndef _TAO_IDL_PRIMTYPESS_R9MCFS_H_
+#define _TAO_IDL_PRIMTYPESS_R9MCFS_H_
 
 #include /**/ "ace/pre.h"
 

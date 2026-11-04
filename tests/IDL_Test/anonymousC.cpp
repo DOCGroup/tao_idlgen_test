@@ -32,7 +32,6 @@
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
 #include "tao/SystemException.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "anonymousC.inl"

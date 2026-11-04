@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTS_8MEISI_CPP_
-#define _TAO_IDL_AMI_TESTS_8MEISI_CPP_
+#ifndef _TAO_IDL_AMI_TESTS_GJFXKQ_CPP_
+#define _TAO_IDL_AMI_TESTS_GJFXKQ_CPP_
 
 #include "ami_testS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -58,7 +58,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_AMI_Test_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_AMI_Test_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_A_AMI_Test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -85,18 +85,15 @@ TAO_A_AMI_Test_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_A_AMI_Test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {10};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {25};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {23};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {13};
+  constexpr std::size_t MIN_WORD_LENGTH {3};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {3};
+  constexpr std::size_t MAX_HASH_VALUE {25};
+  constexpr std::size_t WORDLIST_SIZE {13};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"foo", std::addressof(POA_A::AMI_Test::foo_skel), nullptr},
       {"shutdown", std::addressof(POA_A::AMI_Test::shutdown_skel), nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
@@ -104,7 +101,7 @@ TAO_A_AMI_Test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
       {"inout_arg_test", std::addressof(POA_A::AMI_Test::inout_arg_test_skel), nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
-      {"_get_yadda", std::addressof(POA_A::AMI_Test::_get_yadda_skel), 0},
+      {"_get_yadda", std::addressof(POA_A::AMI_Test::_get_yadda_skel), nullptr},
       {"_set_yadda", std::addressof(POA_A::AMI_Test::_set_yadda_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
     };
@@ -121,7 +118,7 @@ TAO_A_AMI_Test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -134,9 +131,11 @@ TAO_A_AMI_Test_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -559,7 +558,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_AMI_AMI_TestHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_AMI_AMI_TestHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_A_AMI_AMI_TestHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -586,35 +585,31 @@ TAO_A_AMI_AMI_TestHandler_Perfect_Hash_OpTable::hash (const char *str, std::size
 const TAO_operation_db_entry *
 TAO_A_AMI_AMI_TestHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {13};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {20};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {29};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {25};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {18};
+  constexpr std::size_t MIN_WORD_LENGTH {3};
+  constexpr std::size_t MAX_WORD_LENGTH {20};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {29};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"set_yadda", std::addressof(POA_A::AMI_AMI_TestHandler::set_yadda_skel), nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"inout_arg_test", std::addressof(POA_A::AMI_AMI_TestHandler::inout_arg_test_skel), nullptr},
       {"set_yadda_excep", std::addressof(POA_A::AMI_AMI_TestHandler::set_yadda_excep_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"foo", std::addressof(POA_A::AMI_AMI_TestHandler::foo_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"inout_arg_test_excep", std::addressof(POA_A::AMI_AMI_TestHandler::inout_arg_test_excep_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"get_yadda", std::addressof(POA_A::AMI_AMI_TestHandler::get_yadda_skel), nullptr},
       {"foo_excep", std::addressof(POA_A::AMI_AMI_TestHandler::foo_excep_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"get_yadda_excep", std::addressof(POA_A::AMI_AMI_TestHandler::get_yadda_excep_skel), nullptr},
     };
 
@@ -1268,7 +1263,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_Test_Child_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_Test_Child_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_A_Test_Child_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -1295,18 +1290,15 @@ TAO_A_Test_Child_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 const TAO_operation_db_entry *
 TAO_A_Test_Child_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {11};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {3};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {25};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {23};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
+  constexpr std::size_t MIN_WORD_LENGTH {3};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr std::size_t MIN_HASH_VALUE {3};
+  constexpr std::size_t MAX_HASH_VALUE {25};
+  constexpr std::size_t WORDLIST_SIZE {14};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"foo", std::addressof(POA_A::AMI_Test::foo_skel), nullptr},
       {"shutdown", std::addressof(POA_A::AMI_Test::shutdown_skel), nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
@@ -1315,7 +1307,7 @@ TAO_A_Test_Child_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"child_op", std::addressof(POA_A::Test_Child::child_op_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
-      {"_get_yadda", std::addressof(POA_A::AMI_Test::_get_yadda_skel), 0},
+      {"_get_yadda", std::addressof(POA_A::AMI_Test::_get_yadda_skel), nullptr},
       {"_set_yadda", std::addressof(POA_A::AMI_Test::_set_yadda_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
     };
@@ -1332,7 +1324,7 @@ TAO_A_Test_Child_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int slot = lookup[key];
+          int const slot = lookup[key];
 
           if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
@@ -1345,9 +1337,11 @@ TAO_A_Test_Child_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
             return nullptr;
           else
             {
-              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
-              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
-              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
+              std::size_t const offset = slot > 0
+                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
+              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -1463,7 +1457,7 @@ public:
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++17 -Z TAO_A_AMI_Test_ChildHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_AMI_Test_ChildHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_A_AMI_Test_ChildHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
@@ -1490,36 +1484,32 @@ TAO_A_AMI_Test_ChildHandler_Perfect_Hash_OpTable::hash (const char *str, std::si
 const TAO_operation_db_entry *
 TAO_A_AMI_Test_ChildHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {15};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {3};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {20};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {29};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {25};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {20};
+  constexpr std::size_t MIN_WORD_LENGTH {3};
+  constexpr std::size_t MAX_WORD_LENGTH {20};
+  constexpr std::size_t MIN_HASH_VALUE {5};
+  constexpr std::size_t MAX_HASH_VALUE {29};
 
   static constexpr TAO_operation_db_entry wordlist[] =
     {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"set_yadda", std::addressof(POA_A::AMI_AMI_TestHandler::set_yadda_skel), nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"inout_arg_test", std::addressof(POA_A::AMI_AMI_TestHandler::inout_arg_test_skel), nullptr},
       {"set_yadda_excep", std::addressof(POA_A::AMI_AMI_TestHandler::set_yadda_excep_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"foo", std::addressof(POA_A::AMI_AMI_TestHandler::foo_skel), nullptr},
       {"get_yadda", std::addressof(POA_A::AMI_AMI_TestHandler::get_yadda_skel), nullptr},
       {"inout_arg_test_excep", std::addressof(POA_A::AMI_AMI_TestHandler::inout_arg_test_excep_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"child_op", std::addressof(POA_A::AMI_Test_ChildHandler::child_op_skel), nullptr},
       {"foo_excep", std::addressof(POA_A::AMI_AMI_TestHandler::foo_excep_skel), nullptr},
       {"get_yadda_excep", std::addressof(POA_A::AMI_AMI_TestHandler::get_yadda_excep_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"child_op_excep", std::addressof(POA_A::AMI_Test_ChildHandler::child_op_excep_skel), nullptr},
     };

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_LOADER_CONSTC_06FHDB_H_
-#define _TAO_IDL_LOADER_CONSTC_06FHDB_H_
+#ifndef _TAO_IDL_LOADER_CONSTC_JWIZGR_H_
+#define _TAO_IDL_LOADER_CONSTC_JWIZGR_H_
 
 #include /**/ "ace/pre.h"
 

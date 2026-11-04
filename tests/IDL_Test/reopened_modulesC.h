@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPENED_MODULESC_5SXBNB_H_
-#define _TAO_IDL_REOPENED_MODULESC_5SXBNB_H_
+#ifndef _TAO_IDL_REOPENED_MODULESC_SRJ2SM_H_
+#define _TAO_IDL_REOPENED_MODULESC_SRJ2SM_H_
 
 #include /**/ "ace/pre.h"
 

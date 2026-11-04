@@ -46,7 +46,6 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "simpleC.inl"

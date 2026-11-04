@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REPO_ID_MODC_DDR3HP_H_
-#define _TAO_IDL_REPO_ID_MODC_DDR3HP_H_
+#ifndef _TAO_IDL_REPO_ID_MODC_B0BLIX_H_
+#define _TAO_IDL_REPO_ID_MODC_B0BLIX_H_
 
 #include /**/ "ace/pre.h"
 

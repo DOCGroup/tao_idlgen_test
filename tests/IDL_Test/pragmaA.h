@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRAGMAA_KTM2YF_H_
-#define _TAO_IDL_PRAGMAA_KTM2YF_H_
+#ifndef _TAO_IDL_PRAGMAA_Z2M74J_H_
+#define _TAO_IDL_PRAGMAA_Z2M74J_H_
 
 #include /**/ "ace/pre.h"
 
