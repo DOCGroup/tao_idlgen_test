@@ -80,10 +80,10 @@ Test::InvalidTimestamp::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<InvalidTimestamp *> (_tao_excp);
 }
 
-const Test::InvalidTimestamp *
+Test::InvalidTimestamp const *
 Test::InvalidTimestamp::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const InvalidTimestamp *> (_tao_excp);
+  return dynamic_cast<InvalidTimestamp const *> (_tao_excp);
 }
 
 ::CORBA::Exception *Test::InvalidTimestamp::_alloc ()
@@ -183,10 +183,10 @@ Test::ServerOverload::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<ServerOverload *> (_tao_excp);
 }
 
-const Test::ServerOverload *
+Test::ServerOverload const *
 Test::ServerOverload::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const ServerOverload *> (_tao_excp);
+  return dynamic_cast<ServerOverload const *> (_tao_excp);
 }
 
 ::CORBA::Exception *Test::ServerOverload::_alloc ()
@@ -942,7 +942,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const Test::InvalidTimestamp &_tao_elem)
+  Test::InvalidTimestamp const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<Test::InvalidTimestamp>::insert_copy (
     _tao_any,
@@ -965,8 +965,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const Test::InvalidTimestamp *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  Test::InvalidTimestamp const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<Test::InvalidTimestamp>::extract (
     _tao_any,
@@ -1012,7 +1012,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const Test::ServerOverload &_tao_elem)
+  Test::ServerOverload const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<Test::ServerOverload>::insert_copy (
     _tao_any,
@@ -1035,8 +1035,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const Test::ServerOverload *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  Test::ServerOverload const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<Test::ServerOverload>::extract (
     _tao_any,
@@ -1318,7 +1318,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::InvalidTimestamp &_tao_aggregate)
+    Test::InvalidTimestamp const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -1337,7 +1337,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::ServerOverload &_tao_aggregate)
+    Test::ServerOverload const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -1378,7 +1378,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const Test::Red_Herring *_tao_valuetype)
+    Test::Red_Herring const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -1470,7 +1470,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const Test::AMH_RoundtripExceptionHolder *_tao_valuetype)
+    Test::AMH_RoundtripExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

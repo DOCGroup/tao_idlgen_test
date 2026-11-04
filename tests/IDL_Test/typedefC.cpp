@@ -4159,7 +4159,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const TestModule::AMH_TestInterfaceExceptionHolder *_tao_valuetype)
+    TestModule::AMH_TestInterfaceExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4280,7 +4280,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const bug_2124::AMH_FooExceptionHolder *_tao_valuetype)
+    bug_2124::AMH_FooExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4401,7 +4401,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::One::AMH_WhateverExceptionHolder *_tao_valuetype)
+    bug_2122::One::AMH_WhateverExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4522,7 +4522,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Two::AMH_WhoCaresExceptionHolder *_tao_valuetype)
+    bug_2122::Two::AMH_WhoCaresExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4643,7 +4643,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Three::AMH_WhoCaresExceptionHolder *_tao_valuetype)
+    bug_2122::Three::AMH_WhoCaresExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

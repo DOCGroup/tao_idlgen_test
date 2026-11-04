@@ -9880,7 +9880,7 @@ TAO::Objref_Traits<ParamMod::ParameterTester>::marshal (ParamMod::ParameterTeste
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ParamMod::ParameterTester::object_excep_type::object_excep_type (
-    const ParamMod::ParameterTester_ptr _tao_objref)
+    ParamMod::ParameterTester_ptr const _tao_objref)
   : ::CORBA::UserException (
         "IDL:ParamMod/ParameterTester/object_excep_type:1.0",
         "object_excep_type")
@@ -9923,10 +9923,10 @@ ParamMod::ParameterTester::object_excep_type::_downcast (::CORBA::Exception *_ta
   return dynamic_cast<object_excep_type *> (_tao_excp);
 }
 
-const ParamMod::ParameterTester::object_excep_type *
+ParamMod::ParameterTester::object_excep_type const *
 ParamMod::ParameterTester::object_excep_type::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const object_excep_type *> (_tao_excp);
+  return dynamic_cast<object_excep_type const *> (_tao_excp);
 }
 
 ::CORBA::Exception *ParamMod::ParameterTester::object_excep_type::_alloc ()
@@ -14588,7 +14588,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 const CORBA::Long redefs::base::lconst;
 
 redefs::base::ex::ex (
-    const char * _tao_info)
+    char const * _tao_info)
   : ::CORBA::UserException (
         "IDL:redefs/base/ex:1.0",
         "ex")
@@ -14631,10 +14631,10 @@ redefs::base::ex::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<ex *> (_tao_excp);
 }
 
-const redefs::base::ex *
+redefs::base::ex const *
 redefs::base::ex::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const ex *> (_tao_excp);
+  return dynamic_cast<ex const *> (_tao_excp);
 }
 
 ::CORBA::Exception *redefs::base::ex::_alloc ()
@@ -15328,10 +15328,10 @@ redefs::derived::ex::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<ex *> (_tao_excp);
 }
 
-const redefs::derived::ex *
+redefs::derived::ex const *
 redefs::derived::ex::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const ex *> (_tao_excp);
+  return dynamic_cast<ex const *> (_tao_excp);
 }
 
 ::CORBA::Exception *redefs::derived::ex::_alloc ()
@@ -23278,7 +23278,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ParamMod::ParameterTester::object_excep_type &_tao_elem)
+  ParamMod::ParameterTester::object_excep_type const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<ParamMod::ParameterTester::object_excep_type>::insert_copy (
     _tao_any,
@@ -23301,8 +23301,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ParamMod::ParameterTester::object_excep_type *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ParamMod::ParameterTester::object_excep_type const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<ParamMod::ParameterTester::object_excep_type>::extract (
     _tao_any,
@@ -25182,7 +25182,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const redefs::base::ex &_tao_elem)
+  redefs::base::ex const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<redefs::base::ex>::insert_copy (
     _tao_any,
@@ -25205,8 +25205,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const redefs::base::ex *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  redefs::base::ex const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<redefs::base::ex>::extract (
     _tao_any,
@@ -25551,7 +25551,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const redefs::derived::ex &_tao_elem)
+  redefs::derived::ex const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<redefs::derived::ex>::insert_copy (
     _tao_any,
@@ -25574,8 +25574,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const redefs::derived::ex *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  redefs::derived::ex const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<redefs::derived::ex>::extract (
     _tao_any,
@@ -26914,7 +26914,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_BaseExceptionHolder *_tao_valuetype)
+    AMH_BaseExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -27035,7 +27035,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_DerivedExceptionHolder *_tao_valuetype)
+    AMH_DerivedExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -27178,7 +27178,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_foostepExceptionHolder *_tao_valuetype)
+    AMH_foostepExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -27321,7 +27321,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_motherExceptionHolder *_tao_valuetype)
+    AMH_motherExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -27464,7 +27464,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_fatherExceptionHolder *_tao_valuetype)
+    AMH_fatherExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -27585,7 +27585,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_childExceptionHolder *_tao_valuetype)
+    AMH_childExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -27706,7 +27706,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH__cxx_tryExceptionHolder *_tao_valuetype)
+    AMH__cxx_tryExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -27827,7 +27827,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_later_userExceptionHolder *_tao_valuetype)
+    AMH_later_userExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -27973,7 +27973,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_laterExceptionHolder *_tao_valuetype)
+    AMH_laterExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -28094,7 +28094,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_BeginExceptionHolder *_tao_valuetype)
+    AMH_BeginExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -28215,7 +28215,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_MiddleExceptionHolder *_tao_valuetype)
+    AMH_MiddleExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -28336,7 +28336,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_EndExceptionHolder *_tao_valuetype)
+    AMH_EndExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -28457,7 +28457,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_ClientExceptionHolder *_tao_valuetype)
+    AMH_ClientExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -28610,7 +28610,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_AttributeTesterExceptionHolder *_tao_valuetype)
+    AMH_AttributeTesterExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -28680,7 +28680,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const ParamMod::ParameterTester::object_excep_type &_tao_aggregate)
+    ParamMod::ParameterTester::object_excep_type const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -28935,7 +28935,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const ParamMod::AMH_ParameterTesterExceptionHolder *_tao_valuetype)
+    ParamMod::AMH_ParameterTesterExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -29116,7 +29116,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_AExceptionHolder *_tao_valuetype)
+    AMH_AExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -29237,7 +29237,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const M::AMH_AExceptionHolder *_tao_valuetype)
+    M::AMH_AExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -29358,7 +29358,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const i1::AMH_if1ExceptionHolder *_tao_valuetype)
+    i1::AMH_if1ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -29479,7 +29479,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const i2::AMH_if2ExceptionHolder *_tao_valuetype)
+    i2::AMH_if2ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -29600,7 +29600,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const i2::AMH_if3ExceptionHolder *_tao_valuetype)
+    i2::AMH_if3ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -29670,7 +29670,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const redefs::base::ex &_tao_aggregate)
+    redefs::base::ex const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -29775,7 +29775,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const redefs::AMH_baseExceptionHolder *_tao_valuetype)
+    redefs::AMH_baseExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -29845,7 +29845,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const redefs::derived::ex &_tao_aggregate)
+    redefs::derived::ex const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -29950,7 +29950,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const redefs::AMH_derivedExceptionHolder *_tao_valuetype)
+    redefs::AMH_derivedExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -30071,7 +30071,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const Rec_Arg_Traits::AMH_baseExceptionHolder *_tao_valuetype)
+    Rec_Arg_Traits::AMH_baseExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -30192,7 +30192,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const Rec_Arg_Traits::AMH_derivedExceptionHolder *_tao_valuetype)
+    Rec_Arg_Traits::AMH_derivedExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -30313,7 +30313,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const call_test::AMH_iTestExceptionHolder *_tao_valuetype)
+    call_test::AMH_iTestExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -30434,7 +30434,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const call_attribute::AMH_iBarExceptionHolder *_tao_valuetype)
+    call_attribute::AMH_iBarExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

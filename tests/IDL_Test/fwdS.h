@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FWDS_I7HG9V_H_
-#define _TAO_IDL_FWDS_I7HG9V_H_
+#ifndef _TAO_IDL_FWDS_BL66GK_H_
+#define _TAO_IDL_FWDS_BL66GK_H_
 
 #include /**/ "ace/pre.h"
 

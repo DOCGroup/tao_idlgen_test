@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_CONSTANTSC_9T19OR_H_
-#define _TAO_IDL_CONSTANTSC_9T19OR_H_
+#ifndef _TAO_IDL_CONSTANTSC_17CIVA_H_
+#define _TAO_IDL_CONSTANTSC_17CIVA_H_
 
 #include /**/ "ace/pre.h"
 
@@ -226,7 +226,7 @@ namespace ClassConstants
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -300,8 +300,8 @@ namespace ClassConstants
     ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
-    AMH_IfaceExceptionHolder (const AMH_IfaceExceptionHolder &);
-    void operator= (const AMH_IfaceExceptionHolder &);
+    AMH_IfaceExceptionHolder (AMH_IfaceExceptionHolder const &);
+    void operator= (AMH_IfaceExceptionHolder const &);
 
     ::CORBA::Exception *exception;
 
@@ -366,7 +366,7 @@ namespace ClassConstants
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -417,7 +417,7 @@ namespace ClassConstants
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -502,8 +502,8 @@ namespace ClassConstants
     ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
-    Vt (const Vt &);
-    void operator= (const Vt &);
+    Vt (Vt const &);
+    void operator= (Vt const &);
 
   protected:
     virtual ::CORBA::Boolean
@@ -828,7 +828,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ClassConstants::AMH_IfaceExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ClassConstants::AMH_IfaceExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ClassConstants::AMH_IfaceExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -851,7 +851,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ClassConstants::Vt *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ClassConstants::Vt const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ClassConstants::Vt *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

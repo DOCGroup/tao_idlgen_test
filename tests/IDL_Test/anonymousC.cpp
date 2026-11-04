@@ -2470,10 +2470,10 @@ All_Anon::Nested_Anon::_long_array_2_copy (
 }
 
 All_Anon::Nested_Anon::Nested_Anon (
-    const All_Anon::Nested_Anon::_float_seq_array _tao_float_seq_array,
-    const All_Anon::Nested_Anon::_another_fsa _tao_another_fsa,
-    const All_Anon::Nested_Anon::_long_array_1 _tao_long_array_1,
-    const All_Anon::Nested_Anon::_long_array_2 _tao_long_array_2)
+    All_Anon::Nested_Anon::_float_seq_array const _tao_float_seq_array,
+    All_Anon::Nested_Anon::_another_fsa const _tao_another_fsa,
+    All_Anon::Nested_Anon::_long_array_1 const _tao_long_array_1,
+    All_Anon::Nested_Anon::_long_array_2 const _tao_long_array_2)
   : ::CORBA::UserException (
         "IDL:All_Anon/Nested_Anon:1.0",
         "Nested_Anon")
@@ -2525,10 +2525,10 @@ All_Anon::Nested_Anon::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<Nested_Anon *> (_tao_excp);
 }
 
-const All_Anon::Nested_Anon *
+All_Anon::Nested_Anon const *
 All_Anon::Nested_Anon::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const Nested_Anon *> (_tao_excp);
+  return dynamic_cast<Nested_Anon const *> (_tao_excp);
 }
 
 ::CORBA::Exception *All_Anon::Nested_Anon::_alloc ()
@@ -2878,7 +2878,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const All_Anon::AMH_anon_bd_string_testExceptionHolder *_tao_valuetype)
+    All_Anon::AMH_anon_bd_string_testExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3102,7 +3102,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const All_Anon::Nested_Anon &_tao_aggregate)
+    All_Anon::Nested_Anon const &_tao_aggregate)
 {
   All_Anon::Nested_Anon::_float_seq_array_forany _tao_aggregate_float_seq_array
     (const_cast<All_Anon::Nested_Anon::_float_seq_array_slice*> (

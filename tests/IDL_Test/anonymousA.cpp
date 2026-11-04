@@ -1104,7 +1104,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const All_Anon::Nested_Anon &_tao_elem)
+  All_Anon::Nested_Anon const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<All_Anon::Nested_Anon>::insert_copy (
     _tao_any,
@@ -1127,8 +1127,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const All_Anon::Nested_Anon *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  All_Anon::Nested_Anon const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<All_Anon::Nested_Anon>::extract (
     _tao_any,

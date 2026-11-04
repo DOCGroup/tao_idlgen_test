@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTC_SH3I21_H_
-#define _TAO_IDL_AMI_TESTC_SH3I21_H_
+#ifndef _TAO_IDL_AMI_TESTC_DT3KN3_H_
+#define _TAO_IDL_AMI_TESTC_DT3KN3_H_
 
 #include /**/ "ace/pre.h"
 
@@ -81,15 +81,15 @@ namespace A
     ::TAO::String_Manager whatDidTheRightThing {};
 
     DidTheRightThing ();
-    DidTheRightThing (const DidTheRightThing &);
+    DidTheRightThing (DidTheRightThing const &);
     ~DidTheRightThing () override = default;
 
-    DidTheRightThing &operator= (const DidTheRightThing &);
+    DidTheRightThing &operator= (DidTheRightThing const &);
 
     static void _tao_any_destructor (void *);
 
     static DidTheRightThing *_downcast (::CORBA::Exception *);
-    static const DidTheRightThing *_downcast (::CORBA::Exception const *);
+    static DidTheRightThing const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -102,7 +102,7 @@ namespace A
 
     DidTheRightThing (
         ::CORBA::Long _tao_id,
-        const char * _tao_whatDidTheRightThing);
+        char const * _tao_whatDidTheRightThing);
 
     ::CORBA::TypeCode_ptr _tao_type () const override;
   };
@@ -174,7 +174,7 @@ namespace A
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -282,7 +282,7 @@ namespace A
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -350,7 +350,7 @@ namespace A
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -421,7 +421,7 @@ namespace A
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -612,9 +612,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
- void operator<<= (::CORBA::Any &, const A::DidTheRightThing &); // copying version
+ void operator<<= (::CORBA::Any &, A::DidTheRightThing const &); // copying version
  void operator<<= (::CORBA::Any &, A::DidTheRightThing*); // noncopying version
- ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const A::DidTheRightThing *&);
+ ::CORBA::Boolean operator>>= (::CORBA::Any const &, A::DidTheRightThing const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -656,7 +656,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::DidTheRightThing &);
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::DidTheRightThing const &);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, A::DidTheRightThing &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIAMONDC_M56J3J_H_
-#define _TAO_IDL_DIAMONDC_M56J3J_H_
+#ifndef _TAO_IDL_DIAMONDC_8804TN_H_
+#define _TAO_IDL_DIAMONDC_8804TN_H_
 
 #include /**/ "ace/pre.h"
 
@@ -99,7 +99,7 @@ namespace Diamond
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -176,7 +176,8 @@ class MY_Stub_Export TAO_Diamond_Top_Proxy_Factory_Adapter
       ~TAO_Diamond_Top_Smart_Proxy_Base ();
       virtual TAO_Stub *_stubobj () const;
       virtual TAO_Stub *_stubobj ();
-            virtual char * shape ();protected:
+            virtual char * shape ();
+    protected:
       ::Diamond::Top_ptr get_proxy ();
       ::Diamond::Top_var proxy_;
     };
@@ -214,7 +215,7 @@ class MY_Stub_Export TAO_Diamond_Top_Proxy_Factory_Adapter
 
       ::CORBA::Boolean _is_a (char const *type_id) override;
       char const *_interface_repository_id () const override;
-      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Concrete interface only.
@@ -291,7 +292,8 @@ class MY_Stub_Export TAO_Diamond_Left_Proxy_Factory_Adapter
         ~TAO_Diamond_Left_Smart_Proxy_Base ();
         virtual TAO_Stub *_stubobj () const;
         virtual TAO_Stub *_stubobj ();
-                  virtual char * color ();protected:
+                  virtual char * color ();
+      protected:
         ::Diamond::Left_ptr get_proxy ();
         ::Diamond::Left_var proxy_;
       };
@@ -329,7 +331,7 @@ class MY_Stub_Export TAO_Diamond_Left_Proxy_Factory_Adapter
 
         ::CORBA::Boolean _is_a (char const *type_id) override;
         char const *_interface_repository_id () const override;
-        ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+        virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
       protected:
         // Concrete interface only.
@@ -406,7 +408,8 @@ class MY_Stub_Export TAO_Diamond_Right_Proxy_Factory_Adapter
           ~TAO_Diamond_Right_Smart_Proxy_Base ();
           virtual TAO_Stub *_stubobj () const;
           virtual TAO_Stub *_stubobj ();
-                        virtual ::CORBA::Long width ();protected:
+                        virtual ::CORBA::Long width ();
+        protected:
           ::Diamond::Right_ptr get_proxy ();
           ::Diamond::Right_var proxy_;
         };
@@ -445,7 +448,7 @@ class MY_Stub_Export TAO_Diamond_Right_Proxy_Factory_Adapter
 
           ::CORBA::Boolean _is_a (char const *type_id) override;
           char const *_interface_repository_id () const override;
-          ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+          virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
         protected:
           // Concrete interface only.
@@ -523,7 +526,8 @@ class MY_Stub_Export TAO_Diamond_Buttom_Proxy_Factory_Adapter
             ~TAO_Diamond_Buttom_Smart_Proxy_Base ();
             virtual TAO_Stub *_stubobj () const;
             virtual TAO_Stub *_stubobj ();
-                              virtual char * name ();protected:
+                              virtual char * name ();
+          protected:
             ::Diamond::Buttom_ptr get_proxy ();
             ::Diamond::Buttom_var proxy_;
           };

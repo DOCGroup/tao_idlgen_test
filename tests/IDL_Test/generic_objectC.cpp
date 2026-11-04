@@ -1000,7 +1000,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_genericExceptionHolder *_tao_valuetype)
+    AMH_genericExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

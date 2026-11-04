@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRING_VALUEC_3LMFRX_H_
-#define _TAO_IDL_STRING_VALUEC_3LMFRX_H_
+#ifndef _TAO_IDL_STRING_VALUEC_9Z3HH6_H_
+#define _TAO_IDL_STRING_VALUEC_9Z3HH6_H_
 
 #include /**/ "ace/pre.h"
 
@@ -111,8 +111,8 @@ namespace include_test
     ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
-    StringTest (const StringTest &);
-    void operator= (const StringTest &);
+    StringTest (StringTest const &);
+    void operator= (StringTest const &);
 
   protected:
     virtual ::CORBA::Boolean
@@ -266,7 +266,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const include_test::StringTest *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, include_test::StringTest const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, include_test::StringTest *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

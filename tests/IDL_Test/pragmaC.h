@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRAGMAC_X2W60S_H_
-#define _TAO_IDL_PRAGMAC_X2W60S_H_
+#ifndef _TAO_IDL_PRAGMAC_6TEDJW_H_
+#define _TAO_IDL_PRAGMAC_6TEDJW_H_
 
 #include /**/ "ace/pre.h"
 
@@ -108,7 +108,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -182,8 +182,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_helloExceptionHolder (const AMH_helloExceptionHolder &);
-  void operator= (const AMH_helloExceptionHolder &);
+  AMH_helloExceptionHolder (AMH_helloExceptionHolder const &);
+  void operator= (AMH_helloExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -248,7 +248,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -299,7 +299,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -355,15 +355,15 @@ class TAO_IDL_TEST_STUB_Export Riot : public ::CORBA::UserException
 public:
 
   Riot ();
-  Riot (const Riot &);
+  Riot (Riot const &);
   ~Riot () override = default;
 
-  Riot &operator= (const Riot &);
+  Riot &operator= (Riot const &);
 
   static void _tao_any_destructor (void *);
 
   static Riot *_downcast (::CORBA::Exception *);
-  static const Riot *_downcast (::CORBA::Exception const *);
+  static Riot const *_downcast (::CORBA::Exception const *);
 
   static ::CORBA::Exception *_alloc ();
 
@@ -414,7 +414,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -488,8 +488,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_goodbyeExceptionHolder (const AMH_goodbyeExceptionHolder &);
-  void operator= (const AMH_goodbyeExceptionHolder &);
+  AMH_goodbyeExceptionHolder (AMH_goodbyeExceptionHolder const &);
+  void operator= (AMH_goodbyeExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -554,7 +554,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -605,7 +605,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -638,15 +638,15 @@ namespace A
   public:
 
     my_exception ();
-    my_exception (const my_exception &);
+    my_exception (my_exception const &);
     ~my_exception () override = default;
 
-    my_exception &operator= (const my_exception &);
+    my_exception &operator= (my_exception const &);
 
     static void _tao_any_destructor (void *);
 
     static my_exception *_downcast (::CORBA::Exception *);
-    static const my_exception *_downcast (::CORBA::Exception const *);
+    static my_exception const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -701,7 +701,7 @@ namespace salutation
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -775,8 +775,8 @@ namespace salutation
     ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
-    AMH_sayonaraExceptionHolder (const AMH_sayonaraExceptionHolder &);
-    void operator= (const AMH_sayonaraExceptionHolder &);
+    AMH_sayonaraExceptionHolder (AMH_sayonaraExceptionHolder const &);
+    void operator= (AMH_sayonaraExceptionHolder const &);
 
     ::CORBA::Exception *exception;
 
@@ -841,7 +841,7 @@ namespace salutation
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -892,7 +892,7 @@ namespace salutation
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -957,7 +957,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -1031,8 +1031,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_ciaoExceptionHolder (const AMH_ciaoExceptionHolder &);
-  void operator= (const AMH_ciaoExceptionHolder &);
+  AMH_ciaoExceptionHolder (AMH_ciaoExceptionHolder const &);
+  void operator= (AMH_ciaoExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -1097,7 +1097,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -1148,7 +1148,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -1198,7 +1198,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -1272,8 +1272,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_alohaExceptionHolder (const AMH_alohaExceptionHolder &);
-  void operator= (const AMH_alohaExceptionHolder &);
+  AMH_alohaExceptionHolder (AMH_alohaExceptionHolder const &);
+  void operator= (AMH_alohaExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -1338,7 +1338,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -1389,7 +1389,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -2165,7 +2165,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_helloExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_helloExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_helloExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2186,7 +2186,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Riot &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Riot const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Riot &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2209,7 +2209,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_goodbyeExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_goodbyeExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_goodbyeExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2223,7 +2223,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::my_exception &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::my_exception const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, A::my_exception &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2246,7 +2246,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const salutation::AMH_sayonaraExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, salutation::AMH_sayonaraExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, salutation::AMH_sayonaraExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2276,7 +2276,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_ciaoExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_ciaoExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_ciaoExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2306,7 +2306,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_alohaExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_alohaExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_alohaExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

@@ -3424,7 +3424,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMH_oneExceptionHolder *_tao_valuetype)
+    OldInherit::AMH_oneExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3545,7 +3545,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMH_twoExceptionHolder *_tao_valuetype)
+    OldInherit::AMH_twoExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3666,7 +3666,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMH_threeExceptionHolder *_tao_valuetype)
+    OldInherit::AMH_threeExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3787,7 +3787,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMH_fourExceptionHolder *_tao_valuetype)
+    OldInherit::AMH_fourExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3908,7 +3908,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMH_fiveExceptionHolder *_tao_valuetype)
+    OldInherit::AMH_fiveExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

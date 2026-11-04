@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPECODEA_QDHUPQ_H_
-#define _TAO_IDL_TYPECODEA_QDHUPQ_H_
+#ifndef _TAO_IDL_TYPECODEA_SJKBGA_H_
+#define _TAO_IDL_TYPECODEA_SJKBGA_H_
 
 #include /**/ "ace/pre.h"
 

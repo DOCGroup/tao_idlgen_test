@@ -938,7 +938,7 @@ namespace VT_Test
 }
 
 MyException::MyException (
-    const A::MyStructA & _tao_exField)
+    A::MyStructA const & _tao_exField)
   : ::CORBA::UserException (
         "IDL:MyException:1.0",
         "MyException")
@@ -981,10 +981,10 @@ MyException::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<MyException *> (_tao_excp);
 }
 
-const MyException *
+MyException const *
 MyException::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const MyException *> (_tao_excp);
+  return dynamic_cast<MyException const *> (_tao_excp);
 }
 
 ::CORBA::Exception *MyException::_alloc ()
@@ -3668,7 +3668,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const MyException &_tao_elem)
+  MyException const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<MyException>::insert_copy (
     _tao_any,
@@ -3691,8 +3691,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const MyException *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  MyException const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<MyException>::extract (
     _tao_any,
@@ -4874,7 +4874,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_ifaceExceptionHolder *_tao_valuetype)
+    AMH_ifaceExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4967,7 +4967,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const MyException &_tao_aggregate)
+    MyException const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -5146,7 +5146,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_MyIntExceptionHolder *_tao_valuetype)
+    AMH_MyIntExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -5289,7 +5289,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder *_tao_valuetype)
+    RootModule::SUBMODULE1::AMH_ChildIFExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -5410,7 +5410,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_BExceptionHolder *_tao_valuetype)
+    AMH_BExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

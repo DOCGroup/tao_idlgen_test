@@ -561,10 +561,10 @@ Riot::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<Riot *> (_tao_excp);
 }
 
-const Riot *
+Riot const *
 Riot::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const Riot *> (_tao_excp);
+  return dynamic_cast<Riot const *> (_tao_excp);
 }
 
 ::CORBA::Exception *Riot::_alloc ()
@@ -1129,10 +1129,10 @@ A::my_exception::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<my_exception *> (_tao_excp);
 }
 
-const A::my_exception *
+A::my_exception const *
 A::my_exception::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const my_exception *> (_tao_excp);
+  return dynamic_cast<my_exception const *> (_tao_excp);
 }
 
 ::CORBA::Exception *A::my_exception::_alloc ()
@@ -2839,7 +2839,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_helloExceptionHolder *_tao_valuetype)
+    AMH_helloExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -2931,7 +2931,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Riot &_tao_aggregate)
+    Riot const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -3001,7 +3001,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_goodbyeExceptionHolder *_tao_valuetype)
+    AMH_goodbyeExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3071,7 +3071,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const A::my_exception &_tao_aggregate)
+    A::my_exception const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -3141,7 +3141,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const salutation::AMH_sayonaraExceptionHolder *_tao_valuetype)
+    salutation::AMH_sayonaraExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3262,7 +3262,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_ciaoExceptionHolder *_tao_valuetype)
+    AMH_ciaoExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3383,7 +3383,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_alohaExceptionHolder *_tao_valuetype)
+    AMH_alohaExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

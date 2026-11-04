@@ -146,8 +146,8 @@ void myfoostruct::_tao_any_destructor (void *_tao_void_pointer)
 }
 
 nasty::nasty (
-    const char * _tao_id,
-    const myfoostruct & _tao_rec_info)
+    char const * _tao_id,
+    myfoostruct const & _tao_rec_info)
   : ::CORBA::UserException (
         "IDL:nasty:1.0",
         "nasty")
@@ -193,10 +193,10 @@ nasty::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<nasty *> (_tao_excp);
 }
 
-const nasty *
+nasty const *
 nasty::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const nasty *> (_tao_excp);
+  return dynamic_cast<nasty const *> (_tao_excp);
 }
 
 ::CORBA::Exception *nasty::_alloc ()
@@ -1111,7 +1111,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const nasty &_tao_elem)
+  nasty const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<nasty>::insert_copy (
     _tao_any,
@@ -1134,8 +1134,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const nasty *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  nasty const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<nasty>::extract (
     _tao_any,
@@ -1785,7 +1785,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const nasty &_tao_aggregate)
+    nasty const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())

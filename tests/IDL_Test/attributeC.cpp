@@ -82,10 +82,10 @@ Hello::InternalErrorA::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<InternalErrorA *> (_tao_excp);
 }
 
-const Hello::InternalErrorA *
+Hello::InternalErrorA const *
 Hello::InternalErrorA::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const InternalErrorA *> (_tao_excp);
+  return dynamic_cast<InternalErrorA const *> (_tao_excp);
 }
 
 ::CORBA::Exception *Hello::InternalErrorA::_alloc ()
@@ -185,10 +185,10 @@ Hello::InternalErrorB::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<InternalErrorB *> (_tao_excp);
 }
 
-const Hello::InternalErrorB *
+Hello::InternalErrorB const *
 Hello::InternalErrorB::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const InternalErrorB *> (_tao_excp);
+  return dynamic_cast<InternalErrorB const *> (_tao_excp);
 }
 
 ::CORBA::Exception *Hello::InternalErrorB::_alloc ()
@@ -3042,7 +3042,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const Hello::InternalErrorA &_tao_elem)
+  Hello::InternalErrorA const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<Hello::InternalErrorA>::insert_copy (
     _tao_any,
@@ -3065,8 +3065,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const Hello::InternalErrorA *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  Hello::InternalErrorA const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<Hello::InternalErrorA>::extract (
     _tao_any,
@@ -3112,7 +3112,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const Hello::InternalErrorB &_tao_elem)
+  Hello::InternalErrorB const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<Hello::InternalErrorB>::insert_copy (
     _tao_any,
@@ -3135,8 +3135,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const Hello::InternalErrorB *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  Hello::InternalErrorB const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<Hello::InternalErrorB>::extract (
     _tao_any,
@@ -3409,7 +3409,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Hello::InternalErrorA &_tao_aggregate)
+    Hello::InternalErrorA const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -3428,7 +3428,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Hello::InternalErrorB &_tao_aggregate)
+    Hello::InternalErrorB const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -3498,7 +3498,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const Hello::AMH_MyFooExceptionHolder *_tao_valuetype)
+    Hello::AMH_MyFooExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

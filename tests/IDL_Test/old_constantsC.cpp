@@ -117,10 +117,10 @@ OldConstants::E::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<E *> (_tao_excp);
 }
 
-const OldConstants::E *
+OldConstants::E const *
 OldConstants::E::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const E *> (_tao_excp);
+  return dynamic_cast<E const *> (_tao_excp);
 }
 
 ::CORBA::Exception *OldConstants::E::_alloc ()
@@ -260,10 +260,10 @@ OldConstants::M::E::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<E *> (_tao_excp);
 }
 
-const OldConstants::M::E *
+OldConstants::M::E const *
 OldConstants::M::E::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const E *> (_tao_excp);
+  return dynamic_cast<E const *> (_tao_excp);
 }
 
 ::CORBA::Exception *OldConstants::M::E::_alloc ()
@@ -432,10 +432,10 @@ OldConstants::M::A::E::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<E *> (_tao_excp);
 }
 
-const OldConstants::M::A::E *
+OldConstants::M::A::E const *
 OldConstants::M::A::E::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const E *> (_tao_excp);
+  return dynamic_cast<E const *> (_tao_excp);
 }
 
 ::CORBA::Exception *OldConstants::M::A::E::_alloc ()
@@ -1314,7 +1314,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const OldConstants::E &_tao_elem)
+  OldConstants::E const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<OldConstants::E>::insert_copy (
     _tao_any,
@@ -1337,8 +1337,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const OldConstants::E *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  OldConstants::E const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<OldConstants::E>::extract (
     _tao_any,
@@ -1414,7 +1414,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const OldConstants::M::E &_tao_elem)
+  OldConstants::M::E const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<OldConstants::M::E>::insert_copy (
     _tao_any,
@@ -1437,8 +1437,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const OldConstants::M::E *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  OldConstants::M::E const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<OldConstants::M::E>::extract (
     _tao_any,
@@ -1572,7 +1572,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const OldConstants::M::A::E &_tao_elem)
+  OldConstants::M::A::E const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<OldConstants::M::A::E>::insert_copy (
     _tao_any,
@@ -1595,8 +1595,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const OldConstants::M::A::E *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  OldConstants::M::A::E const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<OldConstants::M::A::E>::extract (
     _tao_any,
@@ -1833,7 +1833,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldConstants::E &_tao_aggregate)
+    OldConstants::E const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -1887,7 +1887,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldConstants::M::E &_tao_aggregate)
+    OldConstants::M::E const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -1941,7 +1941,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldConstants::M::A::E &_tao_aggregate)
+    OldConstants::M::A::E const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -2024,7 +2024,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldConstants::M::AMH_AExceptionHolder *_tao_valuetype)
+    OldConstants::M::AMH_AExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

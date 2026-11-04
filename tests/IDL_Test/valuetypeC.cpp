@@ -1681,7 +1681,7 @@ OBV_DefaultInitializedValue::_tao_unmarshal__DefaultInitializedValue (TAO_InputC
 }
 /// Accessor to set the member.
 void
-OBV_DefaultInitializedValue::boolean_value (const CORBA::Boolean val)
+OBV_DefaultInitializedValue::boolean_value (CORBA::Boolean const val)
 {
   // Set the value.
   this->_pd_boolean_value = val;
@@ -1695,7 +1695,7 @@ OBV_DefaultInitializedValue::boolean_value () const
 }
 /// Accessor to set the member.
 void
-OBV_DefaultInitializedValue::long_value (const CORBA::Long val)
+OBV_DefaultInitializedValue::long_value (CORBA::Long const val)
 {
   // Set the value.
   this->_pd_long_value = val;
@@ -1767,13 +1767,13 @@ RecValueType::_tao_seq_RecValueType_::_tao_seq_RecValueType_ (::CORBA::ULong max
 #endif /* end #if !defined */
 /// Accessor to set the member.
 void
-OBV_RecValueType::rec_value_types (const RecValueType::_tao_seq_RecValueType_ &val)
+OBV_RecValueType::rec_value_types (RecValueType::_tao_seq_RecValueType_ const &val)
 {
   this->_pd_rec_value_types = val;
 }
 
 /// Readonly get method.
-const RecValueType::_tao_seq_RecValueType_ &
+RecValueType::_tao_seq_RecValueType_ const &
 OBV_RecValueType::rec_value_types () const
 {
   return this->_pd_rec_value_types;
@@ -1803,13 +1803,13 @@ RecValueType::_tao_seq_RecValueType__2::_tao_seq_RecValueType__2 (::CORBA::ULong
 #endif /* end #if !defined */
 /// Accessor to set the member.
 void
-OBV_RecValueType::rec_value_types2 (const RecValueType::_tao_seq_RecValueType__2 &val)
+OBV_RecValueType::rec_value_types2 (RecValueType::_tao_seq_RecValueType__2 const &val)
 {
   this->_pd_rec_value_types2 = val;
 }
 
 /// Readonly get method.
-const RecValueType::_tao_seq_RecValueType__2 &
+RecValueType::_tao_seq_RecValueType__2 const &
 OBV_RecValueType::rec_value_types2 () const
 {
   return this->_pd_rec_value_types2;
@@ -1909,12 +1909,12 @@ OBV_ModSelection::SelectionDefns::CriterionExpr::theLeftCriterion () const
 }
 /// Accessor to set the member
 void
-OBV_ModSelection::SelectionDefns::CriterionExpr::theRightCriterionExpr (const ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &val)
+OBV_ModSelection::SelectionDefns::CriterionExpr::theRightCriterionExpr (ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr const &val)
 {
   this->_pd_theRightCriterionExpr = val;
 }
 /// Readonly get method.
-const ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &
+ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr const &
 OBV_ModSelection::SelectionDefns::CriterionExpr::theRightCriterionExpr () const
 {
   return this->_pd_theRightCriterionExpr;
@@ -2604,7 +2604,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const MyValueType *_tao_valuetype)
+    MyValueType const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -2691,7 +2691,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const DefaultInitializedValue *_tao_valuetype)
+    DefaultInitializedValue const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -2911,7 +2911,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const RecValueType *_tao_valuetype)
+    RecValueType const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3000,7 +3000,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const GetsDeprecatedMember *_tao_valuetype)
+    GetsDeprecatedMember const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3106,7 +3106,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const X_VALUETYPE::AXXX *_tao_valuetype)
+    X_VALUETYPE::AXXX const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3151,7 +3151,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const X_VALUETYPE::BXXX *_tao_valuetype)
+    X_VALUETYPE::BXXX const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3219,7 +3219,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const ModSelection::SelectionDefns::Criterion *_tao_valuetype)
+    ModSelection::SelectionDefns::Criterion const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3344,7 +3344,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const ModSelection::SelectionDefns::CriterionExpr *_tao_valuetype)
+    ModSelection::SelectionDefns::CriterionExpr const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

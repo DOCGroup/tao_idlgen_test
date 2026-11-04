@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INTERFACES_GKJMHT_CPP_
-#define _TAO_IDL_INTERFACES_GKJMHT_CPP_
+#ifndef _TAO_IDL_INTERFACES_KSIZDD_CPP_
+#define _TAO_IDL_INTERFACES_KSIZDD_CPP_
 
 #include "interfaceS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -57,16 +57,16 @@ class TAO_AMH_Base_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_Base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_Base_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -84,11 +84,16 @@ TAO_AMH_Base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      19, 19, 19, 19, 19, 19,  5, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 19;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_Base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_Base_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -123,7 +128,7 @@ TAO_AMH_Base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -273,16 +278,16 @@ class TAO_Base_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Base_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -300,11 +305,16 @@ TAO_Base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      19, 19, 19, 19, 19, 19,  5, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 19;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_Base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Base_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -339,7 +349,7 @@ TAO_Base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -635,16 +645,16 @@ class TAO_AMI_BaseHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_BaseHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_BaseHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_BaseHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -662,11 +672,16 @@ TAO_AMI_BaseHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len
      31, 31,  5, 31, 31,  0,  5, 31, 31, 31,
      31, 31, 31, 31, 31, 31, 31, 31,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 31;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_BaseHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_BaseHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {15};
@@ -697,7 +712,7 @@ TAO_AMI_BaseHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -1082,16 +1097,16 @@ class TAO_AMH_Derived_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_Derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_Derived_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1109,11 +1124,16 @@ TAO_AMH_Derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      19, 19, 19, 19, 19, 19,  5, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 19;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_Derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_Derived_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -1148,7 +1168,7 @@ TAO_AMH_Derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -1220,16 +1240,16 @@ class TAO_Derived_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Derived_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1247,11 +1267,16 @@ TAO_Derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      19, 19, 19, 19, 19, 19,  5, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 19;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_Derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Derived_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -1286,7 +1311,7 @@ TAO_Derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -1370,16 +1395,16 @@ class TAO_AMI_DerivedHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_DerivedHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_DerivedHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_DerivedHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1397,11 +1422,16 @@ TAO_AMI_DerivedHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t 
      31, 31,  5, 31, 31,  0,  5, 31, 31, 31,
      31, 31, 31, 31, 31, 31, 31, 31,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 31;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_DerivedHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_DerivedHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {15};
@@ -1432,7 +1462,7 @@ TAO_AMI_DerivedHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -1502,16 +1532,16 @@ class TAO_AMH_foostep_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_foostep_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_foostep_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_foostep_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1529,11 +1559,16 @@ TAO_AMH_foostep_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_foostep_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_foostep_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -1559,7 +1594,7 @@ TAO_AMH_foostep_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -1649,16 +1684,16 @@ class TAO_foostep_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_foostep_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_foostep_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_foostep_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1676,11 +1711,16 @@ TAO_foostep_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_foostep_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_foostep_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -1706,7 +1746,7 @@ TAO_foostep_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -1883,16 +1923,16 @@ class TAO_AMI_foostepHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_foostepHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_foostepHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_foostepHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -1910,11 +1950,16 @@ TAO_AMI_foostepHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t 
      19, 19,  5, 19, 19, 19,  0, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 19;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_foostepHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_foostepHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -1942,7 +1987,7 @@ TAO_AMI_foostepHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -2178,16 +2223,16 @@ class TAO_AMH_mother_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_mother_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_mother_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_mother_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2205,11 +2250,16 @@ TAO_AMH_mother_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_mother_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_mother_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -2234,7 +2284,7 @@ TAO_AMH_mother_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -2289,16 +2339,16 @@ class TAO_mother_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_mother_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_mother_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_mother_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2316,11 +2366,16 @@ TAO_mother_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_mother_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_mother_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -2345,7 +2400,7 @@ TAO_mother_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -2412,16 +2467,16 @@ class TAO_AMI_motherHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_motherHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_motherHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_motherHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2439,11 +2494,16 @@ TAO_AMI_motherHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_motherHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_motherHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -2468,7 +2528,7 @@ TAO_AMI_motherHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -2537,16 +2597,16 @@ class TAO_AMH_father_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_father_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_father_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_father_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2564,11 +2624,16 @@ TAO_AMH_father_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_father_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_father_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -2593,7 +2658,7 @@ TAO_AMH_father_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -2648,16 +2713,16 @@ class TAO_father_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_father_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_father_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_father_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2675,11 +2740,16 @@ TAO_father_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_father_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_father_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -2704,7 +2774,7 @@ TAO_father_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -2771,16 +2841,16 @@ class TAO_AMI_fatherHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_fatherHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_fatherHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_fatherHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2798,11 +2868,16 @@ TAO_AMI_fatherHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_fatherHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_fatherHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -2827,7 +2902,7 @@ TAO_AMI_fatherHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -2896,16 +2971,16 @@ class TAO_AMH_child_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_child_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_child_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_child_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -2923,11 +2998,16 @@ TAO_AMH_child_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_child_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_child_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -2952,7 +3032,7 @@ TAO_AMH_child_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -3010,16 +3090,16 @@ class TAO_child_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_child_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_child_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_child_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3037,11 +3117,16 @@ TAO_child_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_child_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_child_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -3066,7 +3151,7 @@ TAO_child_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -3136,16 +3221,16 @@ class TAO_AMI_childHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_childHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_childHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_childHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3163,11 +3248,16 @@ TAO_AMI_childHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t le
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_childHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_childHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -3192,7 +3282,7 @@ TAO_AMI_childHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t 
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -3263,16 +3353,16 @@ class TAO_AMH_try_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_try_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_try_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_try_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3290,11 +3380,16 @@ TAO_AMH_try_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_try_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_try_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -3319,7 +3414,7 @@ TAO_AMH_try_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -3375,16 +3470,16 @@ class TAO_try_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_try_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_try_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_try_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3402,11 +3497,16 @@ TAO_try_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_try_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_try_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -3431,7 +3531,7 @@ TAO_try_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -3499,16 +3599,16 @@ class TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3526,11 +3626,16 @@ TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -3555,7 +3660,7 @@ TAO_AMI__cxx_tryHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -3624,16 +3729,16 @@ class TAO_AMH_later_user_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_later_user_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_later_user_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_later_user_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3651,11 +3756,16 @@ TAO_AMH_later_user_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16,  0,  0, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_later_user_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_later_user_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -3683,7 +3793,7 @@ TAO_AMH_later_user_Perfect_Hash_OpTable::lookup (const char *str, std::size_t le
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -3828,16 +3938,16 @@ class TAO_later_user_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_later_user_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_later_user_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_later_user_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -3855,11 +3965,16 @@ TAO_later_user_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16,  0,  0, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_later_user_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_later_user_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -3887,7 +4002,7 @@ TAO_later_user_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -4202,16 +4317,16 @@ class TAO_AMI_later_userHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_later_userHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_later_userHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_later_userHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -4229,11 +4344,16 @@ TAO_AMI_later_userHandler_Perfect_Hash_OpTable::hash (const char *str, std::size
      16,  0,  0, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_later_userHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_later_userHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {2};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -4263,7 +4383,7 @@ TAO_AMI_later_userHandler_Perfect_Hash_OpTable::lookup (const char *str, std::si
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -4668,16 +4788,16 @@ class TAO_AMH_later_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_later_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_later_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_later_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -4695,11 +4815,16 @@ TAO_AMH_later_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_later_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_later_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -4724,7 +4849,7 @@ TAO_AMH_later_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -4780,16 +4905,16 @@ class TAO_later_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_later_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_later_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_later_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -4807,11 +4932,16 @@ TAO_later_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_later_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_later_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -4836,7 +4966,7 @@ TAO_later_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -4904,16 +5034,16 @@ class TAO_AMI_laterHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_laterHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_laterHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_laterHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -4931,11 +5061,16 @@ TAO_AMI_laterHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t le
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_laterHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_laterHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -4960,7 +5095,7 @@ TAO_AMI_laterHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t 
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -5029,16 +5164,16 @@ class TAO_AMH_Begin_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Begin_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_Begin_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_Begin_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -5056,11 +5191,16 @@ TAO_AMH_Begin_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_Begin_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_Begin_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -5085,7 +5225,7 @@ TAO_AMH_Begin_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -5140,16 +5280,16 @@ class TAO_Begin_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Begin_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Begin_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Begin_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -5167,11 +5307,16 @@ TAO_Begin_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_Begin_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Begin_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -5196,7 +5341,7 @@ TAO_Begin_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -5263,16 +5408,16 @@ class TAO_AMI_BeginHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_BeginHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_BeginHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_BeginHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -5290,11 +5435,16 @@ TAO_AMI_BeginHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t le
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_BeginHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_BeginHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -5319,7 +5469,7 @@ TAO_AMI_BeginHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t 
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -5388,16 +5538,16 @@ class TAO_AMH_Middle_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Middle_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_Middle_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_Middle_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -5415,11 +5565,16 @@ TAO_AMH_Middle_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_Middle_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_Middle_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -5444,7 +5599,7 @@ TAO_AMH_Middle_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -5501,16 +5656,16 @@ class TAO_Middle_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Middle_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Middle_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Middle_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -5528,11 +5683,16 @@ TAO_Middle_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_Middle_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Middle_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -5557,7 +5717,7 @@ TAO_Middle_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -5626,16 +5786,16 @@ class TAO_AMI_MiddleHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_MiddleHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_MiddleHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_MiddleHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -5653,11 +5813,16 @@ TAO_AMI_MiddleHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_MiddleHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_MiddleHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -5682,7 +5847,7 @@ TAO_AMI_MiddleHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -5752,16 +5917,16 @@ class TAO_AMH_End_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_End_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_End_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_End_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -5779,11 +5944,16 @@ TAO_AMH_End_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_End_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_End_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -5808,7 +5978,7 @@ TAO_AMH_End_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -5866,16 +6036,16 @@ class TAO_End_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_End_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_End_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_End_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -5893,11 +6063,16 @@ TAO_End_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_End_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_End_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -5922,7 +6097,7 @@ TAO_End_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -5992,16 +6167,16 @@ class TAO_AMI_EndHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_EndHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_EndHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_EndHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -6019,11 +6194,16 @@ TAO_AMI_EndHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_EndHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_EndHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -6048,7 +6228,7 @@ TAO_AMI_EndHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t le
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -6119,16 +6299,16 @@ class TAO_AMH_Client_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Client_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_Client_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_Client_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -6146,11 +6326,16 @@ TAO_AMH_Client_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16,  0, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_Client_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_Client_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -6185,7 +6370,7 @@ TAO_AMH_Client_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -6335,16 +6520,16 @@ class TAO_Client_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Client_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Client_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Client_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -6362,11 +6547,16 @@ TAO_Client_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16,  0, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_Client_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Client_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -6401,7 +6591,7 @@ TAO_Client_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -6697,16 +6887,16 @@ class TAO_AMI_ClientHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_ClientHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_ClientHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_ClientHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -6724,11 +6914,16 @@ TAO_AMI_ClientHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
      26, 26,  0, 26, 26,  0,  0, 26,  0, 26,
      26, 26, 26, 26, 26, 26, 26, 26,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 26;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_ClientHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_ClientHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -6759,7 +6954,7 @@ TAO_AMI_ClientHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -7144,16 +7339,16 @@ class TAO_AMH_AttributeTester_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_AttributeTester_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_AttributeTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_AttributeTester_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -7171,11 +7366,16 @@ TAO_AMH_AttributeTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t
      20, 20, 20, 20, 20, 20,  0,  0, 20, 20,
      20, 20, 20, 20, 20, 20, 20, 20,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 20;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_AttributeTester_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_AttributeTester_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -7212,7 +7412,7 @@ TAO_AMH_AttributeTester_Perfect_Hash_OpTable::lookup (const char *str, std::size
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -7444,16 +7644,16 @@ class TAO_AttributeTester_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AttributeTester_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AttributeTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AttributeTester_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -7471,11 +7671,16 @@ TAO_AttributeTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t len
      20, 20, 20, 20, 20, 20,  0,  0, 20, 20,
      20, 20, 20, 20, 20, 20, 20, 20,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 20;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AttributeTester_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AttributeTester_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -7512,7 +7717,7 @@ TAO_AttributeTester_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -8021,16 +8226,16 @@ class TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -8048,11 +8253,16 @@ TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable::hash (const char *str, std:
      29, 29,  0, 29, 29,  0, 15,  0, 29, 29,
      29, 29, 29, 29, 29, 29, 29, 29,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 29;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -8094,7 +8304,7 @@ TAO_AMI_AttributeTesterHandler_Perfect_Hash_OpTable::lookup (const char *str, st
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -8811,16 +9021,16 @@ class TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -8838,11 +9048,16 @@ TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable::hash (const char *str, st
      20, 20,  0, 20, 20, 20,  0, 20, 20, 20,
      20, 20, 20, 20, 20, 20, 20, 20,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 20;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {19};
@@ -8869,7 +9084,7 @@ TAO_ParamMod_AMH_ParameterTester_Perfect_Hash_OpTable::lookup (const char *str, 
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -8974,16 +9189,16 @@ class TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -9001,11 +9216,16 @@ TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable::hash (const char *str, std::s
      20, 20,  0, 20, 20, 20,  0, 20, 20, 20,
      20, 20, 20, 20, 20, 20, 20, 20,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 20;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {19};
@@ -9032,7 +9252,7 @@ TAO_ParamMod_ParameterTester_Perfect_Hash_OpTable::lookup (const char *str, std:
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -9254,16 +9474,16 @@ class TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -9281,11 +9501,16 @@ TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable::hash (const char *
      26, 26,  0, 26, 26, 26,  0, 26, 26, 26,
      26, 26, 26, 26, 26, 26, 26, 26,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 26;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {25};
@@ -9314,7 +9539,7 @@ TAO_ParamMod_AMI_ParameterTesterHandler_Perfect_Hash_OpTable::lookup (const char
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -9609,16 +9834,16 @@ class TAO_AMH_A_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_A_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_A_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -9636,11 +9861,16 @@ TAO_AMH_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_A_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -9665,7 +9895,7 @@ TAO_AMH_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -9720,16 +9950,16 @@ class TAO_A_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_A_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -9747,11 +9977,16 @@ TAO_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_A_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -9776,7 +10011,7 @@ TAO_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -9843,16 +10078,16 @@ class TAO_AMI_AHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_AHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_AHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_AHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -9870,11 +10105,16 @@ TAO_AMI_AHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_AHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_AHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -9899,7 +10139,7 @@ TAO_AMI_AHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -9968,16 +10208,16 @@ class TAO_M_AMH_A_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M_AMH_A_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_M_AMH_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_M_AMH_A_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -9995,11 +10235,16 @@ TAO_M_AMH_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_M_AMH_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_M_AMH_A_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -10024,7 +10269,7 @@ TAO_M_AMH_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -10080,16 +10325,16 @@ class TAO_M_A_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M_A_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_M_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_M_A_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -10107,11 +10352,16 @@ TAO_M_A_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_M_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_M_A_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -10136,7 +10386,7 @@ TAO_M_A_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -10204,16 +10454,16 @@ class TAO_M_AMI_AHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M_AMI_AHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_M_AMI_AHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_M_AMI_AHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -10231,11 +10481,16 @@ TAO_M_AMI_AHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_M_AMI_AHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_M_AMI_AHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -10260,7 +10515,7 @@ TAO_M_AMI_AHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t le
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -10329,16 +10584,16 @@ class TAO_i1_AMH_if1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i1_AMH_if1_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_i1_AMH_if1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_i1_AMH_if1_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -10356,11 +10611,16 @@ TAO_i1_AMH_if1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16,  0, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_i1_AMH_if1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_i1_AMH_if1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -10386,7 +10646,7 @@ TAO_i1_AMH_if1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -10476,16 +10736,16 @@ class TAO_i1_if1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i1_if1_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_i1_if1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_i1_if1_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -10503,11 +10763,16 @@ TAO_i1_if1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16,  0, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_i1_if1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_i1_if1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -10533,7 +10798,7 @@ TAO_i1_if1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -10714,16 +10979,16 @@ class TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -10741,11 +11006,16 @@ TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
      16, 16,  0, 16,  0, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -10772,7 +11042,7 @@ TAO_i1_AMI_if1Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -11016,16 +11286,16 @@ class TAO_i2_AMH_if2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMH_if2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_i2_AMH_if2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_i2_AMH_if2_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -11043,11 +11313,16 @@ TAO_i2_AMH_if2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16,  0, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_i2_AMH_if2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_i2_AMH_if2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -11074,7 +11349,7 @@ TAO_i2_AMH_if2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -11165,16 +11440,16 @@ class TAO_i2_if2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_if2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_i2_if2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_i2_if2_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -11192,11 +11467,16 @@ TAO_i2_if2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16,  0, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_i2_if2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_i2_if2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -11223,7 +11503,7 @@ TAO_i2_if2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -11405,16 +11685,16 @@ class TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -11432,11 +11712,16 @@ TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
      19, 19,  5, 19,  0, 19,  0, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 19;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -11466,7 +11751,7 @@ TAO_i2_AMI_if2Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -11711,16 +11996,16 @@ class TAO_i2_AMH_if3_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMH_if3_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_i2_AMH_if3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_i2_AMH_if3_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -11738,11 +12023,16 @@ TAO_i2_AMH_if3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16,  0, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_i2_AMH_if3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_i2_AMH_if3_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -11770,7 +12060,7 @@ TAO_i2_AMH_if3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -11862,16 +12152,16 @@ class TAO_i2_if3_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_if3_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_i2_if3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_i2_if3_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -11889,11 +12179,16 @@ TAO_i2_if3_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16,  0, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_i2_if3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_i2_if3_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -11921,7 +12216,7 @@ TAO_i2_if3_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -12104,16 +12399,16 @@ class TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -12131,11 +12426,16 @@ TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t l
      19, 19,  0, 19,  0, 19,  5, 19, 19, 19,
      19, 19, 19, 19, 19, 19, 19, 19,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 19;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -12174,7 +12474,7 @@ TAO_i2_AMI_if3Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -12435,16 +12735,16 @@ class TAO_redefs_AMH_base_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMH_base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_redefs_AMH_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_redefs_AMH_base_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -12462,11 +12762,16 @@ TAO_redefs_AMH_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_redefs_AMH_base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_redefs_AMH_base_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -12491,7 +12796,7 @@ TAO_redefs_AMH_base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -12546,16 +12851,16 @@ class TAO_redefs_base_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_redefs_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_redefs_base_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -12573,11 +12878,16 @@ TAO_redefs_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_redefs_base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_redefs_base_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -12602,7 +12912,7 @@ TAO_redefs_base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -12669,16 +12979,16 @@ class TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -12696,11 +13006,16 @@ TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable::hash (const char *str, std::siz
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -12725,7 +13040,7 @@ TAO_redefs_AMI_baseHandler_Perfect_Hash_OpTable::lookup (const char *str, std::s
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -12794,16 +13109,16 @@ class TAO_redefs_AMH_derived_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMH_derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_redefs_AMH_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_redefs_AMH_derived_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -12821,11 +13136,16 @@ TAO_redefs_AMH_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t 
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_redefs_AMH_derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_redefs_AMH_derived_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -12850,7 +13170,7 @@ TAO_redefs_AMH_derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -12906,16 +13226,16 @@ class TAO_redefs_derived_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_redefs_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_redefs_derived_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -12933,11 +13253,16 @@ TAO_redefs_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_redefs_derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_redefs_derived_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -12962,7 +13287,7 @@ TAO_redefs_derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t le
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -13030,16 +13355,16 @@ class TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -13057,11 +13382,16 @@ TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable::hash (const char *str, std::
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -13086,7 +13416,7 @@ TAO_redefs_AMI_derivedHandler_Perfect_Hash_OpTable::lookup (const char *str, std
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -13156,16 +13486,16 @@ class TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -13183,11 +13513,16 @@ TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable::hash (const char *str, std::si
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -13212,7 +13547,7 @@ TAO_Rec_Arg_Traits_AMH_base_Perfect_Hash_OpTable::lookup (const char *str, std::
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -13267,16 +13602,16 @@ class TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -13294,11 +13629,16 @@ TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable::hash (const char *str, std::size_t
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -13323,7 +13663,7 @@ TAO_Rec_Arg_Traits_base_Perfect_Hash_OpTable::lookup (const char *str, std::size
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -13390,16 +13730,16 @@ class TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -13417,11 +13757,16 @@ TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable::hash (const char *str, 
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -13446,7 +13791,7 @@ TAO_Rec_Arg_Traits_AMI_baseHandler_Perfect_Hash_OpTable::lookup (const char *str
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -13515,16 +13860,16 @@ class TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -13542,11 +13887,16 @@ TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable::hash (const char *str, std:
      16, 16, 16, 16,  0, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -13572,7 +13922,7 @@ TAO_Rec_Arg_Traits_AMH_derived_Perfect_Hash_OpTable::lookup (const char *str, st
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -13672,16 +14022,16 @@ class TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -13699,11 +14049,16 @@ TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable::hash (const char *str, std::siz
      16, 16, 16, 16,  0, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -13729,7 +14084,7 @@ TAO_Rec_Arg_Traits_derived_Perfect_Hash_OpTable::lookup (const char *str, std::s
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -13906,16 +14261,16 @@ class TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -13933,11 +14288,16 @@ TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable::hash (const char *st
      18, 18,  0, 18,  0, 18,  0, 18, 18, 18,
      18, 18, 18, 18, 18, 18, 18, 18,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 18;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {17};
@@ -13965,7 +14325,7 @@ TAO_Rec_Arg_Traits_AMI_derivedHandler_Perfect_Hash_OpTable::lookup (const char *
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -14191,16 +14551,16 @@ class TAO_call_test_AMH_iTest_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_test_AMH_iTest_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_call_test_AMH_iTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_call_test_AMH_iTest_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -14218,11 +14578,16 @@ TAO_call_test_AMH_iTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t
      16, 16,  0, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_call_test_AMH_iTest_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_call_test_AMH_iTest_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -14249,7 +14614,7 @@ TAO_call_test_AMH_iTest_Perfect_Hash_OpTable::lookup (const char *str, std::size
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -14348,16 +14713,16 @@ class TAO_call_test_iTest_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_test_iTest_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_call_test_iTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_call_test_iTest_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -14375,11 +14740,16 @@ TAO_call_test_iTest_Perfect_Hash_OpTable::hash (const char *str, std::size_t len
      16, 16,  0, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_call_test_iTest_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_call_test_iTest_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -14406,7 +14776,7 @@ TAO_call_test_iTest_Perfect_Hash_OpTable::lookup (const char *str, std::size_t l
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -14582,16 +14952,16 @@ class TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -14609,11 +14979,16 @@ TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable::hash (const char *str, std:
      16, 16,  0, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -14641,7 +15016,7 @@ TAO_call_test_AMI_iTestHandler_Perfect_Hash_OpTable::lookup (const char *str, st
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -14866,16 +15241,16 @@ class TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -14893,11 +15268,16 @@ TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable::hash (const char *str, std::si
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -14932,7 +15312,7 @@ TAO_call_attribute_AMH_iBar_Perfect_Hash_OpTable::lookup (const char *str, std::
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -15082,16 +15462,16 @@ class TAO_call_attribute_iBar_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_attribute_iBar_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_call_attribute_iBar_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_call_attribute_iBar_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -15109,11 +15489,16 @@ TAO_call_attribute_iBar_Perfect_Hash_OpTable::hash (const char *str, std::size_t
      16, 16, 16, 16, 16, 16,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 16;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_call_attribute_iBar_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_call_attribute_iBar_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -15148,7 +15533,7 @@ TAO_call_attribute_iBar_Perfect_Hash_OpTable::lookup (const char *str, std::size
 
           if (slot >= 0 && slot < static_cast<int> (sizeof (wordlist) / sizeof (*wordlist)))
             {
-              const char *s = wordlist[slot].opname;
+              char const *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
@@ -15452,16 +15837,16 @@ class TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr unsigned char asso_values[] =
     {
@@ -15479,11 +15864,16 @@ TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable::hash (const char *str, 
      25, 25,  0, 25, 25,  0,  0, 25, 25, 25,
      25, 25, 25, 25, 25, 25, 25, 25,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
+      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
+    return 25;
+  return len + asso_values[last_char] + asso_values[first_char];
 }
 
-const TAO_operation_db_entry *
-TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
@@ -15515,7 +15905,7 @@ TAO_call_attribute_AMI_iBarHandler_Perfect_Hash_OpTable::lookup (const char *str
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);

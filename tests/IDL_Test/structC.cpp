@@ -866,10 +866,10 @@ Test::DefaultInitializedException::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<DefaultInitializedException *> (_tao_excp);
 }
 
-const Test::DefaultInitializedException *
+Test::DefaultInitializedException const *
 Test::DefaultInitializedException::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const DefaultInitializedException *> (_tao_excp);
+  return dynamic_cast<DefaultInitializedException const *> (_tao_excp);
 }
 
 ::CORBA::Exception *Test::DefaultInitializedException::_alloc ()
@@ -1572,7 +1572,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const Test::DefaultInitializedException &_tao_elem)
+  Test::DefaultInitializedException const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<Test::DefaultInitializedException>::insert_copy (
     _tao_any,
@@ -1595,8 +1595,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const Test::DefaultInitializedException *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  Test::DefaultInitializedException const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<Test::DefaultInitializedException>::extract (
     _tao_any,
@@ -2011,7 +2011,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::DefaultInitializedException &_tao_aggregate)
+    Test::DefaultInitializedException const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())

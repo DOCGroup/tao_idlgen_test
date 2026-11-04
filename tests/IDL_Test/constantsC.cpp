@@ -815,7 +815,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const ClassConstants::AMH_IfaceExceptionHolder *_tao_valuetype)
+    ClassConstants::AMH_IfaceExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -907,7 +907,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const ClassConstants::Vt *_tao_valuetype)
+    ClassConstants::Vt const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

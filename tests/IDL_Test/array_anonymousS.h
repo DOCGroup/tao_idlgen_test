@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_EKAN6L_H_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_EKAN6L_H_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_OU5WU3_H_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_OU5WU3_H_
 
 #include /**/ "ace/pre.h"
 

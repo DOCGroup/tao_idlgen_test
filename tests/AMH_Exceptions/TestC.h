@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTC_UD13Q5_H_
-#define _TAO_IDL_TESTC_UD13Q5_H_
+#ifndef _TAO_IDL_TESTC_ZQV1VT_H_
+#define _TAO_IDL_TESTC_ZQV1VT_H_
 
 #include /**/ "ace/pre.h"
 
@@ -77,15 +77,15 @@ namespace Test
   public:
 
     InvalidTimestamp ();
-    InvalidTimestamp (const InvalidTimestamp &);
+    InvalidTimestamp (InvalidTimestamp const &);
     ~InvalidTimestamp () override = default;
 
-    InvalidTimestamp &operator= (const InvalidTimestamp &);
+    InvalidTimestamp &operator= (InvalidTimestamp const &);
 
     static void _tao_any_destructor (void *);
 
     static InvalidTimestamp *_downcast (::CORBA::Exception *);
-    static const InvalidTimestamp *_downcast (::CORBA::Exception const *);
+    static InvalidTimestamp const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -105,15 +105,15 @@ namespace Test
   public:
 
     ServerOverload ();
-    ServerOverload (const ServerOverload &);
+    ServerOverload (ServerOverload const &);
     ~ServerOverload () override = default;
 
-    ServerOverload &operator= (const ServerOverload &);
+    ServerOverload &operator= (ServerOverload const &);
 
     static void _tao_any_destructor (void *);
 
     static ServerOverload *_downcast (::CORBA::Exception *);
-    static const ServerOverload *_downcast (::CORBA::Exception const *);
+    static ServerOverload const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -181,8 +181,8 @@ namespace Test
     ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
-    Red_Herring (const Red_Herring &);
-    void operator= (const Red_Herring &);
+    Red_Herring (Red_Herring const &);
+    void operator= (Red_Herring const &);
 
   protected:
     virtual ::CORBA::Boolean
@@ -230,7 +230,7 @@ namespace Test
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -315,8 +315,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_RoundtripExceptionHolder (const AMH_RoundtripExceptionHolder &);
-  void operator= (const AMH_RoundtripExceptionHolder &);
+  AMH_RoundtripExceptionHolder (AMH_RoundtripExceptionHolder const &);
+  void operator= (AMH_RoundtripExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -371,7 +371,7 @@ public:
 
   ::CORBA::Boolean _is_a (char const *type_id) override;
   char const *_interface_repository_id () const override;
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -564,18 +564,18 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
- void operator<<= (::CORBA::Any &, const Test::InvalidTimestamp &); // copying version
+ void operator<<= (::CORBA::Any &, Test::InvalidTimestamp const &); // copying version
  void operator<<= (::CORBA::Any &, Test::InvalidTimestamp*); // noncopying version
- ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const Test::InvalidTimestamp *&);
+ ::CORBA::Boolean operator>>= (::CORBA::Any const &, Test::InvalidTimestamp const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
- void operator<<= (::CORBA::Any &, const Test::ServerOverload &); // copying version
+ void operator<<= (::CORBA::Any &, Test::ServerOverload const &); // copying version
  void operator<<= (::CORBA::Any &, Test::ServerOverload*); // noncopying version
- ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const Test::ServerOverload *&);
+ ::CORBA::Boolean operator>>= (::CORBA::Any const &, Test::ServerOverload const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -617,14 +617,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::InvalidTimestamp &);
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::InvalidTimestamp const &);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::InvalidTimestamp &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::ServerOverload &);
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::ServerOverload const &);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::ServerOverload &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -640,7 +640,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::Red_Herring *);
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::Red_Herring const *);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::Red_Herring *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -663,7 +663,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::AMH_RoundtripExceptionHolder *);
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::AMH_RoundtripExceptionHolder const *);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::AMH_RoundtripExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

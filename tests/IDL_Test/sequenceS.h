@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCES_60PCUU_H_
-#define _TAO_IDL_SEQUENCES_60PCUU_H_
+#ifndef _TAO_IDL_SEQUENCES_71V7DF_H_
+#define _TAO_IDL_SEQUENCES_71V7DF_H_
 
 #include /**/ "ace/pre.h"
 

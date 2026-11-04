@@ -994,12 +994,12 @@ OBV_T_Data_T::_tao_unmarshal__T_Data_T (TAO_InputCDR &strm, TAO_ChunkInfo& ci)
 }
 /// Accessor to set the member.
 void
-OBV_T_Data_T::type (const Type_T &val)
+OBV_T_Data_T::type (Type_T const &val)
 {
   this->_pd_type = val;
 }
 /// Readonly get method.
-const Type_T &
+Type_T const &
 OBV_T_Data_T::type () const
 {
   return this->_pd_type;
@@ -1439,7 +1439,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const T_Data_T *_tao_valuetype)
+    T_Data_T const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -1555,7 +1555,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_TestExceptionHolder *_tao_valuetype)
+    AMH_TestExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

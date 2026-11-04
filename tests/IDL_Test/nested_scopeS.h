@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPES_9OUGDT_H_
-#define _TAO_IDL_NESTED_SCOPES_9OUGDT_H_
+#ifndef _TAO_IDL_NESTED_SCOPES_O6FOPR_H_
+#define _TAO_IDL_NESTED_SCOPES_O6FOPR_H_
 
 #include /**/ "ace/pre.h"
 

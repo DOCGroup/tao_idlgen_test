@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_LOADER_CONSTC_A64Y1A_H_
-#define _TAO_IDL_LOADER_CONSTC_A64Y1A_H_
+#ifndef _TAO_IDL_LOADER_CONSTC_4YNT72_H_
+#define _TAO_IDL_LOADER_CONSTC_4YNT72_H_
 
 #include /**/ "ace/pre.h"
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2C_94XD2Z_H_
-#define _TAO_IDL_SIMPLE2C_94XD2Z_H_
+#ifndef _TAO_IDL_SIMPLE2C_8Y63C1_H_
+#define _TAO_IDL_SIMPLE2C_8Y63C1_H_
 
 #include /**/ "ace/pre.h"
 
@@ -120,15 +120,15 @@ public:
     ::TAO::String_Manager msg {};
 
     OverFlow ();
-    OverFlow (const OverFlow &);
+    OverFlow (OverFlow const &);
     ~OverFlow () override = default;
 
-    OverFlow &operator= (const OverFlow &);
+    OverFlow &operator= (OverFlow const &);
 
     static void _tao_any_destructor (void *);
 
     static OverFlow *_downcast (::CORBA::Exception *);
-    static const OverFlow *_downcast (::CORBA::Exception const *);
+    static OverFlow const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -141,7 +141,7 @@ public:
 
     OverFlow (
         ::CORBA::Long _tao_a,
-        const char * _tao_msg);
+        char const * _tao_msg);
 
     ::CORBA::TypeCode_ptr _tao_type () const override;
   };
@@ -154,15 +154,15 @@ public:
     ::TAO::String_Manager msg {};
 
     UnderFlow ();
-    UnderFlow (const UnderFlow &);
+    UnderFlow (UnderFlow const &);
     ~UnderFlow () override = default;
 
-    UnderFlow &operator= (const UnderFlow &);
+    UnderFlow &operator= (UnderFlow const &);
 
     static void _tao_any_destructor (void *);
 
     static UnderFlow *_downcast (::CORBA::Exception *);
-    static const UnderFlow *_downcast (::CORBA::Exception const *);
+    static UnderFlow const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -175,7 +175,7 @@ public:
 
     UnderFlow (
         ::CORBA::Long _tao_b,
-        const char * _tao_msg);
+        char const * _tao_msg);
 
     ::CORBA::TypeCode_ptr _tao_type () const override;
   };
@@ -187,15 +187,15 @@ public:
     vec10 c {};
 
     BadNum ();
-    BadNum (const BadNum &);
+    BadNum (BadNum const &);
     ~BadNum () override = default;
 
-    BadNum &operator= (const BadNum &);
+    BadNum &operator= (BadNum const &);
 
     static void _tao_any_destructor (void *);
 
     static BadNum *_downcast (::CORBA::Exception *);
-    static const BadNum *_downcast (::CORBA::Exception const *);
+    static BadNum const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -207,7 +207,7 @@ public:
     void _tao_decode (TAO_InputCDR &cdr) override;
 
     BadNum (
-        const vec10 & _tao_c);
+        vec10 const & _tao_c);
 
     ::CORBA::TypeCode_ptr _tao_type () const override;
   };
@@ -219,15 +219,15 @@ public:
     ::CORBA::Any reason {};
 
     UserError ();
-    UserError (const UserError &);
+    UserError (UserError const &);
     ~UserError () override = default;
 
-    UserError &operator= (const UserError &);
+    UserError &operator= (UserError const &);
 
     static void _tao_any_destructor (void *);
 
     static UserError *_downcast (::CORBA::Exception *);
-    static const UserError *_downcast (::CORBA::Exception const *);
+    static UserError const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -239,7 +239,7 @@ public:
     void _tao_decode (TAO_InputCDR &cdr) override;
 
     UserError (
-        const ::CORBA::Any & _tao_reason);
+        ::CORBA::Any const & _tao_reason);
 
     ::CORBA::TypeCode_ptr _tao_type () const override;
   };
@@ -269,7 +269,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -364,8 +364,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_simple3ExceptionHolder (const AMH_simple3ExceptionHolder &);
-  void operator= (const AMH_simple3ExceptionHolder &);
+  AMH_simple3ExceptionHolder (AMH_simple3ExceptionHolder const &);
+  void operator= (AMH_simple3ExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -431,7 +431,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -512,7 +512,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -713,36 +713,36 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const simple3::OverFlow &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::OverFlow const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::OverFlow*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const simple3::OverFlow *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, simple3::OverFlow const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const simple3::UnderFlow &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::UnderFlow const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::UnderFlow*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const simple3::UnderFlow *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, simple3::UnderFlow const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const simple3::BadNum &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::BadNum const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::BadNum*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const simple3::BadNum *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, simple3::BadNum const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const simple3::UserError &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::UserError const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3::UserError*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const simple3::UserError *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, simple3::UserError const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -782,28 +782,28 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const simple3::OverFlow &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, simple3::OverFlow const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, simple3::OverFlow &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const simple3::UnderFlow &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, simple3::UnderFlow const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, simple3::UnderFlow &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const simple3::BadNum &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, simple3::BadNum const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, simple3::BadNum &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const simple3::UserError &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, simple3::UserError const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, simple3::UserError &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -819,7 +819,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_simple3ExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_simple3ExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_simple3ExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

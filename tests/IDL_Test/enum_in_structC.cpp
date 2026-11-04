@@ -542,10 +542,10 @@ ErrorException::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<ErrorException *> (_tao_excp);
 }
 
-const ErrorException *
+ErrorException const *
 ErrorException::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const ErrorException *> (_tao_excp);
+  return dynamic_cast<ErrorException const *> (_tao_excp);
 }
 
 ::CORBA::Exception *ErrorException::_alloc ()
@@ -790,7 +790,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ErrorException &_tao_elem)
+  ErrorException const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<ErrorException>::insert_copy (
     _tao_any,
@@ -813,8 +813,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ErrorException *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ErrorException const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<ErrorException>::extract (
     _tao_any,
@@ -1186,7 +1186,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const ErrorException &_tao_aggregate)
+    ErrorException const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())

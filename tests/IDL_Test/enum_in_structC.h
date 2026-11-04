@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ENUM_IN_STRUCTC_RGX8G1_H_
-#define _TAO_IDL_ENUM_IN_STRUCTC_RGX8G1_H_
+#ifndef _TAO_IDL_ENUM_IN_STRUCTC_RRVT72_H_
+#define _TAO_IDL_ENUM_IN_STRUCTC_RRVT72_H_
 
 #include /**/ "ace/pre.h"
 
@@ -246,15 +246,15 @@ public:
   static ::CORBA::TypeCode_ptr const _tc_ReasonCode;ReasonCode reason {};
 
   ErrorException ();
-  ErrorException (const ErrorException &);
+  ErrorException (ErrorException const &);
   ~ErrorException () override = default;
 
-  ErrorException &operator= (const ErrorException &);
+  ErrorException &operator= (ErrorException const &);
 
   static void _tao_any_destructor (void *);
 
   static ErrorException *_downcast (::CORBA::Exception *);
-  static const ErrorException *_downcast (::CORBA::Exception const *);
+  static ErrorException const *_downcast (::CORBA::Exception const *);
 
   static ::CORBA::Exception *_alloc ();
 
@@ -432,9 +432,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const ErrorException &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ErrorException const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ErrorException*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const ErrorException *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ErrorException const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -518,7 +518,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ErrorException &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ErrorException const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ErrorException &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

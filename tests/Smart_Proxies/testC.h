@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTC_ZA1NGU_H_
-#define _TAO_IDL_TESTC_ZA1NGU_H_
+#ifndef _TAO_IDL_TESTC_PTDPBD_H_
+#define _TAO_IDL_TESTC_PTDPBD_H_
 
 #include /**/ "ace/pre.h"
 
@@ -99,7 +99,7 @@ public:
 
   ::CORBA::Boolean _is_a (char const *type_id) override;
   char const *_interface_repository_id () const override;
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -176,8 +176,11 @@ public:
     ~TAO_Test_Smart_Proxy_Base ();
     virtual TAO_Stub *_stubobj () const;
     virtual TAO_Stub *_stubobj ();
-      virtual ::CORBA::Short box_prices ();  virtual ::CORBA::Long tickets (
-    ::CORBA::Short number);  virtual void shutdown ();protected:
+      virtual ::CORBA::Short box_prices ();
+    virtual ::CORBA::Long tickets (
+    ::CORBA::Short number);
+    virtual void shutdown ();
+  protected:
     ::Test_ptr get_proxy ();
     ::Test_var proxy_;
   };

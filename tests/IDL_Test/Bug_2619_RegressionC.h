@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONC_N3004Y_H_
-#define _TAO_IDL_BUG_2619_REGRESSIONC_N3004Y_H_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONC_V1V6UI_H_
+#define _TAO_IDL_BUG_2619_REGRESSIONC_V1V6UI_H_
 
 #include /**/ "ace/pre.h"
 
@@ -123,8 +123,8 @@ public:
   ::CORBA::TypeCode_ptr _tao_type () const override;
 
 public:
-  virtual void type (const Type_T &) = 0;
-  virtual const Type_T &type () const = 0;
+  virtual void type (Type_T const &) = 0;
+  virtual Type_T const &type () const = 0;
   virtual Type_T &type () = 0;
 
 protected:
@@ -136,8 +136,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  T_Data_T (const T_Data_T &);
-  void operator= (const T_Data_T &);
+  T_Data_T (T_Data_T const &);
+  void operator= (T_Data_T const &);
 
 protected:
   virtual ::CORBA::Boolean
@@ -211,7 +211,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -296,8 +296,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_TestExceptionHolder (const AMH_TestExceptionHolder &);
-  void operator= (const AMH_TestExceptionHolder &);
+  AMH_TestExceptionHolder (AMH_TestExceptionHolder const &);
+  void operator= (AMH_TestExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -352,7 +352,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -416,7 +416,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -555,8 +555,8 @@ class TAO_IDL_TEST_STUB_Export OBV_T_Data_T
 {
 
 public:
-  void type (const Type_T &) override;
-  const Type_T &type () const override;
+  void type (Type_T const &) override;
+  Type_T const &type () const override;
   Type_T &type () override;
 
 public:
@@ -753,7 +753,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const T_Data_T *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, T_Data_T const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, T_Data_T *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -776,7 +776,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_TestExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_TestExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_TestExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

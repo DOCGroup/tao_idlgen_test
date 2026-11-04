@@ -1811,13 +1811,13 @@ IncludedBase::_tao_seq_CORBA_Long_::_tao_seq_CORBA_Long_ (::CORBA::ULong max,
 #endif /* end #if !defined */
 /// Accessor to set the member.
 void
-OBV_IncludedBase::DeprecatedMember (const IncludedBase::_tao_seq_CORBA_Long_ &val)
+OBV_IncludedBase::DeprecatedMember (IncludedBase::_tao_seq_CORBA_Long_ const &val)
 {
   this->_pd_DeprecatedMember = val;
 }
 
 /// Readonly get method.
-const IncludedBase::_tao_seq_CORBA_Long_ &
+IncludedBase::_tao_seq_CORBA_Long_ const &
 OBV_IncludedBase::DeprecatedMember () const
 {
   return this->_pd_DeprecatedMember;
@@ -2784,7 +2784,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const VT_Def::VT *_tao_valuetype)
+    VT_Def::VT const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -2870,7 +2870,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const IncludedBase *_tao_valuetype)
+    IncludedBase const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3055,7 +3055,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder *_tao_valuetype)
+    RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3176,7 +3176,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_AAAExceptionHolder *_tao_valuetype)
+    AMH_AAAExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

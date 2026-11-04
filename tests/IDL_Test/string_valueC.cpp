@@ -353,7 +353,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const include_test::StringTest *_tao_valuetype)
+    include_test::StringTest const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

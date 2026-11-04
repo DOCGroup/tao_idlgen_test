@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRUCTS_PV7EUF_CPP_
-#define _TAO_IDL_STRUCTS_PV7EUF_CPP_
+#ifndef _TAO_IDL_STRUCTS_PZYX24_CPP_
+#define _TAO_IDL_STRUCTS_PZYX24_CPP_
 
 #include "structS.h"
 

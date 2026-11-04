@@ -1339,7 +1339,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const foo::bar::AMH_fooBarExceptionHolder *_tao_valuetype)
+    foo::bar::AMH_fooBarExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

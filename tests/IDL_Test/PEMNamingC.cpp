@@ -182,12 +182,12 @@ namespace Plesk
 }
 
 Plesk::ExSystem::ExSystem (
-    const char * _tao_module_id,
+    char const * _tao_module_id,
     ::CORBA::Long _tao_extype_id,
     ::CORBA::Long _tao_errcode,
     ::CORBA::Long _tao_errcode_minor,
-    const char * _tao_errmsg,
-    const Plesk::TPropertyList & _tao_props,
+    char const * _tao_errmsg,
+    Plesk::TPropertyList const & _tao_props,
     Plesk::TBool _tao_transient)
   : ::CORBA::UserException (
         "IDL:Plesk/ExSystem:1.0",
@@ -249,10 +249,10 @@ Plesk::ExSystem::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<ExSystem *> (_tao_excp);
 }
 
-const Plesk::ExSystem *
+Plesk::ExSystem const *
 Plesk::ExSystem::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const ExSystem *> (_tao_excp);
+  return dynamic_cast<ExSystem const *> (_tao_excp);
 }
 
 ::CORBA::Exception *Plesk::ExSystem::_alloc ()
@@ -1616,7 +1616,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const Plesk::ExSystem &_tao_elem)
+  Plesk::ExSystem const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<Plesk::ExSystem>::insert_copy (
     _tao_any,
@@ -1639,8 +1639,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const Plesk::ExSystem *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  Plesk::ExSystem const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<Plesk::ExSystem>::extract (
     _tao_any,
@@ -2023,7 +2023,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Plesk::ExSystem &_tao_aggregate)
+    Plesk::ExSystem const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -2140,7 +2140,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const Plesk::Naming::AMH_ObjectResolverExceptionHolder *_tao_valuetype)
+    Plesk::Naming::AMH_ObjectResolverExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

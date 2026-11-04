@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_UNIONS_BITDIS_CPP_
-#define _TAO_IDL_UNIONS_BITDIS_CPP_
+#ifndef _TAO_IDL_UNIONS_991KOU_CPP_
+#define _TAO_IDL_UNIONS_991KOU_CPP_
 
 #include "unionS.h"
 

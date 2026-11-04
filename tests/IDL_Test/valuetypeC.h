@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_VALUETYPEC_FDMFRL_H_
-#define _TAO_IDL_VALUETYPEC_FDMFRL_H_
+#ifndef _TAO_IDL_VALUETYPEC_426KX9_H_
+#define _TAO_IDL_VALUETYPEC_426KX9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -130,8 +130,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  MyValueType (const MyValueType &);
-  void operator= (const MyValueType &);
+  MyValueType (MyValueType const &);
+  void operator= (MyValueType const &);
 
 protected:
   virtual ::CORBA::Boolean
@@ -196,11 +196,11 @@ public:
   ::CORBA::TypeCode_ptr _tao_type () const override;
 
 public:
-  virtual void boolean_value (const ::CORBA::Boolean) = 0;
+  virtual void boolean_value (::CORBA::Boolean const) = 0;
   virtual ::CORBA::Boolean boolean_value () const = 0;
 
 public:
-  virtual void long_value (const ::CORBA::Long) = 0;
+  virtual void long_value (::CORBA::Long const) = 0;
   virtual ::CORBA::Long long_value () const = 0;
 
 protected:
@@ -212,8 +212,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  DefaultInitializedValue (const DefaultInitializedValue &);
-  void operator= (const DefaultInitializedValue &);
+  DefaultInitializedValue (DefaultInitializedValue const &);
+  void operator= (DefaultInitializedValue const &);
 
 protected:
   virtual ::CORBA::Boolean
@@ -358,8 +358,8 @@ public:
 protected:
 
   using _rec_value_types_seq = _tao_seq_RecValueType_;
-  virtual void rec_value_types (const RecValueType::_tao_seq_RecValueType_ &) = 0;
-  virtual const RecValueType::_tao_seq_RecValueType_ &rec_value_types () const = 0;
+  virtual void rec_value_types (RecValueType::_tao_seq_RecValueType_ const &) = 0;
+  virtual RecValueType::_tao_seq_RecValueType_ const &rec_value_types () const = 0;
   virtual RecValueType::_tao_seq_RecValueType_ &rec_value_types () = 0;
 
 protected:
@@ -396,8 +396,8 @@ public:
 protected:
 
   using _rec_value_types2_seq = _tao_seq_RecValueType__2;
-  virtual void rec_value_types2 (const RecValueType::_tao_seq_RecValueType__2 &) = 0;
-  virtual const RecValueType::_tao_seq_RecValueType__2 &rec_value_types2 () const = 0;
+  virtual void rec_value_types2 (RecValueType::_tao_seq_RecValueType__2 const &) = 0;
+  virtual RecValueType::_tao_seq_RecValueType__2 const &rec_value_types2 () const = 0;
   virtual RecValueType::_tao_seq_RecValueType__2 &rec_value_types2 () = 0;
 
 protected:
@@ -409,8 +409,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  RecValueType (const RecValueType &);
-  void operator= (const RecValueType &);
+  RecValueType (RecValueType const &);
+  void operator= (RecValueType const &);
 
 protected:
   virtual ::CORBA::Boolean
@@ -487,8 +487,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  GetsDeprecatedMember (const GetsDeprecatedMember &);
-  void operator= (const GetsDeprecatedMember &);
+  GetsDeprecatedMember (GetsDeprecatedMember const &);
+  void operator= (GetsDeprecatedMember const &);
 
 protected:
   virtual ::CORBA::Boolean
@@ -562,8 +562,8 @@ protected:
   ~AXXX () override;
 
 private:
-  AXXX (const AXXX &);
-  void operator= (const AXXX &);
+  AXXX (AXXX const &);
+  void operator= (AXXX const &);
 
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AXXX;
@@ -607,8 +607,8 @@ protected:
   ~BXXX () override;
 
 private:
-  BXXX (const BXXX &);
-  void operator= (const BXXX &);
+  BXXX (BXXX const &);
+  void operator= (BXXX const &);
 
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_BXXX;
@@ -709,8 +709,8 @@ namespace ModSelection
       ~Criterion () override;
 
     private:
-      Criterion (const Criterion &);
-      void operator= (const Criterion &);
+      Criterion (Criterion const &);
+      void operator= (Criterion const &);
 
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Criterion;
@@ -818,8 +818,8 @@ namespace ModSelection
       virtual ModSelection::SelectionDefns::Criterion *theLeftCriterion () const = 0;
 
     public:
-      virtual void theRightCriterionExpr (const ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &) = 0;
-      virtual const ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &theRightCriterionExpr () const = 0;
+      virtual void theRightCriterionExpr (ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr const &) = 0;
+      virtual ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr const &theRightCriterionExpr () const = 0;
       virtual ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &theRightCriterionExpr () = 0;
 
     public:
@@ -835,8 +835,8 @@ namespace ModSelection
       ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
     private:
-      CriterionExpr (const CriterionExpr &);
-      void operator= (const CriterionExpr &);
+      CriterionExpr (CriterionExpr const &);
+      void operator= (CriterionExpr const &);
 
     protected:
       virtual ::CORBA::Boolean
@@ -1138,11 +1138,11 @@ class TAO_IDL_TEST_STUB_Export OBV_DefaultInitializedValue
 {
 
 public:
-  void boolean_value (const ::CORBA::Boolean) override;
+  void boolean_value (::CORBA::Boolean const) override;
   ::CORBA::Boolean boolean_value () const override;
 
 public:
-  void long_value (const ::CORBA::Long) override;
+  void long_value (::CORBA::Long const) override;
   ::CORBA::Long long_value () const override;
 
 public:
@@ -1178,13 +1178,13 @@ class TAO_IDL_TEST_STUB_Export OBV_RecValueType
 {
 
 protected:
-  void rec_value_types (const RecValueType::_tao_seq_RecValueType_ &) override;
-  const RecValueType::_tao_seq_RecValueType_ &rec_value_types () const override;
+  void rec_value_types (RecValueType::_tao_seq_RecValueType_ const &) override;
+  RecValueType::_tao_seq_RecValueType_ const &rec_value_types () const override;
   RecValueType::_tao_seq_RecValueType_ &rec_value_types () override;
 
 protected:
-  void rec_value_types2 (const RecValueType::_tao_seq_RecValueType__2 &) override;
-  const RecValueType::_tao_seq_RecValueType__2 &rec_value_types2 () const override;
+  void rec_value_types2 (RecValueType::_tao_seq_RecValueType__2 const &) override;
+  RecValueType::_tao_seq_RecValueType__2 const &rec_value_types2 () const override;
   RecValueType::_tao_seq_RecValueType__2 &rec_value_types2 () override;
 
 public:
@@ -1268,8 +1268,8 @@ namespace OBV_ModSelection
     ModSelection::SelectionDefns::Criterion *theLeftCriterion () const override;
 
   public:
-    void theRightCriterionExpr (const ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &) override;
-    const ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &theRightCriterionExpr () const override;
+    void theRightCriterionExpr (ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr const &) override;
+    ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr const &theRightCriterionExpr () const override;
     ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr &theRightCriterionExpr () override;
 
   public:
@@ -1523,7 +1523,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const MyValueType *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, MyValueType const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, MyValueType *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1539,7 +1539,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const DefaultInitializedValue *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, DefaultInitializedValue const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, DefaultInitializedValue *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1569,7 +1569,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const RecValueType *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, RecValueType const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, RecValueType *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1615,7 +1615,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const GetsDeprecatedMember *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, GetsDeprecatedMember const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, GetsDeprecatedMember *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1631,7 +1631,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const X_VALUETYPE::AXXX *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, X_VALUETYPE::AXXX const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X_VALUETYPE::AXXX *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1647,7 +1647,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const X_VALUETYPE::BXXX *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, X_VALUETYPE::BXXX const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, X_VALUETYPE::BXXX *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1674,7 +1674,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ModSelection::SelectionDefns::Criterion *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ModSelection::SelectionDefns::Criterion const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ModSelection::SelectionDefns::Criterion *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1690,7 +1690,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ModSelection::SelectionDefns::CriterionExpr *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ModSelection::SelectionDefns::CriterionExpr const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ModSelection::SelectionDefns::CriterionExpr *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

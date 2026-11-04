@@ -919,10 +919,10 @@ mod2::fwd::bar::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<bar *> (_tao_excp);
 }
 
-const mod2::fwd::bar *
+mod2::fwd::bar const *
 mod2::fwd::bar::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const bar *> (_tao_excp);
+  return dynamic_cast<bar const *> (_tao_excp);
 }
 
 ::CORBA::Exception *mod2::fwd::bar::_alloc ()
@@ -2572,7 +2572,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const mod2::fwd::bar &_tao_elem)
+  mod2::fwd::bar const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<mod2::fwd::bar>::insert_copy (
     _tao_any,
@@ -2595,8 +2595,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const mod2::fwd::bar *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  mod2::fwd::bar const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<mod2::fwd::bar>::extract (
     _tao_any,
@@ -2862,7 +2862,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const scope_test::AMH_i_scope_testExceptionHolder *_tao_valuetype)
+    scope_test::AMH_i_scope_testExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3023,7 +3023,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const mod2::fwd::bar &_tao_aggregate)
+    mod2::fwd::bar const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -3093,7 +3093,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const mod2::AMH_fwdExceptionHolder *_tao_valuetype)
+    mod2::AMH_fwdExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

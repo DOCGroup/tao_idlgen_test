@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCEC_QW5VMR_H_
-#define _TAO_IDL_SEQUENCEC_QW5VMR_H_
+#ifndef _TAO_IDL_SEQUENCEC_USA75H_H_
+#define _TAO_IDL_SEQUENCEC_USA75H_H_
 
 #include /**/ "ace/pre.h"
 
@@ -123,15 +123,15 @@ public:
   myfoostruct rec_info {};
 
   nasty ();
-  nasty (const nasty &);
+  nasty (nasty const &);
   ~nasty () override = default;
 
-  nasty &operator= (const nasty &);
+  nasty &operator= (nasty const &);
 
   static void _tao_any_destructor (void *);
 
   static nasty *_downcast (::CORBA::Exception *);
-  static const nasty *_downcast (::CORBA::Exception const *);
+  static nasty const *_downcast (::CORBA::Exception const *);
 
   static ::CORBA::Exception *_alloc ();
 
@@ -143,8 +143,8 @@ public:
   void _tao_decode (TAO_InputCDR &cdr) override;
 
   nasty (
-      const char * _tao_id,
-      const myfoostruct & _tao_rec_info);
+      char const * _tao_id,
+      myfoostruct const & _tao_rec_info);
 
   ::CORBA::TypeCode_ptr _tao_type () const override;
 };
@@ -220,7 +220,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -738,9 +738,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const nasty &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, nasty const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, nasty*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const nasty *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, nasty const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -881,7 +881,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const nasty &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, nasty const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, nasty &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

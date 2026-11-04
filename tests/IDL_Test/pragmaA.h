@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRAGMAA_QYEB8G_H_
-#define _TAO_IDL_PRAGMAA_QYEB8G_H_
+#ifndef _TAO_IDL_PRAGMAA_DFYYT0_H_
+#define _TAO_IDL_PRAGMAA_DFYYT0_H_
 
 #include /**/ "ace/pre.h"
 
@@ -119,9 +119,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Riot &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Riot const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Riot*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const Riot *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Riot const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -164,9 +164,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const A::my_exception &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, A::my_exception const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, A::my_exception*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const A::my_exception *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, A::my_exception const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

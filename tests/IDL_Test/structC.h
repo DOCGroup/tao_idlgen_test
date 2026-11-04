@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRUCTC_8P5KL2_H_
-#define _TAO_IDL_STRUCTC_8P5KL2_H_
+#ifndef _TAO_IDL_STRUCTC_TM9AFF_H_
+#define _TAO_IDL_STRUCTC_TM9AFF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -384,15 +384,15 @@ namespace Test
     ::CORBA::Long long_value {};
 
     DefaultInitializedException ();
-    DefaultInitializedException (const DefaultInitializedException &);
+    DefaultInitializedException (DefaultInitializedException const &);
     ~DefaultInitializedException () override = default;
 
-    DefaultInitializedException &operator= (const DefaultInitializedException &);
+    DefaultInitializedException &operator= (DefaultInitializedException const &);
 
     static void _tao_any_destructor (void *);
 
     static DefaultInitializedException *_downcast (::CORBA::Exception *);
-    static const DefaultInitializedException *_downcast (::CORBA::Exception const *);
+    static DefaultInitializedException const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -799,9 +799,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Test::DefaultInitializedException &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Test::DefaultInitializedException const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Test::DefaultInitializedException*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const Test::DefaultInitializedException *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Test::DefaultInitializedException const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -924,7 +924,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::DefaultInitializedException &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::DefaultInitializedException const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::DefaultInitializedException &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

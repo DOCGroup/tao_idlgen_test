@@ -128,7 +128,7 @@ void mod2::scope_struct::_tao_any_destructor (void *_tao_void_pointer)
 }
 
 mod2::exp::exp (
-    const mod2::fwd_ptr _tao_fwd_mem)
+    mod2::fwd_ptr const _tao_fwd_mem)
   : ::CORBA::UserException (
         "IDL:mod2/exp:1.0",
         "exp")
@@ -171,10 +171,10 @@ mod2::exp::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<exp *> (_tao_excp);
 }
 
-const mod2::exp *
+mod2::exp const *
 mod2::exp::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const exp *> (_tao_excp);
+  return dynamic_cast<exp const *> (_tao_excp);
 }
 
 ::CORBA::Exception *mod2::exp::_alloc ()
@@ -1726,6 +1726,12 @@ char const *fwd_mixed_intf::abstract_parent::_desc_interface_name ()
 {
   return "abstract_parent";
 }
+
+::CORBA::Boolean
+fwd_mixed_intf::abstract_parent::marshal (TAO_OutputCDR &cdr)
+{
+  return (cdr << this);
+}
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_fwd_mixed_intf_abstract_parent (
@@ -2732,7 +2738,7 @@ OBV_obv_fwd::ForwardedType::_tao_unmarshal__obv_fwd_ForwardedType (TAO_InputCDR 
 }
 /// Accessor to set the member.
 void
-OBV_obv_fwd::ForwardedType::number (const CORBA::Long val)
+OBV_obv_fwd::ForwardedType::number (CORBA::Long const val)
 {
   // Set the value.
   this->_pd_number = val;
@@ -2862,7 +2868,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const mod2::exp &_tao_elem)
+  mod2::exp const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<mod2::exp>::insert_copy (
     _tao_any,
@@ -2885,8 +2891,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const mod2::exp *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  mod2::exp const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<mod2::exp>::extract (
     _tao_any,
@@ -3956,7 +3962,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const mod2::exp &_tao_aggregate)
+    mod2::exp const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -4042,7 +4048,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const mod2::AMH_fullExceptionHolder *_tao_valuetype)
+    mod2::AMH_fullExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4186,7 +4192,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const fwd_mixed_intf::AMH_concrete_parentExceptionHolder *_tao_valuetype)
+    fwd_mixed_intf::AMH_concrete_parentExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4423,7 +4429,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const obv_fwd::EnclosingType *_tao_valuetype)
+    obv_fwd::EnclosingType const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4510,7 +4516,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const obv_fwd::ForwardedType *_tao_valuetype)
+    obv_fwd::ForwardedType const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

@@ -210,10 +210,10 @@ e_skip::e_hump::e_skip::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<e_skip *> (_tao_excp);
 }
 
-const e_skip::e_hump::e_skip *
+e_skip::e_hump::e_skip const *
 e_skip::e_hump::e_skip::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const e_skip *> (_tao_excp);
+  return dynamic_cast<e_skip const *> (_tao_excp);
 }
 
 ::CORBA::Exception *e_skip::e_hump::e_skip::_alloc ()
@@ -5396,7 +5396,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const e_skip::e_hump::e_skip &_tao_elem)
+  e_skip::e_hump::e_skip const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<e_skip::e_hump::e_skip>::insert_copy (
     _tao_any,
@@ -5419,8 +5419,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const e_skip::e_hump::e_skip *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  e_skip::e_hump::e_skip const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<e_skip::e_hump::e_skip>::extract (
     _tao_any,
@@ -7726,7 +7726,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const e_skip::e_hump::e_skip &_tao_aggregate)
+    e_skip::e_hump::e_skip const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -7796,7 +7796,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const i_skip::i_hump::AMH_i_skipExceptionHolder *_tao_valuetype)
+    i_skip::i_hump::AMH_i_skipExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -8050,7 +8050,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_blooExceptionHolder *_tao_valuetype)
+    AMH_blooExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -8216,7 +8216,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const bug_1985_a::b::AMH_somethingExceptionHolder *_tao_valuetype)
+    bug_1985_a::b::AMH_somethingExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -8337,7 +8337,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const bug_1985_c::d::AMH_somethingExceptionHolder *_tao_valuetype)
+    bug_1985_c::d::AMH_somethingExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -8458,7 +8458,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const Negotiator::AMH_UAV_NegotiatorExceptionHolder *_tao_valuetype)
+    Negotiator::AMH_UAV_NegotiatorExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -8579,7 +8579,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder *_tao_valuetype)
+    Negotiator::AMH_UAV_Negotiator_FactoryExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -8722,7 +8722,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const Wow::bug_2125::AMH_MyInterfaceExceptionHolder *_tao_valuetype)
+    Wow::bug_2125::AMH_MyInterfaceExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

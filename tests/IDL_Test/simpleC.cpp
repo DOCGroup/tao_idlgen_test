@@ -149,10 +149,10 @@ simple_error::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<simple_error *> (_tao_excp);
 }
 
-const simple_error *
+simple_error const *
 simple_error::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const simple_error *> (_tao_excp);
+  return dynamic_cast<simple_error const *> (_tao_excp);
 }
 
 ::CORBA::Exception *simple_error::_alloc ()
@@ -1086,10 +1086,10 @@ simple2::simple2_error::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<simple2_error *> (_tao_excp);
 }
 
-const simple2::simple2_error *
+simple2::simple2_error const *
 simple2::simple2_error::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const simple2_error *> (_tao_excp);
+  return dynamic_cast<simple2_error const *> (_tao_excp);
 }
 
 ::CORBA::Exception *simple2::simple2_error::_alloc ()
@@ -2017,7 +2017,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const simple_error &_tao_elem)
+  simple_error const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<simple_error>::insert_copy (
     _tao_any,
@@ -2040,8 +2040,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const simple_error *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  simple_error const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<simple_error>::extract (
     _tao_any,
@@ -2403,7 +2403,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const simple2::simple2_error &_tao_elem)
+  simple2::simple2_error const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<simple2::simple2_error>::insert_copy (
     _tao_any,
@@ -2426,8 +2426,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const simple2::simple2_error *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  simple2::simple2_error const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<simple2::simple2_error>::extract (
     _tao_any,
@@ -2665,7 +2665,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const simple_error &_tao_aggregate)
+    simple_error const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -2748,7 +2748,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_simpleExceptionHolder *_tao_valuetype)
+    AMH_simpleExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -2818,7 +2818,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const simple2::simple2_error &_tao_aggregate)
+    simple2::simple2_error const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -2901,7 +2901,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_simple2ExceptionHolder *_tao_valuetype)
+    AMH_simple2ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

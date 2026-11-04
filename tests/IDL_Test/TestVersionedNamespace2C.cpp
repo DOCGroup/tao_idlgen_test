@@ -1849,9 +1849,9 @@ namespace M2
 }
 
 M2::M3::E1::E1 (
-    const M2::M3::L3_ptr _tao_val2,
-    const M1::BooleanUnion1 & _tao_bool1,
-    const M1::BooleanUnion2 & _tao_bool2)
+    M2::M3::L3_ptr const _tao_val2,
+    M1::BooleanUnion1 const & _tao_bool1,
+    M1::BooleanUnion2 const & _tao_bool2)
   : ::CORBA::UserException (
         "IDL:M2/M3/E1:1.0",
         "E1")
@@ -1900,10 +1900,10 @@ M2::M3::E1::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<E1 *> (_tao_excp);
 }
 
-const M2::M3::E1 *
+M2::M3::E1 const *
 M2::M3::E1::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const E1 *> (_tao_excp);
+  return dynamic_cast<E1 const *> (_tao_excp);
 }
 
 ::CORBA::Exception *M2::M3::E1::_alloc ()
@@ -2901,12 +2901,12 @@ OBV_M1::V::valString () const // get method
 }
 /// Accessor to set the member.
 void
-OBV_M1::V::valStruct (const M1::S1 &val)
+OBV_M1::V::valStruct (M1::S1 const &val)
 {
   this->_pd_valStruct = val;
 }
 /// Readonly get method.
-const M1::S1 &
+M1::S1 const &
 OBV_M1::V::valStruct () const
 {
   return this->_pd_valStruct;
@@ -2933,12 +2933,12 @@ OBV_M1::V::valLocalIface () const
 }
 /// Accessor to set the member
 void
-OBV_M1::V::valBoolUnion1 (const M1::BooleanUnion1 &val)
+OBV_M1::V::valBoolUnion1 (M1::BooleanUnion1 const &val)
 {
   this->_pd_valBoolUnion1 = val;
 }
 /// Readonly get method.
-const M1::BooleanUnion1 &
+M1::BooleanUnion1 const &
 OBV_M1::V::valBoolUnion1 () const
 {
   return this->_pd_valBoolUnion1;
@@ -2951,12 +2951,12 @@ OBV_M1::V::valBoolUnion1 ()
 }
 /// Accessor to set the member
 void
-OBV_M1::V::valBoolUnion2 (const M1::BooleanUnion2 &val)
+OBV_M1::V::valBoolUnion2 (M1::BooleanUnion2 const &val)
 {
   this->_pd_valBoolUnion2 = val;
 }
 /// Readonly get method.
-const M1::BooleanUnion2 &
+M1::BooleanUnion2 const &
 OBV_M1::V::valBoolUnion2 () const
 {
   return this->_pd_valBoolUnion2;
@@ -2969,12 +2969,12 @@ OBV_M1::V::valBoolUnion2 ()
 }
 /// Accessor to set the member.
 void
-OBV_M1::V::valX (const M1::X &val)
+OBV_M1::V::valX (M1::X const &val)
 {
   this->_pd_valX = val;
 }
 /// Readonly get method.
-const M1::X &
+M1::X const &
 OBV_M1::V::valX () const
 {
   return this->_pd_valX;
@@ -3085,12 +3085,12 @@ OBV_M2::M3::V2::valString () const // get method
 }
 /// Accessor to set the member.
 void
-OBV_M2::M3::V2::valStruct (const M2::M3::S2 &val)
+OBV_M2::M3::V2::valStruct (M2::M3::S2 const &val)
 {
   this->_pd_valStruct = val;
 }
 /// Readonly get method.
-const M2::M3::S2 &
+M2::M3::S2 const &
 OBV_M2::M3::V2::valStruct () const
 {
   return this->_pd_valStruct;
@@ -3198,12 +3198,12 @@ OBV_M2::M3::V3::valString () const // get method
 }
 /// Accessor to set the member.
 void
-OBV_M2::M3::V3::valStruct (const M1::S1 &val)
+OBV_M2::M3::V3::valStruct (M1::S1 const &val)
 {
   this->_pd_valStruct = val;
 }
 /// Readonly get method.
-const M1::S1 &
+M1::S1 const &
 OBV_M2::M3::V3::valStruct () const
 {
   return this->_pd_valStruct;
@@ -4258,7 +4258,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const M2::M3::E1 &_tao_elem)
+  M2::M3::E1 const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<M2::M3::E1>::insert_copy (
     _tao_any,
@@ -4281,8 +4281,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const M2::M3::E1 *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  M2::M3::E1 const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<M2::M3::E1>::extract (
     _tao_any,
@@ -4760,7 +4760,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const M1::AMH_LIExceptionHolder *_tao_valuetype)
+    M1::AMH_LIExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4864,7 +4864,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const M1::AMH_L2ExceptionHolder *_tao_valuetype)
+    M1::AMH_L2ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -5092,7 +5092,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const M1::V *_tao_valuetype)
+    M1::V const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -5259,7 +5259,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const M2::M3::AMH_L3ExceptionHolder *_tao_valuetype)
+    M2::M3::AMH_L3ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -5304,7 +5304,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const M2::M3::E1 &_tao_aggregate)
+    M2::M3::E1 const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -5406,7 +5406,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const M2::M3::AMH_L4ExceptionHolder *_tao_valuetype)
+    M2::M3::AMH_L4ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -5477,7 +5477,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const M2::M3::V2 *_tao_valuetype)
+    M2::M3::V2 const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -5584,7 +5584,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const M2::M3::V3 *_tao_valuetype)
+    M2::M3::V3 const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

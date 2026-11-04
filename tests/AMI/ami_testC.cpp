@@ -54,7 +54,7 @@
 
 A::DidTheRightThing::DidTheRightThing (
     ::CORBA::Long _tao_id,
-    const char * _tao_whatDidTheRightThing)
+    char const * _tao_whatDidTheRightThing)
   : ::CORBA::UserException (
         "IDL:A/DidTheRightThing:1.0",
         "DidTheRightThing")
@@ -100,10 +100,10 @@ A::DidTheRightThing::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<DidTheRightThing *> (_tao_excp);
 }
 
-const A::DidTheRightThing *
+A::DidTheRightThing const *
 A::DidTheRightThing::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const DidTheRightThing *> (_tao_excp);
+  return dynamic_cast<DidTheRightThing const *> (_tao_excp);
 }
 
 ::CORBA::Exception *A::DidTheRightThing::_alloc ()
@@ -1667,7 +1667,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const A::DidTheRightThing &_tao_elem)
+  A::DidTheRightThing const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<A::DidTheRightThing>::insert_copy (
     _tao_any,
@@ -1690,8 +1690,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const A::DidTheRightThing *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  A::DidTheRightThing const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<A::DidTheRightThing>::extract (
     _tao_any,
@@ -1938,7 +1938,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const A::DidTheRightThing &_tao_aggregate)
+    A::DidTheRightThing const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())

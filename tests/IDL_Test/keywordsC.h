@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSC_CLZ8HY_H_
-#define _TAO_IDL_KEYWORDSC_CLZ8HY_H_
+#ifndef _TAO_IDL_KEYWORDSC_1DP27B_H_
+#define _TAO_IDL_KEYWORDSC_1DP27B_H_
 
 #include /**/ "ace/pre.h"
 
@@ -212,7 +212,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -307,8 +307,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_TestingExceptionHolder (const AMH_TestingExceptionHolder &);
-  void operator= (const AMH_TestingExceptionHolder &);
+  AMH_TestingExceptionHolder (AMH_TestingExceptionHolder const &);
+  void operator= (AMH_TestingExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -367,7 +367,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -441,7 +441,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -792,7 +792,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_TestingExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_TestingExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_TestingExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

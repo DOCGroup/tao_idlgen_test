@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANON_NESTEDC_370E7O_H_
-#define _TAO_IDL_ARRAY_ANON_NESTEDC_370E7O_H_
+#ifndef _TAO_IDL_ARRAY_ANON_NESTEDC_6UD2M2_H_
+#define _TAO_IDL_ARRAY_ANON_NESTEDC_6UD2M2_H_
 
 #include /**/ "ace/pre.h"
 

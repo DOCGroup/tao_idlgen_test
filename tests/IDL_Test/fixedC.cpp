@@ -993,7 +993,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const FixedPoint::AMH_FixedOperationsExceptionHolder *_tao_valuetype)
+    FixedPoint::AMH_FixedOperationsExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

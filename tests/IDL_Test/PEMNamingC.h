@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGC_HQ40N6_H_
-#define _TAO_IDL_PEMNAMINGC_HQ40N6_H_
+#ifndef _TAO_IDL_PEMNAMINGC_DBUT0I_H_
+#define _TAO_IDL_PEMNAMINGC_DBUT0I_H_
 
 #include /**/ "ace/pre.h"
 
@@ -155,15 +155,15 @@ namespace Plesk
     Plesk::TBool transient {};
 
     ExSystem ();
-    ExSystem (const ExSystem &);
+    ExSystem (ExSystem const &);
     ~ExSystem () override = default;
 
-    ExSystem &operator= (const ExSystem &);
+    ExSystem &operator= (ExSystem const &);
 
     static void _tao_any_destructor (void *);
 
     static ExSystem *_downcast (::CORBA::Exception *);
-    static const ExSystem *_downcast (::CORBA::Exception const *);
+    static ExSystem const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -175,12 +175,12 @@ namespace Plesk
     void _tao_decode (TAO_InputCDR &cdr) override;
 
     ExSystem (
-        const char * _tao_module_id,
+        char const * _tao_module_id,
         ::CORBA::Long _tao_extype_id,
         ::CORBA::Long _tao_errcode,
         ::CORBA::Long _tao_errcode_minor,
-        const char * _tao_errmsg,
-        const Plesk::TPropertyList & _tao_props,
+        char const * _tao_errmsg,
+        Plesk::TPropertyList const & _tao_props,
         Plesk::TBool _tao_transient);
 
     ::CORBA::TypeCode_ptr _tao_type () const override;
@@ -264,7 +264,7 @@ namespace Plesk
       char const *_interface_repository_id () const override;
       static char const *_desc_repository_id ();
       static char const *_desc_interface_name ();
-      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Concrete interface only.
@@ -359,8 +359,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_ObjectResolverExceptionHolder (const AMH_ObjectResolverExceptionHolder &);
-  void operator= (const AMH_ObjectResolverExceptionHolder &);
+  AMH_ObjectResolverExceptionHolder (AMH_ObjectResolverExceptionHolder const &);
+  void operator= (AMH_ObjectResolverExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -423,7 +423,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -501,7 +501,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -752,9 +752,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Plesk::ExSystem &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::ExSystem const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::ExSystem*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const Plesk::ExSystem *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Plesk::ExSystem const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -830,7 +830,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Plesk::ExSystem &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Plesk::ExSystem const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Plesk::ExSystem &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -860,7 +860,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Plesk::Naming::AMH_ObjectResolverExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Plesk::Naming::AMH_ObjectResolverExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Plesk::Naming::AMH_ObjectResolverExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

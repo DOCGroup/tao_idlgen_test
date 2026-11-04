@@ -83,7 +83,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 simple3::OverFlow::OverFlow (
     ::CORBA::Long _tao_a,
-    const char * _tao_msg)
+    char const * _tao_msg)
   : ::CORBA::UserException (
         "IDL:simple3/OverFlow:1.0",
         "OverFlow")
@@ -129,10 +129,10 @@ simple3::OverFlow::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<OverFlow *> (_tao_excp);
 }
 
-const simple3::OverFlow *
+simple3::OverFlow const *
 simple3::OverFlow::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const OverFlow *> (_tao_excp);
+  return dynamic_cast<OverFlow const *> (_tao_excp);
 }
 
 ::CORBA::Exception *simple3::OverFlow::_alloc ()
@@ -203,7 +203,7 @@ _tao_tc_simple3_OverFlow (
 
 simple3::UnderFlow::UnderFlow (
     ::CORBA::Long _tao_b,
-    const char * _tao_msg)
+    char const * _tao_msg)
   : ::CORBA::UserException (
         "IDL:simple3/UnderFlow:1.0",
         "UnderFlow")
@@ -249,10 +249,10 @@ simple3::UnderFlow::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<UnderFlow *> (_tao_excp);
 }
 
-const simple3::UnderFlow *
+simple3::UnderFlow const *
 simple3::UnderFlow::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const UnderFlow *> (_tao_excp);
+  return dynamic_cast<UnderFlow const *> (_tao_excp);
 }
 
 ::CORBA::Exception *simple3::UnderFlow::_alloc ()
@@ -322,7 +322,7 @@ _tao_tc_simple3_UnderFlow (
 ::CORBA::TypeCode_ptr const simple3::_tc_UnderFlow = std::addressof(_tao_tc_simple3_UnderFlow);
 
 simple3::BadNum::BadNum (
-    const vec10 & _tao_c)
+    vec10 const & _tao_c)
   : ::CORBA::UserException (
         "IDL:simple3/BadNum:1.0",
         "BadNum")
@@ -365,10 +365,10 @@ simple3::BadNum::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<BadNum *> (_tao_excp);
 }
 
-const simple3::BadNum *
+simple3::BadNum const *
 simple3::BadNum::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const BadNum *> (_tao_excp);
+  return dynamic_cast<BadNum const *> (_tao_excp);
 }
 
 ::CORBA::Exception *simple3::BadNum::_alloc ()
@@ -438,7 +438,7 @@ _tao_tc_simple3_BadNum (
 ::CORBA::TypeCode_ptr const simple3::_tc_BadNum = std::addressof(_tao_tc_simple3_BadNum);
 
 simple3::UserError::UserError (
-    const ::CORBA::Any & _tao_reason)
+    ::CORBA::Any const & _tao_reason)
   : ::CORBA::UserException (
         "IDL:simple3/UserError:1.0",
         "UserError")
@@ -481,10 +481,10 @@ simple3::UserError::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<UserError *> (_tao_excp);
 }
 
-const simple3::UserError *
+simple3::UserError const *
 simple3::UserError::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const UserError *> (_tao_excp);
+  return dynamic_cast<UserError const *> (_tao_excp);
 }
 
 ::CORBA::Exception *simple3::UserError::_alloc ()
@@ -1776,7 +1776,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const simple3::OverFlow &_tao_elem)
+  simple3::OverFlow const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<simple3::OverFlow>::insert_copy (
     _tao_any,
@@ -1799,8 +1799,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const simple3::OverFlow *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  simple3::OverFlow const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<simple3::OverFlow>::extract (
     _tao_any,
@@ -1846,7 +1846,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const simple3::UnderFlow &_tao_elem)
+  simple3::UnderFlow const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<simple3::UnderFlow>::insert_copy (
     _tao_any,
@@ -1869,8 +1869,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const simple3::UnderFlow *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  simple3::UnderFlow const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<simple3::UnderFlow>::extract (
     _tao_any,
@@ -1916,7 +1916,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const simple3::BadNum &_tao_elem)
+  simple3::BadNum const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<simple3::BadNum>::insert_copy (
     _tao_any,
@@ -1939,8 +1939,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const simple3::BadNum *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  simple3::BadNum const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<simple3::BadNum>::extract (
     _tao_any,
@@ -1986,7 +1986,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const simple3::UserError &_tao_elem)
+  simple3::UserError const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<simple3::UserError>::insert_copy (
     _tao_any,
@@ -2009,8 +2009,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const simple3::UserError *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  simple3::UserError const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<simple3::UserError>::extract (
     _tao_any,
@@ -2225,7 +2225,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const simple3::OverFlow &_tao_aggregate)
+    simple3::OverFlow const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -2259,7 +2259,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const simple3::UnderFlow &_tao_aggregate)
+    simple3::UnderFlow const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -2293,7 +2293,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const simple3::BadNum &_tao_aggregate)
+    simple3::BadNum const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -2325,7 +2325,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const simple3::UserError &_tao_aggregate)
+    simple3::UserError const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -2408,7 +2408,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_simple3ExceptionHolder *_tao_valuetype)
+    AMH_simple3ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

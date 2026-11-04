@@ -993,12 +993,12 @@ OBV_Data_T::_tao_unmarshal__Data_T (TAO_InputCDR &strm, TAO_ChunkInfo& ci)
 }
 /// Accessor to set the member.
 void
-OBV_Data_T::whenLastUpdated (const WhenLastUpdated_T &val)
+OBV_Data_T::whenLastUpdated (WhenLastUpdated_T const &val)
 {
   this->_pd_whenLastUpdated = val;
 }
 /// Readonly get method.
-const WhenLastUpdated_T &
+WhenLastUpdated_T const &
 OBV_Data_T::whenLastUpdated () const
 {
   return this->_pd_whenLastUpdated;
@@ -1438,7 +1438,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const Data_T *_tao_valuetype)
+    Data_T const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -1554,7 +1554,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_User_TExceptionHolder *_tao_valuetype)
+    AMH_User_TExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

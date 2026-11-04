@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTEC_YRY6KG_H_
-#define _TAO_IDL_ATTRIBUTEC_YRY6KG_H_
+#ifndef _TAO_IDL_ATTRIBUTEC_9WGZAA_H_
+#define _TAO_IDL_ATTRIBUTEC_9WGZAA_H_
 
 #include /**/ "ace/pre.h"
 
@@ -79,15 +79,15 @@ namespace Hello
   public:
 
     InternalErrorA ();
-    InternalErrorA (const InternalErrorA &);
+    InternalErrorA (InternalErrorA const &);
     ~InternalErrorA () override = default;
 
-    InternalErrorA &operator= (const InternalErrorA &);
+    InternalErrorA &operator= (InternalErrorA const &);
 
     static void _tao_any_destructor (void *);
 
     static InternalErrorA *_downcast (::CORBA::Exception *);
-    static const InternalErrorA *_downcast (::CORBA::Exception const *);
+    static InternalErrorA const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -107,15 +107,15 @@ namespace Hello
   public:
 
     InternalErrorB ();
-    InternalErrorB (const InternalErrorB &);
+    InternalErrorB (InternalErrorB const &);
     ~InternalErrorB () override = default;
 
-    InternalErrorB &operator= (const InternalErrorB &);
+    InternalErrorB &operator= (InternalErrorB const &);
 
     static void _tao_any_destructor (void *);
 
     static InternalErrorB *_downcast (::CORBA::Exception *);
-    static const InternalErrorB *_downcast (::CORBA::Exception const *);
+    static InternalErrorB const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -223,7 +223,7 @@ namespace Hello
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -388,8 +388,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_MyFooExceptionHolder (const AMH_MyFooExceptionHolder &);
-  void operator= (const AMH_MyFooExceptionHolder &);
+  AMH_MyFooExceptionHolder (AMH_MyFooExceptionHolder const &);
+  void operator= (AMH_MyFooExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -488,7 +488,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -644,7 +644,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -842,18 +842,18 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Hello::InternalErrorA &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Hello::InternalErrorA const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Hello::InternalErrorA*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const Hello::InternalErrorA *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Hello::InternalErrorA const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Hello::InternalErrorB &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Hello::InternalErrorB const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Hello::InternalErrorB*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const Hello::InternalErrorB *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Hello::InternalErrorB const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -895,14 +895,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Hello::InternalErrorA &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Hello::InternalErrorA const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Hello::InternalErrorA &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Hello::InternalErrorB &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Hello::InternalErrorB const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Hello::InternalErrorB &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -925,7 +925,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Hello::AMH_MyFooExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Hello::AMH_MyFooExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Hello::AMH_MyFooExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

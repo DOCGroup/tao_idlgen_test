@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REPO_ID_MODC_IYOQTZ_H_
-#define _TAO_IDL_REPO_ID_MODC_IYOQTZ_H_
+#ifndef _TAO_IDL_REPO_ID_MODC_L2XBI8_H_
+#define _TAO_IDL_REPO_ID_MODC_L2XBI8_H_
 
 #include /**/ "ace/pre.h"
 
@@ -91,7 +91,7 @@ namespace gleep
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -147,7 +147,7 @@ namespace gleep
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -203,7 +203,7 @@ namespace gleep
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -259,7 +259,7 @@ namespace gleep
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -313,7 +313,7 @@ namespace gleep
       char const *_interface_repository_id () const override;
       static char const *_desc_repository_id ();
       static char const *_desc_interface_name ();
-      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Abstract or local interface only.
@@ -365,7 +365,7 @@ namespace gleep
       char const *_interface_repository_id () const override;
       static char const *_desc_repository_id ();
       static char const *_desc_interface_name ();
-      ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+      virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
       // Abstract or local interface only.
@@ -419,7 +419,7 @@ namespace gleep
         char const *_interface_repository_id () const override;
         static char const *_desc_repository_id ();
         static char const *_desc_interface_name ();
-        ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+        virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
       protected:
         // Abstract or local interface only.
@@ -475,7 +475,7 @@ namespace gleep
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.

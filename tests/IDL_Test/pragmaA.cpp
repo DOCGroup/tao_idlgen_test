@@ -703,7 +703,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const Riot &_tao_elem)
+  Riot const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<Riot>::insert_copy (
     _tao_any,
@@ -726,8 +726,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const Riot *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  Riot const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<Riot>::extract (
     _tao_any,
@@ -1031,7 +1031,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const A::my_exception &_tao_elem)
+  A::my_exception const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<A::my_exception>::insert_copy (
     _tao_any,
@@ -1054,8 +1054,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const A::my_exception *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  A::my_exception const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<A::my_exception>::extract (
     _tao_any,

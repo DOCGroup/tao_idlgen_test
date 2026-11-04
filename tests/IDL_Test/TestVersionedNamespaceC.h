@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_QXJYD4_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_QXJYD4_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_7RFYOR_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_7RFYOR_H_
 
 #include /**/ "ace/pre.h"
 
@@ -117,7 +117,7 @@ namespace M1
 
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.
@@ -173,8 +173,8 @@ namespace M1
     virtual char const *valString () const = 0;
 
   public:
-    virtual void valStruct (const M1::S1 &) = 0;
-    virtual const M1::S1 &valStruct () const = 0;
+    virtual void valStruct (M1::S1 const &) = 0;
+    virtual M1::S1 const &valStruct () const = 0;
     virtual M1::S1 &valStruct () = 0;
 
   public:
@@ -190,8 +190,8 @@ namespace M1
     ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
-    V (const V &);
-    void operator= (const V &);
+    V (V const &);
+    void operator= (V const &);
 
   protected:
 
@@ -274,8 +274,8 @@ public:
   char const *valString () const override;
 
 public:
-  void valStruct (const M1::S1 &) override;
-  const M1::S1 &valStruct () const override;
+  void valStruct (M1::S1 const &) override;
+  M1::S1 const &valStruct () const override;
   M1::S1 &valStruct () override;
 
 public:

@@ -82,10 +82,10 @@ something::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<something *> (_tao_excp);
 }
 
-const something *
+something const *
 something::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const something *> (_tao_excp);
+  return dynamic_cast<something const *> (_tao_excp);
 }
 
 ::CORBA::Exception *something::_alloc ()
@@ -987,7 +987,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const something &_tao_elem)
+  something const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<something>::insert_copy (
     _tao_any,
@@ -1010,8 +1010,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const something *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  something const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<something>::extract (
     _tao_any,
@@ -1325,7 +1325,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const something &_tao_aggregate)
+    something const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -1417,7 +1417,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_Bug_2350_RegressionExceptionHolder *_tao_valuetype)
+    AMH_Bug_2350_RegressionExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

@@ -403,12 +403,12 @@ OBV_M1::V::valString () const // get method
 }
 /// Accessor to set the member.
 void
-OBV_M1::V::valStruct (const M1::S1 &val)
+OBV_M1::V::valStruct (M1::S1 const &val)
 {
   this->_pd_valStruct = val;
 }
 /// Readonly get method.
-const M1::S1 &
+M1::S1 const &
 OBV_M1::V::valStruct () const
 {
   return this->_pd_valStruct;

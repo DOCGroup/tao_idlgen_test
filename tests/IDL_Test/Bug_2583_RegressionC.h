@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2583_REGRESSIONC_WOIGDI_H_
-#define _TAO_IDL_BUG_2583_REGRESSIONC_WOIGDI_H_
+#ifndef _TAO_IDL_BUG_2583_REGRESSIONC_Y76CNM_H_
+#define _TAO_IDL_BUG_2583_REGRESSIONC_Y76CNM_H_
 
 #include /**/ "ace/pre.h"
 
@@ -99,7 +99,7 @@ namespace Test
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Abstract or local interface only.

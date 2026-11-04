@@ -8173,7 +8173,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMH_ex1ExceptionHolder *_tao_valuetype)
+    OldDif2::AMH_ex1ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -8294,7 +8294,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMH_ex2ExceptionHolder *_tao_valuetype)
+    OldDif2::AMH_ex2ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -8415,7 +8415,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMH_ex3ExceptionHolder *_tao_valuetype)
+    OldDif2::AMH_ex3ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -8536,7 +8536,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMH_ex4ExceptionHolder *_tao_valuetype)
+    OldDif2::AMH_ex4ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

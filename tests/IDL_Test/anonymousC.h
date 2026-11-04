@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSC_0B4IGP_H_
-#define _TAO_IDL_ANONYMOUSC_0B4IGP_H_
+#ifndef _TAO_IDL_ANONYMOUSC_5B1045_H_
+#define _TAO_IDL_ANONYMOUSC_5B1045_H_
 
 #include /**/ "ace/pre.h"
 
@@ -376,7 +376,7 @@ namespace All_Anon
     char const *_interface_repository_id () const override;
     static char const *_desc_repository_id ();
     static char const *_desc_interface_name ();
-    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
     // Concrete interface only.
@@ -530,8 +530,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_anon_bd_string_testExceptionHolder (const AMH_anon_bd_string_testExceptionHolder &);
-  void operator= (const AMH_anon_bd_string_testExceptionHolder &);
+  AMH_anon_bd_string_testExceptionHolder (AMH_anon_bd_string_testExceptionHolder const &);
+  void operator= (AMH_anon_bd_string_testExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -623,7 +623,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Abstract or local interface only.
@@ -766,7 +766,7 @@ public:
   char const *_interface_repository_id () const override;
   static char const *_desc_repository_id ();
   static char const *_desc_interface_name ();
-  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -911,15 +911,15 @@ public:
   _long_array_2 long_array_2 {};
 
   Nested_Anon ();
-  Nested_Anon (const Nested_Anon &);
+  Nested_Anon (Nested_Anon const &);
   ~Nested_Anon () override = default;
 
-  Nested_Anon &operator= (const Nested_Anon &);
+  Nested_Anon &operator= (Nested_Anon const &);
 
   static void _tao_any_destructor (void *);
 
   static Nested_Anon *_downcast (::CORBA::Exception *);
-  static const Nested_Anon *_downcast (::CORBA::Exception const *);
+  static Nested_Anon const *_downcast (::CORBA::Exception const *);
 
   static ::CORBA::Exception *_alloc ();
 
@@ -931,10 +931,10 @@ public:
   void _tao_decode (TAO_InputCDR &cdr) override;
 
   Nested_Anon (
-      const _float_seq_array _tao_float_seq_array,
-      const _another_fsa _tao_another_fsa,
-      const _long_array_1 _tao_long_array_1,
-      const _long_array_2 _tao_long_array_2);
+      _float_seq_array const _tao_float_seq_array,
+      _another_fsa const _tao_another_fsa,
+      _long_array_1 const _tao_long_array_1,
+      _long_array_2 const _tao_long_array_2);
 
   ::CORBA::TypeCode_ptr _tao_type () const override;
 };
@@ -1715,7 +1715,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const All_Anon::AMH_anon_bd_string_testExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, All_Anon::AMH_anon_bd_string_testExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::AMH_anon_bd_string_testExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1729,7 +1729,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const All_Anon::Nested_Anon &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, All_Anon::Nested_Anon const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::Nested_Anon &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
