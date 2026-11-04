@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLEC_G3X540_H_
-#define _TAO_IDL_SIMPLEC_G3X540_H_
+#ifndef _TAO_IDL_SIMPLEC_G3E3XY_H_
+#define _TAO_IDL_SIMPLEC_G3E3XY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -882,11 +882,9 @@ protected:
   ~OBV_AMH_simpleExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_simpleExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_simpleExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_simpleExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_simpleExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -906,11 +904,9 @@ protected:
   ~OBV_AMH_simple2ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_simple2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_simple2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_simple2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_simple2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

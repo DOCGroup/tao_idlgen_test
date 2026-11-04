@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDINGS_PILCTH_CPP_
-#define _TAO_IDL_INCLUDINGS_PILCTH_CPP_
+#ifndef _TAO_IDL_INCLUDINGS_7YWACB_CPP_
+#define _TAO_IDL_INCLUDINGS_7YWACB_CPP_
 
 #include "includingS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -157,7 +157,7 @@ iface*
 POA_AMH_iface::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -536,9 +536,7 @@ POA_AMH_MyInt::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_MyIntResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_MyIntResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -576,7 +574,7 @@ MyInt*
 POA_AMH_MyInt::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -764,11 +762,11 @@ void POA_MyInt::op_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1026,11 +1024,11 @@ void POA_AMI_MyIntHandler::op_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1092,11 +1090,11 @@ void POA_AMI_MyIntHandler::op_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1241,7 +1239,7 @@ RootModule::SUBMODULE1::ChildIF*
 POA_RootModule::SUBMODULE1::AMH_ChildIF::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1614,7 +1612,7 @@ B*
 POA_AMH_B::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

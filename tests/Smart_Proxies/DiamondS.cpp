@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIAMONDS_06VEX0_CPP_
-#define _TAO_IDL_DIAMONDS_06VEX0_CPP_
+#ifndef _TAO_IDL_DIAMONDS_0LB1K1_CPP_
+#define _TAO_IDL_DIAMONDS_0LB1K1_CPP_
 
 #include "DiamondS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -217,11 +217,11 @@ void POA_Diamond::Top::shape_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -432,11 +432,11 @@ void POA_Diamond::Left::color_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -648,11 +648,11 @@ void POA_Diamond::Right::width_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -866,11 +866,11 @@ void POA_Diamond::Buttom::name_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

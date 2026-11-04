@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONS_LIBR8Y_CPP_
-#define _TAO_IDL_OLD_UNIONS_LIBR8Y_CPP_
+#ifndef _TAO_IDL_OLD_UNIONS_OCS7NR_CPP_
+#define _TAO_IDL_OLD_UNIONS_OCS7NR_CPP_
 
 #include "old_unionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -165,9 +165,7 @@ POA_OldUnion::AMH_a::opA_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldUnion::TAO_AMH_aResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_OldUnion::TAO_AMH_aResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -205,7 +203,7 @@ OldUnion::a*
 POA_OldUnion::AMH_a::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -397,11 +395,11 @@ void POA_OldUnion::a::opA_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -662,11 +660,11 @@ void POA_OldUnion::AMI_aHandler::opA_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -732,11 +730,11 @@ void POA_OldUnion::AMI_aHandler::opA_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

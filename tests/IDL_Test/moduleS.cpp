@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_MODULES_5KKUKV_CPP_
-#define _TAO_IDL_MODULES_5KKUKV_CPP_
+#ifndef _TAO_IDL_MODULES_MBGAP6_CPP_
+#define _TAO_IDL_MODULES_MBGAP6_CPP_
 
 #include "moduleS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -180,9 +180,7 @@ POA_mod1::mod2::AMH_ex1::_get_l1_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -226,9 +224,7 @@ POA_mod1::mod2::AMH_ex1::_set_l1_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -263,9 +259,7 @@ POA_mod1::mod2::AMH_ex1::_get_l2_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -307,9 +301,7 @@ POA_mod1::mod2::AMH_ex1::m1_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -347,7 +339,7 @@ mod1::mod2::ex1*
 POA_mod1::mod2::AMH_ex1::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -611,11 +603,11 @@ void POA_mod1::mod2::ex1::_get_l1_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -685,11 +677,11 @@ void POA_mod1::mod2::ex1::_set_l1_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -756,11 +748,11 @@ void POA_mod1::mod2::ex1::_get_l2_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -836,11 +828,11 @@ void POA_mod1::mod2::ex1::m1_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1314,11 +1306,11 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l1_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1388,11 +1380,11 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l1_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1444,11 +1436,11 @@ void POA_mod1::mod2::AMI_ex1Handler::set_l1_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1518,11 +1510,11 @@ void POA_mod1::mod2::AMI_ex1Handler::set_l1_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1592,11 +1584,11 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l2_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1666,11 +1658,11 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l2_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1740,11 +1732,11 @@ void POA_mod1::mod2::AMI_ex1Handler::m1_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1814,11 +1806,11 @@ void POA_mod1::mod2::AMI_ex1Handler::m1_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1988,9 +1980,7 @@ POA_mod1::mod2::AMH_ex2::_get_l3_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -2034,9 +2024,7 @@ POA_mod1::mod2::AMH_ex2::_set_l3_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -2079,9 +2067,7 @@ POA_mod1::mod2::AMH_ex2::m2_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -2120,7 +2106,7 @@ mod1::mod2::ex2*
 POA_mod1::mod2::AMH_ex2::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -2370,11 +2356,11 @@ void POA_mod1::mod2::ex2::_get_l3_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2444,11 +2430,11 @@ void POA_mod1::mod2::ex2::_set_l3_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2533,11 +2519,11 @@ void POA_mod1::mod2::ex2::m2_skel (
                          , args
                          , 3
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2957,11 +2943,11 @@ void POA_mod1::mod2::AMI_ex2Handler::get_l3_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3031,11 +3017,11 @@ void POA_mod1::mod2::AMI_ex2Handler::get_l3_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3087,11 +3073,11 @@ void POA_mod1::mod2::AMI_ex2Handler::set_l3_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3161,11 +3147,11 @@ void POA_mod1::mod2::AMI_ex2Handler::set_l3_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3244,11 +3230,11 @@ void POA_mod1::mod2::AMI_ex2Handler::m2_skel (
                          , args
                          , 3
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3318,11 +3304,11 @@ void POA_mod1::mod2::AMI_ex2Handler::m2_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

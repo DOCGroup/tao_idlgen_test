@@ -23,6 +23,7 @@
  **/
 
 #include "repo_id_modC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_UNIONS_RFY748_CPP_
-#define _TAO_IDL_UNIONS_RFY748_CPP_
+#ifndef _TAO_IDL_UNIONS_6WM88K_CPP_
+#define _TAO_IDL_UNIONS_6WM88K_CPP_
 
 #include "unionS.h"
 

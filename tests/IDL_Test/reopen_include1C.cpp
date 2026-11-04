@@ -23,6 +23,7 @@
  **/
 
 #include "reopen_include1C.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -84,10 +85,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> frag_dub_seq_0 (
-        ::CORBA::tk_sequence, &CORBA::_tc_double, 0U);
+        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_double), 0U);
 
     ::CORBA::TypeCode_ptr const tc_frag_dub_seq_0 =
-      &frag_dub_seq_0;
+      std::addressof (frag_dub_seq_0);
   }
 }
 }
@@ -103,7 +104,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:frag/dub_seq:1.0",
     "dub_seq",
-    &TAO::TypeCode::tc_frag_dub_seq_0);
+    std::addressof (TAO::TypeCode::tc_frag_dub_seq_0));
 
 namespace frag
 {
@@ -294,7 +295,7 @@ namespace A
     ::CORBA::TypeCode_ptr const _tc_X1 = std::addressof(_tao_tc_A_B_X1);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_B_AMH_X1ExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_A_B_AMH_X1ExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -304,7 +305,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:A/B/AMH_X1ExceptionHolder:1.0",
     "AMH_X1ExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_A_B_AMH_X1ExceptionHolder,
     0);
 

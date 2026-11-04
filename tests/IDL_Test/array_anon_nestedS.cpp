@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANON_NESTEDS_3J1MY4_CPP_
-#define _TAO_IDL_ARRAY_ANON_NESTEDS_3J1MY4_CPP_
+#ifndef _TAO_IDL_ARRAY_ANON_NESTEDS_73V0TH_CPP_
+#define _TAO_IDL_ARRAY_ANON_NESTEDS_73V0TH_CPP_
 
 #include "array_anon_nestedS.h"
 

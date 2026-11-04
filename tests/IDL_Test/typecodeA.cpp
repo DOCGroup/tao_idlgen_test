@@ -49,10 +49,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> MyModule_TypeCodeList_0 (
-        ::CORBA::tk_sequence, &CORBA::_tc_TypeCode, 0U);
+        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_TypeCode), 0U);
 
     ::CORBA::TypeCode_ptr const tc_MyModule_TypeCodeList_0 =
-      &MyModule_TypeCodeList_0;
+      std::addressof (MyModule_TypeCodeList_0);
   }
 }
 }
@@ -68,7 +68,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:MyModule/TypeCodeList:1.0",
     "TypeCodeList",
-    &TAO::TypeCode::tc_MyModule_TypeCodeList_0);
+    std::addressof (TAO::TypeCode::tc_MyModule_TypeCodeList_0));
 
 namespace MyModule
 {

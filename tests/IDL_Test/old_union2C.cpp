@@ -23,6 +23,7 @@
  **/
 
 #include "old_union2C.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -152,13 +153,13 @@ void OldUnion2::Foo::_reset ()
     break;
   }
 }
-static TAO::TypeCode::Case_T<OldUnion2::FooDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Foo__0 (OldUnion2::FOO1, "x", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<OldUnion2::FooDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Foo__1 (OldUnion2::FOO2, "y", &CORBA::_tc_string);
+static TAO::TypeCode::Case_T<OldUnion2::FooDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Foo__0 (OldUnion2::FOO1, "x", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<OldUnion2::FooDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Foo__1 (OldUnion2::FOO2, "y", std::addressof (CORBA::_tc_string));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_OldUnion2_Foo[] =
   {
-    &_tao_cases_OldUnion2_Foo__0,
-    &_tao_cases_OldUnion2_Foo__1
+    std::addressof (_tao_cases_OldUnion2_Foo__0),
+    std::addressof (_tao_cases_OldUnion2_Foo__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -168,7 +169,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_OldUnion2_Foo (
     "IDL:OldUnion2/Foo:1.0",
     "Foo",
-    &OldUnion2::_tc_FooDisc,
+    std::addressof (OldUnion2::_tc_FooDisc),
     _tao_cases_OldUnion2_Foo,
     sizeof (_tao_cases_OldUnion2_Foo)/sizeof (_tao_cases_OldUnion2_Foo[0]),
     -1);
@@ -182,8 +183,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldUnion2_Bar[] =
       {
-        { "kind", &OldUnion2::Bar::_tc_BarDisc },
-        { "addr", &OldUnion2::Bar::_tc_Foo }
+        { "kind", std::addressof (OldUnion2::Bar::_tc_BarDisc) },
+        { "addr", std::addressof (OldUnion2::Bar::_tc_Foo) }
       };
 
 static TAO::TypeCode::Struct<
@@ -296,13 +297,13 @@ OldUnion2::Bar::Foo::operator= (::OldUnion2::Bar::Foo const &u)
 void OldUnion2::Bar::Foo::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<OldUnion2::Bar::BarDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Bar_Foo__0 (OldUnion2::Bar::BAR1, "x", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<OldUnion2::Bar::BarDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Bar_Foo__1 (OldUnion2::Bar::BAR2, "y", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<OldUnion2::Bar::BarDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Bar_Foo__0 (OldUnion2::Bar::BAR1, "x", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<OldUnion2::Bar::BarDisc, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion2_Bar_Foo__1 (OldUnion2::Bar::BAR2, "y", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_OldUnion2_Bar_Foo[] =
   {
-    &_tao_cases_OldUnion2_Bar_Foo__0,
-    &_tao_cases_OldUnion2_Bar_Foo__1
+    std::addressof (_tao_cases_OldUnion2_Bar_Foo__0),
+    std::addressof (_tao_cases_OldUnion2_Bar_Foo__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -312,7 +313,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_OldUnion2_Bar_Foo (
     "IDL:OldUnion2/Bar/Foo:1.0",
     "Foo",
-    &OldUnion2::Bar::_tc_BarDisc,
+    std::addressof (OldUnion2::Bar::_tc_BarDisc),
     _tao_cases_OldUnion2_Bar_Foo,
     sizeof (_tao_cases_OldUnion2_Bar_Foo)/sizeof (_tao_cases_OldUnion2_Bar_Foo[0]),
     -1);

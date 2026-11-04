@@ -23,6 +23,7 @@
  **/
 
 #include "keywordsC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -55,12 +56,12 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Keywords[] =
       {
-        { "or", &CORBA::_tc_ushort },
-        { "or_eq", &CORBA::_tc_char },
-        { "private", &CORBA::_tc_octet },
-        { "protected", &CORBA::_tc_boolean },
-        { "public", &CORBA::_tc_float },
-        { "int", &CORBA::_tc_double }
+        { "or", std::addressof (CORBA::_tc_ushort) },
+        { "or_eq", std::addressof (CORBA::_tc_char) },
+        { "private", std::addressof (CORBA::_tc_octet) },
+        { "protected", std::addressof (CORBA::_tc_boolean) },
+        { "public", std::addressof (CORBA::_tc_float) },
+        { "int", std::addressof (CORBA::_tc_double) }
       };
 
 static TAO::TypeCode::Struct<
@@ -91,7 +92,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Object[] =
       {
-        { "id", &CORBA::_tc_longlong }
+        { "id", std::addressof (CORBA::_tc_longlong) }
       };
 
 static TAO::TypeCode::Struct<
@@ -153,10 +154,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ObjectSeq_0 (
-        ::CORBA::tk_sequence, &_tc_Object, 0U);
+        ::CORBA::tk_sequence, std::addressof (_tc_Object), 0U);
 
     ::CORBA::TypeCode_ptr const tc_ObjectSeq_0 =
-      &ObjectSeq_0;
+      std::addressof (ObjectSeq_0);
   }
 }
 }
@@ -172,7 +173,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:ObjectSeq:1.0",
     "ObjectSeq",
-    &TAO::TypeCode::tc_ObjectSeq_0);
+    std::addressof (TAO::TypeCode::tc_ObjectSeq_0));
 
 ::CORBA::TypeCode_ptr const _tc_ObjectSeq = std::addressof(_tao_tc_ObjectSeq);
 
@@ -181,7 +182,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Objects[] =
       {
-        { "objs", &_tc_ObjectSeq }
+        { "objs", std::addressof (_tc_ObjectSeq) }
       };
 
 static TAO::TypeCode::Struct<
@@ -455,7 +456,7 @@ static TAO::TypeCode::Objref<char const *,
     "Testing");
 
 ::CORBA::TypeCode_ptr const _tc_Testing = std::addressof(_tao_tc_Testing);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_TestingExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_TestingExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -465,7 +466,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_TestingExceptionHolder:1.0",
     "AMH_TestingExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_TestingExceptionHolder,
     0);
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_DN02QS_CPP_
-#define _TAO_IDL_OLD_SEQUENCES_DN02QS_CPP_
+#ifndef _TAO_IDL_OLD_SEQUENCES_O12AAC_CPP_
+#define _TAO_IDL_OLD_SEQUENCES_O12AAC_CPP_
 
 #include "old_sequenceS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -178,9 +178,7 @@ POA_AMH_TestSeq::_get_fattr_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_TestSeqResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_TestSeqResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -224,9 +222,7 @@ POA_AMH_TestSeq::_set_fattr_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_TestSeqResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_TestSeqResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -264,7 +260,7 @@ TestSeq*
 POA_AMH_TestSeq::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -481,11 +477,11 @@ void POA_TestSeq::_get_fattr_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -547,11 +543,11 @@ void POA_TestSeq::_set_fattr_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -866,11 +862,11 @@ void POA_AMI_TestSeqHandler::get_fattr_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -932,11 +928,11 @@ void POA_AMI_TestSeqHandler::get_fattr_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -980,11 +976,11 @@ void POA_AMI_TestSeqHandler::set_fattr_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1046,11 +1042,11 @@ void POA_AMI_TestSeqHandler::set_fattr_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

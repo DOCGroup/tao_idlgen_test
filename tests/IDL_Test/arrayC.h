@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAYC_IFZC0M_H_
-#define _TAO_IDL_ARRAYC_IFZC0M_H_
+#ifndef _TAO_IDL_ARRAYC_7ID4KT_H_
+#define _TAO_IDL_ARRAYC_7ID4KT_H_
 
 #include /**/ "ace/pre.h"
 
@@ -2254,11 +2254,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
             ~OBV_AMH_array_argsExceptionHolder () override;
 
           protected:
-            ::CORBA::Boolean
-            _tao_marshal__AMH_array_argsExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+            ::CORBA::Boolean _tao_marshal__AMH_array_argsExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-            ::CORBA::Boolean
-            _tao_unmarshal__AMH_array_argsExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+            ::CORBA::Boolean _tao_unmarshal__AMH_array_argsExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
             ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
             ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2282,11 +2280,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
           ::CORBA::ValueBase *_copy_value () override;
 
         protected:
-          ::CORBA::Boolean
-          _tao_marshal__AMH_testdataExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+          ::CORBA::Boolean _tao_marshal__AMH_testdataExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-          ::CORBA::Boolean
-          _tao_unmarshal__AMH_testdataExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+          ::CORBA::Boolean _tao_unmarshal__AMH_testdataExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
           ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
           ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -2308,11 +2304,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
           ~AMH_MyTestExceptionHolder () override;
 
         protected:
-          ::CORBA::Boolean
-          _tao_marshal__arraytest_AMH_MyTestExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+          ::CORBA::Boolean _tao_marshal__arraytest_AMH_MyTestExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-          ::CORBA::Boolean
-          _tao_unmarshal__arraytest_AMH_MyTestExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+          ::CORBA::Boolean _tao_unmarshal__arraytest_AMH_MyTestExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
           ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
           ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

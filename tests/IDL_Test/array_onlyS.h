@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ONLYS_7JBNSC_H_
-#define _TAO_IDL_ARRAY_ONLYS_7JBNSC_H_
+#ifndef _TAO_IDL_ARRAY_ONLYS_558DR8_H_
+#define _TAO_IDL_ARRAY_ONLYS_558DR8_H_
 
 #include /**/ "ace/pre.h"
 

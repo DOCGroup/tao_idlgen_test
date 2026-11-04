@@ -23,6 +23,7 @@
  **/
 
 #include "constantsC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"

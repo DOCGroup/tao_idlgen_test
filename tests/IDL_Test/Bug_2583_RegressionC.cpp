@@ -23,6 +23,7 @@
  **/
 
 #include "Bug_2583_RegressionC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -178,8 +179,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_NameDynAnyPair[] =
       {
-        { "id", &CORBA::_tc_string },
-        { "value", &Test::_tc_DynAny }
+        { "id", std::addressof (CORBA::_tc_string) },
+        { "value", std::addressof (Test::_tc_DynAny) }
       };
 
 static TAO::TypeCode::Struct<
@@ -244,10 +245,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_NameDynAnyPairSeq_0 (
-        ::CORBA::tk_sequence, &Test::_tc_NameDynAnyPair, 0U);
+        ::CORBA::tk_sequence, std::addressof (Test::_tc_NameDynAnyPair), 0U);
 
     ::CORBA::TypeCode_ptr const tc_Test_NameDynAnyPairSeq_0 =
-      &Test_NameDynAnyPairSeq_0;
+      std::addressof (Test_NameDynAnyPairSeq_0);
   }
 }
 }
@@ -263,7 +264,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/NameDynAnyPairSeq:1.0",
     "NameDynAnyPairSeq",
-    &TAO::TypeCode::tc_Test_NameDynAnyPairSeq_0);
+    std::addressof (TAO::TypeCode::tc_Test_NameDynAnyPairSeq_0));
 
 namespace Test
 {

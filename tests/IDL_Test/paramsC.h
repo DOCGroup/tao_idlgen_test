@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSC_JB9HHD_H_
-#define _TAO_IDL_PARAMSC_JB9HHD_H_
+#ifndef _TAO_IDL_PARAMSC_ACKQ0M_H_
+#define _TAO_IDL_PARAMSC_ACKQ0M_H_
 
 #include /**/ "ace/pre.h"
 
@@ -508,11 +508,9 @@ namespace OBV_foo
     ~AMH_fooBarExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__foo_bar_AMH_fooBarExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__foo_bar_AMH_fooBarExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__foo_bar_AMH_fooBarExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__foo_bar_AMH_fooBarExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

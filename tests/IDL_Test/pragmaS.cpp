@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRAGMAS_LQCCJV_CPP_
-#define _TAO_IDL_PRAGMAS_LQCCJV_CPP_
+#ifndef _TAO_IDL_PRAGMAS_ACPG1J_CPP_
+#define _TAO_IDL_PRAGMAS_ACPG1J_CPP_
 
 #include "pragmaS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -158,7 +158,7 @@ hello*
 POA_AMH_hello::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -531,7 +531,7 @@ goodbye*
 POA_AMH_goodbye::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -904,7 +904,7 @@ salutation::sayonara*
 POA_salutation::AMH_sayonara::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1277,7 +1277,7 @@ ciao*
 POA_AMH_ciao::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1650,7 +1650,7 @@ aloha*
 POA_AMH_aloha::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

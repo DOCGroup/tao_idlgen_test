@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_STRING_VALUES_O1NIXP_H_
-#define _TAO_IDL_STRING_VALUES_O1NIXP_H_
+#ifndef _TAO_IDL_STRING_VALUES_N4DD85_H_
+#define _TAO_IDL_STRING_VALUES_N4DD85_H_
 
 #include /**/ "ace/pre.h"
 

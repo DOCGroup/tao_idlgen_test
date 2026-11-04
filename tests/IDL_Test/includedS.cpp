@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDEDS_TS7FUH_CPP_
-#define _TAO_IDL_INCLUDEDS_TS7FUH_CPP_
+#ifndef _TAO_IDL_INCLUDEDS_ZIMXO7_CPP_
+#define _TAO_IDL_INCLUDEDS_ZIMXO7_CPP_
 
 #include "includedS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -157,7 +157,7 @@ RootModule::SUBMODULE1::ParentIF*
 POA_RootModule::SUBMODULE1::AMH_ParentIF::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -528,7 +528,7 @@ AAA*
 POA_AMH_AAA::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

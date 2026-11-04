@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPECODEA_E4V76R_H_
-#define _TAO_IDL_TYPECODEA_E4V76R_H_
+#ifndef _TAO_IDL_TYPECODEA_T32A21_H_
+#define _TAO_IDL_TYPECODEA_T32A21_H_
 
 #include /**/ "ace/pre.h"
 

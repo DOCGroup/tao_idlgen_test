@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_9HNZLE_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_9HNZLE_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2C_MEJ4OU_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2C_MEJ4OU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1541,11 +1541,9 @@ protected:
   ~AMH_LIExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M1_AMH_LIExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M1_AMH_LIExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M1_AMH_LIExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M1_AMH_LIExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1565,11 +1563,9 @@ protected:
   ~AMH_L2ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M1_AMH_L2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M1_AMH_L2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M1_AMH_L2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M1_AMH_L2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1631,11 +1627,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M1_V (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M1_V (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M1_V (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M1_V (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1668,11 +1662,9 @@ namespace OBV_M2
     ~AMH_L3ExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__M2_M3_AMH_L3ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__M2_M3_AMH_L3ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__M2_M3_AMH_L3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__M2_M3_AMH_L3ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1692,11 +1684,9 @@ protected:
   ~AMH_L4ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M2_M3_AMH_L4ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M2_M3_AMH_L4ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M2_M3_AMH_L4ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M2_M3_AMH_L4ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1745,11 +1735,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M2_M3_V2 (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M2_M3_V2 (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M2_M3_V2 (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M2_M3_V2 (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1797,11 +1785,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__M2_M3_V3 (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__M2_M3_V3 (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__M2_M3_V3 (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__M2_M3_V3 (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

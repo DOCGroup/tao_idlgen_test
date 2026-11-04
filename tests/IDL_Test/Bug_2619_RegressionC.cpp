@@ -23,6 +23,7 @@
  **/
 
 #include "Bug_2619_RegressionC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -54,7 +55,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Type_T[] =
       {
-        { "id", &CORBA::_tc_string }
+        { "id", std::addressof (CORBA::_tc_string) }
       };
 
 static TAO::TypeCode::Struct<
@@ -82,7 +83,7 @@ Type_T::_tao_any_destructor (
 }
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_T_Data_T[] =
   {
-    { "type", &_tc_Type_T, ::CORBA::PUBLIC_MEMBER }
+    { "type", std::addressof (_tc_Type_T), ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -94,7 +95,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:T_Data_T:1.0",
     "T_Data_T",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_T_Data_T,
     1);
 
@@ -285,7 +286,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/Group:1.0",
     "Group",
-    &_tc_Type_T);
+    std::addressof (_tc_Type_T));
 
 ::CORBA::TypeCode_ptr const Test::_tc_Group = std::addressof(_tao_tc_Test_Group);
 ::Test::Group *
@@ -435,7 +436,7 @@ static TAO::TypeCode::Objref<char const *,
     "Test");
 
 ::CORBA::TypeCode_ptr const _tc_Test = std::addressof(_tao_tc_Test);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_TestExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_TestExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -445,7 +446,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_TestExceptionHolder:1.0",
     "AMH_TestExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_TestExceptionHolder,
     0);
 

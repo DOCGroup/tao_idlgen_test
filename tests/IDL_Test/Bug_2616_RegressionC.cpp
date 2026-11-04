@@ -23,6 +23,7 @@
  **/
 
 #include "Bug_2616_RegressionC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -53,7 +54,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_AA[] =
       {
-        { "x", &CORBA::_tc_long }
+        { "x", std::addressof (CORBA::_tc_long) }
       };
 
 static TAO::TypeCode::Struct<
@@ -84,7 +85,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_BB[] =
       {
-        { "data", &_tc_AA }
+        { "data", std::addressof (_tc_AA) }
       };
 
 static TAO::TypeCode::Struct<
@@ -148,7 +149,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Interface1/Type:1.0",
     "Type",
-    &_tc_BB);
+    std::addressof (_tc_BB));
 
 ::CORBA::TypeCode_ptr const Interface1::_tc_Type = std::addressof(_tao_tc_Interface1_Type);
 void
@@ -304,7 +305,7 @@ static TAO::TypeCode::Objref<char const *,
     "Interface1");
 
 ::CORBA::TypeCode_ptr const _tc_Interface1 = std::addressof(_tao_tc_Interface1);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Interface1ExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Interface1ExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -314,7 +315,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_Interface1ExceptionHolder:1.0",
     "AMH_Interface1ExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_Interface1ExceptionHolder,
     0);
 
@@ -866,7 +867,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Interface2/Type:1.0",
     "Type",
-    &_tc_AA);
+    std::addressof (_tc_AA));
 
 ::CORBA::TypeCode_ptr const Interface2::_tc_Type = std::addressof(_tao_tc_Interface2_Type);
 void
@@ -1022,7 +1023,7 @@ static TAO::TypeCode::Objref<char const *,
     "Interface2");
 
 ::CORBA::TypeCode_ptr const _tc_Interface2 = std::addressof(_tao_tc_Interface2);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Interface2ExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Interface2ExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1032,7 +1033,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_Interface2ExceptionHolder:1.0",
     "AMH_Interface2ExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_Interface2ExceptionHolder,
     0);
 

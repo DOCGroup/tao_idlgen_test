@@ -23,6 +23,7 @@
  **/
 
 #include "TestC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -130,7 +131,7 @@ void Test::InvalidTimestamp::_tao_decode (TAO_InputCDR &cdr)
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_Test_InvalidTimestamp = nullptr;
+    _tao_fields_Test_InvalidTimestamp {};
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -233,7 +234,7 @@ void Test::ServerOverload::_tao_decode (TAO_InputCDR &cdr)
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_Test_ServerOverload = nullptr;
+    _tao_fields_Test_ServerOverload {};
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -260,13 +261,13 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/Timestamp:1.0",
     "Timestamp",
-    &CORBA::_tc_ulonglong);
+    std::addressof (CORBA::_tc_ulonglong));
 
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_Timestamp = std::addressof(_tao_tc_Test_Timestamp);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Test_Red_Herring = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Test_Red_Herring {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -276,7 +277,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Test/Red_Herring:1.0",
     "Red_Herring",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_Test_Red_Herring,
     0);
 
@@ -598,7 +599,7 @@ namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_Roundtrip = std::addressof(_tao_tc_Test_Roundtrip);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Test_AMH_RoundtripExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Test_AMH_RoundtripExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -608,7 +609,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Test/AMH_RoundtripExceptionHolder:1.0",
     "AMH_RoundtripExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_Test_AMH_RoundtripExceptionHolder,
     0);
 

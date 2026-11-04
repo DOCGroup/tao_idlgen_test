@@ -23,6 +23,7 @@
  **/
 
 #include "Bug_2350_RegressionC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -132,7 +133,7 @@ void something::_tao_decode (TAO_InputCDR &cdr)
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_something = nullptr;
+    _tao_fields_something {};
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -154,7 +155,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_user_ExceptionHolder[] =
       {
-        { "a", &CORBA::_tc_long }
+        { "a", std::addressof (CORBA::_tc_long) }
       };
 
 static TAO::TypeCode::Struct<
@@ -379,7 +380,7 @@ static TAO::TypeCode::Objref<char const *,
     "Bug_2350_Regression");
 
 ::CORBA::TypeCode_ptr const _tc_Bug_2350_Regression = std::addressof(_tao_tc_Bug_2350_Regression);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Bug_2350_RegressionExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Bug_2350_RegressionExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -389,7 +390,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_Bug_2350_RegressionExceptionHolder:1.0",
     "AMH_Bug_2350_RegressionExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_Bug_2350_RegressionExceptionHolder,
     0);
 

@@ -23,6 +23,7 @@
  **/
 
 #include "fwdC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -62,7 +63,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_scope_test_same_scope_struct[] =
       {
-        { "same_scope_member", &scope_test::_tc_i_scope_test }
+        { "same_scope_member", std::addressof (scope_test::_tc_i_scope_test) }
       };
 
 static TAO::TypeCode::Struct<
@@ -101,7 +102,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_mod2_scope_struct[] =
       {
-        { "ss_member", &scope_test::_tc_i_scope_test }
+        { "ss_member", std::addressof (scope_test::_tc_i_scope_test) }
       };
 
 static TAO::TypeCode::Struct<
@@ -232,7 +233,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_mod2_exp[] =
       {
-        { "fwd_mem", &mod2::_tc_fwd }
+        { "fwd_mem", std::addressof (mod2::_tc_fwd) }
       };
 
 static TAO::TypeCode::Struct<
@@ -265,7 +266,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:mod2/td_fwd:1.0",
     "td_fwd",
-    &mod2::_tc_fwd);
+    std::addressof (mod2::_tc_fwd));
 
 namespace mod2
 {
@@ -469,7 +470,7 @@ namespace mod2
 {
   ::CORBA::TypeCode_ptr const _tc_full = std::addressof(_tao_tc_mod2_full);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_mod2_AMH_fullExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_mod2_AMH_fullExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -479,7 +480,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:mod2/AMH_fullExceptionHolder:1.0",
     "AMH_fullExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_mod2_AMH_fullExceptionHolder,
     0);
 
@@ -1060,10 +1061,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> mod2_full_seq2_5 (
-        ::CORBA::tk_sequence, &mod2::_tc_full, 5U);
+        ::CORBA::tk_sequence, std::addressof (mod2::_tc_full), 5U);
 
     ::CORBA::TypeCode_ptr const tc_mod2_full_seq2_5 =
-      &mod2_full_seq2_5;
+      std::addressof (mod2_full_seq2_5);
   }
 }
 }
@@ -1079,7 +1080,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:mod2/full_seq2:1.0",
     "full_seq2",
-    &TAO::TypeCode::tc_mod2_full_seq2_5);
+    std::addressof (TAO::TypeCode::tc_mod2_full_seq2_5));
 
 namespace mod2
 {
@@ -1207,7 +1208,7 @@ namespace fwd_mixed_intf
 {
   ::CORBA::TypeCode_ptr const _tc_concrete_parent = std::addressof(_tao_tc_fwd_mixed_intf_concrete_parent);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_fwd_mixed_intf_AMH_concrete_parentExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_fwd_mixed_intf_AMH_concrete_parentExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1217,7 +1218,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:fwd_mixed_intf/AMH_concrete_parentExceptionHolder:1.0",
     "AMH_concrete_parentExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_fwd_mixed_intf_AMH_concrete_parentExceptionHolder,
     0);
 
@@ -2297,7 +2298,7 @@ namespace fwd_mixed_intf
 }
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_obv_fwd_EnclosingType[] =
   {
-    { "forwarded", &obv_fwd::_tc_ForwardedType, ::CORBA::PUBLIC_MEMBER }
+    { "forwarded", std::addressof (obv_fwd::_tc_ForwardedType), ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -2309,7 +2310,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:obv_fwd/EnclosingType:1.0",
     "EnclosingType",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_obv_fwd_EnclosingType,
     1);
 
@@ -2467,7 +2468,7 @@ obv_fwd::EnclosingType_init::create_for_unmarshal ()
 }
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_obv_fwd_ForwardedType[] =
   {
-    { "number", &CORBA::_tc_long, ::CORBA::PUBLIC_MEMBER }
+    { "number", std::addressof (CORBA::_tc_long), ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -2479,7 +2480,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:obv_fwd/ForwardedType:1.0",
     "ForwardedType",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_obv_fwd_ForwardedType,
     1);
 

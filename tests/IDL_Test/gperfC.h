@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFC_A0JBD3_H_
-#define _TAO_IDL_GPERFC_A0JBD3_H_
+#ifndef _TAO_IDL_GPERFC_PLG91O_H_
+#define _TAO_IDL_GPERFC_PLG91O_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1748,11 +1748,9 @@ protected:
   ~OBV_AMH_testlistitemExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_testlistitemExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_testlistitemExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_testlistitemExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_testlistitemExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1772,11 +1770,9 @@ protected:
   ~OBV_AMH_testExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_testExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_testExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1796,11 +1792,9 @@ protected:
   ~OBV_AMH_Simple_ServerExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_Simple_ServerExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_Simple_ServerExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_Simple_ServerExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_Simple_ServerExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

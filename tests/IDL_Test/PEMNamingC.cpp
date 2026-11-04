@@ -23,6 +23,7 @@
  **/
 
 #include "PEMNamingC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -60,7 +61,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Plesk/TObjectID:1.0",
     "TObjectID",
-    &CORBA::_tc_long);
+    std::addressof (CORBA::_tc_long));
 
 namespace Plesk
 {
@@ -91,8 +92,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Plesk_TProperty[] =
       {
-        { "name", &CORBA::_tc_string },
-        { "value", &CORBA::_tc_string }
+        { "name", std::addressof (CORBA::_tc_string) },
+        { "value", std::addressof (CORBA::_tc_string) }
       };
 
 static TAO::TypeCode::Struct<
@@ -157,10 +158,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Plesk_TPropertyList_0 (
-        ::CORBA::tk_sequence, &Plesk::_tc_TProperty, 0U);
+        ::CORBA::tk_sequence, std::addressof (Plesk::_tc_TProperty), 0U);
 
     ::CORBA::TypeCode_ptr const tc_Plesk_TPropertyList_0 =
-      &Plesk_TPropertyList_0;
+      std::addressof (Plesk_TPropertyList_0);
   }
 }
 }
@@ -176,7 +177,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Plesk/TPropertyList:1.0",
     "TPropertyList",
-    &TAO::TypeCode::tc_Plesk_TPropertyList_0);
+    std::addressof (TAO::TypeCode::tc_Plesk_TPropertyList_0));
 
 namespace Plesk
 {
@@ -304,13 +305,13 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Plesk_ExSystem[] =
       {
-        { "module_id", &CORBA::_tc_string },
-        { "extype_id", &CORBA::_tc_long },
-        { "errcode", &CORBA::_tc_long },
-        { "errcode_minor", &CORBA::_tc_long },
-        { "errmsg", &CORBA::_tc_string },
-        { "props", &Plesk::_tc_TPropertyList },
-        { "transient", &Plesk::_tc_TBool }
+        { "module_id", std::addressof (CORBA::_tc_string) },
+        { "extype_id", std::addressof (CORBA::_tc_long) },
+        { "errcode", std::addressof (CORBA::_tc_long) },
+        { "errcode_minor", std::addressof (CORBA::_tc_long) },
+        { "errmsg", std::addressof (CORBA::_tc_string) },
+        { "props", std::addressof (Plesk::_tc_TPropertyList) },
+        { "transient", std::addressof (Plesk::_tc_TBool) }
       };
 
 static TAO::TypeCode::Struct<
@@ -336,7 +337,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Plesk_Naming_NamingContext[] =
       {
-        { "kernel_resolver_ior", &CORBA::_tc_string }
+        { "kernel_resolver_ior", std::addressof (CORBA::_tc_string) }
       };
 
 static TAO::TypeCode::Struct<
@@ -676,7 +677,7 @@ namespace Plesk
     ::CORBA::TypeCode_ptr const _tc_ObjectResolver = std::addressof(_tao_tc_Plesk_Naming_ObjectResolver);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Plesk_Naming_AMH_ObjectResolverExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Plesk_Naming_AMH_ObjectResolverExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -686,7 +687,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Plesk/Naming/AMH_ObjectResolverExceptionHolder:1.0",
     "AMH_ObjectResolverExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_Plesk_Naming_AMH_ObjectResolverExceptionHolder,
     0);
 

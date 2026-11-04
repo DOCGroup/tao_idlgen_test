@@ -23,6 +23,7 @@
  **/
 
 #include "attributeC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -132,7 +133,7 @@ void Hello::InternalErrorA::_tao_decode (TAO_InputCDR &cdr)
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_Hello_InternalErrorA = nullptr;
+    _tao_fields_Hello_InternalErrorA {};
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -235,7 +236,7 @@ void Hello::InternalErrorB::_tao_decode (TAO_InputCDR &cdr)
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_Hello_InternalErrorB = nullptr;
+    _tao_fields_Hello_InternalErrorB {};
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -262,7 +263,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Hello/MyType:1.0",
     "MyType",
-    &CORBA::_tc_short);
+    std::addressof (CORBA::_tc_short));
 
 namespace Hello
 {
@@ -1057,7 +1058,7 @@ namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_MyFoo = std::addressof(_tao_tc_Hello_MyFoo);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Hello_AMH_MyFooExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Hello_AMH_MyFooExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1067,7 +1068,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Hello/AMH_MyFooExceptionHolder:1.0",
     "AMH_MyFooExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_Hello_AMH_MyFooExceptionHolder,
     0);
 

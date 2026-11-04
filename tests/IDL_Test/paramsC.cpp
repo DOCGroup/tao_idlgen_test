@@ -23,6 +23,7 @@
  **/
 
 #include "paramsC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -53,9 +54,9 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_foo_theDate[] =
       {
-        { "year", &CORBA::_tc_short },
-        { "month", &CORBA::_tc_short },
-        { "day", &CORBA::_tc_short }
+        { "year", std::addressof (CORBA::_tc_short) },
+        { "month", std::addressof (CORBA::_tc_short) },
+        { "day", std::addressof (CORBA::_tc_short) }
       };
 
 static TAO::TypeCode::Struct<
@@ -89,7 +90,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_foo_bar_theDate[] =
       {
-        { "x", &CORBA::_tc_short }
+        { "x", std::addressof (CORBA::_tc_short) }
       };
 
 static TAO::TypeCode::Struct<
@@ -324,7 +325,7 @@ namespace foo
     ::CORBA::TypeCode_ptr const _tc_fooBar = std::addressof(_tao_tc_foo_bar_fooBar);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_foo_bar_AMH_fooBarExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_foo_bar_AMH_fooBarExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -334,7 +335,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:foo/bar/AMH_fooBarExceptionHolder:1.0",
     "AMH_fooBarExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_foo_bar_AMH_fooBarExceptionHolder,
     0);
 

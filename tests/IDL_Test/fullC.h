@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLC_8E6ZVH_H_
-#define _TAO_IDL_FULLC_8E6ZVH_H_
+#ifndef _TAO_IDL_FULLC_OLKDL1_H_
+#define _TAO_IDL_FULLC_OLKDL1_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1020,11 +1020,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1047,11 +1045,9 @@ protected:
   ~AMH_fwdExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__mod2_AMH_fwdExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__mod2_AMH_fwdExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__mod2_AMH_fwdExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__mod2_AMH_fwdExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

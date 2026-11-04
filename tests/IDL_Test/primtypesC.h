@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESC_IFW2QD_H_
-#define _TAO_IDL_PRIMTYPESC_IFW2QD_H_
+#ifndef _TAO_IDL_PRIMTYPESC_RPVFV5_H_
+#define _TAO_IDL_PRIMTYPESC_RPVFV5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -987,11 +987,9 @@ protected:
   ~AMH_ex1ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldPrimTypes_AMH_ex1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldPrimTypes_AMH_ex1ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldPrimTypes_AMH_ex1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldPrimTypes_AMH_ex1ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1011,11 +1009,9 @@ protected:
   ~AMH_ex2ExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldPrimTypes_AMH_ex2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldPrimTypes_AMH_ex2ExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldPrimTypes_AMH_ex2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldPrimTypes_AMH_ex2ExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

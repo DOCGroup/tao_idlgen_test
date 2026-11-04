@@ -23,6 +23,7 @@
  **/
 
 #include "gperfC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -243,7 +244,7 @@ static TAO::TypeCode::Objref<char const *,
     "testlistitem");
 
 ::CORBA::TypeCode_ptr const _tc_testlistitem = std::addressof(_tao_tc_testlistitem);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_testlistitemExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_testlistitemExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -253,7 +254,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_testlistitemExceptionHolder:1.0",
     "AMH_testlistitemExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_testlistitemExceptionHolder,
     0);
 
@@ -1815,7 +1816,7 @@ static TAO::TypeCode::Objref<char const *,
     "test");
 
 ::CORBA::TypeCode_ptr const _tc_test = std::addressof(_tao_tc_test);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_testExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_testExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1825,7 +1826,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_testExceptionHolder:1.0",
     "AMH_testExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_testExceptionHolder,
     0);
 
@@ -4851,7 +4852,7 @@ static TAO::TypeCode::Objref<char const *,
     "Simple_Server");
 
 ::CORBA::TypeCode_ptr const _tc_Simple_Server = std::addressof(_tao_tc_Simple_Server);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Simple_ServerExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Simple_ServerExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -4861,7 +4862,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_Simple_ServerExceptionHolder:1.0",
     "AMH_Simple_ServerExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_Simple_ServerExceptionHolder,
     0);
 

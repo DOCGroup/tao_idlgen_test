@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_KZ6Q03_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_KZ6Q03_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_ZO3MIG_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_ZO3MIG_H_
 
 #include /**/ "ace/pre.h"
 

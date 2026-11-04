@@ -23,6 +23,7 @@
  **/
 
 #include "dif2C.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"

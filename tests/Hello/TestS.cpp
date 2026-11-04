@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_NSZ6VR_CPP_
-#define _TAO_IDL_TESTS_NSZ6VR_CPP_
+#ifndef _TAO_IDL_TESTS_B1X943_CPP_
+#define _TAO_IDL_TESTS_B1X943_CPP_
 
 #include "TestS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -181,11 +181,11 @@ void POA_Test::Hello::get_string_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -233,11 +233,11 @@ void POA_Test::Hello::shutdown_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

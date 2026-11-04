@@ -23,6 +23,7 @@
  **/
 
 #include "Bug_3821_RegressionC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -148,15 +149,15 @@ test::UnionAllCovered_EnumerationDiscriminant::operator= (::test::UnionAllCovere
 void test::UnionAllCovered_EnumerationDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_EnumerationDiscriminant__2 (test::Enum3, "e_enum3", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_EnumerationDiscriminant__2 (test::Enum3, "e_enum3", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionAllCovered_EnumerationDiscriminant[] =
   {
-    &_tao_cases_test_UnionAllCovered_EnumerationDiscriminant__0,
-    &_tao_cases_test_UnionAllCovered_EnumerationDiscriminant__1,
-    &_tao_cases_test_UnionAllCovered_EnumerationDiscriminant__2
+    std::addressof (_tao_cases_test_UnionAllCovered_EnumerationDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionAllCovered_EnumerationDiscriminant__1),
+    std::addressof (_tao_cases_test_UnionAllCovered_EnumerationDiscriminant__2)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -166,7 +167,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionAllCovered_EnumerationDiscriminant (
     "IDL:test/UnionAllCovered_EnumerationDiscriminant:1.0",
     "UnionAllCovered_EnumerationDiscriminant",
-    &test::_tc_Enumeration,
+    std::addressof (test::_tc_Enumeration),
     _tao_cases_test_UnionAllCovered_EnumerationDiscriminant,
     sizeof (_tao_cases_test_UnionAllCovered_EnumerationDiscriminant)/sizeof (_tao_cases_test_UnionAllCovered_EnumerationDiscriminant[0]),
     -1);
@@ -254,15 +255,15 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::operator= (::test::Uni
 void test::UnionAllCoveredWithDefault_EnumerationDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__2 ((test::Enumeration) -1, "e_def", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__2 ((test::Enumeration) -1, "e_def", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant[] =
   {
-    &_tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__0,
-    &_tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__1,
-    &_tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__2
+    std::addressof (_tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__1),
+    std::addressof (_tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant__2)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -272,7 +273,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionAllCoveredWithDefault_EnumerationDiscriminant (
     "IDL:test/UnionAllCoveredWithDefault_EnumerationDiscriminant:1.0",
     "UnionAllCoveredWithDefault_EnumerationDiscriminant",
-    &test::_tc_Enumeration,
+    std::addressof (test::_tc_Enumeration),
     _tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant,
     sizeof (_tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant)/sizeof (_tao_cases_test_UnionAllCoveredWithDefault_EnumerationDiscriminant[0]),
     2);
@@ -360,15 +361,15 @@ test::UnionWithDefault_EnumerationDiscriminant::operator= (::test::UnionWithDefa
 void test::UnionWithDefault_EnumerationDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_EnumerationDiscriminant__2 (test::Enum3, "e_def", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_EnumerationDiscriminant__2 (test::Enum3, "e_def", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionWithDefault_EnumerationDiscriminant[] =
   {
-    &_tao_cases_test_UnionWithDefault_EnumerationDiscriminant__0,
-    &_tao_cases_test_UnionWithDefault_EnumerationDiscriminant__1,
-    &_tao_cases_test_UnionWithDefault_EnumerationDiscriminant__2
+    std::addressof (_tao_cases_test_UnionWithDefault_EnumerationDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionWithDefault_EnumerationDiscriminant__1),
+    std::addressof (_tao_cases_test_UnionWithDefault_EnumerationDiscriminant__2)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -378,7 +379,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionWithDefault_EnumerationDiscriminant (
     "IDL:test/UnionWithDefault_EnumerationDiscriminant:1.0",
     "UnionWithDefault_EnumerationDiscriminant",
-    &test::_tc_Enumeration,
+    std::addressof (test::_tc_Enumeration),
     _tao_cases_test_UnionWithDefault_EnumerationDiscriminant,
     sizeof (_tao_cases_test_UnionWithDefault_EnumerationDiscriminant)/sizeof (_tao_cases_test_UnionWithDefault_EnumerationDiscriminant[0]),
     2);
@@ -455,13 +456,13 @@ test::UnionWithImplicitDefault_EnumerationDiscriminant::operator= (::test::Union
 void test::UnionWithImplicitDefault_EnumerationDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant__0 (test::Enum1, "e_enum1", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant__1 (test::Enum2, "e_enum2", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant[] =
   {
-    &_tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant__0,
-    &_tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant__1
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -471,7 +472,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionWithImplicitDefault_EnumerationDiscriminant (
     "IDL:test/UnionWithImplicitDefault_EnumerationDiscriminant:1.0",
     "UnionWithImplicitDefault_EnumerationDiscriminant",
-    &test::_tc_Enumeration,
+    std::addressof (test::_tc_Enumeration),
     _tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant,
     sizeof (_tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant)/sizeof (_tao_cases_test_UnionWithImplicitDefault_EnumerationDiscriminant[0]),
     -1);
@@ -487,7 +488,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:test/TypedefedEnumeration:1.0",
     "TypedefedEnumeration",
-    &test::_tc_Enumeration);
+    std::addressof (test::_tc_Enumeration));
 
 namespace test
 {
@@ -571,15 +572,15 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::operator= (::test::Union
 void test::UnionAllCovered_TypedefedEnumerationDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__2 (test::Enum3, "e_enum3", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__2 (test::Enum3, "e_enum3", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant[] =
   {
-    &_tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__0,
-    &_tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__1,
-    &_tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__2
+    std::addressof (_tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__1),
+    std::addressof (_tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant__2)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -589,7 +590,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionAllCovered_TypedefedEnumerationDiscriminant (
     "IDL:test/UnionAllCovered_TypedefedEnumerationDiscriminant:1.0",
     "UnionAllCovered_TypedefedEnumerationDiscriminant",
-    &test::_tc_Enumeration,
+    std::addressof (test::_tc_Enumeration),
     _tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant,
     sizeof (_tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant)/sizeof (_tao_cases_test_UnionAllCovered_TypedefedEnumerationDiscriminant[0]),
     -1);
@@ -677,15 +678,15 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::operator= (::
 void test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__2 ((test::Enumeration) -1, "e_def", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__2 ((test::Enumeration) -1, "e_def", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant[] =
   {
-    &_tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__0,
-    &_tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__1,
-    &_tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__2
+    std::addressof (_tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__1),
+    std::addressof (_tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant__2)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -695,7 +696,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant (
     "IDL:test/UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant:1.0",
     "UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant",
-    &test::_tc_Enumeration,
+    std::addressof (test::_tc_Enumeration),
     _tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant,
     sizeof (_tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant)/sizeof (_tao_cases_test_UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant[0]),
     2);
@@ -783,15 +784,15 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::operator= (::test::Unio
 void test::UnionWithDefault_TypedefedEnumerationDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__2 (test::Enum3, "e_def", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__2 (test::Enum3, "e_def", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant[] =
   {
-    &_tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__0,
-    &_tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__1,
-    &_tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__2
+    std::addressof (_tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__1),
+    std::addressof (_tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant__2)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -801,7 +802,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionWithDefault_TypedefedEnumerationDiscriminant (
     "IDL:test/UnionWithDefault_TypedefedEnumerationDiscriminant:1.0",
     "UnionWithDefault_TypedefedEnumerationDiscriminant",
-    &test::_tc_Enumeration,
+    std::addressof (test::_tc_Enumeration),
     _tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant,
     sizeof (_tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant)/sizeof (_tao_cases_test_UnionWithDefault_TypedefedEnumerationDiscriminant[0]),
     2);
@@ -878,13 +879,13 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::operator= (::te
 void test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant__0 (test::Enum1, "e_enum1", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<test::Enumeration, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant__1 (test::Enum2, "e_enum2", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant[] =
   {
-    &_tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant__0,
-    &_tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant__1
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -894,7 +895,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant (
     "IDL:test/UnionWithImplicitDefault_TypedefedEnumerationDiscriminant:1.0",
     "UnionWithImplicitDefault_TypedefedEnumerationDiscriminant",
-    &test::_tc_Enumeration,
+    std::addressof (test::_tc_Enumeration),
     _tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant,
     sizeof (_tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant)/sizeof (_tao_cases_test_UnionWithImplicitDefault_TypedefedEnumerationDiscriminant[0]),
     -1);
@@ -972,13 +973,13 @@ test::UnionAllCovered_BooleanDiscriminant::operator= (::test::UnionAllCovered_Bo
 void test::UnionAllCovered_BooleanDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_BooleanDiscriminant__0 (true, "e_true", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_BooleanDiscriminant__1 (false, "e_false", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_BooleanDiscriminant__0 (true, "e_true", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_BooleanDiscriminant__1 (false, "e_false", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionAllCovered_BooleanDiscriminant[] =
   {
-    &_tao_cases_test_UnionAllCovered_BooleanDiscriminant__0,
-    &_tao_cases_test_UnionAllCovered_BooleanDiscriminant__1
+    std::addressof (_tao_cases_test_UnionAllCovered_BooleanDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionAllCovered_BooleanDiscriminant__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -988,7 +989,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionAllCovered_BooleanDiscriminant (
     "IDL:test/UnionAllCovered_BooleanDiscriminant:1.0",
     "UnionAllCovered_BooleanDiscriminant",
-    &CORBA::_tc_boolean,
+    std::addressof (CORBA::_tc_boolean),
     _tao_cases_test_UnionAllCovered_BooleanDiscriminant,
     sizeof (_tao_cases_test_UnionAllCovered_BooleanDiscriminant)/sizeof (_tao_cases_test_UnionAllCovered_BooleanDiscriminant[0]),
     -1);
@@ -1066,13 +1067,13 @@ test::UnionWithDefault_BooleanDiscriminant::operator= (::test::UnionWithDefault_
 void test::UnionWithDefault_BooleanDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_BooleanDiscriminant__0 (true, "e_true", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_BooleanDiscriminant__1 (false, "e_def", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_BooleanDiscriminant__0 (true, "e_true", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_BooleanDiscriminant__1 (false, "e_def", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionWithDefault_BooleanDiscriminant[] =
   {
-    &_tao_cases_test_UnionWithDefault_BooleanDiscriminant__0,
-    &_tao_cases_test_UnionWithDefault_BooleanDiscriminant__1
+    std::addressof (_tao_cases_test_UnionWithDefault_BooleanDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionWithDefault_BooleanDiscriminant__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -1082,7 +1083,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionWithDefault_BooleanDiscriminant (
     "IDL:test/UnionWithDefault_BooleanDiscriminant:1.0",
     "UnionWithDefault_BooleanDiscriminant",
-    &CORBA::_tc_boolean,
+    std::addressof (CORBA::_tc_boolean),
     _tao_cases_test_UnionWithDefault_BooleanDiscriminant,
     sizeof (_tao_cases_test_UnionWithDefault_BooleanDiscriminant)/sizeof (_tao_cases_test_UnionWithDefault_BooleanDiscriminant[0]),
     1);
@@ -1149,11 +1150,11 @@ test::UnionWithImplicitDefault_BooleanDiscriminant::operator= (::test::UnionWith
 void test::UnionWithImplicitDefault_BooleanDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant__0 (true, "e_true", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant__0 (true, "e_true", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant[] =
   {
-    &_tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant__0
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant__0)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -1163,7 +1164,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionWithImplicitDefault_BooleanDiscriminant (
     "IDL:test/UnionWithImplicitDefault_BooleanDiscriminant:1.0",
     "UnionWithImplicitDefault_BooleanDiscriminant",
-    &CORBA::_tc_boolean,
+    std::addressof (CORBA::_tc_boolean),
     _tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant,
     sizeof (_tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant)/sizeof (_tao_cases_test_UnionWithImplicitDefault_BooleanDiscriminant[0]),
     -1);
@@ -1231,521 +1232,521 @@ test::UnionAllCovered_CharDiscriminant::operator= (::test::UnionAllCovered_CharD
 void test::UnionAllCovered_CharDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__0 ('\x0', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__1 ('\x1', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__2 ('\x2', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__3 ('\x3', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__4 ('\x4', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__5 ('\x5', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__6 ('\x6', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__7 ('\a', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__8 ('\b', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__9 ('\t', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__10 ('\n', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__11 ('\v', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__12 ('\f', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__13 ('\r', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__14 ('\xe', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__15 ('\xf', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__16 ('\x10', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__17 ('\x11', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__18 ('\x12', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__19 ('\x13', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__20 ('\x14', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__21 ('\x15', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__22 ('\x16', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__23 ('\x17', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__24 ('\x18', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__25 ('\x19', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__26 ('\x1a', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__27 ('\x1b', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__28 ('\x1c', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__29 ('\x1d', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__30 ('\x1e', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__31 ('\x1f', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__32 (' ', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__33 ('!', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__34 ('"', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__35 ('#', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__36 ('$', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__37 ('%', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__38 ('&', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__39 ('\'', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__40 ('(', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__41 (')', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__42 ('*', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__43 ('+', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__44 (',', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__45 ('-', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__46 ('.', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__47 ('/', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__48 ('0', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__49 ('1', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__50 ('2', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__51 ('3', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__52 ('4', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__53 ('5', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__54 ('6', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__55 ('7', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__56 ('8', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__57 ('9', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__58 (':', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__59 (';', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__60 ('<', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__61 ('=', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__62 ('>', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__63 ('?', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__64 ('@', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__65 ('A', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__66 ('B', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__67 ('C', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__68 ('D', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__69 ('E', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__70 ('F', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__71 ('G', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__72 ('H', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__73 ('I', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__74 ('J', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__75 ('K', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__76 ('L', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__77 ('M', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__78 ('N', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__79 ('O', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__80 ('P', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__81 ('Q', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__82 ('R', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__83 ('S', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__84 ('T', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__85 ('U', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__86 ('V', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__87 ('W', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__88 ('X', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__89 ('Y', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__90 ('Z', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__91 ('[', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__92 ('\\', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__93 (']', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__94 ('^', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__95 ('_', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__96 ('`', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__97 ('a', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__98 ('b', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__99 ('c', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__100 ('d', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__101 ('e', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__102 ('f', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__103 ('g', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__104 ('h', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__105 ('i', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__106 ('j', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__107 ('k', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__108 ('l', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__109 ('m', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__110 ('n', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__111 ('o', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__112 ('p', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__113 ('q', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__114 ('r', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__115 ('s', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__116 ('t', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__117 ('u', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__118 ('v', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__119 ('w', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__120 ('x', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__121 ('y', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__122 ('z', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__123 ('{', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__124 ('|', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__125 ('}', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__126 ('~', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__127 ('\x7f', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__128 ('\x80', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__129 ('\x81', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__130 ('\x82', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__131 ('\x83', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__132 ('\x84', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__133 ('\x85', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__134 ('\x86', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__135 ('\x87', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__136 ('\x88', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__137 ('\x89', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__138 ('\x8a', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__139 ('\x8b', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__140 ('\x8c', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__141 ('\x8d', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__142 ('\x8e', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__143 ('\x8f', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__144 ('\x90', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__145 ('\x91', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__146 ('\x92', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__147 ('\x93', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__148 ('\x94', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__149 ('\x95', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__150 ('\x96', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__151 ('\x97', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__152 ('\x98', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__153 ('\x99', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__154 ('\x9a', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__155 ('\x9b', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__156 ('\x9c', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__157 ('\x9d', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__158 ('\x9e', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__159 ('\x9f', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__160 ('\xa0', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__161 ('\xa1', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__162 ('\xa2', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__163 ('\xa3', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__164 ('\xa4', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__165 ('\xa5', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__166 ('\xa6', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__167 ('\xa7', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__168 ('\xa8', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__169 ('\xa9', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__170 ('\xaa', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__171 ('\xab', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__172 ('\xac', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__173 ('\xad', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__174 ('\xae', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__175 ('\xaf', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__176 ('\xb0', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__177 ('\xb1', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__178 ('\xb2', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__179 ('\xb3', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__180 ('\xb4', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__181 ('\xb5', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__182 ('\xb6', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__183 ('\xb7', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__184 ('\xb8', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__185 ('\xb9', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__186 ('\xba', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__187 ('\xbb', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__188 ('\xbc', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__189 ('\xbd', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__190 ('\xbe', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__191 ('\xbf', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__192 ('\xc0', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__193 ('\xc1', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__194 ('\xc2', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__195 ('\xc3', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__196 ('\xc4', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__197 ('\xc5', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__198 ('\xc6', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__199 ('\xc7', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__200 ('\xc8', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__201 ('\xc9', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__202 ('\xca', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__203 ('\xcb', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__204 ('\xcc', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__205 ('\xcd', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__206 ('\xce', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__207 ('\xcf', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__208 ('\xd0', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__209 ('\xd1', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__210 ('\xd2', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__211 ('\xd3', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__212 ('\xd4', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__213 ('\xd5', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__214 ('\xd6', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__215 ('\xd7', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__216 ('\xd8', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__217 ('\xd9', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__218 ('\xda', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__219 ('\xdb', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__220 ('\xdc', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__221 ('\xdd', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__222 ('\xde', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__223 ('\xdf', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__224 ('\xe0', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__225 ('\xe1', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__226 ('\xe2', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__227 ('\xe3', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__228 ('\xe4', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__229 ('\xe5', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__230 ('\xe6', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__231 ('\xe7', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__232 ('\xe8', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__233 ('\xe9', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__234 ('\xea', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__235 ('\xeb', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__236 ('\xec', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__237 ('\xed', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__238 ('\xee', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__239 ('\xef', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__240 ('\xf0', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__241 ('\xf1', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__242 ('\xf2', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__243 ('\xf3', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__244 ('\xf4', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__245 ('\xf5', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__246 ('\xf6', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__247 ('\xf7', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__248 ('\xf8', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__249 ('\xf9', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__250 ('\xfa', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__251 ('\xfb', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__252 ('\xfc', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__253 ('\xfd', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__254 ('\xfe', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__255 ('\xff', "e_chars", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__0 ('\x0', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__1 ('\x1', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__2 ('\x2', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__3 ('\x3', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__4 ('\x4', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__5 ('\x5', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__6 ('\x6', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__7 ('\a', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__8 ('\b', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__9 ('\t', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__10 ('\n', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__11 ('\v', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__12 ('\f', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__13 ('\r', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__14 ('\xe', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__15 ('\xf', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__16 ('\x10', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__17 ('\x11', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__18 ('\x12', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__19 ('\x13', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__20 ('\x14', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__21 ('\x15', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__22 ('\x16', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__23 ('\x17', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__24 ('\x18', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__25 ('\x19', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__26 ('\x1a', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__27 ('\x1b', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__28 ('\x1c', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__29 ('\x1d', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__30 ('\x1e', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__31 ('\x1f', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__32 (' ', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__33 ('!', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__34 ('"', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__35 ('#', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__36 ('$', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__37 ('%', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__38 ('&', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__39 ('\'', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__40 ('(', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__41 (')', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__42 ('*', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__43 ('+', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__44 (',', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__45 ('-', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__46 ('.', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__47 ('/', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__48 ('0', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__49 ('1', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__50 ('2', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__51 ('3', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__52 ('4', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__53 ('5', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__54 ('6', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__55 ('7', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__56 ('8', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__57 ('9', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__58 (':', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__59 (';', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__60 ('<', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__61 ('=', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__62 ('>', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__63 ('?', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__64 ('@', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__65 ('A', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__66 ('B', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__67 ('C', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__68 ('D', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__69 ('E', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__70 ('F', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__71 ('G', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__72 ('H', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__73 ('I', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__74 ('J', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__75 ('K', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__76 ('L', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__77 ('M', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__78 ('N', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__79 ('O', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__80 ('P', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__81 ('Q', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__82 ('R', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__83 ('S', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__84 ('T', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__85 ('U', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__86 ('V', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__87 ('W', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__88 ('X', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__89 ('Y', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__90 ('Z', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__91 ('[', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__92 ('\\', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__93 (']', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__94 ('^', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__95 ('_', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__96 ('`', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__97 ('a', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__98 ('b', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__99 ('c', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__100 ('d', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__101 ('e', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__102 ('f', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__103 ('g', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__104 ('h', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__105 ('i', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__106 ('j', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__107 ('k', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__108 ('l', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__109 ('m', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__110 ('n', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__111 ('o', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__112 ('p', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__113 ('q', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__114 ('r', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__115 ('s', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__116 ('t', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__117 ('u', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__118 ('v', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__119 ('w', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__120 ('x', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__121 ('y', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__122 ('z', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__123 ('{', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__124 ('|', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__125 ('}', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__126 ('~', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__127 ('\x7f', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__128 ('\x80', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__129 ('\x81', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__130 ('\x82', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__131 ('\x83', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__132 ('\x84', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__133 ('\x85', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__134 ('\x86', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__135 ('\x87', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__136 ('\x88', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__137 ('\x89', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__138 ('\x8a', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__139 ('\x8b', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__140 ('\x8c', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__141 ('\x8d', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__142 ('\x8e', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__143 ('\x8f', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__144 ('\x90', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__145 ('\x91', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__146 ('\x92', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__147 ('\x93', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__148 ('\x94', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__149 ('\x95', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__150 ('\x96', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__151 ('\x97', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__152 ('\x98', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__153 ('\x99', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__154 ('\x9a', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__155 ('\x9b', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__156 ('\x9c', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__157 ('\x9d', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__158 ('\x9e', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__159 ('\x9f', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__160 ('\xa0', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__161 ('\xa1', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__162 ('\xa2', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__163 ('\xa3', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__164 ('\xa4', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__165 ('\xa5', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__166 ('\xa6', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__167 ('\xa7', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__168 ('\xa8', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__169 ('\xa9', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__170 ('\xaa', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__171 ('\xab', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__172 ('\xac', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__173 ('\xad', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__174 ('\xae', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__175 ('\xaf', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__176 ('\xb0', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__177 ('\xb1', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__178 ('\xb2', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__179 ('\xb3', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__180 ('\xb4', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__181 ('\xb5', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__182 ('\xb6', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__183 ('\xb7', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__184 ('\xb8', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__185 ('\xb9', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__186 ('\xba', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__187 ('\xbb', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__188 ('\xbc', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__189 ('\xbd', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__190 ('\xbe', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__191 ('\xbf', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__192 ('\xc0', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__193 ('\xc1', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__194 ('\xc2', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__195 ('\xc3', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__196 ('\xc4', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__197 ('\xc5', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__198 ('\xc6', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__199 ('\xc7', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__200 ('\xc8', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__201 ('\xc9', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__202 ('\xca', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__203 ('\xcb', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__204 ('\xcc', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__205 ('\xcd', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__206 ('\xce', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__207 ('\xcf', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__208 ('\xd0', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__209 ('\xd1', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__210 ('\xd2', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__211 ('\xd3', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__212 ('\xd4', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__213 ('\xd5', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__214 ('\xd6', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__215 ('\xd7', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__216 ('\xd8', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__217 ('\xd9', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__218 ('\xda', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__219 ('\xdb', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__220 ('\xdc', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__221 ('\xdd', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__222 ('\xde', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__223 ('\xdf', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__224 ('\xe0', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__225 ('\xe1', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__226 ('\xe2', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__227 ('\xe3', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__228 ('\xe4', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__229 ('\xe5', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__230 ('\xe6', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__231 ('\xe7', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__232 ('\xe8', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__233 ('\xe9', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__234 ('\xea', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__235 ('\xeb', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__236 ('\xec', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__237 ('\xed', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__238 ('\xee', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__239 ('\xef', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__240 ('\xf0', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__241 ('\xf1', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__242 ('\xf2', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__243 ('\xf3', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__244 ('\xf4', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__245 ('\xf5', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__246 ('\xf6', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__247 ('\xf7', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__248 ('\xf8', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__249 ('\xf9', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__250 ('\xfa', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__251 ('\xfb', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__252 ('\xfc', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__253 ('\xfd', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__254 ('\xfe', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionAllCovered_CharDiscriminant__255 ('\xff', "e_chars", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionAllCovered_CharDiscriminant[] =
   {
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__0,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__1,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__2,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__3,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__4,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__5,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__6,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__7,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__8,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__9,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__10,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__11,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__12,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__13,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__14,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__15,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__16,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__17,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__18,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__19,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__20,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__21,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__22,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__23,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__24,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__25,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__26,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__27,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__28,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__29,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__30,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__31,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__32,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__33,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__34,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__35,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__36,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__37,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__38,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__39,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__40,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__41,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__42,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__43,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__44,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__45,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__46,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__47,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__48,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__49,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__50,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__51,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__52,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__53,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__54,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__55,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__56,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__57,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__58,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__59,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__60,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__61,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__62,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__63,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__64,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__65,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__66,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__67,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__68,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__69,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__70,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__71,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__72,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__73,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__74,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__75,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__76,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__77,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__78,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__79,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__80,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__81,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__82,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__83,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__84,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__85,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__86,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__87,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__88,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__89,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__90,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__91,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__92,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__93,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__94,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__95,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__96,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__97,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__98,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__99,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__100,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__101,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__102,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__103,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__104,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__105,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__106,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__107,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__108,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__109,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__110,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__111,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__112,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__113,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__114,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__115,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__116,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__117,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__118,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__119,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__120,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__121,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__122,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__123,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__124,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__125,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__126,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__127,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__128,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__129,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__130,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__131,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__132,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__133,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__134,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__135,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__136,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__137,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__138,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__139,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__140,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__141,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__142,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__143,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__144,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__145,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__146,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__147,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__148,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__149,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__150,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__151,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__152,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__153,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__154,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__155,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__156,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__157,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__158,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__159,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__160,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__161,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__162,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__163,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__164,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__165,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__166,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__167,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__168,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__169,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__170,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__171,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__172,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__173,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__174,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__175,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__176,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__177,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__178,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__179,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__180,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__181,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__182,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__183,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__184,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__185,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__186,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__187,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__188,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__189,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__190,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__191,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__192,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__193,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__194,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__195,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__196,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__197,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__198,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__199,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__200,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__201,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__202,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__203,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__204,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__205,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__206,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__207,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__208,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__209,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__210,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__211,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__212,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__213,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__214,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__215,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__216,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__217,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__218,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__219,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__220,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__221,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__222,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__223,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__224,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__225,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__226,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__227,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__228,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__229,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__230,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__231,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__232,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__233,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__234,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__235,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__236,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__237,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__238,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__239,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__240,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__241,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__242,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__243,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__244,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__245,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__246,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__247,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__248,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__249,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__250,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__251,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__252,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__253,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__254,
-    &_tao_cases_test_UnionAllCovered_CharDiscriminant__255
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__1),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__2),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__3),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__4),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__5),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__6),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__7),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__8),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__9),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__10),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__11),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__12),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__13),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__14),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__15),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__16),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__17),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__18),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__19),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__20),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__21),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__22),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__23),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__24),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__25),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__26),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__27),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__28),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__29),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__30),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__31),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__32),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__33),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__34),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__35),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__36),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__37),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__38),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__39),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__40),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__41),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__42),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__43),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__44),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__45),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__46),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__47),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__48),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__49),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__50),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__51),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__52),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__53),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__54),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__55),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__56),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__57),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__58),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__59),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__60),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__61),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__62),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__63),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__64),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__65),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__66),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__67),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__68),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__69),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__70),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__71),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__72),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__73),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__74),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__75),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__76),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__77),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__78),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__79),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__80),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__81),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__82),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__83),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__84),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__85),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__86),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__87),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__88),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__89),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__90),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__91),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__92),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__93),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__94),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__95),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__96),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__97),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__98),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__99),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__100),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__101),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__102),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__103),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__104),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__105),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__106),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__107),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__108),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__109),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__110),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__111),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__112),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__113),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__114),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__115),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__116),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__117),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__118),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__119),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__120),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__121),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__122),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__123),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__124),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__125),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__126),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__127),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__128),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__129),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__130),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__131),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__132),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__133),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__134),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__135),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__136),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__137),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__138),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__139),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__140),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__141),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__142),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__143),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__144),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__145),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__146),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__147),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__148),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__149),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__150),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__151),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__152),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__153),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__154),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__155),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__156),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__157),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__158),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__159),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__160),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__161),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__162),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__163),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__164),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__165),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__166),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__167),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__168),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__169),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__170),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__171),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__172),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__173),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__174),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__175),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__176),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__177),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__178),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__179),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__180),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__181),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__182),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__183),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__184),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__185),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__186),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__187),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__188),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__189),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__190),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__191),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__192),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__193),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__194),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__195),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__196),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__197),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__198),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__199),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__200),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__201),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__202),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__203),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__204),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__205),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__206),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__207),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__208),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__209),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__210),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__211),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__212),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__213),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__214),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__215),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__216),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__217),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__218),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__219),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__220),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__221),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__222),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__223),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__224),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__225),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__226),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__227),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__228),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__229),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__230),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__231),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__232),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__233),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__234),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__235),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__236),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__237),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__238),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__239),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__240),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__241),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__242),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__243),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__244),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__245),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__246),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__247),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__248),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__249),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__250),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__251),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__252),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__253),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__254),
+    std::addressof (_tao_cases_test_UnionAllCovered_CharDiscriminant__255)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -1755,7 +1756,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionAllCovered_CharDiscriminant (
     "IDL:test/UnionAllCovered_CharDiscriminant:1.0",
     "UnionAllCovered_CharDiscriminant",
-    &CORBA::_tc_char,
+    std::addressof (CORBA::_tc_char),
     _tao_cases_test_UnionAllCovered_CharDiscriminant,
     sizeof (_tao_cases_test_UnionAllCovered_CharDiscriminant)/sizeof (_tao_cases_test_UnionAllCovered_CharDiscriminant[0]),
     -1);
@@ -1833,27 +1834,27 @@ test::UnionWithDefault_CharDiscriminant::operator= (::test::UnionWithDefault_Cha
 void test::UnionWithDefault_CharDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__0 ('\x0', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__1 ('\x1', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__2 ('\x2', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__3 ('\x3', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__4 ('\x4', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__5 ('\x5', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__6 ('\x6', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__7 ('\a', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__8 ('\10', "e_def", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__0 ('\x0', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__1 ('\x1', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__2 ('\x2', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__3 ('\x3', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__4 ('\x4', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__5 ('\x5', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__6 ('\x6', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__7 ('\a', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_CharDiscriminant__8 ('\10', "e_def", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionWithDefault_CharDiscriminant[] =
   {
-    &_tao_cases_test_UnionWithDefault_CharDiscriminant__0,
-    &_tao_cases_test_UnionWithDefault_CharDiscriminant__1,
-    &_tao_cases_test_UnionWithDefault_CharDiscriminant__2,
-    &_tao_cases_test_UnionWithDefault_CharDiscriminant__3,
-    &_tao_cases_test_UnionWithDefault_CharDiscriminant__4,
-    &_tao_cases_test_UnionWithDefault_CharDiscriminant__5,
-    &_tao_cases_test_UnionWithDefault_CharDiscriminant__6,
-    &_tao_cases_test_UnionWithDefault_CharDiscriminant__7,
-    &_tao_cases_test_UnionWithDefault_CharDiscriminant__8
+    std::addressof (_tao_cases_test_UnionWithDefault_CharDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionWithDefault_CharDiscriminant__1),
+    std::addressof (_tao_cases_test_UnionWithDefault_CharDiscriminant__2),
+    std::addressof (_tao_cases_test_UnionWithDefault_CharDiscriminant__3),
+    std::addressof (_tao_cases_test_UnionWithDefault_CharDiscriminant__4),
+    std::addressof (_tao_cases_test_UnionWithDefault_CharDiscriminant__5),
+    std::addressof (_tao_cases_test_UnionWithDefault_CharDiscriminant__6),
+    std::addressof (_tao_cases_test_UnionWithDefault_CharDiscriminant__7),
+    std::addressof (_tao_cases_test_UnionWithDefault_CharDiscriminant__8)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -1863,7 +1864,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionWithDefault_CharDiscriminant (
     "IDL:test/UnionWithDefault_CharDiscriminant:1.0",
     "UnionWithDefault_CharDiscriminant",
-    &CORBA::_tc_char,
+    std::addressof (CORBA::_tc_char),
     _tao_cases_test_UnionWithDefault_CharDiscriminant,
     sizeof (_tao_cases_test_UnionWithDefault_CharDiscriminant)/sizeof (_tao_cases_test_UnionWithDefault_CharDiscriminant[0]),
     1);
@@ -1930,25 +1931,25 @@ test::UnionWithImplicitDefault_CharDiscriminant::operator= (::test::UnionWithImp
 void test::UnionWithImplicitDefault_CharDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__0 ('\x0', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__1 ('\x1', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__2 ('\x2', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__3 ('\x3', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__4 ('\x4', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__5 ('\x5', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__6 ('\x6', "e_chars", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__7 ('\a', "e_chars", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__0 ('\x0', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__1 ('\x1', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__2 ('\x2', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__3 ('\x3', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__4 ('\x4', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__5 ('\x5', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__6 ('\x6', "e_chars", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__7 ('\a', "e_chars", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant[] =
   {
-    &_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__0,
-    &_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__1,
-    &_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__2,
-    &_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__3,
-    &_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__4,
-    &_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__5,
-    &_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__6,
-    &_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__7
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__1),
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__2),
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__3),
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__4),
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__5),
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__6),
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant__7)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -1958,7 +1959,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionWithImplicitDefault_CharDiscriminant (
     "IDL:test/UnionWithImplicitDefault_CharDiscriminant:1.0",
     "UnionWithImplicitDefault_CharDiscriminant",
-    &CORBA::_tc_char,
+    std::addressof (CORBA::_tc_char),
     _tao_cases_test_UnionWithImplicitDefault_CharDiscriminant,
     sizeof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant)/sizeof (_tao_cases_test_UnionWithImplicitDefault_CharDiscriminant[0]),
     -1);
@@ -2056,17 +2057,17 @@ test::UnionWithDefault_LongDiscriminant::operator= (::test::UnionWithDefault_Lon
 void test::UnionWithDefault_LongDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_LongDiscriminant__0 (1, "e_case1", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_LongDiscriminant__1 (2, "e_case2", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_LongDiscriminant__2 (3, "e_case3", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_LongDiscriminant__3 (-2147483647, "e_def", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_LongDiscriminant__0 (1, "e_case1", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_LongDiscriminant__1 (2, "e_case2", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_LongDiscriminant__2 (3, "e_case3", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithDefault_LongDiscriminant__3 (-2147483647, "e_def", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionWithDefault_LongDiscriminant[] =
   {
-    &_tao_cases_test_UnionWithDefault_LongDiscriminant__0,
-    &_tao_cases_test_UnionWithDefault_LongDiscriminant__1,
-    &_tao_cases_test_UnionWithDefault_LongDiscriminant__2,
-    &_tao_cases_test_UnionWithDefault_LongDiscriminant__3
+    std::addressof (_tao_cases_test_UnionWithDefault_LongDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionWithDefault_LongDiscriminant__1),
+    std::addressof (_tao_cases_test_UnionWithDefault_LongDiscriminant__2),
+    std::addressof (_tao_cases_test_UnionWithDefault_LongDiscriminant__3)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -2076,7 +2077,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionWithDefault_LongDiscriminant (
     "IDL:test/UnionWithDefault_LongDiscriminant:1.0",
     "UnionWithDefault_LongDiscriminant",
-    &CORBA::_tc_long,
+    std::addressof (CORBA::_tc_long),
     _tao_cases_test_UnionWithDefault_LongDiscriminant,
     sizeof (_tao_cases_test_UnionWithDefault_LongDiscriminant)/sizeof (_tao_cases_test_UnionWithDefault_LongDiscriminant[0]),
     3);
@@ -2163,15 +2164,15 @@ test::UnionWithImplicitDefault_LongDiscriminant::operator= (::test::UnionWithImp
 void test::UnionWithImplicitDefault_LongDiscriminant::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__0 (1, "e_case1", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__1 (2, "e_case2", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__2 (3, "e_case3", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__0 (1, "e_case1", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__1 (2, "e_case2", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__2 (3, "e_case3", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_test_UnionWithImplicitDefault_LongDiscriminant[] =
   {
-    &_tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__0,
-    &_tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__1,
-    &_tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__2
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__0),
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__1),
+    std::addressof (_tao_cases_test_UnionWithImplicitDefault_LongDiscriminant__2)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -2181,7 +2182,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_test_UnionWithImplicitDefault_LongDiscriminant (
     "IDL:test/UnionWithImplicitDefault_LongDiscriminant:1.0",
     "UnionWithImplicitDefault_LongDiscriminant",
-    &CORBA::_tc_long,
+    std::addressof (CORBA::_tc_long),
     _tao_cases_test_UnionWithImplicitDefault_LongDiscriminant,
     sizeof (_tao_cases_test_UnionWithImplicitDefault_LongDiscriminant)/sizeof (_tao_cases_test_UnionWithImplicitDefault_LongDiscriminant[0]),
     -1);

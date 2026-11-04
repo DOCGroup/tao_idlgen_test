@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_VALUETYPEC_BELC6O_H_
-#define _TAO_IDL_VALUETYPEC_BELC6O_H_
+#ifndef _TAO_IDL_VALUETYPEC_I11VJ7_H_
+#define _TAO_IDL_VALUETYPEC_I11VJ7_H_
 
 #include /**/ "ace/pre.h"
 
@@ -1118,11 +1118,9 @@ public:
   ~OBV_MyValueType () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__MyValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__MyValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__MyValueType (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__MyValueType (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1159,11 +1157,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__DefaultInitializedValue (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__DefaultInitializedValue (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__DefaultInitializedValue (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__DefaultInitializedValue (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1203,11 +1199,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__RecValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__RecValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__RecValueType (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__RecValueType (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1240,11 +1234,9 @@ public:
   ~OBV_GetsDeprecatedMember () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__GetsDeprecatedMember (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__GetsDeprecatedMember (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__GetsDeprecatedMember (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__GetsDeprecatedMember (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1293,11 +1285,9 @@ namespace OBV_ModSelection
     ~CriterionExpr () override;
 
   protected:
-    ::CORBA::Boolean
-    _tao_marshal__ModSelection_SelectionDefns_CriterionExpr (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean _tao_marshal__ModSelection_SelectionDefns_CriterionExpr (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean
-    _tao_unmarshal__ModSelection_SelectionDefns_CriterionExpr (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean _tao_unmarshal__ModSelection_SelectionDefns_CriterionExpr (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

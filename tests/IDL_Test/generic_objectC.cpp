@@ -23,6 +23,7 @@
  **/
 
 #include "generic_objectC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/CDR.h"

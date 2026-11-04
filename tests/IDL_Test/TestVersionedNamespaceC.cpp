@@ -23,6 +23,7 @@
  **/
 
 #include "TestVersionedNamespaceC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -48,7 +49,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M1_S1[] =
       {
-        { "o", &CORBA::_tc_octet }
+        { "o", std::addressof (CORBA::_tc_octet) }
       };
 
 static TAO::TypeCode::Struct<
@@ -183,9 +184,9 @@ namespace M1
 }
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_M1_V[] =
   {
-    { "valString", &CORBA::_tc_string, ::CORBA::PUBLIC_MEMBER },
-    { "valStruct", &M1::_tc_S1, ::CORBA::PUBLIC_MEMBER },
-    { "valLocalIface", &M1::_tc_LI, ::CORBA::PUBLIC_MEMBER }
+    { "valString", std::addressof (CORBA::_tc_string), ::CORBA::PUBLIC_MEMBER },
+    { "valStruct", std::addressof (M1::_tc_S1), ::CORBA::PUBLIC_MEMBER },
+    { "valLocalIface", std::addressof (M1::_tc_LI), ::CORBA::PUBLIC_MEMBER }
 
   };
 static TAO::TypeCode::Value<char const *,
@@ -197,7 +198,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:M1/V:1.0",
     "V",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_M1_V,
     3);
 

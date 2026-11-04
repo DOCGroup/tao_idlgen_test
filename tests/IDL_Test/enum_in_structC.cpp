@@ -23,6 +23,7 @@
  **/
 
 #include "enum_in_structC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -75,8 +76,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_HoldsEnum[] =
       {
-        { "named_enum", &HoldsEnum::_tc_Named },
-        { "unnamed_enum", &_tc_UnNamed }
+        { "named_enum", std::addressof (HoldsEnum::_tc_Named) },
+        { "unnamed_enum", std::addressof (_tc_UnNamed) }
       };
 
 static TAO::TypeCode::Struct<
@@ -133,11 +134,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_en_10 (
         ::CORBA::tk_array,
-        &decl_heavy_struct::_tc_str_en,
+        std::addressof (decl_heavy_struct::_tc_str_en),
         10U);
 
     ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_en =
-      &decl_heavy_struct_m_en_10;
+      std::addressof (decl_heavy_struct_m_en_10);
   }
 }
 }
@@ -159,11 +160,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_st_10 (
         ::CORBA::tk_array,
-        &decl_heavy_struct::_tc_st,
+        std::addressof (decl_heavy_struct::_tc_st),
         10U);
 
     ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_st =
-      &decl_heavy_struct_m_st_10;
+      std::addressof (decl_heavy_struct_m_st_10);
   }
 }
 }
@@ -185,11 +186,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_struct_m_un_10 (
         ::CORBA::tk_array,
-        &decl_heavy_struct::_tc_un,
+        std::addressof (decl_heavy_struct::_tc_un),
         10U);
 
     ::CORBA::TypeCode_ptr const tc_decl_heavy_struct_m_un =
-      &decl_heavy_struct_m_un_10;
+      std::addressof (decl_heavy_struct_m_un_10);
   }
 }
 }
@@ -202,9 +203,9 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_decl_heavy_struct[] =
       {
-        { "m_en", &TAO::TypeCode::tc_decl_heavy_struct_m_en },
-        { "m_st", &TAO::TypeCode::tc_decl_heavy_struct_m_st },
-        { "m_un", &TAO::TypeCode::tc_decl_heavy_struct_m_un }
+        { "m_en", std::addressof (TAO::TypeCode::tc_decl_heavy_struct_m_en) },
+        { "m_st", std::addressof (TAO::TypeCode::tc_decl_heavy_struct_m_st) },
+        { "m_un", std::addressof (TAO::TypeCode::tc_decl_heavy_struct_m_un) }
       };
 
 static TAO::TypeCode::Struct<
@@ -328,8 +329,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_decl_heavy_struct_st[] =
       {
-        { "a", &CORBA::_tc_long },
-        { "b", &CORBA::_tc_char }
+        { "a", std::addressof (CORBA::_tc_long) },
+        { "b", std::addressof (CORBA::_tc_char) }
       };
 
 static TAO::TypeCode::Struct<
@@ -461,13 +462,13 @@ decl_heavy_struct::un::operator= (::decl_heavy_struct::un const &u)
 void decl_heavy_struct::un::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__0 (1, "a", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__1 (2, "b", &CORBA::_tc_char);
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__0 (1, "a", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_struct_un__1 (2, "b", std::addressof (CORBA::_tc_char));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_decl_heavy_struct_un[] =
   {
-    &_tao_cases_decl_heavy_struct_un__0,
-    &_tao_cases_decl_heavy_struct_un__1
+    std::addressof (_tao_cases_decl_heavy_struct_un__0),
+    std::addressof (_tao_cases_decl_heavy_struct_un__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -477,7 +478,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_decl_heavy_struct_un (
     "IDL:decl_heavy_struct/un:1.0",
     "un",
-    &CORBA::_tc_long,
+    std::addressof (CORBA::_tc_long),
     _tao_cases_decl_heavy_struct_un,
     sizeof (_tao_cases_decl_heavy_struct_un)/sizeof (_tao_cases_decl_heavy_struct_un[0]),
     -1);
@@ -600,7 +601,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_ErrorException[] =
       {
-        { "reason", &ErrorException::_tc_ReasonCode }
+        { "reason", std::addressof (ErrorException::_tc_ReasonCode) }
       };
 
 static TAO::TypeCode::Struct<

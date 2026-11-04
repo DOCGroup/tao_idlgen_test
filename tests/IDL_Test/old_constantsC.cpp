@@ -23,6 +23,7 @@
  **/
 
 #include "old_constantsC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -169,7 +170,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldConstants_E[] =
       {
-        { "cause", &CORBA::_tc_short }
+        { "cause", std::addressof (CORBA::_tc_short) }
       };
 
 static TAO::TypeCode::Struct<
@@ -312,7 +313,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldConstants_M_E[] =
       {
-        { "cause", &CORBA::_tc_short }
+        { "cause", std::addressof (CORBA::_tc_short) }
       };
 
 static TAO::TypeCode::Struct<
@@ -484,7 +485,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldConstants_M_A_E[] =
       {
-        { "cause", &CORBA::_tc_short }
+        { "cause", std::addressof (CORBA::_tc_short) }
       };
 
 static TAO::TypeCode::Struct<
@@ -673,7 +674,7 @@ namespace OldConstants
     ::CORBA::TypeCode_ptr const _tc_A = std::addressof(_tao_tc_OldConstants_M_A);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldConstants_M_AMH_AExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldConstants_M_AMH_AExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -683,7 +684,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:OldConstants/M/AMH_AExceptionHolder:1.0",
     "AMH_AExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_OldConstants_M_AMH_AExceptionHolder,
     0);
 

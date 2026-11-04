@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2S_IIHVBI_CPP_
-#define _TAO_IDL_SIMPLE2S_IIHVBI_CPP_
+#ifndef _TAO_IDL_SIMPLE2S_0DYG3M_CPP_
+#define _TAO_IDL_SIMPLE2S_0DYG3M_CPP_
 
 #include "simple2S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -170,9 +170,7 @@ POA_AMH_simple3::op3_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_simple3ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_simple3ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -217,9 +215,7 @@ POA_AMH_simple3::op4_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_simple3ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_simple3ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -260,7 +256,7 @@ simple3*
 POA_AMH_simple3::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -472,16 +468,14 @@ void POA_simple3::op3_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       simple3::_tc_OverFlow,
       simple3::_tc_UnderFlow,
       simple3::_tc_BadNum
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_a;
@@ -515,11 +509,11 @@ void POA_simple3::op3_skel (
                          , args
                          , 5
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 3
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -575,14 +569,12 @@ void POA_simple3::op4_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       simple3::_tc_UnderFlow
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< ::CORBA::Any>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Any>::in_arg_val _tao_x;
@@ -614,11 +606,11 @@ void POA_simple3::op4_skel (
                          , args
                          , 4
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -977,16 +969,14 @@ void POA_AMI_simple3Handler::op3_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       simple3::_tc_OverFlow,
       simple3::_tc_UnderFlow,
       simple3::_tc_BadNum
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
@@ -1020,11 +1010,11 @@ void POA_AMI_simple3Handler::op3_skel (
                          , args
                          , 5
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 3
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1093,16 +1083,14 @@ void POA_AMI_simple3Handler::op3_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       simple3::_tc_OverFlow,
       simple3::_tc_UnderFlow,
       simple3::_tc_BadNum
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -1130,11 +1118,11 @@ void POA_AMI_simple3Handler::op3_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 3
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1184,14 +1172,12 @@ void POA_AMI_simple3Handler::op4_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       simple3::_tc_UnderFlow
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Any>::in_arg_val _tao_ami_return_val;
@@ -1223,11 +1209,11 @@ void POA_AMI_simple3Handler::op4_skel (
                          , args
                          , 4
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1280,14 +1266,12 @@ void POA_AMI_simple3Handler::op4_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       simple3::_tc_UnderFlow
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -1315,11 +1299,11 @@ void POA_AMI_simple3Handler::op4_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

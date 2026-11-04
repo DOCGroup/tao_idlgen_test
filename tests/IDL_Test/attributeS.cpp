@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTES_Y8X4HO_CPP_
-#define _TAO_IDL_ATTRIBUTES_Y8X4HO_CPP_
+#ifndef _TAO_IDL_ATTRIBUTES_BPFN38_CPP_
+#define _TAO_IDL_ATTRIBUTES_BPFN38_CPP_
 
 #include "attributeS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
@@ -185,9 +185,7 @@ POA_Hello::AMH_MyFoo::_get_rw_attrib_mytype_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -231,9 +229,7 @@ POA_Hello::AMH_MyFoo::_set_rw_attrib_mytype_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -268,9 +264,7 @@ POA_Hello::AMH_MyFoo::_get_rw_attrib_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -314,9 +308,7 @@ POA_Hello::AMH_MyFoo::_set_rw_attrib_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -351,9 +343,7 @@ POA_Hello::AMH_MyFoo::_get_rw_attrib_reverted_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -397,9 +387,7 @@ POA_Hello::AMH_MyFoo::_set_rw_attrib_reverted_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -434,9 +422,7 @@ POA_Hello::AMH_MyFoo::_get_rw_attribB_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -480,9 +466,7 @@ POA_Hello::AMH_MyFoo::_set_rw_attribB_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -517,9 +501,7 @@ POA_Hello::AMH_MyFoo::_get_ro_attrib_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_Hello::TAO_AMH_MyFooResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -556,7 +538,7 @@ Hello::MyFoo*
 POA_Hello::AMH_MyFoo::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -886,14 +868,12 @@ void POA_Hello::MyFoo::_get_rw_attrib_mytype_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorA
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< ::CORBA::Short>::ret_val retval;
 
@@ -919,11 +899,11 @@ void POA_Hello::MyFoo::_get_rw_attrib_mytype_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -963,14 +943,12 @@ void POA_Hello::MyFoo::_set_rw_attrib_mytype_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib_mytype;
@@ -998,11 +976,11 @@ void POA_Hello::MyFoo::_set_rw_attrib_mytype_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1041,14 +1019,12 @@ void POA_Hello::MyFoo::_get_rw_attrib_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorA
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< ::CORBA::Short>::ret_val retval;
 
@@ -1074,11 +1050,11 @@ void POA_Hello::MyFoo::_get_rw_attrib_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1118,14 +1094,12 @@ void POA_Hello::MyFoo::_set_rw_attrib_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib;
@@ -1153,11 +1127,11 @@ void POA_Hello::MyFoo::_set_rw_attrib_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1196,14 +1170,12 @@ void POA_Hello::MyFoo::_get_rw_attrib_reverted_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< ::CORBA::Short>::ret_val retval;
 
@@ -1229,11 +1201,11 @@ void POA_Hello::MyFoo::_get_rw_attrib_reverted_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1273,14 +1245,12 @@ void POA_Hello::MyFoo::_set_rw_attrib_reverted_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorA
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib_reverted;
@@ -1308,11 +1278,11 @@ void POA_Hello::MyFoo::_set_rw_attrib_reverted_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1351,14 +1321,12 @@ void POA_Hello::MyFoo::_get_rw_attribB_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< ::CORBA::Short>::ret_val retval;
 
@@ -1384,11 +1352,11 @@ void POA_Hello::MyFoo::_get_rw_attribB_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1454,11 +1422,11 @@ void POA_Hello::MyFoo::_set_rw_attribB_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1497,14 +1465,12 @@ void POA_Hello::MyFoo::_get_ro_attrib_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< ::CORBA::Short>::ret_val retval;
 
@@ -1530,11 +1496,11 @@ void POA_Hello::MyFoo::_get_ro_attrib_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2283,14 +2249,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorA
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val;
@@ -2318,11 +2282,11 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2379,14 +2343,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorA
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -2414,11 +2376,11 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2445,14 +2407,12 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
 
@@ -2475,11 +2435,11 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2536,14 +2496,12 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -2571,11 +2529,11 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2615,14 +2573,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorA
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val;
@@ -2650,11 +2606,11 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2711,14 +2667,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorA
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -2746,11 +2700,11 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2777,14 +2731,12 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
 
@@ -2807,11 +2759,11 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2868,14 +2820,12 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -2903,11 +2853,11 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2947,14 +2897,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val;
@@ -2982,11 +2930,11 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3043,14 +2991,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -3078,11 +3024,11 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3109,14 +3055,12 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorA
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
 
@@ -3139,11 +3083,11 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3200,14 +3144,12 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorA
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -3235,11 +3177,11 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3279,14 +3221,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attribB_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val;
@@ -3314,11 +3254,11 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attribB_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3375,14 +3315,12 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attribB_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -3410,11 +3348,11 @@ void POA_Hello::AMI_MyFooHandler::get_rw_attribB_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3462,11 +3400,11 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attribB_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3532,11 +3470,11 @@ void POA_Hello::AMI_MyFooHandler::set_rw_attribB_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3576,14 +3514,12 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val;
@@ -3611,11 +3547,11 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3672,14 +3608,12 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Hello::_tc_InternalErrorB
     };
-
-#endif /* TAO_HAS_INTERCEPTORS */
+  #endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits< void>::ret_val retval;
   TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -3707,11 +3641,11 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

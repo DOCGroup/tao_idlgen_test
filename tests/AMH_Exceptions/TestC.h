@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTC_C51LXH_H_
-#define _TAO_IDL_TESTC_C51LXH_H_
+#ifndef _TAO_IDL_TESTC_4FRH2M_H_
+#define _TAO_IDL_TESTC_4FRH2M_H_
 
 #include /**/ "ace/pre.h"
 
@@ -464,11 +464,9 @@ protected:
   ~Red_Herring () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__Test_Red_Herring (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Test_Red_Herring (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__Test_Red_Herring (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Test_Red_Herring (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -488,11 +486,9 @@ protected:
   ~AMH_RoundtripExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__Test_AMH_RoundtripExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Test_AMH_RoundtripExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__Test_AMH_RoundtripExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Test_AMH_RoundtripExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);

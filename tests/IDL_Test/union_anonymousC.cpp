@@ -23,6 +23,7 @@
  **/
 
 #include "union_anonymousC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -58,7 +59,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Element[] =
       {
-        { "Value", &Element::_tc_ValueUnion }
+        { "Value", std::addressof (Element::_tc_ValueUnion) }
       };
 
 static TAO::TypeCode::Struct<
@@ -215,10 +216,10 @@ namespace TAO
     namespace
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Element_ValueUnion__tao_seq_Element_ValueUnion__0 (
-        ::CORBA::tk_sequence, &Element::_tc_ValueUnion, 0U);
+        ::CORBA::tk_sequence, std::addressof (Element::_tc_ValueUnion), 0U);
 
     ::CORBA::TypeCode_ptr const tc_Element_ValueUnion__tao_seq_Element_ValueUnion__0 =
-      &Element_ValueUnion__tao_seq_Element_ValueUnion__0;
+      std::addressof (Element_ValueUnion__tao_seq_Element_ValueUnion__0);
   }
 }
 }
@@ -227,13 +228,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_Element_ValueUnion__tao_seq_Element_ValueUnion__GUARD */
 
-static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_Element_ValueUnion__0 (0, "lvalue", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_Element_ValueUnion__1 (1, "VUValue", &TAO::TypeCode::tc_Element_ValueUnion__tao_seq_Element_ValueUnion__0);
+static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_Element_ValueUnion__0 (0, "lvalue", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_Element_ValueUnion__1 (1, "VUValue", std::addressof (TAO::TypeCode::tc_Element_ValueUnion__tao_seq_Element_ValueUnion__0));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_Element_ValueUnion[] =
   {
-    &_tao_cases_Element_ValueUnion__0,
-    &_tao_cases_Element_ValueUnion__1
+    std::addressof (_tao_cases_Element_ValueUnion__0),
+    std::addressof (_tao_cases_Element_ValueUnion__1)
   };
 
 static TAO::TypeCode::Recursive_Type<
@@ -247,7 +248,7 @@ static TAO::TypeCode::Recursive_Type<
   _tao_tc_Element_ValueUnion (
     "IDL:Element/ValueUnion:1.0",
     "ValueUnion",
-    &CORBA::_tc_short,
+    std::addressof (CORBA::_tc_short),
     _tao_cases_Element_ValueUnion,
     sizeof (_tao_cases_Element_ValueUnion)/sizeof (_tao_cases_Element_ValueUnion[0]),
     -1);
@@ -305,11 +306,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> NamedLongArray_10 (
         ::CORBA::tk_array,
-        &CORBA::_tc_long,
+        std::addressof (CORBA::_tc_long),
         10U);
 
     ::CORBA::TypeCode_ptr const tc_NamedLongArray =
-      &NamedLongArray_10;
+      std::addressof (NamedLongArray_10);
   }
 }
 }
@@ -324,7 +325,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:NamedLongArray:1.0",
     "NamedLongArray",
-    &TAO::TypeCode::tc_NamedLongArray);
+    std::addressof (TAO::TypeCode::tc_NamedLongArray));
 
 ::CORBA::TypeCode_ptr const _tc_NamedLongArray = std::addressof(_tao_tc_NamedLongArray);
 static char const * const _tao_enumerators_decl_heavy_union_which[] =
@@ -442,8 +443,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_decl_heavy_union_st[] =
       {
-        { "a", &CORBA::_tc_long },
-        { "b", &CORBA::_tc_char }
+        { "a", std::addressof (CORBA::_tc_long) },
+        { "b", std::addressof (CORBA::_tc_char) }
       };
 
 static TAO::TypeCode::Struct<
@@ -575,13 +576,13 @@ decl_heavy_union::un::operator= (::decl_heavy_union::un const &u)
 void decl_heavy_union::un::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union_un__0 (1, "a", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union_un__1 (2, "b", &CORBA::_tc_char);
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union_un__0 (1, "a", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union_un__1 (2, "b", std::addressof (CORBA::_tc_char));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_decl_heavy_union_un[] =
   {
-    &_tao_cases_decl_heavy_union_un__0,
-    &_tao_cases_decl_heavy_union_un__1
+    std::addressof (_tao_cases_decl_heavy_union_un__0),
+    std::addressof (_tao_cases_decl_heavy_union_un__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -591,7 +592,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_decl_heavy_union_un (
     "IDL:decl_heavy_union/un:1.0",
     "un",
-    &CORBA::_tc_long,
+    std::addressof (CORBA::_tc_long),
     _tao_cases_decl_heavy_union_un,
     sizeof (_tao_cases_decl_heavy_union_un)/sizeof (_tao_cases_decl_heavy_union_un[0]),
     -1);
@@ -817,11 +818,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_union_m_en_arr_10 (
         ::CORBA::tk_array,
-        &decl_heavy_union::_tc_en,
+        std::addressof (decl_heavy_union::_tc_en),
         10U);
 
     ::CORBA::TypeCode_ptr const tc_decl_heavy_union_m_en_arr =
-      &decl_heavy_union_m_en_arr_10;
+      std::addressof (decl_heavy_union_m_en_arr_10);
   }
 }
 }
@@ -843,11 +844,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_union_m_st_arr_10 (
         ::CORBA::tk_array,
-        &decl_heavy_union::_tc_st,
+        std::addressof (decl_heavy_union::_tc_st),
         10U);
 
     ::CORBA::TypeCode_ptr const tc_decl_heavy_union_m_st_arr =
-      &decl_heavy_union_m_st_arr_10;
+      std::addressof (decl_heavy_union_m_st_arr_10);
   }
 }
 }
@@ -869,11 +870,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_union_m_un_arr_10 (
         ::CORBA::tk_array,
-        &decl_heavy_union::_tc_un,
+        std::addressof (decl_heavy_union::_tc_un),
         10U);
 
     ::CORBA::TypeCode_ptr const tc_decl_heavy_union_m_un_arr =
-      &decl_heavy_union_m_un_arr_10;
+      std::addressof (decl_heavy_union_m_un_arr_10);
   }
 }
 }
@@ -895,11 +896,11 @@ namespace TAO
     {
       TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> decl_heavy_union_m_anon_long_array_10 (
         ::CORBA::tk_array,
-        &CORBA::_tc_long,
+        std::addressof (CORBA::_tc_long),
         10U);
 
     ::CORBA::TypeCode_ptr const tc_decl_heavy_union_m_anon_long_array =
-      &decl_heavy_union_m_anon_long_array_10;
+      std::addressof (decl_heavy_union_m_anon_long_array_10);
   }
 }
 }
@@ -907,21 +908,21 @@ namespace TAO
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_TYPECODE_decl_heavy_union_m_anon_long_array_GUARD */
-static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__0 (1, "m_which", &decl_heavy_union::_tc_which);
-static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__1 (2, "m_en_arr", &TAO::TypeCode::tc_decl_heavy_union_m_en_arr);
-static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__2 (3, "m_st_arr", &TAO::TypeCode::tc_decl_heavy_union_m_st_arr);
-static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__3 (4, "m_un_arr", &TAO::TypeCode::tc_decl_heavy_union_m_un_arr);
-static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__4 (5, "m_named_long_array", &_tc_NamedLongArray);
-static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__5 (6, "m_anon_long_array", &TAO::TypeCode::tc_decl_heavy_union_m_anon_long_array);
+static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__0 (1, "m_which", std::addressof (decl_heavy_union::_tc_which));
+static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__1 (2, "m_en_arr", std::addressof (TAO::TypeCode::tc_decl_heavy_union_m_en_arr));
+static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__2 (3, "m_st_arr", std::addressof (TAO::TypeCode::tc_decl_heavy_union_m_st_arr));
+static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__3 (4, "m_un_arr", std::addressof (TAO::TypeCode::tc_decl_heavy_union_m_un_arr));
+static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__4 (5, "m_named_long_array", std::addressof (_tc_NamedLongArray));
+static TAO::TypeCode::Case_T<CORBA::Short, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_decl_heavy_union__5 (6, "m_anon_long_array", std::addressof (TAO::TypeCode::tc_decl_heavy_union_m_anon_long_array));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_decl_heavy_union[] =
   {
-    &_tao_cases_decl_heavy_union__0,
-    &_tao_cases_decl_heavy_union__1,
-    &_tao_cases_decl_heavy_union__2,
-    &_tao_cases_decl_heavy_union__3,
-    &_tao_cases_decl_heavy_union__4,
-    &_tao_cases_decl_heavy_union__5
+    std::addressof (_tao_cases_decl_heavy_union__0),
+    std::addressof (_tao_cases_decl_heavy_union__1),
+    std::addressof (_tao_cases_decl_heavy_union__2),
+    std::addressof (_tao_cases_decl_heavy_union__3),
+    std::addressof (_tao_cases_decl_heavy_union__4),
+    std::addressof (_tao_cases_decl_heavy_union__5)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -931,7 +932,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_decl_heavy_union (
     "IDL:decl_heavy_union:1.0",
     "decl_heavy_union",
-    &CORBA::_tc_short,
+    std::addressof (CORBA::_tc_short),
     _tao_cases_decl_heavy_union,
     sizeof (_tao_cases_decl_heavy_union)/sizeof (_tao_cases_decl_heavy_union[0]),
     -1);

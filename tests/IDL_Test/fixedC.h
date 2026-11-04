@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDC_SHGT1N_H_
-#define _TAO_IDL_FIXEDC_SHGT1N_H_
+#ifndef _TAO_IDL_FIXEDC_RDF5SJ_H_
+#define _TAO_IDL_FIXEDC_RDF5SJ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -511,11 +511,9 @@ protected:
   ~AMH_FixedOperationsExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__FixedPoint_AMH_FixedOperationsExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__FixedPoint_AMH_FixedOperationsExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__FixedPoint_AMH_FixedOperationsExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__FixedPoint_AMH_FixedOperationsExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
