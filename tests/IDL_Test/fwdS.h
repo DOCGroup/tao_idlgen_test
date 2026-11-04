@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FWDS_7PBQ7G_H_
-#define _TAO_IDL_FWDS_7PBQ7G_H_
+#ifndef _TAO_IDL_FWDS_1KNEBH_H_
+#define _TAO_IDL_FWDS_1KNEBH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -407,10 +407,10 @@ namespace POA_mod2
     AMH_full ();
 
   public:
-    AMH_full (const AMH_full& rhs);
+    AMH_full (AMH_full const &rhs);
     ~AMH_full () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -418,7 +418,7 @@ namespace POA_mod2
 
     mod2::full *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -449,10 +449,10 @@ public:
   using _stub_ptr_type = ::mod2::full_ptr;
   using _stub_var_type = ::mod2::full_var;
 
-  full (const full& rhs) = default;
+  full (full const &rhs) = default;
   ~full () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -460,7 +460,7 @@ public:
 
   ::mod2::full *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::mod2::fwd_ptr op (
     ::mod2::fwd_ptr inarg,
     ::mod2::fwd_ptr & inoutarg,
@@ -525,10 +525,10 @@ public:
   using _stub_ptr_type = ::mod2::AMI_fullHandler_ptr;
   using _stub_var_type = ::mod2::AMI_fullHandler_var;
 
-  AMI_fullHandler (const AMI_fullHandler& rhs) = default;
+  AMI_fullHandler (AMI_fullHandler const &rhs) = default;
   ~AMI_fullHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -536,7 +536,7 @@ public:
 
   ::mod2::AMI_fullHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op (
     ::mod2::fwd_ptr ami_return_val,
     ::mod2::fwd_ptr inoutarg,
@@ -592,10 +592,10 @@ namespace POA_fwd_mixed_intf
     AMH_concrete_parent ();
 
   public:
-    AMH_concrete_parent (const AMH_concrete_parent& rhs);
+    AMH_concrete_parent (AMH_concrete_parent const &rhs);
     ~AMH_concrete_parent () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -603,7 +603,7 @@ namespace POA_fwd_mixed_intf
 
     fwd_mixed_intf::concrete_parent *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 class concrete_parent;
@@ -623,10 +623,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::concrete_parent_ptr;
   using _stub_var_type = ::fwd_mixed_intf::concrete_parent_var;
 
-  concrete_parent (const concrete_parent& rhs) = default;
+  concrete_parent (concrete_parent const &rhs) = default;
   ~concrete_parent () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -634,7 +634,7 @@ public:
 
   ::fwd_mixed_intf::concrete_parent *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -680,10 +680,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::AMI_concrete_parentHandler_ptr;
   using _stub_var_type = ::fwd_mixed_intf::AMI_concrete_parentHandler_var;
 
-  AMI_concrete_parentHandler (const AMI_concrete_parentHandler& rhs) = default;
+  AMI_concrete_parentHandler (AMI_concrete_parentHandler const &rhs) = default;
   ~AMI_concrete_parentHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -691,7 +691,7 @@ public:
 
   ::fwd_mixed_intf::AMI_concrete_parentHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -726,10 +726,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::mixed_abs_first_ptr;
   using _stub_var_type = ::fwd_mixed_intf::mixed_abs_first_var;
 
-  mixed_abs_first (const mixed_abs_first& rhs) = default;
+  mixed_abs_first (mixed_abs_first const &rhs) = default;
   ~mixed_abs_first () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -737,7 +737,7 @@ public:
 
   ::fwd_mixed_intf::mixed_abs_first *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -772,10 +772,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr;
   using _stub_var_type = ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_var;
 
-  AMI_mixed_abs_firstHandler (const AMI_mixed_abs_firstHandler& rhs) = default;
+  AMI_mixed_abs_firstHandler (AMI_mixed_abs_firstHandler const &rhs) = default;
   ~AMI_mixed_abs_firstHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -783,7 +783,7 @@ public:
 
   ::fwd_mixed_intf::AMI_mixed_abs_firstHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -818,10 +818,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::mixed_conc_first_ptr;
   using _stub_var_type = ::fwd_mixed_intf::mixed_conc_first_var;
 
-  mixed_conc_first (const mixed_conc_first& rhs) = default;
+  mixed_conc_first (mixed_conc_first const &rhs) = default;
   ~mixed_conc_first () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -829,7 +829,7 @@ public:
 
   ::fwd_mixed_intf::mixed_conc_first *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -864,10 +864,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr;
   using _stub_var_type = ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_var;
 
-  AMI_mixed_conc_firstHandler (const AMI_mixed_conc_firstHandler& rhs) = default;
+  AMI_mixed_conc_firstHandler (AMI_mixed_conc_firstHandler const &rhs) = default;
   ~AMI_mixed_conc_firstHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -875,7 +875,7 @@ public:
 
   ::fwd_mixed_intf::AMI_mixed_conc_firstHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

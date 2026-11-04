@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONC_F6PRPJ_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONC_F6PRPJ_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONC_HS8AYG_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONC_HS8AYG_H_
 
 #include /**/ "ace/pre.h"
 
@@ -141,10 +141,10 @@ public:
   virtual void sendc_getEncoding (
     ::AMI_FieldDevice_THandler_ptr ami_handler);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -165,9 +165,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  FieldDevice_T (const FieldDevice_T &) = delete;
+  FieldDevice_T (FieldDevice_T const &) = delete;
   FieldDevice_T (FieldDevice_T &&) = delete;
-  FieldDevice_T &operator= (const FieldDevice_T &) = delete;
+  FieldDevice_T &operator= (FieldDevice_T const &) = delete;
   FieldDevice_T &operator= (FieldDevice_T &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_FieldDevice_T;
@@ -298,10 +298,10 @@ public:
   virtual void getEncoding_excep (
     ::AMH_FieldDevice_TExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -312,9 +312,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_FieldDevice_TResponseHandler (const AMH_FieldDevice_TResponseHandler &) = delete;
+  AMH_FieldDevice_TResponseHandler (AMH_FieldDevice_TResponseHandler const &) = delete;
   AMH_FieldDevice_TResponseHandler (AMH_FieldDevice_TResponseHandler &&) = delete;
-  AMH_FieldDevice_TResponseHandler &operator= (const AMH_FieldDevice_TResponseHandler &) = delete;
+  AMH_FieldDevice_TResponseHandler &operator= (AMH_FieldDevice_TResponseHandler const &) = delete;
   AMH_FieldDevice_TResponseHandler &operator= (AMH_FieldDevice_TResponseHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_FieldDevice_TResponseHandler;
@@ -374,10 +374,10 @@ public:
   virtual void getEncoding_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -398,9 +398,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_FieldDevice_THandler (const AMI_FieldDevice_THandler &) = delete;
+  AMI_FieldDevice_THandler (AMI_FieldDevice_THandler const &) = delete;
   AMI_FieldDevice_THandler (AMI_FieldDevice_THandler &&) = delete;
-  AMI_FieldDevice_THandler &operator= (const AMI_FieldDevice_THandler &) = delete;
+  AMI_FieldDevice_THandler &operator= (AMI_FieldDevice_THandler const &) = delete;
   AMI_FieldDevice_THandler &operator= (AMI_FieldDevice_THandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_FieldDevice_THandler;
@@ -609,7 +609,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FieldDevice_T_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, FieldDevice_T_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, FieldDevice_T_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, FieldDevice_T_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -627,7 +627,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_FieldDevice_TResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_FieldDevice_TResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMH_FieldDevice_TResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMH_FieldDevice_TResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -636,7 +636,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_FieldDevice_THandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_FieldDevice_THandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMI_FieldDevice_THandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMI_FieldDevice_THandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -656,7 +656,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const FieldDevice_T_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, FieldDevice_T_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, FieldDevice_T_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -679,7 +679,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_FieldDevice_THandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMI_FieldDevice_THandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_FieldDevice_THandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INHERITS_4ANHHU_CPP_
-#define _TAO_IDL_INHERITS_4ANHHU_CPP_
+#ifndef _TAO_IDL_INHERITS_OW2P6Q_CPP_
+#define _TAO_IDL_INHERITS_OW2P6Q_CPP_
 
 #include "inheritS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -112,7 +112,7 @@ POA_OldInherit::AMH_one::op_one_skel (
     );
 }
 
-::CORBA::Boolean POA_OldInherit::AMH_one::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMH_one::_is_a (char const *value)
 {
   return
     (
@@ -121,7 +121,7 @@ POA_OldInherit::AMH_one::op_one_skel (
     );
 }
 
-const char* POA_OldInherit::AMH_one::_interface_repository_id () const
+char const *POA_OldInherit::AMH_one::_interface_repository_id () const
 {
   return "IDL:OldInherit/one:1.0";
 }
@@ -252,7 +252,7 @@ void POA_OldInherit::one::op_one_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::one::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::one::_is_a (char const *value)
 {
   return
     (
@@ -261,7 +261,7 @@ void POA_OldInherit::one::op_one_skel (
     );
 }
 
-const char* POA_OldInherit::one::_interface_repository_id () const
+char const *POA_OldInherit::one::_interface_repository_id () const
 {
   return "IDL:OldInherit/one:1.0";
 }
@@ -502,7 +502,7 @@ void POA_OldInherit::AMI_oneHandler::op_one_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::AMI_oneHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMI_oneHandler::_is_a (char const *value)
 {
   return
     (
@@ -512,7 +512,7 @@ void POA_OldInherit::AMI_oneHandler::op_one_excep_skel (
     );
 }
 
-const char* POA_OldInherit::AMI_oneHandler::_interface_repository_id () const
+char const *POA_OldInherit::AMI_oneHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_oneHandler:1.0";
 }
@@ -598,7 +598,7 @@ POA_OldInherit::AMH_two::op_two_skel (
     );
 }
 
-::CORBA::Boolean POA_OldInherit::AMH_two::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMH_two::_is_a (char const *value)
 {
   return
     (
@@ -608,7 +608,7 @@ POA_OldInherit::AMH_two::op_two_skel (
     );
 }
 
-const char* POA_OldInherit::AMH_two::_interface_repository_id () const
+char const *POA_OldInherit::AMH_two::_interface_repository_id () const
 {
   return "IDL:OldInherit/two:1.0";
 }
@@ -740,7 +740,7 @@ void POA_OldInherit::two::op_two_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::two::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::two::_is_a (char const *value)
 {
   return
     (
@@ -750,7 +750,7 @@ void POA_OldInherit::two::op_two_skel (
     );
 }
 
-const char* POA_OldInherit::two::_interface_repository_id () const
+char const *POA_OldInherit::two::_interface_repository_id () const
 {
   return "IDL:OldInherit/two:1.0";
 }
@@ -993,7 +993,7 @@ void POA_OldInherit::AMI_twoHandler::op_two_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::AMI_twoHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMI_twoHandler::_is_a (char const *value)
 {
   return
     (
@@ -1004,7 +1004,7 @@ void POA_OldInherit::AMI_twoHandler::op_two_excep_skel (
     );
 }
 
-const char* POA_OldInherit::AMI_twoHandler::_interface_repository_id () const
+char const *POA_OldInherit::AMI_twoHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_twoHandler:1.0";
 }
@@ -1090,7 +1090,7 @@ POA_OldInherit::AMH_three::op_three_skel (
     );
 }
 
-::CORBA::Boolean POA_OldInherit::AMH_three::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMH_three::_is_a (char const *value)
 {
   return
     (
@@ -1100,7 +1100,7 @@ POA_OldInherit::AMH_three::op_three_skel (
     );
 }
 
-const char* POA_OldInherit::AMH_three::_interface_repository_id () const
+char const *POA_OldInherit::AMH_three::_interface_repository_id () const
 {
   return "IDL:OldInherit/three:1.0";
 }
@@ -1232,7 +1232,7 @@ void POA_OldInherit::three::op_three_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::three::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::three::_is_a (char const *value)
 {
   return
     (
@@ -1242,7 +1242,7 @@ void POA_OldInherit::three::op_three_skel (
     );
 }
 
-const char* POA_OldInherit::three::_interface_repository_id () const
+char const *POA_OldInherit::three::_interface_repository_id () const
 {
   return "IDL:OldInherit/three:1.0";
 }
@@ -1485,7 +1485,7 @@ void POA_OldInherit::AMI_threeHandler::op_three_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::AMI_threeHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMI_threeHandler::_is_a (char const *value)
 {
   return
     (
@@ -1496,7 +1496,7 @@ void POA_OldInherit::AMI_threeHandler::op_three_excep_skel (
     );
 }
 
-const char* POA_OldInherit::AMI_threeHandler::_interface_repository_id () const
+char const *POA_OldInherit::AMI_threeHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_threeHandler:1.0";
 }
@@ -1584,7 +1584,7 @@ POA_OldInherit::AMH_four::op_four_skel (
     );
 }
 
-::CORBA::Boolean POA_OldInherit::AMH_four::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMH_four::_is_a (char const *value)
 {
   return
     (
@@ -1596,7 +1596,7 @@ POA_OldInherit::AMH_four::op_four_skel (
     );
 }
 
-const char* POA_OldInherit::AMH_four::_interface_repository_id () const
+char const *POA_OldInherit::AMH_four::_interface_repository_id () const
 {
   return "IDL:OldInherit/four:1.0";
 }
@@ -1730,7 +1730,7 @@ void POA_OldInherit::four::op_four_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::four::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::four::_is_a (char const *value)
 {
   return
     (
@@ -1742,7 +1742,7 @@ void POA_OldInherit::four::op_four_skel (
     );
 }
 
-const char* POA_OldInherit::four::_interface_repository_id () const
+char const *POA_OldInherit::four::_interface_repository_id () const
 {
   return "IDL:OldInherit/four:1.0";
 }
@@ -1989,7 +1989,7 @@ void POA_OldInherit::AMI_fourHandler::op_four_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::AMI_fourHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMI_fourHandler::_is_a (char const *value)
 {
   return
     (
@@ -2002,7 +2002,7 @@ void POA_OldInherit::AMI_fourHandler::op_four_excep_skel (
     );
 }
 
-const char* POA_OldInherit::AMI_fourHandler::_interface_repository_id () const
+char const *POA_OldInherit::AMI_fourHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_fourHandler:1.0";
 }
@@ -2091,7 +2091,7 @@ POA_OldInherit::AMH_five::op_five_skel (
     );
 }
 
-::CORBA::Boolean POA_OldInherit::AMH_five::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMH_five::_is_a (char const *value)
 {
   return
     (
@@ -2104,7 +2104,7 @@ POA_OldInherit::AMH_five::op_five_skel (
     );
 }
 
-const char* POA_OldInherit::AMH_five::_interface_repository_id () const
+char const *POA_OldInherit::AMH_five::_interface_repository_id () const
 {
   return "IDL:OldInherit/five:1.0";
 }
@@ -2239,7 +2239,7 @@ void POA_OldInherit::five::op_five_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::five::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::five::_is_a (char const *value)
 {
   return
     (
@@ -2252,7 +2252,7 @@ void POA_OldInherit::five::op_five_skel (
     );
 }
 
-const char* POA_OldInherit::five::_interface_repository_id () const
+char const *POA_OldInherit::five::_interface_repository_id () const
 {
   return "IDL:OldInherit/five:1.0";
 }
@@ -2501,7 +2501,7 @@ void POA_OldInherit::AMI_fiveHandler::op_five_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::AMI_fiveHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMI_fiveHandler::_is_a (char const *value)
 {
   return
     (
@@ -2515,7 +2515,7 @@ void POA_OldInherit::AMI_fiveHandler::op_five_excep_skel (
     );
 }
 
-const char* POA_OldInherit::AMI_fiveHandler::_interface_repository_id () const
+char const *POA_OldInherit::AMI_fiveHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_fiveHandler:1.0";
 }

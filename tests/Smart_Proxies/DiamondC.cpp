@@ -57,7 +57,7 @@ TAO::Objref_Traits<Diamond::Top>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Top>::marshal (const Diamond::Top_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Top>::marshal (Diamond::Top_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -140,7 +140,7 @@ Diamond::Top::_tao_release (Top_ptr obj)
 }
 
 ::CORBA::Boolean
-Diamond::Top::_is_a (const char *value)
+Diamond::Top::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -153,7 +153,7 @@ Diamond::Top::_is_a (const char *value)
     }
 }
 
-const char* Diamond::Top::_interface_repository_id () const
+char const *Diamond::Top::_interface_repository_id () const
 {
   return "IDL:Diamond/Top:1.0";
 }
@@ -323,7 +323,7 @@ TAO::Objref_Traits<Diamond::Left>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Left>::marshal (const Diamond::Left_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Left>::marshal (Diamond::Left_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -406,7 +406,7 @@ Diamond::Left::_tao_release (Left_ptr obj)
 }
 
 ::CORBA::Boolean
-Diamond::Left::_is_a (const char *value)
+Diamond::Left::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
       std::strcmp (value, "IDL:Diamond/Left:1.0") == 0 ||
@@ -420,7 +420,7 @@ Diamond::Left::_is_a (const char *value)
     }
 }
 
-const char* Diamond::Left::_interface_repository_id () const
+char const *Diamond::Left::_interface_repository_id () const
 {
   return "IDL:Diamond/Left:1.0";
 }
@@ -590,7 +590,7 @@ TAO::Objref_Traits<Diamond::Right>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Right>::marshal (const Diamond::Right_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Right>::marshal (Diamond::Right_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -673,7 +673,7 @@ Diamond::Right::_tao_release (Right_ptr obj)
 }
 
 ::CORBA::Boolean
-Diamond::Right::_is_a (const char *value)
+Diamond::Right::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
       std::strcmp (value, "IDL:Diamond/Right:1.0") == 0 ||
@@ -687,7 +687,7 @@ Diamond::Right::_is_a (const char *value)
     }
 }
 
-const char* Diamond::Right::_interface_repository_id () const
+char const *Diamond::Right::_interface_repository_id () const
 {
   return "IDL:Diamond/Right:1.0";
 }
@@ -857,7 +857,7 @@ TAO::Objref_Traits<Diamond::Buttom>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Buttom>::marshal (const Diamond::Buttom_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Buttom>::marshal (Diamond::Buttom_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -940,7 +940,7 @@ Diamond::Buttom::_tao_release (Buttom_ptr obj)
 }
 
 ::CORBA::Boolean
-Diamond::Buttom::_is_a (const char *value)
+Diamond::Buttom::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
       std::strcmp (value, "IDL:Diamond/Left:1.0") == 0 ||
@@ -956,7 +956,7 @@ Diamond::Buttom::_is_a (const char *value)
     }
 }
 
-const char* Diamond::Buttom::_interface_repository_id () const
+char const *Diamond::Buttom::_interface_repository_id () const
 {
   return "IDL:Diamond/Buttom:1.0";
 }
@@ -1107,7 +1107,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Diamond::Top_ptr _tao_objref)
+    Diamond::Top_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1136,7 +1136,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Diamond::Left_ptr _tao_objref)
+    Diamond::Left_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1165,7 +1165,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Diamond::Right_ptr _tao_objref)
+    Diamond::Right_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1194,7 +1194,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Diamond::Buttom_ptr _tao_objref)
+    Diamond::Buttom_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

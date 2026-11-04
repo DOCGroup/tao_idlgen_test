@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDS_LI6Y6G_CPP_
-#define _TAO_IDL_FIXEDS_LI6Y6G_CPP_
+#ifndef _TAO_IDL_FIXEDS_5DVDDD_CPP_
+#define _TAO_IDL_FIXEDS_5DVDDD_CPP_
 
 #include "fixedS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -158,7 +158,7 @@ POA_FixedPoint::AMH_FixedOperations::_set_rate_skel (
     );
 }
 
-::CORBA::Boolean POA_FixedPoint::AMH_FixedOperations::_is_a (const char* value)
+::CORBA::Boolean POA_FixedPoint::AMH_FixedOperations::_is_a (char const *value)
 {
   return
     (
@@ -167,7 +167,7 @@ POA_FixedPoint::AMH_FixedOperations::_set_rate_skel (
     );
 }
 
-const char* POA_FixedPoint::AMH_FixedOperations::_interface_repository_id () const
+char const *POA_FixedPoint::AMH_FixedOperations::_interface_repository_id () const
 {
   return "IDL:FixedPoint/FixedOperations:1.0";
 }
@@ -403,7 +403,7 @@ void POA_FixedPoint::FixedOperations::_set_rate_skel (
                          );
 }
 
-::CORBA::Boolean POA_FixedPoint::FixedOperations::_is_a (const char* value)
+::CORBA::Boolean POA_FixedPoint::FixedOperations::_is_a (char const *value)
 {
   return
     (
@@ -412,7 +412,7 @@ void POA_FixedPoint::FixedOperations::_set_rate_skel (
     );
 }
 
-const char* POA_FixedPoint::FixedOperations::_interface_repository_id () const
+char const *POA_FixedPoint::FixedOperations::_interface_repository_id () const
 {
   return "IDL:FixedPoint/FixedOperations:1.0";
 }
@@ -859,7 +859,7 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_FixedPoint::AMI_FixedOperationsHandler::_is_a (const char* value)
+::CORBA::Boolean POA_FixedPoint::AMI_FixedOperationsHandler::_is_a (char const *value)
 {
   return
     (
@@ -869,7 +869,7 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_excep_skel (
     );
 }
 
-const char* POA_FixedPoint::AMI_FixedOperationsHandler::_interface_repository_id () const
+char const *POA_FixedPoint::AMI_FixedOperationsHandler::_interface_repository_id () const
 {
   return "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0";
 }

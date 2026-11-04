@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_TAZGY5_CPP_
-#define _TAO_IDL_TESTS_TAZGY5_CPP_
+#ifndef _TAO_IDL_TESTS_VE7G0N_CPP_
+#define _TAO_IDL_TESTS_VE7G0N_CPP_
 
 #include "TestS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -182,7 +182,7 @@ void POA_Test::Hello::shutdown_skel (
                          );
 }
 
-::CORBA::Boolean POA_Test::Hello::_is_a (const char* value)
+::CORBA::Boolean POA_Test::Hello::_is_a (char const *value)
 {
   return
     (
@@ -191,7 +191,7 @@ void POA_Test::Hello::shutdown_skel (
     );
 }
 
-const char* POA_Test::Hello::_interface_repository_id () const
+char const *POA_Test::Hello::_interface_repository_id () const
 {
   return "IDL:Test/Hello:1.0";
 }

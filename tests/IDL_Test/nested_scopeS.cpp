@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPES_33PNJT_CPP_
-#define _TAO_IDL_NESTED_SCOPES_33PNJT_CPP_
+#ifndef _TAO_IDL_NESTED_SCOPES_2DADDA_CPP_
+#define _TAO_IDL_NESTED_SCOPES_2DADDA_CPP_
 
 #include "nested_scopeS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -77,7 +77,7 @@ POA_i_skip::i_hump::AMH_i_skip::AMH_i_skip ()
   this->optable_ = std::addressof (tao_i_skip_i_hump_AMH_i_skip_optable);
 }
 
-::CORBA::Boolean POA_i_skip::i_hump::AMH_i_skip::_is_a (const char* value)
+::CORBA::Boolean POA_i_skip::i_hump::AMH_i_skip::_is_a (char const *value)
 {
   return
     (
@@ -86,7 +86,7 @@ POA_i_skip::i_hump::AMH_i_skip::AMH_i_skip ()
     );
 }
 
-const char* POA_i_skip::i_hump::AMH_i_skip::_interface_repository_id () const
+char const *POA_i_skip::i_hump::AMH_i_skip::_interface_repository_id () const
 {
   return "IDL:i_skip/i_hump/i_skip:1.0";
 }
@@ -148,7 +148,7 @@ POA_i_skip::i_hump::i_skip::i_skip ()
   this->optable_ = std::addressof (tao_i_skip_i_hump_i_skip_optable);
 }
 
-::CORBA::Boolean POA_i_skip::i_hump::i_skip::_is_a (const char* value)
+::CORBA::Boolean POA_i_skip::i_hump::i_skip::_is_a (char const *value)
 {
   return
     (
@@ -157,7 +157,7 @@ POA_i_skip::i_hump::i_skip::i_skip ()
     );
 }
 
-const char* POA_i_skip::i_hump::i_skip::_interface_repository_id () const
+char const *POA_i_skip::i_hump::i_skip::_interface_repository_id () const
 {
   return "IDL:i_skip/i_hump/i_skip:1.0";
 }
@@ -219,7 +219,7 @@ POA_i_skip::i_hump::AMI_i_skipHandler::AMI_i_skipHandler ()
   this->optable_ = std::addressof (tao_i_skip_i_hump_AMI_i_skipHandler_optable);
 }
 
-::CORBA::Boolean POA_i_skip::i_hump::AMI_i_skipHandler::_is_a (const char* value)
+::CORBA::Boolean POA_i_skip::i_hump::AMI_i_skipHandler::_is_a (char const *value)
 {
   return
     (
@@ -229,7 +229,7 @@ POA_i_skip::i_hump::AMI_i_skipHandler::AMI_i_skipHandler ()
     );
 }
 
-const char* POA_i_skip::i_hump::AMI_i_skipHandler::_interface_repository_id () const
+char const *POA_i_skip::i_hump::AMI_i_skipHandler::_interface_repository_id () const
 {
   return "IDL:i_skip/i_hump/AMI_i_skipHandler:1.0";
 }
@@ -279,7 +279,7 @@ POA_AMH_bloo::POA_AMH_bloo ()
   this->optable_ = std::addressof (tao_AMH_bloo_optable);
 }
 
-::CORBA::Boolean POA_AMH_bloo::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_bloo::_is_a (char const *value)
 {
   return
     (
@@ -288,7 +288,7 @@ POA_AMH_bloo::POA_AMH_bloo ()
     );
 }
 
-const char* POA_AMH_bloo::_interface_repository_id () const
+char const *POA_AMH_bloo::_interface_repository_id () const
 {
   return "IDL:bloo:1.0";
 }
@@ -350,7 +350,7 @@ POA_bloo::POA_bloo ()
   this->optable_ = std::addressof (tao_bloo_optable);
 }
 
-::CORBA::Boolean POA_bloo::_is_a (const char* value)
+::CORBA::Boolean POA_bloo::_is_a (char const *value)
 {
   return
     (
@@ -359,7 +359,7 @@ POA_bloo::POA_bloo ()
     );
 }
 
-const char* POA_bloo::_interface_repository_id () const
+char const *POA_bloo::_interface_repository_id () const
 {
   return "IDL:bloo:1.0";
 }
@@ -421,7 +421,7 @@ POA_AMI_blooHandler::POA_AMI_blooHandler ()
   this->optable_ = std::addressof (tao_AMI_blooHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_blooHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_blooHandler::_is_a (char const *value)
 {
   return
     (
@@ -431,7 +431,7 @@ POA_AMI_blooHandler::POA_AMI_blooHandler ()
     );
 }
 
-const char* POA_AMI_blooHandler::_interface_repository_id () const
+char const *POA_AMI_blooHandler::_interface_repository_id () const
 {
   return "IDL:AMI_blooHandler:1.0";
 }
@@ -481,7 +481,7 @@ POA_bug_1985_a::b::AMH_something::AMH_something ()
   this->optable_ = std::addressof (tao_bug_1985_a_b_AMH_something_optable);
 }
 
-::CORBA::Boolean POA_bug_1985_a::b::AMH_something::_is_a (const char* value)
+::CORBA::Boolean POA_bug_1985_a::b::AMH_something::_is_a (char const *value)
 {
   return
     (
@@ -490,7 +490,7 @@ POA_bug_1985_a::b::AMH_something::AMH_something ()
     );
 }
 
-const char* POA_bug_1985_a::b::AMH_something::_interface_repository_id () const
+char const *POA_bug_1985_a::b::AMH_something::_interface_repository_id () const
 {
   return "IDL:bug_1985_a/b/something:1.0";
 }
@@ -552,7 +552,7 @@ POA_bug_1985_a::b::something::something ()
   this->optable_ = std::addressof (tao_bug_1985_a_b_something_optable);
 }
 
-::CORBA::Boolean POA_bug_1985_a::b::something::_is_a (const char* value)
+::CORBA::Boolean POA_bug_1985_a::b::something::_is_a (char const *value)
 {
   return
     (
@@ -561,7 +561,7 @@ POA_bug_1985_a::b::something::something ()
     );
 }
 
-const char* POA_bug_1985_a::b::something::_interface_repository_id () const
+char const *POA_bug_1985_a::b::something::_interface_repository_id () const
 {
   return "IDL:bug_1985_a/b/something:1.0";
 }
@@ -623,7 +623,7 @@ POA_bug_1985_a::b::AMI_somethingHandler::AMI_somethingHandler ()
   this->optable_ = std::addressof (tao_bug_1985_a_b_AMI_somethingHandler_optable);
 }
 
-::CORBA::Boolean POA_bug_1985_a::b::AMI_somethingHandler::_is_a (const char* value)
+::CORBA::Boolean POA_bug_1985_a::b::AMI_somethingHandler::_is_a (char const *value)
 {
   return
     (
@@ -633,7 +633,7 @@ POA_bug_1985_a::b::AMI_somethingHandler::AMI_somethingHandler ()
     );
 }
 
-const char* POA_bug_1985_a::b::AMI_somethingHandler::_interface_repository_id () const
+char const *POA_bug_1985_a::b::AMI_somethingHandler::_interface_repository_id () const
 {
   return "IDL:bug_1985_a/b/AMI_somethingHandler:1.0";
 }
@@ -683,7 +683,7 @@ POA_bug_1985_c::d::AMH_something::AMH_something ()
   this->optable_ = std::addressof (tao_bug_1985_c_d_AMH_something_optable);
 }
 
-::CORBA::Boolean POA_bug_1985_c::d::AMH_something::_is_a (const char* value)
+::CORBA::Boolean POA_bug_1985_c::d::AMH_something::_is_a (char const *value)
 {
   return
     (
@@ -693,7 +693,7 @@ POA_bug_1985_c::d::AMH_something::AMH_something ()
     );
 }
 
-const char* POA_bug_1985_c::d::AMH_something::_interface_repository_id () const
+char const *POA_bug_1985_c::d::AMH_something::_interface_repository_id () const
 {
   return "IDL:bug_1985_c/d/something:1.0";
 }
@@ -755,7 +755,7 @@ POA_bug_1985_c::d::something::something ()
   this->optable_ = std::addressof (tao_bug_1985_c_d_something_optable);
 }
 
-::CORBA::Boolean POA_bug_1985_c::d::something::_is_a (const char* value)
+::CORBA::Boolean POA_bug_1985_c::d::something::_is_a (char const *value)
 {
   return
     (
@@ -765,7 +765,7 @@ POA_bug_1985_c::d::something::something ()
     );
 }
 
-const char* POA_bug_1985_c::d::something::_interface_repository_id () const
+char const *POA_bug_1985_c::d::something::_interface_repository_id () const
 {
   return "IDL:bug_1985_c/d/something:1.0";
 }
@@ -827,7 +827,7 @@ POA_bug_1985_c::d::AMI_somethingHandler::AMI_somethingHandler ()
   this->optable_ = std::addressof (tao_bug_1985_c_d_AMI_somethingHandler_optable);
 }
 
-::CORBA::Boolean POA_bug_1985_c::d::AMI_somethingHandler::_is_a (const char* value)
+::CORBA::Boolean POA_bug_1985_c::d::AMI_somethingHandler::_is_a (char const *value)
 {
   return
     (
@@ -838,7 +838,7 @@ POA_bug_1985_c::d::AMI_somethingHandler::AMI_somethingHandler ()
     );
 }
 
-const char* POA_bug_1985_c::d::AMI_somethingHandler::_interface_repository_id () const
+char const *POA_bug_1985_c::d::AMI_somethingHandler::_interface_repository_id () const
 {
   return "IDL:bug_1985_c/d/AMI_somethingHandler:1.0";
 }
@@ -888,7 +888,7 @@ POA_Negotiator::AMH_UAV_Negotiator::AMH_UAV_Negotiator ()
   this->optable_ = std::addressof (tao_Negotiator_AMH_UAV_Negotiator_optable);
 }
 
-::CORBA::Boolean POA_Negotiator::AMH_UAV_Negotiator::_is_a (const char* value)
+::CORBA::Boolean POA_Negotiator::AMH_UAV_Negotiator::_is_a (char const *value)
 {
   return
     (
@@ -897,7 +897,7 @@ POA_Negotiator::AMH_UAV_Negotiator::AMH_UAV_Negotiator ()
     );
 }
 
-const char* POA_Negotiator::AMH_UAV_Negotiator::_interface_repository_id () const
+char const *POA_Negotiator::AMH_UAV_Negotiator::_interface_repository_id () const
 {
   return "IDL:Negotiator/UAV_Negotiator:1.0";
 }
@@ -959,7 +959,7 @@ POA_Negotiator::UAV_Negotiator::UAV_Negotiator ()
   this->optable_ = std::addressof (tao_Negotiator_UAV_Negotiator_optable);
 }
 
-::CORBA::Boolean POA_Negotiator::UAV_Negotiator::_is_a (const char* value)
+::CORBA::Boolean POA_Negotiator::UAV_Negotiator::_is_a (char const *value)
 {
   return
     (
@@ -968,7 +968,7 @@ POA_Negotiator::UAV_Negotiator::UAV_Negotiator ()
     );
 }
 
-const char* POA_Negotiator::UAV_Negotiator::_interface_repository_id () const
+char const *POA_Negotiator::UAV_Negotiator::_interface_repository_id () const
 {
   return "IDL:Negotiator/UAV_Negotiator:1.0";
 }
@@ -1030,7 +1030,7 @@ POA_Negotiator::AMI_UAV_NegotiatorHandler::AMI_UAV_NegotiatorHandler ()
   this->optable_ = std::addressof (tao_Negotiator_AMI_UAV_NegotiatorHandler_optable);
 }
 
-::CORBA::Boolean POA_Negotiator::AMI_UAV_NegotiatorHandler::_is_a (const char* value)
+::CORBA::Boolean POA_Negotiator::AMI_UAV_NegotiatorHandler::_is_a (char const *value)
 {
   return
     (
@@ -1040,7 +1040,7 @@ POA_Negotiator::AMI_UAV_NegotiatorHandler::AMI_UAV_NegotiatorHandler ()
     );
 }
 
-const char* POA_Negotiator::AMI_UAV_NegotiatorHandler::_interface_repository_id () const
+char const *POA_Negotiator::AMI_UAV_NegotiatorHandler::_interface_repository_id () const
 {
   return "IDL:Negotiator/AMI_UAV_NegotiatorHandler:1.0";
 }
@@ -1134,7 +1134,7 @@ POA_Negotiator::AMH_UAV_Negotiator_Factory::make_negotiator_skel (
     );
 }
 
-::CORBA::Boolean POA_Negotiator::AMH_UAV_Negotiator_Factory::_is_a (const char* value)
+::CORBA::Boolean POA_Negotiator::AMH_UAV_Negotiator_Factory::_is_a (char const *value)
 {
   return
     (
@@ -1144,7 +1144,7 @@ POA_Negotiator::AMH_UAV_Negotiator_Factory::make_negotiator_skel (
     );
 }
 
-const char* POA_Negotiator::AMH_UAV_Negotiator_Factory::_interface_repository_id () const
+char const *POA_Negotiator::AMH_UAV_Negotiator_Factory::_interface_repository_id () const
 {
   return "IDL:Negotiator/UAV_Negotiator_Factory:1.0";
 }
@@ -1301,7 +1301,7 @@ void POA_Negotiator::UAV_Negotiator_Factory::make_negotiator_skel (
                          );
 }
 
-::CORBA::Boolean POA_Negotiator::UAV_Negotiator_Factory::_is_a (const char* value)
+::CORBA::Boolean POA_Negotiator::UAV_Negotiator_Factory::_is_a (char const *value)
 {
   return
     (
@@ -1311,7 +1311,7 @@ void POA_Negotiator::UAV_Negotiator_Factory::make_negotiator_skel (
     );
 }
 
-const char* POA_Negotiator::UAV_Negotiator_Factory::_interface_repository_id () const
+char const *POA_Negotiator::UAV_Negotiator_Factory::_interface_repository_id () const
 {
   return "IDL:Negotiator/UAV_Negotiator_Factory:1.0";
 }
@@ -1579,7 +1579,7 @@ void POA_Negotiator::AMI_UAV_Negotiator_FactoryHandler::make_negotiator_excep_sk
                          );
 }
 
-::CORBA::Boolean POA_Negotiator::AMI_UAV_Negotiator_FactoryHandler::_is_a (const char* value)
+::CORBA::Boolean POA_Negotiator::AMI_UAV_Negotiator_FactoryHandler::_is_a (char const *value)
 {
   return
     (
@@ -1590,7 +1590,7 @@ void POA_Negotiator::AMI_UAV_Negotiator_FactoryHandler::make_negotiator_excep_sk
     );
 }
 
-const char* POA_Negotiator::AMI_UAV_Negotiator_FactoryHandler::_interface_repository_id () const
+char const *POA_Negotiator::AMI_UAV_Negotiator_FactoryHandler::_interface_repository_id () const
 {
   return "IDL:Negotiator/AMI_UAV_Negotiator_FactoryHandler:1.0";
 }
@@ -1684,7 +1684,7 @@ POA_Wow::bug_2125::AMH_MyInterface::op2_skel (
     );
 }
 
-::CORBA::Boolean POA_Wow::bug_2125::AMH_MyInterface::_is_a (const char* value)
+::CORBA::Boolean POA_Wow::bug_2125::AMH_MyInterface::_is_a (char const *value)
 {
   return
     (
@@ -1693,7 +1693,7 @@ POA_Wow::bug_2125::AMH_MyInterface::op2_skel (
     );
 }
 
-const char* POA_Wow::bug_2125::AMH_MyInterface::_interface_repository_id () const
+char const *POA_Wow::bug_2125::AMH_MyInterface::_interface_repository_id () const
 {
   return "IDL:Wow/bug_2125/MyInterface:1.0";
 }
@@ -1847,7 +1847,7 @@ void POA_Wow::bug_2125::MyInterface::op2_skel (
                          );
 }
 
-::CORBA::Boolean POA_Wow::bug_2125::MyInterface::_is_a (const char* value)
+::CORBA::Boolean POA_Wow::bug_2125::MyInterface::_is_a (char const *value)
 {
   return
     (
@@ -1856,7 +1856,7 @@ void POA_Wow::bug_2125::MyInterface::op2_skel (
     );
 }
 
-const char* POA_Wow::bug_2125::MyInterface::_interface_repository_id () const
+char const *POA_Wow::bug_2125::MyInterface::_interface_repository_id () const
 {
   return "IDL:Wow/bug_2125/MyInterface:1.0";
 }
@@ -2105,7 +2105,7 @@ void POA_Wow::bug_2125::AMI_MyInterfaceHandler::op2_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_Wow::bug_2125::AMI_MyInterfaceHandler::_is_a (const char* value)
+::CORBA::Boolean POA_Wow::bug_2125::AMI_MyInterfaceHandler::_is_a (char const *value)
 {
   return
     (
@@ -2115,7 +2115,7 @@ void POA_Wow::bug_2125::AMI_MyInterfaceHandler::op2_excep_skel (
     );
 }
 
-const char* POA_Wow::bug_2125::AMI_MyInterfaceHandler::_interface_repository_id () const
+char const *POA_Wow::bug_2125::AMI_MyInterfaceHandler::_interface_repository_id () const
 {
   return "IDL:Wow/bug_2125/AMI_MyInterfaceHandler:1.0";
 }

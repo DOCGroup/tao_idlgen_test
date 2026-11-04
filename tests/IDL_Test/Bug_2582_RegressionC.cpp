@@ -128,7 +128,7 @@ TAO::Objref_Traits<FieldDevice_T>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<FieldDevice_T>::marshal (const FieldDevice_T_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<FieldDevice_T>::marshal (FieldDevice_T_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -297,7 +297,7 @@ FieldDevice_T::_tao_release (FieldDevice_T_ptr obj)
 }
 
 ::CORBA::Boolean
-FieldDevice_T::_is_a (const char *value)
+FieldDevice_T::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:FieldDevice_T:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -310,17 +310,17 @@ FieldDevice_T::_is_a (const char *value)
     }
 }
 
-const char* FieldDevice_T::_interface_repository_id () const
+char const *FieldDevice_T::_interface_repository_id () const
 {
   return "IDL:FieldDevice_T:1.0";
 }
 
-const char* FieldDevice_T::_desc_repository_id ()
+char const *FieldDevice_T::_desc_repository_id ()
 {
   return "IDL:FieldDevice_T:1.0";
 }
 
-const char* FieldDevice_T::_desc_interface_name ()
+char const *FieldDevice_T::_desc_interface_name ()
 {
   return "FieldDevice_T";
 }
@@ -542,7 +542,7 @@ TAO::Objref_Traits<AMH_FieldDevice_TResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_FieldDevice_TResponseHandler>::marshal (const AMH_FieldDevice_TResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_FieldDevice_TResponseHandler>::marshal (AMH_FieldDevice_TResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -596,7 +596,7 @@ AMH_FieldDevice_TResponseHandler::_tao_release (AMH_FieldDevice_TResponseHandler
 }
 
 ::CORBA::Boolean
-AMH_FieldDevice_TResponseHandler::_is_a (const char *value)
+AMH_FieldDevice_TResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_FieldDevice_TResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -610,17 +610,17 @@ AMH_FieldDevice_TResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* AMH_FieldDevice_TResponseHandler::_interface_repository_id () const
+char const *AMH_FieldDevice_TResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_FieldDevice_TResponseHandler:1.0";
 }
 
-const char* AMH_FieldDevice_TResponseHandler::_desc_repository_id ()
+char const *AMH_FieldDevice_TResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_FieldDevice_TResponseHandler:1.0";
 }
 
-const char* AMH_FieldDevice_TResponseHandler::_desc_interface_name ()
+char const *AMH_FieldDevice_TResponseHandler::_desc_interface_name ()
 {
   return "AMH_FieldDevice_TResponseHandler";
 }
@@ -662,7 +662,7 @@ TAO::Objref_Traits<AMI_FieldDevice_THandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_FieldDevice_THandler>::marshal (const AMI_FieldDevice_THandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_FieldDevice_THandler>::marshal (AMI_FieldDevice_THandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -961,7 +961,7 @@ AMI_FieldDevice_THandler::_tao_release (AMI_FieldDevice_THandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_FieldDevice_THandler::_is_a (const char *value)
+AMI_FieldDevice_THandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_FieldDevice_THandler:1.0") == 0 ||
@@ -975,17 +975,17 @@ AMI_FieldDevice_THandler::_is_a (const char *value)
     }
 }
 
-const char* AMI_FieldDevice_THandler::_interface_repository_id () const
+char const *AMI_FieldDevice_THandler::_interface_repository_id () const
 {
   return "IDL:AMI_FieldDevice_THandler:1.0";
 }
 
-const char* AMI_FieldDevice_THandler::_desc_repository_id ()
+char const *AMI_FieldDevice_THandler::_desc_repository_id ()
 {
   return "IDL:AMI_FieldDevice_THandler:1.0";
 }
 
-const char* AMI_FieldDevice_THandler::_desc_interface_name ()
+char const *AMI_FieldDevice_THandler::_desc_interface_name ()
 {
   return "AMI_FieldDevice_THandler";
 }
@@ -1133,7 +1133,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     FieldDevice_T_ptr &_tao_elem)
 {
   return
@@ -1275,7 +1275,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_FieldDevice_TResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1333,7 +1333,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_FieldDevice_THandler_ptr &_tao_elem)
 {
   return
@@ -1395,7 +1395,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const FieldDevice_T_ptr _tao_objref)
+    FieldDevice_T_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1487,7 +1487,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const AMI_FieldDevice_THandler_ptr _tao_objref)
+    AMI_FieldDevice_THandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

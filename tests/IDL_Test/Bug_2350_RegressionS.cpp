@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_33S2GZ_CPP_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_33S2GZ_CPP_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_GAKFWA_CPP_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_GAKFWA_CPP_
 
 #include "Bug_2350_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -121,7 +121,7 @@ POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_Bug_2350_Regression::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_Bug_2350_Regression::_is_a (char const *value)
 {
   return
     (
@@ -130,7 +130,7 @@ POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
     );
 }
 
-const char* POA_AMH_Bug_2350_Regression::_interface_repository_id () const
+char const *POA_AMH_Bug_2350_Regression::_interface_repository_id () const
 {
   return "IDL:Bug_2350_Regression:1.0";
 }
@@ -283,7 +283,7 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_Bug_2350_Regression::_is_a (const char* value)
+::CORBA::Boolean POA_Bug_2350_Regression::_is_a (char const *value)
 {
   return
     (
@@ -292,7 +292,7 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
     );
 }
 
-const char* POA_Bug_2350_Regression::_interface_repository_id () const
+char const *POA_Bug_2350_Regression::_interface_repository_id () const
 {
   return "IDL:Bug_2350_Regression:1.0";
 }
@@ -556,7 +556,7 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_Bug_2350_RegressionHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_Bug_2350_RegressionHandler::_is_a (char const *value)
 {
   return
     (
@@ -566,7 +566,7 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
     );
 }
 
-const char* POA_AMI_Bug_2350_RegressionHandler::_interface_repository_id () const
+char const *POA_AMI_Bug_2350_RegressionHandler::_interface_repository_id () const
 {
   return "IDL:AMI_Bug_2350_RegressionHandler:1.0";
 }

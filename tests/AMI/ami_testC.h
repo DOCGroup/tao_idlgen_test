@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTC_1W62EQ_H_
-#define _TAO_IDL_AMI_TESTC_1W62EQ_H_
+#ifndef _TAO_IDL_AMI_TESTC_SFWZQH_H_
+#define _TAO_IDL_AMI_TESTC_SFWZQH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -172,8 +172,8 @@ namespace A
       ::A::AMI_AMI_TestHandler_ptr ami_handler,
       char const * str);
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -194,9 +194,9 @@ namespace A
 
   private:
     // Private and unimplemented for concrete interfaces.
-    AMI_Test (const AMI_Test &) = delete;
+    AMI_Test (AMI_Test const &) = delete;
     AMI_Test (AMI_Test &&) = delete;
-    AMI_Test &operator= (const AMI_Test &) = delete;
+    AMI_Test &operator= (AMI_Test const &) = delete;
     AMI_Test &operator= (AMI_Test &&) = delete;
   };
   extern  ::CORBA::TypeCode_ptr const _tc_AMI_Test;
@@ -280,8 +280,8 @@ namespace A
     virtual void inout_arg_test_excep (
       ::Messaging::ExceptionHolder * excep_holder);
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -302,9 +302,9 @@ namespace A
 
   private:
     // Private and unimplemented for concrete interfaces.
-    AMI_AMI_TestHandler (const AMI_AMI_TestHandler &) = delete;
+    AMI_AMI_TestHandler (AMI_AMI_TestHandler const &) = delete;
     AMI_AMI_TestHandler (AMI_AMI_TestHandler &&) = delete;
-    AMI_AMI_TestHandler &operator= (const AMI_AMI_TestHandler &) = delete;
+    AMI_AMI_TestHandler &operator= (AMI_AMI_TestHandler const &) = delete;
     AMI_AMI_TestHandler &operator= (AMI_AMI_TestHandler &&) = delete;
   };
   extern  ::CORBA::TypeCode_ptr const _tc_AMI_AMI_TestHandler;
@@ -348,8 +348,8 @@ namespace A
     virtual void sendc_child_op (
       ::A::AMI_Test_ChildHandler_ptr ami_handler);
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -370,9 +370,9 @@ namespace A
 
   private:
     // Private and unimplemented for concrete interfaces.
-    Test_Child (const Test_Child &) = delete;
+    Test_Child (Test_Child const &) = delete;
     Test_Child (Test_Child &&) = delete;
-    Test_Child &operator= (const Test_Child &) = delete;
+    Test_Child &operator= (Test_Child const &) = delete;
     Test_Child &operator= (Test_Child &&) = delete;
   };
   extern  ::CORBA::TypeCode_ptr const _tc_Test_Child;
@@ -419,8 +419,8 @@ namespace A
     virtual void child_op_excep (
       ::Messaging::ExceptionHolder * excep_holder);
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -441,9 +441,9 @@ namespace A
 
   private:
     // Private and unimplemented for concrete interfaces.
-    AMI_Test_ChildHandler (const AMI_Test_ChildHandler &) = delete;
+    AMI_Test_ChildHandler (AMI_Test_ChildHandler const &) = delete;
     AMI_Test_ChildHandler (AMI_Test_ChildHandler &&) = delete;
-    AMI_Test_ChildHandler &operator= (const AMI_Test_ChildHandler &) = delete;
+    AMI_Test_ChildHandler &operator= (AMI_Test_ChildHandler const &) = delete;
     AMI_Test_ChildHandler &operator= (AMI_Test_ChildHandler &&) = delete;
   };
   extern  ::CORBA::TypeCode_ptr const _tc_AMI_Test_ChildHandler;
@@ -623,7 +623,7 @@ namespace CORBA {
 
  void operator<<= (::CORBA::Any &, A::AMI_Test_ptr); // copying
  void operator<<= (::CORBA::Any &, A::AMI_Test_ptr *); // non-copying
- ::CORBA::Boolean operator>>= (const ::CORBA::Any &, A::AMI_Test_ptr &);
+ ::CORBA::Boolean operator>>= (::CORBA::Any const &, A::AMI_Test_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -632,7 +632,7 @@ namespace CORBA {
 
  void operator<<= (::CORBA::Any &, A::AMI_AMI_TestHandler_ptr); // copying
  void operator<<= (::CORBA::Any &, A::AMI_AMI_TestHandler_ptr *); // non-copying
- ::CORBA::Boolean operator>>= (const ::CORBA::Any &, A::AMI_AMI_TestHandler_ptr &);
+ ::CORBA::Boolean operator>>= (::CORBA::Any const &, A::AMI_AMI_TestHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -641,7 +641,7 @@ namespace CORBA {
 
  void operator<<= (::CORBA::Any &, A::Test_Child_ptr); // copying
  void operator<<= (::CORBA::Any &, A::Test_Child_ptr *); // non-copying
- ::CORBA::Boolean operator>>= (const ::CORBA::Any &, A::Test_Child_ptr &);
+ ::CORBA::Boolean operator>>= (::CORBA::Any const &, A::Test_Child_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -650,7 +650,7 @@ namespace CORBA {
 
  void operator<<= (::CORBA::Any &, A::AMI_Test_ChildHandler_ptr); // copying
  void operator<<= (::CORBA::Any &, A::AMI_Test_ChildHandler_ptr *); // non-copying
- ::CORBA::Boolean operator>>= (const ::CORBA::Any &, A::AMI_Test_ChildHandler_ptr &);
+ ::CORBA::Boolean operator>>= (::CORBA::Any const &, A::AMI_Test_ChildHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -663,28 +663,28 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::AMI_Test_ptr );
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::AMI_Test_ptr const);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, A::AMI_Test_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::AMI_AMI_TestHandler_ptr );
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::AMI_AMI_TestHandler_ptr const);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, A::AMI_AMI_TestHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::Test_Child_ptr );
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::Test_Child_ptr const);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, A::Test_Child_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::AMI_Test_ChildHandler_ptr );
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::AMI_Test_ChildHandler_ptr const);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, A::AMI_Test_ChildHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

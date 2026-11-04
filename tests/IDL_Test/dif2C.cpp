@@ -59,7 +59,7 @@ TAO::Objref_Traits<OldDif2::ex1>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex1>::marshal (const OldDif2::ex1_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex1>::marshal (OldDif2::ex1_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -618,7 +618,7 @@ OldDif2::ex1::_tao_release (ex1_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::ex1::_is_a (const char *value)
+OldDif2::ex1::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -631,17 +631,17 @@ OldDif2::ex1::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::ex1::_interface_repository_id () const
+char const *OldDif2::ex1::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex1:1.0";
 }
 
-const char* OldDif2::ex1::_desc_repository_id ()
+char const *OldDif2::ex1::_desc_repository_id ()
 {
   return "IDL:OldDif2/ex1:1.0";
 }
 
-const char* OldDif2::ex1::_desc_interface_name ()
+char const *OldDif2::ex1::_desc_interface_name ()
 {
   return "ex1";
 }
@@ -904,7 +904,7 @@ TAO::Objref_Traits<OldDif2::AMH_ex1ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex1ResponseHandler>::marshal (const OldDif2::AMH_ex1ResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex1ResponseHandler>::marshal (OldDif2::AMH_ex1ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -958,7 +958,7 @@ OldDif2::AMH_ex1ResponseHandler::_tao_release (AMH_ex1ResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMH_ex1ResponseHandler::_is_a (const char *value)
+OldDif2::AMH_ex1ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/AMH_ex1ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -972,17 +972,17 @@ OldDif2::AMH_ex1ResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMH_ex1ResponseHandler::_interface_repository_id () const
+char const *OldDif2::AMH_ex1ResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMH_ex1ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex1ResponseHandler::_desc_repository_id ()
+char const *OldDif2::AMH_ex1ResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMH_ex1ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex1ResponseHandler::_desc_interface_name ()
+char const *OldDif2::AMH_ex1ResponseHandler::_desc_interface_name ()
 {
   return "AMH_ex1ResponseHandler";
 }
@@ -1016,7 +1016,7 @@ TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::marshal (const OldDif2::AMI_ex1Handler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::marshal (OldDif2::AMI_ex1Handler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2006,7 +2006,7 @@ OldDif2::AMI_ex1Handler::_tao_release (AMI_ex1Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMI_ex1Handler::_is_a (const char *value)
+OldDif2::AMI_ex1Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
@@ -2020,17 +2020,17 @@ OldDif2::AMI_ex1Handler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMI_ex1Handler::_interface_repository_id () const
+char const *OldDif2::AMI_ex1Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex1Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex1Handler::_desc_repository_id ()
+char const *OldDif2::AMI_ex1Handler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMI_ex1Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex1Handler::_desc_interface_name ()
+char const *OldDif2::AMI_ex1Handler::_desc_interface_name ()
 {
   return "AMI_ex1Handler";
 }
@@ -2064,7 +2064,7 @@ TAO::Objref_Traits<OldDif2::ex2>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex2>::marshal (const OldDif2::ex2_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex2>::marshal (OldDif2::ex2_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2546,7 +2546,7 @@ OldDif2::ex2::_tao_release (ex2_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::ex2::_is_a (const char *value)
+OldDif2::ex2::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/ex2:1.0") == 0 ||
@@ -2560,17 +2560,17 @@ OldDif2::ex2::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::ex2::_interface_repository_id () const
+char const *OldDif2::ex2::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex2:1.0";
 }
 
-const char* OldDif2::ex2::_desc_repository_id ()
+char const *OldDif2::ex2::_desc_repository_id ()
 {
   return "IDL:OldDif2/ex2:1.0";
 }
 
-const char* OldDif2::ex2::_desc_interface_name ()
+char const *OldDif2::ex2::_desc_interface_name ()
 {
   return "ex2";
 }
@@ -2819,7 +2819,7 @@ TAO::Objref_Traits<OldDif2::AMH_ex2ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex2ResponseHandler>::marshal (const OldDif2::AMH_ex2ResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex2ResponseHandler>::marshal (OldDif2::AMH_ex2ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2873,7 +2873,7 @@ OldDif2::AMH_ex2ResponseHandler::_tao_release (AMH_ex2ResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMH_ex2ResponseHandler::_is_a (const char *value)
+OldDif2::AMH_ex2ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/AMH_ex2ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -2887,17 +2887,17 @@ OldDif2::AMH_ex2ResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMH_ex2ResponseHandler::_interface_repository_id () const
+char const *OldDif2::AMH_ex2ResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMH_ex2ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex2ResponseHandler::_desc_repository_id ()
+char const *OldDif2::AMH_ex2ResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMH_ex2ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex2ResponseHandler::_desc_interface_name ()
+char const *OldDif2::AMH_ex2ResponseHandler::_desc_interface_name ()
 {
   return "AMH_ex2ResponseHandler";
 }
@@ -2931,7 +2931,7 @@ TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::marshal (const OldDif2::AMI_ex2Handler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::marshal (OldDif2::AMI_ex2Handler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3785,7 +3785,7 @@ OldDif2::AMI_ex2Handler::_tao_release (AMI_ex2Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMI_ex2Handler::_is_a (const char *value)
+OldDif2::AMI_ex2Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
@@ -3800,17 +3800,17 @@ OldDif2::AMI_ex2Handler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMI_ex2Handler::_interface_repository_id () const
+char const *OldDif2::AMI_ex2Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex2Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex2Handler::_desc_repository_id ()
+char const *OldDif2::AMI_ex2Handler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMI_ex2Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex2Handler::_desc_interface_name ()
+char const *OldDif2::AMI_ex2Handler::_desc_interface_name ()
 {
   return "AMI_ex2Handler";
 }
@@ -3844,7 +3844,7 @@ TAO::Objref_Traits<OldDif2::ex3>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex3>::marshal (const OldDif2::ex3_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex3>::marshal (OldDif2::ex3_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -4315,7 +4315,7 @@ OldDif2::ex3::_tao_release (ex3_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::ex3::_is_a (const char *value)
+OldDif2::ex3::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/ex3:1.0") == 0 ||
@@ -4329,17 +4329,17 @@ OldDif2::ex3::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::ex3::_interface_repository_id () const
+char const *OldDif2::ex3::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex3:1.0";
 }
 
-const char* OldDif2::ex3::_desc_repository_id ()
+char const *OldDif2::ex3::_desc_repository_id ()
 {
   return "IDL:OldDif2/ex3:1.0";
 }
 
-const char* OldDif2::ex3::_desc_interface_name ()
+char const *OldDif2::ex3::_desc_interface_name ()
 {
   return "ex3";
 }
@@ -4602,7 +4602,7 @@ TAO::Objref_Traits<OldDif2::AMH_ex3ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex3ResponseHandler>::marshal (const OldDif2::AMH_ex3ResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex3ResponseHandler>::marshal (OldDif2::AMH_ex3ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -4656,7 +4656,7 @@ OldDif2::AMH_ex3ResponseHandler::_tao_release (AMH_ex3ResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMH_ex3ResponseHandler::_is_a (const char *value)
+OldDif2::AMH_ex3ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/AMH_ex3ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -4670,17 +4670,17 @@ OldDif2::AMH_ex3ResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMH_ex3ResponseHandler::_interface_repository_id () const
+char const *OldDif2::AMH_ex3ResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMH_ex3ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex3ResponseHandler::_desc_repository_id ()
+char const *OldDif2::AMH_ex3ResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMH_ex3ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex3ResponseHandler::_desc_interface_name ()
+char const *OldDif2::AMH_ex3ResponseHandler::_desc_interface_name ()
 {
   return "AMH_ex3ResponseHandler";
 }
@@ -4714,7 +4714,7 @@ TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::marshal (const OldDif2::AMI_ex3Handler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::marshal (OldDif2::AMI_ex3Handler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -5612,7 +5612,7 @@ OldDif2::AMI_ex3Handler::_tao_release (AMI_ex3Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMI_ex3Handler::_is_a (const char *value)
+OldDif2::AMI_ex3Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
@@ -5627,17 +5627,17 @@ OldDif2::AMI_ex3Handler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMI_ex3Handler::_interface_repository_id () const
+char const *OldDif2::AMI_ex3Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex3Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex3Handler::_desc_repository_id ()
+char const *OldDif2::AMI_ex3Handler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMI_ex3Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex3Handler::_desc_interface_name ()
+char const *OldDif2::AMI_ex3Handler::_desc_interface_name ()
 {
   return "AMI_ex3Handler";
 }
@@ -5671,7 +5671,7 @@ TAO::Objref_Traits<OldDif2::ex4>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex4>::marshal (const OldDif2::ex4_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex4>::marshal (OldDif2::ex4_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -6322,7 +6322,7 @@ OldDif2::ex4::_tao_release (ex4_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::ex4::_is_a (const char *value)
+OldDif2::ex4::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/ex2:1.0") == 0 ||
@@ -6338,17 +6338,17 @@ OldDif2::ex4::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::ex4::_interface_repository_id () const
+char const *OldDif2::ex4::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex4:1.0";
 }
 
-const char* OldDif2::ex4::_desc_repository_id ()
+char const *OldDif2::ex4::_desc_repository_id ()
 {
   return "IDL:OldDif2/ex4:1.0";
 }
 
-const char* OldDif2::ex4::_desc_interface_name ()
+char const *OldDif2::ex4::_desc_interface_name ()
 {
   return "ex4";
 }
@@ -6653,7 +6653,7 @@ TAO::Objref_Traits<OldDif2::AMH_ex4ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex4ResponseHandler>::marshal (const OldDif2::AMH_ex4ResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex4ResponseHandler>::marshal (OldDif2::AMH_ex4ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -6707,7 +6707,7 @@ OldDif2::AMH_ex4ResponseHandler::_tao_release (AMH_ex4ResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMH_ex4ResponseHandler::_is_a (const char *value)
+OldDif2::AMH_ex4ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/AMH_ex4ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -6721,17 +6721,17 @@ OldDif2::AMH_ex4ResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMH_ex4ResponseHandler::_interface_repository_id () const
+char const *OldDif2::AMH_ex4ResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMH_ex4ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex4ResponseHandler::_desc_repository_id ()
+char const *OldDif2::AMH_ex4ResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMH_ex4ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex4ResponseHandler::_desc_interface_name ()
+char const *OldDif2::AMH_ex4ResponseHandler::_desc_interface_name ()
 {
   return "AMH_ex4ResponseHandler";
 }
@@ -6765,7 +6765,7 @@ TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::marshal (const OldDif2::AMI_ex4Handler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::marshal (OldDif2::AMI_ex4Handler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -8024,7 +8024,7 @@ OldDif2::AMI_ex4Handler::_tao_release (AMI_ex4Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMI_ex4Handler::_is_a (const char *value)
+OldDif2::AMI_ex4Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
@@ -8041,17 +8041,17 @@ OldDif2::AMI_ex4Handler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMI_ex4Handler::_interface_repository_id () const
+char const *OldDif2::AMI_ex4Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex4Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex4Handler::_desc_repository_id ()
+char const *OldDif2::AMI_ex4Handler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMI_ex4Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex4Handler::_desc_interface_name ()
+char const *OldDif2::AMI_ex4Handler::_desc_interface_name ()
 {
   return "AMI_ex4Handler";
 }
@@ -8122,7 +8122,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::ex1_ptr _tao_objref)
+    OldDif2::ex1_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -8214,7 +8214,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMI_ex1Handler_ptr _tao_objref)
+    OldDif2::AMI_ex1Handler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -8243,7 +8243,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::ex2_ptr _tao_objref)
+    OldDif2::ex2_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -8335,7 +8335,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMI_ex2Handler_ptr _tao_objref)
+    OldDif2::AMI_ex2Handler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -8364,7 +8364,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::ex3_ptr _tao_objref)
+    OldDif2::ex3_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -8456,7 +8456,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMI_ex3Handler_ptr _tao_objref)
+    OldDif2::AMI_ex3Handler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -8485,7 +8485,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::ex4_ptr _tao_objref)
+    OldDif2::ex4_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -8577,7 +8577,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMI_ex4Handler_ptr _tao_objref)
+    OldDif2::AMI_ex4Handler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

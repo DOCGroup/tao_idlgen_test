@@ -243,7 +243,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     generic_ptr &_tao_elem)
 {
   return
@@ -385,7 +385,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_genericResponseHandler_ptr &_tao_elem)
 {
   return
@@ -443,7 +443,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_genericHandler_ptr &_tao_elem)
 {
   return

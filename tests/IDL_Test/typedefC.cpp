@@ -175,7 +175,7 @@ TAO::Objref_Traits<TestModule::TestInterface>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<TestModule::TestInterface>::marshal (const TestModule::TestInterface_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<TestModule::TestInterface>::marshal (TestModule::TestInterface_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -356,7 +356,7 @@ TestModule::TestInterface::_tao_release (TestInterface_ptr obj)
 }
 
 ::CORBA::Boolean
-TestModule::TestInterface::_is_a (const char *value)
+TestModule::TestInterface::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:TestModule/TestInterface:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -369,17 +369,17 @@ TestModule::TestInterface::_is_a (const char *value)
     }
 }
 
-const char* TestModule::TestInterface::_interface_repository_id () const
+char const *TestModule::TestInterface::_interface_repository_id () const
 {
   return "IDL:TestModule/TestInterface:1.0";
 }
 
-const char* TestModule::TestInterface::_desc_repository_id ()
+char const *TestModule::TestInterface::_desc_repository_id ()
 {
   return "IDL:TestModule/TestInterface:1.0";
 }
 
-const char* TestModule::TestInterface::_desc_interface_name ()
+char const *TestModule::TestInterface::_desc_interface_name ()
 {
   return "TestInterface";
 }
@@ -572,7 +572,7 @@ TAO::Objref_Traits<TestModule::AMH_TestInterfaceResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<TestModule::AMH_TestInterfaceResponseHandler>::marshal (const TestModule::AMH_TestInterfaceResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<TestModule::AMH_TestInterfaceResponseHandler>::marshal (TestModule::AMH_TestInterfaceResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -626,7 +626,7 @@ TestModule::AMH_TestInterfaceResponseHandler::_tao_release (AMH_TestInterfaceRes
 }
 
 ::CORBA::Boolean
-TestModule::AMH_TestInterfaceResponseHandler::_is_a (const char *value)
+TestModule::AMH_TestInterfaceResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:TestModule/AMH_TestInterfaceResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -640,17 +640,17 @@ TestModule::AMH_TestInterfaceResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* TestModule::AMH_TestInterfaceResponseHandler::_interface_repository_id () const
+char const *TestModule::AMH_TestInterfaceResponseHandler::_interface_repository_id () const
 {
   return "IDL:TestModule/AMH_TestInterfaceResponseHandler:1.0";
 }
 
-const char* TestModule::AMH_TestInterfaceResponseHandler::_desc_repository_id ()
+char const *TestModule::AMH_TestInterfaceResponseHandler::_desc_repository_id ()
 {
   return "IDL:TestModule/AMH_TestInterfaceResponseHandler:1.0";
 }
 
-const char* TestModule::AMH_TestInterfaceResponseHandler::_desc_interface_name ()
+char const *TestModule::AMH_TestInterfaceResponseHandler::_desc_interface_name ()
 {
   return "AMH_TestInterfaceResponseHandler";
 }
@@ -684,7 +684,7 @@ TAO::Objref_Traits<TestModule::AMI_TestInterfaceHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<TestModule::AMI_TestInterfaceHandler>::marshal (const TestModule::AMI_TestInterfaceHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<TestModule::AMI_TestInterfaceHandler>::marshal (TestModule::AMI_TestInterfaceHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -967,7 +967,7 @@ TestModule::AMI_TestInterfaceHandler::_tao_release (AMI_TestInterfaceHandler_ptr
 }
 
 ::CORBA::Boolean
-TestModule::AMI_TestInterfaceHandler::_is_a (const char *value)
+TestModule::AMI_TestInterfaceHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:TestModule/AMI_TestInterfaceHandler:1.0") == 0 ||
@@ -981,17 +981,17 @@ TestModule::AMI_TestInterfaceHandler::_is_a (const char *value)
     }
 }
 
-const char* TestModule::AMI_TestInterfaceHandler::_interface_repository_id () const
+char const *TestModule::AMI_TestInterfaceHandler::_interface_repository_id () const
 {
   return "IDL:TestModule/AMI_TestInterfaceHandler:1.0";
 }
 
-const char* TestModule::AMI_TestInterfaceHandler::_desc_repository_id ()
+char const *TestModule::AMI_TestInterfaceHandler::_desc_repository_id ()
 {
   return "IDL:TestModule/AMI_TestInterfaceHandler:1.0";
 }
 
-const char* TestModule::AMI_TestInterfaceHandler::_desc_interface_name ()
+char const *TestModule::AMI_TestInterfaceHandler::_desc_interface_name ()
 {
   return "AMI_TestInterfaceHandler";
 }
@@ -1025,7 +1025,7 @@ TAO::Objref_Traits<bug_2124::Foo>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2124::Foo>::marshal (const bug_2124::Foo_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2124::Foo>::marshal (bug_2124::Foo_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1206,7 +1206,7 @@ bug_2124::Foo::_tao_release (Foo_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2124::Foo::_is_a (const char *value)
+bug_2124::Foo::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:bug_2124/Foo:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -1219,17 +1219,17 @@ bug_2124::Foo::_is_a (const char *value)
     }
 }
 
-const char* bug_2124::Foo::_interface_repository_id () const
+char const *bug_2124::Foo::_interface_repository_id () const
 {
   return "IDL:bug_2124/Foo:1.0";
 }
 
-const char* bug_2124::Foo::_desc_repository_id ()
+char const *bug_2124::Foo::_desc_repository_id ()
 {
   return "IDL:bug_2124/Foo:1.0";
 }
 
-const char* bug_2124::Foo::_desc_interface_name ()
+char const *bug_2124::Foo::_desc_interface_name ()
 {
   return "Foo";
 }
@@ -1422,7 +1422,7 @@ TAO::Objref_Traits<bug_2124::AMH_FooResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2124::AMH_FooResponseHandler>::marshal (const bug_2124::AMH_FooResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2124::AMH_FooResponseHandler>::marshal (bug_2124::AMH_FooResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1476,7 +1476,7 @@ bug_2124::AMH_FooResponseHandler::_tao_release (AMH_FooResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2124::AMH_FooResponseHandler::_is_a (const char *value)
+bug_2124::AMH_FooResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:bug_2124/AMH_FooResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -1490,17 +1490,17 @@ bug_2124::AMH_FooResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2124::AMH_FooResponseHandler::_interface_repository_id () const
+char const *bug_2124::AMH_FooResponseHandler::_interface_repository_id () const
 {
   return "IDL:bug_2124/AMH_FooResponseHandler:1.0";
 }
 
-const char* bug_2124::AMH_FooResponseHandler::_desc_repository_id ()
+char const *bug_2124::AMH_FooResponseHandler::_desc_repository_id ()
 {
   return "IDL:bug_2124/AMH_FooResponseHandler:1.0";
 }
 
-const char* bug_2124::AMH_FooResponseHandler::_desc_interface_name ()
+char const *bug_2124::AMH_FooResponseHandler::_desc_interface_name ()
 {
   return "AMH_FooResponseHandler";
 }
@@ -1534,7 +1534,7 @@ TAO::Objref_Traits<bug_2124::AMI_FooHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2124::AMI_FooHandler>::marshal (const bug_2124::AMI_FooHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2124::AMI_FooHandler>::marshal (bug_2124::AMI_FooHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1817,7 +1817,7 @@ bug_2124::AMI_FooHandler::_tao_release (AMI_FooHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2124::AMI_FooHandler::_is_a (const char *value)
+bug_2124::AMI_FooHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:bug_2124/AMI_FooHandler:1.0") == 0 ||
@@ -1831,17 +1831,17 @@ bug_2124::AMI_FooHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2124::AMI_FooHandler::_interface_repository_id () const
+char const *bug_2124::AMI_FooHandler::_interface_repository_id () const
 {
   return "IDL:bug_2124/AMI_FooHandler:1.0";
 }
 
-const char* bug_2124::AMI_FooHandler::_desc_repository_id ()
+char const *bug_2124::AMI_FooHandler::_desc_repository_id ()
 {
   return "IDL:bug_2124/AMI_FooHandler:1.0";
 }
 
-const char* bug_2124::AMI_FooHandler::_desc_interface_name ()
+char const *bug_2124::AMI_FooHandler::_desc_interface_name ()
 {
   return "AMI_FooHandler";
 }
@@ -1875,7 +1875,7 @@ TAO::Objref_Traits<bug_2122::One::Whatever>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::One::Whatever>::marshal (const bug_2122::One::Whatever_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::One::Whatever>::marshal (bug_2122::One::Whatever_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1992,7 +1992,7 @@ bug_2122::One::Whatever::_tao_release (Whatever_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::One::Whatever::_is_a (const char *value)
+bug_2122::One::Whatever::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:bug_2122/One/Whatever:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -2005,17 +2005,17 @@ bug_2122::One::Whatever::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::One::Whatever::_interface_repository_id () const
+char const *bug_2122::One::Whatever::_interface_repository_id () const
 {
   return "IDL:bug_2122/One/Whatever:1.0";
 }
 
-const char* bug_2122::One::Whatever::_desc_repository_id ()
+char const *bug_2122::One::Whatever::_desc_repository_id ()
 {
   return "IDL:bug_2122/One/Whatever:1.0";
 }
 
-const char* bug_2122::One::Whatever::_desc_interface_name ()
+char const *bug_2122::One::Whatever::_desc_interface_name ()
 {
   return "Whatever";
 }
@@ -2194,7 +2194,7 @@ TAO::Objref_Traits<bug_2122::One::AMH_WhateverResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::One::AMH_WhateverResponseHandler>::marshal (const bug_2122::One::AMH_WhateverResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::One::AMH_WhateverResponseHandler>::marshal (bug_2122::One::AMH_WhateverResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2248,7 +2248,7 @@ bug_2122::One::AMH_WhateverResponseHandler::_tao_release (AMH_WhateverResponseHa
 }
 
 ::CORBA::Boolean
-bug_2122::One::AMH_WhateverResponseHandler::_is_a (const char *value)
+bug_2122::One::AMH_WhateverResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:bug_2122/One/AMH_WhateverResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -2262,17 +2262,17 @@ bug_2122::One::AMH_WhateverResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::One::AMH_WhateverResponseHandler::_interface_repository_id () const
+char const *bug_2122::One::AMH_WhateverResponseHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/One/AMH_WhateverResponseHandler:1.0";
 }
 
-const char* bug_2122::One::AMH_WhateverResponseHandler::_desc_repository_id ()
+char const *bug_2122::One::AMH_WhateverResponseHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/One/AMH_WhateverResponseHandler:1.0";
 }
 
-const char* bug_2122::One::AMH_WhateverResponseHandler::_desc_interface_name ()
+char const *bug_2122::One::AMH_WhateverResponseHandler::_desc_interface_name ()
 {
   return "AMH_WhateverResponseHandler";
 }
@@ -2306,7 +2306,7 @@ TAO::Objref_Traits<bug_2122::One::AMI_WhateverHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::One::AMI_WhateverHandler>::marshal (const bug_2122::One::AMI_WhateverHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::One::AMI_WhateverHandler>::marshal (bug_2122::One::AMI_WhateverHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2474,7 +2474,7 @@ bug_2122::One::AMI_WhateverHandler::_tao_release (AMI_WhateverHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::One::AMI_WhateverHandler::_is_a (const char *value)
+bug_2122::One::AMI_WhateverHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:bug_2122/One/AMI_WhateverHandler:1.0") == 0 ||
@@ -2488,17 +2488,17 @@ bug_2122::One::AMI_WhateverHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::One::AMI_WhateverHandler::_interface_repository_id () const
+char const *bug_2122::One::AMI_WhateverHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/One/AMI_WhateverHandler:1.0";
 }
 
-const char* bug_2122::One::AMI_WhateverHandler::_desc_repository_id ()
+char const *bug_2122::One::AMI_WhateverHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/One/AMI_WhateverHandler:1.0";
 }
 
-const char* bug_2122::One::AMI_WhateverHandler::_desc_interface_name ()
+char const *bug_2122::One::AMI_WhateverHandler::_desc_interface_name ()
 {
   return "AMI_WhateverHandler";
 }
@@ -2532,7 +2532,7 @@ TAO::Objref_Traits<bug_2122::Two::WhoCares>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Two::WhoCares>::marshal (const bug_2122::Two::WhoCares_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Two::WhoCares>::marshal (bug_2122::Two::WhoCares_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2649,7 +2649,7 @@ bug_2122::Two::WhoCares::_tao_release (WhoCares_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::Two::WhoCares::_is_a (const char *value)
+bug_2122::Two::WhoCares::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:bug_2122/Two/WhoCares:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -2662,17 +2662,17 @@ bug_2122::Two::WhoCares::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Two::WhoCares::_interface_repository_id () const
+char const *bug_2122::Two::WhoCares::_interface_repository_id () const
 {
   return "IDL:bug_2122/Two/WhoCares:1.0";
 }
 
-const char* bug_2122::Two::WhoCares::_desc_repository_id ()
+char const *bug_2122::Two::WhoCares::_desc_repository_id ()
 {
   return "IDL:bug_2122/Two/WhoCares:1.0";
 }
 
-const char* bug_2122::Two::WhoCares::_desc_interface_name ()
+char const *bug_2122::Two::WhoCares::_desc_interface_name ()
 {
   return "WhoCares";
 }
@@ -2851,7 +2851,7 @@ TAO::Objref_Traits<bug_2122::Two::AMH_WhoCaresResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Two::AMH_WhoCaresResponseHandler>::marshal (const bug_2122::Two::AMH_WhoCaresResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Two::AMH_WhoCaresResponseHandler>::marshal (bug_2122::Two::AMH_WhoCaresResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2905,7 +2905,7 @@ bug_2122::Two::AMH_WhoCaresResponseHandler::_tao_release (AMH_WhoCaresResponseHa
 }
 
 ::CORBA::Boolean
-bug_2122::Two::AMH_WhoCaresResponseHandler::_is_a (const char *value)
+bug_2122::Two::AMH_WhoCaresResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:bug_2122/Two/AMH_WhoCaresResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -2919,17 +2919,17 @@ bug_2122::Two::AMH_WhoCaresResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Two::AMH_WhoCaresResponseHandler::_interface_repository_id () const
+char const *bug_2122::Two::AMH_WhoCaresResponseHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/Two/AMH_WhoCaresResponseHandler:1.0";
 }
 
-const char* bug_2122::Two::AMH_WhoCaresResponseHandler::_desc_repository_id ()
+char const *bug_2122::Two::AMH_WhoCaresResponseHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/Two/AMH_WhoCaresResponseHandler:1.0";
 }
 
-const char* bug_2122::Two::AMH_WhoCaresResponseHandler::_desc_interface_name ()
+char const *bug_2122::Two::AMH_WhoCaresResponseHandler::_desc_interface_name ()
 {
   return "AMH_WhoCaresResponseHandler";
 }
@@ -2963,7 +2963,7 @@ TAO::Objref_Traits<bug_2122::Two::AMI_WhoCaresHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Two::AMI_WhoCaresHandler>::marshal (const bug_2122::Two::AMI_WhoCaresHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Two::AMI_WhoCaresHandler>::marshal (bug_2122::Two::AMI_WhoCaresHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3131,7 +3131,7 @@ bug_2122::Two::AMI_WhoCaresHandler::_tao_release (AMI_WhoCaresHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::Two::AMI_WhoCaresHandler::_is_a (const char *value)
+bug_2122::Two::AMI_WhoCaresHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:bug_2122/Two/AMI_WhoCaresHandler:1.0") == 0 ||
@@ -3145,17 +3145,17 @@ bug_2122::Two::AMI_WhoCaresHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Two::AMI_WhoCaresHandler::_interface_repository_id () const
+char const *bug_2122::Two::AMI_WhoCaresHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/Two/AMI_WhoCaresHandler:1.0";
 }
 
-const char* bug_2122::Two::AMI_WhoCaresHandler::_desc_repository_id ()
+char const *bug_2122::Two::AMI_WhoCaresHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/Two/AMI_WhoCaresHandler:1.0";
 }
 
-const char* bug_2122::Two::AMI_WhoCaresHandler::_desc_interface_name ()
+char const *bug_2122::Two::AMI_WhoCaresHandler::_desc_interface_name ()
 {
   return "AMI_WhoCaresHandler";
 }
@@ -3189,7 +3189,7 @@ TAO::Objref_Traits<bug_2122::Three::WhoCares>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Three::WhoCares>::marshal (const bug_2122::Three::WhoCares_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Three::WhoCares>::marshal (bug_2122::Three::WhoCares_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3306,7 +3306,7 @@ bug_2122::Three::WhoCares::_tao_release (WhoCares_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::Three::WhoCares::_is_a (const char *value)
+bug_2122::Three::WhoCares::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:bug_2122/Three/WhoCares:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -3319,17 +3319,17 @@ bug_2122::Three::WhoCares::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Three::WhoCares::_interface_repository_id () const
+char const *bug_2122::Three::WhoCares::_interface_repository_id () const
 {
   return "IDL:bug_2122/Three/WhoCares:1.0";
 }
 
-const char* bug_2122::Three::WhoCares::_desc_repository_id ()
+char const *bug_2122::Three::WhoCares::_desc_repository_id ()
 {
   return "IDL:bug_2122/Three/WhoCares:1.0";
 }
 
-const char* bug_2122::Three::WhoCares::_desc_interface_name ()
+char const *bug_2122::Three::WhoCares::_desc_interface_name ()
 {
   return "WhoCares";
 }
@@ -3508,7 +3508,7 @@ TAO::Objref_Traits<bug_2122::Three::AMH_WhoCaresResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Three::AMH_WhoCaresResponseHandler>::marshal (const bug_2122::Three::AMH_WhoCaresResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Three::AMH_WhoCaresResponseHandler>::marshal (bug_2122::Three::AMH_WhoCaresResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3562,7 +3562,7 @@ bug_2122::Three::AMH_WhoCaresResponseHandler::_tao_release (AMH_WhoCaresResponse
 }
 
 ::CORBA::Boolean
-bug_2122::Three::AMH_WhoCaresResponseHandler::_is_a (const char *value)
+bug_2122::Three::AMH_WhoCaresResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:bug_2122/Three/AMH_WhoCaresResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -3576,17 +3576,17 @@ bug_2122::Three::AMH_WhoCaresResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Three::AMH_WhoCaresResponseHandler::_interface_repository_id () const
+char const *bug_2122::Three::AMH_WhoCaresResponseHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/Three/AMH_WhoCaresResponseHandler:1.0";
 }
 
-const char* bug_2122::Three::AMH_WhoCaresResponseHandler::_desc_repository_id ()
+char const *bug_2122::Three::AMH_WhoCaresResponseHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/Three/AMH_WhoCaresResponseHandler:1.0";
 }
 
-const char* bug_2122::Three::AMH_WhoCaresResponseHandler::_desc_interface_name ()
+char const *bug_2122::Three::AMH_WhoCaresResponseHandler::_desc_interface_name ()
 {
   return "AMH_WhoCaresResponseHandler";
 }
@@ -3620,7 +3620,7 @@ TAO::Objref_Traits<bug_2122::Three::AMI_WhoCaresHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Three::AMI_WhoCaresHandler>::marshal (const bug_2122::Three::AMI_WhoCaresHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Three::AMI_WhoCaresHandler>::marshal (bug_2122::Three::AMI_WhoCaresHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3788,7 +3788,7 @@ bug_2122::Three::AMI_WhoCaresHandler::_tao_release (AMI_WhoCaresHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::Three::AMI_WhoCaresHandler::_is_a (const char *value)
+bug_2122::Three::AMI_WhoCaresHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:bug_2122/Three/AMI_WhoCaresHandler:1.0") == 0 ||
@@ -3802,17 +3802,17 @@ bug_2122::Three::AMI_WhoCaresHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Three::AMI_WhoCaresHandler::_interface_repository_id () const
+char const *bug_2122::Three::AMI_WhoCaresHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/Three/AMI_WhoCaresHandler:1.0";
 }
 
-const char* bug_2122::Three::AMI_WhoCaresHandler::_desc_repository_id ()
+char const *bug_2122::Three::AMI_WhoCaresHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/Three/AMI_WhoCaresHandler:1.0";
 }
 
-const char* bug_2122::Three::AMI_WhoCaresHandler::_desc_interface_name ()
+char const *bug_2122::Three::AMI_WhoCaresHandler::_desc_interface_name ()
 {
   return "AMI_WhoCaresHandler";
 }
@@ -4108,7 +4108,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const TestModule::TestInterface_ptr _tao_objref)
+    TestModule::TestInterface_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4200,7 +4200,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const TestModule::AMI_TestInterfaceHandler_ptr _tao_objref)
+    TestModule::AMI_TestInterfaceHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4229,7 +4229,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2124::Foo_ptr _tao_objref)
+    bug_2124::Foo_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4321,7 +4321,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2124::AMI_FooHandler_ptr _tao_objref)
+    bug_2124::AMI_FooHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4350,7 +4350,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::One::Whatever_ptr _tao_objref)
+    bug_2122::One::Whatever_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4442,7 +4442,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::One::AMI_WhateverHandler_ptr _tao_objref)
+    bug_2122::One::AMI_WhateverHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4471,7 +4471,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Two::WhoCares_ptr _tao_objref)
+    bug_2122::Two::WhoCares_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4563,7 +4563,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Two::AMI_WhoCaresHandler_ptr _tao_objref)
+    bug_2122::Two::AMI_WhoCaresHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4592,7 +4592,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Three::WhoCares_ptr _tao_objref)
+    bug_2122::Three::WhoCares_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4684,7 +4684,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Three::AMI_WhoCaresHandler_ptr _tao_objref)
+    bug_2122::Three::AMI_WhoCaresHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

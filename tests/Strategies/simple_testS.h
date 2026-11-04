@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_OWF1J9_H_
-#define _TAO_IDL_SIMPLE_TESTS_OWF1J9_H_
+#ifndef _TAO_IDL_SIMPLE_TESTS_VZRYHH_H_
+#define _TAO_IDL_SIMPLE_TESTS_VZRYHH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -85,10 +85,10 @@ public:
   using _stub_ptr_type = ::Simple_Server_ptr;
   using _stub_var_type = ::Simple_Server_var;
 
-  POA_Simple_Server (const POA_Simple_Server& rhs) = default;
+  POA_Simple_Server (POA_Simple_Server const &rhs) = default;
   ~POA_Simple_Server () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -96,7 +96,7 @@ public:
 
   ::Simple_Server *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::CORBA::Boolean print_status () = 0;
 
   static void print_status_skel (

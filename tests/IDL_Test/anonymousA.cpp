@@ -855,7 +855,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     All_Anon::anon_bd_string_test_ptr &_tao_elem)
 {
   return
@@ -997,7 +997,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     All_Anon::AMH_anon_bd_string_testResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1055,7 +1055,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     All_Anon::AMI_anon_bd_string_testHandler_ptr &_tao_elem)
 {
   return

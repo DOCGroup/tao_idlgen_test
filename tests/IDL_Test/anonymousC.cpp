@@ -291,7 +291,7 @@ TAO::Objref_Traits<All_Anon::anon_bd_string_test>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<All_Anon::anon_bd_string_test>::marshal (const All_Anon::anon_bd_string_test_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<All_Anon::anon_bd_string_test>::marshal (All_Anon::anon_bd_string_test_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -833,7 +833,7 @@ All_Anon::anon_bd_string_test::_tao_release (anon_bd_string_test_ptr obj)
 }
 
 ::CORBA::Boolean
-All_Anon::anon_bd_string_test::_is_a (const char *value)
+All_Anon::anon_bd_string_test::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:All_Anon/anon_bd_string_test:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -846,17 +846,17 @@ All_Anon::anon_bd_string_test::_is_a (const char *value)
     }
 }
 
-const char* All_Anon::anon_bd_string_test::_interface_repository_id () const
+char const *All_Anon::anon_bd_string_test::_interface_repository_id () const
 {
   return "IDL:All_Anon/anon_bd_string_test:1.0";
 }
 
-const char* All_Anon::anon_bd_string_test::_desc_repository_id ()
+char const *All_Anon::anon_bd_string_test::_desc_repository_id ()
 {
   return "IDL:All_Anon/anon_bd_string_test:1.0";
 }
 
-const char* All_Anon::anon_bd_string_test::_desc_interface_name ()
+char const *All_Anon::anon_bd_string_test::_desc_interface_name ()
 {
   return "anon_bd_string_test";
 }
@@ -1133,7 +1133,7 @@ TAO::Objref_Traits<All_Anon::AMH_anon_bd_string_testResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<All_Anon::AMH_anon_bd_string_testResponseHandler>::marshal (const All_Anon::AMH_anon_bd_string_testResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<All_Anon::AMH_anon_bd_string_testResponseHandler>::marshal (All_Anon::AMH_anon_bd_string_testResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1187,7 +1187,7 @@ All_Anon::AMH_anon_bd_string_testResponseHandler::_tao_release (AMH_anon_bd_stri
 }
 
 ::CORBA::Boolean
-All_Anon::AMH_anon_bd_string_testResponseHandler::_is_a (const char *value)
+All_Anon::AMH_anon_bd_string_testResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:All_Anon/AMH_anon_bd_string_testResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -1201,17 +1201,17 @@ All_Anon::AMH_anon_bd_string_testResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* All_Anon::AMH_anon_bd_string_testResponseHandler::_interface_repository_id () const
+char const *All_Anon::AMH_anon_bd_string_testResponseHandler::_interface_repository_id () const
 {
   return "IDL:All_Anon/AMH_anon_bd_string_testResponseHandler:1.0";
 }
 
-const char* All_Anon::AMH_anon_bd_string_testResponseHandler::_desc_repository_id ()
+char const *All_Anon::AMH_anon_bd_string_testResponseHandler::_desc_repository_id ()
 {
   return "IDL:All_Anon/AMH_anon_bd_string_testResponseHandler:1.0";
 }
 
-const char* All_Anon::AMH_anon_bd_string_testResponseHandler::_desc_interface_name ()
+char const *All_Anon::AMH_anon_bd_string_testResponseHandler::_desc_interface_name ()
 {
   return "AMH_anon_bd_string_testResponseHandler";
 }
@@ -1245,7 +1245,7 @@ TAO::Objref_Traits<All_Anon::AMI_anon_bd_string_testHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<All_Anon::AMI_anon_bd_string_testHandler>::marshal (const All_Anon::AMI_anon_bd_string_testHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<All_Anon::AMI_anon_bd_string_testHandler>::marshal (All_Anon::AMI_anon_bd_string_testHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2250,7 +2250,7 @@ All_Anon::AMI_anon_bd_string_testHandler::_tao_release (AMI_anon_bd_string_testH
 }
 
 ::CORBA::Boolean
-All_Anon::AMI_anon_bd_string_testHandler::_is_a (const char *value)
+All_Anon::AMI_anon_bd_string_testHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:All_Anon/AMI_anon_bd_string_testHandler:1.0") == 0 ||
@@ -2264,17 +2264,17 @@ All_Anon::AMI_anon_bd_string_testHandler::_is_a (const char *value)
     }
 }
 
-const char* All_Anon::AMI_anon_bd_string_testHandler::_interface_repository_id () const
+char const *All_Anon::AMI_anon_bd_string_testHandler::_interface_repository_id () const
 {
   return "IDL:All_Anon/AMI_anon_bd_string_testHandler:1.0";
 }
 
-const char* All_Anon::AMI_anon_bd_string_testHandler::_desc_repository_id ()
+char const *All_Anon::AMI_anon_bd_string_testHandler::_desc_repository_id ()
 {
   return "IDL:All_Anon/AMI_anon_bd_string_testHandler:1.0";
 }
 
-const char* All_Anon::AMI_anon_bd_string_testHandler::_desc_interface_name ()
+char const *All_Anon::AMI_anon_bd_string_testHandler::_desc_interface_name ()
 {
   return "AMI_anon_bd_string_testHandler";
 }
@@ -2827,7 +2827,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const All_Anon::anon_bd_string_test_ptr _tao_objref)
+    All_Anon::anon_bd_string_test_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2919,7 +2919,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_objref)
+    All_Anon::AMI_anon_bd_string_testHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

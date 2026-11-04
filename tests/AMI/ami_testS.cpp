@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_AMI_TESTS_QT1I2V_CPP_
-#define _TAO_IDL_AMI_TESTS_QT1I2V_CPP_
+#ifndef _TAO_IDL_AMI_TESTS_AJ163I_CPP_
+#define _TAO_IDL_AMI_TESTS_AJ163I_CPP_
 
 #include "ami_testS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -436,7 +436,7 @@ void POA_A::AMI_Test::inout_arg_test_skel (
                          );
 }
 
-::CORBA::Boolean POA_A::AMI_Test::_is_a (const char* value)
+::CORBA::Boolean POA_A::AMI_Test::_is_a (char const *value)
 {
   return
     (
@@ -445,7 +445,7 @@ void POA_A::AMI_Test::inout_arg_test_skel (
     );
 }
 
-const char* POA_A::AMI_Test::_interface_repository_id () const
+char const *POA_A::AMI_Test::_interface_repository_id () const
 {
   return "IDL:A/AMI_Test:1.0";
 }
@@ -1084,7 +1084,7 @@ void POA_A::AMI_AMI_TestHandler::inout_arg_test_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_A::AMI_AMI_TestHandler::_is_a (const char* value)
+::CORBA::Boolean POA_A::AMI_AMI_TestHandler::_is_a (char const *value)
 {
   return
     (
@@ -1094,7 +1094,7 @@ void POA_A::AMI_AMI_TestHandler::inout_arg_test_excep_skel (
     );
 }
 
-const char* POA_A::AMI_AMI_TestHandler::_interface_repository_id () const
+char const *POA_A::AMI_AMI_TestHandler::_interface_repository_id () const
 {
   return "IDL:A/AMI_AMI_TestHandler:1.0";
 }
@@ -1201,7 +1201,7 @@ void POA_A::Test_Child::child_op_skel (
                          );
 }
 
-::CORBA::Boolean POA_A::Test_Child::_is_a (const char* value)
+::CORBA::Boolean POA_A::Test_Child::_is_a (char const *value)
 {
   return
     (
@@ -1211,7 +1211,7 @@ void POA_A::Test_Child::child_op_skel (
     );
 }
 
-const char* POA_A::Test_Child::_interface_repository_id () const
+char const *POA_A::Test_Child::_interface_repository_id () const
 {
   return "IDL:A/Test_Child:1.0";
 }
@@ -1392,7 +1392,7 @@ void POA_A::AMI_Test_ChildHandler::child_op_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_A::AMI_Test_ChildHandler::_is_a (const char* value)
+::CORBA::Boolean POA_A::AMI_Test_ChildHandler::_is_a (char const *value)
 {
   return
     (
@@ -1403,7 +1403,7 @@ void POA_A::AMI_Test_ChildHandler::child_op_excep_skel (
     );
 }
 
-const char* POA_A::AMI_Test_ChildHandler::_interface_repository_id () const
+char const *POA_A::AMI_Test_ChildHandler::_interface_repository_id () const
 {
   return "IDL:A/AMI_Test_ChildHandler:1.0";
 }

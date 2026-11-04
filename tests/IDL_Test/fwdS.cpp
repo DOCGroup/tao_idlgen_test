@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FWDS_JTN1QG_CPP_
-#define _TAO_IDL_FWDS_JTN1QG_CPP_
+#ifndef _TAO_IDL_FWDS_Z39CVE_CPP_
+#define _TAO_IDL_FWDS_Z39CVE_CPP_
 
 #include "fwdS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -124,7 +124,7 @@ POA_mod2::AMH_full::op_skel (
     );
 }
 
-::CORBA::Boolean POA_mod2::AMH_full::_is_a (const char* value)
+::CORBA::Boolean POA_mod2::AMH_full::_is_a (char const *value)
 {
   return
     (
@@ -133,7 +133,7 @@ POA_mod2::AMH_full::op_skel (
     );
 }
 
-const char* POA_mod2::AMH_full::_interface_repository_id () const
+char const *POA_mod2::AMH_full::_interface_repository_id () const
 {
   return "IDL:mod2/full:1.0";
 }
@@ -310,7 +310,7 @@ void POA_mod2::full::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_mod2::full::_is_a (const char* value)
+::CORBA::Boolean POA_mod2::full::_is_a (char const *value)
 {
   return
     (
@@ -319,7 +319,7 @@ void POA_mod2::full::op_skel (
     );
 }
 
-const char* POA_mod2::full::_interface_repository_id () const
+char const *POA_mod2::full::_interface_repository_id () const
 {
   return "IDL:mod2/full:1.0";
 }
@@ -611,7 +611,7 @@ void POA_mod2::AMI_fullHandler::op_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_mod2::AMI_fullHandler::_is_a (const char* value)
+::CORBA::Boolean POA_mod2::AMI_fullHandler::_is_a (char const *value)
 {
   return
     (
@@ -621,7 +621,7 @@ void POA_mod2::AMI_fullHandler::op_excep_skel (
     );
 }
 
-const char* POA_mod2::AMI_fullHandler::_interface_repository_id () const
+char const *POA_mod2::AMI_fullHandler::_interface_repository_id () const
 {
   return "IDL:mod2/AMI_fullHandler:1.0";
 }
@@ -671,7 +671,7 @@ POA_fwd_mixed_intf::AMH_concrete_parent::AMH_concrete_parent ()
   this->optable_ = std::addressof (tao_fwd_mixed_intf_AMH_concrete_parent_optable);
 }
 
-::CORBA::Boolean POA_fwd_mixed_intf::AMH_concrete_parent::_is_a (const char* value)
+::CORBA::Boolean POA_fwd_mixed_intf::AMH_concrete_parent::_is_a (char const *value)
 {
   return
     (
@@ -680,7 +680,7 @@ POA_fwd_mixed_intf::AMH_concrete_parent::AMH_concrete_parent ()
     );
 }
 
-const char* POA_fwd_mixed_intf::AMH_concrete_parent::_interface_repository_id () const
+char const *POA_fwd_mixed_intf::AMH_concrete_parent::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/concrete_parent:1.0";
 }
@@ -742,7 +742,7 @@ POA_fwd_mixed_intf::concrete_parent::concrete_parent ()
   this->optable_ = std::addressof (tao_fwd_mixed_intf_concrete_parent_optable);
 }
 
-::CORBA::Boolean POA_fwd_mixed_intf::concrete_parent::_is_a (const char* value)
+::CORBA::Boolean POA_fwd_mixed_intf::concrete_parent::_is_a (char const *value)
 {
   return
     (
@@ -751,7 +751,7 @@ POA_fwd_mixed_intf::concrete_parent::concrete_parent ()
     );
 }
 
-const char* POA_fwd_mixed_intf::concrete_parent::_interface_repository_id () const
+char const *POA_fwd_mixed_intf::concrete_parent::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/concrete_parent:1.0";
 }
@@ -813,7 +813,7 @@ POA_fwd_mixed_intf::AMI_concrete_parentHandler::AMI_concrete_parentHandler ()
   this->optable_ = std::addressof (tao_fwd_mixed_intf_AMI_concrete_parentHandler_optable);
 }
 
-::CORBA::Boolean POA_fwd_mixed_intf::AMI_concrete_parentHandler::_is_a (const char* value)
+::CORBA::Boolean POA_fwd_mixed_intf::AMI_concrete_parentHandler::_is_a (char const *value)
 {
   return
     (
@@ -823,7 +823,7 @@ POA_fwd_mixed_intf::AMI_concrete_parentHandler::AMI_concrete_parentHandler ()
     );
 }
 
-const char* POA_fwd_mixed_intf::AMI_concrete_parentHandler::_interface_repository_id () const
+char const *POA_fwd_mixed_intf::AMI_concrete_parentHandler::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/AMI_concrete_parentHandler:1.0";
 }
@@ -885,7 +885,7 @@ POA_fwd_mixed_intf::mixed_abs_first::mixed_abs_first ()
   this->optable_ = std::addressof (tao_fwd_mixed_intf_mixed_abs_first_optable);
 }
 
-::CORBA::Boolean POA_fwd_mixed_intf::mixed_abs_first::_is_a (const char* value)
+::CORBA::Boolean POA_fwd_mixed_intf::mixed_abs_first::_is_a (char const *value)
 {
   return
     (
@@ -897,7 +897,7 @@ POA_fwd_mixed_intf::mixed_abs_first::mixed_abs_first ()
     );
 }
 
-const char* POA_fwd_mixed_intf::mixed_abs_first::_interface_repository_id () const
+char const *POA_fwd_mixed_intf::mixed_abs_first::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/mixed_abs_first:1.0";
 }
@@ -959,7 +959,7 @@ POA_fwd_mixed_intf::AMI_mixed_abs_firstHandler::AMI_mixed_abs_firstHandler ()
   this->optable_ = std::addressof (tao_fwd_mixed_intf_AMI_mixed_abs_firstHandler_optable);
 }
 
-::CORBA::Boolean POA_fwd_mixed_intf::AMI_mixed_abs_firstHandler::_is_a (const char* value)
+::CORBA::Boolean POA_fwd_mixed_intf::AMI_mixed_abs_firstHandler::_is_a (char const *value)
 {
   return
     (
@@ -970,7 +970,7 @@ POA_fwd_mixed_intf::AMI_mixed_abs_firstHandler::AMI_mixed_abs_firstHandler ()
     );
 }
 
-const char* POA_fwd_mixed_intf::AMI_mixed_abs_firstHandler::_interface_repository_id () const
+char const *POA_fwd_mixed_intf::AMI_mixed_abs_firstHandler::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/AMI_mixed_abs_firstHandler:1.0";
 }
@@ -1032,7 +1032,7 @@ POA_fwd_mixed_intf::mixed_conc_first::mixed_conc_first ()
   this->optable_ = std::addressof (tao_fwd_mixed_intf_mixed_conc_first_optable);
 }
 
-::CORBA::Boolean POA_fwd_mixed_intf::mixed_conc_first::_is_a (const char* value)
+::CORBA::Boolean POA_fwd_mixed_intf::mixed_conc_first::_is_a (char const *value)
 {
   return
     (
@@ -1044,7 +1044,7 @@ POA_fwd_mixed_intf::mixed_conc_first::mixed_conc_first ()
     );
 }
 
-const char* POA_fwd_mixed_intf::mixed_conc_first::_interface_repository_id () const
+char const *POA_fwd_mixed_intf::mixed_conc_first::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/mixed_conc_first:1.0";
 }
@@ -1106,7 +1106,7 @@ POA_fwd_mixed_intf::AMI_mixed_conc_firstHandler::AMI_mixed_conc_firstHandler ()
   this->optable_ = std::addressof (tao_fwd_mixed_intf_AMI_mixed_conc_firstHandler_optable);
 }
 
-::CORBA::Boolean POA_fwd_mixed_intf::AMI_mixed_conc_firstHandler::_is_a (const char* value)
+::CORBA::Boolean POA_fwd_mixed_intf::AMI_mixed_conc_firstHandler::_is_a (char const *value)
 {
   return
     (
@@ -1117,7 +1117,7 @@ POA_fwd_mixed_intf::AMI_mixed_conc_firstHandler::AMI_mixed_conc_firstHandler ()
     );
 }
 
-const char* POA_fwd_mixed_intf::AMI_mixed_conc_firstHandler::_interface_repository_id () const
+char const *POA_fwd_mixed_intf::AMI_mixed_conc_firstHandler::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/AMI_mixed_conc_firstHandler:1.0";
 }

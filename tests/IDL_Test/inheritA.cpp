@@ -359,7 +359,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::one_ptr &_tao_elem)
 {
   return
@@ -501,7 +501,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::AMH_oneResponseHandler_ptr &_tao_elem)
 {
   return
@@ -559,7 +559,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::AMI_oneHandler_ptr &_tao_elem)
 {
   return
@@ -617,7 +617,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::two_ptr &_tao_elem)
 {
   return
@@ -759,7 +759,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::AMH_twoResponseHandler_ptr &_tao_elem)
 {
   return
@@ -817,7 +817,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::AMI_twoHandler_ptr &_tao_elem)
 {
   return
@@ -875,7 +875,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::three_ptr &_tao_elem)
 {
   return
@@ -1017,7 +1017,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::AMH_threeResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1075,7 +1075,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::AMI_threeHandler_ptr &_tao_elem)
 {
   return
@@ -1133,7 +1133,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::four_ptr &_tao_elem)
 {
   return
@@ -1275,7 +1275,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::AMH_fourResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1333,7 +1333,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::AMI_fourHandler_ptr &_tao_elem)
 {
   return
@@ -1391,7 +1391,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::five_ptr &_tao_elem)
 {
   return
@@ -1533,7 +1533,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::AMH_fiveResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1591,7 +1591,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldInherit::AMI_fiveHandler_ptr &_tao_elem)
 {
   return

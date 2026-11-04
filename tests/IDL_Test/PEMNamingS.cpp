@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGS_BPL722_CPP_
-#define _TAO_IDL_PEMNAMINGS_BPL722_CPP_
+#ifndef _TAO_IDL_PEMNAMINGS_MAQTPF_CPP_
+#define _TAO_IDL_PEMNAMINGS_MAQTPF_CPP_
 
 #include "PEMNamingS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -174,7 +174,7 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
     );
 }
 
-::CORBA::Boolean POA_Plesk::Naming::AMH_ObjectResolver::_is_a (const char* value)
+::CORBA::Boolean POA_Plesk::Naming::AMH_ObjectResolver::_is_a (char const *value)
 {
   return
     (
@@ -183,7 +183,7 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
     );
 }
 
-const char* POA_Plesk::Naming::AMH_ObjectResolver::_interface_repository_id () const
+char const *POA_Plesk::Naming::AMH_ObjectResolver::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
@@ -488,7 +488,7 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
                          );
 }
 
-::CORBA::Boolean POA_Plesk::Naming::ObjectResolver::_is_a (const char* value)
+::CORBA::Boolean POA_Plesk::Naming::ObjectResolver::_is_a (char const *value)
 {
   return
     (
@@ -497,7 +497,7 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
     );
 }
 
-const char* POA_Plesk::Naming::ObjectResolver::_interface_repository_id () const
+char const *POA_Plesk::Naming::ObjectResolver::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
@@ -1073,7 +1073,7 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_Plesk::Naming::AMI_ObjectResolverHandler::_is_a (const char* value)
+::CORBA::Boolean POA_Plesk::Naming::AMI_ObjectResolverHandler::_is_a (char const *value)
 {
   return
     (
@@ -1083,7 +1083,7 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
     );
 }
 
-const char* POA_Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_id () const
+char const *POA_Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0";
 }

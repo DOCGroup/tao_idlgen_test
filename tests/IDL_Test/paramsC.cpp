@@ -142,7 +142,7 @@ TAO::Objref_Traits<foo::bar::fooBar>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<foo::bar::fooBar>::marshal (const foo::bar::fooBar_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<foo::bar::fooBar>::marshal (foo::bar::fooBar_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -270,7 +270,7 @@ foo::bar::fooBar::_tao_release (fooBar_ptr obj)
 }
 
 ::CORBA::Boolean
-foo::bar::fooBar::_is_a (const char *value)
+foo::bar::fooBar::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:foo/bar/fooBar:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -283,17 +283,17 @@ foo::bar::fooBar::_is_a (const char *value)
     }
 }
 
-const char* foo::bar::fooBar::_interface_repository_id () const
+char const *foo::bar::fooBar::_interface_repository_id () const
 {
   return "IDL:foo/bar/fooBar:1.0";
 }
 
-const char* foo::bar::fooBar::_desc_repository_id ()
+char const *foo::bar::fooBar::_desc_repository_id ()
 {
   return "IDL:foo/bar/fooBar:1.0";
 }
 
-const char* foo::bar::fooBar::_desc_interface_name ()
+char const *foo::bar::fooBar::_desc_interface_name ()
 {
   return "fooBar";
 }
@@ -515,7 +515,7 @@ TAO::Objref_Traits<foo::bar::AMH_fooBarResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<foo::bar::AMH_fooBarResponseHandler>::marshal (const foo::bar::AMH_fooBarResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<foo::bar::AMH_fooBarResponseHandler>::marshal (foo::bar::AMH_fooBarResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -569,7 +569,7 @@ foo::bar::AMH_fooBarResponseHandler::_tao_release (AMH_fooBarResponseHandler_ptr
 }
 
 ::CORBA::Boolean
-foo::bar::AMH_fooBarResponseHandler::_is_a (const char *value)
+foo::bar::AMH_fooBarResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:foo/bar/AMH_fooBarResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -583,17 +583,17 @@ foo::bar::AMH_fooBarResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* foo::bar::AMH_fooBarResponseHandler::_interface_repository_id () const
+char const *foo::bar::AMH_fooBarResponseHandler::_interface_repository_id () const
 {
   return "IDL:foo/bar/AMH_fooBarResponseHandler:1.0";
 }
 
-const char* foo::bar::AMH_fooBarResponseHandler::_desc_repository_id ()
+char const *foo::bar::AMH_fooBarResponseHandler::_desc_repository_id ()
 {
   return "IDL:foo/bar/AMH_fooBarResponseHandler:1.0";
 }
 
-const char* foo::bar::AMH_fooBarResponseHandler::_desc_interface_name ()
+char const *foo::bar::AMH_fooBarResponseHandler::_desc_interface_name ()
 {
   return "AMH_fooBarResponseHandler";
 }
@@ -642,7 +642,7 @@ TAO::Objref_Traits<foo::bar::AMI_fooBarHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<foo::bar::AMI_fooBarHandler>::marshal (const foo::bar::AMI_fooBarHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<foo::bar::AMI_fooBarHandler>::marshal (foo::bar::AMI_fooBarHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -832,7 +832,7 @@ foo::bar::AMI_fooBarHandler::_tao_release (AMI_fooBarHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-foo::bar::AMI_fooBarHandler::_is_a (const char *value)
+foo::bar::AMI_fooBarHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:foo/bar/AMI_fooBarHandler:1.0") == 0 ||
@@ -846,17 +846,17 @@ foo::bar::AMI_fooBarHandler::_is_a (const char *value)
     }
 }
 
-const char* foo::bar::AMI_fooBarHandler::_interface_repository_id () const
+char const *foo::bar::AMI_fooBarHandler::_interface_repository_id () const
 {
   return "IDL:foo/bar/AMI_fooBarHandler:1.0";
 }
 
-const char* foo::bar::AMI_fooBarHandler::_desc_repository_id ()
+char const *foo::bar::AMI_fooBarHandler::_desc_repository_id ()
 {
   return "IDL:foo/bar/AMI_fooBarHandler:1.0";
 }
 
-const char* foo::bar::AMI_fooBarHandler::_desc_interface_name ()
+char const *foo::bar::AMI_fooBarHandler::_desc_interface_name ()
 {
   return "AMI_fooBarHandler";
 }
@@ -1022,7 +1022,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     foo::bar::fooBar_ptr &_tao_elem)
 {
   return
@@ -1164,7 +1164,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     foo::bar::AMH_fooBarResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1222,7 +1222,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     foo::bar::AMI_fooBarHandler_ptr &_tao_elem)
 {
   return
@@ -1288,7 +1288,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const foo::bar::fooBar_ptr _tao_objref)
+    foo::bar::fooBar_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1380,7 +1380,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const foo::bar::AMI_fooBarHandler_ptr _tao_objref)
+    foo::bar::AMI_fooBarHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

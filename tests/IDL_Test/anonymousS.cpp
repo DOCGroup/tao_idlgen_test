@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSS_7TXY8K_CPP_
-#define _TAO_IDL_ANONYMOUSS_7TXY8K_CPP_
+#ifndef _TAO_IDL_ANONYMOUSS_3HXHAV_CPP_
+#define _TAO_IDL_ANONYMOUSS_3HXHAV_CPP_
 
 #include "anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -393,7 +393,7 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc43_skel (
     );
 }
 
-::CORBA::Boolean POA_All_Anon::AMH_anon_bd_string_test::_is_a (const char* value)
+::CORBA::Boolean POA_All_Anon::AMH_anon_bd_string_test::_is_a (char const *value)
 {
   return
     (
@@ -402,7 +402,7 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc43_skel (
     );
 }
 
-const char* POA_All_Anon::AMH_anon_bd_string_test::_interface_repository_id () const
+char const *POA_All_Anon::AMH_anon_bd_string_test::_interface_repository_id () const
 {
   return "IDL:All_Anon/anon_bd_string_test:1.0";
 }
@@ -1163,7 +1163,7 @@ void POA_All_Anon::anon_bd_string_test::TestFunc43_skel (
                          );
 }
 
-::CORBA::Boolean POA_All_Anon::anon_bd_string_test::_is_a (const char* value)
+::CORBA::Boolean POA_All_Anon::anon_bd_string_test::_is_a (char const *value)
 {
   return
     (
@@ -1172,7 +1172,7 @@ void POA_All_Anon::anon_bd_string_test::TestFunc43_skel (
     );
 }
 
-const char* POA_All_Anon::anon_bd_string_test::_interface_repository_id () const
+char const *POA_All_Anon::anon_bd_string_test::_interface_repository_id () const
 {
   return "IDL:All_Anon/anon_bd_string_test:1.0";
 }
@@ -2774,7 +2774,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_All_Anon::AMI_anon_bd_string_testHandler::_is_a (const char* value)
+::CORBA::Boolean POA_All_Anon::AMI_anon_bd_string_testHandler::_is_a (char const *value)
 {
   return
     (
@@ -2784,7 +2784,7 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_excep_skel (
     );
 }
 
-const char* POA_All_Anon::AMI_anon_bd_string_testHandler::_interface_repository_id () const
+char const *POA_All_Anon::AMI_anon_bd_string_testHandler::_interface_repository_id () const
 {
   return "IDL:All_Anon/AMI_anon_bd_string_testHandler:1.0";
 }

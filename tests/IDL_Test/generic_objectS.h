@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_SDQX56_H_
-#define _TAO_IDL_GENERIC_OBJECTS_SDQX56_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_1E3ZQ9_H_
+#define _TAO_IDL_GENERIC_OBJECTS_1E3ZQ9_H_
 
 #include /**/ "ace/pre.h"
 
@@ -153,10 +153,10 @@ protected:
   POA_AMH_generic ();
 
 public:
-  POA_AMH_generic (const POA_AMH_generic& rhs);
+  POA_AMH_generic (POA_AMH_generic const &rhs);
   ~POA_AMH_generic () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -164,7 +164,7 @@ public:
 
   generic *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -195,10 +195,10 @@ public:
   using _stub_ptr_type = ::generic_ptr;
   using _stub_var_type = ::generic_var;
 
-  POA_generic (const POA_generic& rhs) = default;
+  POA_generic (POA_generic const &rhs) = default;
   ~POA_generic () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -206,7 +206,7 @@ public:
 
   ::generic *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::CORBA::Object_ptr op (
     ::CORBA::Object_ptr inarg,
     ::CORBA::Object_ptr & inoutarg,
@@ -271,10 +271,10 @@ public:
   using _stub_ptr_type = ::AMI_genericHandler_ptr;
   using _stub_var_type = ::AMI_genericHandler_var;
 
-  POA_AMI_genericHandler (const POA_AMI_genericHandler& rhs) = default;
+  POA_AMI_genericHandler (POA_AMI_genericHandler const &rhs) = default;
   ~POA_AMI_genericHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -282,7 +282,7 @@ public:
 
   ::AMI_genericHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op (
     ::CORBA::Object_ptr ami_return_val,
     ::CORBA::Object_ptr inoutarg,

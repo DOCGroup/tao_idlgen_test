@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_L0JJLL_CPP_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_L0JJLL_CPP_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_DL4PRG_CPP_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_DL4PRG_CPP_
 
 #include "Bug_2577_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -112,7 +112,7 @@ POA_AMH_User_T::getLoginTime_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_User_T::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_User_T::_is_a (char const *value)
 {
   return
     (
@@ -121,7 +121,7 @@ POA_AMH_User_T::getLoginTime_skel (
     );
 }
 
-const char* POA_AMH_User_T::_interface_repository_id () const
+char const *POA_AMH_User_T::_interface_repository_id () const
 {
   return "IDL:User_T:1.0";
 }
@@ -264,7 +264,7 @@ void POA_User_T::getLoginTime_skel (
                          );
 }
 
-::CORBA::Boolean POA_User_T::_is_a (const char* value)
+::CORBA::Boolean POA_User_T::_is_a (char const *value)
 {
   return
     (
@@ -273,7 +273,7 @@ void POA_User_T::getLoginTime_skel (
     );
 }
 
-const char* POA_User_T::_interface_repository_id () const
+char const *POA_User_T::_interface_repository_id () const
 {
   return "IDL:User_T:1.0";
 }
@@ -533,7 +533,7 @@ void POA_AMI_User_THandler::getLoginTime_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_User_THandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_User_THandler::_is_a (char const *value)
 {
   return
     (
@@ -543,7 +543,7 @@ void POA_AMI_User_THandler::getLoginTime_excep_skel (
     );
 }
 
-const char* POA_AMI_User_THandler::_interface_repository_id () const
+char const *POA_AMI_User_THandler::_interface_repository_id () const
 {
   return "IDL:AMI_User_THandler:1.0";
 }

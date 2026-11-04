@@ -435,7 +435,7 @@ namespace CORBA {
 
                               ::CORBA::Boolean
                               operator>>= (
-                                  const ::CORBA::Any &_tao_any,
+                                  ::CORBA::Any const &_tao_any,
                                   FixedPoint::FixedOperations_ptr &_tao_elem)
                               {
                                 return
@@ -577,7 +577,7 @@ namespace CORBA {
 
                               ::CORBA::Boolean
                               operator>>= (
-                                  const ::CORBA::Any &_tao_any,
+                                  ::CORBA::Any const &_tao_any,
                                   FixedPoint::AMH_FixedOperationsResponseHandler_ptr &_tao_elem)
                               {
                                 return
@@ -635,7 +635,7 @@ namespace CORBA {
 
                               ::CORBA::Boolean
                               operator>>= (
-                                  const ::CORBA::Any &_tao_any,
+                                  ::CORBA::Any const &_tao_any,
                                   FixedPoint::AMI_FixedOperationsHandler_ptr &_tao_elem)
                               {
                                 return

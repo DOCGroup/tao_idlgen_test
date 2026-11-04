@@ -304,7 +304,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::ex1_ptr &_tao_elem)
 {
   return
@@ -446,7 +446,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::AMH_ex1ResponseHandler_ptr &_tao_elem)
 {
   return
@@ -504,7 +504,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::AMI_ex1Handler_ptr &_tao_elem)
 {
   return
@@ -562,7 +562,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::ex2_ptr &_tao_elem)
 {
   return
@@ -704,7 +704,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::AMH_ex2ResponseHandler_ptr &_tao_elem)
 {
   return
@@ -762,7 +762,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::AMI_ex2Handler_ptr &_tao_elem)
 {
   return
@@ -820,7 +820,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::ex3_ptr &_tao_elem)
 {
   return
@@ -962,7 +962,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::AMH_ex3ResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1020,7 +1020,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::AMI_ex3Handler_ptr &_tao_elem)
 {
   return
@@ -1078,7 +1078,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::ex4_ptr &_tao_elem)
 {
   return
@@ -1220,7 +1220,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::AMH_ex4ResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1278,7 +1278,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldDif2::AMI_ex4Handler_ptr &_tao_elem)
 {
   return

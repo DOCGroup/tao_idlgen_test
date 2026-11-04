@@ -291,7 +291,7 @@ TAO::Objref_Traits<mod2::full>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<mod2::full>::marshal (const mod2::full_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<mod2::full>::marshal (mod2::full_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -419,7 +419,7 @@ mod2::full::_tao_release (full_ptr obj)
 }
 
 ::CORBA::Boolean
-mod2::full::_is_a (const char *value)
+mod2::full::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:mod2/full:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -432,17 +432,17 @@ mod2::full::_is_a (const char *value)
     }
 }
 
-const char* mod2::full::_interface_repository_id () const
+char const *mod2::full::_interface_repository_id () const
 {
   return "IDL:mod2/full:1.0";
 }
 
-const char* mod2::full::_desc_repository_id ()
+char const *mod2::full::_desc_repository_id ()
 {
   return "IDL:mod2/full:1.0";
 }
 
-const char* mod2::full::_desc_interface_name ()
+char const *mod2::full::_desc_interface_name ()
 {
   return "full";
 }
@@ -656,7 +656,7 @@ TAO::Objref_Traits<mod2::AMH_fullResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<mod2::AMH_fullResponseHandler>::marshal (const mod2::AMH_fullResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<mod2::AMH_fullResponseHandler>::marshal (mod2::AMH_fullResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -710,7 +710,7 @@ mod2::AMH_fullResponseHandler::_tao_release (AMH_fullResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-mod2::AMH_fullResponseHandler::_is_a (const char *value)
+mod2::AMH_fullResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:mod2/AMH_fullResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -724,17 +724,17 @@ mod2::AMH_fullResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* mod2::AMH_fullResponseHandler::_interface_repository_id () const
+char const *mod2::AMH_fullResponseHandler::_interface_repository_id () const
 {
   return "IDL:mod2/AMH_fullResponseHandler:1.0";
 }
 
-const char* mod2::AMH_fullResponseHandler::_desc_repository_id ()
+char const *mod2::AMH_fullResponseHandler::_desc_repository_id ()
 {
   return "IDL:mod2/AMH_fullResponseHandler:1.0";
 }
 
-const char* mod2::AMH_fullResponseHandler::_desc_interface_name ()
+char const *mod2::AMH_fullResponseHandler::_desc_interface_name ()
 {
   return "AMH_fullResponseHandler";
 }
@@ -779,7 +779,7 @@ TAO::Objref_Traits<mod2::AMI_fullHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<mod2::AMI_fullHandler>::marshal (const mod2::AMI_fullHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<mod2::AMI_fullHandler>::marshal (mod2::AMI_fullHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -969,7 +969,7 @@ mod2::AMI_fullHandler::_tao_release (AMI_fullHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-mod2::AMI_fullHandler::_is_a (const char *value)
+mod2::AMI_fullHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:mod2/AMI_fullHandler:1.0") == 0 ||
@@ -983,17 +983,17 @@ mod2::AMI_fullHandler::_is_a (const char *value)
     }
 }
 
-const char* mod2::AMI_fullHandler::_interface_repository_id () const
+char const *mod2::AMI_fullHandler::_interface_repository_id () const
 {
   return "IDL:mod2/AMI_fullHandler:1.0";
 }
 
-const char* mod2::AMI_fullHandler::_desc_repository_id ()
+char const *mod2::AMI_fullHandler::_desc_repository_id ()
 {
   return "IDL:mod2/AMI_fullHandler:1.0";
 }
 
-const char* mod2::AMI_fullHandler::_desc_interface_name ()
+char const *mod2::AMI_fullHandler::_desc_interface_name ()
 {
   return "AMI_fullHandler";
 }
@@ -1099,7 +1099,7 @@ TAO::Objref_Traits<fwd_mixed_intf::concrete_parent>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<fwd_mixed_intf::concrete_parent>::marshal (const fwd_mixed_intf::concrete_parent_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<fwd_mixed_intf::concrete_parent>::marshal (fwd_mixed_intf::concrete_parent_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1151,7 +1151,7 @@ fwd_mixed_intf::concrete_parent::_tao_release (concrete_parent_ptr obj)
 }
 
 ::CORBA::Boolean
-fwd_mixed_intf::concrete_parent::_is_a (const char *value)
+fwd_mixed_intf::concrete_parent::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:fwd_mixed_intf/concrete_parent:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -1164,17 +1164,17 @@ fwd_mixed_intf::concrete_parent::_is_a (const char *value)
     }
 }
 
-const char* fwd_mixed_intf::concrete_parent::_interface_repository_id () const
+char const *fwd_mixed_intf::concrete_parent::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/concrete_parent:1.0";
 }
 
-const char* fwd_mixed_intf::concrete_parent::_desc_repository_id ()
+char const *fwd_mixed_intf::concrete_parent::_desc_repository_id ()
 {
   return "IDL:fwd_mixed_intf/concrete_parent:1.0";
 }
 
-const char* fwd_mixed_intf::concrete_parent::_desc_interface_name ()
+char const *fwd_mixed_intf::concrete_parent::_desc_interface_name ()
 {
   return "concrete_parent";
 }
@@ -1406,7 +1406,7 @@ TAO::Objref_Traits<fwd_mixed_intf::AMH_concrete_parentResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<fwd_mixed_intf::AMH_concrete_parentResponseHandler>::marshal (const fwd_mixed_intf::AMH_concrete_parentResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<fwd_mixed_intf::AMH_concrete_parentResponseHandler>::marshal (fwd_mixed_intf::AMH_concrete_parentResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1460,7 +1460,7 @@ fwd_mixed_intf::AMH_concrete_parentResponseHandler::_tao_release (AMH_concrete_p
 }
 
 ::CORBA::Boolean
-fwd_mixed_intf::AMH_concrete_parentResponseHandler::_is_a (const char *value)
+fwd_mixed_intf::AMH_concrete_parentResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:fwd_mixed_intf/AMH_concrete_parentResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -1474,17 +1474,17 @@ fwd_mixed_intf::AMH_concrete_parentResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* fwd_mixed_intf::AMH_concrete_parentResponseHandler::_interface_repository_id () const
+char const *fwd_mixed_intf::AMH_concrete_parentResponseHandler::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/AMH_concrete_parentResponseHandler:1.0";
 }
 
-const char* fwd_mixed_intf::AMH_concrete_parentResponseHandler::_desc_repository_id ()
+char const *fwd_mixed_intf::AMH_concrete_parentResponseHandler::_desc_repository_id ()
 {
   return "IDL:fwd_mixed_intf/AMH_concrete_parentResponseHandler:1.0";
 }
 
-const char* fwd_mixed_intf::AMH_concrete_parentResponseHandler::_desc_interface_name ()
+char const *fwd_mixed_intf::AMH_concrete_parentResponseHandler::_desc_interface_name ()
 {
   return "AMH_concrete_parentResponseHandler";
 }
@@ -1529,7 +1529,7 @@ TAO::Objref_Traits<fwd_mixed_intf::AMI_concrete_parentHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<fwd_mixed_intf::AMI_concrete_parentHandler>::marshal (const fwd_mixed_intf::AMI_concrete_parentHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<fwd_mixed_intf::AMI_concrete_parentHandler>::marshal (fwd_mixed_intf::AMI_concrete_parentHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1581,7 +1581,7 @@ fwd_mixed_intf::AMI_concrete_parentHandler::_tao_release (AMI_concrete_parentHan
 }
 
 ::CORBA::Boolean
-fwd_mixed_intf::AMI_concrete_parentHandler::_is_a (const char *value)
+fwd_mixed_intf::AMI_concrete_parentHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:fwd_mixed_intf/AMI_concrete_parentHandler:1.0") == 0 ||
@@ -1595,17 +1595,17 @@ fwd_mixed_intf::AMI_concrete_parentHandler::_is_a (const char *value)
     }
 }
 
-const char* fwd_mixed_intf::AMI_concrete_parentHandler::_interface_repository_id () const
+char const *fwd_mixed_intf::AMI_concrete_parentHandler::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/AMI_concrete_parentHandler:1.0";
 }
 
-const char* fwd_mixed_intf::AMI_concrete_parentHandler::_desc_repository_id ()
+char const *fwd_mixed_intf::AMI_concrete_parentHandler::_desc_repository_id ()
 {
   return "IDL:fwd_mixed_intf/AMI_concrete_parentHandler:1.0";
 }
 
-const char* fwd_mixed_intf::AMI_concrete_parentHandler::_desc_interface_name ()
+char const *fwd_mixed_intf::AMI_concrete_parentHandler::_desc_interface_name ()
 {
   return "AMI_concrete_parentHandler";
 }
@@ -1650,7 +1650,7 @@ TAO::Objref_Traits<fwd_mixed_intf::abstract_parent>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<fwd_mixed_intf::abstract_parent>::marshal (const fwd_mixed_intf::abstract_parent_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<fwd_mixed_intf::abstract_parent>::marshal (fwd_mixed_intf::abstract_parent_ptr const p,TAO_OutputCDR & cdr)
 {
   return cdr << p;
 }
@@ -1699,7 +1699,7 @@ fwd_mixed_intf::abstract_parent::_tao_release (abstract_parent_ptr obj)
 }
 
 ::CORBA::Boolean
-fwd_mixed_intf::abstract_parent::_is_a (const char *value)
+fwd_mixed_intf::abstract_parent::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:fwd_mixed_intf/abstract_parent:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/AbstractBase:1.0") == 0)
@@ -1712,17 +1712,17 @@ fwd_mixed_intf::abstract_parent::_is_a (const char *value)
     }
 }
 
-const char* fwd_mixed_intf::abstract_parent::_interface_repository_id () const
+char const *fwd_mixed_intf::abstract_parent::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/abstract_parent:1.0";
 }
 
-const char* fwd_mixed_intf::abstract_parent::_desc_repository_id ()
+char const *fwd_mixed_intf::abstract_parent::_desc_repository_id ()
 {
   return "IDL:fwd_mixed_intf/abstract_parent:1.0";
 }
 
-const char* fwd_mixed_intf::abstract_parent::_desc_interface_name ()
+char const *fwd_mixed_intf::abstract_parent::_desc_interface_name ()
 {
   return "abstract_parent";
 }
@@ -1762,7 +1762,7 @@ TAO::Objref_Traits<fwd_mixed_intf::mixed_abs_first>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<fwd_mixed_intf::mixed_abs_first>::marshal (const fwd_mixed_intf::mixed_abs_first_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<fwd_mixed_intf::mixed_abs_first>::marshal (fwd_mixed_intf::mixed_abs_first_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1834,7 +1834,7 @@ fwd_mixed_intf::mixed_abs_first::_tao_release (mixed_abs_first_ptr obj)
 }
 
 ::CORBA::Boolean
-fwd_mixed_intf::mixed_abs_first::_is_a (const char *value)
+fwd_mixed_intf::mixed_abs_first::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:fwd_mixed_intf/abstract_parent:1.0") == 0 ||
       std::strcmp (value, "IDL:fwd_mixed_intf/concrete_parent:1.0") == 0 ||
@@ -1850,17 +1850,17 @@ fwd_mixed_intf::mixed_abs_first::_is_a (const char *value)
     }
 }
 
-const char* fwd_mixed_intf::mixed_abs_first::_interface_repository_id () const
+char const *fwd_mixed_intf::mixed_abs_first::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/mixed_abs_first:1.0";
 }
 
-const char* fwd_mixed_intf::mixed_abs_first::_desc_repository_id ()
+char const *fwd_mixed_intf::mixed_abs_first::_desc_repository_id ()
 {
   return "IDL:fwd_mixed_intf/mixed_abs_first:1.0";
 }
 
-const char* fwd_mixed_intf::mixed_abs_first::_desc_interface_name ()
+char const *fwd_mixed_intf::mixed_abs_first::_desc_interface_name ()
 {
   return "mixed_abs_first";
 }
@@ -1905,7 +1905,7 @@ TAO::Objref_Traits<fwd_mixed_intf::AMI_mixed_abs_firstHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<fwd_mixed_intf::AMI_mixed_abs_firstHandler>::marshal (const fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<fwd_mixed_intf::AMI_mixed_abs_firstHandler>::marshal (fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1957,7 +1957,7 @@ fwd_mixed_intf::AMI_mixed_abs_firstHandler::_tao_release (AMI_mixed_abs_firstHan
 }
 
 ::CORBA::Boolean
-fwd_mixed_intf::AMI_mixed_abs_firstHandler::_is_a (const char *value)
+fwd_mixed_intf::AMI_mixed_abs_firstHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:fwd_mixed_intf/AMI_concrete_parentHandler:1.0") == 0 ||
@@ -1972,17 +1972,17 @@ fwd_mixed_intf::AMI_mixed_abs_firstHandler::_is_a (const char *value)
     }
 }
 
-const char* fwd_mixed_intf::AMI_mixed_abs_firstHandler::_interface_repository_id () const
+char const *fwd_mixed_intf::AMI_mixed_abs_firstHandler::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/AMI_mixed_abs_firstHandler:1.0";
 }
 
-const char* fwd_mixed_intf::AMI_mixed_abs_firstHandler::_desc_repository_id ()
+char const *fwd_mixed_intf::AMI_mixed_abs_firstHandler::_desc_repository_id ()
 {
   return "IDL:fwd_mixed_intf/AMI_mixed_abs_firstHandler:1.0";
 }
 
-const char* fwd_mixed_intf::AMI_mixed_abs_firstHandler::_desc_interface_name ()
+char const *fwd_mixed_intf::AMI_mixed_abs_firstHandler::_desc_interface_name ()
 {
   return "AMI_mixed_abs_firstHandler";
 }
@@ -2028,7 +2028,7 @@ TAO::Objref_Traits<fwd_mixed_intf::mixed_conc_first>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<fwd_mixed_intf::mixed_conc_first>::marshal (const fwd_mixed_intf::mixed_conc_first_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<fwd_mixed_intf::mixed_conc_first>::marshal (fwd_mixed_intf::mixed_conc_first_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2100,7 +2100,7 @@ fwd_mixed_intf::mixed_conc_first::_tao_release (mixed_conc_first_ptr obj)
 }
 
 ::CORBA::Boolean
-fwd_mixed_intf::mixed_conc_first::_is_a (const char *value)
+fwd_mixed_intf::mixed_conc_first::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:fwd_mixed_intf/concrete_parent:1.0") == 0 ||
       std::strcmp (value, "IDL:fwd_mixed_intf/abstract_parent:1.0") == 0 ||
@@ -2116,17 +2116,17 @@ fwd_mixed_intf::mixed_conc_first::_is_a (const char *value)
     }
 }
 
-const char* fwd_mixed_intf::mixed_conc_first::_interface_repository_id () const
+char const *fwd_mixed_intf::mixed_conc_first::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/mixed_conc_first:1.0";
 }
 
-const char* fwd_mixed_intf::mixed_conc_first::_desc_repository_id ()
+char const *fwd_mixed_intf::mixed_conc_first::_desc_repository_id ()
 {
   return "IDL:fwd_mixed_intf/mixed_conc_first:1.0";
 }
 
-const char* fwd_mixed_intf::mixed_conc_first::_desc_interface_name ()
+char const *fwd_mixed_intf::mixed_conc_first::_desc_interface_name ()
 {
   return "mixed_conc_first";
 }
@@ -2171,7 +2171,7 @@ TAO::Objref_Traits<fwd_mixed_intf::AMI_mixed_conc_firstHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<fwd_mixed_intf::AMI_mixed_conc_firstHandler>::marshal (const fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<fwd_mixed_intf::AMI_mixed_conc_firstHandler>::marshal (fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2223,7 +2223,7 @@ fwd_mixed_intf::AMI_mixed_conc_firstHandler::_tao_release (AMI_mixed_conc_firstH
 }
 
 ::CORBA::Boolean
-fwd_mixed_intf::AMI_mixed_conc_firstHandler::_is_a (const char *value)
+fwd_mixed_intf::AMI_mixed_conc_firstHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:fwd_mixed_intf/AMI_concrete_parentHandler:1.0") == 0 ||
@@ -2238,17 +2238,17 @@ fwd_mixed_intf::AMI_mixed_conc_firstHandler::_is_a (const char *value)
     }
 }
 
-const char* fwd_mixed_intf::AMI_mixed_conc_firstHandler::_interface_repository_id () const
+char const *fwd_mixed_intf::AMI_mixed_conc_firstHandler::_interface_repository_id () const
 {
   return "IDL:fwd_mixed_intf/AMI_mixed_conc_firstHandler:1.0";
 }
 
-const char* fwd_mixed_intf::AMI_mixed_conc_firstHandler::_desc_repository_id ()
+char const *fwd_mixed_intf::AMI_mixed_conc_firstHandler::_desc_repository_id ()
 {
   return "IDL:fwd_mixed_intf/AMI_mixed_conc_firstHandler:1.0";
 }
 
-const char* fwd_mixed_intf::AMI_mixed_conc_firstHandler::_desc_interface_name ()
+char const *fwd_mixed_intf::AMI_mixed_conc_firstHandler::_desc_interface_name ()
 {
   return "AMI_mixed_conc_firstHandler";
 }
@@ -2941,7 +2941,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     mod2::full_ptr &_tao_elem)
 {
   return
@@ -3083,7 +3083,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     mod2::AMH_fullResponseHandler_ptr &_tao_elem)
 {
   return
@@ -3141,7 +3141,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     mod2::AMI_fullHandler_ptr &_tao_elem)
 {
   return
@@ -3240,7 +3240,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     fwd_mixed_intf::concrete_parent_ptr &_tao_elem)
 {
   return
@@ -3382,7 +3382,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     fwd_mixed_intf::AMH_concrete_parentResponseHandler_ptr &_tao_elem)
 {
   return
@@ -3440,7 +3440,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     fwd_mixed_intf::AMI_concrete_parentHandler_ptr &_tao_elem)
 {
   return
@@ -3498,7 +3498,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     fwd_mixed_intf::abstract_parent_ptr &_tao_elem)
 {
   return
@@ -3568,7 +3568,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     fwd_mixed_intf::mixed_abs_first_ptr &_tao_elem)
 {
   return
@@ -3626,7 +3626,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr &_tao_elem)
 {
   return
@@ -3696,7 +3696,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     fwd_mixed_intf::mixed_conc_first_ptr &_tao_elem)
 {
   return
@@ -3754,7 +3754,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr &_tao_elem)
 {
   return
@@ -3991,7 +3991,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const mod2::full_ptr _tao_objref)
+    mod2::full_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4083,7 +4083,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const mod2::AMI_fullHandler_ptr _tao_objref)
+    mod2::AMI_fullHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4135,7 +4135,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const fwd_mixed_intf::concrete_parent_ptr _tao_objref)
+    fwd_mixed_intf::concrete_parent_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4227,7 +4227,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const fwd_mixed_intf::AMI_concrete_parentHandler_ptr _tao_objref)
+    fwd_mixed_intf::AMI_concrete_parentHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4256,7 +4256,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const fwd_mixed_intf::abstract_parent_ptr _tao_objref)
+    fwd_mixed_intf::abstract_parent_ptr const _tao_objref)
 {
   ::CORBA::AbstractBase_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4285,7 +4285,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const fwd_mixed_intf::mixed_abs_first_ptr _tao_objref)
+    fwd_mixed_intf::mixed_abs_first_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4314,7 +4314,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr _tao_objref)
+    fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4343,7 +4343,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const fwd_mixed_intf::mixed_conc_first_ptr _tao_objref)
+    fwd_mixed_intf::mixed_conc_first_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4372,7 +4372,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr _tao_objref)
+    fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

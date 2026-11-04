@@ -278,7 +278,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     ClassConstants::Iface_ptr &_tao_elem)
 {
   return
@@ -420,7 +420,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     ClassConstants::AMH_IfaceResponseHandler_ptr &_tao_elem)
 {
   return
@@ -478,7 +478,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     ClassConstants::AMI_IfaceHandler_ptr &_tao_elem)
 {
   return

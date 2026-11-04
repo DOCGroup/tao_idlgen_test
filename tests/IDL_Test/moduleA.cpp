@@ -223,7 +223,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     mod1::mod2::ex1_ptr &_tao_elem)
 {
   return
@@ -365,7 +365,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     mod1::mod2::AMH_ex1ResponseHandler_ptr &_tao_elem)
 {
   return
@@ -423,7 +423,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     mod1::mod2::AMI_ex1Handler_ptr &_tao_elem)
 {
   return
@@ -481,7 +481,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     mod1::mod2::ex2_ptr &_tao_elem)
 {
   return
@@ -623,7 +623,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     mod1::mod2::AMH_ex2ResponseHandler_ptr &_tao_elem)
 {
   return
@@ -681,7 +681,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     mod1::mod2::AMI_ex2Handler_ptr &_tao_elem)
 {
   return

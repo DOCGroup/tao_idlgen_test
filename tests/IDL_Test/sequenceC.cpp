@@ -346,7 +346,7 @@ TAO::Objref_Traits<seqLocal>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<seqLocal>::marshal (const seqLocal_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<seqLocal>::marshal (seqLocal_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -400,7 +400,7 @@ seqLocal::_tao_release (seqLocal_ptr obj)
 }
 
 ::CORBA::Boolean
-seqLocal::_is_a (const char *value)
+seqLocal::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:seqLocal:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -414,17 +414,17 @@ seqLocal::_is_a (const char *value)
     }
 }
 
-const char* seqLocal::_interface_repository_id () const
+char const *seqLocal::_interface_repository_id () const
 {
   return "IDL:seqLocal:1.0";
 }
 
-const char* seqLocal::_desc_repository_id ()
+char const *seqLocal::_desc_repository_id ()
 {
   return "IDL:seqLocal:1.0";
 }
 
-const char* seqLocal::_desc_interface_name ()
+char const *seqLocal::_desc_interface_name ()
 {
   return "seqLocal";
 }
@@ -1248,7 +1248,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     seqLocal_ptr &_tao_elem)
 {
   return

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSC_PA2101_H_
-#define _TAO_IDL_ANONYMOUSC_PA2101_H_
+#ifndef _TAO_IDL_ANONYMOUSC_9T7KFK_H_
+#define _TAO_IDL_ANONYMOUSC_9T7KFK_H_
 
 #include /**/ "ace/pre.h"
 
@@ -372,10 +372,10 @@ namespace All_Anon
       ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
       char const * inarg);
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -396,9 +396,9 @@ namespace All_Anon
 
   private:
     // Private and unimplemented for concrete interfaces.
-    anon_bd_string_test (const anon_bd_string_test &) = delete;
+    anon_bd_string_test (anon_bd_string_test const &) = delete;
     anon_bd_string_test (anon_bd_string_test &&) = delete;
-    anon_bd_string_test &operator= (const anon_bd_string_test &) = delete;
+    anon_bd_string_test &operator= (anon_bd_string_test const &) = delete;
     anon_bd_string_test &operator= (anon_bd_string_test &&) = delete;
   };
 
@@ -619,10 +619,10 @@ public:
   virtual void TestFunc43_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -633,9 +633,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_anon_bd_string_testResponseHandler (const AMH_anon_bd_string_testResponseHandler &) = delete;
+  AMH_anon_bd_string_testResponseHandler (AMH_anon_bd_string_testResponseHandler const &) = delete;
   AMH_anon_bd_string_testResponseHandler (AMH_anon_bd_string_testResponseHandler &&) = delete;
-  AMH_anon_bd_string_testResponseHandler &operator= (const AMH_anon_bd_string_testResponseHandler &) = delete;
+  AMH_anon_bd_string_testResponseHandler &operator= (AMH_anon_bd_string_testResponseHandler const &) = delete;
   AMH_anon_bd_string_testResponseHandler &operator= (AMH_anon_bd_string_testResponseHandler &&) = delete;
 };
 
@@ -762,10 +762,10 @@ public:
   virtual void TestFunc43_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -786,9 +786,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_anon_bd_string_testHandler (const AMI_anon_bd_string_testHandler &) = delete;
+  AMI_anon_bd_string_testHandler (AMI_anon_bd_string_testHandler const &) = delete;
   AMI_anon_bd_string_testHandler (AMI_anon_bd_string_testHandler &&) = delete;
-  AMI_anon_bd_string_testHandler &operator= (const AMI_anon_bd_string_testHandler &) = delete;
+  AMI_anon_bd_string_testHandler &operator= (AMI_anon_bd_string_testHandler const &) = delete;
   AMI_anon_bd_string_testHandler &operator= (AMI_anon_bd_string_testHandler &&) = delete;
 };
 
@@ -1699,7 +1699,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const All_Anon::anon_bd_string_test_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, All_Anon::anon_bd_string_test_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::anon_bd_string_test_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1722,7 +1722,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const All_Anon::AMI_anon_bd_string_testHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, All_Anon::AMI_anon_bd_string_testHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::AMI_anon_bd_string_testHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

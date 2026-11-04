@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEPREFIXS_FNQHJJ_CPP_
-#define _TAO_IDL_TYPEPREFIXS_FNQHJJ_CPP_
+#ifndef _TAO_IDL_TYPEPREFIXS_NL9ST2_CPP_
+#define _TAO_IDL_TYPEPREFIXS_NL9ST2_CPP_
 
 #include "typeprefixS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -77,7 +77,7 @@ POA_A::AMH_B::AMH_B ()
   this->optable_ = std::addressof (tao_A_AMH_B_optable);
 }
 
-::CORBA::Boolean POA_A::AMH_B::_is_a (const char* value)
+::CORBA::Boolean POA_A::AMH_B::_is_a (char const *value)
 {
   return
     (
@@ -86,7 +86,7 @@ POA_A::AMH_B::AMH_B ()
     );
 }
 
-const char* POA_A::AMH_B::_interface_repository_id () const
+char const *POA_A::AMH_B::_interface_repository_id () const
 {
   return "IDL:TAO/A/B:1.0";
 }
@@ -148,7 +148,7 @@ POA_A::B::B ()
   this->optable_ = std::addressof (tao_A_B_optable);
 }
 
-::CORBA::Boolean POA_A::B::_is_a (const char* value)
+::CORBA::Boolean POA_A::B::_is_a (char const *value)
 {
   return
     (
@@ -157,7 +157,7 @@ POA_A::B::B ()
     );
 }
 
-const char* POA_A::B::_interface_repository_id () const
+char const *POA_A::B::_interface_repository_id () const
 {
   return "IDL:TAO/A/B:1.0";
 }
@@ -219,7 +219,7 @@ POA_A::AMI_BHandler::AMI_BHandler ()
   this->optable_ = std::addressof (tao_A_AMI_BHandler_optable);
 }
 
-::CORBA::Boolean POA_A::AMI_BHandler::_is_a (const char* value)
+::CORBA::Boolean POA_A::AMI_BHandler::_is_a (char const *value)
 {
   return
     (
@@ -229,7 +229,7 @@ POA_A::AMI_BHandler::AMI_BHandler ()
     );
 }
 
-const char* POA_A::AMI_BHandler::_interface_repository_id () const
+char const *POA_A::AMI_BHandler::_interface_repository_id () const
 {
   return "IDL:TAO/A/AMI_BHandler:1.0";
 }
@@ -323,7 +323,7 @@ POA_A::AMH_C::op_skel (
     );
 }
 
-::CORBA::Boolean POA_A::AMH_C::_is_a (const char* value)
+::CORBA::Boolean POA_A::AMH_C::_is_a (char const *value)
 {
   return
     (
@@ -332,7 +332,7 @@ POA_A::AMH_C::op_skel (
     );
 }
 
-const char* POA_A::AMH_C::_interface_repository_id () const
+char const *POA_A::AMH_C::_interface_repository_id () const
 {
   return "IDL:TAO/A/C:1.0";
 }
@@ -482,7 +482,7 @@ void POA_A::C::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_A::C::_is_a (const char* value)
+::CORBA::Boolean POA_A::C::_is_a (char const *value)
 {
   return
     (
@@ -491,7 +491,7 @@ void POA_A::C::op_skel (
     );
 }
 
-const char* POA_A::C::_interface_repository_id () const
+char const *POA_A::C::_interface_repository_id () const
 {
   return "IDL:TAO/A/C:1.0";
 }
@@ -732,7 +732,7 @@ void POA_A::AMI_CHandler::op_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_A::AMI_CHandler::_is_a (const char* value)
+::CORBA::Boolean POA_A::AMI_CHandler::_is_a (char const *value)
 {
   return
     (
@@ -742,7 +742,7 @@ void POA_A::AMI_CHandler::op_excep_skel (
     );
 }
 
-const char* POA_A::AMI_CHandler::_interface_repository_id () const
+char const *POA_A::AMI_CHandler::_interface_repository_id () const
 {
   return "IDL:TAO/A/AMI_CHandler:1.0";
 }

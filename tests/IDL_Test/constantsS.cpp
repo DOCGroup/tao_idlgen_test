@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_CONSTANTSS_FI41SK_CPP_
-#define _TAO_IDL_CONSTANTSS_FI41SK_CPP_
+#ifndef _TAO_IDL_CONSTANTSS_6NPGKX_CPP_
+#define _TAO_IDL_CONSTANTSS_6NPGKX_CPP_
 
 #include "constantsS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -76,7 +76,7 @@ POA_ClassConstants::AMH_Iface::AMH_Iface ()
   this->optable_ = std::addressof (tao_ClassConstants_AMH_Iface_optable);
 }
 
-::CORBA::Boolean POA_ClassConstants::AMH_Iface::_is_a (const char* value)
+::CORBA::Boolean POA_ClassConstants::AMH_Iface::_is_a (char const *value)
 {
   return
     (
@@ -85,7 +85,7 @@ POA_ClassConstants::AMH_Iface::AMH_Iface ()
     );
 }
 
-const char* POA_ClassConstants::AMH_Iface::_interface_repository_id () const
+char const *POA_ClassConstants::AMH_Iface::_interface_repository_id () const
 {
   return "IDL:ClassConstants/Iface:1.0";
 }
@@ -146,7 +146,7 @@ POA_ClassConstants::Iface::Iface ()
   this->optable_ = std::addressof (tao_ClassConstants_Iface_optable);
 }
 
-::CORBA::Boolean POA_ClassConstants::Iface::_is_a (const char* value)
+::CORBA::Boolean POA_ClassConstants::Iface::_is_a (char const *value)
 {
   return
     (
@@ -155,7 +155,7 @@ POA_ClassConstants::Iface::Iface ()
     );
 }
 
-const char* POA_ClassConstants::Iface::_interface_repository_id () const
+char const *POA_ClassConstants::Iface::_interface_repository_id () const
 {
   return "IDL:ClassConstants/Iface:1.0";
 }
@@ -217,7 +217,7 @@ POA_ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler ()
   this->optable_ = std::addressof (tao_ClassConstants_AMI_IfaceHandler_optable);
 }
 
-::CORBA::Boolean POA_ClassConstants::AMI_IfaceHandler::_is_a (const char* value)
+::CORBA::Boolean POA_ClassConstants::AMI_IfaceHandler::_is_a (char const *value)
 {
   return
     (
@@ -227,7 +227,7 @@ POA_ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler ()
     );
 }
 
-const char* POA_ClassConstants::AMI_IfaceHandler::_interface_repository_id () const
+char const *POA_ClassConstants::AMI_IfaceHandler::_interface_repository_id () const
 {
   return "IDL:ClassConstants/AMI_IfaceHandler:1.0";
 }

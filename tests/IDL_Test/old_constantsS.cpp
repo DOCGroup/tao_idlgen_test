@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_CONSTANTSS_F99UGC_CPP_
-#define _TAO_IDL_OLD_CONSTANTSS_F99UGC_CPP_
+#ifndef _TAO_IDL_OLD_CONSTANTSS_88JCXO_CPP_
+#define _TAO_IDL_OLD_CONSTANTSS_88JCXO_CPP_
 
 #include "old_constantsS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -124,7 +124,7 @@ POA_OldConstants::M::AMH_A::foo_skel (
     );
 }
 
-::CORBA::Boolean POA_OldConstants::M::AMH_A::_is_a (const char* value)
+::CORBA::Boolean POA_OldConstants::M::AMH_A::_is_a (char const *value)
 {
   return
     (
@@ -133,7 +133,7 @@ POA_OldConstants::M::AMH_A::foo_skel (
     );
 }
 
-const char* POA_OldConstants::M::AMH_A::_interface_repository_id () const
+char const *POA_OldConstants::M::AMH_A::_interface_repository_id () const
 {
   return "IDL:OldConstants/M/A:1.0";
 }
@@ -314,7 +314,7 @@ void POA_OldConstants::M::A::foo_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldConstants::M::A::_is_a (const char* value)
+::CORBA::Boolean POA_OldConstants::M::A::_is_a (char const *value)
 {
   return
     (
@@ -323,7 +323,7 @@ void POA_OldConstants::M::A::foo_skel (
     );
 }
 
-const char* POA_OldConstants::M::A::_interface_repository_id () const
+char const *POA_OldConstants::M::A::_interface_repository_id () const
 {
   return "IDL:OldConstants/M/A:1.0";
 }
@@ -623,7 +623,7 @@ void POA_OldConstants::M::AMI_AHandler::foo_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldConstants::M::AMI_AHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldConstants::M::AMI_AHandler::_is_a (char const *value)
 {
   return
     (
@@ -633,7 +633,7 @@ void POA_OldConstants::M::AMI_AHandler::foo_excep_skel (
     );
 }
 
-const char* POA_OldConstants::M::AMI_AHandler::_interface_repository_id () const
+char const *POA_OldConstants::M::AMI_AHandler::_interface_repository_id () const
 {
   return "IDL:OldConstants/M/AMI_AHandler:1.0";
 }

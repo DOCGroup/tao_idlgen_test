@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_5ETUW3_CPP_
-#define _TAO_IDL_BUG_2619_REGRESSIONS_5ETUW3_CPP_
+#ifndef _TAO_IDL_BUG_2619_REGRESSIONS_ZBG2RC_CPP_
+#define _TAO_IDL_BUG_2619_REGRESSIONS_ZBG2RC_CPP_
 
 #include "Bug_2619_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -112,7 +112,7 @@ POA_AMH_Test::getGroup_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_Test::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_Test::_is_a (char const *value)
 {
   return
     (
@@ -121,7 +121,7 @@ POA_AMH_Test::getGroup_skel (
     );
 }
 
-const char* POA_AMH_Test::_interface_repository_id () const
+char const *POA_AMH_Test::_interface_repository_id () const
 {
   return "IDL:Test:1.0";
 }
@@ -264,7 +264,7 @@ void POA_Test::getGroup_skel (
                          );
 }
 
-::CORBA::Boolean POA_Test::_is_a (const char* value)
+::CORBA::Boolean POA_Test::_is_a (char const *value)
 {
   return
     (
@@ -273,7 +273,7 @@ void POA_Test::getGroup_skel (
     );
 }
 
-const char* POA_Test::_interface_repository_id () const
+char const *POA_Test::_interface_repository_id () const
 {
   return "IDL:Test:1.0";
 }
@@ -533,7 +533,7 @@ void POA_AMI_TestHandler::getGroup_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_TestHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_TestHandler::_is_a (char const *value)
 {
   return
     (
@@ -543,7 +543,7 @@ void POA_AMI_TestHandler::getGroup_excep_skel (
     );
 }
 
-const char* POA_AMI_TestHandler::_interface_repository_id () const
+char const *POA_AMI_TestHandler::_interface_repository_id () const
 {
   return "IDL:AMI_TestHandler:1.0";
 }

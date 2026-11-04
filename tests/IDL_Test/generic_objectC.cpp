@@ -162,7 +162,7 @@ TAO::Objref_Traits<generic>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<generic>::marshal (const generic_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<generic>::marshal (generic_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -290,7 +290,7 @@ generic::_tao_release (generic_ptr obj)
 }
 
 ::CORBA::Boolean
-generic::_is_a (const char *value)
+generic::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:generic:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -303,17 +303,17 @@ generic::_is_a (const char *value)
     }
 }
 
-const char* generic::_interface_repository_id () const
+char const *generic::_interface_repository_id () const
 {
   return "IDL:generic:1.0";
 }
 
-const char* generic::_desc_repository_id ()
+char const *generic::_desc_repository_id ()
 {
   return "IDL:generic:1.0";
 }
 
-const char* generic::_desc_interface_name ()
+char const *generic::_desc_interface_name ()
 {
   return "generic";
 }
@@ -492,7 +492,7 @@ TAO::Objref_Traits<AMH_genericResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_genericResponseHandler>::marshal (const AMH_genericResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_genericResponseHandler>::marshal (AMH_genericResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -546,7 +546,7 @@ AMH_genericResponseHandler::_tao_release (AMH_genericResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMH_genericResponseHandler::_is_a (const char *value)
+AMH_genericResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_genericResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -560,17 +560,17 @@ AMH_genericResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* AMH_genericResponseHandler::_interface_repository_id () const
+char const *AMH_genericResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_genericResponseHandler:1.0";
 }
 
-const char* AMH_genericResponseHandler::_desc_repository_id ()
+char const *AMH_genericResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_genericResponseHandler:1.0";
 }
 
-const char* AMH_genericResponseHandler::_desc_interface_name ()
+char const *AMH_genericResponseHandler::_desc_interface_name ()
 {
   return "AMH_genericResponseHandler";
 }
@@ -604,7 +604,7 @@ TAO::Objref_Traits<AMI_genericHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_genericHandler>::marshal (const AMI_genericHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_genericHandler>::marshal (AMI_genericHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -794,7 +794,7 @@ AMI_genericHandler::_tao_release (AMI_genericHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_genericHandler::_is_a (const char *value)
+AMI_genericHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_genericHandler:1.0") == 0 ||
@@ -808,17 +808,17 @@ AMI_genericHandler::_is_a (const char *value)
     }
 }
 
-const char* AMI_genericHandler::_interface_repository_id () const
+char const *AMI_genericHandler::_interface_repository_id () const
 {
   return "IDL:AMI_genericHandler:1.0";
 }
 
-const char* AMI_genericHandler::_desc_repository_id ()
+char const *AMI_genericHandler::_desc_repository_id ()
 {
   return "IDL:AMI_genericHandler:1.0";
 }
 
-const char* AMI_genericHandler::_desc_interface_name ()
+char const *AMI_genericHandler::_desc_interface_name ()
 {
   return "AMI_genericHandler";
 }
@@ -949,7 +949,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const generic_ptr _tao_objref)
+    generic_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1041,7 +1041,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const AMI_genericHandler_ptr _tao_objref)
+    AMI_genericHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

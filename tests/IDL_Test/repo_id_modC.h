@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REPO_ID_MODC_I81LKE_H_
-#define _TAO_IDL_REPO_ID_MODC_I81LKE_H_
+#ifndef _TAO_IDL_REPO_ID_MODC_EDVVDZ_H_
+#define _TAO_IDL_REPO_ID_MODC_EDVVDZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -87,10 +87,10 @@ namespace gleep
     static schmooze_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmooze_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -101,9 +101,9 @@ namespace gleep
 
   private:
     // Private and unimplemented for concrete interfaces.
-    schmooze (const schmooze &) = delete;
+    schmooze (schmooze const &) = delete;
     schmooze (schmooze &&) = delete;
-    schmooze &operator= (const schmooze &) = delete;
+    schmooze &operator= (schmooze const &) = delete;
     schmooze &operator= (schmooze &&) = delete;
   };
 
@@ -143,10 +143,10 @@ namespace gleep
     static schmeer_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmeer_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -157,9 +157,9 @@ namespace gleep
 
   private:
     // Private and unimplemented for concrete interfaces.
-    schmeer (const schmeer &) = delete;
+    schmeer (schmeer const &) = delete;
     schmeer (schmeer &&) = delete;
-    schmeer &operator= (const schmeer &) = delete;
+    schmeer &operator= (schmeer const &) = delete;
     schmeer &operator= (schmeer &&) = delete;
   };
 
@@ -199,10 +199,10 @@ namespace gleep
     static schlemiel_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schlemiel_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -213,9 +213,9 @@ namespace gleep
 
   private:
     // Private and unimplemented for concrete interfaces.
-    schlemiel (const schlemiel &) = delete;
+    schlemiel (schlemiel const &) = delete;
     schlemiel (schlemiel &&) = delete;
-    schlemiel &operator= (const schlemiel &) = delete;
+    schlemiel &operator= (schlemiel const &) = delete;
     schlemiel &operator= (schlemiel &&) = delete;
   };
 
@@ -255,10 +255,10 @@ namespace gleep
     static spilkis_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static spilkis_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -269,9 +269,9 @@ namespace gleep
 
   private:
     // Private and unimplemented for concrete interfaces.
-    spilkis (const spilkis &) = delete;
+    spilkis (spilkis const &) = delete;
     spilkis (spilkis &&) = delete;
-    spilkis &operator= (const spilkis &) = delete;
+    spilkis &operator= (spilkis const &) = delete;
     spilkis &operator= (spilkis &&) = delete;
   };
   namespace floop
@@ -309,10 +309,10 @@ namespace gleep
       static schmuck_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static schmuck_ptr _nil ();
 
-      ::CORBA::Boolean _is_a (const char *type_id) override;
-      const char* _interface_repository_id () const override;
-      static const char* _desc_repository_id ();
-      static const char* _desc_interface_name ();
+      ::CORBA::Boolean _is_a (char const *type_id) override;
+      char const *_interface_repository_id () const override;
+      static char const *_desc_repository_id ();
+      static char const *_desc_interface_name ();
       ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
@@ -323,9 +323,9 @@ namespace gleep
 
     private:
       // Private and unimplemented for concrete interfaces.
-      schmuck (const schmuck &) = delete;
+      schmuck (schmuck const &) = delete;
       schmuck (schmuck &&) = delete;
-      schmuck &operator= (const schmuck &) = delete;
+      schmuck &operator= (schmuck const &) = delete;
       schmuck &operator= (schmuck &&) = delete;
     };
 
@@ -361,10 +361,10 @@ namespace gleep
       static schmendrick_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static schmendrick_ptr _nil ();
 
-      ::CORBA::Boolean _is_a (const char *type_id) override;
-      const char* _interface_repository_id () const override;
-      static const char* _desc_repository_id ();
-      static const char* _desc_interface_name ();
+      ::CORBA::Boolean _is_a (char const *type_id) override;
+      char const *_interface_repository_id () const override;
+      static char const *_desc_repository_id ();
+      static char const *_desc_interface_name ();
       ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
@@ -375,9 +375,9 @@ namespace gleep
 
     private:
       // Private and unimplemented for concrete interfaces.
-      schmendrick (const schmendrick &) = delete;
+      schmendrick (schmendrick const &) = delete;
       schmendrick (schmendrick &&) = delete;
-      schmendrick &operator= (const schmendrick &) = delete;
+      schmendrick &operator= (schmendrick const &) = delete;
       schmendrick &operator= (schmendrick &&) = delete;
     };
     namespace verklempt
@@ -415,10 +415,10 @@ namespace gleep
         static schlemazel_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
         static schlemazel_ptr _nil ();
 
-        ::CORBA::Boolean _is_a (const char *type_id) override;
-        const char* _interface_repository_id () const override;
-        static const char* _desc_repository_id ();
-        static const char* _desc_interface_name ();
+        ::CORBA::Boolean _is_a (char const *type_id) override;
+        char const *_interface_repository_id () const override;
+        static char const *_desc_repository_id ();
+        static char const *_desc_interface_name ();
         ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
       protected:
@@ -429,9 +429,9 @@ namespace gleep
 
       private:
         // Private and unimplemented for concrete interfaces.
-        schlemazel (const schlemazel &) = delete;
+        schlemazel (schlemazel const &) = delete;
         schlemazel (schlemazel &&) = delete;
-        schlemazel &operator= (const schlemazel &) = delete;
+        schlemazel &operator= (schlemazel const &) = delete;
         schlemazel &operator= (schlemazel &&) = delete;
       };
 
@@ -471,10 +471,10 @@ namespace gleep
     static schmegegging_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmegegging_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -485,9 +485,9 @@ namespace gleep
 
   private:
     // Private and unimplemented for concrete interfaces.
-    schmegegging (const schmegegging &) = delete;
+    schmegegging (schmegegging const &) = delete;
     schmegegging (schmegegging &&) = delete;
-    schmegegging &operator= (const schmegegging &) = delete;
+    schmegegging &operator= (schmegegging const &) = delete;
     schmegegging &operator= (schmegegging &&) = delete;
   };
 

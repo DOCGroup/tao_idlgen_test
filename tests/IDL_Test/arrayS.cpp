@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAYS_W8RQFX_CPP_
-#define _TAO_IDL_ARRAYS_W8RQFX_CPP_
+#ifndef _TAO_IDL_ARRAYS_H9CKRM_CPP_
+#define _TAO_IDL_ARRAYS_H9CKRM_CPP_
 
 #include "arrayS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -130,7 +130,7 @@ POA_AMH_array_args::all_arrays_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_array_args::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_array_args::_is_a (char const *value)
 {
   return
     (
@@ -139,7 +139,7 @@ POA_AMH_array_args::all_arrays_skel (
     );
 }
 
-const char* POA_AMH_array_args::_interface_repository_id () const
+char const *POA_AMH_array_args::_interface_repository_id () const
 {
   return "IDL:array_args:1.0";
 }
@@ -295,7 +295,7 @@ void POA_array_args::all_arrays_skel (
                          );
 }
 
-::CORBA::Boolean POA_array_args::_is_a (const char* value)
+::CORBA::Boolean POA_array_args::_is_a (char const *value)
 {
   return
     (
@@ -304,7 +304,7 @@ void POA_array_args::all_arrays_skel (
     );
 }
 
-const char* POA_array_args::_interface_repository_id () const
+char const *POA_array_args::_interface_repository_id () const
 {
   return "IDL:array_args:1.0";
 }
@@ -537,7 +537,7 @@ void POA_AMI_array_argsHandler::all_arrays_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_array_argsHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_array_argsHandler::_is_a (char const *value)
 {
   return
     (
@@ -547,7 +547,7 @@ void POA_AMI_array_argsHandler::all_arrays_excep_skel (
     );
 }
 
-const char* POA_AMI_array_argsHandler::_interface_repository_id () const
+char const *POA_AMI_array_argsHandler::_interface_repository_id () const
 {
   return "IDL:AMI_array_argsHandler:1.0";
 }
@@ -596,7 +596,7 @@ POA_AMH_testdata::POA_AMH_testdata ()
   this->optable_ = std::addressof (tao_AMH_testdata_optable);
 }
 
-::CORBA::Boolean POA_AMH_testdata::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_testdata::_is_a (char const *value)
 {
   return
     (
@@ -605,7 +605,7 @@ POA_AMH_testdata::POA_AMH_testdata ()
     );
 }
 
-const char* POA_AMH_testdata::_interface_repository_id () const
+char const *POA_AMH_testdata::_interface_repository_id () const
 {
   return "IDL:testdata:1.0";
 }
@@ -666,7 +666,7 @@ POA_testdata::POA_testdata ()
   this->optable_ = std::addressof (tao_testdata_optable);
 }
 
-::CORBA::Boolean POA_testdata::_is_a (const char* value)
+::CORBA::Boolean POA_testdata::_is_a (char const *value)
 {
   return
     (
@@ -675,7 +675,7 @@ POA_testdata::POA_testdata ()
     );
 }
 
-const char* POA_testdata::_interface_repository_id () const
+char const *POA_testdata::_interface_repository_id () const
 {
   return "IDL:testdata:1.0";
 }
@@ -737,7 +737,7 @@ POA_AMI_testdataHandler::POA_AMI_testdataHandler ()
   this->optable_ = std::addressof (tao_AMI_testdataHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_testdataHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_testdataHandler::_is_a (char const *value)
 {
   return
     (
@@ -747,7 +747,7 @@ POA_AMI_testdataHandler::POA_AMI_testdataHandler ()
     );
 }
 
-const char* POA_AMI_testdataHandler::_interface_repository_id () const
+char const *POA_AMI_testdataHandler::_interface_repository_id () const
 {
   return "IDL:AMI_testdataHandler:1.0";
 }
@@ -832,7 +832,7 @@ POA_arraytest::AMH_MyTest::test_method_skel (
     );
 }
 
-::CORBA::Boolean POA_arraytest::AMH_MyTest::_is_a (const char* value)
+::CORBA::Boolean POA_arraytest::AMH_MyTest::_is_a (char const *value)
 {
   return
     (
@@ -841,7 +841,7 @@ POA_arraytest::AMH_MyTest::test_method_skel (
     );
 }
 
-const char* POA_arraytest::AMH_MyTest::_interface_repository_id () const
+char const *POA_arraytest::AMH_MyTest::_interface_repository_id () const
 {
   return "IDL:arraytest/MyTest:1.0";
 }
@@ -991,7 +991,7 @@ void POA_arraytest::MyTest::test_method_skel (
                          );
 }
 
-::CORBA::Boolean POA_arraytest::MyTest::_is_a (const char* value)
+::CORBA::Boolean POA_arraytest::MyTest::_is_a (char const *value)
 {
   return
     (
@@ -1000,7 +1000,7 @@ void POA_arraytest::MyTest::test_method_skel (
     );
 }
 
-const char* POA_arraytest::MyTest::_interface_repository_id () const
+char const *POA_arraytest::MyTest::_interface_repository_id () const
 {
   return "IDL:arraytest/MyTest:1.0";
 }
@@ -1268,7 +1268,7 @@ void POA_arraytest::AMI_MyTestHandler::test_method_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_arraytest::AMI_MyTestHandler::_is_a (const char* value)
+::CORBA::Boolean POA_arraytest::AMI_MyTestHandler::_is_a (char const *value)
 {
   return
     (
@@ -1278,7 +1278,7 @@ void POA_arraytest::AMI_MyTestHandler::test_method_excep_skel (
     );
 }
 
-const char* POA_arraytest::AMI_MyTestHandler::_interface_repository_id () const
+char const *POA_arraytest::AMI_MyTestHandler::_interface_repository_id () const
 {
   return "IDL:arraytest/AMI_MyTestHandler:1.0";
 }

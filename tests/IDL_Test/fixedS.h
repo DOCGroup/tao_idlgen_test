@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDS_1PM96Q_H_
-#define _TAO_IDL_FIXEDS_1PM96Q_H_
+#ifndef _TAO_IDL_FIXEDS_B4X8GB_H_
+#define _TAO_IDL_FIXEDS_B4X8GB_H_
 
 #include /**/ "ace/pre.h"
 
@@ -155,10 +155,10 @@ namespace POA_FixedPoint
     AMH_FixedOperations ();
 
   public:
-    AMH_FixedOperations (const AMH_FixedOperations& rhs);
+    AMH_FixedOperations (AMH_FixedOperations const &rhs);
     ~AMH_FixedOperations () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -166,7 +166,7 @@ namespace POA_FixedPoint
 
     FixedPoint::FixedOperations *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void _get_rate_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -205,10 +205,10 @@ public:
   using _stub_ptr_type = ::FixedPoint::FixedOperations_ptr;
   using _stub_var_type = ::FixedPoint::FixedOperations_var;
 
-  FixedOperations (const FixedOperations& rhs) = default;
+  FixedOperations (FixedOperations const &rhs) = default;
   ~FixedOperations () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -216,7 +216,7 @@ public:
 
   ::FixedPoint::FixedOperations *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::FixedPoint::Amount rate () = 0;
 
   static void _get_rate_skel (
@@ -290,10 +290,10 @@ public:
   using _stub_ptr_type = ::FixedPoint::AMI_FixedOperationsHandler_ptr;
   using _stub_var_type = ::FixedPoint::AMI_FixedOperationsHandler_var;
 
-  AMI_FixedOperationsHandler (const AMI_FixedOperationsHandler& rhs) = default;
+  AMI_FixedOperationsHandler (AMI_FixedOperationsHandler const &rhs) = default;
   ~AMI_FixedOperationsHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -301,7 +301,7 @@ public:
 
   ::FixedPoint::AMI_FixedOperationsHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void get_rate (
     ::FixedPoint::Amount const & ami_return_val) = 0;
 

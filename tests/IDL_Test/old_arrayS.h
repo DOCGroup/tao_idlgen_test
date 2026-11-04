@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYS_ET4HRF_H_
-#define _TAO_IDL_OLD_ARRAYS_ET4HRF_H_
+#ifndef _TAO_IDL_OLD_ARRAYS_P05QOY_H_
+#define _TAO_IDL_OLD_ARRAYS_P05QOY_H_
 
 #include /**/ "ace/pre.h"
 
@@ -257,10 +257,10 @@ namespace POA_OldArray
     AMH_A_i ();
 
   public:
-    AMH_A_i (const AMH_A_i& rhs);
+    AMH_A_i (AMH_A_i const &rhs);
     ~AMH_A_i () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -268,7 +268,7 @@ namespace POA_OldArray
 
     OldArray::A_i *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -340,10 +340,10 @@ public:
   using _stub_ptr_type = ::OldArray::A_i_ptr;
   using _stub_var_type = ::OldArray::A_i_var;
 
-  A_i (const A_i& rhs) = default;
+  A_i (A_i const &rhs) = default;
   ~A_i () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -351,7 +351,7 @@ public:
 
   ::OldArray::A_i *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::OldArray::A op (
     ::OldArray::A const & a1,
     ::OldArray::A & a2,
@@ -482,10 +482,10 @@ public:
   using _stub_ptr_type = ::OldArray::AMI_A_iHandler_ptr;
   using _stub_var_type = ::OldArray::AMI_A_iHandler_var;
 
-  AMI_A_iHandler (const AMI_A_iHandler& rhs) = default;
+  AMI_A_iHandler (AMI_A_iHandler const &rhs) = default;
   ~AMI_A_iHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -493,7 +493,7 @@ public:
 
   ::OldArray::AMI_A_iHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op (
     ::OldArray::A const & ami_return_val,
     ::OldArray::A const & a2,

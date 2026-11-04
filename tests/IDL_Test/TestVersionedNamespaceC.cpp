@@ -95,7 +95,7 @@ TAO::Objref_Traits<M1::LI>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<M1::LI>::marshal (const M1::LI_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<M1::LI>::marshal (M1::LI_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -144,7 +144,7 @@ M1::LI::_tao_release (LI_ptr obj)
 }
 
 ::CORBA::Boolean
-M1::LI::_is_a (const char *value)
+M1::LI::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -158,7 +158,7 @@ M1::LI::_is_a (const char *value)
     }
 }
 
-const char* M1::LI::_interface_repository_id () const
+char const *M1::LI::_interface_repository_id () const
 {
   return "IDL:M1/LI:1.0";
 }

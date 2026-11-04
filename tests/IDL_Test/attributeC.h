@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTEC_0T28E0_H_
-#define _TAO_IDL_ATTRIBUTEC_0T28E0_H_
+#ifndef _TAO_IDL_ATTRIBUTEC_MRILRZ_H_
+#define _TAO_IDL_ATTRIBUTEC_MRILRZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -219,10 +219,10 @@ namespace Hello
     virtual void sendc_get_ro_attrib (
       ::Hello::AMI_MyFooHandler_ptr ami_handler);
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -243,9 +243,9 @@ namespace Hello
 
   private:
     // Private and unimplemented for concrete interfaces.
-    MyFoo (const MyFoo &) = delete;
+    MyFoo (MyFoo const &) = delete;
     MyFoo (MyFoo &&) = delete;
-    MyFoo &operator= (const MyFoo &) = delete;
+    MyFoo &operator= (MyFoo const &) = delete;
     MyFoo &operator= (MyFoo &&) = delete;
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_MyFoo;
@@ -484,10 +484,10 @@ public:
   virtual void get_ro_attrib_excep (
     ::Hello::AMH_MyFooExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -498,9 +498,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_MyFooResponseHandler (const AMH_MyFooResponseHandler &) = delete;
+  AMH_MyFooResponseHandler (AMH_MyFooResponseHandler const &) = delete;
   AMH_MyFooResponseHandler (AMH_MyFooResponseHandler &&) = delete;
-  AMH_MyFooResponseHandler &operator= (const AMH_MyFooResponseHandler &) = delete;
+  AMH_MyFooResponseHandler &operator= (AMH_MyFooResponseHandler const &) = delete;
   AMH_MyFooResponseHandler &operator= (AMH_MyFooResponseHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_MyFooResponseHandler;
@@ -640,10 +640,10 @@ public:
   virtual void get_ro_attrib_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -664,9 +664,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_MyFooHandler (const AMI_MyFooHandler &) = delete;
+  AMI_MyFooHandler (AMI_MyFooHandler const &) = delete;
   AMI_MyFooHandler (AMI_MyFooHandler &&) = delete;
-  AMI_MyFooHandler &operator= (const AMI_MyFooHandler &) = delete;
+  AMI_MyFooHandler &operator= (AMI_MyFooHandler const &) = delete;
   AMI_MyFooHandler &operator= (AMI_MyFooHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_MyFooHandler;
@@ -862,7 +862,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Hello::MyFoo_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Hello::MyFoo_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Hello::MyFoo_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Hello::MyFoo_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -880,7 +880,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Hello::AMH_MyFooResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Hello::AMH_MyFooResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Hello::AMH_MyFooResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Hello::AMH_MyFooResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -889,7 +889,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Hello::AMI_MyFooHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Hello::AMI_MyFooHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Hello::AMI_MyFooHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Hello::AMI_MyFooHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -909,7 +909,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Hello::MyFoo_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Hello::MyFoo_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Hello::MyFoo_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -932,7 +932,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Hello::AMI_MyFooHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Hello::AMI_MyFooHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Hello::AMI_MyFooHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

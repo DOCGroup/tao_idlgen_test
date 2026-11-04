@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_04GF46_H_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_04GF46_H_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_CX0VC4_H_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_CX0VC4_H_
 
 #include /**/ "ace/pre.h"
 
@@ -175,10 +175,10 @@ protected:
   POA_AMH_tdef ();
 
 public:
-  POA_AMH_tdef (const POA_AMH_tdef& rhs);
+  POA_AMH_tdef (POA_AMH_tdef const &rhs);
   ~POA_AMH_tdef () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -186,7 +186,7 @@ public:
 
   tdef *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 };
 
 class POA_tdef;
@@ -206,10 +206,10 @@ public:
   using _stub_ptr_type = ::tdef_ptr;
   using _stub_var_type = ::tdef_var;
 
-  POA_tdef (const POA_tdef& rhs) = default;
+  POA_tdef (POA_tdef const &rhs) = default;
   ~POA_tdef () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -217,7 +217,7 @@ public:
 
   ::tdef *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -263,10 +263,10 @@ public:
   using _stub_ptr_type = ::AMI_tdefHandler_ptr;
   using _stub_var_type = ::AMI_tdefHandler_var;
 
-  POA_AMI_tdefHandler (const POA_AMI_tdefHandler& rhs) = default;
+  POA_AMI_tdefHandler (POA_AMI_tdefHandler const &rhs) = default;
   ~POA_AMI_tdefHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -274,7 +274,7 @@ public:
 
   ::AMI_tdefHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

@@ -425,7 +425,7 @@ TAO::Objref_Traits<Test::Roundtrip>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test::Roundtrip>::marshal (const Test::Roundtrip_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test::Roundtrip>::marshal (Test::Roundtrip_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -562,7 +562,7 @@ Test::Roundtrip::_tao_release (Roundtrip_ptr obj)
 }
 
 ::CORBA::Boolean
-Test::Roundtrip::_is_a (const char *value)
+Test::Roundtrip::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Test/Roundtrip:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -575,7 +575,7 @@ Test::Roundtrip::_is_a (const char *value)
     }
 }
 
-const char* Test::Roundtrip::_interface_repository_id () const
+char const *Test::Roundtrip::_interface_repository_id () const
 {
   return "IDL:Test/Roundtrip:1.0";
 }
@@ -789,7 +789,7 @@ TAO::Objref_Traits<Test::AMH_RoundtripResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test::AMH_RoundtripResponseHandler>::marshal (const Test::AMH_RoundtripResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test::AMH_RoundtripResponseHandler>::marshal (Test::AMH_RoundtripResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -843,7 +843,7 @@ Test::AMH_RoundtripResponseHandler::_tao_release (AMH_RoundtripResponseHandler_p
 }
 
 ::CORBA::Boolean
-Test::AMH_RoundtripResponseHandler::_is_a (const char *value)
+Test::AMH_RoundtripResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Test/AMH_RoundtripResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -857,7 +857,7 @@ Test::AMH_RoundtripResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* Test::AMH_RoundtripResponseHandler::_interface_repository_id () const
+char const *Test::AMH_RoundtripResponseHandler::_interface_repository_id () const
 {
   return "IDL:Test/AMH_RoundtripResponseHandler:1.0";
 }
@@ -1158,7 +1158,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Test::Roundtrip_ptr &_tao_elem)
 {
   return
@@ -1300,7 +1300,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Test::AMH_RoundtripResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1419,7 +1419,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::Roundtrip_ptr _tao_objref)
+    Test::Roundtrip_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

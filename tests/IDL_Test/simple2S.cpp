@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2S_VL2DH2_CPP_
-#define _TAO_IDL_SIMPLE2S_VL2DH2_CPP_
+#ifndef _TAO_IDL_SIMPLE2S_9O8LHL_CPP_
+#define _TAO_IDL_SIMPLE2S_9O8LHL_CPP_
 
 #include "simple2S.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -170,7 +170,7 @@ POA_AMH_simple3::op4_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_simple3::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_simple3::_is_a (char const *value)
 {
   return
     (
@@ -181,7 +181,7 @@ POA_AMH_simple3::op4_skel (
     );
 }
 
-const char* POA_AMH_simple3::_interface_repository_id () const
+char const *POA_AMH_simple3::_interface_repository_id () const
 {
   return "IDL:simple3:1.0";
 }
@@ -494,7 +494,7 @@ void POA_simple3::op4_skel (
                          );
 }
 
-::CORBA::Boolean POA_simple3::_is_a (const char* value)
+::CORBA::Boolean POA_simple3::_is_a (char const *value)
 {
   return
     (
@@ -505,7 +505,7 @@ void POA_simple3::op4_skel (
     );
 }
 
-const char* POA_simple3::_interface_repository_id () const
+char const *POA_simple3::_interface_repository_id () const
 {
   return "IDL:simple3:1.0";
 }
@@ -1109,7 +1109,7 @@ void POA_AMI_simple3Handler::op4_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_simple3Handler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_simple3Handler::_is_a (char const *value)
 {
   return
     (
@@ -1121,7 +1121,7 @@ void POA_AMI_simple3Handler::op4_excep_skel (
     );
 }
 
-const char* POA_AMI_simple3Handler::_interface_repository_id () const
+char const *POA_AMI_simple3Handler::_interface_repository_id () const
 {
   return "IDL:AMI_simple3Handler:1.0";
 }

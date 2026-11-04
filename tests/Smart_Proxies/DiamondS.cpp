@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIAMONDS_WIE973_CPP_
-#define _TAO_IDL_DIAMONDS_WIE973_CPP_
+#ifndef _TAO_IDL_DIAMONDS_BYXKB4_CPP_
+#define _TAO_IDL_DIAMONDS_BYXKB4_CPP_
 
 #include "DiamondS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -168,7 +168,7 @@ void POA_Diamond::Top::shape_skel (
                          );
 }
 
-::CORBA::Boolean POA_Diamond::Top::_is_a (const char* value)
+::CORBA::Boolean POA_Diamond::Top::_is_a (char const *value)
 {
   return
     (
@@ -177,7 +177,7 @@ void POA_Diamond::Top::shape_skel (
     );
 }
 
-const char* POA_Diamond::Top::_interface_repository_id () const
+char const *POA_Diamond::Top::_interface_repository_id () const
 {
   return "IDL:Diamond/Top:1.0";
 }
@@ -325,7 +325,7 @@ void POA_Diamond::Left::color_skel (
                          );
 }
 
-::CORBA::Boolean POA_Diamond::Left::_is_a (const char* value)
+::CORBA::Boolean POA_Diamond::Left::_is_a (char const *value)
 {
   return
     (
@@ -335,7 +335,7 @@ void POA_Diamond::Left::color_skel (
     );
 }
 
-const char* POA_Diamond::Left::_interface_repository_id () const
+char const *POA_Diamond::Left::_interface_repository_id () const
 {
   return "IDL:Diamond/Left:1.0";
 }
@@ -483,7 +483,7 @@ void POA_Diamond::Right::width_skel (
                          );
 }
 
-::CORBA::Boolean POA_Diamond::Right::_is_a (const char* value)
+::CORBA::Boolean POA_Diamond::Right::_is_a (char const *value)
 {
   return
     (
@@ -493,7 +493,7 @@ void POA_Diamond::Right::width_skel (
     );
 }
 
-const char* POA_Diamond::Right::_interface_repository_id () const
+char const *POA_Diamond::Right::_interface_repository_id () const
 {
   return "IDL:Diamond/Right:1.0";
 }
@@ -643,7 +643,7 @@ void POA_Diamond::Buttom::name_skel (
                          );
 }
 
-::CORBA::Boolean POA_Diamond::Buttom::_is_a (const char* value)
+::CORBA::Boolean POA_Diamond::Buttom::_is_a (char const *value)
 {
   return
     (
@@ -655,7 +655,7 @@ void POA_Diamond::Buttom::name_skel (
     );
 }
 
-const char* POA_Diamond::Buttom::_interface_repository_id () const
+char const *POA_Diamond::Buttom::_interface_repository_id () const
 {
   return "IDL:Diamond/Buttom:1.0";
 }

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTC_ZR99ZL_H_
-#define _TAO_IDL_TESTC_ZR99ZL_H_
+#ifndef _TAO_IDL_TESTC_LYVMXV_H_
+#define _TAO_IDL_TESTC_LYVMXV_H_
 
 #include /**/ "ace/pre.h"
 
@@ -97,8 +97,8 @@ public:
 
   virtual void shutdown ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -119,9 +119,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  Test (const Test &) = delete;
+  Test (Test const &) = delete;
   Test (Test &&) = delete;
-  Test &operator= (const Test &) = delete;
+  Test &operator= (Test const &) = delete;
   Test &operator= (Test &&) = delete;
 };
 
@@ -157,7 +157,7 @@ public:
     TAO_Test_Proxy_Factory_Adapter ();
     ~TAO_Test_Proxy_Factory_Adapter ();
     TAO_Test_Proxy_Factory_Adapter &operator= (
-        const TAO_Test_Proxy_Factory_Adapter &
+        TAO_Test_Proxy_Factory_Adapter const &
       );
     TAO_Test_Default_Proxy_Factory *proxy_factory_;
     bool one_shot_factory_;
@@ -231,7 +231,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-   ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test_ptr );
+   ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test_ptr const);
    ::CORBA::Boolean operator>> (TAO_InputCDR &, Test_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

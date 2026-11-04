@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_KEYWORDSS_NPY743_CPP_
-#define _TAO_IDL_KEYWORDSS_NPY743_CPP_
+#ifndef _TAO_IDL_KEYWORDSS_H5GNPS_CPP_
+#define _TAO_IDL_KEYWORDSS_H5GNPS_CPP_
 
 #include "keywordsS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -165,7 +165,7 @@ POA_AMH_Testing::bar_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_Testing::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_Testing::_is_a (char const *value)
 {
   return
     (
@@ -174,7 +174,7 @@ POA_AMH_Testing::bar_skel (
     );
 }
 
-const char* POA_AMH_Testing::_interface_repository_id () const
+char const *POA_AMH_Testing::_interface_repository_id () const
 {
   return "IDL:Testing:1.0";
 }
@@ -405,7 +405,7 @@ void POA_Testing::bar_skel (
                          );
 }
 
-::CORBA::Boolean POA_Testing::_is_a (const char* value)
+::CORBA::Boolean POA_Testing::_is_a (char const *value)
 {
   return
     (
@@ -414,7 +414,7 @@ void POA_Testing::bar_skel (
     );
 }
 
-const char* POA_Testing::_interface_repository_id () const
+char const *POA_Testing::_interface_repository_id () const
 {
   return "IDL:Testing:1.0";
 }
@@ -818,7 +818,7 @@ void POA_AMI_TestingHandler::bar_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_TestingHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_TestingHandler::_is_a (char const *value)
 {
   return
     (
@@ -828,7 +828,7 @@ void POA_AMI_TestingHandler::bar_excep_skel (
     );
 }
 
-const char* POA_AMI_TestingHandler::_interface_repository_id () const
+char const *POA_AMI_TestingHandler::_interface_repository_id () const
 {
   return "IDL:AMI_TestingHandler:1.0";
 }

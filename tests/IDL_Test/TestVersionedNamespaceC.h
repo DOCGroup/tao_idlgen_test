@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_WOSEER_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_WOSEER_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_0COLEF_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_0COLEF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -115,8 +115,8 @@ namespace M1
     virtual void op (
       ::M1::S1 const & s) = 0;
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -127,9 +127,9 @@ namespace M1
 
   private:
     // Private and unimplemented for concrete interfaces.
-    LI (const LI &) = delete;
+    LI (LI const &) = delete;
     LI (LI &&) = delete;
-    LI &operator= (const LI &) = delete;
+    LI &operator= (LI const &) = delete;
     LI &operator= (LI &&) = delete;
   };
   extern  ::CORBA::TypeCode_ptr const _tc_LI;

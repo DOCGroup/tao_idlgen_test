@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLS_H3MTEQ_H_
-#define _TAO_IDL_FULLS_H3MTEQ_H_
+#ifndef _TAO_IDL_FULLS_M9B9FA_H_
+#define _TAO_IDL_FULLS_M9B9FA_H_
 
 #include /**/ "ace/pre.h"
 
@@ -233,10 +233,10 @@ namespace POA_scope_test
     AMH_i_scope_test ();
 
   public:
-    AMH_i_scope_test (const AMH_i_scope_test& rhs);
+    AMH_i_scope_test (AMH_i_scope_test const &rhs);
     ~AMH_i_scope_test () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -244,7 +244,7 @@ namespace POA_scope_test
 
     scope_test::i_scope_test *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 class i_scope_test;
@@ -264,10 +264,10 @@ public:
   using _stub_ptr_type = ::scope_test::i_scope_test_ptr;
   using _stub_var_type = ::scope_test::i_scope_test_var;
 
-  i_scope_test (const i_scope_test& rhs) = default;
+  i_scope_test (i_scope_test const &rhs) = default;
   ~i_scope_test () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -275,7 +275,7 @@ public:
 
   ::scope_test::i_scope_test *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -321,10 +321,10 @@ public:
   using _stub_ptr_type = ::scope_test::AMI_i_scope_testHandler_ptr;
   using _stub_var_type = ::scope_test::AMI_i_scope_testHandler_var;
 
-  AMI_i_scope_testHandler (const AMI_i_scope_testHandler& rhs) = default;
+  AMI_i_scope_testHandler (AMI_i_scope_testHandler const &rhs) = default;
   ~AMI_i_scope_testHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -332,7 +332,7 @@ public:
 
   ::scope_test::AMI_i_scope_testHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -364,10 +364,10 @@ namespace POA_mod2
     AMH_fwd ();
 
   public:
-    AMH_fwd (const AMH_fwd& rhs);
+    AMH_fwd (AMH_fwd const &rhs);
     ~AMH_fwd () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -375,7 +375,7 @@ namespace POA_mod2
 
     mod2::fwd *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void _get_attr_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -426,10 +426,10 @@ public:
   using _stub_ptr_type = ::mod2::fwd_ptr;
   using _stub_var_type = ::mod2::fwd_var;
 
-  fwd (const fwd& rhs) = default;
+  fwd (fwd const &rhs) = default;
   ~fwd () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -437,7 +437,7 @@ public:
 
   ::mod2::fwd *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual char * attr () = 0;
 
   static void _get_attr_skel (
@@ -531,10 +531,10 @@ public:
   using _stub_ptr_type = ::mod2::AMI_fwdHandler_ptr;
   using _stub_var_type = ::mod2::AMI_fwdHandler_var;
 
-  AMI_fwdHandler (const AMI_fwdHandler& rhs) = default;
+  AMI_fwdHandler (AMI_fwdHandler const &rhs) = default;
   ~AMI_fwdHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -542,7 +542,7 @@ public:
 
   ::mod2::AMI_fwdHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void get_attr (
     char const * ami_return_val) = 0;
 

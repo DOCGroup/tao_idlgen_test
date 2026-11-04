@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFS_P96VML_H_
-#define _TAO_IDL_GPERFS_P96VML_H_
+#ifndef _TAO_IDL_GPERFS_P3JU6B_H_
+#define _TAO_IDL_GPERFS_P3JU6B_H_
 
 #include /**/ "ace/pre.h"
 
@@ -237,10 +237,10 @@ protected:
   POA_AMH_testlistitem ();
 
 public:
-  POA_AMH_testlistitem (const POA_AMH_testlistitem& rhs);
+  POA_AMH_testlistitem (POA_AMH_testlistitem const &rhs);
   ~POA_AMH_testlistitem () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -248,7 +248,7 @@ public:
 
   testlistitem *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void _get_name_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -277,10 +277,10 @@ public:
   using _stub_ptr_type = ::testlistitem_ptr;
   using _stub_var_type = ::testlistitem_var;
 
-  POA_testlistitem (const POA_testlistitem& rhs) = default;
+  POA_testlistitem (POA_testlistitem const &rhs) = default;
   ~POA_testlistitem () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -288,7 +288,7 @@ public:
 
   ::testlistitem *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual char * name () = 0;
 
   static void _get_name_skel (
@@ -348,10 +348,10 @@ public:
   using _stub_ptr_type = ::AMI_testlistitemHandler_ptr;
   using _stub_var_type = ::AMI_testlistitemHandler_var;
 
-  POA_AMI_testlistitemHandler (const POA_AMI_testlistitemHandler& rhs) = default;
+  POA_AMI_testlistitemHandler (POA_AMI_testlistitemHandler const &rhs) = default;
   ~POA_AMI_testlistitemHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -359,7 +359,7 @@ public:
 
   ::AMI_testlistitemHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void get_name (
     char const * ami_return_val) = 0;
 
@@ -409,10 +409,10 @@ protected:
   POA_AMH_test ();
 
 public:
-  POA_AMH_test (const POA_AMH_test& rhs);
+  POA_AMH_test (POA_AMH_test const &rhs);
   ~POA_AMH_test () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -420,7 +420,7 @@ public:
 
   test *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void _get_stest_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -583,10 +583,10 @@ public:
   using _stub_ptr_type = ::test_ptr;
   using _stub_var_type = ::test_var;
 
-  POA_test (const POA_test& rhs) = default;
+  POA_test (POA_test const &rhs) = default;
   ~POA_test () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -594,7 +594,7 @@ public:
 
   ::test *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual char * stest () = 0;
 
   static void _get_stest_skel (
@@ -851,10 +851,10 @@ public:
   using _stub_ptr_type = ::AMI_testHandler_ptr;
   using _stub_var_type = ::AMI_testHandler_var;
 
-  POA_AMI_testHandler (const POA_AMI_testHandler& rhs) = default;
+  POA_AMI_testHandler (POA_AMI_testHandler const &rhs) = default;
   ~POA_AMI_testHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -862,7 +862,7 @@ public:
 
   ::AMI_testHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void get_stest (
     char const * ami_return_val) = 0;
 
@@ -1213,10 +1213,10 @@ protected:
   POA_AMH_Simple_Server ();
 
 public:
-  POA_AMH_Simple_Server (const POA_AMH_Simple_Server& rhs);
+  POA_AMH_Simple_Server (POA_AMH_Simple_Server const &rhs);
   ~POA_AMH_Simple_Server () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -1224,7 +1224,7 @@ public:
 
   Simple_Server *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void ackConfBasData_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1406,10 +1406,10 @@ public:
   using _stub_ptr_type = ::Simple_Server_ptr;
   using _stub_var_type = ::Simple_Server_var;
 
-  POA_Simple_Server (const POA_Simple_Server& rhs) = default;
+  POA_Simple_Server (POA_Simple_Server const &rhs) = default;
   ~POA_Simple_Server () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1417,7 +1417,7 @@ public:
 
   ::Simple_Server *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void ackConfBasData () = 0;
 
   static void ackConfBasData_skel (
@@ -1697,10 +1697,10 @@ public:
   using _stub_ptr_type = ::AMI_Simple_ServerHandler_ptr;
   using _stub_var_type = ::AMI_Simple_ServerHandler_var;
 
-  POA_AMI_Simple_ServerHandler (const POA_AMI_Simple_ServerHandler& rhs) = default;
+  POA_AMI_Simple_ServerHandler (POA_AMI_Simple_ServerHandler const &rhs) = default;
   ~POA_AMI_Simple_ServerHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1708,7 +1708,7 @@ public:
 
   ::AMI_Simple_ServerHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

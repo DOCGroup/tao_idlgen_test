@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDINGS_APHZYD_CPP_
-#define _TAO_IDL_INCLUDINGS_APHZYD_CPP_
+#ifndef _TAO_IDL_INCLUDINGS_BOWEBU_CPP_
+#define _TAO_IDL_INCLUDINGS_BOWEBU_CPP_
 
 #include "includingS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -76,7 +76,7 @@ POA_AMH_iface::POA_AMH_iface ()
   this->optable_ = std::addressof (tao_AMH_iface_optable);
 }
 
-::CORBA::Boolean POA_AMH_iface::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_iface::_is_a (char const *value)
 {
   return
     (
@@ -85,7 +85,7 @@ POA_AMH_iface::POA_AMH_iface ()
     );
 }
 
-const char* POA_AMH_iface::_interface_repository_id () const
+char const *POA_AMH_iface::_interface_repository_id () const
 {
   return "IDL:iface:1.0";
 }
@@ -146,7 +146,7 @@ POA_iface::POA_iface ()
   this->optable_ = std::addressof (tao_iface_optable);
 }
 
-::CORBA::Boolean POA_iface::_is_a (const char* value)
+::CORBA::Boolean POA_iface::_is_a (char const *value)
 {
   return
     (
@@ -155,7 +155,7 @@ POA_iface::POA_iface ()
     );
 }
 
-const char* POA_iface::_interface_repository_id () const
+char const *POA_iface::_interface_repository_id () const
 {
   return "IDL:iface:1.0";
 }
@@ -217,7 +217,7 @@ POA_AMI_ifaceHandler::POA_AMI_ifaceHandler ()
   this->optable_ = std::addressof (tao_AMI_ifaceHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_ifaceHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_ifaceHandler::_is_a (char const *value)
 {
   return
     (
@@ -227,7 +227,7 @@ POA_AMI_ifaceHandler::POA_AMI_ifaceHandler ()
     );
 }
 
-const char* POA_AMI_ifaceHandler::_interface_repository_id () const
+char const *POA_AMI_ifaceHandler::_interface_repository_id () const
 {
   return "IDL:AMI_ifaceHandler:1.0";
 }
@@ -321,7 +321,7 @@ POA_AMH_MyInt::op_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_MyInt::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_MyInt::_is_a (char const *value)
 {
   return
     (
@@ -330,7 +330,7 @@ POA_AMH_MyInt::op_skel (
     );
 }
 
-const char* POA_AMH_MyInt::_interface_repository_id () const
+char const *POA_AMH_MyInt::_interface_repository_id () const
 {
   return "IDL:MyInt:1.0";
 }
@@ -483,7 +483,7 @@ void POA_MyInt::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_MyInt::_is_a (const char* value)
+::CORBA::Boolean POA_MyInt::_is_a (char const *value)
 {
   return
     (
@@ -492,7 +492,7 @@ void POA_MyInt::op_skel (
     );
 }
 
-const char* POA_MyInt::_interface_repository_id () const
+char const *POA_MyInt::_interface_repository_id () const
 {
   return "IDL:MyInt:1.0";
 }
@@ -752,7 +752,7 @@ void POA_AMI_MyIntHandler::op_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_MyIntHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_MyIntHandler::_is_a (char const *value)
 {
   return
     (
@@ -762,7 +762,7 @@ void POA_AMI_MyIntHandler::op_excep_skel (
     );
 }
 
-const char* POA_AMI_MyIntHandler::_interface_repository_id () const
+char const *POA_AMI_MyIntHandler::_interface_repository_id () const
 {
   return "IDL:AMI_MyIntHandler:1.0";
 }
@@ -811,7 +811,7 @@ POA_RootModule::SUBMODULE1::AMH_ChildIF::AMH_ChildIF ()
   this->optable_ = std::addressof (tao_RootModule_SUBMODULE1_AMH_ChildIF_optable);
 }
 
-::CORBA::Boolean POA_RootModule::SUBMODULE1::AMH_ChildIF::_is_a (const char* value)
+::CORBA::Boolean POA_RootModule::SUBMODULE1::AMH_ChildIF::_is_a (char const *value)
 {
   return
     (
@@ -821,7 +821,7 @@ POA_RootModule::SUBMODULE1::AMH_ChildIF::AMH_ChildIF ()
     );
 }
 
-const char* POA_RootModule::SUBMODULE1::AMH_ChildIF::_interface_repository_id () const
+char const *POA_RootModule::SUBMODULE1::AMH_ChildIF::_interface_repository_id () const
 {
   return "IDL:RootModule/SUBMODULE1/ChildIF:1.0";
 }
@@ -882,7 +882,7 @@ POA_RootModule::SUBMODULE1::ChildIF::ChildIF ()
   this->optable_ = std::addressof (tao_RootModule_SUBMODULE1_ChildIF_optable);
 }
 
-::CORBA::Boolean POA_RootModule::SUBMODULE1::ChildIF::_is_a (const char* value)
+::CORBA::Boolean POA_RootModule::SUBMODULE1::ChildIF::_is_a (char const *value)
 {
   return
     (
@@ -892,7 +892,7 @@ POA_RootModule::SUBMODULE1::ChildIF::ChildIF ()
     );
 }
 
-const char* POA_RootModule::SUBMODULE1::ChildIF::_interface_repository_id () const
+char const *POA_RootModule::SUBMODULE1::ChildIF::_interface_repository_id () const
 {
   return "IDL:RootModule/SUBMODULE1/ChildIF:1.0";
 }
@@ -954,7 +954,7 @@ POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::AMI_ChildIFHandler ()
   this->optable_ = std::addressof (tao_RootModule_SUBMODULE1_AMI_ChildIFHandler_optable);
 }
 
-::CORBA::Boolean POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::_is_a (const char* value)
+::CORBA::Boolean POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::_is_a (char const *value)
 {
   return
     (
@@ -965,7 +965,7 @@ POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::AMI_ChildIFHandler ()
     );
 }
 
-const char* POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::_interface_repository_id () const
+char const *POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::_interface_repository_id () const
 {
   return "IDL:RootModule/SUBMODULE1/AMI_ChildIFHandler:1.0";
 }
@@ -1014,7 +1014,7 @@ POA_AMH_B::POA_AMH_B ()
   this->optable_ = std::addressof (tao_AMH_B_optable);
 }
 
-::CORBA::Boolean POA_AMH_B::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_B::_is_a (char const *value)
 {
   return
     (
@@ -1023,7 +1023,7 @@ POA_AMH_B::POA_AMH_B ()
     );
 }
 
-const char* POA_AMH_B::_interface_repository_id () const
+char const *POA_AMH_B::_interface_repository_id () const
 {
   return "IDL:B:1.0";
 }
@@ -1084,7 +1084,7 @@ POA_B::POA_B ()
   this->optable_ = std::addressof (tao_B_optable);
 }
 
-::CORBA::Boolean POA_B::_is_a (const char* value)
+::CORBA::Boolean POA_B::_is_a (char const *value)
 {
   return
     (
@@ -1093,7 +1093,7 @@ POA_B::POA_B ()
     );
 }
 
-const char* POA_B::_interface_repository_id () const
+char const *POA_B::_interface_repository_id () const
 {
   return "IDL:B:1.0";
 }
@@ -1155,7 +1155,7 @@ POA_AMI_BHandler::POA_AMI_BHandler ()
   this->optable_ = std::addressof (tao_AMI_BHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_BHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_BHandler::_is_a (char const *value)
 {
   return
     (
@@ -1165,7 +1165,7 @@ POA_AMI_BHandler::POA_AMI_BHandler ()
     );
 }
 
-const char* POA_AMI_BHandler::_interface_repository_id () const
+char const *POA_AMI_BHandler::_interface_repository_id () const
 {
   return "IDL:AMI_BHandler:1.0";
 }

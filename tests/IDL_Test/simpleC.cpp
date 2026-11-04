@@ -243,7 +243,7 @@ TAO::Objref_Traits<simple>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<simple>::marshal (const simple_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<simple>::marshal (simple_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -386,7 +386,7 @@ simple::_tao_release (simple_ptr obj)
 }
 
 ::CORBA::Boolean
-simple::_is_a (const char *value)
+simple::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:simple:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -399,17 +399,17 @@ simple::_is_a (const char *value)
     }
 }
 
-const char* simple::_interface_repository_id () const
+char const *simple::_interface_repository_id () const
 {
   return "IDL:simple:1.0";
 }
 
-const char* simple::_desc_repository_id ()
+char const *simple::_desc_repository_id ()
 {
   return "IDL:simple:1.0";
 }
 
-const char* simple::_desc_interface_name ()
+char const *simple::_desc_interface_name ()
 {
   return "simple";
 }
@@ -617,7 +617,7 @@ TAO::Objref_Traits<AMH_simpleResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_simpleResponseHandler>::marshal (const AMH_simpleResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_simpleResponseHandler>::marshal (AMH_simpleResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -671,7 +671,7 @@ AMH_simpleResponseHandler::_tao_release (AMH_simpleResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMH_simpleResponseHandler::_is_a (const char *value)
+AMH_simpleResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_simpleResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -685,17 +685,17 @@ AMH_simpleResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* AMH_simpleResponseHandler::_interface_repository_id () const
+char const *AMH_simpleResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_simpleResponseHandler:1.0";
 }
 
-const char* AMH_simpleResponseHandler::_desc_repository_id ()
+char const *AMH_simpleResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_simpleResponseHandler:1.0";
 }
 
-const char* AMH_simpleResponseHandler::_desc_interface_name ()
+char const *AMH_simpleResponseHandler::_desc_interface_name ()
 {
   return "AMH_simpleResponseHandler";
 }
@@ -737,7 +737,7 @@ TAO::Objref_Traits<AMI_simpleHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_simpleHandler>::marshal (const AMI_simpleHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_simpleHandler>::marshal (AMI_simpleHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -969,7 +969,7 @@ AMI_simpleHandler::_tao_release (AMI_simpleHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_simpleHandler::_is_a (const char *value)
+AMI_simpleHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
@@ -983,17 +983,17 @@ AMI_simpleHandler::_is_a (const char *value)
     }
 }
 
-const char* AMI_simpleHandler::_interface_repository_id () const
+char const *AMI_simpleHandler::_interface_repository_id () const
 {
   return "IDL:AMI_simpleHandler:1.0";
 }
 
-const char* AMI_simpleHandler::_desc_repository_id ()
+char const *AMI_simpleHandler::_desc_repository_id ()
 {
   return "IDL:AMI_simpleHandler:1.0";
 }
 
-const char* AMI_simpleHandler::_desc_interface_name ()
+char const *AMI_simpleHandler::_desc_interface_name ()
 {
   return "AMI_simpleHandler";
 }
@@ -1035,7 +1035,7 @@ TAO::Objref_Traits<simple2>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<simple2>::marshal (const simple2_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<simple2>::marshal (simple2_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1292,7 +1292,7 @@ simple2::_tao_release (simple2_ptr obj)
 }
 
 ::CORBA::Boolean
-simple2::_is_a (const char *value)
+simple2::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:simple:1.0") == 0 ||
       std::strcmp (value, "IDL:simple2:1.0") == 0 ||
@@ -1306,17 +1306,17 @@ simple2::_is_a (const char *value)
     }
 }
 
-const char* simple2::_interface_repository_id () const
+char const *simple2::_interface_repository_id () const
 {
   return "IDL:simple2:1.0";
 }
 
-const char* simple2::_desc_repository_id ()
+char const *simple2::_desc_repository_id ()
 {
   return "IDL:simple2:1.0";
 }
 
-const char* simple2::_desc_interface_name ()
+char const *simple2::_desc_interface_name ()
 {
   return "simple2";
 }
@@ -1524,7 +1524,7 @@ TAO::Objref_Traits<AMH_simple2ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_simple2ResponseHandler>::marshal (const AMH_simple2ResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_simple2ResponseHandler>::marshal (AMH_simple2ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1578,7 +1578,7 @@ AMH_simple2ResponseHandler::_tao_release (AMH_simple2ResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMH_simple2ResponseHandler::_is_a (const char *value)
+AMH_simple2ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_simple2ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -1592,17 +1592,17 @@ AMH_simple2ResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* AMH_simple2ResponseHandler::_interface_repository_id () const
+char const *AMH_simple2ResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_simple2ResponseHandler:1.0";
 }
 
-const char* AMH_simple2ResponseHandler::_desc_repository_id ()
+char const *AMH_simple2ResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_simple2ResponseHandler:1.0";
 }
 
-const char* AMH_simple2ResponseHandler::_desc_interface_name ()
+char const *AMH_simple2ResponseHandler::_desc_interface_name ()
 {
   return "AMH_simple2ResponseHandler";
 }
@@ -1644,7 +1644,7 @@ TAO::Objref_Traits<AMI_simple2Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_simple2Handler>::marshal (const AMI_simple2Handler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_simple2Handler>::marshal (AMI_simple2Handler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1869,7 +1869,7 @@ AMI_simple2Handler::_tao_release (AMI_simple2Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_simple2Handler::_is_a (const char *value)
+AMI_simple2Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
@@ -1884,17 +1884,17 @@ AMI_simple2Handler::_is_a (const char *value)
     }
 }
 
-const char* AMI_simple2Handler::_interface_repository_id () const
+char const *AMI_simple2Handler::_interface_repository_id () const
 {
   return "IDL:AMI_simple2Handler:1.0";
 }
 
-const char* AMI_simple2Handler::_desc_repository_id ()
+char const *AMI_simple2Handler::_desc_repository_id ()
 {
   return "IDL:AMI_simple2Handler:1.0";
 }
 
-const char* AMI_simple2Handler::_desc_interface_name ()
+char const *AMI_simple2Handler::_desc_interface_name ()
 {
   return "AMI_simple2Handler";
 }
@@ -2096,7 +2096,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     simple_ptr &_tao_elem)
 {
   return
@@ -2238,7 +2238,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_simpleResponseHandler_ptr &_tao_elem)
 {
   return
@@ -2296,7 +2296,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_simpleHandler_ptr &_tao_elem)
 {
   return
@@ -2354,7 +2354,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     simple2_ptr &_tao_elem)
 {
   return
@@ -2566,7 +2566,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_simple2ResponseHandler_ptr &_tao_elem)
 {
   return
@@ -2624,7 +2624,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_simple2Handler_ptr &_tao_elem)
 {
   return
@@ -2697,7 +2697,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const simple_ptr _tao_objref)
+    simple_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2789,7 +2789,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const AMI_simpleHandler_ptr _tao_objref)
+    AMI_simpleHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2850,7 +2850,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const simple2_ptr _tao_objref)
+    simple2_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2942,7 +2942,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const AMI_simple2Handler_ptr _tao_objref)
+    AMI_simple2Handler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

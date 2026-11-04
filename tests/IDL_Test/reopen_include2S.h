@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2S_II15OI_H_
-#define _TAO_IDL_REOPEN_INCLUDE2S_II15OI_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2S_43Q1RV_H_
+#define _TAO_IDL_REOPEN_INCLUDE2S_43Q1RV_H_
 
 #include /**/ "ace/pre.h"
 
@@ -158,10 +158,10 @@ namespace POA_A
       AMH_X2 ();
 
     public:
-      AMH_X2 (const AMH_X2& rhs);
+      AMH_X2 (AMH_X2 const &rhs);
       ~AMH_X2 () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -169,7 +169,7 @@ namespace POA_A
 
       A::B::X2 *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     static void getX2_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -198,10 +198,10 @@ namespace POA_A
     using _stub_ptr_type = ::A::B::X2_ptr;
     using _stub_var_type = ::A::B::X2_var;
 
-    X2 (const X2& rhs) = default;
+    X2 (X2 const &rhs) = default;
     ~X2 () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -209,7 +209,7 @@ namespace POA_A
 
     ::A::B::X2 *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual char * getX2 () = 0;
 
     static void getX2_skel (
@@ -269,10 +269,10 @@ namespace POA_A
     using _stub_ptr_type = ::A::B::AMI_X2Handler_ptr;
     using _stub_var_type = ::A::B::AMI_X2Handler_var;
 
-    AMI_X2Handler (const AMI_X2Handler& rhs) = default;
+    AMI_X2Handler (AMI_X2Handler const &rhs) = default;
     ~AMI_X2Handler () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -280,7 +280,7 @@ namespace POA_A
 
     ::A::B::AMI_X2Handler *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual void getX2 (
       char const * ami_return_val) = 0;
 

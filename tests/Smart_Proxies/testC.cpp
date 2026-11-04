@@ -57,7 +57,7 @@ TAO::Objref_Traits<Test>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test>::marshal (const Test_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test>::marshal (Test_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -201,7 +201,7 @@ Test::_tao_release (Test_ptr obj)
 }
 
 ::CORBA::Boolean
-Test::_is_a (const char *value)
+Test::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Test:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -214,7 +214,7 @@ Test::_is_a (const char *value)
     }
 }
 
-const char* Test::_interface_repository_id () const
+char const *Test::_interface_repository_id () const
 {
   return "IDL:Test:1.0";
 }
@@ -381,7 +381,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test_ptr _tao_objref)
+    Test_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

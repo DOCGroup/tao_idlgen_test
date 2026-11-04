@@ -119,7 +119,7 @@ fwd_mixed_intf::abstract_parent::abstract_parent ()
 {}
 
 ACE_INLINE
-fwd_mixed_intf::abstract_parent::abstract_parent (const abstract_parent &rhs)
+fwd_mixed_intf::abstract_parent::abstract_parent (abstract_parent const &rhs)
   : ::CORBA::AbstractBase (rhs)
 {}
 

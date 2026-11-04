@@ -72,7 +72,7 @@ TAO::Objref_Traits<Test::DynAny>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test::DynAny>::marshal (const Test::DynAny_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test::DynAny>::marshal (Test::DynAny_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -126,7 +126,7 @@ Test::DynAny::_tao_release (DynAny_ptr obj)
 }
 
 ::CORBA::Boolean
-Test::DynAny::_is_a (const char *value)
+Test::DynAny::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Test/DynAny:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -140,17 +140,17 @@ Test::DynAny::_is_a (const char *value)
     }
 }
 
-const char* Test::DynAny::_interface_repository_id () const
+char const *Test::DynAny::_interface_repository_id () const
 {
   return "IDL:Test/DynAny:1.0";
 }
 
-const char* Test::DynAny::_desc_repository_id ()
+char const *Test::DynAny::_desc_repository_id ()
 {
   return "IDL:Test/DynAny:1.0";
 }
 
-const char* Test::DynAny::_desc_interface_name ()
+char const *Test::DynAny::_desc_interface_name ()
 {
   return "DynAny";
 }
@@ -327,7 +327,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Test::DynAny_ptr &_tao_elem)
 {
   return

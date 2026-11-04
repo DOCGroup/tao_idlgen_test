@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSS_M8XMFE_CPP_
-#define _TAO_IDL_PARAMSS_M8XMFE_CPP_
+#ifndef _TAO_IDL_PARAMSS_V90OJT_CPP_
+#define _TAO_IDL_PARAMSS_V90OJT_CPP_
 
 #include "paramsS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -124,7 +124,7 @@ POA_foo::bar::AMH_fooBar::getDate_skel (
     );
 }
 
-::CORBA::Boolean POA_foo::bar::AMH_fooBar::_is_a (const char* value)
+::CORBA::Boolean POA_foo::bar::AMH_fooBar::_is_a (char const *value)
 {
   return
     (
@@ -133,7 +133,7 @@ POA_foo::bar::AMH_fooBar::getDate_skel (
     );
 }
 
-const char* POA_foo::bar::AMH_fooBar::_interface_repository_id () const
+char const *POA_foo::bar::AMH_fooBar::_interface_repository_id () const
 {
   return "IDL:foo/bar/fooBar:1.0";
 }
@@ -314,7 +314,7 @@ void POA_foo::bar::fooBar::getDate_skel (
                          );
 }
 
-::CORBA::Boolean POA_foo::bar::fooBar::_is_a (const char* value)
+::CORBA::Boolean POA_foo::bar::fooBar::_is_a (char const *value)
 {
   return
     (
@@ -323,7 +323,7 @@ void POA_foo::bar::fooBar::getDate_skel (
     );
 }
 
-const char* POA_foo::bar::fooBar::_interface_repository_id () const
+char const *POA_foo::bar::fooBar::_interface_repository_id () const
 {
   return "IDL:foo/bar/fooBar:1.0";
 }
@@ -623,7 +623,7 @@ void POA_foo::bar::AMI_fooBarHandler::getDate_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_foo::bar::AMI_fooBarHandler::_is_a (const char* value)
+::CORBA::Boolean POA_foo::bar::AMI_fooBarHandler::_is_a (char const *value)
 {
   return
     (
@@ -633,7 +633,7 @@ void POA_foo::bar::AMI_fooBarHandler::getDate_excep_skel (
     );
 }
 
-const char* POA_foo::bar::AMI_fooBarHandler::_interface_repository_id () const
+char const *POA_foo::bar::AMI_fooBarHandler::_interface_repository_id () const
 {
   return "IDL:foo/bar/AMI_fooBarHandler:1.0";
 }

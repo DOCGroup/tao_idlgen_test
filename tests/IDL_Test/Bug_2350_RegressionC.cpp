@@ -202,7 +202,7 @@ TAO::Objref_Traits<Bug_2350_Regression>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Bug_2350_Regression>::marshal (const Bug_2350_Regression_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Bug_2350_Regression>::marshal (Bug_2350_Regression_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -334,7 +334,7 @@ Bug_2350_Regression::_tao_release (Bug_2350_Regression_ptr obj)
 }
 
 ::CORBA::Boolean
-Bug_2350_Regression::_is_a (const char *value)
+Bug_2350_Regression::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Bug_2350_Regression:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -347,17 +347,17 @@ Bug_2350_Regression::_is_a (const char *value)
     }
 }
 
-const char* Bug_2350_Regression::_interface_repository_id () const
+char const *Bug_2350_Regression::_interface_repository_id () const
 {
   return "IDL:Bug_2350_Regression:1.0";
 }
 
-const char* Bug_2350_Regression::_desc_repository_id ()
+char const *Bug_2350_Regression::_desc_repository_id ()
 {
   return "IDL:Bug_2350_Regression:1.0";
 }
 
-const char* Bug_2350_Regression::_desc_interface_name ()
+char const *Bug_2350_Regression::_desc_interface_name ()
 {
   return "Bug_2350_Regression";
 }
@@ -565,7 +565,7 @@ TAO::Objref_Traits<AMH_Bug_2350_RegressionResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_Bug_2350_RegressionResponseHandler>::marshal (const AMH_Bug_2350_RegressionResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_Bug_2350_RegressionResponseHandler>::marshal (AMH_Bug_2350_RegressionResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -619,7 +619,7 @@ AMH_Bug_2350_RegressionResponseHandler::_tao_release (AMH_Bug_2350_RegressionRes
 }
 
 ::CORBA::Boolean
-AMH_Bug_2350_RegressionResponseHandler::_is_a (const char *value)
+AMH_Bug_2350_RegressionResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_Bug_2350_RegressionResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -633,17 +633,17 @@ AMH_Bug_2350_RegressionResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* AMH_Bug_2350_RegressionResponseHandler::_interface_repository_id () const
+char const *AMH_Bug_2350_RegressionResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_Bug_2350_RegressionResponseHandler:1.0";
 }
 
-const char* AMH_Bug_2350_RegressionResponseHandler::_desc_repository_id ()
+char const *AMH_Bug_2350_RegressionResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_Bug_2350_RegressionResponseHandler:1.0";
 }
 
-const char* AMH_Bug_2350_RegressionResponseHandler::_desc_interface_name ()
+char const *AMH_Bug_2350_RegressionResponseHandler::_desc_interface_name ()
 {
   return "AMH_Bug_2350_RegressionResponseHandler";
 }
@@ -685,7 +685,7 @@ TAO::Objref_Traits<AMI_Bug_2350_RegressionHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_Bug_2350_RegressionHandler>::marshal (const AMI_Bug_2350_RegressionHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_Bug_2350_RegressionHandler>::marshal (AMI_Bug_2350_RegressionHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -895,7 +895,7 @@ AMI_Bug_2350_RegressionHandler::_tao_release (AMI_Bug_2350_RegressionHandler_ptr
 }
 
 ::CORBA::Boolean
-AMI_Bug_2350_RegressionHandler::_is_a (const char *value)
+AMI_Bug_2350_RegressionHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_Bug_2350_RegressionHandler:1.0") == 0 ||
@@ -909,17 +909,17 @@ AMI_Bug_2350_RegressionHandler::_is_a (const char *value)
     }
 }
 
-const char* AMI_Bug_2350_RegressionHandler::_interface_repository_id () const
+char const *AMI_Bug_2350_RegressionHandler::_interface_repository_id () const
 {
   return "IDL:AMI_Bug_2350_RegressionHandler:1.0";
 }
 
-const char* AMI_Bug_2350_RegressionHandler::_desc_repository_id ()
+char const *AMI_Bug_2350_RegressionHandler::_desc_repository_id ()
 {
   return "IDL:AMI_Bug_2350_RegressionHandler:1.0";
 }
 
-const char* AMI_Bug_2350_RegressionHandler::_desc_interface_name ()
+char const *AMI_Bug_2350_RegressionHandler::_desc_interface_name ()
 {
   return "AMI_Bug_2350_RegressionHandler";
 }
@@ -1107,7 +1107,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Bug_2350_Regression_ptr &_tao_elem)
 {
   return
@@ -1249,7 +1249,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_Bug_2350_RegressionResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1307,7 +1307,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_Bug_2350_RegressionHandler_ptr &_tao_elem)
 {
   return
@@ -1366,7 +1366,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Bug_2350_Regression_ptr _tao_objref)
+    Bug_2350_Regression_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1458,7 +1458,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const AMI_Bug_2350_RegressionHandler_ptr _tao_objref)
+    AMI_Bug_2350_RegressionHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

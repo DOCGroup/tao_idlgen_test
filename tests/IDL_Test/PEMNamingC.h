@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PEMNAMINGC_XW3Q0C_H_
-#define _TAO_IDL_PEMNAMINGC_XW3Q0C_H_
+#ifndef _TAO_IDL_PEMNAMINGC_FA5PWE_H_
+#define _TAO_IDL_PEMNAMINGC_FA5PWE_H_
 
 #include /**/ "ace/pre.h"
 
@@ -260,10 +260,10 @@ namespace Plesk
         char const * version,
         ::Plesk::TObjectID sc_id);
 
-      ::CORBA::Boolean _is_a (const char *type_id) override;
-      const char* _interface_repository_id () const override;
-      static const char* _desc_repository_id ();
-      static const char* _desc_interface_name ();
+      ::CORBA::Boolean _is_a (char const *type_id) override;
+      char const *_interface_repository_id () const override;
+      static char const *_desc_repository_id ();
+      static char const *_desc_interface_name ();
       ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
@@ -284,9 +284,9 @@ namespace Plesk
 
     private:
       // Private and unimplemented for concrete interfaces.
-      ObjectResolver (const ObjectResolver &) = delete;
+      ObjectResolver (ObjectResolver const &) = delete;
       ObjectResolver (ObjectResolver &&) = delete;
-      ObjectResolver &operator= (const ObjectResolver &) = delete;
+      ObjectResolver &operator= (ObjectResolver const &) = delete;
       ObjectResolver &operator= (ObjectResolver &&) = delete;
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_ObjectResolver;
@@ -419,10 +419,10 @@ public:
   virtual void resolve_sc_excep (
     ::Plesk::Naming::AMH_ObjectResolverExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -433,9 +433,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_ObjectResolverResponseHandler (const AMH_ObjectResolverResponseHandler &) = delete;
+  AMH_ObjectResolverResponseHandler (AMH_ObjectResolverResponseHandler const &) = delete;
   AMH_ObjectResolverResponseHandler (AMH_ObjectResolverResponseHandler &&) = delete;
-  AMH_ObjectResolverResponseHandler &operator= (const AMH_ObjectResolverResponseHandler &) = delete;
+  AMH_ObjectResolverResponseHandler &operator= (AMH_ObjectResolverResponseHandler const &) = delete;
   AMH_ObjectResolverResponseHandler &operator= (AMH_ObjectResolverResponseHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_ObjectResolverResponseHandler;
@@ -497,10 +497,10 @@ public:
   virtual void resolve_sc_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -521,9 +521,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_ObjectResolverHandler (const AMI_ObjectResolverHandler &) = delete;
+  AMI_ObjectResolverHandler (AMI_ObjectResolverHandler const &) = delete;
   AMI_ObjectResolverHandler (AMI_ObjectResolverHandler &&) = delete;
-  AMI_ObjectResolverHandler &operator= (const AMI_ObjectResolverHandler &) = delete;
+  AMI_ObjectResolverHandler &operator= (AMI_ObjectResolverHandler const &) = delete;
   AMI_ObjectResolverHandler &operator= (AMI_ObjectResolverHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_ObjectResolverHandler;
@@ -772,7 +772,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::Naming::ObjectResolver_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::Naming::ObjectResolver_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Plesk::Naming::ObjectResolver_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Plesk::Naming::ObjectResolver_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -790,7 +790,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -799,7 +799,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::Naming::AMI_ObjectResolverHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Plesk::Naming::AMI_ObjectResolverHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Plesk::Naming::AMI_ObjectResolverHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Plesk::Naming::AMI_ObjectResolverHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -844,7 +844,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Plesk::Naming::ObjectResolver_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Plesk::Naming::ObjectResolver_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Plesk::Naming::ObjectResolver_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -867,7 +867,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Plesk::Naming::AMI_ObjectResolverHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Plesk::Naming::AMI_ObjectResolverHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Plesk::Naming::AMI_ObjectResolverHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

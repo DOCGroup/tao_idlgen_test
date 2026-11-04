@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTS_QC6YNU_CPP_
-#define _TAO_IDL_GENERIC_OBJECTS_QC6YNU_CPP_
+#ifndef _TAO_IDL_GENERIC_OBJECTS_W8ZAZ0_CPP_
+#define _TAO_IDL_GENERIC_OBJECTS_W8ZAZ0_CPP_
 
 #include "generic_objectS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -124,7 +124,7 @@ POA_AMH_generic::op_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_generic::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_generic::_is_a (char const *value)
 {
   return
     (
@@ -133,7 +133,7 @@ POA_AMH_generic::op_skel (
     );
 }
 
-const char* POA_AMH_generic::_interface_repository_id () const
+char const *POA_AMH_generic::_interface_repository_id () const
 {
   return "IDL:generic:1.0";
 }
@@ -306,7 +306,7 @@ void POA_generic::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_generic::_is_a (const char* value)
+::CORBA::Boolean POA_generic::_is_a (char const *value)
 {
   return
     (
@@ -315,7 +315,7 @@ void POA_generic::op_skel (
     );
 }
 
-const char* POA_generic::_interface_repository_id () const
+char const *POA_generic::_interface_repository_id () const
 {
   return "IDL:generic:1.0";
 }
@@ -599,7 +599,7 @@ void POA_AMI_genericHandler::op_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_genericHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_genericHandler::_is_a (char const *value)
 {
   return
     (
@@ -609,7 +609,7 @@ void POA_AMI_genericHandler::op_excep_skel (
     );
 }
 
-const char* POA_AMI_genericHandler::_interface_repository_id () const
+char const *POA_AMI_genericHandler::_interface_repository_id () const
 {
   return "IDL:AMI_genericHandler:1.0";
 }

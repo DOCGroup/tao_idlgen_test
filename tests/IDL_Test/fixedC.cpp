@@ -65,7 +65,7 @@ TAO::Objref_Traits<FixedPoint::FixedOperations>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<FixedPoint::FixedOperations>::marshal (const FixedPoint::FixedOperations_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<FixedPoint::FixedOperations>::marshal (FixedPoint::FixedOperations_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -240,7 +240,7 @@ FixedPoint::FixedOperations::_tao_release (FixedOperations_ptr obj)
 }
 
 ::CORBA::Boolean
-FixedPoint::FixedOperations::_is_a (const char *value)
+FixedPoint::FixedOperations::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:FixedPoint/FixedOperations:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -253,17 +253,17 @@ FixedPoint::FixedOperations::_is_a (const char *value)
     }
 }
 
-const char* FixedPoint::FixedOperations::_interface_repository_id () const
+char const *FixedPoint::FixedOperations::_interface_repository_id () const
 {
   return "IDL:FixedPoint/FixedOperations:1.0";
 }
 
-const char* FixedPoint::FixedOperations::_desc_repository_id ()
+char const *FixedPoint::FixedOperations::_desc_repository_id ()
 {
   return "IDL:FixedPoint/FixedOperations:1.0";
 }
 
-const char* FixedPoint::FixedOperations::_desc_interface_name ()
+char const *FixedPoint::FixedOperations::_desc_interface_name ()
 {
   return "FixedOperations";
 }
@@ -456,7 +456,7 @@ TAO::Objref_Traits<FixedPoint::AMH_FixedOperationsResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<FixedPoint::AMH_FixedOperationsResponseHandler>::marshal (const FixedPoint::AMH_FixedOperationsResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<FixedPoint::AMH_FixedOperationsResponseHandler>::marshal (FixedPoint::AMH_FixedOperationsResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -510,7 +510,7 @@ FixedPoint::AMH_FixedOperationsResponseHandler::_tao_release (AMH_FixedOperation
 }
 
 ::CORBA::Boolean
-FixedPoint::AMH_FixedOperationsResponseHandler::_is_a (const char *value)
+FixedPoint::AMH_FixedOperationsResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:FixedPoint/AMH_FixedOperationsResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -524,17 +524,17 @@ FixedPoint::AMH_FixedOperationsResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* FixedPoint::AMH_FixedOperationsResponseHandler::_interface_repository_id () const
+char const *FixedPoint::AMH_FixedOperationsResponseHandler::_interface_repository_id () const
 {
   return "IDL:FixedPoint/AMH_FixedOperationsResponseHandler:1.0";
 }
 
-const char* FixedPoint::AMH_FixedOperationsResponseHandler::_desc_repository_id ()
+char const *FixedPoint::AMH_FixedOperationsResponseHandler::_desc_repository_id ()
 {
   return "IDL:FixedPoint/AMH_FixedOperationsResponseHandler:1.0";
 }
 
-const char* FixedPoint::AMH_FixedOperationsResponseHandler::_desc_interface_name ()
+char const *FixedPoint::AMH_FixedOperationsResponseHandler::_desc_interface_name ()
 {
   return "AMH_FixedOperationsResponseHandler";
 }
@@ -568,7 +568,7 @@ TAO::Objref_Traits<FixedPoint::AMI_FixedOperationsHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<FixedPoint::AMI_FixedOperationsHandler>::marshal (const FixedPoint::AMI_FixedOperationsHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<FixedPoint::AMI_FixedOperationsHandler>::marshal (FixedPoint::AMI_FixedOperationsHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -859,7 +859,7 @@ FixedPoint::AMI_FixedOperationsHandler::_tao_release (AMI_FixedOperationsHandler
 }
 
 ::CORBA::Boolean
-FixedPoint::AMI_FixedOperationsHandler::_is_a (const char *value)
+FixedPoint::AMI_FixedOperationsHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0") == 0 ||
@@ -873,17 +873,17 @@ FixedPoint::AMI_FixedOperationsHandler::_is_a (const char *value)
     }
 }
 
-const char* FixedPoint::AMI_FixedOperationsHandler::_interface_repository_id () const
+char const *FixedPoint::AMI_FixedOperationsHandler::_interface_repository_id () const
 {
   return "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0";
 }
 
-const char* FixedPoint::AMI_FixedOperationsHandler::_desc_repository_id ()
+char const *FixedPoint::AMI_FixedOperationsHandler::_desc_repository_id ()
 {
   return "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0";
 }
 
-const char* FixedPoint::AMI_FixedOperationsHandler::_desc_interface_name ()
+char const *FixedPoint::AMI_FixedOperationsHandler::_desc_interface_name ()
 {
   return "AMI_FixedOperationsHandler";
 }
@@ -942,7 +942,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const FixedPoint::FixedOperations_ptr _tao_objref)
+    FixedPoint::FixedOperations_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1034,7 +1034,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const FixedPoint::AMI_FixedOperationsHandler_ptr _tao_objref)
+    FixedPoint::AMI_FixedOperationsHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_MODULES_APSIJ4_CPP_
-#define _TAO_IDL_MODULES_APSIJ4_CPP_
+#ifndef _TAO_IDL_MODULES_IJJCCD_CPP_
+#define _TAO_IDL_MODULES_IJJCCD_CPP_
 
 #include "moduleS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -237,7 +237,7 @@ POA_mod1::mod2::AMH_ex1::m1_skel (
     );
 }
 
-::CORBA::Boolean POA_mod1::mod2::AMH_ex1::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::AMH_ex1::_is_a (char const *value)
 {
   return
     (
@@ -246,7 +246,7 @@ POA_mod1::mod2::AMH_ex1::m1_skel (
     );
 }
 
-const char* POA_mod1::mod2::AMH_ex1::_interface_repository_id () const
+char const *POA_mod1::mod2::AMH_ex1::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/ex1:1.0";
 }
@@ -680,7 +680,7 @@ void POA_mod1::mod2::ex1::m1_skel (
                          );
 }
 
-::CORBA::Boolean POA_mod1::mod2::ex1::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::ex1::_is_a (char const *value)
 {
   return
     (
@@ -689,7 +689,7 @@ void POA_mod1::mod2::ex1::m1_skel (
     );
 }
 
-const char* POA_mod1::mod2::ex1::_interface_repository_id () const
+char const *POA_mod1::mod2::ex1::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/ex1:1.0";
 }
@@ -1580,7 +1580,7 @@ void POA_mod1::mod2::AMI_ex1Handler::m1_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_mod1::mod2::AMI_ex1Handler::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::AMI_ex1Handler::_is_a (char const *value)
 {
   return
     (
@@ -1590,7 +1590,7 @@ void POA_mod1::mod2::AMI_ex1Handler::m1_excep_skel (
     );
 }
 
-const char* POA_mod1::mod2::AMI_ex1Handler::_interface_repository_id () const
+char const *POA_mod1::mod2::AMI_ex1Handler::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/AMI_ex1Handler:1.0";
 }
@@ -1769,7 +1769,7 @@ POA_mod1::mod2::AMH_ex2::m2_skel (
     );
 }
 
-::CORBA::Boolean POA_mod1::mod2::AMH_ex2::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::AMH_ex2::_is_a (char const *value)
 {
   return
     (
@@ -1779,7 +1779,7 @@ POA_mod1::mod2::AMH_ex2::m2_skel (
     );
 }
 
-const char* POA_mod1::mod2::AMH_ex2::_interface_repository_id () const
+char const *POA_mod1::mod2::AMH_ex2::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/ex2:1.0";
 }
@@ -2137,7 +2137,7 @@ void POA_mod1::mod2::ex2::m2_skel (
                          );
 }
 
-::CORBA::Boolean POA_mod1::mod2::ex2::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::ex2::_is_a (char const *value)
 {
   return
     (
@@ -2147,7 +2147,7 @@ void POA_mod1::mod2::ex2::m2_skel (
     );
 }
 
-const char* POA_mod1::mod2::ex2::_interface_repository_id () const
+char const *POA_mod1::mod2::ex2::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/ex2:1.0";
 }
@@ -2844,7 +2844,7 @@ void POA_mod1::mod2::AMI_ex2Handler::m2_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_mod1::mod2::AMI_ex2Handler::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::AMI_ex2Handler::_is_a (char const *value)
 {
   return
     (
@@ -2855,7 +2855,7 @@ void POA_mod1::mod2::AMI_ex2Handler::m2_excep_skel (
     );
 }
 
-const char* POA_mod1::mod2::AMI_ex2Handler::_interface_repository_id () const
+char const *POA_mod1::mod2::AMI_ex2Handler::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/AMI_ex2Handler:1.0";
 }

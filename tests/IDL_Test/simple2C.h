@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE2C_DNXUH5_H_
-#define _TAO_IDL_SIMPLE2C_DNXUH5_H_
+#ifndef _TAO_IDL_SIMPLE2C_9GYYGE_H_
+#define _TAO_IDL_SIMPLE2C_9GYYGE_H_
 
 #include /**/ "ace/pre.h"
 
@@ -265,10 +265,10 @@ public:
     ::CORBA::Any const & x,
     ::CORBA::Any const & y);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -289,9 +289,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  simple3 (const simple3 &) = delete;
+  simple3 (simple3 const &) = delete;
   simple3 (simple3 &&) = delete;
-  simple3 &operator= (const simple3 &) = delete;
+  simple3 &operator= (simple3 const &) = delete;
   simple3 &operator= (simple3 &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_simple3;
@@ -427,10 +427,10 @@ public:
   virtual void op4_excep (
     ::AMH_simple3ExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -441,9 +441,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_simple3ResponseHandler (const AMH_simple3ResponseHandler &) = delete;
+  AMH_simple3ResponseHandler (AMH_simple3ResponseHandler const &) = delete;
   AMH_simple3ResponseHandler (AMH_simple3ResponseHandler &&) = delete;
-  AMH_simple3ResponseHandler &operator= (const AMH_simple3ResponseHandler &) = delete;
+  AMH_simple3ResponseHandler &operator= (AMH_simple3ResponseHandler const &) = delete;
   AMH_simple3ResponseHandler &operator= (AMH_simple3ResponseHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_simple3ResponseHandler;
@@ -508,10 +508,10 @@ public:
   virtual void op4_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -532,9 +532,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_simple3Handler (const AMI_simple3Handler &) = delete;
+  AMI_simple3Handler (AMI_simple3Handler const &) = delete;
   AMI_simple3Handler (AMI_simple3Handler &&) = delete;
-  AMI_simple3Handler &operator= (const AMI_simple3Handler &) = delete;
+  AMI_simple3Handler &operator= (AMI_simple3Handler const &) = delete;
   AMI_simple3Handler &operator= (AMI_simple3Handler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_simple3Handler;
@@ -706,7 +706,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, simple3_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, simple3_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, simple3_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -760,7 +760,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_simple3ResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_simple3ResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMH_simple3ResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMH_simple3ResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -769,13 +769,13 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_simple3Handler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_simple3Handler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AMI_simple3Handler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMI_simple3Handler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const simple3_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, simple3_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, simple3_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -826,7 +826,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_simple3Handler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMI_simple3Handler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_simple3Handler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

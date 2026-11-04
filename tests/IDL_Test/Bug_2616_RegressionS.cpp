@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_V92XCK_CPP_
-#define _TAO_IDL_BUG_2616_REGRESSIONS_V92XCK_CPP_
+#ifndef _TAO_IDL_BUG_2616_REGRESSIONS_U4G5BH_CPP_
+#define _TAO_IDL_BUG_2616_REGRESSIONS_U4G5BH_CPP_
 
 #include "Bug_2616_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -121,7 +121,7 @@ POA_AMH_Interface1::do_it_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_Interface1::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_Interface1::_is_a (char const *value)
 {
   return
     (
@@ -130,7 +130,7 @@ POA_AMH_Interface1::do_it_skel (
     );
 }
 
-const char* POA_AMH_Interface1::_interface_repository_id () const
+char const *POA_AMH_Interface1::_interface_repository_id () const
 {
   return "IDL:Interface1:1.0";
 }
@@ -276,7 +276,7 @@ void POA_Interface1::do_it_skel (
                          );
 }
 
-::CORBA::Boolean POA_Interface1::_is_a (const char* value)
+::CORBA::Boolean POA_Interface1::_is_a (char const *value)
 {
   return
     (
@@ -285,7 +285,7 @@ void POA_Interface1::do_it_skel (
     );
 }
 
-const char* POA_Interface1::_interface_repository_id () const
+char const *POA_Interface1::_interface_repository_id () const
 {
   return "IDL:Interface1:1.0";
 }
@@ -518,7 +518,7 @@ void POA_AMI_Interface1Handler::do_it_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_Interface1Handler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_Interface1Handler::_is_a (char const *value)
 {
   return
     (
@@ -528,7 +528,7 @@ void POA_AMI_Interface1Handler::do_it_excep_skel (
     );
 }
 
-const char* POA_AMI_Interface1Handler::_interface_repository_id () const
+char const *POA_AMI_Interface1Handler::_interface_repository_id () const
 {
   return "IDL:AMI_Interface1Handler:1.0";
 }
@@ -622,7 +622,7 @@ POA_AMH_Interface2::do_it_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_Interface2::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_Interface2::_is_a (char const *value)
 {
   return
     (
@@ -631,7 +631,7 @@ POA_AMH_Interface2::do_it_skel (
     );
 }
 
-const char* POA_AMH_Interface2::_interface_repository_id () const
+char const *POA_AMH_Interface2::_interface_repository_id () const
 {
   return "IDL:Interface2:1.0";
 }
@@ -777,7 +777,7 @@ void POA_Interface2::do_it_skel (
                          );
 }
 
-::CORBA::Boolean POA_Interface2::_is_a (const char* value)
+::CORBA::Boolean POA_Interface2::_is_a (char const *value)
 {
   return
     (
@@ -786,7 +786,7 @@ void POA_Interface2::do_it_skel (
     );
 }
 
-const char* POA_Interface2::_interface_repository_id () const
+char const *POA_Interface2::_interface_repository_id () const
 {
   return "IDL:Interface2:1.0";
 }
@@ -1019,7 +1019,7 @@ void POA_AMI_Interface2Handler::do_it_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_Interface2Handler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_Interface2Handler::_is_a (char const *value)
 {
   return
     (
@@ -1029,7 +1029,7 @@ void POA_AMI_Interface2Handler::do_it_excep_skel (
     );
 }
 
-const char* POA_AMI_Interface2Handler::_interface_repository_id () const
+char const *POA_AMI_Interface2Handler::_interface_repository_id () const
 {
   return "IDL:AMI_Interface2Handler:1.0";
 }

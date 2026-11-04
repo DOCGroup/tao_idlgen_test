@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_BU4PKS_CPP_
-#define _TAO_IDL_OLD_SEQUENCES_BU4PKS_CPP_
+#ifndef _TAO_IDL_OLD_SEQUENCES_TBD915_CPP_
+#define _TAO_IDL_OLD_SEQUENCES_TBD915_CPP_
 
 #include "old_sequenceS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -158,7 +158,7 @@ POA_AMH_TestSeq::_set_fattr_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_TestSeq::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_TestSeq::_is_a (char const *value)
 {
   return
     (
@@ -167,7 +167,7 @@ POA_AMH_TestSeq::_set_fattr_skel (
     );
 }
 
-const char* POA_AMH_TestSeq::_interface_repository_id () const
+char const *POA_AMH_TestSeq::_interface_repository_id () const
 {
   return "IDL:TestSeq:1.0";
 }
@@ -395,7 +395,7 @@ void POA_TestSeq::_set_fattr_skel (
                          );
 }
 
-::CORBA::Boolean POA_TestSeq::_is_a (const char* value)
+::CORBA::Boolean POA_TestSeq::_is_a (char const *value)
 {
   return
     (
@@ -404,7 +404,7 @@ void POA_TestSeq::_set_fattr_skel (
     );
 }
 
-const char* POA_TestSeq::_interface_repository_id () const
+char const *POA_TestSeq::_interface_repository_id () const
 {
   return "IDL:TestSeq:1.0";
 }
@@ -835,7 +835,7 @@ void POA_AMI_TestSeqHandler::set_fattr_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_TestSeqHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_TestSeqHandler::_is_a (char const *value)
 {
   return
     (
@@ -845,7 +845,7 @@ void POA_AMI_TestSeqHandler::set_fattr_excep_skel (
     );
 }
 
-const char* POA_AMI_TestSeqHandler::_interface_repository_id () const
+char const *POA_AMI_TestSeqHandler::_interface_repository_id () const
 {
   return "IDL:AMI_TestSeqHandler:1.0";
 }

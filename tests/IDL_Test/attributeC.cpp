@@ -292,7 +292,7 @@ TAO::Objref_Traits<Hello::MyFoo>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Hello::MyFoo>::marshal (const Hello::MyFoo_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Hello::MyFoo>::marshal (Hello::MyFoo_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1011,7 +1011,7 @@ Hello::MyFoo::_tao_release (MyFoo_ptr obj)
 }
 
 ::CORBA::Boolean
-Hello::MyFoo::_is_a (const char *value)
+Hello::MyFoo::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Hello/MyFoo:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -1024,17 +1024,17 @@ Hello::MyFoo::_is_a (const char *value)
     }
 }
 
-const char* Hello::MyFoo::_interface_repository_id () const
+char const *Hello::MyFoo::_interface_repository_id () const
 {
   return "IDL:Hello/MyFoo:1.0";
 }
 
-const char* Hello::MyFoo::_desc_repository_id ()
+char const *Hello::MyFoo::_desc_repository_id ()
 {
   return "IDL:Hello/MyFoo:1.0";
 }
 
-const char* Hello::MyFoo::_desc_interface_name ()
+char const *Hello::MyFoo::_desc_interface_name ()
 {
   return "MyFoo";
 }
@@ -1360,7 +1360,7 @@ TAO::Objref_Traits<Hello::AMH_MyFooResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Hello::AMH_MyFooResponseHandler>::marshal (const Hello::AMH_MyFooResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Hello::AMH_MyFooResponseHandler>::marshal (Hello::AMH_MyFooResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1414,7 +1414,7 @@ Hello::AMH_MyFooResponseHandler::_tao_release (AMH_MyFooResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-Hello::AMH_MyFooResponseHandler::_is_a (const char *value)
+Hello::AMH_MyFooResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Hello/AMH_MyFooResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -1428,17 +1428,17 @@ Hello::AMH_MyFooResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* Hello::AMH_MyFooResponseHandler::_interface_repository_id () const
+char const *Hello::AMH_MyFooResponseHandler::_interface_repository_id () const
 {
   return "IDL:Hello/AMH_MyFooResponseHandler:1.0";
 }
 
-const char* Hello::AMH_MyFooResponseHandler::_desc_repository_id ()
+char const *Hello::AMH_MyFooResponseHandler::_desc_repository_id ()
 {
   return "IDL:Hello/AMH_MyFooResponseHandler:1.0";
 }
 
-const char* Hello::AMH_MyFooResponseHandler::_desc_interface_name ()
+char const *Hello::AMH_MyFooResponseHandler::_desc_interface_name ()
 {
   return "AMH_MyFooResponseHandler";
 }
@@ -1483,7 +1483,7 @@ TAO::Objref_Traits<Hello::AMI_MyFooHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Hello::AMI_MyFooHandler>::marshal (const Hello::AMI_MyFooHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Hello::AMI_MyFooHandler>::marshal (Hello::AMI_MyFooHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2947,7 +2947,7 @@ Hello::AMI_MyFooHandler::_tao_release (AMI_MyFooHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-Hello::AMI_MyFooHandler::_is_a (const char *value)
+Hello::AMI_MyFooHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:Hello/AMI_MyFooHandler:1.0") == 0 ||
@@ -2961,17 +2961,17 @@ Hello::AMI_MyFooHandler::_is_a (const char *value)
     }
 }
 
-const char* Hello::AMI_MyFooHandler::_interface_repository_id () const
+char const *Hello::AMI_MyFooHandler::_interface_repository_id () const
 {
   return "IDL:Hello/AMI_MyFooHandler:1.0";
 }
 
-const char* Hello::AMI_MyFooHandler::_desc_repository_id ()
+char const *Hello::AMI_MyFooHandler::_desc_repository_id ()
 {
   return "IDL:Hello/AMI_MyFooHandler:1.0";
 }
 
-const char* Hello::AMI_MyFooHandler::_desc_interface_name ()
+char const *Hello::AMI_MyFooHandler::_desc_interface_name ()
 {
   return "AMI_MyFooHandler";
 }
@@ -3191,7 +3191,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Hello::MyFoo_ptr &_tao_elem)
 {
   return
@@ -3333,7 +3333,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Hello::AMH_MyFooResponseHandler_ptr &_tao_elem)
 {
   return
@@ -3391,7 +3391,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Hello::AMI_MyFooHandler_ptr &_tao_elem)
 {
   return
@@ -3447,7 +3447,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Hello::MyFoo_ptr _tao_objref)
+    Hello::MyFoo_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3539,7 +3539,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Hello::AMI_MyFooHandler_ptr _tao_objref)
+    Hello::AMI_MyFooHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

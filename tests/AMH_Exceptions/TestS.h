@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_Z2VA3X_H_
-#define _TAO_IDL_TESTS_Z2VA3X_H_
+#ifndef _TAO_IDL_TESTS_Y6960E_H_
+#define _TAO_IDL_TESTS_Y6960E_H_
 
 #include /**/ "ace/pre.h"
 
@@ -118,10 +118,10 @@ namespace POA_Test
     AMH_Roundtrip ();
 
   public:
-    AMH_Roundtrip (const AMH_Roundtrip& rhs);
+    AMH_Roundtrip (AMH_Roundtrip const &rhs);
     ~AMH_Roundtrip () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -129,7 +129,7 @@ namespace POA_Test
 
     Test::Roundtrip *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void test_method_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -166,10 +166,10 @@ public:
   using _stub_ptr_type = ::Test::Roundtrip_ptr;
   using _stub_var_type = ::Test::Roundtrip_var;
 
-  Roundtrip (const Roundtrip& rhs) = default;
+  Roundtrip (Roundtrip const &rhs) = default;
   ~Roundtrip () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -177,7 +177,7 @@ public:
 
   ::Test::Roundtrip *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::Test::Timestamp test_method (
     ::Test::Timestamp send_time) = 0;
 

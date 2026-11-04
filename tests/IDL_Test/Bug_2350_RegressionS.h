@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_S9EB21_H_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_S9EB21_H_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_3I3XR5_H_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_3I3XR5_H_
 
 #include /**/ "ace/pre.h"
 
@@ -143,10 +143,10 @@ protected:
   POA_AMH_Bug_2350_Regression ();
 
 public:
-  POA_AMH_Bug_2350_Regression (const POA_AMH_Bug_2350_Regression& rhs);
+  POA_AMH_Bug_2350_Regression (POA_AMH_Bug_2350_Regression const &rhs);
   ~POA_AMH_Bug_2350_Regression () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -154,7 +154,7 @@ public:
 
   Bug_2350_Regression *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void Bug_2350_Regression_excep_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -184,10 +184,10 @@ public:
   using _stub_ptr_type = ::Bug_2350_Regression_ptr;
   using _stub_var_type = ::Bug_2350_Regression_var;
 
-  POA_Bug_2350_Regression (const POA_Bug_2350_Regression& rhs) = default;
+  POA_Bug_2350_Regression (POA_Bug_2350_Regression const &rhs) = default;
   ~POA_Bug_2350_Regression () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -195,7 +195,7 @@ public:
 
   ::Bug_2350_Regression *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void Bug_2350_Regression_excep (
     ::user_ExceptionHolder const & a) = 0;
 
@@ -255,10 +255,10 @@ public:
   using _stub_ptr_type = ::AMI_Bug_2350_RegressionHandler_ptr;
   using _stub_var_type = ::AMI_Bug_2350_RegressionHandler_var;
 
-  POA_AMI_Bug_2350_RegressionHandler (const POA_AMI_Bug_2350_RegressionHandler& rhs) = default;
+  POA_AMI_Bug_2350_RegressionHandler (POA_AMI_Bug_2350_RegressionHandler const &rhs) = default;
   ~POA_AMI_Bug_2350_RegressionHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -266,7 +266,7 @@ public:
 
   ::AMI_Bug_2350_RegressionHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void Bug_2350_Regression_excep () = 0;
 
   static void Bug_2350_Regression_excep_skel (

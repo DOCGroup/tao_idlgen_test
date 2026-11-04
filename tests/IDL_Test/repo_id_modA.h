@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REPO_ID_MODA_X9G2VI_H_
-#define _TAO_IDL_REPO_ID_MODA_X9G2VI_H_
+#ifndef _TAO_IDL_REPO_ID_MODA_FQLKC1_H_
+#define _TAO_IDL_REPO_ID_MODA_FQLKC1_H_
 
 #include /**/ "ace/pre.h"
 
@@ -74,7 +74,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::schmooze_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::schmooze_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::schmooze_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, gleep::schmooze_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -83,7 +83,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::schmeer_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::schmeer_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::schmeer_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, gleep::schmeer_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -92,7 +92,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::schlemiel_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::schlemiel_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::schlemiel_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, gleep::schlemiel_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -101,7 +101,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::spilkis_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::spilkis_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::spilkis_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, gleep::spilkis_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -110,7 +110,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::floop::schmuck_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::floop::schmuck_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::floop::schmuck_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, gleep::floop::schmuck_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -119,7 +119,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::floop::schmendrick_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::floop::schmendrick_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::floop::schmendrick_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, gleep::floop::schmendrick_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -128,7 +128,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::floop::verklempt::schlemazel_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::floop::verklempt::schlemazel_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::floop::verklempt::schlemazel_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, gleep::floop::verklempt::schlemazel_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -137,7 +137,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::schmegegging_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, gleep::schmegegging_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, gleep::schmegegging_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, gleep::schmegegging_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

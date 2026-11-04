@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTES_RG0NUK_CPP_
-#define _TAO_IDL_ATTRIBUTES_RG0NUK_CPP_
+#ifndef _TAO_IDL_ATTRIBUTES_KD32DB_CPP_
+#define _TAO_IDL_ATTRIBUTES_KD32DB_CPP_
 
 #include "attributeS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -436,7 +436,7 @@ POA_Hello::AMH_MyFoo::_get_ro_attrib_skel (
     );
 }
 
-::CORBA::Boolean POA_Hello::AMH_MyFoo::_is_a (const char* value)
+::CORBA::Boolean POA_Hello::AMH_MyFoo::_is_a (char const *value)
 {
   return
     (
@@ -445,7 +445,7 @@ POA_Hello::AMH_MyFoo::_get_ro_attrib_skel (
     );
 }
 
-const char* POA_Hello::AMH_MyFoo::_interface_repository_id () const
+char const *POA_Hello::AMH_MyFoo::_interface_repository_id () const
 {
   return "IDL:Hello/MyFoo:1.0";
 }
@@ -1348,7 +1348,7 @@ void POA_Hello::MyFoo::_get_ro_attrib_skel (
                          );
 }
 
-::CORBA::Boolean POA_Hello::MyFoo::_is_a (const char* value)
+::CORBA::Boolean POA_Hello::MyFoo::_is_a (char const *value)
 {
   return
     (
@@ -1357,7 +1357,7 @@ void POA_Hello::MyFoo::_get_ro_attrib_skel (
     );
 }
 
-const char* POA_Hello::MyFoo::_interface_repository_id () const
+char const *POA_Hello::MyFoo::_interface_repository_id () const
 {
   return "IDL:Hello/MyFoo:1.0";
 }
@@ -3413,7 +3413,7 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_Hello::AMI_MyFooHandler::_is_a (const char* value)
+::CORBA::Boolean POA_Hello::AMI_MyFooHandler::_is_a (char const *value)
 {
   return
     (
@@ -3423,7 +3423,7 @@ void POA_Hello::AMI_MyFooHandler::get_ro_attrib_excep_skel (
     );
 }
 
-const char* POA_Hello::AMI_MyFooHandler::_interface_repository_id () const
+char const *POA_Hello::AMI_MyFooHandler::_interface_repository_id () const
 {
   return "IDL:Hello/AMI_MyFooHandler:1.0";
 }

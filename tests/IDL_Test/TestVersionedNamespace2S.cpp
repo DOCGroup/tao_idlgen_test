@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_FKAEIJ_CPP_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_FKAEIJ_CPP_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_SFJR6D_CPP_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_SFJR6D_CPP_
 
 #include "TestVersionedNamespace2S.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -120,7 +120,7 @@ POA_M1::AMH_LI::op_skel (
     );
 }
 
-::CORBA::Boolean POA_M1::AMH_LI::_is_a (const char* value)
+::CORBA::Boolean POA_M1::AMH_LI::_is_a (char const *value)
 {
   return
     (
@@ -129,7 +129,7 @@ POA_M1::AMH_LI::op_skel (
     );
 }
 
-const char* POA_M1::AMH_LI::_interface_repository_id () const
+char const *POA_M1::AMH_LI::_interface_repository_id () const
 {
   return "IDL:M1/LI:1.0";
 }
@@ -249,7 +249,7 @@ void POA_M1::LI::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_M1::LI::_is_a (const char* value)
+::CORBA::Boolean POA_M1::LI::_is_a (char const *value)
 {
   return
     (
@@ -258,7 +258,7 @@ void POA_M1::LI::op_skel (
     );
 }
 
-const char* POA_M1::LI::_interface_repository_id () const
+char const *POA_M1::LI::_interface_repository_id () const
 {
   return "IDL:M1/LI:1.0";
 }
@@ -373,7 +373,7 @@ POA_M1::AMH_L2::op_skel (
     );
 }
 
-::CORBA::Boolean POA_M1::AMH_L2::_is_a (const char* value)
+::CORBA::Boolean POA_M1::AMH_L2::_is_a (char const *value)
 {
   return
     (
@@ -382,7 +382,7 @@ POA_M1::AMH_L2::op_skel (
     );
 }
 
-const char* POA_M1::AMH_L2::_interface_repository_id () const
+char const *POA_M1::AMH_L2::_interface_repository_id () const
 {
   return "IDL:M1/L2:1.0";
 }
@@ -502,7 +502,7 @@ void POA_M1::L2::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_M1::L2::_is_a (const char* value)
+::CORBA::Boolean POA_M1::L2::_is_a (char const *value)
 {
   return
     (
@@ -511,7 +511,7 @@ void POA_M1::L2::op_skel (
     );
 }
 
-const char* POA_M1::L2::_interface_repository_id () const
+char const *POA_M1::L2::_interface_repository_id () const
 {
   return "IDL:M1/L2:1.0";
 }
@@ -626,7 +626,7 @@ POA_M2::M3::AMH_L3::op_skel (
     );
 }
 
-::CORBA::Boolean POA_M2::M3::AMH_L3::_is_a (const char* value)
+::CORBA::Boolean POA_M2::M3::AMH_L3::_is_a (char const *value)
 {
   return
     (
@@ -635,7 +635,7 @@ POA_M2::M3::AMH_L3::op_skel (
     );
 }
 
-const char* POA_M2::M3::AMH_L3::_interface_repository_id () const
+char const *POA_M2::M3::AMH_L3::_interface_repository_id () const
 {
   return "IDL:M2/M3/L3:1.0";
 }
@@ -759,7 +759,7 @@ void POA_M2::M3::L3::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_M2::M3::L3::_is_a (const char* value)
+::CORBA::Boolean POA_M2::M3::L3::_is_a (char const *value)
 {
   return
     (
@@ -768,7 +768,7 @@ void POA_M2::M3::L3::op_skel (
     );
 }
 
-const char* POA_M2::M3::L3::_interface_repository_id () const
+char const *POA_M2::M3::L3::_interface_repository_id () const
 {
   return "IDL:M2/M3/L3:1.0";
 }
@@ -883,7 +883,7 @@ POA_M2::M3::AMH_L4::op_skel (
     );
 }
 
-::CORBA::Boolean POA_M2::M3::AMH_L4::_is_a (const char* value)
+::CORBA::Boolean POA_M2::M3::AMH_L4::_is_a (char const *value)
 {
   return
     (
@@ -892,7 +892,7 @@ POA_M2::M3::AMH_L4::op_skel (
     );
 }
 
-const char* POA_M2::M3::AMH_L4::_interface_repository_id () const
+char const *POA_M2::M3::AMH_L4::_interface_repository_id () const
 {
   return "IDL:M2/M3/L4:1.0";
 }
@@ -1023,7 +1023,7 @@ void POA_M2::M3::L4::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_M2::M3::L4::_is_a (const char* value)
+::CORBA::Boolean POA_M2::M3::L4::_is_a (char const *value)
 {
   return
     (
@@ -1032,7 +1032,7 @@ void POA_M2::M3::L4::op_skel (
     );
 }
 
-const char* POA_M2::M3::L4::_interface_repository_id () const
+char const *POA_M2::M3::L4::_interface_repository_id () const
 {
   return "IDL:M2/M3/L4:1.0";
 }

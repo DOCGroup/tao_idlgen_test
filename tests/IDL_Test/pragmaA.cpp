@@ -424,7 +424,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     hello_ptr &_tao_elem)
 {
   return
@@ -566,7 +566,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_helloResponseHandler_ptr &_tao_elem)
 {
   return
@@ -624,7 +624,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_helloHandler_ptr &_tao_elem)
 {
   return
@@ -782,7 +782,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     goodbye_ptr &_tao_elem)
 {
   return
@@ -924,7 +924,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_goodbyeResponseHandler_ptr &_tao_elem)
 {
   return
@@ -982,7 +982,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_goodbyeHandler_ptr &_tao_elem)
 {
   return
@@ -1110,7 +1110,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     salutation::sayonara_ptr &_tao_elem)
 {
   return
@@ -1252,7 +1252,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     salutation::AMH_sayonaraResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1310,7 +1310,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     salutation::AMI_sayonaraHandler_ptr &_tao_elem)
 {
   return
@@ -1368,7 +1368,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     ciao_ptr &_tao_elem)
 {
   return
@@ -1510,7 +1510,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_ciaoResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1568,7 +1568,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_ciaoHandler_ptr &_tao_elem)
 {
   return
@@ -1626,7 +1626,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     aloha_ptr &_tao_elem)
 {
   return
@@ -1768,7 +1768,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_alohaResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1826,7 +1826,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_alohaHandler_ptr &_tao_elem)
 {
   return

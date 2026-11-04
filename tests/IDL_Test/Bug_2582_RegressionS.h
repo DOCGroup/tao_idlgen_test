@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_U8FJDK_H_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_U8FJDK_H_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_I7WJPX_H_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_I7WJPX_H_
 
 #include /**/ "ace/pre.h"
 
@@ -153,10 +153,10 @@ protected:
   POA_AMH_FieldDevice_T ();
 
 public:
-  POA_AMH_FieldDevice_T (const POA_AMH_FieldDevice_T& rhs);
+  POA_AMH_FieldDevice_T (POA_AMH_FieldDevice_T const &rhs);
   ~POA_AMH_FieldDevice_T () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -164,7 +164,7 @@ public:
 
   FieldDevice_T *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void getEncodingID_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -202,10 +202,10 @@ public:
   using _stub_ptr_type = ::FieldDevice_T_ptr;
   using _stub_var_type = ::FieldDevice_T_var;
 
-  POA_FieldDevice_T (const POA_FieldDevice_T& rhs) = default;
+  POA_FieldDevice_T (POA_FieldDevice_T const &rhs) = default;
   ~POA_FieldDevice_T () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -213,7 +213,7 @@ public:
 
   ::FieldDevice_T *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::EncodingID2_T getEncodingID () = 0;
 
   static void getEncodingID_skel (
@@ -287,10 +287,10 @@ public:
   using _stub_ptr_type = ::AMI_FieldDevice_THandler_ptr;
   using _stub_var_type = ::AMI_FieldDevice_THandler_var;
 
-  POA_AMI_FieldDevice_THandler (const POA_AMI_FieldDevice_THandler& rhs) = default;
+  POA_AMI_FieldDevice_THandler (POA_AMI_FieldDevice_THandler const &rhs) = default;
   ~POA_AMI_FieldDevice_THandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -298,7 +298,7 @@ public:
 
   ::AMI_FieldDevice_THandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void getEncodingID (
     ::EncodingID2_T ami_return_val) = 0;
 

@@ -198,7 +198,7 @@ TAO::Objref_Traits<A::AMI_Test>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::AMI_Test>::marshal (const A::AMI_Test_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::AMI_Test>::marshal (A::AMI_Test_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -556,7 +556,7 @@ A::AMI_Test::_tao_release (AMI_Test_ptr obj)
 }
 
 ::CORBA::Boolean
-A::AMI_Test::_is_a (const char *value)
+A::AMI_Test::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:A/AMI_Test:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -569,7 +569,7 @@ A::AMI_Test::_is_a (const char *value)
     }
 }
 
-const char* A::AMI_Test::_interface_repository_id () const
+char const *A::AMI_Test::_interface_repository_id () const
 {
   return "IDL:A/AMI_Test:1.0";
 }
@@ -614,7 +614,7 @@ TAO::Objref_Traits<A::AMI_AMI_TestHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::AMI_AMI_TestHandler>::marshal (const A::AMI_AMI_TestHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::AMI_AMI_TestHandler>::marshal (A::AMI_AMI_TestHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1200,7 +1200,7 @@ A::AMI_AMI_TestHandler::_tao_release (AMI_AMI_TestHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-A::AMI_AMI_TestHandler::_is_a (const char *value)
+A::AMI_AMI_TestHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:A/AMI_AMI_TestHandler:1.0") == 0 ||
@@ -1214,7 +1214,7 @@ A::AMI_AMI_TestHandler::_is_a (const char *value)
     }
 }
 
-const char* A::AMI_AMI_TestHandler::_interface_repository_id () const
+char const *A::AMI_AMI_TestHandler::_interface_repository_id () const
 {
   return "IDL:A/AMI_AMI_TestHandler:1.0";
 }
@@ -1259,7 +1259,7 @@ TAO::Objref_Traits<A::Test_Child>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::Test_Child>::marshal (const A::Test_Child_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::Test_Child>::marshal (A::Test_Child_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1368,7 +1368,7 @@ A::Test_Child::_tao_release (Test_Child_ptr obj)
 }
 
 ::CORBA::Boolean
-A::Test_Child::_is_a (const char *value)
+A::Test_Child::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:A/AMI_Test:1.0") == 0 ||
       std::strcmp (value, "IDL:A/Test_Child:1.0") == 0 ||
@@ -1382,7 +1382,7 @@ A::Test_Child::_is_a (const char *value)
     }
 }
 
-const char* A::Test_Child::_interface_repository_id () const
+char const *A::Test_Child::_interface_repository_id () const
 {
   return "IDL:A/Test_Child:1.0";
 }
@@ -1427,7 +1427,7 @@ TAO::Objref_Traits<A::AMI_Test_ChildHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::AMI_Test_ChildHandler>::marshal (const A::AMI_Test_ChildHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::AMI_Test_ChildHandler>::marshal (A::AMI_Test_ChildHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1595,7 +1595,7 @@ A::AMI_Test_ChildHandler::_tao_release (AMI_Test_ChildHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-A::AMI_Test_ChildHandler::_is_a (const char *value)
+A::AMI_Test_ChildHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:A/AMI_AMI_TestHandler:1.0") == 0 ||
@@ -1610,7 +1610,7 @@ A::AMI_Test_ChildHandler::_is_a (const char *value)
     }
 }
 
-const char* A::AMI_Test_ChildHandler::_interface_repository_id () const
+char const *A::AMI_Test_ChildHandler::_interface_repository_id () const
 {
   return "IDL:A/AMI_Test_ChildHandler:1.0";
 }
@@ -1746,7 +1746,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     A::AMI_Test_ptr &_tao_elem)
 {
   return
@@ -1804,7 +1804,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     A::AMI_AMI_TestHandler_ptr &_tao_elem)
 {
   return
@@ -1862,7 +1862,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     A::Test_Child_ptr &_tao_elem)
 {
   return
@@ -1920,7 +1920,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     A::AMI_Test_ChildHandler_ptr &_tao_elem)
 {
   return
@@ -1972,7 +1972,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const A::AMI_Test_ptr _tao_objref)
+    A::AMI_Test_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2001,7 +2001,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const A::AMI_AMI_TestHandler_ptr _tao_objref)
+    A::AMI_AMI_TestHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2030,7 +2030,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const A::Test_Child_ptr _tao_objref)
+    A::Test_Child_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2059,7 +2059,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const A::AMI_Test_ChildHandler_ptr _tao_objref)
+    A::AMI_Test_ChildHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

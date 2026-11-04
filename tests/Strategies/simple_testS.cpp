@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTS_DP1ZEO_CPP_
-#define _TAO_IDL_SIMPLE_TESTS_DP1ZEO_CPP_
+#ifndef _TAO_IDL_SIMPLE_TESTS_8XCU3V_CPP_
+#define _TAO_IDL_SIMPLE_TESTS_8XCU3V_CPP_
 
 #include "simple_testS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -182,7 +182,7 @@ void POA_Simple_Server::shutdown_skel (
                          );
 }
 
-::CORBA::Boolean POA_Simple_Server::_is_a (const char* value)
+::CORBA::Boolean POA_Simple_Server::_is_a (char const *value)
 {
   return
     (
@@ -191,7 +191,7 @@ void POA_Simple_Server::shutdown_skel (
     );
 }
 
-const char* POA_Simple_Server::_interface_repository_id () const
+char const *POA_Simple_Server::_interface_repository_id () const
 {
   return "IDL:Simple_Server:1.0";
 }

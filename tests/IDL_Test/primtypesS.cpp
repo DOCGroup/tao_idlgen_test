@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRIMTYPESS_T06GM7_CPP_
-#define _TAO_IDL_PRIMTYPESS_T06GM7_CPP_
+#ifndef _TAO_IDL_PRIMTYPESS_U23O30_CPP_
+#define _TAO_IDL_PRIMTYPESS_U23O30_CPP_
 
 #include "primtypesS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -285,7 +285,7 @@ POA_OldPrimTypes::AMH_ex1::mtypes_skel (
     );
 }
 
-::CORBA::Boolean POA_OldPrimTypes::AMH_ex1::_is_a (const char* value)
+::CORBA::Boolean POA_OldPrimTypes::AMH_ex1::_is_a (char const *value)
 {
   return
     (
@@ -294,7 +294,7 @@ POA_OldPrimTypes::AMH_ex1::mtypes_skel (
     );
 }
 
-const char* POA_OldPrimTypes::AMH_ex1::_interface_repository_id () const
+char const *POA_OldPrimTypes::AMH_ex1::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/ex1:1.0";
 }
@@ -922,7 +922,7 @@ void POA_OldPrimTypes::ex1::mtypes_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldPrimTypes::ex1::_is_a (const char* value)
+::CORBA::Boolean POA_OldPrimTypes::ex1::_is_a (char const *value)
 {
   return
     (
@@ -931,7 +931,7 @@ void POA_OldPrimTypes::ex1::mtypes_skel (
     );
 }
 
-const char* POA_OldPrimTypes::ex1::_interface_repository_id () const
+char const *POA_OldPrimTypes::ex1::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/ex1:1.0";
 }
@@ -1958,7 +1958,7 @@ void POA_OldPrimTypes::AMI_ex1Handler::mtypes_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldPrimTypes::AMI_ex1Handler::_is_a (const char* value)
+::CORBA::Boolean POA_OldPrimTypes::AMI_ex1Handler::_is_a (char const *value)
 {
   return
     (
@@ -1968,7 +1968,7 @@ void POA_OldPrimTypes::AMI_ex1Handler::mtypes_excep_skel (
     );
 }
 
-const char* POA_OldPrimTypes::AMI_ex1Handler::_interface_repository_id () const
+char const *POA_OldPrimTypes::AMI_ex1Handler::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/AMI_ex1Handler:1.0";
 }
@@ -2136,7 +2136,7 @@ POA_OldPrimTypes::AMH_ex2::mv_skel (
     );
 }
 
-::CORBA::Boolean POA_OldPrimTypes::AMH_ex2::_is_a (const char* value)
+::CORBA::Boolean POA_OldPrimTypes::AMH_ex2::_is_a (char const *value)
 {
   return
     (
@@ -2146,7 +2146,7 @@ POA_OldPrimTypes::AMH_ex2::mv_skel (
     );
 }
 
-const char* POA_OldPrimTypes::AMH_ex2::_interface_repository_id () const
+char const *POA_OldPrimTypes::AMH_ex2::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/ex2:1.0";
 }
@@ -2473,7 +2473,7 @@ void POA_OldPrimTypes::ex2::mv_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldPrimTypes::ex2::_is_a (const char* value)
+::CORBA::Boolean POA_OldPrimTypes::ex2::_is_a (char const *value)
 {
   return
     (
@@ -2483,7 +2483,7 @@ void POA_OldPrimTypes::ex2::mv_skel (
     );
 }
 
-const char* POA_OldPrimTypes::ex2::_interface_repository_id () const
+char const *POA_OldPrimTypes::ex2::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/ex2:1.0";
 }
@@ -3156,7 +3156,7 @@ void POA_OldPrimTypes::AMI_ex2Handler::mv_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldPrimTypes::AMI_ex2Handler::_is_a (const char* value)
+::CORBA::Boolean POA_OldPrimTypes::AMI_ex2Handler::_is_a (char const *value)
 {
   return
     (
@@ -3167,7 +3167,7 @@ void POA_OldPrimTypes::AMI_ex2Handler::mv_excep_skel (
     );
 }
 
-const char* POA_OldPrimTypes::AMI_ex2Handler::_interface_repository_id () const
+char const *POA_OldPrimTypes::AMI_ex2Handler::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/AMI_ex2Handler:1.0";
 }

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_UNIONS_R3Z1DE_CPP_
-#define _TAO_IDL_OLD_UNIONS_R3Z1DE_CPP_
+#ifndef _TAO_IDL_OLD_UNIONS_61F145_CPP_
+#define _TAO_IDL_OLD_UNIONS_61F145_CPP_
 
 #include "old_unionS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -121,7 +121,7 @@ POA_OldUnion::AMH_a::opA_skel (
     );
 }
 
-::CORBA::Boolean POA_OldUnion::AMH_a::_is_a (const char* value)
+::CORBA::Boolean POA_OldUnion::AMH_a::_is_a (char const *value)
 {
   return
     (
@@ -130,7 +130,7 @@ POA_OldUnion::AMH_a::opA_skel (
     );
 }
 
-const char* POA_OldUnion::AMH_a::_interface_repository_id () const
+char const *POA_OldUnion::AMH_a::_interface_repository_id () const
 {
   return "IDL:OldUnion/a:1.0";
 }
@@ -287,7 +287,7 @@ void POA_OldUnion::a::opA_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldUnion::a::_is_a (const char* value)
+::CORBA::Boolean POA_OldUnion::a::_is_a (char const *value)
 {
   return
     (
@@ -296,7 +296,7 @@ void POA_OldUnion::a::opA_skel (
     );
 }
 
-const char* POA_OldUnion::a::_interface_repository_id () const
+char const *POA_OldUnion::a::_interface_repository_id () const
 {
   return "IDL:OldUnion/a:1.0";
 }
@@ -564,7 +564,7 @@ void POA_OldUnion::AMI_aHandler::opA_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldUnion::AMI_aHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldUnion::AMI_aHandler::_is_a (char const *value)
 {
   return
     (
@@ -574,7 +574,7 @@ void POA_OldUnion::AMI_aHandler::opA_excep_skel (
     );
 }
 
-const char* POA_OldUnion::AMI_aHandler::_interface_repository_id () const
+char const *POA_OldUnion::AMI_aHandler::_interface_repository_id () const
 {
   return "IDL:OldUnion/AMI_aHandler:1.0";
 }

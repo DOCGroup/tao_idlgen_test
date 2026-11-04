@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2C_ZS3LKC_H_
-#define _TAO_IDL_REOPEN_INCLUDE2C_ZS3LKC_H_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2C_WYX596_H_
+#define _TAO_IDL_REOPEN_INCLUDE2C_WYX596_H_
 
 #include /**/ "ace/pre.h"
 
@@ -143,10 +143,10 @@ namespace A
       virtual void sendc_getX2 (
         ::A::B::AMI_X2Handler_ptr ami_handler);
 
-      ::CORBA::Boolean _is_a (const char *type_id) override;
-      const char* _interface_repository_id () const override;
-      static const char* _desc_repository_id ();
-      static const char* _desc_interface_name ();
+      ::CORBA::Boolean _is_a (char const *type_id) override;
+      char const *_interface_repository_id () const override;
+      static char const *_desc_repository_id ();
+      static char const *_desc_interface_name ();
       ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
@@ -167,9 +167,9 @@ namespace A
 
     private:
       // Private and unimplemented for concrete interfaces.
-      X2 (const X2 &) = delete;
+      X2 (X2 const &) = delete;
       X2 (X2 &&) = delete;
-      X2 &operator= (const X2 &) = delete;
+      X2 &operator= (X2 const &) = delete;
       X2 &operator= (X2 &&) = delete;
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_X2;
@@ -284,10 +284,10 @@ public:
   virtual void getX2_excep (
     ::A::B::AMH_X2ExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -298,9 +298,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_X2ResponseHandler (const AMH_X2ResponseHandler &) = delete;
+  AMH_X2ResponseHandler (AMH_X2ResponseHandler const &) = delete;
   AMH_X2ResponseHandler (AMH_X2ResponseHandler &&) = delete;
-  AMH_X2ResponseHandler &operator= (const AMH_X2ResponseHandler &) = delete;
+  AMH_X2ResponseHandler &operator= (AMH_X2ResponseHandler const &) = delete;
   AMH_X2ResponseHandler &operator= (AMH_X2ResponseHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_X2ResponseHandler;
@@ -348,10 +348,10 @@ public:
   virtual void getX2_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -372,9 +372,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_X2Handler (const AMI_X2Handler &) = delete;
+  AMI_X2Handler (AMI_X2Handler const &) = delete;
   AMI_X2Handler (AMI_X2Handler &&) = delete;
-  AMI_X2Handler &operator= (const AMI_X2Handler &) = delete;
+  AMI_X2Handler &operator= (AMI_X2Handler const &) = delete;
   AMI_X2Handler &operator= (AMI_X2Handler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_X2Handler;
@@ -576,7 +576,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, A::B::X2_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, A::B::X2_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, A::B::X2_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, A::B::X2_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -594,7 +594,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, A::B::AMH_X2ResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, A::B::AMH_X2ResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, A::B::AMH_X2ResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, A::B::AMH_X2ResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -603,7 +603,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, A::B::AMI_X2Handler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, A::B::AMI_X2Handler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, A::B::AMI_X2Handler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, A::B::AMI_X2Handler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -616,7 +616,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::B::X2_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::B::X2_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, A::B::X2_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -639,7 +639,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::B::AMI_X2Handler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::B::AMI_X2Handler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, A::B::AMI_X2Handler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_04KI1B_CPP_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_04KI1B_CPP_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_UWDIB6_CPP_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_UWDIB6_CPP_
 
 #include "sequence_anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -121,7 +121,7 @@ POA_AMH_seqTest::send_dozen_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_seqTest::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_seqTest::_is_a (char const *value)
 {
   return
     (
@@ -130,7 +130,7 @@ POA_AMH_seqTest::send_dozen_skel (
     );
 }
 
-const char* POA_AMH_seqTest::_interface_repository_id () const
+char const *POA_AMH_seqTest::_interface_repository_id () const
 {
   return "IDL:seqTest:1.0";
 }
@@ -276,7 +276,7 @@ void POA_seqTest::send_dozen_skel (
                          );
 }
 
-::CORBA::Boolean POA_seqTest::_is_a (const char* value)
+::CORBA::Boolean POA_seqTest::_is_a (char const *value)
 {
   return
     (
@@ -285,7 +285,7 @@ void POA_seqTest::send_dozen_skel (
     );
 }
 
-const char* POA_seqTest::_interface_repository_id () const
+char const *POA_seqTest::_interface_repository_id () const
 {
   return "IDL:seqTest:1.0";
 }
@@ -545,7 +545,7 @@ void POA_AMI_seqTestHandler::send_dozen_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_seqTestHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_seqTestHandler::_is_a (char const *value)
 {
   return
     (
@@ -555,7 +555,7 @@ void POA_AMI_seqTestHandler::send_dozen_excep_skel (
     );
 }
 
-const char* POA_AMI_seqTestHandler::_interface_repository_id () const
+char const *POA_AMI_seqTestHandler::_interface_repository_id () const
 {
   return "IDL:AMI_seqTestHandler:1.0";
 }

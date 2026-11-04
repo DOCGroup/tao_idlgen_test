@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_CONSTANTSS_ZA103H_H_
-#define _TAO_IDL_OLD_CONSTANTSS_ZA103H_H_
+#ifndef _TAO_IDL_OLD_CONSTANTSS_C7H8GW_H_
+#define _TAO_IDL_OLD_CONSTANTSS_C7H8GW_H_
 
 #include /**/ "ace/pre.h"
 
@@ -169,10 +169,10 @@ namespace POA_OldConstants
       AMH_A ();
 
     public:
-      AMH_A (const AMH_A& rhs);
+      AMH_A (AMH_A const &rhs);
       ~AMH_A () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -180,7 +180,7 @@ namespace POA_OldConstants
 
       OldConstants::M::A *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     static void foo_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -211,10 +211,10 @@ namespace POA_OldConstants
     using _stub_ptr_type = ::OldConstants::M::A_ptr;
     using _stub_var_type = ::OldConstants::M::A_var;
 
-    A (const A& rhs) = default;
+    A (A const &rhs) = default;
     ~A () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -222,7 +222,7 @@ namespace POA_OldConstants
 
     ::OldConstants::M::A *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual ::OldConstants::M::A::N foo (
       ::OldConstants::M::A::N x,
       ::OldConstants::M::A::N_out y,
@@ -287,10 +287,10 @@ namespace POA_OldConstants
     using _stub_ptr_type = ::OldConstants::M::AMI_AHandler_ptr;
     using _stub_var_type = ::OldConstants::M::AMI_AHandler_var;
 
-    AMI_AHandler (const AMI_AHandler& rhs) = default;
+    AMI_AHandler (AMI_AHandler const &rhs) = default;
     ~AMI_AHandler () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -298,7 +298,7 @@ namespace POA_OldConstants
 
     ::OldConstants::M::AMI_AHandler *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual void foo (
       ::OldConstants::M::A::N ami_return_val,
       ::OldConstants::M::A::N y,

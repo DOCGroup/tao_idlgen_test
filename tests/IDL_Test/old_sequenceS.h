@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_SEQUENCES_00VZ01_H_
-#define _TAO_IDL_OLD_SEQUENCES_00VZ01_H_
+#ifndef _TAO_IDL_OLD_SEQUENCES_WHBRS3_H_
+#define _TAO_IDL_OLD_SEQUENCES_WHBRS3_H_
 
 #include /**/ "ace/pre.h"
 
@@ -247,10 +247,10 @@ protected:
   POA_AMH_TestSeq ();
 
 public:
-  POA_AMH_TestSeq (const POA_AMH_TestSeq& rhs);
+  POA_AMH_TestSeq (POA_AMH_TestSeq const &rhs);
   ~POA_AMH_TestSeq () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -258,7 +258,7 @@ public:
 
   TestSeq *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void _get_fattr_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -297,10 +297,10 @@ public:
   using _stub_ptr_type = ::TestSeq_ptr;
   using _stub_var_type = ::TestSeq_var;
 
-  POA_TestSeq (const POA_TestSeq& rhs) = default;
+  POA_TestSeq (POA_TestSeq const &rhs) = default;
   ~POA_TestSeq () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -308,7 +308,7 @@ public:
 
   ::TestSeq *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::f_unbounded * fattr () = 0;
 
   static void _get_fattr_skel (
@@ -382,10 +382,10 @@ public:
   using _stub_ptr_type = ::AMI_TestSeqHandler_ptr;
   using _stub_var_type = ::AMI_TestSeqHandler_var;
 
-  POA_AMI_TestSeqHandler (const POA_AMI_TestSeqHandler& rhs) = default;
+  POA_AMI_TestSeqHandler (POA_AMI_TestSeqHandler const &rhs) = default;
   ~POA_AMI_TestSeqHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -393,7 +393,7 @@ public:
 
   ::AMI_TestSeqHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void get_fattr (
     ::f_unbounded const & ami_return_val) = 0;
 

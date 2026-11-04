@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_CONSTANTSS_UC524O_H_
-#define _TAO_IDL_CONSTANTSS_UC524O_H_
+#ifndef _TAO_IDL_CONSTANTSS_0ZKT3G_H_
+#define _TAO_IDL_CONSTANTSS_0ZKT3G_H_
 
 #include /**/ "ace/pre.h"
 
@@ -174,10 +174,10 @@ namespace POA_ClassConstants
     AMH_Iface ();
 
   public:
-    AMH_Iface (const AMH_Iface& rhs);
+    AMH_Iface (AMH_Iface const &rhs);
     ~AMH_Iface () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -185,7 +185,7 @@ namespace POA_ClassConstants
 
     ClassConstants::Iface *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 class Iface;
@@ -205,10 +205,10 @@ public:
   using _stub_ptr_type = ::ClassConstants::Iface_ptr;
   using _stub_var_type = ::ClassConstants::Iface_var;
 
-  Iface (const Iface& rhs) = default;
+  Iface (Iface const &rhs) = default;
   ~Iface () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -216,7 +216,7 @@ public:
 
   ::ClassConstants::Iface *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -262,10 +262,10 @@ public:
   using _stub_ptr_type = ::ClassConstants::AMI_IfaceHandler_ptr;
   using _stub_var_type = ::ClassConstants::AMI_IfaceHandler_var;
 
-  AMI_IfaceHandler (const AMI_IfaceHandler& rhs) = default;
+  AMI_IfaceHandler (AMI_IfaceHandler const &rhs) = default;
   ~AMI_IfaceHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -273,7 +273,7 @@ public:
 
   ::ClassConstants::AMI_IfaceHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

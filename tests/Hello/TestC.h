@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTC_CXDRMQ_H_
-#define _TAO_IDL_TESTC_CXDRMQ_H_
+#ifndef _TAO_IDL_TESTC_BG548V_H_
+#define _TAO_IDL_TESTC_BG548V_H_
 
 #include /**/ "ace/pre.h"
 
@@ -97,8 +97,8 @@ namespace Test
 
     virtual void shutdown ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -119,9 +119,9 @@ namespace Test
 
   private:
     // Private and unimplemented for concrete interfaces.
-    Hello (const Hello &) = delete;
+    Hello (Hello const &) = delete;
     Hello (Hello &&) = delete;
-    Hello &operator= (const Hello &) = delete;
+    Hello &operator= (Hello const &) = delete;
     Hello &operator= (Hello &&) = delete;
   };
 
@@ -176,7 +176,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::Hello_ptr );
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::Hello_ptr const);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::Hello_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

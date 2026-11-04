@@ -645,7 +645,7 @@ TAO::Objref_Traits<TestSeq>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<TestSeq>::marshal (const TestSeq_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<TestSeq>::marshal (TestSeq_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -874,7 +874,7 @@ TestSeq::_tao_release (TestSeq_ptr obj)
 }
 
 ::CORBA::Boolean
-TestSeq::_is_a (const char *value)
+TestSeq::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:TestSeq:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -887,17 +887,17 @@ TestSeq::_is_a (const char *value)
     }
 }
 
-const char* TestSeq::_interface_repository_id () const
+char const *TestSeq::_interface_repository_id () const
 {
   return "IDL:TestSeq:1.0";
 }
 
-const char* TestSeq::_desc_repository_id ()
+char const *TestSeq::_desc_repository_id ()
 {
   return "IDL:TestSeq:1.0";
 }
 
-const char* TestSeq::_desc_interface_name ()
+char const *TestSeq::_desc_interface_name ()
 {
   return "TestSeq";
 }
@@ -1119,7 +1119,7 @@ TAO::Objref_Traits<AMH_TestSeqResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_TestSeqResponseHandler>::marshal (const AMH_TestSeqResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_TestSeqResponseHandler>::marshal (AMH_TestSeqResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1173,7 +1173,7 @@ AMH_TestSeqResponseHandler::_tao_release (AMH_TestSeqResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMH_TestSeqResponseHandler::_is_a (const char *value)
+AMH_TestSeqResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_TestSeqResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -1187,17 +1187,17 @@ AMH_TestSeqResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* AMH_TestSeqResponseHandler::_interface_repository_id () const
+char const *AMH_TestSeqResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_TestSeqResponseHandler:1.0";
 }
 
-const char* AMH_TestSeqResponseHandler::_desc_repository_id ()
+char const *AMH_TestSeqResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_TestSeqResponseHandler:1.0";
 }
 
-const char* AMH_TestSeqResponseHandler::_desc_interface_name ()
+char const *AMH_TestSeqResponseHandler::_desc_interface_name ()
 {
   return "AMH_TestSeqResponseHandler";
 }
@@ -1239,7 +1239,7 @@ TAO::Objref_Traits<AMI_TestSeqHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_TestSeqHandler>::marshal (const AMI_TestSeqHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_TestSeqHandler>::marshal (AMI_TestSeqHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1530,7 +1530,7 @@ AMI_TestSeqHandler::_tao_release (AMI_TestSeqHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_TestSeqHandler::_is_a (const char *value)
+AMI_TestSeqHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_TestSeqHandler:1.0") == 0 ||
@@ -1544,17 +1544,17 @@ AMI_TestSeqHandler::_is_a (const char *value)
     }
 }
 
-const char* AMI_TestSeqHandler::_interface_repository_id () const
+char const *AMI_TestSeqHandler::_interface_repository_id () const
 {
   return "IDL:AMI_TestSeqHandler:1.0";
 }
 
-const char* AMI_TestSeqHandler::_desc_repository_id ()
+char const *AMI_TestSeqHandler::_desc_repository_id ()
 {
   return "IDL:AMI_TestSeqHandler:1.0";
 }
 
-const char* AMI_TestSeqHandler::_desc_interface_name ()
+char const *AMI_TestSeqHandler::_desc_interface_name ()
 {
   return "AMI_TestSeqHandler";
 }
@@ -2039,7 +2039,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     TestSeq_ptr &_tao_elem)
 {
   return
@@ -2222,7 +2222,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_TestSeqResponseHandler_ptr &_tao_elem)
 {
   return
@@ -2280,7 +2280,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_TestSeqHandler_ptr &_tao_elem)
 {
   return
@@ -2580,7 +2580,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const TestSeq_ptr _tao_objref)
+    TestSeq_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2672,7 +2672,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const AMI_TestSeqHandler_ptr _tao_objref)
+    AMI_TestSeqHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

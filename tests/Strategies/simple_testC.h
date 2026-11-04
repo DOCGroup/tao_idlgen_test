@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLE_TESTC_HZV7AX_H_
-#define _TAO_IDL_SIMPLE_TESTC_HZV7AX_H_
+#ifndef _TAO_IDL_SIMPLE_TESTC_AIKU2A_H_
+#define _TAO_IDL_SIMPLE_TESTC_AIKU2A_H_
 
 #include /**/ "ace/pre.h"
 
@@ -94,8 +94,8 @@ public:
 
   virtual void shutdown ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -116,9 +116,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  Simple_Server (const Simple_Server &) = delete;
+  Simple_Server (Simple_Server const &) = delete;
   Simple_Server (Simple_Server &&) = delete;
-  Simple_Server &operator= (const Simple_Server &) = delete;
+  Simple_Server &operator= (Simple_Server const &) = delete;
   Simple_Server &operator= (Simple_Server &&) = delete;
 };
 
@@ -171,7 +171,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Simple_Server_ptr );
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, Simple_Server_ptr const);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Simple_Server_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

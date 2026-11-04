@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GENERIC_OBJECTC_DPPR3Z_H_
-#define _TAO_IDL_GENERIC_OBJECTC_DPPR3Z_H_
+#ifndef _TAO_IDL_GENERIC_OBJECTC_A508UR_H_
+#define _TAO_IDL_GENERIC_OBJECTC_A508UR_H_
 
 #include /**/ "ace/pre.h"
 
@@ -165,10 +165,10 @@ public:
     ::CORBA::Object_ptr inarg,
     ::CORBA::Object_ptr inoutarg);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -189,9 +189,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  generic (const generic &) = delete;
+  generic (generic const &) = delete;
   generic (generic &&) = delete;
-  generic &operator= (const generic &) = delete;
+  generic &operator= (generic const &) = delete;
   generic &operator= (generic &&) = delete;
 };
 
@@ -306,10 +306,10 @@ public:
   virtual void op_excep (
     ::AMH_genericExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -320,9 +320,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_genericResponseHandler (const AMH_genericResponseHandler &) = delete;
+  AMH_genericResponseHandler (AMH_genericResponseHandler const &) = delete;
   AMH_genericResponseHandler (AMH_genericResponseHandler &&) = delete;
-  AMH_genericResponseHandler &operator= (const AMH_genericResponseHandler &) = delete;
+  AMH_genericResponseHandler &operator= (AMH_genericResponseHandler const &) = delete;
   AMH_genericResponseHandler &operator= (AMH_genericResponseHandler &&) = delete;
 };
 
@@ -371,10 +371,10 @@ public:
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -395,9 +395,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_genericHandler (const AMI_genericHandler &) = delete;
+  AMI_genericHandler (AMI_genericHandler const &) = delete;
   AMI_genericHandler (AMI_genericHandler &&) = delete;
-  AMI_genericHandler &operator= (const AMI_genericHandler &) = delete;
+  AMI_genericHandler &operator= (AMI_genericHandler const &) = delete;
   AMI_genericHandler &operator= (AMI_genericHandler &&) = delete;
 };
 
@@ -599,7 +599,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const generic_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, generic_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, generic_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -622,7 +622,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_genericHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMI_genericHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_genericHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

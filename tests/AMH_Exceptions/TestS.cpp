@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTS_2WTKWL_CPP_
-#define _TAO_IDL_TESTS_2WTKWL_CPP_
+#ifndef _TAO_IDL_TESTS_9X6BHC_CPP_
+#define _TAO_IDL_TESTS_9X6BHC_CPP_
 
 #include "TestS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -153,7 +153,7 @@ POA_Test::AMH_Roundtrip::shutdown_skel (
     );
 }
 
-::CORBA::Boolean POA_Test::AMH_Roundtrip::_is_a (const char* value)
+::CORBA::Boolean POA_Test::AMH_Roundtrip::_is_a (char const *value)
 {
   return
     (
@@ -162,7 +162,7 @@ POA_Test::AMH_Roundtrip::shutdown_skel (
     );
 }
 
-const char* POA_Test::AMH_Roundtrip::_interface_repository_id () const
+char const *POA_Test::AMH_Roundtrip::_interface_repository_id () const
 {
   return "IDL:Test/Roundtrip:1.0";
 }
@@ -349,7 +349,7 @@ void POA_Test::Roundtrip::shutdown_skel (
                          );
 }
 
-::CORBA::Boolean POA_Test::Roundtrip::_is_a (const char* value)
+::CORBA::Boolean POA_Test::Roundtrip::_is_a (char const *value)
 {
   return
     (
@@ -358,7 +358,7 @@ void POA_Test::Roundtrip::shutdown_skel (
     );
 }
 
-const char* POA_Test::Roundtrip::_interface_repository_id () const
+char const *POA_Test::Roundtrip::_interface_repository_id () const
 {
   return "IDL:Test/Roundtrip:1.0";
 }

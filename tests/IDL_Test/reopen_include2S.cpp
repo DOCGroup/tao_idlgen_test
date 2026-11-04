@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_REOPEN_INCLUDE2S_WM65GY_CPP_
-#define _TAO_IDL_REOPEN_INCLUDE2S_WM65GY_CPP_
+#ifndef _TAO_IDL_REOPEN_INCLUDE2S_EHZ7JA_CPP_
+#define _TAO_IDL_REOPEN_INCLUDE2S_EHZ7JA_CPP_
 
 #include "reopen_include2S.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -112,7 +112,7 @@ POA_A::B::AMH_X2::getX2_skel (
     );
 }
 
-::CORBA::Boolean POA_A::B::AMH_X2::_is_a (const char* value)
+::CORBA::Boolean POA_A::B::AMH_X2::_is_a (char const *value)
 {
   return
     (
@@ -121,7 +121,7 @@ POA_A::B::AMH_X2::getX2_skel (
     );
 }
 
-const char* POA_A::B::AMH_X2::_interface_repository_id () const
+char const *POA_A::B::AMH_X2::_interface_repository_id () const
 {
   return "IDL:A/B/X2:1.0";
 }
@@ -272,7 +272,7 @@ void POA_A::B::X2::getX2_skel (
                          );
 }
 
-::CORBA::Boolean POA_A::B::X2::_is_a (const char* value)
+::CORBA::Boolean POA_A::B::X2::_is_a (char const *value)
 {
   return
     (
@@ -281,7 +281,7 @@ void POA_A::B::X2::getX2_skel (
     );
 }
 
-const char* POA_A::B::X2::_interface_repository_id () const
+char const *POA_A::B::X2::_interface_repository_id () const
 {
   return "IDL:A/B/X2:1.0";
 }
@@ -557,7 +557,7 @@ void POA_A::B::AMI_X2Handler::getX2_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_A::B::AMI_X2Handler::_is_a (const char* value)
+::CORBA::Boolean POA_A::B::AMI_X2Handler::_is_a (char const *value)
 {
   return
     (
@@ -567,7 +567,7 @@ void POA_A::B::AMI_X2Handler::getX2_excep_skel (
     );
 }
 
-const char* POA_A::B::AMI_X2Handler::_interface_repository_id () const
+char const *POA_A::B::AMI_X2Handler::_interface_repository_id () const
 {
   return "IDL:A/B/AMI_X2Handler:1.0";
 }

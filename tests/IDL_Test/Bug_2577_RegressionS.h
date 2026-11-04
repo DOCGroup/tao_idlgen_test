@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_UANW42_H_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_UANW42_H_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_A2TAOU_H_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_A2TAOU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -160,10 +160,10 @@ protected:
   POA_AMH_User_T ();
 
 public:
-  POA_AMH_User_T (const POA_AMH_User_T& rhs);
+  POA_AMH_User_T (POA_AMH_User_T const &rhs);
   ~POA_AMH_User_T () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -171,7 +171,7 @@ public:
 
   User_T *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void getLoginTime_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -200,10 +200,10 @@ public:
   using _stub_ptr_type = ::User_T_ptr;
   using _stub_var_type = ::User_T_var;
 
-  POA_User_T (const POA_User_T& rhs) = default;
+  POA_User_T (POA_User_T const &rhs) = default;
   ~POA_User_T () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -211,7 +211,7 @@ public:
 
   ::User_T *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::DateTime_T getLoginTime () = 0;
 
   static void getLoginTime_skel (
@@ -271,10 +271,10 @@ public:
   using _stub_ptr_type = ::AMI_User_THandler_ptr;
   using _stub_var_type = ::AMI_User_THandler_var;
 
-  POA_AMI_User_THandler (const POA_AMI_User_THandler& rhs) = default;
+  POA_AMI_User_THandler (POA_AMI_User_THandler const &rhs) = default;
   ~POA_AMI_User_THandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -282,7 +282,7 @@ public:
 
   ::AMI_User_THandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void getLoginTime (
     ::DateTime_T const & ami_return_val) = 0;
 

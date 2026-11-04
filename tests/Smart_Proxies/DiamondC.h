@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIAMONDC_L2K2LA_H_
-#define _TAO_IDL_DIAMONDC_L2K2LA_H_
+#ifndef _TAO_IDL_DIAMONDC_5YM5RC_H_
+#define _TAO_IDL_DIAMONDC_5YM5RC_H_
 
 #include /**/ "ace/pre.h"
 
@@ -97,8 +97,8 @@ namespace Diamond
 
     virtual char * shape ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -119,9 +119,9 @@ namespace Diamond
 
   private:
     // Private and unimplemented for concrete interfaces.
-    Top (const Top &) = delete;
+    Top (Top const &) = delete;
     Top (Top &&) = delete;
-    Top &operator= (const Top &) = delete;
+    Top &operator= (Top const &) = delete;
     Top &operator= (Top &&) = delete;
   };
 
@@ -157,7 +157,7 @@ class MY_Stub_Export TAO_Diamond_Top_Proxy_Factory_Adapter
       TAO_Diamond_Top_Proxy_Factory_Adapter ();
       ~TAO_Diamond_Top_Proxy_Factory_Adapter ();
       TAO_Diamond_Top_Proxy_Factory_Adapter &operator= (
-          const TAO_Diamond_Top_Proxy_Factory_Adapter &
+          TAO_Diamond_Top_Proxy_Factory_Adapter const &
         );
       TAO_Diamond_Top_Default_Proxy_Factory *proxy_factory_;
       bool one_shot_factory_;
@@ -212,8 +212,8 @@ class MY_Stub_Export TAO_Diamond_Top_Proxy_Factory_Adapter
 
       virtual char * color ();
 
-      ::CORBA::Boolean _is_a (const char *type_id) override;
-      const char* _interface_repository_id () const override;
+      ::CORBA::Boolean _is_a (char const *type_id) override;
+      char const *_interface_repository_id () const override;
       ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
@@ -234,9 +234,9 @@ class MY_Stub_Export TAO_Diamond_Top_Proxy_Factory_Adapter
 
     private:
       // Private and unimplemented for concrete interfaces.
-      Left (const Left &) = delete;
+      Left (Left const &) = delete;
       Left (Left &&) = delete;
-      Left &operator= (const Left &) = delete;
+      Left &operator= (Left const &) = delete;
       Left &operator= (Left &&) = delete;
     };
 
@@ -272,7 +272,7 @@ class MY_Stub_Export TAO_Diamond_Left_Proxy_Factory_Adapter
         TAO_Diamond_Left_Proxy_Factory_Adapter ();
         ~TAO_Diamond_Left_Proxy_Factory_Adapter ();
         TAO_Diamond_Left_Proxy_Factory_Adapter &operator= (
-            const TAO_Diamond_Left_Proxy_Factory_Adapter &
+            TAO_Diamond_Left_Proxy_Factory_Adapter const &
           );
         TAO_Diamond_Left_Default_Proxy_Factory *proxy_factory_;
         bool one_shot_factory_;
@@ -327,8 +327,8 @@ class MY_Stub_Export TAO_Diamond_Left_Proxy_Factory_Adapter
 
         virtual ::CORBA::Long width ();
 
-        ::CORBA::Boolean _is_a (const char *type_id) override;
-        const char* _interface_repository_id () const override;
+        ::CORBA::Boolean _is_a (char const *type_id) override;
+        char const *_interface_repository_id () const override;
         ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
       protected:
@@ -349,9 +349,9 @@ class MY_Stub_Export TAO_Diamond_Left_Proxy_Factory_Adapter
 
       private:
         // Private and unimplemented for concrete interfaces.
-        Right (const Right &) = delete;
+        Right (Right const &) = delete;
         Right (Right &&) = delete;
-        Right &operator= (const Right &) = delete;
+        Right &operator= (Right const &) = delete;
         Right &operator= (Right &&) = delete;
       };
 
@@ -387,7 +387,7 @@ class MY_Stub_Export TAO_Diamond_Right_Proxy_Factory_Adapter
           TAO_Diamond_Right_Proxy_Factory_Adapter ();
           ~TAO_Diamond_Right_Proxy_Factory_Adapter ();
           TAO_Diamond_Right_Proxy_Factory_Adapter &operator= (
-              const TAO_Diamond_Right_Proxy_Factory_Adapter &
+              TAO_Diamond_Right_Proxy_Factory_Adapter const &
             );
           TAO_Diamond_Right_Default_Proxy_Factory *proxy_factory_;
           bool one_shot_factory_;
@@ -443,8 +443,8 @@ class MY_Stub_Export TAO_Diamond_Right_Proxy_Factory_Adapter
 
           virtual char * name ();
 
-          ::CORBA::Boolean _is_a (const char *type_id) override;
-          const char* _interface_repository_id () const override;
+          ::CORBA::Boolean _is_a (char const *type_id) override;
+          char const *_interface_repository_id () const override;
           ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
         protected:
@@ -465,9 +465,9 @@ class MY_Stub_Export TAO_Diamond_Right_Proxy_Factory_Adapter
 
         private:
           // Private and unimplemented for concrete interfaces.
-          Buttom (const Buttom &) = delete;
+          Buttom (Buttom const &) = delete;
           Buttom (Buttom &&) = delete;
-          Buttom &operator= (const Buttom &) = delete;
+          Buttom &operator= (Buttom const &) = delete;
           Buttom &operator= (Buttom &&) = delete;
         };
 
@@ -503,7 +503,7 @@ class MY_Stub_Export TAO_Diamond_Buttom_Proxy_Factory_Adapter
             TAO_Diamond_Buttom_Proxy_Factory_Adapter ();
             ~TAO_Diamond_Buttom_Proxy_Factory_Adapter ();
             TAO_Diamond_Buttom_Proxy_Factory_Adapter &operator= (
-                const TAO_Diamond_Buttom_Proxy_Factory_Adapter &
+                TAO_Diamond_Buttom_Proxy_Factory_Adapter const &
               );
             TAO_Diamond_Buttom_Default_Proxy_Factory *proxy_factory_;
             bool one_shot_factory_;
@@ -669,28 +669,28 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Diamond::Top_ptr );
+        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Diamond::Top_ptr const);
         MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Top_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Diamond::Left_ptr );
+        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Diamond::Left_ptr const);
         MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Left_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Diamond::Right_ptr );
+        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Diamond::Right_ptr const);
         MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Right_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Diamond::Buttom_ptr );
+        MY_Stub_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Diamond::Buttom_ptr const);
         MY_Stub_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Diamond::Buttom_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2583_REGRESSIONC_MSDXP3_H_
-#define _TAO_IDL_BUG_2583_REGRESSIONC_MSDXP3_H_
+#ifndef _TAO_IDL_BUG_2583_REGRESSIONC_9I1GRF_H_
+#define _TAO_IDL_BUG_2583_REGRESSIONC_9I1GRF_H_
 
 #include /**/ "ace/pre.h"
 
@@ -95,10 +95,10 @@ namespace Test
     static DynAny_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static DynAny_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -109,9 +109,9 @@ namespace Test
 
   private:
     // Private and unimplemented for concrete interfaces.
-    DynAny (const DynAny &) = delete;
+    DynAny (DynAny const &) = delete;
     DynAny (DynAny &&) = delete;
-    DynAny &operator= (const DynAny &) = delete;
+    DynAny &operator= (DynAny const &) = delete;
     DynAny &operator= (DynAny &&) = delete;
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DynAny;
@@ -243,7 +243,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Test::DynAny_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Test::DynAny_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::DynAny_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Test::DynAny_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

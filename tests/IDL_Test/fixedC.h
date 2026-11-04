@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDC_II44EF_H_
-#define _TAO_IDL_FIXEDC_II44EF_H_
+#ifndef _TAO_IDL_FIXEDC_SHOY5L_H_
+#define _TAO_IDL_FIXEDC_SHOY5L_H_
 
 #include /**/ "ace/pre.h"
 
@@ -140,10 +140,10 @@ namespace FixedPoint
     virtual void sendc_get_rate (
       ::FixedPoint::AMI_FixedOperationsHandler_ptr ami_handler);
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -164,9 +164,9 @@ namespace FixedPoint
 
   private:
     // Private and unimplemented for concrete interfaces.
-    FixedOperations (const FixedOperations &) = delete;
+    FixedOperations (FixedOperations const &) = delete;
     FixedOperations (FixedOperations &&) = delete;
-    FixedOperations &operator= (const FixedOperations &) = delete;
+    FixedOperations &operator= (FixedOperations const &) = delete;
     FixedOperations &operator= (FixedOperations &&) = delete;
   };
 
@@ -294,10 +294,10 @@ public:
   virtual void set_rate_excep (
     ::FixedPoint::AMH_FixedOperationsExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -308,9 +308,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_FixedOperationsResponseHandler (const AMH_FixedOperationsResponseHandler &) = delete;
+  AMH_FixedOperationsResponseHandler (AMH_FixedOperationsResponseHandler const &) = delete;
   AMH_FixedOperationsResponseHandler (AMH_FixedOperationsResponseHandler &&) = delete;
-  AMH_FixedOperationsResponseHandler &operator= (const AMH_FixedOperationsResponseHandler &) = delete;
+  AMH_FixedOperationsResponseHandler &operator= (AMH_FixedOperationsResponseHandler const &) = delete;
   AMH_FixedOperationsResponseHandler &operator= (AMH_FixedOperationsResponseHandler &&) = delete;
 };
 
@@ -368,10 +368,10 @@ public:
   virtual void set_rate_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -392,9 +392,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_FixedOperationsHandler (const AMI_FixedOperationsHandler &) = delete;
+  AMI_FixedOperationsHandler (AMI_FixedOperationsHandler const &) = delete;
   AMI_FixedOperationsHandler (AMI_FixedOperationsHandler &&) = delete;
-  AMI_FixedOperationsHandler &operator= (const AMI_FixedOperationsHandler &) = delete;
+  AMI_FixedOperationsHandler &operator= (AMI_FixedOperationsHandler const &) = delete;
   AMI_FixedOperationsHandler &operator= (AMI_FixedOperationsHandler &&) = delete;
 };
 using AmountAlias = ::ACE_CDR::Fixed;
@@ -596,7 +596,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const FixedPoint::FixedOperations_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, FixedPoint::FixedOperations_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, FixedPoint::FixedOperations_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -619,7 +619,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const FixedPoint::AMI_FixedOperationsHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, FixedPoint::AMI_FixedOperationsHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, FixedPoint::AMI_FixedOperationsHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

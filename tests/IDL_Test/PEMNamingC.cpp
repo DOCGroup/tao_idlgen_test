@@ -389,7 +389,7 @@ TAO::Objref_Traits<Plesk::Naming::ObjectResolver>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Plesk::Naming::ObjectResolver>::marshal (const Plesk::Naming::ObjectResolver_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Plesk::Naming::ObjectResolver>::marshal (Plesk::Naming::ObjectResolver_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -622,7 +622,7 @@ Plesk::Naming::ObjectResolver::_tao_release (ObjectResolver_ptr obj)
 }
 
 ::CORBA::Boolean
-Plesk::Naming::ObjectResolver::_is_a (const char *value)
+Plesk::Naming::ObjectResolver::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Plesk/Naming/ObjectResolver:1.2") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -635,17 +635,17 @@ Plesk::Naming::ObjectResolver::_is_a (const char *value)
     }
 }
 
-const char* Plesk::Naming::ObjectResolver::_interface_repository_id () const
+char const *Plesk::Naming::ObjectResolver::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
 
-const char* Plesk::Naming::ObjectResolver::_desc_repository_id ()
+char const *Plesk::Naming::ObjectResolver::_desc_repository_id ()
 {
   return "IDL:Plesk/Naming/ObjectResolver:1.2";
 }
 
-const char* Plesk::Naming::ObjectResolver::_desc_interface_name ()
+char const *Plesk::Naming::ObjectResolver::_desc_interface_name ()
 {
   return "ObjectResolver";
 }
@@ -881,7 +881,7 @@ TAO::Objref_Traits<Plesk::Naming::AMH_ObjectResolverResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Plesk::Naming::AMH_ObjectResolverResponseHandler>::marshal (const Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Plesk::Naming::AMH_ObjectResolverResponseHandler>::marshal (Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -935,7 +935,7 @@ Plesk::Naming::AMH_ObjectResolverResponseHandler::_tao_release (AMH_ObjectResolv
 }
 
 ::CORBA::Boolean
-Plesk::Naming::AMH_ObjectResolverResponseHandler::_is_a (const char *value)
+Plesk::Naming::AMH_ObjectResolverResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Plesk/Naming/AMH_ObjectResolverResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -949,17 +949,17 @@ Plesk::Naming::AMH_ObjectResolverResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* Plesk::Naming::AMH_ObjectResolverResponseHandler::_interface_repository_id () const
+char const *Plesk::Naming::AMH_ObjectResolverResponseHandler::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/AMH_ObjectResolverResponseHandler:1.0";
 }
 
-const char* Plesk::Naming::AMH_ObjectResolverResponseHandler::_desc_repository_id ()
+char const *Plesk::Naming::AMH_ObjectResolverResponseHandler::_desc_repository_id ()
 {
   return "IDL:Plesk/Naming/AMH_ObjectResolverResponseHandler:1.0";
 }
 
-const char* Plesk::Naming::AMH_ObjectResolverResponseHandler::_desc_interface_name ()
+char const *Plesk::Naming::AMH_ObjectResolverResponseHandler::_desc_interface_name ()
 {
   return "AMH_ObjectResolverResponseHandler";
 }
@@ -1008,7 +1008,7 @@ TAO::Objref_Traits<Plesk::Naming::AMI_ObjectResolverHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Plesk::Naming::AMI_ObjectResolverHandler>::marshal (const Plesk::Naming::AMI_ObjectResolverHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Plesk::Naming::AMI_ObjectResolverHandler>::marshal (Plesk::Naming::AMI_ObjectResolverHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1405,7 +1405,7 @@ Plesk::Naming::AMI_ObjectResolverHandler::_tao_release (AMI_ObjectResolverHandle
 }
 
 ::CORBA::Boolean
-Plesk::Naming::AMI_ObjectResolverHandler::_is_a (const char *value)
+Plesk::Naming::AMI_ObjectResolverHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0") == 0 ||
@@ -1419,17 +1419,17 @@ Plesk::Naming::AMI_ObjectResolverHandler::_is_a (const char *value)
     }
 }
 
-const char* Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_id () const
+char const *Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_id () const
 {
   return "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0";
 }
 
-const char* Plesk::Naming::AMI_ObjectResolverHandler::_desc_repository_id ()
+char const *Plesk::Naming::AMI_ObjectResolverHandler::_desc_repository_id ()
 {
   return "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0";
 }
 
-const char* Plesk::Naming::AMI_ObjectResolverHandler::_desc_interface_name ()
+char const *Plesk::Naming::AMI_ObjectResolverHandler::_desc_interface_name ()
 {
   return "AMI_ObjectResolverHandler";
 }
@@ -1736,7 +1736,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Plesk::Naming::ObjectResolver_ptr &_tao_elem)
 {
   return
@@ -1878,7 +1878,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1936,7 +1936,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Plesk::Naming::AMI_ObjectResolverHandler_ptr &_tao_elem)
 {
   return
@@ -2089,7 +2089,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Plesk::Naming::ObjectResolver_ptr _tao_objref)
+    Plesk::Naming::ObjectResolver_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2181,7 +2181,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Plesk::Naming::AMI_ObjectResolverHandler_ptr _tao_objref)
+    Plesk::Naming::AMI_ObjectResolverHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

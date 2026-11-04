@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_NESTED_SCOPES_G9FTFR_H_
-#define _TAO_IDL_NESTED_SCOPES_G9FTFR_H_
+#ifndef _TAO_IDL_NESTED_SCOPES_2UJT4X_H_
+#define _TAO_IDL_NESTED_SCOPES_2UJT4X_H_
 
 #include /**/ "ace/pre.h"
 
@@ -568,10 +568,10 @@ namespace POA_i_skip
       AMH_i_skip ();
 
     public:
-      AMH_i_skip (const AMH_i_skip& rhs);
+      AMH_i_skip (AMH_i_skip const &rhs);
       ~AMH_i_skip () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -579,7 +579,7 @@ namespace POA_i_skip
 
       i_skip::i_hump::i_skip *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   class i_skip;
@@ -599,10 +599,10 @@ namespace POA_i_skip
     using _stub_ptr_type = ::i_skip::i_hump::i_skip_ptr;
     using _stub_var_type = ::i_skip::i_hump::i_skip_var;
 
-    i_skip (const i_skip& rhs) = default;
+    i_skip (i_skip const &rhs) = default;
     ~i_skip () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -610,7 +610,7 @@ namespace POA_i_skip
 
     ::i_skip::i_hump::i_skip *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -656,10 +656,10 @@ namespace POA_i_skip
     using _stub_ptr_type = ::i_skip::i_hump::AMI_i_skipHandler_ptr;
     using _stub_var_type = ::i_skip::i_hump::AMI_i_skipHandler_var;
 
-    AMI_i_skipHandler (const AMI_i_skipHandler& rhs) = default;
+    AMI_i_skipHandler (AMI_i_skipHandler const &rhs) = default;
     ~AMI_i_skipHandler () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -667,7 +667,7 @@ namespace POA_i_skip
 
     ::i_skip::i_hump::AMI_i_skipHandler *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -752,10 +752,10 @@ protected:
   POA_AMH_bloo ();
 
 public:
-  POA_AMH_bloo (const POA_AMH_bloo& rhs);
+  POA_AMH_bloo (POA_AMH_bloo const &rhs);
   ~POA_AMH_bloo () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -763,7 +763,7 @@ public:
 
   bloo *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 };
 
 class POA_bloo;
@@ -783,10 +783,10 @@ public:
   using _stub_ptr_type = ::bloo_ptr;
   using _stub_var_type = ::bloo_var;
 
-  POA_bloo (const POA_bloo& rhs) = default;
+  POA_bloo (POA_bloo const &rhs) = default;
   ~POA_bloo () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -794,7 +794,7 @@ public:
 
   ::bloo *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -840,10 +840,10 @@ public:
   using _stub_ptr_type = ::AMI_blooHandler_ptr;
   using _stub_var_type = ::AMI_blooHandler_var;
 
-  POA_AMI_blooHandler (const POA_AMI_blooHandler& rhs) = default;
+  POA_AMI_blooHandler (POA_AMI_blooHandler const &rhs) = default;
   ~POA_AMI_blooHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -851,7 +851,7 @@ public:
 
   ::AMI_blooHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -903,10 +903,10 @@ namespace POA_bug_1985_a
       AMH_something ();
 
     public:
-      AMH_something (const AMH_something& rhs);
+      AMH_something (AMH_something const &rhs);
       ~AMH_something () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -914,7 +914,7 @@ namespace POA_bug_1985_a
 
       bug_1985_a::b::something *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   class something;
@@ -934,10 +934,10 @@ namespace POA_bug_1985_a
     using _stub_ptr_type = ::bug_1985_a::b::something_ptr;
     using _stub_var_type = ::bug_1985_a::b::something_var;
 
-    something (const something& rhs) = default;
+    something (something const &rhs) = default;
     ~something () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -945,7 +945,7 @@ namespace POA_bug_1985_a
 
     ::bug_1985_a::b::something *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -991,10 +991,10 @@ namespace POA_bug_1985_a
     using _stub_ptr_type = ::bug_1985_a::b::AMI_somethingHandler_ptr;
     using _stub_var_type = ::bug_1985_a::b::AMI_somethingHandler_var;
 
-    AMI_somethingHandler (const AMI_somethingHandler& rhs) = default;
+    AMI_somethingHandler (AMI_somethingHandler const &rhs) = default;
     ~AMI_somethingHandler () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -1002,7 +1002,7 @@ namespace POA_bug_1985_a
 
     ::bug_1985_a::b::AMI_somethingHandler *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -1040,10 +1040,10 @@ namespace POA_bug_1985_c
       AMH_something ();
 
     public:
-      AMH_something (const AMH_something& rhs);
+      AMH_something (AMH_something const &rhs);
       ~AMH_something () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -1051,7 +1051,7 @@ namespace POA_bug_1985_c
 
       bug_1985_c::d::something *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   class something;
@@ -1071,10 +1071,10 @@ namespace POA_bug_1985_c
     using _stub_ptr_type = ::bug_1985_c::d::something_ptr;
     using _stub_var_type = ::bug_1985_c::d::something_var;
 
-    something (const something& rhs) = default;
+    something (something const &rhs) = default;
     ~something () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -1082,7 +1082,7 @@ namespace POA_bug_1985_c
 
     ::bug_1985_c::d::something *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -1129,10 +1129,10 @@ namespace POA_bug_1985_c
     using _stub_ptr_type = ::bug_1985_c::d::AMI_somethingHandler_ptr;
     using _stub_var_type = ::bug_1985_c::d::AMI_somethingHandler_var;
 
-    AMI_somethingHandler (const AMI_somethingHandler& rhs) = default;
+    AMI_somethingHandler (AMI_somethingHandler const &rhs) = default;
     ~AMI_somethingHandler () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -1140,7 +1140,7 @@ namespace POA_bug_1985_c
 
     ::bug_1985_c::d::AMI_somethingHandler *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -1174,10 +1174,10 @@ namespace POA_Negotiator
     AMH_UAV_Negotiator ();
 
   public:
-    AMH_UAV_Negotiator (const AMH_UAV_Negotiator& rhs);
+    AMH_UAV_Negotiator (AMH_UAV_Negotiator const &rhs);
     ~AMH_UAV_Negotiator () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -1185,7 +1185,7 @@ namespace POA_Negotiator
 
     Negotiator::UAV_Negotiator *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 class UAV_Negotiator;
@@ -1205,10 +1205,10 @@ public:
   using _stub_ptr_type = ::Negotiator::UAV_Negotiator_ptr;
   using _stub_var_type = ::Negotiator::UAV_Negotiator_var;
 
-  UAV_Negotiator (const UAV_Negotiator& rhs) = default;
+  UAV_Negotiator (UAV_Negotiator const &rhs) = default;
   ~UAV_Negotiator () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1216,7 +1216,7 @@ public:
 
   ::Negotiator::UAV_Negotiator *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -1262,10 +1262,10 @@ public:
   using _stub_ptr_type = ::Negotiator::AMI_UAV_NegotiatorHandler_ptr;
   using _stub_var_type = ::Negotiator::AMI_UAV_NegotiatorHandler_var;
 
-  AMI_UAV_NegotiatorHandler (const AMI_UAV_NegotiatorHandler& rhs) = default;
+  AMI_UAV_NegotiatorHandler (AMI_UAV_NegotiatorHandler const &rhs) = default;
   ~AMI_UAV_NegotiatorHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1273,7 +1273,7 @@ public:
 
   ::Negotiator::AMI_UAV_NegotiatorHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -1302,10 +1302,10 @@ protected:
   AMH_UAV_Negotiator_Factory ();
 
 public:
-  AMH_UAV_Negotiator_Factory (const AMH_UAV_Negotiator_Factory& rhs);
+  AMH_UAV_Negotiator_Factory (AMH_UAV_Negotiator_Factory const &rhs);
   ~AMH_UAV_Negotiator_Factory () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -1313,7 +1313,7 @@ public:
 
   Negotiator::UAV_Negotiator_Factory *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void make_negotiator_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1343,10 +1343,10 @@ public:
   using _stub_ptr_type = ::Negotiator::UAV_Negotiator_Factory_ptr;
   using _stub_var_type = ::Negotiator::UAV_Negotiator_Factory_var;
 
-  UAV_Negotiator_Factory (const UAV_Negotiator_Factory& rhs) = default;
+  UAV_Negotiator_Factory (UAV_Negotiator_Factory const &rhs) = default;
   ~UAV_Negotiator_Factory () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1354,7 +1354,7 @@ public:
 
   ::Negotiator::UAV_Negotiator_Factory *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::Negotiator::UAV_Negotiator_ptr make_negotiator (
     char const * bitrate_sc) = 0;
 
@@ -1416,10 +1416,10 @@ public:
   using _stub_ptr_type = ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_ptr;
   using _stub_var_type = ::Negotiator::AMI_UAV_Negotiator_FactoryHandler_var;
 
-  AMI_UAV_Negotiator_FactoryHandler (const AMI_UAV_Negotiator_FactoryHandler& rhs) = default;
+  AMI_UAV_Negotiator_FactoryHandler (AMI_UAV_Negotiator_FactoryHandler const &rhs) = default;
   ~AMI_UAV_Negotiator_FactoryHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1427,7 +1427,7 @@ public:
 
   ::Negotiator::AMI_UAV_Negotiator_FactoryHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void make_negotiator (
     ::Negotiator::UAV_Negotiator_ptr ami_return_val) = 0;
 
@@ -1493,10 +1493,10 @@ namespace POA_Wow
       AMH_MyInterface ();
 
     public:
-      AMH_MyInterface (const AMH_MyInterface& rhs);
+      AMH_MyInterface (AMH_MyInterface const &rhs);
       ~AMH_MyInterface () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -1504,7 +1504,7 @@ namespace POA_Wow
 
       Wow::bug_2125::MyInterface *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     static void op2_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1534,10 +1534,10 @@ namespace POA_Wow
     using _stub_ptr_type = ::Wow::bug_2125::MyInterface_ptr;
     using _stub_var_type = ::Wow::bug_2125::MyInterface_var;
 
-    MyInterface (const MyInterface& rhs) = default;
+    MyInterface (MyInterface const &rhs) = default;
     ~MyInterface () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -1545,7 +1545,7 @@ namespace POA_Wow
 
     ::Wow::bug_2125::MyInterface *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual void op2 (
       ::bug_2125::Bar::Stuff fbs) = 0;
 
@@ -1605,10 +1605,10 @@ namespace POA_Wow
     using _stub_ptr_type = ::Wow::bug_2125::AMI_MyInterfaceHandler_ptr;
     using _stub_var_type = ::Wow::bug_2125::AMI_MyInterfaceHandler_var;
 
-    AMI_MyInterfaceHandler (const AMI_MyInterfaceHandler& rhs) = default;
+    AMI_MyInterfaceHandler (AMI_MyInterfaceHandler const &rhs) = default;
     ~AMI_MyInterfaceHandler () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -1616,7 +1616,7 @@ namespace POA_Wow
 
     ::Wow::bug_2125::AMI_MyInterfaceHandler *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual void op2 () = 0;
 
     static void op2_skel (

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIF2S_WGV30X_CPP_
-#define _TAO_IDL_DIF2S_WGV30X_CPP_
+#ifndef _TAO_IDL_DIF2S_I9CMSB_CPP_
+#define _TAO_IDL_DIF2S_I9CMSB_CPP_
 
 #include "dif2S.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -394,7 +394,7 @@ POA_OldDif2::AMH_ex1::op6_skel (
     );
 }
 
-::CORBA::Boolean POA_OldDif2::AMH_ex1::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::AMH_ex1::_is_a (char const *value)
 {
   return
     (
@@ -403,7 +403,7 @@ POA_OldDif2::AMH_ex1::op6_skel (
     );
 }
 
-const char* POA_OldDif2::AMH_ex1::_interface_repository_id () const
+char const *POA_OldDif2::AMH_ex1::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex1:1.0";
 }
@@ -1230,7 +1230,7 @@ void POA_OldDif2::ex1::op6_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldDif2::ex1::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::ex1::_is_a (char const *value)
 {
   return
     (
@@ -1239,7 +1239,7 @@ void POA_OldDif2::ex1::op6_skel (
     );
 }
 
-const char* POA_OldDif2::ex1::_interface_repository_id () const
+char const *POA_OldDif2::ex1::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex1:1.0";
 }
@@ -2860,7 +2860,7 @@ void POA_OldDif2::AMI_ex1Handler::op6_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldDif2::AMI_ex1Handler::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::AMI_ex1Handler::_is_a (char const *value)
 {
   return
     (
@@ -2870,7 +2870,7 @@ void POA_OldDif2::AMI_ex1Handler::op6_excep_skel (
     );
 }
 
-const char* POA_OldDif2::AMI_ex1Handler::_interface_repository_id () const
+char const *POA_OldDif2::AMI_ex1Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex1Handler:1.0";
 }
@@ -3200,7 +3200,7 @@ POA_OldDif2::AMH_ex2::op12_skel (
     );
 }
 
-::CORBA::Boolean POA_OldDif2::AMH_ex2::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::AMH_ex2::_is_a (char const *value)
 {
   return
     (
@@ -3210,7 +3210,7 @@ POA_OldDif2::AMH_ex2::op12_skel (
     );
 }
 
-const char* POA_OldDif2::AMH_ex2::_interface_repository_id () const
+char const *POA_OldDif2::AMH_ex2::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex2:1.0";
 }
@@ -3934,7 +3934,7 @@ void POA_OldDif2::ex2::op12_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldDif2::ex2::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::ex2::_is_a (char const *value)
 {
   return
     (
@@ -3944,7 +3944,7 @@ void POA_OldDif2::ex2::op12_skel (
     );
 }
 
-const char* POA_OldDif2::ex2::_interface_repository_id () const
+char const *POA_OldDif2::ex2::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex2:1.0";
 }
@@ -5364,7 +5364,7 @@ void POA_OldDif2::AMI_ex2Handler::op12_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldDif2::AMI_ex2Handler::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::AMI_ex2Handler::_is_a (char const *value)
 {
   return
     (
@@ -5375,7 +5375,7 @@ void POA_OldDif2::AMI_ex2Handler::op12_excep_skel (
     );
 }
 
-const char* POA_OldDif2::AMI_ex2Handler::_interface_repository_id () const
+char const *POA_OldDif2::AMI_ex2Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex2Handler:1.0";
 }
@@ -5699,7 +5699,7 @@ POA_OldDif2::AMH_ex3::_get_unsigned_long_attribute_skel (
     );
 }
 
-::CORBA::Boolean POA_OldDif2::AMH_ex3::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::AMH_ex3::_is_a (char const *value)
 {
   return
     (
@@ -5709,7 +5709,7 @@ POA_OldDif2::AMH_ex3::_get_unsigned_long_attribute_skel (
     );
 }
 
-const char* POA_OldDif2::AMH_ex3::_interface_repository_id () const
+char const *POA_OldDif2::AMH_ex3::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex3:1.0";
 }
@@ -6385,7 +6385,7 @@ void POA_OldDif2::ex3::_get_unsigned_long_attribute_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldDif2::ex3::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::ex3::_is_a (char const *value)
 {
   return
     (
@@ -6395,7 +6395,7 @@ void POA_OldDif2::ex3::_get_unsigned_long_attribute_skel (
     );
 }
 
-const char* POA_OldDif2::ex3::_interface_repository_id () const
+char const *POA_OldDif2::ex3::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex3:1.0";
 }
@@ -7859,7 +7859,7 @@ void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldDif2::AMI_ex3Handler::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::AMI_ex3Handler::_is_a (char const *value)
 {
   return
     (
@@ -7870,7 +7870,7 @@ void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep_skel (
     );
 }
 
-const char* POA_OldDif2::AMI_ex3Handler::_interface_repository_id () const
+char const *POA_OldDif2::AMI_ex3Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex3Handler:1.0";
 }
@@ -8323,7 +8323,7 @@ POA_OldDif2::AMH_ex4::_get_an_object_attribute_skel (
     );
 }
 
-::CORBA::Boolean POA_OldDif2::AMH_ex4::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::AMH_ex4::_is_a (char const *value)
 {
   return
     (
@@ -8335,7 +8335,7 @@ POA_OldDif2::AMH_ex4::_get_an_object_attribute_skel (
     );
 }
 
-const char* POA_OldDif2::AMH_ex4::_interface_repository_id () const
+char const *POA_OldDif2::AMH_ex4::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex4:1.0";
 }
@@ -9285,7 +9285,7 @@ void POA_OldDif2::ex4::_get_an_object_attribute_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldDif2::ex4::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::ex4::_is_a (char const *value)
 {
   return
     (
@@ -9297,7 +9297,7 @@ void POA_OldDif2::ex4::_get_an_object_attribute_skel (
     );
 }
 
-const char* POA_OldDif2::ex4::_interface_repository_id () const
+char const *POA_OldDif2::ex4::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex4:1.0";
 }
@@ -11378,7 +11378,7 @@ void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldDif2::AMI_ex4Handler::_is_a (const char* value)
+::CORBA::Boolean POA_OldDif2::AMI_ex4Handler::_is_a (char const *value)
 {
   return
     (
@@ -11391,7 +11391,7 @@ void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_excep_skel (
     );
 }
 
-const char* POA_OldDif2::AMI_ex4Handler::_interface_repository_id () const
+char const *POA_OldDif2::AMI_ex4Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex4Handler:1.0";
 }

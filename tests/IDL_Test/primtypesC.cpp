@@ -59,7 +59,7 @@ TAO::Objref_Traits<OldPrimTypes::ex1>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldPrimTypes::ex1>::marshal (const OldPrimTypes::ex1_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldPrimTypes::ex1>::marshal (OldPrimTypes::ex1_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -465,7 +465,7 @@ OldPrimTypes::ex1::_tao_release (ex1_ptr obj)
 }
 
 ::CORBA::Boolean
-OldPrimTypes::ex1::_is_a (const char *value)
+OldPrimTypes::ex1::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldPrimTypes/ex1:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
@@ -478,17 +478,17 @@ OldPrimTypes::ex1::_is_a (const char *value)
     }
 }
 
-const char* OldPrimTypes::ex1::_interface_repository_id () const
+char const *OldPrimTypes::ex1::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/ex1:1.0";
 }
 
-const char* OldPrimTypes::ex1::_desc_repository_id ()
+char const *OldPrimTypes::ex1::_desc_repository_id ()
 {
   return "IDL:OldPrimTypes/ex1:1.0";
 }
 
-const char* OldPrimTypes::ex1::_desc_interface_name ()
+char const *OldPrimTypes::ex1::_desc_interface_name ()
 {
   return "ex1";
 }
@@ -709,7 +709,7 @@ TAO::Objref_Traits<OldPrimTypes::AMH_ex1ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldPrimTypes::AMH_ex1ResponseHandler>::marshal (const OldPrimTypes::AMH_ex1ResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldPrimTypes::AMH_ex1ResponseHandler>::marshal (OldPrimTypes::AMH_ex1ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -763,7 +763,7 @@ OldPrimTypes::AMH_ex1ResponseHandler::_tao_release (AMH_ex1ResponseHandler_ptr o
 }
 
 ::CORBA::Boolean
-OldPrimTypes::AMH_ex1ResponseHandler::_is_a (const char *value)
+OldPrimTypes::AMH_ex1ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldPrimTypes/AMH_ex1ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -777,17 +777,17 @@ OldPrimTypes::AMH_ex1ResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldPrimTypes::AMH_ex1ResponseHandler::_interface_repository_id () const
+char const *OldPrimTypes::AMH_ex1ResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/AMH_ex1ResponseHandler:1.0";
 }
 
-const char* OldPrimTypes::AMH_ex1ResponseHandler::_desc_repository_id ()
+char const *OldPrimTypes::AMH_ex1ResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldPrimTypes/AMH_ex1ResponseHandler:1.0";
 }
 
-const char* OldPrimTypes::AMH_ex1ResponseHandler::_desc_interface_name ()
+char const *OldPrimTypes::AMH_ex1ResponseHandler::_desc_interface_name ()
 {
   return "AMH_ex1ResponseHandler";
 }
@@ -821,7 +821,7 @@ TAO::Objref_Traits<OldPrimTypes::AMI_ex1Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldPrimTypes::AMI_ex1Handler>::marshal (const OldPrimTypes::AMI_ex1Handler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldPrimTypes::AMI_ex1Handler>::marshal (OldPrimTypes::AMI_ex1Handler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1456,7 +1456,7 @@ OldPrimTypes::AMI_ex1Handler::_tao_release (AMI_ex1Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldPrimTypes::AMI_ex1Handler::_is_a (const char *value)
+OldPrimTypes::AMI_ex1Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldPrimTypes/AMI_ex1Handler:1.0") == 0 ||
@@ -1470,17 +1470,17 @@ OldPrimTypes::AMI_ex1Handler::_is_a (const char *value)
     }
 }
 
-const char* OldPrimTypes::AMI_ex1Handler::_interface_repository_id () const
+char const *OldPrimTypes::AMI_ex1Handler::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/AMI_ex1Handler:1.0";
 }
 
-const char* OldPrimTypes::AMI_ex1Handler::_desc_repository_id ()
+char const *OldPrimTypes::AMI_ex1Handler::_desc_repository_id ()
 {
   return "IDL:OldPrimTypes/AMI_ex1Handler:1.0";
 }
 
-const char* OldPrimTypes::AMI_ex1Handler::_desc_interface_name ()
+char const *OldPrimTypes::AMI_ex1Handler::_desc_interface_name ()
 {
   return "AMI_ex1Handler";
 }
@@ -1514,7 +1514,7 @@ TAO::Objref_Traits<OldPrimTypes::ex2>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldPrimTypes::ex2>::marshal (const OldPrimTypes::ex2_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldPrimTypes::ex2>::marshal (OldPrimTypes::ex2_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1750,7 +1750,7 @@ OldPrimTypes::ex2::_tao_release (ex2_ptr obj)
 }
 
 ::CORBA::Boolean
-OldPrimTypes::ex2::_is_a (const char *value)
+OldPrimTypes::ex2::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldPrimTypes/ex1:1.0") == 0 ||
       std::strcmp (value, "IDL:OldPrimTypes/ex2:1.0") == 0 ||
@@ -1764,17 +1764,17 @@ OldPrimTypes::ex2::_is_a (const char *value)
     }
 }
 
-const char* OldPrimTypes::ex2::_interface_repository_id () const
+char const *OldPrimTypes::ex2::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/ex2:1.0";
 }
 
-const char* OldPrimTypes::ex2::_desc_repository_id ()
+char const *OldPrimTypes::ex2::_desc_repository_id ()
 {
   return "IDL:OldPrimTypes/ex2:1.0";
 }
 
-const char* OldPrimTypes::ex2::_desc_interface_name ()
+char const *OldPrimTypes::ex2::_desc_interface_name ()
 {
   return "ex2";
 }
@@ -1981,7 +1981,7 @@ TAO::Objref_Traits<OldPrimTypes::AMH_ex2ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldPrimTypes::AMH_ex2ResponseHandler>::marshal (const OldPrimTypes::AMH_ex2ResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldPrimTypes::AMH_ex2ResponseHandler>::marshal (OldPrimTypes::AMH_ex2ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2035,7 +2035,7 @@ OldPrimTypes::AMH_ex2ResponseHandler::_tao_release (AMH_ex2ResponseHandler_ptr o
 }
 
 ::CORBA::Boolean
-OldPrimTypes::AMH_ex2ResponseHandler::_is_a (const char *value)
+OldPrimTypes::AMH_ex2ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldPrimTypes/AMH_ex2ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
@@ -2049,17 +2049,17 @@ OldPrimTypes::AMH_ex2ResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldPrimTypes::AMH_ex2ResponseHandler::_interface_repository_id () const
+char const *OldPrimTypes::AMH_ex2ResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/AMH_ex2ResponseHandler:1.0";
 }
 
-const char* OldPrimTypes::AMH_ex2ResponseHandler::_desc_repository_id ()
+char const *OldPrimTypes::AMH_ex2ResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldPrimTypes/AMH_ex2ResponseHandler:1.0";
 }
 
-const char* OldPrimTypes::AMH_ex2ResponseHandler::_desc_interface_name ()
+char const *OldPrimTypes::AMH_ex2ResponseHandler::_desc_interface_name ()
 {
   return "AMH_ex2ResponseHandler";
 }
@@ -2093,7 +2093,7 @@ TAO::Objref_Traits<OldPrimTypes::AMI_ex2Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldPrimTypes::AMI_ex2Handler>::marshal (const OldPrimTypes::AMI_ex2Handler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldPrimTypes::AMI_ex2Handler>::marshal (OldPrimTypes::AMI_ex2Handler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2514,7 +2514,7 @@ OldPrimTypes::AMI_ex2Handler::_tao_release (AMI_ex2Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldPrimTypes::AMI_ex2Handler::_is_a (const char *value)
+OldPrimTypes::AMI_ex2Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldPrimTypes/AMI_ex1Handler:1.0") == 0 ||
@@ -2529,17 +2529,17 @@ OldPrimTypes::AMI_ex2Handler::_is_a (const char *value)
     }
 }
 
-const char* OldPrimTypes::AMI_ex2Handler::_interface_repository_id () const
+char const *OldPrimTypes::AMI_ex2Handler::_interface_repository_id () const
 {
   return "IDL:OldPrimTypes/AMI_ex2Handler:1.0";
 }
 
-const char* OldPrimTypes::AMI_ex2Handler::_desc_repository_id ()
+char const *OldPrimTypes::AMI_ex2Handler::_desc_repository_id ()
 {
   return "IDL:OldPrimTypes/AMI_ex2Handler:1.0";
 }
 
-const char* OldPrimTypes::AMI_ex2Handler::_desc_interface_name ()
+char const *OldPrimTypes::AMI_ex2Handler::_desc_interface_name ()
 {
   return "AMI_ex2Handler";
 }
@@ -2582,7 +2582,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldPrimTypes::ex1_ptr _tao_objref)
+    OldPrimTypes::ex1_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2674,7 +2674,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldPrimTypes::AMI_ex1Handler_ptr _tao_objref)
+    OldPrimTypes::AMI_ex1Handler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2703,7 +2703,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldPrimTypes::ex2_ptr _tao_objref)
+    OldPrimTypes::ex2_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2795,7 +2795,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldPrimTypes::AMI_ex2Handler_ptr _tao_objref)
+    OldPrimTypes::AMI_ex2Handler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);

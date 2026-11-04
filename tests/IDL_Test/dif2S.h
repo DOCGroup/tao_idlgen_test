@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_DIF2S_JUOUEI_H_
-#define _TAO_IDL_DIF2S_JUOUEI_H_
+#ifndef _TAO_IDL_DIF2S_G4BBAZ_H_
+#define _TAO_IDL_DIF2S_G4BBAZ_H_
 
 #include /**/ "ace/pre.h"
 
@@ -453,10 +453,10 @@ namespace POA_OldDif2
     AMH_ex1 ();
 
   public:
-    AMH_ex1 (const AMH_ex1& rhs);
+    AMH_ex1 (AMH_ex1 const &rhs);
     ~AMH_ex1 () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -464,7 +464,7 @@ namespace POA_OldDif2
 
     OldDif2::ex1 *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void op0_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -559,10 +559,10 @@ public:
   using _stub_ptr_type = ::OldDif2::ex1_ptr;
   using _stub_var_type = ::OldDif2::ex1_var;
 
-  ex1 (const ex1& rhs) = default;
+  ex1 (ex1 const &rhs) = default;
   ~ex1 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -570,7 +570,7 @@ public:
 
   ::OldDif2::ex1 *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op0 () = 0;
 
   static void op0_skel (
@@ -743,10 +743,10 @@ public:
   using _stub_ptr_type = ::OldDif2::AMI_ex1Handler_ptr;
   using _stub_var_type = ::OldDif2::AMI_ex1Handler_var;
 
-  AMI_ex1Handler (const AMI_ex1Handler& rhs) = default;
+  AMI_ex1Handler (AMI_ex1Handler const &rhs) = default;
   ~AMI_ex1Handler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -754,7 +754,7 @@ public:
 
   ::OldDif2::AMI_ex1Handler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op0 () = 0;
 
   static void op0_skel (
@@ -948,10 +948,10 @@ protected:
   AMH_ex2 ();
 
 public:
-  AMH_ex2 (const AMH_ex2& rhs);
+  AMH_ex2 (AMH_ex2 const &rhs);
   ~AMH_ex2 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -959,7 +959,7 @@ public:
 
   OldDif2::ex2 *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void op7_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1042,10 +1042,10 @@ public:
   using _stub_ptr_type = ::OldDif2::ex2_ptr;
   using _stub_var_type = ::OldDif2::ex2_var;
 
-  ex2 (const ex2& rhs) = default;
+  ex2 (ex2 const &rhs) = default;
   ~ex2 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1053,7 +1053,7 @@ public:
 
   ::OldDif2::ex2 *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::CORBA::Char op7 (
     ::CORBA::Char c,
     ::CORBA::Boolean_out b,
@@ -1207,10 +1207,10 @@ public:
   using _stub_ptr_type = ::OldDif2::AMI_ex2Handler_ptr;
   using _stub_var_type = ::OldDif2::AMI_ex2Handler_var;
 
-  AMI_ex2Handler (const AMI_ex2Handler& rhs) = default;
+  AMI_ex2Handler (AMI_ex2Handler const &rhs) = default;
   ~AMI_ex2Handler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1218,7 +1218,7 @@ public:
 
   ::OldDif2::AMI_ex2Handler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op7 (
     ::CORBA::Char ami_return_val,
     ::CORBA::Boolean b,
@@ -1388,10 +1388,10 @@ protected:
   AMH_ex3 ();
 
 public:
-  AMH_ex3 (const AMH_ex3& rhs);
+  AMH_ex3 (AMH_ex3 const &rhs);
   ~AMH_ex3 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -1399,7 +1399,7 @@ public:
 
   OldDif2::ex3 *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void _get_float_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1484,10 +1484,10 @@ public:
   using _stub_ptr_type = ::OldDif2::ex3_ptr;
   using _stub_var_type = ::OldDif2::ex3_var;
 
-  ex3 (const ex3& rhs) = default;
+  ex3 (ex3 const &rhs) = default;
   ~ex3 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1495,7 +1495,7 @@ public:
 
   ::OldDif2::ex3 *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::CORBA::Float float_attribute () = 0;
 
   static void _get_float_attribute_skel (
@@ -1640,10 +1640,10 @@ public:
   using _stub_ptr_type = ::OldDif2::AMI_ex3Handler_ptr;
   using _stub_var_type = ::OldDif2::AMI_ex3Handler_var;
 
-  AMI_ex3Handler (const AMI_ex3Handler& rhs) = default;
+  AMI_ex3Handler (AMI_ex3Handler const &rhs) = default;
   ~AMI_ex3Handler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1651,7 +1651,7 @@ public:
 
   ::OldDif2::AMI_ex3Handler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void get_float_attribute (
     ::CORBA::Float ami_return_val) = 0;
 
@@ -1833,10 +1833,10 @@ protected:
   AMH_ex4 ();
 
 public:
-  AMH_ex4 (const AMH_ex4& rhs);
+  AMH_ex4 (AMH_ex4 const &rhs);
   ~AMH_ex4 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -1844,7 +1844,7 @@ public:
 
   OldDif2::ex4 *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void _get_unsigned_short_attribute_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -1958,10 +1958,10 @@ public:
   using _stub_ptr_type = ::OldDif2::ex4_ptr;
   using _stub_var_type = ::OldDif2::ex4_var;
 
-  ex4 (const ex4& rhs) = default;
+  ex4 (ex4 const &rhs) = default;
   ~ex4 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1969,7 +1969,7 @@ public:
 
   ::OldDif2::ex4 *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::CORBA::UShort unsigned_short_attribute () = 0;
 
   static void _get_unsigned_short_attribute_skel (
@@ -2158,10 +2158,10 @@ public:
   using _stub_ptr_type = ::OldDif2::AMI_ex4Handler_ptr;
   using _stub_var_type = ::OldDif2::AMI_ex4Handler_var;
 
-  AMI_ex4Handler (const AMI_ex4Handler& rhs) = default;
+  AMI_ex4Handler (AMI_ex4Handler const &rhs) = default;
   ~AMI_ex4Handler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -2169,7 +2169,7 @@ public:
 
   ::OldDif2::AMI_ex4Handler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void get_unsigned_short_attribute (
     ::CORBA::UShort ami_return_val) = 0;
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_EIZUFO_CPP_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_EIZUFO_CPP_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_3JPQJZ_CPP_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_3JPQJZ_CPP_
 
 #include "Bug_2582_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -147,7 +147,7 @@ POA_AMH_FieldDevice_T::getEncoding_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_FieldDevice_T::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_FieldDevice_T::_is_a (char const *value)
 {
   return
     (
@@ -156,7 +156,7 @@ POA_AMH_FieldDevice_T::getEncoding_skel (
     );
 }
 
-const char* POA_AMH_FieldDevice_T::_interface_repository_id () const
+char const *POA_AMH_FieldDevice_T::_interface_repository_id () const
 {
   return "IDL:FieldDevice_T:1.0";
 }
@@ -381,7 +381,7 @@ void POA_FieldDevice_T::getEncoding_skel (
                          );
 }
 
-::CORBA::Boolean POA_FieldDevice_T::_is_a (const char* value)
+::CORBA::Boolean POA_FieldDevice_T::_is_a (char const *value)
 {
   return
     (
@@ -390,7 +390,7 @@ void POA_FieldDevice_T::getEncoding_skel (
     );
 }
 
-const char* POA_FieldDevice_T::_interface_repository_id () const
+char const *POA_FieldDevice_T::_interface_repository_id () const
 {
   return "IDL:FieldDevice_T:1.0";
 }
@@ -848,7 +848,7 @@ void POA_AMI_FieldDevice_THandler::getEncoding_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_FieldDevice_THandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_FieldDevice_THandler::_is_a (char const *value)
 {
   return
     (
@@ -858,7 +858,7 @@ void POA_AMI_FieldDevice_THandler::getEncoding_excep_skel (
     );
 }
 
-const char* POA_AMI_FieldDevice_THandler::_interface_repository_id () const
+char const *POA_AMI_FieldDevice_THandler::_interface_repository_id () const
 {
   return "IDL:AMI_FieldDevice_THandler:1.0";
 }

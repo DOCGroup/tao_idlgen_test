@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEPREFIXS_T2WW75_H_
-#define _TAO_IDL_TYPEPREFIXS_T2WW75_H_
+#ifndef _TAO_IDL_TYPEPREFIXS_MJH4JB_H_
+#define _TAO_IDL_TYPEPREFIXS_MJH4JB_H_
 
 #include /**/ "ace/pre.h"
 
@@ -183,10 +183,10 @@ namespace POA_A
     AMH_B ();
 
   public:
-    AMH_B (const AMH_B& rhs);
+    AMH_B (AMH_B const &rhs);
     ~AMH_B () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -194,7 +194,7 @@ namespace POA_A
 
     A::B *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 class B;
@@ -214,10 +214,10 @@ public:
   using _stub_ptr_type = ::A::B_ptr;
   using _stub_var_type = ::A::B_var;
 
-  B (const B& rhs) = default;
+  B (B const &rhs) = default;
   ~B () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -225,7 +225,7 @@ public:
 
   ::A::B *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -271,10 +271,10 @@ public:
   using _stub_ptr_type = ::A::AMI_BHandler_ptr;
   using _stub_var_type = ::A::AMI_BHandler_var;
 
-  AMI_BHandler (const AMI_BHandler& rhs) = default;
+  AMI_BHandler (AMI_BHandler const &rhs) = default;
   ~AMI_BHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -282,7 +282,7 @@ public:
 
   ::A::AMI_BHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -310,10 +310,10 @@ protected:
   AMH_C ();
 
 public:
-  AMH_C (const AMH_C& rhs);
+  AMH_C (AMH_C const &rhs);
   ~AMH_C () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -321,7 +321,7 @@ public:
 
   A::C *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -351,10 +351,10 @@ public:
   using _stub_ptr_type = ::A::C_ptr;
   using _stub_var_type = ::A::C_var;
 
-  C (const C& rhs) = default;
+  C (C const &rhs) = default;
   ~C () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -362,7 +362,7 @@ public:
 
   ::A::C *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op (
     ::A::B_ptr a) = 0;
 
@@ -422,10 +422,10 @@ public:
   using _stub_ptr_type = ::A::AMI_CHandler_ptr;
   using _stub_var_type = ::A::AMI_CHandler_var;
 
-  AMI_CHandler (const AMI_CHandler& rhs) = default;
+  AMI_CHandler (AMI_CHandler const &rhs) = default;
   ~AMI_CHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -433,7 +433,7 @@ public:
 
   ::A::AMI_CHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op () = 0;
 
   static void op_skel (

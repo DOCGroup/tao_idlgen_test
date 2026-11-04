@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYS_9DHL1F_CPP_
-#define _TAO_IDL_OLD_ARRAYS_9DHL1F_CPP_
+#ifndef _TAO_IDL_OLD_ARRAYS_WHSE8W_CPP_
+#define _TAO_IDL_OLD_ARRAYS_WHSE8W_CPP_
 
 #include "old_arrayS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -308,7 +308,7 @@ POA_OldArray::AMH_A_i::_set_attribute_array_skel (
     );
 }
 
-::CORBA::Boolean POA_OldArray::AMH_A_i::_is_a (const char* value)
+::CORBA::Boolean POA_OldArray::AMH_A_i::_is_a (char const *value)
 {
   return
     (
@@ -317,7 +317,7 @@ POA_OldArray::AMH_A_i::_set_attribute_array_skel (
     );
 }
 
-const char* POA_OldArray::AMH_A_i::_interface_repository_id () const
+char const *POA_OldArray::AMH_A_i::_interface_repository_id () const
 {
   return "IDL:OldArray/A_i:1.0";
 }
@@ -901,7 +901,7 @@ void POA_OldArray::A_i::_set_attribute_array_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldArray::A_i::_is_a (const char* value)
+::CORBA::Boolean POA_OldArray::A_i::_is_a (char const *value)
 {
   return
     (
@@ -910,7 +910,7 @@ void POA_OldArray::A_i::_set_attribute_array_skel (
     );
 }
 
-const char* POA_OldArray::A_i::_interface_repository_id () const
+char const *POA_OldArray::A_i::_interface_repository_id () const
 {
   return "IDL:OldArray/A_i:1.0";
 }
@@ -2047,7 +2047,7 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_OldArray::AMI_A_iHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldArray::AMI_A_iHandler::_is_a (char const *value)
 {
   return
     (
@@ -2057,7 +2057,7 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel (
     );
 }
 
-const char* POA_OldArray::AMI_A_iHandler::_interface_repository_id () const
+char const *POA_OldArray::AMI_A_iHandler::_interface_repository_id () const
 {
   return "IDL:OldArray/AMI_A_iHandler:1.0";
 }

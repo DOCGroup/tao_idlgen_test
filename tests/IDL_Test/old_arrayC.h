@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYC_R1VM4M_H_
-#define _TAO_IDL_OLD_ARRAYC_R1VM4M_H_
+#ifndef _TAO_IDL_OLD_ARRAYC_PEW0HH_H_
+#define _TAO_IDL_OLD_ARRAYC_PEW0HH_H_
 
 #include /**/ "ace/pre.h"
 
@@ -357,10 +357,10 @@ namespace OldArray
     virtual void sendc_get_attribute_array (
       ::OldArray::AMI_A_iHandler_ptr ami_handler);
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -381,9 +381,9 @@ namespace OldArray
 
   private:
     // Private and unimplemented for concrete interfaces.
-    A_i (const A_i &) = delete;
+    A_i (A_i const &) = delete;
     A_i (A_i &&) = delete;
-    A_i &operator= (const A_i &) = delete;
+    A_i &operator= (A_i const &) = delete;
     A_i &operator= (A_i &&) = delete;
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_A_i;
@@ -567,10 +567,10 @@ public:
   virtual void set_attribute_array_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -581,9 +581,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_A_iResponseHandler (const AMH_A_iResponseHandler &) = delete;
+  AMH_A_iResponseHandler (AMH_A_iResponseHandler const &) = delete;
   AMH_A_iResponseHandler (AMH_A_iResponseHandler &&) = delete;
-  AMH_A_iResponseHandler &operator= (const AMH_A_iResponseHandler &) = delete;
+  AMH_A_iResponseHandler &operator= (AMH_A_iResponseHandler const &) = delete;
   AMH_A_iResponseHandler &operator= (AMH_A_iResponseHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_A_iResponseHandler;
@@ -684,10 +684,10 @@ public:
   virtual void set_attribute_array_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -708,9 +708,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_A_iHandler (const AMI_A_iHandler &) = delete;
+  AMI_A_iHandler (AMI_A_iHandler const &) = delete;
   AMI_A_iHandler (AMI_A_iHandler &&) = delete;
-  AMI_A_iHandler &operator= (const AMI_A_iHandler &) = delete;
+  AMI_A_iHandler &operator= (AMI_A_iHandler const &) = delete;
   AMI_A_iHandler &operator= (AMI_A_iHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_A_iHandler;
@@ -1225,7 +1225,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::A_i_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::A_i_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldArray::A_i_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldArray::A_i_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1243,7 +1243,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::AMH_A_iResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::AMH_A_iResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldArray::AMH_A_iResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldArray::AMH_A_iResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1252,7 +1252,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::AMI_A_iHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::AMI_A_iHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldArray::AMI_A_iHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldArray::AMI_A_iHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1335,7 +1335,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldArray::A_i_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldArray::A_i_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::A_i_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1358,7 +1358,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldArray::AMI_A_iHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldArray::AMI_A_iHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::AMI_A_iHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

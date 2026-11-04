@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PRAGMAS_K08TGZ_CPP_
-#define _TAO_IDL_PRAGMAS_K08TGZ_CPP_
+#ifndef _TAO_IDL_PRAGMAS_2U18F3_CPP_
+#define _TAO_IDL_PRAGMAS_2U18F3_CPP_
 
 #include "pragmaS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -77,7 +77,7 @@ POA_AMH_hello::POA_AMH_hello ()
   this->optable_ = std::addressof (tao_AMH_hello_optable);
 }
 
-::CORBA::Boolean POA_AMH_hello::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_hello::_is_a (char const *value)
 {
   return
     (
@@ -86,7 +86,7 @@ POA_AMH_hello::POA_AMH_hello ()
     );
 }
 
-const char* POA_AMH_hello::_interface_repository_id () const
+char const *POA_AMH_hello::_interface_repository_id () const
 {
   return "IDL:anvil.com/hello:1.0";
 }
@@ -148,7 +148,7 @@ POA_hello::POA_hello ()
   this->optable_ = std::addressof (tao_hello_optable);
 }
 
-::CORBA::Boolean POA_hello::_is_a (const char* value)
+::CORBA::Boolean POA_hello::_is_a (char const *value)
 {
   return
     (
@@ -157,7 +157,7 @@ POA_hello::POA_hello ()
     );
 }
 
-const char* POA_hello::_interface_repository_id () const
+char const *POA_hello::_interface_repository_id () const
 {
   return "IDL:anvil.com/hello:1.0";
 }
@@ -219,7 +219,7 @@ POA_AMI_helloHandler::POA_AMI_helloHandler ()
   this->optable_ = std::addressof (tao_AMI_helloHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_helloHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_helloHandler::_is_a (char const *value)
 {
   return
     (
@@ -229,7 +229,7 @@ POA_AMI_helloHandler::POA_AMI_helloHandler ()
     );
 }
 
-const char* POA_AMI_helloHandler::_interface_repository_id () const
+char const *POA_AMI_helloHandler::_interface_repository_id () const
 {
   return "IDL:anvil.com/AMI_helloHandler:1.0";
 }
@@ -279,7 +279,7 @@ POA_AMH_goodbye::POA_AMH_goodbye ()
   this->optable_ = std::addressof (tao_AMH_goodbye_optable);
 }
 
-::CORBA::Boolean POA_AMH_goodbye::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_goodbye::_is_a (char const *value)
 {
   return
     (
@@ -288,7 +288,7 @@ POA_AMH_goodbye::POA_AMH_goodbye ()
     );
 }
 
-const char* POA_AMH_goodbye::_interface_repository_id () const
+char const *POA_AMH_goodbye::_interface_repository_id () const
 {
   return "IDL:anvil.com/goodbye:1.0";
 }
@@ -350,7 +350,7 @@ POA_goodbye::POA_goodbye ()
   this->optable_ = std::addressof (tao_goodbye_optable);
 }
 
-::CORBA::Boolean POA_goodbye::_is_a (const char* value)
+::CORBA::Boolean POA_goodbye::_is_a (char const *value)
 {
   return
     (
@@ -359,7 +359,7 @@ POA_goodbye::POA_goodbye ()
     );
 }
 
-const char* POA_goodbye::_interface_repository_id () const
+char const *POA_goodbye::_interface_repository_id () const
 {
   return "IDL:anvil.com/goodbye:1.0";
 }
@@ -421,7 +421,7 @@ POA_AMI_goodbyeHandler::POA_AMI_goodbyeHandler ()
   this->optable_ = std::addressof (tao_AMI_goodbyeHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_goodbyeHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_goodbyeHandler::_is_a (char const *value)
 {
   return
     (
@@ -431,7 +431,7 @@ POA_AMI_goodbyeHandler::POA_AMI_goodbyeHandler ()
     );
 }
 
-const char* POA_AMI_goodbyeHandler::_interface_repository_id () const
+char const *POA_AMI_goodbyeHandler::_interface_repository_id () const
 {
   return "IDL:anvil.com/AMI_goodbyeHandler:1.0";
 }
@@ -481,7 +481,7 @@ POA_salutation::AMH_sayonara::AMH_sayonara ()
   this->optable_ = std::addressof (tao_salutation_AMH_sayonara_optable);
 }
 
-::CORBA::Boolean POA_salutation::AMH_sayonara::_is_a (const char* value)
+::CORBA::Boolean POA_salutation::AMH_sayonara::_is_a (char const *value)
 {
   return
     (
@@ -490,7 +490,7 @@ POA_salutation::AMH_sayonara::AMH_sayonara ()
     );
 }
 
-const char* POA_salutation::AMH_sayonara::_interface_repository_id () const
+char const *POA_salutation::AMH_sayonara::_interface_repository_id () const
 {
   return "IDL:hammer.com/salutation/sayonara:1.0";
 }
@@ -552,7 +552,7 @@ POA_salutation::sayonara::sayonara ()
   this->optable_ = std::addressof (tao_salutation_sayonara_optable);
 }
 
-::CORBA::Boolean POA_salutation::sayonara::_is_a (const char* value)
+::CORBA::Boolean POA_salutation::sayonara::_is_a (char const *value)
 {
   return
     (
@@ -561,7 +561,7 @@ POA_salutation::sayonara::sayonara ()
     );
 }
 
-const char* POA_salutation::sayonara::_interface_repository_id () const
+char const *POA_salutation::sayonara::_interface_repository_id () const
 {
   return "IDL:hammer.com/salutation/sayonara:1.0";
 }
@@ -623,7 +623,7 @@ POA_salutation::AMI_sayonaraHandler::AMI_sayonaraHandler ()
   this->optable_ = std::addressof (tao_salutation_AMI_sayonaraHandler_optable);
 }
 
-::CORBA::Boolean POA_salutation::AMI_sayonaraHandler::_is_a (const char* value)
+::CORBA::Boolean POA_salutation::AMI_sayonaraHandler::_is_a (char const *value)
 {
   return
     (
@@ -633,7 +633,7 @@ POA_salutation::AMI_sayonaraHandler::AMI_sayonaraHandler ()
     );
 }
 
-const char* POA_salutation::AMI_sayonaraHandler::_interface_repository_id () const
+char const *POA_salutation::AMI_sayonaraHandler::_interface_repository_id () const
 {
   return "IDL:hammer.com/salutation/AMI_sayonaraHandler:1.0";
 }
@@ -683,7 +683,7 @@ POA_AMH_ciao::POA_AMH_ciao ()
   this->optable_ = std::addressof (tao_AMH_ciao_optable);
 }
 
-::CORBA::Boolean POA_AMH_ciao::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_ciao::_is_a (char const *value)
 {
   return
     (
@@ -692,7 +692,7 @@ POA_AMH_ciao::POA_AMH_ciao ()
     );
 }
 
-const char* POA_AMH_ciao::_interface_repository_id () const
+char const *POA_AMH_ciao::_interface_repository_id () const
 {
   return "IDL:anvil.com/ciao:1.0";
 }
@@ -754,7 +754,7 @@ POA_ciao::POA_ciao ()
   this->optable_ = std::addressof (tao_ciao_optable);
 }
 
-::CORBA::Boolean POA_ciao::_is_a (const char* value)
+::CORBA::Boolean POA_ciao::_is_a (char const *value)
 {
   return
     (
@@ -763,7 +763,7 @@ POA_ciao::POA_ciao ()
     );
 }
 
-const char* POA_ciao::_interface_repository_id () const
+char const *POA_ciao::_interface_repository_id () const
 {
   return "IDL:anvil.com/ciao:1.0";
 }
@@ -825,7 +825,7 @@ POA_AMI_ciaoHandler::POA_AMI_ciaoHandler ()
   this->optable_ = std::addressof (tao_AMI_ciaoHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_ciaoHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_ciaoHandler::_is_a (char const *value)
 {
   return
     (
@@ -835,7 +835,7 @@ POA_AMI_ciaoHandler::POA_AMI_ciaoHandler ()
     );
 }
 
-const char* POA_AMI_ciaoHandler::_interface_repository_id () const
+char const *POA_AMI_ciaoHandler::_interface_repository_id () const
 {
   return "IDL:anvil.com/AMI_ciaoHandler:1.0";
 }
@@ -885,7 +885,7 @@ POA_AMH_aloha::POA_AMH_aloha ()
   this->optable_ = std::addressof (tao_AMH_aloha_optable);
 }
 
-::CORBA::Boolean POA_AMH_aloha::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_aloha::_is_a (char const *value)
 {
   return
     (
@@ -894,7 +894,7 @@ POA_AMH_aloha::POA_AMH_aloha ()
     );
 }
 
-const char* POA_AMH_aloha::_interface_repository_id () const
+char const *POA_AMH_aloha::_interface_repository_id () const
 {
   return "IDL:anvil.com/aloha:1.0";
 }
@@ -956,7 +956,7 @@ POA_aloha::POA_aloha ()
   this->optable_ = std::addressof (tao_aloha_optable);
 }
 
-::CORBA::Boolean POA_aloha::_is_a (const char* value)
+::CORBA::Boolean POA_aloha::_is_a (char const *value)
 {
   return
     (
@@ -965,7 +965,7 @@ POA_aloha::POA_aloha ()
     );
 }
 
-const char* POA_aloha::_interface_repository_id () const
+char const *POA_aloha::_interface_repository_id () const
 {
   return "IDL:anvil.com/aloha:1.0";
 }
@@ -1027,7 +1027,7 @@ POA_AMI_alohaHandler::POA_AMI_alohaHandler ()
   this->optable_ = std::addressof (tao_AMI_alohaHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_alohaHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_alohaHandler::_is_a (char const *value)
 {
   return
     (
@@ -1037,7 +1037,7 @@ POA_AMI_alohaHandler::POA_AMI_alohaHandler ()
     );
 }
 
-const char* POA_AMI_alohaHandler::_interface_repository_id () const
+char const *POA_AMI_alohaHandler::_interface_repository_id () const
 {
   return "IDL:anvil.com/AMI_alohaHandler:1.0";
 }

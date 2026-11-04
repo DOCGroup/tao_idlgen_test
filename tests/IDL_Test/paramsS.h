@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_PARAMSS_BX4ADJ_H_
-#define _TAO_IDL_PARAMSS_BX4ADJ_H_
+#ifndef _TAO_IDL_PARAMSS_FNTVCU_H_
+#define _TAO_IDL_PARAMSS_FNTVCU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -159,10 +159,10 @@ namespace POA_foo
       AMH_fooBar ();
 
     public:
-      AMH_fooBar (const AMH_fooBar& rhs);
+      AMH_fooBar (AMH_fooBar const &rhs);
       ~AMH_fooBar () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -170,7 +170,7 @@ namespace POA_foo
 
       foo::bar::fooBar *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     static void getDate_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -201,10 +201,10 @@ namespace POA_foo
     using _stub_ptr_type = ::foo::bar::fooBar_ptr;
     using _stub_var_type = ::foo::bar::fooBar_var;
 
-    fooBar (const fooBar& rhs) = default;
+    fooBar (fooBar const &rhs) = default;
     ~fooBar () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -212,7 +212,7 @@ namespace POA_foo
 
     ::foo::bar::fooBar *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual ::foo::theDate getDate (
       ::foo::theDate const & a,
       ::foo::theDate & b,
@@ -277,10 +277,10 @@ namespace POA_foo
     using _stub_ptr_type = ::foo::bar::AMI_fooBarHandler_ptr;
     using _stub_var_type = ::foo::bar::AMI_fooBarHandler_var;
 
-    AMI_fooBarHandler (const AMI_fooBarHandler& rhs) = default;
+    AMI_fooBarHandler (AMI_fooBarHandler const &rhs) = default;
     ~AMI_fooBarHandler () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -288,7 +288,7 @@ namespace POA_foo
 
     ::foo::bar::AMI_fooBarHandler *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual void getDate (
       ::foo::theDate const & ami_return_val,
       ::foo::theDate const & b,

@@ -1181,7 +1181,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     TestModule::TestInterface_ptr &_tao_elem)
 {
   return
@@ -1323,7 +1323,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     TestModule::AMH_TestInterfaceResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1381,7 +1381,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     TestModule::AMI_TestInterfaceHandler_ptr &_tao_elem)
 {
   return
@@ -1439,7 +1439,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2124::Foo_ptr &_tao_elem)
 {
   return
@@ -1581,7 +1581,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2124::AMH_FooResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1639,7 +1639,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2124::AMI_FooHandler_ptr &_tao_elem)
 {
   return
@@ -1697,7 +1697,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2122::One::Whatever_ptr &_tao_elem)
 {
   return
@@ -1839,7 +1839,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2122::One::AMH_WhateverResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1897,7 +1897,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2122::One::AMI_WhateverHandler_ptr &_tao_elem)
 {
   return
@@ -1955,7 +1955,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2122::Two::WhoCares_ptr &_tao_elem)
 {
   return
@@ -2097,7 +2097,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2122::Two::AMH_WhoCaresResponseHandler_ptr &_tao_elem)
 {
   return
@@ -2155,7 +2155,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2122::Two::AMI_WhoCaresHandler_ptr &_tao_elem)
 {
   return
@@ -2213,7 +2213,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2122::Three::WhoCares_ptr &_tao_elem)
 {
   return
@@ -2355,7 +2355,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2122::Three::AMH_WhoCaresResponseHandler_ptr &_tao_elem)
 {
   return
@@ -2413,7 +2413,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2122::Three::AMI_WhoCaresHandler_ptr &_tao_elem)
 {
   return

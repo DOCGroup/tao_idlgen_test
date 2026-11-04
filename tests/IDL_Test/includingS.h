@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDINGS_11ULGD_H_
-#define _TAO_IDL_INCLUDINGS_11ULGD_H_
+#ifndef _TAO_IDL_INCLUDINGS_CZGWT4_H_
+#define _TAO_IDL_INCLUDINGS_CZGWT4_H_
 
 #include /**/ "ace/pre.h"
 
@@ -365,10 +365,10 @@ protected:
   POA_AMH_iface ();
 
 public:
-  POA_AMH_iface (const POA_AMH_iface& rhs);
+  POA_AMH_iface (POA_AMH_iface const &rhs);
   ~POA_AMH_iface () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -376,7 +376,7 @@ public:
 
   iface *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 };
 
 class POA_iface;
@@ -396,10 +396,10 @@ public:
   using _stub_ptr_type = ::iface_ptr;
   using _stub_var_type = ::iface_var;
 
-  POA_iface (const POA_iface& rhs) = default;
+  POA_iface (POA_iface const &rhs) = default;
   ~POA_iface () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -407,7 +407,7 @@ public:
 
   ::iface *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -453,10 +453,10 @@ public:
   using _stub_ptr_type = ::AMI_ifaceHandler_ptr;
   using _stub_var_type = ::AMI_ifaceHandler_var;
 
-  POA_AMI_ifaceHandler (const POA_AMI_ifaceHandler& rhs) = default;
+  POA_AMI_ifaceHandler (POA_AMI_ifaceHandler const &rhs) = default;
   ~POA_AMI_ifaceHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -464,7 +464,7 @@ public:
 
   ::AMI_ifaceHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -500,10 +500,10 @@ protected:
   POA_AMH_MyInt ();
 
 public:
-  POA_AMH_MyInt (const POA_AMH_MyInt& rhs);
+  POA_AMH_MyInt (POA_AMH_MyInt const &rhs);
   ~POA_AMH_MyInt () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -511,7 +511,7 @@ public:
 
   MyInt *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -541,10 +541,10 @@ public:
   using _stub_ptr_type = ::MyInt_ptr;
   using _stub_var_type = ::MyInt_var;
 
-  POA_MyInt (const POA_MyInt& rhs) = default;
+  POA_MyInt (POA_MyInt const &rhs) = default;
   ~POA_MyInt () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -552,7 +552,7 @@ public:
 
   ::MyInt *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::A::MyStructA * op (
     ::A::MyStructA const & ab) = 0;
 
@@ -613,10 +613,10 @@ public:
   using _stub_ptr_type = ::AMI_MyIntHandler_ptr;
   using _stub_var_type = ::AMI_MyIntHandler_var;
 
-  POA_AMI_MyIntHandler (const POA_AMI_MyIntHandler& rhs) = default;
+  POA_AMI_MyIntHandler (POA_AMI_MyIntHandler const &rhs) = default;
   ~POA_AMI_MyIntHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -624,7 +624,7 @@ public:
 
   ::AMI_MyIntHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op (
     ::A::MyStructA const & ami_return_val) = 0;
 
@@ -681,10 +681,10 @@ namespace POA_RootModule
       AMH_ChildIF ();
 
     public:
-      AMH_ChildIF (const AMH_ChildIF& rhs);
+      AMH_ChildIF (AMH_ChildIF const &rhs);
       ~AMH_ChildIF () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -692,7 +692,7 @@ namespace POA_RootModule
 
       RootModule::SUBMODULE1::ChildIF *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   class ChildIF;
@@ -712,10 +712,10 @@ namespace POA_RootModule
     using _stub_ptr_type = ::RootModule::SUBMODULE1::ChildIF_ptr;
     using _stub_var_type = ::RootModule::SUBMODULE1::ChildIF_var;
 
-    ChildIF (const ChildIF& rhs) = default;
+    ChildIF (ChildIF const &rhs) = default;
     ~ChildIF () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -723,7 +723,7 @@ namespace POA_RootModule
 
     ::RootModule::SUBMODULE1::ChildIF *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -770,10 +770,10 @@ namespace POA_RootModule
     using _stub_ptr_type = ::RootModule::SUBMODULE1::AMI_ChildIFHandler_ptr;
     using _stub_var_type = ::RootModule::SUBMODULE1::AMI_ChildIFHandler_var;
 
-    AMI_ChildIFHandler (const AMI_ChildIFHandler& rhs) = default;
+    AMI_ChildIFHandler (AMI_ChildIFHandler const &rhs) = default;
     ~AMI_ChildIFHandler () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -781,7 +781,7 @@ namespace POA_RootModule
 
     ::RootModule::SUBMODULE1::AMI_ChildIFHandler *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -812,10 +812,10 @@ protected:
   POA_AMH_B ();
 
 public:
-  POA_AMH_B (const POA_AMH_B& rhs);
+  POA_AMH_B (POA_AMH_B const &rhs);
   ~POA_AMH_B () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -823,7 +823,7 @@ public:
 
   B *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 };
 
 class POA_B;
@@ -843,10 +843,10 @@ public:
   using _stub_ptr_type = ::B_ptr;
   using _stub_var_type = ::B_var;
 
-  POA_B (const POA_B& rhs) = default;
+  POA_B (POA_B const &rhs) = default;
   ~POA_B () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -854,7 +854,7 @@ public:
 
   ::B *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -900,10 +900,10 @@ public:
   using _stub_ptr_type = ::AMI_BHandler_ptr;
   using _stub_var_type = ::AMI_BHandler_var;
 
-  POA_AMI_BHandler (const POA_AMI_BHandler& rhs) = default;
+  POA_AMI_BHandler (POA_AMI_BHandler const &rhs) = default;
   ~POA_AMI_BHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -911,7 +911,7 @@ public:
 
   ::AMI_BHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

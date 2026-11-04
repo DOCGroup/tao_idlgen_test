@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFS_SHYOBY_CPP_
-#define _TAO_IDL_GPERFS_SHYOBY_CPP_
+#ifndef _TAO_IDL_GPERFS_BB58FU_CPP_
+#define _TAO_IDL_GPERFS_BB58FU_CPP_
 
 #include "gperfS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -112,7 +112,7 @@ POA_AMH_testlistitem::_get_name_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_testlistitem::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_testlistitem::_is_a (char const *value)
 {
   return
     (
@@ -121,7 +121,7 @@ POA_AMH_testlistitem::_get_name_skel (
     );
 }
 
-const char* POA_AMH_testlistitem::_interface_repository_id () const
+char const *POA_AMH_testlistitem::_interface_repository_id () const
 {
   return "IDL:testlistitem:1.0";
 }
@@ -264,7 +264,7 @@ void POA_testlistitem::_get_name_skel (
                          );
 }
 
-::CORBA::Boolean POA_testlistitem::_is_a (const char* value)
+::CORBA::Boolean POA_testlistitem::_is_a (char const *value)
 {
   return
     (
@@ -273,7 +273,7 @@ void POA_testlistitem::_get_name_skel (
     );
 }
 
-const char* POA_testlistitem::_interface_repository_id () const
+char const *POA_testlistitem::_interface_repository_id () const
 {
   return "IDL:testlistitem:1.0";
 }
@@ -533,7 +533,7 @@ void POA_AMI_testlistitemHandler::get_name_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_testlistitemHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_testlistitemHandler::_is_a (char const *value)
 {
   return
     (
@@ -543,7 +543,7 @@ void POA_AMI_testlistitemHandler::get_name_excep_skel (
     );
 }
 
-const char* POA_AMI_testlistitemHandler::_interface_repository_id () const
+char const *POA_AMI_testlistitemHandler::_interface_repository_id () const
 {
   return "IDL:AMI_testlistitemHandler:1.0";
 }
@@ -1204,7 +1204,7 @@ POA_AMH_test::new_testlistitem_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_test::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_test::_is_a (char const *value)
 {
   return
     (
@@ -1213,7 +1213,7 @@ POA_AMH_test::new_testlistitem_skel (
     );
 }
 
-const char* POA_AMH_test::_interface_repository_id () const
+char const *POA_AMH_test::_interface_repository_id () const
 {
   return "IDL:test:1.0";
 }
@@ -2535,7 +2535,7 @@ void POA_test::new_testlistitem_skel (
                          );
 }
 
-::CORBA::Boolean POA_test::_is_a (const char* value)
+::CORBA::Boolean POA_test::_is_a (char const *value)
 {
   return
     (
@@ -2544,7 +2544,7 @@ void POA_test::new_testlistitem_skel (
     );
 }
 
-const char* POA_test::_interface_repository_id () const
+char const *POA_test::_interface_repository_id () const
 {
   return "IDL:test:1.0";
 }
@@ -5387,7 +5387,7 @@ void POA_AMI_testHandler::new_testlistitem_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_testHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_testHandler::_is_a (char const *value)
 {
   return
     (
@@ -5397,7 +5397,7 @@ void POA_AMI_testHandler::new_testlistitem_excep_skel (
     );
 }
 
-const char* POA_AMI_testHandler::_interface_repository_id () const
+char const *POA_AMI_testHandler::_interface_repository_id () const
 {
   return "IDL:AMI_testHandler:1.0";
 }
@@ -6077,7 +6077,7 @@ POA_AMH_Simple_Server::transferTriggerTdc_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_Simple_Server::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_Simple_Server::_is_a (char const *value)
 {
   return
     (
@@ -6086,7 +6086,7 @@ POA_AMH_Simple_Server::transferTriggerTdc_skel (
     );
 }
 
-const char* POA_AMH_Simple_Server::_interface_repository_id () const
+char const *POA_AMH_Simple_Server::_interface_repository_id () const
 {
   return "IDL:Simple_Server:1.0";
 }
@@ -7335,7 +7335,7 @@ void POA_Simple_Server::transferTriggerTdc_skel (
                          );
 }
 
-::CORBA::Boolean POA_Simple_Server::_is_a (const char* value)
+::CORBA::Boolean POA_Simple_Server::_is_a (char const *value)
 {
   return
     (
@@ -7344,7 +7344,7 @@ void POA_Simple_Server::transferTriggerTdc_skel (
     );
 }
 
-const char* POA_Simple_Server::_interface_repository_id () const
+char const *POA_Simple_Server::_interface_repository_id () const
 {
   return "IDL:Simple_Server:1.0";
 }
@@ -7767,7 +7767,7 @@ POA_AMI_Simple_ServerHandler::POA_AMI_Simple_ServerHandler ()
   this->optable_ = std::addressof (tao_AMI_Simple_ServerHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_Simple_ServerHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_Simple_ServerHandler::_is_a (char const *value)
 {
   return
     (
@@ -7777,7 +7777,7 @@ POA_AMI_Simple_ServerHandler::POA_AMI_Simple_ServerHandler ()
     );
 }
 
-const char* POA_AMI_Simple_ServerHandler::_interface_repository_id () const
+char const *POA_AMI_Simple_ServerHandler::_interface_repository_id () const
 {
   return "IDL:AMI_Simple_ServerHandler:1.0";
 }

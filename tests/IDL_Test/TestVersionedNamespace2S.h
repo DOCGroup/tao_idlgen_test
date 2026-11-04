@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_CS37F3_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_CS37F3_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_VWVAVU_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_VWVAVU_H_
 
 #include /**/ "ace/pre.h"
 
@@ -304,10 +304,10 @@ namespace POA_M1
     AMH_LI ();
 
   public:
-    AMH_LI (const AMH_LI& rhs);
+    AMH_LI (AMH_LI const &rhs);
     ~AMH_LI () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -315,7 +315,7 @@ namespace POA_M1
 
     M1::LI *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -343,10 +343,10 @@ public:
   using _stub_ptr_type = ::M1::LI_ptr;
   using _stub_var_type = ::M1::LI_var;
 
-  LI (const LI& rhs) = default;
+  LI (LI const &rhs) = default;
   ~LI () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -354,7 +354,7 @@ public:
 
   ::M1::LI *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op (
     ::M1::S1 const & s) = 0;
 
@@ -387,10 +387,10 @@ protected:
   AMH_L2 ();
 
 public:
-  AMH_L2 (const AMH_L2& rhs);
+  AMH_L2 (AMH_L2 const &rhs);
   ~AMH_L2 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -398,7 +398,7 @@ public:
 
   M1::L2 *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -426,10 +426,10 @@ public:
   using _stub_ptr_type = ::M1::L2_ptr;
   using _stub_var_type = ::M1::L2_var;
 
-  L2 (const L2& rhs) = default;
+  L2 (L2 const &rhs) = default;
   ~L2 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -437,7 +437,7 @@ public:
 
   ::M1::L2 *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op (
     ::M1::S1 const & s) = 0;
 
@@ -478,10 +478,10 @@ namespace POA_M2
       AMH_L3 ();
 
     public:
-      AMH_L3 (const AMH_L3& rhs);
+      AMH_L3 (AMH_L3 const &rhs);
       ~AMH_L3 () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -489,7 +489,7 @@ namespace POA_M2
 
       M2::M3::L3 *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     static void op_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -517,10 +517,10 @@ namespace POA_M2
     using _stub_ptr_type = ::M2::M3::L3_ptr;
     using _stub_var_type = ::M2::M3::L3_var;
 
-    L3 (const L3& rhs) = default;
+    L3 (L3 const &rhs) = default;
     ~L3 () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -528,7 +528,7 @@ namespace POA_M2
 
     ::M2::M3::L3 *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual void op (
       ::M2::M3::S2 const & s) = 0;
 
@@ -561,10 +561,10 @@ namespace POA_M2
     AMH_L4 ();
 
   public:
-    AMH_L4 (const AMH_L4& rhs);
+    AMH_L4 (AMH_L4 const &rhs);
     ~AMH_L4 () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -572,7 +572,7 @@ namespace POA_M2
 
     M2::M3::L4 *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -600,10 +600,10 @@ public:
   using _stub_ptr_type = ::M2::M3::L4_ptr;
   using _stub_var_type = ::M2::M3::L4_var;
 
-  L4 (const L4& rhs) = default;
+  L4 (L4 const &rhs) = default;
   ~L4 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -611,7 +611,7 @@ public:
 
   ::M2::M3::L4 *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op (
     ::M2::M3::S2 const & s) = 0;
 

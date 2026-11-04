@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_8154KP_CPP_
-#define _TAO_IDL_ARRAY_ANONYMOUSS_8154KP_CPP_
+#ifndef _TAO_IDL_ARRAY_ANONYMOUSS_X8OHNB_CPP_
+#define _TAO_IDL_ARRAY_ANONYMOUSS_X8OHNB_CPP_
 
 #include "array_anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -76,7 +76,7 @@ POA_AMH_tdef::POA_AMH_tdef ()
   this->optable_ = std::addressof (tao_AMH_tdef_optable);
 }
 
-::CORBA::Boolean POA_AMH_tdef::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_tdef::_is_a (char const *value)
 {
   return
     (
@@ -85,7 +85,7 @@ POA_AMH_tdef::POA_AMH_tdef ()
     );
 }
 
-const char* POA_AMH_tdef::_interface_repository_id () const
+char const *POA_AMH_tdef::_interface_repository_id () const
 {
   return "IDL:tdef:1.0";
 }
@@ -146,7 +146,7 @@ POA_tdef::POA_tdef ()
   this->optable_ = std::addressof (tao_tdef_optable);
 }
 
-::CORBA::Boolean POA_tdef::_is_a (const char* value)
+::CORBA::Boolean POA_tdef::_is_a (char const *value)
 {
   return
     (
@@ -155,7 +155,7 @@ POA_tdef::POA_tdef ()
     );
 }
 
-const char* POA_tdef::_interface_repository_id () const
+char const *POA_tdef::_interface_repository_id () const
 {
   return "IDL:tdef:1.0";
 }
@@ -217,7 +217,7 @@ POA_AMI_tdefHandler::POA_AMI_tdefHandler ()
   this->optable_ = std::addressof (tao_AMI_tdefHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_tdefHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_tdefHandler::_is_a (char const *value)
 {
   return
     (
@@ -227,7 +227,7 @@ POA_AMI_tdefHandler::POA_AMI_tdefHandler ()
     );
 }
 
-const char* POA_AMI_tdefHandler::_interface_repository_id () const
+char const *POA_AMI_tdefHandler::_interface_repository_id () const
 {
   return "IDL:AMI_tdefHandler:1.0";
 }

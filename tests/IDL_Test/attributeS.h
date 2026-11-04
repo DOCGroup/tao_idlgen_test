@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTES_BVPVLR_H_
-#define _TAO_IDL_ATTRIBUTES_BVPVLR_H_
+#ifndef _TAO_IDL_ATTRIBUTES_YZJF62_H_
+#define _TAO_IDL_ATTRIBUTES_YZJF62_H_
 
 #include /**/ "ace/pre.h"
 
@@ -136,10 +136,10 @@ namespace POA_Hello
     AMH_MyFoo ();
 
   public:
-    AMH_MyFoo (const AMH_MyFoo& rhs);
+    AMH_MyFoo (AMH_MyFoo const &rhs);
     ~AMH_MyFoo () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -147,7 +147,7 @@ namespace POA_Hello
 
     Hello::MyFoo *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void _get_rw_attrib_mytype_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -252,10 +252,10 @@ public:
   using _stub_ptr_type = ::Hello::MyFoo_ptr;
   using _stub_var_type = ::Hello::MyFoo_var;
 
-  MyFoo (const MyFoo& rhs) = default;
+  MyFoo (MyFoo const &rhs) = default;
   ~MyFoo () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -263,7 +263,7 @@ public:
 
   ::Hello::MyFoo *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::Hello::MyType rw_attrib_mytype () = 0;
 
   static void _get_rw_attrib_mytype_skel (
@@ -435,10 +435,10 @@ public:
   using _stub_ptr_type = ::Hello::AMI_MyFooHandler_ptr;
   using _stub_var_type = ::Hello::AMI_MyFooHandler_var;
 
-  AMI_MyFooHandler (const AMI_MyFooHandler& rhs) = default;
+  AMI_MyFooHandler (AMI_MyFooHandler const &rhs) = default;
   ~AMI_MyFooHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -446,7 +446,7 @@ public:
 
   ::Hello::AMI_MyFooHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void get_rw_attrib_mytype (
     ::Hello::MyType ami_return_val) = 0;
 

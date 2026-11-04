@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ENUM_IN_STRUCTS_F5KUT1_H_
-#define _TAO_IDL_ENUM_IN_STRUCTS_F5KUT1_H_
+#ifndef _TAO_IDL_ENUM_IN_STRUCTS_UTZUD1_H_
+#define _TAO_IDL_ENUM_IN_STRUCTS_UTZUD1_H_
 
 #include /**/ "ace/pre.h"
 

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FULLS_HWPMAR_CPP_
-#define _TAO_IDL_FULLS_HWPMAR_CPP_
+#ifndef _TAO_IDL_FULLS_1UJRQU_CPP_
+#define _TAO_IDL_FULLS_1UJRQU_CPP_
 
 #include "fullS.h"
 #include "tao/PortableServer/Operation_Table_Dynamic_Hash.h"
@@ -77,7 +77,7 @@ POA_scope_test::AMH_i_scope_test::AMH_i_scope_test ()
   this->optable_ = std::addressof (tao_scope_test_AMH_i_scope_test_optable);
 }
 
-::CORBA::Boolean POA_scope_test::AMH_i_scope_test::_is_a (const char* value)
+::CORBA::Boolean POA_scope_test::AMH_i_scope_test::_is_a (char const *value)
 {
   return
     (
@@ -86,7 +86,7 @@ POA_scope_test::AMH_i_scope_test::AMH_i_scope_test ()
     );
 }
 
-const char* POA_scope_test::AMH_i_scope_test::_interface_repository_id () const
+char const *POA_scope_test::AMH_i_scope_test::_interface_repository_id () const
 {
   return "IDL:scope_test/i_scope_test:1.0";
 }
@@ -148,7 +148,7 @@ POA_scope_test::i_scope_test::i_scope_test ()
   this->optable_ = std::addressof (tao_scope_test_i_scope_test_optable);
 }
 
-::CORBA::Boolean POA_scope_test::i_scope_test::_is_a (const char* value)
+::CORBA::Boolean POA_scope_test::i_scope_test::_is_a (char const *value)
 {
   return
     (
@@ -157,7 +157,7 @@ POA_scope_test::i_scope_test::i_scope_test ()
     );
 }
 
-const char* POA_scope_test::i_scope_test::_interface_repository_id () const
+char const *POA_scope_test::i_scope_test::_interface_repository_id () const
 {
   return "IDL:scope_test/i_scope_test:1.0";
 }
@@ -219,7 +219,7 @@ POA_scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler ()
   this->optable_ = std::addressof (tao_scope_test_AMI_i_scope_testHandler_optable);
 }
 
-::CORBA::Boolean POA_scope_test::AMI_i_scope_testHandler::_is_a (const char* value)
+::CORBA::Boolean POA_scope_test::AMI_i_scope_testHandler::_is_a (char const *value)
 {
   return
     (
@@ -229,7 +229,7 @@ POA_scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler ()
     );
 }
 
-const char* POA_scope_test::AMI_i_scope_testHandler::_interface_repository_id () const
+char const *POA_scope_test::AMI_i_scope_testHandler::_interface_repository_id () const
 {
   return "IDL:scope_test/AMI_i_scope_testHandler:1.0";
 }
@@ -410,7 +410,7 @@ POA_mod2::AMH_fwd::op_skel (
     );
 }
 
-::CORBA::Boolean POA_mod2::AMH_fwd::_is_a (const char* value)
+::CORBA::Boolean POA_mod2::AMH_fwd::_is_a (char const *value)
 {
   return
     (
@@ -419,7 +419,7 @@ POA_mod2::AMH_fwd::op_skel (
     );
 }
 
-const char* POA_mod2::AMH_fwd::_interface_repository_id () const
+char const *POA_mod2::AMH_fwd::_interface_repository_id () const
 {
   return "IDL:mod2/fwd:1.0";
 }
@@ -778,7 +778,7 @@ void POA_mod2::fwd::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_mod2::fwd::_is_a (const char* value)
+::CORBA::Boolean POA_mod2::fwd::_is_a (char const *value)
 {
   return
     (
@@ -787,7 +787,7 @@ void POA_mod2::fwd::op_skel (
     );
 }
 
-const char* POA_mod2::fwd::_interface_repository_id () const
+char const *POA_mod2::fwd::_interface_repository_id () const
 {
   return "IDL:mod2/fwd:1.0";
 }
@@ -1507,7 +1507,7 @@ void POA_mod2::AMI_fwdHandler::op_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_mod2::AMI_fwdHandler::_is_a (const char* value)
+::CORBA::Boolean POA_mod2::AMI_fwdHandler::_is_a (char const *value)
 {
   return
     (
@@ -1517,7 +1517,7 @@ void POA_mod2::AMI_fwdHandler::op_excep_skel (
     );
 }
 
-const char* POA_mod2::AMI_fwdHandler::_interface_repository_id () const
+char const *POA_mod2::AMI_fwdHandler::_interface_repository_id () const
 {
   return "IDL:mod2/AMI_fwdHandler:1.0";
 }

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSS_GHUQTQ_H_
-#define _TAO_IDL_ANONYMOUSS_GHUQTQ_H_
+#ifndef _TAO_IDL_ANONYMOUSS_5T4H9C_H_
+#define _TAO_IDL_ANONYMOUSS_5T4H9C_H_
 
 #include /**/ "ace/pre.h"
 
@@ -470,10 +470,10 @@ namespace POA_All_Anon
     AMH_anon_bd_string_test ();
 
   public:
-    AMH_anon_bd_string_test (const AMH_anon_bd_string_test& rhs);
+    AMH_anon_bd_string_test (AMH_anon_bd_string_test const &rhs);
     ~AMH_anon_bd_string_test () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -481,7 +481,7 @@ namespace POA_All_Anon
 
     All_Anon::anon_bd_string_test *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void TestFunc_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -577,10 +577,10 @@ public:
   using _stub_ptr_type = ::All_Anon::anon_bd_string_test_ptr;
   using _stub_var_type = ::All_Anon::anon_bd_string_test_var;
 
-  anon_bd_string_test (const anon_bd_string_test& rhs) = default;
+  anon_bd_string_test (anon_bd_string_test const &rhs) = default;
   ~anon_bd_string_test () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -588,7 +588,7 @@ public:
 
   ::All_Anon::anon_bd_string_test *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual char * TestFunc () = 0;
 
   static void TestFunc_skel (
@@ -746,10 +746,10 @@ public:
   using _stub_ptr_type = ::All_Anon::AMI_anon_bd_string_testHandler_ptr;
   using _stub_var_type = ::All_Anon::AMI_anon_bd_string_testHandler_var;
 
-  AMI_anon_bd_string_testHandler (const AMI_anon_bd_string_testHandler& rhs) = default;
+  AMI_anon_bd_string_testHandler (AMI_anon_bd_string_testHandler const &rhs) = default;
   ~AMI_anon_bd_string_testHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -757,7 +757,7 @@ public:
 
   ::All_Anon::AMI_anon_bd_string_testHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void TestFunc (
     char const * ami_return_val) = 0;
 
