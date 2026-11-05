@@ -36,7 +36,7 @@
 #include "typedefC.inl"
 #endif /* !defined INLINE */
 TAO_A5_slice *
-TAO_A5_dup (const TAO_A5_slice *_tao_src_array)
+TAO_A5_dup (TAO_A5_slice const *_tao_src_array)
 {
   TAO_A5_slice *_tao_dup_array = TAO_A5_alloc ();
 
@@ -65,7 +65,7 @@ TAO_A5_free (TAO_A5_slice *_tao_slice)
 void
 TAO_A5_copy (
     TAO_A5_slice * _tao_to,
-    const TAO_A5_slice *_tao_from)
+    TAO_A5_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 5; ++i0)
@@ -74,7 +74,7 @@ TAO_A5_copy (
     }
 }
 TAO_M5_slice *
-TAO_M5_dup (const TAO_M5_slice *_tao_src_array)
+TAO_M5_dup (TAO_M5_slice const *_tao_src_array)
 {
   TAO_M5_slice *_tao_dup_array = TAO_M5_alloc ();
 
@@ -103,7 +103,7 @@ TAO_M5_free (TAO_M5_slice *_tao_slice)
 void
 TAO_M5_copy (
     TAO_M5_slice * _tao_to,
-    const TAO_M5_slice *_tao_from)
+    TAO_M5_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 5; ++i0)
@@ -113,7 +113,7 @@ TAO_M5_copy (
     }
 }
 TAO_Z5_slice *
-TAO_Z5_dup (const TAO_Z5_slice *_tao_src_array)
+TAO_Z5_dup (TAO_Z5_slice const *_tao_src_array)
 {
   TAO_Z5_slice *_tao_dup_array = TAO_Z5_alloc ();
 
@@ -142,7 +142,7 @@ TAO_Z5_free (TAO_Z5_slice *_tao_slice)
 void
 TAO_Z5_copy (
     TAO_Z5_slice * _tao_to,
-    const TAO_Z5_slice *_tao_from)
+    TAO_Z5_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 5; ++i0)
@@ -4012,7 +4012,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const TAO_A5_forany &_tao_array)
+    TAO_A5_forany const &_tao_array)
 {
   return strm.write_char_array (
       reinterpret_cast <const ACE_CDR::Char *> (_tao_array.in ()),
@@ -4034,7 +4034,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const TAO_M5_forany &_tao_array)
+    TAO_M5_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -4071,7 +4071,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const TAO_Z5_forany &_tao_array)
+    TAO_Z5_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 

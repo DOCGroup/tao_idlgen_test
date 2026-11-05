@@ -81,7 +81,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 const CORBA::Short tdef::byteslen;
 tdef::Bytes_slice *
-tdef::Bytes_dup (const tdef::Bytes_slice *_tao_src_array)
+tdef::Bytes_dup (tdef::Bytes_slice const *_tao_src_array)
 {
   tdef::Bytes_slice *_tao_dup_array = tdef::Bytes_alloc ();
 
@@ -110,7 +110,7 @@ tdef::Bytes_free (tdef::Bytes_slice *_tao_slice)
 void
 tdef::Bytes_copy (
     tdef::Bytes_slice * _tao_to,
-    const tdef::Bytes_slice *_tao_from)
+    tdef::Bytes_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 13; ++i0)
@@ -211,7 +211,7 @@ void tdef::bytes_or_longs::_tao_any_destructor (void *_tao_void_pointer)
   delete tmp;
 }
 tdef::bytes_or_longs::_Longs_slice *
-tdef::bytes_or_longs::_Longs_dup (const tdef::bytes_or_longs::_Longs_slice *_tao_src_array)
+tdef::bytes_or_longs::_Longs_dup (tdef::bytes_or_longs::_Longs_slice const *_tao_src_array)
 {
   tdef::bytes_or_longs::_Longs_slice *_tao_dup_array = tdef::bytes_or_longs::_Longs_alloc ();
 
@@ -240,7 +240,7 @@ tdef::bytes_or_longs::_Longs_free (tdef::bytes_or_longs::_Longs_slice *_tao_slic
 void
 tdef::bytes_or_longs::_Longs_copy (
     tdef::bytes_or_longs::_Longs_slice * _tao_to,
-    const tdef::bytes_or_longs::_Longs_slice *_tao_from)
+    tdef::bytes_or_longs::_Longs_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 12; ++i0)
@@ -843,7 +843,7 @@ void ABCModule::RmtPhysicalInfo::_tao_any_destructor (void *_tao_void_pointer)
   delete tmp;
 }
 ABCModule::RmtPhysicalInfo::_rmtNodeId_slice *
-ABCModule::RmtPhysicalInfo::_rmtNodeId_dup (const ABCModule::RmtPhysicalInfo::_rmtNodeId_slice *_tao_src_array)
+ABCModule::RmtPhysicalInfo::_rmtNodeId_dup (ABCModule::RmtPhysicalInfo::_rmtNodeId_slice const *_tao_src_array)
 {
   ABCModule::RmtPhysicalInfo::_rmtNodeId_slice *_tao_dup_array = ABCModule::RmtPhysicalInfo::_rmtNodeId_alloc ();
 
@@ -872,7 +872,7 @@ ABCModule::RmtPhysicalInfo::_rmtNodeId_free (ABCModule::RmtPhysicalInfo::_rmtNod
 void
 ABCModule::RmtPhysicalInfo::_rmtNodeId_copy (
     ABCModule::RmtPhysicalInfo::_rmtNodeId_slice * _tao_to,
-    const ABCModule::RmtPhysicalInfo::_rmtNodeId_slice *_tao_from)
+    ABCModule::RmtPhysicalInfo::_rmtNodeId_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 22; ++i0)
@@ -881,7 +881,7 @@ ABCModule::RmtPhysicalInfo::_rmtNodeId_copy (
     }
 }
 ABCModule::RmtPhysicalInfo::_rmtDetails_slice *
-ABCModule::RmtPhysicalInfo::_rmtDetails_dup (const ABCModule::RmtPhysicalInfo::_rmtDetails_slice *_tao_src_array)
+ABCModule::RmtPhysicalInfo::_rmtDetails_dup (ABCModule::RmtPhysicalInfo::_rmtDetails_slice const *_tao_src_array)
 {
   ABCModule::RmtPhysicalInfo::_rmtDetails_slice *_tao_dup_array = ABCModule::RmtPhysicalInfo::_rmtDetails_alloc ();
 
@@ -910,7 +910,7 @@ ABCModule::RmtPhysicalInfo::_rmtDetails_free (ABCModule::RmtPhysicalInfo::_rmtDe
 void
 ABCModule::RmtPhysicalInfo::_rmtDetails_copy (
     ABCModule::RmtPhysicalInfo::_rmtDetails_slice * _tao_to,
-    const ABCModule::RmtPhysicalInfo::_rmtDetails_slice *_tao_from)
+    ABCModule::RmtPhysicalInfo::_rmtDetails_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 22; ++i0)
@@ -1004,7 +1004,7 @@ void ABCModule::bbbBubBubBubBaby::_tao_any_destructor (void *_tao_void_pointer)
   delete tmp;
 }
 ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice *
-ABCModule::bbbBubBubBubBaby::_rmtNodeId_dup (const ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice *_tao_src_array)
+ABCModule::bbbBubBubBubBaby::_rmtNodeId_dup (ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice const *_tao_src_array)
 {
   ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice *_tao_dup_array = ABCModule::bbbBubBubBubBaby::_rmtNodeId_alloc ();
 
@@ -1033,7 +1033,7 @@ ABCModule::bbbBubBubBubBaby::_rmtNodeId_free (ABCModule::bbbBubBubBubBaby::_rmtN
 void
 ABCModule::bbbBubBubBubBaby::_rmtNodeId_copy (
     ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice * _tao_to,
-    const ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice *_tao_from)
+    ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 22; ++i0)
@@ -1042,7 +1042,7 @@ ABCModule::bbbBubBubBubBaby::_rmtNodeId_copy (
     }
 }
 ABCModule::bbbBubBubBubBaby::_rmtDetails_slice *
-ABCModule::bbbBubBubBubBaby::_rmtDetails_dup (const ABCModule::bbbBubBubBubBaby::_rmtDetails_slice *_tao_src_array)
+ABCModule::bbbBubBubBubBaby::_rmtDetails_dup (ABCModule::bbbBubBubBubBaby::_rmtDetails_slice const *_tao_src_array)
 {
   ABCModule::bbbBubBubBubBaby::_rmtDetails_slice *_tao_dup_array = ABCModule::bbbBubBubBubBaby::_rmtDetails_alloc ();
 
@@ -1071,7 +1071,7 @@ ABCModule::bbbBubBubBubBaby::_rmtDetails_free (ABCModule::bbbBubBubBubBaby::_rmt
 void
 ABCModule::bbbBubBubBubBaby::_rmtDetails_copy (
     ABCModule::bbbBubBubBubBaby::_rmtDetails_slice * _tao_to,
-    const ABCModule::bbbBubBubBubBaby::_rmtDetails_slice *_tao_from)
+    ABCModule::bbbBubBubBubBaby::_rmtDetails_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 22; ++i0)
@@ -1168,7 +1168,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const tdef::Bytes_forany &_tao_elem)
+    tdef::Bytes_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -1185,7 +1185,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     tdef::Bytes_forany &_tao_elem)
 
 {
@@ -1529,7 +1529,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const tdef::Bytes_forany &_tao_array)
+    tdef::Bytes_forany const &_tao_array)
 {
   return strm.write_octet_array (
       reinterpret_cast <const ACE_CDR::Octet *> (_tao_array.in ()),
@@ -1551,7 +1551,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const tdef::bytes_or_longs::_Longs_forany &_tao_array)
+    tdef::bytes_or_longs::_Longs_forany const &_tao_array)
 {
   return strm.write_long_array (
       reinterpret_cast <const ACE_CDR::Long *> (_tao_array.in ()),
@@ -1730,7 +1730,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const ABCModule::RmtPhysicalInfo::_rmtNodeId_forany &_tao_array)
+    ABCModule::RmtPhysicalInfo::_rmtNodeId_forany const &_tao_array)
 {
   return strm.write_octet_array (
       reinterpret_cast <const ACE_CDR::Octet *> (_tao_array.in ()),
@@ -1752,7 +1752,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const ABCModule::RmtPhysicalInfo::_rmtDetails_forany &_tao_array)
+    ABCModule::RmtPhysicalInfo::_rmtDetails_forany const &_tao_array)
 {
   return strm.write_octet_array (
       reinterpret_cast <const ACE_CDR::Octet *> (_tao_array.in ()),
@@ -1810,7 +1810,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const ABCModule::bbbBubBubBubBaby::_rmtNodeId_forany &_tao_array)
+    ABCModule::bbbBubBubBubBaby::_rmtNodeId_forany const &_tao_array)
 {
   return strm.write_octet_array (
       reinterpret_cast <const ACE_CDR::Octet *> (_tao_array.in ()),
@@ -1832,7 +1832,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const ABCModule::bbbBubBubBubBaby::_rmtDetails_forany &_tao_array)
+    ABCModule::bbbBubBubBubBaby::_rmtDetails_forany const &_tao_array)
 {
   return strm.write_octet_array (
       reinterpret_cast <const ACE_CDR::Octet *> (_tao_array.in ()),

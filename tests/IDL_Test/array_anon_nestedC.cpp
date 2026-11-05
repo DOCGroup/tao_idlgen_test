@@ -103,7 +103,7 @@ void teststruct::_tao_any_destructor (void *_tao_void_pointer)
   delete tmp;
 }
 teststruct::_b_slice *
-teststruct::_b_dup (const teststruct::_b_slice *_tao_src_array)
+teststruct::_b_dup (teststruct::_b_slice const *_tao_src_array)
 {
   teststruct::_b_slice *_tao_dup_array = teststruct::_b_alloc ();
 
@@ -132,7 +132,7 @@ teststruct::_b_free (teststruct::_b_slice *_tao_slice)
 void
 teststruct::_b_copy (
     teststruct::_b_slice * _tao_to,
-    const teststruct::_b_slice *_tao_from)
+    teststruct::_b_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 4; ++i0)
@@ -196,7 +196,7 @@ void teststruct::embeddedstruct::_tao_any_destructor (void *_tao_void_pointer)
   delete tmp;
 }
 teststruct::embeddedstruct::_a_slice *
-teststruct::embeddedstruct::_a_dup (const teststruct::embeddedstruct::_a_slice *_tao_src_array)
+teststruct::embeddedstruct::_a_dup (teststruct::embeddedstruct::_a_slice const *_tao_src_array)
 {
   teststruct::embeddedstruct::_a_slice *_tao_dup_array = teststruct::embeddedstruct::_a_alloc ();
 
@@ -225,7 +225,7 @@ teststruct::embeddedstruct::_a_free (teststruct::embeddedstruct::_a_slice *_tao_
 void
 teststruct::embeddedstruct::_a_copy (
     teststruct::embeddedstruct::_a_slice * _tao_to,
-    const teststruct::embeddedstruct::_a_slice *_tao_from)
+    teststruct::embeddedstruct::_a_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 4; ++i0)
@@ -330,7 +330,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const teststruct::_b_forany &_tao_array)
+    teststruct::_b_forany const &_tao_array)
 {
   return strm.write_char_array (
       reinterpret_cast <const ACE_CDR::Char *> (_tao_array.in ()),
@@ -352,7 +352,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const teststruct::embeddedstruct::_a_forany &_tao_array)
+    teststruct::embeddedstruct::_a_forany const &_tao_array)
 {
   return strm.write_char_array (
       reinterpret_cast <const ACE_CDR::Char *> (_tao_array.in ()),

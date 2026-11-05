@@ -68,9 +68,9 @@ TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *TEST_TYPE_alloc ();
 
 TAO_IDL_TEST_STUB_Export void TEST_TYPE_free (TEST_TYPE_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *TEST_TYPE_dup (const TEST_TYPE_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *TEST_TYPE_dup (TEST_TYPE_slice const *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void TEST_TYPE_copy (TEST_TYPE_slice *_tao_to, const TEST_TYPE_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void TEST_TYPE_copy (TEST_TYPE_slice *_tao_to, TEST_TYPE_slice const *_tao_from);
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -136,7 +136,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::TEST_TYPE_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ::TEST_TYPE_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::TEST_TYPE_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

@@ -1025,7 +1025,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const TAO_A5_forany &_tao_elem)
+    TAO_A5_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -1042,7 +1042,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     TAO_A5_forany &_tao_elem)
 
 {
@@ -1064,7 +1064,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const TAO_M5_forany &_tao_elem)
+    TAO_M5_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -1081,7 +1081,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     TAO_M5_forany &_tao_elem)
 
 {
@@ -1103,7 +1103,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const TAO_Z5_forany &_tao_elem)
+    TAO_Z5_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -1120,7 +1120,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     TAO_Z5_forany &_tao_elem)
 
 {

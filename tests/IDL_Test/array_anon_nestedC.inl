@@ -35,7 +35,7 @@ TAO::Array_Traits<teststruct::_b_forany>::free (
 ACE_INLINE
 teststruct::_b_slice *
 TAO::Array_Traits<teststruct::_b_forany>::dup (
-    const teststruct::_b_slice * _tao_slice)
+    teststruct::_b_slice const * _tao_slice)
 {
   return teststruct::_b_dup (_tao_slice);
 }
@@ -44,7 +44,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<teststruct::_b_forany>::copy (
     teststruct::_b_slice * _tao_to,
-    const teststruct::_b_slice * _tao_from)
+    teststruct::_b_slice const * _tao_from)
 {
   teststruct::_b_copy (_tao_to, _tao_from);
 }
@@ -83,7 +83,7 @@ TAO::Array_Traits<teststruct::embeddedstruct::_a_forany>::free (
 ACE_INLINE
 teststruct::embeddedstruct::_a_slice *
 TAO::Array_Traits<teststruct::embeddedstruct::_a_forany>::dup (
-    const teststruct::embeddedstruct::_a_slice * _tao_slice)
+    teststruct::embeddedstruct::_a_slice const * _tao_slice)
 {
   return teststruct::embeddedstruct::_a_dup (_tao_slice);
 }
@@ -92,7 +92,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<teststruct::embeddedstruct::_a_forany>::copy (
     teststruct::embeddedstruct::_a_slice * _tao_to,
-    const teststruct::embeddedstruct::_a_slice * _tao_from)
+    teststruct::embeddedstruct::_a_slice const * _tao_from)
 {
   teststruct::embeddedstruct::_a_copy (_tao_to, _tao_from);
 }

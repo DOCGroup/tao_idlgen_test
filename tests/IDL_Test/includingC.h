@@ -2088,7 +2088,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, choice);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, choice &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, choice &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2123,7 +2123,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, iface::postal);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, iface::postal &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, iface::postal &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2248,7 +2248,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, RootModule::SUBMODULE1::ChildIF::DifferentMode);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, RootModule::SUBMODULE1::ChildIF::DifferentMode &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, RootModule::SUBMODULE1::ChildIF::DifferentMode &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

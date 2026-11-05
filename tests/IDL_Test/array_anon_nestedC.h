@@ -79,9 +79,9 @@ struct TAO_IDL_TEST_STUB_Export teststruct
 
   static void _b_free (_b_slice *_tao_slice);
 
-  static _b_slice *_b_dup (const _b_slice *_tao_slice);
+  static _b_slice *_b_dup (_b_slice const *_tao_slice);
 
-  static void _b_copy (_b_slice *_tao_to, const _b_slice *_tao_from);
+  static void _b_copy (_b_slice *_tao_to, _b_slice const *_tao_from);
 
   _b b {};
 
@@ -107,9 +107,9 @@ struct TAO_IDL_TEST_STUB_Export teststruct
 
     static void _a_free (_a_slice *_tao_slice);
 
-    static _a_slice *_a_dup (const _a_slice *_tao_slice);
+    static _a_slice *_a_dup (_a_slice const *_tao_slice);
 
-    static void _a_copy (_a_slice *_tao_to, const _a_slice *_tao_from);
+    static void _a_copy (_a_slice *_tao_to, _a_slice const *_tao_from);
 
     _a a {};
   };
@@ -235,7 +235,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const teststruct::_b_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, teststruct::_b_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, teststruct::_b_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -249,7 +249,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const teststruct::embeddedstruct::_a_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, teststruct::embeddedstruct::_a_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, teststruct::embeddedstruct::_a_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

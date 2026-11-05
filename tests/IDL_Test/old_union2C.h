@@ -277,7 +277,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion2::FooDisc);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldUnion2::FooDisc &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldUnion2::FooDisc &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -303,7 +303,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldUnion2::Bar::BarDisc);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldUnion2::Bar::BarDisc &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldUnion2::Bar::BarDisc &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

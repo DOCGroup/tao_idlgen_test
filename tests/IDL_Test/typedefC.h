@@ -89,9 +89,9 @@ TAO_IDL_TEST_STUB_Export TAO_A5_slice *TAO_A5_alloc ();
 
 TAO_IDL_TEST_STUB_Export void TAO_A5_free (TAO_A5_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export TAO_A5_slice *TAO_A5_dup (const TAO_A5_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export TAO_A5_slice *TAO_A5_dup (TAO_A5_slice const *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void TAO_A5_copy (TAO_A5_slice *_tao_to, const TAO_A5_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void TAO_A5_copy (TAO_A5_slice *_tao_to, TAO_A5_slice const *_tao_from);
 using TAO_C5 = TAO_A5;
 using TAO_C5_slice = TAO_A5_slice;
 using TAO_C5_var = TAO_A5_var;
@@ -179,9 +179,9 @@ TAO_IDL_TEST_STUB_Export TAO_M5_slice *TAO_M5_alloc ();
 
 TAO_IDL_TEST_STUB_Export void TAO_M5_free (TAO_M5_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export TAO_M5_slice *TAO_M5_dup (const TAO_M5_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export TAO_M5_slice *TAO_M5_dup (TAO_M5_slice const *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void TAO_M5_copy (TAO_M5_slice *_tao_to, const TAO_M5_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void TAO_M5_copy (TAO_M5_slice *_tao_to, TAO_M5_slice const *_tao_from);
 using TAO_R5 = TAO_M5;
 using TAO_R5_slice = TAO_M5_slice;
 using TAO_R5_var = TAO_M5_var;
@@ -245,9 +245,9 @@ TAO_IDL_TEST_STUB_Export TAO_Z5_slice *TAO_Z5_alloc ();
 
 TAO_IDL_TEST_STUB_Export void TAO_Z5_free (TAO_Z5_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export TAO_Z5_slice *TAO_Z5_dup (const TAO_Z5_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export TAO_Z5_slice *TAO_Z5_dup (TAO_Z5_slice const *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void TAO_Z5_copy (TAO_Z5_slice *_tao_to, const TAO_Z5_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void TAO_Z5_copy (TAO_Z5_slice *_tao_to, TAO_Z5_slice const *_tao_from);
 namespace TestModule
 {
   using typedef_1 = char *;
@@ -2822,21 +2822,21 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::TAO_A5_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ::TAO_A5_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::TAO_A5_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::TAO_M5_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ::TAO_M5_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::TAO_M5_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::TAO_Z5_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ::TAO_Z5_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::TAO_Z5_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

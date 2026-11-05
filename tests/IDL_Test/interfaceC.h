@@ -3733,9 +3733,9 @@ public:
 
   static void string_1_free (string_1_slice *_tao_slice);
 
-  static string_1_slice *string_1_dup (const string_1_slice *_tao_slice);
+  static string_1_slice *string_1_dup (string_1_slice const *_tao_slice);
 
-  static void string_1_copy (string_1_slice *_tao_to, const string_1_slice *_tao_from);
+  static void string_1_copy (string_1_slice *_tao_to, string_1_slice const *_tao_from);
   static ::CORBA::TypeCode_ptr const _tc_string_1;
 
   virtual char * a_su ();
@@ -4193,9 +4193,9 @@ namespace ParamMod
 
     static void object_array_type_free (object_array_type_slice *_tao_slice);
 
-    static object_array_type_slice *object_array_type_dup (const object_array_type_slice *_tao_slice);
+    static object_array_type_slice *object_array_type_dup (object_array_type_slice const *_tao_slice);
 
-    static void object_array_type_copy (object_array_type_slice *_tao_to, const object_array_type_slice *_tao_from);
+    static void object_array_type_copy (object_array_type_slice *_tao_to, object_array_type_slice const *_tao_from);
     static ::CORBA::TypeCode_ptr const _tc_object_array_type;
 
     struct object_struct_type;
@@ -11863,8 +11863,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const AttributeTester::string_1_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AttributeTester::string_1_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AttributeTester::string_1_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AttributeTester::string_1_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -11925,8 +11925,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const ParamMod::ParameterTester::object_array_type_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ParamMod::ParameterTester::object_array_type_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ParamMod::ParameterTester::object_array_type_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ParamMod::ParameterTester::object_array_type_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -12034,7 +12034,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, M::A_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, M::A_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, M::A *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, M::A *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -12861,7 +12861,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const AttributeTester::string_1_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, AttributeTester::string_1_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AttributeTester::string_1_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -12920,7 +12920,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ParamMod::ParameterTester::object_array_type_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ParamMod::ParameterTester::object_array_type_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ParamMod::ParameterTester::object_array_type_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -13001,7 +13001,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const M::A_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, M::A_ptr const );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, M::A_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

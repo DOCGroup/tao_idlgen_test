@@ -90,9 +90,9 @@ TAO_IDL_TEST_STUB_Export string_20_slice *string_20_alloc ();
 
 TAO_IDL_TEST_STUB_Export void string_20_free (string_20_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export string_20_slice *string_20_dup (const string_20_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export string_20_slice *string_20_dup (string_20_slice const *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void string_20_copy (string_20_slice *_tao_to, const string_20_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void string_20_copy (string_20_slice *_tao_to, string_20_slice const *_tao_from);
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_string_20;
 
 struct bar1;
@@ -1206,8 +1206,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const string_20_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, string_20_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, string_20_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, string_20_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1348,7 +1348,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::string_20_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ::string_20_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::string_20_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

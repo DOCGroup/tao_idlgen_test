@@ -43,7 +43,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ObjectType);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ObjectType &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ObjectType &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

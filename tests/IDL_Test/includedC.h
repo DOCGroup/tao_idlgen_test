@@ -1391,7 +1391,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Agog);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Agog &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Agog &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1444,7 +1444,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, RootModule::SUBMODULE1::ParentIF::Mode);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, RootModule::SUBMODULE1::ParentIF::Mode &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, RootModule::SUBMODULE1::ParentIF::Mode &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

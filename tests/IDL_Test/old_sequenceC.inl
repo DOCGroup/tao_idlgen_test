@@ -35,7 +35,7 @@ TAO::Array_Traits<sfoo_ar_forany>::free (
 ACE_INLINE
 sfoo_ar_slice *
 TAO::Array_Traits<sfoo_ar_forany>::dup (
-    const sfoo_ar_slice * _tao_slice)
+    sfoo_ar_slice const * _tao_slice)
 {
   return sfoo_ar_dup (_tao_slice);
 }
@@ -44,7 +44,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<sfoo_ar_forany>::copy (
     sfoo_ar_slice * _tao_to,
-    const sfoo_ar_slice * _tao_from)
+    sfoo_ar_slice const * _tao_from)
 {
   sfoo_ar_copy (_tao_to, _tao_from);
 }

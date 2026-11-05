@@ -424,7 +424,7 @@ void sfoo::_tao_any_destructor (void *_tao_void_pointer)
   delete tmp;
 }
 sfoo_ar_slice *
-sfoo_ar_dup (const sfoo_ar_slice *_tao_src_array)
+sfoo_ar_dup (sfoo_ar_slice const *_tao_src_array)
 {
   sfoo_ar_slice *_tao_dup_array = sfoo_ar_alloc ();
 
@@ -453,7 +453,7 @@ sfoo_ar_free (sfoo_ar_slice *_tao_slice)
 void
 sfoo_ar_copy (
     sfoo_ar_slice * _tao_to,
-    const sfoo_ar_slice *_tao_from)
+    sfoo_ar_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 20; ++i0)
@@ -1879,7 +1879,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const sfoo_ar_forany &_tao_elem)
+    sfoo_ar_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -1896,7 +1896,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     sfoo_ar_forany &_tao_elem)
 
 {
@@ -2481,7 +2481,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const sfoo_ar_forany &_tao_array)
+    sfoo_ar_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 

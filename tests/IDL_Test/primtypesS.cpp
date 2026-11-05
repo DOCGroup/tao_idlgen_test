@@ -63,13 +63,13 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
+TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
-  static constexpr std::array<unsigned char, 128> asso_values =
+  static constexpr unsigned char asso_values[] =
     {
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
@@ -85,21 +85,23 @@ TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::hash (char const *str, std::size_
      16, 16, 16, 16, 16,  0,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
-  unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
-TAO_operation_db_entry const *
-TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
+const TAO_operation_db_entry *
+TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  constexpr std::size_t MIN_WORD_LENGTH {2};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr int MIN_HASH_VALUE {2};
-  constexpr int MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
 
-  static constexpr std::array<TAO_operation_db_entry , 11> wordlist =
-    {{
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"m1", std::addressof(POA_OldPrimTypes::AMH_ex1::m1_skel), std::addressof(POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::m1)},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -110,9 +112,9 @@ TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::lookup (char const *str, std::siz
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-    }};
+    };
 
-  static constexpr std::array<signed char, 16> lookup =
+  static constexpr signed char lookup[] =
     {
        -1,  -1,   2,  -5,  -2,   3,   4, -19,  -1,  -1,   7,  -1,  -1,   8,
         9,  10,
@@ -124,24 +126,22 @@ TAO_OldPrimTypes_AMH_ex1_Perfect_Hash_OpTable::lookup (char const *str, std::siz
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int const slot = lookup[key];
+          int slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (wordlist.size ()))
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
-              char const *s = wordlist[slot].opname;
+              const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
             return nullptr;
           else
             {
-              std::size_t const offset = slot > 0
-                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
-                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
-              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
-              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
+              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -408,13 +408,13 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
+TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
-  static constexpr std::array<unsigned char, 128> asso_values =
+  static constexpr unsigned char asso_values[] =
     {
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
@@ -430,21 +430,23 @@ TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::hash (char const *str, std::size_t le
      16, 16, 16, 16, 16,  0,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
-  unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
-TAO_operation_db_entry const *
-TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
+const TAO_operation_db_entry *
+TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  constexpr std::size_t MIN_WORD_LENGTH {2};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr int MIN_HASH_VALUE {2};
-  constexpr int MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {9};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {15};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {14};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
 
-  static constexpr std::array<TAO_operation_db_entry , 11> wordlist =
-    {{
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"m1", std::addressof(POA_OldPrimTypes::ex1::m1_skel), std::addressof(POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::m1)},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -455,9 +457,9 @@ TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-    }};
+    };
 
-  static constexpr std::array<signed char, 16> lookup =
+  static constexpr signed char lookup[] =
     {
        -1,  -1,   2,  -5,  -2,   3,   4, -19,  -1,  -1,   7,  -1,  -1,   8,
         9,  10,
@@ -469,24 +471,22 @@ TAO_OldPrimTypes_ex1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int const slot = lookup[key];
+          int slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (wordlist.size ()))
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
-              char const *s = wordlist[slot].opname;
+              const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
             return nullptr;
           else
             {
-              std::size_t const offset = slot > 0
-                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
-                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
-              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
-              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
+              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -1256,13 +1256,13 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
+TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
-  static constexpr std::array<unsigned char, 128> asso_values =
+  static constexpr unsigned char asso_values[] =
     {
      23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
      23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
@@ -1278,21 +1278,23 @@ TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::hash (char const *str, std
      23, 23,  0, 23, 23,  5,  0, 23, 23, 23,
      23, 23, 23, 23, 23, 23, 23, 23,
     };
-  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
-  unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
-TAO_operation_db_entry const *
-TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
+const TAO_operation_db_entry *
+TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  constexpr std::size_t MIN_WORD_LENGTH {2};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr int MIN_HASH_VALUE {5};
-  constexpr int MAX_HASH_VALUE {22};
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {13};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {22};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {18};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {18};
 
-  static constexpr std::array<TAO_operation_db_entry , 23> wordlist =
-    {{
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"",nullptr,nullptr},
@@ -1310,7 +1312,7 @@ TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (char const *str, s
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"get_l1", std::addressof(POA_OldPrimTypes::AMI_ex1Handler::get_l1_skel), std::addressof(POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1)},
       {"get_l1_excep", std::addressof(POA_OldPrimTypes::AMI_ex1Handler::get_l1_excep_skel), std::addressof(POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1_excep)},
-    }};
+    };
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
@@ -1318,7 +1320,7 @@ TAO_OldPrimTypes_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (char const *str, s
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          char const *s = wordlist[key].opname;
+          const char *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -2216,13 +2218,13 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
+TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
-  static constexpr std::array<unsigned char, 128> asso_values =
+  static constexpr unsigned char asso_values[] =
     {
      18, 18, 18, 18, 18, 18, 18, 18, 18, 18,
      18, 18, 18, 18, 18, 18, 18, 18, 18, 18,
@@ -2238,21 +2240,23 @@ TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::hash (char const *str, std::size_
      18, 18, 18, 18, 18,  5,  0, 18,  4, 18,
      18, 18, 18, 18, 18, 18, 18, 18,
     };
-  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
-  unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
-TAO_operation_db_entry const *
-TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
+const TAO_operation_db_entry *
+TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  constexpr std::size_t MIN_WORD_LENGTH {2};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr int MIN_HASH_VALUE {2};
-  constexpr int MAX_HASH_VALUE {17};
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {12};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {17};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {16};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
 
-  static constexpr std::array<TAO_operation_db_entry , 14> wordlist =
-    {{
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"m1", std::addressof(POA_OldPrimTypes::AMH_ex1::m1_skel), std::addressof(POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::m1)},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -2266,9 +2270,9 @@ TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::lookup (char const *str, std::siz
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
       {"_get_l2", std::addressof(POA_OldPrimTypes::ex2::_get_l2_skel), std::addressof(POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::_get_l2)},
-    }};
+    };
 
-  static constexpr std::array<signed char, 18> lookup =
+  static constexpr signed char lookup[] =
     {
        -1,  -1,   2,  -5,  -2,   3,   4, -21,  -1,  -1,   7,   8,   9,  10,
        11,  12,  -1,  13,
@@ -2280,24 +2284,22 @@ TAO_OldPrimTypes_AMH_ex2_Perfect_Hash_OpTable::lookup (char const *str, std::siz
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int const slot = lookup[key];
+          int slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (wordlist.size ()))
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
-              char const *s = wordlist[slot].opname;
+              const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
             return nullptr;
           else
             {
-              std::size_t const offset = slot > 0
-                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
-                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
-              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
-              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
+              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -2472,13 +2474,13 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
+TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
-  static constexpr std::array<unsigned char, 128> asso_values =
+  static constexpr unsigned char asso_values[] =
     {
      18, 18, 18, 18, 18, 18, 18, 18, 18, 18,
      18, 18, 18, 18, 18, 18, 18, 18, 18, 18,
@@ -2494,21 +2496,23 @@ TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::hash (char const *str, std::size_t le
      18, 18, 18, 18, 18,  5,  0, 18,  4, 18,
      18, 18, 18, 18, 18, 18, 18, 18,
     };
-  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
-  unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
-TAO_operation_db_entry const *
-TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
+const TAO_operation_db_entry *
+TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  constexpr std::size_t MIN_WORD_LENGTH {2};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr int MIN_HASH_VALUE {2};
-  constexpr int MAX_HASH_VALUE {17};
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {12};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {17};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {16};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {2};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {14};
 
-  static constexpr std::array<TAO_operation_db_entry , 14> wordlist =
-    {{
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"m1", std::addressof(POA_OldPrimTypes::ex1::m1_skel), std::addressof(POA_OldPrimTypes::_TAO_ex1_Direct_Proxy_Impl::m1)},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -2522,9 +2526,9 @@ TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
       {"_get_l2", std::addressof(POA_OldPrimTypes::ex2::_get_l2_skel), std::addressof(POA_OldPrimTypes::_TAO_ex2_Direct_Proxy_Impl::_get_l2)},
-    }};
+    };
 
-  static constexpr std::array<signed char, 18> lookup =
+  static constexpr signed char lookup[] =
     {
        -1,  -1,   2,  -5,  -2,   3,   4, -21,  -1,  -1,   7,   8,   9,  10,
        11,  12,  -1,  13,
@@ -2536,24 +2540,22 @@ TAO_OldPrimTypes_ex2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int const slot = lookup[key];
+          int slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (wordlist.size ()))
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
-              char const *s = wordlist[slot].opname;
+              const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
             return nullptr;
           else
             {
-              std::size_t const offset = slot > 0
-                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
-                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
-              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
-              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
+              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
@@ -2966,13 +2968,13 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* C++ code produced by gperf version 2.8 (ACE version) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
+TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
 {
-  static constexpr std::array<unsigned char, 128> asso_values =
+  static constexpr unsigned char asso_values[] =
     {
      23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
      23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
@@ -2988,21 +2990,23 @@ TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::hash (char const *str, std
      23, 23,  0, 23, 23,  5,  0, 23,  0, 23,
      23, 23, 23, 23, 23, 23, 23, 23,
     };
-  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
-  unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
+  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
 }
 
-TAO_operation_db_entry const *
-TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
+const TAO_operation_db_entry *
+TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
 {
-  constexpr std::size_t MIN_WORD_LENGTH {2};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
-  constexpr int MIN_HASH_VALUE {2};
-  constexpr int MAX_HASH_VALUE {22};
+  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {19};
+  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {2};
+  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {14};
+  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {2};
+  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {22};
+  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {21};
+  [[maybe_unused]] constexpr std::size_t DUPLICATES {4};
+  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {21};
 
-  static constexpr std::array<TAO_operation_db_entry , 21> wordlist =
-    {{
+  static constexpr TAO_operation_db_entry wordlist[] =
+    {
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"mv", std::addressof(POA_OldPrimTypes::AMI_ex2Handler::mv_skel), std::addressof(POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::mv)},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -3023,9 +3027,9 @@ TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (char const *str, s
       {"get_l1", std::addressof(POA_OldPrimTypes::AMI_ex1Handler::get_l1_skel), std::addressof(POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1)},
       {"get_l1_excep", std::addressof(POA_OldPrimTypes::AMI_ex1Handler::get_l1_excep_skel), std::addressof(POA_OldPrimTypes::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1_excep)},
       {"get_l2_excep", std::addressof(POA_OldPrimTypes::AMI_ex2Handler::get_l2_excep_skel), std::addressof(POA_OldPrimTypes::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l2_excep)},
-    }};
+    };
 
-  static constexpr std::array<signed char, 23> lookup =
+  static constexpr signed char lookup[] =
     {
        -1,  -1,   2,  -6,  -3,   3,   4,   5, -27,  -1,   9,  10,  11,  12,
        13,  14,  15,  16, -19,  -2,  17,  18, -26,
@@ -3037,24 +3041,22 @@ TAO_OldPrimTypes_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (char const *str, s
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          int const slot = lookup[key];
+          int slot = lookup[key];
 
-          if (slot >= 0 && slot < static_cast<int> (wordlist.size ()))
+          if (slot >= 0 && slot < static_cast<int> (WORDLIST_SIZE))
             {
-              char const *s = wordlist[slot].opname;
+              const char *s = wordlist[slot].opname;
 
               if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 return std::addressof (wordlist[slot]);
             }
-          else if (slot < 0 && slot >= -MAX_HASH_VALUE)
+          else if (slot < 0 && slot >= -static_cast<int> (MAX_HASH_VALUE))
             return nullptr;
           else
             {
-              std::size_t const offset = slot > 0
-                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
-                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
-              TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
-              TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
+              unsigned int offset = key + slot + (slot > 0 ? -MAX_HASH_VALUE : MAX_HASH_VALUE);
+              const TAO_operation_db_entry *base = std::addressof (wordlist[-lookup[offset]]);
+              const TAO_operation_db_entry *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
                 if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))

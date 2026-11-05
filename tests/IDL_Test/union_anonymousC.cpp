@@ -252,7 +252,7 @@ static TAO::TypeCode::Recursive_Type<
 
 ::CORBA::TypeCode_ptr const Element::_tc_ValueUnion = std::addressof(_tao_tc_Element_ValueUnion);
 NamedLongArray_slice *
-NamedLongArray_dup (const NamedLongArray_slice *_tao_src_array)
+NamedLongArray_dup (NamedLongArray_slice const *_tao_src_array)
 {
   NamedLongArray_slice *_tao_dup_array = NamedLongArray_alloc ();
 
@@ -281,7 +281,7 @@ NamedLongArray_free (NamedLongArray_slice *_tao_slice)
 void
 NamedLongArray_copy (
     NamedLongArray_slice * _tao_to,
-    const NamedLongArray_slice *_tao_from)
+    NamedLongArray_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 10; ++i0)
@@ -343,7 +343,7 @@ static TAO::TypeCode::Enum<char const *,
 
 ::CORBA::TypeCode_ptr const decl_heavy_union::_tc_which = std::addressof(_tao_tc_decl_heavy_union_which);
 decl_heavy_union::_m_en_arr_slice *
-decl_heavy_union::_m_en_arr_dup (const decl_heavy_union::_m_en_arr_slice *_tao_src_array)
+decl_heavy_union::_m_en_arr_dup (decl_heavy_union::_m_en_arr_slice const *_tao_src_array)
 {
   decl_heavy_union::_m_en_arr_slice *_tao_dup_array = decl_heavy_union::_m_en_arr_alloc ();
 
@@ -372,7 +372,7 @@ decl_heavy_union::_m_en_arr_free (decl_heavy_union::_m_en_arr_slice *_tao_slice)
 void
 decl_heavy_union::_m_en_arr_copy (
     decl_heavy_union::_m_en_arr_slice * _tao_to,
-    const decl_heavy_union::_m_en_arr_slice *_tao_from)
+    decl_heavy_union::_m_en_arr_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 10; ++i0)
@@ -398,7 +398,7 @@ static TAO::TypeCode::Enum<char const *,
 
 ::CORBA::TypeCode_ptr const decl_heavy_union::_tc_en = std::addressof(_tao_tc_decl_heavy_union_en);
 decl_heavy_union::_m_st_arr_slice *
-decl_heavy_union::_m_st_arr_dup (const decl_heavy_union::_m_st_arr_slice *_tao_src_array)
+decl_heavy_union::_m_st_arr_dup (decl_heavy_union::_m_st_arr_slice const *_tao_src_array)
 {
   decl_heavy_union::_m_st_arr_slice *_tao_dup_array = decl_heavy_union::_m_st_arr_alloc ();
 
@@ -427,7 +427,7 @@ decl_heavy_union::_m_st_arr_free (decl_heavy_union::_m_st_arr_slice *_tao_slice)
 void
 decl_heavy_union::_m_st_arr_copy (
     decl_heavy_union::_m_st_arr_slice * _tao_to,
-    const decl_heavy_union::_m_st_arr_slice *_tao_from)
+    decl_heavy_union::_m_st_arr_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 10; ++i0)
@@ -466,7 +466,7 @@ void decl_heavy_union::st::_tao_any_destructor (void *_tao_void_pointer)
   delete tmp;
 }
 decl_heavy_union::_m_un_arr_slice *
-decl_heavy_union::_m_un_arr_dup (const decl_heavy_union::_m_un_arr_slice *_tao_src_array)
+decl_heavy_union::_m_un_arr_dup (decl_heavy_union::_m_un_arr_slice const *_tao_src_array)
 {
   decl_heavy_union::_m_un_arr_slice *_tao_dup_array = decl_heavy_union::_m_un_arr_alloc ();
 
@@ -495,7 +495,7 @@ decl_heavy_union::_m_un_arr_free (decl_heavy_union::_m_un_arr_slice *_tao_slice)
 void
 decl_heavy_union::_m_un_arr_copy (
     decl_heavy_union::_m_un_arr_slice * _tao_to,
-    const decl_heavy_union::_m_un_arr_slice *_tao_from)
+    decl_heavy_union::_m_un_arr_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 10; ++i0)
@@ -594,7 +594,7 @@ static TAO::TypeCode::Union<char const *,
 
 ::CORBA::TypeCode_ptr const decl_heavy_union::_tc_un = std::addressof(_tao_tc_decl_heavy_union_un);
 decl_heavy_union::_m_anon_long_array_slice *
-decl_heavy_union::_m_anon_long_array_dup (const decl_heavy_union::_m_anon_long_array_slice *_tao_src_array)
+decl_heavy_union::_m_anon_long_array_dup (decl_heavy_union::_m_anon_long_array_slice const *_tao_src_array)
 {
   decl_heavy_union::_m_anon_long_array_slice *_tao_dup_array = decl_heavy_union::_m_anon_long_array_alloc ();
 
@@ -623,7 +623,7 @@ decl_heavy_union::_m_anon_long_array_free (decl_heavy_union::_m_anon_long_array_
 void
 decl_heavy_union::_m_anon_long_array_copy (
     decl_heavy_union::_m_anon_long_array_slice * _tao_to,
-    const decl_heavy_union::_m_anon_long_array_slice *_tao_from)
+    decl_heavy_union::_m_anon_long_array_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 10; ++i0)
@@ -1025,7 +1025,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const NamedLongArray_forany &_tao_elem)
+    NamedLongArray_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -1042,7 +1042,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     NamedLongArray_forany &_tao_elem)
 
 {
@@ -1122,7 +1122,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     decl_heavy_union::which &_tao_elem)
 {
   return
@@ -1152,7 +1152,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     decl_heavy_union::en &_tao_elem)
 {
   return
@@ -1293,7 +1293,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const NamedLongArray_forany &_tao_array)
+    NamedLongArray_forany const &_tao_array)
 {
   return strm.write_long_array (
       reinterpret_cast <const ACE_CDR::Long *> (_tao_array.in ()),
@@ -1359,7 +1359,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const decl_heavy_union::_m_en_arr_forany &_tao_array)
+    decl_heavy_union::_m_en_arr_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -1415,7 +1415,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const decl_heavy_union::_m_st_arr_forany &_tao_array)
+    decl_heavy_union::_m_st_arr_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -1528,7 +1528,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const decl_heavy_union::_m_un_arr_forany &_tao_array)
+    decl_heavy_union::_m_un_arr_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -1560,7 +1560,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const decl_heavy_union::_m_anon_long_array_forany &_tao_array)
+    decl_heavy_union::_m_anon_long_array_forany const &_tao_array)
 {
   return strm.write_long_array (
       reinterpret_cast <const ACE_CDR::Long *> (_tao_array.in ()),

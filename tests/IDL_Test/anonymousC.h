@@ -156,9 +156,9 @@ namespace Half_Anon
 
   extern TAO_IDL_TEST_STUB_Export void char_seq_array_free (char_seq_array_slice *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export char_seq_array_slice *char_seq_array_dup (const char_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export char_seq_array_slice *char_seq_array_dup (char_seq_array_slice const *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export void char_seq_array_copy (char_seq_array_slice *_tao_to, const char_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void char_seq_array_copy (char_seq_array_slice *_tao_to, char_seq_array_slice const *_tao_from);
 
 #if !defined (_HALF_ANON__TAO_SEQ_CORBA_ULONG__18_CH_)
 #define _HALF_ANON__TAO_SEQ_CORBA_ULONG__18_CH_
@@ -197,9 +197,9 @@ namespace Half_Anon
 
   extern TAO_IDL_TEST_STUB_Export void bd_ulong_seq_array_free (bd_ulong_seq_array_slice *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export bd_ulong_seq_array_slice *bd_ulong_seq_array_dup (const bd_ulong_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export bd_ulong_seq_array_slice *bd_ulong_seq_array_dup (bd_ulong_seq_array_slice const *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export void bd_ulong_seq_array_copy (bd_ulong_seq_array_slice *_tao_to, const bd_ulong_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void bd_ulong_seq_array_copy (bd_ulong_seq_array_slice *_tao_to, bd_ulong_seq_array_slice const *_tao_from);
 
 #if !defined (_HALF_ANON__TAO_SEQ_CORBA_USHORT__CH_)
 #define _HALF_ANON__TAO_SEQ_CORBA_USHORT__CH_
@@ -240,9 +240,9 @@ namespace Half_Anon
 
   extern TAO_IDL_TEST_STUB_Export void ushort_seq_array_free (ushort_seq_array_slice *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export ushort_seq_array_slice *ushort_seq_array_dup (const ushort_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export ushort_seq_array_slice *ushort_seq_array_dup (ushort_seq_array_slice const *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export void ushort_seq_array_copy (ushort_seq_array_slice *_tao_to, const ushort_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void ushort_seq_array_copy (ushort_seq_array_slice *_tao_to, ushort_seq_array_slice const *_tao_from);
 
 #if !defined (_HALF_ANON__TAO_SEQ_CORBA_USHORT__7_CH_)
 #define _HALF_ANON__TAO_SEQ_CORBA_USHORT__7_CH_
@@ -281,9 +281,9 @@ namespace Half_Anon
 
   extern TAO_IDL_TEST_STUB_Export void bd_ushort_seq_array_free (bd_ushort_seq_array_slice *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export bd_ushort_seq_array_slice *bd_ushort_seq_array_dup (const bd_ushort_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export bd_ushort_seq_array_slice *bd_ushort_seq_array_dup (bd_ushort_seq_array_slice const *_tao_slice);
 
-  extern TAO_IDL_TEST_STUB_Export void bd_ushort_seq_array_copy (bd_ushort_seq_array_slice *_tao_to, const bd_ushort_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void bd_ushort_seq_array_copy (bd_ushort_seq_array_slice *_tao_to, bd_ushort_seq_array_slice const *_tao_from);
 
 } // module Half_Anon
 namespace All_Anon
@@ -831,9 +831,9 @@ public:
 
   static void _float_seq_array_free (_float_seq_array_slice *_tao_slice);
 
-  static _float_seq_array_slice *_float_seq_array_dup (const _float_seq_array_slice *_tao_slice);
+  static _float_seq_array_slice *_float_seq_array_dup (_float_seq_array_slice const *_tao_slice);
 
-  static void _float_seq_array_copy (_float_seq_array_slice *_tao_to, const _float_seq_array_slice *_tao_from);
+  static void _float_seq_array_copy (_float_seq_array_slice *_tao_to, _float_seq_array_slice const *_tao_from);
 
   _float_seq_array float_seq_array {};
 
@@ -872,9 +872,9 @@ public:
 
   static void _another_fsa_free (_another_fsa_slice *_tao_slice);
 
-  static _another_fsa_slice *_another_fsa_dup (const _another_fsa_slice *_tao_slice);
+  static _another_fsa_slice *_another_fsa_dup (_another_fsa_slice const *_tao_slice);
 
-  static void _another_fsa_copy (_another_fsa_slice *_tao_to, const _another_fsa_slice *_tao_from);
+  static void _another_fsa_copy (_another_fsa_slice *_tao_to, _another_fsa_slice const *_tao_from);
 
   _another_fsa another_fsa {};
 
@@ -888,9 +888,9 @@ public:
 
   static void _long_array_1_free (_long_array_1_slice *_tao_slice);
 
-  static _long_array_1_slice *_long_array_1_dup (const _long_array_1_slice *_tao_slice);
+  static _long_array_1_slice *_long_array_1_dup (_long_array_1_slice const *_tao_slice);
 
-  static void _long_array_1_copy (_long_array_1_slice *_tao_to, const _long_array_1_slice *_tao_from);
+  static void _long_array_1_copy (_long_array_1_slice *_tao_to, _long_array_1_slice const *_tao_from);
 
   _long_array_1 long_array_1 {};
 
@@ -904,9 +904,9 @@ public:
 
   static void _long_array_2_free (_long_array_2_slice *_tao_slice);
 
-  static _long_array_2_slice *_long_array_2_dup (const _long_array_2_slice *_tao_slice);
+  static _long_array_2_slice *_long_array_2_dup (_long_array_2_slice const *_tao_slice);
 
-  static void _long_array_2_copy (_long_array_2_slice *_tao_to, const _long_array_2_slice *_tao_from);
+  static void _long_array_2_copy (_long_array_2_slice *_tao_to, _long_array_2_slice const *_tao_from);
 
   _long_array_2 long_array_2 {};
 
@@ -1626,7 +1626,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Half_Anon::char_seq_array_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, Half_Anon::char_seq_array_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Half_Anon::char_seq_array_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1648,7 +1648,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Half_Anon::bd_ulong_seq_array_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, Half_Anon::bd_ulong_seq_array_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Half_Anon::bd_ulong_seq_array_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1670,7 +1670,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Half_Anon::ushort_seq_array_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, Half_Anon::ushort_seq_array_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Half_Anon::ushort_seq_array_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1692,7 +1692,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const Half_Anon::bd_ushort_seq_array_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, Half_Anon::bd_ushort_seq_array_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Half_Anon::bd_ushort_seq_array_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1751,7 +1751,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const All_Anon::Nested_Anon::_float_seq_array_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, All_Anon::Nested_Anon::_float_seq_array_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::Nested_Anon::_float_seq_array_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1773,21 +1773,21 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const All_Anon::Nested_Anon::_another_fsa_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, All_Anon::Nested_Anon::_another_fsa_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::Nested_Anon::_another_fsa_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const All_Anon::Nested_Anon::_long_array_1_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, All_Anon::Nested_Anon::_long_array_1_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::Nested_Anon::_long_array_1_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const All_Anon::Nested_Anon::_long_array_2_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, All_Anon::Nested_Anon::_long_array_2_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::Nested_Anon::_long_array_2_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

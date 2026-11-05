@@ -165,9 +165,9 @@ TAO_IDL_TEST_STUB_Export NamedLongArray_slice *NamedLongArray_alloc ();
 
 TAO_IDL_TEST_STUB_Export void NamedLongArray_free (NamedLongArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export NamedLongArray_slice *NamedLongArray_dup (const NamedLongArray_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export NamedLongArray_slice *NamedLongArray_dup (NamedLongArray_slice const *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void NamedLongArray_copy (NamedLongArray_slice *_tao_to, const NamedLongArray_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void NamedLongArray_copy (NamedLongArray_slice *_tao_to, NamedLongArray_slice const *_tao_from);
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_NamedLongArray;
 
 class decl_heavy_union;
@@ -223,9 +223,9 @@ public:
 
   static void _m_en_arr_free (_m_en_arr_slice *_tao_slice);
 
-  static _m_en_arr_slice *_m_en_arr_dup (const _m_en_arr_slice *_tao_slice);
+  static _m_en_arr_slice *_m_en_arr_dup (_m_en_arr_slice const *_tao_slice);
 
-  static void _m_en_arr_copy (_m_en_arr_slice *_tao_to, const _m_en_arr_slice *_tao_from);
+  static void _m_en_arr_copy (_m_en_arr_slice *_tao_to, _m_en_arr_slice const *_tao_from);
 
   void m_en_arr (_m_en_arr);
   _m_en_arr_slice * m_en_arr () const; // get method
@@ -257,9 +257,9 @@ public:
 
   static void _m_st_arr_free (_m_st_arr_slice *_tao_slice);
 
-  static _m_st_arr_slice *_m_st_arr_dup (const _m_st_arr_slice *_tao_slice);
+  static _m_st_arr_slice *_m_st_arr_dup (_m_st_arr_slice const *_tao_slice);
 
-  static void _m_st_arr_copy (_m_st_arr_slice *_tao_to, const _m_st_arr_slice *_tao_from);
+  static void _m_st_arr_copy (_m_st_arr_slice *_tao_to, _m_st_arr_slice const *_tao_from);
 
   void m_st_arr (_m_st_arr);
   _m_st_arr_slice * m_st_arr () const; // get method
@@ -320,9 +320,9 @@ public:
 
   static void _m_un_arr_free (_m_un_arr_slice *_tao_slice);
 
-  static _m_un_arr_slice *_m_un_arr_dup (const _m_un_arr_slice *_tao_slice);
+  static _m_un_arr_slice *_m_un_arr_dup (_m_un_arr_slice const *_tao_slice);
 
-  static void _m_un_arr_copy (_m_un_arr_slice *_tao_to, const _m_un_arr_slice *_tao_from);
+  static void _m_un_arr_copy (_m_un_arr_slice *_tao_to, _m_un_arr_slice const *_tao_from);
 
   void m_un_arr (_m_un_arr);
   _m_un_arr_slice * m_un_arr () const; // get method
@@ -340,9 +340,9 @@ public:
 
   static void _m_anon_long_array_free (_m_anon_long_array_slice *_tao_slice);
 
-  static _m_anon_long_array_slice *_m_anon_long_array_dup (const _m_anon_long_array_slice *_tao_slice);
+  static _m_anon_long_array_slice *_m_anon_long_array_dup (_m_anon_long_array_slice const *_tao_slice);
 
-  static void _m_anon_long_array_copy (_m_anon_long_array_slice *_tao_to, const _m_anon_long_array_slice *_tao_from);
+  static void _m_anon_long_array_copy (_m_anon_long_array_slice *_tao_to, _m_anon_long_array_slice const *_tao_from);
 
   void m_anon_long_array (_m_anon_long_array);
   _m_anon_long_array_slice * m_anon_long_array () const; // get method
@@ -561,8 +561,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const NamedLongArray_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, NamedLongArray_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, NamedLongArray_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, NamedLongArray_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -579,7 +579,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, decl_heavy_union::which);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, decl_heavy_union::which &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, decl_heavy_union::which &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -587,7 +587,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, decl_heavy_union::en);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, decl_heavy_union::en &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, decl_heavy_union::en &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -622,7 +622,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::NamedLongArray_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ::NamedLongArray_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::NamedLongArray_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -650,7 +650,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_union::_m_en_arr_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_union::_m_en_arr_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_union::_m_en_arr_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -664,7 +664,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_union::_m_st_arr_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_union::_m_st_arr_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_union::_m_st_arr_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -678,14 +678,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_union::_m_un_arr_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_union::_m_un_arr_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_union::_m_un_arr_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_union::_m_anon_long_array_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_union::_m_anon_long_array_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_union::_m_anon_long_array_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

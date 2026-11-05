@@ -325,7 +325,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     CallMe::Colors &_tao_elem)
 {
   return
@@ -400,7 +400,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     CallMe::YourColorBaby::ColorMe &_tao_elem)
 {
   return
@@ -430,7 +430,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     CallMe::YourColorBaby::Val &_tao_elem)
 {
   return
@@ -505,7 +505,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     CallMe::YourCar::ColorMe &_tao_elem)
 {
   return

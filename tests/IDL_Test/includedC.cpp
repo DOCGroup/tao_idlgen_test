@@ -1939,7 +1939,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Agog &_tao_elem)
 {
   return
@@ -2243,7 +2243,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     RootModule::SUBMODULE1::ParentIF::Mode &_tao_elem)
 {
   return

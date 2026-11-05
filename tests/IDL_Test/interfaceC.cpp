@@ -8518,7 +8518,7 @@ TAO::Objref_Traits<AttributeTester>::marshal (AttributeTester_ptr const p,TAO_Ou
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 AttributeTester::string_1_slice *
-AttributeTester::string_1_dup (const AttributeTester::string_1_slice *_tao_src_array)
+AttributeTester::string_1_dup (AttributeTester::string_1_slice const *_tao_src_array)
 {
   AttributeTester::string_1_slice *_tao_dup_array = AttributeTester::string_1_alloc ();
 
@@ -8547,7 +8547,7 @@ AttributeTester::string_1_free (AttributeTester::string_1_slice *_tao_slice)
 void
 AttributeTester::string_1_copy (
     AttributeTester::string_1_slice * _tao_to,
-    const AttributeTester::string_1_slice *_tao_from)
+    AttributeTester::string_1_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 1; ++i0)
@@ -10052,7 +10052,7 @@ static TAO::TypeCode::Alias<char const *,
 
 ::CORBA::TypeCode_ptr const ParamMod::ParameterTester::_tc_object_seq_type = std::addressof(_tao_tc_ParamMod_ParameterTester_object_seq_type);
 ParamMod::ParameterTester::object_array_type_slice *
-ParamMod::ParameterTester::object_array_type_dup (const ParamMod::ParameterTester::object_array_type_slice *_tao_src_array)
+ParamMod::ParameterTester::object_array_type_dup (ParamMod::ParameterTester::object_array_type_slice const *_tao_src_array)
 {
   ParamMod::ParameterTester::object_array_type_slice *_tao_dup_array = ParamMod::ParameterTester::object_array_type_alloc ();
 
@@ -10081,7 +10081,7 @@ ParamMod::ParameterTester::object_array_type_free (ParamMod::ParameterTester::ob
 void
 ParamMod::ParameterTester::object_array_type_copy (
     ParamMod::ParameterTester::object_array_type_slice * _tao_to,
-    const ParamMod::ParameterTester::object_array_type_slice *_tao_from)
+    ParamMod::ParameterTester::object_array_type_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 5; ++i0)
@@ -22951,7 +22951,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const AttributeTester::string_1_forany &_tao_elem)
+    AttributeTester::string_1_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -22968,7 +22968,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AttributeTester::string_1_forany &_tao_elem)
 
 {
@@ -23359,7 +23359,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const ParamMod::ParameterTester::object_array_type_forany &_tao_elem)
+    ParamMod::ParameterTester::object_array_type_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -23376,7 +23376,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     ParamMod::ParameterTester::object_array_type_forany &_tao_elem)
 
 {
@@ -28527,7 +28527,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const AttributeTester::string_1_forany &_tao_array)
+    AttributeTester::string_1_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -28738,7 +28738,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const ParamMod::ParameterTester::object_array_type_forany &_tao_array)
+    ParamMod::ParameterTester::object_array_type_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 

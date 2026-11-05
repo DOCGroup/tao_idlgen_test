@@ -227,7 +227,7 @@ void decl_heavy_struct::_tao_any_destructor (void *_tao_void_pointer)
   delete tmp;
 }
 decl_heavy_struct::_m_en_slice *
-decl_heavy_struct::_m_en_dup (const decl_heavy_struct::_m_en_slice *_tao_src_array)
+decl_heavy_struct::_m_en_dup (decl_heavy_struct::_m_en_slice const *_tao_src_array)
 {
   decl_heavy_struct::_m_en_slice *_tao_dup_array = decl_heavy_struct::_m_en_alloc ();
 
@@ -256,7 +256,7 @@ decl_heavy_struct::_m_en_free (decl_heavy_struct::_m_en_slice *_tao_slice)
 void
 decl_heavy_struct::_m_en_copy (
     decl_heavy_struct::_m_en_slice * _tao_to,
-    const decl_heavy_struct::_m_en_slice *_tao_from)
+    decl_heavy_struct::_m_en_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 10; ++i0)
@@ -282,7 +282,7 @@ static TAO::TypeCode::Enum<char const *,
 
 ::CORBA::TypeCode_ptr const decl_heavy_struct::_tc_str_en = std::addressof(_tao_tc_decl_heavy_struct_str_en);
 decl_heavy_struct::_m_st_slice *
-decl_heavy_struct::_m_st_dup (const decl_heavy_struct::_m_st_slice *_tao_src_array)
+decl_heavy_struct::_m_st_dup (decl_heavy_struct::_m_st_slice const *_tao_src_array)
 {
   decl_heavy_struct::_m_st_slice *_tao_dup_array = decl_heavy_struct::_m_st_alloc ();
 
@@ -311,7 +311,7 @@ decl_heavy_struct::_m_st_free (decl_heavy_struct::_m_st_slice *_tao_slice)
 void
 decl_heavy_struct::_m_st_copy (
     decl_heavy_struct::_m_st_slice * _tao_to,
-    const decl_heavy_struct::_m_st_slice *_tao_from)
+    decl_heavy_struct::_m_st_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 10; ++i0)
@@ -350,7 +350,7 @@ void decl_heavy_struct::st::_tao_any_destructor (void *_tao_void_pointer)
   delete tmp;
 }
 decl_heavy_struct::_m_un_slice *
-decl_heavy_struct::_m_un_dup (const decl_heavy_struct::_m_un_slice *_tao_src_array)
+decl_heavy_struct::_m_un_dup (decl_heavy_struct::_m_un_slice const *_tao_src_array)
 {
   decl_heavy_struct::_m_un_slice *_tao_dup_array = decl_heavy_struct::_m_un_alloc ();
 
@@ -379,7 +379,7 @@ decl_heavy_struct::_m_un_free (decl_heavy_struct::_m_un_slice *_tao_slice)
 void
 decl_heavy_struct::_m_un_copy (
     decl_heavy_struct::_m_un_slice * _tao_to,
-    const decl_heavy_struct::_m_un_slice *_tao_from)
+    decl_heavy_struct::_m_un_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 10; ++i0)
@@ -631,7 +631,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     UnNamed &_tao_elem)
 {
   return
@@ -702,7 +702,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     HoldsEnum::Named &_tao_elem)
 {
   return
@@ -919,7 +919,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const decl_heavy_struct::_m_en_forany &_tao_array)
+    decl_heavy_struct::_m_en_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -975,7 +975,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const decl_heavy_struct::_m_st_forany &_tao_array)
+    decl_heavy_struct::_m_st_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -1088,7 +1088,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const decl_heavy_struct::_m_un_forany &_tao_array)
+    decl_heavy_struct::_m_un_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 

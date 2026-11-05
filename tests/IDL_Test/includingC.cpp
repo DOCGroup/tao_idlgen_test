@@ -3161,7 +3161,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     choice &_tao_elem)
 {
   return
@@ -3339,7 +3339,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     iface::postal &_tao_elem)
 {
   return
@@ -4123,7 +4123,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     RootModule::SUBMODULE1::ChildIF::DifferentMode &_tao_elem)
 {
   return

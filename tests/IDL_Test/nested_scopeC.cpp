@@ -7325,7 +7325,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2125::Bar::Stuff &_tao_elem)
 {
   return

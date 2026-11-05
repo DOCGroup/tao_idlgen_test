@@ -52,7 +52,7 @@
 #include "old_structC.inl"
 #endif /* !defined INLINE */
 string_20_slice *
-string_20_dup (const string_20_slice *_tao_src_array)
+string_20_dup (string_20_slice const *_tao_src_array)
 {
   string_20_slice *_tao_dup_array = string_20_alloc ();
 
@@ -81,7 +81,7 @@ string_20_free (string_20_slice *_tao_slice)
 void
 string_20_copy (
     string_20_slice * _tao_to,
-    const string_20_slice *_tao_from)
+    string_20_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 20; ++i0)
@@ -2035,7 +2035,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const string_20_forany &_tao_elem)
+    string_20_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -2052,7 +2052,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     string_20_forany &_tao_elem)
 
 {
@@ -2876,7 +2876,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const string_20_forany &_tao_array)
+    string_20_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 

@@ -77,7 +77,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const TEST_TYPE_forany &_tao_elem)
+    TEST_TYPE_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -94,7 +94,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     TEST_TYPE_forany &_tao_elem)
 
 {

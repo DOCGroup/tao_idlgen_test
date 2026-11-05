@@ -115,24 +115,24 @@ namespace CommaList
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const TAO_A5_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TAO_A5_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TAO_A5_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, TAO_A5_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const TAO_M5_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TAO_M5_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TAO_M5_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, TAO_M5_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const TAO_Z5_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, TAO_Z5_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, TAO_Z5_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, TAO_Z5_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

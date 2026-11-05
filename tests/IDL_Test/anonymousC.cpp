@@ -60,7 +60,7 @@ void Not_Anon::short_seq::_tao_any_destructor (
 
 #endif /* end #if !defined */
 Half_Anon::char_seq_array_slice *
-Half_Anon::char_seq_array_dup (const Half_Anon::char_seq_array_slice *_tao_src_array)
+Half_Anon::char_seq_array_dup (Half_Anon::char_seq_array_slice const *_tao_src_array)
 {
   Half_Anon::char_seq_array_slice *_tao_dup_array = Half_Anon::char_seq_array_alloc ();
 
@@ -89,7 +89,7 @@ Half_Anon::char_seq_array_free (Half_Anon::char_seq_array_slice *_tao_slice)
 void
 Half_Anon::char_seq_array_copy (
     Half_Anon::char_seq_array_slice * _tao_to,
-    const Half_Anon::char_seq_array_slice *_tao_from)
+    Half_Anon::char_seq_array_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 14; ++i0)
@@ -114,7 +114,7 @@ Half_Anon::_tao_seq_CORBA_Char_::_tao_seq_CORBA_Char_ (::CORBA::ULong max,
 
 #endif /* end #if !defined */
 Half_Anon::bd_ulong_seq_array_slice *
-Half_Anon::bd_ulong_seq_array_dup (const Half_Anon::bd_ulong_seq_array_slice *_tao_src_array)
+Half_Anon::bd_ulong_seq_array_dup (Half_Anon::bd_ulong_seq_array_slice const *_tao_src_array)
 {
   Half_Anon::bd_ulong_seq_array_slice *_tao_dup_array = Half_Anon::bd_ulong_seq_array_alloc ();
 
@@ -143,7 +143,7 @@ Half_Anon::bd_ulong_seq_array_free (Half_Anon::bd_ulong_seq_array_slice *_tao_sl
 void
 Half_Anon::bd_ulong_seq_array_copy (
     Half_Anon::bd_ulong_seq_array_slice * _tao_to,
-    const Half_Anon::bd_ulong_seq_array_slice *_tao_from)
+    Half_Anon::bd_ulong_seq_array_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 17; ++i0)
@@ -164,7 +164,7 @@ Half_Anon::_tao_seq_CORBA_ULong__18::_tao_seq_CORBA_ULong__18 (::CORBA::ULong le
 
 #endif /* end #if !defined */
 Half_Anon::ushort_seq_array_slice *
-Half_Anon::ushort_seq_array_dup (const Half_Anon::ushort_seq_array_slice *_tao_src_array)
+Half_Anon::ushort_seq_array_dup (Half_Anon::ushort_seq_array_slice const *_tao_src_array)
 {
   Half_Anon::ushort_seq_array_slice *_tao_dup_array = Half_Anon::ushort_seq_array_alloc ();
 
@@ -193,7 +193,7 @@ Half_Anon::ushort_seq_array_free (Half_Anon::ushort_seq_array_slice *_tao_slice)
 void
 Half_Anon::ushort_seq_array_copy (
     Half_Anon::ushort_seq_array_slice * _tao_to,
-    const Half_Anon::ushort_seq_array_slice *_tao_from)
+    Half_Anon::ushort_seq_array_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 12; ++i0)
@@ -218,7 +218,7 @@ Half_Anon::_tao_seq_CORBA_UShort_::_tao_seq_CORBA_UShort_ (::CORBA::ULong max,
 
 #endif /* end #if !defined */
 Half_Anon::bd_ushort_seq_array_slice *
-Half_Anon::bd_ushort_seq_array_dup (const Half_Anon::bd_ushort_seq_array_slice *_tao_src_array)
+Half_Anon::bd_ushort_seq_array_dup (Half_Anon::bd_ushort_seq_array_slice const *_tao_src_array)
 {
   Half_Anon::bd_ushort_seq_array_slice *_tao_dup_array = Half_Anon::bd_ushort_seq_array_alloc ();
 
@@ -247,7 +247,7 @@ Half_Anon::bd_ushort_seq_array_free (Half_Anon::bd_ushort_seq_array_slice *_tao_
 void
 Half_Anon::bd_ushort_seq_array_copy (
     Half_Anon::bd_ushort_seq_array_slice * _tao_to,
-    const Half_Anon::bd_ushort_seq_array_slice *_tao_from)
+    Half_Anon::bd_ushort_seq_array_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 11; ++i0)
@@ -2285,7 +2285,7 @@ All_Anon::AMI_anon_bd_string_testHandler::marshal (TAO_OutputCDR &cdr)
   return (cdr << this);
 }
 All_Anon::Nested_Anon::_float_seq_array_slice *
-All_Anon::Nested_Anon::_float_seq_array_dup (const All_Anon::Nested_Anon::_float_seq_array_slice *_tao_src_array)
+All_Anon::Nested_Anon::_float_seq_array_dup (All_Anon::Nested_Anon::_float_seq_array_slice const *_tao_src_array)
 {
   All_Anon::Nested_Anon::_float_seq_array_slice *_tao_dup_array = All_Anon::Nested_Anon::_float_seq_array_alloc ();
 
@@ -2314,7 +2314,7 @@ All_Anon::Nested_Anon::_float_seq_array_free (All_Anon::Nested_Anon::_float_seq_
 void
 All_Anon::Nested_Anon::_float_seq_array_copy (
     All_Anon::Nested_Anon::_float_seq_array_slice * _tao_to,
-    const All_Anon::Nested_Anon::_float_seq_array_slice *_tao_from)
+    All_Anon::Nested_Anon::_float_seq_array_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 6; ++i0)
@@ -2339,7 +2339,7 @@ All_Anon::Nested_Anon::_tao_seq_CORBA_Float_::_tao_seq_CORBA_Float_ (::CORBA::UL
 
 #endif /* end #if !defined */
 All_Anon::Nested_Anon::_another_fsa_slice *
-All_Anon::Nested_Anon::_another_fsa_dup (const All_Anon::Nested_Anon::_another_fsa_slice *_tao_src_array)
+All_Anon::Nested_Anon::_another_fsa_dup (All_Anon::Nested_Anon::_another_fsa_slice const *_tao_src_array)
 {
   All_Anon::Nested_Anon::_another_fsa_slice *_tao_dup_array = All_Anon::Nested_Anon::_another_fsa_alloc ();
 
@@ -2368,7 +2368,7 @@ All_Anon::Nested_Anon::_another_fsa_free (All_Anon::Nested_Anon::_another_fsa_sl
 void
 All_Anon::Nested_Anon::_another_fsa_copy (
     All_Anon::Nested_Anon::_another_fsa_slice * _tao_to,
-    const All_Anon::Nested_Anon::_another_fsa_slice *_tao_from)
+    All_Anon::Nested_Anon::_another_fsa_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 6; ++i0)
@@ -2393,7 +2393,7 @@ All_Anon::Nested_Anon::_tao_seq_CORBA_Float_::_tao_seq_CORBA_Float_ (::CORBA::UL
 
 #endif /* end #if !defined */
 All_Anon::Nested_Anon::_long_array_1_slice *
-All_Anon::Nested_Anon::_long_array_1_dup (const All_Anon::Nested_Anon::_long_array_1_slice *_tao_src_array)
+All_Anon::Nested_Anon::_long_array_1_dup (All_Anon::Nested_Anon::_long_array_1_slice const *_tao_src_array)
 {
   All_Anon::Nested_Anon::_long_array_1_slice *_tao_dup_array = All_Anon::Nested_Anon::_long_array_1_alloc ();
 
@@ -2422,7 +2422,7 @@ All_Anon::Nested_Anon::_long_array_1_free (All_Anon::Nested_Anon::_long_array_1_
 void
 All_Anon::Nested_Anon::_long_array_1_copy (
     All_Anon::Nested_Anon::_long_array_1_slice * _tao_to,
-    const All_Anon::Nested_Anon::_long_array_1_slice *_tao_from)
+    All_Anon::Nested_Anon::_long_array_1_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 6; ++i0)
@@ -2431,7 +2431,7 @@ All_Anon::Nested_Anon::_long_array_1_copy (
     }
 }
 All_Anon::Nested_Anon::_long_array_2_slice *
-All_Anon::Nested_Anon::_long_array_2_dup (const All_Anon::Nested_Anon::_long_array_2_slice *_tao_src_array)
+All_Anon::Nested_Anon::_long_array_2_dup (All_Anon::Nested_Anon::_long_array_2_slice const *_tao_src_array)
 {
   All_Anon::Nested_Anon::_long_array_2_slice *_tao_dup_array = All_Anon::Nested_Anon::_long_array_2_alloc ();
 
@@ -2460,7 +2460,7 @@ All_Anon::Nested_Anon::_long_array_2_free (All_Anon::Nested_Anon::_long_array_2_
 void
 All_Anon::Nested_Anon::_long_array_2_copy (
     All_Anon::Nested_Anon::_long_array_2_slice * _tao_to,
-    const All_Anon::Nested_Anon::_long_array_2_slice *_tao_from)
+    All_Anon::Nested_Anon::_long_array_2_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 6; ++i0)
@@ -2630,7 +2630,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Half_Anon::char_seq_array_forany &_tao_array)
+    Half_Anon::char_seq_array_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -2685,7 +2685,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Half_Anon::bd_ulong_seq_array_forany &_tao_array)
+    Half_Anon::bd_ulong_seq_array_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -2740,7 +2740,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Half_Anon::ushort_seq_array_forany &_tao_array)
+    Half_Anon::ushort_seq_array_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -2795,7 +2795,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Half_Anon::bd_ushort_seq_array_forany &_tao_array)
+    Half_Anon::bd_ushort_seq_array_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -2971,7 +2971,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const All_Anon::Nested_Anon::_float_seq_array_forany &_tao_array)
+    All_Anon::Nested_Anon::_float_seq_array_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -3026,7 +3026,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const All_Anon::Nested_Anon::_another_fsa_forany &_tao_array)
+    All_Anon::Nested_Anon::_another_fsa_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -3058,7 +3058,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const All_Anon::Nested_Anon::_long_array_1_forany &_tao_array)
+    All_Anon::Nested_Anon::_long_array_1_forany const &_tao_array)
 {
   return strm.write_long_array (
       reinterpret_cast <const ACE_CDR::Long *> (_tao_array.in ()),
@@ -3080,7 +3080,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const All_Anon::Nested_Anon::_long_array_2_forany &_tao_array)
+    All_Anon::Nested_Anon::_long_array_2_forany const &_tao_array)
 {
   return strm.write_long_array (
       reinterpret_cast <const ACE_CDR::Long *> (_tao_array.in ()),

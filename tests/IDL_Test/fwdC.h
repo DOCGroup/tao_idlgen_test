@@ -2077,7 +2077,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, scope_test::i_scope_test_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, scope_test::i_scope_test_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, scope_test::i_scope_test *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, scope_test::i_scope_test *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2104,7 +2104,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::fwd_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::fwd_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod2::fwd *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, mod2::fwd *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2167,7 +2167,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::fwd_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::fwd_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod2::fwd *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, mod2::fwd *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2176,7 +2176,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, fwd_mixed_intf::mixed_parents_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, fwd_mixed_intf::mixed_parents_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, fwd_mixed_intf::mixed_parents *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, fwd_mixed_intf::mixed_parents *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2290,7 +2290,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const scope_test::i_scope_test_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, scope_test::i_scope_test_ptr const );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, scope_test::i_scope_test_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2311,7 +2311,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod2::fwd_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod2::fwd_ptr const );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::fwd_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2366,14 +2366,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod2::fwd_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod2::fwd_ptr const );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::fwd_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const fwd_mixed_intf::mixed_parents_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, fwd_mixed_intf::mixed_parents_ptr const );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, fwd_mixed_intf::mixed_parents_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

@@ -35,7 +35,7 @@ TAO::Array_Traits<tdef::Bytes_forany>::free (
 ACE_INLINE
 tdef::Bytes_slice *
 TAO::Array_Traits<tdef::Bytes_forany>::dup (
-    const tdef::Bytes_slice * _tao_slice)
+    tdef::Bytes_slice const * _tao_slice)
 {
   return tdef::Bytes_dup (_tao_slice);
 }
@@ -44,7 +44,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<tdef::Bytes_forany>::copy (
     tdef::Bytes_slice * _tao_to,
-    const tdef::Bytes_slice * _tao_from)
+    tdef::Bytes_slice const * _tao_from)
 {
   tdef::Bytes_copy (_tao_to, _tao_from);
 }
@@ -83,7 +83,7 @@ TAO::Array_Traits<tdef::bytes_or_longs::_Longs_forany>::free (
 ACE_INLINE
 tdef::bytes_or_longs::_Longs_slice *
 TAO::Array_Traits<tdef::bytes_or_longs::_Longs_forany>::dup (
-    const tdef::bytes_or_longs::_Longs_slice * _tao_slice)
+    tdef::bytes_or_longs::_Longs_slice const * _tao_slice)
 {
   return tdef::bytes_or_longs::_Longs_dup (_tao_slice);
 }
@@ -92,7 +92,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<tdef::bytes_or_longs::_Longs_forany>::copy (
     tdef::bytes_or_longs::_Longs_slice * _tao_to,
-    const tdef::bytes_or_longs::_Longs_slice * _tao_from)
+    tdef::bytes_or_longs::_Longs_slice const * _tao_from)
 {
   tdef::bytes_or_longs::_Longs_copy (_tao_to, _tao_from);
 }
@@ -177,7 +177,7 @@ TAO::Array_Traits<ABCModule::RmtPhysicalInfo::_rmtNodeId_forany>::free (
 ACE_INLINE
 ABCModule::RmtPhysicalInfo::_rmtNodeId_slice *
 TAO::Array_Traits<ABCModule::RmtPhysicalInfo::_rmtNodeId_forany>::dup (
-    const ABCModule::RmtPhysicalInfo::_rmtNodeId_slice * _tao_slice)
+    ABCModule::RmtPhysicalInfo::_rmtNodeId_slice const * _tao_slice)
 {
   return ABCModule::RmtPhysicalInfo::_rmtNodeId_dup (_tao_slice);
 }
@@ -186,7 +186,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<ABCModule::RmtPhysicalInfo::_rmtNodeId_forany>::copy (
     ABCModule::RmtPhysicalInfo::_rmtNodeId_slice * _tao_to,
-    const ABCModule::RmtPhysicalInfo::_rmtNodeId_slice * _tao_from)
+    ABCModule::RmtPhysicalInfo::_rmtNodeId_slice const * _tao_from)
 {
   ABCModule::RmtPhysicalInfo::_rmtNodeId_copy (_tao_to, _tao_from);
 }
@@ -225,7 +225,7 @@ TAO::Array_Traits<ABCModule::RmtPhysicalInfo::_rmtDetails_forany>::free (
 ACE_INLINE
 ABCModule::RmtPhysicalInfo::_rmtDetails_slice *
 TAO::Array_Traits<ABCModule::RmtPhysicalInfo::_rmtDetails_forany>::dup (
-    const ABCModule::RmtPhysicalInfo::_rmtDetails_slice * _tao_slice)
+    ABCModule::RmtPhysicalInfo::_rmtDetails_slice const * _tao_slice)
 {
   return ABCModule::RmtPhysicalInfo::_rmtDetails_dup (_tao_slice);
 }
@@ -234,7 +234,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<ABCModule::RmtPhysicalInfo::_rmtDetails_forany>::copy (
     ABCModule::RmtPhysicalInfo::_rmtDetails_slice * _tao_to,
-    const ABCModule::RmtPhysicalInfo::_rmtDetails_slice * _tao_from)
+    ABCModule::RmtPhysicalInfo::_rmtDetails_slice const * _tao_from)
 {
   ABCModule::RmtPhysicalInfo::_rmtDetails_copy (_tao_to, _tao_from);
 }
@@ -273,7 +273,7 @@ TAO::Array_Traits<ABCModule::bbbBubBubBubBaby::_rmtNodeId_forany>::free (
 ACE_INLINE
 ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice *
 TAO::Array_Traits<ABCModule::bbbBubBubBubBaby::_rmtNodeId_forany>::dup (
-    const ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice * _tao_slice)
+    ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice const * _tao_slice)
 {
   return ABCModule::bbbBubBubBubBaby::_rmtNodeId_dup (_tao_slice);
 }
@@ -282,7 +282,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<ABCModule::bbbBubBubBubBaby::_rmtNodeId_forany>::copy (
     ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice * _tao_to,
-    const ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice * _tao_from)
+    ABCModule::bbbBubBubBubBaby::_rmtNodeId_slice const * _tao_from)
 {
   ABCModule::bbbBubBubBubBaby::_rmtNodeId_copy (_tao_to, _tao_from);
 }
@@ -321,7 +321,7 @@ TAO::Array_Traits<ABCModule::bbbBubBubBubBaby::_rmtDetails_forany>::free (
 ACE_INLINE
 ABCModule::bbbBubBubBubBaby::_rmtDetails_slice *
 TAO::Array_Traits<ABCModule::bbbBubBubBubBaby::_rmtDetails_forany>::dup (
-    const ABCModule::bbbBubBubBubBaby::_rmtDetails_slice * _tao_slice)
+    ABCModule::bbbBubBubBubBaby::_rmtDetails_slice const * _tao_slice)
 {
   return ABCModule::bbbBubBubBubBaby::_rmtDetails_dup (_tao_slice);
 }
@@ -330,7 +330,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<ABCModule::bbbBubBubBubBaby::_rmtDetails_forany>::copy (
     ABCModule::bbbBubBubBubBaby::_rmtDetails_slice * _tao_to,
-    const ABCModule::bbbBubBubBubBaby::_rmtDetails_slice * _tao_from)
+    ABCModule::bbbBubBubBubBaby::_rmtDetails_slice const * _tao_from)
 {
   ABCModule::bbbBubBubBubBaby::_rmtDetails_copy (_tao_to, _tao_from);
 }

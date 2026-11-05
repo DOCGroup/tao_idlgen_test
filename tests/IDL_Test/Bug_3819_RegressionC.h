@@ -294,7 +294,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Bar *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, orange::apple::Bar *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -303,7 +303,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Bar *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, orange::apple::Bar *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -341,14 +341,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Bar_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, orange::apple::Bar_ptr const );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::apple::Bar_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Bar_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, orange::apple::Bar_ptr const );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::apple::Bar_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

@@ -1267,7 +1267,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldConstants::N &_tao_elem)
 {
   return
@@ -1367,7 +1367,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldConstants::M::N &_tao_elem)
 {
   return
@@ -1525,7 +1525,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldConstants::M::A::N &_tao_elem)
 {
   return

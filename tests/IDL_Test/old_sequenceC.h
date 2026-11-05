@@ -314,9 +314,9 @@ TAO_IDL_TEST_STUB_Export sfoo_ar_slice *sfoo_ar_alloc ();
 
 TAO_IDL_TEST_STUB_Export void sfoo_ar_free (sfoo_ar_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export sfoo_ar_slice *sfoo_ar_dup (const sfoo_ar_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export sfoo_ar_slice *sfoo_ar_dup (sfoo_ar_slice const *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void sfoo_ar_copy (sfoo_ar_slice *_tao_to, const sfoo_ar_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void sfoo_ar_copy (sfoo_ar_slice *_tao_to, sfoo_ar_slice const *_tao_from);
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_sfoo_ar;
 
 #if !defined (_F_UNBOUNDED_CH_)
@@ -1085,8 +1085,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const sfoo_ar_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, sfoo_ar_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, sfoo_ar_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, sfoo_ar_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1237,7 +1237,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::sfoo_ar_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ::sfoo_ar_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::sfoo_ar_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

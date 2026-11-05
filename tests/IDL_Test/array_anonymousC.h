@@ -122,9 +122,9 @@ public:
 
   static void Bytes_free (Bytes_slice *_tao_slice);
 
-  static Bytes_slice *Bytes_dup (const Bytes_slice *_tao_slice);
+  static Bytes_slice *Bytes_dup (Bytes_slice const *_tao_slice);
 
-  static void Bytes_copy (Bytes_slice *_tao_to, const Bytes_slice *_tao_from);
+  static void Bytes_copy (Bytes_slice *_tao_to, Bytes_slice const *_tao_from);
   static ::CORBA::TypeCode_ptr const _tc_Bytes;
 
   struct bytes_or_longs;
@@ -151,9 +151,9 @@ public:
 
     static void _Longs_free (_Longs_slice *_tao_slice);
 
-    static _Longs_slice *_Longs_dup (const _Longs_slice *_tao_slice);
+    static _Longs_slice *_Longs_dup (_Longs_slice const *_tao_slice);
 
-    static void _Longs_copy (_Longs_slice *_tao_to, const _Longs_slice *_tao_from);
+    static void _Longs_copy (_Longs_slice *_tao_to, _Longs_slice const *_tao_from);
 
     _Longs Longs {};
   };
@@ -408,9 +408,9 @@ namespace ABCModule
 
     static void _rmtNodeId_free (_rmtNodeId_slice *_tao_slice);
 
-    static _rmtNodeId_slice *_rmtNodeId_dup (const _rmtNodeId_slice *_tao_slice);
+    static _rmtNodeId_slice *_rmtNodeId_dup (_rmtNodeId_slice const *_tao_slice);
 
-    static void _rmtNodeId_copy (_rmtNodeId_slice *_tao_to, const _rmtNodeId_slice *_tao_from);
+    static void _rmtNodeId_copy (_rmtNodeId_slice *_tao_to, _rmtNodeId_slice const *_tao_from);
 
     _rmtNodeId rmtNodeId {};
 
@@ -424,9 +424,9 @@ namespace ABCModule
 
     static void _rmtDetails_free (_rmtDetails_slice *_tao_slice);
 
-    static _rmtDetails_slice *_rmtDetails_dup (const _rmtDetails_slice *_tao_slice);
+    static _rmtDetails_slice *_rmtDetails_dup (_rmtDetails_slice const *_tao_slice);
 
-    static void _rmtDetails_copy (_rmtDetails_slice *_tao_to, const _rmtDetails_slice *_tao_from);
+    static void _rmtDetails_copy (_rmtDetails_slice *_tao_to, _rmtDetails_slice const *_tao_from);
 
     _rmtDetails rmtDetails {};
   };
@@ -454,9 +454,9 @@ namespace ABCModule
 
     static void _rmtNodeId_free (_rmtNodeId_slice *_tao_slice);
 
-    static _rmtNodeId_slice *_rmtNodeId_dup (const _rmtNodeId_slice *_tao_slice);
+    static _rmtNodeId_slice *_rmtNodeId_dup (_rmtNodeId_slice const *_tao_slice);
 
-    static void _rmtNodeId_copy (_rmtNodeId_slice *_tao_to, const _rmtNodeId_slice *_tao_from);
+    static void _rmtNodeId_copy (_rmtNodeId_slice *_tao_to, _rmtNodeId_slice const *_tao_from);
 
     _rmtNodeId rmtNodeId {};
 
@@ -470,9 +470,9 @@ namespace ABCModule
 
     static void _rmtDetails_free (_rmtDetails_slice *_tao_slice);
 
-    static _rmtDetails_slice *_rmtDetails_dup (const _rmtDetails_slice *_tao_slice);
+    static _rmtDetails_slice *_rmtDetails_dup (_rmtDetails_slice const *_tao_slice);
 
-    static void _rmtDetails_copy (_rmtDetails_slice *_tao_to, const _rmtDetails_slice *_tao_from);
+    static void _rmtDetails_copy (_rmtDetails_slice *_tao_to, _rmtDetails_slice const *_tao_from);
 
     _rmtDetails rmtDetails {};
   };
@@ -795,8 +795,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const tdef::Bytes_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, tdef::Bytes_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, tdef::Bytes_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, tdef::Bytes_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -863,7 +863,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const tdef::Bytes_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, tdef::Bytes_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, tdef::Bytes_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -877,7 +877,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const tdef::bytes_or_longs::_Longs_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, tdef::bytes_or_longs::_Longs_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, tdef::bytes_or_longs::_Longs_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -914,14 +914,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ABCModule::RmtPhysicalInfo::_rmtNodeId_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ABCModule::RmtPhysicalInfo::_rmtNodeId_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ABCModule::RmtPhysicalInfo::_rmtNodeId_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ABCModule::RmtPhysicalInfo::_rmtDetails_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ABCModule::RmtPhysicalInfo::_rmtDetails_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ABCModule::RmtPhysicalInfo::_rmtDetails_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -935,14 +935,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ABCModule::bbbBubBubBubBaby::_rmtNodeId_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ABCModule::bbbBubBubBubBaby::_rmtNodeId_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ABCModule::bbbBubBubBubBaby::_rmtNodeId_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ABCModule::bbbBubBubBubBaby::_rmtDetails_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ABCModule::bbbBubBubBubBaby::_rmtDetails_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ABCModule::bbbBubBubBubBaby::_rmtDetails_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
