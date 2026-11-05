@@ -169,8 +169,7 @@ namespace Test
 
   public:
     virtual ::Test::Timestamp test_method (
-        ::Test::Timestamp
-      ) = 0;
+        ::Test::Timestamp) = 0;
 
   protected:
     Red_Herring ();

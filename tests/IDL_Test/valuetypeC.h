@@ -694,15 +694,13 @@ namespace ModSelection
 
     public:
       virtual void setCriterionRequiredAttributes (
-          char *&
-        ) = 0;
+          char *&) = 0;
 
     public:
 
     public:
       virtual ::CORBA::Boolean isValid (
-          ::CORBA::WChar const *
-        ) = 0;
+          ::CORBA::WChar const *) = 0;
 
     protected:
       Criterion ();
