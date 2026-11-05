@@ -98,7 +98,7 @@ TAO_AMH_TestSeq_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 12> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 12> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -316,7 +316,7 @@ TAO_TestSeq_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 12> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 12> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -478,11 +478,11 @@ void POA_TestSeq::_get_fattr_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -544,11 +544,11 @@ void POA_TestSeq::_set_fattr_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -680,7 +680,7 @@ TAO_AMI_TestSeqHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {25};
 
-  static constexpr std::array<TAO_operation_db_entry , 26> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 26> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -861,11 +861,11 @@ void POA_AMI_TestSeqHandler::get_fattr_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -927,11 +927,11 @@ void POA_AMI_TestSeqHandler::get_fattr_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -975,11 +975,11 @@ void POA_AMI_TestSeqHandler::set_fattr_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1041,11 +1041,11 @@ void POA_AMI_TestSeqHandler::set_fattr_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

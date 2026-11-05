@@ -98,7 +98,7 @@ TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {18};
 
-  static constexpr std::array<TAO_operation_db_entry , 19> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 19> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op6", std::addressof(POA_OldDif2::AMH_ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
@@ -531,7 +531,7 @@ TAO_OldDif2_ex1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {18};
 
-  static constexpr std::array<TAO_operation_db_entry , 19> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 19> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op6", std::addressof(POA_OldDif2::ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
@@ -773,11 +773,11 @@ void POA_OldDif2::ex1::op0_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -867,11 +867,11 @@ void POA_OldDif2::ex1::op1_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -961,11 +961,11 @@ void POA_OldDif2::ex1::op2_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1055,11 +1055,11 @@ void POA_OldDif2::ex1::op3_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1149,11 +1149,11 @@ void POA_OldDif2::ex1::op4_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1252,11 +1252,11 @@ void POA_OldDif2::ex1::op5_skel (
                          , args
                          , 5
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1337,11 +1337,11 @@ void POA_OldDif2::ex1::op6_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1637,7 +1637,7 @@ TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (char const *str, std::s
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {18};
 
-  static constexpr std::array<TAO_operation_db_entry , 22> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 22> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op6", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6)},
@@ -2027,11 +2027,11 @@ void POA_OldDif2::AMI_ex1Handler::op0_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2097,11 +2097,11 @@ void POA_OldDif2::AMI_ex1Handler::op0_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2185,11 +2185,11 @@ void POA_OldDif2::AMI_ex1Handler::op1_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2255,11 +2255,11 @@ void POA_OldDif2::AMI_ex1Handler::op1_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2343,11 +2343,11 @@ void POA_OldDif2::AMI_ex1Handler::op2_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2413,11 +2413,11 @@ void POA_OldDif2::AMI_ex1Handler::op2_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2501,11 +2501,11 @@ void POA_OldDif2::AMI_ex1Handler::op3_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2571,11 +2571,11 @@ void POA_OldDif2::AMI_ex1Handler::op3_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2659,11 +2659,11 @@ void POA_OldDif2::AMI_ex1Handler::op4_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2729,11 +2729,11 @@ void POA_OldDif2::AMI_ex1Handler::op4_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2817,11 +2817,11 @@ void POA_OldDif2::AMI_ex1Handler::op5_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2887,11 +2887,11 @@ void POA_OldDif2::AMI_ex1Handler::op5_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2975,11 +2975,11 @@ void POA_OldDif2::AMI_ex1Handler::op6_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3045,11 +3045,11 @@ void POA_OldDif2::AMI_ex1Handler::op6_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3133,7 +3133,7 @@ TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {33};
 
-  static constexpr std::array<TAO_operation_db_entry , 34> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 34> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op2", std::addressof(POA_OldDif2::AMH_ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
@@ -3532,7 +3532,7 @@ TAO_OldDif2_ex2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {33};
 
-  static constexpr std::array<TAO_operation_db_entry , 34> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 34> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op2", std::addressof(POA_OldDif2::ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
@@ -3803,11 +3803,11 @@ void POA_OldDif2::ex2::op7_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3888,11 +3888,11 @@ void POA_OldDif2::ex2::op8_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3991,11 +3991,11 @@ void POA_OldDif2::ex2::op9_skel (
                          , args
                          , 5
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4076,11 +4076,11 @@ void POA_OldDif2::ex2::op10_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4161,11 +4161,11 @@ void POA_OldDif2::ex2::op11_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4237,11 +4237,11 @@ void POA_OldDif2::ex2::op12_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4512,7 +4512,7 @@ TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (char const *str, std::s
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {38};
 
-  static constexpr std::array<TAO_operation_db_entry , 34> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 34> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op2", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2)},
@@ -4913,11 +4913,11 @@ void POA_OldDif2::AMI_ex2Handler::op7_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -4983,11 +4983,11 @@ void POA_OldDif2::AMI_ex2Handler::op7_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5062,11 +5062,11 @@ void POA_OldDif2::AMI_ex2Handler::op8_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5132,11 +5132,11 @@ void POA_OldDif2::AMI_ex2Handler::op8_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5229,11 +5229,11 @@ void POA_OldDif2::AMI_ex2Handler::op9_skel (
                          , args
                          , 5
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5299,11 +5299,11 @@ void POA_OldDif2::AMI_ex2Handler::op9_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5378,11 +5378,11 @@ void POA_OldDif2::AMI_ex2Handler::op10_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5448,11 +5448,11 @@ void POA_OldDif2::AMI_ex2Handler::op10_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5536,11 +5536,11 @@ void POA_OldDif2::AMI_ex2Handler::op11_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5606,11 +5606,11 @@ void POA_OldDif2::AMI_ex2Handler::op11_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5676,11 +5676,11 @@ void POA_OldDif2::AMI_ex2Handler::op12_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5746,11 +5746,11 @@ void POA_OldDif2::AMI_ex2Handler::op12_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -5835,7 +5835,7 @@ TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {28};
 
-  static constexpr std::array<TAO_operation_db_entry , 22> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 22> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op6", std::addressof(POA_OldDif2::AMH_ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
@@ -6248,7 +6248,7 @@ TAO_OldDif2_ex3_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {28};
 
-  static constexpr std::array<TAO_operation_db_entry , 22> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 22> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op6", std::addressof(POA_OldDif2::ex1::op6_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op6)},
@@ -6517,11 +6517,11 @@ void POA_OldDif2::ex3::_get_float_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -6584,11 +6584,11 @@ void POA_OldDif2::ex3::_get_double_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -6654,11 +6654,11 @@ void POA_OldDif2::ex3::_set_double_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -6721,11 +6721,11 @@ void POA_OldDif2::ex3::_get_long_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -6788,11 +6788,11 @@ void POA_OldDif2::ex3::_get_short_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -6858,11 +6858,11 @@ void POA_OldDif2::ex3::_set_short_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -6925,11 +6925,11 @@ void POA_OldDif2::ex3::_get_unsigned_long_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7194,7 +7194,7 @@ TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::lookup (char const *str, std::s
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {43};
 
-  static constexpr std::array<TAO_operation_db_entry , 36> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 36> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op6", std::addressof(POA_OldDif2::AMI_ex1Handler::op6_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op6)},
@@ -7605,11 +7605,11 @@ void POA_OldDif2::AMI_ex3Handler::get_float_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7675,11 +7675,11 @@ void POA_OldDif2::AMI_ex3Handler::get_float_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7745,11 +7745,11 @@ void POA_OldDif2::AMI_ex3Handler::get_double_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7815,11 +7815,11 @@ void POA_OldDif2::AMI_ex3Handler::get_double_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7867,11 +7867,11 @@ void POA_OldDif2::AMI_ex3Handler::set_double_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -7937,11 +7937,11 @@ void POA_OldDif2::AMI_ex3Handler::set_double_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -8007,11 +8007,11 @@ void POA_OldDif2::AMI_ex3Handler::get_long_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -8077,11 +8077,11 @@ void POA_OldDif2::AMI_ex3Handler::get_long_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -8147,11 +8147,11 @@ void POA_OldDif2::AMI_ex3Handler::get_short_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -8217,11 +8217,11 @@ void POA_OldDif2::AMI_ex3Handler::get_short_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -8269,11 +8269,11 @@ void POA_OldDif2::AMI_ex3Handler::set_short_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -8339,11 +8339,11 @@ void POA_OldDif2::AMI_ex3Handler::set_short_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -8409,11 +8409,11 @@ void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -8479,11 +8479,11 @@ void POA_OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -8568,7 +8568,7 @@ TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {34};
 
-  static constexpr std::array<TAO_operation_db_entry , 38> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 38> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op2", std::addressof(POA_OldDif2::AMH_ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
@@ -9173,7 +9173,7 @@ TAO_OldDif2_ex4_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {34};
 
-  static constexpr std::array<TAO_operation_db_entry , 38> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 38> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op2", std::addressof(POA_OldDif2::ex1::op2_skel), std::addressof(POA_OldDif2::_TAO_ex1_Direct_Proxy_Impl::op2)},
@@ -9573,11 +9573,11 @@ void POA_OldDif2::ex4::_get_unsigned_short_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -9643,11 +9643,11 @@ void POA_OldDif2::ex4::_set_unsigned_short_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -9710,11 +9710,11 @@ void POA_OldDif2::ex4::_get_char_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -9777,11 +9777,11 @@ void POA_OldDif2::ex4::_get_boolean_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -9847,11 +9847,11 @@ void POA_OldDif2::ex4::_set_boolean_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -9914,11 +9914,11 @@ void POA_OldDif2::ex4::_get_octet_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -9981,11 +9981,11 @@ void POA_OldDif2::ex4::_get_string_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -10051,11 +10051,11 @@ void POA_OldDif2::ex4::_set_string_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -10118,11 +10118,11 @@ void POA_OldDif2::ex4::_get_limited_string_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -10185,11 +10185,11 @@ void POA_OldDif2::ex4::_get_an_object_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -10532,7 +10532,7 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (char const *str, std::s
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {68};
 
-  static constexpr std::array<TAO_operation_db_entry , 68> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 68> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op2", std::addressof(POA_OldDif2::AMI_ex1Handler::op2_skel), std::addressof(POA_OldDif2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::op2)},
@@ -11216,11 +11216,11 @@ void POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -11286,11 +11286,11 @@ void POA_OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -11338,11 +11338,11 @@ void POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -11408,11 +11408,11 @@ void POA_OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -11478,11 +11478,11 @@ void POA_OldDif2::AMI_ex4Handler::get_char_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -11548,11 +11548,11 @@ void POA_OldDif2::AMI_ex4Handler::get_char_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -11618,11 +11618,11 @@ void POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -11688,11 +11688,11 @@ void POA_OldDif2::AMI_ex4Handler::get_boolean_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -11740,11 +11740,11 @@ void POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -11810,11 +11810,11 @@ void POA_OldDif2::AMI_ex4Handler::set_boolean_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -11880,11 +11880,11 @@ void POA_OldDif2::AMI_ex4Handler::get_octet_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -11950,11 +11950,11 @@ void POA_OldDif2::AMI_ex4Handler::get_octet_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -12020,11 +12020,11 @@ void POA_OldDif2::AMI_ex4Handler::get_string_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -12090,11 +12090,11 @@ void POA_OldDif2::AMI_ex4Handler::get_string_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -12142,11 +12142,11 @@ void POA_OldDif2::AMI_ex4Handler::set_string_attribute_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -12212,11 +12212,11 @@ void POA_OldDif2::AMI_ex4Handler::set_string_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -12282,11 +12282,11 @@ void POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -12352,11 +12352,11 @@ void POA_OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -12422,11 +12422,11 @@ void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -12492,11 +12492,11 @@ void POA_OldDif2::AMI_ex4Handler::get_an_object_attribute_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

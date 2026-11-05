@@ -98,7 +98,7 @@ TAO_AMH_Interface1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t le
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"do_it", std::addressof(POA_AMH_Interface1::do_it_skel), std::addressof(_TAO_Interface1_Direct_Proxy_Impl::do_it)},
@@ -257,7 +257,7 @@ TAO_Interface1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"do_it", std::addressof(POA_Interface1::do_it_skel), std::addressof(_TAO_Interface1_Direct_Proxy_Impl::do_it)},
@@ -381,11 +381,11 @@ void POA_Interface1::do_it_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -489,7 +489,7 @@ TAO_AMI_Interface1Handler_Perfect_Hash_OpTable::lookup (char const *str, std::si
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"do_it", std::addressof(POA_AMI_Interface1Handler::do_it_skel), std::addressof(_TAO_AMI_Interface1Handler_Direct_Proxy_Impl::do_it)},
@@ -613,11 +613,11 @@ void POA_AMI_Interface1Handler::do_it_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -679,11 +679,11 @@ void POA_AMI_Interface1Handler::do_it_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -767,7 +767,7 @@ TAO_AMH_Interface2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t le
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"do_it", std::addressof(POA_AMH_Interface2::do_it_skel), std::addressof(_TAO_Interface2_Direct_Proxy_Impl::do_it)},
@@ -926,7 +926,7 @@ TAO_Interface2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"do_it", std::addressof(POA_Interface2::do_it_skel), std::addressof(_TAO_Interface2_Direct_Proxy_Impl::do_it)},
@@ -1050,11 +1050,11 @@ void POA_Interface2::do_it_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1158,7 +1158,7 @@ TAO_AMI_Interface2Handler_Perfect_Hash_OpTable::lookup (char const *str, std::si
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"do_it", std::addressof(POA_AMI_Interface2Handler::do_it_skel), std::addressof(_TAO_AMI_Interface2Handler_Direct_Proxy_Impl::do_it)},
@@ -1282,11 +1282,11 @@ void POA_AMI_Interface2Handler::do_it_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1348,11 +1348,11 @@ void POA_AMI_Interface2Handler::do_it_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

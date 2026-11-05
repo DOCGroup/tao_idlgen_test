@@ -98,7 +98,7 @@ TAO_mod2_AMH_full_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len
   constexpr int MIN_HASH_VALUE {2};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_mod2::AMH_full::op_skel), std::addressof(POA_mod2::_TAO_full_Direct_Proxy_Impl::op)},
@@ -260,7 +260,7 @@ TAO_mod2_full_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {2};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_mod2::full::op_skel), std::addressof(POA_mod2::_TAO_full_Direct_Proxy_Impl::op)},
@@ -415,11 +415,11 @@ void POA_mod2::full::op_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -535,7 +535,7 @@ TAO_mod2_AMI_fullHandler_Perfect_Hash_OpTable::lookup (char const *str, std::siz
   constexpr int MIN_HASH_VALUE {2};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_mod2::AMI_fullHandler::op_skel), std::addressof(POA_mod2::_TAO_AMI_fullHandler_Direct_Proxy_Impl::op)},
@@ -703,11 +703,11 @@ void POA_mod2::AMI_fullHandler::op_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -773,11 +773,11 @@ void POA_mod2::AMI_fullHandler::op_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -861,7 +861,7 @@ TAO_fwd_mixed_intf_AMH_concrete_parent_Perfect_Hash_OpTable::lookup (char const 
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -975,7 +975,7 @@ TAO_fwd_mixed_intf_concrete_parent_Perfect_Hash_OpTable::lookup (char const *str
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1101,7 +1101,7 @@ TAO_fwd_mixed_intf_AMI_concrete_parentHandler_Perfect_Hash_OpTable::lookup (char
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1228,7 +1228,7 @@ TAO_fwd_mixed_intf_mixed_abs_first_Perfect_Hash_OpTable::lookup (char const *str
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1357,7 +1357,7 @@ TAO_fwd_mixed_intf_AMI_mixed_abs_firstHandler_Perfect_Hash_OpTable::lookup (char
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1485,7 +1485,7 @@ TAO_fwd_mixed_intf_mixed_conc_first_Perfect_Hash_OpTable::lookup (char const *st
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1614,7 +1614,7 @@ TAO_fwd_mixed_intf_AMI_mixed_conc_firstHandler_Perfect_Hash_OpTable::lookup (cha
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},

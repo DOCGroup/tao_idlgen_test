@@ -98,7 +98,7 @@ TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {18};
 
-  static constexpr std::array<TAO_operation_db_entry , 12> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 12> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -316,7 +316,7 @@ TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str, st
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {18};
 
-  static constexpr std::array<TAO_operation_db_entry , 12> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 12> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -482,11 +482,11 @@ void POA_FixedPoint::FixedOperations::_get_rate_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -552,11 +552,11 @@ void POA_FixedPoint::FixedOperations::_set_rate_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -688,7 +688,7 @@ TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::lookup (char con
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {24};
 
-  static constexpr std::array<TAO_operation_db_entry , 25> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 25> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -874,11 +874,11 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::get_rate_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -944,11 +944,11 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::get_rate_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -996,11 +996,11 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1066,11 +1066,11 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

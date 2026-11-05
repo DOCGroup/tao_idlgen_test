@@ -91,7 +91,7 @@ TAO_Test_Hello_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {20};
 
-  static constexpr std::array<TAO_operation_db_entry , 21> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 21> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_skel), nullptr},
@@ -180,11 +180,11 @@ void POA_Test::Hello::get_string_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -232,11 +232,11 @@ void POA_Test::Hello::shutdown_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

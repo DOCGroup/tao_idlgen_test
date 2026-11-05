@@ -98,7 +98,7 @@ TAO_scope_test_AMH_i_scope_test_Perfect_Hash_OpTable::lookup (char const *str, s
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -212,7 +212,7 @@ TAO_scope_test_i_scope_test_Perfect_Hash_OpTable::lookup (char const *str, std::
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -338,7 +338,7 @@ TAO_scope_test_AMI_i_scope_testHandler_Perfect_Hash_OpTable::lookup (char const 
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -465,7 +465,7 @@ TAO_mod2_AMH_fwd_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {2};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 10> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 10> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_mod2::AMH_fwd::op_skel), std::addressof(POA_mod2::_TAO_fwd_Direct_Proxy_Impl::op)},
@@ -733,7 +733,7 @@ TAO_mod2_fwd_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {2};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 10> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 10> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_mod2::fwd::op_skel), std::addressof(POA_mod2::_TAO_fwd_Direct_Proxy_Impl::op)},
@@ -921,11 +921,11 @@ void POA_mod2::fwd::_get_attr_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -991,11 +991,11 @@ void POA_mod2::fwd::_set_attr_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1055,12 +1055,12 @@ void POA_mod2::fwd::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       mod2::fwd::_tc_bar
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<::mod2::full>::ret_val retval;
   TAO::SArg_Traits<::mod2::full>::inout_arg_val _tao_full_arg;
@@ -1092,11 +1092,11 @@ void POA_mod2::fwd::op_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1262,7 +1262,7 @@ TAO_mod2_AMI_fwdHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {24};
 
-  static constexpr std::array<TAO_operation_db_entry , 25> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 25> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1489,11 +1489,11 @@ void POA_mod2::AMI_fwdHandler::get_attr_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1559,11 +1559,11 @@ void POA_mod2::AMI_fwdHandler::get_attr_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1611,11 +1611,11 @@ void POA_mod2::AMI_fwdHandler::set_attr_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1681,11 +1681,11 @@ void POA_mod2::AMI_fwdHandler::set_attr_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1746,12 +1746,12 @@ void POA_mod2::AMI_fwdHandler::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       mod2::fwd::_tc_bar
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<void>::ret_val retval;
   TAO::SArg_Traits<::mod2::full>::in_arg_val _tao_ami_return_val;
@@ -1785,11 +1785,11 @@ void POA_mod2::AMI_fwdHandler::op_skel (
                          , args
                          , 5
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1846,12 +1846,12 @@ void POA_mod2::AMI_fwdHandler::op_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       mod2::fwd::_tc_bar
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<void>::ret_val retval;
   TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -1879,11 +1879,11 @@ void POA_mod2::AMI_fwdHandler::op_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

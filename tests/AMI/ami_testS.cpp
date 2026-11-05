@@ -93,7 +93,7 @@ TAO_A_AMI_Test_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {25};
 
-  static constexpr std::array<TAO_operation_db_entry , 13> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 13> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"foo", std::addressof(POA_A::AMI_Test::foo_skel), nullptr},
@@ -211,12 +211,12 @@ void POA_A::AMI_Test::foo_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       A::_tc_DidTheRightThing
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<::CORBA::Long>::ret_val retval;
   TAO::SArg_Traits<::CORBA::Long>::out_arg_val _tao_out_l;
@@ -248,11 +248,11 @@ void POA_A::AMI_Test::foo_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -315,11 +315,11 @@ void POA_A::AMI_Test::_get_yadda_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -385,11 +385,11 @@ void POA_A::AMI_Test::_set_yadda_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -437,11 +437,11 @@ void POA_A::AMI_Test::shutdown_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -507,11 +507,11 @@ void POA_A::AMI_Test::inout_arg_test_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -594,7 +594,7 @@ TAO_A_AMI_AMI_TestHandler_Perfect_Hash_OpTable::lookup (char const *str, std::si
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {29};
 
-  static constexpr std::array<TAO_operation_db_entry , 30> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 30> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -682,12 +682,12 @@ void POA_A::AMI_AMI_TestHandler::foo_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       A::_tc_DidTheRightThing
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<void>::ret_val retval;
   TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val;
@@ -717,11 +717,11 @@ void POA_A::AMI_AMI_TestHandler::foo_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -778,12 +778,12 @@ void POA_A::AMI_AMI_TestHandler::foo_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       A::_tc_DidTheRightThing
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<void>::ret_val retval;
   TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -811,11 +811,11 @@ void POA_A::AMI_AMI_TestHandler::foo_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -881,11 +881,11 @@ void POA_A::AMI_AMI_TestHandler::get_yadda_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -951,11 +951,11 @@ void POA_A::AMI_AMI_TestHandler::get_yadda_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1003,11 +1003,11 @@ void POA_A::AMI_AMI_TestHandler::set_yadda_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1073,11 +1073,11 @@ void POA_A::AMI_AMI_TestHandler::set_yadda_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1143,11 +1143,11 @@ void POA_A::AMI_AMI_TestHandler::inout_arg_test_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1213,11 +1213,11 @@ void POA_A::AMI_AMI_TestHandler::inout_arg_test_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1301,7 +1301,7 @@ TAO_A_Test_Child_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {25};
 
-  static constexpr std::array<TAO_operation_db_entry , 14> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 14> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"foo", std::addressof(POA_A::AMI_Test::foo_skel), nullptr},
@@ -1408,11 +1408,11 @@ void POA_A::Test_Child::child_op_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1496,7 +1496,7 @@ TAO_A_AMI_Test_ChildHandler_Perfect_Hash_OpTable::lookup (char const *str, std::
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {29};
 
-  static constexpr std::array<TAO_operation_db_entry , 30> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 30> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1587,11 +1587,11 @@ void POA_A::AMI_Test_ChildHandler::child_op_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1657,11 +1657,11 @@ void POA_A::AMI_Test_ChildHandler::child_op_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

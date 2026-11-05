@@ -98,7 +98,7 @@ TAO_OldInherit_AMH_one_Perfect_Hash_OpTable::lookup (char const *str, std::size_
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -247,7 +247,7 @@ TAO_OldInherit_one_Perfect_Hash_OpTable::lookup (char const *str, std::size_t le
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -355,11 +355,11 @@ void POA_OldInherit::one::op_one_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -463,7 +463,7 @@ TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable::lookup (char const *str, std
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -589,11 +589,11 @@ void POA_OldInherit::AMI_oneHandler::op_one_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -659,11 +659,11 @@ void POA_OldInherit::AMI_oneHandler::op_one_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -747,7 +747,7 @@ TAO_OldInherit_AMH_two_Perfect_Hash_OpTable::lookup (char const *str, std::size_
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -898,7 +898,7 @@ TAO_OldInherit_two_Perfect_Hash_OpTable::lookup (char const *str, std::size_t le
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1007,11 +1007,11 @@ void POA_OldInherit::two::op_two_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1116,7 +1116,7 @@ TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::lookup (char const *str, std
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 14> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 14> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1268,11 +1268,11 @@ void POA_OldInherit::AMI_twoHandler::op_two_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1338,11 +1338,11 @@ void POA_OldInherit::AMI_twoHandler::op_two_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1427,7 +1427,7 @@ TAO_OldInherit_AMH_three_Perfect_Hash_OpTable::lookup (char const *str, std::siz
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {18};
 
-  static constexpr std::array<TAO_operation_db_entry , 19> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 19> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -1580,7 +1580,7 @@ TAO_OldInherit_three_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {18};
 
-  static constexpr std::array<TAO_operation_db_entry , 19> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 19> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1691,11 +1691,11 @@ void POA_OldInherit::three::op_three_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1800,7 +1800,7 @@ TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable::lookup (char const *str, s
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {19};
 
-  static constexpr std::array<TAO_operation_db_entry , 20> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 20> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -1932,11 +1932,11 @@ void POA_OldInherit::AMI_threeHandler::op_three_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2002,11 +2002,11 @@ void POA_OldInherit::AMI_threeHandler::op_three_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2091,7 +2091,7 @@ TAO_OldInherit_AMH_four_Perfect_Hash_OpTable::lookup (char const *str, std::size
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {23};
 
-  static constexpr std::array<TAO_operation_db_entry , 24> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 24> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -2248,7 +2248,7 @@ TAO_OldInherit_four_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {23};
 
-  static constexpr std::array<TAO_operation_db_entry , 24> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 24> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -2361,11 +2361,11 @@ void POA_OldInherit::four::op_four_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2472,7 +2472,7 @@ TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::lookup (char const *str, st
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {28};
 
-  static constexpr std::array<TAO_operation_db_entry , 18> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 18> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -2629,11 +2629,11 @@ void POA_OldInherit::AMI_fourHandler::op_four_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2699,11 +2699,11 @@ void POA_OldInherit::AMI_fourHandler::op_four_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2790,7 +2790,7 @@ TAO_OldInherit_AMH_five_Perfect_Hash_OpTable::lookup (char const *str, std::size
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {23};
 
-  static constexpr std::array<TAO_operation_db_entry , 24> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 24> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -2948,7 +2948,7 @@ TAO_OldInherit_five_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {23};
 
-  static constexpr std::array<TAO_operation_db_entry , 24> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 24> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -3061,11 +3061,11 @@ void POA_OldInherit::five::op_five_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3173,7 +3173,7 @@ TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::lookup (char const *str, st
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {28};
 
-  static constexpr std::array<TAO_operation_db_entry , 20> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 20> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -3332,11 +3332,11 @@ void POA_OldInherit::AMI_fiveHandler::op_five_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3402,11 +3402,11 @@ void POA_OldInherit::AMI_fiveHandler::op_five_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

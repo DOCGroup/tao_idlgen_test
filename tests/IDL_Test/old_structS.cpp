@@ -98,7 +98,7 @@ TAO_AMH_foo1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {2};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_AMH_foo1::op_skel), std::addressof(_TAO_foo1_Direct_Proxy_Impl::op)},
@@ -257,7 +257,7 @@ TAO_foo1_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {2};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_foo1::op_skel), std::addressof(_TAO_foo1_Direct_Proxy_Impl::op)},
@@ -398,11 +398,11 @@ void POA_foo1::op_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -516,7 +516,7 @@ TAO_AMI_foo1Handler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
   constexpr int MIN_HASH_VALUE {2};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_AMI_foo1Handler::op_skel), std::addressof(_TAO_AMI_foo1Handler_Direct_Proxy_Impl::op)},
@@ -670,11 +670,11 @@ void POA_AMI_foo1Handler::op_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -736,11 +736,11 @@ void POA_AMI_foo1Handler::op_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -824,7 +824,7 @@ TAO_AMH_foo2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {2};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_AMH_foo1::op_skel), std::addressof(_TAO_foo1_Direct_Proxy_Impl::op)},
@@ -1030,7 +1030,7 @@ TAO_foo2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {2};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_foo1::op_skel), std::addressof(_TAO_foo1_Direct_Proxy_Impl::op)},
@@ -1184,11 +1184,11 @@ void POA_foo2::op2_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1265,11 +1265,11 @@ void POA_foo2::op3_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1412,7 +1412,7 @@ TAO_AMI_foo2Handler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
   constexpr int MIN_HASH_VALUE {2};
   constexpr int MAX_HASH_VALUE {18};
 
-  static constexpr std::array<TAO_operation_db_entry , 13> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 13> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"op", std::addressof(POA_AMI_foo1Handler::op_skel), std::addressof(_TAO_AMI_foo1Handler_Direct_Proxy_Impl::op)},
@@ -1618,11 +1618,11 @@ void POA_AMI_foo2Handler::op2_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1684,11 +1684,11 @@ void POA_AMI_foo2Handler::op2_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1759,11 +1759,11 @@ void POA_AMI_foo2Handler::op3_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1825,11 +1825,11 @@ void POA_AMI_foo2Handler::op3_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

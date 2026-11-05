@@ -98,7 +98,7 @@ TAO_OldUnion_AMH_a_Perfect_Hash_OpTable::lookup (char const *str, std::size_t le
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"opA", std::addressof(POA_OldUnion::AMH_a::opA_skel), std::addressof(POA_OldUnion::_TAO_a_Direct_Proxy_Impl::opA)},
@@ -257,7 +257,7 @@ TAO_OldUnion_a_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"opA", std::addressof(POA_OldUnion::a::opA_skel), std::addressof(POA_OldUnion::_TAO_a_Direct_Proxy_Impl::opA)},
@@ -392,11 +392,11 @@ void POA_OldUnion::a::opA_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -508,7 +508,7 @@ TAO_OldUnion_AMI_aHandler_Perfect_Hash_OpTable::lookup (char const *str, std::si
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"opA", std::addressof(POA_OldUnion::AMI_aHandler::opA_skel), std::addressof(POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::opA)},
@@ -655,11 +655,11 @@ void POA_OldUnion::AMI_aHandler::opA_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -725,11 +725,11 @@ void POA_OldUnion::AMI_aHandler::opA_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

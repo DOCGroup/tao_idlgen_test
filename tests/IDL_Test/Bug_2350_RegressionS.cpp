@@ -98,7 +98,7 @@ TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (char const *str, std::
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {25};
 
-  static constexpr std::array<TAO_operation_db_entry , 26> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 26> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -257,7 +257,7 @@ TAO_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (char const *str, std::size
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {25};
 
-  static constexpr std::array<TAO_operation_db_entry , 26> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 26> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -355,12 +355,12 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       _tc_something
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<void>::ret_val retval;
   TAO::SArg_Traits<::user_ExceptionHolder>::in_arg_val _tao_a;
@@ -388,11 +388,11 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -496,7 +496,7 @@ TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::lookup (char const *str
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {31};
 
-  static constexpr std::array<TAO_operation_db_entry , 32> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 32> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -600,12 +600,12 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       _tc_something
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<void>::ret_val retval;
 
@@ -628,11 +628,11 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -685,12 +685,12 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       _tc_something
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<void>::ret_val retval;
   TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -718,11 +718,11 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

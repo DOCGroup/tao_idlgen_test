@@ -98,7 +98,7 @@ TAO_Plesk_Naming_AMH_ObjectResolver_Perfect_Hash_OpTable::lookup (char const *st
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {17};
 
-  static constexpr std::array<TAO_operation_db_entry , 18> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 18> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
@@ -310,7 +310,7 @@ TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable::lookup (char const *str, s
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {17};
 
-  static constexpr std::array<TAO_operation_db_entry , 18> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 18> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -453,12 +453,12 @@ void POA_Plesk::Naming::ObjectResolver::resolve_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<::CORBA::Object>::ret_val retval;
   TAO::SArg_Traits<char *>::in_arg_val _tao_service_type;
@@ -488,11 +488,11 @@ void POA_Plesk::Naming::ObjectResolver::resolve_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -556,12 +556,12 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<::CORBA::Object>::ret_val retval;
   TAO::SArg_Traits<char *>::in_arg_val _tao_service_type;
@@ -593,11 +593,11 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -741,7 +741,7 @@ TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable::lookup (char co
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {21};
 
-  static constexpr std::array<TAO_operation_db_entry , 22> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 22> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
@@ -914,12 +914,12 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<void>::ret_val retval;
   TAO::SArg_Traits<::CORBA::Object>::in_arg_val _tao_ami_return_val;
@@ -949,11 +949,11 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1014,12 +1014,12 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<void>::ret_val retval;
   TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -1047,11 +1047,11 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1102,12 +1102,12 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<void>::ret_val retval;
   TAO::SArg_Traits<::CORBA::Object>::in_arg_val _tao_ami_return_val;
@@ -1137,11 +1137,11 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_skel (
                          , args
                          , 3
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1202,12 +1202,12 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Plesk::_tc_ExSystem
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
+#endif /* TAO_HAS_INTERCEPTORS */
 
   TAO::SArg_Traits<void>::ret_val retval;
   TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
@@ -1235,11 +1235,11 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 

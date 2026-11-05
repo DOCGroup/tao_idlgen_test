@@ -98,7 +98,7 @@ TAO_OldConstants_M_AMH_A_Perfect_Hash_OpTable::lookup (char const *str, std::siz
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"foo", std::addressof(POA_OldConstants::M::AMH_A::foo_skel), std::addressof(POA_OldConstants::M::_TAO_A_Direct_Proxy_Impl::foo)},
@@ -260,7 +260,7 @@ TAO_OldConstants_M_A_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"foo", std::addressof(POA_OldConstants::M::A::foo_skel), std::addressof(POA_OldConstants::M::_TAO_A_Direct_Proxy_Impl::foo)},
@@ -419,11 +419,11 @@ void POA_OldConstants::M::A::foo_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -539,7 +539,7 @@ TAO_OldConstants_M_AMI_AHandler_Perfect_Hash_OpTable::lookup (char const *str, s
   constexpr int MIN_HASH_VALUE {3};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"foo", std::addressof(POA_OldConstants::M::AMI_AHandler::foo_skel), std::addressof(POA_OldConstants::M::_TAO_AMI_AHandler_Direct_Proxy_Impl::foo)},
@@ -710,11 +710,11 @@ void POA_OldConstants::M::AMI_AHandler::foo_skel (
                          , args
                          , 4
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -784,11 +784,11 @@ void POA_OldConstants::M::AMI_AHandler::foo_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
