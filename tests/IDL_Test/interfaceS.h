@@ -1466,8 +1466,7 @@ static void _get_value_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void value (
-    AMH_BaseResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_BaseResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_value_skel (
     TAO_ServerRequest &_tao_req,
@@ -1476,8 +1475,7 @@ static void _set_value_skel (
 
 virtual void value (
     AMH_BaseResponseHandler_ptr _tao_rh,
-    ::CORBA::Long value
-  ) = 0;
+    ::CORBA::Long value) = 0;
 
 };
 
@@ -1816,8 +1814,7 @@ static void getDate_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void getDate (
-    AMH_foostepResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_foostepResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -2505,8 +2502,7 @@ static void op_skel (
 virtual void op (
     AMH_later_userResponseHandler_ptr _tao_rh,
     ::later_ptr inarg,
-    ::later_ptr inoutarg
-  ) = 0;
+    ::later_ptr inoutarg) = 0;
 
 static void op2_skel (
     TAO_ServerRequest &_tao_req,
@@ -2515,8 +2511,7 @@ static void op2_skel (
 
 virtual void op2 (
     AMH_later_userResponseHandler_ptr _tao_rh,
-    ::Bool inarg2
-  ) = 0;
+    ::Bool inarg2) = 0;
 
 };
 
@@ -3241,8 +3236,7 @@ static void _get_v_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void v (
-    AMH_ClientResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_ClientResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_v_skel (
     TAO_ServerRequest &_tao_req,
@@ -3251,8 +3245,7 @@ static void _set_v_skel (
 
 virtual void v (
     AMH_ClientResponseHandler_ptr _tao_rh,
-    ::Begin::Value v
-  ) = 0;
+    ::Begin::Value v) = 0;
 
 };
 
@@ -3458,8 +3451,7 @@ static void _get_a_su_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void a_su (
-    AMH_AttributeTesterResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_AttributeTesterResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_a_su_skel (
     TAO_ServerRequest &_tao_req,
@@ -3468,8 +3460,7 @@ static void _set_a_su_skel (
 
 virtual void a_su (
     AMH_AttributeTesterResponseHandler_ptr _tao_rh,
-    char const * a_su
-  ) = 0;
+    char const * a_su) = 0;
 
 static void _get_a_sb_skel (
     TAO_ServerRequest &_tao_req,
@@ -3477,8 +3468,7 @@ static void _get_a_sb_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void a_sb (
-    AMH_AttributeTesterResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_AttributeTesterResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_a_sb_skel (
     TAO_ServerRequest &_tao_req,
@@ -3487,8 +3477,7 @@ static void _set_a_sb_skel (
 
 virtual void a_sb (
     AMH_AttributeTesterResponseHandler_ptr _tao_rh,
-    ::AttributeTester::string_1 const a_sb
-  ) = 0;
+    ::AttributeTester::string_1 const a_sb) = 0;
 
 };
 
@@ -3770,8 +3759,7 @@ namespace POA_ParamMod
   virtual void parameter_tester_op (
       ParamMod::AMH_ParameterTesterResponseHandler_ptr _tao_rh,
       ::ParamMod::ParameterTester::object_struct_type const & inarg,
-      ::ParamMod::ParameterTester::object_array_type const inoutarg
-    ) = 0;
+      ::ParamMod::ParameterTester::object_array_type const inoutarg) = 0;
 
 };
 
@@ -4215,8 +4203,7 @@ namespace POA_i1
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void getStr (
-      i1::AMH_if1ResponseHandler_ptr _tao_rh
-    ) = 0;
+      i1::AMH_if1ResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -4392,8 +4379,7 @@ namespace POA_i2
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void getstr2 (
-      i2::AMH_if2ResponseHandler_ptr _tao_rh
-    ) = 0;
+      i2::AMH_if2ResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -4566,8 +4552,7 @@ static void getstr3_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void getstr3 (
-    i2::AMH_if3ResponseHandler_ptr _tao_rh
-  ) = 0;
+    i2::AMH_if3ResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -5132,8 +5117,7 @@ static void remove_task_skel (
 
 virtual void remove_task (
     Rec_Arg_Traits::AMH_derivedResponseHandler_ptr _tao_rh,
-    ::Rec_Arg_Traits::base::plan_stub_type_ptr listener
-  ) = 0;
+    ::Rec_Arg_Traits::base::plan_stub_type_ptr listener) = 0;
 
 };
 
@@ -5309,8 +5293,7 @@ namespace POA_call_test
 
   virtual void do_op (
       call_test::AMH_iTestResponseHandler_ptr _tao_rh,
-      char const * call
-    ) = 0;
+      char const * call) = 0;
 
 };
 
@@ -5484,8 +5467,7 @@ namespace POA_call_attribute
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void call (
-      call_attribute::AMH_iBarResponseHandler_ptr _tao_rh
-    ) = 0;
+      call_attribute::AMH_iBarResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_call_skel (
       TAO_ServerRequest &_tao_req,
@@ -5494,8 +5476,7 @@ namespace POA_call_attribute
 
   virtual void call (
       call_attribute::AMH_iBarResponseHandler_ptr _tao_rh,
-      char const * call
-    ) = 0;
+      char const * call) = 0;
 
 };
 

@@ -182,8 +182,7 @@ namespace POA_Plesk
     virtual void resolve (
         Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr _tao_rh,
         char const * service_type,
-        ::Plesk::TObjectID sc_id
-      ) = 0;
+        ::Plesk::TObjectID sc_id) = 0;
 
     static void resolve_sc_skel (
         TAO_ServerRequest &_tao_req,
@@ -194,8 +193,7 @@ namespace POA_Plesk
         Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr _tao_rh,
         char const * service_type,
         char const * version,
-        ::Plesk::TObjectID sc_id
-      ) = 0;
+        ::Plesk::TObjectID sc_id) = 0;
 
   };
 

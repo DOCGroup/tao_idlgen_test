@@ -173,8 +173,7 @@ static void op_skel (
 virtual void op (
     AMH_genericResponseHandler_ptr _tao_rh,
     ::CORBA::Object_ptr inarg,
-    ::CORBA::Object_ptr inoutarg
-  ) = 0;
+    ::CORBA::Object_ptr inoutarg) = 0;
 
 };
 

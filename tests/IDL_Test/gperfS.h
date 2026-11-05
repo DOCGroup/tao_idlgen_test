@@ -255,8 +255,7 @@ static void _get_name_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void name (
-    AMH_testlistitemResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_testlistitemResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -427,8 +426,7 @@ static void _get_stest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void stest (
-    AMH_testResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_testResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_stest_skel (
     TAO_ServerRequest &_tao_req,
@@ -437,8 +435,7 @@ static void _set_stest_skel (
 
 virtual void stest (
     AMH_testResponseHandler_ptr _tao_rh,
-    char const * stest
-  ) = 0;
+    char const * stest) = 0;
 
 static void _get_wstest_skel (
     TAO_ServerRequest &_tao_req,
@@ -446,8 +443,7 @@ static void _get_wstest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void wstest (
-    AMH_testResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_testResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_wstest_skel (
     TAO_ServerRequest &_tao_req,
@@ -456,8 +452,7 @@ static void _set_wstest_skel (
 
 virtual void wstest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::CORBA::WChar const * wstest
-  ) = 0;
+    ::CORBA::WChar const * wstest) = 0;
 
 static void _get_ltest_skel (
     TAO_ServerRequest &_tao_req,
@@ -465,8 +460,7 @@ static void _get_ltest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ltest (
-    AMH_testResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_testResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_ltest_skel (
     TAO_ServerRequest &_tao_req,
@@ -475,8 +469,7 @@ static void _set_ltest_skel (
 
 virtual void ltest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::CORBA::LongLong ltest
-  ) = 0;
+    ::CORBA::LongLong ltest) = 0;
 
 static void _get_ldtest_skel (
     TAO_ServerRequest &_tao_req,
@@ -484,8 +477,7 @@ static void _get_ldtest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ldtest (
-    AMH_testResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_testResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_ldtest_skel (
     TAO_ServerRequest &_tao_req,
@@ -494,8 +486,7 @@ static void _set_ldtest_skel (
 
 virtual void ldtest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::CORBA::LongDouble ldtest
-  ) = 0;
+    ::CORBA::LongDouble ldtest) = 0;
 
 static void _get_etest_skel (
     TAO_ServerRequest &_tao_req,
@@ -503,8 +494,7 @@ static void _get_etest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void etest (
-    AMH_testResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_testResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_etest_skel (
     TAO_ServerRequest &_tao_req,
@@ -513,8 +503,7 @@ static void _set_etest_skel (
 
 virtual void etest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::TestEnum etest
-  ) = 0;
+    ::TestEnum etest) = 0;
 
 static void _get_setest_skel (
     TAO_ServerRequest &_tao_req,
@@ -522,8 +511,7 @@ static void _get_setest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void setest (
-    AMH_testResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_testResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_setest_skel (
     TAO_ServerRequest &_tao_req,
@@ -532,8 +520,7 @@ static void _set_setest_skel (
 
 virtual void setest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::CORBA::WChar const * setest
-  ) = 0;
+    ::CORBA::WChar const * setest) = 0;
 
 static void _get_tltest_skel (
     TAO_ServerRequest &_tao_req,
@@ -541,8 +528,7 @@ static void _get_tltest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void tltest (
-    AMH_testResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_testResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_tltest_skel (
     TAO_ServerRequest &_tao_req,
@@ -551,8 +537,7 @@ static void _set_tltest_skel (
 
 virtual void tltest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::testlistitem_ptr tltest
-  ) = 0;
+    ::testlistitem_ptr tltest) = 0;
 
 static void new_testlistitem_skel (
     TAO_ServerRequest &_tao_req,
@@ -561,8 +546,7 @@ static void new_testlistitem_skel (
 
 virtual void new_testlistitem (
     AMH_testResponseHandler_ptr _tao_rh,
-    char const * name
-  ) = 0;
+    char const * name) = 0;
 
 };
 
@@ -1231,8 +1215,7 @@ static void ackConfBasData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfBasData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfMosData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1240,8 +1223,7 @@ static void ackConfMosData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfMosData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfTwmData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1249,8 +1231,7 @@ static void ackConfTwmData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfTwmData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfArchData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1258,8 +1239,7 @@ static void ackConfArchData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfArchData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfVonData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1267,8 +1247,7 @@ static void ackConfVonData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfVonData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfFftData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1276,8 +1255,7 @@ static void ackConfFftData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfFftData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfSosData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1285,8 +1263,7 @@ static void ackConfSosData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfSosData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfSscData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1294,8 +1271,7 @@ static void ackConfSscData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfSscData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfCsData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1303,8 +1279,7 @@ static void ackConfCsData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfCsData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfR10Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1312,8 +1287,7 @@ static void ackConfR10Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR10Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfR11Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1321,8 +1295,7 @@ static void ackConfR11Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR11Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfR12Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1330,8 +1303,7 @@ static void ackConfR12Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR12Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfR13Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1339,8 +1311,7 @@ static void ackConfR13Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR13Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfR14Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1348,8 +1319,7 @@ static void ackConfR14Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR14Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void ackConfR15Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1357,8 +1327,7 @@ static void ackConfR15Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR15Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void shutdown_skel (
     TAO_ServerRequest &_tao_req,
@@ -1366,8 +1335,7 @@ static void shutdown_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void shutdown (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void transferTriggerDb_skel (
     TAO_ServerRequest &_tao_req,
@@ -1375,8 +1343,7 @@ static void transferTriggerDb_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void transferTriggerDb (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 static void transferTriggerTdc_skel (
     TAO_ServerRequest &_tao_req,
@@ -1384,8 +1351,7 @@ static void transferTriggerTdc_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void transferTriggerTdc (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
 
 };
 

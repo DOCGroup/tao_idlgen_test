@@ -178,8 +178,7 @@ static void getLoginTime_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void getLoginTime (
-    AMH_User_TResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_User_TResponseHandler_ptr _tao_rh) = 0;
 
 };
 

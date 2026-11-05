@@ -202,8 +202,7 @@ namespace POA_OldPrimTypes
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void l1 (
-      OldPrimTypes::AMH_ex1ResponseHandler_ptr _tao_rh
-    ) = 0;
+      OldPrimTypes::AMH_ex1ResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_l1_skel (
       TAO_ServerRequest &_tao_req,
@@ -212,8 +211,7 @@ namespace POA_OldPrimTypes
 
   virtual void l1 (
       OldPrimTypes::AMH_ex1ResponseHandler_ptr _tao_rh,
-      ::CORBA::Long l1
-    ) = 0;
+      ::CORBA::Long l1) = 0;
 
   static void m1_skel (
       TAO_ServerRequest &_tao_req,
@@ -222,8 +220,7 @@ namespace POA_OldPrimTypes
 
   virtual void m1 (
       OldPrimTypes::AMH_ex1ResponseHandler_ptr _tao_rh,
-      ::CORBA::Long a
-    ) = 0;
+      ::CORBA::Long a) = 0;
 
   static void mtypes_skel (
       TAO_ServerRequest &_tao_req,
@@ -245,8 +242,7 @@ namespace POA_OldPrimTypes
       ::CORBA::Double f1,
       ::CORBA::Double f2,
       ::CORBA::Char g1,
-      ::CORBA::Char g2
-    ) = 0;
+      ::CORBA::Char g2) = 0;
 
 };
 
@@ -575,8 +571,7 @@ static void _get_l2_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void l2 (
-    OldPrimTypes::AMH_ex2ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldPrimTypes::AMH_ex2ResponseHandler_ptr _tao_rh) = 0;
 
 static void m2_skel (
     TAO_ServerRequest &_tao_req,
@@ -585,8 +580,7 @@ static void m2_skel (
 
 virtual void m2 (
     OldPrimTypes::AMH_ex2ResponseHandler_ptr _tao_rh,
-    ::CORBA::Long a
-  ) = 0;
+    ::CORBA::Long a) = 0;
 
 static void mv_skel (
     TAO_ServerRequest &_tao_req,
@@ -594,8 +588,7 @@ static void mv_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void mv (
-    OldPrimTypes::AMH_ex2ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldPrimTypes::AMH_ex2ResponseHandler_ptr _tao_rh) = 0;
 
 };
 

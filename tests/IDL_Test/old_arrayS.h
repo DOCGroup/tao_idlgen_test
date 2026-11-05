@@ -277,8 +277,7 @@ namespace POA_OldArray
   virtual void op (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
       ::OldArray::A const & a1,
-      ::OldArray::A const & a2
-    ) = 0;
+      ::OldArray::A const & a2) = 0;
 
   static void op2_skel (
       TAO_ServerRequest &_tao_req,
@@ -288,8 +287,7 @@ namespace POA_OldArray
   virtual void op2 (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
       ::OldArray::str22 const a1,
-      ::OldArray::str22 const a2
-    ) = 0;
+      ::OldArray::str22 const a2) = 0;
 
   static void op4_skel (
       TAO_ServerRequest &_tao_req,
@@ -299,8 +297,7 @@ namespace POA_OldArray
   virtual void op4 (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
       ::OldArray::A const & a1,
-      ::OldArray::A const & a2
-    ) = 0;
+      ::OldArray::A const & a2) = 0;
 
   static void _get_attribute_array_skel (
       TAO_ServerRequest &_tao_req,
@@ -308,8 +305,7 @@ namespace POA_OldArray
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void attribute_array (
-      OldArray::AMH_A_iResponseHandler_ptr _tao_rh
-    ) = 0;
+      OldArray::AMH_A_iResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_attribute_array_skel (
       TAO_ServerRequest &_tao_req,
@@ -318,8 +314,7 @@ namespace POA_OldArray
 
   virtual void attribute_array (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
-      ::OldArray::str22 const attribute_array
-    ) = 0;
+      ::OldArray::str22 const attribute_array) = 0;
 
 };
 

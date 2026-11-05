@@ -265,8 +265,7 @@ static void _get_fattr_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void fattr (
-    AMH_TestSeqResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_TestSeqResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_fattr_skel (
     TAO_ServerRequest &_tao_req,
@@ -275,8 +274,7 @@ static void _set_fattr_skel (
 
 virtual void fattr (
     AMH_TestSeqResponseHandler_ptr _tao_rh,
-    ::f_unbounded const & fattr
-  ) = 0;
+    ::f_unbounded const & fattr) = 0;
 
 };
 

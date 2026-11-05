@@ -283,8 +283,7 @@ static void op_skel (
 
 virtual void op (
     AMH_foo1ResponseHandler_ptr _tao_rh,
-    ::bar1 const & a
-  ) = 0;
+    ::bar1 const & a) = 0;
 
 };
 
@@ -461,8 +460,7 @@ static void op2_skel (
 
 virtual void op2 (
     AMH_foo2ResponseHandler_ptr _tao_rh,
-    ::bar2 const & a
-  ) = 0;
+    ::bar2 const & a) = 0;
 
 static void op3_skel (
     TAO_ServerRequest &_tao_req,
@@ -471,8 +469,7 @@ static void op3_skel (
 
 virtual void op3 (
     AMH_foo2ResponseHandler_ptr _tao_rh,
-    ::CORBA::Long a
-  ) = 0;
+    ::CORBA::Long a) = 0;
 
 };
 

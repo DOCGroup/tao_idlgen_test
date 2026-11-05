@@ -179,8 +179,7 @@ namespace POA_foo
     virtual void getDate (
         foo::bar::AMH_fooBarResponseHandler_ptr _tao_rh,
         ::foo::theDate const & a,
-        ::foo::theDate const & b
-      ) = 0;
+        ::foo::theDate const & b) = 0;
 
   };
 

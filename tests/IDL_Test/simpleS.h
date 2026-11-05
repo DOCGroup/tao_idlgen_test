@@ -210,8 +210,7 @@ static void op_skel (
 virtual void op (
     AMH_simpleResponseHandler_ptr _tao_rh,
     ::CORBA::Long a,
-    ::CORBA::Long c
-  ) = 0;
+    ::CORBA::Long c) = 0;
 
 };
 
@@ -392,8 +391,7 @@ static void op2_skel (
 virtual void op2 (
     AMH_simple2ResponseHandler_ptr _tao_rh,
     ::CORBA::Long a,
-    ::simple_ptr b
-  ) = 0;
+    ::simple_ptr b) = 0;
 
 };
 

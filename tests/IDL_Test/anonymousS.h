@@ -488,8 +488,7 @@ namespace POA_All_Anon
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void TestFunc (
-      All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh
-    ) = 0;
+      All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh) = 0;
 
   static void TestFunc2_skel (
       TAO_ServerRequest &_tao_req,
@@ -497,8 +496,7 @@ namespace POA_All_Anon
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void TestFunc2 (
-      All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh
-    ) = 0;
+      All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh) = 0;
 
   static void TestFunc3_skel (
       TAO_ServerRequest &_tao_req,
@@ -506,8 +504,7 @@ namespace POA_All_Anon
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void TestFunc3 (
-      All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh
-    ) = 0;
+      All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh) = 0;
 
   static void TestFunc23_skel (
       TAO_ServerRequest &_tao_req,
@@ -515,8 +512,7 @@ namespace POA_All_Anon
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void TestFunc23 (
-      All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh
-    ) = 0;
+      All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh) = 0;
 
   static void TestFunc4_skel (
       TAO_ServerRequest &_tao_req,
@@ -525,8 +521,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc4 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      char const * inarg
-    ) = 0;
+      char const * inarg) = 0;
 
   static void TestFunc41_skel (
       TAO_ServerRequest &_tao_req,
@@ -535,8 +530,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc41 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      char const * inarg
-    ) = 0;
+      char const * inarg) = 0;
 
   static void TestFunc42_skel (
       TAO_ServerRequest &_tao_req,
@@ -545,8 +539,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc42 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      char const * inarg
-    ) = 0;
+      char const * inarg) = 0;
 
   static void TestFunc43_skel (
       TAO_ServerRequest &_tao_req,
@@ -555,8 +548,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc43 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      char const * inarg
-    ) = 0;
+      char const * inarg) = 0;
 
 };
 

@@ -195,8 +195,7 @@ namespace POA_OldUnion
 
   virtual void opA (
       OldUnion::AMH_aResponseHandler_ptr _tao_rh,
-      ::OldUnion::a::astruct const & b
-    ) = 0;
+      ::OldUnion::a::astruct const & b) = 0;
 
 };
 

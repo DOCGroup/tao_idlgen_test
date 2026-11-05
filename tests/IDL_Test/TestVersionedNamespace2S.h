@@ -323,8 +323,7 @@ namespace POA_M1
 
   virtual void op (
       M1::AMH_LIResponseHandler_ptr _tao_rh,
-      ::M1::S1 const & s
-    ) = 0;
+      ::M1::S1 const & s) = 0;
 
 };
 
@@ -406,8 +405,7 @@ static void op_skel (
 
 virtual void op (
     M1::AMH_L2ResponseHandler_ptr _tao_rh,
-    ::M1::S1 const & s
-  ) = 0;
+    ::M1::S1 const & s) = 0;
 
 };
 
@@ -497,8 +495,7 @@ namespace POA_M2
 
     virtual void op (
         M2::M3::AMH_L3ResponseHandler_ptr _tao_rh,
-        ::M2::M3::S2 const & s
-      ) = 0;
+        ::M2::M3::S2 const & s) = 0;
 
   };
 
@@ -580,8 +577,7 @@ namespace POA_M2
 
   virtual void op (
       M2::M3::AMH_L4ResponseHandler_ptr _tao_rh,
-      ::M2::M3::S2 const & s
-    ) = 0;
+      ::M2::M3::S2 const & s) = 0;
 
 };
 

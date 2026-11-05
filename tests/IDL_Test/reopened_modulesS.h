@@ -1409,8 +1409,7 @@ namespace POA_AA
 
       virtual void op1 (
           AA::BB::CC::AMH_x2ResponseHandler_ptr _tao_rh,
-          ::AA::BB::x1_ptr obj
-        ) = 0;
+          ::AA::BB::x1_ptr obj) = 0;
 
       static void op2_skel (
           TAO_ServerRequest &_tao_req,
@@ -1419,8 +1418,7 @@ namespace POA_AA
 
       virtual void op2 (
           AA::BB::CC::AMH_x2ResponseHandler_ptr _tao_rh,
-          ::AA::BB::x1_ptr obj
-        ) = 0;
+          ::AA::BB::x1_ptr obj) = 0;
 
       static void op3_skel (
           TAO_ServerRequest &_tao_req,
@@ -1429,8 +1427,7 @@ namespace POA_AA
 
       virtual void op3 (
           AA::BB::CC::AMH_x2ResponseHandler_ptr _tao_rh,
-          ::AA::BB::x1_ptr obj
-        ) = 0;
+          ::AA::BB::x1_ptr obj) = 0;
 
     };
 
@@ -1678,8 +1675,7 @@ namespace POA_dot
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void someParty (
-      dot::AMH_PersonResponseHandler_ptr _tao_rh
-    ) = 0;
+      dot::AMH_PersonResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_someParty_skel (
       TAO_ServerRequest &_tao_req,
@@ -1688,8 +1684,7 @@ namespace POA_dot
 
   virtual void someParty (
       dot::AMH_PersonResponseHandler_ptr _tao_rh,
-      ::dot::Party_ptr someParty
-    ) = 0;
+      ::dot::Party_ptr someParty) = 0;
 
 };
 
@@ -1899,8 +1894,7 @@ namespace POA_dot
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void somePerson (
-      dot::AMH_PartyResponseHandler_ptr _tao_rh
-    ) = 0;
+      dot::AMH_PartyResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_somePerson_skel (
       TAO_ServerRequest &_tao_req,
@@ -1909,8 +1903,7 @@ namespace POA_dot
 
   virtual void somePerson (
       dot::AMH_PartyResponseHandler_ptr _tao_rh,
-      ::dot::Person_ptr somePerson
-    ) = 0;
+      ::dot::Person_ptr somePerson) = 0;
 
 };
 
@@ -2132,8 +2125,7 @@ static void Operation_skel (
 virtual void Operation (
     AMH_OpHolderResponseHandler_ptr _tao_rh,
     ::Outside::Tricky p1,
-    ::Outside::Reopened::Newdef p3
-  ) = 0;
+    ::Outside::Reopened::Newdef p3) = 0;
 
 };
 
@@ -2321,8 +2313,7 @@ namespace POA_com
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void getInfo (
-      com::AMH_IFaceResponseHandler_ptr _tao_rh
-    ) = 0;
+      com::AMH_IFaceResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -2629,8 +2620,7 @@ namespace POA_X
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void method (
-      X::AMH_BIResponseHandler_ptr _tao_rh
-    ) = 0;
+      X::AMH_BIResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -2804,8 +2794,7 @@ namespace POA_XX
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void op1 (
-      XX::AMH_blah_intfcResponseHandler_ptr _tao_rh
-    ) = 0;
+      XX::AMH_blah_intfcResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -2975,8 +2964,7 @@ static void op0_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void op0 (
-    XX::AMH_blah0ResponseHandler_ptr _tao_rh
-  ) = 0;
+    XX::AMH_blah0ResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -3284,8 +3272,7 @@ static void op_skel (
 virtual void op (
     AMH_gatherResponseHandler_ptr _tao_rh,
     ::frag::dub_seq const & inarg,
-    ::frag::pug const & inoutarg
-  ) = 0;
+    ::frag::pug const & inoutarg) = 0;
 
 };
 
@@ -3471,8 +3458,7 @@ namespace POA_foo
 
   virtual void op (
       foo::AMH_objResponseHandler_ptr _tao_rh,
-      ::bar const & inarg
-    ) = 0;
+      ::bar const & inarg) = 0;
 
 };
 
@@ -3651,8 +3637,7 @@ namespace POA_A
         TAO_ServantBase *_tao_servant_upcall);
 
     virtual void getSeqOfX2 (
-        A::B::AMH_X3ResponseHandler_ptr _tao_rh
-      ) = 0;
+        A::B::AMH_X3ResponseHandler_ptr _tao_rh) = 0;
 
     static void getX3_skel (
         TAO_ServerRequest &_tao_req,
@@ -3660,8 +3645,7 @@ namespace POA_A
         TAO_ServantBase *_tao_servant_upcall);
 
     virtual void getX3 (
-        A::B::AMH_X3ResponseHandler_ptr _tao_rh
-      ) = 0;
+        A::B::AMH_X3ResponseHandler_ptr _tao_rh) = 0;
 
   };
 
@@ -3883,8 +3867,7 @@ namespace POA_mA
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void theB (
-      mA::AMH_AResponseHandler_ptr _tao_rh
-    ) = 0;
+      mA::AMH_AResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_theB_skel (
       TAO_ServerRequest &_tao_req,
@@ -3893,8 +3876,7 @@ namespace POA_mA
 
   virtual void theB (
       mA::AMH_AResponseHandler_ptr _tao_rh,
-      ::mB::B_ptr theB
-    ) = 0;
+      ::mB::B_ptr theB) = 0;
 
 };
 
@@ -4105,8 +4087,7 @@ namespace POA_mB
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void theA (
-      mB::AMH_BResponseHandler_ptr _tao_rh
-    ) = 0;
+      mB::AMH_BResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_theA_skel (
       TAO_ServerRequest &_tao_req,
@@ -4115,8 +4096,7 @@ namespace POA_mB
 
   virtual void theA (
       mB::AMH_BResponseHandler_ptr _tao_rh,
-      ::mA::A_ptr theA
-    ) = 0;
+      ::mA::A_ptr theA) = 0;
 
 };
 

@@ -219,8 +219,7 @@ static void do_it_skel (
 
 virtual void do_it (
     AMH_Interface1ResponseHandler_ptr _tao_rh,
-    ::Interface1::Type const & value
-  ) = 0;
+    ::Interface1::Type const & value) = 0;
 
 };
 
@@ -391,8 +390,7 @@ static void do_it_skel (
 
 virtual void do_it (
     AMH_Interface2ResponseHandler_ptr _tao_rh,
-    ::Interface2::Type const & value
-  ) = 0;
+    ::Interface2::Type const & value) = 0;
 
 };
 

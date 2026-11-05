@@ -519,8 +519,7 @@ static void op_skel (
 
 virtual void op (
     AMH_MyIntResponseHandler_ptr _tao_rh,
-    ::A::MyStructA const & ab
-  ) = 0;
+    ::A::MyStructA const & ab) = 0;
 
 };
 

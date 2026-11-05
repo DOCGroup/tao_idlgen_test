@@ -192,8 +192,7 @@ static void foo_skel (
 
 virtual void foo (
     AMH_TestingResponseHandler_ptr _tao_rh,
-    char const * _cxx_namespace
-  ) = 0;
+    char const * _cxx_namespace) = 0;
 
 static void bar_skel (
     TAO_ServerRequest &_tao_req,
@@ -202,8 +201,7 @@ static void bar_skel (
 
 virtual void bar (
     AMH_TestingResponseHandler_ptr _tao_rh,
-    ::Objects const & foo
-  ) = 0;
+    ::Objects const & foo) = 0;
 
 };
 

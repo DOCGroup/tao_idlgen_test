@@ -204,8 +204,7 @@ namespace POA_mod1
         TAO_ServantBase *_tao_servant_upcall);
 
     virtual void l1 (
-        mod1::mod2::AMH_ex1ResponseHandler_ptr _tao_rh
-      ) = 0;
+        mod1::mod2::AMH_ex1ResponseHandler_ptr _tao_rh) = 0;
 
     static void _set_l1_skel (
         TAO_ServerRequest &_tao_req,
@@ -214,8 +213,7 @@ namespace POA_mod1
 
     virtual void l1 (
         mod1::mod2::AMH_ex1ResponseHandler_ptr _tao_rh,
-        ::CORBA::Long l1
-      ) = 0;
+        ::CORBA::Long l1) = 0;
 
     static void _get_l2_skel (
         TAO_ServerRequest &_tao_req,
@@ -223,8 +221,7 @@ namespace POA_mod1
         TAO_ServantBase *_tao_servant_upcall);
 
     virtual void l2 (
-        mod1::mod2::AMH_ex1ResponseHandler_ptr _tao_rh
-      ) = 0;
+        mod1::mod2::AMH_ex1ResponseHandler_ptr _tao_rh) = 0;
 
     static void m1_skel (
         TAO_ServerRequest &_tao_req,
@@ -233,8 +230,7 @@ namespace POA_mod1
 
     virtual void m1 (
         mod1::mod2::AMH_ex1ResponseHandler_ptr _tao_rh,
-        ::CORBA::Long a
-      ) = 0;
+        ::CORBA::Long a) = 0;
 
   };
 
@@ -514,8 +510,7 @@ namespace POA_mod1
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void l3 (
-      mod1::mod2::AMH_ex2ResponseHandler_ptr _tao_rh
-    ) = 0;
+      mod1::mod2::AMH_ex2ResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_l3_skel (
       TAO_ServerRequest &_tao_req,
@@ -524,8 +519,7 @@ namespace POA_mod1
 
   virtual void l3 (
       mod1::mod2::AMH_ex2ResponseHandler_ptr _tao_rh,
-      ::CORBA::Long l3
-    ) = 0;
+      ::CORBA::Long l3) = 0;
 
   static void m2_skel (
       TAO_ServerRequest &_tao_req,
@@ -534,8 +528,7 @@ namespace POA_mod1
 
   virtual void m2 (
       mod1::mod2::AMH_ex2ResponseHandler_ptr _tao_rh,
-      ::CORBA::Long a
-    ) = 0;
+      ::CORBA::Long a) = 0;
 
 };
 

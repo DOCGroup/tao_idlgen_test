@@ -137,8 +137,7 @@ namespace POA_Test
 
   virtual void test_method (
       Test::AMH_RoundtripResponseHandler_ptr _tao_rh,
-      ::Test::Timestamp send_time
-    ) = 0;
+      ::Test::Timestamp send_time) = 0;
 
   static void shutdown_skel (
       TAO_ServerRequest &_tao_req,
@@ -146,8 +145,7 @@ namespace POA_Test
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void shutdown (
-      Test::AMH_RoundtripResponseHandler_ptr _tao_rh
-    ) = 0;
+      Test::AMH_RoundtripResponseHandler_ptr _tao_rh) = 0;
 
 };
 

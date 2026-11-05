@@ -155,8 +155,7 @@ static void op3_skel (
 
 virtual void op3 (
     AMH_simple3ResponseHandler_ptr _tao_rh,
-    ::CORBA::Long a
-  ) = 0;
+    ::CORBA::Long a) = 0;
 
 static void op4_skel (
     TAO_ServerRequest &_tao_req,
@@ -166,8 +165,7 @@ static void op4_skel (
 virtual void op4 (
     AMH_simple3ResponseHandler_ptr _tao_rh,
     ::CORBA::Any const & x,
-    ::CORBA::Any const & y
-  ) = 0;
+    ::CORBA::Any const & y) = 0;
 
 };
 

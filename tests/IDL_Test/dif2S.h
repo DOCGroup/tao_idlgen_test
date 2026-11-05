@@ -471,8 +471,7 @@ namespace POA_OldDif2
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void op0 (
-      OldDif2::AMH_ex1ResponseHandler_ptr _tao_rh
-    ) = 0;
+      OldDif2::AMH_ex1ResponseHandler_ptr _tao_rh) = 0;
 
   static void op1_skel (
       TAO_ServerRequest &_tao_req,
@@ -482,8 +481,7 @@ namespace POA_OldDif2
   virtual void op1 (
       OldDif2::AMH_ex1ResponseHandler_ptr _tao_rh,
       ::CORBA::Float f,
-      ::CORBA::Long l
-    ) = 0;
+      ::CORBA::Long l) = 0;
 
   static void op2_skel (
       TAO_ServerRequest &_tao_req,
@@ -493,8 +491,7 @@ namespace POA_OldDif2
   virtual void op2 (
       OldDif2::AMH_ex1ResponseHandler_ptr _tao_rh,
       ::CORBA::Double d,
-      ::CORBA::Short s
-    ) = 0;
+      ::CORBA::Short s) = 0;
 
   static void op3_skel (
       TAO_ServerRequest &_tao_req,
@@ -504,8 +501,7 @@ namespace POA_OldDif2
   virtual void op3 (
       OldDif2::AMH_ex1ResponseHandler_ptr _tao_rh,
       ::CORBA::Long l,
-      ::CORBA::ULong ul
-    ) = 0;
+      ::CORBA::ULong ul) = 0;
 
   static void op4_skel (
       TAO_ServerRequest &_tao_req,
@@ -515,8 +511,7 @@ namespace POA_OldDif2
   virtual void op4 (
       OldDif2::AMH_ex1ResponseHandler_ptr _tao_rh,
       ::CORBA::Short s,
-      ::CORBA::UShort us
-    ) = 0;
+      ::CORBA::UShort us) = 0;
 
   static void op5_skel (
       TAO_ServerRequest &_tao_req,
@@ -527,8 +522,7 @@ namespace POA_OldDif2
       OldDif2::AMH_ex1ResponseHandler_ptr _tao_rh,
       ::CORBA::ULong ul,
       ::CORBA::UShort us,
-      ::CORBA::Boolean b
-    ) = 0;
+      ::CORBA::Boolean b) = 0;
 
   static void op6_skel (
       TAO_ServerRequest &_tao_req,
@@ -537,8 +531,7 @@ namespace POA_OldDif2
 
   virtual void op6 (
       OldDif2::AMH_ex1ResponseHandler_ptr _tao_rh,
-      ::CORBA::Char c
-    ) = 0;
+      ::CORBA::Char c) = 0;
 
 };
 
@@ -968,8 +961,7 @@ static void op7_skel (
 virtual void op7 (
     OldDif2::AMH_ex2ResponseHandler_ptr _tao_rh,
     ::CORBA::Char c,
-    ::CORBA::Octet o
-  ) = 0;
+    ::CORBA::Octet o) = 0;
 
 static void op8_skel (
     TAO_ServerRequest &_tao_req,
@@ -978,8 +970,7 @@ static void op8_skel (
 
 virtual void op8 (
     OldDif2::AMH_ex2ResponseHandler_ptr _tao_rh,
-    ::CORBA::Octet o
-  ) = 0;
+    ::CORBA::Octet o) = 0;
 
 static void op9_skel (
     TAO_ServerRequest &_tao_req,
@@ -990,8 +981,7 @@ virtual void op9 (
     OldDif2::AMH_ex2ResponseHandler_ptr _tao_rh,
     ::CORBA::Octet o,
     char const * ls,
-    ::CORBA::Long l
-  ) = 0;
+    ::CORBA::Long l) = 0;
 
 static void op10_skel (
     TAO_ServerRequest &_tao_req,
@@ -1000,8 +990,7 @@ static void op10_skel (
 
 virtual void op10 (
     OldDif2::AMH_ex2ResponseHandler_ptr _tao_rh,
-    char const * s
-  ) = 0;
+    char const * s) = 0;
 
 static void op11_skel (
     TAO_ServerRequest &_tao_req,
@@ -1010,8 +999,7 @@ static void op11_skel (
 
 virtual void op11 (
     OldDif2::AMH_ex2ResponseHandler_ptr _tao_rh,
-    char const * ls
-  ) = 0;
+    char const * ls) = 0;
 
 static void op12_skel (
     TAO_ServerRequest &_tao_req,
@@ -1020,8 +1008,7 @@ static void op12_skel (
 
 virtual void op12 (
     OldDif2::AMH_ex2ResponseHandler_ptr _tao_rh,
-    ::CORBA::Long l
-  ) = 0;
+    ::CORBA::Long l) = 0;
 
 };
 
@@ -1406,8 +1393,7 @@ static void _get_float_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void float_attribute (
-    OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh) = 0;
 
 static void _get_double_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1415,8 +1401,7 @@ static void _get_double_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void double_attribute (
-    OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_double_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1425,8 +1410,7 @@ static void _set_double_attribute_skel (
 
 virtual void double_attribute (
     OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh,
-    ::CORBA::Double double_attribute
-  ) = 0;
+    ::CORBA::Double double_attribute) = 0;
 
 static void _get_long_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1434,8 +1418,7 @@ static void _get_long_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void long_attribute (
-    OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh) = 0;
 
 static void _get_short_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1443,8 +1426,7 @@ static void _get_short_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void short_attribute (
-    OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_short_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1453,8 +1435,7 @@ static void _set_short_attribute_skel (
 
 virtual void short_attribute (
     OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh,
-    ::CORBA::Short short_attribute
-  ) = 0;
+    ::CORBA::Short short_attribute) = 0;
 
 static void _get_unsigned_long_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1462,8 +1443,7 @@ static void _get_unsigned_long_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void unsigned_long_attribute (
-    OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex3ResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -1851,8 +1831,7 @@ static void _get_unsigned_short_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void unsigned_short_attribute (
-    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_unsigned_short_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1861,8 +1840,7 @@ static void _set_unsigned_short_attribute_skel (
 
 virtual void unsigned_short_attribute (
     OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh,
-    ::CORBA::UShort unsigned_short_attribute
-  ) = 0;
+    ::CORBA::UShort unsigned_short_attribute) = 0;
 
 static void _get_char_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1870,8 +1848,7 @@ static void _get_char_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void char_attribute (
-    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh) = 0;
 
 static void _get_boolean_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1879,8 +1856,7 @@ static void _get_boolean_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void boolean_attribute (
-    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_boolean_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1889,8 +1865,7 @@ static void _set_boolean_attribute_skel (
 
 virtual void boolean_attribute (
     OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh,
-    ::CORBA::Boolean boolean_attribute
-  ) = 0;
+    ::CORBA::Boolean boolean_attribute) = 0;
 
 static void _get_octet_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1898,8 +1873,7 @@ static void _get_octet_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void octet_attribute (
-    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh) = 0;
 
 static void _get_string_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1907,8 +1881,7 @@ static void _get_string_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void string_attribute (
-    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_string_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1917,8 +1890,7 @@ static void _set_string_attribute_skel (
 
 virtual void string_attribute (
     OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh,
-    char const * string_attribute
-  ) = 0;
+    char const * string_attribute) = 0;
 
 static void _get_limited_string_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1926,8 +1898,7 @@ static void _get_limited_string_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void limited_string_attribute (
-    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh) = 0;
 
 static void _get_an_object_attribute_skel (
     TAO_ServerRequest &_tao_req,
@@ -1935,8 +1906,7 @@ static void _get_an_object_attribute_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void an_object_attribute (
-    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldDif2::AMH_ex4ResponseHandler_ptr _tao_rh) = 0;
 
 };
 

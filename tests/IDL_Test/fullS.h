@@ -382,8 +382,7 @@ namespace POA_mod2
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void attr (
-      mod2::AMH_fwdResponseHandler_ptr _tao_rh
-    ) = 0;
+      mod2::AMH_fwdResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_attr_skel (
       TAO_ServerRequest &_tao_req,
@@ -392,8 +391,7 @@ namespace POA_mod2
 
   virtual void attr (
       mod2::AMH_fwdResponseHandler_ptr _tao_rh,
-      char const * attr
-    ) = 0;
+      char const * attr) = 0;
 
   static void op_skel (
       TAO_ServerRequest &_tao_req,
@@ -404,8 +402,7 @@ namespace POA_mod2
       mod2::AMH_fwdResponseHandler_ptr _tao_rh,
       ::mod2::full_ptr full_arg,
       ::mod2::fwd::un const & un_arg,
-      ::mod2::fwd::full_seq const & full_seq_arg
-    ) = 0;
+      ::mod2::fwd::full_seq const & full_seq_arg) = 0;
 
 };
 

@@ -154,8 +154,7 @@ namespace POA_Hello
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void rw_attrib_mytype (
-      Hello::AMH_MyFooResponseHandler_ptr _tao_rh
-    ) = 0;
+      Hello::AMH_MyFooResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_rw_attrib_mytype_skel (
       TAO_ServerRequest &_tao_req,
@@ -164,8 +163,7 @@ namespace POA_Hello
 
   virtual void rw_attrib_mytype (
       Hello::AMH_MyFooResponseHandler_ptr _tao_rh,
-      ::Hello::MyType rw_attrib_mytype
-    ) = 0;
+      ::Hello::MyType rw_attrib_mytype) = 0;
 
   static void _get_rw_attrib_skel (
       TAO_ServerRequest &_tao_req,
@@ -173,8 +171,7 @@ namespace POA_Hello
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void rw_attrib (
-      Hello::AMH_MyFooResponseHandler_ptr _tao_rh
-    ) = 0;
+      Hello::AMH_MyFooResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_rw_attrib_skel (
       TAO_ServerRequest &_tao_req,
@@ -183,8 +180,7 @@ namespace POA_Hello
 
   virtual void rw_attrib (
       Hello::AMH_MyFooResponseHandler_ptr _tao_rh,
-      ::CORBA::Short rw_attrib
-    ) = 0;
+      ::CORBA::Short rw_attrib) = 0;
 
   static void _get_rw_attrib_reverted_skel (
       TAO_ServerRequest &_tao_req,
@@ -192,8 +188,7 @@ namespace POA_Hello
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void rw_attrib_reverted (
-      Hello::AMH_MyFooResponseHandler_ptr _tao_rh
-    ) = 0;
+      Hello::AMH_MyFooResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_rw_attrib_reverted_skel (
       TAO_ServerRequest &_tao_req,
@@ -202,8 +197,7 @@ namespace POA_Hello
 
   virtual void rw_attrib_reverted (
       Hello::AMH_MyFooResponseHandler_ptr _tao_rh,
-      ::CORBA::Short rw_attrib_reverted
-    ) = 0;
+      ::CORBA::Short rw_attrib_reverted) = 0;
 
   static void _get_rw_attribB_skel (
       TAO_ServerRequest &_tao_req,
@@ -211,8 +205,7 @@ namespace POA_Hello
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void rw_attribB (
-      Hello::AMH_MyFooResponseHandler_ptr _tao_rh
-    ) = 0;
+      Hello::AMH_MyFooResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_rw_attribB_skel (
       TAO_ServerRequest &_tao_req,
@@ -221,8 +214,7 @@ namespace POA_Hello
 
   virtual void rw_attribB (
       Hello::AMH_MyFooResponseHandler_ptr _tao_rh,
-      ::CORBA::Short rw_attribB
-    ) = 0;
+      ::CORBA::Short rw_attribB) = 0;
 
   static void _get_ro_attrib_skel (
       TAO_ServerRequest &_tao_req,
@@ -230,8 +222,7 @@ namespace POA_Hello
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void ro_attrib (
-      Hello::AMH_MyFooResponseHandler_ptr _tao_rh
-    ) = 0;
+      Hello::AMH_MyFooResponseHandler_ptr _tao_rh) = 0;
 
 };
 

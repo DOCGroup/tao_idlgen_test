@@ -329,8 +329,7 @@ static void op_skel (
 
 virtual void op (
     A::AMH_CResponseHandler_ptr _tao_rh,
-    ::A::B_ptr a
-  ) = 0;
+    ::A::B_ptr a) = 0;
 
 };
 

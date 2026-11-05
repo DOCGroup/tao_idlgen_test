@@ -556,8 +556,7 @@ static void all_arrays_skel (
 virtual void all_arrays (
     AMH_array_argsResponseHandler_ptr _tao_rh,
     ::oa1 const arg1,
-    ::oa2 const arg2
-  ) = 0;
+    ::oa2 const arg2) = 0;
 
 };
 
@@ -862,8 +861,7 @@ namespace POA_arraytest
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void test_method (
-      arraytest::AMH_MyTestResponseHandler_ptr _tao_rh
-    ) = 0;
+      arraytest::AMH_MyTestResponseHandler_ptr _tao_rh) = 0;
 
 };
 

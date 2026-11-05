@@ -528,8 +528,7 @@ namespace POA_TestModule
 
   virtual void set_typedef_1 (
       TestModule::AMH_TestInterfaceResponseHandler_ptr _tao_rh,
-      char const * typ1
-    ) = 0;
+      char const * typ1) = 0;
 
   static void set_typedef_2_skel (
       TAO_ServerRequest &_tao_req,
@@ -538,8 +537,7 @@ namespace POA_TestModule
 
   virtual void set_typedef_2 (
       TestModule::AMH_TestInterfaceResponseHandler_ptr _tao_rh,
-      char const * typ2
-    ) = 0;
+      char const * typ2) = 0;
 
 };
 
@@ -749,8 +747,7 @@ namespace POA_bug_2124
 
   virtual void op1 (
       bug_2124::AMH_FooResponseHandler_ptr _tao_rh,
-      char const * s
-    ) = 0;
+      char const * s) = 0;
 
   static void op2_skel (
       TAO_ServerRequest &_tao_req,
@@ -759,8 +756,7 @@ namespace POA_bug_2124
 
   virtual void op2 (
       bug_2124::AMH_FooResponseHandler_ptr _tao_rh,
-      char const * s
-    ) = 0;
+      char const * s) = 0;
 
 };
 
@@ -973,8 +969,7 @@ namespace POA_bug_2122
 
     virtual void someOp (
         bug_2122::One::AMH_WhateverResponseHandler_ptr _tao_rh,
-        char const * s
-      ) = 0;
+        char const * s) = 0;
 
   };
 
@@ -1149,8 +1144,7 @@ namespace Two
 
   virtual void someOp (
       bug_2122::Two::AMH_WhoCaresResponseHandler_ptr _tao_rh,
-      char const * s
-    ) = 0;
+      char const * s) = 0;
 
 };
 
@@ -1325,8 +1319,7 @@ namespace Three
 
   virtual void someOp (
       bug_2122::Three::AMH_WhoCaresResponseHandler_ptr _tao_rh,
-      char const * s
-    ) = 0;
+      char const * s) = 0;
 
 };
 

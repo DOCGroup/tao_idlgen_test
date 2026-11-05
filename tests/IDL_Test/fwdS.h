@@ -427,8 +427,7 @@ namespace POA_mod2
   virtual void op (
       mod2::AMH_fullResponseHandler_ptr _tao_rh,
       ::mod2::fwd_ptr inarg,
-      ::mod2::fwd_ptr inoutarg
-    ) = 0;
+      ::mod2::fwd_ptr inoutarg) = 0;
 
 };
 

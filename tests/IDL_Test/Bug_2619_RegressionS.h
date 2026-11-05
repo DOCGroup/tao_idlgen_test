@@ -178,8 +178,7 @@ static void getGroup_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void getGroup (
-    AMH_TestResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_TestResponseHandler_ptr _tao_rh) = 0;
 
 };
 

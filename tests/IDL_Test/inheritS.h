@@ -342,8 +342,7 @@ namespace POA_OldInherit
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void op_one (
-      OldInherit::AMH_oneResponseHandler_ptr _tao_rh
-    ) = 0;
+      OldInherit::AMH_oneResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -513,8 +512,7 @@ static void op_two_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void op_two (
-    OldInherit::AMH_twoResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldInherit::AMH_twoResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -685,8 +683,7 @@ static void op_three_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void op_three (
-    OldInherit::AMH_threeResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldInherit::AMH_threeResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -858,8 +855,7 @@ static void op_four_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void op_four (
-    OldInherit::AMH_fourResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldInherit::AMH_fourResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -1036,8 +1032,7 @@ static void op_five_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void op_five (
-    OldInherit::AMH_fiveResponseHandler_ptr _tao_rh
-  ) = 0;
+    OldInherit::AMH_fiveResponseHandler_ptr _tao_rh) = 0;
 
 };
 

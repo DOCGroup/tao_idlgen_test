@@ -171,8 +171,7 @@ namespace POA_A
         TAO_ServantBase *_tao_servant_upcall);
 
     virtual void getX1 (
-        A::B::AMH_X1ResponseHandler_ptr _tao_rh
-      ) = 0;
+        A::B::AMH_X1ResponseHandler_ptr _tao_rh) = 0;
 
   };
 

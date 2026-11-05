@@ -162,8 +162,7 @@ static void Bug_2350_Regression_excep_skel (
 
 virtual void Bug_2350_Regression_excep (
     AMH_Bug_2350_RegressionResponseHandler_ptr _tao_rh,
-    ::user_ExceptionHolder const & a
-  ) = 0;
+    ::user_ExceptionHolder const & a) = 0;
 
 };
 

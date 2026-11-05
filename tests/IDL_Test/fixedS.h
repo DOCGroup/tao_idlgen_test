@@ -173,8 +173,7 @@ namespace POA_FixedPoint
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void rate (
-      FixedPoint::AMH_FixedOperationsResponseHandler_ptr _tao_rh
-    ) = 0;
+      FixedPoint::AMH_FixedOperationsResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_rate_skel (
       TAO_ServerRequest &_tao_req,
@@ -183,8 +182,7 @@ namespace POA_FixedPoint
 
   virtual void rate (
       FixedPoint::AMH_FixedOperationsResponseHandler_ptr _tao_rh,
-      ::FixedPoint::Amount const & rate
-    ) = 0;
+      ::FixedPoint::Amount const & rate) = 0;
 
 };
 

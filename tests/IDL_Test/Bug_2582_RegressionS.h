@@ -171,8 +171,7 @@ static void getEncodingID_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void getEncodingID (
-    AMH_FieldDevice_TResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_FieldDevice_TResponseHandler_ptr _tao_rh) = 0;
 
 static void getEncoding_skel (
     TAO_ServerRequest &_tao_req,
@@ -180,8 +179,7 @@ static void getEncoding_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void getEncoding (
-    AMH_FieldDevice_TResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_FieldDevice_TResponseHandler_ptr _tao_rh) = 0;
 
 };
 

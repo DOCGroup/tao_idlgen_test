@@ -1321,8 +1321,7 @@ static void make_negotiator_skel (
 
 virtual void make_negotiator (
     Negotiator::AMH_UAV_Negotiator_FactoryResponseHandler_ptr _tao_rh,
-    char const * bitrate_sc
-  ) = 0;
+    char const * bitrate_sc) = 0;
 
 };
 
@@ -1512,8 +1511,7 @@ namespace POA_Wow
 
     virtual void op2 (
         Wow::bug_2125::AMH_MyInterfaceResponseHandler_ptr _tao_rh,
-        ::bug_2125::Bar::Stuff fbs
-      ) = 0;
+        ::bug_2125::Bar::Stuff fbs) = 0;
 
   };
 

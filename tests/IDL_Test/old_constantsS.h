@@ -189,8 +189,7 @@ namespace POA_OldConstants
     virtual void foo (
         OldConstants::M::AMH_AResponseHandler_ptr _tao_rh,
         ::OldConstants::M::A::N x,
-        ::OldConstants::M::A::N z
-      ) = 0;
+        ::OldConstants::M::A::N z) = 0;
 
   };
 

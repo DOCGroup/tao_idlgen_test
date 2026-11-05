@@ -194,8 +194,7 @@ static void send_dozen_skel (
 
 virtual void send_dozen (
     AMH_seqTestResponseHandler_ptr _tao_rh,
-    ::seqTest::dozens const & bouquets
-  ) = 0;
+    ::seqTest::dozens const & bouquets) = 0;
 
 };
 
