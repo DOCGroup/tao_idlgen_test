@@ -89,7 +89,7 @@ namespace Not_Anon
 
   class TAO_IDL_TEST_STUB_Export short_seq
     : public
-        ::TAO::unbounded_value_sequence< ::CORBA::Short>
+        ::TAO::unbounded_value_sequence<::CORBA::Short>
   {
   public:
     short_seq () = default;
@@ -122,7 +122,7 @@ namespace Half_Anon
 
   class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_Char_
     : public
-        ::TAO::unbounded_value_sequence< ::CORBA::Char>
+        ::TAO::unbounded_value_sequence<::CORBA::Char>
   {
   public:
     _tao_seq_CORBA_Char_ () = default;
@@ -146,391 +146,347 @@ namespace Half_Anon
   using char_seq_array_slice = _tao_seq_CORBA_Char_;
   struct char_seq_array_tag {};
 
-  using char_seq_array_var =
-    TAO_VarArray_Var_T<
-        char_seq_array,
-        char_seq_array_slice,
-        char_seq_array_tag
-      >;
+  using char_seq_array_var = TAO_VarArray_Var_T<char_seq_array, char_seq_array_slice, char_seq_array_tag>;
 
-    using char_seq_array_out =
-      TAO_Array_Out_T<
-          char_seq_array,
-          char_seq_array_var,
-          char_seq_array_slice,
-          char_seq_array_tag
-        >;
+  using char_seq_array_out = TAO_Array_Out_T<char_seq_array, char_seq_array_var, char_seq_array_slice, char_seq_array_tag>;
 
-      using char_seq_array_forany = TAO_Array_Forany_T<char_seq_array, char_seq_array_slice, char_seq_array_tag>;
+  using char_seq_array_forany = TAO_Array_Forany_T<char_seq_array, char_seq_array_slice, char_seq_array_tag>;
 
-      extern TAO_IDL_TEST_STUB_Export char_seq_array_slice *char_seq_array_alloc ();
+  extern TAO_IDL_TEST_STUB_Export char_seq_array_slice *char_seq_array_alloc ();
 
-      extern TAO_IDL_TEST_STUB_Export void char_seq_array_free (char_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export void char_seq_array_free (char_seq_array_slice *_tao_slice);
 
-      extern TAO_IDL_TEST_STUB_Export char_seq_array_slice *char_seq_array_dup (const char_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export char_seq_array_slice *char_seq_array_dup (const char_seq_array_slice *_tao_slice);
 
-      extern TAO_IDL_TEST_STUB_Export void char_seq_array_copy (char_seq_array_slice *_tao_to, const char_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void char_seq_array_copy (char_seq_array_slice *_tao_to, const char_seq_array_slice *_tao_from);
 
 #if !defined (_HALF_ANON__TAO_SEQ_CORBA_ULONG__18_CH_)
 #define _HALF_ANON__TAO_SEQ_CORBA_ULONG__18_CH_
 
-      class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_ULong__18
-        : public
-            ::TAO::bounded_value_sequence< ::CORBA::ULong,18>
-      {
-      public:
-        _tao_seq_CORBA_ULong__18 () = default;
-        _tao_seq_CORBA_ULong__18 (
-          ::CORBA::ULong length,
-          ::CORBA::ULong* buffer,
-          ::CORBA::Boolean release = false);
-        _tao_seq_CORBA_ULong__18 (_tao_seq_CORBA_ULong__18 const &) = default;
-        _tao_seq_CORBA_ULong__18 (_tao_seq_CORBA_ULong__18 &&) = default;
-        _tao_seq_CORBA_ULong__18& operator= (_tao_seq_CORBA_ULong__18 const &) = default;
-        _tao_seq_CORBA_ULong__18& operator= (_tao_seq_CORBA_ULong__18 &&) = default;
-        virtual ~_tao_seq_CORBA_ULong__18 () = default;
+  class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_ULong__18
+    : public
+        ::TAO::bounded_value_sequence<::CORBA::ULong,18>
+  {
+  public:
+    _tao_seq_CORBA_ULong__18 () = default;
+    _tao_seq_CORBA_ULong__18 (
+      ::CORBA::ULong length,
+      ::CORBA::ULong* buffer,
+      ::CORBA::Boolean release = false);
+    _tao_seq_CORBA_ULong__18 (_tao_seq_CORBA_ULong__18 const &) = default;
+    _tao_seq_CORBA_ULong__18 (_tao_seq_CORBA_ULong__18 &&) = default;
+    _tao_seq_CORBA_ULong__18& operator= (_tao_seq_CORBA_ULong__18 const &) = default;
+    _tao_seq_CORBA_ULong__18& operator= (_tao_seq_CORBA_ULong__18 &&) = default;
+    virtual ~_tao_seq_CORBA_ULong__18 () = default;
 
-      };
+  };
 
 #endif /* end #if !defined */
 
-      using bd_ulong_seq_array = _tao_seq_CORBA_ULong__18[17];
-      using bd_ulong_seq_array_slice = _tao_seq_CORBA_ULong__18;
-      struct bd_ulong_seq_array_tag {};
+  using bd_ulong_seq_array = _tao_seq_CORBA_ULong__18[17];
+  using bd_ulong_seq_array_slice = _tao_seq_CORBA_ULong__18;
+  struct bd_ulong_seq_array_tag {};
 
-      using bd_ulong_seq_array_var =
-        TAO_VarArray_Var_T<
-            bd_ulong_seq_array,
-            bd_ulong_seq_array_slice,
-            bd_ulong_seq_array_tag
-          >;
+  using bd_ulong_seq_array_var = TAO_VarArray_Var_T<bd_ulong_seq_array, bd_ulong_seq_array_slice, bd_ulong_seq_array_tag>;
 
-        using bd_ulong_seq_array_out =
-          TAO_Array_Out_T<
-              bd_ulong_seq_array,
-              bd_ulong_seq_array_var,
-              bd_ulong_seq_array_slice,
-              bd_ulong_seq_array_tag
-            >;
+  using bd_ulong_seq_array_out = TAO_Array_Out_T<bd_ulong_seq_array, bd_ulong_seq_array_var, bd_ulong_seq_array_slice, bd_ulong_seq_array_tag>;
 
-          using bd_ulong_seq_array_forany = TAO_Array_Forany_T<bd_ulong_seq_array, bd_ulong_seq_array_slice, bd_ulong_seq_array_tag>;
+  using bd_ulong_seq_array_forany = TAO_Array_Forany_T<bd_ulong_seq_array, bd_ulong_seq_array_slice, bd_ulong_seq_array_tag>;
 
-          extern TAO_IDL_TEST_STUB_Export bd_ulong_seq_array_slice *bd_ulong_seq_array_alloc ();
+  extern TAO_IDL_TEST_STUB_Export bd_ulong_seq_array_slice *bd_ulong_seq_array_alloc ();
 
-          extern TAO_IDL_TEST_STUB_Export void bd_ulong_seq_array_free (bd_ulong_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export void bd_ulong_seq_array_free (bd_ulong_seq_array_slice *_tao_slice);
 
-          extern TAO_IDL_TEST_STUB_Export bd_ulong_seq_array_slice *bd_ulong_seq_array_dup (const bd_ulong_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export bd_ulong_seq_array_slice *bd_ulong_seq_array_dup (const bd_ulong_seq_array_slice *_tao_slice);
 
-          extern TAO_IDL_TEST_STUB_Export void bd_ulong_seq_array_copy (bd_ulong_seq_array_slice *_tao_to, const bd_ulong_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void bd_ulong_seq_array_copy (bd_ulong_seq_array_slice *_tao_to, const bd_ulong_seq_array_slice *_tao_from);
 
 #if !defined (_HALF_ANON__TAO_SEQ_CORBA_USHORT__CH_)
 #define _HALF_ANON__TAO_SEQ_CORBA_USHORT__CH_
 
-          class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_UShort_
-            : public
-                ::TAO::unbounded_value_sequence< ::CORBA::UShort>
-          {
-          public:
-            _tao_seq_CORBA_UShort_ () = default;
-            explicit _tao_seq_CORBA_UShort_ (::CORBA::ULong max);
-            _tao_seq_CORBA_UShort_ (
-              ::CORBA::ULong max,
-              ::CORBA::ULong length,
-              ::CORBA::UShort* buffer,
-              ::CORBA::Boolean release = false);
-            _tao_seq_CORBA_UShort_ (_tao_seq_CORBA_UShort_ const &) = default;
-            _tao_seq_CORBA_UShort_ (_tao_seq_CORBA_UShort_ &&) = default;
-            _tao_seq_CORBA_UShort_& operator= (_tao_seq_CORBA_UShort_ const &) = default;
-            _tao_seq_CORBA_UShort_& operator= (_tao_seq_CORBA_UShort_ &&) = default;
-            virtual ~_tao_seq_CORBA_UShort_ () = default;
+  class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_UShort_
+    : public
+        ::TAO::unbounded_value_sequence<::CORBA::UShort>
+  {
+  public:
+    _tao_seq_CORBA_UShort_ () = default;
+    explicit _tao_seq_CORBA_UShort_ (::CORBA::ULong max);
+    _tao_seq_CORBA_UShort_ (
+      ::CORBA::ULong max,
+      ::CORBA::ULong length,
+      ::CORBA::UShort* buffer,
+      ::CORBA::Boolean release = false);
+    _tao_seq_CORBA_UShort_ (_tao_seq_CORBA_UShort_ const &) = default;
+    _tao_seq_CORBA_UShort_ (_tao_seq_CORBA_UShort_ &&) = default;
+    _tao_seq_CORBA_UShort_& operator= (_tao_seq_CORBA_UShort_ const &) = default;
+    _tao_seq_CORBA_UShort_& operator= (_tao_seq_CORBA_UShort_ &&) = default;
+    virtual ~_tao_seq_CORBA_UShort_ () = default;
 
-          };
+  };
 
 #endif /* end #if !defined */
 
-          using ushort_seq_array = _tao_seq_CORBA_UShort_[12];
-          using ushort_seq_array_slice = _tao_seq_CORBA_UShort_;
-          struct ushort_seq_array_tag {};
+  using ushort_seq_array = _tao_seq_CORBA_UShort_[12];
+  using ushort_seq_array_slice = _tao_seq_CORBA_UShort_;
+  struct ushort_seq_array_tag {};
 
-          using ushort_seq_array_var =
-            TAO_VarArray_Var_T<
-                ushort_seq_array,
-                ushort_seq_array_slice,
-                ushort_seq_array_tag
-              >;
+  using ushort_seq_array_var = TAO_VarArray_Var_T<ushort_seq_array, ushort_seq_array_slice, ushort_seq_array_tag>;
 
-            using ushort_seq_array_out =
-              TAO_Array_Out_T<
-                  ushort_seq_array,
-                  ushort_seq_array_var,
-                  ushort_seq_array_slice,
-                  ushort_seq_array_tag
-                >;
+  using ushort_seq_array_out = TAO_Array_Out_T<ushort_seq_array, ushort_seq_array_var, ushort_seq_array_slice, ushort_seq_array_tag>;
 
-              using ushort_seq_array_forany = TAO_Array_Forany_T<ushort_seq_array, ushort_seq_array_slice, ushort_seq_array_tag>;
+  using ushort_seq_array_forany = TAO_Array_Forany_T<ushort_seq_array, ushort_seq_array_slice, ushort_seq_array_tag>;
 
-              extern TAO_IDL_TEST_STUB_Export ushort_seq_array_slice *ushort_seq_array_alloc ();
+  extern TAO_IDL_TEST_STUB_Export ushort_seq_array_slice *ushort_seq_array_alloc ();
 
-              extern TAO_IDL_TEST_STUB_Export void ushort_seq_array_free (ushort_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export void ushort_seq_array_free (ushort_seq_array_slice *_tao_slice);
 
-              extern TAO_IDL_TEST_STUB_Export ushort_seq_array_slice *ushort_seq_array_dup (const ushort_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export ushort_seq_array_slice *ushort_seq_array_dup (const ushort_seq_array_slice *_tao_slice);
 
-              extern TAO_IDL_TEST_STUB_Export void ushort_seq_array_copy (ushort_seq_array_slice *_tao_to, const ushort_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void ushort_seq_array_copy (ushort_seq_array_slice *_tao_to, const ushort_seq_array_slice *_tao_from);
 
 #if !defined (_HALF_ANON__TAO_SEQ_CORBA_USHORT__7_CH_)
 #define _HALF_ANON__TAO_SEQ_CORBA_USHORT__7_CH_
 
-              class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_UShort__7
-                : public
-                    ::TAO::bounded_value_sequence< ::CORBA::UShort,7>
-              {
-              public:
-                _tao_seq_CORBA_UShort__7 () = default;
-                _tao_seq_CORBA_UShort__7 (
-                  ::CORBA::ULong length,
-                  ::CORBA::UShort* buffer,
-                  ::CORBA::Boolean release = false);
-                _tao_seq_CORBA_UShort__7 (_tao_seq_CORBA_UShort__7 const &) = default;
-                _tao_seq_CORBA_UShort__7 (_tao_seq_CORBA_UShort__7 &&) = default;
-                _tao_seq_CORBA_UShort__7& operator= (_tao_seq_CORBA_UShort__7 const &) = default;
-                _tao_seq_CORBA_UShort__7& operator= (_tao_seq_CORBA_UShort__7 &&) = default;
-                virtual ~_tao_seq_CORBA_UShort__7 () = default;
+  class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_UShort__7
+    : public
+        ::TAO::bounded_value_sequence<::CORBA::UShort,7>
+  {
+  public:
+    _tao_seq_CORBA_UShort__7 () = default;
+    _tao_seq_CORBA_UShort__7 (
+      ::CORBA::ULong length,
+      ::CORBA::UShort* buffer,
+      ::CORBA::Boolean release = false);
+    _tao_seq_CORBA_UShort__7 (_tao_seq_CORBA_UShort__7 const &) = default;
+    _tao_seq_CORBA_UShort__7 (_tao_seq_CORBA_UShort__7 &&) = default;
+    _tao_seq_CORBA_UShort__7& operator= (_tao_seq_CORBA_UShort__7 const &) = default;
+    _tao_seq_CORBA_UShort__7& operator= (_tao_seq_CORBA_UShort__7 &&) = default;
+    virtual ~_tao_seq_CORBA_UShort__7 () = default;
 
-              };
+  };
 
 #endif /* end #if !defined */
 
-              using bd_ushort_seq_array = _tao_seq_CORBA_UShort__7[11];
-              using bd_ushort_seq_array_slice = _tao_seq_CORBA_UShort__7;
-              struct bd_ushort_seq_array_tag {};
+  using bd_ushort_seq_array = _tao_seq_CORBA_UShort__7[11];
+  using bd_ushort_seq_array_slice = _tao_seq_CORBA_UShort__7;
+  struct bd_ushort_seq_array_tag {};
 
-              using bd_ushort_seq_array_var =
-                TAO_VarArray_Var_T<
-                    bd_ushort_seq_array,
-                    bd_ushort_seq_array_slice,
-                    bd_ushort_seq_array_tag
-                  >;
+  using bd_ushort_seq_array_var = TAO_VarArray_Var_T<bd_ushort_seq_array, bd_ushort_seq_array_slice, bd_ushort_seq_array_tag>;
 
-                using bd_ushort_seq_array_out =
-                  TAO_Array_Out_T<
-                      bd_ushort_seq_array,
-                      bd_ushort_seq_array_var,
-                      bd_ushort_seq_array_slice,
-                      bd_ushort_seq_array_tag
-                    >;
+  using bd_ushort_seq_array_out = TAO_Array_Out_T<bd_ushort_seq_array, bd_ushort_seq_array_var, bd_ushort_seq_array_slice, bd_ushort_seq_array_tag>;
 
-                  using bd_ushort_seq_array_forany = TAO_Array_Forany_T<bd_ushort_seq_array, bd_ushort_seq_array_slice, bd_ushort_seq_array_tag>;
+  using bd_ushort_seq_array_forany = TAO_Array_Forany_T<bd_ushort_seq_array, bd_ushort_seq_array_slice, bd_ushort_seq_array_tag>;
 
-                  extern TAO_IDL_TEST_STUB_Export bd_ushort_seq_array_slice *bd_ushort_seq_array_alloc ();
+  extern TAO_IDL_TEST_STUB_Export bd_ushort_seq_array_slice *bd_ushort_seq_array_alloc ();
 
-                  extern TAO_IDL_TEST_STUB_Export void bd_ushort_seq_array_free (bd_ushort_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export void bd_ushort_seq_array_free (bd_ushort_seq_array_slice *_tao_slice);
 
-                  extern TAO_IDL_TEST_STUB_Export bd_ushort_seq_array_slice *bd_ushort_seq_array_dup (const bd_ushort_seq_array_slice *_tao_slice);
+  extern TAO_IDL_TEST_STUB_Export bd_ushort_seq_array_slice *bd_ushort_seq_array_dup (const bd_ushort_seq_array_slice *_tao_slice);
 
-                  extern TAO_IDL_TEST_STUB_Export void bd_ushort_seq_array_copy (bd_ushort_seq_array_slice *_tao_to, const bd_ushort_seq_array_slice *_tao_from);
+  extern TAO_IDL_TEST_STUB_Export void bd_ushort_seq_array_copy (bd_ushort_seq_array_slice *_tao_to, const bd_ushort_seq_array_slice *_tao_from);
 
-                } // module Half_Anon
-                namespace All_Anon
-                {
+} // module Half_Anon
+namespace All_Anon
+{
 
 #if !defined (_ALL_ANON_ANON_BD_STRING_TEST__VAR_OUT_CH_)
 #define _ALL_ANON_ANON_BD_STRING_TEST__VAR_OUT_CH_
 
-                  class AMI_anon_bd_string_testHandler;
-                  using AMI_anon_bd_string_testHandler_ptr = AMI_anon_bd_string_testHandler *;
+  class AMI_anon_bd_string_testHandler;
+  using AMI_anon_bd_string_testHandler_ptr = AMI_anon_bd_string_testHandler *;
 
-                  class anon_bd_string_test;
-                  using anon_bd_string_test_ptr = anon_bd_string_test*;
-                  using anon_bd_string_test_var = TAO_Objref_Var_T<anon_bd_string_test>;
-                  using anon_bd_string_test_out = TAO_Objref_Out_T<anon_bd_string_test>;
+  class anon_bd_string_test;
+  using anon_bd_string_test_ptr = anon_bd_string_test*;
+  using anon_bd_string_test_var = TAO_Objref_Var_T<anon_bd_string_test>;
+  using anon_bd_string_test_out = TAO_Objref_Out_T<anon_bd_string_test>;
 
 #endif /* end #if !defined */
 
-                  class TAO_IDL_TEST_STUB_Export anon_bd_string_test
-                    : public virtual ::CORBA::Object
-                  {
-                  public:
-                    friend class TAO::Narrow_Utils<anon_bd_string_test>;
-                    using _ptr_type = anon_bd_string_test_ptr;
-                    using _var_type = anon_bd_string_test_var;
-                    using _out_type = anon_bd_string_test_out;
+  class TAO_IDL_TEST_STUB_Export anon_bd_string_test
+    : public virtual ::CORBA::Object
+  {
+  public:
+    friend class TAO::Narrow_Utils<anon_bd_string_test>;
+    using _ptr_type = anon_bd_string_test_ptr;
+    using _var_type = anon_bd_string_test_var;
+    using _out_type = anon_bd_string_test_out;
 
-                    static void _tao_any_destructor (void *);
+    static void _tao_any_destructor (void *);
 
-                    // The static operations.
-                    static anon_bd_string_test_ptr _duplicate (anon_bd_string_test_ptr obj);
+    // The static operations.
+    static anon_bd_string_test_ptr _duplicate (anon_bd_string_test_ptr obj);
 
-                    static void _tao_release (anon_bd_string_test_ptr obj);
+    static void _tao_release (anon_bd_string_test_ptr obj);
 
-                    static anon_bd_string_test_ptr _narrow (::CORBA::Object_ptr obj);
-                    static anon_bd_string_test_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
-                    static anon_bd_string_test_ptr _nil ();
+    static anon_bd_string_test_ptr _narrow (::CORBA::Object_ptr obj);
+    static anon_bd_string_test_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+    static anon_bd_string_test_ptr _nil ();
 
-                    static const CORBA::Long test_string_size = 25;
+    static const CORBA::Long test_string_size = 25;
 
-                    virtual char * TestFunc ();
+    virtual char * TestFunc ();
 
-                    virtual char * TestFunc2 ();
+    virtual char * TestFunc2 ();
 
-                    virtual char * TestFunc3 ();
+    virtual char * TestFunc3 ();
 
-                    virtual char * TestFunc23 ();
+    virtual char * TestFunc23 ();
 
-                    virtual void TestFunc4 (
-                      const char * inarg);
+    virtual void TestFunc4 (
+      char const * inarg);
 
-                    virtual void TestFunc41 (
-                      const char * inarg);
+    virtual void TestFunc41 (
+      char const * inarg);
 
-                    virtual void TestFunc42 (
-                      const char * inarg);
+    virtual void TestFunc42 (
+      char const * inarg);
 
-                    virtual void TestFunc43 (
-                      const char * inarg);
+    virtual void TestFunc43 (
+      char const * inarg);
 
-                    virtual void sendc_TestFunc (
-                      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler);
+    virtual void sendc_TestFunc (
+      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler);
 
-                    virtual void sendc_TestFunc2 (
-                      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler);
+    virtual void sendc_TestFunc2 (
+      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler);
 
-                    virtual void sendc_TestFunc3 (
-                      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler);
+    virtual void sendc_TestFunc3 (
+      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler);
 
-                    virtual void sendc_TestFunc23 (
-                      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler);
+    virtual void sendc_TestFunc23 (
+      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler);
 
-                    virtual void sendc_TestFunc4 (
-                      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-                      const char * inarg);
+    virtual void sendc_TestFunc4 (
+      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
+      char const * inarg);
 
-                    virtual void sendc_TestFunc41 (
-                      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-                      const char * inarg);
+    virtual void sendc_TestFunc41 (
+      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
+      char const * inarg);
 
-                    virtual void sendc_TestFunc42 (
-                      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-                      const char * inarg);
+    virtual void sendc_TestFunc42 (
+      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
+      char const * inarg);
 
-                    virtual void sendc_TestFunc43 (
-                      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
-                      const char * inarg);
+    virtual void sendc_TestFunc43 (
+      ::All_Anon::AMI_anon_bd_string_testHandler_ptr ami_handler,
+      char const * inarg);
 
-                    ::CORBA::Boolean _is_a (const char *type_id) override;
-                    const char* _interface_repository_id () const override;
-                    static const char* _desc_repository_id ();
-                    static const char* _desc_interface_name ();
-                    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
-                  protected:
-                    // Concrete interface only.
-                    anon_bd_string_test ();
+  protected:
+    // Concrete interface only.
+    anon_bd_string_test ();
 
-                    // Concrete non-local interface only.
-                    anon_bd_string_test (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
+    // Concrete non-local interface only.
+    anon_bd_string_test (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
 
-                    // Non-local interface only.
-                    anon_bd_string_test (
-                        TAO_Stub *objref,
-                        ::CORBA::Boolean _tao_collocated = false,
-                        TAO_Abstract_ServantBase *servant = nullptr,
-                        TAO_ORB_Core *orb_core = nullptr);
+    // Non-local interface only.
+    anon_bd_string_test (
+        TAO_Stub *objref,
+        ::CORBA::Boolean _tao_collocated = false,
+        TAO_Abstract_ServantBase *servant = nullptr,
+        TAO_ORB_Core *orb_core = nullptr);
 
-                    ~anon_bd_string_test () override = default;
+    ~anon_bd_string_test () override = default;
 
-                  private:
-                    // Private and unimplemented for concrete interfaces.
-                    anon_bd_string_test (const anon_bd_string_test &) = delete;
-                    anon_bd_string_test (anon_bd_string_test &&) = delete;
-                    anon_bd_string_test &operator= (const anon_bd_string_test &) = delete;
-                    anon_bd_string_test &operator= (anon_bd_string_test &&) = delete;
-                  };
+  private:
+    // Private and unimplemented for concrete interfaces.
+    anon_bd_string_test (anon_bd_string_test const &) = delete;
+    anon_bd_string_test (anon_bd_string_test &&) = delete;
+    anon_bd_string_test &operator= (anon_bd_string_test const &) = delete;
+    anon_bd_string_test &operator= (anon_bd_string_test &&) = delete;
+  };
 
 #if !defined (_ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__VAR_OUT_CH_)
 #define _ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__VAR_OUT_CH_
 
-                  class AMH_anon_bd_string_testExceptionHolder;
-                  using AMH_anon_bd_string_testExceptionHolder_var = TAO_Value_Var_T<AMH_anon_bd_string_testExceptionHolder>;
-                  using AMH_anon_bd_string_testExceptionHolder_out = TAO_Value_Out_T<AMH_anon_bd_string_testExceptionHolder>;
+  class AMH_anon_bd_string_testExceptionHolder;
+  using AMH_anon_bd_string_testExceptionHolder_var = TAO_Value_Var_T<AMH_anon_bd_string_testExceptionHolder>;
+  using AMH_anon_bd_string_testExceptionHolder_out = TAO_Value_Out_T<AMH_anon_bd_string_testExceptionHolder>;
 
 #endif /* end #if !defined */
 
-                  class TAO_IDL_TEST_STUB_Export AMH_anon_bd_string_testExceptionHolder
-                    : public virtual ::CORBA::DefaultValueRefCountBase
-                  {
-                  public:
-                    using _ptr_type = AMH_anon_bd_string_testExceptionHolder*;
-                    using _var_type = AMH_anon_bd_string_testExceptionHolder_var;
-                    using _out_type = AMH_anon_bd_string_testExceptionHolder_out;
+  class TAO_IDL_TEST_STUB_Export AMH_anon_bd_string_testExceptionHolder
+    : public virtual ::CORBA::DefaultValueRefCountBase
+  {
+  public:
+    using _ptr_type = AMH_anon_bd_string_testExceptionHolder*;
+    using _var_type = AMH_anon_bd_string_testExceptionHolder_var;
+    using _out_type = AMH_anon_bd_string_testExceptionHolder_out;
 
-                    static void _tao_any_destructor (void *);
+    static void _tao_any_destructor (void *);
 
-                    AMH_anon_bd_string_testExceptionHolder (::CORBA::Exception *ex)
-                      : exception (ex)
-                    {}
+    AMH_anon_bd_string_testExceptionHolder (::CORBA::Exception *ex)
+      : exception (ex)
+    {}
 
-                    ~AMH_anon_bd_string_testExceptionHolder () override;
-                    ::CORBA::ValueBase *_copy_value () override;
+    ~AMH_anon_bd_string_testExceptionHolder () override;
+    ::CORBA::ValueBase *_copy_value () override;
 
-                    static AMH_anon_bd_string_testExceptionHolder* _downcast (::CORBA::ValueBase *v);
+    static AMH_anon_bd_string_testExceptionHolder* _downcast (::CORBA::ValueBase *v);
 
-                    /// TAO extensions or internals
-                    static ::CORBA::Boolean _tao_unmarshal (
-                        TAO_InputCDR &strm,
-                        AMH_anon_bd_string_testExceptionHolder *&new_object);
+    /// TAO extensions or internals
+    static ::CORBA::Boolean _tao_unmarshal (
+        TAO_InputCDR &strm,
+        AMH_anon_bd_string_testExceptionHolder *&new_object);
 
-                    char const * _tao_obv_repository_id () const override;
+    char const * _tao_obv_repository_id () const override;
 
-                    void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+    void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
-                    static char const * _tao_obv_static_repository_id ();
+    static char const * _tao_obv_static_repository_id ();
 
-                    ::CORBA::TypeCode_ptr _tao_type () const override;
-
-                  public:
-
-                  public:
-                    virtual void raise_TestFunc ();
-
-                public:
-
-                public:
-                  virtual void raise_TestFunc2 ();
-
-              public:
-
-              public:
-                virtual void raise_TestFunc3 ();
-
-            public:
-
-            public:
-              virtual void raise_TestFunc23 ();
-
-          public:
-
-          public:
-            virtual void raise_TestFunc4 ();
-
-        public:
-
-        public:
-          virtual void raise_TestFunc41 ();
-
-      public:
-
-      public:
-        virtual void raise_TestFunc42 ();
-
-    public:
-
-    public:
-      virtual void raise_TestFunc43 ();
+    ::CORBA::TypeCode_ptr _tao_type () const override;
 
   public:
 
   public:
-    virtual void raise_sendc_TestFunc ();
+    virtual void raise_TestFunc ();
+
+public:
+
+public:
+  virtual void raise_TestFunc2 ();
+
+public:
+
+public:
+  virtual void raise_TestFunc3 ();
+
+public:
+
+public:
+  virtual void raise_TestFunc23 ();
+
+public:
+
+public:
+  virtual void raise_TestFunc4 ();
+
+public:
+
+public:
+  virtual void raise_TestFunc41 ();
+
+public:
+
+public:
+  virtual void raise_TestFunc42 ();
+
+public:
+
+public:
+  virtual void raise_TestFunc43 ();
+
+public:
+
+public:
+  virtual void raise_sendc_TestFunc ();
 
 public:
 
@@ -574,8 +530,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_anon_bd_string_testExceptionHolder (const AMH_anon_bd_string_testExceptionHolder &);
-  void operator= (const AMH_anon_bd_string_testExceptionHolder &);
+  AMH_anon_bd_string_testExceptionHolder (AMH_anon_bd_string_testExceptionHolder const &);
+  void operator= (AMH_anon_bd_string_testExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -620,25 +576,25 @@ public:
   static AMH_anon_bd_string_testResponseHandler_ptr _nil ();
 
   virtual void TestFunc (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void TestFunc_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) = 0;
 
   virtual void TestFunc2 (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void TestFunc2_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) = 0;
 
   virtual void TestFunc3 (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void TestFunc3_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) = 0;
 
   virtual void TestFunc23 (
-    const char * return_value) = 0;
+    char const * return_value) = 0;
 
   virtual void TestFunc23_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) = 0;
@@ -663,10 +619,10 @@ public:
   virtual void TestFunc43_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -677,9 +633,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_anon_bd_string_testResponseHandler (const AMH_anon_bd_string_testResponseHandler &) = delete;
+  AMH_anon_bd_string_testResponseHandler (AMH_anon_bd_string_testResponseHandler const &) = delete;
   AMH_anon_bd_string_testResponseHandler (AMH_anon_bd_string_testResponseHandler &&) = delete;
-  AMH_anon_bd_string_testResponseHandler &operator= (const AMH_anon_bd_string_testResponseHandler &) = delete;
+  AMH_anon_bd_string_testResponseHandler &operator= (AMH_anon_bd_string_testResponseHandler const &) = delete;
   AMH_anon_bd_string_testResponseHandler &operator= (AMH_anon_bd_string_testResponseHandler &&) = delete;
 };
 
@@ -715,7 +671,7 @@ public:
   static AMI_anon_bd_string_testHandler_ptr _nil ();
 
   virtual void TestFunc (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   TestFunc_reply_stub (
@@ -727,7 +683,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void TestFunc2 (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   TestFunc2_reply_stub (
@@ -739,7 +695,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void TestFunc3 (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   TestFunc3_reply_stub (
@@ -751,7 +707,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void TestFunc23 (
-    const char * ami_return_val);
+    char const * ami_return_val);
 
   static void
   TestFunc23_reply_stub (
@@ -806,10 +762,10 @@ public:
   virtual void TestFunc43_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -830,9 +786,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_anon_bd_string_testHandler (const AMI_anon_bd_string_testHandler &) = delete;
+  AMI_anon_bd_string_testHandler (AMI_anon_bd_string_testHandler const &) = delete;
   AMI_anon_bd_string_testHandler (AMI_anon_bd_string_testHandler &&) = delete;
-  AMI_anon_bd_string_testHandler &operator= (const AMI_anon_bd_string_testHandler &) = delete;
+  AMI_anon_bd_string_testHandler &operator= (AMI_anon_bd_string_testHandler const &) = delete;
   AMI_anon_bd_string_testHandler &operator= (AMI_anon_bd_string_testHandler &&) = delete;
 };
 
@@ -845,7 +801,7 @@ public:
 
   class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_Float_
     : public
-        ::TAO::unbounded_value_sequence< ::CORBA::Float>
+        ::TAO::unbounded_value_sequence<::CORBA::Float>
   {
   public:
     _tao_seq_CORBA_Float_ () = default;
@@ -886,7 +842,7 @@ public:
 
   class TAO_IDL_TEST_STUB_Export _tao_seq_CORBA_Float_
     : public
-        ::TAO::unbounded_value_sequence< ::CORBA::Float>
+        ::TAO::unbounded_value_sequence<::CORBA::Float>
   {
   public:
     _tao_seq_CORBA_Float_ () = default;
@@ -955,15 +911,15 @@ public:
   _long_array_2 long_array_2 {};
 
   Nested_Anon ();
-  Nested_Anon (const Nested_Anon &);
+  Nested_Anon (Nested_Anon const &);
   ~Nested_Anon () override = default;
 
-  Nested_Anon &operator= (const Nested_Anon &);
+  Nested_Anon &operator= (Nested_Anon const &);
 
   static void _tao_any_destructor (void *);
 
   static Nested_Anon *_downcast (::CORBA::Exception *);
-  static const Nested_Anon *_downcast (::CORBA::Exception const *);
+  static Nested_Anon const *_downcast (::CORBA::Exception const *);
 
   static ::CORBA::Exception *_alloc ();
 
@@ -975,10 +931,10 @@ public:
   void _tao_decode (TAO_InputCDR &cdr) override;
 
   Nested_Anon (
-      const _float_seq_array _tao_float_seq_array,
-      const _another_fsa _tao_another_fsa,
-      const _long_array_1 _tao_long_array_1,
-      const _long_array_2 _tao_long_array_2);
+      _float_seq_array const _tao_float_seq_array,
+      _another_fsa const _tao_another_fsa,
+      _long_array_1 const _tao_long_array_1,
+      _long_array_2 const _tao_long_array_2);
 
   ::CORBA::TypeCode_ptr _tao_type () const override;
 };
@@ -1002,7 +958,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -1017,7 +973,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::Not_Anon::short_seq>
+  class Arg_Traits<::Not_Anon::short_seq>
     : public
         Var_Size_Arg_Traits_T<
             ::Not_Anon::short_seq,
@@ -1027,7 +983,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Half_Anon::char_seq_array_tag>
+  class Arg_Traits<::Half_Anon::char_seq_array_tag>
     : public
         Var_Array_Arg_Traits_T<
             ::Half_Anon::char_seq_array_out,
@@ -1038,7 +994,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Half_Anon::bd_ulong_seq_array_tag>
+  class Arg_Traits<::Half_Anon::bd_ulong_seq_array_tag>
     : public
         Var_Array_Arg_Traits_T<
             ::Half_Anon::bd_ulong_seq_array_out,
@@ -1049,7 +1005,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Half_Anon::ushort_seq_array_tag>
+  class Arg_Traits<::Half_Anon::ushort_seq_array_tag>
     : public
         Var_Array_Arg_Traits_T<
             ::Half_Anon::ushort_seq_array_out,
@@ -1060,7 +1016,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Half_Anon::bd_ushort_seq_array_tag>
+  class Arg_Traits<::Half_Anon::bd_ushort_seq_array_tag>
     : public
         Var_Array_Arg_Traits_T<
             ::Half_Anon::bd_ushort_seq_array_out,
@@ -1074,7 +1030,7 @@ namespace TAO
 #define _ALL_ANON_ANON_BD_STRING_TEST__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::All_Anon::anon_bd_string_test>
+  class  Arg_Traits<::All_Anon::anon_bd_string_test>
     : public Object_Arg_Traits_T<
         ::All_Anon::anon_bd_string_test_ptr,
         ::All_Anon::anon_bd_string_test_var,
@@ -1302,7 +1258,7 @@ class Arg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc43_inarg>
 #define _ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__ARG_TRAITS_
 
 template<>
-class Arg_Traits< ::All_Anon::AMH_anon_bd_string_testExceptionHolder>
+class Arg_Traits<::All_Anon::AMH_anon_bd_string_testExceptionHolder>
   : public
       Object_Arg_Traits_T<
           ::All_Anon::AMH_anon_bd_string_testExceptionHolder *,
@@ -1320,7 +1276,7 @@ class Arg_Traits< ::All_Anon::AMH_anon_bd_string_testExceptionHolder>
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__ARG_TRAITS_
 
 template<>
-class  Arg_Traits< ::All_Anon::AMI_anon_bd_string_testHandler>
+class  Arg_Traits<::All_Anon::AMI_anon_bd_string_testHandler>
   : public Object_Arg_Traits_T<
       ::All_Anon::AMI_anon_bd_string_testHandler_ptr,
       ::All_Anon::AMI_anon_bd_string_testHandler_var,
@@ -1438,11 +1394,9 @@ protected:
   ~AMH_anon_bd_string_testExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__All_Anon_AMH_anon_bd_string_testExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__All_Anon_AMH_anon_bd_string_testExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__All_Anon_AMH_anon_bd_string_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__All_Anon_AMH_anon_bd_string_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1527,7 +1481,7 @@ namespace TAO
 #define _ALL_ANON_ANON_BD_STRING_TEST__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::All_Anon::anon_bd_string_test>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::All_Anon::anon_bd_string_test>
   {
     static ::All_Anon::anon_bd_string_test_ptr duplicate (::All_Anon::anon_bd_string_test_ptr p);
     static void release (::All_Anon::anon_bd_string_test_ptr p);
@@ -1554,7 +1508,7 @@ namespace TAO
 #define _ALL_ANON_AMH_ANON_BD_STRING_TESTRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::All_Anon::AMH_anon_bd_string_testResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::All_Anon::AMH_anon_bd_string_testResponseHandler>
   {
     static ::All_Anon::AMH_anon_bd_string_testResponseHandler_ptr duplicate (::All_Anon::AMH_anon_bd_string_testResponseHandler_ptr p);
     static void release (::All_Anon::AMH_anon_bd_string_testResponseHandler_ptr p);
@@ -1568,7 +1522,7 @@ namespace TAO
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::All_Anon::AMI_anon_bd_string_testHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::All_Anon::AMI_anon_bd_string_testHandler>
   {
     static ::All_Anon::AMI_anon_bd_string_testHandler_ptr duplicate (::All_Anon::AMI_anon_bd_string_testHandler_ptr p);
     static void release (::All_Anon::AMI_anon_bd_string_testHandler_ptr p);
@@ -1648,12 +1602,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_Not_Anon_short_seq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Not_Anon::short_seq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Not_Anon::short_seq &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Not_Anon::short_seq const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Not_Anon::short_seq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1664,11 +1614,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Half_Anon::_tao_seq_CORBA_Char_ const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  Half_Anon::_tao_seq_CORBA_Char_ const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Half_Anon::_tao_seq_CORBA_Char_ &_tao_sequence);
+  TAO_InputCDR &strm,
+  Half_Anon::_tao_seq_CORBA_Char_ &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1686,11 +1636,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Half_Anon::_tao_seq_CORBA_ULong__18 const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  Half_Anon::_tao_seq_CORBA_ULong__18 const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Half_Anon::_tao_seq_CORBA_ULong__18 &_tao_sequence);
+  TAO_InputCDR &strm,
+  Half_Anon::_tao_seq_CORBA_ULong__18 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1708,11 +1658,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Half_Anon::_tao_seq_CORBA_UShort_ const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  Half_Anon::_tao_seq_CORBA_UShort_ const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Half_Anon::_tao_seq_CORBA_UShort_ &_tao_sequence);
+  TAO_InputCDR &strm,
+  Half_Anon::_tao_seq_CORBA_UShort_ &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1730,11 +1680,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Half_Anon::_tao_seq_CORBA_UShort__7 const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  Half_Anon::_tao_seq_CORBA_UShort__7 const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Half_Anon::_tao_seq_CORBA_UShort__7 &_tao_sequence);
+  TAO_InputCDR &strm,
+  Half_Anon::_tao_seq_CORBA_UShort__7 &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1749,7 +1699,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const All_Anon::anon_bd_string_test_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, All_Anon::anon_bd_string_test_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::anon_bd_string_test_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1765,21 +1715,21 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const All_Anon::AMH_anon_bd_string_testExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, All_Anon::AMH_anon_bd_string_testExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::AMH_anon_bd_string_testExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const All_Anon::AMI_anon_bd_string_testHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, All_Anon::AMI_anon_bd_string_testHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::AMI_anon_bd_string_testHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const All_Anon::Nested_Anon &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, All_Anon::Nested_Anon const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, All_Anon::Nested_Anon &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1789,11 +1739,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    All_Anon::Nested_Anon::_tao_seq_CORBA_Float_ const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  All_Anon::Nested_Anon::_tao_seq_CORBA_Float_ const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    All_Anon::Nested_Anon::_tao_seq_CORBA_Float_ &_tao_sequence);
+  TAO_InputCDR &strm,
+  All_Anon::Nested_Anon::_tao_seq_CORBA_Float_ &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1811,11 +1761,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    All_Anon::Nested_Anon::_tao_seq_CORBA_Float_ const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  All_Anon::Nested_Anon::_tao_seq_CORBA_Float_ const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    All_Anon::Nested_Anon::_tao_seq_CORBA_Float_ &_tao_sequence);
+  TAO_InputCDR &strm,
+  All_Anon::Nested_Anon::_tao_seq_CORBA_Float_ &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

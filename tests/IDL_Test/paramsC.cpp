@@ -23,6 +23,7 @@
  **/
 
 #include "paramsC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -43,7 +44,6 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "paramsC.inl"
@@ -53,9 +53,9 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_foo_theDate[] =
       {
-        { "year", &CORBA::_tc_short },
-        { "month", &CORBA::_tc_short },
-        { "day", &CORBA::_tc_short }
+        { "year", std::addressof (CORBA::_tc_short) },
+        { "month", std::addressof (CORBA::_tc_short) },
+        { "day", std::addressof (CORBA::_tc_short) }
       };
 
 static TAO::TypeCode::Struct<
@@ -77,9 +77,7 @@ namespace foo
   ::CORBA::TypeCode_ptr const _tc_theDate = std::addressof(_tao_tc_foo_theDate);
 }
 
-void
-foo::theDate::_tao_any_destructor (
-    void *_tao_void_pointer)
+void foo::theDate::_tao_any_destructor (void *_tao_void_pointer)
 {
   theDate *tmp = static_cast<theDate *> (_tao_void_pointer);
   delete tmp;
@@ -89,7 +87,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_foo_bar_theDate[] =
       {
-        { "x", &CORBA::_tc_short }
+        { "x", std::addressof (CORBA::_tc_short) }
       };
 
 static TAO::TypeCode::Struct<
@@ -115,9 +113,7 @@ namespace foo
   }
 }
 
-void
-foo::bar::theDate::_tao_any_destructor (
-    void *_tao_void_pointer)
+void foo::bar::theDate::_tao_any_destructor (void *_tao_void_pointer)
 {
   theDate *tmp = static_cast<theDate *> (_tao_void_pointer);
   delete tmp;
@@ -146,7 +142,7 @@ TAO::Objref_Traits<foo::bar::fooBar>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<foo::bar::fooBar>::marshal (const foo::bar::fooBar_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<foo::bar::fooBar>::marshal (foo::bar::fooBar_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -155,7 +151,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::foo::theDate
 foo::bar::fooBar::getDate (
-  const ::foo::theDate & a,
+  ::foo::theDate const & a,
   ::foo::theDate & b,
   ::foo::theDate_out c)
 {
@@ -164,10 +160,10 @@ foo::bar::fooBar::getDate (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< ::foo::theDate>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::foo::theDate>::in_arg_val _tao_a (a);
-  TAO::Arg_Traits< ::foo::theDate>::inout_arg_val _tao_b (b);
-  TAO::Arg_Traits< ::foo::theDate>::out_arg_val _tao_c (c);
+  TAO::Arg_Traits<::foo::theDate>::ret_val _tao_retval;
+  TAO::Arg_Traits<::foo::theDate>::in_arg_val _tao_a (a);
+  TAO::Arg_Traits<::foo::theDate>::inout_arg_val _tao_b (b);
+  TAO::Arg_Traits<::foo::theDate>::out_arg_val _tao_c (c);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -195,8 +191,8 @@ foo::bar::fooBar::getDate (
 void
 foo::bar::fooBar::sendc_getDate (
   ::foo::bar::AMI_fooBarHandler_ptr ami_handler,
-  const ::foo::theDate & a,
-  const ::foo::theDate & b)
+  ::foo::theDate const & a,
+  ::foo::theDate const & b)
 {
   if (!this->is_evaluated ())
     {
@@ -204,8 +200,8 @@ foo::bar::fooBar::sendc_getDate (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::foo::theDate>::in_arg_val _tao_a (a);
-  TAO::Arg_Traits< ::foo::theDate>::in_arg_val _tao_b (b);
+  TAO::Arg_Traits<::foo::theDate>::in_arg_val _tao_a (a);
+  TAO::Arg_Traits<::foo::theDate>::in_arg_val _tao_b (b);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -274,12 +270,10 @@ foo::bar::fooBar::_tao_release (fooBar_ptr obj)
 }
 
 ::CORBA::Boolean
-foo::bar::fooBar::_is_a (const char *value)
+foo::bar::fooBar::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:foo/bar/fooBar:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:foo/bar/fooBar:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -289,17 +283,17 @@ foo::bar::fooBar::_is_a (const char *value)
     }
 }
 
-const char* foo::bar::fooBar::_interface_repository_id () const
+char const *foo::bar::fooBar::_interface_repository_id () const
 {
   return "IDL:foo/bar/fooBar:1.0";
 }
 
-const char* foo::bar::fooBar::_desc_repository_id ()
+char const *foo::bar::fooBar::_desc_repository_id ()
 {
   return "IDL:foo/bar/fooBar:1.0";
 }
 
-const char* foo::bar::fooBar::_desc_interface_name ()
+char const *foo::bar::fooBar::_desc_interface_name ()
 {
   return "fooBar";
 }
@@ -324,7 +318,7 @@ namespace foo
     ::CORBA::TypeCode_ptr const _tc_fooBar = std::addressof(_tao_tc_foo_bar_fooBar);
   }
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_foo_bar_AMH_fooBarExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_foo_bar_AMH_fooBarExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -334,7 +328,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:foo/bar/AMH_fooBarExceptionHolder:1.0",
     "AMH_fooBarExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_foo_bar_AMH_fooBarExceptionHolder,
     0);
 
@@ -487,14 +481,14 @@ foo::bar::AMH_fooBarExceptionHolder::_tao_unmarshal (
 void
 foo::bar::AMH_fooBarExceptionHolder::raise_getDate ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 foo::bar::AMH_fooBarExceptionHolder::raise_sendc_getDate ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -521,7 +515,7 @@ TAO::Objref_Traits<foo::bar::AMH_fooBarResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<foo::bar::AMH_fooBarResponseHandler>::marshal (const foo::bar::AMH_fooBarResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<foo::bar::AMH_fooBarResponseHandler>::marshal (foo::bar::AMH_fooBarResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -575,13 +569,11 @@ foo::bar::AMH_fooBarResponseHandler::_tao_release (AMH_fooBarResponseHandler_ptr
 }
 
 ::CORBA::Boolean
-foo::bar::AMH_fooBarResponseHandler::_is_a (const char *value)
+foo::bar::AMH_fooBarResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:foo/bar/AMH_fooBarResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:foo/bar/AMH_fooBarResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -591,17 +583,17 @@ foo::bar::AMH_fooBarResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* foo::bar::AMH_fooBarResponseHandler::_interface_repository_id () const
+char const *foo::bar::AMH_fooBarResponseHandler::_interface_repository_id () const
 {
   return "IDL:foo/bar/AMH_fooBarResponseHandler:1.0";
 }
 
-const char* foo::bar::AMH_fooBarResponseHandler::_desc_repository_id ()
+char const *foo::bar::AMH_fooBarResponseHandler::_desc_repository_id ()
 {
   return "IDL:foo/bar/AMH_fooBarResponseHandler:1.0";
 }
 
-const char* foo::bar::AMH_fooBarResponseHandler::_desc_interface_name ()
+char const *foo::bar::AMH_fooBarResponseHandler::_desc_interface_name ()
 {
   return "AMH_fooBarResponseHandler";
 }
@@ -650,7 +642,7 @@ TAO::Objref_Traits<foo::bar::AMI_fooBarHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<foo::bar::AMI_fooBarHandler>::marshal (const foo::bar::AMI_fooBarHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<foo::bar::AMI_fooBarHandler>::marshal (foo::bar::AMI_fooBarHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -659,19 +651,19 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 foo::bar::AMI_fooBarHandler::getDate (
-  const ::foo::theDate & ami_return_val,
-  const ::foo::theDate & b,
-  const ::foo::theDate & c)
+  ::foo::theDate const & ami_return_val,
+  ::foo::theDate const & b,
+  ::foo::theDate const & c)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::foo::theDate>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::foo::theDate>::in_arg_val _tao_b (b);
-  TAO::Arg_Traits< ::foo::theDate>::in_arg_val _tao_c (c);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::foo::theDate>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::foo::theDate>::in_arg_val _tao_b (b);
+  TAO::Arg_Traits<::foo::theDate>::in_arg_val _tao_c (c);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -773,8 +765,8 @@ foo::bar::AMI_fooBarHandler::getDate_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -840,13 +832,11 @@ foo::bar::AMI_fooBarHandler::_tao_release (AMI_fooBarHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-foo::bar::AMI_fooBarHandler::_is_a (const char *value)
+foo::bar::AMI_fooBarHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:foo/bar/AMI_fooBarHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -856,17 +846,17 @@ foo::bar::AMI_fooBarHandler::_is_a (const char *value)
     }
 }
 
-const char* foo::bar::AMI_fooBarHandler::_interface_repository_id () const
+char const *foo::bar::AMI_fooBarHandler::_interface_repository_id () const
 {
   return "IDL:foo/bar/AMI_fooBarHandler:1.0";
 }
 
-const char* foo::bar::AMI_fooBarHandler::_desc_repository_id ()
+char const *foo::bar::AMI_fooBarHandler::_desc_repository_id ()
 {
   return "IDL:foo/bar/AMI_fooBarHandler:1.0";
 }
 
-const char* foo::bar::AMI_fooBarHandler::_desc_interface_name ()
+char const *foo::bar::AMI_fooBarHandler::_desc_interface_name ()
 {
   return "AMI_fooBarHandler";
 }
@@ -914,7 +904,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::foo::theDate const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::foo::theDate>::insert_copy (
+  TAO::Any_Dual_Impl_T<::foo::theDate>::insert_copy (
     _tao_any,
     ::foo::theDate::_tao_any_destructor,
     foo::_tc_theDate,
@@ -926,7 +916,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::foo::theDate *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::foo::theDate>::insert (
+  TAO::Any_Dual_Impl_T<::foo::theDate>::insert (
     _tao_any,
     ::foo::theDate::_tao_any_destructor,
     foo::_tc_theDate,
@@ -938,7 +928,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::foo::theDate const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::foo::theDate>::extract (
+  return TAO::Any_Dual_Impl_T<::foo::theDate>::extract (
     _tao_any,
     ::foo::theDate::_tao_any_destructor,
     foo::_tc_theDate,
@@ -955,7 +945,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::foo::bar::theDate const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::foo::bar::theDate>::insert_copy (
+  TAO::Any_Dual_Impl_T<::foo::bar::theDate>::insert_copy (
     _tao_any,
     ::foo::bar::theDate::_tao_any_destructor,
     foo::bar::_tc_theDate,
@@ -967,7 +957,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::foo::bar::theDate *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::foo::bar::theDate>::insert (
+  TAO::Any_Dual_Impl_T<::foo::bar::theDate>::insert (
     _tao_any,
     ::foo::bar::theDate::_tao_any_destructor,
     foo::bar::_tc_theDate,
@@ -979,7 +969,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::foo::bar::theDate const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::foo::bar::theDate>::extract (
+  return TAO::Any_Dual_Impl_T<::foo::bar::theDate>::extract (
     _tao_any,
     ::foo::bar::theDate::_tao_any_destructor,
     foo::bar::_tc_theDate,
@@ -1032,7 +1022,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     foo::bar::fooBar_ptr &_tao_elem)
 {
   return
@@ -1174,7 +1164,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     foo::bar::AMH_fooBarResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1232,7 +1222,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     foo::bar::AMI_fooBarHandler_ptr &_tao_elem)
 {
   return
@@ -1298,7 +1288,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const foo::bar::fooBar_ptr _tao_objref)
+    foo::bar::fooBar_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1316,7 +1306,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::foo::bar::fooBar>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::foo::bar::fooBar>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -1349,7 +1339,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const foo::bar::AMH_fooBarExceptionHolder *_tao_valuetype)
+    foo::bar::AMH_fooBarExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -1390,7 +1380,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const foo::bar::AMI_fooBarHandler_ptr _tao_objref)
+    foo::bar::AMI_fooBarHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1408,7 +1398,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::foo::bar::AMI_fooBarHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::foo::bar::AMI_fooBarHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

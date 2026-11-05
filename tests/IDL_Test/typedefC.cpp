@@ -23,6 +23,7 @@
  **/
 
 #include "typedefC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
@@ -30,7 +31,6 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "typedefC.inl"
@@ -175,7 +175,7 @@ TAO::Objref_Traits<TestModule::TestInterface>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<TestModule::TestInterface>::marshal (const TestModule::TestInterface_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<TestModule::TestInterface>::marshal (TestModule::TestInterface_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -184,15 +184,15 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 TestModule::TestInterface::set_typedef_1 (
-  const char * typ1)
+  char const * typ1)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::typedef_1_32>::in_arg_val _tao_typ1 (typ1);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::TAO::typedef_1_32>::in_arg_val _tao_typ1 (typ1);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -214,15 +214,15 @@ TestModule::TestInterface::set_typedef_1 (
 }
 void
 TestModule::TestInterface::set_typedef_2 (
-  const char * typ2)
+  char const * typ2)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::typedef_2_32>::in_arg_val _tao_typ2 (typ2);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::TAO::typedef_2_32>::in_arg_val _tao_typ2 (typ2);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -246,7 +246,7 @@ TestModule::TestInterface::set_typedef_2 (
 void
 TestModule::TestInterface::sendc_set_typedef_1 (
   ::TestModule::AMI_TestInterfaceHandler_ptr ami_handler,
-  const char * typ1)
+  char const * typ1)
 {
   if (!this->is_evaluated ())
     {
@@ -254,7 +254,7 @@ TestModule::TestInterface::sendc_set_typedef_1 (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::typedef_1_32>::in_arg_val _tao_typ1 (typ1);
+  TAO::Arg_Traits<::TAO::typedef_1_32>::in_arg_val _tao_typ1 (typ1);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -280,7 +280,7 @@ TestModule::TestInterface::sendc_set_typedef_1 (
 void
 TestModule::TestInterface::sendc_set_typedef_2 (
   ::TestModule::AMI_TestInterfaceHandler_ptr ami_handler,
-  const char * typ2)
+  char const * typ2)
 {
   if (!this->is_evaluated ())
     {
@@ -288,7 +288,7 @@ TestModule::TestInterface::sendc_set_typedef_2 (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::typedef_2_32>::in_arg_val _tao_typ2 (typ2);
+  TAO::Arg_Traits<::TAO::typedef_2_32>::in_arg_val _tao_typ2 (typ2);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -356,12 +356,10 @@ TestModule::TestInterface::_tao_release (TestInterface_ptr obj)
 }
 
 ::CORBA::Boolean
-TestModule::TestInterface::_is_a (const char *value)
+TestModule::TestInterface::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:TestModule/TestInterface:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:TestModule/TestInterface:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -371,17 +369,17 @@ TestModule::TestInterface::_is_a (const char *value)
     }
 }
 
-const char* TestModule::TestInterface::_interface_repository_id () const
+char const *TestModule::TestInterface::_interface_repository_id () const
 {
   return "IDL:TestModule/TestInterface:1.0";
 }
 
-const char* TestModule::TestInterface::_desc_repository_id ()
+char const *TestModule::TestInterface::_desc_repository_id ()
 {
   return "IDL:TestModule/TestInterface:1.0";
 }
 
-const char* TestModule::TestInterface::_desc_interface_name ()
+char const *TestModule::TestInterface::_desc_interface_name ()
 {
   return "TestInterface";
 }
@@ -526,28 +524,28 @@ TestModule::AMH_TestInterfaceExceptionHolder::_tao_unmarshal (
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_set_typedef_1 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_set_typedef_2 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_sendc_set_typedef_1 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 TestModule::AMH_TestInterfaceExceptionHolder::raise_sendc_set_typedef_2 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -574,7 +572,7 @@ TAO::Objref_Traits<TestModule::AMH_TestInterfaceResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<TestModule::AMH_TestInterfaceResponseHandler>::marshal (const TestModule::AMH_TestInterfaceResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<TestModule::AMH_TestInterfaceResponseHandler>::marshal (TestModule::AMH_TestInterfaceResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -628,13 +626,11 @@ TestModule::AMH_TestInterfaceResponseHandler::_tao_release (AMH_TestInterfaceRes
 }
 
 ::CORBA::Boolean
-TestModule::AMH_TestInterfaceResponseHandler::_is_a (const char *value)
+TestModule::AMH_TestInterfaceResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:TestModule/AMH_TestInterfaceResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:TestModule/AMH_TestInterfaceResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -644,17 +640,17 @@ TestModule::AMH_TestInterfaceResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* TestModule::AMH_TestInterfaceResponseHandler::_interface_repository_id () const
+char const *TestModule::AMH_TestInterfaceResponseHandler::_interface_repository_id () const
 {
   return "IDL:TestModule/AMH_TestInterfaceResponseHandler:1.0";
 }
 
-const char* TestModule::AMH_TestInterfaceResponseHandler::_desc_repository_id ()
+char const *TestModule::AMH_TestInterfaceResponseHandler::_desc_repository_id ()
 {
   return "IDL:TestModule/AMH_TestInterfaceResponseHandler:1.0";
 }
 
-const char* TestModule::AMH_TestInterfaceResponseHandler::_desc_interface_name ()
+char const *TestModule::AMH_TestInterfaceResponseHandler::_desc_interface_name ()
 {
   return "AMH_TestInterfaceResponseHandler";
 }
@@ -688,7 +684,7 @@ TAO::Objref_Traits<TestModule::AMI_TestInterfaceHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<TestModule::AMI_TestInterfaceHandler>::marshal (const TestModule::AMI_TestInterfaceHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<TestModule::AMI_TestInterfaceHandler>::marshal (TestModule::AMI_TestInterfaceHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -703,7 +699,7 @@ TestModule::AMI_TestInterfaceHandler::set_typedef_1 ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -789,8 +785,8 @@ TestModule::AMI_TestInterfaceHandler::set_typedef_1_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -818,7 +814,7 @@ TestModule::AMI_TestInterfaceHandler::set_typedef_2 ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -904,8 +900,8 @@ TestModule::AMI_TestInterfaceHandler::set_typedef_2_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -971,13 +967,11 @@ TestModule::AMI_TestInterfaceHandler::_tao_release (AMI_TestInterfaceHandler_ptr
 }
 
 ::CORBA::Boolean
-TestModule::AMI_TestInterfaceHandler::_is_a (const char *value)
+TestModule::AMI_TestInterfaceHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:TestModule/AMI_TestInterfaceHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -987,17 +981,17 @@ TestModule::AMI_TestInterfaceHandler::_is_a (const char *value)
     }
 }
 
-const char* TestModule::AMI_TestInterfaceHandler::_interface_repository_id () const
+char const *TestModule::AMI_TestInterfaceHandler::_interface_repository_id () const
 {
   return "IDL:TestModule/AMI_TestInterfaceHandler:1.0";
 }
 
-const char* TestModule::AMI_TestInterfaceHandler::_desc_repository_id ()
+char const *TestModule::AMI_TestInterfaceHandler::_desc_repository_id ()
 {
   return "IDL:TestModule/AMI_TestInterfaceHandler:1.0";
 }
 
-const char* TestModule::AMI_TestInterfaceHandler::_desc_interface_name ()
+char const *TestModule::AMI_TestInterfaceHandler::_desc_interface_name ()
 {
   return "AMI_TestInterfaceHandler";
 }
@@ -1031,7 +1025,7 @@ TAO::Objref_Traits<bug_2124::Foo>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2124::Foo>::marshal (const bug_2124::Foo_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2124::Foo>::marshal (bug_2124::Foo_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1040,15 +1034,15 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 bug_2124::Foo::op1 (
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::MyString_10>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::TAO::MyString_10>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1070,15 +1064,15 @@ bug_2124::Foo::op1 (
 }
 void
 bug_2124::Foo::op2 (
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::OtherString_10>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::TAO::OtherString_10>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1102,7 +1096,7 @@ bug_2124::Foo::op2 (
 void
 bug_2124::Foo::sendc_op1 (
   ::bug_2124::AMI_FooHandler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -1110,7 +1104,7 @@ bug_2124::Foo::sendc_op1 (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::MyString_10>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<::TAO::MyString_10>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -1136,7 +1130,7 @@ bug_2124::Foo::sendc_op1 (
 void
 bug_2124::Foo::sendc_op2 (
   ::bug_2124::AMI_FooHandler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -1144,7 +1138,7 @@ bug_2124::Foo::sendc_op2 (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::OtherString_10>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<::TAO::OtherString_10>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -1212,12 +1206,10 @@ bug_2124::Foo::_tao_release (Foo_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2124::Foo::_is_a (const char *value)
+bug_2124::Foo::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:bug_2124/Foo:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:bug_2124/Foo:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1227,17 +1219,17 @@ bug_2124::Foo::_is_a (const char *value)
     }
 }
 
-const char* bug_2124::Foo::_interface_repository_id () const
+char const *bug_2124::Foo::_interface_repository_id () const
 {
   return "IDL:bug_2124/Foo:1.0";
 }
 
-const char* bug_2124::Foo::_desc_repository_id ()
+char const *bug_2124::Foo::_desc_repository_id ()
 {
   return "IDL:bug_2124/Foo:1.0";
 }
 
-const char* bug_2124::Foo::_desc_interface_name ()
+char const *bug_2124::Foo::_desc_interface_name ()
 {
   return "Foo";
 }
@@ -1382,28 +1374,28 @@ bug_2124::AMH_FooExceptionHolder::_tao_unmarshal (
 void
 bug_2124::AMH_FooExceptionHolder::raise_op1 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 bug_2124::AMH_FooExceptionHolder::raise_op2 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 bug_2124::AMH_FooExceptionHolder::raise_sendc_op1 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 bug_2124::AMH_FooExceptionHolder::raise_sendc_op2 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -1430,7 +1422,7 @@ TAO::Objref_Traits<bug_2124::AMH_FooResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2124::AMH_FooResponseHandler>::marshal (const bug_2124::AMH_FooResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2124::AMH_FooResponseHandler>::marshal (bug_2124::AMH_FooResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1484,13 +1476,11 @@ bug_2124::AMH_FooResponseHandler::_tao_release (AMH_FooResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2124::AMH_FooResponseHandler::_is_a (const char *value)
+bug_2124::AMH_FooResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:bug_2124/AMH_FooResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:bug_2124/AMH_FooResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1500,17 +1490,17 @@ bug_2124::AMH_FooResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2124::AMH_FooResponseHandler::_interface_repository_id () const
+char const *bug_2124::AMH_FooResponseHandler::_interface_repository_id () const
 {
   return "IDL:bug_2124/AMH_FooResponseHandler:1.0";
 }
 
-const char* bug_2124::AMH_FooResponseHandler::_desc_repository_id ()
+char const *bug_2124::AMH_FooResponseHandler::_desc_repository_id ()
 {
   return "IDL:bug_2124/AMH_FooResponseHandler:1.0";
 }
 
-const char* bug_2124::AMH_FooResponseHandler::_desc_interface_name ()
+char const *bug_2124::AMH_FooResponseHandler::_desc_interface_name ()
 {
   return "AMH_FooResponseHandler";
 }
@@ -1544,7 +1534,7 @@ TAO::Objref_Traits<bug_2124::AMI_FooHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2124::AMI_FooHandler>::marshal (const bug_2124::AMI_FooHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2124::AMI_FooHandler>::marshal (bug_2124::AMI_FooHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1559,7 +1549,7 @@ bug_2124::AMI_FooHandler::op1 ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1645,8 +1635,8 @@ bug_2124::AMI_FooHandler::op1_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1674,7 +1664,7 @@ bug_2124::AMI_FooHandler::op2 ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1760,8 +1750,8 @@ bug_2124::AMI_FooHandler::op2_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1827,13 +1817,11 @@ bug_2124::AMI_FooHandler::_tao_release (AMI_FooHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2124::AMI_FooHandler::_is_a (const char *value)
+bug_2124::AMI_FooHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:bug_2124/AMI_FooHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1843,17 +1831,17 @@ bug_2124::AMI_FooHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2124::AMI_FooHandler::_interface_repository_id () const
+char const *bug_2124::AMI_FooHandler::_interface_repository_id () const
 {
   return "IDL:bug_2124/AMI_FooHandler:1.0";
 }
 
-const char* bug_2124::AMI_FooHandler::_desc_repository_id ()
+char const *bug_2124::AMI_FooHandler::_desc_repository_id ()
 {
   return "IDL:bug_2124/AMI_FooHandler:1.0";
 }
 
-const char* bug_2124::AMI_FooHandler::_desc_interface_name ()
+char const *bug_2124::AMI_FooHandler::_desc_interface_name ()
 {
   return "AMI_FooHandler";
 }
@@ -1887,7 +1875,7 @@ TAO::Objref_Traits<bug_2122::One::Whatever>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::One::Whatever>::marshal (const bug_2122::One::Whatever_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::One::Whatever>::marshal (bug_2122::One::Whatever_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1896,15 +1884,15 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 bug_2122::One::Whatever::someOp (
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::MyString_40>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::TAO::MyString_40>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1928,7 +1916,7 @@ bug_2122::One::Whatever::someOp (
 void
 bug_2122::One::Whatever::sendc_someOp (
   ::bug_2122::One::AMI_WhateverHandler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -1936,7 +1924,7 @@ bug_2122::One::Whatever::sendc_someOp (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::MyString_40>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<::TAO::MyString_40>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -2004,12 +1992,10 @@ bug_2122::One::Whatever::_tao_release (Whatever_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::One::Whatever::_is_a (const char *value)
+bug_2122::One::Whatever::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:bug_2122/One/Whatever:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:bug_2122/One/Whatever:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2019,17 +2005,17 @@ bug_2122::One::Whatever::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::One::Whatever::_interface_repository_id () const
+char const *bug_2122::One::Whatever::_interface_repository_id () const
 {
   return "IDL:bug_2122/One/Whatever:1.0";
 }
 
-const char* bug_2122::One::Whatever::_desc_repository_id ()
+char const *bug_2122::One::Whatever::_desc_repository_id ()
 {
   return "IDL:bug_2122/One/Whatever:1.0";
 }
 
-const char* bug_2122::One::Whatever::_desc_interface_name ()
+char const *bug_2122::One::Whatever::_desc_interface_name ()
 {
   return "Whatever";
 }
@@ -2174,14 +2160,14 @@ bug_2122::One::AMH_WhateverExceptionHolder::_tao_unmarshal (
 void
 bug_2122::One::AMH_WhateverExceptionHolder::raise_someOp ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 bug_2122::One::AMH_WhateverExceptionHolder::raise_sendc_someOp ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -2208,7 +2194,7 @@ TAO::Objref_Traits<bug_2122::One::AMH_WhateverResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::One::AMH_WhateverResponseHandler>::marshal (const bug_2122::One::AMH_WhateverResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::One::AMH_WhateverResponseHandler>::marshal (bug_2122::One::AMH_WhateverResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2262,13 +2248,11 @@ bug_2122::One::AMH_WhateverResponseHandler::_tao_release (AMH_WhateverResponseHa
 }
 
 ::CORBA::Boolean
-bug_2122::One::AMH_WhateverResponseHandler::_is_a (const char *value)
+bug_2122::One::AMH_WhateverResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:bug_2122/One/AMH_WhateverResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:bug_2122/One/AMH_WhateverResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2278,17 +2262,17 @@ bug_2122::One::AMH_WhateverResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::One::AMH_WhateverResponseHandler::_interface_repository_id () const
+char const *bug_2122::One::AMH_WhateverResponseHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/One/AMH_WhateverResponseHandler:1.0";
 }
 
-const char* bug_2122::One::AMH_WhateverResponseHandler::_desc_repository_id ()
+char const *bug_2122::One::AMH_WhateverResponseHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/One/AMH_WhateverResponseHandler:1.0";
 }
 
-const char* bug_2122::One::AMH_WhateverResponseHandler::_desc_interface_name ()
+char const *bug_2122::One::AMH_WhateverResponseHandler::_desc_interface_name ()
 {
   return "AMH_WhateverResponseHandler";
 }
@@ -2322,7 +2306,7 @@ TAO::Objref_Traits<bug_2122::One::AMI_WhateverHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::One::AMI_WhateverHandler>::marshal (const bug_2122::One::AMI_WhateverHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::One::AMI_WhateverHandler>::marshal (bug_2122::One::AMI_WhateverHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2337,7 +2321,7 @@ bug_2122::One::AMI_WhateverHandler::someOp ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2423,8 +2407,8 @@ bug_2122::One::AMI_WhateverHandler::someOp_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2490,13 +2474,11 @@ bug_2122::One::AMI_WhateverHandler::_tao_release (AMI_WhateverHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::One::AMI_WhateverHandler::_is_a (const char *value)
+bug_2122::One::AMI_WhateverHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:bug_2122/One/AMI_WhateverHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2506,17 +2488,17 @@ bug_2122::One::AMI_WhateverHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::One::AMI_WhateverHandler::_interface_repository_id () const
+char const *bug_2122::One::AMI_WhateverHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/One/AMI_WhateverHandler:1.0";
 }
 
-const char* bug_2122::One::AMI_WhateverHandler::_desc_repository_id ()
+char const *bug_2122::One::AMI_WhateverHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/One/AMI_WhateverHandler:1.0";
 }
 
-const char* bug_2122::One::AMI_WhateverHandler::_desc_interface_name ()
+char const *bug_2122::One::AMI_WhateverHandler::_desc_interface_name ()
 {
   return "AMI_WhateverHandler";
 }
@@ -2550,7 +2532,7 @@ TAO::Objref_Traits<bug_2122::Two::WhoCares>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Two::WhoCares>::marshal (const bug_2122::Two::WhoCares_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Two::WhoCares>::marshal (bug_2122::Two::WhoCares_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2559,15 +2541,15 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 bug_2122::Two::WhoCares::someOp (
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::MyString_100>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::TAO::MyString_100>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2591,7 +2573,7 @@ bug_2122::Two::WhoCares::someOp (
 void
 bug_2122::Two::WhoCares::sendc_someOp (
   ::bug_2122::Two::AMI_WhoCaresHandler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -2599,7 +2581,7 @@ bug_2122::Two::WhoCares::sendc_someOp (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::MyString_100>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<::TAO::MyString_100>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -2667,12 +2649,10 @@ bug_2122::Two::WhoCares::_tao_release (WhoCares_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::Two::WhoCares::_is_a (const char *value)
+bug_2122::Two::WhoCares::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:bug_2122/Two/WhoCares:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:bug_2122/Two/WhoCares:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2682,17 +2662,17 @@ bug_2122::Two::WhoCares::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Two::WhoCares::_interface_repository_id () const
+char const *bug_2122::Two::WhoCares::_interface_repository_id () const
 {
   return "IDL:bug_2122/Two/WhoCares:1.0";
 }
 
-const char* bug_2122::Two::WhoCares::_desc_repository_id ()
+char const *bug_2122::Two::WhoCares::_desc_repository_id ()
 {
   return "IDL:bug_2122/Two/WhoCares:1.0";
 }
 
-const char* bug_2122::Two::WhoCares::_desc_interface_name ()
+char const *bug_2122::Two::WhoCares::_desc_interface_name ()
 {
   return "WhoCares";
 }
@@ -2837,14 +2817,14 @@ bug_2122::Two::AMH_WhoCaresExceptionHolder::_tao_unmarshal (
 void
 bug_2122::Two::AMH_WhoCaresExceptionHolder::raise_someOp ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 bug_2122::Two::AMH_WhoCaresExceptionHolder::raise_sendc_someOp ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -2871,7 +2851,7 @@ TAO::Objref_Traits<bug_2122::Two::AMH_WhoCaresResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Two::AMH_WhoCaresResponseHandler>::marshal (const bug_2122::Two::AMH_WhoCaresResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Two::AMH_WhoCaresResponseHandler>::marshal (bug_2122::Two::AMH_WhoCaresResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2925,13 +2905,11 @@ bug_2122::Two::AMH_WhoCaresResponseHandler::_tao_release (AMH_WhoCaresResponseHa
 }
 
 ::CORBA::Boolean
-bug_2122::Two::AMH_WhoCaresResponseHandler::_is_a (const char *value)
+bug_2122::Two::AMH_WhoCaresResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:bug_2122/Two/AMH_WhoCaresResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:bug_2122/Two/AMH_WhoCaresResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2941,17 +2919,17 @@ bug_2122::Two::AMH_WhoCaresResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Two::AMH_WhoCaresResponseHandler::_interface_repository_id () const
+char const *bug_2122::Two::AMH_WhoCaresResponseHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/Two/AMH_WhoCaresResponseHandler:1.0";
 }
 
-const char* bug_2122::Two::AMH_WhoCaresResponseHandler::_desc_repository_id ()
+char const *bug_2122::Two::AMH_WhoCaresResponseHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/Two/AMH_WhoCaresResponseHandler:1.0";
 }
 
-const char* bug_2122::Two::AMH_WhoCaresResponseHandler::_desc_interface_name ()
+char const *bug_2122::Two::AMH_WhoCaresResponseHandler::_desc_interface_name ()
 {
   return "AMH_WhoCaresResponseHandler";
 }
@@ -2985,7 +2963,7 @@ TAO::Objref_Traits<bug_2122::Two::AMI_WhoCaresHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Two::AMI_WhoCaresHandler>::marshal (const bug_2122::Two::AMI_WhoCaresHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Two::AMI_WhoCaresHandler>::marshal (bug_2122::Two::AMI_WhoCaresHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3000,7 +2978,7 @@ bug_2122::Two::AMI_WhoCaresHandler::someOp ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3086,8 +3064,8 @@ bug_2122::Two::AMI_WhoCaresHandler::someOp_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3153,13 +3131,11 @@ bug_2122::Two::AMI_WhoCaresHandler::_tao_release (AMI_WhoCaresHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::Two::AMI_WhoCaresHandler::_is_a (const char *value)
+bug_2122::Two::AMI_WhoCaresHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:bug_2122/Two/AMI_WhoCaresHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -3169,17 +3145,17 @@ bug_2122::Two::AMI_WhoCaresHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Two::AMI_WhoCaresHandler::_interface_repository_id () const
+char const *bug_2122::Two::AMI_WhoCaresHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/Two/AMI_WhoCaresHandler:1.0";
 }
 
-const char* bug_2122::Two::AMI_WhoCaresHandler::_desc_repository_id ()
+char const *bug_2122::Two::AMI_WhoCaresHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/Two/AMI_WhoCaresHandler:1.0";
 }
 
-const char* bug_2122::Two::AMI_WhoCaresHandler::_desc_interface_name ()
+char const *bug_2122::Two::AMI_WhoCaresHandler::_desc_interface_name ()
 {
   return "AMI_WhoCaresHandler";
 }
@@ -3213,7 +3189,7 @@ TAO::Objref_Traits<bug_2122::Three::WhoCares>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Three::WhoCares>::marshal (const bug_2122::Three::WhoCares_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Three::WhoCares>::marshal (bug_2122::Three::WhoCares_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3222,15 +3198,15 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 bug_2122::Three::WhoCares::someOp (
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::MyString_100>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::TAO::MyString_100>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3254,7 +3230,7 @@ bug_2122::Three::WhoCares::someOp (
 void
 bug_2122::Three::WhoCares::sendc_someOp (
   ::bug_2122::Three::AMI_WhoCaresHandler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
@@ -3262,7 +3238,7 @@ bug_2122::Three::WhoCares::sendc_someOp (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::MyString_100>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<::TAO::MyString_100>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -3330,12 +3306,10 @@ bug_2122::Three::WhoCares::_tao_release (WhoCares_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::Three::WhoCares::_is_a (const char *value)
+bug_2122::Three::WhoCares::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:bug_2122/Three/WhoCares:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:bug_2122/Three/WhoCares:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -3345,17 +3319,17 @@ bug_2122::Three::WhoCares::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Three::WhoCares::_interface_repository_id () const
+char const *bug_2122::Three::WhoCares::_interface_repository_id () const
 {
   return "IDL:bug_2122/Three/WhoCares:1.0";
 }
 
-const char* bug_2122::Three::WhoCares::_desc_repository_id ()
+char const *bug_2122::Three::WhoCares::_desc_repository_id ()
 {
   return "IDL:bug_2122/Three/WhoCares:1.0";
 }
 
-const char* bug_2122::Three::WhoCares::_desc_interface_name ()
+char const *bug_2122::Three::WhoCares::_desc_interface_name ()
 {
   return "WhoCares";
 }
@@ -3500,14 +3474,14 @@ bug_2122::Three::AMH_WhoCaresExceptionHolder::_tao_unmarshal (
 void
 bug_2122::Three::AMH_WhoCaresExceptionHolder::raise_someOp ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 bug_2122::Three::AMH_WhoCaresExceptionHolder::raise_sendc_someOp ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -3534,7 +3508,7 @@ TAO::Objref_Traits<bug_2122::Three::AMH_WhoCaresResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Three::AMH_WhoCaresResponseHandler>::marshal (const bug_2122::Three::AMH_WhoCaresResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Three::AMH_WhoCaresResponseHandler>::marshal (bug_2122::Three::AMH_WhoCaresResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3588,13 +3562,11 @@ bug_2122::Three::AMH_WhoCaresResponseHandler::_tao_release (AMH_WhoCaresResponse
 }
 
 ::CORBA::Boolean
-bug_2122::Three::AMH_WhoCaresResponseHandler::_is_a (const char *value)
+bug_2122::Three::AMH_WhoCaresResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:bug_2122/Three/AMH_WhoCaresResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:bug_2122/Three/AMH_WhoCaresResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -3604,17 +3576,17 @@ bug_2122::Three::AMH_WhoCaresResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Three::AMH_WhoCaresResponseHandler::_interface_repository_id () const
+char const *bug_2122::Three::AMH_WhoCaresResponseHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/Three/AMH_WhoCaresResponseHandler:1.0";
 }
 
-const char* bug_2122::Three::AMH_WhoCaresResponseHandler::_desc_repository_id ()
+char const *bug_2122::Three::AMH_WhoCaresResponseHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/Three/AMH_WhoCaresResponseHandler:1.0";
 }
 
-const char* bug_2122::Three::AMH_WhoCaresResponseHandler::_desc_interface_name ()
+char const *bug_2122::Three::AMH_WhoCaresResponseHandler::_desc_interface_name ()
 {
   return "AMH_WhoCaresResponseHandler";
 }
@@ -3648,7 +3620,7 @@ TAO::Objref_Traits<bug_2122::Three::AMI_WhoCaresHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<bug_2122::Three::AMI_WhoCaresHandler>::marshal (const bug_2122::Three::AMI_WhoCaresHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<bug_2122::Three::AMI_WhoCaresHandler>::marshal (bug_2122::Three::AMI_WhoCaresHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3663,7 +3635,7 @@ bug_2122::Three::AMI_WhoCaresHandler::someOp ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3749,8 +3721,8 @@ bug_2122::Three::AMI_WhoCaresHandler::someOp_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3816,13 +3788,11 @@ bug_2122::Three::AMI_WhoCaresHandler::_tao_release (AMI_WhoCaresHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-bug_2122::Three::AMI_WhoCaresHandler::_is_a (const char *value)
+bug_2122::Three::AMI_WhoCaresHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:bug_2122/Three/AMI_WhoCaresHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -3832,17 +3802,17 @@ bug_2122::Three::AMI_WhoCaresHandler::_is_a (const char *value)
     }
 }
 
-const char* bug_2122::Three::AMI_WhoCaresHandler::_interface_repository_id () const
+char const *bug_2122::Three::AMI_WhoCaresHandler::_interface_repository_id () const
 {
   return "IDL:bug_2122/Three/AMI_WhoCaresHandler:1.0";
 }
 
-const char* bug_2122::Three::AMI_WhoCaresHandler::_desc_repository_id ()
+char const *bug_2122::Three::AMI_WhoCaresHandler::_desc_repository_id ()
 {
   return "IDL:bug_2122/Three/AMI_WhoCaresHandler:1.0";
 }
 
-const char* bug_2122::Three::AMI_WhoCaresHandler::_desc_interface_name ()
+char const *bug_2122::Three::AMI_WhoCaresHandler::_desc_interface_name ()
 {
   return "AMI_WhoCaresHandler";
 }
@@ -3857,13 +3827,13 @@ bug_2122::Three::AMI_WhoCaresHandler::marshal (TAO_OutputCDR &cdr)
 #define _COMMALIST_FOO_CS_
 
 CommaList::Foo::Foo (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
+  : ::TAO::unbounded_value_sequence<::CORBA::Double> (max) {}
 
 CommaList::Foo::Foo (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::Double * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double>
+  : ::TAO::unbounded_value_sequence<::CORBA::Double>
     (max, length, buffer, release)
 {}
 
@@ -3880,13 +3850,13 @@ void CommaList::Foo::_tao_any_destructor (
 #define _COMMALIST_DUBBLE_CS_
 
 CommaList::Dubble::Dubble (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
+  : ::TAO::unbounded_value_sequence<::CORBA::Double> (max) {}
 
 CommaList::Dubble::Dubble (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::Double * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double>
+  : ::TAO::unbounded_value_sequence<::CORBA::Double>
     (max, length, buffer, release)
 {}
 
@@ -3903,13 +3873,13 @@ void CommaList::Dubble::_tao_any_destructor (
 #define _COMMALIST_DUBBEL_CS_
 
 CommaList::Dubbel::Dubbel (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
+  : ::TAO::unbounded_value_sequence<::CORBA::Double> (max) {}
 
 CommaList::Dubbel::Dubbel (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::Double * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double>
+  : ::TAO::unbounded_value_sequence<::CORBA::Double>
     (max, length, buffer, release)
 {}
 
@@ -3926,13 +3896,13 @@ void CommaList::Dubbel::_tao_any_destructor (
 #define _COMMALIST_TOIL_CS_
 
 CommaList::Toil::Toil (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
+  : ::TAO::unbounded_value_sequence<::CORBA::Double> (max) {}
 
 CommaList::Toil::Toil (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::Double * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double>
+  : ::TAO::unbounded_value_sequence<::CORBA::Double>
     (max, length, buffer, release)
 {}
 
@@ -3949,13 +3919,13 @@ void CommaList::Toil::_tao_any_destructor (
 #define _COMMALIST_TROUBLE_CS_
 
 CommaList::Trouble::Trouble (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double> (max) {}
+  : ::TAO::unbounded_value_sequence<::CORBA::Double> (max) {}
 
 CommaList::Trouble::Trouble (::CORBA::ULong max,
   ::CORBA::ULong length,
   ::CORBA::Double * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< ::CORBA::Double>
+  : ::TAO::unbounded_value_sequence<::CORBA::Double>
     (max, length, buffer, release)
 {}
 
@@ -4138,7 +4108,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const TestModule::TestInterface_ptr _tao_objref)
+    TestModule::TestInterface_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4156,7 +4126,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::TestModule::TestInterface>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::TestModule::TestInterface>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -4189,7 +4159,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const TestModule::AMH_TestInterfaceExceptionHolder *_tao_valuetype)
+    TestModule::AMH_TestInterfaceExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4230,7 +4200,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const TestModule::AMI_TestInterfaceHandler_ptr _tao_objref)
+    TestModule::AMI_TestInterfaceHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4248,7 +4218,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::TestModule::AMI_TestInterfaceHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::TestModule::AMI_TestInterfaceHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -4259,7 +4229,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2124::Foo_ptr _tao_objref)
+    bug_2124::Foo_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4277,7 +4247,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::bug_2124::Foo>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::bug_2124::Foo>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -4310,7 +4280,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const bug_2124::AMH_FooExceptionHolder *_tao_valuetype)
+    bug_2124::AMH_FooExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4351,7 +4321,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2124::AMI_FooHandler_ptr _tao_objref)
+    bug_2124::AMI_FooHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4369,7 +4339,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::bug_2124::AMI_FooHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::bug_2124::AMI_FooHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -4380,7 +4350,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::One::Whatever_ptr _tao_objref)
+    bug_2122::One::Whatever_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4398,7 +4368,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::bug_2122::One::Whatever>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::bug_2122::One::Whatever>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -4431,7 +4401,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::One::AMH_WhateverExceptionHolder *_tao_valuetype)
+    bug_2122::One::AMH_WhateverExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4472,7 +4442,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::One::AMI_WhateverHandler_ptr _tao_objref)
+    bug_2122::One::AMI_WhateverHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4490,7 +4460,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::bug_2122::One::AMI_WhateverHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::bug_2122::One::AMI_WhateverHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -4501,7 +4471,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Two::WhoCares_ptr _tao_objref)
+    bug_2122::Two::WhoCares_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4519,7 +4489,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::bug_2122::Two::WhoCares>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::bug_2122::Two::WhoCares>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -4552,7 +4522,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Two::AMH_WhoCaresExceptionHolder *_tao_valuetype)
+    bug_2122::Two::AMH_WhoCaresExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4593,7 +4563,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Two::AMI_WhoCaresHandler_ptr _tao_objref)
+    bug_2122::Two::AMI_WhoCaresHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4611,7 +4581,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::bug_2122::Two::AMI_WhoCaresHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::bug_2122::Two::AMI_WhoCaresHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -4622,7 +4592,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Three::WhoCares_ptr _tao_objref)
+    bug_2122::Three::WhoCares_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4640,7 +4610,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::bug_2122::Three::WhoCares>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::bug_2122::Three::WhoCares>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -4673,7 +4643,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Three::AMH_WhoCaresExceptionHolder *_tao_valuetype)
+    bug_2122::Three::AMH_WhoCaresExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -4714,7 +4684,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2122::Three::AMI_WhoCaresHandler_ptr _tao_objref)
+    bug_2122::Three::AMI_WhoCaresHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -4732,7 +4702,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::bug_2122::Three::AMI_WhoCaresHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::bug_2122::Three::AMI_WhoCaresHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

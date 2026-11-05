@@ -51,7 +51,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -68,7 +68,7 @@ namespace TAO
 #define _INCLUDE_TEST_STRINGTEST__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::include_test::StringTest>
+  class SArg_Traits<::include_test::StringTest>
     : public
         Object_SArg_Traits_T<
             ::include_test::StringTest *,

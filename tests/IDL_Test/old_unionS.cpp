@@ -27,6 +27,7 @@
 
 #include "old_unionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -57,9 +58,9 @@ class TAO_OldUnion_AMH_a_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -163,9 +164,7 @@ POA_OldUnion::AMH_a::opA_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldUnion::TAO_AMH_aResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_OldUnion::TAO_AMH_aResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -179,7 +178,7 @@ POA_OldUnion::AMH_a::opA_skel (
     );
 }
 
-::CORBA::Boolean POA_OldUnion::AMH_a::_is_a (const char* value)
+::CORBA::Boolean POA_OldUnion::AMH_a::_is_a (char const *value)
 {
   return
     (
@@ -188,7 +187,7 @@ POA_OldUnion::AMH_a::opA_skel (
     );
 }
 
-const char* POA_OldUnion::AMH_a::_interface_repository_id () const
+char const *POA_OldUnion::AMH_a::_interface_repository_id () const
 {
   return "IDL:OldUnion/a:1.0";
 }
@@ -203,7 +202,7 @@ OldUnion::a*
 POA_OldUnion::AMH_a::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -218,9 +217,9 @@ class TAO_OldUnion_a_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -310,9 +309,9 @@ POA_OldUnion::_TAO_a_Direct_Proxy_Impl::opA (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::OldUnion::Foo2>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::OldUnion::Foo2>::ret_val *) args[0])->arg () =
     _tao_ptr->opA (
-          ((TAO::Arg_Traits< ::OldUnion::a::astruct>::in_arg_val *) args[1])->arg ()
+          ((TAO::Arg_Traits<::OldUnion::a::astruct>::in_arg_val *) args[1])->arg ()
         );
 }
 
@@ -340,13 +339,13 @@ namespace POA_OldUnion
 
     void execute () override
     {
-      TAO::SArg_Traits< ::OldUnion::Foo2>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg< ::OldUnion::Foo2> (
+      TAO::SArg_Traits<::OldUnion::Foo2>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg<::OldUnion::Foo2> (
           this->operation_details_,
           this->args_);
 
-      TAO::SArg_Traits< ::OldUnion::a::astruct>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::OldUnion::a::astruct> (
+      TAO::SArg_Traits<::OldUnion::a::astruct>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::OldUnion::a::astruct> (
           this->operation_details_,
           this->args_,
           1);
@@ -367,8 +366,8 @@ void POA_OldUnion::a::opA_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::OldUnion::Foo2>::ret_val retval;
-  TAO::SArg_Traits< ::OldUnion::a::astruct>::in_arg_val _tao_b;
+  TAO::SArg_Traits<::OldUnion::Foo2>::ret_val retval;
+  TAO::SArg_Traits<::OldUnion::a::astruct>::in_arg_val _tao_b;
 
   TAO::Argument * const args[] =
     {
@@ -393,15 +392,15 @@ void POA_OldUnion::a::opA_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldUnion::a::_is_a (const char* value)
+::CORBA::Boolean POA_OldUnion::a::_is_a (char const *value)
 {
   return
     (
@@ -410,7 +409,7 @@ void POA_OldUnion::a::opA_skel (
     );
 }
 
-const char* POA_OldUnion::a::_interface_repository_id () const
+char const *POA_OldUnion::a::_interface_repository_id () const
 {
   return "IDL:OldUnion/a:1.0";
 }
@@ -438,7 +437,7 @@ POA_OldUnion::a::_this ()
 
 void
 POA_OldUnion::TAO_AMH_aResponseHandler::opA (
-  const ::OldUnion::Foo2 & return_value)
+  ::OldUnion::Foo2 const & return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -469,9 +468,9 @@ class TAO_OldUnion_AMI_aHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -563,7 +562,7 @@ POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::opA (
     }
 
   _tao_ptr->opA (
-        ((TAO::Arg_Traits< ::OldUnion::Foo2>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::OldUnion::Foo2>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -581,7 +580,7 @@ POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::opA_excep (
     }
 
   _tao_ptr->opA_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -609,8 +608,8 @@ namespace POA_OldUnion
 
     void execute () override
     {
-      TAO::SArg_Traits< ::OldUnion::Foo2>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::OldUnion::Foo2> (
+      TAO::SArg_Traits<::OldUnion::Foo2>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::OldUnion::Foo2> (
           this->operation_details_,
           this->args_,
           1);
@@ -630,8 +629,8 @@ void POA_OldUnion::AMI_aHandler::opA_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::OldUnion::Foo2>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::OldUnion::Foo2>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -656,11 +655,11 @@ void POA_OldUnion::AMI_aHandler::opA_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -679,8 +678,8 @@ namespace POA_OldUnion
 
     void execute () override
     {
-      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -700,8 +699,8 @@ void POA_OldUnion::AMI_aHandler::opA_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -726,15 +725,15 @@ void POA_OldUnion::AMI_aHandler::opA_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldUnion::AMI_aHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldUnion::AMI_aHandler::_is_a (char const *value)
 {
   return
     (
@@ -744,7 +743,7 @@ void POA_OldUnion::AMI_aHandler::opA_excep_skel (
     );
 }
 
-const char* POA_OldUnion::AMI_aHandler::_interface_repository_id () const
+char const *POA_OldUnion::AMI_aHandler::_interface_repository_id () const
 {
   return "IDL:OldUnion/AMI_aHandler:1.0";
 }

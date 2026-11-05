@@ -27,6 +27,7 @@
 
 #include "loader_constS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>

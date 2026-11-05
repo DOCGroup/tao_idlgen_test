@@ -27,6 +27,7 @@
 
 #include "old_sequenceS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -57,9 +58,9 @@ class TAO_AMH_TestSeq_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -178,9 +179,7 @@ POA_AMH_TestSeq::_get_fattr_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_TestSeqResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_TestSeqResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -224,9 +223,7 @@ POA_AMH_TestSeq::_set_fattr_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_TestSeqResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_TestSeqResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -240,7 +237,7 @@ POA_AMH_TestSeq::_set_fattr_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_TestSeq::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_TestSeq::_is_a (char const *value)
 {
   return
     (
@@ -249,7 +246,7 @@ POA_AMH_TestSeq::_set_fattr_skel (
     );
 }
 
-const char* POA_AMH_TestSeq::_interface_repository_id () const
+char const *POA_AMH_TestSeq::_interface_repository_id () const
 {
   return "IDL:TestSeq:1.0";
 }
@@ -264,7 +261,7 @@ TestSeq*
 POA_AMH_TestSeq::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -279,9 +276,9 @@ class TAO_TestSeq_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -394,7 +391,7 @@ _TAO_TestSeq_Direct_Proxy_Impl::_get_fattr (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::f_unbounded>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::f_unbounded>::ret_val *) args[0])->arg () =
     _tao_ptr->fattr (
         );
 }
@@ -413,7 +410,7 @@ _TAO_TestSeq_Direct_Proxy_Impl::_set_fattr (
     }
 
   _tao_ptr->fattr (
-        ((TAO::Arg_Traits< ::f_unbounded>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::f_unbounded>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -438,8 +435,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::f_unbounded>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< ::f_unbounded> (
+    TAO::SArg_Traits<::f_unbounded>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<::f_unbounded> (
         this->operation_details_,
         this->args_);
 
@@ -457,7 +454,7 @@ void POA_TestSeq::_get_fattr_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::f_unbounded>::ret_val retval;
+  TAO::SArg_Traits<::f_unbounded>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -481,11 +478,11 @@ void POA_TestSeq::_get_fattr_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -501,8 +498,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::f_unbounded>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::f_unbounded> (
+    TAO::SArg_Traits<::f_unbounded>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::f_unbounded> (
         this->operation_details_,
         this->args_,
         1);
@@ -521,8 +518,8 @@ void POA_TestSeq::_set_fattr_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::f_unbounded>::in_arg_val _tao_fattr;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::f_unbounded>::in_arg_val _tao_fattr;
 
   TAO::Argument * const args[] =
     {
@@ -547,15 +544,15 @@ void POA_TestSeq::_set_fattr_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_TestSeq::_is_a (const char* value)
+::CORBA::Boolean POA_TestSeq::_is_a (char const *value)
 {
   return
     (
@@ -564,7 +561,7 @@ void POA_TestSeq::_set_fattr_skel (
     );
 }
 
-const char* POA_TestSeq::_interface_repository_id () const
+char const *POA_TestSeq::_interface_repository_id () const
 {
   return "IDL:TestSeq:1.0";
 }
@@ -592,7 +589,7 @@ POA_TestSeq::_this ()
 
 void
 POA_TAO_AMH_TestSeqResponseHandler::get_fattr (
-  const ::f_unbounded & return_value)
+  ::f_unbounded const & return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -643,9 +640,9 @@ class TAO_AMI_TestSeqHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -740,7 +737,7 @@ _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::get_fattr (
     }
 
   _tao_ptr->get_fattr (
-        ((TAO::Arg_Traits< ::f_unbounded>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::f_unbounded>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -758,7 +755,7 @@ _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::get_fattr_excep (
     }
 
   _tao_ptr->get_fattr_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -793,7 +790,7 @@ _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl::set_fattr_excep (
     }
 
   _tao_ptr->set_fattr_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -818,8 +815,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::f_unbounded>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::f_unbounded> (
+    TAO::SArg_Traits<::f_unbounded>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::f_unbounded> (
         this->operation_details_,
         this->args_,
         1);
@@ -838,8 +835,8 @@ void POA_AMI_TestSeqHandler::get_fattr_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::f_unbounded>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::f_unbounded>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -864,11 +861,11 @@ void POA_AMI_TestSeqHandler::get_fattr_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -884,8 +881,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -904,8 +901,8 @@ void POA_AMI_TestSeqHandler::get_fattr_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -930,11 +927,11 @@ void POA_AMI_TestSeqHandler::get_fattr_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -957,7 +954,7 @@ void POA_AMI_TestSeqHandler::set_fattr_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -978,11 +975,11 @@ void POA_AMI_TestSeqHandler::set_fattr_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -998,8 +995,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -1018,8 +1015,8 @@ void POA_AMI_TestSeqHandler::set_fattr_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1044,15 +1041,15 @@ void POA_AMI_TestSeqHandler::set_fattr_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_AMI_TestSeqHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_TestSeqHandler::_is_a (char const *value)
 {
   return
     (
@@ -1062,7 +1059,7 @@ void POA_AMI_TestSeqHandler::set_fattr_excep_skel (
     );
 }
 
-const char* POA_AMI_TestSeqHandler::_interface_repository_id () const
+char const *POA_AMI_TestSeqHandler::_interface_repository_id () const
 {
   return "IDL:AMI_TestSeqHandler:1.0";
 }

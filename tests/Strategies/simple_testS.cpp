@@ -27,6 +27,7 @@
 
 #include "simple_testS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -50,9 +51,9 @@ class TAO_Simple_Server_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -139,8 +140,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< ::ACE_InputCDR::to_boolean> (
+    TAO::SArg_Traits<::ACE_InputCDR::to_boolean>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<::ACE_InputCDR::to_boolean> (
         this->operation_details_,
         this->args_);
 
@@ -158,7 +159,7 @@ void POA_Simple_Server::print_status_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::ret_val retval;
+  TAO::SArg_Traits<::ACE_InputCDR::to_boolean>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -182,11 +183,11 @@ void POA_Simple_Server::print_status_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -209,7 +210,7 @@ void POA_Simple_Server::shutdown_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -230,15 +231,15 @@ void POA_Simple_Server::shutdown_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Simple_Server::_is_a (const char* value)
+::CORBA::Boolean POA_Simple_Server::_is_a (char const *value)
 {
   return
     (
@@ -247,7 +248,7 @@ void POA_Simple_Server::shutdown_skel (
     );
 }
 
-const char* POA_Simple_Server::_interface_repository_id () const
+char const *POA_Simple_Server::_interface_repository_id () const
 {
   return "IDL:Simple_Server:1.0";
 }

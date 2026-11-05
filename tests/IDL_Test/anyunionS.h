@@ -50,7 +50,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -64,7 +64,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::AnyUnionEnum>
+  class SArg_Traits<::AnyUnionEnum>
     : public
         Basic_SArg_Traits_T<
             ::AnyUnionEnum,
@@ -74,7 +74,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::MyAnyUnion>
+  class SArg_Traits<::MyAnyUnion>
     : public
         Var_Size_SArg_Traits_T<
             ::MyAnyUnion,

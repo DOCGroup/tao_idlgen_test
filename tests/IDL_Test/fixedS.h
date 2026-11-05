@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::ACE_CDR::Fixed>
+  class SArg_Traits<::ACE_CDR::Fixed>
     : public Basic_SArg_Traits_T<
       ::ACE_CDR::Fixed,
       TAO::Any_Insert_Policy_Noop
@@ -83,7 +83,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::FixedPoint::FixedValues>
+  class SArg_Traits<::FixedPoint::FixedValues>
     : public
         Var_Size_SArg_Traits_T<
             ::FixedPoint::FixedValues,
@@ -96,7 +96,7 @@ namespace TAO
 #define _FIXEDPOINT_FIXEDOPERATIONS__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::FixedPoint::FixedOperations>
+  class  SArg_Traits<::FixedPoint::FixedOperations>
     : public Object_SArg_Traits_T<
         ::FixedPoint::FixedOperations_ptr,
         ::FixedPoint::FixedOperations_var,
@@ -111,7 +111,7 @@ namespace TAO
 #define _FIXEDPOINT_AMH_FIXEDOPERATIONSEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::FixedPoint::AMH_FixedOperationsExceptionHolder>
+  class SArg_Traits<::FixedPoint::AMH_FixedOperationsExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::FixedPoint::AMH_FixedOperationsExceptionHolder *,
@@ -128,7 +128,7 @@ namespace TAO
 #define _FIXEDPOINT_AMI_FIXEDOPERATIONSHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::FixedPoint::AMI_FixedOperationsHandler>
+  class  SArg_Traits<::FixedPoint::AMI_FixedOperationsHandler>
     : public Object_SArg_Traits_T<
         ::FixedPoint::AMI_FixedOperationsHandler_ptr,
         ::FixedPoint::AMI_FixedOperationsHandler_var,
@@ -155,10 +155,10 @@ namespace POA_FixedPoint
     AMH_FixedOperations ();
 
   public:
-    AMH_FixedOperations (const AMH_FixedOperations& rhs);
+    AMH_FixedOperations (AMH_FixedOperations const &rhs);
     ~AMH_FixedOperations () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -166,7 +166,7 @@ namespace POA_FixedPoint
 
     FixedPoint::FixedOperations *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void _get_rate_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -183,7 +183,7 @@ namespace POA_FixedPoint
 
   virtual void rate (
       FixedPoint::AMH_FixedOperationsResponseHandler_ptr _tao_rh,
-      const ::FixedPoint::Amount & rate
+      ::FixedPoint::Amount const & rate
     ) = 0;
 
 };
@@ -205,10 +205,10 @@ public:
   using _stub_ptr_type = ::FixedPoint::FixedOperations_ptr;
   using _stub_var_type = ::FixedPoint::FixedOperations_var;
 
-  FixedOperations (const FixedOperations& rhs) = default;
+  FixedOperations (FixedOperations const &rhs) = default;
   ~FixedOperations () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -216,7 +216,7 @@ public:
 
   ::FixedPoint::FixedOperations *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::FixedPoint::Amount rate () = 0;
 
   static void _get_rate_skel (
@@ -224,7 +224,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void rate (
-    const ::FixedPoint::Amount & rate) = 0;
+    ::FixedPoint::Amount const & rate) = 0;
 
   static void _set_rate_skel (
       TAO_ServerRequest &server_request,
@@ -265,7 +265,7 @@ public:
   TAO_AMH_FixedOperationsResponseHandler () = default;
   virtual ~TAO_AMH_FixedOperationsResponseHandler () = default;
   void get_rate (
-    const ::FixedPoint::Amount & return_value) override;
+    ::FixedPoint::Amount const & return_value) override;
   void get_rate_excep (
     ::FixedPoint::AMH_FixedOperationsExceptionHolder * holder) override;
   void set_rate () override;
@@ -290,10 +290,10 @@ public:
   using _stub_ptr_type = ::FixedPoint::AMI_FixedOperationsHandler_ptr;
   using _stub_var_type = ::FixedPoint::AMI_FixedOperationsHandler_var;
 
-  AMI_FixedOperationsHandler (const AMI_FixedOperationsHandler& rhs) = default;
+  AMI_FixedOperationsHandler (AMI_FixedOperationsHandler const &rhs) = default;
   ~AMI_FixedOperationsHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -301,9 +301,9 @@ public:
 
   ::FixedPoint::AMI_FixedOperationsHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void get_rate (
-    const ::FixedPoint::Amount & ami_return_val) = 0;
+    ::FixedPoint::Amount const & ami_return_val) = 0;
 
   static void get_rate_skel (
       TAO_ServerRequest &server_request,

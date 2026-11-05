@@ -131,7 +131,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -146,7 +146,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::teststruct>
+  class Arg_Traits<::teststruct>
     : public
         Fixed_Size_Arg_Traits_T<
             ::teststruct,
@@ -156,7 +156,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::teststruct::embeddedstruct>
+  class Arg_Traits<::teststruct::embeddedstruct>
     : public
         Fixed_Size_Arg_Traits_T<
             ::teststruct::embeddedstruct,

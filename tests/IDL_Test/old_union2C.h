@@ -198,7 +198,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -213,7 +213,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::OldUnion2::FooDisc>
+  class Arg_Traits<::OldUnion2::FooDisc>
     : public
         Basic_Arg_Traits_T<
             ::OldUnion2::FooDisc,
@@ -223,7 +223,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldUnion2::Foo>
+  class Arg_Traits<::OldUnion2::Foo>
     : public
         Var_Size_Arg_Traits_T<
             ::OldUnion2::Foo,
@@ -233,7 +233,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldUnion2::Bar>
+  class Arg_Traits<::OldUnion2::Bar>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldUnion2::Bar,
@@ -243,7 +243,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldUnion2::Bar::BarDisc>
+  class Arg_Traits<::OldUnion2::Bar::BarDisc>
     : public
         Basic_Arg_Traits_T<
             ::OldUnion2::Bar::BarDisc,
@@ -253,7 +253,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::OldUnion2::Bar::Foo>
+  class Arg_Traits<::OldUnion2::Bar::Foo>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldUnion2::Bar::Foo,

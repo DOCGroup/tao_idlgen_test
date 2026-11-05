@@ -27,6 +27,7 @@
 
 #include "includedS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -57,9 +58,9 @@ class TAO_RootModule_SUBMODULE1_AMH_ParentIF_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -131,7 +132,7 @@ POA_RootModule::SUBMODULE1::AMH_ParentIF::AMH_ParentIF ()
   this->optable_ = std::addressof (tao_RootModule_SUBMODULE1_AMH_ParentIF_optable);
 }
 
-::CORBA::Boolean POA_RootModule::SUBMODULE1::AMH_ParentIF::_is_a (const char* value)
+::CORBA::Boolean POA_RootModule::SUBMODULE1::AMH_ParentIF::_is_a (char const *value)
 {
   return
     (
@@ -140,7 +141,7 @@ POA_RootModule::SUBMODULE1::AMH_ParentIF::AMH_ParentIF ()
     );
 }
 
-const char* POA_RootModule::SUBMODULE1::AMH_ParentIF::_interface_repository_id () const
+char const *POA_RootModule::SUBMODULE1::AMH_ParentIF::_interface_repository_id () const
 {
   return "IDL:RootModule/SUBMODULE1/ParentIF:1.0";
 }
@@ -155,7 +156,7 @@ RootModule::SUBMODULE1::ParentIF*
 POA_RootModule::SUBMODULE1::AMH_ParentIF::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -170,9 +171,9 @@ class TAO_RootModule_SUBMODULE1_ParentIF_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -256,7 +257,7 @@ POA_RootModule::SUBMODULE1::ParentIF::ParentIF ()
   this->optable_ = std::addressof (tao_RootModule_SUBMODULE1_ParentIF_optable);
 }
 
-::CORBA::Boolean POA_RootModule::SUBMODULE1::ParentIF::_is_a (const char* value)
+::CORBA::Boolean POA_RootModule::SUBMODULE1::ParentIF::_is_a (char const *value)
 {
   return
     (
@@ -265,7 +266,7 @@ POA_RootModule::SUBMODULE1::ParentIF::ParentIF ()
     );
 }
 
-const char* POA_RootModule::SUBMODULE1::ParentIF::_interface_repository_id () const
+char const *POA_RootModule::SUBMODULE1::ParentIF::_interface_repository_id () const
 {
   return "IDL:RootModule/SUBMODULE1/ParentIF:1.0";
 }
@@ -295,9 +296,9 @@ class TAO_RootModule_SUBMODULE1_AMI_ParentIFHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -382,7 +383,7 @@ POA_RootModule::SUBMODULE1::AMI_ParentIFHandler::AMI_ParentIFHandler ()
   this->optable_ = std::addressof (tao_RootModule_SUBMODULE1_AMI_ParentIFHandler_optable);
 }
 
-::CORBA::Boolean POA_RootModule::SUBMODULE1::AMI_ParentIFHandler::_is_a (const char* value)
+::CORBA::Boolean POA_RootModule::SUBMODULE1::AMI_ParentIFHandler::_is_a (char const *value)
 {
   return
     (
@@ -392,7 +393,7 @@ POA_RootModule::SUBMODULE1::AMI_ParentIFHandler::AMI_ParentIFHandler ()
     );
 }
 
-const char* POA_RootModule::SUBMODULE1::AMI_ParentIFHandler::_interface_repository_id () const
+char const *POA_RootModule::SUBMODULE1::AMI_ParentIFHandler::_interface_repository_id () const
 {
   return "IDL:RootModule/SUBMODULE1/AMI_ParentIFHandler:1.0";
 }
@@ -422,9 +423,9 @@ class TAO_AMH_AAA_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -496,7 +497,7 @@ POA_AMH_AAA::POA_AMH_AAA ()
   this->optable_ = std::addressof (tao_AMH_AAA_optable);
 }
 
-::CORBA::Boolean POA_AMH_AAA::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_AAA::_is_a (char const *value)
 {
   return
     (
@@ -505,7 +506,7 @@ POA_AMH_AAA::POA_AMH_AAA ()
     );
 }
 
-const char* POA_AMH_AAA::_interface_repository_id () const
+char const *POA_AMH_AAA::_interface_repository_id () const
 {
   return "IDL:AAA:1.0";
 }
@@ -520,7 +521,7 @@ AAA*
 POA_AMH_AAA::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -535,9 +536,9 @@ class TAO_AAA_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -621,7 +622,7 @@ POA_AAA::POA_AAA ()
   this->optable_ = std::addressof (tao_AAA_optable);
 }
 
-::CORBA::Boolean POA_AAA::_is_a (const char* value)
+::CORBA::Boolean POA_AAA::_is_a (char const *value)
 {
   return
     (
@@ -630,7 +631,7 @@ POA_AAA::POA_AAA ()
     );
 }
 
-const char* POA_AAA::_interface_repository_id () const
+char const *POA_AAA::_interface_repository_id () const
 {
   return "IDL:AAA:1.0";
 }
@@ -660,9 +661,9 @@ class TAO_AMI_AAAHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -747,7 +748,7 @@ POA_AMI_AAAHandler::POA_AMI_AAAHandler ()
   this->optable_ = std::addressof (tao_AMI_AAAHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_AAAHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_AAAHandler::_is_a (char const *value)
 {
   return
     (
@@ -757,7 +758,7 @@ POA_AMI_AAAHandler::POA_AMI_AAAHandler ()
     );
 }
 
-const char* POA_AMI_AAAHandler::_interface_repository_id () const
+char const *POA_AMI_AAAHandler::_interface_repository_id () const
 {
   return "IDL:AMI_AAAHandler:1.0";
 }

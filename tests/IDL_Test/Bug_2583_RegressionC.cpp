@@ -23,6 +23,7 @@
  **/
 
 #include "Bug_2583_RegressionC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -43,7 +44,6 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_2583_RegressionC.inl"
@@ -72,7 +72,7 @@ TAO::Objref_Traits<Test::DynAny>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test::DynAny>::marshal (const Test::DynAny_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test::DynAny>::marshal (Test::DynAny_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -126,13 +126,11 @@ Test::DynAny::_tao_release (DynAny_ptr obj)
 }
 
 ::CORBA::Boolean
-Test::DynAny::_is_a (const char *value)
+Test::DynAny::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:Test/DynAny:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:Test/DynAny:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -142,17 +140,17 @@ Test::DynAny::_is_a (const char *value)
     }
 }
 
-const char* Test::DynAny::_interface_repository_id () const
+char const *Test::DynAny::_interface_repository_id () const
 {
   return "IDL:Test/DynAny:1.0";
 }
 
-const char* Test::DynAny::_desc_repository_id ()
+char const *Test::DynAny::_desc_repository_id ()
 {
   return "IDL:Test/DynAny:1.0";
 }
 
-const char* Test::DynAny::_desc_interface_name ()
+char const *Test::DynAny::_desc_interface_name ()
 {
   return "DynAny";
 }
@@ -178,8 +176,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_NameDynAnyPair[] =
       {
-        { "id", &CORBA::_tc_string },
-        { "value", &Test::_tc_DynAny }
+        { "id", std::addressof (CORBA::_tc_string) },
+        { "value", std::addressof (Test::_tc_DynAny) }
       };
 
 static TAO::TypeCode::Struct<
@@ -201,9 +199,7 @@ namespace Test
   ::CORBA::TypeCode_ptr const _tc_NameDynAnyPair = std::addressof(_tao_tc_Test_NameDynAnyPair);
 }
 
-void
-Test::NameDynAnyPair::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Test::NameDynAnyPair::_tao_any_destructor (void *_tao_void_pointer)
 {
   NameDynAnyPair *tmp = static_cast<NameDynAnyPair *> (_tao_void_pointer);
   delete tmp;
@@ -213,13 +209,13 @@ Test::NameDynAnyPair::_tao_any_destructor (
 #define _TEST_NAMEDYNANYPAIRSEQ_CS_
 
 Test::NameDynAnyPairSeq::NameDynAnyPairSeq (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< NameDynAnyPair> (max) {}
+  : ::TAO::unbounded_value_sequence<NameDynAnyPair> (max) {}
 
 Test::NameDynAnyPairSeq::NameDynAnyPairSeq (::CORBA::ULong max,
   ::CORBA::ULong length,
   Test::NameDynAnyPair * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< NameDynAnyPair>
+  : ::TAO::unbounded_value_sequence<NameDynAnyPair>
     (max, length, buffer, release)
 {}
 
@@ -243,11 +239,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_NameDynAnyPairSeq_0 (
-        ::CORBA::tk_sequence, &Test::_tc_NameDynAnyPair, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_NameDynAnyPairSeq_0 (
+        ::CORBA::tk_sequence, std::addressof (Test::_tc_NameDynAnyPair), 0U);
 
     ::CORBA::TypeCode_ptr const tc_Test_NameDynAnyPairSeq_0 =
-      &Test_NameDynAnyPairSeq_0;
+      std::addressof (Test_NameDynAnyPairSeq_0);
   }
 }
 }
@@ -263,7 +259,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/NameDynAnyPairSeq:1.0",
     "NameDynAnyPairSeq",
-    &TAO::TypeCode::tc_Test_NameDynAnyPairSeq_0);
+    std::addressof (TAO::TypeCode::tc_Test_NameDynAnyPairSeq_0));
 
 namespace Test
 {
@@ -331,7 +327,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Test::DynAny_ptr &_tao_elem)
 {
   return
@@ -373,7 +369,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::NameDynAnyPair const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::NameDynAnyPair>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::NameDynAnyPair>::insert_copy (
     _tao_any,
     ::Test::NameDynAnyPair::_tao_any_destructor,
     Test::_tc_NameDynAnyPair,
@@ -385,7 +381,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::NameDynAnyPair *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::NameDynAnyPair>::insert (
+  TAO::Any_Dual_Impl_T<::Test::NameDynAnyPair>::insert (
     _tao_any,
     ::Test::NameDynAnyPair::_tao_any_destructor,
     Test::_tc_NameDynAnyPair,
@@ -397,7 +393,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Test::NameDynAnyPair const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::NameDynAnyPair>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::NameDynAnyPair>::extract (
     _tao_any,
     ::Test::NameDynAnyPair::_tao_any_destructor,
     Test::_tc_NameDynAnyPair,
@@ -435,7 +431,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::NameDynAnyPairSeq const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::NameDynAnyPairSeq>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::NameDynAnyPairSeq>::insert_copy (
     _tao_any,
     ::Test::NameDynAnyPairSeq::_tao_any_destructor,
     ::Test::_tc_NameDynAnyPairSeq,
@@ -447,7 +443,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::NameDynAnyPairSeq *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::NameDynAnyPairSeq>::insert (
+  TAO::Any_Dual_Impl_T<::Test::NameDynAnyPairSeq>::insert (
     _tao_any,
     ::Test::NameDynAnyPairSeq::_tao_any_destructor,
     ::Test::_tc_NameDynAnyPairSeq,
@@ -459,7 +455,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Test::NameDynAnyPairSeq const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::NameDynAnyPairSeq>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::NameDynAnyPairSeq>::extract (
     _tao_any,
     ::Test::NameDynAnyPairSeq::_tao_any_destructor,
     ::Test::_tc_NameDynAnyPairSeq,

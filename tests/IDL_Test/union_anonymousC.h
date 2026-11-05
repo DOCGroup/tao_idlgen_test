@@ -102,7 +102,7 @@ struct TAO_IDL_TEST_STUB_Export Element
 
     class TAO_IDL_TEST_STUB_Export _tao_seq_Element_ValueUnion_
       : public
-          ::TAO::unbounded_value_sequence< Element::ValueUnion>
+          ::TAO::unbounded_value_sequence<Element::ValueUnion>
     {
     public:
       _tao_seq_Element_ValueUnion_ () = default;
@@ -155,14 +155,9 @@ using NamedLongArray = ::CORBA::Long[10];
 using NamedLongArray_slice = ::CORBA::Long;
 struct NamedLongArray_tag {};
 
-using NamedLongArray_var =
-  TAO_FixedArray_Var_T<
-      NamedLongArray,
-      NamedLongArray_slice,
-      NamedLongArray_tag
-    >;
+using NamedLongArray_var = TAO_FixedArray_Var_T<NamedLongArray, NamedLongArray_slice, NamedLongArray_tag>;
 
-  using NamedLongArray_out = NamedLongArray;
+using NamedLongArray_out = NamedLongArray;
 
 using NamedLongArray_forany = TAO_Array_Forany_T<NamedLongArray, NamedLongArray_slice, NamedLongArray_tag>;
 
@@ -389,7 +384,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -404,7 +399,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::Element>
+  class Arg_Traits<::Element>
     : public
         Var_Size_Arg_Traits_T<
             ::Element,
@@ -414,7 +409,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Element::ValueUnion>
+  class Arg_Traits<::Element::ValueUnion>
     : public
         Var_Size_Arg_Traits_T<
             ::Element::ValueUnion,
@@ -424,7 +419,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::NamedLongArray_tag>
+  class Arg_Traits<::NamedLongArray_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::NamedLongArray_var,
@@ -435,7 +430,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::decl_heavy_union>
+  class Arg_Traits<::decl_heavy_union>
     : public
         Fixed_Size_Arg_Traits_T<
             ::decl_heavy_union,
@@ -445,7 +440,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::decl_heavy_union::which>
+  class Arg_Traits<::decl_heavy_union::which>
     : public
         Basic_Arg_Traits_T<
             ::decl_heavy_union::which,
@@ -615,11 +610,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Element::ValueUnion::_tao_seq_Element_ValueUnion_ const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  Element::ValueUnion::_tao_seq_Element_ValueUnion_ const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Element::ValueUnion::_tao_seq_Element_ValueUnion_ &_tao_sequence);
+  TAO_InputCDR &strm,
+  Element::ValueUnion::_tao_seq_Element_ValueUnion_ &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

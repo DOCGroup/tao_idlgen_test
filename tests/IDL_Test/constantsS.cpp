@@ -27,6 +27,7 @@
 
 #include "constantsS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -57,9 +58,9 @@ class TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -131,7 +132,7 @@ POA_ClassConstants::AMH_Iface::AMH_Iface ()
   this->optable_ = std::addressof (tao_ClassConstants_AMH_Iface_optable);
 }
 
-::CORBA::Boolean POA_ClassConstants::AMH_Iface::_is_a (const char* value)
+::CORBA::Boolean POA_ClassConstants::AMH_Iface::_is_a (char const *value)
 {
   return
     (
@@ -140,7 +141,7 @@ POA_ClassConstants::AMH_Iface::AMH_Iface ()
     );
 }
 
-const char* POA_ClassConstants::AMH_Iface::_interface_repository_id () const
+char const *POA_ClassConstants::AMH_Iface::_interface_repository_id () const
 {
   return "IDL:ClassConstants/Iface:1.0";
 }
@@ -155,7 +156,7 @@ ClassConstants::Iface*
 POA_ClassConstants::AMH_Iface::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -170,9 +171,9 @@ class TAO_ClassConstants_Iface_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -256,7 +257,7 @@ POA_ClassConstants::Iface::Iface ()
   this->optable_ = std::addressof (tao_ClassConstants_Iface_optable);
 }
 
-::CORBA::Boolean POA_ClassConstants::Iface::_is_a (const char* value)
+::CORBA::Boolean POA_ClassConstants::Iface::_is_a (char const *value)
 {
   return
     (
@@ -265,7 +266,7 @@ POA_ClassConstants::Iface::Iface ()
     );
 }
 
-const char* POA_ClassConstants::Iface::_interface_repository_id () const
+char const *POA_ClassConstants::Iface::_interface_repository_id () const
 {
   return "IDL:ClassConstants/Iface:1.0";
 }
@@ -295,9 +296,9 @@ class TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -382,7 +383,7 @@ POA_ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler ()
   this->optable_ = std::addressof (tao_ClassConstants_AMI_IfaceHandler_optable);
 }
 
-::CORBA::Boolean POA_ClassConstants::AMI_IfaceHandler::_is_a (const char* value)
+::CORBA::Boolean POA_ClassConstants::AMI_IfaceHandler::_is_a (char const *value)
 {
   return
     (
@@ -392,7 +393,7 @@ POA_ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler ()
     );
 }
 
-const char* POA_ClassConstants::AMI_IfaceHandler::_interface_repository_id () const
+char const *POA_ClassConstants::AMI_IfaceHandler::_interface_repository_id () const
 {
   return "IDL:ClassConstants/AMI_IfaceHandler:1.0";
 }

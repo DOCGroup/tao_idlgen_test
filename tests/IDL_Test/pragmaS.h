@@ -59,7 +59,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -76,7 +76,7 @@ namespace TAO
 #define _HELLO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::hello>
+  class  SArg_Traits<::hello>
     : public Object_SArg_Traits_T<
         ::hello_ptr,
         ::hello_var,
@@ -91,7 +91,7 @@ namespace TAO
 #define _AMH_HELLOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_helloExceptionHolder>
+  class SArg_Traits<::AMH_helloExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_helloExceptionHolder *,
@@ -108,7 +108,7 @@ namespace TAO
 #define _AMI_HELLOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_helloHandler>
+  class  SArg_Traits<::AMI_helloHandler>
     : public Object_SArg_Traits_T<
         ::AMI_helloHandler_ptr,
         ::AMI_helloHandler_var,
@@ -120,7 +120,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::ClusterFu>
+  class SArg_Traits<::ClusterFu>
     : public
         Basic_SArg_Traits_T<
             ::ClusterFu,
@@ -133,7 +133,7 @@ namespace TAO
 #define _ALOHA__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::aloha>
+  class  SArg_Traits<::aloha>
     : public Object_SArg_Traits_T<
         ::aloha_ptr,
         ::aloha_var,
@@ -148,7 +148,7 @@ namespace TAO
 #define _GOODBYE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::goodbye>
+  class  SArg_Traits<::goodbye>
     : public Object_SArg_Traits_T<
         ::goodbye_ptr,
         ::goodbye_var,
@@ -163,7 +163,7 @@ namespace TAO
 #define _AMH_GOODBYEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_goodbyeExceptionHolder>
+  class SArg_Traits<::AMH_goodbyeExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_goodbyeExceptionHolder *,
@@ -180,7 +180,7 @@ namespace TAO
 #define _AMI_GOODBYEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_goodbyeHandler>
+  class  SArg_Traits<::AMI_goodbyeHandler>
     : public Object_SArg_Traits_T<
         ::AMI_goodbyeHandler_ptr,
         ::AMI_goodbyeHandler_var,
@@ -195,7 +195,7 @@ namespace TAO
 #define _SALUTATION_SAYONARA__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::salutation::sayonara>
+  class  SArg_Traits<::salutation::sayonara>
     : public Object_SArg_Traits_T<
         ::salutation::sayonara_ptr,
         ::salutation::sayonara_var,
@@ -210,7 +210,7 @@ namespace TAO
 #define _SALUTATION_AMH_SAYONARAEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::salutation::AMH_sayonaraExceptionHolder>
+  class SArg_Traits<::salutation::AMH_sayonaraExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::salutation::AMH_sayonaraExceptionHolder *,
@@ -227,7 +227,7 @@ namespace TAO
 #define _SALUTATION_AMI_SAYONARAHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::salutation::AMI_sayonaraHandler>
+  class  SArg_Traits<::salutation::AMI_sayonaraHandler>
     : public Object_SArg_Traits_T<
         ::salutation::AMI_sayonaraHandler_ptr,
         ::salutation::AMI_sayonaraHandler_var,
@@ -242,7 +242,7 @@ namespace TAO
 #define _CIAO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::ciao>
+  class  SArg_Traits<::ciao>
     : public Object_SArg_Traits_T<
         ::ciao_ptr,
         ::ciao_var,
@@ -257,7 +257,7 @@ namespace TAO
 #define _AMH_CIAOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_ciaoExceptionHolder>
+  class SArg_Traits<::AMH_ciaoExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_ciaoExceptionHolder *,
@@ -274,7 +274,7 @@ namespace TAO
 #define _AMI_CIAOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_ciaoHandler>
+  class  SArg_Traits<::AMI_ciaoHandler>
     : public Object_SArg_Traits_T<
         ::AMI_ciaoHandler_ptr,
         ::AMI_ciaoHandler_var,
@@ -289,7 +289,7 @@ namespace TAO
 #define _AMH_ALOHAEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_alohaExceptionHolder>
+  class SArg_Traits<::AMH_alohaExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_alohaExceptionHolder *,
@@ -306,7 +306,7 @@ namespace TAO
 #define _AMI_ALOHAHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_alohaHandler>
+  class  SArg_Traits<::AMI_alohaHandler>
     : public Object_SArg_Traits_T<
         ::AMI_alohaHandler_ptr,
         ::AMI_alohaHandler_var,
@@ -318,7 +318,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::DCPS_Test::Sample>
+  class SArg_Traits<::DCPS_Test::Sample>
     : public
         Fixed_Size_SArg_Traits_T<
             ::DCPS_Test::Sample,
@@ -340,10 +340,10 @@ protected:
   POA_AMH_hello ();
 
 public:
-  POA_AMH_hello (const POA_AMH_hello& rhs);
+  POA_AMH_hello (POA_AMH_hello const &rhs);
   ~POA_AMH_hello () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -351,7 +351,7 @@ public:
 
   hello *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 };
 
 class POA_hello;
@@ -371,10 +371,10 @@ public:
   using _stub_ptr_type = ::hello_ptr;
   using _stub_var_type = ::hello_var;
 
-  POA_hello (const POA_hello& rhs) = default;
+  POA_hello (POA_hello const &rhs) = default;
   ~POA_hello () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -382,7 +382,7 @@ public:
 
   ::hello *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -428,10 +428,10 @@ public:
   using _stub_ptr_type = ::AMI_helloHandler_ptr;
   using _stub_var_type = ::AMI_helloHandler_var;
 
-  POA_AMI_helloHandler (const POA_AMI_helloHandler& rhs) = default;
+  POA_AMI_helloHandler (POA_AMI_helloHandler const &rhs) = default;
   ~POA_AMI_helloHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -439,7 +439,7 @@ public:
 
   ::AMI_helloHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -467,10 +467,10 @@ protected:
   POA_AMH_goodbye ();
 
 public:
-  POA_AMH_goodbye (const POA_AMH_goodbye& rhs);
+  POA_AMH_goodbye (POA_AMH_goodbye const &rhs);
   ~POA_AMH_goodbye () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -478,7 +478,7 @@ public:
 
   goodbye *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 };
 
 class POA_goodbye;
@@ -498,10 +498,10 @@ public:
   using _stub_ptr_type = ::goodbye_ptr;
   using _stub_var_type = ::goodbye_var;
 
-  POA_goodbye (const POA_goodbye& rhs) = default;
+  POA_goodbye (POA_goodbye const &rhs) = default;
   ~POA_goodbye () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -509,7 +509,7 @@ public:
 
   ::goodbye *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -555,10 +555,10 @@ public:
   using _stub_ptr_type = ::AMI_goodbyeHandler_ptr;
   using _stub_var_type = ::AMI_goodbyeHandler_var;
 
-  POA_AMI_goodbyeHandler (const POA_AMI_goodbyeHandler& rhs) = default;
+  POA_AMI_goodbyeHandler (POA_AMI_goodbyeHandler const &rhs) = default;
   ~POA_AMI_goodbyeHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -566,7 +566,7 @@ public:
 
   ::AMI_goodbyeHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -601,10 +601,10 @@ namespace POA_salutation
     AMH_sayonara ();
 
   public:
-    AMH_sayonara (const AMH_sayonara& rhs);
+    AMH_sayonara (AMH_sayonara const &rhs);
     ~AMH_sayonara () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -612,7 +612,7 @@ namespace POA_salutation
 
     salutation::sayonara *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 class sayonara;
@@ -632,10 +632,10 @@ public:
   using _stub_ptr_type = ::salutation::sayonara_ptr;
   using _stub_var_type = ::salutation::sayonara_var;
 
-  sayonara (const sayonara& rhs) = default;
+  sayonara (sayonara const &rhs) = default;
   ~sayonara () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -643,7 +643,7 @@ public:
 
   ::salutation::sayonara *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -689,10 +689,10 @@ public:
   using _stub_ptr_type = ::salutation::AMI_sayonaraHandler_ptr;
   using _stub_var_type = ::salutation::AMI_sayonaraHandler_var;
 
-  AMI_sayonaraHandler (const AMI_sayonaraHandler& rhs) = default;
+  AMI_sayonaraHandler (AMI_sayonaraHandler const &rhs) = default;
   ~AMI_sayonaraHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -700,7 +700,7 @@ public:
 
   ::salutation::AMI_sayonaraHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -729,10 +729,10 @@ protected:
   POA_AMH_ciao ();
 
 public:
-  POA_AMH_ciao (const POA_AMH_ciao& rhs);
+  POA_AMH_ciao (POA_AMH_ciao const &rhs);
   ~POA_AMH_ciao () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -740,7 +740,7 @@ public:
 
   ciao *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 };
 
 class POA_ciao;
@@ -760,10 +760,10 @@ public:
   using _stub_ptr_type = ::ciao_ptr;
   using _stub_var_type = ::ciao_var;
 
-  POA_ciao (const POA_ciao& rhs) = default;
+  POA_ciao (POA_ciao const &rhs) = default;
   ~POA_ciao () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -771,7 +771,7 @@ public:
 
   ::ciao *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -817,10 +817,10 @@ public:
   using _stub_ptr_type = ::AMI_ciaoHandler_ptr;
   using _stub_var_type = ::AMI_ciaoHandler_var;
 
-  POA_AMI_ciaoHandler (const POA_AMI_ciaoHandler& rhs) = default;
+  POA_AMI_ciaoHandler (POA_AMI_ciaoHandler const &rhs) = default;
   ~POA_AMI_ciaoHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -828,7 +828,7 @@ public:
 
   ::AMI_ciaoHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -856,10 +856,10 @@ protected:
   POA_AMH_aloha ();
 
 public:
-  POA_AMH_aloha (const POA_AMH_aloha& rhs);
+  POA_AMH_aloha (POA_AMH_aloha const &rhs);
   ~POA_AMH_aloha () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -867,7 +867,7 @@ public:
 
   aloha *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 };
 
 class POA_aloha;
@@ -887,10 +887,10 @@ public:
   using _stub_ptr_type = ::aloha_ptr;
   using _stub_var_type = ::aloha_var;
 
-  POA_aloha (const POA_aloha& rhs) = default;
+  POA_aloha (POA_aloha const &rhs) = default;
   ~POA_aloha () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -898,7 +898,7 @@ public:
 
   ::aloha *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -944,10 +944,10 @@ public:
   using _stub_ptr_type = ::AMI_alohaHandler_ptr;
   using _stub_var_type = ::AMI_alohaHandler_var;
 
-  POA_AMI_alohaHandler (const POA_AMI_alohaHandler& rhs) = default;
+  POA_AMI_alohaHandler (POA_AMI_alohaHandler const &rhs) = default;
   ~POA_AMI_alohaHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -955,7 +955,7 @@ public:
 
   ::AMI_alohaHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

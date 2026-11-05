@@ -58,13 +58,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> teststruct_b_4 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> teststruct_b_4 (
         ::CORBA::tk_array,
-        &CORBA::_tc_char,
+        std::addressof (CORBA::_tc_char),
         4U);
 
     ::CORBA::TypeCode_ptr const tc_teststruct_b =
-      &teststruct_b_4;
+      std::addressof (teststruct_b_4);
   }
 }
 }
@@ -77,8 +77,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_teststruct[] =
       {
-        { "b", &TAO::TypeCode::tc_teststruct_b },
-        { "estruct", &teststruct::_tc_embeddedstruct }
+        { "b", std::addressof (TAO::TypeCode::tc_teststruct_b) },
+        { "estruct", std::addressof (teststruct::_tc_embeddedstruct) }
       };
 
 static TAO::TypeCode::Struct<
@@ -97,9 +97,7 @@ _tao_tc_teststruct (
 
 ::CORBA::TypeCode_ptr const _tc_teststruct = std::addressof(_tao_tc_teststruct);
 
-void
-teststruct::_tao_any_destructor (
-    void *_tao_void_pointer)
+void teststruct::_tao_any_destructor (void *_tao_void_pointer)
 {
   teststruct *tmp = static_cast<teststruct *> (_tao_void_pointer);
   delete tmp;
@@ -154,13 +152,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> teststruct_embeddedstruct_a_4 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> teststruct_embeddedstruct_a_4 (
         ::CORBA::tk_array,
-        &CORBA::_tc_char,
+        std::addressof (CORBA::_tc_char),
         4U);
 
     ::CORBA::TypeCode_ptr const tc_teststruct_embeddedstruct_a =
-      &teststruct_embeddedstruct_a_4;
+      std::addressof (teststruct_embeddedstruct_a_4);
   }
 }
 }
@@ -173,7 +171,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_teststruct_embeddedstruct[] =
       {
-        { "a", &TAO::TypeCode::tc_teststruct_embeddedstruct_a }
+        { "a", std::addressof (TAO::TypeCode::tc_teststruct_embeddedstruct_a) }
       };
 
 static TAO::TypeCode::Struct<
@@ -192,9 +190,7 @@ _tao_tc_teststruct_embeddedstruct (
 
 ::CORBA::TypeCode_ptr const teststruct::_tc_embeddedstruct = std::addressof(_tao_tc_teststruct_embeddedstruct);
 
-void
-teststruct::embeddedstruct::_tao_any_destructor (
-    void *_tao_void_pointer)
+void teststruct::embeddedstruct::_tao_any_destructor (void *_tao_void_pointer)
 {
   embeddedstruct *tmp = static_cast<embeddedstruct *> (_tao_void_pointer);
   delete tmp;
@@ -244,7 +240,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:tstruct:1.0",
     "tstruct",
-    &_tc_teststruct);
+    std::addressof (_tc_teststruct));
 
 ::CORBA::TypeCode_ptr const _tc_tstruct = std::addressof(_tao_tc_tstruct);
 
@@ -256,7 +252,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::teststruct const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::teststruct>::insert_copy (
+  TAO::Any_Dual_Impl_T<::teststruct>::insert_copy (
     _tao_any,
     ::teststruct::_tao_any_destructor,
     _tc_teststruct,
@@ -268,7 +264,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::teststruct *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::teststruct>::insert (
+  TAO::Any_Dual_Impl_T<::teststruct>::insert (
     _tao_any,
     ::teststruct::_tao_any_destructor,
     _tc_teststruct,
@@ -280,7 +276,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::teststruct const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::teststruct>::extract (
+  return TAO::Any_Dual_Impl_T<::teststruct>::extract (
     _tao_any,
     ::teststruct::_tao_any_destructor,
     _tc_teststruct,
@@ -297,7 +293,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::teststruct::embeddedstruct const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::teststruct::embeddedstruct>::insert_copy (
+  TAO::Any_Dual_Impl_T<::teststruct::embeddedstruct>::insert_copy (
     _tao_any,
     ::teststruct::embeddedstruct::_tao_any_destructor,
     teststruct::_tc_embeddedstruct,
@@ -309,7 +305,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::teststruct::embeddedstruct *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::teststruct::embeddedstruct>::insert (
+  TAO::Any_Dual_Impl_T<::teststruct::embeddedstruct>::insert (
     _tao_any,
     ::teststruct::embeddedstruct::_tao_any_destructor,
     teststruct::_tc_embeddedstruct,
@@ -321,7 +317,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::teststruct::embeddedstruct const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::teststruct::embeddedstruct>::extract (
+  return TAO::Any_Dual_Impl_T<::teststruct::embeddedstruct>::extract (
     _tao_any,
     ::teststruct::embeddedstruct::_tao_any_destructor,
     teststruct::_tc_embeddedstruct,

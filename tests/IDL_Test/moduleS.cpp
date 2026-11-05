@@ -27,6 +27,7 @@
 
 #include "moduleS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -57,9 +58,9 @@ class TAO_mod1_mod2_AMH_ex1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -180,9 +181,7 @@ POA_mod1::mod2::AMH_ex1::_get_l1_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -226,9 +225,7 @@ POA_mod1::mod2::AMH_ex1::_set_l1_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -263,9 +260,7 @@ POA_mod1::mod2::AMH_ex1::_get_l2_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -307,9 +302,7 @@ POA_mod1::mod2::AMH_ex1::m1_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex1ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -323,7 +316,7 @@ POA_mod1::mod2::AMH_ex1::m1_skel (
     );
 }
 
-::CORBA::Boolean POA_mod1::mod2::AMH_ex1::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::AMH_ex1::_is_a (char const *value)
 {
   return
     (
@@ -332,7 +325,7 @@ POA_mod1::mod2::AMH_ex1::m1_skel (
     );
 }
 
-const char* POA_mod1::mod2::AMH_ex1::_interface_repository_id () const
+char const *POA_mod1::mod2::AMH_ex1::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/ex1:1.0";
 }
@@ -347,7 +340,7 @@ mod1::mod2::ex1*
 POA_mod1::mod2::AMH_ex1::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -362,9 +355,9 @@ class TAO_mod1_mod2_ex1_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -479,7 +472,7 @@ POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::_get_l1 (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::CORBA::Long>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::CORBA::Long>::ret_val *) args[0])->arg () =
     _tao_ptr->l1 (
         );
 }
@@ -498,7 +491,7 @@ POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::_set_l1 (
     }
 
   _tao_ptr->l1 (
-        ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -515,7 +508,7 @@ POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::_get_l2 (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::CORBA::Long>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::CORBA::Long>::ret_val *) args[0])->arg () =
     _tao_ptr->l2 (
         );
 }
@@ -533,9 +526,9 @@ POA_mod1::mod2::_TAO_ex1_Direct_Proxy_Impl::m1 (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::CORBA::Long>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::CORBA::Long>::ret_val *) args[0])->arg () =
     _tao_ptr->m1 (
-          ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
+          ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg ()
         );
 }
 
@@ -566,8 +559,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::ret_arg_type retval =
-          TAO::Portable_Server::get_ret_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
+          TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_);
 
@@ -587,7 +580,7 @@ void POA_mod1::mod2::ex1::_get_l1_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -611,11 +604,11 @@ void POA_mod1::mod2::ex1::_get_l1_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -637,8 +630,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_,
             1);
@@ -659,8 +652,8 @@ void POA_mod1::mod2::ex1::_set_l1_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_l1;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_l1;
 
   TAO::Argument * const args[] =
     {
@@ -685,11 +678,11 @@ void POA_mod1::mod2::ex1::_set_l1_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -711,8 +704,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::ret_arg_type retval =
-          TAO::Portable_Server::get_ret_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
+          TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_);
 
@@ -732,7 +725,7 @@ void POA_mod1::mod2::ex1::_get_l2_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -756,11 +749,11 @@ void POA_mod1::mod2::ex1::_get_l2_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -782,13 +775,13 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::ret_arg_type retval =
-          TAO::Portable_Server::get_ret_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
+          TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_);
 
-        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_,
             1);
@@ -810,8 +803,8 @@ void POA_mod1::mod2::ex1::m1_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_a;
+  TAO::SArg_Traits<::CORBA::Long>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_a;
 
   TAO::Argument * const args[] =
     {
@@ -836,15 +829,15 @@ void POA_mod1::mod2::ex1::m1_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_mod1::mod2::ex1::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::ex1::_is_a (char const *value)
 {
   return
     (
@@ -853,7 +846,7 @@ void POA_mod1::mod2::ex1::m1_skel (
     );
 }
 
-const char* POA_mod1::mod2::ex1::_interface_repository_id () const
+char const *POA_mod1::mod2::ex1::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/ex1:1.0";
 }
@@ -988,9 +981,9 @@ class TAO_mod1_mod2_AMI_ex1Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -1110,7 +1103,7 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1 (
     }
 
   _tao_ptr->get_l1 (
-        ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1128,7 +1121,7 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l1_excep (
     }
 
   _tao_ptr->get_l1_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1163,7 +1156,7 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::set_l1_excep (
     }
 
   _tao_ptr->set_l1_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1181,7 +1174,7 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l2 (
     }
 
   _tao_ptr->get_l2 (
-        ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1199,7 +1192,7 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::get_l2_excep (
     }
 
   _tao_ptr->get_l2_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1217,7 +1210,7 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1 (
     }
 
   _tao_ptr->m1 (
-        ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1235,7 +1228,7 @@ POA_mod1::mod2::_TAO_AMI_ex1Handler_Direct_Proxy_Impl::m1_excep (
     }
 
   _tao_ptr->m1_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1266,8 +1259,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_,
             1);
@@ -1288,8 +1281,8 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l1_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -1314,11 +1307,11 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l1_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1340,8 +1333,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+        TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
             this->operation_details_,
             this->args_,
             1);
@@ -1362,8 +1355,8 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l1_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1388,11 +1381,11 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l1_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1423,7 +1416,7 @@ void POA_mod1::mod2::AMI_ex1Handler::set_l1_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -1444,11 +1437,11 @@ void POA_mod1::mod2::AMI_ex1Handler::set_l1_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1470,8 +1463,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+        TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
             this->operation_details_,
             this->args_,
             1);
@@ -1492,8 +1485,8 @@ void POA_mod1::mod2::AMI_ex1Handler::set_l1_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1518,11 +1511,11 @@ void POA_mod1::mod2::AMI_ex1Handler::set_l1_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1544,8 +1537,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_,
             1);
@@ -1566,8 +1559,8 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l2_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -1592,11 +1585,11 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l2_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1618,8 +1611,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+        TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
             this->operation_details_,
             this->args_,
             1);
@@ -1640,8 +1633,8 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l2_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1666,11 +1659,11 @@ void POA_mod1::mod2::AMI_ex1Handler::get_l2_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1692,8 +1685,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_,
             1);
@@ -1714,8 +1707,8 @@ void POA_mod1::mod2::AMI_ex1Handler::m1_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -1740,11 +1733,11 @@ void POA_mod1::mod2::AMI_ex1Handler::m1_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1766,8 +1759,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+        TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
             this->operation_details_,
             this->args_,
             1);
@@ -1788,8 +1781,8 @@ void POA_mod1::mod2::AMI_ex1Handler::m1_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1814,15 +1807,15 @@ void POA_mod1::mod2::AMI_ex1Handler::m1_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_mod1::mod2::AMI_ex1Handler::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::AMI_ex1Handler::_is_a (char const *value)
 {
   return
     (
@@ -1832,7 +1825,7 @@ void POA_mod1::mod2::AMI_ex1Handler::m1_excep_skel (
     );
 }
 
-const char* POA_mod1::mod2::AMI_ex1Handler::_interface_repository_id () const
+char const *POA_mod1::mod2::AMI_ex1Handler::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/AMI_ex1Handler:1.0";
 }
@@ -1862,9 +1855,9 @@ class TAO_mod1_mod2_AMH_ex2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -1988,9 +1981,7 @@ POA_mod1::mod2::AMH_ex2::_get_l3_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -2034,9 +2025,7 @@ POA_mod1::mod2::AMH_ex2::_set_l3_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -2079,9 +2068,7 @@ POA_mod1::mod2::AMH_ex2::m2_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_mod1::mod2::TAO_AMH_ex2ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -2095,7 +2082,7 @@ POA_mod1::mod2::AMH_ex2::m2_skel (
     );
 }
 
-::CORBA::Boolean POA_mod1::mod2::AMH_ex2::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::AMH_ex2::_is_a (char const *value)
 {
   return
     (
@@ -2105,7 +2092,7 @@ POA_mod1::mod2::AMH_ex2::m2_skel (
     );
 }
 
-const char* POA_mod1::mod2::AMH_ex2::_interface_repository_id () const
+char const *POA_mod1::mod2::AMH_ex2::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/ex2:1.0";
 }
@@ -2120,7 +2107,7 @@ mod1::mod2::ex2*
 POA_mod1::mod2::AMH_ex2::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -2135,9 +2122,9 @@ class TAO_mod1_mod2_ex2_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -2255,7 +2242,7 @@ POA_mod1::mod2::_TAO_ex2_Direct_Proxy_Impl::_get_l3 (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::CORBA::Long>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::CORBA::Long>::ret_val *) args[0])->arg () =
     _tao_ptr->l3 (
         );
 }
@@ -2274,7 +2261,7 @@ POA_mod1::mod2::_TAO_ex2_Direct_Proxy_Impl::_set_l3 (
     }
 
   _tao_ptr->l3 (
-        ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -2291,10 +2278,10 @@ POA_mod1::mod2::_TAO_ex2_Direct_Proxy_Impl::m2 (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::CORBA::Long>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::CORBA::Long>::ret_val *) args[0])->arg () =
     _tao_ptr->m2 (
-          ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits< ::CORBA::Long>::out_arg_val *) args[2])->arg ()
+          ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg (),
+          ((TAO::Arg_Traits<::CORBA::Long>::out_arg_val *) args[2])->arg ()
         );
 }
 
@@ -2325,8 +2312,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::ret_arg_type retval =
-          TAO::Portable_Server::get_ret_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
+          TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_);
 
@@ -2346,7 +2333,7 @@ void POA_mod1::mod2::ex2::_get_l3_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -2370,11 +2357,11 @@ void POA_mod1::mod2::ex2::_get_l3_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2396,8 +2383,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_,
             1);
@@ -2418,8 +2405,8 @@ void POA_mod1::mod2::ex2::_set_l3_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_l3;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_l3;
 
   TAO::Argument * const args[] =
     {
@@ -2444,11 +2431,11 @@ void POA_mod1::mod2::ex2::_set_l3_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2470,19 +2457,19 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::ret_arg_type retval =
-          TAO::Portable_Server::get_ret_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
+          TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_);
 
-        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_,
             1);
 
-        TAO::SArg_Traits< ::CORBA::Long>::out_arg_type arg_2 =
-          TAO::Portable_Server::get_out_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::out_arg_type arg_2 =
+          TAO::Portable_Server::get_out_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_,
             2);
@@ -2505,9 +2492,9 @@ void POA_mod1::mod2::ex2::m2_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_a;
-  TAO::SArg_Traits< ::CORBA::Long>::out_arg_val _tao_b;
+  TAO::SArg_Traits<::CORBA::Long>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_a;
+  TAO::SArg_Traits<::CORBA::Long>::out_arg_val _tao_b;
 
   TAO::Argument * const args[] =
     {
@@ -2533,15 +2520,15 @@ void POA_mod1::mod2::ex2::m2_skel (
                          , args
                          , 3
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_mod1::mod2::ex2::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::ex2::_is_a (char const *value)
 {
   return
     (
@@ -2551,7 +2538,7 @@ void POA_mod1::mod2::ex2::m2_skel (
     );
 }
 
-const char* POA_mod1::mod2::ex2::_interface_repository_id () const
+char const *POA_mod1::mod2::ex2::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/ex2:1.0";
 }
@@ -2660,9 +2647,9 @@ class TAO_mod1_mod2_AMI_ex2Handler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -2788,7 +2775,7 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l3 (
     }
 
   _tao_ptr->get_l3 (
-        ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -2806,7 +2793,7 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::get_l3_excep (
     }
 
   _tao_ptr->get_l3_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -2841,7 +2828,7 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::set_l3_excep (
     }
 
   _tao_ptr->set_l3_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -2859,8 +2846,8 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2 (
     }
 
   _tao_ptr->m2 (
-        ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[2])->arg ()
+        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg (),
+        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[2])->arg ()
       );
 }
 
@@ -2878,7 +2865,7 @@ POA_mod1::mod2::_TAO_AMI_ex2Handler_Direct_Proxy_Impl::m2_excep (
     }
 
   _tao_ptr->m2_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -2909,8 +2896,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_,
             1);
@@ -2931,8 +2918,8 @@ void POA_mod1::mod2::AMI_ex2Handler::get_l3_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -2957,11 +2944,11 @@ void POA_mod1::mod2::AMI_ex2Handler::get_l3_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2983,8 +2970,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+        TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
             this->operation_details_,
             this->args_,
             1);
@@ -3005,8 +2992,8 @@ void POA_mod1::mod2::AMI_ex2Handler::get_l3_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -3031,11 +3018,11 @@ void POA_mod1::mod2::AMI_ex2Handler::get_l3_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3066,7 +3053,7 @@ void POA_mod1::mod2::AMI_ex2Handler::set_l3_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -3087,11 +3074,11 @@ void POA_mod1::mod2::AMI_ex2Handler::set_l3_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3113,8 +3100,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+        TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
             this->operation_details_,
             this->args_,
             1);
@@ -3135,8 +3122,8 @@ void POA_mod1::mod2::AMI_ex2Handler::set_l3_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -3161,11 +3148,11 @@ void POA_mod1::mod2::AMI_ex2Handler::set_l3_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3187,14 +3174,14 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_,
             1);
 
-        TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_2 =
-          TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
+        TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_2 =
+          TAO::Portable_Server::get_in_arg<::CORBA::Long> (
             this->operation_details_,
             this->args_,
             2);
@@ -3216,9 +3203,9 @@ void POA_mod1::mod2::AMI_ex2Handler::m2_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
-  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_b;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_b;
 
   TAO::Argument * const args[] =
     {
@@ -3244,11 +3231,11 @@ void POA_mod1::mod2::AMI_ex2Handler::m2_skel (
                          , args
                          , 3
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3270,8 +3257,8 @@ namespace POA_mod1
 
       void execute () override
       {
-        TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+        TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
             this->operation_details_,
             this->args_,
             1);
@@ -3292,8 +3279,8 @@ void POA_mod1::mod2::AMI_ex2Handler::m2_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -3318,15 +3305,15 @@ void POA_mod1::mod2::AMI_ex2Handler::m2_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_mod1::mod2::AMI_ex2Handler::_is_a (const char* value)
+::CORBA::Boolean POA_mod1::mod2::AMI_ex2Handler::_is_a (char const *value)
 {
   return
     (
@@ -3337,7 +3324,7 @@ void POA_mod1::mod2::AMI_ex2Handler::m2_excep_skel (
     );
 }
 
-const char* POA_mod1::mod2::AMI_ex2Handler::_interface_repository_id () const
+char const *POA_mod1::mod2::AMI_ex2Handler::_interface_repository_id () const
 {
   return "IDL:mod1/mod2/AMI_ex2Handler:1.0";
 }

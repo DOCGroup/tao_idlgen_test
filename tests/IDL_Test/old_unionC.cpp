@@ -23,6 +23,7 @@
  **/
 
 #include "old_unionC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -46,7 +47,6 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "old_unionC.inl"
@@ -56,8 +56,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldUnion_Bar[] =
       {
-        { "b1", &CORBA::_tc_long },
-        { "b2", &CORBA::_tc_char }
+        { "b1", std::addressof (CORBA::_tc_long) },
+        { "b2", std::addressof (CORBA::_tc_char) }
       };
 
 static TAO::TypeCode::Struct<
@@ -79,9 +79,7 @@ namespace OldUnion
   ::CORBA::TypeCode_ptr const _tc_Bar = std::addressof(_tao_tc_OldUnion_Bar);
 }
 
-void
-OldUnion::Bar::_tao_any_destructor (
-    void *_tao_void_pointer)
+void OldUnion::Bar::_tao_any_destructor (void *_tao_void_pointer)
 {
   Bar *tmp = static_cast<Bar *> (_tao_void_pointer);
   delete tmp;
@@ -165,15 +163,15 @@ OldUnion::Foo::operator= (::OldUnion::Foo const &u)
 void OldUnion::Foo::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo__0 (1, "x", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo__1 (2, "y", &OldUnion::_tc_Bar);
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo__2 (-2147483647, "z", &CORBA::_tc_char);
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo__0 (1, "x", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo__1 (2, "y", std::addressof (OldUnion::_tc_Bar));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo__2 (-2147483647, "z", std::addressof (CORBA::_tc_char));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_OldUnion_Foo[] =
   {
-    &_tao_cases_OldUnion_Foo__0,
-    &_tao_cases_OldUnion_Foo__1,
-    &_tao_cases_OldUnion_Foo__2
+    std::addressof (_tao_cases_OldUnion_Foo__0),
+    std::addressof (_tao_cases_OldUnion_Foo__1),
+    std::addressof (_tao_cases_OldUnion_Foo__2)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -183,7 +181,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_OldUnion_Foo (
     "IDL:OldUnion/Foo:1.0",
     "Foo",
-    &CORBA::_tc_long,
+    std::addressof (CORBA::_tc_long),
     _tao_cases_OldUnion_Foo,
     sizeof (_tao_cases_OldUnion_Foo)/sizeof (_tao_cases_OldUnion_Foo[0]),
     2);
@@ -294,13 +292,13 @@ void OldUnion::Foo2::_reset ()
     break;
   }
 }
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo2__0 ('a', "x", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo2__1 ('b', "y", &OldUnion::_tc_Foo);
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo2__0 ('a', "x", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Char, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_OldUnion_Foo2__1 ('b', "y", std::addressof (OldUnion::_tc_Foo));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_OldUnion_Foo2[] =
   {
-    &_tao_cases_OldUnion_Foo2__0,
-    &_tao_cases_OldUnion_Foo2__1
+    std::addressof (_tao_cases_OldUnion_Foo2__0),
+    std::addressof (_tao_cases_OldUnion_Foo2__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -310,7 +308,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_OldUnion_Foo2 (
     "IDL:OldUnion/Foo2:1.0",
     "Foo2",
-    &CORBA::_tc_char,
+    std::addressof (CORBA::_tc_char),
     _tao_cases_OldUnion_Foo2,
     sizeof (_tao_cases_OldUnion_Foo2)/sizeof (_tao_cases_OldUnion_Foo2[0]),
     -1);
@@ -343,7 +341,7 @@ TAO::Objref_Traits<OldUnion::a>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldUnion::a>::marshal (const OldUnion::a_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldUnion::a>::marshal (OldUnion::a_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -355,9 +353,9 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_OldUnion_a_astruct[] =
       {
-        { "a1", &OldUnion::_tc_Foo2 },
-        { "a2", &OldUnion::_tc_Foo },
-        { "a3", &OldUnion::_tc_Bar }
+        { "a1", std::addressof (OldUnion::_tc_Foo2) },
+        { "a2", std::addressof (OldUnion::_tc_Foo) },
+        { "a3", std::addressof (OldUnion::_tc_Bar) }
       };
 
 static TAO::TypeCode::Struct<
@@ -376,24 +374,22 @@ _tao_tc_OldUnion_a_astruct (
 
 ::CORBA::TypeCode_ptr const OldUnion::a::_tc_astruct = std::addressof(_tao_tc_OldUnion_a_astruct);
 
-void
-OldUnion::a::astruct::_tao_any_destructor (
-    void *_tao_void_pointer)
+void OldUnion::a::astruct::_tao_any_destructor (void *_tao_void_pointer)
 {
   astruct *tmp = static_cast<astruct *> (_tao_void_pointer);
   delete tmp;
 }
 ::OldUnion::Foo2
 OldUnion::a::opA (
-  const ::OldUnion::a::astruct & b)
+  ::OldUnion::a::astruct const & b)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< ::OldUnion::Foo2>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::OldUnion::a::astruct>::in_arg_val _tao_b (b);
+  TAO::Arg_Traits<::OldUnion::Foo2>::ret_val _tao_retval;
+  TAO::Arg_Traits<::OldUnion::a::astruct>::in_arg_val _tao_b (b);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -419,7 +415,7 @@ OldUnion::a::opA (
 void
 OldUnion::a::sendc_opA (
   ::OldUnion::AMI_aHandler_ptr ami_handler,
-  const ::OldUnion::a::astruct & b)
+  ::OldUnion::a::astruct const & b)
 {
   if (!this->is_evaluated ())
     {
@@ -427,7 +423,7 @@ OldUnion::a::sendc_opA (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::OldUnion::a::astruct>::in_arg_val _tao_b (b);
+  TAO::Arg_Traits<::OldUnion::a::astruct>::in_arg_val _tao_b (b);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -495,12 +491,10 @@ OldUnion::a::_tao_release (a_ptr obj)
 }
 
 ::CORBA::Boolean
-OldUnion::a::_is_a (const char *value)
+OldUnion::a::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldUnion/a:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:OldUnion/a:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -510,17 +504,17 @@ OldUnion::a::_is_a (const char *value)
     }
 }
 
-const char* OldUnion::a::_interface_repository_id () const
+char const *OldUnion::a::_interface_repository_id () const
 {
   return "IDL:OldUnion/a:1.0";
 }
 
-const char* OldUnion::a::_desc_repository_id ()
+char const *OldUnion::a::_desc_repository_id ()
 {
   return "IDL:OldUnion/a:1.0";
 }
 
-const char* OldUnion::a::_desc_interface_name ()
+char const *OldUnion::a::_desc_interface_name ()
 {
   return "a";
 }
@@ -541,7 +535,7 @@ namespace OldUnion
 {
   ::CORBA::TypeCode_ptr const _tc_a = std::addressof(_tao_tc_OldUnion_a);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldUnion_AMH_aExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_OldUnion_AMH_aExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -551,7 +545,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:OldUnion/AMH_aExceptionHolder:1.0",
     "AMH_aExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_OldUnion_AMH_aExceptionHolder,
     0);
 
@@ -700,14 +694,14 @@ OldUnion::AMH_aExceptionHolder::_tao_unmarshal (
 void
 OldUnion::AMH_aExceptionHolder::raise_opA ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 OldUnion::AMH_aExceptionHolder::raise_sendc_opA ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -734,7 +728,7 @@ TAO::Objref_Traits<OldUnion::AMH_aResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldUnion::AMH_aResponseHandler>::marshal (const OldUnion::AMH_aResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldUnion::AMH_aResponseHandler>::marshal (OldUnion::AMH_aResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -788,13 +782,11 @@ OldUnion::AMH_aResponseHandler::_tao_release (AMH_aResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldUnion::AMH_aResponseHandler::_is_a (const char *value)
+OldUnion::AMH_aResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldUnion/AMH_aResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldUnion/AMH_aResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -804,17 +796,17 @@ OldUnion::AMH_aResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldUnion::AMH_aResponseHandler::_interface_repository_id () const
+char const *OldUnion::AMH_aResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldUnion/AMH_aResponseHandler:1.0";
 }
 
-const char* OldUnion::AMH_aResponseHandler::_desc_repository_id ()
+char const *OldUnion::AMH_aResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldUnion/AMH_aResponseHandler:1.0";
 }
 
-const char* OldUnion::AMH_aResponseHandler::_desc_interface_name ()
+char const *OldUnion::AMH_aResponseHandler::_desc_interface_name ()
 {
   return "AMH_aResponseHandler";
 }
@@ -859,7 +851,7 @@ TAO::Objref_Traits<OldUnion::AMI_aHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldUnion::AMI_aHandler>::marshal (const OldUnion::AMI_aHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldUnion::AMI_aHandler>::marshal (OldUnion::AMI_aHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -868,15 +860,15 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 OldUnion::AMI_aHandler::opA (
-  const ::OldUnion::Foo2 & ami_return_val)
+  ::OldUnion::Foo2 const & ami_return_val)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::OldUnion::Foo2>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::OldUnion::Foo2>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -968,8 +960,8 @@ OldUnion::AMI_aHandler::opA_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1035,13 +1027,11 @@ OldUnion::AMI_aHandler::_tao_release (AMI_aHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldUnion::AMI_aHandler::_is_a (const char *value)
+OldUnion::AMI_aHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldUnion/AMI_aHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1051,17 +1041,17 @@ OldUnion::AMI_aHandler::_is_a (const char *value)
     }
 }
 
-const char* OldUnion::AMI_aHandler::_interface_repository_id () const
+char const *OldUnion::AMI_aHandler::_interface_repository_id () const
 {
   return "IDL:OldUnion/AMI_aHandler:1.0";
 }
 
-const char* OldUnion::AMI_aHandler::_desc_repository_id ()
+char const *OldUnion::AMI_aHandler::_desc_repository_id ()
 {
   return "IDL:OldUnion/AMI_aHandler:1.0";
 }
 
-const char* OldUnion::AMI_aHandler::_desc_interface_name ()
+char const *OldUnion::AMI_aHandler::_desc_interface_name ()
 {
   return "AMI_aHandler";
 }
@@ -1105,7 +1095,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::OldUnion::Bar const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::OldUnion::Bar>::insert_copy (
+  TAO::Any_Dual_Impl_T<::OldUnion::Bar>::insert_copy (
     _tao_any,
     ::OldUnion::Bar::_tao_any_destructor,
     OldUnion::_tc_Bar,
@@ -1117,7 +1107,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::OldUnion::Bar *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::OldUnion::Bar>::insert (
+  TAO::Any_Dual_Impl_T<::OldUnion::Bar>::insert (
     _tao_any,
     ::OldUnion::Bar::_tao_any_destructor,
     OldUnion::_tc_Bar,
@@ -1129,7 +1119,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::OldUnion::Bar const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::OldUnion::Bar>::extract (
+  return TAO::Any_Dual_Impl_T<::OldUnion::Bar>::extract (
     _tao_any,
     ::OldUnion::Bar::_tao_any_destructor,
     OldUnion::_tc_Bar,
@@ -1272,7 +1262,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldUnion::a_ptr &_tao_elem)
 {
   return
@@ -1294,7 +1284,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::OldUnion::a::astruct const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::OldUnion::a::astruct>::insert_copy (
+  TAO::Any_Dual_Impl_T<::OldUnion::a::astruct>::insert_copy (
     _tao_any,
     ::OldUnion::a::astruct::_tao_any_destructor,
     OldUnion::a::_tc_astruct,
@@ -1306,7 +1296,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::OldUnion::a::astruct *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::OldUnion::a::astruct>::insert (
+  TAO::Any_Dual_Impl_T<::OldUnion::a::astruct>::insert (
     _tao_any,
     ::OldUnion::a::astruct::_tao_any_destructor,
     OldUnion::a::_tc_astruct,
@@ -1318,7 +1308,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::OldUnion::a::astruct const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::OldUnion::a::astruct>::extract (
+  return TAO::Any_Dual_Impl_T<::OldUnion::a::astruct>::extract (
     _tao_any,
     ::OldUnion::a::astruct::_tao_any_destructor,
     OldUnion::a::_tc_astruct,
@@ -1455,7 +1445,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldUnion::AMH_aResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1513,7 +1503,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     OldUnion::AMI_aHandler_ptr &_tao_elem)
 {
   return
@@ -1562,7 +1552,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -1590,13 +1580,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     OldUnion::Foo &_tao_union)
 {
-  CORBA::Long _tao_discriminant {};
+  CORBA::Long _tao_discriminant;
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -1653,7 +1643,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_union._d ())
   {
@@ -1678,14 +1668,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     OldUnion::Foo2 &_tao_union)
 {
-  CORBA::Char _tao_discriminant {};
+  CORBA::Char _tao_discriminant;
   ::ACE_InputCDR::to_char tmp (_tao_discriminant);
   if (!(strm >> tmp))
     {
       return false;
     }
 
-  ::CORBA::Boolean result {true};
+  ::CORBA::Boolean result = true;
 
   switch (_tao_discriminant)
   {
@@ -1754,7 +1744,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldUnion::a_ptr _tao_objref)
+    OldUnion::a_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1772,7 +1762,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldUnion::a>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldUnion::a>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -1805,7 +1795,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldUnion::AMH_aExceptionHolder *_tao_valuetype)
+    OldUnion::AMH_aExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -1846,7 +1836,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldUnion::AMI_aHandler_ptr _tao_objref)
+    OldUnion::AMI_aHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1864,7 +1854,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldUnion::AMI_aHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldUnion::AMI_aHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

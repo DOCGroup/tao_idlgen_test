@@ -52,7 +52,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -66,7 +66,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::TEST_TYPE_tag>
+  class SArg_Traits<::TEST_TYPE_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::TEST_TYPE_var,

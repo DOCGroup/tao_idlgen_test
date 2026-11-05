@@ -23,6 +23,7 @@
  **/
 
 #include "inheritC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
@@ -30,7 +31,6 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "inheritC.inl"
@@ -59,7 +59,7 @@ TAO::Objref_Traits<OldInherit::one>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::one>::marshal (const OldInherit::one_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::one>::marshal (OldInherit::one_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -74,7 +74,7 @@ OldInherit::one::op_one ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -168,12 +168,10 @@ OldInherit::one::_tao_release (one_ptr obj)
 }
 
 ::CORBA::Boolean
-OldInherit::one::_is_a (const char *value)
+OldInherit::one::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -183,17 +181,17 @@ OldInherit::one::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::one::_interface_repository_id () const
+char const *OldInherit::one::_interface_repository_id () const
 {
   return "IDL:OldInherit/one:1.0";
 }
 
-const char* OldInherit::one::_desc_repository_id ()
+char const *OldInherit::one::_desc_repository_id ()
 {
   return "IDL:OldInherit/one:1.0";
 }
 
-const char* OldInherit::one::_desc_interface_name ()
+char const *OldInherit::one::_desc_interface_name ()
 {
   return "one";
 }
@@ -338,14 +336,14 @@ OldInherit::AMH_oneExceptionHolder::_tao_unmarshal (
 void
 OldInherit::AMH_oneExceptionHolder::raise_op_one ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 OldInherit::AMH_oneExceptionHolder::raise_sendc_op_one ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -372,7 +370,7 @@ TAO::Objref_Traits<OldInherit::AMH_oneResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::AMH_oneResponseHandler>::marshal (const OldInherit::AMH_oneResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::AMH_oneResponseHandler>::marshal (OldInherit::AMH_oneResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -426,13 +424,11 @@ OldInherit::AMH_oneResponseHandler::_tao_release (AMH_oneResponseHandler_ptr obj
 }
 
 ::CORBA::Boolean
-OldInherit::AMH_oneResponseHandler::_is_a (const char *value)
+OldInherit::AMH_oneResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/AMH_oneResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/AMH_oneResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -442,17 +438,17 @@ OldInherit::AMH_oneResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::AMH_oneResponseHandler::_interface_repository_id () const
+char const *OldInherit::AMH_oneResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMH_oneResponseHandler:1.0";
 }
 
-const char* OldInherit::AMH_oneResponseHandler::_desc_repository_id ()
+char const *OldInherit::AMH_oneResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldInherit/AMH_oneResponseHandler:1.0";
 }
 
-const char* OldInherit::AMH_oneResponseHandler::_desc_interface_name ()
+char const *OldInherit::AMH_oneResponseHandler::_desc_interface_name ()
 {
   return "AMH_oneResponseHandler";
 }
@@ -486,7 +482,7 @@ TAO::Objref_Traits<OldInherit::AMI_oneHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::AMI_oneHandler>::marshal (const OldInherit::AMI_oneHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::AMI_oneHandler>::marshal (OldInherit::AMI_oneHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -501,7 +497,7 @@ OldInherit::AMI_oneHandler::op_one ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -587,8 +583,8 @@ OldInherit::AMI_oneHandler::op_one_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -654,13 +650,11 @@ OldInherit::AMI_oneHandler::_tao_release (AMI_oneHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldInherit::AMI_oneHandler::_is_a (const char *value)
+OldInherit::AMI_oneHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -670,17 +664,17 @@ OldInherit::AMI_oneHandler::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::AMI_oneHandler::_interface_repository_id () const
+char const *OldInherit::AMI_oneHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_oneHandler:1.0";
 }
 
-const char* OldInherit::AMI_oneHandler::_desc_repository_id ()
+char const *OldInherit::AMI_oneHandler::_desc_repository_id ()
 {
   return "IDL:OldInherit/AMI_oneHandler:1.0";
 }
 
-const char* OldInherit::AMI_oneHandler::_desc_interface_name ()
+char const *OldInherit::AMI_oneHandler::_desc_interface_name ()
 {
   return "AMI_oneHandler";
 }
@@ -714,7 +708,7 @@ TAO::Objref_Traits<OldInherit::two>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::two>::marshal (const OldInherit::two_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::two>::marshal (OldInherit::two_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -729,7 +723,7 @@ OldInherit::two::op_two ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -823,13 +817,11 @@ OldInherit::two::_tao_release (two_ptr obj)
 }
 
 ::CORBA::Boolean
-OldInherit::two::_is_a (const char *value)
+OldInherit::two::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -839,17 +831,17 @@ OldInherit::two::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::two::_interface_repository_id () const
+char const *OldInherit::two::_interface_repository_id () const
 {
   return "IDL:OldInherit/two:1.0";
 }
 
-const char* OldInherit::two::_desc_repository_id ()
+char const *OldInherit::two::_desc_repository_id ()
 {
   return "IDL:OldInherit/two:1.0";
 }
 
-const char* OldInherit::two::_desc_interface_name ()
+char const *OldInherit::two::_desc_interface_name ()
 {
   return "two";
 }
@@ -994,14 +986,14 @@ OldInherit::AMH_twoExceptionHolder::_tao_unmarshal (
 void
 OldInherit::AMH_twoExceptionHolder::raise_op_two ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 OldInherit::AMH_twoExceptionHolder::raise_sendc_op_two ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -1028,7 +1020,7 @@ TAO::Objref_Traits<OldInherit::AMH_twoResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::AMH_twoResponseHandler>::marshal (const OldInherit::AMH_twoResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::AMH_twoResponseHandler>::marshal (OldInherit::AMH_twoResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1082,13 +1074,11 @@ OldInherit::AMH_twoResponseHandler::_tao_release (AMH_twoResponseHandler_ptr obj
 }
 
 ::CORBA::Boolean
-OldInherit::AMH_twoResponseHandler::_is_a (const char *value)
+OldInherit::AMH_twoResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/AMH_twoResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/AMH_twoResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1098,17 +1088,17 @@ OldInherit::AMH_twoResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::AMH_twoResponseHandler::_interface_repository_id () const
+char const *OldInherit::AMH_twoResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMH_twoResponseHandler:1.0";
 }
 
-const char* OldInherit::AMH_twoResponseHandler::_desc_repository_id ()
+char const *OldInherit::AMH_twoResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldInherit/AMH_twoResponseHandler:1.0";
 }
 
-const char* OldInherit::AMH_twoResponseHandler::_desc_interface_name ()
+char const *OldInherit::AMH_twoResponseHandler::_desc_interface_name ()
 {
   return "AMH_twoResponseHandler";
 }
@@ -1142,7 +1132,7 @@ TAO::Objref_Traits<OldInherit::AMI_twoHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::AMI_twoHandler>::marshal (const OldInherit::AMI_twoHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::AMI_twoHandler>::marshal (OldInherit::AMI_twoHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1157,7 +1147,7 @@ OldInherit::AMI_twoHandler::op_two ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1243,8 +1233,8 @@ OldInherit::AMI_twoHandler::op_two_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1310,14 +1300,12 @@ OldInherit::AMI_twoHandler::_tao_release (AMI_twoHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldInherit::AMI_twoHandler::_is_a (const char *value)
+OldInherit::AMI_twoHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1327,17 +1315,17 @@ OldInherit::AMI_twoHandler::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::AMI_twoHandler::_interface_repository_id () const
+char const *OldInherit::AMI_twoHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_twoHandler:1.0";
 }
 
-const char* OldInherit::AMI_twoHandler::_desc_repository_id ()
+char const *OldInherit::AMI_twoHandler::_desc_repository_id ()
 {
   return "IDL:OldInherit/AMI_twoHandler:1.0";
 }
 
-const char* OldInherit::AMI_twoHandler::_desc_interface_name ()
+char const *OldInherit::AMI_twoHandler::_desc_interface_name ()
 {
   return "AMI_twoHandler";
 }
@@ -1371,7 +1359,7 @@ TAO::Objref_Traits<OldInherit::three>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::three>::marshal (const OldInherit::three_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::three>::marshal (OldInherit::three_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1386,7 +1374,7 @@ OldInherit::three::op_three ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1480,13 +1468,11 @@ OldInherit::three::_tao_release (three_ptr obj)
 }
 
 ::CORBA::Boolean
-OldInherit::three::_is_a (const char *value)
+OldInherit::three::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1496,17 +1482,17 @@ OldInherit::three::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::three::_interface_repository_id () const
+char const *OldInherit::three::_interface_repository_id () const
 {
   return "IDL:OldInherit/three:1.0";
 }
 
-const char* OldInherit::three::_desc_repository_id ()
+char const *OldInherit::three::_desc_repository_id ()
 {
   return "IDL:OldInherit/three:1.0";
 }
 
-const char* OldInherit::three::_desc_interface_name ()
+char const *OldInherit::three::_desc_interface_name ()
 {
   return "three";
 }
@@ -1651,14 +1637,14 @@ OldInherit::AMH_threeExceptionHolder::_tao_unmarshal (
 void
 OldInherit::AMH_threeExceptionHolder::raise_op_three ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 OldInherit::AMH_threeExceptionHolder::raise_sendc_op_three ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -1685,7 +1671,7 @@ TAO::Objref_Traits<OldInherit::AMH_threeResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::AMH_threeResponseHandler>::marshal (const OldInherit::AMH_threeResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::AMH_threeResponseHandler>::marshal (OldInherit::AMH_threeResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1739,13 +1725,11 @@ OldInherit::AMH_threeResponseHandler::_tao_release (AMH_threeResponseHandler_ptr
 }
 
 ::CORBA::Boolean
-OldInherit::AMH_threeResponseHandler::_is_a (const char *value)
+OldInherit::AMH_threeResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/AMH_threeResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/AMH_threeResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1755,17 +1739,17 @@ OldInherit::AMH_threeResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::AMH_threeResponseHandler::_interface_repository_id () const
+char const *OldInherit::AMH_threeResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMH_threeResponseHandler:1.0";
 }
 
-const char* OldInherit::AMH_threeResponseHandler::_desc_repository_id ()
+char const *OldInherit::AMH_threeResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldInherit/AMH_threeResponseHandler:1.0";
 }
 
-const char* OldInherit::AMH_threeResponseHandler::_desc_interface_name ()
+char const *OldInherit::AMH_threeResponseHandler::_desc_interface_name ()
 {
   return "AMH_threeResponseHandler";
 }
@@ -1799,7 +1783,7 @@ TAO::Objref_Traits<OldInherit::AMI_threeHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::AMI_threeHandler>::marshal (const OldInherit::AMI_threeHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::AMI_threeHandler>::marshal (OldInherit::AMI_threeHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1814,7 +1798,7 @@ OldInherit::AMI_threeHandler::op_three ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1900,8 +1884,8 @@ OldInherit::AMI_threeHandler::op_three_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1967,14 +1951,12 @@ OldInherit::AMI_threeHandler::_tao_release (AMI_threeHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldInherit::AMI_threeHandler::_is_a (const char *value)
+OldInherit::AMI_threeHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1984,17 +1966,17 @@ OldInherit::AMI_threeHandler::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::AMI_threeHandler::_interface_repository_id () const
+char const *OldInherit::AMI_threeHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_threeHandler:1.0";
 }
 
-const char* OldInherit::AMI_threeHandler::_desc_repository_id ()
+char const *OldInherit::AMI_threeHandler::_desc_repository_id ()
 {
   return "IDL:OldInherit/AMI_threeHandler:1.0";
 }
 
-const char* OldInherit::AMI_threeHandler::_desc_interface_name ()
+char const *OldInherit::AMI_threeHandler::_desc_interface_name ()
 {
   return "AMI_threeHandler";
 }
@@ -2028,7 +2010,7 @@ TAO::Objref_Traits<OldInherit::four>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::four>::marshal (const OldInherit::four_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::four>::marshal (OldInherit::four_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2043,7 +2025,7 @@ OldInherit::four::op_four ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2137,15 +2119,13 @@ OldInherit::four::_tao_release (four_ptr obj)
 }
 
 ::CORBA::Boolean
-OldInherit::four::_is_a (const char *value)
+OldInherit::four::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2155,17 +2135,17 @@ OldInherit::four::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::four::_interface_repository_id () const
+char const *OldInherit::four::_interface_repository_id () const
 {
   return "IDL:OldInherit/four:1.0";
 }
 
-const char* OldInherit::four::_desc_repository_id ()
+char const *OldInherit::four::_desc_repository_id ()
 {
   return "IDL:OldInherit/four:1.0";
 }
 
-const char* OldInherit::four::_desc_interface_name ()
+char const *OldInherit::four::_desc_interface_name ()
 {
   return "four";
 }
@@ -2310,14 +2290,14 @@ OldInherit::AMH_fourExceptionHolder::_tao_unmarshal (
 void
 OldInherit::AMH_fourExceptionHolder::raise_op_four ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 OldInherit::AMH_fourExceptionHolder::raise_sendc_op_four ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -2344,7 +2324,7 @@ TAO::Objref_Traits<OldInherit::AMH_fourResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::AMH_fourResponseHandler>::marshal (const OldInherit::AMH_fourResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::AMH_fourResponseHandler>::marshal (OldInherit::AMH_fourResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2398,13 +2378,11 @@ OldInherit::AMH_fourResponseHandler::_tao_release (AMH_fourResponseHandler_ptr o
 }
 
 ::CORBA::Boolean
-OldInherit::AMH_fourResponseHandler::_is_a (const char *value)
+OldInherit::AMH_fourResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/AMH_fourResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/AMH_fourResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2414,17 +2392,17 @@ OldInherit::AMH_fourResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::AMH_fourResponseHandler::_interface_repository_id () const
+char const *OldInherit::AMH_fourResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMH_fourResponseHandler:1.0";
 }
 
-const char* OldInherit::AMH_fourResponseHandler::_desc_repository_id ()
+char const *OldInherit::AMH_fourResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldInherit/AMH_fourResponseHandler:1.0";
 }
 
-const char* OldInherit::AMH_fourResponseHandler::_desc_interface_name ()
+char const *OldInherit::AMH_fourResponseHandler::_desc_interface_name ()
 {
   return "AMH_fourResponseHandler";
 }
@@ -2458,7 +2436,7 @@ TAO::Objref_Traits<OldInherit::AMI_fourHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::AMI_fourHandler>::marshal (const OldInherit::AMI_fourHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::AMI_fourHandler>::marshal (OldInherit::AMI_fourHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2473,7 +2451,7 @@ OldInherit::AMI_fourHandler::op_four ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2559,8 +2537,8 @@ OldInherit::AMI_fourHandler::op_four_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2626,16 +2604,14 @@ OldInherit::AMI_fourHandler::_tao_release (AMI_fourHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldInherit::AMI_fourHandler::_is_a (const char *value)
+OldInherit::AMI_fourHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_fourHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2645,17 +2621,17 @@ OldInherit::AMI_fourHandler::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::AMI_fourHandler::_interface_repository_id () const
+char const *OldInherit::AMI_fourHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_fourHandler:1.0";
 }
 
-const char* OldInherit::AMI_fourHandler::_desc_repository_id ()
+char const *OldInherit::AMI_fourHandler::_desc_repository_id ()
 {
   return "IDL:OldInherit/AMI_fourHandler:1.0";
 }
 
-const char* OldInherit::AMI_fourHandler::_desc_interface_name ()
+char const *OldInherit::AMI_fourHandler::_desc_interface_name ()
 {
   return "AMI_fourHandler";
 }
@@ -2689,7 +2665,7 @@ TAO::Objref_Traits<OldInherit::five>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::five>::marshal (const OldInherit::five_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::five>::marshal (OldInherit::five_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2704,7 +2680,7 @@ OldInherit::five::op_five ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2798,16 +2774,14 @@ OldInherit::five::_tao_release (five_ptr obj)
 }
 
 ::CORBA::Boolean
-OldInherit::five::_is_a (const char *value)
+OldInherit::five::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/five:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2817,17 +2791,17 @@ OldInherit::five::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::five::_interface_repository_id () const
+char const *OldInherit::five::_interface_repository_id () const
 {
   return "IDL:OldInherit/five:1.0";
 }
 
-const char* OldInherit::five::_desc_repository_id ()
+char const *OldInherit::five::_desc_repository_id ()
 {
   return "IDL:OldInherit/five:1.0";
 }
 
-const char* OldInherit::five::_desc_interface_name ()
+char const *OldInherit::five::_desc_interface_name ()
 {
   return "five";
 }
@@ -2972,14 +2946,14 @@ OldInherit::AMH_fiveExceptionHolder::_tao_unmarshal (
 void
 OldInherit::AMH_fiveExceptionHolder::raise_op_five ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 OldInherit::AMH_fiveExceptionHolder::raise_sendc_op_five ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -3006,7 +2980,7 @@ TAO::Objref_Traits<OldInherit::AMH_fiveResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::AMH_fiveResponseHandler>::marshal (const OldInherit::AMH_fiveResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::AMH_fiveResponseHandler>::marshal (OldInherit::AMH_fiveResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3060,13 +3034,11 @@ OldInherit::AMH_fiveResponseHandler::_tao_release (AMH_fiveResponseHandler_ptr o
 }
 
 ::CORBA::Boolean
-OldInherit::AMH_fiveResponseHandler::_is_a (const char *value)
+OldInherit::AMH_fiveResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldInherit/AMH_fiveResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldInherit/AMH_fiveResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -3076,17 +3048,17 @@ OldInherit::AMH_fiveResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::AMH_fiveResponseHandler::_interface_repository_id () const
+char const *OldInherit::AMH_fiveResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMH_fiveResponseHandler:1.0";
 }
 
-const char* OldInherit::AMH_fiveResponseHandler::_desc_repository_id ()
+char const *OldInherit::AMH_fiveResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldInherit/AMH_fiveResponseHandler:1.0";
 }
 
-const char* OldInherit::AMH_fiveResponseHandler::_desc_interface_name ()
+char const *OldInherit::AMH_fiveResponseHandler::_desc_interface_name ()
 {
   return "AMH_fiveResponseHandler";
 }
@@ -3120,7 +3092,7 @@ TAO::Objref_Traits<OldInherit::AMI_fiveHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldInherit::AMI_fiveHandler>::marshal (const OldInherit::AMI_fiveHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldInherit::AMI_fiveHandler>::marshal (OldInherit::AMI_fiveHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3135,7 +3107,7 @@ OldInherit::AMI_fiveHandler::op_five ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3221,8 +3193,8 @@ OldInherit::AMI_fiveHandler::op_five_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3288,17 +3260,15 @@ OldInherit::AMI_fiveHandler::_tao_release (AMI_fiveHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldInherit::AMI_fiveHandler::_is_a (const char *value)
+OldInherit::AMI_fiveHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_fourHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldInherit/AMI_fiveHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -3308,17 +3278,17 @@ OldInherit::AMI_fiveHandler::_is_a (const char *value)
     }
 }
 
-const char* OldInherit::AMI_fiveHandler::_interface_repository_id () const
+char const *OldInherit::AMI_fiveHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_fiveHandler:1.0";
 }
 
-const char* OldInherit::AMI_fiveHandler::_desc_repository_id ()
+char const *OldInherit::AMI_fiveHandler::_desc_repository_id ()
 {
   return "IDL:OldInherit/AMI_fiveHandler:1.0";
 }
 
-const char* OldInherit::AMI_fiveHandler::_desc_interface_name ()
+char const *OldInherit::AMI_fiveHandler::_desc_interface_name ()
 {
   return "AMI_fiveHandler";
 }
@@ -3403,7 +3373,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::one_ptr _tao_objref)
+    OldInherit::one_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3421,7 +3391,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::one>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::one>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3454,7 +3424,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMH_oneExceptionHolder *_tao_valuetype)
+    OldInherit::AMH_oneExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3495,7 +3465,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMI_oneHandler_ptr _tao_objref)
+    OldInherit::AMI_oneHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3513,7 +3483,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::AMI_oneHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::AMI_oneHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3524,7 +3494,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::two_ptr _tao_objref)
+    OldInherit::two_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3542,7 +3512,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::two>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::two>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3575,7 +3545,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMH_twoExceptionHolder *_tao_valuetype)
+    OldInherit::AMH_twoExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3616,7 +3586,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMI_twoHandler_ptr _tao_objref)
+    OldInherit::AMI_twoHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3634,7 +3604,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::AMI_twoHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::AMI_twoHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3645,7 +3615,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::three_ptr _tao_objref)
+    OldInherit::three_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3663,7 +3633,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::three>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::three>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3696,7 +3666,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMH_threeExceptionHolder *_tao_valuetype)
+    OldInherit::AMH_threeExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3737,7 +3707,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMI_threeHandler_ptr _tao_objref)
+    OldInherit::AMI_threeHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3755,7 +3725,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::AMI_threeHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::AMI_threeHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3766,7 +3736,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::four_ptr _tao_objref)
+    OldInherit::four_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3784,7 +3754,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::four>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::four>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3817,7 +3787,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMH_fourExceptionHolder *_tao_valuetype)
+    OldInherit::AMH_fourExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3858,7 +3828,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMI_fourHandler_ptr _tao_objref)
+    OldInherit::AMI_fourHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3876,7 +3846,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::AMI_fourHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::AMI_fourHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3887,7 +3857,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::five_ptr _tao_objref)
+    OldInherit::five_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3905,7 +3875,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::five>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::five>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -3938,7 +3908,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMH_fiveExceptionHolder *_tao_valuetype)
+    OldInherit::AMH_fiveExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3979,7 +3949,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldInherit::AMI_fiveHandler_ptr _tao_objref)
+    OldInherit::AMI_fiveHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3997,7 +3967,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldInherit::AMI_fiveHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldInherit::AMI_fiveHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

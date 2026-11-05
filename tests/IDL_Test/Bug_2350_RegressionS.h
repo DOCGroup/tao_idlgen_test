@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::user_ExceptionHolder>
+  class SArg_Traits<::user_ExceptionHolder>
     : public
         Fixed_Size_SArg_Traits_T<
             ::user_ExceptionHolder,
@@ -87,7 +87,7 @@ namespace TAO
 #define _BUG_2350_REGRESSION__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Bug_2350_Regression>
+  class  SArg_Traits<::Bug_2350_Regression>
     : public Object_SArg_Traits_T<
         ::Bug_2350_Regression_ptr,
         ::Bug_2350_Regression_var,
@@ -102,7 +102,7 @@ namespace TAO
 #define _AMH_BUG_2350_REGRESSIONEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_Bug_2350_RegressionExceptionHolder>
+  class SArg_Traits<::AMH_Bug_2350_RegressionExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_Bug_2350_RegressionExceptionHolder *,
@@ -119,7 +119,7 @@ namespace TAO
 #define _AMI_BUG_2350_REGRESSIONHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_Bug_2350_RegressionHandler>
+  class  SArg_Traits<::AMI_Bug_2350_RegressionHandler>
     : public Object_SArg_Traits_T<
         ::AMI_Bug_2350_RegressionHandler_ptr,
         ::AMI_Bug_2350_RegressionHandler_var,
@@ -143,10 +143,10 @@ protected:
   POA_AMH_Bug_2350_Regression ();
 
 public:
-  POA_AMH_Bug_2350_Regression (const POA_AMH_Bug_2350_Regression& rhs);
+  POA_AMH_Bug_2350_Regression (POA_AMH_Bug_2350_Regression const &rhs);
   ~POA_AMH_Bug_2350_Regression () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -154,7 +154,7 @@ public:
 
   Bug_2350_Regression *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void Bug_2350_Regression_excep_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -162,7 +162,7 @@ static void Bug_2350_Regression_excep_skel (
 
 virtual void Bug_2350_Regression_excep (
     AMH_Bug_2350_RegressionResponseHandler_ptr _tao_rh,
-    const ::user_ExceptionHolder & a
+    ::user_ExceptionHolder const & a
   ) = 0;
 
 };
@@ -184,10 +184,10 @@ public:
   using _stub_ptr_type = ::Bug_2350_Regression_ptr;
   using _stub_var_type = ::Bug_2350_Regression_var;
 
-  POA_Bug_2350_Regression (const POA_Bug_2350_Regression& rhs) = default;
+  POA_Bug_2350_Regression (POA_Bug_2350_Regression const &rhs) = default;
   ~POA_Bug_2350_Regression () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -195,9 +195,9 @@ public:
 
   ::Bug_2350_Regression *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void Bug_2350_Regression_excep (
-    const ::user_ExceptionHolder & a) = 0;
+    ::user_ExceptionHolder const & a) = 0;
 
   static void Bug_2350_Regression_excep_skel (
       TAO_ServerRequest &server_request,
@@ -255,10 +255,10 @@ public:
   using _stub_ptr_type = ::AMI_Bug_2350_RegressionHandler_ptr;
   using _stub_var_type = ::AMI_Bug_2350_RegressionHandler_var;
 
-  POA_AMI_Bug_2350_RegressionHandler (const POA_AMI_Bug_2350_RegressionHandler& rhs) = default;
+  POA_AMI_Bug_2350_RegressionHandler (POA_AMI_Bug_2350_RegressionHandler const &rhs) = default;
   ~POA_AMI_Bug_2350_RegressionHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -266,7 +266,7 @@ public:
 
   ::AMI_Bug_2350_RegressionHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void Bug_2350_Regression_excep () = 0;
 
   static void Bug_2350_Regression_excep_skel (

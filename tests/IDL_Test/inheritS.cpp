@@ -27,6 +27,7 @@
 
 #include "inheritS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -57,9 +58,9 @@ class TAO_OldInherit_AMH_one_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -154,9 +155,7 @@ POA_OldInherit::AMH_one::op_one_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldInherit::TAO_AMH_oneResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_OldInherit::TAO_AMH_oneResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -169,7 +168,7 @@ POA_OldInherit::AMH_one::op_one_skel (
     );
 }
 
-::CORBA::Boolean POA_OldInherit::AMH_one::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMH_one::_is_a (char const *value)
 {
   return
     (
@@ -178,7 +177,7 @@ POA_OldInherit::AMH_one::op_one_skel (
     );
 }
 
-const char* POA_OldInherit::AMH_one::_interface_repository_id () const
+char const *POA_OldInherit::AMH_one::_interface_repository_id () const
 {
   return "IDL:OldInherit/one:1.0";
 }
@@ -193,7 +192,7 @@ OldInherit::one*
 POA_OldInherit::AMH_one::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -208,9 +207,9 @@ class TAO_OldInherit_one_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -335,7 +334,7 @@ void POA_OldInherit::one::op_one_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -356,15 +355,15 @@ void POA_OldInherit::one::op_one_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::one::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::one::_is_a (char const *value)
 {
   return
     (
@@ -373,7 +372,7 @@ void POA_OldInherit::one::op_one_skel (
     );
 }
 
-const char* POA_OldInherit::one::_interface_repository_id () const
+char const *POA_OldInherit::one::_interface_repository_id () const
 {
   return "IDL:OldInherit/one:1.0";
 }
@@ -424,9 +423,9 @@ class TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -533,7 +532,7 @@ POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::op_one_excep (
     }
 
   _tao_ptr->op_one_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -569,7 +568,7 @@ void POA_OldInherit::AMI_oneHandler::op_one_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -590,11 +589,11 @@ void POA_OldInherit::AMI_oneHandler::op_one_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -613,8 +612,8 @@ namespace POA_OldInherit
 
     void execute () override
     {
-      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -634,8 +633,8 @@ void POA_OldInherit::AMI_oneHandler::op_one_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -660,15 +659,15 @@ void POA_OldInherit::AMI_oneHandler::op_one_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::AMI_oneHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMI_oneHandler::_is_a (char const *value)
 {
   return
     (
@@ -678,7 +677,7 @@ void POA_OldInherit::AMI_oneHandler::op_one_excep_skel (
     );
 }
 
-const char* POA_OldInherit::AMI_oneHandler::_interface_repository_id () const
+char const *POA_OldInherit::AMI_oneHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_oneHandler:1.0";
 }
@@ -708,9 +707,9 @@ class TAO_OldInherit_AMH_two_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -806,9 +805,7 @@ POA_OldInherit::AMH_two::op_two_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldInherit::TAO_AMH_twoResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_OldInherit::TAO_AMH_twoResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -821,7 +818,7 @@ POA_OldInherit::AMH_two::op_two_skel (
     );
 }
 
-::CORBA::Boolean POA_OldInherit::AMH_two::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMH_two::_is_a (char const *value)
 {
   return
     (
@@ -831,7 +828,7 @@ POA_OldInherit::AMH_two::op_two_skel (
     );
 }
 
-const char* POA_OldInherit::AMH_two::_interface_repository_id () const
+char const *POA_OldInherit::AMH_two::_interface_repository_id () const
 {
   return "IDL:OldInherit/two:1.0";
 }
@@ -846,7 +843,7 @@ OldInherit::two*
 POA_OldInherit::AMH_two::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -861,9 +858,9 @@ class TAO_OldInherit_two_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -989,7 +986,7 @@ void POA_OldInherit::two::op_two_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -1010,15 +1007,15 @@ void POA_OldInherit::two::op_two_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::two::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::two::_is_a (char const *value)
 {
   return
     (
@@ -1028,7 +1025,7 @@ void POA_OldInherit::two::op_two_skel (
     );
 }
 
-const char* POA_OldInherit::two::_interface_repository_id () const
+char const *POA_OldInherit::two::_interface_repository_id () const
 {
   return "IDL:OldInherit/two:1.0";
 }
@@ -1079,9 +1076,9 @@ class TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -1214,7 +1211,7 @@ POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::op_two_excep (
     }
 
   _tao_ptr->op_two_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1250,7 +1247,7 @@ void POA_OldInherit::AMI_twoHandler::op_two_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -1271,11 +1268,11 @@ void POA_OldInherit::AMI_twoHandler::op_two_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1294,8 +1291,8 @@ namespace POA_OldInherit
 
     void execute () override
     {
-      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -1315,8 +1312,8 @@ void POA_OldInherit::AMI_twoHandler::op_two_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1341,15 +1338,15 @@ void POA_OldInherit::AMI_twoHandler::op_two_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::AMI_twoHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMI_twoHandler::_is_a (char const *value)
 {
   return
     (
@@ -1360,7 +1357,7 @@ void POA_OldInherit::AMI_twoHandler::op_two_excep_skel (
     );
 }
 
-const char* POA_OldInherit::AMI_twoHandler::_interface_repository_id () const
+char const *POA_OldInherit::AMI_twoHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_twoHandler:1.0";
 }
@@ -1390,9 +1387,9 @@ class TAO_OldInherit_AMH_three_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -1490,9 +1487,7 @@ POA_OldInherit::AMH_three::op_three_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldInherit::TAO_AMH_threeResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_OldInherit::TAO_AMH_threeResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1505,7 +1500,7 @@ POA_OldInherit::AMH_three::op_three_skel (
     );
 }
 
-::CORBA::Boolean POA_OldInherit::AMH_three::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMH_three::_is_a (char const *value)
 {
   return
     (
@@ -1515,7 +1510,7 @@ POA_OldInherit::AMH_three::op_three_skel (
     );
 }
 
-const char* POA_OldInherit::AMH_three::_interface_repository_id () const
+char const *POA_OldInherit::AMH_three::_interface_repository_id () const
 {
   return "IDL:OldInherit/three:1.0";
 }
@@ -1530,7 +1525,7 @@ OldInherit::three*
 POA_OldInherit::AMH_three::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1545,9 +1540,9 @@ class TAO_OldInherit_three_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -1675,7 +1670,7 @@ void POA_OldInherit::three::op_three_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -1696,15 +1691,15 @@ void POA_OldInherit::three::op_three_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::three::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::three::_is_a (char const *value)
 {
   return
     (
@@ -1714,7 +1709,7 @@ void POA_OldInherit::three::op_three_skel (
     );
 }
 
-const char* POA_OldInherit::three::_interface_repository_id () const
+char const *POA_OldInherit::three::_interface_repository_id () const
 {
   return "IDL:OldInherit/three:1.0";
 }
@@ -1765,9 +1760,9 @@ class TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -1880,7 +1875,7 @@ POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::op_three_excep (
     }
 
   _tao_ptr->op_three_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -1916,7 +1911,7 @@ void POA_OldInherit::AMI_threeHandler::op_three_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -1937,11 +1932,11 @@ void POA_OldInherit::AMI_threeHandler::op_three_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -1960,8 +1955,8 @@ namespace POA_OldInherit
 
     void execute () override
     {
-      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -1981,8 +1976,8 @@ void POA_OldInherit::AMI_threeHandler::op_three_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -2007,15 +2002,15 @@ void POA_OldInherit::AMI_threeHandler::op_three_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::AMI_threeHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMI_threeHandler::_is_a (char const *value)
 {
   return
     (
@@ -2026,7 +2021,7 @@ void POA_OldInherit::AMI_threeHandler::op_three_excep_skel (
     );
 }
 
-const char* POA_OldInherit::AMI_threeHandler::_interface_repository_id () const
+char const *POA_OldInherit::AMI_threeHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_threeHandler:1.0";
 }
@@ -2056,9 +2051,9 @@ class TAO_OldInherit_AMH_four_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -2158,9 +2153,7 @@ POA_OldInherit::AMH_four::op_four_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldInherit::TAO_AMH_fourResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_OldInherit::TAO_AMH_fourResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -2173,7 +2166,7 @@ POA_OldInherit::AMH_four::op_four_skel (
     );
 }
 
-::CORBA::Boolean POA_OldInherit::AMH_four::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMH_four::_is_a (char const *value)
 {
   return
     (
@@ -2185,7 +2178,7 @@ POA_OldInherit::AMH_four::op_four_skel (
     );
 }
 
-const char* POA_OldInherit::AMH_four::_interface_repository_id () const
+char const *POA_OldInherit::AMH_four::_interface_repository_id () const
 {
   return "IDL:OldInherit/four:1.0";
 }
@@ -2200,7 +2193,7 @@ OldInherit::four*
 POA_OldInherit::AMH_four::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -2215,9 +2208,9 @@ class TAO_OldInherit_four_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -2347,7 +2340,7 @@ void POA_OldInherit::four::op_four_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -2368,15 +2361,15 @@ void POA_OldInherit::four::op_four_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::four::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::four::_is_a (char const *value)
 {
   return
     (
@@ -2388,7 +2381,7 @@ void POA_OldInherit::four::op_four_skel (
     );
 }
 
-const char* POA_OldInherit::four::_interface_repository_id () const
+char const *POA_OldInherit::four::_interface_repository_id () const
 {
   return "IDL:OldInherit/four:1.0";
 }
@@ -2439,9 +2432,9 @@ class TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -2579,7 +2572,7 @@ POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::op_four_excep (
     }
 
   _tao_ptr->op_four_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -2615,7 +2608,7 @@ void POA_OldInherit::AMI_fourHandler::op_four_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -2636,11 +2629,11 @@ void POA_OldInherit::AMI_fourHandler::op_four_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -2659,8 +2652,8 @@ namespace POA_OldInherit
 
     void execute () override
     {
-      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -2680,8 +2673,8 @@ void POA_OldInherit::AMI_fourHandler::op_four_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -2706,15 +2699,15 @@ void POA_OldInherit::AMI_fourHandler::op_four_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::AMI_fourHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMI_fourHandler::_is_a (char const *value)
 {
   return
     (
@@ -2727,7 +2720,7 @@ void POA_OldInherit::AMI_fourHandler::op_four_excep_skel (
     );
 }
 
-const char* POA_OldInherit::AMI_fourHandler::_interface_repository_id () const
+char const *POA_OldInherit::AMI_fourHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_fourHandler:1.0";
 }
@@ -2757,9 +2750,9 @@ class TAO_OldInherit_AMH_five_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -2859,9 +2852,7 @@ POA_OldInherit::AMH_five::op_five_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_OldInherit::TAO_AMH_fiveResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_OldInherit::TAO_AMH_fiveResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -2874,7 +2865,7 @@ POA_OldInherit::AMH_five::op_five_skel (
     );
 }
 
-::CORBA::Boolean POA_OldInherit::AMH_five::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMH_five::_is_a (char const *value)
 {
   return
     (
@@ -2887,7 +2878,7 @@ POA_OldInherit::AMH_five::op_five_skel (
     );
 }
 
-const char* POA_OldInherit::AMH_five::_interface_repository_id () const
+char const *POA_OldInherit::AMH_five::_interface_repository_id () const
 {
   return "IDL:OldInherit/five:1.0";
 }
@@ -2902,7 +2893,7 @@ OldInherit::five*
 POA_OldInherit::AMH_five::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -2917,9 +2908,9 @@ class TAO_OldInherit_five_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -3049,7 +3040,7 @@ void POA_OldInherit::five::op_five_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -3070,15 +3061,15 @@ void POA_OldInherit::five::op_five_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::five::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::five::_is_a (char const *value)
 {
   return
     (
@@ -3091,7 +3082,7 @@ void POA_OldInherit::five::op_five_skel (
     );
 }
 
-const char* POA_OldInherit::five::_interface_repository_id () const
+char const *POA_OldInherit::five::_interface_repository_id () const
 {
   return "IDL:OldInherit/five:1.0";
 }
@@ -3142,9 +3133,9 @@ class TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (const char *str, std::size_t len) override;
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -3284,7 +3275,7 @@ POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::op_five_excep (
     }
 
   _tao_ptr->op_five_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -3320,7 +3311,7 @@ void POA_OldInherit::AMI_fiveHandler::op_five_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -3341,11 +3332,11 @@ void POA_OldInherit::AMI_fiveHandler::op_five_skel (
                          , args
                          , 1
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -3364,8 +3355,8 @@ namespace POA_OldInherit
 
     void execute () override
     {
-      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -3385,8 +3376,8 @@ void POA_OldInherit::AMI_fiveHandler::op_five_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -3411,15 +3402,15 @@ void POA_OldInherit::AMI_fiveHandler::op_five_excep_skel (
                          , args
                          , 2
                          , command
-#if TAO_HAS_INTERCEPTORS == 1
+  #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
+  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_OldInherit::AMI_fiveHandler::_is_a (const char* value)
+::CORBA::Boolean POA_OldInherit::AMI_fiveHandler::_is_a (char const *value)
 {
   return
     (
@@ -3433,7 +3424,7 @@ void POA_OldInherit::AMI_fiveHandler::op_five_excep_skel (
     );
 }
 
-const char* POA_OldInherit::AMI_fiveHandler::_interface_repository_id () const
+char const *POA_OldInherit::AMI_fiveHandler::_interface_repository_id () const
 {
   return "IDL:OldInherit/AMI_fiveHandler:1.0";
 }

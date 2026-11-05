@@ -62,7 +62,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -79,7 +79,7 @@ namespace TAO
 #define _SIMPLE3__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::simple3>
+  class  SArg_Traits<::simple3>
     : public Object_SArg_Traits_T<
         ::simple3_ptr,
         ::simple3_var,
@@ -94,7 +94,7 @@ namespace TAO
 #define _AMH_SIMPLE3EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_simple3ExceptionHolder>
+  class SArg_Traits<::AMH_simple3ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_simple3ExceptionHolder *,
@@ -111,7 +111,7 @@ namespace TAO
 #define _AMI_SIMPLE3HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_simple3Handler>
+  class  SArg_Traits<::AMI_simple3Handler>
     : public Object_SArg_Traits_T<
         ::AMI_simple3Handler_ptr,
         ::AMI_simple3Handler_var,
@@ -136,10 +136,10 @@ protected:
   POA_AMH_simple3 ();
 
 public:
-  POA_AMH_simple3 (const POA_AMH_simple3& rhs);
+  POA_AMH_simple3 (POA_AMH_simple3 const &rhs);
   ~POA_AMH_simple3 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -147,7 +147,7 @@ public:
 
   simple3 *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void op3_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -165,8 +165,8 @@ static void op4_skel (
 
 virtual void op4 (
     AMH_simple3ResponseHandler_ptr _tao_rh,
-    const ::CORBA::Any & x,
-    const ::CORBA::Any & y
+    ::CORBA::Any const & x,
+    ::CORBA::Any const & y
   ) = 0;
 
 };
@@ -188,10 +188,10 @@ public:
   using _stub_ptr_type = ::simple3_ptr;
   using _stub_var_type = ::simple3_var;
 
-  POA_simple3 (const POA_simple3& rhs) = default;
+  POA_simple3 (POA_simple3 const &rhs) = default;
   ~POA_simple3 () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -199,7 +199,7 @@ public:
 
   ::simple3 *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::CORBA::Long op3 (
     ::CORBA::Long a,
     ::simple3_out b,
@@ -211,7 +211,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual ::CORBA::Any * op4 (
-    const ::CORBA::Any & x,
+    ::CORBA::Any const & x,
     ::CORBA::Any & y,
     ::CORBA::Any_out z) = 0;
 
@@ -262,9 +262,9 @@ public:
   void op3_excep (
     ::AMH_simple3ExceptionHolder * holder) override;
   void op4 (
-    const ::CORBA::Any & return_value,
-    const ::CORBA::Any & y,
-    const ::CORBA::Any & z) override;
+    ::CORBA::Any const & return_value,
+    ::CORBA::Any const & y,
+    ::CORBA::Any const & z) override;
   void op4_excep (
     ::AMH_simple3ExceptionHolder * holder) override;
 };
@@ -286,10 +286,10 @@ public:
   using _stub_ptr_type = ::AMI_simple3Handler_ptr;
   using _stub_var_type = ::AMI_simple3Handler_var;
 
-  POA_AMI_simple3Handler (const POA_AMI_simple3Handler& rhs) = default;
+  POA_AMI_simple3Handler (POA_AMI_simple3Handler const &rhs) = default;
   ~POA_AMI_simple3Handler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -297,7 +297,7 @@ public:
 
   ::AMI_simple3Handler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op3 (
     ::CORBA::Long ami_return_val,
     ::simple3_ptr b,
@@ -316,9 +316,9 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void op4 (
-    const ::CORBA::Any & ami_return_val,
-    const ::CORBA::Any & y,
-    const ::CORBA::Any & z) = 0;
+    ::CORBA::Any const & ami_return_val,
+    ::CORBA::Any const & y,
+    ::CORBA::Any const & z) = 0;
 
   static void op4_skel (
       TAO_ServerRequest &server_request,

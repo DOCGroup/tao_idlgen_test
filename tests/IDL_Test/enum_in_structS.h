@@ -52,7 +52,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -66,7 +66,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::UnNamed>
+  class SArg_Traits<::UnNamed>
     : public
         Basic_SArg_Traits_T<
             ::UnNamed,
@@ -76,7 +76,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::HoldsEnum>
+  class SArg_Traits<::HoldsEnum>
     : public
         Fixed_Size_SArg_Traits_T<
             ::HoldsEnum,
@@ -86,7 +86,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::HoldsEnum::Named>
+  class SArg_Traits<::HoldsEnum::Named>
     : public
         Basic_SArg_Traits_T<
             ::HoldsEnum::Named,
@@ -96,7 +96,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::decl_heavy_struct>
+  class SArg_Traits<::decl_heavy_struct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::decl_heavy_struct,

@@ -62,7 +62,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -79,7 +79,7 @@ namespace TAO
 #define _MYVALUETYPE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::MyValueType>
+  class SArg_Traits<::MyValueType>
     : public
         Object_SArg_Traits_T<
             ::MyValueType *,
@@ -96,7 +96,7 @@ namespace TAO
 #define _DEFAULTINITIALIZEDVALUE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::DefaultInitializedValue>
+  class SArg_Traits<::DefaultInitializedValue>
     : public
         Object_SArg_Traits_T<
             ::DefaultInitializedValue *,
@@ -110,7 +110,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::ValueSort2>
+  class SArg_Traits<::ValueSort2>
     : public
         Basic_SArg_Traits_T<
             ::ValueSort2,
@@ -120,7 +120,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::MyValueTypeUnion>
+  class SArg_Traits<::MyValueTypeUnion>
     : public
         Var_Size_SArg_Traits_T<
             ::MyValueTypeUnion,
@@ -133,7 +133,7 @@ namespace TAO
 #define _RECVALUETYPE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::RecValueType>
+  class SArg_Traits<::RecValueType>
     : public
         Object_SArg_Traits_T<
             ::RecValueType *,
@@ -150,7 +150,7 @@ namespace TAO
 #define _GETSDEPRECATEDMEMBER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::GetsDeprecatedMember>
+  class SArg_Traits<::GetsDeprecatedMember>
     : public
         Object_SArg_Traits_T<
             ::GetsDeprecatedMember *,
@@ -167,7 +167,7 @@ namespace TAO
 #define _X_VALUETYPE_AXXX__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::X_VALUETYPE::AXXX>
+  class SArg_Traits<::X_VALUETYPE::AXXX>
     : public
         Object_SArg_Traits_T<
             ::X_VALUETYPE::AXXX *,
@@ -184,7 +184,7 @@ namespace TAO
 #define _X_VALUETYPE_BXXX__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::X_VALUETYPE::BXXX>
+  class SArg_Traits<::X_VALUETYPE::BXXX>
     : public
         Object_SArg_Traits_T<
             ::X_VALUETYPE::BXXX *,
@@ -198,7 +198,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::X_VALUETYPE::BSeq>
+  class SArg_Traits<::X_VALUETYPE::BSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::X_VALUETYPE::BSeq,
@@ -211,7 +211,7 @@ namespace TAO
 #define _MODSELECTION_SELECTIONDEFNS_CRITERION__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::ModSelection::SelectionDefns::Criterion>
+  class SArg_Traits<::ModSelection::SelectionDefns::Criterion>
     : public
         Object_SArg_Traits_T<
             ::ModSelection::SelectionDefns::Criterion *,
@@ -228,7 +228,7 @@ namespace TAO
 #define _MODSELECTION_SELECTIONDEFNS_CRITERIONEXPR__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::ModSelection::SelectionDefns::CriterionExpr>
+  class SArg_Traits<::ModSelection::SelectionDefns::CriterionExpr>
     : public
         Object_SArg_Traits_T<
             ::ModSelection::SelectionDefns::CriterionExpr *,
@@ -242,7 +242,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionInfos>
+  class SArg_Traits<::ModSelection::SelectionDefns::CriterionExpr::RightCriterionInfos>
     : public
         Var_Size_SArg_Traits_T<
             ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionInfos,
@@ -252,7 +252,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr>
+  class SArg_Traits<::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr>
     : public
         Var_Size_SArg_Traits_T<
             ::ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr,

@@ -95,10 +95,10 @@ namespace Test
     static DynAny_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static DynAny_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -109,9 +109,9 @@ namespace Test
 
   private:
     // Private and unimplemented for concrete interfaces.
-    DynAny (const DynAny &) = delete;
+    DynAny (DynAny const &) = delete;
     DynAny (DynAny &&) = delete;
-    DynAny &operator= (const DynAny &) = delete;
+    DynAny &operator= (DynAny const &) = delete;
     DynAny &operator= (DynAny &&) = delete;
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_DynAny;
@@ -142,7 +142,7 @@ namespace Test
 
   class TAO_IDL_TEST_STUB_Export NameDynAnyPairSeq
     : public
-        ::TAO::unbounded_value_sequence< NameDynAnyPair>
+        ::TAO::unbounded_value_sequence<NameDynAnyPair>
   {
   public:
     NameDynAnyPairSeq () = default;
@@ -179,7 +179,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -194,7 +194,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::Test::NameDynAnyPair>
+  class Arg_Traits<::Test::NameDynAnyPair>
     : public
         Var_Size_Arg_Traits_T<
             ::Test::NameDynAnyPair,
@@ -204,7 +204,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Test::NameDynAnyPairSeq>
+  class Arg_Traits<::Test::NameDynAnyPairSeq>
     : public
         Var_Size_Arg_Traits_T<
             ::Test::NameDynAnyPairSeq,
@@ -226,7 +226,7 @@ namespace TAO
 #define _TEST_DYNANY__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::Test::DynAny>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Test::DynAny>
   {
     static ::Test::DynAny_ptr duplicate (::Test::DynAny_ptr p);
     static void release (::Test::DynAny_ptr p);
@@ -243,7 +243,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Test::DynAny_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Test::DynAny_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Test::DynAny_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Test::DynAny_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
