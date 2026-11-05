@@ -63,13 +63,13 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      26, 26, 26, 26, 26, 26, 26, 26, 26, 26,
      26, 26, 26, 26, 26, 26, 26, 26, 26, 26,
@@ -85,23 +85,21 @@ TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::hash (const char *str, std::si
      26, 26,  0, 26, 26, 26,  0, 26, 26, 26,
      26, 26, 26, 26, 26, 26, 26, 26,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
-const TAO_operation_db_entry *
-TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {25};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {25};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {21};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {25};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {25};
 
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
+  static constexpr std::array<TAO_operation_db_entry , 26> wordlist =
+    {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
@@ -112,7 +110,7 @@ TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (const char *str, std::
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"Bug_2350_Regression_excep", std::addressof(POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel), std::addressof(_TAO_Bug_2350_Regression_Direct_Proxy_Impl::Bug_2350_Regression_excep)},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
@@ -120,7 +118,7 @@ TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (const char *str, std::
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -224,13 +222,13 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_Bug_2350_Regression_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_Bug_2350_Regression_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      26, 26, 26, 26, 26, 26, 26, 26, 26, 26,
      26, 26, 26, 26, 26, 26, 26, 26, 26, 26,
@@ -246,23 +244,21 @@ TAO_Bug_2350_Regression_Perfect_Hash_OpTable::hash (const char *str, std::size_t
      26, 26,  0, 26, 26, 26,  0, 26, 26, 26,
      26, 26, 26, 26, 26, 26, 26, 26,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
-const TAO_operation_db_entry *
-TAO_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {6};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {25};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {25};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {21};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {11};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {25};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {25};
 
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
+  static constexpr std::array<TAO_operation_db_entry , 26> wordlist =
+    {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
@@ -273,7 +269,7 @@ TAO_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (const char *str, std::size
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"Bug_2350_Regression_excep", std::addressof(POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel), std::addressof(_TAO_Bug_2350_Regression_Direct_Proxy_Impl::Bug_2350_Regression_excep)},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
@@ -281,7 +277,7 @@ TAO_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (const char *str, std::size
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
@@ -465,13 +461,13 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
 /* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
-TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::hash (const char *str, std::size_t len)
+TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      32, 32, 32, 32, 32, 32, 32, 32, 32, 32,
      32, 32, 32, 32, 32, 32, 32, 32, 32, 32,
@@ -487,23 +483,21 @@ TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::hash (const char *str, 
      32, 32,  0, 32, 32, 32,  0, 32, 32, 32,
      32, 32, 32, 32, 32, 32, 32, 32,
     };
-  return len + asso_values[static_cast<unsigned char>(str[len - 1])] + asso_values[static_cast<unsigned char>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
-const TAO_operation_db_entry *
-TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::lookup (const char *str, std::size_t len)
+TAO_operation_db_entry const *
+TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
-  [[maybe_unused]] constexpr std::size_t TOTAL_KEYWORDS {7};
-  [[maybe_unused]] constexpr std::size_t MIN_WORD_LENGTH {5};
-  [[maybe_unused]] constexpr std::size_t MAX_WORD_LENGTH {31};
-  [[maybe_unused]] constexpr std::size_t MIN_HASH_VALUE {5};
-  [[maybe_unused]] constexpr std::size_t MAX_HASH_VALUE {31};
-  [[maybe_unused]] constexpr std::size_t HASH_VALUE_RANGE {27};
-  [[maybe_unused]] constexpr std::size_t DUPLICATES {0};
-  [[maybe_unused]] constexpr std::size_t WORDLIST_SIZE {12};
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {31};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {31};
 
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
+  static constexpr std::array<TAO_operation_db_entry , 32> wordlist =
+    {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
@@ -516,7 +510,7 @@ TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::lookup (const char *str
       {"Bug_2350_Regression_excep", std::addressof(POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_skel), std::addressof(_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep)},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"Bug_2350_Regression_excep_excep", std::addressof(POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel), std::addressof(_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep_excep)},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
@@ -524,7 +518,7 @@ TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::lookup (const char *str
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
           if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             return std::addressof (wordlist[key]);
