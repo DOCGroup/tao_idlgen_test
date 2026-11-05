@@ -143,19 +143,19 @@ namespace foo
       static fooBar_ptr _nil ();
 
       virtual ::foo::theDate getDate (
-        ::foo::theDate const & a,
+        const ::foo::theDate & a,
         ::foo::theDate & b,
         ::foo::theDate_out c);
 
       virtual void sendc_getDate (
         ::foo::bar::AMI_fooBarHandler_ptr ami_handler,
-        ::foo::theDate const & a,
-        ::foo::theDate const & b);
+        const ::foo::theDate & a,
+        const ::foo::theDate & b);
 
-      ::CORBA::Boolean _is_a (char const *type_id) override;
-      char const *_interface_repository_id () const override;
-      static char const *_desc_repository_id ();
-      static char const *_desc_interface_name ();
+      ::CORBA::Boolean _is_a (const char *type_id) override;
+      const char* _interface_repository_id () const override;
+      static const char* _desc_repository_id ();
+      static const char* _desc_interface_name ();
       ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
     protected:
@@ -176,9 +176,9 @@ namespace foo
 
     private:
       // Private and unimplemented for concrete interfaces.
-      fooBar (fooBar const &) = delete;
+      fooBar (const fooBar &) = delete;
       fooBar (fooBar &&) = delete;
-      fooBar &operator= (fooBar const &) = delete;
+      fooBar &operator= (const fooBar &) = delete;
       fooBar &operator= (fooBar &&) = delete;
     };
     extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_fooBar;
@@ -241,8 +241,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_fooBarExceptionHolder (AMH_fooBarExceptionHolder const &);
-  void operator= (AMH_fooBarExceptionHolder const &);
+  AMH_fooBarExceptionHolder (const AMH_fooBarExceptionHolder &);
+  void operator= (const AMH_fooBarExceptionHolder &);
 
   ::CORBA::Exception *exception;
 
@@ -288,17 +288,17 @@ public:
   static AMH_fooBarResponseHandler_ptr _nil ();
 
   virtual void getDate (
-    ::foo::theDate const & return_value,
-    ::foo::theDate const & b,
-    ::foo::theDate const & c) = 0;
+    const ::foo::theDate & return_value,
+    const ::foo::theDate & b,
+    const ::foo::theDate & c) = 0;
 
   virtual void getDate_excep (
     ::foo::bar::AMH_fooBarExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (char const *type_id) override;
-  char const *_interface_repository_id () const override;
-  static char const *_desc_repository_id ();
-  static char const *_desc_interface_name ();
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
+  static const char* _desc_repository_id ();
+  static const char* _desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -309,9 +309,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_fooBarResponseHandler (AMH_fooBarResponseHandler const &) = delete;
+  AMH_fooBarResponseHandler (const AMH_fooBarResponseHandler &) = delete;
   AMH_fooBarResponseHandler (AMH_fooBarResponseHandler &&) = delete;
-  AMH_fooBarResponseHandler &operator= (AMH_fooBarResponseHandler const &) = delete;
+  AMH_fooBarResponseHandler &operator= (const AMH_fooBarResponseHandler &) = delete;
   AMH_fooBarResponseHandler &operator= (AMH_fooBarResponseHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_fooBarResponseHandler;
@@ -348,9 +348,9 @@ public:
   static AMI_fooBarHandler_ptr _nil ();
 
   virtual void getDate (
-    ::foo::theDate const & ami_return_val,
-    ::foo::theDate const & b,
-    ::foo::theDate const & c);
+    const ::foo::theDate & ami_return_val,
+    const ::foo::theDate & b,
+    const ::foo::theDate & c);
 
   static void
   getDate_reply_stub (
@@ -361,10 +361,10 @@ public:
   virtual void getDate_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (char const *type_id) override;
-  char const *_interface_repository_id () const override;
-  static char const *_desc_repository_id ();
-  static char const *_desc_interface_name ();
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
+  static const char* _desc_repository_id ();
+  static const char* _desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -385,9 +385,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_fooBarHandler (AMI_fooBarHandler const &) = delete;
+  AMI_fooBarHandler (const AMI_fooBarHandler &) = delete;
   AMI_fooBarHandler (AMI_fooBarHandler &&) = delete;
-  AMI_fooBarHandler &operator= (AMI_fooBarHandler const &) = delete;
+  AMI_fooBarHandler &operator= (const AMI_fooBarHandler &) = delete;
   AMI_fooBarHandler &operator= (AMI_fooBarHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_fooBarHandler;
@@ -406,7 +406,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -421,7 +421,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::foo::theDate>
+  class Arg_Traits< ::foo::theDate>
     : public
         Fixed_Size_Arg_Traits_T<
             ::foo::theDate,
@@ -431,7 +431,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::foo::bar::theDate>
+  class Arg_Traits< ::foo::bar::theDate>
     : public
         Fixed_Size_Arg_Traits_T<
             ::foo::bar::theDate,
@@ -444,7 +444,7 @@ namespace TAO
 #define _FOO_BAR_FOOBAR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::foo::bar::fooBar>
+  class  Arg_Traits< ::foo::bar::fooBar>
     : public Object_Arg_Traits_T<
         ::foo::bar::fooBar_ptr,
         ::foo::bar::fooBar_var,
@@ -460,7 +460,7 @@ namespace TAO
 #define _FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::foo::bar::AMH_fooBarExceptionHolder>
+  class Arg_Traits< ::foo::bar::AMH_fooBarExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::foo::bar::AMH_fooBarExceptionHolder *,
@@ -478,7 +478,7 @@ namespace TAO
 #define _FOO_BAR_AMI_FOOBARHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::foo::bar::AMI_fooBarHandler>
+  class  Arg_Traits< ::foo::bar::AMI_fooBarHandler>
     : public Object_Arg_Traits_T<
         ::foo::bar::AMI_fooBarHandler_ptr,
         ::foo::bar::AMI_fooBarHandler_var,
@@ -508,9 +508,11 @@ namespace OBV_foo
     ~AMH_fooBarExceptionHolder () override;
 
   protected:
-    ::CORBA::Boolean _tao_marshal__foo_bar_AMH_fooBarExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+    ::CORBA::Boolean
+    _tao_marshal__foo_bar_AMH_fooBarExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-    ::CORBA::Boolean _tao_unmarshal__foo_bar_AMH_fooBarExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+    ::CORBA::Boolean
+    _tao_unmarshal__foo_bar_AMH_fooBarExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
     ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
     ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -532,7 +534,7 @@ namespace TAO
 #define _FOO_BAR_FOOBAR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::foo::bar::fooBar>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::foo::bar::fooBar>
   {
     static ::foo::bar::fooBar_ptr duplicate (::foo::bar::fooBar_ptr p);
     static void release (::foo::bar::fooBar_ptr p);
@@ -559,7 +561,7 @@ namespace TAO
 #define _FOO_BAR_AMH_FOOBARRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::foo::bar::AMH_fooBarResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::foo::bar::AMH_fooBarResponseHandler>
   {
     static ::foo::bar::AMH_fooBarResponseHandler_ptr duplicate (::foo::bar::AMH_fooBarResponseHandler_ptr p);
     static void release (::foo::bar::AMH_fooBarResponseHandler_ptr p);
@@ -573,7 +575,7 @@ namespace TAO
 #define _FOO_BAR_AMI_FOOBARHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::foo::bar::AMI_fooBarHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::foo::bar::AMI_fooBarHandler>
   {
     static ::foo::bar::AMI_fooBarHandler_ptr duplicate (::foo::bar::AMI_fooBarHandler_ptr p);
     static void release (::foo::bar::AMI_fooBarHandler_ptr p);
@@ -608,7 +610,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo::bar::fooBar_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo::bar::fooBar_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, foo::bar::fooBar_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, foo::bar::fooBar_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -626,7 +628,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo::bar::AMH_fooBarResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo::bar::AMH_fooBarResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, foo::bar::AMH_fooBarResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, foo::bar::AMH_fooBarResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -635,7 +637,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo::bar::AMI_fooBarHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, foo::bar::AMI_fooBarHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, foo::bar::AMI_fooBarHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, foo::bar::AMI_fooBarHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -655,7 +657,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, foo::bar::fooBar_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const foo::bar::fooBar_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, foo::bar::fooBar_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -671,14 +673,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, foo::bar::AMH_fooBarExceptionHolder const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const foo::bar::AMH_fooBarExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, foo::bar::AMH_fooBarExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, foo::bar::AMI_fooBarHandler_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const foo::bar::AMI_fooBarHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, foo::bar::AMI_fooBarHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

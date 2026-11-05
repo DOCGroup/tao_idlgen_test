@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #define _SCOPE_TEST_I_SCOPE_TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::scope_test::i_scope_test>
+  class  SArg_Traits< ::scope_test::i_scope_test>
     : public Object_SArg_Traits_T<
         ::scope_test::i_scope_test_ptr,
         ::scope_test::i_scope_test_var,
@@ -89,7 +89,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::scope_test::same_scope_struct>
+  class SArg_Traits< ::scope_test::same_scope_struct>
     : public
         Var_Size_SArg_Traits_T<
             ::scope_test::same_scope_struct,
@@ -99,7 +99,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::mod2::scope_struct>
+  class SArg_Traits< ::mod2::scope_struct>
     : public
         Var_Size_SArg_Traits_T<
             ::mod2::scope_struct,
@@ -112,7 +112,7 @@ namespace TAO
 #define _MOD2_FWD__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::mod2::fwd>
+  class  SArg_Traits< ::mod2::fwd>
     : public Object_SArg_Traits_T<
         ::mod2::fwd_ptr,
         ::mod2::fwd_var,
@@ -127,7 +127,7 @@ namespace TAO
 #define _MOD2_FULL__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::mod2::full>
+  class  SArg_Traits< ::mod2::full>
     : public Object_SArg_Traits_T<
         ::mod2::full_ptr,
         ::mod2::full_var,
@@ -142,7 +142,7 @@ namespace TAO
 #define _MOD2_AMH_FULLEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::mod2::AMH_fullExceptionHolder>
+  class SArg_Traits< ::mod2::AMH_fullExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::mod2::AMH_fullExceptionHolder *,
@@ -159,7 +159,7 @@ namespace TAO
 #define _MOD2_AMI_FULLHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::mod2::AMI_fullHandler>
+  class  SArg_Traits< ::mod2::AMI_fullHandler>
     : public Object_SArg_Traits_T<
         ::mod2::AMI_fullHandler_ptr,
         ::mod2::AMI_fullHandler_var,
@@ -171,7 +171,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::mod2::full_seq2>
+  class SArg_Traits< ::mod2::full_seq2>
     : public
         Var_Size_SArg_Traits_T<
             ::mod2::full_seq2,
@@ -184,7 +184,7 @@ namespace TAO
 #define _MOD2_FWD__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::mod2::fwd>
+  class  SArg_Traits< ::mod2::fwd>
     : public Object_SArg_Traits_T<
         ::mod2::fwd_ptr,
         ::mod2::fwd_var,
@@ -199,7 +199,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_PARENTS__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::fwd_mixed_intf::mixed_parents>
+  class  SArg_Traits< ::fwd_mixed_intf::mixed_parents>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::mixed_parents_ptr,
         ::fwd_mixed_intf::mixed_parents_var,
@@ -214,7 +214,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_CONCRETE_PARENT__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::fwd_mixed_intf::concrete_parent>
+  class  SArg_Traits< ::fwd_mixed_intf::concrete_parent>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::concrete_parent_ptr,
         ::fwd_mixed_intf::concrete_parent_var,
@@ -229,7 +229,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMH_CONCRETE_PARENTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::fwd_mixed_intf::AMH_concrete_parentExceptionHolder>
+  class SArg_Traits< ::fwd_mixed_intf::AMH_concrete_parentExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::fwd_mixed_intf::AMH_concrete_parentExceptionHolder *,
@@ -246,7 +246,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_CONCRETE_PARENTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::fwd_mixed_intf::AMI_concrete_parentHandler>
+  class  SArg_Traits< ::fwd_mixed_intf::AMI_concrete_parentHandler>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::AMI_concrete_parentHandler_ptr,
         ::fwd_mixed_intf::AMI_concrete_parentHandler_var,
@@ -261,7 +261,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_ABSTRACT_PARENT__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::fwd_mixed_intf::abstract_parent>
+  class  SArg_Traits< ::fwd_mixed_intf::abstract_parent>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::abstract_parent_ptr,
         ::fwd_mixed_intf::abstract_parent_var,
@@ -276,7 +276,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_ABS_FIRST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::fwd_mixed_intf::mixed_abs_first>
+  class  SArg_Traits< ::fwd_mixed_intf::mixed_abs_first>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::mixed_abs_first_ptr,
         ::fwd_mixed_intf::mixed_abs_first_var,
@@ -291,7 +291,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_MIXED_ABS_FIRSTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::fwd_mixed_intf::AMI_mixed_abs_firstHandler>
+  class  SArg_Traits< ::fwd_mixed_intf::AMI_mixed_abs_firstHandler>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr,
         ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_var,
@@ -306,7 +306,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_MIXED_CONC_FIRST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::fwd_mixed_intf::mixed_conc_first>
+  class  SArg_Traits< ::fwd_mixed_intf::mixed_conc_first>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::mixed_conc_first_ptr,
         ::fwd_mixed_intf::mixed_conc_first_var,
@@ -321,7 +321,7 @@ namespace TAO
 #define _FWD_MIXED_INTF_AMI_MIXED_CONC_FIRSTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::fwd_mixed_intf::AMI_mixed_conc_firstHandler>
+  class  SArg_Traits< ::fwd_mixed_intf::AMI_mixed_conc_firstHandler>
     : public Object_SArg_Traits_T<
         ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr,
         ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_var,
@@ -336,7 +336,7 @@ namespace TAO
 #define _OBV_FWD_FORWARDEDTYPE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::obv_fwd::ForwardedType>
+  class SArg_Traits< ::obv_fwd::ForwardedType>
     : public
         Object_SArg_Traits_T<
             ::obv_fwd::ForwardedType *,
@@ -353,7 +353,7 @@ namespace TAO
 #define _OBV_FWD_ENCLOSINGTYPE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::obv_fwd::EnclosingType>
+  class SArg_Traits< ::obv_fwd::EnclosingType>
     : public
         Object_SArg_Traits_T<
             ::obv_fwd::EnclosingType *,
@@ -370,7 +370,7 @@ namespace TAO
 #define _OBV_FWD_FORWARDEDTYPE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::obv_fwd::ForwardedType>
+  class SArg_Traits< ::obv_fwd::ForwardedType>
     : public
         Object_SArg_Traits_T<
             ::obv_fwd::ForwardedType *,
@@ -407,10 +407,10 @@ namespace POA_mod2
     AMH_full ();
 
   public:
-    AMH_full (AMH_full const &rhs);
+    AMH_full (const AMH_full& rhs);
     ~AMH_full () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -418,7 +418,7 @@ namespace POA_mod2
 
     mod2::full *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -449,10 +449,10 @@ public:
   using _stub_ptr_type = ::mod2::full_ptr;
   using _stub_var_type = ::mod2::full_var;
 
-  full (full const &rhs) = default;
+  full (const full& rhs) = default;
   ~full () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -460,7 +460,7 @@ public:
 
   ::mod2::full *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual ::mod2::fwd_ptr op (
     ::mod2::fwd_ptr inarg,
     ::mod2::fwd_ptr & inoutarg,
@@ -525,10 +525,10 @@ public:
   using _stub_ptr_type = ::mod2::AMI_fullHandler_ptr;
   using _stub_var_type = ::mod2::AMI_fullHandler_var;
 
-  AMI_fullHandler (AMI_fullHandler const &rhs) = default;
+  AMI_fullHandler (const AMI_fullHandler& rhs) = default;
   ~AMI_fullHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -536,7 +536,7 @@ public:
 
   ::mod2::AMI_fullHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op (
     ::mod2::fwd_ptr ami_return_val,
     ::mod2::fwd_ptr inoutarg,
@@ -592,10 +592,10 @@ namespace POA_fwd_mixed_intf
     AMH_concrete_parent ();
 
   public:
-    AMH_concrete_parent (AMH_concrete_parent const &rhs);
+    AMH_concrete_parent (const AMH_concrete_parent& rhs);
     ~AMH_concrete_parent () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -603,7 +603,7 @@ namespace POA_fwd_mixed_intf
 
     fwd_mixed_intf::concrete_parent *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 class concrete_parent;
@@ -623,10 +623,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::concrete_parent_ptr;
   using _stub_var_type = ::fwd_mixed_intf::concrete_parent_var;
 
-  concrete_parent (concrete_parent const &rhs) = default;
+  concrete_parent (const concrete_parent& rhs) = default;
   ~concrete_parent () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -634,7 +634,7 @@ public:
 
   ::fwd_mixed_intf::concrete_parent *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -680,10 +680,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::AMI_concrete_parentHandler_ptr;
   using _stub_var_type = ::fwd_mixed_intf::AMI_concrete_parentHandler_var;
 
-  AMI_concrete_parentHandler (AMI_concrete_parentHandler const &rhs) = default;
+  AMI_concrete_parentHandler (const AMI_concrete_parentHandler& rhs) = default;
   ~AMI_concrete_parentHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -691,7 +691,7 @@ public:
 
   ::fwd_mixed_intf::AMI_concrete_parentHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -726,10 +726,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::mixed_abs_first_ptr;
   using _stub_var_type = ::fwd_mixed_intf::mixed_abs_first_var;
 
-  mixed_abs_first (mixed_abs_first const &rhs) = default;
+  mixed_abs_first (const mixed_abs_first& rhs) = default;
   ~mixed_abs_first () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -737,7 +737,7 @@ public:
 
   ::fwd_mixed_intf::mixed_abs_first *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -772,10 +772,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_ptr;
   using _stub_var_type = ::fwd_mixed_intf::AMI_mixed_abs_firstHandler_var;
 
-  AMI_mixed_abs_firstHandler (AMI_mixed_abs_firstHandler const &rhs) = default;
+  AMI_mixed_abs_firstHandler (const AMI_mixed_abs_firstHandler& rhs) = default;
   ~AMI_mixed_abs_firstHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -783,7 +783,7 @@ public:
 
   ::fwd_mixed_intf::AMI_mixed_abs_firstHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -818,10 +818,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::mixed_conc_first_ptr;
   using _stub_var_type = ::fwd_mixed_intf::mixed_conc_first_var;
 
-  mixed_conc_first (mixed_conc_first const &rhs) = default;
+  mixed_conc_first (const mixed_conc_first& rhs) = default;
   ~mixed_conc_first () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -829,7 +829,7 @@ public:
 
   ::fwd_mixed_intf::mixed_conc_first *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -864,10 +864,10 @@ public:
   using _stub_ptr_type = ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_ptr;
   using _stub_var_type = ::fwd_mixed_intf::AMI_mixed_conc_firstHandler_var;
 
-  AMI_mixed_conc_firstHandler (AMI_mixed_conc_firstHandler const &rhs) = default;
+  AMI_mixed_conc_firstHandler (const AMI_mixed_conc_firstHandler& rhs) = default;
   ~AMI_mixed_conc_firstHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -875,7 +875,7 @@ public:
 
   ::fwd_mixed_intf::AMI_mixed_conc_firstHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

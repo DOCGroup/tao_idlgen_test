@@ -64,7 +64,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -78,7 +78,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::Not_Anon::short_seq>
+  class SArg_Traits< ::Not_Anon::short_seq>
     : public
         Var_Size_SArg_Traits_T<
             ::Not_Anon::short_seq,
@@ -88,7 +88,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Half_Anon::char_seq_array_tag>
+  class SArg_Traits< ::Half_Anon::char_seq_array_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::Half_Anon::char_seq_array_out,
@@ -99,7 +99,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Half_Anon::bd_ulong_seq_array_tag>
+  class SArg_Traits< ::Half_Anon::bd_ulong_seq_array_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::Half_Anon::bd_ulong_seq_array_out,
@@ -110,7 +110,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Half_Anon::ushort_seq_array_tag>
+  class SArg_Traits< ::Half_Anon::ushort_seq_array_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::Half_Anon::ushort_seq_array_out,
@@ -121,7 +121,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Half_Anon::bd_ushort_seq_array_tag>
+  class SArg_Traits< ::Half_Anon::bd_ushort_seq_array_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::Half_Anon::bd_ushort_seq_array_out,
@@ -135,7 +135,7 @@ namespace TAO
 #define _ALL_ANON_ANON_BD_STRING_TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::All_Anon::anon_bd_string_test>
+  class  SArg_Traits< ::All_Anon::anon_bd_string_test>
     : public Object_SArg_Traits_T<
         ::All_Anon::anon_bd_string_test_ptr,
         ::All_Anon::anon_bd_string_test_var,
@@ -338,7 +338,7 @@ class SArg_Traits<All_Anon_anon_bd_string_test_sendc_TestFunc43_inarg>
 #define _ALL_ANON_AMH_ANON_BD_STRING_TESTEXCEPTIONHOLDER__SARG_TRAITS_
 
 template<>
-class SArg_Traits<::All_Anon::AMH_anon_bd_string_testExceptionHolder>
+class SArg_Traits< ::All_Anon::AMH_anon_bd_string_testExceptionHolder>
   : public
       Object_SArg_Traits_T<
           ::All_Anon::AMH_anon_bd_string_testExceptionHolder *,
@@ -355,7 +355,7 @@ class SArg_Traits<::All_Anon::AMH_anon_bd_string_testExceptionHolder>
 #define _ALL_ANON_AMI_ANON_BD_STRING_TESTHANDLER__SARG_TRAITS_
 
 template<>
-class  SArg_Traits<::All_Anon::AMI_anon_bd_string_testHandler>
+class  SArg_Traits< ::All_Anon::AMI_anon_bd_string_testHandler>
   : public Object_SArg_Traits_T<
       ::All_Anon::AMI_anon_bd_string_testHandler_ptr,
       ::All_Anon::AMI_anon_bd_string_testHandler_var,
@@ -470,10 +470,10 @@ namespace POA_All_Anon
     AMH_anon_bd_string_test ();
 
   public:
-    AMH_anon_bd_string_test (AMH_anon_bd_string_test const &rhs);
+    AMH_anon_bd_string_test (const AMH_anon_bd_string_test& rhs);
     ~AMH_anon_bd_string_test () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -481,7 +481,7 @@ namespace POA_All_Anon
 
     All_Anon::anon_bd_string_test *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   static void TestFunc_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -525,7 +525,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc4 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      char const * inarg
+      const char * inarg
     ) = 0;
 
   static void TestFunc41_skel (
@@ -535,7 +535,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc41 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      char const * inarg
+      const char * inarg
     ) = 0;
 
   static void TestFunc42_skel (
@@ -545,7 +545,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc42 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      char const * inarg
+      const char * inarg
     ) = 0;
 
   static void TestFunc43_skel (
@@ -555,7 +555,7 @@ namespace POA_All_Anon
 
   virtual void TestFunc43 (
       All_Anon::AMH_anon_bd_string_testResponseHandler_ptr _tao_rh,
-      char const * inarg
+      const char * inarg
     ) = 0;
 
 };
@@ -577,10 +577,10 @@ public:
   using _stub_ptr_type = ::All_Anon::anon_bd_string_test_ptr;
   using _stub_var_type = ::All_Anon::anon_bd_string_test_var;
 
-  anon_bd_string_test (anon_bd_string_test const &rhs) = default;
+  anon_bd_string_test (const anon_bd_string_test& rhs) = default;
   ~anon_bd_string_test () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -588,7 +588,7 @@ public:
 
   ::All_Anon::anon_bd_string_test *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual char * TestFunc () = 0;
 
   static void TestFunc_skel (
@@ -614,28 +614,28 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc4 (
-    char const * inarg) = 0;
+    const char * inarg) = 0;
 
   static void TestFunc4_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc41 (
-    char const * inarg) = 0;
+    const char * inarg) = 0;
 
   static void TestFunc41_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc42 (
-    char const * inarg) = 0;
+    const char * inarg) = 0;
 
   static void TestFunc42_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc43 (
-    char const * inarg) = 0;
+    const char * inarg) = 0;
 
   static void TestFunc43_skel (
       TAO_ServerRequest &server_request,
@@ -700,19 +700,19 @@ public:
   TAO_AMH_anon_bd_string_testResponseHandler () = default;
   virtual ~TAO_AMH_anon_bd_string_testResponseHandler () = default;
   void TestFunc (
-    char const * return_value) override;
+    const char * return_value) override;
   void TestFunc_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
   void TestFunc2 (
-    char const * return_value) override;
+    const char * return_value) override;
   void TestFunc2_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
   void TestFunc3 (
-    char const * return_value) override;
+    const char * return_value) override;
   void TestFunc3_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
   void TestFunc23 (
-    char const * return_value) override;
+    const char * return_value) override;
   void TestFunc23_excep (
     ::All_Anon::AMH_anon_bd_string_testExceptionHolder * holder) override;
   void TestFunc4 () override;
@@ -746,10 +746,10 @@ public:
   using _stub_ptr_type = ::All_Anon::AMI_anon_bd_string_testHandler_ptr;
   using _stub_var_type = ::All_Anon::AMI_anon_bd_string_testHandler_var;
 
-  AMI_anon_bd_string_testHandler (AMI_anon_bd_string_testHandler const &rhs) = default;
+  AMI_anon_bd_string_testHandler (const AMI_anon_bd_string_testHandler& rhs) = default;
   ~AMI_anon_bd_string_testHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -757,9 +757,9 @@ public:
 
   ::All_Anon::AMI_anon_bd_string_testHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void TestFunc (
-    char const * ami_return_val) = 0;
+    const char * ami_return_val) = 0;
 
   static void TestFunc_skel (
       TAO_ServerRequest &server_request,
@@ -773,7 +773,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc2 (
-    char const * ami_return_val) = 0;
+    const char * ami_return_val) = 0;
 
   static void TestFunc2_skel (
       TAO_ServerRequest &server_request,
@@ -787,7 +787,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc3 (
-    char const * ami_return_val) = 0;
+    const char * ami_return_val) = 0;
 
   static void TestFunc3_skel (
       TAO_ServerRequest &server_request,
@@ -801,7 +801,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void TestFunc23 (
-    char const * ami_return_val) = 0;
+    const char * ami_return_val) = 0;
 
   static void TestFunc23_skel (
       TAO_ServerRequest &server_request,

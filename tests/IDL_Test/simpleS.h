@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::vec10>
+  class SArg_Traits< ::vec10>
     : public
         Var_Size_SArg_Traits_T<
             ::vec10,
@@ -87,7 +87,7 @@ namespace TAO
 #define _SIMPLE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::simple>
+  class  SArg_Traits< ::simple>
     : public Object_SArg_Traits_T<
         ::simple_ptr,
         ::simple_var,
@@ -102,7 +102,7 @@ namespace TAO
 #define _AMH_SIMPLEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::AMH_simpleExceptionHolder>
+  class SArg_Traits< ::AMH_simpleExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_simpleExceptionHolder *,
@@ -119,7 +119,7 @@ namespace TAO
 #define _AMI_SIMPLEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AMI_simpleHandler>
+  class  SArg_Traits< ::AMI_simpleHandler>
     : public Object_SArg_Traits_T<
         ::AMI_simpleHandler_ptr,
         ::AMI_simpleHandler_var,
@@ -134,7 +134,7 @@ namespace TAO
 #define _SIMPLE2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::simple2>
+  class  SArg_Traits< ::simple2>
     : public Object_SArg_Traits_T<
         ::simple2_ptr,
         ::simple2_var,
@@ -149,7 +149,7 @@ namespace TAO
 #define _AMH_SIMPLE2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::AMH_simple2ExceptionHolder>
+  class SArg_Traits< ::AMH_simple2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_simple2ExceptionHolder *,
@@ -166,7 +166,7 @@ namespace TAO
 #define _AMI_SIMPLE2HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AMI_simple2Handler>
+  class  SArg_Traits< ::AMI_simple2Handler>
     : public Object_SArg_Traits_T<
         ::AMI_simple2Handler_ptr,
         ::AMI_simple2Handler_var,
@@ -190,10 +190,10 @@ protected:
   POA_AMH_simple ();
 
 public:
-  POA_AMH_simple (POA_AMH_simple const &rhs);
+  POA_AMH_simple (const POA_AMH_simple& rhs);
   ~POA_AMH_simple () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -201,7 +201,7 @@ public:
 
   simple *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -232,10 +232,10 @@ public:
   using _stub_ptr_type = ::simple_ptr;
   using _stub_var_type = ::simple_var;
 
-  POA_simple (POA_simple const &rhs) = default;
+  POA_simple (const POA_simple& rhs) = default;
   ~POA_simple () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -243,7 +243,7 @@ public:
 
   ::simple *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Long op (
     ::CORBA::Long a,
     ::simple_out b,
@@ -308,10 +308,10 @@ public:
   using _stub_ptr_type = ::AMI_simpleHandler_ptr;
   using _stub_var_type = ::AMI_simpleHandler_var;
 
-  POA_AMI_simpleHandler (POA_AMI_simpleHandler const &rhs) = default;
+  POA_AMI_simpleHandler (const POA_AMI_simpleHandler& rhs) = default;
   ~POA_AMI_simpleHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -319,7 +319,7 @@ public:
 
   ::AMI_simpleHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op (
     ::CORBA::Long ami_return_val,
     ::simple_ptr b,
@@ -372,10 +372,10 @@ protected:
   POA_AMH_simple2 ();
 
 public:
-  POA_AMH_simple2 (POA_AMH_simple2 const &rhs);
+  POA_AMH_simple2 (const POA_AMH_simple2& rhs);
   ~POA_AMH_simple2 () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -383,7 +383,7 @@ public:
 
   simple2 *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void op2_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -414,10 +414,10 @@ public:
   using _stub_ptr_type = ::simple2_ptr;
   using _stub_var_type = ::simple2_var;
 
-  POA_simple2 (POA_simple2 const &rhs) = default;
+  POA_simple2 (const POA_simple2& rhs) = default;
   ~POA_simple2 () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -425,7 +425,7 @@ public:
 
   ::simple2 *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual ::CORBA::Long op2 (
     ::CORBA::Long a,
     ::simple_ptr b,
@@ -490,10 +490,10 @@ public:
   using _stub_ptr_type = ::AMI_simple2Handler_ptr;
   using _stub_var_type = ::AMI_simple2Handler_var;
 
-  POA_AMI_simple2Handler (POA_AMI_simple2Handler const &rhs) = default;
+  POA_AMI_simple2Handler (const POA_AMI_simple2Handler& rhs) = default;
   ~POA_AMI_simple2Handler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -501,7 +501,7 @@ public:
 
   ::AMI_simple2Handler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op2 (
     ::CORBA::Long ami_return_val,
     ::simple2_ptr c) = 0;

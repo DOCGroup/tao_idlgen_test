@@ -51,7 +51,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -65,7 +65,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::Test::NameDynAnyPair>
+  class SArg_Traits< ::Test::NameDynAnyPair>
     : public
         Var_Size_SArg_Traits_T<
             ::Test::NameDynAnyPair,
@@ -75,7 +75,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::NameDynAnyPairSeq>
+  class SArg_Traits< ::Test::NameDynAnyPairSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::Test::NameDynAnyPairSeq,

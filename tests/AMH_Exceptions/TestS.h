@@ -57,7 +57,7 @@ namespace TAO
 #define _TEST_RED_HERRING__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Test::Red_Herring>
+  class SArg_Traits< ::Test::Red_Herring>
     : public
         Object_SArg_Traits_T<
             ::Test::Red_Herring *,
@@ -74,7 +74,7 @@ namespace TAO
 #define _TEST_ROUNDTRIP__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Test::Roundtrip>
+  class  SArg_Traits< ::Test::Roundtrip>
     : public Object_SArg_Traits_T<
         ::Test::Roundtrip_ptr,
         ::Test::Roundtrip_var,
@@ -89,7 +89,7 @@ namespace TAO
 #define _TEST_AMH_ROUNDTRIPEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Test::AMH_RoundtripExceptionHolder>
+  class SArg_Traits< ::Test::AMH_RoundtripExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Test::AMH_RoundtripExceptionHolder *,
@@ -118,10 +118,10 @@ namespace POA_Test
     AMH_Roundtrip ();
 
   public:
-    AMH_Roundtrip (AMH_Roundtrip const &rhs);
+    AMH_Roundtrip (const AMH_Roundtrip& rhs);
     ~AMH_Roundtrip () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -129,7 +129,7 @@ namespace POA_Test
 
     Test::Roundtrip *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   static void test_method_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -166,10 +166,10 @@ public:
   using _stub_ptr_type = ::Test::Roundtrip_ptr;
   using _stub_var_type = ::Test::Roundtrip_var;
 
-  Roundtrip (Roundtrip const &rhs) = default;
+  Roundtrip (const Roundtrip& rhs) = default;
   ~Roundtrip () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -177,7 +177,7 @@ public:
 
   ::Test::Roundtrip *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual ::Test::Timestamp test_method (
     ::Test::Timestamp send_time) = 0;
 

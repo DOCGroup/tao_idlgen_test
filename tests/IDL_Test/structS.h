@@ -53,7 +53,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -67,7 +67,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::Test::S1>
+  class SArg_Traits< ::Test::S1>
     : public
         Var_Size_SArg_Traits_T<
             ::Test::S1,
@@ -77,7 +77,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::TS3Seq>
+  class SArg_Traits< ::Test::TS3Seq>
     : public
         Var_Size_SArg_Traits_T<
             ::Test::TS3Seq,
@@ -87,7 +87,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::S3>
+  class SArg_Traits< ::Test::S3>
     : public
         Var_Size_SArg_Traits_T<
             ::Test::S3,
@@ -97,7 +97,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::TS4Seq>
+  class SArg_Traits< ::Test::TS4Seq>
     : public
         Var_Size_SArg_Traits_T<
             ::Test::TS4Seq,
@@ -107,7 +107,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::TS5Seq>
+  class SArg_Traits< ::Test::TS5Seq>
     : public
         Var_Size_SArg_Traits_T<
             ::Test::TS5Seq,
@@ -117,7 +117,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::S4>
+  class SArg_Traits< ::Test::S4>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Test::S4,
@@ -127,7 +127,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::S5>
+  class SArg_Traits< ::Test::S5>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Test::S5,
@@ -137,7 +137,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::FooStruct>
+  class SArg_Traits< ::Test::FooStruct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Test::FooStruct,
@@ -147,7 +147,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::S90>
+  class SArg_Traits< ::Test::S90>
     : public
         Basic_SArg_Traits_T<
             ::Test::S90,
@@ -157,7 +157,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::S90Array_tag>
+  class SArg_Traits< ::Test::S90Array_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::Test::S90Array_var,
@@ -168,7 +168,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::S42_tag>
+  class SArg_Traits< ::Test::S42_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::Test::S42_var,
@@ -179,7 +179,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::SString43_tag>
+  class SArg_Traits< ::Test::SString43_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::Test::SString43_out,
@@ -190,7 +190,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::S4Array_tag>
+  class SArg_Traits< ::Test::S4Array_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::Test::S4Array_var,
@@ -201,7 +201,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::S10>
+  class SArg_Traits< ::Test::S10>
     : public
         Var_Size_SArg_Traits_T<
             ::Test::S10,
@@ -211,7 +211,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Test::DefaultInitialized>
+  class SArg_Traits< ::Test::DefaultInitialized>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Test::DefaultInitialized,

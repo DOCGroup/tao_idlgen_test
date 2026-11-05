@@ -62,7 +62,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -79,7 +79,7 @@ namespace TAO
 #define _SEQTEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::seqTest>
+  class  SArg_Traits< ::seqTest>
     : public Object_SArg_Traits_T<
         ::seqTest_ptr,
         ::seqTest_var,
@@ -91,7 +91,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::seqTest::dozens>
+  class SArg_Traits< ::seqTest::dozens>
     : public
         Var_Size_SArg_Traits_T<
             ::seqTest::dozens,
@@ -104,7 +104,7 @@ namespace TAO
 #define _AMH_SEQTESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::AMH_seqTestExceptionHolder>
+  class SArg_Traits< ::AMH_seqTestExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_seqTestExceptionHolder *,
@@ -121,7 +121,7 @@ namespace TAO
 #define _AMI_SEQTESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AMI_seqTestHandler>
+  class  SArg_Traits< ::AMI_seqTestHandler>
     : public Object_SArg_Traits_T<
         ::AMI_seqTestHandler_ptr,
         ::AMI_seqTestHandler_var,
@@ -133,7 +133,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::twinStruct>
+  class SArg_Traits< ::twinStruct>
     : public
         Var_Size_SArg_Traits_T<
             ::twinStruct,
@@ -143,7 +143,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::outside>
+  class SArg_Traits< ::outside>
     : public
         Var_Size_SArg_Traits_T<
             ::outside,
@@ -153,7 +153,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::nestedSeqStruct>
+  class SArg_Traits< ::nestedSeqStruct>
     : public
         Var_Size_SArg_Traits_T<
             ::nestedSeqStruct,
@@ -175,10 +175,10 @@ protected:
   POA_AMH_seqTest ();
 
 public:
-  POA_AMH_seqTest (POA_AMH_seqTest const &rhs);
+  POA_AMH_seqTest (const POA_AMH_seqTest& rhs);
   ~POA_AMH_seqTest () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -186,7 +186,7 @@ public:
 
   seqTest *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void send_dozen_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -194,7 +194,7 @@ static void send_dozen_skel (
 
 virtual void send_dozen (
     AMH_seqTestResponseHandler_ptr _tao_rh,
-    ::seqTest::dozens const & bouquets
+    const ::seqTest::dozens & bouquets
   ) = 0;
 
 };
@@ -216,10 +216,10 @@ public:
   using _stub_ptr_type = ::seqTest_ptr;
   using _stub_var_type = ::seqTest_var;
 
-  POA_seqTest (POA_seqTest const &rhs) = default;
+  POA_seqTest (const POA_seqTest& rhs) = default;
   ~POA_seqTest () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -227,7 +227,7 @@ public:
 
   ::seqTest *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void send_dozen (
     ::seqTest::dozens & bouquets) = 0;
 
@@ -266,7 +266,7 @@ public:
   POA_TAO_AMH_seqTestResponseHandler () = default;
   virtual ~POA_TAO_AMH_seqTestResponseHandler () = default;
   void send_dozen (
-    ::seqTest::dozens const & bouquets) override;
+    const ::seqTest::dozens & bouquets) override;
   void send_dozen_excep (
     ::AMH_seqTestExceptionHolder * holder) override;
 };
@@ -288,10 +288,10 @@ public:
   using _stub_ptr_type = ::AMI_seqTestHandler_ptr;
   using _stub_var_type = ::AMI_seqTestHandler_var;
 
-  POA_AMI_seqTestHandler (POA_AMI_seqTestHandler const &rhs) = default;
+  POA_AMI_seqTestHandler (const POA_AMI_seqTestHandler& rhs) = default;
   ~POA_AMI_seqTestHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -299,9 +299,9 @@ public:
 
   ::AMI_seqTestHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void send_dozen (
-    ::seqTest::dozens const & bouquets) = 0;
+    const ::seqTest::dozens & bouquets) = 0;
 
   static void send_dozen_skel (
       TAO_ServerRequest &server_request,

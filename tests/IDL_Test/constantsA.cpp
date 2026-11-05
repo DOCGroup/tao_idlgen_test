@@ -66,7 +66,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:m_b/enum_b:1.0",
     "enum_b",
-    std::addressof (m_a::_tc_enum_a));
+    &m_a::_tc_enum_a);
 
 namespace m_b
 {
@@ -83,7 +83,7 @@ namespace ClassConstants
 {
   ::CORBA::TypeCode_ptr const _tc_Iface = std::addressof(_tao_tc_ClassConstants_Iface);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_ClassConstants_AMH_IfaceExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_ClassConstants_AMH_IfaceExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -93,7 +93,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:ClassConstants/AMH_IfaceExceptionHolder:1.0",
     "AMH_IfaceExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_ClassConstants_AMH_IfaceExceptionHolder,
     0);
 
@@ -128,7 +128,7 @@ namespace ClassConstants
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_IfaceHandler = std::addressof(_tao_tc_ClassConstants_AMI_IfaceHandler);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_ClassConstants_Vt {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_ClassConstants_Vt = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -138,7 +138,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:ClassConstants/Vt:1.0",
     "Vt",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_ClassConstants_Vt,
     0);
 
@@ -158,7 +158,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:CoercionBug/UInt16:1.0",
     "UInt16",
-    std::addressof (CORBA::_tc_ushort));
+    &CORBA::_tc_ushort);
 
 namespace CoercionBug
 {
@@ -171,7 +171,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:CoercionBug/CellFlags:1.0",
     "CellFlags",
-    std::addressof (CoercionBug::_tc_UInt16));
+    &CoercionBug::_tc_UInt16);
 
 namespace CoercionBug
 {
@@ -184,7 +184,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:SignedGen/LongType:1.0",
     "LongType",
-    std::addressof (CORBA::_tc_long));
+    &CORBA::_tc_long);
 
 namespace SignedGen
 {
@@ -197,7 +197,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:SignedGen/ShortType:1.0",
     "ShortType",
-    std::addressof (CORBA::_tc_short));
+    &CORBA::_tc_short);
 
 namespace SignedGen
 {
@@ -278,7 +278,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     ClassConstants::Iface_ptr &_tao_elem)
 {
   return
@@ -420,7 +420,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     ClassConstants::AMH_IfaceResponseHandler_ptr &_tao_elem)
 {
   return
@@ -478,7 +478,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     ClassConstants::AMI_IfaceHandler_ptr &_tao_elem)
 {
   return

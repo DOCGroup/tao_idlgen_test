@@ -23,7 +23,6 @@
  **/
 
 #include "anyunionC.h"
-#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -46,6 +45,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "anyunionC.inl"
@@ -155,11 +155,11 @@ void MyAnyUnion::_reset ()
     break;
   }
 }
-static TAO::TypeCode::Case_T<AnyUnionEnum, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_MyAnyUnion__0 (::ANYUNIONENUM2, "my_any", std::addressof (CORBA::_tc_any));
+static TAO::TypeCode::Case_T<AnyUnionEnum, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_MyAnyUnion__0 (::ANYUNIONENUM2, "my_any", &CORBA::_tc_any);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_MyAnyUnion[] =
   {
-    std::addressof (_tao_cases_MyAnyUnion__0)
+    &_tao_cases_MyAnyUnion__0
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -169,7 +169,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_MyAnyUnion (
     "IDL:MyAnyUnion:1.0",
     "MyAnyUnion",
-    std::addressof (_tc_AnyUnionEnum),
+    &_tc_AnyUnionEnum,
     _tao_cases_MyAnyUnion,
     sizeof (_tao_cases_MyAnyUnion)/sizeof (_tao_cases_MyAnyUnion[0]),
     -1);
@@ -255,13 +255,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, AnyUnionEnum _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, AnyUnionEnum & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -284,7 +284,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_union._d ())
   {
@@ -304,13 +304,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     MyAnyUnion &_tao_union)
 {
-  AnyUnionEnum _tao_discriminant;
+  AnyUnionEnum _tao_discriminant {};
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_discriminant)
   {

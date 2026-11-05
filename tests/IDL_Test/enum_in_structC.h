@@ -246,15 +246,15 @@ public:
   static ::CORBA::TypeCode_ptr const _tc_ReasonCode;ReasonCode reason {};
 
   ErrorException ();
-  ErrorException (ErrorException const &);
+  ErrorException (const ErrorException &);
   ~ErrorException () override = default;
 
-  ErrorException &operator= (ErrorException const &);
+  ErrorException &operator= (const ErrorException &);
 
   static void _tao_any_destructor (void *);
 
   static ErrorException *_downcast (::CORBA::Exception *);
-  static ErrorException const *_downcast (::CORBA::Exception const *);
+  static const ErrorException *_downcast (::CORBA::Exception const *);
 
   static ::CORBA::Exception *_alloc ();
 
@@ -282,7 +282,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -297,7 +297,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::UnNamed>
+  class Arg_Traits< ::UnNamed>
     : public
         Basic_Arg_Traits_T<
             ::UnNamed,
@@ -307,7 +307,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::HoldsEnum>
+  class Arg_Traits< ::HoldsEnum>
     : public
         Fixed_Size_Arg_Traits_T<
             ::HoldsEnum,
@@ -317,7 +317,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::HoldsEnum::Named>
+  class Arg_Traits< ::HoldsEnum::Named>
     : public
         Basic_Arg_Traits_T<
             ::HoldsEnum::Named,
@@ -327,7 +327,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::decl_heavy_struct>
+  class Arg_Traits< ::decl_heavy_struct>
     : public
         Fixed_Size_Arg_Traits_T<
             ::decl_heavy_struct,
@@ -432,9 +432,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ErrorException const &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const ErrorException &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ErrorException*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ErrorException const *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const ErrorException *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -518,7 +518,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ErrorException const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ErrorException &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ErrorException &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

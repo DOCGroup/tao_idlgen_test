@@ -61,7 +61,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -78,7 +78,7 @@ namespace TAO
 #define _TDEF__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::tdef>
+  class  SArg_Traits< ::tdef>
     : public Object_SArg_Traits_T<
         ::tdef_ptr,
         ::tdef_var,
@@ -90,7 +90,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::tdef::Bytes_tag>
+  class SArg_Traits< ::tdef::Bytes_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::tdef::Bytes_var,
@@ -101,7 +101,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::tdef::bytes_or_longs>
+  class SArg_Traits< ::tdef::bytes_or_longs>
     : public
         Fixed_Size_SArg_Traits_T<
             ::tdef::bytes_or_longs,
@@ -114,7 +114,7 @@ namespace TAO
 #define _AMH_TDEFEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::AMH_tdefExceptionHolder>
+  class SArg_Traits< ::AMH_tdefExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_tdefExceptionHolder *,
@@ -131,7 +131,7 @@ namespace TAO
 #define _AMI_TDEFHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AMI_tdefHandler>
+  class  SArg_Traits< ::AMI_tdefHandler>
     : public Object_SArg_Traits_T<
         ::AMI_tdefHandler_ptr,
         ::AMI_tdefHandler_var,
@@ -143,7 +143,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::ABCModule::RmtPhysicalInfo>
+  class SArg_Traits< ::ABCModule::RmtPhysicalInfo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::ABCModule::RmtPhysicalInfo,
@@ -153,7 +153,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::ABCModule::bbbBubBubBubBaby>
+  class SArg_Traits< ::ABCModule::bbbBubBubBubBaby>
     : public
         Fixed_Size_SArg_Traits_T<
             ::ABCModule::bbbBubBubBubBaby,
@@ -175,10 +175,10 @@ protected:
   POA_AMH_tdef ();
 
 public:
-  POA_AMH_tdef (POA_AMH_tdef const &rhs);
+  POA_AMH_tdef (const POA_AMH_tdef& rhs);
   ~POA_AMH_tdef () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -186,7 +186,7 @@ public:
 
   tdef *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 };
 
 class POA_tdef;
@@ -206,10 +206,10 @@ public:
   using _stub_ptr_type = ::tdef_ptr;
   using _stub_var_type = ::tdef_var;
 
-  POA_tdef (POA_tdef const &rhs) = default;
+  POA_tdef (const POA_tdef& rhs) = default;
   ~POA_tdef () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -217,7 +217,7 @@ public:
 
   ::tdef *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -263,10 +263,10 @@ public:
   using _stub_ptr_type = ::AMI_tdefHandler_ptr;
   using _stub_var_type = ::AMI_tdefHandler_var;
 
-  POA_AMI_tdefHandler (POA_AMI_tdefHandler const &rhs) = default;
+  POA_AMI_tdefHandler (const POA_AMI_tdefHandler& rhs) = default;
   ~POA_AMI_tdefHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -274,7 +274,7 @@ public:
 
   ::AMI_tdefHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

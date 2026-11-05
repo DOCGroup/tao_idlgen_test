@@ -23,7 +23,6 @@
  **/
 
 #include "fixedC.h"
-#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
@@ -31,12 +30,15 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "fixedC.inl"
 #endif /* !defined INLINE */
 
-void FixedPoint::FixedValues::_tao_any_destructor (void *_tao_void_pointer)
+void
+FixedPoint::FixedValues::_tao_any_destructor (
+    void *_tao_void_pointer)
 {
   FixedValues *tmp = static_cast<FixedValues *> (_tao_void_pointer);
   delete tmp;
@@ -65,7 +67,7 @@ TAO::Objref_Traits<FixedPoint::FixedOperations>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<FixedPoint::FixedOperations>::marshal (FixedPoint::FixedOperations_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<FixedPoint::FixedOperations>::marshal (const FixedPoint::FixedOperations_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -80,7 +82,7 @@ FixedPoint::FixedOperations::rate ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::ACE_CDR::Fixed>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::ACE_CDR::Fixed>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -106,15 +108,15 @@ FixedPoint::FixedOperations::rate ()
 }
 void
 FixedPoint::FixedOperations::rate (
-  ::FixedPoint::Amount const & rate)
+  const ::FixedPoint::Amount & rate)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::ACE_CDR::Fixed>::in_arg_val _tao_rate (rate);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::ACE_CDR::Fixed>::in_arg_val _tao_rate (rate);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -138,7 +140,7 @@ FixedPoint::FixedOperations::rate (
 void
 FixedPoint::FixedOperations::sendc_set_rate (
   ::FixedPoint::AMI_FixedOperationsHandler_ptr ami_handler,
-  ::FixedPoint::Amount const & rate)
+  const ::FixedPoint::Amount & rate)
 {
   if (!this->is_evaluated ())
     {
@@ -146,7 +148,7 @@ FixedPoint::FixedOperations::sendc_set_rate (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::ACE_CDR::Fixed>::in_arg_val _tao_rate (rate);
+  TAO::Arg_Traits< ::ACE_CDR::Fixed>::in_arg_val _tao_rate (rate);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -240,10 +242,12 @@ FixedPoint::FixedOperations::_tao_release (FixedOperations_ptr obj)
 }
 
 ::CORBA::Boolean
-FixedPoint::FixedOperations::_is_a (char const *value)
+FixedPoint::FixedOperations::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:FixedPoint/FixedOperations:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+  if (
+      std::strcmp (value, "IDL:FixedPoint/FixedOperations:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -253,17 +257,17 @@ FixedPoint::FixedOperations::_is_a (char const *value)
     }
 }
 
-char const *FixedPoint::FixedOperations::_interface_repository_id () const
+const char* FixedPoint::FixedOperations::_interface_repository_id () const
 {
   return "IDL:FixedPoint/FixedOperations:1.0";
 }
 
-char const *FixedPoint::FixedOperations::_desc_repository_id ()
+const char* FixedPoint::FixedOperations::_desc_repository_id ()
 {
   return "IDL:FixedPoint/FixedOperations:1.0";
 }
 
-char const *FixedPoint::FixedOperations::_desc_interface_name ()
+const char* FixedPoint::FixedOperations::_desc_interface_name ()
 {
   return "FixedOperations";
 }
@@ -408,28 +412,28 @@ FixedPoint::AMH_FixedOperationsExceptionHolder::_tao_unmarshal (
 void
 FixedPoint::AMH_FixedOperationsExceptionHolder::raise_get_rate ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 FixedPoint::AMH_FixedOperationsExceptionHolder::raise_set_rate ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 FixedPoint::AMH_FixedOperationsExceptionHolder::raise_sendc_set_rate ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 FixedPoint::AMH_FixedOperationsExceptionHolder::raise_sendc_get_rate ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -456,7 +460,7 @@ TAO::Objref_Traits<FixedPoint::AMH_FixedOperationsResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<FixedPoint::AMH_FixedOperationsResponseHandler>::marshal (FixedPoint::AMH_FixedOperationsResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<FixedPoint::AMH_FixedOperationsResponseHandler>::marshal (const FixedPoint::AMH_FixedOperationsResponseHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -510,11 +514,13 @@ FixedPoint::AMH_FixedOperationsResponseHandler::_tao_release (AMH_FixedOperation
 }
 
 ::CORBA::Boolean
-FixedPoint::AMH_FixedOperationsResponseHandler::_is_a (char const *value)
+FixedPoint::AMH_FixedOperationsResponseHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:FixedPoint/AMH_FixedOperationsResponseHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:FixedPoint/AMH_FixedOperationsResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -524,17 +530,17 @@ FixedPoint::AMH_FixedOperationsResponseHandler::_is_a (char const *value)
     }
 }
 
-char const *FixedPoint::AMH_FixedOperationsResponseHandler::_interface_repository_id () const
+const char* FixedPoint::AMH_FixedOperationsResponseHandler::_interface_repository_id () const
 {
   return "IDL:FixedPoint/AMH_FixedOperationsResponseHandler:1.0";
 }
 
-char const *FixedPoint::AMH_FixedOperationsResponseHandler::_desc_repository_id ()
+const char* FixedPoint::AMH_FixedOperationsResponseHandler::_desc_repository_id ()
 {
   return "IDL:FixedPoint/AMH_FixedOperationsResponseHandler:1.0";
 }
 
-char const *FixedPoint::AMH_FixedOperationsResponseHandler::_desc_interface_name ()
+const char* FixedPoint::AMH_FixedOperationsResponseHandler::_desc_interface_name ()
 {
   return "AMH_FixedOperationsResponseHandler";
 }
@@ -568,7 +574,7 @@ TAO::Objref_Traits<FixedPoint::AMI_FixedOperationsHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<FixedPoint::AMI_FixedOperationsHandler>::marshal (FixedPoint::AMI_FixedOperationsHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<FixedPoint::AMI_FixedOperationsHandler>::marshal (const FixedPoint::AMI_FixedOperationsHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -577,15 +583,15 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 FixedPoint::AMI_FixedOperationsHandler::get_rate (
-  ::FixedPoint::Amount const & ami_return_val)
+  const ::FixedPoint::Amount & ami_return_val)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::ACE_CDR::Fixed>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::ACE_CDR::Fixed>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -677,8 +683,8 @@ FixedPoint::AMI_FixedOperationsHandler::get_rate_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -706,7 +712,7 @@ FixedPoint::AMI_FixedOperationsHandler::set_rate ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -792,8 +798,8 @@ FixedPoint::AMI_FixedOperationsHandler::set_rate_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -859,11 +865,13 @@ FixedPoint::AMI_FixedOperationsHandler::_tao_release (AMI_FixedOperationsHandler
 }
 
 ::CORBA::Boolean
-FixedPoint::AMI_FixedOperationsHandler::_is_a (char const *value)
+FixedPoint::AMI_FixedOperationsHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -873,17 +881,17 @@ FixedPoint::AMI_FixedOperationsHandler::_is_a (char const *value)
     }
 }
 
-char const *FixedPoint::AMI_FixedOperationsHandler::_interface_repository_id () const
+const char* FixedPoint::AMI_FixedOperationsHandler::_interface_repository_id () const
 {
   return "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0";
 }
 
-char const *FixedPoint::AMI_FixedOperationsHandler::_desc_repository_id ()
+const char* FixedPoint::AMI_FixedOperationsHandler::_desc_repository_id ()
 {
   return "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0";
 }
 
-char const *FixedPoint::AMI_FixedOperationsHandler::_desc_interface_name ()
+const char* FixedPoint::AMI_FixedOperationsHandler::_desc_interface_name ()
 {
   return "AMI_FixedOperationsHandler";
 }
@@ -942,7 +950,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    FixedPoint::FixedOperations_ptr const _tao_objref)
+    const FixedPoint::FixedOperations_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -960,7 +968,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::FixedPoint::FixedOperations>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::FixedPoint::FixedOperations>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -993,7 +1001,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    FixedPoint::AMH_FixedOperationsExceptionHolder const *_tao_valuetype)
+    const FixedPoint::AMH_FixedOperationsExceptionHolder *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -1034,7 +1042,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    FixedPoint::AMI_FixedOperationsHandler_ptr const _tao_objref)
+    const FixedPoint::AMI_FixedOperationsHandler_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1052,7 +1060,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::FixedPoint::AMI_FixedOperationsHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::FixedPoint::AMI_FixedOperationsHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

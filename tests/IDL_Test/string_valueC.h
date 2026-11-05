@@ -111,8 +111,8 @@ namespace include_test
     ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
-    StringTest (StringTest const &);
-    void operator= (StringTest const &);
+    StringTest (const StringTest &);
+    void operator= (const StringTest &);
 
   protected:
     virtual ::CORBA::Boolean
@@ -152,7 +152,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -170,7 +170,7 @@ namespace TAO
 #define _INCLUDE_TEST_STRINGTEST__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::include_test::StringTest>
+  class Arg_Traits< ::include_test::StringTest>
     : public
         Object_Arg_Traits_T<
             ::include_test::StringTest *,
@@ -211,9 +211,11 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean _tao_marshal__include_test_StringTest (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean
+  _tao_marshal__include_test_StringTest (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean _tao_unmarshal__include_test_StringTest (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean
+  _tao_unmarshal__include_test_StringTest (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -266,7 +268,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, include_test::StringTest const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const include_test::StringTest *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, include_test::StringTest *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

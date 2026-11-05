@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #define _HELLO_MYFOO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Hello::MyFoo>
+  class  SArg_Traits< ::Hello::MyFoo>
     : public Object_SArg_Traits_T<
         ::Hello::MyFoo_ptr,
         ::Hello::MyFoo_var,
@@ -92,7 +92,7 @@ namespace TAO
 #define _HELLO_AMH_MYFOOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Hello::AMH_MyFooExceptionHolder>
+  class SArg_Traits< ::Hello::AMH_MyFooExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Hello::AMH_MyFooExceptionHolder *,
@@ -109,7 +109,7 @@ namespace TAO
 #define _HELLO_AMI_MYFOOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Hello::AMI_MyFooHandler>
+  class  SArg_Traits< ::Hello::AMI_MyFooHandler>
     : public Object_SArg_Traits_T<
         ::Hello::AMI_MyFooHandler_ptr,
         ::Hello::AMI_MyFooHandler_var,
@@ -136,10 +136,10 @@ namespace POA_Hello
     AMH_MyFoo ();
 
   public:
-    AMH_MyFoo (AMH_MyFoo const &rhs);
+    AMH_MyFoo (const AMH_MyFoo& rhs);
     ~AMH_MyFoo () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -147,7 +147,7 @@ namespace POA_Hello
 
     Hello::MyFoo *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   static void _get_rw_attrib_mytype_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -252,10 +252,10 @@ public:
   using _stub_ptr_type = ::Hello::MyFoo_ptr;
   using _stub_var_type = ::Hello::MyFoo_var;
 
-  MyFoo (MyFoo const &rhs) = default;
+  MyFoo (const MyFoo& rhs) = default;
   ~MyFoo () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -263,7 +263,7 @@ public:
 
   ::Hello::MyFoo *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual ::Hello::MyType rw_attrib_mytype () = 0;
 
   static void _get_rw_attrib_mytype_skel (
@@ -435,10 +435,10 @@ public:
   using _stub_ptr_type = ::Hello::AMI_MyFooHandler_ptr;
   using _stub_var_type = ::Hello::AMI_MyFooHandler_var;
 
-  AMI_MyFooHandler (AMI_MyFooHandler const &rhs) = default;
+  AMI_MyFooHandler (const AMI_MyFooHandler& rhs) = default;
   ~AMI_MyFooHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -446,7 +446,7 @@ public:
 
   ::Hello::AMI_MyFooHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void get_rw_attrib_mytype (
     ::Hello::MyType ami_return_val) = 0;
 

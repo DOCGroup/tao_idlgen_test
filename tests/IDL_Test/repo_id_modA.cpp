@@ -200,7 +200,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     gleep::schmooze_ptr &_tao_elem)
 {
   return
@@ -275,7 +275,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     gleep::schmeer_ptr &_tao_elem)
 {
   return
@@ -350,7 +350,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     gleep::schlemiel_ptr &_tao_elem)
 {
   return
@@ -425,7 +425,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     gleep::spilkis_ptr &_tao_elem)
 {
   return
@@ -500,7 +500,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     gleep::floop::schmuck_ptr &_tao_elem)
 {
   return
@@ -575,7 +575,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     gleep::floop::schmendrick_ptr &_tao_elem)
 {
   return
@@ -650,7 +650,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     gleep::floop::verklempt::schlemazel_ptr &_tao_elem)
 {
   return
@@ -725,7 +725,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     gleep::schmegegging_ptr &_tao_elem)
 {
   return

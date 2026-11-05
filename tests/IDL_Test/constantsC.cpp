@@ -23,12 +23,12 @@
  **/
 
 #include "constantsC.h"
-#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "constantsC.inl"
@@ -57,7 +57,7 @@ TAO::Objref_Traits<ClassConstants::Iface>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<ClassConstants::Iface>::marshal (ClassConstants::Iface_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<ClassConstants::Iface>::marshal (const ClassConstants::Iface_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -119,10 +119,12 @@ ClassConstants::Iface::_tao_release (Iface_ptr obj)
 }
 
 ::CORBA::Boolean
-ClassConstants::Iface::_is_a (char const *value)
+ClassConstants::Iface::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:ClassConstants/Iface:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+  if (
+      std::strcmp (value, "IDL:ClassConstants/Iface:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -132,17 +134,17 @@ ClassConstants::Iface::_is_a (char const *value)
     }
 }
 
-char const *ClassConstants::Iface::_interface_repository_id () const
+const char* ClassConstants::Iface::_interface_repository_id () const
 {
   return "IDL:ClassConstants/Iface:1.0";
 }
 
-char const *ClassConstants::Iface::_desc_repository_id ()
+const char* ClassConstants::Iface::_desc_repository_id ()
 {
   return "IDL:ClassConstants/Iface:1.0";
 }
 
-char const *ClassConstants::Iface::_desc_interface_name ()
+const char* ClassConstants::Iface::_desc_interface_name ()
 {
   return "Iface";
 }
@@ -339,7 +341,7 @@ TAO::Objref_Traits<ClassConstants::AMH_IfaceResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<ClassConstants::AMH_IfaceResponseHandler>::marshal (ClassConstants::AMH_IfaceResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<ClassConstants::AMH_IfaceResponseHandler>::marshal (const ClassConstants::AMH_IfaceResponseHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -393,11 +395,13 @@ ClassConstants::AMH_IfaceResponseHandler::_tao_release (AMH_IfaceResponseHandler
 }
 
 ::CORBA::Boolean
-ClassConstants::AMH_IfaceResponseHandler::_is_a (char const *value)
+ClassConstants::AMH_IfaceResponseHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:ClassConstants/AMH_IfaceResponseHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:ClassConstants/AMH_IfaceResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -407,17 +411,17 @@ ClassConstants::AMH_IfaceResponseHandler::_is_a (char const *value)
     }
 }
 
-char const *ClassConstants::AMH_IfaceResponseHandler::_interface_repository_id () const
+const char* ClassConstants::AMH_IfaceResponseHandler::_interface_repository_id () const
 {
   return "IDL:ClassConstants/AMH_IfaceResponseHandler:1.0";
 }
 
-char const *ClassConstants::AMH_IfaceResponseHandler::_desc_repository_id ()
+const char* ClassConstants::AMH_IfaceResponseHandler::_desc_repository_id ()
 {
   return "IDL:ClassConstants/AMH_IfaceResponseHandler:1.0";
 }
 
-char const *ClassConstants::AMH_IfaceResponseHandler::_desc_interface_name ()
+const char* ClassConstants::AMH_IfaceResponseHandler::_desc_interface_name ()
 {
   return "AMH_IfaceResponseHandler";
 }
@@ -451,7 +455,7 @@ TAO::Objref_Traits<ClassConstants::AMI_IfaceHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<ClassConstants::AMI_IfaceHandler>::marshal (ClassConstants::AMI_IfaceHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<ClassConstants::AMI_IfaceHandler>::marshal (const ClassConstants::AMI_IfaceHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -503,11 +507,13 @@ ClassConstants::AMI_IfaceHandler::_tao_release (AMI_IfaceHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-ClassConstants::AMI_IfaceHandler::_is_a (char const *value)
+ClassConstants::AMI_IfaceHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:ClassConstants/AMI_IfaceHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -517,17 +523,17 @@ ClassConstants::AMI_IfaceHandler::_is_a (char const *value)
     }
 }
 
-char const *ClassConstants::AMI_IfaceHandler::_interface_repository_id () const
+const char* ClassConstants::AMI_IfaceHandler::_interface_repository_id () const
 {
   return "IDL:ClassConstants/AMI_IfaceHandler:1.0";
 }
 
-char const *ClassConstants::AMI_IfaceHandler::_desc_repository_id ()
+const char* ClassConstants::AMI_IfaceHandler::_desc_repository_id ()
 {
   return "IDL:ClassConstants/AMI_IfaceHandler:1.0";
 }
 
-char const *ClassConstants::AMI_IfaceHandler::_desc_interface_name ()
+const char* ClassConstants::AMI_IfaceHandler::_desc_interface_name ()
 {
   return "AMI_IfaceHandler";
 }
@@ -742,13 +748,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, m_a::enum_a _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, m_a::enum_a & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -764,7 +770,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    ClassConstants::Iface_ptr const _tao_objref)
+    const ClassConstants::Iface_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -782,7 +788,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::ClassConstants::Iface>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::ClassConstants::Iface>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -815,7 +821,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    ClassConstants::AMH_IfaceExceptionHolder const *_tao_valuetype)
+    const ClassConstants::AMH_IfaceExceptionHolder *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -856,7 +862,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    ClassConstants::AMI_IfaceHandler_ptr const _tao_objref)
+    const ClassConstants::AMI_IfaceHandler_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -874,7 +880,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::ClassConstants::AMI_IfaceHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::ClassConstants::AMI_IfaceHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -907,7 +913,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    ClassConstants::Vt const *_tao_valuetype)
+    const ClassConstants::Vt *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (

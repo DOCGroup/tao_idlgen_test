@@ -50,7 +50,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -64,7 +64,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::CallMe::Colors>
+  class SArg_Traits< ::CallMe::Colors>
     : public
         Basic_SArg_Traits_T<
             ::CallMe::Colors,
@@ -74,7 +74,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::CallMe::YourColorBaby>
+  class SArg_Traits< ::CallMe::YourColorBaby>
     : public
         Fixed_Size_SArg_Traits_T<
             ::CallMe::YourColorBaby,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::CallMe::YourColorBaby::Val>
+  class SArg_Traits< ::CallMe::YourColorBaby::Val>
     : public
         Basic_SArg_Traits_T<
             ::CallMe::YourColorBaby::Val,
@@ -94,7 +94,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::CallMe::YourCar>
+  class SArg_Traits< ::CallMe::YourCar>
     : public
         Fixed_Size_SArg_Traits_T<
             ::CallMe::YourCar,

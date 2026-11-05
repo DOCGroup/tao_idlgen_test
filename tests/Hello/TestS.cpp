@@ -50,9 +50,9 @@ class TAO_Test_Hello_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (char const *str, std::size_t len) override;
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -61,7 +61,7 @@ public:
 std::size_t
 TAO_Test_Hello_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
      21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
@@ -79,10 +79,7 @@ TAO_Test_Hello_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
     };
   unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
   unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
-      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
-    return 21;
-  return len + asso_values[last_char] + asso_values[first_char];
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
 TAO_operation_db_entry const *
@@ -93,8 +90,8 @@ TAO_Test_Hello_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {20};
 
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
+  static constexpr std::array<TAO_operation_db_entry , 21> wordlist =
+    {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},
@@ -107,7 +104,7 @@ TAO_Test_Hello_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"get_string", std::addressof(POA_Test::Hello::get_string_skel), nullptr},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
@@ -144,8 +141,8 @@ namespace POA_Test
 
     void execute () override
     {
-      TAO::SArg_Traits<char *>::ret_arg_type retval =
-        static_cast<TAO::SArg_Traits<char *>::ret_val *> (this->args_[0])->arg ();
+      TAO::SArg_Traits< char *>::ret_arg_type retval =
+        static_cast<TAO::SArg_Traits< char *>::ret_val *> (this->args_[0])->arg ();
 
       retval =
         this->servant_->get_string ();
@@ -161,7 +158,7 @@ void POA_Test::Hello::get_string_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<char *>::ret_val retval;
+  TAO::SArg_Traits< char *>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -182,11 +179,11 @@ void POA_Test::Hello::get_string_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -213,7 +210,7 @@ void POA_Test::Hello::shutdown_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -234,15 +231,15 @@ void POA_Test::Hello::shutdown_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , nullptr
                          , 0
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Test::Hello::_is_a (char const *value)
+::CORBA::Boolean POA_Test::Hello::_is_a (const char* value)
 {
   return
     (
@@ -251,7 +248,7 @@ void POA_Test::Hello::shutdown_skel (
     );
 }
 
-char const *POA_Test::Hello::_interface_repository_id () const
+const char* POA_Test::Hello::_interface_repository_id () const
 {
   return "IDL:Test/Hello:1.0";
 }

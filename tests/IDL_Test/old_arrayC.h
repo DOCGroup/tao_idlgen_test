@@ -82,9 +82,14 @@ namespace OldArray
   using str22_slice = ::CORBA::Char[2];
   struct str22_tag {};
 
-  using str22_var = TAO_FixedArray_Var_T<str22, str22_slice, str22_tag>;
+  using str22_var =
+    TAO_FixedArray_Var_T<
+        str22,
+        str22_slice,
+        str22_tag
+      >;
 
-  using str22_out = str22;
+    using str22_out = str22;
 
   using str22_forany = TAO_Array_Forany_T<str22, str22_slice, str22_tag>;
 
@@ -101,9 +106,14 @@ namespace OldArray
   using boolarray_slice = ::CORBA::Boolean[40];
   struct boolarray_tag {};
 
-  using boolarray_var = TAO_FixedArray_Var_T<boolarray, boolarray_slice, boolarray_tag>;
+  using boolarray_var =
+    TAO_FixedArray_Var_T<
+        boolarray,
+        boolarray_slice,
+        boolarray_tag
+      >;
 
-  using boolarray_out = boolarray;
+    using boolarray_out = boolarray;
 
   using boolarray_forany = TAO_Array_Forany_T<boolarray, boolarray_slice, boolarray_tag>;
 
@@ -120,9 +130,14 @@ namespace OldArray
   using char_17_slice = ::CORBA::Char;
   struct char_17_tag {};
 
-  using char_17_var = TAO_FixedArray_Var_T<char_17, char_17_slice, char_17_tag>;
+  using char_17_var =
+    TAO_FixedArray_Var_T<
+        char_17,
+        char_17_slice,
+        char_17_tag
+      >;
 
-  using char_17_out = char_17;
+    using char_17_out = char_17;
 
   using char_17_forany = TAO_Array_Forany_T<char_17, char_17_slice, char_17_tag>;
 
@@ -139,9 +154,14 @@ namespace OldArray
   using char_10_2_slice = ::CORBA::Char[2];
   struct char_10_2_tag {};
 
-  using char_10_2_var = TAO_FixedArray_Var_T<char_10_2, char_10_2_slice, char_10_2_tag>;
+  using char_10_2_var =
+    TAO_FixedArray_Var_T<
+        char_10_2,
+        char_10_2_slice,
+        char_10_2_tag
+      >;
 
-  using char_10_2_out = char_10_2;
+    using char_10_2_out = char_10_2;
 
   using char_10_2_forany = TAO_Array_Forany_T<char_10_2, char_10_2_slice, char_10_2_tag>;
 
@@ -210,9 +230,14 @@ namespace OldArray
   using A_matrix_slice = A[3][4];
   struct A_matrix_tag {};
 
-  using A_matrix_var = TAO_FixedArray_Var_T<A_matrix, A_matrix_slice, A_matrix_tag>;
+  using A_matrix_var =
+    TAO_FixedArray_Var_T<
+        A_matrix,
+        A_matrix_slice,
+        A_matrix_tag
+      >;
 
-  using A_matrix_out = A_matrix;
+    using A_matrix_out = A_matrix;
 
   using A_matrix_forany = TAO_Array_Forany_T<A_matrix, A_matrix_slice, A_matrix_tag>;
 
@@ -229,9 +254,14 @@ namespace OldArray
   using B_matrix_slice = B[3][4];
   struct B_matrix_tag {};
 
-  using B_matrix_var = TAO_FixedArray_Var_T<B_matrix, B_matrix_slice, B_matrix_tag>;
+  using B_matrix_var =
+    TAO_FixedArray_Var_T<
+        B_matrix,
+        B_matrix_slice,
+        B_matrix_tag
+      >;
 
-  using B_matrix_out = B_matrix;
+    using B_matrix_out = B_matrix;
 
   using B_matrix_forany = TAO_Array_Forany_T<B_matrix, B_matrix_slice, B_matrix_tag>;
 
@@ -248,9 +278,14 @@ namespace OldArray
   using C_matrix_slice = C[3][4];
   struct C_matrix_tag {};
 
-  using C_matrix_var = TAO_FixedArray_Var_T<C_matrix, C_matrix_slice, C_matrix_tag>;
+  using C_matrix_var =
+    TAO_FixedArray_Var_T<
+        C_matrix,
+        C_matrix_slice,
+        C_matrix_tag
+      >;
 
-  using C_matrix_out = C_matrix;
+    using C_matrix_out = C_matrix;
 
   using C_matrix_forany = TAO_Array_Forany_T<C_matrix, C_matrix_slice, C_matrix_tag>;
 
@@ -267,9 +302,14 @@ namespace OldArray
   using A_rmatrix_slice = A_matrix[3][4][5];
   struct A_rmatrix_tag {};
 
-  using A_rmatrix_var = TAO_FixedArray_Var_T<A_rmatrix, A_rmatrix_slice, A_rmatrix_tag>;
+  using A_rmatrix_var =
+    TAO_FixedArray_Var_T<
+        A_rmatrix,
+        A_rmatrix_slice,
+        A_rmatrix_tag
+      >;
 
-  using A_rmatrix_out = A_rmatrix;
+    using A_rmatrix_out = A_rmatrix;
 
   using A_rmatrix_forany = TAO_Array_Forany_T<A_rmatrix, A_rmatrix_slice, A_rmatrix_tag>;
 
@@ -316,51 +356,51 @@ namespace OldArray
     static A_i_ptr _nil ();
 
     virtual ::OldArray::A op (
-      ::OldArray::A const & a1,
+      const ::OldArray::A & a1,
       ::OldArray::A & a2,
       ::OldArray::A_out a3);
 
     virtual ::OldArray::str22_slice * op2 (
-      ::OldArray::str22 const a1,
+      const ::OldArray::str22 a1,
       ::OldArray::str22 a2,
       ::OldArray::str22_out a3);
 
     virtual ::OldArray::A_matrix_slice * op4 (
-      ::OldArray::A const & a1,
+      const ::OldArray::A & a1,
       ::OldArray::A & a2,
       ::OldArray::A_out a3);
 
     virtual ::OldArray::str22_slice * attribute_array ();
 
     virtual void attribute_array (
-      ::OldArray::str22 const attribute_array);
+      const ::OldArray::str22 attribute_array);
 
     virtual void sendc_op (
       ::OldArray::AMI_A_iHandler_ptr ami_handler,
-      ::OldArray::A const & a1,
-      ::OldArray::A const & a2);
+      const ::OldArray::A & a1,
+      const ::OldArray::A & a2);
 
     virtual void sendc_op2 (
       ::OldArray::AMI_A_iHandler_ptr ami_handler,
-      ::OldArray::str22 const a1,
-      ::OldArray::str22 const a2);
+      const ::OldArray::str22 a1,
+      const ::OldArray::str22 a2);
 
     virtual void sendc_op4 (
       ::OldArray::AMI_A_iHandler_ptr ami_handler,
-      ::OldArray::A const & a1,
-      ::OldArray::A const & a2);
+      const ::OldArray::A & a1,
+      const ::OldArray::A & a2);
 
     virtual void sendc_set_attribute_array (
       ::OldArray::AMI_A_iHandler_ptr ami_handler,
-      ::OldArray::str22 const attribute_array);
+      const ::OldArray::str22 attribute_array);
 
     virtual void sendc_get_attribute_array (
       ::OldArray::AMI_A_iHandler_ptr ami_handler);
 
-    ::CORBA::Boolean _is_a (char const *type_id) override;
-    char const *_interface_repository_id () const override;
-    static char const *_desc_repository_id ();
-    static char const *_desc_interface_name ();
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    static const char* _desc_repository_id ();
+    static const char* _desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -381,9 +421,9 @@ namespace OldArray
 
   private:
     // Private and unimplemented for concrete interfaces.
-    A_i (A_i const &) = delete;
+    A_i (const A_i &) = delete;
     A_i (A_i &&) = delete;
-    A_i &operator= (A_i const &) = delete;
+    A_i &operator= (const A_i &) = delete;
     A_i &operator= (A_i &&) = delete;
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_A_i;
@@ -486,8 +526,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_A_iExceptionHolder (AMH_A_iExceptionHolder const &);
-  void operator= (AMH_A_iExceptionHolder const &);
+  AMH_A_iExceptionHolder (const AMH_A_iExceptionHolder &);
+  void operator= (const AMH_A_iExceptionHolder &);
 
   ::CORBA::Exception *exception;
 
@@ -533,31 +573,31 @@ public:
   static AMH_A_iResponseHandler_ptr _nil ();
 
   virtual void op (
-    ::OldArray::A const & return_value,
-    ::OldArray::A const & a2,
-    ::OldArray::A const & a3) = 0;
+    const ::OldArray::A & return_value,
+    const ::OldArray::A & a2,
+    const ::OldArray::A & a3) = 0;
 
   virtual void op_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) = 0;
 
   virtual void op2 (
-    ::OldArray::str22 const return_value,
-    ::OldArray::str22 const a2,
-    ::OldArray::str22 const a3) = 0;
+    const ::OldArray::str22 return_value,
+    const ::OldArray::str22 a2,
+    const ::OldArray::str22 a3) = 0;
 
   virtual void op2_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) = 0;
 
   virtual void op4 (
-    ::OldArray::A_matrix const return_value,
-    ::OldArray::A const & a2,
-    ::OldArray::A const & a3) = 0;
+    const ::OldArray::A_matrix return_value,
+    const ::OldArray::A & a2,
+    const ::OldArray::A & a3) = 0;
 
   virtual void op4_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) = 0;
 
   virtual void get_attribute_array (
-    ::OldArray::str22 const return_value) = 0;
+    const ::OldArray::str22 return_value) = 0;
 
   virtual void get_attribute_array_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) = 0;
@@ -567,10 +607,10 @@ public:
   virtual void set_attribute_array_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (char const *type_id) override;
-  char const *_interface_repository_id () const override;
-  static char const *_desc_repository_id ();
-  static char const *_desc_interface_name ();
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
+  static const char* _desc_repository_id ();
+  static const char* _desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -581,9 +621,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_A_iResponseHandler (AMH_A_iResponseHandler const &) = delete;
+  AMH_A_iResponseHandler (const AMH_A_iResponseHandler &) = delete;
   AMH_A_iResponseHandler (AMH_A_iResponseHandler &&) = delete;
-  AMH_A_iResponseHandler &operator= (AMH_A_iResponseHandler const &) = delete;
+  AMH_A_iResponseHandler &operator= (const AMH_A_iResponseHandler &) = delete;
   AMH_A_iResponseHandler &operator= (AMH_A_iResponseHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_A_iResponseHandler;
@@ -620,9 +660,9 @@ public:
   static AMI_A_iHandler_ptr _nil ();
 
   virtual void op (
-    ::OldArray::A const & ami_return_val,
-    ::OldArray::A const & a2,
-    ::OldArray::A const & a3);
+    const ::OldArray::A & ami_return_val,
+    const ::OldArray::A & a2,
+    const ::OldArray::A & a3);
 
   static void
   op_reply_stub (
@@ -634,9 +674,9 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void op2 (
-    ::OldArray::str22 const ami_return_val,
-    ::OldArray::str22 const a2,
-    ::OldArray::str22 const a3);
+    const ::OldArray::str22 ami_return_val,
+    const ::OldArray::str22 a2,
+    const ::OldArray::str22 a3);
 
   static void
   op2_reply_stub (
@@ -648,9 +688,9 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void op4 (
-    ::OldArray::A_matrix const ami_return_val,
-    ::OldArray::A const & a2,
-    ::OldArray::A const & a3);
+    const ::OldArray::A_matrix ami_return_val,
+    const ::OldArray::A & a2,
+    const ::OldArray::A & a3);
 
   static void
   op4_reply_stub (
@@ -662,7 +702,7 @@ public:
     ::Messaging::ExceptionHolder * excep_holder);
 
   virtual void get_attribute_array (
-    ::OldArray::str22 const ami_return_val);
+    const ::OldArray::str22 ami_return_val);
 
   static void
   get_attribute_array_reply_stub (
@@ -684,10 +724,10 @@ public:
   virtual void set_attribute_array_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (char const *type_id) override;
-  char const *_interface_repository_id () const override;
-  static char const *_desc_repository_id ();
-  static char const *_desc_interface_name ();
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
+  static const char* _desc_repository_id ();
+  static const char* _desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -708,9 +748,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_A_iHandler (AMI_A_iHandler const &) = delete;
+  AMI_A_iHandler (const AMI_A_iHandler &) = delete;
   AMI_A_iHandler (AMI_A_iHandler &&) = delete;
-  AMI_A_iHandler &operator= (AMI_A_iHandler const &) = delete;
+  AMI_A_iHandler &operator= (const AMI_A_iHandler &) = delete;
   AMI_A_iHandler &operator= (AMI_A_iHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_A_iHandler;
@@ -727,7 +767,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -742,7 +782,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::OldArray::str22_tag>
+  class Arg_Traits< ::OldArray::str22_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::str22_var,
@@ -753,7 +793,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::OldArray::boolarray_tag>
+  class Arg_Traits< ::OldArray::boolarray_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::boolarray_var,
@@ -764,7 +804,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::OldArray::char_17_tag>
+  class Arg_Traits< ::OldArray::char_17_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::char_17_var,
@@ -775,7 +815,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::OldArray::char_10_2_tag>
+  class Arg_Traits< ::OldArray::char_10_2_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::char_10_2_var,
@@ -786,7 +826,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::OldArray::A>
+  class Arg_Traits< ::OldArray::A>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldArray::A,
@@ -796,7 +836,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::OldArray::B>
+  class Arg_Traits< ::OldArray::B>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldArray::B,
@@ -806,7 +846,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::OldArray::C>
+  class Arg_Traits< ::OldArray::C>
     : public
         Fixed_Size_Arg_Traits_T<
             ::OldArray::C,
@@ -816,7 +856,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::OldArray::A_matrix_tag>
+  class Arg_Traits< ::OldArray::A_matrix_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::A_matrix_var,
@@ -827,7 +867,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::OldArray::B_matrix_tag>
+  class Arg_Traits< ::OldArray::B_matrix_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::B_matrix_var,
@@ -838,7 +878,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::OldArray::C_matrix_tag>
+  class Arg_Traits< ::OldArray::C_matrix_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::C_matrix_var,
@@ -849,7 +889,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::OldArray::A_rmatrix_tag>
+  class Arg_Traits< ::OldArray::A_rmatrix_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::OldArray::A_rmatrix_var,
@@ -863,7 +903,7 @@ namespace TAO
 #define _OLDARRAY_A_I__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::OldArray::A_i>
+  class  Arg_Traits< ::OldArray::A_i>
     : public Object_Arg_Traits_T<
         ::OldArray::A_i_ptr,
         ::OldArray::A_i_var,
@@ -879,7 +919,7 @@ namespace TAO
 #define _OLDARRAY_AMH_A_IEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::OldArray::AMH_A_iExceptionHolder>
+  class Arg_Traits< ::OldArray::AMH_A_iExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldArray::AMH_A_iExceptionHolder *,
@@ -897,7 +937,7 @@ namespace TAO
 #define _OLDARRAY_AMI_A_IHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::OldArray::AMI_A_iHandler>
+  class  Arg_Traits< ::OldArray::AMI_A_iHandler>
     : public Object_Arg_Traits_T<
         ::OldArray::AMI_A_iHandler_ptr,
         ::OldArray::AMI_A_iHandler_var,
@@ -925,9 +965,11 @@ protected:
   ~AMH_A_iExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean _tao_marshal__OldArray_AMH_A_iExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean
+  _tao_marshal__OldArray_AMH_A_iExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean _tao_unmarshal__OldArray_AMH_A_iExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean
+  _tao_unmarshal__OldArray_AMH_A_iExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1076,7 +1118,7 @@ namespace TAO
 #define _OLDARRAY_A_I__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldArray::A_i>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldArray::A_i>
   {
     static ::OldArray::A_i_ptr duplicate (::OldArray::A_i_ptr p);
     static void release (::OldArray::A_i_ptr p);
@@ -1103,7 +1145,7 @@ namespace TAO
 #define _OLDARRAY_AMH_A_IRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldArray::AMH_A_iResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldArray::AMH_A_iResponseHandler>
   {
     static ::OldArray::AMH_A_iResponseHandler_ptr duplicate (::OldArray::AMH_A_iResponseHandler_ptr p);
     static void release (::OldArray::AMH_A_iResponseHandler_ptr p);
@@ -1117,7 +1159,7 @@ namespace TAO
 #define _OLDARRAY_AMI_A_IHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldArray::AMI_A_iHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldArray::AMI_A_iHandler>
   {
     static ::OldArray::AMI_A_iHandler_ptr duplicate (::OldArray::AMI_A_iHandler_ptr p);
     static void release (::OldArray::AMI_A_iHandler_ptr p);
@@ -1225,7 +1267,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::A_i_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::A_i_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldArray::A_i_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldArray::A_i_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1243,7 +1285,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::AMH_A_iResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::AMH_A_iResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldArray::AMH_A_iResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldArray::AMH_A_iResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1252,7 +1294,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::AMI_A_iHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, OldArray::AMI_A_iHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, OldArray::AMI_A_iHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, OldArray::AMI_A_iHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1335,7 +1377,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldArray::A_i_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldArray::A_i_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::A_i_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1351,14 +1393,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldArray::AMH_A_iExceptionHolder const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldArray::AMH_A_iExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::AMH_A_iExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldArray::AMI_A_iHandler_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldArray::AMI_A_iHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldArray::AMI_A_iHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

@@ -23,7 +23,6 @@
  **/
 
 #include "Bug_2582_RegressionC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -46,6 +45,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_2582_RegressionC.inl"
@@ -70,7 +70,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Encoding_T[] =
       {
-        { "id", std::addressof (_tc_EncodingID_T) }
+        { "id", &_tc_EncodingID_T }
       };
 
 static TAO::TypeCode::Struct<
@@ -89,7 +89,9 @@ _tao_tc_Encoding_T (
 
 ::CORBA::TypeCode_ptr const _tc_Encoding_T = std::addressof(_tao_tc_Encoding_T);
 
-void Encoding_T::_tao_any_destructor (void *_tao_void_pointer)
+void
+Encoding_T::_tao_any_destructor (
+    void *_tao_void_pointer)
 {
   Encoding_T *tmp = static_cast<Encoding_T *> (_tao_void_pointer);
   delete tmp;
@@ -101,7 +103,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:EncodingID2_T:1.0",
     "EncodingID2_T",
-    std::addressof (_tc_EncodingID_T));
+    &_tc_EncodingID_T);
 
 ::CORBA::TypeCode_ptr const _tc_EncodingID2_T = std::addressof(_tao_tc_EncodingID2_T);
 
@@ -128,7 +130,7 @@ TAO::Objref_Traits<FieldDevice_T>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<FieldDevice_T>::marshal (FieldDevice_T_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<FieldDevice_T>::marshal (const FieldDevice_T_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -143,7 +145,7 @@ FieldDevice_T::getEncodingID ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::EncodingID_T>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::EncodingID_T>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -175,7 +177,7 @@ FieldDevice_T::getEncoding ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::Encoding_T>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Encoding_T>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -297,10 +299,12 @@ FieldDevice_T::_tao_release (FieldDevice_T_ptr obj)
 }
 
 ::CORBA::Boolean
-FieldDevice_T::_is_a (char const *value)
+FieldDevice_T::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:FieldDevice_T:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+  if (
+      std::strcmp (value, "IDL:FieldDevice_T:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -310,17 +314,17 @@ FieldDevice_T::_is_a (char const *value)
     }
 }
 
-char const *FieldDevice_T::_interface_repository_id () const
+const char* FieldDevice_T::_interface_repository_id () const
 {
   return "IDL:FieldDevice_T:1.0";
 }
 
-char const *FieldDevice_T::_desc_repository_id ()
+const char* FieldDevice_T::_desc_repository_id ()
 {
   return "IDL:FieldDevice_T:1.0";
 }
 
-char const *FieldDevice_T::_desc_interface_name ()
+const char* FieldDevice_T::_desc_interface_name ()
 {
   return "FieldDevice_T";
 }
@@ -338,7 +342,7 @@ static TAO::TypeCode::Objref<char const *,
     "FieldDevice_T");
 
 ::CORBA::TypeCode_ptr const _tc_FieldDevice_T = std::addressof(_tao_tc_FieldDevice_T);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_FieldDevice_TExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_FieldDevice_TExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -348,7 +352,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_FieldDevice_TExceptionHolder:1.0",
     "AMH_FieldDevice_TExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_FieldDevice_TExceptionHolder,
     0);
 
@@ -494,28 +498,28 @@ AMH_FieldDevice_TExceptionHolder::_tao_unmarshal (
 void
 AMH_FieldDevice_TExceptionHolder::raise_getEncodingID ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_FieldDevice_TExceptionHolder::raise_getEncoding ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_FieldDevice_TExceptionHolder::raise_sendc_getEncodingID ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_FieldDevice_TExceptionHolder::raise_sendc_getEncoding ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -542,7 +546,7 @@ TAO::Objref_Traits<AMH_FieldDevice_TResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_FieldDevice_TResponseHandler>::marshal (AMH_FieldDevice_TResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_FieldDevice_TResponseHandler>::marshal (const AMH_FieldDevice_TResponseHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -596,11 +600,13 @@ AMH_FieldDevice_TResponseHandler::_tao_release (AMH_FieldDevice_TResponseHandler
 }
 
 ::CORBA::Boolean
-AMH_FieldDevice_TResponseHandler::_is_a (char const *value)
+AMH_FieldDevice_TResponseHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:AMH_FieldDevice_TResponseHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:AMH_FieldDevice_TResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -610,17 +616,17 @@ AMH_FieldDevice_TResponseHandler::_is_a (char const *value)
     }
 }
 
-char const *AMH_FieldDevice_TResponseHandler::_interface_repository_id () const
+const char* AMH_FieldDevice_TResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_FieldDevice_TResponseHandler:1.0";
 }
 
-char const *AMH_FieldDevice_TResponseHandler::_desc_repository_id ()
+const char* AMH_FieldDevice_TResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_FieldDevice_TResponseHandler:1.0";
 }
 
-char const *AMH_FieldDevice_TResponseHandler::_desc_interface_name ()
+const char* AMH_FieldDevice_TResponseHandler::_desc_interface_name ()
 {
   return "AMH_FieldDevice_TResponseHandler";
 }
@@ -662,7 +668,7 @@ TAO::Objref_Traits<AMI_FieldDevice_THandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_FieldDevice_THandler>::marshal (AMI_FieldDevice_THandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_FieldDevice_THandler>::marshal (const AMI_FieldDevice_THandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -678,8 +684,8 @@ AMI_FieldDevice_THandler::getEncodingID (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::EncodingID_T>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::EncodingID_T>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -771,8 +777,8 @@ AMI_FieldDevice_THandler::getEncodingID_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -794,15 +800,15 @@ AMI_FieldDevice_THandler::getEncodingID_excep (
 }
 void
 AMI_FieldDevice_THandler::getEncoding (
-  ::Encoding_T const & ami_return_val)
+  const ::Encoding_T & ami_return_val)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Encoding_T>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Encoding_T>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -894,8 +900,8 @@ AMI_FieldDevice_THandler::getEncoding_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -961,11 +967,13 @@ AMI_FieldDevice_THandler::_tao_release (AMI_FieldDevice_THandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_FieldDevice_THandler::_is_a (char const *value)
+AMI_FieldDevice_THandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_FieldDevice_THandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -975,17 +983,17 @@ AMI_FieldDevice_THandler::_is_a (char const *value)
     }
 }
 
-char const *AMI_FieldDevice_THandler::_interface_repository_id () const
+const char* AMI_FieldDevice_THandler::_interface_repository_id () const
 {
   return "IDL:AMI_FieldDevice_THandler:1.0";
 }
 
-char const *AMI_FieldDevice_THandler::_desc_repository_id ()
+const char* AMI_FieldDevice_THandler::_desc_repository_id ()
 {
   return "IDL:AMI_FieldDevice_THandler:1.0";
 }
 
-char const *AMI_FieldDevice_THandler::_desc_interface_name ()
+const char* AMI_FieldDevice_THandler::_desc_interface_name ()
 {
   return "AMI_FieldDevice_THandler";
 }
@@ -1056,7 +1064,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Encoding_T const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::Encoding_T>::insert_copy (
+  TAO::Any_Dual_Impl_T< ::Encoding_T>::insert_copy (
     _tao_any,
     ::Encoding_T::_tao_any_destructor,
     _tc_Encoding_T,
@@ -1068,7 +1076,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Encoding_T *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::Encoding_T>::insert (
+  TAO::Any_Dual_Impl_T< ::Encoding_T>::insert (
     _tao_any,
     ::Encoding_T::_tao_any_destructor,
     _tc_Encoding_T,
@@ -1080,7 +1088,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Encoding_T const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T<::Encoding_T>::extract (
+  return TAO::Any_Dual_Impl_T< ::Encoding_T>::extract (
     _tao_any,
     ::Encoding_T::_tao_any_destructor,
     _tc_Encoding_T,
@@ -1133,7 +1141,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     FieldDevice_T_ptr &_tao_elem)
 {
   return
@@ -1275,7 +1283,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     AMH_FieldDevice_TResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1333,7 +1341,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     AMI_FieldDevice_THandler_ptr &_tao_elem)
 {
   return
@@ -1351,13 +1359,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, EncodingID_T _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, EncodingID_T & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -1395,7 +1403,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    FieldDevice_T_ptr const _tao_objref)
+    const FieldDevice_T_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1413,7 +1421,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::FieldDevice_T>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::FieldDevice_T>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -1446,7 +1454,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    AMH_FieldDevice_TExceptionHolder const *_tao_valuetype)
+    const AMH_FieldDevice_TExceptionHolder *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -1487,7 +1495,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    AMI_FieldDevice_THandler_ptr const _tao_objref)
+    const AMI_FieldDevice_THandler_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1505,7 +1513,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::AMI_FieldDevice_THandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::AMI_FieldDevice_THandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

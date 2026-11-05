@@ -57,9 +57,9 @@ class TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (char const *str, std::size_t len) override;
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -68,7 +68,7 @@ public:
 std::size_t
 TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
@@ -86,10 +86,7 @@ TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable::hash (char const *str, std::s
     };
   unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
   unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
-      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
-    return 16;
-  return len + asso_values[last_char] + asso_values[first_char];
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
 TAO_operation_db_entry const *
@@ -100,8 +97,8 @@ TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable::lookup (char const *str, std:
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
+  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+    {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
@@ -110,7 +107,7 @@ TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable::lookup (char const *str, std:
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
@@ -134,7 +131,7 @@ POA_ClassConstants::AMH_Iface::AMH_Iface ()
   this->optable_ = std::addressof (tao_ClassConstants_AMH_Iface_optable);
 }
 
-::CORBA::Boolean POA_ClassConstants::AMH_Iface::_is_a (char const *value)
+::CORBA::Boolean POA_ClassConstants::AMH_Iface::_is_a (const char* value)
 {
   return
     (
@@ -143,7 +140,7 @@ POA_ClassConstants::AMH_Iface::AMH_Iface ()
     );
 }
 
-char const *POA_ClassConstants::AMH_Iface::_interface_repository_id () const
+const char* POA_ClassConstants::AMH_Iface::_interface_repository_id () const
 {
   return "IDL:ClassConstants/Iface:1.0";
 }
@@ -158,7 +155,7 @@ ClassConstants::Iface*
 POA_ClassConstants::AMH_Iface::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -173,9 +170,9 @@ class TAO_ClassConstants_Iface_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (char const *str, std::size_t len) override;
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -184,7 +181,7 @@ public:
 std::size_t
 TAO_ClassConstants_Iface_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
@@ -202,10 +199,7 @@ TAO_ClassConstants_Iface_Perfect_Hash_OpTable::hash (char const *str, std::size_
     };
   unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
   unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
-      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
-    return 16;
-  return len + asso_values[last_char] + asso_values[first_char];
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
 TAO_operation_db_entry const *
@@ -216,8 +210,8 @@ TAO_ClassConstants_Iface_Perfect_Hash_OpTable::lookup (char const *str, std::siz
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
+  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+    {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
@@ -226,7 +220,7 @@ TAO_ClassConstants_Iface_Perfect_Hash_OpTable::lookup (char const *str, std::siz
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
@@ -262,7 +256,7 @@ POA_ClassConstants::Iface::Iface ()
   this->optable_ = std::addressof (tao_ClassConstants_Iface_optable);
 }
 
-::CORBA::Boolean POA_ClassConstants::Iface::_is_a (char const *value)
+::CORBA::Boolean POA_ClassConstants::Iface::_is_a (const char* value)
 {
   return
     (
@@ -271,7 +265,7 @@ POA_ClassConstants::Iface::Iface ()
     );
 }
 
-char const *POA_ClassConstants::Iface::_interface_repository_id () const
+const char* POA_ClassConstants::Iface::_interface_repository_id () const
 {
   return "IDL:ClassConstants/Iface:1.0";
 }
@@ -301,9 +295,9 @@ class TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (char const *str, std::size_t len) override;
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -312,7 +306,7 @@ public:
 std::size_t
 TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
@@ -330,10 +324,7 @@ TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable::hash (char const *str,
     };
   unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
   unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
-      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
-    return 16;
-  return len + asso_values[last_char] + asso_values[first_char];
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
 TAO_operation_db_entry const *
@@ -344,8 +335,8 @@ TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable::lookup (char const *st
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
+  static constexpr std::array<TAO_operation_db_entry , 16> wordlist =
+    {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
@@ -354,7 +345,7 @@ TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable::lookup (char const *st
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
@@ -391,7 +382,7 @@ POA_ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler ()
   this->optable_ = std::addressof (tao_ClassConstants_AMI_IfaceHandler_optable);
 }
 
-::CORBA::Boolean POA_ClassConstants::AMI_IfaceHandler::_is_a (char const *value)
+::CORBA::Boolean POA_ClassConstants::AMI_IfaceHandler::_is_a (const char* value)
 {
   return
     (
@@ -401,7 +392,7 @@ POA_ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler ()
     );
 }
 
-char const *POA_ClassConstants::AMI_IfaceHandler::_interface_repository_id () const
+const char* POA_ClassConstants::AMI_IfaceHandler::_interface_repository_id () const
 {
   return "IDL:ClassConstants/AMI_IfaceHandler:1.0";
 }

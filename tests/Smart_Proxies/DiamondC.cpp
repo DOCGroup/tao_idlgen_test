@@ -23,12 +23,12 @@
  **/
 
 #include "DiamondC.h"
-#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Object_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "DiamondC.inl"
@@ -57,7 +57,7 @@ TAO::Objref_Traits<Diamond::Top>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Top>::marshal (Diamond::Top_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Top>::marshal (const Diamond::Top_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -72,7 +72,7 @@ Diamond::Top::shape ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<char *>::ret_val _tao_retval;
+  TAO::Arg_Traits< char *>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -103,7 +103,9 @@ Diamond::Top::Top ()
 Diamond::Top_ptr
 Diamond::Top::_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Top *proxy = TAO::Narrow_Utils<Top>::narrow (
+  Diamond::Top *proxy = nullptr;
+
+  proxy = TAO::Narrow_Utils<Top>::narrow (
       _tao_objref,
       "IDL:Diamond/Top:1.0");
   return TAO_Diamond_Top_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
@@ -112,7 +114,9 @@ Diamond::Top::_narrow (::CORBA::Object_ptr _tao_objref)
 Diamond::Top_ptr
 Diamond::Top::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Top *proxy = TAO::Narrow_Utils<Top>::unchecked_narrow (
+  Diamond::Top *proxy = nullptr;
+
+  proxy = TAO::Narrow_Utils<Top>::unchecked_narrow (
       _tao_objref);
   return TAO_Diamond_Top_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
@@ -140,10 +144,12 @@ Diamond::Top::_tao_release (Top_ptr obj)
 }
 
 ::CORBA::Boolean
-Diamond::Top::_is_a (char const *value)
+Diamond::Top::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+  if (
+      std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -153,7 +159,7 @@ Diamond::Top::_is_a (char const *value)
     }
 }
 
-char const *Diamond::Top::_interface_repository_id () const
+const char* Diamond::Top::_interface_repository_id () const
 {
   return "IDL:Diamond/Top:1.0";
 }
@@ -174,7 +180,9 @@ Diamond::TAO_Diamond_Top_Default_Proxy_Factory::~TAO_Diamond_Top_Default_Proxy_F
 }
 
 Diamond::Top_ptr
-Diamond::TAO_Diamond_Top_Default_Proxy_Factory::create_proxy (::Diamond::Top_ptr proxy)
+Diamond::TAO_Diamond_Top_Default_Proxy_Factory::create_proxy (
+    ::Diamond::Top_ptr proxy
+  )
 {
   return proxy;
 }
@@ -189,12 +197,12 @@ Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::TAO_Diamond_Top_Proxy_Factory_Ad
 Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::~TAO_Diamond_Top_Proxy_Factory_Adapter ()
 {
   // Making sure the factory which the adapter has is destroyed with it.
-  std::unique_ptr<TAO_Diamond_Top_Default_Proxy_Factory> proxy_factory (this->proxy_factory_);
+  std::unique_ptr<TAO_Diamond_Top_Default_Proxy_Factory> proxy_factory {this->proxy_factory_};
 }
 
 void
 Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::register_proxy_factory (
-  TAO_Diamond_Top_Default_Proxy_Factory *df, bool one_shot_factory)
+    TAO_Diamond_Top_Default_Proxy_Factory *df, bool one_shot_factory)
 {
   ACE_MT (
       ACE_GUARD (
@@ -323,7 +331,7 @@ TAO::Objref_Traits<Diamond::Left>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Left>::marshal (Diamond::Left_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Left>::marshal (const Diamond::Left_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -338,7 +346,7 @@ Diamond::Left::color ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<char *>::ret_val _tao_retval;
+  TAO::Arg_Traits< char *>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -369,7 +377,9 @@ Diamond::Left::Left ()
 Diamond::Left_ptr
 Diamond::Left::_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Left *proxy = TAO::Narrow_Utils<Left>::narrow (
+  Diamond::Left *proxy = nullptr;
+
+  proxy = TAO::Narrow_Utils<Left>::narrow (
       _tao_objref,
       "IDL:Diamond/Left:1.0");
   return TAO_Diamond_Left_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
@@ -378,7 +388,9 @@ Diamond::Left::_narrow (::CORBA::Object_ptr _tao_objref)
 Diamond::Left_ptr
 Diamond::Left::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Left *proxy = TAO::Narrow_Utils<Left>::unchecked_narrow (
+  Diamond::Left *proxy = nullptr;
+
+  proxy = TAO::Narrow_Utils<Left>::unchecked_narrow (
       _tao_objref);
   return TAO_Diamond_Left_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
@@ -406,11 +418,13 @@ Diamond::Left::_tao_release (Left_ptr obj)
 }
 
 ::CORBA::Boolean
-Diamond::Left::_is_a (char const *value)
+Diamond::Left::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
       std::strcmp (value, "IDL:Diamond/Left:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -420,7 +434,7 @@ Diamond::Left::_is_a (char const *value)
     }
 }
 
-char const *Diamond::Left::_interface_repository_id () const
+const char* Diamond::Left::_interface_repository_id () const
 {
   return "IDL:Diamond/Left:1.0";
 }
@@ -441,7 +455,9 @@ Diamond::TAO_Diamond_Left_Default_Proxy_Factory::~TAO_Diamond_Left_Default_Proxy
 }
 
 Diamond::Left_ptr
-Diamond::TAO_Diamond_Left_Default_Proxy_Factory::create_proxy (::Diamond::Left_ptr proxy)
+Diamond::TAO_Diamond_Left_Default_Proxy_Factory::create_proxy (
+    ::Diamond::Left_ptr proxy
+  )
 {
   return proxy;
 }
@@ -456,12 +472,12 @@ Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::TAO_Diamond_Left_Proxy_Factory_
 Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::~TAO_Diamond_Left_Proxy_Factory_Adapter ()
 {
   // Making sure the factory which the adapter has is destroyed with it.
-  std::unique_ptr<TAO_Diamond_Left_Default_Proxy_Factory> proxy_factory (this->proxy_factory_);
+  std::unique_ptr<TAO_Diamond_Left_Default_Proxy_Factory> proxy_factory {this->proxy_factory_};
 }
 
 void
 Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::register_proxy_factory (
-  TAO_Diamond_Left_Default_Proxy_Factory *df, bool one_shot_factory)
+    TAO_Diamond_Left_Default_Proxy_Factory *df, bool one_shot_factory)
 {
   ACE_MT (
       ACE_GUARD (
@@ -590,7 +606,7 @@ TAO::Objref_Traits<Diamond::Right>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Right>::marshal (Diamond::Right_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Right>::marshal (const Diamond::Right_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -605,7 +621,7 @@ Diamond::Right::width ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::CORBA::Long>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::CORBA::Long>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -636,7 +652,9 @@ Diamond::Right::Right ()
 Diamond::Right_ptr
 Diamond::Right::_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Right *proxy = TAO::Narrow_Utils<Right>::narrow (
+  Diamond::Right *proxy = nullptr;
+
+  proxy = TAO::Narrow_Utils<Right>::narrow (
       _tao_objref,
       "IDL:Diamond/Right:1.0");
   return TAO_Diamond_Right_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
@@ -645,7 +663,9 @@ Diamond::Right::_narrow (::CORBA::Object_ptr _tao_objref)
 Diamond::Right_ptr
 Diamond::Right::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Right *proxy = TAO::Narrow_Utils<Right>::unchecked_narrow (
+  Diamond::Right *proxy = nullptr;
+
+  proxy = TAO::Narrow_Utils<Right>::unchecked_narrow (
       _tao_objref);
   return TAO_Diamond_Right_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
@@ -673,11 +693,13 @@ Diamond::Right::_tao_release (Right_ptr obj)
 }
 
 ::CORBA::Boolean
-Diamond::Right::_is_a (char const *value)
+Diamond::Right::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
       std::strcmp (value, "IDL:Diamond/Right:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -687,7 +709,7 @@ Diamond::Right::_is_a (char const *value)
     }
 }
 
-char const *Diamond::Right::_interface_repository_id () const
+const char* Diamond::Right::_interface_repository_id () const
 {
   return "IDL:Diamond/Right:1.0";
 }
@@ -708,7 +730,9 @@ Diamond::TAO_Diamond_Right_Default_Proxy_Factory::~TAO_Diamond_Right_Default_Pro
 }
 
 Diamond::Right_ptr
-Diamond::TAO_Diamond_Right_Default_Proxy_Factory::create_proxy (::Diamond::Right_ptr proxy)
+Diamond::TAO_Diamond_Right_Default_Proxy_Factory::create_proxy (
+    ::Diamond::Right_ptr proxy
+  )
 {
   return proxy;
 }
@@ -723,12 +747,12 @@ Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::TAO_Diamond_Right_Proxy_Factor
 Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::~TAO_Diamond_Right_Proxy_Factory_Adapter ()
 {
   // Making sure the factory which the adapter has is destroyed with it.
-  std::unique_ptr<TAO_Diamond_Right_Default_Proxy_Factory> proxy_factory (this->proxy_factory_);
+  std::unique_ptr<TAO_Diamond_Right_Default_Proxy_Factory> proxy_factory {this->proxy_factory_};
 }
 
 void
 Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::register_proxy_factory (
-  TAO_Diamond_Right_Default_Proxy_Factory *df, bool one_shot_factory)
+    TAO_Diamond_Right_Default_Proxy_Factory *df, bool one_shot_factory)
 {
   ACE_MT (
       ACE_GUARD (
@@ -857,7 +881,7 @@ TAO::Objref_Traits<Diamond::Buttom>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Buttom>::marshal (Diamond::Buttom_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Buttom>::marshal (const Diamond::Buttom_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -872,7 +896,7 @@ Diamond::Buttom::name ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<char *>::ret_val _tao_retval;
+  TAO::Arg_Traits< char *>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -903,7 +927,9 @@ Diamond::Buttom::Buttom ()
 Diamond::Buttom_ptr
 Diamond::Buttom::_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Buttom *proxy = TAO::Narrow_Utils<Buttom>::narrow (
+  Diamond::Buttom *proxy = nullptr;
+
+  proxy = TAO::Narrow_Utils<Buttom>::narrow (
       _tao_objref,
       "IDL:Diamond/Buttom:1.0");
   return TAO_Diamond_Buttom_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
@@ -912,7 +938,9 @@ Diamond::Buttom::_narrow (::CORBA::Object_ptr _tao_objref)
 Diamond::Buttom_ptr
 Diamond::Buttom::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Buttom *proxy = TAO::Narrow_Utils<Buttom>::unchecked_narrow (
+  Diamond::Buttom *proxy = nullptr;
+
+  proxy = TAO::Narrow_Utils<Buttom>::unchecked_narrow (
       _tao_objref);
   return TAO_Diamond_Buttom_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
@@ -940,13 +968,15 @@ Diamond::Buttom::_tao_release (Buttom_ptr obj)
 }
 
 ::CORBA::Boolean
-Diamond::Buttom::_is_a (char const *value)
+Diamond::Buttom::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
       std::strcmp (value, "IDL:Diamond/Left:1.0") == 0 ||
       std::strcmp (value, "IDL:Diamond/Right:1.0") == 0 ||
       std::strcmp (value, "IDL:Diamond/Buttom:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -956,7 +986,7 @@ Diamond::Buttom::_is_a (char const *value)
     }
 }
 
-char const *Diamond::Buttom::_interface_repository_id () const
+const char* Diamond::Buttom::_interface_repository_id () const
 {
   return "IDL:Diamond/Buttom:1.0";
 }
@@ -977,7 +1007,9 @@ Diamond::TAO_Diamond_Buttom_Default_Proxy_Factory::~TAO_Diamond_Buttom_Default_P
 }
 
 Diamond::Buttom_ptr
-Diamond::TAO_Diamond_Buttom_Default_Proxy_Factory::create_proxy (::Diamond::Buttom_ptr proxy)
+Diamond::TAO_Diamond_Buttom_Default_Proxy_Factory::create_proxy (
+    ::Diamond::Buttom_ptr proxy
+  )
 {
   return proxy;
 }
@@ -992,12 +1024,12 @@ Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::TAO_Diamond_Buttom_Proxy_Fact
 Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::~TAO_Diamond_Buttom_Proxy_Factory_Adapter ()
 {
   // Making sure the factory which the adapter has is destroyed with it.
-  std::unique_ptr<TAO_Diamond_Buttom_Default_Proxy_Factory> proxy_factory (this->proxy_factory_);
+  std::unique_ptr<TAO_Diamond_Buttom_Default_Proxy_Factory> proxy_factory {this->proxy_factory_};
 }
 
 void
 Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::register_proxy_factory (
-  TAO_Diamond_Buttom_Default_Proxy_Factory *df, bool one_shot_factory)
+    TAO_Diamond_Buttom_Default_Proxy_Factory *df, bool one_shot_factory)
 {
   ACE_MT (
       ACE_GUARD (
@@ -1107,7 +1139,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    Diamond::Top_ptr const _tao_objref)
+    const Diamond::Top_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1125,7 +1157,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::Diamond::Top>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::Diamond::Top>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -1136,7 +1168,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    Diamond::Left_ptr const _tao_objref)
+    const Diamond::Left_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1154,7 +1186,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::Diamond::Left>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::Diamond::Left>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -1165,7 +1197,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    Diamond::Right_ptr const _tao_objref)
+    const Diamond::Right_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1183,7 +1215,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::Diamond::Right>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::Diamond::Right>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -1194,7 +1226,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    Diamond::Buttom_ptr const _tao_objref)
+    const Diamond::Buttom_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1212,7 +1244,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::Diamond::Buttom>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::Diamond::Buttom>::unchecked_narrow (obj.in ());
 
   return true;
 }

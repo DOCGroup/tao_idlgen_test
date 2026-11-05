@@ -23,7 +23,6 @@
  **/
 
 #include "Bug_3312_RegressionC.h"
-#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -46,6 +45,7 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_3312_RegressionC.inl"
@@ -172,13 +172,13 @@ CallMe::YourColorBaby::operator= (::CallMe::YourColorBaby const &u)
 void CallMe::YourColorBaby::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CallMe::YourColorBaby::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourColorBaby__0 (CallMe::YourColorBaby::Red, "c_1", std::addressof (CallMe::YourColorBaby::_tc_Val));
-static TAO::TypeCode::Case_T<CallMe::YourColorBaby::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourColorBaby__1 (CallMe::YourColorBaby::Blue, "c_2", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CallMe::YourColorBaby::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourColorBaby__0 (CallMe::YourColorBaby::Red, "c_1", &CallMe::YourColorBaby::_tc_Val);
+static TAO::TypeCode::Case_T<CallMe::YourColorBaby::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourColorBaby__1 (CallMe::YourColorBaby::Blue, "c_2", &CORBA::_tc_long);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_CallMe_YourColorBaby[] =
   {
-    std::addressof (_tao_cases_CallMe_YourColorBaby__0),
-    std::addressof (_tao_cases_CallMe_YourColorBaby__1)
+    &_tao_cases_CallMe_YourColorBaby__0,
+    &_tao_cases_CallMe_YourColorBaby__1
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -188,7 +188,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_CallMe_YourColorBaby (
     "IDL:CallMe/YourColorBaby:1.0",
     "YourColorBaby",
-    std::addressof (CallMe::YourColorBaby::_tc_ColorMe),
+    &CallMe::YourColorBaby::_tc_ColorMe,
     _tao_cases_CallMe_YourColorBaby,
     sizeof (_tao_cases_CallMe_YourColorBaby)/sizeof (_tao_cases_CallMe_YourColorBaby[0]),
     -1);
@@ -281,13 +281,13 @@ CallMe::YourCar::operator= (::CallMe::YourCar const &u)
 void CallMe::YourCar::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CallMe::YourCar::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourCar__0 (CallMe::YourCar::Green, "c_1", std::addressof (CORBA::_tc_short));
-static TAO::TypeCode::Case_T<CallMe::YourCar::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourCar__1 (CallMe::YourCar::Pink, "c_2", std::addressof (CORBA::_tc_short));
+static TAO::TypeCode::Case_T<CallMe::YourCar::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourCar__0 (CallMe::YourCar::Green, "c_1", &CORBA::_tc_short);
+static TAO::TypeCode::Case_T<CallMe::YourCar::ColorMe, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_CallMe_YourCar__1 (CallMe::YourCar::Pink, "c_2", &CORBA::_tc_short);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_CallMe_YourCar[] =
   {
-    std::addressof (_tao_cases_CallMe_YourCar__0),
-    std::addressof (_tao_cases_CallMe_YourCar__1)
+    &_tao_cases_CallMe_YourCar__0,
+    &_tao_cases_CallMe_YourCar__1
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -297,7 +297,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_CallMe_YourCar (
     "IDL:CallMe/YourCar:1.0",
     "YourCar",
-    std::addressof (CallMe::YourCar::_tc_ColorMe),
+    &CallMe::YourCar::_tc_ColorMe,
     _tao_cases_CallMe_YourCar,
     sizeof (_tao_cases_CallMe_YourCar)/sizeof (_tao_cases_CallMe_YourCar[0]),
     -1);
@@ -521,13 +521,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, CallMe::Colors _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, CallMe::Colors & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -543,13 +543,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, CallMe::YourColorBaby::ColorMe _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, CallMe::YourColorBaby::ColorMe & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -565,13 +565,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, CallMe::YourColorBaby::Val _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, CallMe::YourColorBaby::Val & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -594,7 +594,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_union._d ())
   {
@@ -619,13 +619,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     CallMe::YourColorBaby &_tao_union)
 {
-  CallMe::YourColorBaby::ColorMe _tao_discriminant;
+  CallMe::YourColorBaby::ColorMe _tao_discriminant {};
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_discriminant)
   {
@@ -668,13 +668,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, CallMe::YourCar::ColorMe _tao_enumerator)
 {
-  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, CallMe::YourCar::ColorMe & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -697,7 +697,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_union._d ())
   {
@@ -722,13 +722,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     CallMe::YourCar &_tao_union)
 {
-  CallMe::YourCar::ColorMe _tao_discriminant;
+  CallMe::YourCar::ColorMe _tao_discriminant {};
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_discriminant)
   {

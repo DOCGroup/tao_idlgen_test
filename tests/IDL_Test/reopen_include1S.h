@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::frag::dub_seq>
+  class SArg_Traits< ::frag::dub_seq>
     : public
         Var_Size_SArg_Traits_T<
             ::frag::dub_seq,
@@ -87,7 +87,7 @@ namespace TAO
 #define _A_B_X1__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::A::B::X1>
+  class  SArg_Traits< ::A::B::X1>
     : public Object_SArg_Traits_T<
         ::A::B::X1_ptr,
         ::A::B::X1_var,
@@ -102,7 +102,7 @@ namespace TAO
 #define _A_B_AMH_X1EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::A::B::AMH_X1ExceptionHolder>
+  class SArg_Traits< ::A::B::AMH_X1ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::A::B::AMH_X1ExceptionHolder *,
@@ -119,7 +119,7 @@ namespace TAO
 #define _A_B_AMI_X1HANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::A::B::AMI_X1Handler>
+  class  SArg_Traits< ::A::B::AMI_X1Handler>
     : public Object_SArg_Traits_T<
         ::A::B::AMI_X1Handler_ptr,
         ::A::B::AMI_X1Handler_var,
@@ -153,10 +153,10 @@ namespace POA_A
       AMH_X1 ();
 
     public:
-      AMH_X1 (AMH_X1 const &rhs);
+      AMH_X1 (const AMH_X1& rhs);
       ~AMH_X1 () override = default;
 
-      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -164,7 +164,7 @@ namespace POA_A
 
       A::B::X1 *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     static void getX1_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -193,10 +193,10 @@ namespace POA_A
     using _stub_ptr_type = ::A::B::X1_ptr;
     using _stub_var_type = ::A::B::X1_var;
 
-    X1 (X1 const &rhs) = default;
+    X1 (const X1& rhs) = default;
     ~X1 () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -204,7 +204,7 @@ namespace POA_A
 
     ::A::B::X1 *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual char * getX1 () = 0;
 
     static void getX1_skel (
@@ -242,7 +242,7 @@ namespace POA_A
     TAO_AMH_X1ResponseHandler () = default;
     virtual ~TAO_AMH_X1ResponseHandler () = default;
     void getX1 (
-      char const * return_value) override;
+      const char * return_value) override;
     void getX1_excep (
       ::A::B::AMH_X1ExceptionHolder * holder) override;
   };
@@ -264,10 +264,10 @@ namespace POA_A
     using _stub_ptr_type = ::A::B::AMI_X1Handler_ptr;
     using _stub_var_type = ::A::B::AMI_X1Handler_var;
 
-    AMI_X1Handler (AMI_X1Handler const &rhs) = default;
+    AMI_X1Handler (const AMI_X1Handler& rhs) = default;
     ~AMI_X1Handler () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -275,9 +275,9 @@ namespace POA_A
 
     ::A::B::AMI_X1Handler *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual void getX1 (
-      char const * ami_return_val) = 0;
+      const char * ami_return_val) = 0;
 
     static void getX1_skel (
         TAO_ServerRequest &server_request,

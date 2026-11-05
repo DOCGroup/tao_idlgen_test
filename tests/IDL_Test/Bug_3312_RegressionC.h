@@ -194,7 +194,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -209,7 +209,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::CallMe::Colors>
+  class Arg_Traits< ::CallMe::Colors>
     : public
         Basic_Arg_Traits_T<
             ::CallMe::Colors,
@@ -219,7 +219,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::CallMe::YourColorBaby>
+  class Arg_Traits< ::CallMe::YourColorBaby>
     : public
         Fixed_Size_Arg_Traits_T<
             ::CallMe::YourColorBaby,
@@ -229,7 +229,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::CallMe::YourColorBaby::Val>
+  class Arg_Traits< ::CallMe::YourColorBaby::Val>
     : public
         Basic_Arg_Traits_T<
             ::CallMe::YourColorBaby::Val,
@@ -239,7 +239,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::CallMe::YourCar>
+  class Arg_Traits< ::CallMe::YourCar>
     : public
         Fixed_Size_Arg_Traits_T<
             ::CallMe::YourCar,

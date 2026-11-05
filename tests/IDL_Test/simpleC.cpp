@@ -23,7 +23,6 @@
  **/
 
 #include "simpleC.h"
-#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -46,6 +45,7 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
+#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "simpleC.inl"
@@ -57,7 +57,7 @@
 vec10::vec10 (::CORBA::ULong length,
   ::CORBA::Long * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::bounded_value_sequence<::CORBA::Long,10>
+  : ::TAO::bounded_value_sequence< ::CORBA::Long,10>
     (length, buffer, release)
 {}
 
@@ -81,11 +81,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> vec10_10 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_long), 10U);
+      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> vec10_10 (
+        ::CORBA::tk_sequence, &CORBA::_tc_long, 10U);
 
     ::CORBA::TypeCode_ptr const tc_vec10_10 =
-      std::addressof (vec10_10);
+      &vec10_10;
   }
 }
 }
@@ -101,7 +101,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:vec10:1.0",
     "vec10",
-    std::addressof (TAO::TypeCode::tc_vec10_10));
+    &TAO::TypeCode::tc_vec10_10);
 
 ::CORBA::TypeCode_ptr const _tc_vec10 = std::addressof(_tao_tc_vec10);
 
@@ -149,10 +149,10 @@ simple_error::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<simple_error *> (_tao_excp);
 }
 
-simple_error const *
+const simple_error *
 simple_error::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<simple_error const *> (_tao_excp);
+  return dynamic_cast<const simple_error *> (_tao_excp);
 }
 
 ::CORBA::Exception *simple_error::_alloc ()
@@ -201,7 +201,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple_error[] =
       {
-        { "reason", std::addressof (CORBA::_tc_long) }
+        { "reason", &CORBA::_tc_long }
       };
 
 static TAO::TypeCode::Struct<
@@ -243,7 +243,7 @@ TAO::Objref_Traits<simple>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<simple>::marshal (simple_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<simple>::marshal (const simple_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -261,10 +261,10 @@ simple::op (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::CORBA::Long>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_a (a);
-  TAO::Arg_Traits<::simple>::out_arg_val _tao_b (b);
-  TAO::Arg_Traits<::CORBA::Long>::inout_arg_val _tao_c (c);
+  TAO::Arg_Traits< ::CORBA::Long>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_a (a);
+  TAO::Arg_Traits< ::simple>::out_arg_val _tao_b (b);
+  TAO::Arg_Traits< ::CORBA::Long>::inout_arg_val _tao_c (c);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -316,8 +316,8 @@ simple::sendc_op (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_a (a);
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_c (c);
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_a (a);
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_c (c);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -386,10 +386,12 @@ simple::_tao_release (simple_ptr obj)
 }
 
 ::CORBA::Boolean
-simple::_is_a (char const *value)
+simple::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:simple:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+  if (
+      std::strcmp (value, "IDL:simple:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -399,17 +401,17 @@ simple::_is_a (char const *value)
     }
 }
 
-char const *simple::_interface_repository_id () const
+const char* simple::_interface_repository_id () const
 {
   return "IDL:simple:1.0";
 }
 
-char const *simple::_desc_repository_id ()
+const char* simple::_desc_repository_id ()
 {
   return "IDL:simple:1.0";
 }
 
-char const *simple::_desc_interface_name ()
+const char* simple::_desc_interface_name ()
 {
   return "simple";
 }
@@ -427,7 +429,7 @@ static TAO::TypeCode::Objref<char const *,
     "simple");
 
 ::CORBA::TypeCode_ptr const _tc_simple = std::addressof(_tao_tc_simple);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_simpleExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_simpleExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -437,7 +439,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_simpleExceptionHolder:1.0",
     "AMH_simpleExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_simpleExceptionHolder,
     0);
 
@@ -583,14 +585,14 @@ AMH_simpleExceptionHolder::_tao_unmarshal (
 void
 AMH_simpleExceptionHolder::raise_op ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_simpleExceptionHolder::raise_sendc_op ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -617,7 +619,7 @@ TAO::Objref_Traits<AMH_simpleResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_simpleResponseHandler>::marshal (AMH_simpleResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_simpleResponseHandler>::marshal (const AMH_simpleResponseHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -671,11 +673,13 @@ AMH_simpleResponseHandler::_tao_release (AMH_simpleResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMH_simpleResponseHandler::_is_a (char const *value)
+AMH_simpleResponseHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:AMH_simpleResponseHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:AMH_simpleResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -685,17 +689,17 @@ AMH_simpleResponseHandler::_is_a (char const *value)
     }
 }
 
-char const *AMH_simpleResponseHandler::_interface_repository_id () const
+const char* AMH_simpleResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_simpleResponseHandler:1.0";
 }
 
-char const *AMH_simpleResponseHandler::_desc_repository_id ()
+const char* AMH_simpleResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_simpleResponseHandler:1.0";
 }
 
-char const *AMH_simpleResponseHandler::_desc_interface_name ()
+const char* AMH_simpleResponseHandler::_desc_interface_name ()
 {
   return "AMH_simpleResponseHandler";
 }
@@ -737,7 +741,7 @@ TAO::Objref_Traits<AMI_simpleHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_simpleHandler>::marshal (AMI_simpleHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_simpleHandler>::marshal (const AMI_simpleHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -755,10 +759,10 @@ AMI_simpleHandler::op (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits<::simple>::in_arg_val _tao_b (b);
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_c (c);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< ::simple>::in_arg_val _tao_b (b);
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_c (c);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -887,8 +891,8 @@ AMI_simpleHandler::op_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -969,11 +973,13 @@ AMI_simpleHandler::_tao_release (AMI_simpleHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_simpleHandler::_is_a (char const *value)
+AMI_simpleHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -983,17 +989,17 @@ AMI_simpleHandler::_is_a (char const *value)
     }
 }
 
-char const *AMI_simpleHandler::_interface_repository_id () const
+const char* AMI_simpleHandler::_interface_repository_id () const
 {
   return "IDL:AMI_simpleHandler:1.0";
 }
 
-char const *AMI_simpleHandler::_desc_repository_id ()
+const char* AMI_simpleHandler::_desc_repository_id ()
 {
   return "IDL:AMI_simpleHandler:1.0";
 }
 
-char const *AMI_simpleHandler::_desc_interface_name ()
+const char* AMI_simpleHandler::_desc_interface_name ()
 {
   return "AMI_simpleHandler";
 }
@@ -1035,7 +1041,7 @@ TAO::Objref_Traits<simple2>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<simple2>::marshal (simple2_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<simple2>::marshal (const simple2_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1086,10 +1092,10 @@ simple2::simple2_error::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<simple2_error *> (_tao_excp);
 }
 
-simple2::simple2_error const *
+const simple2::simple2_error *
 simple2::simple2_error::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<simple2_error const *> (_tao_excp);
+  return dynamic_cast<const simple2_error *> (_tao_excp);
 }
 
 ::CORBA::Exception *simple2::simple2_error::_alloc ()
@@ -1138,7 +1144,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_simple2_simple2_error[] =
       {
-        { "reason2", std::addressof (CORBA::_tc_long) }
+        { "reason2", &CORBA::_tc_long }
       };
 
 static TAO::TypeCode::Struct<
@@ -1167,10 +1173,10 @@ simple2::op2 (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<::CORBA::Long>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_a (a);
-  TAO::Arg_Traits<::simple>::in_arg_val _tao_b (b);
-  TAO::Arg_Traits<::simple2>::out_arg_val _tao_c (c);
+  TAO::Arg_Traits< ::CORBA::Long>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_a (a);
+  TAO::Arg_Traits< ::simple>::in_arg_val _tao_b (b);
+  TAO::Arg_Traits< ::simple2>::out_arg_val _tao_c (c);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1222,8 +1228,8 @@ simple2::sendc_op2 (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_a (a);
-  TAO::Arg_Traits<::simple>::in_arg_val _tao_b (b);
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_a (a);
+  TAO::Arg_Traits< ::simple>::in_arg_val _tao_b (b);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -1292,11 +1298,13 @@ simple2::_tao_release (simple2_ptr obj)
 }
 
 ::CORBA::Boolean
-simple2::_is_a (char const *value)
+simple2::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:simple:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:simple:1.0") == 0 ||
       std::strcmp (value, "IDL:simple2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -1306,17 +1314,17 @@ simple2::_is_a (char const *value)
     }
 }
 
-char const *simple2::_interface_repository_id () const
+const char* simple2::_interface_repository_id () const
 {
   return "IDL:simple2:1.0";
 }
 
-char const *simple2::_desc_repository_id ()
+const char* simple2::_desc_repository_id ()
 {
   return "IDL:simple2:1.0";
 }
 
-char const *simple2::_desc_interface_name ()
+const char* simple2::_desc_interface_name ()
 {
   return "simple2";
 }
@@ -1334,7 +1342,7 @@ static TAO::TypeCode::Objref<char const *,
     "simple2");
 
 ::CORBA::TypeCode_ptr const _tc_simple2 = std::addressof(_tao_tc_simple2);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_simple2ExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_simple2ExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1344,7 +1352,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_simple2ExceptionHolder:1.0",
     "AMH_simple2ExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_simple2ExceptionHolder,
     0);
 
@@ -1490,14 +1498,14 @@ AMH_simple2ExceptionHolder::_tao_unmarshal (
 void
 AMH_simple2ExceptionHolder::raise_op2 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_simple2ExceptionHolder::raise_sendc_op2 ()
 {
-  std::unique_ptr<::CORBA::Exception> safety (this->exception);
+  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -1524,7 +1532,7 @@ TAO::Objref_Traits<AMH_simple2ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_simple2ResponseHandler>::marshal (AMH_simple2ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_simple2ResponseHandler>::marshal (const AMH_simple2ResponseHandler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1578,11 +1586,13 @@ AMH_simple2ResponseHandler::_tao_release (AMH_simple2ResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMH_simple2ResponseHandler::_is_a (char const *value)
+AMH_simple2ResponseHandler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:AMH_simple2ResponseHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:AMH_simple2ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -1592,17 +1602,17 @@ AMH_simple2ResponseHandler::_is_a (char const *value)
     }
 }
 
-char const *AMH_simple2ResponseHandler::_interface_repository_id () const
+const char* AMH_simple2ResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_simple2ResponseHandler:1.0";
 }
 
-char const *AMH_simple2ResponseHandler::_desc_repository_id ()
+const char* AMH_simple2ResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_simple2ResponseHandler:1.0";
 }
 
-char const *AMH_simple2ResponseHandler::_desc_interface_name ()
+const char* AMH_simple2ResponseHandler::_desc_interface_name ()
 {
   return "AMH_simple2ResponseHandler";
 }
@@ -1644,7 +1654,7 @@ TAO::Objref_Traits<AMI_simple2Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_simple2Handler>::marshal (AMI_simple2Handler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_simple2Handler>::marshal (const AMI_simple2Handler_ptr p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1661,9 +1671,9 @@ AMI_simple2Handler::op2 (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits<::simple2>::in_arg_val _tao_c (c);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits< ::simple2>::in_arg_val _tao_c (c);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1787,8 +1797,8 @@ AMI_simple2Handler::op2_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1869,12 +1879,14 @@ AMI_simple2Handler::_tao_release (AMI_simple2Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_simple2Handler::_is_a (char const *value)
+AMI_simple2Handler::_is_a (const char *value)
 {
-  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (
+      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_simple2Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
+      )
     {
       return true; // success using local knowledge
     }
@@ -1884,17 +1896,17 @@ AMI_simple2Handler::_is_a (char const *value)
     }
 }
 
-char const *AMI_simple2Handler::_interface_repository_id () const
+const char* AMI_simple2Handler::_interface_repository_id () const
 {
   return "IDL:AMI_simple2Handler:1.0";
 }
 
-char const *AMI_simple2Handler::_desc_repository_id ()
+const char* AMI_simple2Handler::_desc_repository_id ()
 {
   return "IDL:AMI_simple2Handler:1.0";
 }
 
-char const *AMI_simple2Handler::_desc_interface_name ()
+const char* AMI_simple2Handler::_desc_interface_name ()
 {
   return "AMI_simple2Handler";
 }
@@ -1949,7 +1961,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::vec10 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::vec10>::insert_copy (
+  TAO::Any_Dual_Impl_T< ::vec10>::insert_copy (
     _tao_any,
     ::vec10::_tao_any_destructor,
     ::_tc_vec10,
@@ -1961,7 +1973,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::vec10 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T<::vec10>::insert (
+  TAO::Any_Dual_Impl_T< ::vec10>::insert (
     _tao_any,
     ::vec10::_tao_any_destructor,
     ::_tc_vec10,
@@ -1973,7 +1985,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::vec10 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T<::vec10>::extract (
+  return TAO::Any_Dual_Impl_T< ::vec10>::extract (
     _tao_any,
     ::vec10::_tao_any_destructor,
     ::_tc_vec10,
@@ -2017,7 +2029,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  simple_error const &_tao_elem)
+  const simple_error &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<simple_error>::insert_copy (
     _tao_any,
@@ -2040,8 +2052,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  ::CORBA::Any const &_tao_any,
-  simple_error const *&_tao_elem)
+  const ::CORBA::Any &_tao_any,
+  const simple_error *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<simple_error>::extract (
     _tao_any,
@@ -2096,7 +2108,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     simple_ptr &_tao_elem)
 {
   return
@@ -2238,7 +2250,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     AMH_simpleResponseHandler_ptr &_tao_elem)
 {
   return
@@ -2296,7 +2308,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     AMI_simpleHandler_ptr &_tao_elem)
 {
   return
@@ -2354,7 +2366,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     simple2_ptr &_tao_elem)
 {
   return
@@ -2403,7 +2415,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  simple2::simple2_error const &_tao_elem)
+  const simple2::simple2_error &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<simple2::simple2_error>::insert_copy (
     _tao_any,
@@ -2426,8 +2438,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  ::CORBA::Any const &_tao_any,
-  simple2::simple2_error const *&_tao_elem)
+  const ::CORBA::Any &_tao_any,
+  const simple2::simple2_error *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<simple2::simple2_error>::extract (
     _tao_any,
@@ -2566,7 +2578,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     AMH_simple2ResponseHandler_ptr &_tao_elem)
 {
   return
@@ -2624,7 +2636,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     AMI_simple2Handler_ptr &_tao_elem)
 {
   return
@@ -2665,7 +2677,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    simple_error const &_tao_aggregate)
+    const simple_error &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -2697,7 +2709,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    simple_ptr const _tao_objref)
+    const simple_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2715,7 +2727,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::simple>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::simple>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -2748,7 +2760,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    AMH_simpleExceptionHolder const *_tao_valuetype)
+    const AMH_simpleExceptionHolder *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -2789,7 +2801,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    AMI_simpleHandler_ptr const _tao_objref)
+    const AMI_simpleHandler_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2807,7 +2819,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::AMI_simpleHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::AMI_simpleHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -2818,7 +2830,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    simple2::simple2_error const &_tao_aggregate)
+    const simple2::simple2_error &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -2850,7 +2862,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    simple2_ptr const _tao_objref)
+    const simple2_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2868,7 +2880,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::simple2>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::simple2>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -2901,7 +2913,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    AMH_simple2ExceptionHolder const *_tao_valuetype)
+    const AMH_simple2ExceptionHolder *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -2942,7 +2954,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    AMI_simple2Handler_ptr const _tao_objref)
+    const AMI_simple2Handler_ptr _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -2960,7 +2972,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils<::AMI_simple2Handler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils< ::AMI_simple2Handler>::unchecked_narrow (obj.in ());
 
   return true;
 }

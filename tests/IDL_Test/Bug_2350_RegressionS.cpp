@@ -57,9 +57,9 @@ class TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (char const *str, std::size_t len) override;
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -68,7 +68,7 @@ public:
 std::size_t
 TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      26, 26, 26, 26, 26, 26, 26, 26, 26, 26,
      26, 26, 26, 26, 26, 26, 26, 26, 26, 26,
@@ -86,10 +86,7 @@ TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::hash (char const *str, std::si
     };
   unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
   unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
-      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
-    return 26;
-  return len + asso_values[last_char] + asso_values[first_char];
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
 TAO_operation_db_entry const *
@@ -100,8 +97,8 @@ TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (char const *str, std::
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {25};
 
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
+  static constexpr std::array<TAO_operation_db_entry , 26> wordlist =
+    {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
@@ -112,7 +109,7 @@ TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (char const *str, std::
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"Bug_2350_Regression_excep", std::addressof(POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel), std::addressof(_TAO_Bug_2350_Regression_Direct_Proxy_Impl::Bug_2350_Regression_excep)},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
@@ -166,7 +163,9 @@ POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Bug_2350_RegressionResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_TAO_AMH_Bug_2350_RegressionResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -180,7 +179,7 @@ POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_Bug_2350_Regression::_is_a (char const *value)
+::CORBA::Boolean POA_AMH_Bug_2350_Regression::_is_a (const char* value)
 {
   return
     (
@@ -189,7 +188,7 @@ POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
     );
 }
 
-char const *POA_AMH_Bug_2350_Regression::_interface_repository_id () const
+const char* POA_AMH_Bug_2350_Regression::_interface_repository_id () const
 {
   return "IDL:Bug_2350_Regression:1.0";
 }
@@ -204,7 +203,7 @@ Bug_2350_Regression*
 POA_AMH_Bug_2350_Regression::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -219,9 +218,9 @@ class TAO_Bug_2350_Regression_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (char const *str, std::size_t len) override;
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -230,7 +229,7 @@ public:
 std::size_t
 TAO_Bug_2350_Regression_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      26, 26, 26, 26, 26, 26, 26, 26, 26, 26,
      26, 26, 26, 26, 26, 26, 26, 26, 26, 26,
@@ -248,10 +247,7 @@ TAO_Bug_2350_Regression_Perfect_Hash_OpTable::hash (char const *str, std::size_t
     };
   unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
   unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
-      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
-    return 26;
-  return len + asso_values[last_char] + asso_values[first_char];
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
 TAO_operation_db_entry const *
@@ -262,8 +258,8 @@ TAO_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (char const *str, std::size
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {25};
 
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
+  static constexpr std::array<TAO_operation_db_entry , 26> wordlist =
+    {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
@@ -274,7 +270,7 @@ TAO_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (char const *str, std::size
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"Bug_2350_Regression_excep", std::addressof(POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel), std::addressof(_TAO_Bug_2350_Regression_Direct_Proxy_Impl::Bug_2350_Regression_excep)},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
@@ -315,7 +311,7 @@ _TAO_Bug_2350_Regression_Direct_Proxy_Impl::Bug_2350_Regression_excep (
     }
 
   _tao_ptr->Bug_2350_Regression_excep (
-        ((TAO::Arg_Traits<::user_ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::user_ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -340,8 +336,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::user_ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::user_ExceptionHolder> (
+    TAO::SArg_Traits< ::user_ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::user_ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -360,15 +356,17 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       _tc_something
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::user_ExceptionHolder>::in_arg_val _tao_a;
+#endif /* TAO_HAS_INTERCEPTORS */
+
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::user_ExceptionHolder>::in_arg_val _tao_a;
 
   TAO::Argument * const args[] =
     {
@@ -393,15 +391,15 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_Bug_2350_Regression::_is_a (char const *value)
+::CORBA::Boolean POA_Bug_2350_Regression::_is_a (const char* value)
 {
   return
     (
@@ -410,7 +408,7 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
     );
 }
 
-char const *POA_Bug_2350_Regression::_interface_repository_id () const
+const char* POA_Bug_2350_Regression::_interface_repository_id () const
 {
   return "IDL:Bug_2350_Regression:1.0";
 }
@@ -461,9 +459,9 @@ class TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (char const *str, std::size_t len) override;
+  std::size_t hash (const char *str, std::size_t len) override;
 public:
-  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
+  const TAO_operation_db_entry * lookup (const char *str, std::size_t len) override;
 };
 
 /* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
@@ -472,7 +470,7 @@ public:
 std::size_t
 TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      32, 32, 32, 32, 32, 32, 32, 32, 32, 32,
      32, 32, 32, 32, 32, 32, 32, 32, 32, 32,
@@ -490,10 +488,7 @@ TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::hash (char const *str, 
     };
   unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
   unsigned char const first_char = static_cast<unsigned char> (str[0]);
-  if (last_char >= sizeof (asso_values) / sizeof (*asso_values)
-      || first_char >= sizeof (asso_values) / sizeof (*asso_values))
-    return 32;
-  return len + asso_values[last_char] + asso_values[first_char];
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
 TAO_operation_db_entry const *
@@ -504,8 +499,8 @@ TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::lookup (char const *str
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {31};
 
-  static constexpr TAO_operation_db_entry wordlist[] =
-    {
+  static constexpr std::array<TAO_operation_db_entry , 32> wordlist =
+    {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
@@ -518,7 +513,7 @@ TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::lookup (char const *str
       {"Bug_2350_Regression_excep", std::addressof(POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_skel), std::addressof(_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep)},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"Bug_2350_Regression_excep_excep", std::addressof(POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel), std::addressof(_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep_excep)},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
@@ -576,7 +571,7 @@ _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep
     }
 
   _tao_ptr->Bug_2350_Regression_excep_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -608,14 +603,16 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       _tc_something
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
+#endif /* TAO_HAS_INTERCEPTORS */
+
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -636,11 +633,11 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_skel (
                          , args
                          , 1
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
@@ -656,8 +653,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -693,15 +690,17 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  #if TAO_HAS_INTERCEPTORS == 1
+
+#if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       _tc_something
     };
-  #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+#endif /* TAO_HAS_INTERCEPTORS */
+
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -726,15 +725,15 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
                          , args
                          , 2
                          , command
-  #if TAO_HAS_INTERCEPTORS == 1
+#if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
                          , exceptions
                          , 1
-  #endif  /* TAO_HAS_INTERCEPTORS == 1 */
+#endif  /* TAO_HAS_INTERCEPTORS == 1 */
                          );
 }
 
-::CORBA::Boolean POA_AMI_Bug_2350_RegressionHandler::_is_a (char const *value)
+::CORBA::Boolean POA_AMI_Bug_2350_RegressionHandler::_is_a (const char* value)
 {
   return
     (
@@ -744,7 +743,7 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
     );
 }
 
-char const *POA_AMI_Bug_2350_RegressionHandler::_interface_repository_id () const
+const char* POA_AMI_Bug_2350_RegressionHandler::_interface_repository_id () const
 {
   return "IDL:AMI_Bug_2350_RegressionHandler:1.0";
 }

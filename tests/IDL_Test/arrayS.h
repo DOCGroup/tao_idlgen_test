@@ -62,7 +62,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -76,7 +76,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::TwoDArray_tag>
+  class SArg_Traits< ::TwoDArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::TwoDArray_var,
@@ -87,7 +87,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::ThreeDArray_tag>
+  class SArg_Traits< ::ThreeDArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::ThreeDArray_var,
@@ -98,7 +98,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::FourDArray_tag>
+  class SArg_Traits< ::FourDArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::FourDArray_var,
@@ -109,7 +109,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::inside_array_tag>
+  class SArg_Traits< ::inside_array_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::inside_array_var,
@@ -120,7 +120,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::wrap>
+  class SArg_Traits< ::wrap>
     : public
         Fixed_Size_SArg_Traits_T<
             ::wrap,
@@ -130,7 +130,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::outside_array_tag>
+  class SArg_Traits< ::outside_array_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::outside_array_var,
@@ -141,7 +141,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::oa1_tag>
+  class SArg_Traits< ::oa1_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::oa1_var,
@@ -152,7 +152,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::oa2_tag>
+  class SArg_Traits< ::oa2_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::oa2_var,
@@ -166,7 +166,7 @@ namespace TAO
 #define _ARRAY_ARGS__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::array_args>
+  class  SArg_Traits< ::array_args>
     : public Object_SArg_Traits_T<
         ::array_args_ptr,
         ::array_args_var,
@@ -181,7 +181,7 @@ namespace TAO
 #define _AMH_ARRAY_ARGSEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::AMH_array_argsExceptionHolder>
+  class SArg_Traits< ::AMH_array_argsExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_array_argsExceptionHolder *,
@@ -198,7 +198,7 @@ namespace TAO
 #define _AMI_ARRAY_ARGSHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AMI_array_argsHandler>
+  class  SArg_Traits< ::AMI_array_argsHandler>
     : public Object_SArg_Traits_T<
         ::AMI_array_argsHandler_ptr,
         ::AMI_array_argsHandler_var,
@@ -210,7 +210,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::string_array::ArrayOfString_tag>
+  class SArg_Traits< ::string_array::ArrayOfString_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::string_array::ArrayOfString_out,
@@ -221,7 +221,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::string_array::ArrayOfMyString_tag>
+  class SArg_Traits< ::string_array::ArrayOfMyString_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::string_array::ArrayOfMyString_out,
@@ -235,7 +235,7 @@ namespace TAO
 #define _TESTDATA__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::testdata>
+  class  SArg_Traits< ::testdata>
     : public Object_SArg_Traits_T<
         ::testdata_ptr,
         ::testdata_var,
@@ -247,7 +247,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::testdata::Arraychar_tag>
+  class SArg_Traits< ::testdata::Arraychar_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::testdata::Arraychar_var,
@@ -258,7 +258,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::testdata::struct2>
+  class SArg_Traits< ::testdata::struct2>
     : public
         Fixed_Size_SArg_Traits_T<
             ::testdata::struct2,
@@ -268,7 +268,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::testdata::ArraycharList>
+  class SArg_Traits< ::testdata::ArraycharList>
     : public
         Var_Size_SArg_Traits_T<
             ::testdata::ArraycharList,
@@ -278,7 +278,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::testdata::BdArraycharList>
+  class SArg_Traits< ::testdata::BdArraycharList>
     : public
         Var_Size_SArg_Traits_T<
             ::testdata::BdArraycharList,
@@ -288,7 +288,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::testdata::ArrayDeCharList>
+  class SArg_Traits< ::testdata::ArrayDeCharList>
     : public
         Var_Size_SArg_Traits_T<
             ::testdata::ArrayDeCharList,
@@ -298,7 +298,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::testdata::BdArrayDeCharList>
+  class SArg_Traits< ::testdata::BdArrayDeCharList>
     : public
         Var_Size_SArg_Traits_T<
             ::testdata::BdArrayDeCharList,
@@ -311,7 +311,7 @@ namespace TAO
 #define _AMH_TESTDATAEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::AMH_testdataExceptionHolder>
+  class SArg_Traits< ::AMH_testdataExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_testdataExceptionHolder *,
@@ -328,7 +328,7 @@ namespace TAO
 #define _AMI_TESTDATAHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AMI_testdataHandler>
+  class  SArg_Traits< ::AMI_testdataHandler>
     : public Object_SArg_Traits_T<
         ::AMI_testdataHandler_ptr,
         ::AMI_testdataHandler_var,
@@ -340,7 +340,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::arraytest::myvec2_tag>
+  class SArg_Traits< ::arraytest::myvec2_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::arraytest::myvec2_out,
@@ -351,7 +351,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::arraytest::myvec3_tag>
+  class SArg_Traits< ::arraytest::myvec3_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::arraytest::myvec3_out,
@@ -365,7 +365,7 @@ namespace TAO
 #define _ARRAYTEST_MYTEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::arraytest::MyTest>
+  class  SArg_Traits< ::arraytest::MyTest>
     : public Object_SArg_Traits_T<
         ::arraytest::MyTest_ptr,
         ::arraytest::MyTest_var,
@@ -380,7 +380,7 @@ namespace TAO
 #define _ARRAYTEST_AMH_MYTESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::arraytest::AMH_MyTestExceptionHolder>
+  class SArg_Traits< ::arraytest::AMH_MyTestExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::arraytest::AMH_MyTestExceptionHolder *,
@@ -397,7 +397,7 @@ namespace TAO
 #define _ARRAYTEST_AMI_MYTESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::arraytest::AMI_MyTestHandler>
+  class  SArg_Traits< ::arraytest::AMI_MyTestHandler>
     : public Object_SArg_Traits_T<
         ::arraytest::AMI_MyTestHandler_ptr,
         ::arraytest::AMI_MyTestHandler_var,
@@ -409,7 +409,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::bug_2126::FirstUnion>
+  class SArg_Traits< ::bug_2126::FirstUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bug_2126::FirstUnion,
@@ -419,7 +419,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::bug_2126::FirstUnionArray_tag>
+  class SArg_Traits< ::bug_2126::FirstUnionArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::bug_2126::FirstUnionArray_var,
@@ -430,7 +430,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::bug_2126::MyStruct>
+  class SArg_Traits< ::bug_2126::MyStruct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bug_2126::MyStruct,
@@ -440,7 +440,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::bug_2126::SecondUnion>
+  class SArg_Traits< ::bug_2126::SecondUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bug_2126::SecondUnion,
@@ -450,7 +450,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::bug_2126::BdFirstUnionArray_tag>
+  class SArg_Traits< ::bug_2126::BdFirstUnionArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::bug_2126::BdFirstUnionArray_var,
@@ -461,7 +461,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::bug_2126::BdMyStruct>
+  class SArg_Traits< ::bug_2126::BdMyStruct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bug_2126::BdMyStruct,
@@ -471,7 +471,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::bug_2126::BdSecondUnion>
+  class SArg_Traits< ::bug_2126::BdSecondUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::bug_2126::BdSecondUnion,
@@ -481,7 +481,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::B41_tag>
+  class SArg_Traits< ::B41_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::B41_var,
@@ -492,7 +492,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::B42_tag>
+  class SArg_Traits< ::B42_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::B42_var,
@@ -503,7 +503,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::B43_tag>
+  class SArg_Traits< ::B43_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::B43_var,
@@ -514,7 +514,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::B85>
+  class SArg_Traits< ::B85>
     : public
         Fixed_Size_SArg_Traits_T<
             ::B85,
@@ -536,10 +536,10 @@ protected:
   POA_AMH_array_args ();
 
 public:
-  POA_AMH_array_args (POA_AMH_array_args const &rhs);
+  POA_AMH_array_args (const POA_AMH_array_args& rhs);
   ~POA_AMH_array_args () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -547,7 +547,7 @@ public:
 
   array_args *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void all_arrays_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -555,8 +555,8 @@ static void all_arrays_skel (
 
 virtual void all_arrays (
     AMH_array_argsResponseHandler_ptr _tao_rh,
-    ::oa1 const arg1,
-    ::oa2 const arg2
+    const ::oa1 arg1,
+    const ::oa2 arg2
   ) = 0;
 
 };
@@ -578,10 +578,10 @@ public:
   using _stub_ptr_type = ::array_args_ptr;
   using _stub_var_type = ::array_args_var;
 
-  POA_array_args (POA_array_args const &rhs) = default;
+  POA_array_args (const POA_array_args& rhs) = default;
   ~POA_array_args () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -589,10 +589,10 @@ public:
 
   ::array_args *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void all_arrays (
-    ::oa1 const arg1,
-    ::oa2 const arg2) = 0;
+    const ::oa1 arg1,
+    const ::oa2 arg2) = 0;
 
   static void all_arrays_skel (
       TAO_ServerRequest &server_request,
@@ -650,10 +650,10 @@ public:
   using _stub_ptr_type = ::AMI_array_argsHandler_ptr;
   using _stub_var_type = ::AMI_array_argsHandler_var;
 
-  POA_AMI_array_argsHandler (POA_AMI_array_argsHandler const &rhs) = default;
+  POA_AMI_array_argsHandler (const POA_AMI_array_argsHandler& rhs) = default;
   ~POA_AMI_array_argsHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -661,7 +661,7 @@ public:
 
   ::AMI_array_argsHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void all_arrays () = 0;
 
   static void all_arrays_skel (
@@ -714,10 +714,10 @@ protected:
   POA_AMH_testdata ();
 
 public:
-  POA_AMH_testdata (POA_AMH_testdata const &rhs);
+  POA_AMH_testdata (const POA_AMH_testdata& rhs);
   ~POA_AMH_testdata () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -725,7 +725,7 @@ public:
 
   testdata *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 };
 
 class POA_testdata;
@@ -745,10 +745,10 @@ public:
   using _stub_ptr_type = ::testdata_ptr;
   using _stub_var_type = ::testdata_var;
 
-  POA_testdata (POA_testdata const &rhs) = default;
+  POA_testdata (const POA_testdata& rhs) = default;
   ~POA_testdata () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -756,7 +756,7 @@ public:
 
   ::testdata *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -802,10 +802,10 @@ public:
   using _stub_ptr_type = ::AMI_testdataHandler_ptr;
   using _stub_var_type = ::AMI_testdataHandler_var;
 
-  POA_AMI_testdataHandler (POA_AMI_testdataHandler const &rhs) = default;
+  POA_AMI_testdataHandler (const POA_AMI_testdataHandler& rhs) = default;
   ~POA_AMI_testdataHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -813,7 +813,7 @@ public:
 
   ::AMI_testdataHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -844,10 +844,10 @@ namespace POA_arraytest
     AMH_MyTest ();
 
   public:
-    AMH_MyTest (AMH_MyTest const &rhs);
+    AMH_MyTest (const AMH_MyTest& rhs);
     ~AMH_MyTest () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -855,7 +855,7 @@ namespace POA_arraytest
 
     arraytest::MyTest *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   static void test_method_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -884,10 +884,10 @@ public:
   using _stub_ptr_type = ::arraytest::MyTest_ptr;
   using _stub_var_type = ::arraytest::MyTest_var;
 
-  MyTest (MyTest const &rhs) = default;
+  MyTest (const MyTest& rhs) = default;
   ~MyTest () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -895,7 +895,7 @@ public:
 
   ::arraytest::MyTest *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void test_method (
     ::arraytest::myvec2_out mystring) = 0;
 
@@ -934,7 +934,7 @@ public:
   TAO_AMH_MyTestResponseHandler () = default;
   virtual ~TAO_AMH_MyTestResponseHandler () = default;
   void test_method (
-    ::arraytest::myvec2 const mystring) override;
+    const ::arraytest::myvec2 mystring) override;
   void test_method_excep (
     ::arraytest::AMH_MyTestExceptionHolder * holder) override;
 };
@@ -956,10 +956,10 @@ public:
   using _stub_ptr_type = ::arraytest::AMI_MyTestHandler_ptr;
   using _stub_var_type = ::arraytest::AMI_MyTestHandler_var;
 
-  AMI_MyTestHandler (AMI_MyTestHandler const &rhs) = default;
+  AMI_MyTestHandler (const AMI_MyTestHandler& rhs) = default;
   ~AMI_MyTestHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -967,9 +967,9 @@ public:
 
   ::arraytest::AMI_MyTestHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void test_method (
-    ::arraytest::myvec2 const mystring) = 0;
+    const ::arraytest::myvec2 mystring) = 0;
 
   static void test_method_skel (
       TAO_ServerRequest &server_request,
