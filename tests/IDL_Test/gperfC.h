@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_GPERFC_BBN2VA_H_
-#define _TAO_IDL_GPERFC_BBN2VA_H_
+#ifndef _TAO_IDL_GPERFC_H_
+#define _TAO_IDL_GPERFC_H_
 
 #include /**/ "ace/pre.h"
 

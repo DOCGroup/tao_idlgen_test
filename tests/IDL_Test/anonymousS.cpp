@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ANONYMOUSS_WS91WH_CPP_
-#define _TAO_IDL_ANONYMOUSS_WS91WH_CPP_
+#ifndef _TAO_IDL_ANONYMOUSS_CPP_
+#define _TAO_IDL_ANONYMOUSS_CPP_
 
 #include "anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

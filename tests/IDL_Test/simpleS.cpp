@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SIMPLES_Q0VC7R_CPP_
-#define _TAO_IDL_SIMPLES_Q0VC7R_CPP_
+#ifndef _TAO_IDL_SIMPLES_CPP_
+#define _TAO_IDL_SIMPLES_CPP_
 
 #include "simpleS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

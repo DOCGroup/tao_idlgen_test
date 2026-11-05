@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDEDS_RRJ5UA_CPP_
-#define _TAO_IDL_INCLUDEDS_RRJ5UA_CPP_
+#ifndef _TAO_IDL_INCLUDEDS_CPP_
+#define _TAO_IDL_INCLUDEDS_CPP_
 
 #include "includedS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

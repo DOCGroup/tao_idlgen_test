@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_ATTRIBUTES_2BLQ0H_CPP_
-#define _TAO_IDL_ATTRIBUTES_2BLQ0H_CPP_
+#ifndef _TAO_IDL_ATTRIBUTES_CPP_
+#define _TAO_IDL_ATTRIBUTES_CPP_
 
 #include "attributeS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

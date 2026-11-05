@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_37F042_CPP_
-#define _TAO_IDL_BUG_2582_REGRESSIONS_37F042_CPP_
+#ifndef _TAO_IDL_BUG_2582_REGRESSIONS_CPP_
+#define _TAO_IDL_BUG_2582_REGRESSIONS_CPP_
 
 #include "Bug_2582_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

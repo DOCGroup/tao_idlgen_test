@@ -17,6 +17,7 @@ do
   export TEST=$i
   pushd $TEST
   $ACE_ROOT/bin/mwc.pl -type gnuace -workers 8
+  find . -type f -name 'GNUmakefile*' -exec sed -i '/^TAO_IDLFLAGS =/a TAO_IDLFLAGS += -Sg' {} +
   make realclean && make -j 8
   if [ "$TEST" = "tests/IDL_Test" ]; then
     make -C Versioned_Namespace -f GNUmakefile.IDL_Test_Versioned_Namespace_1 \

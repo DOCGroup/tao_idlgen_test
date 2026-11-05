@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_WD450O_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSC_WD450O_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSC_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSC_H_
 
 #include /**/ "ace/pre.h"
 

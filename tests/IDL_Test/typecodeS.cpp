@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPECODES_RH0NAT_CPP_
-#define _TAO_IDL_TYPECODES_RH0NAT_CPP_
+#ifndef _TAO_IDL_TYPECODES_CPP_
+#define _TAO_IDL_TYPECODES_CPP_
 
 #include "typecodeS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

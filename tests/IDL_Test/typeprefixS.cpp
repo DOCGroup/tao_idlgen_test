@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_TYPEPREFIXS_6MWHDJ_CPP_
-#define _TAO_IDL_TYPEPREFIXS_6MWHDJ_CPP_
+#ifndef _TAO_IDL_TYPEPREFIXS_CPP_
+#define _TAO_IDL_TYPEPREFIXS_CPP_
 
 #include "typeprefixS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_ARRAYC_ZYEMG6_H_
-#define _TAO_IDL_OLD_ARRAYC_ZYEMG6_H_
+#ifndef _TAO_IDL_OLD_ARRAYC_H_
+#define _TAO_IDL_OLD_ARRAYC_H_
 
 #include /**/ "ace/pre.h"
 

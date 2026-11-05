@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDS_S4Y0LZ_H_
-#define _TAO_IDL_FIXEDS_S4Y0LZ_H_
+#ifndef _TAO_IDL_FIXEDS_H_
+#define _TAO_IDL_FIXEDS_H_
 
 #include /**/ "ace/pre.h"
 

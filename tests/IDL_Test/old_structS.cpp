@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_OLD_STRUCTS_RF7XMO_CPP_
-#define _TAO_IDL_OLD_STRUCTS_RF7XMO_CPP_
+#ifndef _TAO_IDL_OLD_STRUCTS_CPP_
+#define _TAO_IDL_OLD_STRUCTS_CPP_
 
 #include "old_structS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

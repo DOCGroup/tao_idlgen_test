@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_INCLUDINGS_MYDXO5_CPP_
-#define _TAO_IDL_INCLUDINGS_MYDXO5_CPP_
+#ifndef _TAO_IDL_INCLUDINGS_CPP_
+#define _TAO_IDL_INCLUDINGS_CPP_
 
 #include "includingS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

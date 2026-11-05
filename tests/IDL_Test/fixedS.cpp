@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_FIXEDS_0IEORH_CPP_
-#define _TAO_IDL_FIXEDS_0IEORH_CPP_
+#ifndef _TAO_IDL_FIXEDS_CPP_
+#define _TAO_IDL_FIXEDS_CPP_
 
 #include "fixedS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"

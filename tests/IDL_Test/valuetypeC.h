@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_VALUETYPEC_XWL0RL_H_
-#define _TAO_IDL_VALUETYPEC_XWL0RL_H_
+#ifndef _TAO_IDL_VALUETYPEC_H_
+#define _TAO_IDL_VALUETYPEC_H_
 
 #include /**/ "ace/pre.h"
 

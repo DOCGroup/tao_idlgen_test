@@ -22,8 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-#ifndef _TAO_IDL_CONSTANTSA_AHMA5S_H_
-#define _TAO_IDL_CONSTANTSA_AHMA5S_H_
+#ifndef _TAO_IDL_CONSTANTSA_H_
+#define _TAO_IDL_CONSTANTSA_H_
 
 #include /**/ "ace/pre.h"
 
