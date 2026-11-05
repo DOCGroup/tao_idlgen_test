@@ -16,7 +16,7 @@ for i in "${tests[@]}"
 do
   export TEST=$i
   pushd $TEST
-  $ACE_ROOT/bin/mwc.pl -type gnuace -workers 8
+  $ACE_ROOT/bin/mwc.pl -type gnuace -workers 8 -include "$TAO_ROOT/MPC/config"
   find . -type f -name 'GNUmakefile*' -exec sed -i '/^TAO_IDLFLAGS =/a TAO_IDLFLAGS += -Sg' {} +
   make realclean && make -j 8
   if [ "$TEST" = "tests/IDL_Test" ]; then
