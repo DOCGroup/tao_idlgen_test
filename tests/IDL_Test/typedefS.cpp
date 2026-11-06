@@ -64,11 +64,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_TestModule_AMH_TestInterface_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_TestModule_AMH_TestInterface_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_TestModule_AMH_TestInterface_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -271,11 +268,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_TestModule_TestInterface_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_TestModule_TestInterface_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_TestModule_TestInterface_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -620,11 +614,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_TestModule_AMI_TestInterfaceHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_TestModule_AMI_TestInterfaceHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_TestModule_AMI_TestInterfaceHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -1090,11 +1081,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2124_AMH_Foo_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2124_AMH_Foo_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2124_AMH_Foo_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -1297,11 +1285,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2124_Foo_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2124_Foo_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2124_Foo_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -1646,11 +1631,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2124_AMI_FooHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2124_AMI_FooHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2124_AMI_FooHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -2116,11 +2098,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_One_AMH_Whatever_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_One_AMH_Whatever_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2122_One_AMH_Whatever_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -2277,11 +2256,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_One_Whatever_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_One_Whatever_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2122_One_Whatever_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -2519,11 +2495,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_One_AMI_WhateverHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_One_AMI_WhateverHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2122_One_AMI_WhateverHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -2815,11 +2788,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Two_AMH_WhoCares_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Two_AMH_WhoCares_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2122_Two_AMH_WhoCares_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -2976,11 +2946,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Two_WhoCares_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Two_WhoCares_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2122_Two_WhoCares_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -3218,11 +3185,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Two_AMI_WhoCaresHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Two_AMI_WhoCaresHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2122_Two_AMI_WhoCaresHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -3514,11 +3478,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Three_AMH_WhoCares_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Three_AMH_WhoCares_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2122_Three_AMH_WhoCares_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -3675,11 +3636,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Three_WhoCares_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Three_WhoCares_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2122_Three_WhoCares_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -3917,11 +3875,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Three_AMI_WhoCaresHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_bug_2122_Three_AMI_WhoCaresHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_bug_2122_Three_AMI_WhoCaresHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {

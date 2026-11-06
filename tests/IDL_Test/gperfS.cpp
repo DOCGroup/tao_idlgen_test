@@ -64,11 +64,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_testlistitem_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_testlistitem_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_testlistitem_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -217,11 +214,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_testlistitem_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_testlistitem_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_testlistitem_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -457,11 +451,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_testlistitemHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -758,11 +749,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_test_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_test_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_test_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -1509,11 +1497,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_test_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_test_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_test_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -3286,11 +3271,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_testHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_testHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_testHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -5923,11 +5905,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_Simple_Server_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_Simple_Server_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMH_Simple_Server_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -6694,11 +6673,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_Simple_Server_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_Simple_Server_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_Simple_Server_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -8395,11 +8371,8 @@ public:
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable -N lookup */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable -N lookup */
 
-#include <array>
-#include <cstddef>
-#include <memory>
 std::size_t
 TAO_AMI_Simple_ServerHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
