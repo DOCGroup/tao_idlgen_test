@@ -174,9 +174,9 @@ class MY_Stub_Export TAO_Diamond_Top_Proxy_Factory_Adapter
     public:
       TAO_Diamond_Top_Smart_Proxy_Base ();
       ~TAO_Diamond_Top_Smart_Proxy_Base ();
-      virtual TAO_Stub *_stubobj () const;
-      virtual TAO_Stub *_stubobj ();
-            virtual char * shape ();
+      TAO_Stub *_stubobj () const override;
+      TAO_Stub *_stubobj () override;
+            char * shape () override;
     protected:
       ::Diamond::Top_ptr get_proxy ();
       ::Diamond::Top_var proxy_;
@@ -290,9 +290,9 @@ class MY_Stub_Export TAO_Diamond_Left_Proxy_Factory_Adapter
       public:
         TAO_Diamond_Left_Smart_Proxy_Base ();
         ~TAO_Diamond_Left_Smart_Proxy_Base ();
-        virtual TAO_Stub *_stubobj () const;
-        virtual TAO_Stub *_stubobj ();
-                  virtual char * color ();
+        TAO_Stub *_stubobj () const override;
+        TAO_Stub *_stubobj () override;
+                  char * color () override;
       protected:
         ::Diamond::Left_ptr get_proxy ();
         ::Diamond::Left_var proxy_;
@@ -406,9 +406,9 @@ class MY_Stub_Export TAO_Diamond_Right_Proxy_Factory_Adapter
         public:
           TAO_Diamond_Right_Smart_Proxy_Base ();
           ~TAO_Diamond_Right_Smart_Proxy_Base ();
-          virtual TAO_Stub *_stubobj () const;
-          virtual TAO_Stub *_stubobj ();
-                        virtual ::CORBA::Long width ();
+          TAO_Stub *_stubobj () const override;
+          TAO_Stub *_stubobj () override;
+                        ::CORBA::Long width () override;
         protected:
           ::Diamond::Right_ptr get_proxy ();
           ::Diamond::Right_var proxy_;
@@ -524,9 +524,9 @@ class MY_Stub_Export TAO_Diamond_Buttom_Proxy_Factory_Adapter
           public:
             TAO_Diamond_Buttom_Smart_Proxy_Base ();
             ~TAO_Diamond_Buttom_Smart_Proxy_Base ();
-            virtual TAO_Stub *_stubobj () const;
-            virtual TAO_Stub *_stubobj ();
-                              virtual char * name ();
+            TAO_Stub *_stubobj () const override;
+            TAO_Stub *_stubobj () override;
+                              char * name () override;
           protected:
             ::Diamond::Buttom_ptr get_proxy ();
             ::Diamond::Buttom_var proxy_;

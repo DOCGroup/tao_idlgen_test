@@ -203,11 +203,11 @@ public:
   public:
     TAO_Test_Smart_Proxy_Base ();
     ~TAO_Test_Smart_Proxy_Base ();
-    virtual TAO_Stub *_stubobj () const;
-    virtual TAO_Stub *_stubobj ();
-      virtual ::CORBA::Short method (
-    ::CORBA::Short boo);
-    virtual void shutdown ();
+    TAO_Stub *_stubobj () const override;
+    TAO_Stub *_stubobj () override;
+      ::CORBA::Short method (
+    ::CORBA::Short boo) override;
+    void shutdown () override;
   protected:
     ::Test_ptr get_proxy ();
     ::Test_var proxy_;
