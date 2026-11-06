@@ -194,7 +194,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -209,7 +209,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::CallMe::Colors>
+  class Arg_Traits< ::CallMe::Colors>
     : public
         Basic_Arg_Traits_T<
             ::CallMe::Colors,
@@ -219,7 +219,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::CallMe::YourColorBaby>
+  class Arg_Traits< ::CallMe::YourColorBaby>
     : public
         Fixed_Size_Arg_Traits_T<
             ::CallMe::YourColorBaby,
@@ -229,7 +229,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::CallMe::YourColorBaby::Val>
+  class Arg_Traits< ::CallMe::YourColorBaby::Val>
     : public
         Basic_Arg_Traits_T<
             ::CallMe::YourColorBaby::Val,
@@ -239,7 +239,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::CallMe::YourCar>
+  class Arg_Traits< ::CallMe::YourCar>
     : public
         Fixed_Size_Arg_Traits_T<
             ::CallMe::YourCar,
@@ -263,7 +263,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, CallMe::Colors);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, CallMe::Colors &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, CallMe::Colors &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -280,7 +280,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, CallMe::YourColorBaby::ColorMe);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, CallMe::YourColorBaby::ColorMe &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, CallMe::YourColorBaby::ColorMe &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -288,7 +288,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, CallMe::YourColorBaby::Val);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, CallMe::YourColorBaby::Val &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, CallMe::YourColorBaby::Val &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -305,7 +305,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, CallMe::YourCar::ColorMe);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, CallMe::YourCar::ColorMe &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, CallMe::YourCar::ColorMe &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

@@ -2377,7 +2377,7 @@ TAO::Array_Traits<U41_forany>::free (
 ACE_INLINE
 U41_slice *
 TAO::Array_Traits<U41_forany>::dup (
-    U41_slice const * _tao_slice)
+    const U41_slice * _tao_slice)
 {
   return U41_dup (_tao_slice);
 }
@@ -2386,7 +2386,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<U41_forany>::copy (
     U41_slice * _tao_to,
-    U41_slice const * _tao_from)
+    const U41_slice * _tao_from)
 {
   U41_copy (_tao_to, _tao_from);
 }
@@ -2428,7 +2428,7 @@ TAO::Array_Traits<U42_forany>::free (
 ACE_INLINE
 U42_slice *
 TAO::Array_Traits<U42_forany>::dup (
-    U42_slice const * _tao_slice)
+    const U42_slice * _tao_slice)
 {
   return U42_dup (_tao_slice);
 }
@@ -2437,7 +2437,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<U42_forany>::copy (
     U42_slice * _tao_to,
-    U42_slice const * _tao_from)
+    const U42_slice * _tao_from)
 {
   U42_copy (_tao_to, _tao_from);
 }
@@ -2571,7 +2571,7 @@ TAO::Array_Traits<UString_forany>::free (
 ACE_INLINE
 UString_slice *
 TAO::Array_Traits<UString_forany>::dup (
-    UString_slice const * _tao_slice)
+    const UString_slice * _tao_slice)
 {
   return UString_dup (_tao_slice);
 }
@@ -2580,7 +2580,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<UString_forany>::copy (
     UString_slice * _tao_to,
-    UString_slice const * _tao_from)
+    const UString_slice * _tao_from)
 {
   UString_copy (_tao_to, _tao_from);
 }
@@ -2831,7 +2831,7 @@ TAO::Array_Traits<UBarArray_forany>::free (
 ACE_INLINE
 UBarArray_slice *
 TAO::Array_Traits<UBarArray_forany>::dup (
-    UBarArray_slice const * _tao_slice)
+    const UBarArray_slice * _tao_slice)
 {
   return UBarArray_dup (_tao_slice);
 }
@@ -2840,7 +2840,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<UBarArray_forany>::copy (
     UBarArray_slice * _tao_to,
-    UBarArray_slice const * _tao_from)
+    const UBarArray_slice * _tao_from)
 {
   UBarArray_copy (_tao_to, _tao_from);
 }
@@ -3079,7 +3079,7 @@ TAO::Array_Traits<U90Array_forany>::free (
 ACE_INLINE
 U90Array_slice *
 TAO::Array_Traits<U90Array_forany>::dup (
-    U90Array_slice const * _tao_slice)
+    const U90Array_slice * _tao_slice)
 {
   return U90Array_dup (_tao_slice);
 }
@@ -3088,7 +3088,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<U90Array_forany>::copy (
     U90Array_slice * _tao_to,
-    U90Array_slice const * _tao_from)
+    const U90Array_slice * _tao_from)
 {
   U90Array_copy (_tao_to, _tao_from);
 }
@@ -3574,7 +3574,7 @@ TAO::Array_Traits<DefaultInitializedLongArray_forany>::free (
 ACE_INLINE
 DefaultInitializedLongArray_slice *
 TAO::Array_Traits<DefaultInitializedLongArray_forany>::dup (
-    DefaultInitializedLongArray_slice const * _tao_slice)
+    const DefaultInitializedLongArray_slice * _tao_slice)
 {
   return DefaultInitializedLongArray_dup (_tao_slice);
 }
@@ -3583,7 +3583,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<DefaultInitializedLongArray_forany>::copy (
     DefaultInitializedLongArray_slice * _tao_to,
-    DefaultInitializedLongArray_slice const * _tao_from)
+    const DefaultInitializedLongArray_slice * _tao_from)
 {
   DefaultInitializedLongArray_copy (_tao_to, _tao_from);
 }

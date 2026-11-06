@@ -35,7 +35,7 @@ TAO::Array_Traits<OldArray::str22_forany>::free (
 ACE_INLINE
 OldArray::str22_slice *
 TAO::Array_Traits<OldArray::str22_forany>::dup (
-    OldArray::str22_slice const * _tao_slice)
+    const OldArray::str22_slice * _tao_slice)
 {
   return OldArray::str22_dup (_tao_slice);
 }
@@ -44,7 +44,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::str22_forany>::copy (
     OldArray::str22_slice * _tao_to,
-    OldArray::str22_slice const * _tao_from)
+    const OldArray::str22_slice * _tao_from)
 {
   OldArray::str22_copy (_tao_to, _tao_from);
 }
@@ -86,7 +86,7 @@ TAO::Array_Traits<OldArray::boolarray_forany>::free (
 ACE_INLINE
 OldArray::boolarray_slice *
 TAO::Array_Traits<OldArray::boolarray_forany>::dup (
-    OldArray::boolarray_slice const * _tao_slice)
+    const OldArray::boolarray_slice * _tao_slice)
 {
   return OldArray::boolarray_dup (_tao_slice);
 }
@@ -95,7 +95,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::boolarray_forany>::copy (
     OldArray::boolarray_slice * _tao_to,
-    OldArray::boolarray_slice const * _tao_from)
+    const OldArray::boolarray_slice * _tao_from)
 {
   OldArray::boolarray_copy (_tao_to, _tao_from);
 }
@@ -137,7 +137,7 @@ TAO::Array_Traits<OldArray::char_17_forany>::free (
 ACE_INLINE
 OldArray::char_17_slice *
 TAO::Array_Traits<OldArray::char_17_forany>::dup (
-    OldArray::char_17_slice const * _tao_slice)
+    const OldArray::char_17_slice * _tao_slice)
 {
   return OldArray::char_17_dup (_tao_slice);
 }
@@ -146,7 +146,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::char_17_forany>::copy (
     OldArray::char_17_slice * _tao_to,
-    OldArray::char_17_slice const * _tao_from)
+    const OldArray::char_17_slice * _tao_from)
 {
   OldArray::char_17_copy (_tao_to, _tao_from);
 }
@@ -185,7 +185,7 @@ TAO::Array_Traits<OldArray::char_10_2_forany>::free (
 ACE_INLINE
 OldArray::char_10_2_slice *
 TAO::Array_Traits<OldArray::char_10_2_forany>::dup (
-    OldArray::char_10_2_slice const * _tao_slice)
+    const OldArray::char_10_2_slice * _tao_slice)
 {
   return OldArray::char_10_2_dup (_tao_slice);
 }
@@ -194,7 +194,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::char_10_2_forany>::copy (
     OldArray::char_10_2_slice * _tao_to,
-    OldArray::char_10_2_slice const * _tao_from)
+    const OldArray::char_10_2_slice * _tao_from)
 {
   OldArray::char_10_2_copy (_tao_to, _tao_from);
 }
@@ -236,7 +236,7 @@ TAO::Array_Traits<OldArray::A_matrix_forany>::free (
 ACE_INLINE
 OldArray::A_matrix_slice *
 TAO::Array_Traits<OldArray::A_matrix_forany>::dup (
-    OldArray::A_matrix_slice const * _tao_slice)
+    const OldArray::A_matrix_slice * _tao_slice)
 {
   return OldArray::A_matrix_dup (_tao_slice);
 }
@@ -245,7 +245,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::A_matrix_forany>::copy (
     OldArray::A_matrix_slice * _tao_to,
-    OldArray::A_matrix_slice const * _tao_from)
+    const OldArray::A_matrix_slice * _tao_from)
 {
   OldArray::A_matrix_copy (_tao_to, _tao_from);
 }
@@ -290,7 +290,7 @@ TAO::Array_Traits<OldArray::B_matrix_forany>::free (
 ACE_INLINE
 OldArray::B_matrix_slice *
 TAO::Array_Traits<OldArray::B_matrix_forany>::dup (
-    OldArray::B_matrix_slice const * _tao_slice)
+    const OldArray::B_matrix_slice * _tao_slice)
 {
   return OldArray::B_matrix_dup (_tao_slice);
 }
@@ -299,7 +299,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::B_matrix_forany>::copy (
     OldArray::B_matrix_slice * _tao_to,
-    OldArray::B_matrix_slice const * _tao_from)
+    const OldArray::B_matrix_slice * _tao_from)
 {
   OldArray::B_matrix_copy (_tao_to, _tao_from);
 }
@@ -344,7 +344,7 @@ TAO::Array_Traits<OldArray::C_matrix_forany>::free (
 ACE_INLINE
 OldArray::C_matrix_slice *
 TAO::Array_Traits<OldArray::C_matrix_forany>::dup (
-    OldArray::C_matrix_slice const * _tao_slice)
+    const OldArray::C_matrix_slice * _tao_slice)
 {
   return OldArray::C_matrix_dup (_tao_slice);
 }
@@ -353,7 +353,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::C_matrix_forany>::copy (
     OldArray::C_matrix_slice * _tao_to,
-    OldArray::C_matrix_slice const * _tao_from)
+    const OldArray::C_matrix_slice * _tao_from)
 {
   OldArray::C_matrix_copy (_tao_to, _tao_from);
 }
@@ -398,7 +398,7 @@ TAO::Array_Traits<OldArray::A_rmatrix_forany>::free (
 ACE_INLINE
 OldArray::A_rmatrix_slice *
 TAO::Array_Traits<OldArray::A_rmatrix_forany>::dup (
-    OldArray::A_rmatrix_slice const * _tao_slice)
+    const OldArray::A_rmatrix_slice * _tao_slice)
 {
   return OldArray::A_rmatrix_dup (_tao_slice);
 }
@@ -407,7 +407,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::A_rmatrix_forany>::copy (
     OldArray::A_rmatrix_slice * _tao_to,
-    OldArray::A_rmatrix_slice const * _tao_from)
+    const OldArray::A_rmatrix_slice * _tao_from)
 {
   OldArray::A_rmatrix_copy (_tao_to, _tao_from);
 }

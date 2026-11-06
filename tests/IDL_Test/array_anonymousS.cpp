@@ -27,7 +27,6 @@
 
 #include "array_anonymousS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
-#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -63,9 +62,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_tdef_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_tdef_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_AMH_tdef_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -132,7 +134,7 @@ POA_AMH_tdef::POA_AMH_tdef ()
   this->optable_ = std::addressof (tao_AMH_tdef_optable);
 }
 
-::CORBA::Boolean POA_AMH_tdef::_is_a (char const *value)
+::CORBA::Boolean POA_AMH_tdef::_is_a (const char* value)
 {
   return
     (
@@ -141,7 +143,7 @@ POA_AMH_tdef::POA_AMH_tdef ()
     );
 }
 
-char const *POA_AMH_tdef::_interface_repository_id () const
+const char* POA_AMH_tdef::_interface_repository_id () const
 {
   return "IDL:tdef:1.0";
 }
@@ -156,7 +158,7 @@ tdef*
 POA_AMH_tdef::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -176,9 +178,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_tdef_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_tdef_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_tdef_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -257,7 +262,7 @@ POA_tdef::POA_tdef ()
   this->optable_ = std::addressof (tao_tdef_optable);
 }
 
-::CORBA::Boolean POA_tdef::_is_a (char const *value)
+::CORBA::Boolean POA_tdef::_is_a (const char* value)
 {
   return
     (
@@ -266,7 +271,7 @@ POA_tdef::POA_tdef ()
     );
 }
 
-char const *POA_tdef::_interface_repository_id () const
+const char* POA_tdef::_interface_repository_id () const
 {
   return "IDL:tdef:1.0";
 }
@@ -301,9 +306,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_tdefHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_tdefHandler_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_AMI_tdefHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -383,7 +391,7 @@ POA_AMI_tdefHandler::POA_AMI_tdefHandler ()
   this->optable_ = std::addressof (tao_AMI_tdefHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_tdefHandler::_is_a (char const *value)
+::CORBA::Boolean POA_AMI_tdefHandler::_is_a (const char* value)
 {
   return
     (
@@ -393,7 +401,7 @@ POA_AMI_tdefHandler::POA_AMI_tdefHandler ()
     );
 }
 
-char const *POA_AMI_tdefHandler::_interface_repository_id () const
+const char* POA_AMI_tdefHandler::_interface_repository_id () const
 {
   return "IDL:AMI_tdefHandler:1.0";
 }

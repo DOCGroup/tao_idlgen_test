@@ -117,7 +117,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -135,7 +135,7 @@ namespace TAO
 #define _ORANGE_APPLE_FOO__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::orange::apple::Foo>
+  class Arg_Traits< ::orange::apple::Foo>
     : public
         Object_Arg_Traits_T<
             ::orange::apple::Foo *,
@@ -153,7 +153,7 @@ namespace TAO
 #define _ORANGE_APPLE_FOO__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::orange::apple::Foo>
+  class Arg_Traits< ::orange::apple::Foo>
     : public
         Object_Arg_Traits_T<
             ::orange::apple::Foo *,
@@ -171,7 +171,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::orange::apple::Bar>
+  class  Arg_Traits< ::orange::apple::Bar>
     : public Object_Arg_Traits_T<
         ::orange::apple::Bar_ptr,
         ::orange::apple::Bar_var,
@@ -187,7 +187,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::orange::apple::Bar>
+  class  Arg_Traits< ::orange::apple::Bar>
     : public Object_Arg_Traits_T<
         ::orange::apple::Bar_ptr,
         ::orange::apple::Bar_var,
@@ -245,7 +245,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::orange::apple::Bar>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::orange::apple::Bar>
   {
     static ::orange::apple::Bar_ptr duplicate (::orange::apple::Bar_ptr p);
     static void release (::orange::apple::Bar_ptr p);
@@ -259,7 +259,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::orange::apple::Bar>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::orange::apple::Bar>
   {
     static ::orange::apple::Bar_ptr duplicate (::orange::apple::Bar_ptr p);
     static void release (::orange::apple::Bar_ptr p);
@@ -294,7 +294,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, orange::apple::Bar *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Bar *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -303,7 +303,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, orange::apple::Bar *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Bar *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -341,14 +341,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, orange::apple::Bar_ptr const );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Bar_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::apple::Bar_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, orange::apple::Bar_ptr const );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Bar_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::apple::Bar_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

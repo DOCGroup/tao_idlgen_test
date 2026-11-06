@@ -57,13 +57,13 @@ static TAO::TypeCode::Enum<char const *,
     2);
 
 ::CORBA::TypeCode_ptr const _tc_ObjectType = std::addressof(_tao_tc_ObjectType);
-static TAO::TypeCode::Case_T<ObjectType, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_Selecter__0 (::OT_THIS, "this_object", std::addressof (CORBA::_tc_Object));
-static TAO::TypeCode::Case_T<ObjectType, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_Selecter__1 (::OT_THAT, "that_object", std::addressof (CORBA::_tc_Object));
+static TAO::TypeCode::Case_T<ObjectType, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_Selecter__0 (::OT_THIS, "this_object", &CORBA::_tc_Object);
+static TAO::TypeCode::Case_T<ObjectType, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_Selecter__1 (::OT_THAT, "that_object", &CORBA::_tc_Object);
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_Selecter[] =
   {
-    std::addressof (_tao_cases_Selecter__0),
-    std::addressof (_tao_cases_Selecter__1)
+    &_tao_cases_Selecter__0,
+    &_tao_cases_Selecter__1
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -73,7 +73,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_Selecter (
     "IDL:Selecter:1.0",
     "Selecter",
-    std::addressof (_tc_ObjectType),
+    &_tc_ObjectType,
     _tao_cases_Selecter,
     sizeof (_tao_cases_Selecter)/sizeof (_tao_cases_Selecter[0]),
     -1);
@@ -87,7 +87,7 @@ static TAO::TypeCode::Objref<char const *,
     "generic");
 
 ::CORBA::TypeCode_ptr const _tc_generic = std::addressof(_tao_tc_generic);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_genericExceptionHolder {};
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_genericExceptionHolder = nullptr;
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -97,7 +97,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_genericExceptionHolder:1.0",
     "AMH_genericExceptionHolder",
     ::CORBA::VM_NONE,
-    std::addressof (::CORBA::_tc_null),
+    &::CORBA::_tc_null,
     _tao_fields_AMH_genericExceptionHolder,
     0);
 
@@ -142,7 +142,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     ObjectType &_tao_elem)
 {
   return
@@ -243,7 +243,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     generic_ptr &_tao_elem)
 {
   return
@@ -385,7 +385,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     AMH_genericResponseHandler_ptr &_tao_elem)
 {
   return
@@ -443,7 +443,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    ::CORBA::Any const &_tao_any,
+    const ::CORBA::Any &_tao_any,
     AMI_genericHandler_ptr &_tao_elem)
 {
   return

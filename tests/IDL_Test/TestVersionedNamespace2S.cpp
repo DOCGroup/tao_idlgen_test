@@ -27,7 +27,6 @@
 
 #include "TestVersionedNamespace2S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
-#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -62,9 +61,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_AMH_LI_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M1_AMH_LI_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_M1_AMH_LI_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -163,7 +165,9 @@ POA_M1::AMH_LI::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_M1::TAO_AMH_LIResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_M1::TAO_AMH_LIResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -177,7 +181,7 @@ POA_M1::AMH_LI::op_skel (
     );
 }
 
-::CORBA::Boolean POA_M1::AMH_LI::_is_a (char const *value)
+::CORBA::Boolean POA_M1::AMH_LI::_is_a (const char* value)
 {
   return
     (
@@ -186,7 +190,7 @@ POA_M1::AMH_LI::op_skel (
     );
 }
 
-char const *POA_M1::AMH_LI::_interface_repository_id () const
+const char* POA_M1::AMH_LI::_interface_repository_id () const
 {
   return "IDL:M1/LI:1.0";
 }
@@ -201,7 +205,7 @@ M1::LI*
 POA_M1::AMH_LI::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -221,9 +225,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_LI_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M1_LI_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_M1_LI_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -307,8 +314,8 @@ namespace POA_M1
 
     void execute () override
     {
-      TAO::SArg_Traits<::M1::S1>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::M1::S1> (
+      TAO::SArg_Traits< ::M1::S1>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::M1::S1> (
           this->operation_details_,
           this->args_,
           1);
@@ -328,8 +335,8 @@ void POA_M1::LI::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::M1::S1>::in_arg_val _tao_s;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::M1::S1>::in_arg_val _tao_s;
 
   TAO::Argument * const args[] =
     {
@@ -362,7 +369,7 @@ void POA_M1::LI::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_M1::LI::_is_a (char const *value)
+::CORBA::Boolean POA_M1::LI::_is_a (const char* value)
 {
   return
     (
@@ -371,7 +378,7 @@ void POA_M1::LI::op_skel (
     );
 }
 
-char const *POA_M1::LI::_interface_repository_id () const
+const char* POA_M1::LI::_interface_repository_id () const
 {
   return "IDL:M1/LI:1.0";
 }
@@ -427,9 +434,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_AMH_L2_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M1_AMH_L2_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_M1_AMH_L2_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -528,7 +538,9 @@ POA_M1::AMH_L2::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_M1::TAO_AMH_L2ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_M1::TAO_AMH_L2ResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -542,7 +554,7 @@ POA_M1::AMH_L2::op_skel (
     );
 }
 
-::CORBA::Boolean POA_M1::AMH_L2::_is_a (char const *value)
+::CORBA::Boolean POA_M1::AMH_L2::_is_a (const char* value)
 {
   return
     (
@@ -551,7 +563,7 @@ POA_M1::AMH_L2::op_skel (
     );
 }
 
-char const *POA_M1::AMH_L2::_interface_repository_id () const
+const char* POA_M1::AMH_L2::_interface_repository_id () const
 {
   return "IDL:M1/L2:1.0";
 }
@@ -566,7 +578,7 @@ M1::L2*
 POA_M1::AMH_L2::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -586,9 +598,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_L2_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M1_L2_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_M1_L2_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -672,8 +687,8 @@ namespace POA_M1
 
     void execute () override
     {
-      TAO::SArg_Traits<::M1::S1>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::M1::S1> (
+      TAO::SArg_Traits< ::M1::S1>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::M1::S1> (
           this->operation_details_,
           this->args_,
           1);
@@ -693,8 +708,8 @@ void POA_M1::L2::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::M1::S1>::in_arg_val _tao_s;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::M1::S1>::in_arg_val _tao_s;
 
   TAO::Argument * const args[] =
     {
@@ -727,7 +742,7 @@ void POA_M1::L2::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_M1::L2::_is_a (char const *value)
+::CORBA::Boolean POA_M1::L2::_is_a (const char* value)
 {
   return
     (
@@ -736,7 +751,7 @@ void POA_M1::L2::op_skel (
     );
 }
 
-char const *POA_M1::L2::_interface_repository_id () const
+const char* POA_M1::L2::_interface_repository_id () const
 {
   return "IDL:M1/L2:1.0";
 }
@@ -792,9 +807,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -893,7 +911,9 @@ POA_M2::M3::AMH_L3::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_M2::M3::TAO_AMH_L3ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_M2::M3::TAO_AMH_L3ResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -907,7 +927,7 @@ POA_M2::M3::AMH_L3::op_skel (
     );
 }
 
-::CORBA::Boolean POA_M2::M3::AMH_L3::_is_a (char const *value)
+::CORBA::Boolean POA_M2::M3::AMH_L3::_is_a (const char* value)
 {
   return
     (
@@ -916,7 +936,7 @@ POA_M2::M3::AMH_L3::op_skel (
     );
 }
 
-char const *POA_M2::M3::AMH_L3::_interface_repository_id () const
+const char* POA_M2::M3::AMH_L3::_interface_repository_id () const
 {
   return "IDL:M2/M3/L3:1.0";
 }
@@ -931,7 +951,7 @@ M2::M3::L3*
 POA_M2::M3::AMH_L3::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -951,9 +971,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_L3_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M2_M3_L3_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_M2_M3_L3_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -1040,8 +1063,8 @@ namespace POA_M2
 
       void execute () override
       {
-        TAO::SArg_Traits<::M2::M3::S2>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg<::M2::M3::S2> (
+        TAO::SArg_Traits< ::M2::M3::S2>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg< ::M2::M3::S2> (
             this->operation_details_,
             this->args_,
             1);
@@ -1062,8 +1085,8 @@ void POA_M2::M3::L3::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::M2::M3::S2>::in_arg_val _tao_s;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::M2::M3::S2>::in_arg_val _tao_s;
 
   TAO::Argument * const args[] =
     {
@@ -1096,7 +1119,7 @@ void POA_M2::M3::L3::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_M2::M3::L3::_is_a (char const *value)
+::CORBA::Boolean POA_M2::M3::L3::_is_a (const char* value)
 {
   return
     (
@@ -1105,7 +1128,7 @@ void POA_M2::M3::L3::op_skel (
     );
 }
 
-char const *POA_M2::M3::L3::_interface_repository_id () const
+const char* POA_M2::M3::L3::_interface_repository_id () const
 {
   return "IDL:M2/M3/L3:1.0";
 }
@@ -1161,9 +1184,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -1262,7 +1288,9 @@ POA_M2::M3::AMH_L4::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_M2::M3::TAO_AMH_L4ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_M2::M3::TAO_AMH_L4ResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -1276,7 +1304,7 @@ POA_M2::M3::AMH_L4::op_skel (
     );
 }
 
-::CORBA::Boolean POA_M2::M3::AMH_L4::_is_a (char const *value)
+::CORBA::Boolean POA_M2::M3::AMH_L4::_is_a (const char* value)
 {
   return
     (
@@ -1285,7 +1313,7 @@ POA_M2::M3::AMH_L4::op_skel (
     );
 }
 
-char const *POA_M2::M3::AMH_L4::_interface_repository_id () const
+const char* POA_M2::M3::AMH_L4::_interface_repository_id () const
 {
   return "IDL:M2/M3/L4:1.0";
 }
@@ -1300,7 +1328,7 @@ M2::M3::L4*
 POA_M2::M3::AMH_L4::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1320,9 +1348,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_L4_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M2_M3_L4_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_M2_M3_L4_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -1409,8 +1440,8 @@ namespace POA_M2
 
       void execute () override
       {
-        TAO::SArg_Traits<::M2::M3::S2>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg<::M2::M3::S2> (
+        TAO::SArg_Traits< ::M2::M3::S2>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg< ::M2::M3::S2> (
             this->operation_details_,
             this->args_,
             1);
@@ -1431,15 +1462,17 @@ void POA_M2::M3::L4::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       M2::M3::_tc_E1
     };
+
 #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::M2::M3::S2>::in_arg_val _tao_s;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::M2::M3::S2>::in_arg_val _tao_s;
 
   TAO::Argument * const args[] =
     {
@@ -1472,7 +1505,7 @@ void POA_M2::M3::L4::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_M2::M3::L4::_is_a (char const *value)
+::CORBA::Boolean POA_M2::M3::L4::_is_a (const char* value)
 {
   return
     (
@@ -1481,7 +1514,7 @@ void POA_M2::M3::L4::op_skel (
     );
 }
 
-char const *POA_M2::M3::L4::_interface_repository_id () const
+const char* POA_M2::M3::L4::_interface_repository_id () const
 {
   return "IDL:M2/M3/L4:1.0";
 }

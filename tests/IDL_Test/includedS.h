@@ -59,7 +59,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -73,7 +73,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::Aok::Seq1Type>
+  class SArg_Traits< ::Aok::Seq1Type>
     : public
         Var_Size_SArg_Traits_T<
             ::Aok::Seq1Type,
@@ -83,7 +83,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::Agog>
+  class SArg_Traits< ::Agog>
     : public
         Basic_SArg_Traits_T<
             ::Agog,
@@ -96,7 +96,7 @@ namespace TAO
 #define _VT_DEF_VT__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::VT_Def::VT>
+  class SArg_Traits< ::VT_Def::VT>
     : public
         Object_SArg_Traits_T<
             ::VT_Def::VT *,
@@ -113,7 +113,7 @@ namespace TAO
 #define _INCLUDEDBASE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::IncludedBase>
+  class SArg_Traits< ::IncludedBase>
     : public
         Object_SArg_Traits_T<
             ::IncludedBase *,
@@ -127,7 +127,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::A::MySeqA>
+  class SArg_Traits< ::A::MySeqA>
     : public
         Var_Size_SArg_Traits_T<
             ::A::MySeqA,
@@ -137,7 +137,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::A::MyStructA>
+  class SArg_Traits< ::A::MyStructA>
     : public
         Var_Size_SArg_Traits_T<
             ::A::MyStructA,
@@ -150,7 +150,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_PARENTIF__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::RootModule::SUBMODULE1::ParentIF>
+  class  SArg_Traits< ::RootModule::SUBMODULE1::ParentIF>
     : public Object_SArg_Traits_T<
         ::RootModule::SUBMODULE1::ParentIF_ptr,
         ::RootModule::SUBMODULE1::ParentIF_var,
@@ -162,7 +162,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::RootModule::SUBMODULE1::ParentIF::Mode>
+  class SArg_Traits< ::RootModule::SUBMODULE1::ParentIF::Mode>
     : public
         Basic_SArg_Traits_T<
             ::RootModule::SUBMODULE1::ParentIF::Mode,
@@ -175,7 +175,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMH_PARENTIFEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder>
+  class SArg_Traits< ::RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder *,
@@ -192,7 +192,7 @@ namespace TAO
 #define _ROOTMODULE_SUBMODULE1_AMI_PARENTIFHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::RootModule::SUBMODULE1::AMI_ParentIFHandler>
+  class  SArg_Traits< ::RootModule::SUBMODULE1::AMI_ParentIFHandler>
     : public Object_SArg_Traits_T<
         ::RootModule::SUBMODULE1::AMI_ParentIFHandler_ptr,
         ::RootModule::SUBMODULE1::AMI_ParentIFHandler_var,
@@ -207,7 +207,7 @@ namespace TAO
 #define _AAA__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AAA>
+  class  SArg_Traits< ::AAA>
     : public Object_SArg_Traits_T<
         ::AAA_ptr,
         ::AAA_var,
@@ -222,7 +222,7 @@ namespace TAO
 #define _AMH_AAAEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::AMH_AAAExceptionHolder>
+  class SArg_Traits< ::AMH_AAAExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_AAAExceptionHolder *,
@@ -239,7 +239,7 @@ namespace TAO
 #define _AMI_AAAHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AMI_AAAHandler>
+  class  SArg_Traits< ::AMI_AAAHandler>
     : public Object_SArg_Traits_T<
         ::AMI_AAAHandler_ptr,
         ::AMI_AAAHandler_var,
@@ -281,10 +281,10 @@ namespace POA_RootModule
       AMH_ParentIF ();
 
     public:
-      AMH_ParentIF (AMH_ParentIF const &rhs);
+      AMH_ParentIF (const AMH_ParentIF& rhs);
       ~AMH_ParentIF () override = default;
 
-      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -292,7 +292,7 @@ namespace POA_RootModule
 
       RootModule::SUBMODULE1::ParentIF *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   class ParentIF;
@@ -312,10 +312,10 @@ namespace POA_RootModule
     using _stub_ptr_type = ::RootModule::SUBMODULE1::ParentIF_ptr;
     using _stub_var_type = ::RootModule::SUBMODULE1::ParentIF_var;
 
-    ParentIF (ParentIF const &rhs) = default;
+    ParentIF (const ParentIF& rhs) = default;
     ~ParentIF () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -323,7 +323,7 @@ namespace POA_RootModule
 
     ::RootModule::SUBMODULE1::ParentIF *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -369,10 +369,10 @@ namespace POA_RootModule
     using _stub_ptr_type = ::RootModule::SUBMODULE1::AMI_ParentIFHandler_ptr;
     using _stub_var_type = ::RootModule::SUBMODULE1::AMI_ParentIFHandler_var;
 
-    AMI_ParentIFHandler (AMI_ParentIFHandler const &rhs) = default;
+    AMI_ParentIFHandler (const AMI_ParentIFHandler& rhs) = default;
     ~AMI_ParentIFHandler () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -380,7 +380,7 @@ namespace POA_RootModule
 
     ::RootModule::SUBMODULE1::AMI_ParentIFHandler *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
   };
 
   ///////////////////////////////////////////////////////////////////////
@@ -411,10 +411,10 @@ protected:
   POA_AMH_AAA ();
 
 public:
-  POA_AMH_AAA (POA_AMH_AAA const &rhs);
+  POA_AMH_AAA (const POA_AMH_AAA& rhs);
   ~POA_AMH_AAA () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -422,7 +422,7 @@ public:
 
   AAA *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 };
 
 class POA_AAA;
@@ -442,10 +442,10 @@ public:
   using _stub_ptr_type = ::AAA_ptr;
   using _stub_var_type = ::AAA_var;
 
-  POA_AAA (POA_AAA const &rhs) = default;
+  POA_AAA (const POA_AAA& rhs) = default;
   ~POA_AAA () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -453,7 +453,7 @@ public:
 
   ::AAA *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -499,10 +499,10 @@ public:
   using _stub_ptr_type = ::AMI_AAAHandler_ptr;
   using _stub_var_type = ::AMI_AAAHandler_var;
 
-  POA_AMI_AAAHandler (POA_AMI_AAAHandler const &rhs) = default;
+  POA_AMI_AAAHandler (const POA_AMI_AAAHandler& rhs) = default;
   ~POA_AMI_AAAHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -510,7 +510,7 @@ public:
 
   ::AMI_AAAHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

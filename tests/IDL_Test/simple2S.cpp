@@ -27,7 +27,6 @@
 
 #include "simple2S.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
-#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -63,9 +62,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_simple3_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_simple3_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_AMH_simple3_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -169,7 +171,9 @@ POA_AMH_simple3::op3_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_simple3ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_TAO_AMH_simple3ResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -214,7 +218,9 @@ POA_AMH_simple3::op4_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_simple3ResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_TAO_AMH_simple3ResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -229,7 +235,7 @@ POA_AMH_simple3::op4_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_simple3::_is_a (char const *value)
+::CORBA::Boolean POA_AMH_simple3::_is_a (const char* value)
 {
   return
     (
@@ -240,7 +246,7 @@ POA_AMH_simple3::op4_skel (
     );
 }
 
-char const *POA_AMH_simple3::_interface_repository_id () const
+const char* POA_AMH_simple3::_interface_repository_id () const
 {
   return "IDL:simple3:1.0";
 }
@@ -255,7 +261,7 @@ simple3*
 POA_AMH_simple3::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -275,9 +281,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_simple3_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_simple3_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_simple3_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -367,12 +376,12 @@ _TAO_simple3_Direct_Proxy_Impl::op3 (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<::CORBA::Long>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< ::CORBA::Long>::ret_val *) args[0])->arg () =
     _tao_ptr->op3 (
-          ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::simple3>::out_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::simple2>::out_arg_val *) args[3])->arg (),
-          ((TAO::Arg_Traits<::simple>::out_arg_val *) args[4])->arg ()
+          ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg (),
+          ((TAO::Arg_Traits< ::simple3>::out_arg_val *) args[2])->arg (),
+          ((TAO::Arg_Traits< ::simple2>::out_arg_val *) args[3])->arg (),
+          ((TAO::Arg_Traits< ::simple>::out_arg_val *) args[4])->arg ()
         );
 }
 
@@ -389,11 +398,11 @@ _TAO_simple3_Direct_Proxy_Impl::op4 (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits<::CORBA::Any>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits< ::CORBA::Any>::ret_val *) args[0])->arg () =
     _tao_ptr->op4 (
-          ((TAO::Arg_Traits<::CORBA::Any>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::CORBA::Any>::inout_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::CORBA::Any>::out_arg_val *) args[3])->arg ()
+          ((TAO::Arg_Traits< ::CORBA::Any>::in_arg_val *) args[1])->arg (),
+          ((TAO::Arg_Traits< ::CORBA::Any>::inout_arg_val *) args[2])->arg (),
+          ((TAO::Arg_Traits< ::CORBA::Any>::out_arg_val *) args[3])->arg ()
         );
 }
 
@@ -418,31 +427,31 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
+    TAO::SArg_Traits< ::CORBA::Long>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg< ::CORBA::Long> (
         this->operation_details_,
         this->args_);
 
-    TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::CORBA::Long> (
+    TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
         this->operation_details_,
         this->args_,
         1);
 
-    TAO::SArg_Traits<::simple3>::out_arg_type arg_2 =
-      TAO::Portable_Server::get_out_arg<::simple3> (
+    TAO::SArg_Traits< ::simple3>::out_arg_type arg_2 =
+      TAO::Portable_Server::get_out_arg< ::simple3> (
         this->operation_details_,
         this->args_,
         2);
 
-    TAO::SArg_Traits<::simple2>::out_arg_type arg_3 =
-      TAO::Portable_Server::get_out_arg<::simple2> (
+    TAO::SArg_Traits< ::simple2>::out_arg_type arg_3 =
+      TAO::Portable_Server::get_out_arg< ::simple2> (
         this->operation_details_,
         this->args_,
         3);
 
-    TAO::SArg_Traits<::simple>::out_arg_type arg_4 =
-      TAO::Portable_Server::get_out_arg<::simple> (
+    TAO::SArg_Traits< ::simple>::out_arg_type arg_4 =
+      TAO::Portable_Server::get_out_arg< ::simple> (
         this->operation_details_,
         this->args_,
         4);
@@ -465,6 +474,7 @@ void POA_simple3::op3_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -472,13 +482,14 @@ void POA_simple3::op3_skel (
       simple3::_tc_UnderFlow,
       simple3::_tc_BadNum
     };
+
 #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<::CORBA::Long>::ret_val retval;
-  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_a;
-  TAO::SArg_Traits<::simple3>::out_arg_val _tao_b;
-  TAO::SArg_Traits<::simple2>::out_arg_val _tao_c;
-  TAO::SArg_Traits<::simple>::out_arg_val _tao_d;
+  TAO::SArg_Traits< ::CORBA::Long>::ret_val retval;
+  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_a;
+  TAO::SArg_Traits< ::simple3>::out_arg_val _tao_b;
+  TAO::SArg_Traits< ::simple2>::out_arg_val _tao_c;
+  TAO::SArg_Traits< ::simple>::out_arg_val _tao_d;
 
   TAO::Argument * const args[] =
     {
@@ -526,25 +537,25 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::CORBA::Any>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::CORBA::Any> (
+    TAO::SArg_Traits< ::CORBA::Any>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg< ::CORBA::Any> (
         this->operation_details_,
         this->args_);
 
-    TAO::SArg_Traits<::CORBA::Any>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::CORBA::Any> (
+    TAO::SArg_Traits< ::CORBA::Any>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::CORBA::Any> (
         this->operation_details_,
         this->args_,
         1);
 
-    TAO::SArg_Traits<::CORBA::Any>::inout_arg_type arg_2 =
-      TAO::Portable_Server::get_inout_arg<::CORBA::Any> (
+    TAO::SArg_Traits< ::CORBA::Any>::inout_arg_type arg_2 =
+      TAO::Portable_Server::get_inout_arg< ::CORBA::Any> (
         this->operation_details_,
         this->args_,
         2);
 
-    TAO::SArg_Traits<::CORBA::Any>::out_arg_type arg_3 =
-      TAO::Portable_Server::get_out_arg<::CORBA::Any> (
+    TAO::SArg_Traits< ::CORBA::Any>::out_arg_type arg_3 =
+      TAO::Portable_Server::get_out_arg< ::CORBA::Any> (
         this->operation_details_,
         this->args_,
         3);
@@ -566,17 +577,19 @@ void POA_simple3::op4_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       simple3::_tc_UnderFlow
     };
+
 #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<::CORBA::Any>::ret_val retval;
-  TAO::SArg_Traits<::CORBA::Any>::in_arg_val _tao_x;
-  TAO::SArg_Traits<::CORBA::Any>::inout_arg_val _tao_y;
-  TAO::SArg_Traits<::CORBA::Any>::out_arg_val _tao_z;
+  TAO::SArg_Traits< ::CORBA::Any>::ret_val retval;
+  TAO::SArg_Traits< ::CORBA::Any>::in_arg_val _tao_x;
+  TAO::SArg_Traits< ::CORBA::Any>::inout_arg_val _tao_y;
+  TAO::SArg_Traits< ::CORBA::Any>::out_arg_val _tao_z;
 
   TAO::Argument * const args[] =
     {
@@ -611,7 +624,7 @@ void POA_simple3::op4_skel (
                          );
 }
 
-::CORBA::Boolean POA_simple3::_is_a (char const *value)
+::CORBA::Boolean POA_simple3::_is_a (const char* value)
 {
   return
     (
@@ -622,7 +635,7 @@ void POA_simple3::op4_skel (
     );
 }
 
-char const *POA_simple3::_interface_repository_id () const
+const char* POA_simple3::_interface_repository_id () const
 {
   return "IDL:simple3:1.0";
 }
@@ -684,9 +697,9 @@ POA_TAO_AMH_simple3ResponseHandler::op3_excep (
 }
 void
 POA_TAO_AMH_simple3ResponseHandler::op4 (
-  ::CORBA::Any const & return_value,
-  ::CORBA::Any const & y,
-  ::CORBA::Any const & z)
+  const ::CORBA::Any & return_value,
+  const ::CORBA::Any & y,
+  const ::CORBA::Any & z)
 {
   this->_tao_rh_init_reply ();
 
@@ -724,9 +737,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_simple3Handler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_simple3Handler_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_AMI_simple3Handler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -841,10 +857,10 @@ _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op3 (
     }
 
   _tao_ptr->op3 (
-        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::simple3>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits<::simple2>::in_arg_val *) args[3])->arg (),
-        ((TAO::Arg_Traits<::simple>::in_arg_val *) args[4])->arg ()
+        ((TAO::Arg_Traits< ::CORBA::Long>::in_arg_val *) args[1])->arg (),
+        ((TAO::Arg_Traits< ::simple3>::in_arg_val *) args[2])->arg (),
+        ((TAO::Arg_Traits< ::simple2>::in_arg_val *) args[3])->arg (),
+        ((TAO::Arg_Traits< ::simple>::in_arg_val *) args[4])->arg ()
       );
 }
 
@@ -862,7 +878,7 @@ _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op3_excep (
     }
 
   _tao_ptr->op3_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -880,9 +896,9 @@ _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op4 (
     }
 
   _tao_ptr->op4 (
-        ((TAO::Arg_Traits<::CORBA::Any>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::CORBA::Any>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits<::CORBA::Any>::in_arg_val *) args[3])->arg ()
+        ((TAO::Arg_Traits< ::CORBA::Any>::in_arg_val *) args[1])->arg (),
+        ((TAO::Arg_Traits< ::CORBA::Any>::in_arg_val *) args[2])->arg (),
+        ((TAO::Arg_Traits< ::CORBA::Any>::in_arg_val *) args[3])->arg ()
       );
 }
 
@@ -900,7 +916,7 @@ _TAO_AMI_simple3Handler_Direct_Proxy_Impl::op4_excep (
     }
 
   _tao_ptr->op4_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -925,26 +941,26 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::CORBA::Long> (
+    TAO::SArg_Traits< ::CORBA::Long>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::CORBA::Long> (
         this->operation_details_,
         this->args_,
         1);
 
-    TAO::SArg_Traits<::simple3>::in_arg_type arg_2 =
-      TAO::Portable_Server::get_in_arg<::simple3> (
+    TAO::SArg_Traits< ::simple3>::in_arg_type arg_2 =
+      TAO::Portable_Server::get_in_arg< ::simple3> (
         this->operation_details_,
         this->args_,
         2);
 
-    TAO::SArg_Traits<::simple2>::in_arg_type arg_3 =
-      TAO::Portable_Server::get_in_arg<::simple2> (
+    TAO::SArg_Traits< ::simple2>::in_arg_type arg_3 =
+      TAO::Portable_Server::get_in_arg< ::simple2> (
         this->operation_details_,
         this->args_,
         3);
 
-    TAO::SArg_Traits<::simple>::in_arg_type arg_4 =
-      TAO::Portable_Server::get_in_arg<::simple> (
+    TAO::SArg_Traits< ::simple>::in_arg_type arg_4 =
+      TAO::Portable_Server::get_in_arg< ::simple> (
         this->operation_details_,
         this->args_,
         4);
@@ -966,6 +982,7 @@ void POA_AMI_simple3Handler::op3_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -973,13 +990,14 @@ void POA_AMI_simple3Handler::op3_skel (
       simple3::_tc_UnderFlow,
       simple3::_tc_BadNum
     };
+
 #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val;
-  TAO::SArg_Traits<::simple3>::in_arg_val _tao_b;
-  TAO::SArg_Traits<::simple2>::in_arg_val _tao_c;
-  TAO::SArg_Traits<::simple>::in_arg_val _tao_d;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits< ::simple3>::in_arg_val _tao_b;
+  TAO::SArg_Traits< ::simple2>::in_arg_val _tao_c;
+  TAO::SArg_Traits< ::simple>::in_arg_val _tao_d;
 
   TAO::Argument * const args[] =
     {
@@ -1027,8 +1045,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -1080,6 +1098,7 @@ void POA_AMI_simple3Handler::op3_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
@@ -1087,10 +1106,11 @@ void POA_AMI_simple3Handler::op3_excep_skel (
       simple3::_tc_UnderFlow,
       simple3::_tc_BadNum
     };
+
 #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1135,20 +1155,20 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::CORBA::Any>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::CORBA::Any> (
+    TAO::SArg_Traits< ::CORBA::Any>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::CORBA::Any> (
         this->operation_details_,
         this->args_,
         1);
 
-    TAO::SArg_Traits<::CORBA::Any>::in_arg_type arg_2 =
-      TAO::Portable_Server::get_in_arg<::CORBA::Any> (
+    TAO::SArg_Traits< ::CORBA::Any>::in_arg_type arg_2 =
+      TAO::Portable_Server::get_in_arg< ::CORBA::Any> (
         this->operation_details_,
         this->args_,
         2);
 
-    TAO::SArg_Traits<::CORBA::Any>::in_arg_type arg_3 =
-      TAO::Portable_Server::get_in_arg<::CORBA::Any> (
+    TAO::SArg_Traits< ::CORBA::Any>::in_arg_type arg_3 =
+      TAO::Portable_Server::get_in_arg< ::CORBA::Any> (
         this->operation_details_,
         this->args_,
         3);
@@ -1169,17 +1189,19 @@ void POA_AMI_simple3Handler::op4_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       simple3::_tc_UnderFlow
     };
+
 #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::CORBA::Any>::in_arg_val _tao_ami_return_val;
-  TAO::SArg_Traits<::CORBA::Any>::in_arg_val _tao_y;
-  TAO::SArg_Traits<::CORBA::Any>::in_arg_val _tao_z;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::CORBA::Any>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits< ::CORBA::Any>::in_arg_val _tao_y;
+  TAO::SArg_Traits< ::CORBA::Any>::in_arg_val _tao_z;
 
   TAO::Argument * const args[] =
     {
@@ -1226,8 +1248,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -1263,15 +1285,17 @@ void POA_AMI_simple3Handler::op4_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       simple3::_tc_UnderFlow
     };
+
 #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1304,7 +1328,7 @@ void POA_AMI_simple3Handler::op4_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_simple3Handler::_is_a (char const *value)
+::CORBA::Boolean POA_AMI_simple3Handler::_is_a (const char* value)
 {
   return
     (
@@ -1316,7 +1340,7 @@ void POA_AMI_simple3Handler::op4_excep_skel (
     );
 }
 
-char const *POA_AMI_simple3Handler::_interface_repository_id () const
+const char* POA_AMI_simple3Handler::_interface_repository_id () const
 {
   return "IDL:AMI_simple3Handler:1.0";
 }

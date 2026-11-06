@@ -112,10 +112,10 @@ namespace scope_test
     static i_scope_test_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static i_scope_test_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (char const *type_id) override;
-    char const *_interface_repository_id () const override;
-    static char const *_desc_repository_id ();
-    static char const *_desc_interface_name ();
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    static const char* _desc_repository_id ();
+    static const char* _desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -136,9 +136,9 @@ namespace scope_test
 
   private:
     // Private and unimplemented for concrete interfaces.
-    i_scope_test (i_scope_test const &) = delete;
+    i_scope_test (const i_scope_test &) = delete;
     i_scope_test (i_scope_test &&) = delete;
-    i_scope_test &operator= (i_scope_test const &) = delete;
+    i_scope_test &operator= (const i_scope_test &) = delete;
     i_scope_test &operator= (i_scope_test &&) = delete;
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_i_scope_test;
@@ -191,8 +191,8 @@ namespace scope_test
     ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
-    AMH_i_scope_testExceptionHolder (AMH_i_scope_testExceptionHolder const &);
-    void operator= (AMH_i_scope_testExceptionHolder const &);
+    AMH_i_scope_testExceptionHolder (const AMH_i_scope_testExceptionHolder &);
+    void operator= (const AMH_i_scope_testExceptionHolder &);
 
     ::CORBA::Exception *exception;
 
@@ -254,10 +254,10 @@ namespace scope_test
     static AMH_i_scope_testResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMH_i_scope_testResponseHandler_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (char const *type_id) override;
-    char const *_interface_repository_id () const override;
-    static char const *_desc_repository_id ();
-    static char const *_desc_interface_name ();
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    static const char* _desc_repository_id ();
+    static const char* _desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -268,9 +268,9 @@ namespace scope_test
 
   private:
     // Private and unimplemented for concrete interfaces.
-    AMH_i_scope_testResponseHandler (AMH_i_scope_testResponseHandler const &) = delete;
+    AMH_i_scope_testResponseHandler (const AMH_i_scope_testResponseHandler &) = delete;
     AMH_i_scope_testResponseHandler (AMH_i_scope_testResponseHandler &&) = delete;
-    AMH_i_scope_testResponseHandler &operator= (AMH_i_scope_testResponseHandler const &) = delete;
+    AMH_i_scope_testResponseHandler &operator= (const AMH_i_scope_testResponseHandler &) = delete;
     AMH_i_scope_testResponseHandler &operator= (AMH_i_scope_testResponseHandler &&) = delete;
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_i_scope_testResponseHandler;
@@ -306,10 +306,10 @@ namespace scope_test
     static AMI_i_scope_testHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_i_scope_testHandler_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (char const *type_id) override;
-    char const *_interface_repository_id () const override;
-    static char const *_desc_repository_id ();
-    static char const *_desc_interface_name ();
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    static const char* _desc_repository_id ();
+    static const char* _desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -330,9 +330,9 @@ namespace scope_test
 
   private:
     // Private and unimplemented for concrete interfaces.
-    AMI_i_scope_testHandler (AMI_i_scope_testHandler const &) = delete;
+    AMI_i_scope_testHandler (const AMI_i_scope_testHandler &) = delete;
     AMI_i_scope_testHandler (AMI_i_scope_testHandler &&) = delete;
-    AMI_i_scope_testHandler &operator= (AMI_i_scope_testHandler const &) = delete;
+    AMI_i_scope_testHandler &operator= (const AMI_i_scope_testHandler &) = delete;
     AMI_i_scope_testHandler &operator= (AMI_i_scope_testHandler &&) = delete;
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_i_scope_testHandler;
@@ -390,7 +390,7 @@ namespace mod2
     virtual char * attr ();
 
     virtual void attr (
-      char const * attr);
+      const char * attr);
 
     class un;
     using un_var = ::TAO_Var_Var_T<un>;
@@ -472,15 +472,15 @@ namespace mod2
     public:
 
       bar ();
-      bar (bar const &);
+      bar (const bar &);
       ~bar () override = default;
 
-      bar &operator= (bar const &);
+      bar &operator= (const bar &);
 
       static void _tao_any_destructor (void *);
 
       static bar *_downcast (::CORBA::Exception *);
-      static bar const *_downcast (::CORBA::Exception const *);
+      static const bar *_downcast (::CORBA::Exception const *);
 
       static ::CORBA::Exception *_alloc ();
 
@@ -502,7 +502,7 @@ namespace mod2
 
     virtual void sendc_set_attr (
       ::mod2::AMI_fwdHandler_ptr ami_handler,
-      char const * attr);
+      const char * attr);
 
     virtual void sendc_get_attr (
       ::mod2::AMI_fwdHandler_ptr ami_handler);
@@ -510,13 +510,13 @@ namespace mod2
     virtual void sendc_op (
       ::mod2::AMI_fwdHandler_ptr ami_handler,
       ::mod2::full_ptr full_arg,
-      ::mod2::fwd::un const & un_arg,
-      ::mod2::fwd::full_seq const & full_seq_arg);
+      const ::mod2::fwd::un & un_arg,
+      const ::mod2::fwd::full_seq & full_seq_arg);
 
-    ::CORBA::Boolean _is_a (char const *type_id) override;
-    char const *_interface_repository_id () const override;
-    static char const *_desc_repository_id ();
-    static char const *_desc_interface_name ();
+    ::CORBA::Boolean _is_a (const char *type_id) override;
+    const char* _interface_repository_id () const override;
+    static const char* _desc_repository_id ();
+    static const char* _desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -537,9 +537,9 @@ namespace mod2
 
   private:
     // Private and unimplemented for concrete interfaces.
-    fwd (fwd const &) = delete;
+    fwd (const fwd &) = delete;
     fwd (fwd &&) = delete;
-    fwd &operator= (fwd const &) = delete;
+    fwd &operator= (const fwd &) = delete;
     fwd &operator= (fwd &&) = delete;
   };
   extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_fwd;
@@ -622,8 +622,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_fwdExceptionHolder (AMH_fwdExceptionHolder const &);
-  void operator= (AMH_fwdExceptionHolder const &);
+  AMH_fwdExceptionHolder (const AMH_fwdExceptionHolder &);
+  void operator= (const AMH_fwdExceptionHolder &);
 
   ::CORBA::Exception *exception;
 
@@ -669,7 +669,7 @@ public:
   static AMH_fwdResponseHandler_ptr _nil ();
 
   virtual void get_attr (
-    char const * return_value) = 0;
+    const char * return_value) = 0;
 
   virtual void get_attr_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) = 0;
@@ -682,16 +682,16 @@ public:
   virtual void op (
     ::mod2::full_ptr return_value,
     ::mod2::full_ptr full_arg,
-    ::mod2::fwd::un const & un_arg,
-    ::mod2::fwd::full_seq const & full_seq_arg) = 0;
+    const ::mod2::fwd::un & un_arg,
+    const ::mod2::fwd::full_seq & full_seq_arg) = 0;
 
   virtual void op_excep (
     ::mod2::AMH_fwdExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (char const *type_id) override;
-  char const *_interface_repository_id () const override;
-  static char const *_desc_repository_id ();
-  static char const *_desc_interface_name ();
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
+  static const char* _desc_repository_id ();
+  static const char* _desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -702,9 +702,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_fwdResponseHandler (AMH_fwdResponseHandler const &) = delete;
+  AMH_fwdResponseHandler (const AMH_fwdResponseHandler &) = delete;
   AMH_fwdResponseHandler (AMH_fwdResponseHandler &&) = delete;
-  AMH_fwdResponseHandler &operator= (AMH_fwdResponseHandler const &) = delete;
+  AMH_fwdResponseHandler &operator= (const AMH_fwdResponseHandler &) = delete;
   AMH_fwdResponseHandler &operator= (AMH_fwdResponseHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_fwdResponseHandler;
@@ -741,7 +741,7 @@ public:
   static AMI_fwdHandler_ptr _nil ();
 
   virtual void get_attr (
-    char const * ami_return_val);
+    const char * ami_return_val);
 
   static void
   get_attr_reply_stub (
@@ -766,8 +766,8 @@ public:
   virtual void op (
     ::mod2::full_ptr ami_return_val,
     ::mod2::full_ptr full_arg,
-    ::mod2::fwd::un const & un_arg,
-    ::mod2::fwd::full_seq const & full_seq_arg);
+    const ::mod2::fwd::un & un_arg,
+    const ::mod2::fwd::full_seq & full_seq_arg);
 
   static void
   op_reply_stub (
@@ -778,10 +778,10 @@ public:
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (char const *type_id) override;
-  char const *_interface_repository_id () const override;
-  static char const *_desc_repository_id ();
-  static char const *_desc_interface_name ();
+  ::CORBA::Boolean _is_a (const char *type_id) override;
+  const char* _interface_repository_id () const override;
+  static const char* _desc_repository_id ();
+  static const char* _desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -802,9 +802,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_fwdHandler (AMI_fwdHandler const &) = delete;
+  AMI_fwdHandler (const AMI_fwdHandler &) = delete;
   AMI_fwdHandler (AMI_fwdHandler &&) = delete;
-  AMI_fwdHandler &operator= (AMI_fwdHandler const &) = delete;
+  AMI_fwdHandler &operator= (const AMI_fwdHandler &) = delete;
   AMI_fwdHandler &operator= (AMI_fwdHandler &&) = delete;
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_fwdHandler;
@@ -834,7 +834,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -852,7 +852,7 @@ namespace TAO
 #define _SCOPE_TEST_I_SCOPE_TEST__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::scope_test::i_scope_test>
+  class  Arg_Traits< ::scope_test::i_scope_test>
     : public Object_Arg_Traits_T<
         ::scope_test::i_scope_test_ptr,
         ::scope_test::i_scope_test_var,
@@ -868,7 +868,7 @@ namespace TAO
 #define _SCOPE_TEST_AMH_I_SCOPE_TESTEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::scope_test::AMH_i_scope_testExceptionHolder>
+  class Arg_Traits< ::scope_test::AMH_i_scope_testExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::scope_test::AMH_i_scope_testExceptionHolder *,
@@ -886,7 +886,7 @@ namespace TAO
 #define _SCOPE_TEST_AMI_I_SCOPE_TESTHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::scope_test::AMI_i_scope_testHandler>
+  class  Arg_Traits< ::scope_test::AMI_i_scope_testHandler>
     : public Object_Arg_Traits_T<
         ::scope_test::AMI_i_scope_testHandler_ptr,
         ::scope_test::AMI_i_scope_testHandler_var,
@@ -902,7 +902,7 @@ namespace TAO
 #define _MOD2_FWD__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::mod2::fwd>
+  class  Arg_Traits< ::mod2::fwd>
     : public Object_Arg_Traits_T<
         ::mod2::fwd_ptr,
         ::mod2::fwd_var,
@@ -915,7 +915,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::mod2::fwd::un>
+  class Arg_Traits< ::mod2::fwd::un>
     : public
         Var_Size_Arg_Traits_T<
             ::mod2::fwd::un,
@@ -928,7 +928,7 @@ namespace TAO
 #define _MOD2_FULL__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::mod2::full>
+  class  Arg_Traits< ::mod2::full>
     : public Object_Arg_Traits_T<
         ::mod2::full_ptr,
         ::mod2::full_var,
@@ -941,7 +941,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::mod2::fwd::full_seq>
+  class Arg_Traits< ::mod2::fwd::full_seq>
     : public
         Var_Size_Arg_Traits_T<
             ::mod2::fwd::full_seq,
@@ -954,7 +954,7 @@ namespace TAO
 #define _MOD2_AMH_FWDEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::mod2::AMH_fwdExceptionHolder>
+  class Arg_Traits< ::mod2::AMH_fwdExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::mod2::AMH_fwdExceptionHolder *,
@@ -972,7 +972,7 @@ namespace TAO
 #define _MOD2_AMI_FWDHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::mod2::AMI_fwdHandler>
+  class  Arg_Traits< ::mod2::AMI_fwdHandler>
     : public Object_Arg_Traits_T<
         ::mod2::AMI_fwdHandler_ptr,
         ::mod2::AMI_fwdHandler_var,
@@ -988,7 +988,7 @@ namespace TAO
 #define _MOD2_FULL__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits<::mod2::full>
+  class  Arg_Traits< ::mod2::full>
     : public Object_Arg_Traits_T<
         ::mod2::full_ptr,
         ::mod2::full_var,
@@ -1020,9 +1020,11 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean _tao_marshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean
+  _tao_marshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean _tao_unmarshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean
+  _tao_unmarshal__scope_test_AMH_i_scope_testExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1045,9 +1047,11 @@ protected:
   ~AMH_fwdExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean _tao_marshal__mod2_AMH_fwdExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean
+  _tao_marshal__mod2_AMH_fwdExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean _tao_unmarshal__mod2_AMH_fwdExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean
+  _tao_unmarshal__mod2_AMH_fwdExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1068,7 +1072,7 @@ namespace TAO
 #define _SCOPE_TEST_I_SCOPE_TEST__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::scope_test::i_scope_test>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::scope_test::i_scope_test>
   {
     static ::scope_test::i_scope_test_ptr duplicate (::scope_test::i_scope_test_ptr p);
     static void release (::scope_test::i_scope_test_ptr p);
@@ -1095,7 +1099,7 @@ namespace TAO
 #define _SCOPE_TEST_AMH_I_SCOPE_TESTRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::scope_test::AMH_i_scope_testResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::scope_test::AMH_i_scope_testResponseHandler>
   {
     static ::scope_test::AMH_i_scope_testResponseHandler_ptr duplicate (::scope_test::AMH_i_scope_testResponseHandler_ptr p);
     static void release (::scope_test::AMH_i_scope_testResponseHandler_ptr p);
@@ -1109,7 +1113,7 @@ namespace TAO
 #define _SCOPE_TEST_AMI_I_SCOPE_TESTHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::scope_test::AMI_i_scope_testHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::scope_test::AMI_i_scope_testHandler>
   {
     static ::scope_test::AMI_i_scope_testHandler_ptr duplicate (::scope_test::AMI_i_scope_testHandler_ptr p);
     static void release (::scope_test::AMI_i_scope_testHandler_ptr p);
@@ -1123,7 +1127,7 @@ namespace TAO
 #define _MOD2_FULL__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::full>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::full>
   {
     static ::mod2::full_ptr duplicate (::mod2::full_ptr p);
     static void release (::mod2::full_ptr p);
@@ -1137,7 +1141,7 @@ namespace TAO
 #define _MOD2_FWD__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::fwd>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::fwd>
   {
     static ::mod2::fwd_ptr duplicate (::mod2::fwd_ptr p);
     static void release (::mod2::fwd_ptr p);
@@ -1164,7 +1168,7 @@ namespace TAO
 #define _MOD2_AMH_FWDRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::AMH_fwdResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::AMH_fwdResponseHandler>
   {
     static ::mod2::AMH_fwdResponseHandler_ptr duplicate (::mod2::AMH_fwdResponseHandler_ptr p);
     static void release (::mod2::AMH_fwdResponseHandler_ptr p);
@@ -1178,7 +1182,7 @@ namespace TAO
 #define _MOD2_AMI_FWDHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::AMI_fwdHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::AMI_fwdHandler>
   {
     static ::mod2::AMI_fwdHandler_ptr duplicate (::mod2::AMI_fwdHandler_ptr p);
     static void release (::mod2::AMI_fwdHandler_ptr p);
@@ -1192,7 +1196,7 @@ namespace TAO
 #define _MOD2_FULL__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::mod2::full>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::mod2::full>
   {
     static ::mod2::full_ptr duplicate (::mod2::full_ptr p);
     static void release (::mod2::full_ptr p);
@@ -1209,7 +1213,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, scope_test::i_scope_test_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, scope_test::i_scope_test_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, scope_test::i_scope_test_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, scope_test::i_scope_test_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1227,7 +1231,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, scope_test::AMH_i_scope_testResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, scope_test::AMH_i_scope_testResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, scope_test::AMH_i_scope_testResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, scope_test::AMH_i_scope_testResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1236,7 +1240,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, scope_test::AMI_i_scope_testHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, scope_test::AMI_i_scope_testHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, scope_test::AMI_i_scope_testHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, scope_test::AMI_i_scope_testHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1245,7 +1249,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::full_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::full_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, mod2::full *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod2::full *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1254,7 +1258,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::fwd_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::fwd_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, mod2::fwd_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod2::fwd_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1279,9 +1283,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::fwd::bar const &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const mod2::fwd::bar &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::fwd::bar*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, mod2::fwd::bar const *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const mod2::fwd::bar *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1299,7 +1303,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::AMH_fwdResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::AMH_fwdResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, mod2::AMH_fwdResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod2::AMH_fwdResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1308,7 +1312,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::AMI_fwdHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::AMI_fwdHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, mod2::AMI_fwdHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod2::AMI_fwdHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1317,13 +1321,13 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::full_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, mod2::full_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, mod2::full *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, mod2::full *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, scope_test::i_scope_test_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const scope_test::i_scope_test_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, scope_test::i_scope_test_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1339,28 +1343,28 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, scope_test::AMH_i_scope_testExceptionHolder const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const scope_test::AMH_i_scope_testExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, scope_test::AMH_i_scope_testExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, scope_test::AMI_i_scope_testHandler_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const scope_test::AMI_i_scope_testHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, scope_test::AMI_i_scope_testHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod2::full_ptr const );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod2::full_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::full_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod2::fwd_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod2::fwd_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::fwd_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1376,8 +1380,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #define _TAO_CDR_OP_mod2_fwd_full_seq_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, mod2::fwd::full_seq const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, mod2::fwd::full_seq &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
+    TAO_OutputCDR &strm,
+    mod2::fwd::full_seq const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
+    TAO_InputCDR &strm,
+    mod2::fwd::full_seq &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -1385,7 +1393,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod2::fwd::bar const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod2::fwd::bar &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::fwd::bar &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -1401,21 +1409,21 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod2::AMH_fwdExceptionHolder const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod2::AMH_fwdExceptionHolder *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::AMH_fwdExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod2::AMI_fwdHandler_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod2::AMI_fwdHandler_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::AMI_fwdHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, mod2::full_ptr const );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const mod2::full_ptr );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, mod2::full_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

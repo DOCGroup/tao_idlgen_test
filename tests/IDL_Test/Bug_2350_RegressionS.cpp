@@ -27,7 +27,6 @@
 
 #include "Bug_2350_RegressionS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
-#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -63,9 +62,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -164,7 +166,9 @@ POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_Bug_2350_RegressionResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_TAO_AMH_Bug_2350_RegressionResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -178,7 +182,7 @@ POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_Bug_2350_Regression::_is_a (char const *value)
+::CORBA::Boolean POA_AMH_Bug_2350_Regression::_is_a (const char* value)
 {
   return
     (
@@ -187,7 +191,7 @@ POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
     );
 }
 
-char const *POA_AMH_Bug_2350_Regression::_interface_repository_id () const
+const char* POA_AMH_Bug_2350_Regression::_interface_repository_id () const
 {
   return "IDL:Bug_2350_Regression:1.0";
 }
@@ -202,7 +206,7 @@ Bug_2350_Regression*
 POA_AMH_Bug_2350_Regression::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -222,9 +226,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_Bug_2350_Regression_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_Bug_2350_Regression_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -310,7 +317,7 @@ _TAO_Bug_2350_Regression_Direct_Proxy_Impl::Bug_2350_Regression_excep (
     }
 
   _tao_ptr->Bug_2350_Regression_excep (
-        ((TAO::Arg_Traits<::user_ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::user_ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -335,8 +342,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::user_ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::user_ExceptionHolder> (
+    TAO::SArg_Traits< ::user_ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::user_ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -355,15 +362,17 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       _tc_something
     };
+
 #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::user_ExceptionHolder>::in_arg_val _tao_a;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::user_ExceptionHolder>::in_arg_val _tao_a;
 
   TAO::Argument * const args[] =
     {
@@ -396,7 +405,7 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_Bug_2350_Regression::_is_a (char const *value)
+::CORBA::Boolean POA_Bug_2350_Regression::_is_a (const char* value)
 {
   return
     (
@@ -405,7 +414,7 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
     );
 }
 
-char const *POA_Bug_2350_Regression::_interface_repository_id () const
+const char* POA_Bug_2350_Regression::_interface_repository_id () const
 {
   return "IDL:Bug_2350_Regression:1.0";
 }
@@ -461,9 +470,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -568,7 +580,7 @@ _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep
     }
 
   _tao_ptr->Bug_2350_Regression_excep_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -600,14 +612,16 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       _tc_something
     };
+
 #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -648,8 +662,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -685,15 +699,17 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
+
 #if TAO_HAS_INTERCEPTORS == 1
   static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       _tc_something
     };
+
 #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -726,7 +742,7 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_Bug_2350_RegressionHandler::_is_a (char const *value)
+::CORBA::Boolean POA_AMI_Bug_2350_RegressionHandler::_is_a (const char* value)
 {
   return
     (
@@ -736,7 +752,7 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
     );
 }
 
-char const *POA_AMI_Bug_2350_RegressionHandler::_interface_repository_id () const
+const char* POA_AMI_Bug_2350_RegressionHandler::_interface_repository_id () const
 {
   return "IDL:AMI_Bug_2350_RegressionHandler:1.0";
 }

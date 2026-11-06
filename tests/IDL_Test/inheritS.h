@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #define _OLDINHERIT_ONE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldInherit::one>
+  class  SArg_Traits< ::OldInherit::one>
     : public Object_SArg_Traits_T<
         ::OldInherit::one_ptr,
         ::OldInherit::one_var,
@@ -92,7 +92,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_ONEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::OldInherit::AMH_oneExceptionHolder>
+  class SArg_Traits< ::OldInherit::AMH_oneExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldInherit::AMH_oneExceptionHolder *,
@@ -109,7 +109,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_ONEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldInherit::AMI_oneHandler>
+  class  SArg_Traits< ::OldInherit::AMI_oneHandler>
     : public Object_SArg_Traits_T<
         ::OldInherit::AMI_oneHandler_ptr,
         ::OldInherit::AMI_oneHandler_var,
@@ -124,7 +124,7 @@ namespace TAO
 #define _OLDINHERIT_TWO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldInherit::two>
+  class  SArg_Traits< ::OldInherit::two>
     : public Object_SArg_Traits_T<
         ::OldInherit::two_ptr,
         ::OldInherit::two_var,
@@ -139,7 +139,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_TWOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::OldInherit::AMH_twoExceptionHolder>
+  class SArg_Traits< ::OldInherit::AMH_twoExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldInherit::AMH_twoExceptionHolder *,
@@ -156,7 +156,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_TWOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldInherit::AMI_twoHandler>
+  class  SArg_Traits< ::OldInherit::AMI_twoHandler>
     : public Object_SArg_Traits_T<
         ::OldInherit::AMI_twoHandler_ptr,
         ::OldInherit::AMI_twoHandler_var,
@@ -171,7 +171,7 @@ namespace TAO
 #define _OLDINHERIT_THREE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldInherit::three>
+  class  SArg_Traits< ::OldInherit::three>
     : public Object_SArg_Traits_T<
         ::OldInherit::three_ptr,
         ::OldInherit::three_var,
@@ -186,7 +186,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_THREEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::OldInherit::AMH_threeExceptionHolder>
+  class SArg_Traits< ::OldInherit::AMH_threeExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldInherit::AMH_threeExceptionHolder *,
@@ -203,7 +203,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_THREEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldInherit::AMI_threeHandler>
+  class  SArg_Traits< ::OldInherit::AMI_threeHandler>
     : public Object_SArg_Traits_T<
         ::OldInherit::AMI_threeHandler_ptr,
         ::OldInherit::AMI_threeHandler_var,
@@ -218,7 +218,7 @@ namespace TAO
 #define _OLDINHERIT_FOUR__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldInherit::four>
+  class  SArg_Traits< ::OldInherit::four>
     : public Object_SArg_Traits_T<
         ::OldInherit::four_ptr,
         ::OldInherit::four_var,
@@ -233,7 +233,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_FOUREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::OldInherit::AMH_fourExceptionHolder>
+  class SArg_Traits< ::OldInherit::AMH_fourExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldInherit::AMH_fourExceptionHolder *,
@@ -250,7 +250,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_FOURHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldInherit::AMI_fourHandler>
+  class  SArg_Traits< ::OldInherit::AMI_fourHandler>
     : public Object_SArg_Traits_T<
         ::OldInherit::AMI_fourHandler_ptr,
         ::OldInherit::AMI_fourHandler_var,
@@ -265,7 +265,7 @@ namespace TAO
 #define _OLDINHERIT_FIVE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldInherit::five>
+  class  SArg_Traits< ::OldInherit::five>
     : public Object_SArg_Traits_T<
         ::OldInherit::five_ptr,
         ::OldInherit::five_var,
@@ -280,7 +280,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_FIVEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::OldInherit::AMH_fiveExceptionHolder>
+  class SArg_Traits< ::OldInherit::AMH_fiveExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldInherit::AMH_fiveExceptionHolder *,
@@ -297,7 +297,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_FIVEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::OldInherit::AMI_fiveHandler>
+  class  SArg_Traits< ::OldInherit::AMI_fiveHandler>
     : public Object_SArg_Traits_T<
         ::OldInherit::AMI_fiveHandler_ptr,
         ::OldInherit::AMI_fiveHandler_var,
@@ -324,10 +324,10 @@ namespace POA_OldInherit
     AMH_one ();
 
   public:
-    AMH_one (AMH_one const &rhs);
+    AMH_one (const AMH_one& rhs);
     ~AMH_one () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -335,14 +335,15 @@ namespace POA_OldInherit
 
     OldInherit::one *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   static void op_one_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void op_one (
-      OldInherit::AMH_oneResponseHandler_ptr _tao_rh) = 0;
+      OldInherit::AMH_oneResponseHandler_ptr _tao_rh
+    ) = 0;
 
 };
 
@@ -363,10 +364,10 @@ public:
   using _stub_ptr_type = ::OldInherit::one_ptr;
   using _stub_var_type = ::OldInherit::one_var;
 
-  one (one const &rhs) = default;
+  one (const one& rhs) = default;
   ~one () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -374,7 +375,7 @@ public:
 
   ::OldInherit::one *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op_one () = 0;
 
   static void op_one_skel (
@@ -433,10 +434,10 @@ public:
   using _stub_ptr_type = ::OldInherit::AMI_oneHandler_ptr;
   using _stub_var_type = ::OldInherit::AMI_oneHandler_var;
 
-  AMI_oneHandler (AMI_oneHandler const &rhs) = default;
+  AMI_oneHandler (const AMI_oneHandler& rhs) = default;
   ~AMI_oneHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -444,7 +445,7 @@ public:
 
   ::OldInherit::AMI_oneHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op_one () = 0;
 
   static void op_one_skel (
@@ -494,10 +495,10 @@ protected:
   AMH_two ();
 
 public:
-  AMH_two (AMH_two const &rhs);
+  AMH_two (const AMH_two& rhs);
   ~AMH_two () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -505,14 +506,15 @@ public:
 
   OldInherit::two *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void op_two_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void op_two (
-    OldInherit::AMH_twoResponseHandler_ptr _tao_rh) = 0;
+    OldInherit::AMH_twoResponseHandler_ptr _tao_rh
+  ) = 0;
 
 };
 
@@ -533,10 +535,10 @@ public:
   using _stub_ptr_type = ::OldInherit::two_ptr;
   using _stub_var_type = ::OldInherit::two_var;
 
-  two (two const &rhs) = default;
+  two (const two& rhs) = default;
   ~two () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -544,7 +546,7 @@ public:
 
   ::OldInherit::two *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op_two () = 0;
 
   static void op_two_skel (
@@ -604,10 +606,10 @@ public:
   using _stub_ptr_type = ::OldInherit::AMI_twoHandler_ptr;
   using _stub_var_type = ::OldInherit::AMI_twoHandler_var;
 
-  AMI_twoHandler (AMI_twoHandler const &rhs) = default;
+  AMI_twoHandler (const AMI_twoHandler& rhs) = default;
   ~AMI_twoHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -615,7 +617,7 @@ public:
 
   ::OldInherit::AMI_twoHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op_two () = 0;
 
   static void op_two_skel (
@@ -665,10 +667,10 @@ protected:
   AMH_three ();
 
 public:
-  AMH_three (AMH_three const &rhs);
+  AMH_three (const AMH_three& rhs);
   ~AMH_three () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -676,14 +678,15 @@ public:
 
   OldInherit::three *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void op_three_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void op_three (
-    OldInherit::AMH_threeResponseHandler_ptr _tao_rh) = 0;
+    OldInherit::AMH_threeResponseHandler_ptr _tao_rh
+  ) = 0;
 
 };
 
@@ -704,10 +707,10 @@ public:
   using _stub_ptr_type = ::OldInherit::three_ptr;
   using _stub_var_type = ::OldInherit::three_var;
 
-  three (three const &rhs) = default;
+  three (const three& rhs) = default;
   ~three () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -715,7 +718,7 @@ public:
 
   ::OldInherit::three *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op_three () = 0;
 
   static void op_three_skel (
@@ -775,10 +778,10 @@ public:
   using _stub_ptr_type = ::OldInherit::AMI_threeHandler_ptr;
   using _stub_var_type = ::OldInherit::AMI_threeHandler_var;
 
-  AMI_threeHandler (AMI_threeHandler const &rhs) = default;
+  AMI_threeHandler (const AMI_threeHandler& rhs) = default;
   ~AMI_threeHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -786,7 +789,7 @@ public:
 
   ::OldInherit::AMI_threeHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op_three () = 0;
 
   static void op_three_skel (
@@ -837,10 +840,10 @@ protected:
   AMH_four ();
 
 public:
-  AMH_four (AMH_four const &rhs);
+  AMH_four (const AMH_four& rhs);
   ~AMH_four () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -848,14 +851,15 @@ public:
 
   OldInherit::four *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void op_four_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void op_four (
-    OldInherit::AMH_fourResponseHandler_ptr _tao_rh) = 0;
+    OldInherit::AMH_fourResponseHandler_ptr _tao_rh
+  ) = 0;
 
 };
 
@@ -877,10 +881,10 @@ public:
   using _stub_ptr_type = ::OldInherit::four_ptr;
   using _stub_var_type = ::OldInherit::four_var;
 
-  four (four const &rhs) = default;
+  four (const four& rhs) = default;
   ~four () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -888,7 +892,7 @@ public:
 
   ::OldInherit::four *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op_four () = 0;
 
   static void op_four_skel (
@@ -950,10 +954,10 @@ public:
   using _stub_ptr_type = ::OldInherit::AMI_fourHandler_ptr;
   using _stub_var_type = ::OldInherit::AMI_fourHandler_var;
 
-  AMI_fourHandler (AMI_fourHandler const &rhs) = default;
+  AMI_fourHandler (const AMI_fourHandler& rhs) = default;
   ~AMI_fourHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -961,7 +965,7 @@ public:
 
   ::OldInherit::AMI_fourHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op_four () = 0;
 
   static void op_four_skel (
@@ -1014,10 +1018,10 @@ protected:
   AMH_five ();
 
 public:
-  AMH_five (AMH_five const &rhs);
+  AMH_five (const AMH_five& rhs);
   ~AMH_five () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -1025,14 +1029,15 @@ public:
 
   OldInherit::five *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void op_five_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void op_five (
-    OldInherit::AMH_fiveResponseHandler_ptr _tao_rh) = 0;
+    OldInherit::AMH_fiveResponseHandler_ptr _tao_rh
+  ) = 0;
 
 };
 
@@ -1055,10 +1060,10 @@ public:
   using _stub_ptr_type = ::OldInherit::five_ptr;
   using _stub_var_type = ::OldInherit::five_var;
 
-  five (five const &rhs) = default;
+  five (const five& rhs) = default;
   ~five () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1066,7 +1071,7 @@ public:
 
   ::OldInherit::five *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op_five () = 0;
 
   static void op_five_skel (
@@ -1130,10 +1135,10 @@ public:
   using _stub_ptr_type = ::OldInherit::AMI_fiveHandler_ptr;
   using _stub_var_type = ::OldInherit::AMI_fiveHandler_var;
 
-  AMI_fiveHandler (AMI_fiveHandler const &rhs) = default;
+  AMI_fiveHandler (const AMI_fiveHandler& rhs) = default;
   ~AMI_fiveHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1141,7 +1146,7 @@ public:
 
   ::OldInherit::AMI_fiveHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op_five () = 0;
 
   static void op_five_skel (

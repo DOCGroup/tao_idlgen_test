@@ -27,7 +27,6 @@
 
 #include "TestS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
-#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -56,9 +55,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Test_Hello_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_Test_Hello_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_Test_Hello_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -142,8 +144,8 @@ namespace POA_Test
 
     void execute () override
     {
-      TAO::SArg_Traits<char *>::ret_arg_type retval =
-        static_cast<TAO::SArg_Traits<char *>::ret_val *> (this->args_[0])->arg ();
+      TAO::SArg_Traits< char *>::ret_arg_type retval =
+        static_cast<TAO::SArg_Traits< char *>::ret_val *> (this->args_[0])->arg ();
 
       retval =
         this->servant_->get_string ();
@@ -159,7 +161,7 @@ void POA_Test::Hello::get_string_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<char *>::ret_val retval;
+  TAO::SArg_Traits< char *>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -211,7 +213,7 @@ void POA_Test::Hello::shutdown_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -240,7 +242,7 @@ void POA_Test::Hello::shutdown_skel (
                          );
 }
 
-::CORBA::Boolean POA_Test::Hello::_is_a (char const *value)
+::CORBA::Boolean POA_Test::Hello::_is_a (const char* value)
 {
   return
     (
@@ -249,7 +251,7 @@ void POA_Test::Hello::shutdown_skel (
     );
 }
 
-char const *POA_Test::Hello::_interface_repository_id () const
+const char* POA_Test::Hello::_interface_repository_id () const
 {
   return "IDL:Test/Hello:1.0";
 }

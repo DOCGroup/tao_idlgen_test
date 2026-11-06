@@ -117,7 +117,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Messaging::ExceptionHolder>
+  class Arg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -132,7 +132,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::AnyUnionEnum>
+  class Arg_Traits< ::AnyUnionEnum>
     : public
         Basic_Arg_Traits_T<
             ::AnyUnionEnum,
@@ -142,7 +142,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits<::MyAnyUnion>
+  class Arg_Traits< ::MyAnyUnion>
     : public
         Var_Size_Arg_Traits_T<
             ::MyAnyUnion,
@@ -166,7 +166,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AnyUnionEnum);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AnyUnionEnum &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, AnyUnionEnum &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

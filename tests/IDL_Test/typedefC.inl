@@ -35,7 +35,7 @@ TAO::Array_Traits<TAO_A5_forany>::free (
 ACE_INLINE
 TAO_A5_slice *
 TAO::Array_Traits<TAO_A5_forany>::dup (
-    TAO_A5_slice const * _tao_slice)
+    const TAO_A5_slice * _tao_slice)
 {
   return TAO_A5_dup (_tao_slice);
 }
@@ -44,7 +44,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<TAO_A5_forany>::copy (
     TAO_A5_slice * _tao_to,
-    TAO_A5_slice const * _tao_from)
+    const TAO_A5_slice * _tao_from)
 {
   TAO_A5_copy (_tao_to, _tao_from);
 }
@@ -188,7 +188,7 @@ TAO::Array_Traits<TAO_M5_forany>::free (
 ACE_INLINE
 TAO_M5_slice *
 TAO::Array_Traits<TAO_M5_forany>::dup (
-    TAO_M5_slice const * _tao_slice)
+    const TAO_M5_slice * _tao_slice)
 {
   return TAO_M5_dup (_tao_slice);
 }
@@ -197,7 +197,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<TAO_M5_forany>::copy (
     TAO_M5_slice * _tao_to,
-    TAO_M5_slice const * _tao_from)
+    const TAO_M5_slice * _tao_from)
 {
   TAO_M5_copy (_tao_to, _tao_from);
 }
@@ -307,7 +307,7 @@ TAO::Array_Traits<TAO_Z5_forany>::free (
 ACE_INLINE
 TAO_Z5_slice *
 TAO::Array_Traits<TAO_Z5_forany>::dup (
-    TAO_Z5_slice const * _tao_slice)
+    const TAO_Z5_slice * _tao_slice)
 {
   return TAO_Z5_dup (_tao_slice);
 }
@@ -316,7 +316,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<TAO_Z5_forany>::copy (
     TAO_Z5_slice * _tao_to,
-    TAO_Z5_slice const * _tao_from)
+    const TAO_Z5_slice * _tao_from)
 {
   TAO_Z5_copy (_tao_to, _tao_from);
 }

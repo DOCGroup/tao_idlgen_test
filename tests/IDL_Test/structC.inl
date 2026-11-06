@@ -35,7 +35,7 @@ TAO::Array_Traits<Test::S90Array_forany>::free (
 ACE_INLINE
 Test::S90Array_slice *
 TAO::Array_Traits<Test::S90Array_forany>::dup (
-    Test::S90Array_slice const * _tao_slice)
+    const Test::S90Array_slice * _tao_slice)
 {
   return Test::S90Array_dup (_tao_slice);
 }
@@ -44,7 +44,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Test::S90Array_forany>::copy (
     Test::S90Array_slice * _tao_to,
-    Test::S90Array_slice const * _tao_from)
+    const Test::S90Array_slice * _tao_from)
 {
   Test::S90Array_copy (_tao_to, _tao_from);
 }
@@ -83,7 +83,7 @@ TAO::Array_Traits<Test::S42_forany>::free (
 ACE_INLINE
 Test::S42_slice *
 TAO::Array_Traits<Test::S42_forany>::dup (
-    Test::S42_slice const * _tao_slice)
+    const Test::S42_slice * _tao_slice)
 {
   return Test::S42_dup (_tao_slice);
 }
@@ -92,7 +92,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Test::S42_forany>::copy (
     Test::S42_slice * _tao_to,
-    Test::S42_slice const * _tao_from)
+    const Test::S42_slice * _tao_from)
 {
   Test::S42_copy (_tao_to, _tao_from);
 }
@@ -131,7 +131,7 @@ TAO::Array_Traits<Test::SString43_forany>::free (
 ACE_INLINE
 Test::SString43_slice *
 TAO::Array_Traits<Test::SString43_forany>::dup (
-    Test::SString43_slice const * _tao_slice)
+    const Test::SString43_slice * _tao_slice)
 {
   return Test::SString43_dup (_tao_slice);
 }
@@ -140,7 +140,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Test::SString43_forany>::copy (
     Test::SString43_slice * _tao_to,
-    Test::SString43_slice const * _tao_from)
+    const Test::SString43_slice * _tao_from)
 {
   Test::SString43_copy (_tao_to, _tao_from);
 }
@@ -179,7 +179,7 @@ TAO::Array_Traits<Test::S4Array_forany>::free (
 ACE_INLINE
 Test::S4Array_slice *
 TAO::Array_Traits<Test::S4Array_forany>::dup (
-    Test::S4Array_slice const * _tao_slice)
+    const Test::S4Array_slice * _tao_slice)
 {
   return Test::S4Array_dup (_tao_slice);
 }
@@ -188,7 +188,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Test::S4Array_forany>::copy (
     Test::S4Array_slice * _tao_to,
-    Test::S4Array_slice const * _tao_from)
+    const Test::S4Array_slice * _tao_from)
 {
   Test::S4Array_copy (_tao_to, _tao_from);
 }

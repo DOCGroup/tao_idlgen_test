@@ -58,7 +58,7 @@ namespace TAO
 {
 
   template<>
-  class SArg_Traits<::M1::S1>
+  class SArg_Traits< ::M1::S1>
     : public
         Fixed_Size_SArg_Traits_T<
             ::M1::S1,
@@ -71,7 +71,7 @@ namespace TAO
 #define _M1_LI__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::M1::LI>
+  class  SArg_Traits< ::M1::LI>
     : public Object_SArg_Traits_T<
         ::M1::LI_ptr,
         ::M1::LI_var,
@@ -86,7 +86,7 @@ namespace TAO
 #define _M1_AMH_LIEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::M1::AMH_LIExceptionHolder>
+  class SArg_Traits< ::M1::AMH_LIExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::M1::AMH_LIExceptionHolder *,
@@ -103,7 +103,7 @@ namespace TAO
 #define _M1_L2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::M1::L2>
+  class  SArg_Traits< ::M1::L2>
     : public Object_SArg_Traits_T<
         ::M1::L2_ptr,
         ::M1::L2_var,
@@ -118,7 +118,7 @@ namespace TAO
 #define _M1_AMH_L2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::M1::AMH_L2ExceptionHolder>
+  class SArg_Traits< ::M1::AMH_L2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::M1::AMH_L2ExceptionHolder *,
@@ -132,7 +132,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::M1::X>
+  class SArg_Traits< ::M1::X>
     : public
         Var_Size_SArg_Traits_T<
             ::M1::X,
@@ -142,7 +142,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::M1::BooleanUnion1>
+  class SArg_Traits< ::M1::BooleanUnion1>
     : public
         Var_Size_SArg_Traits_T<
             ::M1::BooleanUnion1,
@@ -152,7 +152,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits<::M1::BooleanUnion2>
+  class SArg_Traits< ::M1::BooleanUnion2>
     : public
         Var_Size_SArg_Traits_T<
             ::M1::BooleanUnion2,
@@ -165,7 +165,7 @@ namespace TAO
 #define _M1_V__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::M1::V>
+  class SArg_Traits< ::M1::V>
     : public
         Object_SArg_Traits_T<
             ::M1::V *,
@@ -179,7 +179,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::M2::M3::S2>
+  class SArg_Traits< ::M2::M3::S2>
     : public
         Fixed_Size_SArg_Traits_T<
             ::M2::M3::S2,
@@ -192,7 +192,7 @@ namespace TAO
 #define _M2_M3_L3__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::M2::M3::L3>
+  class  SArg_Traits< ::M2::M3::L3>
     : public Object_SArg_Traits_T<
         ::M2::M3::L3_ptr,
         ::M2::M3::L3_var,
@@ -207,7 +207,7 @@ namespace TAO
 #define _M2_M3_AMH_L3EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::M2::M3::AMH_L3ExceptionHolder>
+  class SArg_Traits< ::M2::M3::AMH_L3ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::M2::M3::AMH_L3ExceptionHolder *,
@@ -224,7 +224,7 @@ namespace TAO
 #define _M2_M3_L4__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::M2::M3::L4>
+  class  SArg_Traits< ::M2::M3::L4>
     : public Object_SArg_Traits_T<
         ::M2::M3::L4_ptr,
         ::M2::M3::L4_var,
@@ -239,7 +239,7 @@ namespace TAO
 #define _M2_M3_AMH_L4EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::M2::M3::AMH_L4ExceptionHolder>
+  class SArg_Traits< ::M2::M3::AMH_L4ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::M2::M3::AMH_L4ExceptionHolder *,
@@ -256,7 +256,7 @@ namespace TAO
 #define _M2_M3_V2__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::M2::M3::V2>
+  class SArg_Traits< ::M2::M3::V2>
     : public
         Object_SArg_Traits_T<
             ::M2::M3::V2 *,
@@ -273,7 +273,7 @@ namespace TAO
 #define _M2_M3_V3__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::M2::M3::V3>
+  class SArg_Traits< ::M2::M3::V3>
     : public
         Object_SArg_Traits_T<
             ::M2::M3::V3 *,
@@ -304,10 +304,10 @@ namespace POA_M1
     AMH_LI ();
 
   public:
-    AMH_LI (AMH_LI const &rhs);
+    AMH_LI (const AMH_LI& rhs);
     ~AMH_LI () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -315,7 +315,7 @@ namespace POA_M1
 
     M1::LI *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -323,7 +323,8 @@ namespace POA_M1
 
   virtual void op (
       M1::AMH_LIResponseHandler_ptr _tao_rh,
-      ::M1::S1 const & s) = 0;
+      const ::M1::S1 & s
+    ) = 0;
 
 };
 
@@ -342,10 +343,10 @@ public:
   using _stub_ptr_type = ::M1::LI_ptr;
   using _stub_var_type = ::M1::LI_var;
 
-  LI (LI const &rhs) = default;
+  LI (const LI& rhs) = default;
   ~LI () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -353,9 +354,9 @@ public:
 
   ::M1::LI *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op (
-    ::M1::S1 const & s) = 0;
+    const ::M1::S1 & s) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
@@ -386,10 +387,10 @@ protected:
   AMH_L2 ();
 
 public:
-  AMH_L2 (AMH_L2 const &rhs);
+  AMH_L2 (const AMH_L2& rhs);
   ~AMH_L2 () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -397,7 +398,7 @@ public:
 
   M1::L2 *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -405,7 +406,8 @@ static void op_skel (
 
 virtual void op (
     M1::AMH_L2ResponseHandler_ptr _tao_rh,
-    ::M1::S1 const & s) = 0;
+    const ::M1::S1 & s
+  ) = 0;
 
 };
 
@@ -424,10 +426,10 @@ public:
   using _stub_ptr_type = ::M1::L2_ptr;
   using _stub_var_type = ::M1::L2_var;
 
-  L2 (L2 const &rhs) = default;
+  L2 (const L2& rhs) = default;
   ~L2 () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -435,9 +437,9 @@ public:
 
   ::M1::L2 *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op (
-    ::M1::S1 const & s) = 0;
+    const ::M1::S1 & s) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
@@ -476,10 +478,10 @@ namespace POA_M2
       AMH_L3 ();
 
     public:
-      AMH_L3 (AMH_L3 const &rhs);
+      AMH_L3 (const AMH_L3& rhs);
       ~AMH_L3 () override = default;
 
-      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -487,7 +489,7 @@ namespace POA_M2
 
       M2::M3::L3 *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     static void op_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -495,7 +497,8 @@ namespace POA_M2
 
     virtual void op (
         M2::M3::AMH_L3ResponseHandler_ptr _tao_rh,
-        ::M2::M3::S2 const & s) = 0;
+        const ::M2::M3::S2 & s
+      ) = 0;
 
   };
 
@@ -514,10 +517,10 @@ namespace POA_M2
     using _stub_ptr_type = ::M2::M3::L3_ptr;
     using _stub_var_type = ::M2::M3::L3_var;
 
-    L3 (L3 const &rhs) = default;
+    L3 (const L3& rhs) = default;
     ~L3 () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -525,9 +528,9 @@ namespace POA_M2
 
     ::M2::M3::L3 *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual void op (
-      ::M2::M3::S2 const & s) = 0;
+      const ::M2::M3::S2 & s) = 0;
 
     static void op_skel (
         TAO_ServerRequest &server_request,
@@ -558,10 +561,10 @@ namespace POA_M2
     AMH_L4 ();
 
   public:
-    AMH_L4 (AMH_L4 const &rhs);
+    AMH_L4 (const AMH_L4& rhs);
     ~AMH_L4 () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -569,7 +572,7 @@ namespace POA_M2
 
     M2::M3::L4 *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -577,7 +580,8 @@ namespace POA_M2
 
   virtual void op (
       M2::M3::AMH_L4ResponseHandler_ptr _tao_rh,
-      ::M2::M3::S2 const & s) = 0;
+      const ::M2::M3::S2 & s
+    ) = 0;
 
 };
 
@@ -596,10 +600,10 @@ public:
   using _stub_ptr_type = ::M2::M3::L4_ptr;
   using _stub_var_type = ::M2::M3::L4_var;
 
-  L4 (L4 const &rhs) = default;
+  L4 (const L4& rhs) = default;
   ~L4 () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -607,9 +611,9 @@ public:
 
   ::M2::M3::L4 *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void op (
-    ::M2::M3::S2 const & s) = 0;
+    const ::M2::M3::S2 & s) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,

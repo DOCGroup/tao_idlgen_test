@@ -84,7 +84,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -98,7 +98,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::MyModule::TypeCodeList>
+  class SArg_Traits< ::MyModule::TypeCodeList>
     : public
         Var_Size_SArg_Traits_T<
             ::MyModule::TypeCodeList,

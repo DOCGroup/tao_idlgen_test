@@ -38,7 +38,7 @@ TAO::Array_Traits<decl_heavy_struct::_m_en_forany>::free (
 ACE_INLINE
 decl_heavy_struct::_m_en_slice *
 TAO::Array_Traits<decl_heavy_struct::_m_en_forany>::dup (
-    decl_heavy_struct::_m_en_slice const * _tao_slice)
+    const decl_heavy_struct::_m_en_slice * _tao_slice)
 {
   return decl_heavy_struct::_m_en_dup (_tao_slice);
 }
@@ -47,7 +47,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<decl_heavy_struct::_m_en_forany>::copy (
     decl_heavy_struct::_m_en_slice * _tao_to,
-    decl_heavy_struct::_m_en_slice const * _tao_from)
+    const decl_heavy_struct::_m_en_slice * _tao_from)
 {
   decl_heavy_struct::_m_en_copy (_tao_to, _tao_from);
 }
@@ -86,7 +86,7 @@ TAO::Array_Traits<decl_heavy_struct::_m_st_forany>::free (
 ACE_INLINE
 decl_heavy_struct::_m_st_slice *
 TAO::Array_Traits<decl_heavy_struct::_m_st_forany>::dup (
-    decl_heavy_struct::_m_st_slice const * _tao_slice)
+    const decl_heavy_struct::_m_st_slice * _tao_slice)
 {
   return decl_heavy_struct::_m_st_dup (_tao_slice);
 }
@@ -95,7 +95,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<decl_heavy_struct::_m_st_forany>::copy (
     decl_heavy_struct::_m_st_slice * _tao_to,
-    decl_heavy_struct::_m_st_slice const * _tao_from)
+    const decl_heavy_struct::_m_st_slice * _tao_from)
 {
   decl_heavy_struct::_m_st_copy (_tao_to, _tao_from);
 }
@@ -229,7 +229,7 @@ TAO::Array_Traits<decl_heavy_struct::_m_un_forany>::free (
 ACE_INLINE
 decl_heavy_struct::_m_un_slice *
 TAO::Array_Traits<decl_heavy_struct::_m_un_forany>::dup (
-    decl_heavy_struct::_m_un_slice const * _tao_slice)
+    const decl_heavy_struct::_m_un_slice * _tao_slice)
 {
   return decl_heavy_struct::_m_un_dup (_tao_slice);
 }
@@ -238,7 +238,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<decl_heavy_struct::_m_un_forany>::copy (
     decl_heavy_struct::_m_un_slice * _tao_to,
-    decl_heavy_struct::_m_un_slice const * _tao_from)
+    const decl_heavy_struct::_m_un_slice * _tao_from)
 {
   decl_heavy_struct::_m_un_copy (_tao_to, _tao_from);
 }

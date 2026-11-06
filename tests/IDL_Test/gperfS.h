@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Messaging::ExceptionHolder>
+  class SArg_Traits< ::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits<::TestEnum>
+  class SArg_Traits< ::TestEnum>
     : public
         Basic_SArg_Traits_T<
             ::TestEnum,
@@ -87,7 +87,7 @@ namespace TAO
 #define _TESTLISTITEM__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::testlistitem>
+  class  SArg_Traits< ::testlistitem>
     : public Object_SArg_Traits_T<
         ::testlistitem_ptr,
         ::testlistitem_var,
@@ -102,7 +102,7 @@ namespace TAO
 #define _AMH_TESTLISTITEMEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::AMH_testlistitemExceptionHolder>
+  class SArg_Traits< ::AMH_testlistitemExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_testlistitemExceptionHolder *,
@@ -119,7 +119,7 @@ namespace TAO
 #define _AMI_TESTLISTITEMHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AMI_testlistitemHandler>
+  class  SArg_Traits< ::AMI_testlistitemHandler>
     : public Object_SArg_Traits_T<
         ::AMI_testlistitemHandler_ptr,
         ::AMI_testlistitemHandler_var,
@@ -134,7 +134,7 @@ namespace TAO
 #define _TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::test>
+  class  SArg_Traits< ::test>
     : public Object_SArg_Traits_T<
         ::test_ptr,
         ::test_var,
@@ -149,7 +149,7 @@ namespace TAO
 #define _AMH_TESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::AMH_testExceptionHolder>
+  class SArg_Traits< ::AMH_testExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_testExceptionHolder *,
@@ -166,7 +166,7 @@ namespace TAO
 #define _AMI_TESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AMI_testHandler>
+  class  SArg_Traits< ::AMI_testHandler>
     : public Object_SArg_Traits_T<
         ::AMI_testHandler_ptr,
         ::AMI_testHandler_var,
@@ -181,7 +181,7 @@ namespace TAO
 #define _SIMPLE_SERVER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Simple_Server>
+  class  SArg_Traits< ::Simple_Server>
     : public Object_SArg_Traits_T<
         ::Simple_Server_ptr,
         ::Simple_Server_var,
@@ -196,7 +196,7 @@ namespace TAO
 #define _AMH_SIMPLE_SERVEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::AMH_Simple_ServerExceptionHolder>
+  class SArg_Traits< ::AMH_Simple_ServerExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_Simple_ServerExceptionHolder *,
@@ -213,7 +213,7 @@ namespace TAO
 #define _AMI_SIMPLE_SERVERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::AMI_Simple_ServerHandler>
+  class  SArg_Traits< ::AMI_Simple_ServerHandler>
     : public Object_SArg_Traits_T<
         ::AMI_Simple_ServerHandler_ptr,
         ::AMI_Simple_ServerHandler_var,
@@ -237,10 +237,10 @@ protected:
   POA_AMH_testlistitem ();
 
 public:
-  POA_AMH_testlistitem (POA_AMH_testlistitem const &rhs);
+  POA_AMH_testlistitem (const POA_AMH_testlistitem& rhs);
   ~POA_AMH_testlistitem () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -248,14 +248,15 @@ public:
 
   testlistitem *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void _get_name_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void name (
-    AMH_testlistitemResponseHandler_ptr _tao_rh) = 0;
+    AMH_testlistitemResponseHandler_ptr _tao_rh
+  ) = 0;
 
 };
 
@@ -276,10 +277,10 @@ public:
   using _stub_ptr_type = ::testlistitem_ptr;
   using _stub_var_type = ::testlistitem_var;
 
-  POA_testlistitem (POA_testlistitem const &rhs) = default;
+  POA_testlistitem (const POA_testlistitem& rhs) = default;
   ~POA_testlistitem () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -287,7 +288,7 @@ public:
 
   ::testlistitem *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual char * name () = 0;
 
   static void _get_name_skel (
@@ -325,7 +326,7 @@ public:
   POA_TAO_AMH_testlistitemResponseHandler () = default;
   virtual ~POA_TAO_AMH_testlistitemResponseHandler () = default;
   void get_name (
-    char const * return_value) override;
+    const char * return_value) override;
   void get_name_excep (
     ::AMH_testlistitemExceptionHolder * holder) override;
 };
@@ -347,10 +348,10 @@ public:
   using _stub_ptr_type = ::AMI_testlistitemHandler_ptr;
   using _stub_var_type = ::AMI_testlistitemHandler_var;
 
-  POA_AMI_testlistitemHandler (POA_AMI_testlistitemHandler const &rhs) = default;
+  POA_AMI_testlistitemHandler (const POA_AMI_testlistitemHandler& rhs) = default;
   ~POA_AMI_testlistitemHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -358,9 +359,9 @@ public:
 
   ::AMI_testlistitemHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void get_name (
-    char const * ami_return_val) = 0;
+    const char * ami_return_val) = 0;
 
   static void get_name_skel (
       TAO_ServerRequest &server_request,
@@ -408,10 +409,10 @@ protected:
   POA_AMH_test ();
 
 public:
-  POA_AMH_test (POA_AMH_test const &rhs);
+  POA_AMH_test (const POA_AMH_test& rhs);
   ~POA_AMH_test () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -419,14 +420,15 @@ public:
 
   test *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void _get_stest_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void stest (
-    AMH_testResponseHandler_ptr _tao_rh) = 0;
+    AMH_testResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void _set_stest_skel (
     TAO_ServerRequest &_tao_req,
@@ -435,7 +437,8 @@ static void _set_stest_skel (
 
 virtual void stest (
     AMH_testResponseHandler_ptr _tao_rh,
-    char const * stest) = 0;
+    const char * stest
+  ) = 0;
 
 static void _get_wstest_skel (
     TAO_ServerRequest &_tao_req,
@@ -443,7 +446,8 @@ static void _get_wstest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void wstest (
-    AMH_testResponseHandler_ptr _tao_rh) = 0;
+    AMH_testResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void _set_wstest_skel (
     TAO_ServerRequest &_tao_req,
@@ -452,7 +456,8 @@ static void _set_wstest_skel (
 
 virtual void wstest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::CORBA::WChar const * wstest) = 0;
+    const ::CORBA::WChar * wstest
+  ) = 0;
 
 static void _get_ltest_skel (
     TAO_ServerRequest &_tao_req,
@@ -460,7 +465,8 @@ static void _get_ltest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ltest (
-    AMH_testResponseHandler_ptr _tao_rh) = 0;
+    AMH_testResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void _set_ltest_skel (
     TAO_ServerRequest &_tao_req,
@@ -469,7 +475,8 @@ static void _set_ltest_skel (
 
 virtual void ltest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::CORBA::LongLong ltest) = 0;
+    ::CORBA::LongLong ltest
+  ) = 0;
 
 static void _get_ldtest_skel (
     TAO_ServerRequest &_tao_req,
@@ -477,7 +484,8 @@ static void _get_ldtest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ldtest (
-    AMH_testResponseHandler_ptr _tao_rh) = 0;
+    AMH_testResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void _set_ldtest_skel (
     TAO_ServerRequest &_tao_req,
@@ -486,7 +494,8 @@ static void _set_ldtest_skel (
 
 virtual void ldtest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::CORBA::LongDouble ldtest) = 0;
+    ::CORBA::LongDouble ldtest
+  ) = 0;
 
 static void _get_etest_skel (
     TAO_ServerRequest &_tao_req,
@@ -494,7 +503,8 @@ static void _get_etest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void etest (
-    AMH_testResponseHandler_ptr _tao_rh) = 0;
+    AMH_testResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void _set_etest_skel (
     TAO_ServerRequest &_tao_req,
@@ -503,7 +513,8 @@ static void _set_etest_skel (
 
 virtual void etest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::TestEnum etest) = 0;
+    ::TestEnum etest
+  ) = 0;
 
 static void _get_setest_skel (
     TAO_ServerRequest &_tao_req,
@@ -511,7 +522,8 @@ static void _get_setest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void setest (
-    AMH_testResponseHandler_ptr _tao_rh) = 0;
+    AMH_testResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void _set_setest_skel (
     TAO_ServerRequest &_tao_req,
@@ -520,7 +532,8 @@ static void _set_setest_skel (
 
 virtual void setest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::CORBA::WChar const * setest) = 0;
+    const ::CORBA::WChar * setest
+  ) = 0;
 
 static void _get_tltest_skel (
     TAO_ServerRequest &_tao_req,
@@ -528,7 +541,8 @@ static void _get_tltest_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void tltest (
-    AMH_testResponseHandler_ptr _tao_rh) = 0;
+    AMH_testResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void _set_tltest_skel (
     TAO_ServerRequest &_tao_req,
@@ -537,7 +551,8 @@ static void _set_tltest_skel (
 
 virtual void tltest (
     AMH_testResponseHandler_ptr _tao_rh,
-    ::testlistitem_ptr tltest) = 0;
+    ::testlistitem_ptr tltest
+  ) = 0;
 
 static void new_testlistitem_skel (
     TAO_ServerRequest &_tao_req,
@@ -546,7 +561,8 @@ static void new_testlistitem_skel (
 
 virtual void new_testlistitem (
     AMH_testResponseHandler_ptr _tao_rh,
-    char const * name) = 0;
+    const char * name
+  ) = 0;
 
 };
 
@@ -567,10 +583,10 @@ public:
   using _stub_ptr_type = ::test_ptr;
   using _stub_var_type = ::test_var;
 
-  POA_test (POA_test const &rhs) = default;
+  POA_test (const POA_test& rhs) = default;
   ~POA_test () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -578,7 +594,7 @@ public:
 
   ::test *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual char * stest () = 0;
 
   static void _get_stest_skel (
@@ -586,7 +602,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void stest (
-    char const * stest) = 0;
+    const char * stest) = 0;
 
   static void _set_stest_skel (
       TAO_ServerRequest &server_request,
@@ -599,7 +615,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void wstest (
-    ::CORBA::WChar const * wstest) = 0;
+    const ::CORBA::WChar * wstest) = 0;
 
   static void _set_wstest_skel (
       TAO_ServerRequest &server_request,
@@ -651,7 +667,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void setest (
-    ::CORBA::WChar const * setest) = 0;
+    const ::CORBA::WChar * setest) = 0;
 
   static void _set_setest_skel (
       TAO_ServerRequest &server_request,
@@ -671,7 +687,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual ::testlistitem_ptr new_testlistitem (
-    char const * name) = 0;
+    const char * name) = 0;
 
   static void new_testlistitem_skel (
       TAO_ServerRequest &server_request,
@@ -764,14 +780,14 @@ public:
   POA_TAO_AMH_testResponseHandler () = default;
   virtual ~POA_TAO_AMH_testResponseHandler () = default;
   void get_stest (
-    char const * return_value) override;
+    const char * return_value) override;
   void get_stest_excep (
     ::AMH_testExceptionHolder * holder) override;
   void set_stest () override;
   void set_stest_excep (
     ::AMH_testExceptionHolder * holder) override;
   void get_wstest (
-    ::CORBA::WChar const * return_value) override;
+    const ::CORBA::WChar * return_value) override;
   void get_wstest_excep (
     ::AMH_testExceptionHolder * holder) override;
   void set_wstest () override;
@@ -799,7 +815,7 @@ public:
   void set_etest_excep (
     ::AMH_testExceptionHolder * holder) override;
   void get_setest (
-    ::CORBA::WChar const * return_value) override;
+    const ::CORBA::WChar * return_value) override;
   void get_setest_excep (
     ::AMH_testExceptionHolder * holder) override;
   void set_setest () override;
@@ -835,10 +851,10 @@ public:
   using _stub_ptr_type = ::AMI_testHandler_ptr;
   using _stub_var_type = ::AMI_testHandler_var;
 
-  POA_AMI_testHandler (POA_AMI_testHandler const &rhs) = default;
+  POA_AMI_testHandler (const POA_AMI_testHandler& rhs) = default;
   ~POA_AMI_testHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -846,9 +862,9 @@ public:
 
   ::AMI_testHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void get_stest (
-    char const * ami_return_val) = 0;
+    const char * ami_return_val) = 0;
 
   static void get_stest_skel (
       TAO_ServerRequest &server_request,
@@ -875,7 +891,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void get_wstest (
-    ::CORBA::WChar const * ami_return_val) = 0;
+    const ::CORBA::WChar * ami_return_val) = 0;
 
   static void get_wstest_skel (
       TAO_ServerRequest &server_request,
@@ -983,7 +999,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void get_setest (
-    ::CORBA::WChar const * ami_return_val) = 0;
+    const ::CORBA::WChar * ami_return_val) = 0;
 
   static void get_setest_skel (
       TAO_ServerRequest &server_request,
@@ -1197,10 +1213,10 @@ protected:
   POA_AMH_Simple_Server ();
 
 public:
-  POA_AMH_Simple_Server (POA_AMH_Simple_Server const &rhs);
+  POA_AMH_Simple_Server (const POA_AMH_Simple_Server& rhs);
   ~POA_AMH_Simple_Server () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -1208,14 +1224,15 @@ public:
 
   Simple_Server *_this ();
 
-char const *_interface_repository_id () const override;
+const char* _interface_repository_id () const override;
 static void ackConfBasData_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfBasData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfMosData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1223,7 +1240,8 @@ static void ackConfMosData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfMosData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfTwmData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1231,7 +1249,8 @@ static void ackConfTwmData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfTwmData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfArchData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1239,7 +1258,8 @@ static void ackConfArchData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfArchData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfVonData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1247,7 +1267,8 @@ static void ackConfVonData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfVonData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfFftData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1255,7 +1276,8 @@ static void ackConfFftData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfFftData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfSosData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1263,7 +1285,8 @@ static void ackConfSosData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfSosData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfSscData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1271,7 +1294,8 @@ static void ackConfSscData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfSscData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfCsData_skel (
     TAO_ServerRequest &_tao_req,
@@ -1279,7 +1303,8 @@ static void ackConfCsData_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfCsData (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfR10Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1287,7 +1312,8 @@ static void ackConfR10Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR10Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfR11Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1295,7 +1321,8 @@ static void ackConfR11Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR11Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfR12Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1303,7 +1330,8 @@ static void ackConfR12Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR12Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfR13Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1311,7 +1339,8 @@ static void ackConfR13Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR13Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfR14Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1319,7 +1348,8 @@ static void ackConfR14Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR14Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void ackConfR15Data_skel (
     TAO_ServerRequest &_tao_req,
@@ -1327,7 +1357,8 @@ static void ackConfR15Data_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void ackConfR15Data (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void shutdown_skel (
     TAO_ServerRequest &_tao_req,
@@ -1335,7 +1366,8 @@ static void shutdown_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void shutdown (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void transferTriggerDb_skel (
     TAO_ServerRequest &_tao_req,
@@ -1343,7 +1375,8 @@ static void transferTriggerDb_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void transferTriggerDb (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 static void transferTriggerTdc_skel (
     TAO_ServerRequest &_tao_req,
@@ -1351,7 +1384,8 @@ static void transferTriggerTdc_skel (
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void transferTriggerTdc (
-    AMH_Simple_ServerResponseHandler_ptr _tao_rh) = 0;
+    AMH_Simple_ServerResponseHandler_ptr _tao_rh
+  ) = 0;
 
 };
 
@@ -1372,10 +1406,10 @@ public:
   using _stub_ptr_type = ::Simple_Server_ptr;
   using _stub_var_type = ::Simple_Server_var;
 
-  POA_Simple_Server (POA_Simple_Server const &rhs) = default;
+  POA_Simple_Server (const POA_Simple_Server& rhs) = default;
   ~POA_Simple_Server () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1383,7 +1417,7 @@ public:
 
   ::Simple_Server *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
   virtual void ackConfBasData () = 0;
 
   static void ackConfBasData_skel (
@@ -1663,10 +1697,10 @@ public:
   using _stub_ptr_type = ::AMI_Simple_ServerHandler_ptr;
   using _stub_var_type = ::AMI_Simple_ServerHandler_var;
 
-  POA_AMI_Simple_ServerHandler (POA_AMI_Simple_ServerHandler const &rhs) = default;
+  POA_AMI_Simple_ServerHandler (const POA_AMI_Simple_ServerHandler& rhs) = default;
   ~POA_AMI_Simple_ServerHandler () override = default;
 
-  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -1674,7 +1708,7 @@ public:
 
   ::AMI_Simple_ServerHandler *_this ();
 
-  char const *_interface_repository_id () const override;
+  const char* _interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

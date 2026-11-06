@@ -52,7 +52,7 @@ namespace TAO
 #define _TEST_HELLO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits<::Test::Hello>
+  class  SArg_Traits< ::Test::Hello>
     : public Object_SArg_Traits_T<
         ::Test::Hello_ptr,
         ::Test::Hello_var,
@@ -84,10 +84,10 @@ namespace POA_Test
     using _stub_ptr_type = ::Test::Hello_ptr;
     using _stub_var_type = ::Test::Hello_var;
 
-    Hello (Hello const &rhs) = default;
+    Hello (const Hello& rhs) = default;
     ~Hello () override = default;
 
-    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -95,7 +95,7 @@ namespace POA_Test
 
     ::Test::Hello *_this ();
 
-    char const *_interface_repository_id () const override;
+    const char* _interface_repository_id () const override;
     virtual char * get_string () = 0;
 
     static void get_string_skel (

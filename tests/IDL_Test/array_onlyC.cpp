@@ -33,7 +33,7 @@
 #include "array_onlyC.inl"
 #endif /* !defined INLINE */
 TEST_TYPE_slice *
-TEST_TYPE_dup (TEST_TYPE_slice const *_tao_src_array)
+TEST_TYPE_dup (const TEST_TYPE_slice *_tao_src_array)
 {
   TEST_TYPE_slice *_tao_dup_array = TEST_TYPE_alloc ();
 
@@ -62,7 +62,7 @@ TEST_TYPE_free (TEST_TYPE_slice *_tao_slice)
 void
 TEST_TYPE_copy (
     TEST_TYPE_slice * _tao_to,
-    TEST_TYPE_slice const *_tao_from)
+    const TEST_TYPE_slice *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 10; ++i0)
@@ -75,7 +75,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    TEST_TYPE_forany const &_tao_array)
+    const TEST_TYPE_forany &_tao_array)
 {
   return strm.write_char_array (
       reinterpret_cast <const ACE_CDR::Char *> (_tao_array.in ()),

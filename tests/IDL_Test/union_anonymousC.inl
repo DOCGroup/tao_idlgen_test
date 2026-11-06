@@ -146,7 +146,7 @@ TAO::Array_Traits<NamedLongArray_forany>::free (
 ACE_INLINE
 NamedLongArray_slice *
 TAO::Array_Traits<NamedLongArray_forany>::dup (
-    NamedLongArray_slice const * _tao_slice)
+    const NamedLongArray_slice * _tao_slice)
 {
   return NamedLongArray_dup (_tao_slice);
 }
@@ -155,7 +155,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<NamedLongArray_forany>::copy (
     NamedLongArray_slice * _tao_to,
-    NamedLongArray_slice const * _tao_from)
+    const NamedLongArray_slice * _tao_from)
 {
   NamedLongArray_copy (_tao_to, _tao_from);
 }
@@ -274,7 +274,7 @@ TAO::Array_Traits<decl_heavy_union::_m_en_arr_forany>::free (
 ACE_INLINE
 decl_heavy_union::_m_en_arr_slice *
 TAO::Array_Traits<decl_heavy_union::_m_en_arr_forany>::dup (
-    decl_heavy_union::_m_en_arr_slice const * _tao_slice)
+    const decl_heavy_union::_m_en_arr_slice * _tao_slice)
 {
   return decl_heavy_union::_m_en_arr_dup (_tao_slice);
 }
@@ -283,7 +283,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<decl_heavy_union::_m_en_arr_forany>::copy (
     decl_heavy_union::_m_en_arr_slice * _tao_to,
-    decl_heavy_union::_m_en_arr_slice const * _tao_from)
+    const decl_heavy_union::_m_en_arr_slice * _tao_from)
 {
   decl_heavy_union::_m_en_arr_copy (_tao_to, _tao_from);
 }
@@ -346,7 +346,7 @@ TAO::Array_Traits<decl_heavy_union::_m_st_arr_forany>::free (
 ACE_INLINE
 decl_heavy_union::_m_st_arr_slice *
 TAO::Array_Traits<decl_heavy_union::_m_st_arr_forany>::dup (
-    decl_heavy_union::_m_st_arr_slice const * _tao_slice)
+    const decl_heavy_union::_m_st_arr_slice * _tao_slice)
 {
   return decl_heavy_union::_m_st_arr_dup (_tao_slice);
 }
@@ -355,7 +355,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<decl_heavy_union::_m_st_arr_forany>::copy (
     decl_heavy_union::_m_st_arr_slice * _tao_to,
-    decl_heavy_union::_m_st_arr_slice const * _tao_from)
+    const decl_heavy_union::_m_st_arr_slice * _tao_from)
 {
   decl_heavy_union::_m_st_arr_copy (_tao_to, _tao_from);
 }
@@ -512,7 +512,7 @@ TAO::Array_Traits<decl_heavy_union::_m_un_arr_forany>::free (
 ACE_INLINE
 decl_heavy_union::_m_un_arr_slice *
 TAO::Array_Traits<decl_heavy_union::_m_un_arr_forany>::dup (
-    decl_heavy_union::_m_un_arr_slice const * _tao_slice)
+    const decl_heavy_union::_m_un_arr_slice * _tao_slice)
 {
   return decl_heavy_union::_m_un_arr_dup (_tao_slice);
 }
@@ -521,7 +521,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<decl_heavy_union::_m_un_arr_forany>::copy (
     decl_heavy_union::_m_un_arr_slice * _tao_to,
-    decl_heavy_union::_m_un_arr_slice const * _tao_from)
+    const decl_heavy_union::_m_un_arr_slice * _tao_from)
 {
   decl_heavy_union::_m_un_arr_copy (_tao_to, _tao_from);
 }
@@ -607,7 +607,7 @@ TAO::Array_Traits<decl_heavy_union::_m_anon_long_array_forany>::free (
 ACE_INLINE
 decl_heavy_union::_m_anon_long_array_slice *
 TAO::Array_Traits<decl_heavy_union::_m_anon_long_array_forany>::dup (
-    decl_heavy_union::_m_anon_long_array_slice const * _tao_slice)
+    const decl_heavy_union::_m_anon_long_array_slice * _tao_slice)
 {
   return decl_heavy_union::_m_anon_long_array_dup (_tao_slice);
 }
@@ -616,7 +616,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<decl_heavy_union::_m_anon_long_array_forany>::copy (
     decl_heavy_union::_m_anon_long_array_slice * _tao_to,
-    decl_heavy_union::_m_anon_long_array_slice const * _tao_from)
+    const decl_heavy_union::_m_anon_long_array_slice * _tao_from)
 {
   decl_heavy_union::_m_anon_long_array_copy (_tao_to, _tao_from);
 }

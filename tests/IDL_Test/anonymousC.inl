@@ -35,7 +35,7 @@ TAO::Array_Traits<Half_Anon::char_seq_array_forany>::free (
 ACE_INLINE
 Half_Anon::char_seq_array_slice *
 TAO::Array_Traits<Half_Anon::char_seq_array_forany>::dup (
-    Half_Anon::char_seq_array_slice const * _tao_slice)
+    const Half_Anon::char_seq_array_slice * _tao_slice)
 {
   return Half_Anon::char_seq_array_dup (_tao_slice);
 }
@@ -44,7 +44,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Half_Anon::char_seq_array_forany>::copy (
     Half_Anon::char_seq_array_slice * _tao_to,
-    Half_Anon::char_seq_array_slice const * _tao_from)
+    const Half_Anon::char_seq_array_slice * _tao_from)
 {
   Half_Anon::char_seq_array_copy (_tao_to, _tao_from);
 }
@@ -83,7 +83,7 @@ TAO::Array_Traits<Half_Anon::bd_ulong_seq_array_forany>::free (
 ACE_INLINE
 Half_Anon::bd_ulong_seq_array_slice *
 TAO::Array_Traits<Half_Anon::bd_ulong_seq_array_forany>::dup (
-    Half_Anon::bd_ulong_seq_array_slice const * _tao_slice)
+    const Half_Anon::bd_ulong_seq_array_slice * _tao_slice)
 {
   return Half_Anon::bd_ulong_seq_array_dup (_tao_slice);
 }
@@ -92,7 +92,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Half_Anon::bd_ulong_seq_array_forany>::copy (
     Half_Anon::bd_ulong_seq_array_slice * _tao_to,
-    Half_Anon::bd_ulong_seq_array_slice const * _tao_from)
+    const Half_Anon::bd_ulong_seq_array_slice * _tao_from)
 {
   Half_Anon::bd_ulong_seq_array_copy (_tao_to, _tao_from);
 }
@@ -131,7 +131,7 @@ TAO::Array_Traits<Half_Anon::ushort_seq_array_forany>::free (
 ACE_INLINE
 Half_Anon::ushort_seq_array_slice *
 TAO::Array_Traits<Half_Anon::ushort_seq_array_forany>::dup (
-    Half_Anon::ushort_seq_array_slice const * _tao_slice)
+    const Half_Anon::ushort_seq_array_slice * _tao_slice)
 {
   return Half_Anon::ushort_seq_array_dup (_tao_slice);
 }
@@ -140,7 +140,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Half_Anon::ushort_seq_array_forany>::copy (
     Half_Anon::ushort_seq_array_slice * _tao_to,
-    Half_Anon::ushort_seq_array_slice const * _tao_from)
+    const Half_Anon::ushort_seq_array_slice * _tao_from)
 {
   Half_Anon::ushort_seq_array_copy (_tao_to, _tao_from);
 }
@@ -179,7 +179,7 @@ TAO::Array_Traits<Half_Anon::bd_ushort_seq_array_forany>::free (
 ACE_INLINE
 Half_Anon::bd_ushort_seq_array_slice *
 TAO::Array_Traits<Half_Anon::bd_ushort_seq_array_forany>::dup (
-    Half_Anon::bd_ushort_seq_array_slice const * _tao_slice)
+    const Half_Anon::bd_ushort_seq_array_slice * _tao_slice)
 {
   return Half_Anon::bd_ushort_seq_array_dup (_tao_slice);
 }
@@ -188,7 +188,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Half_Anon::bd_ushort_seq_array_forany>::copy (
     Half_Anon::bd_ushort_seq_array_slice * _tao_to,
-    Half_Anon::bd_ushort_seq_array_slice const * _tao_from)
+    const Half_Anon::bd_ushort_seq_array_slice * _tao_from)
 {
   Half_Anon::bd_ushort_seq_array_copy (_tao_to, _tao_from);
 }
@@ -273,7 +273,7 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_float_seq_array_forany>::free (
 ACE_INLINE
 All_Anon::Nested_Anon::_float_seq_array_slice *
 TAO::Array_Traits<All_Anon::Nested_Anon::_float_seq_array_forany>::dup (
-    All_Anon::Nested_Anon::_float_seq_array_slice const * _tao_slice)
+    const All_Anon::Nested_Anon::_float_seq_array_slice * _tao_slice)
 {
   return All_Anon::Nested_Anon::_float_seq_array_dup (_tao_slice);
 }
@@ -282,7 +282,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<All_Anon::Nested_Anon::_float_seq_array_forany>::copy (
     All_Anon::Nested_Anon::_float_seq_array_slice * _tao_to,
-    All_Anon::Nested_Anon::_float_seq_array_slice const * _tao_from)
+    const All_Anon::Nested_Anon::_float_seq_array_slice * _tao_from)
 {
   All_Anon::Nested_Anon::_float_seq_array_copy (_tao_to, _tao_from);
 }
@@ -321,7 +321,7 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_another_fsa_forany>::free (
 ACE_INLINE
 All_Anon::Nested_Anon::_another_fsa_slice *
 TAO::Array_Traits<All_Anon::Nested_Anon::_another_fsa_forany>::dup (
-    All_Anon::Nested_Anon::_another_fsa_slice const * _tao_slice)
+    const All_Anon::Nested_Anon::_another_fsa_slice * _tao_slice)
 {
   return All_Anon::Nested_Anon::_another_fsa_dup (_tao_slice);
 }
@@ -330,7 +330,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<All_Anon::Nested_Anon::_another_fsa_forany>::copy (
     All_Anon::Nested_Anon::_another_fsa_slice * _tao_to,
-    All_Anon::Nested_Anon::_another_fsa_slice const * _tao_from)
+    const All_Anon::Nested_Anon::_another_fsa_slice * _tao_from)
 {
   All_Anon::Nested_Anon::_another_fsa_copy (_tao_to, _tao_from);
 }
@@ -369,7 +369,7 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_1_forany>::free (
 ACE_INLINE
 All_Anon::Nested_Anon::_long_array_1_slice *
 TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_1_forany>::dup (
-    All_Anon::Nested_Anon::_long_array_1_slice const * _tao_slice)
+    const All_Anon::Nested_Anon::_long_array_1_slice * _tao_slice)
 {
   return All_Anon::Nested_Anon::_long_array_1_dup (_tao_slice);
 }
@@ -378,7 +378,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_1_forany>::copy (
     All_Anon::Nested_Anon::_long_array_1_slice * _tao_to,
-    All_Anon::Nested_Anon::_long_array_1_slice const * _tao_from)
+    const All_Anon::Nested_Anon::_long_array_1_slice * _tao_from)
 {
   All_Anon::Nested_Anon::_long_array_1_copy (_tao_to, _tao_from);
 }
@@ -417,7 +417,7 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_2_forany>::free (
 ACE_INLINE
 All_Anon::Nested_Anon::_long_array_2_slice *
 TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_2_forany>::dup (
-    All_Anon::Nested_Anon::_long_array_2_slice const * _tao_slice)
+    const All_Anon::Nested_Anon::_long_array_2_slice * _tao_slice)
 {
   return All_Anon::Nested_Anon::_long_array_2_dup (_tao_slice);
 }
@@ -426,7 +426,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_2_forany>::copy (
     All_Anon::Nested_Anon::_long_array_2_slice * _tao_to,
-    All_Anon::Nested_Anon::_long_array_2_slice const * _tao_from)
+    const All_Anon::Nested_Anon::_long_array_2_slice * _tao_from)
 {
   All_Anon::Nested_Anon::_long_array_2_copy (_tao_to, _tao_from);
 }

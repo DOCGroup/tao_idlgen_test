@@ -35,7 +35,7 @@ TAO::Array_Traits<string_20_forany>::free (
 ACE_INLINE
 string_20_slice *
 TAO::Array_Traits<string_20_forany>::dup (
-    string_20_slice const * _tao_slice)
+    const string_20_slice * _tao_slice)
 {
   return string_20_dup (_tao_slice);
 }
@@ -44,7 +44,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<string_20_forany>::copy (
     string_20_slice * _tao_to,
-    string_20_slice const * _tao_from)
+    const string_20_slice * _tao_from)
 {
   string_20_copy (_tao_to, _tao_from);
 }

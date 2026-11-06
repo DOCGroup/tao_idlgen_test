@@ -27,7 +27,6 @@
 
 #include "typeprefixS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
-#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -63,9 +62,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_AMH_B_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_A_AMH_B_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_A_AMH_B_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -133,7 +135,7 @@ POA_A::AMH_B::AMH_B ()
   this->optable_ = std::addressof (tao_A_AMH_B_optable);
 }
 
-::CORBA::Boolean POA_A::AMH_B::_is_a (char const *value)
+::CORBA::Boolean POA_A::AMH_B::_is_a (const char* value)
 {
   return
     (
@@ -142,7 +144,7 @@ POA_A::AMH_B::AMH_B ()
     );
 }
 
-char const *POA_A::AMH_B::_interface_repository_id () const
+const char* POA_A::AMH_B::_interface_repository_id () const
 {
   return "IDL:TAO/A/B:1.0";
 }
@@ -157,7 +159,7 @@ A::B*
 POA_A::AMH_B::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -177,9 +179,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_B_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_A_B_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_A_B_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -259,7 +264,7 @@ POA_A::B::B ()
   this->optable_ = std::addressof (tao_A_B_optable);
 }
 
-::CORBA::Boolean POA_A::B::_is_a (char const *value)
+::CORBA::Boolean POA_A::B::_is_a (const char* value)
 {
   return
     (
@@ -268,7 +273,7 @@ POA_A::B::B ()
     );
 }
 
-char const *POA_A::B::_interface_repository_id () const
+const char* POA_A::B::_interface_repository_id () const
 {
   return "IDL:TAO/A/B:1.0";
 }
@@ -303,9 +308,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_AMI_BHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_A_AMI_BHandler_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_A_AMI_BHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -385,7 +393,7 @@ POA_A::AMI_BHandler::AMI_BHandler ()
   this->optable_ = std::addressof (tao_A_AMI_BHandler_optable);
 }
 
-::CORBA::Boolean POA_A::AMI_BHandler::_is_a (char const *value)
+::CORBA::Boolean POA_A::AMI_BHandler::_is_a (const char* value)
 {
   return
     (
@@ -395,7 +403,7 @@ POA_A::AMI_BHandler::AMI_BHandler ()
     );
 }
 
-char const *POA_A::AMI_BHandler::_interface_repository_id () const
+const char* POA_A::AMI_BHandler::_interface_repository_id () const
 {
   return "IDL:TAO/A/AMI_BHandler:1.0";
 }
@@ -430,9 +438,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_AMH_C_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_A_AMH_C_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_A_AMH_C_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -531,7 +542,9 @@ POA_A::AMH_C::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_A::TAO_AMH_CResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  POA_A::TAO_AMH_CResponseHandler_ptr _tao_rh_ptr =
+    buffer_allocator.allocate();
+
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -545,7 +558,7 @@ POA_A::AMH_C::op_skel (
     );
 }
 
-::CORBA::Boolean POA_A::AMH_C::_is_a (char const *value)
+::CORBA::Boolean POA_A::AMH_C::_is_a (const char* value)
 {
   return
     (
@@ -554,7 +567,7 @@ POA_A::AMH_C::op_skel (
     );
 }
 
-char const *POA_A::AMH_C::_interface_repository_id () const
+const char* POA_A::AMH_C::_interface_repository_id () const
 {
   return "IDL:TAO/A/C:1.0";
 }
@@ -569,7 +582,7 @@ A::C*
 POA_A::AMH_C::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -589,9 +602,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_C_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_A_C_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_A_C_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -677,7 +693,7 @@ POA_A::_TAO_C_Direct_Proxy_Impl::op (
     }
 
   _tao_ptr->op (
-        ((TAO::Arg_Traits<::A::B>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::A::B>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -705,8 +721,8 @@ namespace POA_A
 
     void execute () override
     {
-      TAO::SArg_Traits<::A::B>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::A::B> (
+      TAO::SArg_Traits< ::A::B>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::A::B> (
           this->operation_details_,
           this->args_,
           1);
@@ -726,8 +742,8 @@ void POA_A::C::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::A::B>::in_arg_val _tao_a;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::A::B>::in_arg_val _tao_a;
 
   TAO::Argument * const args[] =
     {
@@ -760,7 +776,7 @@ void POA_A::C::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_A::C::_is_a (char const *value)
+::CORBA::Boolean POA_A::C::_is_a (const char* value)
 {
   return
     (
@@ -769,7 +785,7 @@ void POA_A::C::op_skel (
     );
 }
 
-char const *POA_A::C::_interface_repository_id () const
+const char* POA_A::C::_interface_repository_id () const
 {
   return "IDL:TAO/A/C:1.0";
 }
@@ -825,9 +841,12 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_A_AMI_CHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_A_AMI_CHandler_Perfect_Hash_OpTable -N lookup */
 
+#include <array>
+#include <cstddef>
+#include <memory>
 std::size_t
 TAO_A_AMI_CHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
@@ -932,7 +951,7 @@ POA_A::_TAO_AMI_CHandler_Direct_Proxy_Impl::op_excep (
     }
 
   _tao_ptr->op_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -968,7 +987,7 @@ void POA_A::AMI_CHandler::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits< void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
@@ -1012,8 +1031,8 @@ namespace POA_A
 
     void execute () override
     {
-      TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
+      TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
           this->operation_details_,
           this->args_,
           1);
@@ -1033,8 +1052,8 @@ void POA_A::AMI_CHandler::op_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits<void>::ret_val retval;
-  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits< void>::ret_val retval;
+  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1067,7 +1086,7 @@ void POA_A::AMI_CHandler::op_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_A::AMI_CHandler::_is_a (char const *value)
+::CORBA::Boolean POA_A::AMI_CHandler::_is_a (const char* value)
 {
   return
     (
@@ -1077,7 +1096,7 @@ void POA_A::AMI_CHandler::op_excep_skel (
     );
 }
 
-char const *POA_A::AMI_CHandler::_interface_repository_id () const
+const char* POA_A::AMI_CHandler::_interface_repository_id () const
 {
   return "IDL:TAO/A/AMI_CHandler:1.0";
 }
