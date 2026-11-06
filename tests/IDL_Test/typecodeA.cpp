@@ -48,11 +48,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> MyModule_TypeCodeList_0 (
-        ::CORBA::tk_sequence, &CORBA::_tc_TypeCode, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> MyModule_TypeCodeList_0 (
+        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_TypeCode), 0U);
 
     ::CORBA::TypeCode_ptr const tc_MyModule_TypeCodeList_0 =
-      &MyModule_TypeCodeList_0;
+      std::addressof (MyModule_TypeCodeList_0);
   }
 }
 }
@@ -68,7 +68,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:MyModule/TypeCodeList:1.0",
     "TypeCodeList",
-    &TAO::TypeCode::tc_MyModule_TypeCodeList_0);
+    std::addressof (TAO::TypeCode::tc_MyModule_TypeCodeList_0));
 
 namespace MyModule
 {
@@ -83,7 +83,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::MyModule::TypeCodeList const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::MyModule::TypeCodeList>::insert_copy (
+  TAO::Any_Dual_Impl_T<::MyModule::TypeCodeList>::insert_copy (
     _tao_any,
     ::MyModule::TypeCodeList::_tao_any_destructor,
     ::MyModule::_tc_TypeCodeList,
@@ -95,7 +95,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::MyModule::TypeCodeList *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::MyModule::TypeCodeList>::insert (
+  TAO::Any_Dual_Impl_T<::MyModule::TypeCodeList>::insert (
     _tao_any,
     ::MyModule::TypeCodeList::_tao_any_destructor,
     ::MyModule::_tc_TypeCodeList,
@@ -107,7 +107,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::MyModule::TypeCodeList const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::MyModule::TypeCodeList>::extract (
+  return TAO::Any_Dual_Impl_T<::MyModule::TypeCodeList>::extract (
     _tao_any,
     ::MyModule::TypeCodeList::_tao_any_destructor,
     ::MyModule::_tc_TypeCodeList,

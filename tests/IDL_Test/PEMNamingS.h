@@ -57,7 +57,7 @@ namespace TAO
 {
 
   template<>
-  class SArg_Traits< ::Plesk::TBool>
+  class SArg_Traits<::Plesk::TBool>
     : public
         Basic_SArg_Traits_T<
             ::Plesk::TBool,
@@ -67,7 +67,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Plesk::TProperty>
+  class SArg_Traits<::Plesk::TProperty>
     : public
         Var_Size_SArg_Traits_T<
             ::Plesk::TProperty,
@@ -77,7 +77,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Plesk::TPropertyList>
+  class SArg_Traits<::Plesk::TPropertyList>
     : public
         Var_Size_SArg_Traits_T<
             ::Plesk::TPropertyList,
@@ -87,7 +87,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::Plesk::Naming::NamingContext>
+  class SArg_Traits<::Plesk::Naming::NamingContext>
     : public
         Var_Size_SArg_Traits_T<
             ::Plesk::Naming::NamingContext,
@@ -100,7 +100,7 @@ namespace TAO
 #define _PLESK_NAMING_OBJECTRESOLVER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Plesk::Naming::ObjectResolver>
+  class  SArg_Traits<::Plesk::Naming::ObjectResolver>
     : public Object_SArg_Traits_T<
         ::Plesk::Naming::ObjectResolver_ptr,
         ::Plesk::Naming::ObjectResolver_var,
@@ -115,7 +115,7 @@ namespace TAO
 #define _PLESK_NAMING_AMH_OBJECTRESOLVEREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Plesk::Naming::AMH_ObjectResolverExceptionHolder>
+  class SArg_Traits<::Plesk::Naming::AMH_ObjectResolverExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Plesk::Naming::AMH_ObjectResolverExceptionHolder *,
@@ -132,7 +132,7 @@ namespace TAO
 #define _PLESK_NAMING_AMI_OBJECTRESOLVERHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Plesk::Naming::AMI_ObjectResolverHandler>
+  class  SArg_Traits<::Plesk::Naming::AMI_ObjectResolverHandler>
     : public Object_SArg_Traits_T<
         ::Plesk::Naming::AMI_ObjectResolverHandler_ptr,
         ::Plesk::Naming::AMI_ObjectResolverHandler_var,
@@ -162,10 +162,10 @@ namespace POA_Plesk
       AMH_ObjectResolver ();
 
     public:
-      AMH_ObjectResolver (const AMH_ObjectResolver& rhs);
+      AMH_ObjectResolver (AMH_ObjectResolver const &rhs);
       ~AMH_ObjectResolver () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -173,7 +173,7 @@ namespace POA_Plesk
 
       Plesk::Naming::ObjectResolver *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     static void resolve_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -181,9 +181,8 @@ namespace POA_Plesk
 
     virtual void resolve (
         Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr _tao_rh,
-        const char * service_type,
-        ::Plesk::TObjectID sc_id
-      ) = 0;
+        char const * service_type,
+        ::Plesk::TObjectID sc_id) = 0;
 
     static void resolve_sc_skel (
         TAO_ServerRequest &_tao_req,
@@ -192,10 +191,9 @@ namespace POA_Plesk
 
     virtual void resolve_sc (
         Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr _tao_rh,
-        const char * service_type,
-        const char * version,
-        ::Plesk::TObjectID sc_id
-      ) = 0;
+        char const * service_type,
+        char const * version,
+        ::Plesk::TObjectID sc_id) = 0;
 
   };
 
@@ -216,10 +214,10 @@ namespace POA_Plesk
     using _stub_ptr_type = ::Plesk::Naming::ObjectResolver_ptr;
     using _stub_var_type = ::Plesk::Naming::ObjectResolver_var;
 
-    ObjectResolver (const ObjectResolver& rhs) = default;
+    ObjectResolver (ObjectResolver const &rhs) = default;
     ~ObjectResolver () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -227,9 +225,9 @@ namespace POA_Plesk
 
     ::Plesk::Naming::ObjectResolver *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual ::CORBA::Object_ptr resolve (
-      const char * service_type,
+      char const * service_type,
       ::Plesk::TObjectID & sc_id) = 0;
 
     static void resolve_skel (
@@ -237,8 +235,8 @@ namespace POA_Plesk
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
     virtual ::CORBA::Object_ptr resolve_sc (
-      const char * service_type,
-      const char * version,
+      char const * service_type,
+      char const * version,
       ::Plesk::TObjectID & sc_id) = 0;
 
     static void resolve_sc_skel (
@@ -308,10 +306,10 @@ namespace POA_Plesk
     using _stub_ptr_type = ::Plesk::Naming::AMI_ObjectResolverHandler_ptr;
     using _stub_var_type = ::Plesk::Naming::AMI_ObjectResolverHandler_var;
 
-    AMI_ObjectResolverHandler (const AMI_ObjectResolverHandler& rhs) = default;
+    AMI_ObjectResolverHandler (AMI_ObjectResolverHandler const &rhs) = default;
     ~AMI_ObjectResolverHandler () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -319,7 +317,7 @@ namespace POA_Plesk
 
     ::Plesk::Naming::AMI_ObjectResolverHandler *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual void resolve (
       ::CORBA::Object_ptr ami_return_val,
       ::Plesk::TObjectID sc_id) = 0;

@@ -23,6 +23,7 @@
  **/
 
 #include "sequenceC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -45,7 +46,6 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "sequenceC.inl"
@@ -55,13 +55,13 @@
 #define _MYFOOSTRUCTSEQ_CS_
 
 myfoostructseq::myfoostructseq (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< myfoostruct> (max) {}
+  : ::TAO::unbounded_value_sequence<myfoostruct> (max) {}
 
 myfoostructseq::myfoostructseq (::CORBA::ULong max,
   ::CORBA::ULong length,
   myfoostruct * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< myfoostruct>
+  : ::TAO::unbounded_value_sequence<myfoostruct>
     (max, length, buffer, release)
 {}
 
@@ -85,11 +85,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> myfoostructseq_0 (
-        ::CORBA::tk_sequence, &_tc_myfoostruct, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> myfoostructseq_0 (
+        ::CORBA::tk_sequence, std::addressof (_tc_myfoostruct), 0U);
 
     ::CORBA::TypeCode_ptr const tc_myfoostructseq_0 =
-      &myfoostructseq_0;
+      std::addressof (myfoostructseq_0);
   }
 }
 }
@@ -105,7 +105,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:myfoostructseq:1.0",
     "myfoostructseq",
-    &TAO::TypeCode::tc_myfoostructseq_0);
+    std::addressof (TAO::TypeCode::tc_myfoostructseq_0));
 
 ::CORBA::TypeCode_ptr const _tc_myfoostructseq = std::addressof(_tao_tc_myfoostructseq);
 
@@ -114,8 +114,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_myfoostruct[] =
       {
-        { "str_mem", &CORBA::_tc_string },
-        { "rec_mem", &_tc_myfoostructseq }
+        { "str_mem", std::addressof (CORBA::_tc_string) },
+        { "rec_mem", std::addressof (_tc_myfoostructseq) }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -139,17 +139,15 @@ _tao_tc_myfoostruct (
 
 ::CORBA::TypeCode_ptr const _tc_myfoostruct = std::addressof(_tao_tc_myfoostruct);
 
-void
-myfoostruct::_tao_any_destructor (
-    void *_tao_void_pointer)
+void myfoostruct::_tao_any_destructor (void *_tao_void_pointer)
 {
   myfoostruct *tmp = static_cast<myfoostruct *> (_tao_void_pointer);
   delete tmp;
 }
 
 nasty::nasty (
-    const char * _tao_id,
-    const myfoostruct & _tao_rec_info)
+    char const * _tao_id,
+    myfoostruct const & _tao_rec_info)
   : ::CORBA::UserException (
         "IDL:nasty:1.0",
         "nasty")
@@ -195,10 +193,10 @@ nasty::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<nasty *> (_tao_excp);
 }
 
-const nasty *
+nasty const *
 nasty::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const nasty *> (_tao_excp);
+  return dynamic_cast<nasty const *> (_tao_excp);
 }
 
 ::CORBA::Exception *nasty::_alloc ()
@@ -247,8 +245,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_nasty[] =
       {
-        { "id", &CORBA::_tc_string },
-        { "rec_info", &_tc_myfoostruct }
+        { "id", std::addressof (CORBA::_tc_string) },
+        { "rec_info", std::addressof (_tc_myfoostruct) }
       };
 
 static TAO::TypeCode::Struct<
@@ -271,13 +269,13 @@ _tao_tc_nasty (
 #define _OCTETSEQSEQ_CS_
 
 OctetSeqSeq::OctetSeqSeq (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< CORBA::OctetSeq> (max) {}
+  : ::TAO::unbounded_value_sequence<CORBA::OctetSeq> (max) {}
 
 OctetSeqSeq::OctetSeqSeq (::CORBA::ULong max,
   ::CORBA::ULong length,
   CORBA::OctetSeq * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< CORBA::OctetSeq>
+  : ::TAO::unbounded_value_sequence<CORBA::OctetSeq>
     (max, length, buffer, release)
 {}
 
@@ -301,11 +299,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> OctetSeqSeq_0 (
-        ::CORBA::tk_sequence, &CORBA::_tc_OctetSeq, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> OctetSeqSeq_0 (
+        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_OctetSeq), 0U);
 
     ::CORBA::TypeCode_ptr const tc_OctetSeqSeq_0 =
-      &OctetSeqSeq_0;
+      std::addressof (OctetSeqSeq_0);
   }
 }
 }
@@ -321,7 +319,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:OctetSeqSeq:1.0",
     "OctetSeqSeq",
-    &TAO::TypeCode::tc_OctetSeqSeq_0);
+    std::addressof (TAO::TypeCode::tc_OctetSeqSeq_0));
 
 ::CORBA::TypeCode_ptr const _tc_OctetSeqSeq = std::addressof(_tao_tc_OctetSeqSeq);
 
@@ -348,7 +346,7 @@ TAO::Objref_Traits<seqLocal>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<seqLocal>::marshal (const seqLocal_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<seqLocal>::marshal (seqLocal_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -402,10 +400,9 @@ seqLocal::_tao_release (seqLocal_ptr obj)
 }
 
 ::CORBA::Boolean
-seqLocal::_is_a (const char *value)
+seqLocal::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:seqLocal:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:seqLocal:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
@@ -417,17 +414,17 @@ seqLocal::_is_a (const char *value)
     }
 }
 
-const char* seqLocal::_interface_repository_id () const
+char const *seqLocal::_interface_repository_id () const
 {
   return "IDL:seqLocal:1.0";
 }
 
-const char* seqLocal::_desc_repository_id ()
+char const *seqLocal::_desc_repository_id ()
 {
   return "IDL:seqLocal:1.0";
 }
 
-const char* seqLocal::_desc_interface_name ()
+char const *seqLocal::_desc_interface_name ()
 {
   return "seqLocal";
 }
@@ -480,11 +477,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> seqLocalSeq_0 (
-        ::CORBA::tk_sequence, &_tc_seqLocal, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> seqLocalSeq_0 (
+        ::CORBA::tk_sequence, std::addressof (_tc_seqLocal), 0U);
 
     ::CORBA::TypeCode_ptr const tc_seqLocalSeq_0 =
-      &seqLocalSeq_0;
+      std::addressof (seqLocalSeq_0);
   }
 }
 }
@@ -500,7 +497,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:seqLocalSeq:1.0",
     "seqLocalSeq",
-    &TAO::TypeCode::tc_seqLocalSeq_0);
+    std::addressof (TAO::TypeCode::tc_seqLocalSeq_0));
 
 ::CORBA::TypeCode_ptr const _tc_seqLocalSeq = std::addressof(_tao_tc_seqLocalSeq);
 
@@ -508,13 +505,13 @@ static TAO::TypeCode::Alias<char const *,
 #define _DEPLOYMENT_COMPONENTPACKAGEDESCRIPTIONS_CS_
 
 Deployment::ComponentPackageDescriptions::ComponentPackageDescriptions (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ComponentPackageDescription> (max) {}
+  : ::TAO::unbounded_value_sequence<ComponentPackageDescription> (max) {}
 
 Deployment::ComponentPackageDescriptions::ComponentPackageDescriptions (::CORBA::ULong max,
   ::CORBA::ULong length,
   Deployment::ComponentPackageDescription * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< ComponentPackageDescription>
+  : ::TAO::unbounded_value_sequence<ComponentPackageDescription>
     (max, length, buffer, release)
 {}
 
@@ -538,11 +535,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_ComponentPackageDescriptions_0 (
-        ::CORBA::tk_sequence, &Deployment::_tc_ComponentPackageDescription, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_ComponentPackageDescriptions_0 (
+        ::CORBA::tk_sequence, std::addressof (Deployment::_tc_ComponentPackageDescription), 0U);
 
     ::CORBA::TypeCode_ptr const tc_Deployment_ComponentPackageDescriptions_0 =
-      &Deployment_ComponentPackageDescriptions_0;
+      std::addressof (Deployment_ComponentPackageDescriptions_0);
   }
 }
 }
@@ -558,7 +555,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Deployment/ComponentPackageDescriptions:1.0",
     "ComponentPackageDescriptions",
-    &TAO::TypeCode::tc_Deployment_ComponentPackageDescriptions_0);
+    std::addressof (TAO::TypeCode::tc_Deployment_ComponentPackageDescriptions_0));
 
 namespace Deployment
 {
@@ -570,7 +567,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_ComponentAssemblyDescription[] =
       {
-        { "instance", &Deployment::_tc_ComponentPackageDescriptions }
+        { "instance", std::addressof (Deployment::_tc_ComponentPackageDescriptions) }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -597,9 +594,7 @@ namespace Deployment
   ::CORBA::TypeCode_ptr const _tc_ComponentAssemblyDescription = std::addressof(_tao_tc_Deployment_ComponentAssemblyDescription);
 }
 
-void
-Deployment::ComponentAssemblyDescription::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Deployment::ComponentAssemblyDescription::_tao_any_destructor (void *_tao_void_pointer)
 {
   ComponentAssemblyDescription *tmp = static_cast<ComponentAssemblyDescription *> (_tao_void_pointer);
   delete tmp;
@@ -609,13 +604,13 @@ Deployment::ComponentAssemblyDescription::_tao_any_destructor (
 #define _DEPLOYMENT_COMPONENTASSEMBLYDESCRIPTIONS_CS_
 
 Deployment::ComponentAssemblyDescriptions::ComponentAssemblyDescriptions (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< ComponentAssemblyDescription> (max) {}
+  : ::TAO::unbounded_value_sequence<ComponentAssemblyDescription> (max) {}
 
 Deployment::ComponentAssemblyDescriptions::ComponentAssemblyDescriptions (::CORBA::ULong max,
   ::CORBA::ULong length,
   Deployment::ComponentAssemblyDescription * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< ComponentAssemblyDescription>
+  : ::TAO::unbounded_value_sequence<ComponentAssemblyDescription>
     (max, length, buffer, release)
 {}
 
@@ -639,11 +634,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_ComponentAssemblyDescriptions_0 (
-        ::CORBA::tk_sequence, &Deployment::_tc_ComponentAssemblyDescription, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_ComponentAssemblyDescriptions_0 (
+        ::CORBA::tk_sequence, std::addressof (Deployment::_tc_ComponentAssemblyDescription), 0U);
 
     ::CORBA::TypeCode_ptr const tc_Deployment_ComponentAssemblyDescriptions_0 =
-      &Deployment_ComponentAssemblyDescriptions_0;
+      std::addressof (Deployment_ComponentAssemblyDescriptions_0);
   }
 }
 }
@@ -659,7 +654,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Deployment/ComponentAssemblyDescriptions:1.0",
     "ComponentAssemblyDescriptions",
-    &TAO::TypeCode::tc_Deployment_ComponentAssemblyDescriptions_0);
+    std::addressof (TAO::TypeCode::tc_Deployment_ComponentAssemblyDescriptions_0));
 
 namespace Deployment
 {
@@ -670,13 +665,13 @@ namespace Deployment
 #define _DEPLOYMENT_NAMEDIMPLEMENTATIONARTIFACTS_CS_
 
 Deployment::NamedImplementationArtifacts::NamedImplementationArtifacts (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< NamedImplementationArtifact> (max) {}
+  : ::TAO::unbounded_value_sequence<NamedImplementationArtifact> (max) {}
 
 Deployment::NamedImplementationArtifacts::NamedImplementationArtifacts (::CORBA::ULong max,
   ::CORBA::ULong length,
   Deployment::NamedImplementationArtifact * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< NamedImplementationArtifact>
+  : ::TAO::unbounded_value_sequence<NamedImplementationArtifact>
     (max, length, buffer, release)
 {}
 
@@ -700,11 +695,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_NamedImplementationArtifacts_0 (
-        ::CORBA::tk_sequence, &Deployment::_tc_NamedImplementationArtifact, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_NamedImplementationArtifacts_0 (
+        ::CORBA::tk_sequence, std::addressof (Deployment::_tc_NamedImplementationArtifact), 0U);
 
     ::CORBA::TypeCode_ptr const tc_Deployment_NamedImplementationArtifacts_0 =
-      &Deployment_NamedImplementationArtifacts_0;
+      std::addressof (Deployment_NamedImplementationArtifacts_0);
   }
 }
 }
@@ -720,7 +715,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Deployment/NamedImplementationArtifacts:1.0",
     "NamedImplementationArtifacts",
-    &TAO::TypeCode::tc_Deployment_NamedImplementationArtifacts_0);
+    std::addressof (TAO::TypeCode::tc_Deployment_NamedImplementationArtifacts_0));
 
 namespace Deployment
 {
@@ -732,8 +727,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_NamedImplementationArtifact[] =
       {
-        { "str", &CORBA::_tc_string },
-        { "dependsOn", &Deployment::_tc_NamedImplementationArtifacts }
+        { "str", std::addressof (CORBA::_tc_string) },
+        { "dependsOn", std::addressof (Deployment::_tc_NamedImplementationArtifacts) }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -760,9 +755,7 @@ namespace Deployment
   ::CORBA::TypeCode_ptr const _tc_NamedImplementationArtifact = std::addressof(_tao_tc_Deployment_NamedImplementationArtifact);
 }
 
-void
-Deployment::NamedImplementationArtifact::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Deployment::NamedImplementationArtifact::_tao_any_destructor (void *_tao_void_pointer)
 {
   NamedImplementationArtifact *tmp = static_cast<NamedImplementationArtifact *> (_tao_void_pointer);
   delete tmp;
@@ -773,7 +766,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_MonolithicImplementationDescription[] =
       {
-        { "primaryArtifact", &Deployment::_tc_NamedImplementationArtifacts }
+        { "primaryArtifact", std::addressof (Deployment::_tc_NamedImplementationArtifacts) }
       };
 
 static TAO::TypeCode::Struct<
@@ -795,9 +788,7 @@ namespace Deployment
   ::CORBA::TypeCode_ptr const _tc_MonolithicImplementationDescription = std::addressof(_tao_tc_Deployment_MonolithicImplementationDescription);
 }
 
-void
-Deployment::MonolithicImplementationDescription::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Deployment::MonolithicImplementationDescription::_tao_any_destructor (void *_tao_void_pointer)
 {
   MonolithicImplementationDescription *tmp = static_cast<MonolithicImplementationDescription *> (_tao_void_pointer);
   delete tmp;
@@ -807,13 +798,13 @@ Deployment::MonolithicImplementationDescription::_tao_any_destructor (
 #define _DEPLOYMENT_MONOLITHICIMPLEMENTATIONDESCRIPTIONS_CS_
 
 Deployment::MonolithicImplementationDescriptions::MonolithicImplementationDescriptions (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< MonolithicImplementationDescription> (max) {}
+  : ::TAO::unbounded_value_sequence<MonolithicImplementationDescription> (max) {}
 
 Deployment::MonolithicImplementationDescriptions::MonolithicImplementationDescriptions (::CORBA::ULong max,
   ::CORBA::ULong length,
   Deployment::MonolithicImplementationDescription * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< MonolithicImplementationDescription>
+  : ::TAO::unbounded_value_sequence<MonolithicImplementationDescription>
     (max, length, buffer, release)
 {}
 
@@ -837,11 +828,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_MonolithicImplementationDescriptions_0 (
-        ::CORBA::tk_sequence, &Deployment::_tc_MonolithicImplementationDescription, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_MonolithicImplementationDescriptions_0 (
+        ::CORBA::tk_sequence, std::addressof (Deployment::_tc_MonolithicImplementationDescription), 0U);
 
     ::CORBA::TypeCode_ptr const tc_Deployment_MonolithicImplementationDescriptions_0 =
-      &Deployment_MonolithicImplementationDescriptions_0;
+      std::addressof (Deployment_MonolithicImplementationDescriptions_0);
   }
 }
 }
@@ -857,7 +848,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Deployment/MonolithicImplementationDescriptions:1.0",
     "MonolithicImplementationDescriptions",
-    &TAO::TypeCode::tc_Deployment_MonolithicImplementationDescriptions_0);
+    std::addressof (TAO::TypeCode::tc_Deployment_MonolithicImplementationDescriptions_0));
 
 namespace Deployment
 {
@@ -869,8 +860,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_PackagedComponentImplementation[] =
       {
-        { "assemblyImpl", &Deployment::_tc_ComponentAssemblyDescriptions },
-        { "monolithicImpl", &Deployment::_tc_MonolithicImplementationDescriptions }
+        { "assemblyImpl", std::addressof (Deployment::_tc_ComponentAssemblyDescriptions) },
+        { "monolithicImpl", std::addressof (Deployment::_tc_MonolithicImplementationDescriptions) }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -897,9 +888,7 @@ namespace Deployment
   ::CORBA::TypeCode_ptr const _tc_PackagedComponentImplementation = std::addressof(_tao_tc_Deployment_PackagedComponentImplementation);
 }
 
-void
-Deployment::PackagedComponentImplementation::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Deployment::PackagedComponentImplementation::_tao_any_destructor (void *_tao_void_pointer)
 {
   PackagedComponentImplementation *tmp = static_cast<PackagedComponentImplementation *> (_tao_void_pointer);
   delete tmp;
@@ -909,13 +898,13 @@ Deployment::PackagedComponentImplementation::_tao_any_destructor (
 #define _DEPLOYMENT_PACKAGEDCOMPONENTIMPLEMENTATIONS_CS_
 
 Deployment::PackagedComponentImplementations::PackagedComponentImplementations (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< PackagedComponentImplementation> (max) {}
+  : ::TAO::unbounded_value_sequence<PackagedComponentImplementation> (max) {}
 
 Deployment::PackagedComponentImplementations::PackagedComponentImplementations (::CORBA::ULong max,
   ::CORBA::ULong length,
   Deployment::PackagedComponentImplementation * buffer,
   ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< PackagedComponentImplementation>
+  : ::TAO::unbounded_value_sequence<PackagedComponentImplementation>
     (max, length, buffer, release)
 {}
 
@@ -939,11 +928,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_PackagedComponentImplementations_0 (
-        ::CORBA::tk_sequence, &Deployment::_tc_PackagedComponentImplementation, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Deployment_PackagedComponentImplementations_0 (
+        ::CORBA::tk_sequence, std::addressof (Deployment::_tc_PackagedComponentImplementation), 0U);
 
     ::CORBA::TypeCode_ptr const tc_Deployment_PackagedComponentImplementations_0 =
-      &Deployment_PackagedComponentImplementations_0;
+      std::addressof (Deployment_PackagedComponentImplementations_0);
   }
 }
 }
@@ -959,7 +948,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Deployment/PackagedComponentImplementations:1.0",
     "PackagedComponentImplementations",
-    &TAO::TypeCode::tc_Deployment_PackagedComponentImplementations_0);
+    std::addressof (TAO::TypeCode::tc_Deployment_PackagedComponentImplementations_0));
 
 namespace Deployment
 {
@@ -971,8 +960,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Deployment_ComponentPackageDescription[] =
       {
-        { "str", &CORBA::_tc_string },
-        { "implementation", &Deployment::_tc_PackagedComponentImplementations }
+        { "str", std::addressof (CORBA::_tc_string) },
+        { "implementation", std::addressof (Deployment::_tc_PackagedComponentImplementations) }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -999,9 +988,7 @@ namespace Deployment
   ::CORBA::TypeCode_ptr const _tc_ComponentPackageDescription = std::addressof(_tao_tc_Deployment_ComponentPackageDescription);
 }
 
-void
-Deployment::ComponentPackageDescription::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Deployment::ComponentPackageDescription::_tao_any_destructor (void *_tao_void_pointer)
 {
   ComponentPackageDescription *tmp = static_cast<ComponentPackageDescription *> (_tao_void_pointer);
   delete tmp;
@@ -1015,7 +1002,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::myfoostructseq const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::myfoostructseq>::insert_copy (
+  TAO::Any_Dual_Impl_T<::myfoostructseq>::insert_copy (
     _tao_any,
     ::myfoostructseq::_tao_any_destructor,
     ::_tc_myfoostructseq,
@@ -1027,7 +1014,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::myfoostructseq *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::myfoostructseq>::insert (
+  TAO::Any_Dual_Impl_T<::myfoostructseq>::insert (
     _tao_any,
     ::myfoostructseq::_tao_any_destructor,
     ::_tc_myfoostructseq,
@@ -1039,7 +1026,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::myfoostructseq const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::myfoostructseq>::extract (
+  return TAO::Any_Dual_Impl_T<::myfoostructseq>::extract (
     _tao_any,
     ::myfoostructseq::_tao_any_destructor,
     ::_tc_myfoostructseq,
@@ -1056,7 +1043,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::myfoostruct const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::myfoostruct>::insert_copy (
+  TAO::Any_Dual_Impl_T<::myfoostruct>::insert_copy (
     _tao_any,
     ::myfoostruct::_tao_any_destructor,
     _tc_myfoostruct,
@@ -1068,7 +1055,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::myfoostruct *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::myfoostruct>::insert (
+  TAO::Any_Dual_Impl_T<::myfoostruct>::insert (
     _tao_any,
     ::myfoostruct::_tao_any_destructor,
     _tc_myfoostruct,
@@ -1080,7 +1067,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::myfoostruct const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::myfoostruct>::extract (
+  return TAO::Any_Dual_Impl_T<::myfoostruct>::extract (
     _tao_any,
     ::myfoostruct::_tao_any_destructor,
     _tc_myfoostruct,
@@ -1124,7 +1111,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const nasty &_tao_elem)
+  nasty const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<nasty>::insert_copy (
     _tao_any,
@@ -1147,8 +1134,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const nasty *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  nasty const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<nasty>::extract (
     _tao_any,
@@ -1167,7 +1154,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::OctetSeqSeq const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::OctetSeqSeq>::insert_copy (
+  TAO::Any_Dual_Impl_T<::OctetSeqSeq>::insert_copy (
     _tao_any,
     ::OctetSeqSeq::_tao_any_destructor,
     ::_tc_OctetSeqSeq,
@@ -1179,7 +1166,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::OctetSeqSeq *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::OctetSeqSeq>::insert (
+  TAO::Any_Dual_Impl_T<::OctetSeqSeq>::insert (
     _tao_any,
     ::OctetSeqSeq::_tao_any_destructor,
     ::_tc_OctetSeqSeq,
@@ -1191,7 +1178,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::OctetSeqSeq const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::OctetSeqSeq>::extract (
+  return TAO::Any_Dual_Impl_T<::OctetSeqSeq>::extract (
     _tao_any,
     ::OctetSeqSeq::_tao_any_destructor,
     ::_tc_OctetSeqSeq,
@@ -1261,7 +1248,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     seqLocal_ptr &_tao_elem)
 {
   return
@@ -1304,7 +1291,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::seqLocalSeq const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::seqLocalSeq>::insert_copy (
+  TAO::Any_Dual_Impl_T<::seqLocalSeq>::insert_copy (
     _tao_any,
     ::seqLocalSeq::_tao_any_destructor,
     ::_tc_seqLocalSeq,
@@ -1316,7 +1303,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::seqLocalSeq *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::seqLocalSeq>::insert (
+  TAO::Any_Dual_Impl_T<::seqLocalSeq>::insert (
     _tao_any,
     ::seqLocalSeq::_tao_any_destructor,
     ::_tc_seqLocalSeq,
@@ -1328,7 +1315,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::seqLocalSeq const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::seqLocalSeq>::extract (
+  return TAO::Any_Dual_Impl_T<::seqLocalSeq>::extract (
     _tao_any,
     ::seqLocalSeq::_tao_any_destructor,
     ::_tc_seqLocalSeq,
@@ -1345,7 +1332,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::ComponentPackageDescriptions const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::ComponentPackageDescriptions>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Deployment::ComponentPackageDescriptions>::insert_copy (
     _tao_any,
     ::Deployment::ComponentPackageDescriptions::_tao_any_destructor,
     ::Deployment::_tc_ComponentPackageDescriptions,
@@ -1357,7 +1344,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::ComponentPackageDescriptions *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::ComponentPackageDescriptions>::insert (
+  TAO::Any_Dual_Impl_T<::Deployment::ComponentPackageDescriptions>::insert (
     _tao_any,
     ::Deployment::ComponentPackageDescriptions::_tao_any_destructor,
     ::Deployment::_tc_ComponentPackageDescriptions,
@@ -1369,7 +1356,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Deployment::ComponentPackageDescriptions const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Deployment::ComponentPackageDescriptions>::extract (
+  return TAO::Any_Dual_Impl_T<::Deployment::ComponentPackageDescriptions>::extract (
     _tao_any,
     ::Deployment::ComponentPackageDescriptions::_tao_any_destructor,
     ::Deployment::_tc_ComponentPackageDescriptions,
@@ -1386,7 +1373,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::ComponentAssemblyDescription const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::ComponentAssemblyDescription>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Deployment::ComponentAssemblyDescription>::insert_copy (
     _tao_any,
     ::Deployment::ComponentAssemblyDescription::_tao_any_destructor,
     Deployment::_tc_ComponentAssemblyDescription,
@@ -1398,7 +1385,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::ComponentAssemblyDescription *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::ComponentAssemblyDescription>::insert (
+  TAO::Any_Dual_Impl_T<::Deployment::ComponentAssemblyDescription>::insert (
     _tao_any,
     ::Deployment::ComponentAssemblyDescription::_tao_any_destructor,
     Deployment::_tc_ComponentAssemblyDescription,
@@ -1410,7 +1397,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Deployment::ComponentAssemblyDescription const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Deployment::ComponentAssemblyDescription>::extract (
+  return TAO::Any_Dual_Impl_T<::Deployment::ComponentAssemblyDescription>::extract (
     _tao_any,
     ::Deployment::ComponentAssemblyDescription::_tao_any_destructor,
     Deployment::_tc_ComponentAssemblyDescription,
@@ -1427,7 +1414,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::ComponentAssemblyDescriptions const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::ComponentAssemblyDescriptions>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Deployment::ComponentAssemblyDescriptions>::insert_copy (
     _tao_any,
     ::Deployment::ComponentAssemblyDescriptions::_tao_any_destructor,
     ::Deployment::_tc_ComponentAssemblyDescriptions,
@@ -1439,7 +1426,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::ComponentAssemblyDescriptions *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::ComponentAssemblyDescriptions>::insert (
+  TAO::Any_Dual_Impl_T<::Deployment::ComponentAssemblyDescriptions>::insert (
     _tao_any,
     ::Deployment::ComponentAssemblyDescriptions::_tao_any_destructor,
     ::Deployment::_tc_ComponentAssemblyDescriptions,
@@ -1451,7 +1438,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Deployment::ComponentAssemblyDescriptions const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Deployment::ComponentAssemblyDescriptions>::extract (
+  return TAO::Any_Dual_Impl_T<::Deployment::ComponentAssemblyDescriptions>::extract (
     _tao_any,
     ::Deployment::ComponentAssemblyDescriptions::_tao_any_destructor,
     ::Deployment::_tc_ComponentAssemblyDescriptions,
@@ -1468,7 +1455,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::NamedImplementationArtifacts const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::NamedImplementationArtifacts>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Deployment::NamedImplementationArtifacts>::insert_copy (
     _tao_any,
     ::Deployment::NamedImplementationArtifacts::_tao_any_destructor,
     ::Deployment::_tc_NamedImplementationArtifacts,
@@ -1480,7 +1467,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::NamedImplementationArtifacts *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::NamedImplementationArtifacts>::insert (
+  TAO::Any_Dual_Impl_T<::Deployment::NamedImplementationArtifacts>::insert (
     _tao_any,
     ::Deployment::NamedImplementationArtifacts::_tao_any_destructor,
     ::Deployment::_tc_NamedImplementationArtifacts,
@@ -1492,7 +1479,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Deployment::NamedImplementationArtifacts const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Deployment::NamedImplementationArtifacts>::extract (
+  return TAO::Any_Dual_Impl_T<::Deployment::NamedImplementationArtifacts>::extract (
     _tao_any,
     ::Deployment::NamedImplementationArtifacts::_tao_any_destructor,
     ::Deployment::_tc_NamedImplementationArtifacts,
@@ -1509,7 +1496,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::NamedImplementationArtifact const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::NamedImplementationArtifact>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Deployment::NamedImplementationArtifact>::insert_copy (
     _tao_any,
     ::Deployment::NamedImplementationArtifact::_tao_any_destructor,
     Deployment::_tc_NamedImplementationArtifact,
@@ -1521,7 +1508,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::NamedImplementationArtifact *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::NamedImplementationArtifact>::insert (
+  TAO::Any_Dual_Impl_T<::Deployment::NamedImplementationArtifact>::insert (
     _tao_any,
     ::Deployment::NamedImplementationArtifact::_tao_any_destructor,
     Deployment::_tc_NamedImplementationArtifact,
@@ -1533,7 +1520,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Deployment::NamedImplementationArtifact const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Deployment::NamedImplementationArtifact>::extract (
+  return TAO::Any_Dual_Impl_T<::Deployment::NamedImplementationArtifact>::extract (
     _tao_any,
     ::Deployment::NamedImplementationArtifact::_tao_any_destructor,
     Deployment::_tc_NamedImplementationArtifact,
@@ -1550,7 +1537,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::MonolithicImplementationDescription const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::MonolithicImplementationDescription>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Deployment::MonolithicImplementationDescription>::insert_copy (
     _tao_any,
     ::Deployment::MonolithicImplementationDescription::_tao_any_destructor,
     Deployment::_tc_MonolithicImplementationDescription,
@@ -1562,7 +1549,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::MonolithicImplementationDescription *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::MonolithicImplementationDescription>::insert (
+  TAO::Any_Dual_Impl_T<::Deployment::MonolithicImplementationDescription>::insert (
     _tao_any,
     ::Deployment::MonolithicImplementationDescription::_tao_any_destructor,
     Deployment::_tc_MonolithicImplementationDescription,
@@ -1574,7 +1561,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Deployment::MonolithicImplementationDescription const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Deployment::MonolithicImplementationDescription>::extract (
+  return TAO::Any_Dual_Impl_T<::Deployment::MonolithicImplementationDescription>::extract (
     _tao_any,
     ::Deployment::MonolithicImplementationDescription::_tao_any_destructor,
     Deployment::_tc_MonolithicImplementationDescription,
@@ -1591,7 +1578,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::MonolithicImplementationDescriptions const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::MonolithicImplementationDescriptions>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Deployment::MonolithicImplementationDescriptions>::insert_copy (
     _tao_any,
     ::Deployment::MonolithicImplementationDescriptions::_tao_any_destructor,
     ::Deployment::_tc_MonolithicImplementationDescriptions,
@@ -1603,7 +1590,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::MonolithicImplementationDescriptions *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::MonolithicImplementationDescriptions>::insert (
+  TAO::Any_Dual_Impl_T<::Deployment::MonolithicImplementationDescriptions>::insert (
     _tao_any,
     ::Deployment::MonolithicImplementationDescriptions::_tao_any_destructor,
     ::Deployment::_tc_MonolithicImplementationDescriptions,
@@ -1615,7 +1602,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Deployment::MonolithicImplementationDescriptions const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Deployment::MonolithicImplementationDescriptions>::extract (
+  return TAO::Any_Dual_Impl_T<::Deployment::MonolithicImplementationDescriptions>::extract (
     _tao_any,
     ::Deployment::MonolithicImplementationDescriptions::_tao_any_destructor,
     ::Deployment::_tc_MonolithicImplementationDescriptions,
@@ -1632,7 +1619,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::PackagedComponentImplementation const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::PackagedComponentImplementation>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Deployment::PackagedComponentImplementation>::insert_copy (
     _tao_any,
     ::Deployment::PackagedComponentImplementation::_tao_any_destructor,
     Deployment::_tc_PackagedComponentImplementation,
@@ -1644,7 +1631,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::PackagedComponentImplementation *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::PackagedComponentImplementation>::insert (
+  TAO::Any_Dual_Impl_T<::Deployment::PackagedComponentImplementation>::insert (
     _tao_any,
     ::Deployment::PackagedComponentImplementation::_tao_any_destructor,
     Deployment::_tc_PackagedComponentImplementation,
@@ -1656,7 +1643,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Deployment::PackagedComponentImplementation const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Deployment::PackagedComponentImplementation>::extract (
+  return TAO::Any_Dual_Impl_T<::Deployment::PackagedComponentImplementation>::extract (
     _tao_any,
     ::Deployment::PackagedComponentImplementation::_tao_any_destructor,
     Deployment::_tc_PackagedComponentImplementation,
@@ -1673,7 +1660,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::PackagedComponentImplementations const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::PackagedComponentImplementations>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Deployment::PackagedComponentImplementations>::insert_copy (
     _tao_any,
     ::Deployment::PackagedComponentImplementations::_tao_any_destructor,
     ::Deployment::_tc_PackagedComponentImplementations,
@@ -1685,7 +1672,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::PackagedComponentImplementations *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::PackagedComponentImplementations>::insert (
+  TAO::Any_Dual_Impl_T<::Deployment::PackagedComponentImplementations>::insert (
     _tao_any,
     ::Deployment::PackagedComponentImplementations::_tao_any_destructor,
     ::Deployment::_tc_PackagedComponentImplementations,
@@ -1697,7 +1684,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Deployment::PackagedComponentImplementations const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Deployment::PackagedComponentImplementations>::extract (
+  return TAO::Any_Dual_Impl_T<::Deployment::PackagedComponentImplementations>::extract (
     _tao_any,
     ::Deployment::PackagedComponentImplementations::_tao_any_destructor,
     ::Deployment::_tc_PackagedComponentImplementations,
@@ -1714,7 +1701,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::ComponentPackageDescription const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::ComponentPackageDescription>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Deployment::ComponentPackageDescription>::insert_copy (
     _tao_any,
     ::Deployment::ComponentPackageDescription::_tao_any_destructor,
     Deployment::_tc_ComponentPackageDescription,
@@ -1726,7 +1713,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Deployment::ComponentPackageDescription *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Deployment::ComponentPackageDescription>::insert (
+  TAO::Any_Dual_Impl_T<::Deployment::ComponentPackageDescription>::insert (
     _tao_any,
     ::Deployment::ComponentPackageDescription::_tao_any_destructor,
     Deployment::_tc_ComponentPackageDescription,
@@ -1738,7 +1725,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::Deployment::ComponentPackageDescription const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Deployment::ComponentPackageDescription>::extract (
+  return TAO::Any_Dual_Impl_T<::Deployment::ComponentPackageDescription>::extract (
     _tao_any,
     ::Deployment::ComponentPackageDescription::_tao_any_destructor,
     Deployment::_tc_ComponentPackageDescription,
@@ -1798,7 +1785,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const nasty &_tao_aggregate)
+    nasty const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())

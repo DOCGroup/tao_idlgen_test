@@ -165,10 +165,10 @@ public:
     ::CORBA::Object_ptr inarg,
     ::CORBA::Object_ptr inoutarg);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -189,9 +189,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  generic (const generic &) = delete;
+  generic (generic const &) = delete;
   generic (generic &&) = delete;
-  generic &operator= (const generic &) = delete;
+  generic &operator= (generic const &) = delete;
   generic &operator= (generic &&) = delete;
 };
 
@@ -253,8 +253,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_genericExceptionHolder (const AMH_genericExceptionHolder &);
-  void operator= (const AMH_genericExceptionHolder &);
+  AMH_genericExceptionHolder (AMH_genericExceptionHolder const &);
+  void operator= (AMH_genericExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -306,10 +306,10 @@ public:
   virtual void op_excep (
     ::AMH_genericExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -320,9 +320,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_genericResponseHandler (const AMH_genericResponseHandler &) = delete;
+  AMH_genericResponseHandler (AMH_genericResponseHandler const &) = delete;
   AMH_genericResponseHandler (AMH_genericResponseHandler &&) = delete;
-  AMH_genericResponseHandler &operator= (const AMH_genericResponseHandler &) = delete;
+  AMH_genericResponseHandler &operator= (AMH_genericResponseHandler const &) = delete;
   AMH_genericResponseHandler &operator= (AMH_genericResponseHandler &&) = delete;
 };
 
@@ -371,10 +371,10 @@ public:
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -395,9 +395,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_genericHandler (const AMI_genericHandler &) = delete;
+  AMI_genericHandler (AMI_genericHandler const &) = delete;
   AMI_genericHandler (AMI_genericHandler &&) = delete;
-  AMI_genericHandler &operator= (const AMI_genericHandler &) = delete;
+  AMI_genericHandler &operator= (AMI_genericHandler const &) = delete;
   AMI_genericHandler &operator= (AMI_genericHandler &&) = delete;
 };
 
@@ -411,7 +411,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -426,7 +426,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::ObjectType>
+  class Arg_Traits<::ObjectType>
     : public
         Basic_Arg_Traits_T<
             ::ObjectType,
@@ -436,7 +436,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Selecter>
+  class Arg_Traits<::Selecter>
     : public
         Var_Size_Arg_Traits_T<
             ::Selecter,
@@ -449,7 +449,7 @@ namespace TAO
 #define _GENERIC__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::generic>
+  class  Arg_Traits<::generic>
     : public Object_Arg_Traits_T<
         ::generic_ptr,
         ::generic_var,
@@ -465,7 +465,7 @@ namespace TAO
 #define _AMH_GENERICEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_genericExceptionHolder>
+  class Arg_Traits<::AMH_genericExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_genericExceptionHolder *,
@@ -483,7 +483,7 @@ namespace TAO
 #define _AMI_GENERICHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_genericHandler>
+  class  Arg_Traits<::AMI_genericHandler>
     : public Object_Arg_Traits_T<
         ::AMI_genericHandler_ptr,
         ::AMI_genericHandler_var,
@@ -508,11 +508,9 @@ protected:
   ~OBV_AMH_genericExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_genericExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_genericExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_genericExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_genericExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -532,7 +530,7 @@ namespace TAO
 #define _GENERIC__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::generic>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::generic>
   {
     static ::generic_ptr duplicate (::generic_ptr p);
     static void release (::generic_ptr p);
@@ -559,7 +557,7 @@ namespace TAO
 #define _AMH_GENERICRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_genericResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_genericResponseHandler>
   {
     static ::AMH_genericResponseHandler_ptr duplicate (::AMH_genericResponseHandler_ptr p);
     static void release (::AMH_genericResponseHandler_ptr p);
@@ -573,7 +571,7 @@ namespace TAO
 #define _AMI_GENERICHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_genericHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_genericHandler>
   {
     static ::AMI_genericHandler_ptr duplicate (::AMI_genericHandler_ptr p);
     static void release (::AMI_genericHandler_ptr p);
@@ -601,7 +599,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const generic_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, generic_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, generic_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -617,14 +615,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_genericExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_genericExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_genericExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_genericHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMI_genericHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_genericHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

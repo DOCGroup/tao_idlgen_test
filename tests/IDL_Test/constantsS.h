@@ -59,7 +59,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -73,7 +73,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::m_a::enum_a>
+  class SArg_Traits<::m_a::enum_a>
     : public
         Basic_SArg_Traits_T<
             ::m_a::enum_a,
@@ -86,7 +86,7 @@ namespace TAO
 #define _CLASSCONSTANTS_IFACE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::ClassConstants::Iface>
+  class  SArg_Traits<::ClassConstants::Iface>
     : public Object_SArg_Traits_T<
         ::ClassConstants::Iface_ptr,
         ::ClassConstants::Iface_var,
@@ -101,7 +101,7 @@ namespace TAO
 #define _CLASSCONSTANTS_AMH_IFACEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::ClassConstants::AMH_IfaceExceptionHolder>
+  class SArg_Traits<::ClassConstants::AMH_IfaceExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::ClassConstants::AMH_IfaceExceptionHolder *,
@@ -118,7 +118,7 @@ namespace TAO
 #define _CLASSCONSTANTS_AMI_IFACEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::ClassConstants::AMI_IfaceHandler>
+  class  SArg_Traits<::ClassConstants::AMI_IfaceHandler>
     : public Object_SArg_Traits_T<
         ::ClassConstants::AMI_IfaceHandler_ptr,
         ::ClassConstants::AMI_IfaceHandler_var,
@@ -133,7 +133,7 @@ namespace TAO
 #define _CLASSCONSTANTS_VT__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::ClassConstants::Vt>
+  class SArg_Traits<::ClassConstants::Vt>
     : public
         Object_SArg_Traits_T<
             ::ClassConstants::Vt *,
@@ -174,10 +174,10 @@ namespace POA_ClassConstants
     AMH_Iface ();
 
   public:
-    AMH_Iface (const AMH_Iface& rhs);
+    AMH_Iface (AMH_Iface const &rhs);
     ~AMH_Iface () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -185,7 +185,7 @@ namespace POA_ClassConstants
 
     ClassConstants::Iface *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 class Iface;
@@ -205,10 +205,10 @@ public:
   using _stub_ptr_type = ::ClassConstants::Iface_ptr;
   using _stub_var_type = ::ClassConstants::Iface_var;
 
-  Iface (const Iface& rhs) = default;
+  Iface (Iface const &rhs) = default;
   ~Iface () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -216,7 +216,7 @@ public:
 
   ::ClassConstants::Iface *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -262,10 +262,10 @@ public:
   using _stub_ptr_type = ::ClassConstants::AMI_IfaceHandler_ptr;
   using _stub_var_type = ::ClassConstants::AMI_IfaceHandler_var;
 
-  AMI_IfaceHandler (const AMI_IfaceHandler& rhs) = default;
+  AMI_IfaceHandler (AMI_IfaceHandler const &rhs) = default;
   ~AMI_IfaceHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -273,7 +273,7 @@ public:
 
   ::ClassConstants::AMI_IfaceHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
 };
 
 ///////////////////////////////////////////////////////////////////////

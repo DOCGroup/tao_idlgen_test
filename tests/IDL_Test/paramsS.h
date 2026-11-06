@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::foo::theDate>
+  class SArg_Traits<::foo::theDate>
     : public
         Fixed_Size_SArg_Traits_T<
             ::foo::theDate,
@@ -84,7 +84,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::foo::bar::theDate>
+  class SArg_Traits<::foo::bar::theDate>
     : public
         Fixed_Size_SArg_Traits_T<
             ::foo::bar::theDate,
@@ -97,7 +97,7 @@ namespace TAO
 #define _FOO_BAR_FOOBAR__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::foo::bar::fooBar>
+  class  SArg_Traits<::foo::bar::fooBar>
     : public Object_SArg_Traits_T<
         ::foo::bar::fooBar_ptr,
         ::foo::bar::fooBar_var,
@@ -112,7 +112,7 @@ namespace TAO
 #define _FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::foo::bar::AMH_fooBarExceptionHolder>
+  class SArg_Traits<::foo::bar::AMH_fooBarExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::foo::bar::AMH_fooBarExceptionHolder *,
@@ -129,7 +129,7 @@ namespace TAO
 #define _FOO_BAR_AMI_FOOBARHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::foo::bar::AMI_fooBarHandler>
+  class  SArg_Traits<::foo::bar::AMI_fooBarHandler>
     : public Object_SArg_Traits_T<
         ::foo::bar::AMI_fooBarHandler_ptr,
         ::foo::bar::AMI_fooBarHandler_var,
@@ -159,10 +159,10 @@ namespace POA_foo
       AMH_fooBar ();
 
     public:
-      AMH_fooBar (const AMH_fooBar& rhs);
+      AMH_fooBar (AMH_fooBar const &rhs);
       ~AMH_fooBar () override = default;
 
-      ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
       void _dispatch (
           TAO_ServerRequest &req,
@@ -170,7 +170,7 @@ namespace POA_foo
 
       foo::bar::fooBar *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     static void getDate_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -178,9 +178,8 @@ namespace POA_foo
 
     virtual void getDate (
         foo::bar::AMH_fooBarResponseHandler_ptr _tao_rh,
-        const ::foo::theDate & a,
-        const ::foo::theDate & b
-      ) = 0;
+        ::foo::theDate const & a,
+        ::foo::theDate const & b) = 0;
 
   };
 
@@ -201,10 +200,10 @@ namespace POA_foo
     using _stub_ptr_type = ::foo::bar::fooBar_ptr;
     using _stub_var_type = ::foo::bar::fooBar_var;
 
-    fooBar (const fooBar& rhs) = default;
+    fooBar (fooBar const &rhs) = default;
     ~fooBar () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -212,9 +211,9 @@ namespace POA_foo
 
     ::foo::bar::fooBar *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual ::foo::theDate getDate (
-      const ::foo::theDate & a,
+      ::foo::theDate const & a,
       ::foo::theDate & b,
       ::foo::theDate_out c) = 0;
 
@@ -253,9 +252,9 @@ namespace POA_foo
     TAO_AMH_fooBarResponseHandler () = default;
     virtual ~TAO_AMH_fooBarResponseHandler () = default;
     void getDate (
-      const ::foo::theDate & return_value,
-      const ::foo::theDate & b,
-      const ::foo::theDate & c) override;
+      ::foo::theDate const & return_value,
+      ::foo::theDate const & b,
+      ::foo::theDate const & c) override;
     void getDate_excep (
       ::foo::bar::AMH_fooBarExceptionHolder * holder) override;
   };
@@ -277,10 +276,10 @@ namespace POA_foo
     using _stub_ptr_type = ::foo::bar::AMI_fooBarHandler_ptr;
     using _stub_var_type = ::foo::bar::AMI_fooBarHandler_var;
 
-    AMI_fooBarHandler (const AMI_fooBarHandler& rhs) = default;
+    AMI_fooBarHandler (AMI_fooBarHandler const &rhs) = default;
     ~AMI_fooBarHandler () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -288,11 +287,11 @@ namespace POA_foo
 
     ::foo::bar::AMI_fooBarHandler *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual void getDate (
-      const ::foo::theDate & ami_return_val,
-      const ::foo::theDate & b,
-      const ::foo::theDate & c) = 0;
+      ::foo::theDate const & ami_return_val,
+      ::foo::theDate const & b,
+      ::foo::theDate const & c) = 0;
 
     static void getDate_skel (
         TAO_ServerRequest &server_request,

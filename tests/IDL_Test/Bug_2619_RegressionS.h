@@ -60,7 +60,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -74,7 +74,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::Type_T>
+  class SArg_Traits<::Type_T>
     : public
         Var_Size_SArg_Traits_T<
             ::Type_T,
@@ -87,7 +87,7 @@ namespace TAO
 #define _T_DATA_T__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::T_Data_T>
+  class SArg_Traits<::T_Data_T>
     : public
         Object_SArg_Traits_T<
             ::T_Data_T *,
@@ -104,7 +104,7 @@ namespace TAO
 #define _TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Test>
+  class  SArg_Traits<::Test>
     : public Object_SArg_Traits_T<
         ::Test_ptr,
         ::Test_var,
@@ -119,7 +119,7 @@ namespace TAO
 #define _AMH_TESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_TestExceptionHolder>
+  class SArg_Traits<::AMH_TestExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_TestExceptionHolder *,
@@ -136,7 +136,7 @@ namespace TAO
 #define _AMI_TESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_TestHandler>
+  class  SArg_Traits<::AMI_TestHandler>
     : public Object_SArg_Traits_T<
         ::AMI_TestHandler_ptr,
         ::AMI_TestHandler_var,
@@ -160,10 +160,10 @@ protected:
   POA_AMH_Test ();
 
 public:
-  POA_AMH_Test (const POA_AMH_Test& rhs);
+  POA_AMH_Test (POA_AMH_Test const &rhs);
   ~POA_AMH_Test () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest &req,
@@ -171,15 +171,14 @@ public:
 
   Test *_this ();
 
-const char* _interface_repository_id () const override;
+char const *_interface_repository_id () const override;
 static void getGroup_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
 
 virtual void getGroup (
-    AMH_TestResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_TestResponseHandler_ptr _tao_rh) = 0;
 
 };
 
@@ -200,10 +199,10 @@ public:
   using _stub_ptr_type = ::Test_ptr;
   using _stub_var_type = ::Test_var;
 
-  POA_Test (const POA_Test& rhs) = default;
+  POA_Test (POA_Test const &rhs) = default;
   ~POA_Test () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -211,7 +210,7 @@ public:
 
   ::Test *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::Test::Group * getGroup () = 0;
 
   static void getGroup_skel (
@@ -249,7 +248,7 @@ public:
   POA_TAO_AMH_TestResponseHandler () = default;
   virtual ~POA_TAO_AMH_TestResponseHandler () = default;
   void getGroup (
-    const ::Test::Group & return_value) override;
+    ::Test::Group const & return_value) override;
   void getGroup_excep (
     ::AMH_TestExceptionHolder * holder) override;
 };
@@ -271,10 +270,10 @@ public:
   using _stub_ptr_type = ::AMI_TestHandler_ptr;
   using _stub_var_type = ::AMI_TestHandler_var;
 
-  POA_AMI_TestHandler (const POA_AMI_TestHandler& rhs) = default;
+  POA_AMI_TestHandler (POA_AMI_TestHandler const &rhs) = default;
   ~POA_AMI_TestHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -282,9 +281,9 @@ public:
 
   ::AMI_TestHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void getGroup (
-    const ::Test::Group & ami_return_val) = 0;
+    ::Test::Group const & ami_return_val) = 0;
 
   static void getGroup_skel (
       TAO_ServerRequest &server_request,

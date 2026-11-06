@@ -75,32 +75,32 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Half_Anon::char_seq_array_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Half_Anon::char_seq_array_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Half_Anon::char_seq_array_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Half_Anon::char_seq_array_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Half_Anon::bd_ulong_seq_array_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Half_Anon::bd_ulong_seq_array_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Half_Anon::bd_ulong_seq_array_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Half_Anon::bd_ulong_seq_array_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Half_Anon::ushort_seq_array_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Half_Anon::ushort_seq_array_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Half_Anon::ushort_seq_array_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Half_Anon::ushort_seq_array_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const Half_Anon::bd_ushort_seq_array_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, Half_Anon::bd_ushort_seq_array_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Half_Anon::bd_ushort_seq_array_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Half_Anon::bd_ushort_seq_array_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -109,7 +109,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::anon_bd_string_test_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::anon_bd_string_test_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, All_Anon::anon_bd_string_test_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, All_Anon::anon_bd_string_test_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -127,7 +127,7 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::AMH_anon_bd_string_testResponseHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::AMH_anon_bd_string_testResponseHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, All_Anon::AMH_anon_bd_string_testResponseHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, All_Anon::AMH_anon_bd_string_testResponseHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -136,16 +136,16 @@ namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::AMI_anon_bd_string_testHandler_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::AMI_anon_bd_string_testHandler_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, All_Anon::AMI_anon_bd_string_testHandler_ptr &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, All_Anon::AMI_anon_bd_string_testHandler_ptr &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const All_Anon::Nested_Anon &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::Nested_Anon const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, All_Anon::Nested_Anon*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const All_Anon::Nested_Anon *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, All_Anon::Nested_Anon const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 

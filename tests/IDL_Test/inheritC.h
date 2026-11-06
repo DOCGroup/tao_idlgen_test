@@ -108,10 +108,10 @@ namespace OldInherit
     virtual void sendc_op_one (
       ::OldInherit::AMI_oneHandler_ptr ami_handler);
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -132,9 +132,9 @@ namespace OldInherit
 
   private:
     // Private and unimplemented for concrete interfaces.
-    one (const one &) = delete;
+    one (one const &) = delete;
     one (one &&) = delete;
-    one &operator= (const one &) = delete;
+    one &operator= (one const &) = delete;
     one &operator= (one &&) = delete;
   };
 
@@ -196,8 +196,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_oneExceptionHolder (const AMH_oneExceptionHolder &);
-  void operator= (const AMH_oneExceptionHolder &);
+  AMH_oneExceptionHolder (AMH_oneExceptionHolder const &);
+  void operator= (AMH_oneExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -246,10 +246,10 @@ public:
   virtual void op_one_excep (
     ::OldInherit::AMH_oneExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -260,9 +260,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_oneResponseHandler (const AMH_oneResponseHandler &) = delete;
+  AMH_oneResponseHandler (AMH_oneResponseHandler const &) = delete;
   AMH_oneResponseHandler (AMH_oneResponseHandler &&) = delete;
-  AMH_oneResponseHandler &operator= (const AMH_oneResponseHandler &) = delete;
+  AMH_oneResponseHandler &operator= (AMH_oneResponseHandler const &) = delete;
   AMH_oneResponseHandler &operator= (AMH_oneResponseHandler &&) = delete;
 };
 
@@ -308,10 +308,10 @@ public:
   virtual void op_one_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -332,9 +332,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_oneHandler (const AMI_oneHandler &) = delete;
+  AMI_oneHandler (AMI_oneHandler const &) = delete;
   AMI_oneHandler (AMI_oneHandler &&) = delete;
-  AMI_oneHandler &operator= (const AMI_oneHandler &) = delete;
+  AMI_oneHandler &operator= (AMI_oneHandler const &) = delete;
   AMI_oneHandler &operator= (AMI_oneHandler &&) = delete;
 };
 
@@ -377,10 +377,10 @@ public:
   virtual void sendc_op_two (
     ::OldInherit::AMI_twoHandler_ptr ami_handler);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -401,9 +401,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  two (const two &) = delete;
+  two (two const &) = delete;
   two (two &&) = delete;
-  two &operator= (const two &) = delete;
+  two &operator= (two const &) = delete;
   two &operator= (two &&) = delete;
 };
 
@@ -465,8 +465,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_twoExceptionHolder (const AMH_twoExceptionHolder &);
-  void operator= (const AMH_twoExceptionHolder &);
+  AMH_twoExceptionHolder (AMH_twoExceptionHolder const &);
+  void operator= (AMH_twoExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -515,10 +515,10 @@ public:
   virtual void op_two_excep (
     ::OldInherit::AMH_twoExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -529,9 +529,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_twoResponseHandler (const AMH_twoResponseHandler &) = delete;
+  AMH_twoResponseHandler (AMH_twoResponseHandler const &) = delete;
   AMH_twoResponseHandler (AMH_twoResponseHandler &&) = delete;
-  AMH_twoResponseHandler &operator= (const AMH_twoResponseHandler &) = delete;
+  AMH_twoResponseHandler &operator= (AMH_twoResponseHandler const &) = delete;
   AMH_twoResponseHandler &operator= (AMH_twoResponseHandler &&) = delete;
 };
 
@@ -577,10 +577,10 @@ public:
   virtual void op_two_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -601,9 +601,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_twoHandler (const AMI_twoHandler &) = delete;
+  AMI_twoHandler (AMI_twoHandler const &) = delete;
   AMI_twoHandler (AMI_twoHandler &&) = delete;
-  AMI_twoHandler &operator= (const AMI_twoHandler &) = delete;
+  AMI_twoHandler &operator= (AMI_twoHandler const &) = delete;
   AMI_twoHandler &operator= (AMI_twoHandler &&) = delete;
 };
 
@@ -646,10 +646,10 @@ public:
   virtual void sendc_op_three (
     ::OldInherit::AMI_threeHandler_ptr ami_handler);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -670,9 +670,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  three (const three &) = delete;
+  three (three const &) = delete;
   three (three &&) = delete;
-  three &operator= (const three &) = delete;
+  three &operator= (three const &) = delete;
   three &operator= (three &&) = delete;
 };
 
@@ -734,8 +734,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_threeExceptionHolder (const AMH_threeExceptionHolder &);
-  void operator= (const AMH_threeExceptionHolder &);
+  AMH_threeExceptionHolder (AMH_threeExceptionHolder const &);
+  void operator= (AMH_threeExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -784,10 +784,10 @@ public:
   virtual void op_three_excep (
     ::OldInherit::AMH_threeExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -798,9 +798,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_threeResponseHandler (const AMH_threeResponseHandler &) = delete;
+  AMH_threeResponseHandler (AMH_threeResponseHandler const &) = delete;
   AMH_threeResponseHandler (AMH_threeResponseHandler &&) = delete;
-  AMH_threeResponseHandler &operator= (const AMH_threeResponseHandler &) = delete;
+  AMH_threeResponseHandler &operator= (AMH_threeResponseHandler const &) = delete;
   AMH_threeResponseHandler &operator= (AMH_threeResponseHandler &&) = delete;
 };
 
@@ -846,10 +846,10 @@ public:
   virtual void op_three_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -870,9 +870,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_threeHandler (const AMI_threeHandler &) = delete;
+  AMI_threeHandler (AMI_threeHandler const &) = delete;
   AMI_threeHandler (AMI_threeHandler &&) = delete;
-  AMI_threeHandler &operator= (const AMI_threeHandler &) = delete;
+  AMI_threeHandler &operator= (AMI_threeHandler const &) = delete;
   AMI_threeHandler &operator= (AMI_threeHandler &&) = delete;
 };
 
@@ -916,10 +916,10 @@ public:
   virtual void sendc_op_four (
     ::OldInherit::AMI_fourHandler_ptr ami_handler);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -940,9 +940,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  four (const four &) = delete;
+  four (four const &) = delete;
   four (four &&) = delete;
-  four &operator= (const four &) = delete;
+  four &operator= (four const &) = delete;
   four &operator= (four &&) = delete;
 };
 
@@ -1004,8 +1004,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_fourExceptionHolder (const AMH_fourExceptionHolder &);
-  void operator= (const AMH_fourExceptionHolder &);
+  AMH_fourExceptionHolder (AMH_fourExceptionHolder const &);
+  void operator= (AMH_fourExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -1054,10 +1054,10 @@ public:
   virtual void op_four_excep (
     ::OldInherit::AMH_fourExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -1068,9 +1068,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_fourResponseHandler (const AMH_fourResponseHandler &) = delete;
+  AMH_fourResponseHandler (AMH_fourResponseHandler const &) = delete;
   AMH_fourResponseHandler (AMH_fourResponseHandler &&) = delete;
-  AMH_fourResponseHandler &operator= (const AMH_fourResponseHandler &) = delete;
+  AMH_fourResponseHandler &operator= (AMH_fourResponseHandler const &) = delete;
   AMH_fourResponseHandler &operator= (AMH_fourResponseHandler &&) = delete;
 };
 
@@ -1117,10 +1117,10 @@ public:
   virtual void op_four_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -1141,9 +1141,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_fourHandler (const AMI_fourHandler &) = delete;
+  AMI_fourHandler (AMI_fourHandler const &) = delete;
   AMI_fourHandler (AMI_fourHandler &&) = delete;
-  AMI_fourHandler &operator= (const AMI_fourHandler &) = delete;
+  AMI_fourHandler &operator= (AMI_fourHandler const &) = delete;
   AMI_fourHandler &operator= (AMI_fourHandler &&) = delete;
 };
 
@@ -1188,10 +1188,10 @@ public:
   virtual void sendc_op_five (
     ::OldInherit::AMI_fiveHandler_ptr ami_handler);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -1212,9 +1212,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  five (const five &) = delete;
+  five (five const &) = delete;
   five (five &&) = delete;
-  five &operator= (const five &) = delete;
+  five &operator= (five const &) = delete;
   five &operator= (five &&) = delete;
 };
 
@@ -1276,8 +1276,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_fiveExceptionHolder (const AMH_fiveExceptionHolder &);
-  void operator= (const AMH_fiveExceptionHolder &);
+  AMH_fiveExceptionHolder (AMH_fiveExceptionHolder const &);
+  void operator= (AMH_fiveExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -1326,10 +1326,10 @@ public:
   virtual void op_five_excep (
     ::OldInherit::AMH_fiveExceptionHolder * holder) = 0;
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -1340,9 +1340,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_fiveResponseHandler (const AMH_fiveResponseHandler &) = delete;
+  AMH_fiveResponseHandler (AMH_fiveResponseHandler const &) = delete;
   AMH_fiveResponseHandler (AMH_fiveResponseHandler &&) = delete;
-  AMH_fiveResponseHandler &operator= (const AMH_fiveResponseHandler &) = delete;
+  AMH_fiveResponseHandler &operator= (AMH_fiveResponseHandler const &) = delete;
   AMH_fiveResponseHandler &operator= (AMH_fiveResponseHandler &&) = delete;
 };
 
@@ -1390,10 +1390,10 @@ public:
   virtual void op_five_excep (
     ::Messaging::ExceptionHolder * excep_holder);
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -1414,9 +1414,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_fiveHandler (const AMI_fiveHandler &) = delete;
+  AMI_fiveHandler (AMI_fiveHandler const &) = delete;
   AMI_fiveHandler (AMI_fiveHandler &&) = delete;
-  AMI_fiveHandler &operator= (const AMI_fiveHandler &) = delete;
+  AMI_fiveHandler &operator= (AMI_fiveHandler const &) = delete;
   AMI_fiveHandler &operator= (AMI_fiveHandler &&) = delete;
 };
 
@@ -1432,7 +1432,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -1450,7 +1450,7 @@ namespace TAO
 #define _OLDINHERIT_ONE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::one>
+  class  Arg_Traits<::OldInherit::one>
     : public Object_Arg_Traits_T<
         ::OldInherit::one_ptr,
         ::OldInherit::one_var,
@@ -1466,7 +1466,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_ONEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldInherit::AMH_oneExceptionHolder>
+  class Arg_Traits<::OldInherit::AMH_oneExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldInherit::AMH_oneExceptionHolder *,
@@ -1484,7 +1484,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_ONEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::AMI_oneHandler>
+  class  Arg_Traits<::OldInherit::AMI_oneHandler>
     : public Object_Arg_Traits_T<
         ::OldInherit::AMI_oneHandler_ptr,
         ::OldInherit::AMI_oneHandler_var,
@@ -1500,7 +1500,7 @@ namespace TAO
 #define _OLDINHERIT_TWO__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::two>
+  class  Arg_Traits<::OldInherit::two>
     : public Object_Arg_Traits_T<
         ::OldInherit::two_ptr,
         ::OldInherit::two_var,
@@ -1516,7 +1516,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_TWOEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldInherit::AMH_twoExceptionHolder>
+  class Arg_Traits<::OldInherit::AMH_twoExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldInherit::AMH_twoExceptionHolder *,
@@ -1534,7 +1534,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_TWOHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::AMI_twoHandler>
+  class  Arg_Traits<::OldInherit::AMI_twoHandler>
     : public Object_Arg_Traits_T<
         ::OldInherit::AMI_twoHandler_ptr,
         ::OldInherit::AMI_twoHandler_var,
@@ -1550,7 +1550,7 @@ namespace TAO
 #define _OLDINHERIT_THREE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::three>
+  class  Arg_Traits<::OldInherit::three>
     : public Object_Arg_Traits_T<
         ::OldInherit::three_ptr,
         ::OldInherit::three_var,
@@ -1566,7 +1566,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_THREEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldInherit::AMH_threeExceptionHolder>
+  class Arg_Traits<::OldInherit::AMH_threeExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldInherit::AMH_threeExceptionHolder *,
@@ -1584,7 +1584,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_THREEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::AMI_threeHandler>
+  class  Arg_Traits<::OldInherit::AMI_threeHandler>
     : public Object_Arg_Traits_T<
         ::OldInherit::AMI_threeHandler_ptr,
         ::OldInherit::AMI_threeHandler_var,
@@ -1600,7 +1600,7 @@ namespace TAO
 #define _OLDINHERIT_FOUR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::four>
+  class  Arg_Traits<::OldInherit::four>
     : public Object_Arg_Traits_T<
         ::OldInherit::four_ptr,
         ::OldInherit::four_var,
@@ -1616,7 +1616,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_FOUREXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldInherit::AMH_fourExceptionHolder>
+  class Arg_Traits<::OldInherit::AMH_fourExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldInherit::AMH_fourExceptionHolder *,
@@ -1634,7 +1634,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_FOURHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::AMI_fourHandler>
+  class  Arg_Traits<::OldInherit::AMI_fourHandler>
     : public Object_Arg_Traits_T<
         ::OldInherit::AMI_fourHandler_ptr,
         ::OldInherit::AMI_fourHandler_var,
@@ -1650,7 +1650,7 @@ namespace TAO
 #define _OLDINHERIT_FIVE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::five>
+  class  Arg_Traits<::OldInherit::five>
     : public Object_Arg_Traits_T<
         ::OldInherit::five_ptr,
         ::OldInherit::five_var,
@@ -1666,7 +1666,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_FIVEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::OldInherit::AMH_fiveExceptionHolder>
+  class Arg_Traits<::OldInherit::AMH_fiveExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::OldInherit::AMH_fiveExceptionHolder *,
@@ -1684,7 +1684,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_FIVEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::OldInherit::AMI_fiveHandler>
+  class  Arg_Traits<::OldInherit::AMI_fiveHandler>
     : public Object_Arg_Traits_T<
         ::OldInherit::AMI_fiveHandler_ptr,
         ::OldInherit::AMI_fiveHandler_var,
@@ -1712,11 +1712,9 @@ protected:
   ~AMH_oneExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldInherit_AMH_oneExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldInherit_AMH_oneExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldInherit_AMH_oneExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldInherit_AMH_oneExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1736,11 +1734,9 @@ protected:
   ~AMH_twoExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldInherit_AMH_twoExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldInherit_AMH_twoExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldInherit_AMH_twoExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldInherit_AMH_twoExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1760,11 +1756,9 @@ protected:
   ~AMH_threeExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldInherit_AMH_threeExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldInherit_AMH_threeExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldInherit_AMH_threeExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldInherit_AMH_threeExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1784,11 +1778,9 @@ protected:
   ~AMH_fourExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldInherit_AMH_fourExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldInherit_AMH_fourExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldInherit_AMH_fourExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldInherit_AMH_fourExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1808,11 +1800,9 @@ protected:
   ~AMH_fiveExceptionHolder () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__OldInherit_AMH_fiveExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__OldInherit_AMH_fiveExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__OldInherit_AMH_fiveExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__OldInherit_AMH_fiveExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1833,7 +1823,7 @@ namespace TAO
 #define _OLDINHERIT_ONE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::one>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::one>
   {
     static ::OldInherit::one_ptr duplicate (::OldInherit::one_ptr p);
     static void release (::OldInherit::one_ptr p);
@@ -1860,7 +1850,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_ONERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMH_oneResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMH_oneResponseHandler>
   {
     static ::OldInherit::AMH_oneResponseHandler_ptr duplicate (::OldInherit::AMH_oneResponseHandler_ptr p);
     static void release (::OldInherit::AMH_oneResponseHandler_ptr p);
@@ -1874,7 +1864,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_ONEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMI_oneHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMI_oneHandler>
   {
     static ::OldInherit::AMI_oneHandler_ptr duplicate (::OldInherit::AMI_oneHandler_ptr p);
     static void release (::OldInherit::AMI_oneHandler_ptr p);
@@ -1888,7 +1878,7 @@ namespace TAO
 #define _OLDINHERIT_TWO__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::two>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::two>
   {
     static ::OldInherit::two_ptr duplicate (::OldInherit::two_ptr p);
     static void release (::OldInherit::two_ptr p);
@@ -1915,7 +1905,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_TWORESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMH_twoResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMH_twoResponseHandler>
   {
     static ::OldInherit::AMH_twoResponseHandler_ptr duplicate (::OldInherit::AMH_twoResponseHandler_ptr p);
     static void release (::OldInherit::AMH_twoResponseHandler_ptr p);
@@ -1929,7 +1919,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_TWOHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMI_twoHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMI_twoHandler>
   {
     static ::OldInherit::AMI_twoHandler_ptr duplicate (::OldInherit::AMI_twoHandler_ptr p);
     static void release (::OldInherit::AMI_twoHandler_ptr p);
@@ -1943,7 +1933,7 @@ namespace TAO
 #define _OLDINHERIT_THREE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::three>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::three>
   {
     static ::OldInherit::three_ptr duplicate (::OldInherit::three_ptr p);
     static void release (::OldInherit::three_ptr p);
@@ -1970,7 +1960,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_THREERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMH_threeResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMH_threeResponseHandler>
   {
     static ::OldInherit::AMH_threeResponseHandler_ptr duplicate (::OldInherit::AMH_threeResponseHandler_ptr p);
     static void release (::OldInherit::AMH_threeResponseHandler_ptr p);
@@ -1984,7 +1974,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_THREEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMI_threeHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMI_threeHandler>
   {
     static ::OldInherit::AMI_threeHandler_ptr duplicate (::OldInherit::AMI_threeHandler_ptr p);
     static void release (::OldInherit::AMI_threeHandler_ptr p);
@@ -1998,7 +1988,7 @@ namespace TAO
 #define _OLDINHERIT_FOUR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::four>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::four>
   {
     static ::OldInherit::four_ptr duplicate (::OldInherit::four_ptr p);
     static void release (::OldInherit::four_ptr p);
@@ -2025,7 +2015,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_FOURRESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMH_fourResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMH_fourResponseHandler>
   {
     static ::OldInherit::AMH_fourResponseHandler_ptr duplicate (::OldInherit::AMH_fourResponseHandler_ptr p);
     static void release (::OldInherit::AMH_fourResponseHandler_ptr p);
@@ -2039,7 +2029,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_FOURHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMI_fourHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMI_fourHandler>
   {
     static ::OldInherit::AMI_fourHandler_ptr duplicate (::OldInherit::AMI_fourHandler_ptr p);
     static void release (::OldInherit::AMI_fourHandler_ptr p);
@@ -2053,7 +2043,7 @@ namespace TAO
 #define _OLDINHERIT_FIVE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::five>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::five>
   {
     static ::OldInherit::five_ptr duplicate (::OldInherit::five_ptr p);
     static void release (::OldInherit::five_ptr p);
@@ -2080,7 +2070,7 @@ namespace TAO
 #define _OLDINHERIT_AMH_FIVERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMH_fiveResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMH_fiveResponseHandler>
   {
     static ::OldInherit::AMH_fiveResponseHandler_ptr duplicate (::OldInherit::AMH_fiveResponseHandler_ptr p);
     static void release (::OldInherit::AMH_fiveResponseHandler_ptr p);
@@ -2094,7 +2084,7 @@ namespace TAO
 #define _OLDINHERIT_AMI_FIVEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::OldInherit::AMI_fiveHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::OldInherit::AMI_fiveHandler>
   {
     static ::OldInherit::AMI_fiveHandler_ptr duplicate (::OldInherit::AMI_fiveHandler_ptr p);
     static void release (::OldInherit::AMI_fiveHandler_ptr p);
@@ -2108,7 +2098,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::one_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::one_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::one_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2124,21 +2114,21 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::AMH_oneExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::AMH_oneExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::AMH_oneExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::AMI_oneHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::AMI_oneHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::AMI_oneHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::two_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::two_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::two_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2154,21 +2144,21 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::AMH_twoExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::AMH_twoExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::AMH_twoExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::AMI_twoHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::AMI_twoHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::AMI_twoHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::three_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::three_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::three_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2184,21 +2174,21 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::AMH_threeExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::AMH_threeExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::AMH_threeExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::AMI_threeHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::AMI_threeHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::AMI_threeHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::four_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::four_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::four_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2214,21 +2204,21 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::AMH_fourExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::AMH_fourExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::AMH_fourExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::AMI_fourHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::AMI_fourHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::AMI_fourHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::five_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::five_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::five_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2244,14 +2234,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::AMH_fiveExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::AMH_fiveExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::AMH_fiveExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const OldInherit::AMI_fiveHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, OldInherit::AMI_fiveHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, OldInherit::AMI_fiveHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

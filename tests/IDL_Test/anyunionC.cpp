@@ -23,6 +23,7 @@
  **/
 
 #include "anyunionC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -45,7 +46,6 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "anyunionC.inl"
@@ -155,11 +155,11 @@ void MyAnyUnion::_reset ()
     break;
   }
 }
-static TAO::TypeCode::Case_T<AnyUnionEnum, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_MyAnyUnion__0 (::ANYUNIONENUM2, "my_any", &CORBA::_tc_any);
+static TAO::TypeCode::Case_T<AnyUnionEnum, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_MyAnyUnion__0 (::ANYUNIONENUM2, "my_any", std::addressof (CORBA::_tc_any));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_MyAnyUnion[] =
   {
-    &_tao_cases_MyAnyUnion__0
+    std::addressof (_tao_cases_MyAnyUnion__0)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -169,7 +169,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_MyAnyUnion (
     "IDL:MyAnyUnion:1.0",
     "MyAnyUnion",
-    &_tc_AnyUnionEnum,
+    std::addressof (_tc_AnyUnionEnum),
     _tao_cases_MyAnyUnion,
     sizeof (_tao_cases_MyAnyUnion)/sizeof (_tao_cases_MyAnyUnion[0]),
     -1);
@@ -194,7 +194,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AnyUnionEnum &_tao_elem)
 {
   return
@@ -255,7 +255,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, AnyUnionEnum _tao_enumerator)
 {
-  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, AnyUnionEnum & _tao_enumerator)

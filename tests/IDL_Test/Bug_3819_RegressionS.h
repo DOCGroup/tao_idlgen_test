@@ -50,7 +50,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -67,7 +67,7 @@ namespace TAO
 #define _ORANGE_APPLE_FOO__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::orange::apple::Foo>
+  class SArg_Traits<::orange::apple::Foo>
     : public
         Object_SArg_Traits_T<
             ::orange::apple::Foo *,
@@ -84,7 +84,7 @@ namespace TAO
 #define _ORANGE_APPLE_FOO__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::orange::apple::Foo>
+  class SArg_Traits<::orange::apple::Foo>
     : public
         Object_SArg_Traits_T<
             ::orange::apple::Foo *,
@@ -101,7 +101,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::orange::apple::Bar>
+  class  SArg_Traits<::orange::apple::Bar>
     : public Object_SArg_Traits_T<
         ::orange::apple::Bar_ptr,
         ::orange::apple::Bar_var,
@@ -116,7 +116,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::orange::apple::Bar>
+  class  SArg_Traits<::orange::apple::Bar>
     : public Object_SArg_Traits_T<
         ::orange::apple::Bar_ptr,
         ::orange::apple::Bar_var,

@@ -27,6 +27,7 @@
 
 #include "includingS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -134,7 +135,7 @@ POA_AMH_iface::POA_AMH_iface ()
   this->optable_ = std::addressof (tao_AMH_iface_optable);
 }
 
-::CORBA::Boolean POA_AMH_iface::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_iface::_is_a (char const *value)
 {
   return
     (
@@ -143,7 +144,7 @@ POA_AMH_iface::POA_AMH_iface ()
     );
 }
 
-const char* POA_AMH_iface::_interface_repository_id () const
+char const *POA_AMH_iface::_interface_repository_id () const
 {
   return "IDL:iface:1.0";
 }
@@ -158,7 +159,7 @@ iface*
 POA_AMH_iface::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -262,7 +263,7 @@ POA_iface::POA_iface ()
   this->optable_ = std::addressof (tao_iface_optable);
 }
 
-::CORBA::Boolean POA_iface::_is_a (const char* value)
+::CORBA::Boolean POA_iface::_is_a (char const *value)
 {
   return
     (
@@ -271,7 +272,7 @@ POA_iface::POA_iface ()
     );
 }
 
-const char* POA_iface::_interface_repository_id () const
+char const *POA_iface::_interface_repository_id () const
 {
   return "IDL:iface:1.0";
 }
@@ -391,7 +392,7 @@ POA_AMI_ifaceHandler::POA_AMI_ifaceHandler ()
   this->optable_ = std::addressof (tao_AMI_ifaceHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_ifaceHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_ifaceHandler::_is_a (char const *value)
 {
   return
     (
@@ -401,7 +402,7 @@ POA_AMI_ifaceHandler::POA_AMI_ifaceHandler ()
     );
 }
 
-const char* POA_AMI_ifaceHandler::_interface_repository_id () const
+char const *POA_AMI_ifaceHandler::_interface_repository_id () const
 {
   return "IDL:AMI_ifaceHandler:1.0";
 }
@@ -540,9 +541,7 @@ POA_AMH_MyInt::op_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_TAO_AMH_MyIntResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_TAO_AMH_MyIntResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -556,7 +555,7 @@ POA_AMH_MyInt::op_skel (
     );
 }
 
-::CORBA::Boolean POA_AMH_MyInt::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_MyInt::_is_a (char const *value)
 {
   return
     (
@@ -565,7 +564,7 @@ POA_AMH_MyInt::op_skel (
     );
 }
 
-const char* POA_AMH_MyInt::_interface_repository_id () const
+char const *POA_AMH_MyInt::_interface_repository_id () const
 {
   return "IDL:MyInt:1.0";
 }
@@ -580,7 +579,7 @@ MyInt*
 POA_AMH_MyInt::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -690,9 +689,9 @@ _TAO_MyInt_Direct_Proxy_Impl::op (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::A::MyStructA>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::A::MyStructA>::ret_val *) args[0])->arg () =
     _tao_ptr->op (
-          ((TAO::Arg_Traits< ::A::MyStructA>::in_arg_val *) args[1])->arg ()
+          ((TAO::Arg_Traits<::A::MyStructA>::in_arg_val *) args[1])->arg ()
         );
 }
 
@@ -717,13 +716,13 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::A::MyStructA>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< ::A::MyStructA> (
+    TAO::SArg_Traits<::A::MyStructA>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<::A::MyStructA> (
         this->operation_details_,
         this->args_);
 
-    TAO::SArg_Traits< ::A::MyStructA>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::A::MyStructA> (
+    TAO::SArg_Traits<::A::MyStructA>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::A::MyStructA> (
         this->operation_details_,
         this->args_,
         1);
@@ -743,8 +742,8 @@ void POA_MyInt::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::A::MyStructA>::ret_val retval;
-  TAO::SArg_Traits< ::A::MyStructA>::in_arg_val _tao_ab;
+  TAO::SArg_Traits<::A::MyStructA>::ret_val retval;
+  TAO::SArg_Traits<::A::MyStructA>::in_arg_val _tao_ab;
 
   TAO::Argument * const args[] =
     {
@@ -777,7 +776,7 @@ void POA_MyInt::op_skel (
                          );
 }
 
-::CORBA::Boolean POA_MyInt::_is_a (const char* value)
+::CORBA::Boolean POA_MyInt::_is_a (char const *value)
 {
   return
     (
@@ -786,7 +785,7 @@ void POA_MyInt::op_skel (
     );
 }
 
-const char* POA_MyInt::_interface_repository_id () const
+char const *POA_MyInt::_interface_repository_id () const
 {
   return "IDL:MyInt:1.0";
 }
@@ -814,7 +813,7 @@ POA_MyInt::_this ()
 
 void
 POA_TAO_AMH_MyIntResponseHandler::op (
-  const ::A::MyStructA & return_value)
+  ::A::MyStructA const & return_value)
 {
   this->_tao_rh_init_reply ();
 
@@ -943,7 +942,7 @@ _TAO_AMI_MyIntHandler_Direct_Proxy_Impl::op (
     }
 
   _tao_ptr->op (
-        ((TAO::Arg_Traits< ::A::MyStructA>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::A::MyStructA>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -961,7 +960,7 @@ _TAO_AMI_MyIntHandler_Direct_Proxy_Impl::op_excep (
     }
 
   _tao_ptr->op_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -986,8 +985,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::A::MyStructA>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::A::MyStructA> (
+    TAO::SArg_Traits<::A::MyStructA>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::A::MyStructA> (
         this->operation_details_,
         this->args_,
         1);
@@ -1006,8 +1005,8 @@ void POA_AMI_MyIntHandler::op_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::A::MyStructA>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::A::MyStructA>::in_arg_val _tao_ami_return_val;
 
   TAO::Argument * const args[] =
     {
@@ -1052,8 +1051,8 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-      TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+    TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+      TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
         this->operation_details_,
         this->args_,
         1);
@@ -1072,8 +1071,8 @@ void POA_AMI_MyIntHandler::op_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -1106,7 +1105,7 @@ void POA_AMI_MyIntHandler::op_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_AMI_MyIntHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_MyIntHandler::_is_a (char const *value)
 {
   return
     (
@@ -1116,7 +1115,7 @@ void POA_AMI_MyIntHandler::op_excep_skel (
     );
 }
 
-const char* POA_AMI_MyIntHandler::_interface_repository_id () const
+char const *POA_AMI_MyIntHandler::_interface_repository_id () const
 {
   return "IDL:AMI_MyIntHandler:1.0";
 }
@@ -1223,7 +1222,7 @@ POA_RootModule::SUBMODULE1::AMH_ChildIF::AMH_ChildIF ()
   this->optable_ = std::addressof (tao_RootModule_SUBMODULE1_AMH_ChildIF_optable);
 }
 
-::CORBA::Boolean POA_RootModule::SUBMODULE1::AMH_ChildIF::_is_a (const char* value)
+::CORBA::Boolean POA_RootModule::SUBMODULE1::AMH_ChildIF::_is_a (char const *value)
 {
   return
     (
@@ -1233,7 +1232,7 @@ POA_RootModule::SUBMODULE1::AMH_ChildIF::AMH_ChildIF ()
     );
 }
 
-const char* POA_RootModule::SUBMODULE1::AMH_ChildIF::_interface_repository_id () const
+char const *POA_RootModule::SUBMODULE1::AMH_ChildIF::_interface_repository_id () const
 {
   return "IDL:RootModule/SUBMODULE1/ChildIF:1.0";
 }
@@ -1248,7 +1247,7 @@ RootModule::SUBMODULE1::ChildIF*
 POA_RootModule::SUBMODULE1::AMH_ChildIF::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1352,7 +1351,7 @@ POA_RootModule::SUBMODULE1::ChildIF::ChildIF ()
   this->optable_ = std::addressof (tao_RootModule_SUBMODULE1_ChildIF_optable);
 }
 
-::CORBA::Boolean POA_RootModule::SUBMODULE1::ChildIF::_is_a (const char* value)
+::CORBA::Boolean POA_RootModule::SUBMODULE1::ChildIF::_is_a (char const *value)
 {
   return
     (
@@ -1362,7 +1361,7 @@ POA_RootModule::SUBMODULE1::ChildIF::ChildIF ()
     );
 }
 
-const char* POA_RootModule::SUBMODULE1::ChildIF::_interface_repository_id () const
+char const *POA_RootModule::SUBMODULE1::ChildIF::_interface_repository_id () const
 {
   return "IDL:RootModule/SUBMODULE1/ChildIF:1.0";
 }
@@ -1482,7 +1481,7 @@ POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::AMI_ChildIFHandler ()
   this->optable_ = std::addressof (tao_RootModule_SUBMODULE1_AMI_ChildIFHandler_optable);
 }
 
-::CORBA::Boolean POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::_is_a (const char* value)
+::CORBA::Boolean POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::_is_a (char const *value)
 {
   return
     (
@@ -1493,7 +1492,7 @@ POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::AMI_ChildIFHandler ()
     );
 }
 
-const char* POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::_interface_repository_id () const
+char const *POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::_interface_repository_id () const
 {
   return "IDL:RootModule/SUBMODULE1/AMI_ChildIFHandler:1.0";
 }
@@ -1600,7 +1599,7 @@ POA_AMH_B::POA_AMH_B ()
   this->optable_ = std::addressof (tao_AMH_B_optable);
 }
 
-::CORBA::Boolean POA_AMH_B::_is_a (const char* value)
+::CORBA::Boolean POA_AMH_B::_is_a (char const *value)
 {
   return
     (
@@ -1609,7 +1608,7 @@ POA_AMH_B::POA_AMH_B ()
     );
 }
 
-const char* POA_AMH_B::_interface_repository_id () const
+char const *POA_AMH_B::_interface_repository_id () const
 {
   return "IDL:B:1.0";
 }
@@ -1624,7 +1623,7 @@ B*
 POA_AMH_B::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -1728,7 +1727,7 @@ POA_B::POA_B ()
   this->optable_ = std::addressof (tao_B_optable);
 }
 
-::CORBA::Boolean POA_B::_is_a (const char* value)
+::CORBA::Boolean POA_B::_is_a (char const *value)
 {
   return
     (
@@ -1737,7 +1736,7 @@ POA_B::POA_B ()
     );
 }
 
-const char* POA_B::_interface_repository_id () const
+char const *POA_B::_interface_repository_id () const
 {
   return "IDL:B:1.0";
 }
@@ -1857,7 +1856,7 @@ POA_AMI_BHandler::POA_AMI_BHandler ()
   this->optable_ = std::addressof (tao_AMI_BHandler_optable);
 }
 
-::CORBA::Boolean POA_AMI_BHandler::_is_a (const char* value)
+::CORBA::Boolean POA_AMI_BHandler::_is_a (char const *value)
 {
   return
     (
@@ -1867,7 +1866,7 @@ POA_AMI_BHandler::POA_AMI_BHandler ()
     );
 }
 
-const char* POA_AMI_BHandler::_interface_repository_id () const
+char const *POA_AMI_BHandler::_interface_repository_id () const
 {
   return "IDL:AMI_BHandler:1.0";
 }

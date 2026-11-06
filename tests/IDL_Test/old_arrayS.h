@@ -63,7 +63,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,7 +77,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class SArg_Traits< ::OldArray::str22_tag>
+  class SArg_Traits<::OldArray::str22_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::str22_var,
@@ -88,7 +88,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::boolarray_tag>
+  class SArg_Traits<::OldArray::boolarray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::boolarray_var,
@@ -99,7 +99,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::char_17_tag>
+  class SArg_Traits<::OldArray::char_17_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::char_17_var,
@@ -110,7 +110,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::char_10_2_tag>
+  class SArg_Traits<::OldArray::char_10_2_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::char_10_2_var,
@@ -121,7 +121,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::A>
+  class SArg_Traits<::OldArray::A>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldArray::A,
@@ -131,7 +131,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::B>
+  class SArg_Traits<::OldArray::B>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldArray::B,
@@ -141,7 +141,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::C>
+  class SArg_Traits<::OldArray::C>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldArray::C,
@@ -151,7 +151,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::A_matrix_tag>
+  class SArg_Traits<::OldArray::A_matrix_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::A_matrix_var,
@@ -162,7 +162,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::B_matrix_tag>
+  class SArg_Traits<::OldArray::B_matrix_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::B_matrix_var,
@@ -173,7 +173,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::C_matrix_tag>
+  class SArg_Traits<::OldArray::C_matrix_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::C_matrix_var,
@@ -184,7 +184,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::OldArray::A_rmatrix_tag>
+  class SArg_Traits<::OldArray::A_rmatrix_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::OldArray::A_rmatrix_var,
@@ -198,7 +198,7 @@ namespace TAO
 #define _OLDARRAY_A_I__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldArray::A_i>
+  class  SArg_Traits<::OldArray::A_i>
     : public Object_SArg_Traits_T<
         ::OldArray::A_i_ptr,
         ::OldArray::A_i_var,
@@ -213,7 +213,7 @@ namespace TAO
 #define _OLDARRAY_AMH_A_IEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::OldArray::AMH_A_iExceptionHolder>
+  class SArg_Traits<::OldArray::AMH_A_iExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldArray::AMH_A_iExceptionHolder *,
@@ -230,7 +230,7 @@ namespace TAO
 #define _OLDARRAY_AMI_A_IHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldArray::AMI_A_iHandler>
+  class  SArg_Traits<::OldArray::AMI_A_iHandler>
     : public Object_SArg_Traits_T<
         ::OldArray::AMI_A_iHandler_ptr,
         ::OldArray::AMI_A_iHandler_var,
@@ -257,10 +257,10 @@ namespace POA_OldArray
     AMH_A_i ();
 
   public:
-    AMH_A_i (const AMH_A_i& rhs);
+    AMH_A_i (AMH_A_i const &rhs);
     ~AMH_A_i () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest &req,
@@ -268,7 +268,7 @@ namespace POA_OldArray
 
     OldArray::A_i *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
@@ -276,9 +276,8 @@ namespace POA_OldArray
 
   virtual void op (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
-      const ::OldArray::A & a1,
-      const ::OldArray::A & a2
-    ) = 0;
+      ::OldArray::A const & a1,
+      ::OldArray::A const & a2) = 0;
 
   static void op2_skel (
       TAO_ServerRequest &_tao_req,
@@ -287,9 +286,8 @@ namespace POA_OldArray
 
   virtual void op2 (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
-      const ::OldArray::str22 a1,
-      const ::OldArray::str22 a2
-    ) = 0;
+      ::OldArray::str22 const a1,
+      ::OldArray::str22 const a2) = 0;
 
   static void op4_skel (
       TAO_ServerRequest &_tao_req,
@@ -298,9 +296,8 @@ namespace POA_OldArray
 
   virtual void op4 (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
-      const ::OldArray::A & a1,
-      const ::OldArray::A & a2
-    ) = 0;
+      ::OldArray::A const & a1,
+      ::OldArray::A const & a2) = 0;
 
   static void _get_attribute_array_skel (
       TAO_ServerRequest &_tao_req,
@@ -308,8 +305,7 @@ namespace POA_OldArray
       TAO_ServantBase *_tao_servant_upcall);
 
   virtual void attribute_array (
-      OldArray::AMH_A_iResponseHandler_ptr _tao_rh
-    ) = 0;
+      OldArray::AMH_A_iResponseHandler_ptr _tao_rh) = 0;
 
   static void _set_attribute_array_skel (
       TAO_ServerRequest &_tao_req,
@@ -318,8 +314,7 @@ namespace POA_OldArray
 
   virtual void attribute_array (
       OldArray::AMH_A_iResponseHandler_ptr _tao_rh,
-      const ::OldArray::str22 attribute_array
-    ) = 0;
+      ::OldArray::str22 const attribute_array) = 0;
 
 };
 
@@ -340,10 +335,10 @@ public:
   using _stub_ptr_type = ::OldArray::A_i_ptr;
   using _stub_var_type = ::OldArray::A_i_var;
 
-  A_i (const A_i& rhs) = default;
+  A_i (A_i const &rhs) = default;
   ~A_i () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -351,9 +346,9 @@ public:
 
   ::OldArray::A_i *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::OldArray::A op (
-    const ::OldArray::A & a1,
+    ::OldArray::A const & a1,
     ::OldArray::A & a2,
     ::OldArray::A_out a3) = 0;
 
@@ -362,7 +357,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual ::OldArray::str22_slice * op2 (
-    const ::OldArray::str22 a1,
+    ::OldArray::str22 const a1,
     ::OldArray::str22 a2,
     ::OldArray::str22_out a3) = 0;
 
@@ -371,7 +366,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual ::OldArray::A_matrix_slice * op4 (
-    const ::OldArray::A & a1,
+    ::OldArray::A const & a1,
     ::OldArray::A & a2,
     ::OldArray::A_out a3) = 0;
 
@@ -386,7 +381,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void attribute_array (
-    const ::OldArray::str22 attribute_array) = 0;
+    ::OldArray::str22 const attribute_array) = 0;
 
   static void _set_attribute_array_skel (
       TAO_ServerRequest &server_request,
@@ -439,25 +434,25 @@ public:
   TAO_AMH_A_iResponseHandler () = default;
   virtual ~TAO_AMH_A_iResponseHandler () = default;
   void op (
-    const ::OldArray::A & return_value,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3) override;
+    ::OldArray::A const & return_value,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3) override;
   void op_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
   void op2 (
-    const ::OldArray::str22 return_value,
-    const ::OldArray::str22 a2,
-    const ::OldArray::str22 a3) override;
+    ::OldArray::str22 const return_value,
+    ::OldArray::str22 const a2,
+    ::OldArray::str22 const a3) override;
   void op2_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
   void op4 (
-    const ::OldArray::A_matrix return_value,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3) override;
+    ::OldArray::A_matrix const return_value,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3) override;
   void op4_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
   void get_attribute_array (
-    const ::OldArray::str22 return_value) override;
+    ::OldArray::str22 const return_value) override;
   void get_attribute_array_excep (
     ::OldArray::AMH_A_iExceptionHolder * holder) override;
   void set_attribute_array () override;
@@ -482,10 +477,10 @@ public:
   using _stub_ptr_type = ::OldArray::AMI_A_iHandler_ptr;
   using _stub_var_type = ::OldArray::AMI_A_iHandler_var;
 
-  AMI_A_iHandler (const AMI_A_iHandler& rhs) = default;
+  AMI_A_iHandler (AMI_A_iHandler const &rhs) = default;
   ~AMI_A_iHandler () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -493,11 +488,11 @@ public:
 
   ::OldArray::AMI_A_iHandler *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual void op (
-    const ::OldArray::A & ami_return_val,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3) = 0;
+    ::OldArray::A const & ami_return_val,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
@@ -511,9 +506,9 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void op2 (
-    const ::OldArray::str22 ami_return_val,
-    const ::OldArray::str22 a2,
-    const ::OldArray::str22 a3) = 0;
+    ::OldArray::str22 const ami_return_val,
+    ::OldArray::str22 const a2,
+    ::OldArray::str22 const a3) = 0;
 
   static void op2_skel (
       TAO_ServerRequest &server_request,
@@ -527,9 +522,9 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void op4 (
-    const ::OldArray::A_matrix ami_return_val,
-    const ::OldArray::A & a2,
-    const ::OldArray::A & a3) = 0;
+    ::OldArray::A_matrix const ami_return_val,
+    ::OldArray::A const & a2,
+    ::OldArray::A const & a3) = 0;
 
   static void op4_skel (
       TAO_ServerRequest &server_request,
@@ -543,7 +538,7 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
   virtual void get_attribute_array (
-    const ::OldArray::str22 ami_return_val) = 0;
+    ::OldArray::str22 const ami_return_val) = 0;
 
   static void get_attribute_array_skel (
       TAO_ServerRequest &server_request,

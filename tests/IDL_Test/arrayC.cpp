@@ -23,6 +23,7 @@
  **/
 
 #include "arrayC.h"
+#include <cstring>
 #include <memory>
 #include <new>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
@@ -49,13 +50,12 @@
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "arrayC.inl"
 #endif /* !defined INLINE */
 TwoDArray_slice *
-TwoDArray_dup (const TwoDArray_slice *_tao_src_array)
+TwoDArray_dup (TwoDArray_slice const *_tao_src_array)
 {
   TwoDArray_slice *_tao_dup_array = TwoDArray_alloc ();
 
@@ -84,7 +84,7 @@ TwoDArray_free (TwoDArray_slice *_tao_slice)
 void
 TwoDArray_copy (
     TwoDArray_slice * _tao_to,
-    const TwoDArray_slice *_tao_from)
+    TwoDArray_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 64; ++i0)
@@ -107,21 +107,21 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> TwoDArray_63 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> TwoDArray_63 (
         ::CORBA::tk_array,
-        &CORBA::_tc_short,
+        std::addressof (CORBA::_tc_short),
         63U);
 
     ::CORBA::TypeCode_ptr const tc_TwoDArray_63 =
-      &TwoDArray_63;
+      std::addressof (TwoDArray_63);
 
-    TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> TwoDArray_64_63 (
+    TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> TwoDArray_64_63 (
       ::CORBA::tk_array,
-      &tc_TwoDArray_63,
+      std::addressof (tc_TwoDArray_63),
       64U);
 
   ::CORBA::TypeCode_ptr const tc_TwoDArray =
-    &TwoDArray_64_63;
+    std::addressof (TwoDArray_64_63);
 }
 }
 }
@@ -136,11 +136,11 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:TwoDArray:1.0",
     "TwoDArray",
-    &TAO::TypeCode::tc_TwoDArray);
+    std::addressof (TAO::TypeCode::tc_TwoDArray));
 
 ::CORBA::TypeCode_ptr const _tc_TwoDArray = std::addressof(_tao_tc_TwoDArray);
 ThreeDArray_slice *
-ThreeDArray_dup (const ThreeDArray_slice *_tao_src_array)
+ThreeDArray_dup (ThreeDArray_slice const *_tao_src_array)
 {
   ThreeDArray_slice *_tao_dup_array = ThreeDArray_alloc ();
 
@@ -169,7 +169,7 @@ ThreeDArray_free (ThreeDArray_slice *_tao_slice)
 void
 ThreeDArray_copy (
     ThreeDArray_slice * _tao_to,
-    const ThreeDArray_slice *_tao_from)
+    ThreeDArray_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 64; ++i0)
@@ -195,29 +195,29 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ThreeDArray_62 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ThreeDArray_62 (
         ::CORBA::tk_array,
-        &CORBA::_tc_short,
+        std::addressof (CORBA::_tc_short),
         62U);
 
     ::CORBA::TypeCode_ptr const tc_ThreeDArray_62 =
-      &ThreeDArray_62;
+      std::addressof (ThreeDArray_62);
 
-    TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ThreeDArray_63_62 (
+    TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ThreeDArray_63_62 (
       ::CORBA::tk_array,
-      &tc_ThreeDArray_62,
+      std::addressof (tc_ThreeDArray_62),
       63U);
 
   ::CORBA::TypeCode_ptr const tc_ThreeDArray_63_62 =
-    &ThreeDArray_63_62;
+    std::addressof (ThreeDArray_63_62);
 
-  TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ThreeDArray_64_63_62 (
+  TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> ThreeDArray_64_63_62 (
     ::CORBA::tk_array,
-    &tc_ThreeDArray_63_62,
+    std::addressof (tc_ThreeDArray_63_62),
     64U);
 
 ::CORBA::TypeCode_ptr const tc_ThreeDArray =
-  &ThreeDArray_64_63_62;
+  std::addressof (ThreeDArray_64_63_62);
 }
 }
 }
@@ -232,11 +232,11 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:ThreeDArray:1.0",
     "ThreeDArray",
-    &TAO::TypeCode::tc_ThreeDArray);
+    std::addressof (TAO::TypeCode::tc_ThreeDArray));
 
 ::CORBA::TypeCode_ptr const _tc_ThreeDArray = std::addressof(_tao_tc_ThreeDArray);
 FourDArray_slice *
-FourDArray_dup (const FourDArray_slice *_tao_src_array)
+FourDArray_dup (FourDArray_slice const *_tao_src_array)
 {
   FourDArray_slice *_tao_dup_array = FourDArray_alloc ();
 
@@ -265,7 +265,7 @@ FourDArray_free (FourDArray_slice *_tao_slice)
 void
 FourDArray_copy (
     FourDArray_slice * _tao_to,
-    const FourDArray_slice *_tao_from)
+    FourDArray_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 64; ++i0)
@@ -294,37 +294,37 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> FourDArray_61 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> FourDArray_61 (
         ::CORBA::tk_array,
-        &CORBA::_tc_short,
+        std::addressof (CORBA::_tc_short),
         61U);
 
     ::CORBA::TypeCode_ptr const tc_FourDArray_61 =
-      &FourDArray_61;
+      std::addressof (FourDArray_61);
 
-    TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> FourDArray_62_61 (
+    TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> FourDArray_62_61 (
       ::CORBA::tk_array,
-      &tc_FourDArray_61,
+      std::addressof (tc_FourDArray_61),
       62U);
 
   ::CORBA::TypeCode_ptr const tc_FourDArray_62_61 =
-    &FourDArray_62_61;
+    std::addressof (FourDArray_62_61);
 
-  TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> FourDArray_63_62_61 (
+  TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> FourDArray_63_62_61 (
     ::CORBA::tk_array,
-    &tc_FourDArray_62_61,
+    std::addressof (tc_FourDArray_62_61),
     63U);
 
 ::CORBA::TypeCode_ptr const tc_FourDArray_63_62_61 =
-  &FourDArray_63_62_61;
+  std::addressof (FourDArray_63_62_61);
 
-TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> FourDArray_64_63_62_61 (
+TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> FourDArray_64_63_62_61 (
   ::CORBA::tk_array,
-  &tc_FourDArray_63_62_61,
+  std::addressof (tc_FourDArray_63_62_61),
   64U);
 
 ::CORBA::TypeCode_ptr const tc_FourDArray =
-  &FourDArray_64_63_62_61;
+  std::addressof (FourDArray_64_63_62_61);
 }
 }
 }
@@ -339,11 +339,11 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:FourDArray:1.0",
     "FourDArray",
-    &TAO::TypeCode::tc_FourDArray);
+    std::addressof (TAO::TypeCode::tc_FourDArray));
 
 ::CORBA::TypeCode_ptr const _tc_FourDArray = std::addressof(_tao_tc_FourDArray);
 inside_array_slice *
-inside_array_dup (const inside_array_slice *_tao_src_array)
+inside_array_dup (inside_array_slice const *_tao_src_array)
 {
   inside_array_slice *_tao_dup_array = inside_array_alloc ();
 
@@ -372,7 +372,7 @@ inside_array_free (inside_array_slice *_tao_slice)
 void
 inside_array_copy (
     inside_array_slice * _tao_to,
-    const inside_array_slice *_tao_from)
+    inside_array_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 5; ++i0)
@@ -392,13 +392,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> inside_array_5 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> inside_array_5 (
         ::CORBA::tk_array,
-        &CORBA::_tc_long,
+        std::addressof (CORBA::_tc_long),
         5U);
 
     ::CORBA::TypeCode_ptr const tc_inside_array =
-      &inside_array_5;
+      std::addressof (inside_array_5);
   }
 }
 }
@@ -413,7 +413,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:inside_array:1.0",
     "inside_array",
-    &TAO::TypeCode::tc_inside_array);
+    std::addressof (TAO::TypeCode::tc_inside_array));
 
 ::CORBA::TypeCode_ptr const _tc_inside_array = std::addressof(_tao_tc_inside_array);
 
@@ -422,7 +422,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_wrap[] =
       {
-        { "member", &_tc_inside_array }
+        { "member", std::addressof (_tc_inside_array) }
       };
 
 static TAO::TypeCode::Struct<
@@ -441,15 +441,13 @@ _tao_tc_wrap (
 
 ::CORBA::TypeCode_ptr const _tc_wrap = std::addressof(_tao_tc_wrap);
 
-void
-wrap::_tao_any_destructor (
-    void *_tao_void_pointer)
+void wrap::_tao_any_destructor (void *_tao_void_pointer)
 {
   wrap *tmp = static_cast<wrap *> (_tao_void_pointer);
   delete tmp;
 }
 outside_array_slice *
-outside_array_dup (const outside_array_slice *_tao_src_array)
+outside_array_dup (outside_array_slice const *_tao_src_array)
 {
   outside_array_slice *_tao_dup_array = outside_array_alloc ();
 
@@ -478,7 +476,7 @@ outside_array_free (outside_array_slice *_tao_slice)
 void
 outside_array_copy (
     outside_array_slice * _tao_to,
-    const outside_array_slice *_tao_from)
+    outside_array_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 10; ++i0)
@@ -498,13 +496,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> outside_array_10 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> outside_array_10 (
         ::CORBA::tk_array,
-        &_tc_wrap,
+        std::addressof (_tc_wrap),
         10U);
 
     ::CORBA::TypeCode_ptr const tc_outside_array =
-      &outside_array_10;
+      std::addressof (outside_array_10);
   }
 }
 }
@@ -519,11 +517,11 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:outside_array:1.0",
     "outside_array",
-    &TAO::TypeCode::tc_outside_array);
+    std::addressof (TAO::TypeCode::tc_outside_array));
 
 ::CORBA::TypeCode_ptr const _tc_outside_array = std::addressof(_tao_tc_outside_array);
 oa1_slice *
-oa1_dup (const oa1_slice *_tao_src_array)
+oa1_dup (oa1_slice const *_tao_src_array)
 {
   oa1_slice *_tao_dup_array = oa1_alloc ();
 
@@ -552,7 +550,7 @@ oa1_free (oa1_slice *_tao_slice)
 void
 oa1_copy (
     oa1_slice * _tao_to,
-    const oa1_slice *_tao_from)
+    oa1_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 22; ++i0)
@@ -572,13 +570,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> oa1_22 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> oa1_22 (
         ::CORBA::tk_array,
-        &CORBA::_tc_octet,
+        std::addressof (CORBA::_tc_octet),
         22U);
 
     ::CORBA::TypeCode_ptr const tc_oa1 =
-      &oa1_22;
+      std::addressof (oa1_22);
   }
 }
 }
@@ -593,11 +591,11 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:oa1:1.0",
     "oa1",
-    &TAO::TypeCode::tc_oa1);
+    std::addressof (TAO::TypeCode::tc_oa1));
 
 ::CORBA::TypeCode_ptr const _tc_oa1 = std::addressof(_tao_tc_oa1);
 oa2_slice *
-oa2_dup (const oa2_slice *_tao_src_array)
+oa2_dup (oa2_slice const *_tao_src_array)
 {
   oa2_slice *_tao_dup_array = oa2_alloc ();
 
@@ -626,7 +624,7 @@ oa2_free (oa2_slice *_tao_slice)
 void
 oa2_copy (
     oa2_slice * _tao_to,
-    const oa2_slice *_tao_from)
+    oa2_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 22; ++i0)
@@ -646,13 +644,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> oa2_22 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> oa2_22 (
         ::CORBA::tk_array,
-        &CORBA::_tc_octet,
+        std::addressof (CORBA::_tc_octet),
         22U);
 
     ::CORBA::TypeCode_ptr const tc_oa2 =
-      &oa2_22;
+      std::addressof (oa2_22);
   }
 }
 }
@@ -667,7 +665,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:oa2:1.0",
     "oa2",
-    &TAO::TypeCode::tc_oa2);
+    std::addressof (TAO::TypeCode::tc_oa2));
 
 ::CORBA::TypeCode_ptr const _tc_oa2 = std::addressof(_tao_tc_oa2);
 
@@ -694,7 +692,7 @@ TAO::Objref_Traits<array_args>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<array_args>::marshal (const array_args_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<array_args>::marshal (array_args_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -703,17 +701,17 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 array_args::all_arrays (
-  const ::oa1 arg1,
-  const ::oa2 arg2)
+  ::oa1 const arg1,
+  ::oa2 const arg2)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::oa1_tag>::in_arg_val _tao_arg1 (arg1);
-  TAO::Arg_Traits< ::oa2_tag>::in_arg_val _tao_arg2 (arg2);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::oa1_tag>::in_arg_val _tao_arg1 (arg1);
+  TAO::Arg_Traits<::oa2_tag>::in_arg_val _tao_arg2 (arg2);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -738,8 +736,8 @@ array_args::all_arrays (
 void
 array_args::sendc_all_arrays (
   ::AMI_array_argsHandler_ptr ami_handler,
-  const ::oa1 arg1,
-  const ::oa2 arg2)
+  ::oa1 const arg1,
+  ::oa2 const arg2)
 {
   if (!this->is_evaluated ())
     {
@@ -747,8 +745,8 @@ array_args::sendc_all_arrays (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::oa1_tag>::in_arg_val _tao_arg1 (arg1);
-  TAO::Arg_Traits< ::oa2_tag>::in_arg_val _tao_arg2 (arg2);
+  TAO::Arg_Traits<::oa1_tag>::in_arg_val _tao_arg1 (arg1);
+  TAO::Arg_Traits<::oa2_tag>::in_arg_val _tao_arg2 (arg2);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -817,10 +815,9 @@ array_args::_tao_release (array_args_ptr obj)
 }
 
 ::CORBA::Boolean
-array_args::_is_a (const char *value)
+array_args::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:array_args:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:array_args:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
@@ -831,17 +828,17 @@ array_args::_is_a (const char *value)
     }
 }
 
-const char* array_args::_interface_repository_id () const
+char const *array_args::_interface_repository_id () const
 {
   return "IDL:array_args:1.0";
 }
 
-const char* array_args::_desc_repository_id ()
+char const *array_args::_desc_repository_id ()
 {
   return "IDL:array_args:1.0";
 }
 
-const char* array_args::_desc_interface_name ()
+char const *array_args::_desc_interface_name ()
 {
   return "array_args";
 }
@@ -859,7 +856,7 @@ static TAO::TypeCode::Objref<char const *,
     "array_args");
 
 ::CORBA::TypeCode_ptr const _tc_array_args = std::addressof(_tao_tc_array_args);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_array_argsExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_array_argsExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -869,7 +866,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_array_argsExceptionHolder:1.0",
     "AMH_array_argsExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_array_argsExceptionHolder,
     0);
 
@@ -1015,14 +1012,14 @@ AMH_array_argsExceptionHolder::_tao_unmarshal (
 void
 AMH_array_argsExceptionHolder::raise_all_arrays ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_array_argsExceptionHolder::raise_sendc_all_arrays ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -1049,7 +1046,7 @@ TAO::Objref_Traits<AMH_array_argsResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_array_argsResponseHandler>::marshal (const AMH_array_argsResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_array_argsResponseHandler>::marshal (AMH_array_argsResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1103,10 +1100,9 @@ AMH_array_argsResponseHandler::_tao_release (AMH_array_argsResponseHandler_ptr o
 }
 
 ::CORBA::Boolean
-AMH_array_argsResponseHandler::_is_a (const char *value)
+AMH_array_argsResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:AMH_array_argsResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:AMH_array_argsResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
@@ -1118,17 +1114,17 @@ AMH_array_argsResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* AMH_array_argsResponseHandler::_interface_repository_id () const
+char const *AMH_array_argsResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_array_argsResponseHandler:1.0";
 }
 
-const char* AMH_array_argsResponseHandler::_desc_repository_id ()
+char const *AMH_array_argsResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_array_argsResponseHandler:1.0";
 }
 
-const char* AMH_array_argsResponseHandler::_desc_interface_name ()
+char const *AMH_array_argsResponseHandler::_desc_interface_name ()
 {
   return "AMH_array_argsResponseHandler";
 }
@@ -1170,7 +1166,7 @@ TAO::Objref_Traits<AMI_array_argsHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_array_argsHandler>::marshal (const AMI_array_argsHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_array_argsHandler>::marshal (AMI_array_argsHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1185,7 +1181,7 @@ AMI_array_argsHandler::all_arrays ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1271,8 +1267,8 @@ AMI_array_argsHandler::all_arrays_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1338,10 +1334,9 @@ AMI_array_argsHandler::_tao_release (AMI_array_argsHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_array_argsHandler::_is_a (const char *value)
+AMI_array_argsHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_array_argsHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
@@ -1353,17 +1348,17 @@ AMI_array_argsHandler::_is_a (const char *value)
     }
 }
 
-const char* AMI_array_argsHandler::_interface_repository_id () const
+char const *AMI_array_argsHandler::_interface_repository_id () const
 {
   return "IDL:AMI_array_argsHandler:1.0";
 }
 
-const char* AMI_array_argsHandler::_desc_repository_id ()
+char const *AMI_array_argsHandler::_desc_repository_id ()
 {
   return "IDL:AMI_array_argsHandler:1.0";
 }
 
-const char* AMI_array_argsHandler::_desc_interface_name ()
+char const *AMI_array_argsHandler::_desc_interface_name ()
 {
   return "AMI_array_argsHandler";
 }
@@ -1382,7 +1377,7 @@ static TAO::TypeCode::Objref<char const *,
 
 ::CORBA::TypeCode_ptr const _tc_AMI_array_argsHandler = std::addressof(_tao_tc_AMI_array_argsHandler);
 string_array::ArrayOfString_slice *
-string_array::ArrayOfString_dup (const string_array::ArrayOfString_slice *_tao_src_array)
+string_array::ArrayOfString_dup (string_array::ArrayOfString_slice const *_tao_src_array)
 {
   string_array::ArrayOfString_slice *_tao_dup_array = string_array::ArrayOfString_alloc ();
 
@@ -1411,7 +1406,7 @@ string_array::ArrayOfString_free (string_array::ArrayOfString_slice *_tao_slice)
 void
 string_array::ArrayOfString_copy (
     string_array::ArrayOfString_slice * _tao_to,
-    const string_array::ArrayOfString_slice *_tao_from)
+    string_array::ArrayOfString_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 15; ++i0)
@@ -1431,13 +1426,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> string_array_ArrayOfString_15 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> string_array_ArrayOfString_15 (
         ::CORBA::tk_array,
-        &CORBA::_tc_string,
+        std::addressof (CORBA::_tc_string),
         15U);
 
     ::CORBA::TypeCode_ptr const tc_string_array_ArrayOfString =
-      &string_array_ArrayOfString_15;
+      std::addressof (string_array_ArrayOfString_15);
   }
 }
 }
@@ -1452,7 +1447,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:string_array/ArrayOfString:1.0",
     "ArrayOfString",
-    &TAO::TypeCode::tc_string_array_ArrayOfString);
+    std::addressof (TAO::TypeCode::tc_string_array_ArrayOfString));
 
 namespace string_array
 {
@@ -1465,14 +1460,14 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:string_array/MyString:1.0",
     "MyString",
-    &CORBA::_tc_string);
+    std::addressof (CORBA::_tc_string));
 
 namespace string_array
 {
   ::CORBA::TypeCode_ptr const _tc_MyString = std::addressof(_tao_tc_string_array_MyString);
 }
 string_array::ArrayOfMyString_slice *
-string_array::ArrayOfMyString_dup (const string_array::ArrayOfMyString_slice *_tao_src_array)
+string_array::ArrayOfMyString_dup (string_array::ArrayOfMyString_slice const *_tao_src_array)
 {
   string_array::ArrayOfMyString_slice *_tao_dup_array = string_array::ArrayOfMyString_alloc ();
 
@@ -1501,7 +1496,7 @@ string_array::ArrayOfMyString_free (string_array::ArrayOfMyString_slice *_tao_sl
 void
 string_array::ArrayOfMyString_copy (
     string_array::ArrayOfMyString_slice * _tao_to,
-    const string_array::ArrayOfMyString_slice *_tao_from)
+    string_array::ArrayOfMyString_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 15; ++i0)
@@ -1521,13 +1516,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> string_array_ArrayOfMyString_15 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> string_array_ArrayOfMyString_15 (
         ::CORBA::tk_array,
-        &string_array::_tc_MyString,
+        std::addressof (string_array::_tc_MyString),
         15U);
 
     ::CORBA::TypeCode_ptr const tc_string_array_ArrayOfMyString =
-      &string_array_ArrayOfMyString_15;
+      std::addressof (string_array_ArrayOfMyString_15);
   }
 }
 }
@@ -1542,7 +1537,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:string_array/ArrayOfMyString:1.0",
     "ArrayOfMyString",
-    &TAO::TypeCode::tc_string_array_ArrayOfMyString);
+    std::addressof (TAO::TypeCode::tc_string_array_ArrayOfMyString));
 
 namespace string_array
 {
@@ -1572,7 +1567,7 @@ TAO::Objref_Traits<testdata>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<testdata>::marshal (const testdata_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<testdata>::marshal (testdata_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1580,7 +1575,7 @@ TAO::Objref_Traits<testdata>::marshal (const testdata_ptr p,TAO_OutputCDR & cdr)
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 testdata::Arraychar_slice *
-testdata::Arraychar_dup (const testdata::Arraychar_slice *_tao_src_array)
+testdata::Arraychar_dup (testdata::Arraychar_slice const *_tao_src_array)
 {
   testdata::Arraychar_slice *_tao_dup_array = testdata::Arraychar_alloc ();
 
@@ -1609,7 +1604,7 @@ testdata::Arraychar_free (testdata::Arraychar_slice *_tao_slice)
 void
 testdata::Arraychar_copy (
     testdata::Arraychar_slice * _tao_to,
-    const testdata::Arraychar_slice *_tao_from)
+    testdata::Arraychar_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
@@ -1629,13 +1624,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> testdata_Arraychar_2 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> testdata_Arraychar_2 (
         ::CORBA::tk_array,
-        &CORBA::_tc_char,
+        std::addressof (CORBA::_tc_char),
         2U);
 
     ::CORBA::TypeCode_ptr const tc_testdata_Arraychar =
-      &testdata_Arraychar_2;
+      std::addressof (testdata_Arraychar_2);
   }
 }
 }
@@ -1650,7 +1645,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:testdata/Arraychar:1.0",
     "Arraychar",
-    &TAO::TypeCode::tc_testdata_Arraychar);
+    std::addressof (TAO::TypeCode::tc_testdata_Arraychar));
 
 ::CORBA::TypeCode_ptr const testdata::_tc_Arraychar = std::addressof(_tao_tc_testdata_Arraychar);
 static TAO::TypeCode::Alias<char const *,
@@ -1660,7 +1655,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:testdata/ArrayDeChar:1.0",
     "ArrayDeChar",
-    &testdata::_tc_Arraychar);
+    std::addressof (testdata::_tc_Arraychar));
 
 ::CORBA::TypeCode_ptr const testdata::_tc_ArrayDeChar = std::addressof(_tao_tc_testdata_ArrayDeChar);
 
@@ -1669,8 +1664,8 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_testdata_struct2[] =
       {
-        { "field_1", &testdata::_tc_Arraychar },
-        { "field_2", &testdata::_tc_ArrayDeChar }
+        { "field_1", std::addressof (testdata::_tc_Arraychar) },
+        { "field_2", std::addressof (testdata::_tc_ArrayDeChar) }
       };
 
 static TAO::TypeCode::Struct<
@@ -1689,9 +1684,7 @@ _tao_tc_testdata_struct2 (
 
 ::CORBA::TypeCode_ptr const testdata::_tc_struct2 = std::addressof(_tao_tc_testdata_struct2);
 
-void
-testdata::struct2::_tao_any_destructor (
-    void *_tao_void_pointer)
+void testdata::struct2::_tao_any_destructor (void *_tao_void_pointer)
 {
   struct2 *tmp = static_cast<struct2 *> (_tao_void_pointer);
   delete tmp;
@@ -1739,11 +1732,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> testdata_ArraycharList_0 (
-        ::CORBA::tk_sequence, &testdata::_tc_Arraychar, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> testdata_ArraycharList_0 (
+        ::CORBA::tk_sequence, std::addressof (testdata::_tc_Arraychar), 0U);
 
     ::CORBA::TypeCode_ptr const tc_testdata_ArraycharList_0 =
-      &testdata_ArraycharList_0;
+      std::addressof (testdata_ArraycharList_0);
   }
 }
 }
@@ -1759,7 +1752,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:testdata/ArraycharList:1.0",
     "ArraycharList",
-    &TAO::TypeCode::tc_testdata_ArraycharList_0);
+    std::addressof (TAO::TypeCode::tc_testdata_ArraycharList_0));
 
 ::CORBA::TypeCode_ptr const testdata::_tc_ArraycharList = std::addressof(_tao_tc_testdata_ArraycharList);
 
@@ -1798,11 +1791,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> testdata_BdArraycharList_10 (
-        ::CORBA::tk_sequence, &testdata::_tc_Arraychar, 10U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> testdata_BdArraycharList_10 (
+        ::CORBA::tk_sequence, std::addressof (testdata::_tc_Arraychar), 10U);
 
     ::CORBA::TypeCode_ptr const tc_testdata_BdArraycharList_10 =
-      &testdata_BdArraycharList_10;
+      std::addressof (testdata_BdArraycharList_10);
   }
 }
 }
@@ -1818,7 +1811,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:testdata/BdArraycharList:1.0",
     "BdArraycharList",
-    &TAO::TypeCode::tc_testdata_BdArraycharList_10);
+    std::addressof (TAO::TypeCode::tc_testdata_BdArraycharList_10));
 
 ::CORBA::TypeCode_ptr const testdata::_tc_BdArraycharList = std::addressof(_tao_tc_testdata_BdArraycharList);
 
@@ -1864,11 +1857,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> testdata_ArrayDeCharList_0 (
-        ::CORBA::tk_sequence, &testdata::_tc_ArrayDeChar, 0U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> testdata_ArrayDeCharList_0 (
+        ::CORBA::tk_sequence, std::addressof (testdata::_tc_ArrayDeChar), 0U);
 
     ::CORBA::TypeCode_ptr const tc_testdata_ArrayDeCharList_0 =
-      &testdata_ArrayDeCharList_0;
+      std::addressof (testdata_ArrayDeCharList_0);
   }
 }
 }
@@ -1884,7 +1877,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:testdata/ArrayDeCharList:1.0",
     "ArrayDeCharList",
-    &TAO::TypeCode::tc_testdata_ArrayDeCharList_0);
+    std::addressof (TAO::TypeCode::tc_testdata_ArrayDeCharList_0));
 
 ::CORBA::TypeCode_ptr const testdata::_tc_ArrayDeCharList = std::addressof(_tao_tc_testdata_ArrayDeCharList);
 
@@ -1923,11 +1916,11 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> testdata_BdArrayDeCharList_10 (
-        ::CORBA::tk_sequence, &testdata::_tc_ArrayDeChar, 10U);
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> testdata_BdArrayDeCharList_10 (
+        ::CORBA::tk_sequence, std::addressof (testdata::_tc_ArrayDeChar), 10U);
 
     ::CORBA::TypeCode_ptr const tc_testdata_BdArrayDeCharList_10 =
-      &testdata_BdArrayDeCharList_10;
+      std::addressof (testdata_BdArrayDeCharList_10);
   }
 }
 }
@@ -1943,7 +1936,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:testdata/BdArrayDeCharList:1.0",
     "BdArrayDeCharList",
-    &TAO::TypeCode::tc_testdata_BdArrayDeCharList_10);
+    std::addressof (TAO::TypeCode::tc_testdata_BdArrayDeCharList_10));
 
 ::CORBA::TypeCode_ptr const testdata::_tc_BdArrayDeCharList = std::addressof(_tao_tc_testdata_BdArrayDeCharList);
 
@@ -1992,10 +1985,9 @@ testdata::_tao_release (testdata_ptr obj)
 }
 
 ::CORBA::Boolean
-testdata::_is_a (const char *value)
+testdata::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:testdata:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:testdata:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
@@ -2006,17 +1998,17 @@ testdata::_is_a (const char *value)
     }
 }
 
-const char* testdata::_interface_repository_id () const
+char const *testdata::_interface_repository_id () const
 {
   return "IDL:testdata:1.0";
 }
 
-const char* testdata::_desc_repository_id ()
+char const *testdata::_desc_repository_id ()
 {
   return "IDL:testdata:1.0";
 }
 
-const char* testdata::_desc_interface_name ()
+char const *testdata::_desc_interface_name ()
 {
   return "testdata";
 }
@@ -2034,7 +2026,7 @@ static TAO::TypeCode::Objref<char const *,
     "testdata");
 
 ::CORBA::TypeCode_ptr const _tc_testdata = std::addressof(_tao_tc_testdata);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_testdataExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_testdataExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -2044,7 +2036,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_testdataExceptionHolder:1.0",
     "AMH_testdataExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_testdataExceptionHolder,
     0);
 
@@ -2242,7 +2234,7 @@ TAO::Objref_Traits<AMH_testdataResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_testdataResponseHandler>::marshal (const AMH_testdataResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_testdataResponseHandler>::marshal (AMH_testdataResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2296,10 +2288,9 @@ AMH_testdataResponseHandler::_tao_release (AMH_testdataResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMH_testdataResponseHandler::_is_a (const char *value)
+AMH_testdataResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:AMH_testdataResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:AMH_testdataResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
@@ -2311,17 +2302,17 @@ AMH_testdataResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* AMH_testdataResponseHandler::_interface_repository_id () const
+char const *AMH_testdataResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_testdataResponseHandler:1.0";
 }
 
-const char* AMH_testdataResponseHandler::_desc_repository_id ()
+char const *AMH_testdataResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_testdataResponseHandler:1.0";
 }
 
-const char* AMH_testdataResponseHandler::_desc_interface_name ()
+char const *AMH_testdataResponseHandler::_desc_interface_name ()
 {
   return "AMH_testdataResponseHandler";
 }
@@ -2363,7 +2354,7 @@ TAO::Objref_Traits<AMI_testdataHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_testdataHandler>::marshal (const AMI_testdataHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_testdataHandler>::marshal (AMI_testdataHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2415,10 +2406,9 @@ AMI_testdataHandler::_tao_release (AMI_testdataHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-AMI_testdataHandler::_is_a (const char *value)
+AMI_testdataHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_testdataHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
@@ -2430,17 +2420,17 @@ AMI_testdataHandler::_is_a (const char *value)
     }
 }
 
-const char* AMI_testdataHandler::_interface_repository_id () const
+char const *AMI_testdataHandler::_interface_repository_id () const
 {
   return "IDL:AMI_testdataHandler:1.0";
 }
 
-const char* AMI_testdataHandler::_desc_repository_id ()
+char const *AMI_testdataHandler::_desc_repository_id ()
 {
   return "IDL:AMI_testdataHandler:1.0";
 }
 
-const char* AMI_testdataHandler::_desc_interface_name ()
+char const *AMI_testdataHandler::_desc_interface_name ()
 {
   return "AMI_testdataHandler";
 }
@@ -2459,7 +2449,7 @@ static TAO::TypeCode::Objref<char const *,
 
 ::CORBA::TypeCode_ptr const _tc_AMI_testdataHandler = std::addressof(_tao_tc_AMI_testdataHandler);
 arraytest::myvec2_slice *
-arraytest::myvec2_dup (const arraytest::myvec2_slice *_tao_src_array)
+arraytest::myvec2_dup (arraytest::myvec2_slice const *_tao_src_array)
 {
   arraytest::myvec2_slice *_tao_dup_array = arraytest::myvec2_alloc ();
 
@@ -2488,7 +2478,7 @@ arraytest::myvec2_free (arraytest::myvec2_slice *_tao_slice)
 void
 arraytest::myvec2_copy (
     arraytest::myvec2_slice * _tao_to,
-    const arraytest::myvec2_slice *_tao_from)
+    arraytest::myvec2_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
@@ -2508,13 +2498,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> arraytest_myvec2_2 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> arraytest_myvec2_2 (
         ::CORBA::tk_array,
-        &CORBA::_tc_string,
+        std::addressof (CORBA::_tc_string),
         2U);
 
     ::CORBA::TypeCode_ptr const tc_arraytest_myvec2 =
-      &arraytest_myvec2_2;
+      std::addressof (arraytest_myvec2_2);
   }
 }
 }
@@ -2529,14 +2519,14 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:arraytest/myvec2:1.0",
     "myvec2",
-    &TAO::TypeCode::tc_arraytest_myvec2);
+    std::addressof (TAO::TypeCode::tc_arraytest_myvec2));
 
 namespace arraytest
 {
   ::CORBA::TypeCode_ptr const _tc_myvec2 = std::addressof(_tao_tc_arraytest_myvec2);
 }
 arraytest::myvec3_slice *
-arraytest::myvec3_dup (const arraytest::myvec3_slice *_tao_src_array)
+arraytest::myvec3_dup (arraytest::myvec3_slice const *_tao_src_array)
 {
   arraytest::myvec3_slice *_tao_dup_array = arraytest::myvec3_alloc ();
 
@@ -2565,7 +2555,7 @@ arraytest::myvec3_free (arraytest::myvec3_slice *_tao_slice)
 void
 arraytest::myvec3_copy (
     arraytest::myvec3_slice * _tao_to,
-    const arraytest::myvec3_slice *_tao_from)
+    arraytest::myvec3_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 3; ++i0)
@@ -2585,13 +2575,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> arraytest_myvec3_3 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> arraytest_myvec3_3 (
         ::CORBA::tk_array,
-        &CORBA::_tc_string,
+        std::addressof (CORBA::_tc_string),
         3U);
 
     ::CORBA::TypeCode_ptr const tc_arraytest_myvec3 =
-      &arraytest_myvec3_3;
+      std::addressof (arraytest_myvec3_3);
   }
 }
 }
@@ -2606,7 +2596,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:arraytest/myvec3:1.0",
     "myvec3",
-    &TAO::TypeCode::tc_arraytest_myvec3);
+    std::addressof (TAO::TypeCode::tc_arraytest_myvec3));
 
 namespace arraytest
 {
@@ -2636,7 +2626,7 @@ TAO::Objref_Traits<arraytest::MyTest>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<arraytest::MyTest>::marshal (const arraytest::MyTest_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<arraytest::MyTest>::marshal (arraytest::MyTest_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2652,8 +2642,8 @@ arraytest::MyTest::test_method (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::arraytest::myvec2_tag>::out_arg_val _tao_mystring (mystring);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::arraytest::myvec2_tag>::out_arg_val _tao_mystring (mystring);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2748,10 +2738,9 @@ arraytest::MyTest::_tao_release (MyTest_ptr obj)
 }
 
 ::CORBA::Boolean
-arraytest::MyTest::_is_a (const char *value)
+arraytest::MyTest::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:arraytest/MyTest:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:arraytest/MyTest:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
@@ -2762,17 +2751,17 @@ arraytest::MyTest::_is_a (const char *value)
     }
 }
 
-const char* arraytest::MyTest::_interface_repository_id () const
+char const *arraytest::MyTest::_interface_repository_id () const
 {
   return "IDL:arraytest/MyTest:1.0";
 }
 
-const char* arraytest::MyTest::_desc_repository_id ()
+char const *arraytest::MyTest::_desc_repository_id ()
 {
   return "IDL:arraytest/MyTest:1.0";
 }
 
-const char* arraytest::MyTest::_desc_interface_name ()
+char const *arraytest::MyTest::_desc_interface_name ()
 {
   return "MyTest";
 }
@@ -2793,7 +2782,7 @@ namespace arraytest
 {
   ::CORBA::TypeCode_ptr const _tc_MyTest = std::addressof(_tao_tc_arraytest_MyTest);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_arraytest_AMH_MyTestExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_arraytest_AMH_MyTestExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -2803,7 +2792,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:arraytest/AMH_MyTestExceptionHolder:1.0",
     "AMH_MyTestExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_arraytest_AMH_MyTestExceptionHolder,
     0);
 
@@ -2952,14 +2941,14 @@ arraytest::AMH_MyTestExceptionHolder::_tao_unmarshal (
 void
 arraytest::AMH_MyTestExceptionHolder::raise_test_method ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 arraytest::AMH_MyTestExceptionHolder::raise_sendc_test_method ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -2986,7 +2975,7 @@ TAO::Objref_Traits<arraytest::AMH_MyTestResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<arraytest::AMH_MyTestResponseHandler>::marshal (const arraytest::AMH_MyTestResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<arraytest::AMH_MyTestResponseHandler>::marshal (arraytest::AMH_MyTestResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3040,10 +3029,9 @@ arraytest::AMH_MyTestResponseHandler::_tao_release (AMH_MyTestResponseHandler_pt
 }
 
 ::CORBA::Boolean
-arraytest::AMH_MyTestResponseHandler::_is_a (const char *value)
+arraytest::AMH_MyTestResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:arraytest/AMH_MyTestResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:arraytest/AMH_MyTestResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
@@ -3055,17 +3043,17 @@ arraytest::AMH_MyTestResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* arraytest::AMH_MyTestResponseHandler::_interface_repository_id () const
+char const *arraytest::AMH_MyTestResponseHandler::_interface_repository_id () const
 {
   return "IDL:arraytest/AMH_MyTestResponseHandler:1.0";
 }
 
-const char* arraytest::AMH_MyTestResponseHandler::_desc_repository_id ()
+char const *arraytest::AMH_MyTestResponseHandler::_desc_repository_id ()
 {
   return "IDL:arraytest/AMH_MyTestResponseHandler:1.0";
 }
 
-const char* arraytest::AMH_MyTestResponseHandler::_desc_interface_name ()
+char const *arraytest::AMH_MyTestResponseHandler::_desc_interface_name ()
 {
   return "AMH_MyTestResponseHandler";
 }
@@ -3110,7 +3098,7 @@ TAO::Objref_Traits<arraytest::AMI_MyTestHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<arraytest::AMI_MyTestHandler>::marshal (const arraytest::AMI_MyTestHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<arraytest::AMI_MyTestHandler>::marshal (arraytest::AMI_MyTestHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3119,15 +3107,15 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 arraytest::AMI_MyTestHandler::test_method (
-  const ::arraytest::myvec2 mystring)
+  ::arraytest::myvec2 const mystring)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::arraytest::myvec2_tag>::in_arg_val _tao_mystring (mystring);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::arraytest::myvec2_tag>::in_arg_val _tao_mystring (mystring);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3222,8 +3210,8 @@ arraytest::AMI_MyTestHandler::test_method_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3289,10 +3277,9 @@ arraytest::AMI_MyTestHandler::_tao_release (AMI_MyTestHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-arraytest::AMI_MyTestHandler::_is_a (const char *value)
+arraytest::AMI_MyTestHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:arraytest/AMI_MyTestHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
@@ -3304,17 +3291,17 @@ arraytest::AMI_MyTestHandler::_is_a (const char *value)
     }
 }
 
-const char* arraytest::AMI_MyTestHandler::_interface_repository_id () const
+char const *arraytest::AMI_MyTestHandler::_interface_repository_id () const
 {
   return "IDL:arraytest/AMI_MyTestHandler:1.0";
 }
 
-const char* arraytest::AMI_MyTestHandler::_desc_repository_id ()
+char const *arraytest::AMI_MyTestHandler::_desc_repository_id ()
 {
   return "IDL:arraytest/AMI_MyTestHandler:1.0";
 }
 
-const char* arraytest::AMI_MyTestHandler::_desc_interface_name ()
+char const *arraytest::AMI_MyTestHandler::_desc_interface_name ()
 {
   return "AMI_MyTestHandler";
 }
@@ -3404,13 +3391,13 @@ bug_2126::FirstUnion::operator= (::bug_2126::FirstUnion const &u)
 void bug_2126::FirstUnion::_reset ()
 {
 }
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_FirstUnion__0 (true, "first_union_foo", &CORBA::_tc_long);
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_FirstUnion__1 (false, "first_union_bar", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_FirstUnion__0 (true, "first_union_foo", std::addressof (CORBA::_tc_long));
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_FirstUnion__1 (false, "first_union_bar", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_bug_2126_FirstUnion[] =
   {
-    &_tao_cases_bug_2126_FirstUnion__0,
-    &_tao_cases_bug_2126_FirstUnion__1
+    std::addressof (_tao_cases_bug_2126_FirstUnion__0),
+    std::addressof (_tao_cases_bug_2126_FirstUnion__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -3420,7 +3407,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_bug_2126_FirstUnion (
     "IDL:bug_2126/FirstUnion:1.0",
     "FirstUnion",
-    &CORBA::_tc_boolean,
+    std::addressof (CORBA::_tc_boolean),
     _tao_cases_bug_2126_FirstUnion,
     sizeof (_tao_cases_bug_2126_FirstUnion)/sizeof (_tao_cases_bug_2126_FirstUnion[0]),
     -1);
@@ -3430,7 +3417,7 @@ namespace bug_2126
   ::CORBA::TypeCode_ptr const _tc_FirstUnion = std::addressof(_tao_tc_bug_2126_FirstUnion);
 }
 bug_2126::FirstUnionArray_slice *
-bug_2126::FirstUnionArray_dup (const bug_2126::FirstUnionArray_slice *_tao_src_array)
+bug_2126::FirstUnionArray_dup (bug_2126::FirstUnionArray_slice const *_tao_src_array)
 {
   bug_2126::FirstUnionArray_slice *_tao_dup_array = bug_2126::FirstUnionArray_alloc ();
 
@@ -3459,7 +3446,7 @@ bug_2126::FirstUnionArray_free (bug_2126::FirstUnionArray_slice *_tao_slice)
 void
 bug_2126::FirstUnionArray_copy (
     bug_2126::FirstUnionArray_slice * _tao_to,
-    const bug_2126::FirstUnionArray_slice *_tao_from)
+    bug_2126::FirstUnionArray_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
@@ -3479,13 +3466,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> bug_2126_FirstUnionArray_2 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> bug_2126_FirstUnionArray_2 (
         ::CORBA::tk_array,
-        &bug_2126::_tc_FirstUnion,
+        std::addressof (bug_2126::_tc_FirstUnion),
         2U);
 
     ::CORBA::TypeCode_ptr const tc_bug_2126_FirstUnionArray =
-      &bug_2126_FirstUnionArray_2;
+      std::addressof (bug_2126_FirstUnionArray_2);
   }
 }
 }
@@ -3500,7 +3487,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:bug_2126/FirstUnionArray:1.0",
     "FirstUnionArray",
-    &TAO::TypeCode::tc_bug_2126_FirstUnionArray);
+    std::addressof (TAO::TypeCode::tc_bug_2126_FirstUnionArray));
 
 namespace bug_2126
 {
@@ -3512,7 +3499,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_bug_2126_MyStruct[] =
       {
-        { "my_struct_foo", &bug_2126::_tc_FirstUnionArray }
+        { "my_struct_foo", std::addressof (bug_2126::_tc_FirstUnionArray) }
       };
 
 static TAO::TypeCode::Struct<
@@ -3534,9 +3521,7 @@ namespace bug_2126
   ::CORBA::TypeCode_ptr const _tc_MyStruct = std::addressof(_tao_tc_bug_2126_MyStruct);
 }
 
-void
-bug_2126::MyStruct::_tao_any_destructor (
-    void *_tao_void_pointer)
+void bug_2126::MyStruct::_tao_any_destructor (void *_tao_void_pointer)
 {
   MyStruct *tmp = static_cast<MyStruct *> (_tao_void_pointer);
   delete tmp;
@@ -3646,13 +3631,13 @@ void bug_2126::SecondUnion::_reset ()
     break;
   }
 }
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_SecondUnion__0 (true, "second_union_struct_member", &bug_2126::_tc_MyStruct);
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_SecondUnion__1 (false, "wibble", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_SecondUnion__0 (true, "second_union_struct_member", std::addressof (bug_2126::_tc_MyStruct));
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_SecondUnion__1 (false, "wibble", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_bug_2126_SecondUnion[] =
   {
-    &_tao_cases_bug_2126_SecondUnion__0,
-    &_tao_cases_bug_2126_SecondUnion__1
+    std::addressof (_tao_cases_bug_2126_SecondUnion__0),
+    std::addressof (_tao_cases_bug_2126_SecondUnion__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -3662,7 +3647,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_bug_2126_SecondUnion (
     "IDL:bug_2126/SecondUnion:1.0",
     "SecondUnion",
-    &CORBA::_tc_boolean,
+    std::addressof (CORBA::_tc_boolean),
     _tao_cases_bug_2126_SecondUnion,
     sizeof (_tao_cases_bug_2126_SecondUnion)/sizeof (_tao_cases_bug_2126_SecondUnion[0]),
     -1);
@@ -3672,7 +3657,7 @@ namespace bug_2126
   ::CORBA::TypeCode_ptr const _tc_SecondUnion = std::addressof(_tao_tc_bug_2126_SecondUnion);
 }
 bug_2126::BdFirstUnionArray_slice *
-bug_2126::BdFirstUnionArray_dup (const bug_2126::BdFirstUnionArray_slice *_tao_src_array)
+bug_2126::BdFirstUnionArray_dup (bug_2126::BdFirstUnionArray_slice const *_tao_src_array)
 {
   bug_2126::BdFirstUnionArray_slice *_tao_dup_array = bug_2126::BdFirstUnionArray_alloc ();
 
@@ -3701,7 +3686,7 @@ bug_2126::BdFirstUnionArray_free (bug_2126::BdFirstUnionArray_slice *_tao_slice)
 void
 bug_2126::BdFirstUnionArray_copy (
     bug_2126::BdFirstUnionArray_slice * _tao_to,
-    const bug_2126::BdFirstUnionArray_slice *_tao_from)
+    bug_2126::BdFirstUnionArray_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
@@ -3721,13 +3706,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> bug_2126_BdFirstUnionArray_2 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> bug_2126_BdFirstUnionArray_2 (
         ::CORBA::tk_array,
-        &bug_2126::_tc_FirstUnion,
+        std::addressof (bug_2126::_tc_FirstUnion),
         2U);
 
     ::CORBA::TypeCode_ptr const tc_bug_2126_BdFirstUnionArray =
-      &bug_2126_BdFirstUnionArray_2;
+      std::addressof (bug_2126_BdFirstUnionArray_2);
   }
 }
 }
@@ -3742,7 +3727,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:bug_2126/BdFirstUnionArray:1.0",
     "BdFirstUnionArray",
-    &TAO::TypeCode::tc_bug_2126_BdFirstUnionArray);
+    std::addressof (TAO::TypeCode::tc_bug_2126_BdFirstUnionArray));
 
 namespace bug_2126
 {
@@ -3754,7 +3739,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_bug_2126_BdMyStruct[] =
       {
-        { "my_struct_foo", &bug_2126::_tc_BdFirstUnionArray }
+        { "my_struct_foo", std::addressof (bug_2126::_tc_BdFirstUnionArray) }
       };
 
 static TAO::TypeCode::Struct<
@@ -3776,9 +3761,7 @@ namespace bug_2126
   ::CORBA::TypeCode_ptr const _tc_BdMyStruct = std::addressof(_tao_tc_bug_2126_BdMyStruct);
 }
 
-void
-bug_2126::BdMyStruct::_tao_any_destructor (
-    void *_tao_void_pointer)
+void bug_2126::BdMyStruct::_tao_any_destructor (void *_tao_void_pointer)
 {
   BdMyStruct *tmp = static_cast<BdMyStruct *> (_tao_void_pointer);
   delete tmp;
@@ -3888,13 +3871,13 @@ void bug_2126::BdSecondUnion::_reset ()
     break;
   }
 }
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_BdSecondUnion__0 (true, "second_union_struct_member", &bug_2126::_tc_BdMyStruct);
-static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_BdSecondUnion__1 (false, "wibble", &CORBA::_tc_long);
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_BdSecondUnion__0 (true, "second_union_struct_member", std::addressof (bug_2126::_tc_BdMyStruct));
+static TAO::TypeCode::Case_T<CORBA::Boolean, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_bug_2126_BdSecondUnion__1 (false, "wibble", std::addressof (CORBA::_tc_long));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_bug_2126_BdSecondUnion[] =
   {
-    &_tao_cases_bug_2126_BdSecondUnion__0,
-    &_tao_cases_bug_2126_BdSecondUnion__1
+    std::addressof (_tao_cases_bug_2126_BdSecondUnion__0),
+    std::addressof (_tao_cases_bug_2126_BdSecondUnion__1)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -3904,7 +3887,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_bug_2126_BdSecondUnion (
     "IDL:bug_2126/BdSecondUnion:1.0",
     "BdSecondUnion",
-    &CORBA::_tc_boolean,
+    std::addressof (CORBA::_tc_boolean),
     _tao_cases_bug_2126_BdSecondUnion,
     sizeof (_tao_cases_bug_2126_BdSecondUnion)/sizeof (_tao_cases_bug_2126_BdSecondUnion[0]),
     -1);
@@ -3914,7 +3897,7 @@ namespace bug_2126
   ::CORBA::TypeCode_ptr const _tc_BdSecondUnion = std::addressof(_tao_tc_bug_2126_BdSecondUnion);
 }
 B41_slice *
-B41_dup (const B41_slice *_tao_src_array)
+B41_dup (B41_slice const *_tao_src_array)
 {
   B41_slice *_tao_dup_array = B41_alloc ();
 
@@ -3943,7 +3926,7 @@ B41_free (B41_slice *_tao_slice)
 void
 B41_copy (
     B41_slice * _tao_to,
-    const B41_slice *_tao_from)
+    B41_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
@@ -3966,21 +3949,21 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> B41_3 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> B41_3 (
         ::CORBA::tk_array,
-        &CORBA::_tc_long,
+        std::addressof (CORBA::_tc_long),
         3U);
 
     ::CORBA::TypeCode_ptr const tc_B41_3 =
-      &B41_3;
+      std::addressof (B41_3);
 
-    TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> B41_2_3 (
+    TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> B41_2_3 (
       ::CORBA::tk_array,
-      &tc_B41_3,
+      std::addressof (tc_B41_3),
       2U);
 
   ::CORBA::TypeCode_ptr const tc_B41 =
-    &B41_2_3;
+    std::addressof (B41_2_3);
 }
 }
 }
@@ -3995,11 +3978,11 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:B41:1.0",
     "B41",
-    &TAO::TypeCode::tc_B41);
+    std::addressof (TAO::TypeCode::tc_B41));
 
 ::CORBA::TypeCode_ptr const _tc_B41 = std::addressof(_tao_tc_B41);
 B42_slice *
-B42_dup (const B42_slice *_tao_src_array)
+B42_dup (B42_slice const *_tao_src_array)
 {
   B42_slice *_tao_dup_array = B42_alloc ();
 
@@ -4028,7 +4011,7 @@ B42_free (B42_slice *_tao_slice)
 void
 B42_copy (
     B42_slice * _tao_to,
-    const B42_slice *_tao_from)
+    B42_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
@@ -4048,13 +4031,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> B42_2 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> B42_2 (
         ::CORBA::tk_array,
-        &CORBA::_tc_long,
+        std::addressof (CORBA::_tc_long),
         2U);
 
     ::CORBA::TypeCode_ptr const tc_B42 =
-      &B42_2;
+      std::addressof (B42_2);
   }
 }
 }
@@ -4069,11 +4052,11 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:B42:1.0",
     "B42",
-    &TAO::TypeCode::tc_B42);
+    std::addressof (TAO::TypeCode::tc_B42));
 
 ::CORBA::TypeCode_ptr const _tc_B42 = std::addressof(_tao_tc_B42);
 B43_slice *
-B43_dup (const B43_slice *_tao_src_array)
+B43_dup (B43_slice const *_tao_src_array)
 {
   B43_slice *_tao_dup_array = B43_alloc ();
 
@@ -4102,7 +4085,7 @@ B43_free (B43_slice *_tao_slice)
 void
 B43_copy (
     B43_slice * _tao_to,
-    const B43_slice *_tao_from)
+    B43_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 4; ++i0)
@@ -4122,13 +4105,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> B43_4 (
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> B43_4 (
         ::CORBA::tk_array,
-        &CORBA::_tc_long,
+        std::addressof (CORBA::_tc_long),
         4U);
 
     ::CORBA::TypeCode_ptr const tc_B43 =
-      &B43_4;
+      std::addressof (B43_4);
   }
 }
 }
@@ -4143,7 +4126,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:B43:1.0",
     "B43",
-    &TAO::TypeCode::tc_B43);
+    std::addressof (TAO::TypeCode::tc_B43));
 
 ::CORBA::TypeCode_ptr const _tc_B43 = std::addressof(_tao_tc_B43);
 
@@ -4261,15 +4244,15 @@ void B85::_reset ()
   }
 }
 
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_B85__0 (1, "b_85_1", &_tc_B42);
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_B85__1 (2, "b_85_2", &_tc_B43);
-static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_B85__2 (3, "b_85_3", &_tc_B41);
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_B85__0 (1, "b_85_1", std::addressof (_tc_B42));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_B85__1 (2, "b_85_2", std::addressof (_tc_B43));
+static TAO::TypeCode::Case_T<CORBA::Long, char const *, ::CORBA::TypeCode_ptr const *> const _tao_cases_B85__2 (3, "b_85_3", std::addressof (_tc_B41));
 
 static TAO::TypeCode::Case<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_cases_B85[] =
   {
-    &_tao_cases_B85__0,
-    &_tao_cases_B85__1,
-    &_tao_cases_B85__2
+    std::addressof (_tao_cases_B85__0),
+    std::addressof (_tao_cases_B85__1),
+    std::addressof (_tao_cases_B85__2)
   };
 
 static TAO::TypeCode::Union<char const *,
@@ -4279,7 +4262,7 @@ static TAO::TypeCode::Union<char const *,
   _tao_tc_B85 (
     "IDL:B85:1.0",
     "B85",
-    &CORBA::_tc_long,
+    std::addressof (CORBA::_tc_long),
     _tao_cases_B85,
     sizeof (_tao_cases_B85)/sizeof (_tao_cases_B85[0]),
     -1);
@@ -4344,7 +4327,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const TwoDArray_forany &_tao_elem)
+    TwoDArray_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -4361,7 +4344,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     TwoDArray_forany &_tao_elem)
 
 {
@@ -4383,7 +4366,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const ThreeDArray_forany &_tao_elem)
+    ThreeDArray_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -4400,7 +4383,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     ThreeDArray_forany &_tao_elem)
 
 {
@@ -4422,7 +4405,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const FourDArray_forany &_tao_elem)
+    FourDArray_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -4439,7 +4422,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     FourDArray_forany &_tao_elem)
 
 {
@@ -4461,7 +4444,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const inside_array_forany &_tao_elem)
+    inside_array_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -4478,7 +4461,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     inside_array_forany &_tao_elem)
 
 {
@@ -4503,7 +4486,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::wrap const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::wrap>::insert_copy (
+  TAO::Any_Dual_Impl_T<::wrap>::insert_copy (
     _tao_any,
     ::wrap::_tao_any_destructor,
     _tc_wrap,
@@ -4515,7 +4498,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::wrap *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::wrap>::insert (
+  TAO::Any_Dual_Impl_T<::wrap>::insert (
     _tao_any,
     ::wrap::_tao_any_destructor,
     _tc_wrap,
@@ -4527,7 +4510,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::wrap const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::wrap>::extract (
+  return TAO::Any_Dual_Impl_T<::wrap>::extract (
     _tao_any,
     ::wrap::_tao_any_destructor,
     _tc_wrap,
@@ -4541,7 +4524,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const outside_array_forany &_tao_elem)
+    outside_array_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -4558,7 +4541,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     outside_array_forany &_tao_elem)
 
 {
@@ -4580,7 +4563,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const oa1_forany &_tao_elem)
+    oa1_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -4597,7 +4580,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     oa1_forany &_tao_elem)
 
 {
@@ -4619,7 +4602,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const oa2_forany &_tao_elem)
+    oa2_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -4636,7 +4619,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     oa2_forany &_tao_elem)
 
 {
@@ -4697,7 +4680,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     array_args_ptr &_tao_elem)
 {
   return
@@ -4839,7 +4822,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_array_argsResponseHandler_ptr &_tao_elem)
 {
   return
@@ -4897,7 +4880,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_array_argsHandler_ptr &_tao_elem)
 {
   return
@@ -4916,7 +4899,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const string_array::ArrayOfString_forany &_tao_elem)
+    string_array::ArrayOfString_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -4933,7 +4916,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     string_array::ArrayOfString_forany &_tao_elem)
 
 {
@@ -4955,7 +4938,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const string_array::ArrayOfMyString_forany &_tao_elem)
+    string_array::ArrayOfMyString_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -4972,7 +4955,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     string_array::ArrayOfMyString_forany &_tao_elem)
 
 {
@@ -5033,7 +5016,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     testdata_ptr &_tao_elem)
 {
   return
@@ -5052,7 +5035,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const testdata::Arraychar_forany &_tao_elem)
+    testdata::Arraychar_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -5069,7 +5052,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     testdata::Arraychar_forany &_tao_elem)
 
 {
@@ -5094,7 +5077,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::testdata::struct2 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::testdata::struct2>::insert_copy (
+  TAO::Any_Dual_Impl_T<::testdata::struct2>::insert_copy (
     _tao_any,
     ::testdata::struct2::_tao_any_destructor,
     testdata::_tc_struct2,
@@ -5106,7 +5089,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::testdata::struct2 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::testdata::struct2>::insert (
+  TAO::Any_Dual_Impl_T<::testdata::struct2>::insert (
     _tao_any,
     ::testdata::struct2::_tao_any_destructor,
     testdata::_tc_struct2,
@@ -5118,7 +5101,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::testdata::struct2 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::testdata::struct2>::extract (
+  return TAO::Any_Dual_Impl_T<::testdata::struct2>::extract (
     _tao_any,
     ::testdata::struct2::_tao_any_destructor,
     testdata::_tc_struct2,
@@ -5135,7 +5118,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::testdata::ArraycharList const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::testdata::ArraycharList>::insert_copy (
+  TAO::Any_Dual_Impl_T<::testdata::ArraycharList>::insert_copy (
     _tao_any,
     ::testdata::ArraycharList::_tao_any_destructor,
     ::testdata::_tc_ArraycharList,
@@ -5147,7 +5130,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::testdata::ArraycharList *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::testdata::ArraycharList>::insert (
+  TAO::Any_Dual_Impl_T<::testdata::ArraycharList>::insert (
     _tao_any,
     ::testdata::ArraycharList::_tao_any_destructor,
     ::testdata::_tc_ArraycharList,
@@ -5159,7 +5142,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::testdata::ArraycharList const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::testdata::ArraycharList>::extract (
+  return TAO::Any_Dual_Impl_T<::testdata::ArraycharList>::extract (
     _tao_any,
     ::testdata::ArraycharList::_tao_any_destructor,
     ::testdata::_tc_ArraycharList,
@@ -5176,7 +5159,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::testdata::BdArraycharList const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::testdata::BdArraycharList>::insert_copy (
+  TAO::Any_Dual_Impl_T<::testdata::BdArraycharList>::insert_copy (
     _tao_any,
     ::testdata::BdArraycharList::_tao_any_destructor,
     ::testdata::_tc_BdArraycharList,
@@ -5188,7 +5171,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::testdata::BdArraycharList *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::testdata::BdArraycharList>::insert (
+  TAO::Any_Dual_Impl_T<::testdata::BdArraycharList>::insert (
     _tao_any,
     ::testdata::BdArraycharList::_tao_any_destructor,
     ::testdata::_tc_BdArraycharList,
@@ -5200,7 +5183,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::testdata::BdArraycharList const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::testdata::BdArraycharList>::extract (
+  return TAO::Any_Dual_Impl_T<::testdata::BdArraycharList>::extract (
     _tao_any,
     ::testdata::BdArraycharList::_tao_any_destructor,
     ::testdata::_tc_BdArraycharList,
@@ -5217,7 +5200,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::testdata::ArrayDeCharList const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::testdata::ArrayDeCharList>::insert_copy (
+  TAO::Any_Dual_Impl_T<::testdata::ArrayDeCharList>::insert_copy (
     _tao_any,
     ::testdata::ArrayDeCharList::_tao_any_destructor,
     ::testdata::_tc_ArrayDeCharList,
@@ -5229,7 +5212,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::testdata::ArrayDeCharList *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::testdata::ArrayDeCharList>::insert (
+  TAO::Any_Dual_Impl_T<::testdata::ArrayDeCharList>::insert (
     _tao_any,
     ::testdata::ArrayDeCharList::_tao_any_destructor,
     ::testdata::_tc_ArrayDeCharList,
@@ -5241,7 +5224,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::testdata::ArrayDeCharList const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::testdata::ArrayDeCharList>::extract (
+  return TAO::Any_Dual_Impl_T<::testdata::ArrayDeCharList>::extract (
     _tao_any,
     ::testdata::ArrayDeCharList::_tao_any_destructor,
     ::testdata::_tc_ArrayDeCharList,
@@ -5258,7 +5241,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::testdata::BdArrayDeCharList const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::testdata::BdArrayDeCharList>::insert_copy (
+  TAO::Any_Dual_Impl_T<::testdata::BdArrayDeCharList>::insert_copy (
     _tao_any,
     ::testdata::BdArrayDeCharList::_tao_any_destructor,
     ::testdata::_tc_BdArrayDeCharList,
@@ -5270,7 +5253,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::testdata::BdArrayDeCharList *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::testdata::BdArrayDeCharList>::insert (
+  TAO::Any_Dual_Impl_T<::testdata::BdArrayDeCharList>::insert (
     _tao_any,
     ::testdata::BdArrayDeCharList::_tao_any_destructor,
     ::testdata::_tc_BdArrayDeCharList,
@@ -5282,7 +5265,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::testdata::BdArrayDeCharList const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::testdata::BdArrayDeCharList>::extract (
+  return TAO::Any_Dual_Impl_T<::testdata::BdArrayDeCharList>::extract (
     _tao_any,
     ::testdata::BdArrayDeCharList::_tao_any_destructor,
     ::testdata::_tc_BdArrayDeCharList,
@@ -5419,7 +5402,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_testdataResponseHandler_ptr &_tao_elem)
 {
   return
@@ -5477,7 +5460,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_testdataHandler_ptr &_tao_elem)
 {
   return
@@ -5496,7 +5479,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const arraytest::myvec2_forany &_tao_elem)
+    arraytest::myvec2_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -5513,7 +5496,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     arraytest::myvec2_forany &_tao_elem)
 
 {
@@ -5535,7 +5518,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const arraytest::myvec3_forany &_tao_elem)
+    arraytest::myvec3_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -5552,7 +5535,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     arraytest::myvec3_forany &_tao_elem)
 
 {
@@ -5613,7 +5596,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     arraytest::MyTest_ptr &_tao_elem)
 {
   return
@@ -5755,7 +5738,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     arraytest::AMH_MyTestResponseHandler_ptr &_tao_elem)
 {
   return
@@ -5813,7 +5796,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     arraytest::AMI_MyTestHandler_ptr &_tao_elem)
 {
   return
@@ -5877,7 +5860,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const bug_2126::FirstUnionArray_forany &_tao_elem)
+    bug_2126::FirstUnionArray_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -5894,7 +5877,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2126::FirstUnionArray_forany &_tao_elem)
 
 {
@@ -5919,7 +5902,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::bug_2126::MyStruct const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::bug_2126::MyStruct>::insert_copy (
+  TAO::Any_Dual_Impl_T<::bug_2126::MyStruct>::insert_copy (
     _tao_any,
     ::bug_2126::MyStruct::_tao_any_destructor,
     bug_2126::_tc_MyStruct,
@@ -5931,7 +5914,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::bug_2126::MyStruct *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::bug_2126::MyStruct>::insert (
+  TAO::Any_Dual_Impl_T<::bug_2126::MyStruct>::insert (
     _tao_any,
     ::bug_2126::MyStruct::_tao_any_destructor,
     bug_2126::_tc_MyStruct,
@@ -5943,7 +5926,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::bug_2126::MyStruct const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::bug_2126::MyStruct>::extract (
+  return TAO::Any_Dual_Impl_T<::bug_2126::MyStruct>::extract (
     _tao_any,
     ::bug_2126::MyStruct::_tao_any_destructor,
     bug_2126::_tc_MyStruct,
@@ -6002,7 +5985,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const bug_2126::BdFirstUnionArray_forany &_tao_elem)
+    bug_2126::BdFirstUnionArray_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -6019,7 +6002,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     bug_2126::BdFirstUnionArray_forany &_tao_elem)
 
 {
@@ -6044,7 +6027,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::bug_2126::BdMyStruct const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::bug_2126::BdMyStruct>::insert_copy (
+  TAO::Any_Dual_Impl_T<::bug_2126::BdMyStruct>::insert_copy (
     _tao_any,
     ::bug_2126::BdMyStruct::_tao_any_destructor,
     bug_2126::_tc_BdMyStruct,
@@ -6056,7 +6039,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::bug_2126::BdMyStruct *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::bug_2126::BdMyStruct>::insert (
+  TAO::Any_Dual_Impl_T<::bug_2126::BdMyStruct>::insert (
     _tao_any,
     ::bug_2126::BdMyStruct::_tao_any_destructor,
     bug_2126::_tc_BdMyStruct,
@@ -6068,7 +6051,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::bug_2126::BdMyStruct const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::bug_2126::BdMyStruct>::extract (
+  return TAO::Any_Dual_Impl_T<::bug_2126::BdMyStruct>::extract (
     _tao_any,
     ::bug_2126::BdMyStruct::_tao_any_destructor,
     bug_2126::_tc_BdMyStruct,
@@ -6127,7 +6110,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const B41_forany &_tao_elem)
+    B41_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -6144,7 +6127,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     B41_forany &_tao_elem)
 
 {
@@ -6166,7 +6149,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const B42_forany &_tao_elem)
+    B42_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -6183,7 +6166,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     B42_forany &_tao_elem)
 
 {
@@ -6205,7 +6188,7 @@ namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const B43_forany &_tao_elem)
+    B43_forany const &_tao_elem)
 
 {
   TAO::Any_Array_Impl_T<
@@ -6222,7 +6205,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     B43_forany &_tao_elem)
 
 {
@@ -6288,7 +6271,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const TwoDArray_forany &_tao_array)
+    TwoDArray_forany const &_tao_array)
 {
   return strm.write_short_array (
       reinterpret_cast <const ACE_CDR::Short *> (_tao_array.in ()),
@@ -6310,7 +6293,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const ThreeDArray_forany &_tao_array)
+    ThreeDArray_forany const &_tao_array)
 {
   return strm.write_short_array (
       reinterpret_cast <const ACE_CDR::Short *> (_tao_array.in ()),
@@ -6332,7 +6315,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const FourDArray_forany &_tao_array)
+    FourDArray_forany const &_tao_array)
 {
   return strm.write_short_array (
       reinterpret_cast <const ACE_CDR::Short *> (_tao_array.in ()),
@@ -6354,7 +6337,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const inside_array_forany &_tao_array)
+    inside_array_forany const &_tao_array)
 {
   return strm.write_long_array (
       reinterpret_cast <const ACE_CDR::Long *> (_tao_array.in ()),
@@ -6404,7 +6387,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const outside_array_forany &_tao_array)
+    outside_array_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -6436,7 +6419,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const oa1_forany &_tao_array)
+    oa1_forany const &_tao_array)
 {
   return strm.write_octet_array (
       reinterpret_cast <const ACE_CDR::Octet *> (_tao_array.in ()),
@@ -6458,7 +6441,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const oa2_forany &_tao_array)
+    oa2_forany const &_tao_array)
 {
   return strm.write_octet_array (
       reinterpret_cast <const ACE_CDR::Octet *> (_tao_array.in ()),
@@ -6480,7 +6463,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const array_args_ptr _tao_objref)
+    array_args_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -6498,7 +6481,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::array_args>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::array_args>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -6531,7 +6514,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_array_argsExceptionHolder *_tao_valuetype)
+    AMH_array_argsExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -6572,7 +6555,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const AMI_array_argsHandler_ptr _tao_objref)
+    AMI_array_argsHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -6590,7 +6573,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::AMI_array_argsHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::AMI_array_argsHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -6601,7 +6584,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const string_array::ArrayOfString_forany &_tao_array)
+    string_array::ArrayOfString_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -6633,7 +6616,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const string_array::ArrayOfMyString_forany &_tao_array)
+    string_array::ArrayOfMyString_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -6665,7 +6648,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const testdata::Arraychar_forany &_tao_array)
+    testdata::Arraychar_forany const &_tao_array)
 {
   return strm.write_char_array (
       reinterpret_cast <const ACE_CDR::Char *> (_tao_array.in ()),
@@ -6812,7 +6795,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const testdata_ptr _tao_objref)
+    testdata_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -6830,7 +6813,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::testdata>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::testdata>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -6863,7 +6846,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_testdataExceptionHolder *_tao_valuetype)
+    AMH_testdataExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -6904,7 +6887,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const AMI_testdataHandler_ptr _tao_objref)
+    AMI_testdataHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -6922,7 +6905,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::AMI_testdataHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::AMI_testdataHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -6933,7 +6916,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const arraytest::myvec2_forany &_tao_array)
+    arraytest::myvec2_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -6965,7 +6948,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const arraytest::myvec3_forany &_tao_array)
+    arraytest::myvec3_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -6997,7 +6980,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const arraytest::MyTest_ptr _tao_objref)
+    arraytest::MyTest_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -7015,7 +6998,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::arraytest::MyTest>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::arraytest::MyTest>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -7048,7 +7031,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const arraytest::AMH_MyTestExceptionHolder *_tao_valuetype)
+    arraytest::AMH_MyTestExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -7089,7 +7072,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const arraytest::AMI_MyTestHandler_ptr _tao_objref)
+    arraytest::AMI_MyTestHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -7107,7 +7090,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::arraytest::AMI_MyTestHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::arraytest::AMI_MyTestHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -7185,7 +7168,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2126::FirstUnionArray_forany &_tao_array)
+    bug_2126::FirstUnionArray_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -7312,7 +7295,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const bug_2126::BdFirstUnionArray_forany &_tao_array)
+    bug_2126::BdFirstUnionArray_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
 
@@ -7439,7 +7422,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const B41_forany &_tao_array)
+    B41_forany const &_tao_array)
 {
   return strm.write_long_array (
       reinterpret_cast <const ACE_CDR::Long *> (_tao_array.in ()),
@@ -7461,7 +7444,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const B42_forany &_tao_array)
+    B42_forany const &_tao_array)
 {
   return strm.write_long_array (
       reinterpret_cast <const ACE_CDR::Long *> (_tao_array.in ()),
@@ -7483,7 +7466,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const B43_forany &_tao_array)
+    B43_forany const &_tao_array)
 {
   return strm.write_long_array (
       reinterpret_cast <const ACE_CDR::Long *> (_tao_array.in ()),

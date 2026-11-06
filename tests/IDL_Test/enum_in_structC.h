@@ -125,9 +125,9 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
 
   static void _m_en_free (_m_en_slice *_tao_slice);
 
-  static _m_en_slice *_m_en_dup (const _m_en_slice *_tao_slice);
+  static _m_en_slice *_m_en_dup (_m_en_slice const *_tao_slice);
 
-  static void _m_en_copy (_m_en_slice *_tao_to, const _m_en_slice *_tao_from);
+  static void _m_en_copy (_m_en_slice *_tao_to, _m_en_slice const *_tao_from);
 
   _m_en m_en {};
 
@@ -158,9 +158,9 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
 
   static void _m_st_free (_m_st_slice *_tao_slice);
 
-  static _m_st_slice *_m_st_dup (const _m_st_slice *_tao_slice);
+  static _m_st_slice *_m_st_dup (_m_st_slice const *_tao_slice);
 
-  static void _m_st_copy (_m_st_slice *_tao_to, const _m_st_slice *_tao_from);
+  static void _m_st_copy (_m_st_slice *_tao_to, _m_st_slice const *_tao_from);
 
   _m_st m_st {};
 
@@ -220,9 +220,9 @@ struct TAO_IDL_TEST_STUB_Export decl_heavy_struct
 
   static void _m_un_free (_m_un_slice *_tao_slice);
 
-  static _m_un_slice *_m_un_dup (const _m_un_slice *_tao_slice);
+  static _m_un_slice *_m_un_dup (_m_un_slice const *_tao_slice);
 
-  static void _m_un_copy (_m_un_slice *_tao_to, const _m_un_slice *_tao_from);
+  static void _m_un_copy (_m_un_slice *_tao_to, _m_un_slice const *_tao_from);
 
   _m_un m_un {};
 };
@@ -246,15 +246,15 @@ public:
   static ::CORBA::TypeCode_ptr const _tc_ReasonCode;ReasonCode reason {};
 
   ErrorException ();
-  ErrorException (const ErrorException &);
+  ErrorException (ErrorException const &);
   ~ErrorException () override = default;
 
-  ErrorException &operator= (const ErrorException &);
+  ErrorException &operator= (ErrorException const &);
 
   static void _tao_any_destructor (void *);
 
   static ErrorException *_downcast (::CORBA::Exception *);
-  static const ErrorException *_downcast (::CORBA::Exception const *);
+  static ErrorException const *_downcast (::CORBA::Exception const *);
 
   static ::CORBA::Exception *_alloc ();
 
@@ -282,7 +282,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -297,7 +297,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::UnNamed>
+  class Arg_Traits<::UnNamed>
     : public
         Basic_Arg_Traits_T<
             ::UnNamed,
@@ -307,7 +307,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::HoldsEnum>
+  class Arg_Traits<::HoldsEnum>
     : public
         Fixed_Size_Arg_Traits_T<
             ::HoldsEnum,
@@ -317,7 +317,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::HoldsEnum::Named>
+  class Arg_Traits<::HoldsEnum::Named>
     : public
         Basic_Arg_Traits_T<
             ::HoldsEnum::Named,
@@ -327,7 +327,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::decl_heavy_struct>
+  class Arg_Traits<::decl_heavy_struct>
     : public
         Fixed_Size_Arg_Traits_T<
             ::decl_heavy_struct,
@@ -399,7 +399,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, UnNamed);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, UnNamed &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, UnNamed &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -416,7 +416,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, HoldsEnum::Named);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, HoldsEnum::Named &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, HoldsEnum::Named &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -432,9 +432,9 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const ErrorException &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ErrorException const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ErrorException*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, const ErrorException *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ErrorException const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -442,7 +442,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ErrorException::ReasonCode);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ErrorException::ReasonCode &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ErrorException::ReasonCode &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -483,7 +483,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_struct::_m_en_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_struct::_m_en_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_struct::_m_en_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -497,7 +497,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_struct::_m_st_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_struct::_m_st_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_struct::_m_st_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -511,14 +511,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_struct::_m_un_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_struct::_m_un_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_struct::_m_un_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ErrorException &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ErrorException const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ErrorException &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

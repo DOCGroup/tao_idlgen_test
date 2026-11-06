@@ -27,6 +27,7 @@
 
 #include "paramsS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
 #include <cstddef>
 #include <cstring>
 #include <memory>
@@ -167,9 +168,7 @@ POA_foo::bar::AMH_fooBar::getDate_skel (
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
 
-  POA_foo::bar::TAO_AMH_fooBarResponseHandler_ptr _tao_rh_ptr =
-    buffer_allocator.allocate();
-
+  POA_foo::bar::TAO_AMH_fooBarResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
   if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
 
@@ -184,7 +183,7 @@ POA_foo::bar::AMH_fooBar::getDate_skel (
     );
 }
 
-::CORBA::Boolean POA_foo::bar::AMH_fooBar::_is_a (const char* value)
+::CORBA::Boolean POA_foo::bar::AMH_fooBar::_is_a (char const *value)
 {
   return
     (
@@ -193,7 +192,7 @@ POA_foo::bar::AMH_fooBar::getDate_skel (
     );
 }
 
-const char* POA_foo::bar::AMH_fooBar::_interface_repository_id () const
+char const *POA_foo::bar::AMH_fooBar::_interface_repository_id () const
 {
   return "IDL:foo/bar/fooBar:1.0";
 }
@@ -208,7 +207,7 @@ foo::bar::fooBar*
 POA_foo::bar::AMH_fooBar::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  bool _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -317,11 +316,11 @@ POA_foo::bar::_TAO_fooBar_Direct_Proxy_Impl::getDate (
       throw ::CORBA::INTERNAL ();
     }
 
-  ((TAO::Arg_Traits< ::foo::theDate>::ret_val *) args[0])->arg () =
+  ((TAO::Arg_Traits<::foo::theDate>::ret_val *) args[0])->arg () =
     _tao_ptr->getDate (
-          ((TAO::Arg_Traits< ::foo::theDate>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits< ::foo::theDate>::inout_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits< ::foo::theDate>::out_arg_val *) args[3])->arg ()
+          ((TAO::Arg_Traits<::foo::theDate>::in_arg_val *) args[1])->arg (),
+          ((TAO::Arg_Traits<::foo::theDate>::inout_arg_val *) args[2])->arg (),
+          ((TAO::Arg_Traits<::foo::theDate>::out_arg_val *) args[3])->arg ()
         );
 }
 
@@ -352,25 +351,25 @@ namespace POA_foo
 
       void execute () override
       {
-        TAO::SArg_Traits< ::foo::theDate>::ret_arg_type retval =
-          TAO::Portable_Server::get_ret_arg< ::foo::theDate> (
+        TAO::SArg_Traits<::foo::theDate>::ret_arg_type retval =
+          TAO::Portable_Server::get_ret_arg<::foo::theDate> (
             this->operation_details_,
             this->args_);
 
-        TAO::SArg_Traits< ::foo::theDate>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::foo::theDate> (
+        TAO::SArg_Traits<::foo::theDate>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::foo::theDate> (
             this->operation_details_,
             this->args_,
             1);
 
-        TAO::SArg_Traits< ::foo::theDate>::inout_arg_type arg_2 =
-          TAO::Portable_Server::get_inout_arg< ::foo::theDate> (
+        TAO::SArg_Traits<::foo::theDate>::inout_arg_type arg_2 =
+          TAO::Portable_Server::get_inout_arg<::foo::theDate> (
             this->operation_details_,
             this->args_,
             2);
 
-        TAO::SArg_Traits< ::foo::theDate>::out_arg_type arg_3 =
-          TAO::Portable_Server::get_out_arg< ::foo::theDate> (
+        TAO::SArg_Traits<::foo::theDate>::out_arg_type arg_3 =
+          TAO::Portable_Server::get_out_arg<::foo::theDate> (
             this->operation_details_,
             this->args_,
             3);
@@ -394,10 +393,10 @@ void POA_foo::bar::fooBar::getDate_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< ::foo::theDate>::ret_val retval;
-  TAO::SArg_Traits< ::foo::theDate>::in_arg_val _tao_a;
-  TAO::SArg_Traits< ::foo::theDate>::inout_arg_val _tao_b;
-  TAO::SArg_Traits< ::foo::theDate>::out_arg_val _tao_c;
+  TAO::SArg_Traits<::foo::theDate>::ret_val retval;
+  TAO::SArg_Traits<::foo::theDate>::in_arg_val _tao_a;
+  TAO::SArg_Traits<::foo::theDate>::inout_arg_val _tao_b;
+  TAO::SArg_Traits<::foo::theDate>::out_arg_val _tao_c;
 
   TAO::Argument * const args[] =
     {
@@ -432,7 +431,7 @@ void POA_foo::bar::fooBar::getDate_skel (
                          );
 }
 
-::CORBA::Boolean POA_foo::bar::fooBar::_is_a (const char* value)
+::CORBA::Boolean POA_foo::bar::fooBar::_is_a (char const *value)
 {
   return
     (
@@ -441,7 +440,7 @@ void POA_foo::bar::fooBar::getDate_skel (
     );
 }
 
-const char* POA_foo::bar::fooBar::_interface_repository_id () const
+char const *POA_foo::bar::fooBar::_interface_repository_id () const
 {
   return "IDL:foo/bar/fooBar:1.0";
 }
@@ -469,9 +468,9 @@ POA_foo::bar::fooBar::_this ()
 
 void
 POA_foo::bar::TAO_AMH_fooBarResponseHandler::getDate (
-  const ::foo::theDate & return_value,
-  const ::foo::theDate & b,
-  const ::foo::theDate & c)
+  ::foo::theDate const & return_value,
+  ::foo::theDate const & b,
+  ::foo::theDate const & c)
 {
   this->_tao_rh_init_reply ();
 
@@ -601,9 +600,9 @@ POA_foo::bar::_TAO_AMI_fooBarHandler_Direct_Proxy_Impl::getDate (
     }
 
   _tao_ptr->getDate (
-        ((TAO::Arg_Traits< ::foo::theDate>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits< ::foo::theDate>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits< ::foo::theDate>::in_arg_val *) args[3])->arg ()
+        ((TAO::Arg_Traits<::foo::theDate>::in_arg_val *) args[1])->arg (),
+        ((TAO::Arg_Traits<::foo::theDate>::in_arg_val *) args[2])->arg (),
+        ((TAO::Arg_Traits<::foo::theDate>::in_arg_val *) args[3])->arg ()
       );
 }
 
@@ -621,7 +620,7 @@ POA_foo::bar::_TAO_AMI_fooBarHandler_Direct_Proxy_Impl::getDate_excep (
     }
 
   _tao_ptr->getDate_excep (
-        ((TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
+        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
       );
 }
 
@@ -652,20 +651,20 @@ namespace POA_foo
 
       void execute () override
       {
-        TAO::SArg_Traits< ::foo::theDate>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::foo::theDate> (
+        TAO::SArg_Traits<::foo::theDate>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::foo::theDate> (
             this->operation_details_,
             this->args_,
             1);
 
-        TAO::SArg_Traits< ::foo::theDate>::in_arg_type arg_2 =
-          TAO::Portable_Server::get_in_arg< ::foo::theDate> (
+        TAO::SArg_Traits<::foo::theDate>::in_arg_type arg_2 =
+          TAO::Portable_Server::get_in_arg<::foo::theDate> (
             this->operation_details_,
             this->args_,
             2);
 
-        TAO::SArg_Traits< ::foo::theDate>::in_arg_type arg_3 =
-          TAO::Portable_Server::get_in_arg< ::foo::theDate> (
+        TAO::SArg_Traits<::foo::theDate>::in_arg_type arg_3 =
+          TAO::Portable_Server::get_in_arg<::foo::theDate> (
             this->operation_details_,
             this->args_,
             3);
@@ -688,10 +687,10 @@ void POA_foo::bar::AMI_fooBarHandler::getDate_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::foo::theDate>::in_arg_val _tao_ami_return_val;
-  TAO::SArg_Traits< ::foo::theDate>::in_arg_val _tao_b;
-  TAO::SArg_Traits< ::foo::theDate>::in_arg_val _tao_c;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::foo::theDate>::in_arg_val _tao_ami_return_val;
+  TAO::SArg_Traits<::foo::theDate>::in_arg_val _tao_b;
+  TAO::SArg_Traits<::foo::theDate>::in_arg_val _tao_c;
 
   TAO::Argument * const args[] =
     {
@@ -744,8 +743,8 @@ namespace POA_foo
 
       void execute () override
       {
-        TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_type arg_1 =
-          TAO::Portable_Server::get_in_arg< ::Messaging::ExceptionHolder> (
+        TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_type arg_1 =
+          TAO::Portable_Server::get_in_arg<::Messaging::ExceptionHolder> (
             this->operation_details_,
             this->args_,
             1);
@@ -766,8 +765,8 @@ void POA_foo::bar::AMI_fooBarHandler::getDate_excep_skel (
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
-  TAO::SArg_Traits< void>::ret_val retval;
-  TAO::SArg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
+  TAO::SArg_Traits<void>::ret_val retval;
+  TAO::SArg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder;
 
   TAO::Argument * const args[] =
     {
@@ -800,7 +799,7 @@ void POA_foo::bar::AMI_fooBarHandler::getDate_excep_skel (
                          );
 }
 
-::CORBA::Boolean POA_foo::bar::AMI_fooBarHandler::_is_a (const char* value)
+::CORBA::Boolean POA_foo::bar::AMI_fooBarHandler::_is_a (char const *value)
 {
   return
     (
@@ -810,7 +809,7 @@ void POA_foo::bar::AMI_fooBarHandler::getDate_excep_skel (
     );
 }
 
-const char* POA_foo::bar::AMI_fooBarHandler::_interface_repository_id () const
+char const *POA_foo::bar::AMI_fooBarHandler::_interface_repository_id () const
 {
   return "IDL:foo/bar/AMI_fooBarHandler:1.0";
 }

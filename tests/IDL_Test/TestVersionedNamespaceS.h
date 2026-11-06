@@ -51,7 +51,7 @@ namespace TAO
 {
 
   template<>
-  class SArg_Traits< ::M1::S1>
+  class SArg_Traits<::M1::S1>
     : public
         Fixed_Size_SArg_Traits_T<
             ::M1::S1,
@@ -64,7 +64,7 @@ namespace TAO
 #define _M1_V__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::M1::V>
+  class SArg_Traits<::M1::V>
     : public
         Object_SArg_Traits_T<
             ::M1::V *,

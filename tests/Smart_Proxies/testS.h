@@ -55,7 +55,7 @@ namespace TAO
 #define _TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Test>
+  class  SArg_Traits<::Test>
     : public Object_SArg_Traits_T<
         ::Test_ptr,
         ::Test_var,
@@ -84,10 +84,10 @@ public:
   using _stub_ptr_type = ::Test_ptr;
   using _stub_var_type = ::Test_var;
 
-  POA_Test (const POA_Test& rhs) = default;
+  POA_Test (POA_Test const &rhs) = default;
   ~POA_Test () override = default;
 
-  ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
   void _dispatch (
       TAO_ServerRequest & req,
@@ -95,7 +95,7 @@ public:
 
   ::Test *_this ();
 
-  const char* _interface_repository_id () const override;
+  char const *_interface_repository_id () const override;
   virtual ::CORBA::Short method (
     ::CORBA::Short boo) = 0;
 

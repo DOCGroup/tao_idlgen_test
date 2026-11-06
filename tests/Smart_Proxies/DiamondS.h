@@ -57,7 +57,7 @@ namespace TAO
 #define _DIAMOND_TOP__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Diamond::Top>
+  class  SArg_Traits<::Diamond::Top>
     : public Object_SArg_Traits_T<
         ::Diamond::Top_ptr,
         ::Diamond::Top_var,
@@ -72,7 +72,7 @@ namespace TAO
 #define _DIAMOND_LEFT__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Diamond::Left>
+  class  SArg_Traits<::Diamond::Left>
     : public Object_SArg_Traits_T<
         ::Diamond::Left_ptr,
         ::Diamond::Left_var,
@@ -87,7 +87,7 @@ namespace TAO
 #define _DIAMOND_RIGHT__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Diamond::Right>
+  class  SArg_Traits<::Diamond::Right>
     : public Object_SArg_Traits_T<
         ::Diamond::Right_ptr,
         ::Diamond::Right_var,
@@ -102,7 +102,7 @@ namespace TAO
 #define _DIAMOND_BUTTOM__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Diamond::Buttom>
+  class  SArg_Traits<::Diamond::Buttom>
     : public Object_SArg_Traits_T<
         ::Diamond::Buttom_ptr,
         ::Diamond::Buttom_var,
@@ -136,10 +136,10 @@ namespace POA_Diamond
     using _stub_ptr_type = ::Diamond::Top_ptr;
     using _stub_var_type = ::Diamond::Top_var;
 
-    Top (const Top& rhs) = default;
+    Top (Top const &rhs) = default;
     ~Top () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -147,7 +147,7 @@ namespace POA_Diamond
 
     ::Diamond::Top *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual char * shape () = 0;
 
     static void shape_skel (
@@ -191,10 +191,10 @@ namespace POA_Diamond
     using _stub_ptr_type = ::Diamond::Left_ptr;
     using _stub_var_type = ::Diamond::Left_var;
 
-    Left (const Left& rhs) = default;
+    Left (Left const &rhs) = default;
     ~Left () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -202,7 +202,7 @@ namespace POA_Diamond
 
     ::Diamond::Left *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual char * color () = 0;
 
     static void color_skel (
@@ -247,10 +247,10 @@ namespace POA_Diamond
     using _stub_ptr_type = ::Diamond::Right_ptr;
     using _stub_var_type = ::Diamond::Right_var;
 
-    Right (const Right& rhs) = default;
+    Right (Right const &rhs) = default;
     ~Right () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -258,7 +258,7 @@ namespace POA_Diamond
 
     ::Diamond::Right *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual ::CORBA::Long width () = 0;
 
     static void width_skel (
@@ -304,10 +304,10 @@ namespace POA_Diamond
     using _stub_ptr_type = ::Diamond::Buttom_ptr;
     using _stub_var_type = ::Diamond::Buttom_var;
 
-    Buttom (const Buttom& rhs) = default;
+    Buttom (Buttom const &rhs) = default;
     ~Buttom () override = default;
 
-    ::CORBA::Boolean _is_a (const char* logical_type_id) override;
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
     void _dispatch (
         TAO_ServerRequest & req,
@@ -315,7 +315,7 @@ namespace POA_Diamond
 
     ::Diamond::Buttom *_this ();
 
-    const char* _interface_repository_id () const override;
+    char const *_interface_repository_id () const override;
     virtual char * name () = 0;
 
     static void name_skel (

@@ -48,7 +48,7 @@ static TAO::TypeCode::Objref<char const *,
     "hello");
 
 ::CORBA::TypeCode_ptr const _tc_hello = std::addressof(_tao_tc_hello);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_helloExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_helloExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -58,7 +58,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:anvil.com/AMH_helloExceptionHolder:1.0",
     "AMH_helloExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_helloExceptionHolder,
     0);
 
@@ -91,7 +91,7 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:anvil.com/FuBar:1.0",
     "FuBar",
-    &CORBA::_tc_string);
+    std::addressof (CORBA::_tc_string));
 
 ::CORBA::TypeCode_ptr const _tc_FuBar = std::addressof(_tao_tc_FuBar);
 static char const * const _tao_enumerators_ClusterFu[] =
@@ -119,7 +119,7 @@ static TAO::TypeCode::Enum<char const *,
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_Riot = nullptr;
+    _tao_fields_Riot {};
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -144,7 +144,7 @@ static TAO::TypeCode::Objref<char const *,
     "goodbye");
 
 ::CORBA::TypeCode_ptr const _tc_goodbye = std::addressof(_tao_tc_goodbye);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_goodbyeExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_goodbyeExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -154,7 +154,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:anvil.com/AMH_goodbyeExceptionHolder:1.0",
     "AMH_goodbyeExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_goodbyeExceptionHolder,
     0);
 
@@ -189,7 +189,7 @@ static TAO::TypeCode::Objref<char const *,
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_A_my_exception = nullptr;
+    _tao_fields_A_my_exception {};
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -220,7 +220,7 @@ namespace salutation
 {
   ::CORBA::TypeCode_ptr const _tc_sayonara = std::addressof(_tao_tc_salutation_sayonara);
 }
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_salutation_AMH_sayonaraExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_salutation_AMH_sayonaraExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -230,7 +230,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:hammer.com/salutation/AMH_sayonaraExceptionHolder:1.0",
     "AMH_sayonaraExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_salutation_AMH_sayonaraExceptionHolder,
     0);
 
@@ -273,7 +273,7 @@ static TAO::TypeCode::Objref<char const *,
     "ciao");
 
 ::CORBA::TypeCode_ptr const _tc_ciao = std::addressof(_tao_tc_ciao);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_ciaoExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_ciaoExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -283,7 +283,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:anvil.com/AMH_ciaoExceptionHolder:1.0",
     "AMH_ciaoExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_ciaoExceptionHolder,
     0);
 
@@ -317,7 +317,7 @@ static TAO::TypeCode::Objref<char const *,
     "aloha");
 
 ::CORBA::TypeCode_ptr const _tc_aloha = std::addressof(_tao_tc_aloha);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_alohaExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_alohaExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -327,7 +327,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:anvil.com/AMH_alohaExceptionHolder:1.0",
     "AMH_alohaExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_alohaExceptionHolder,
     0);
 
@@ -358,7 +358,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_DCPS_Test_Sample[] =
       {
-        { "key", &CORBA::_tc_long }
+        { "key", std::addressof (CORBA::_tc_long) }
       };
 
 static TAO::TypeCode::Struct<
@@ -424,7 +424,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     hello_ptr &_tao_elem)
 {
   return
@@ -566,7 +566,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_helloResponseHandler_ptr &_tao_elem)
 {
   return
@@ -624,7 +624,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_helloHandler_ptr &_tao_elem)
 {
   return
@@ -656,7 +656,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     ClusterFu &_tao_elem)
 {
   return
@@ -703,7 +703,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const Riot &_tao_elem)
+  Riot const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<Riot>::insert_copy (
     _tao_any,
@@ -726,8 +726,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const Riot *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  Riot const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<Riot>::extract (
     _tao_any,
@@ -782,7 +782,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     goodbye_ptr &_tao_elem)
 {
   return
@@ -924,7 +924,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_goodbyeResponseHandler_ptr &_tao_elem)
 {
   return
@@ -982,7 +982,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_goodbyeHandler_ptr &_tao_elem)
 {
   return
@@ -1031,7 +1031,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const A::my_exception &_tao_elem)
+  A::my_exception const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<A::my_exception>::insert_copy (
     _tao_any,
@@ -1054,8 +1054,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const A::my_exception *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  A::my_exception const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<A::my_exception>::extract (
     _tao_any,
@@ -1110,7 +1110,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     salutation::sayonara_ptr &_tao_elem)
 {
   return
@@ -1252,7 +1252,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     salutation::AMH_sayonaraResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1310,7 +1310,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     salutation::AMI_sayonaraHandler_ptr &_tao_elem)
 {
   return
@@ -1368,7 +1368,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     ciao_ptr &_tao_elem)
 {
   return
@@ -1510,7 +1510,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_ciaoResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1568,7 +1568,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_ciaoHandler_ptr &_tao_elem)
 {
   return
@@ -1626,7 +1626,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     aloha_ptr &_tao_elem)
 {
   return
@@ -1768,7 +1768,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_alohaResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1826,7 +1826,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_alohaHandler_ptr &_tao_elem)
 {
   return
@@ -1848,7 +1848,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::DCPS_Test::Sample const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::DCPS_Test::Sample>::insert_copy (
+  TAO::Any_Dual_Impl_T<::DCPS_Test::Sample>::insert_copy (
     _tao_any,
     ::DCPS_Test::Sample::_tao_any_destructor,
     DCPS_Test::_tc_Sample,
@@ -1860,7 +1860,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::DCPS_Test::Sample *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::DCPS_Test::Sample>::insert (
+  TAO::Any_Dual_Impl_T<::DCPS_Test::Sample>::insert (
     _tao_any,
     ::DCPS_Test::Sample::_tao_any_destructor,
     DCPS_Test::_tc_Sample,
@@ -1872,7 +1872,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::DCPS_Test::Sample const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::DCPS_Test::Sample>::extract (
+  return TAO::Any_Dual_Impl_T<::DCPS_Test::Sample>::extract (
     _tao_any,
     ::DCPS_Test::Sample::_tao_any_destructor,
     DCPS_Test::_tc_Sample,

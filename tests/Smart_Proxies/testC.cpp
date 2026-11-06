@@ -23,13 +23,13 @@
  **/
 
 #include "testC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Object_T.h"
 #include "tao/SystemException.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "testC.inl"
@@ -58,7 +58,7 @@ TAO::Objref_Traits<Test>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test>::marshal (const Test_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test>::marshal (Test_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -66,7 +66,7 @@ TAO::Objref_Traits<Test>::marshal (const Test_ptr p,TAO_OutputCDR & cdr)
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 Test::Oops::Oops (
-    const char * _tao_reason)
+    char const * _tao_reason)
   : ::CORBA::UserException (
         "IDL:Test/Oops:1.0",
         "Oops")
@@ -103,10 +103,10 @@ Test::Oops::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<Oops *> (_tao_excp);
 }
 
-const Test::Oops *
+Test::Oops const *
 Test::Oops::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const Oops *> (_tao_excp);
+  return dynamic_cast<Oops const *> (_tao_excp);
 }
 
 ::CORBA::Exception *Test::Oops::_alloc ()
@@ -154,8 +154,8 @@ Test::method (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< ::CORBA::Short>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_boo (boo);
+  TAO::Arg_Traits<::CORBA::Short>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_boo (boo);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -200,7 +200,7 @@ Test::shutdown ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -228,9 +228,7 @@ Test::Test ()
 Test_ptr
 Test::_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Test *proxy = nullptr;
-
-  proxy = TAO::Narrow_Utils<Test>::narrow (
+  Test *proxy = TAO::Narrow_Utils<Test>::narrow (
       _tao_objref,
       "IDL:Test:1.0");
   return TAO_Test_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
@@ -239,9 +237,7 @@ Test::_narrow (::CORBA::Object_ptr _tao_objref)
 Test_ptr
 Test::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Test *proxy = nullptr;
-
-  proxy = TAO::Narrow_Utils<Test>::unchecked_narrow (
+  Test *proxy = TAO::Narrow_Utils<Test>::unchecked_narrow (
       _tao_objref);
   return TAO_Test_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
@@ -269,10 +265,9 @@ Test::_tao_release (Test_ptr obj)
 }
 
 ::CORBA::Boolean
-Test::_is_a (const char *value)
+Test::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:Test:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:Test:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
@@ -283,7 +278,7 @@ Test::_is_a (const char *value)
     }
 }
 
-const char* Test::_interface_repository_id () const
+char const *Test::_interface_repository_id () const
 {
   return "IDL:Test:1.0";
 }
@@ -304,9 +299,7 @@ TAO_Test_Default_Proxy_Factory::~TAO_Test_Default_Proxy_Factory ()
 }
 
 Test_ptr
-TAO_Test_Default_Proxy_Factory::create_proxy (
-    ::Test_ptr proxy
-  )
+TAO_Test_Default_Proxy_Factory::create_proxy (::Test_ptr proxy)
 {
   return proxy;
 }
@@ -321,12 +314,12 @@ TAO_Test_Proxy_Factory_Adapter::TAO_Test_Proxy_Factory_Adapter ()
 TAO_Test_Proxy_Factory_Adapter::~TAO_Test_Proxy_Factory_Adapter ()
 {
   // Making sure the factory which the adapter has is destroyed with it.
-  std::unique_ptr<TAO_Test_Default_Proxy_Factory> proxy_factory {this->proxy_factory_};
+  std::unique_ptr<TAO_Test_Default_Proxy_Factory> proxy_factory (this->proxy_factory_);
 }
 
 void
 TAO_Test_Proxy_Factory_Adapter::register_proxy_factory (
-    TAO_Test_Default_Proxy_Factory *df, bool one_shot_factory)
+  TAO_Test_Default_Proxy_Factory *df, bool one_shot_factory)
 {
   ACE_MT (
       ACE_GUARD (
@@ -445,7 +438,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::Oops &_tao_aggregate)
+    Test::Oops const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -477,7 +470,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test_ptr _tao_objref)
+    Test_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -495,7 +488,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::Test>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::Test>::unchecked_narrow (obj.in ());
 
   return true;
 }

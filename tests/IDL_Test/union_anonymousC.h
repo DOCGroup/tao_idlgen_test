@@ -102,7 +102,7 @@ struct TAO_IDL_TEST_STUB_Export Element
 
     class TAO_IDL_TEST_STUB_Export _tao_seq_Element_ValueUnion_
       : public
-          ::TAO::unbounded_value_sequence< Element::ValueUnion>
+          ::TAO::unbounded_value_sequence<Element::ValueUnion>
     {
     public:
       _tao_seq_Element_ValueUnion_ () = default;
@@ -155,14 +155,9 @@ using NamedLongArray = ::CORBA::Long[10];
 using NamedLongArray_slice = ::CORBA::Long;
 struct NamedLongArray_tag {};
 
-using NamedLongArray_var =
-  TAO_FixedArray_Var_T<
-      NamedLongArray,
-      NamedLongArray_slice,
-      NamedLongArray_tag
-    >;
+using NamedLongArray_var = TAO_FixedArray_Var_T<NamedLongArray, NamedLongArray_slice, NamedLongArray_tag>;
 
-  using NamedLongArray_out = NamedLongArray;
+using NamedLongArray_out = NamedLongArray;
 
 using NamedLongArray_forany = TAO_Array_Forany_T<NamedLongArray, NamedLongArray_slice, NamedLongArray_tag>;
 
@@ -170,9 +165,9 @@ TAO_IDL_TEST_STUB_Export NamedLongArray_slice *NamedLongArray_alloc ();
 
 TAO_IDL_TEST_STUB_Export void NamedLongArray_free (NamedLongArray_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export NamedLongArray_slice *NamedLongArray_dup (const NamedLongArray_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export NamedLongArray_slice *NamedLongArray_dup (NamedLongArray_slice const *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void NamedLongArray_copy (NamedLongArray_slice *_tao_to, const NamedLongArray_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void NamedLongArray_copy (NamedLongArray_slice *_tao_to, NamedLongArray_slice const *_tao_from);
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_NamedLongArray;
 
 class decl_heavy_union;
@@ -228,9 +223,9 @@ public:
 
   static void _m_en_arr_free (_m_en_arr_slice *_tao_slice);
 
-  static _m_en_arr_slice *_m_en_arr_dup (const _m_en_arr_slice *_tao_slice);
+  static _m_en_arr_slice *_m_en_arr_dup (_m_en_arr_slice const *_tao_slice);
 
-  static void _m_en_arr_copy (_m_en_arr_slice *_tao_to, const _m_en_arr_slice *_tao_from);
+  static void _m_en_arr_copy (_m_en_arr_slice *_tao_to, _m_en_arr_slice const *_tao_from);
 
   void m_en_arr (_m_en_arr);
   _m_en_arr_slice * m_en_arr () const; // get method
@@ -262,9 +257,9 @@ public:
 
   static void _m_st_arr_free (_m_st_arr_slice *_tao_slice);
 
-  static _m_st_arr_slice *_m_st_arr_dup (const _m_st_arr_slice *_tao_slice);
+  static _m_st_arr_slice *_m_st_arr_dup (_m_st_arr_slice const *_tao_slice);
 
-  static void _m_st_arr_copy (_m_st_arr_slice *_tao_to, const _m_st_arr_slice *_tao_from);
+  static void _m_st_arr_copy (_m_st_arr_slice *_tao_to, _m_st_arr_slice const *_tao_from);
 
   void m_st_arr (_m_st_arr);
   _m_st_arr_slice * m_st_arr () const; // get method
@@ -325,9 +320,9 @@ public:
 
   static void _m_un_arr_free (_m_un_arr_slice *_tao_slice);
 
-  static _m_un_arr_slice *_m_un_arr_dup (const _m_un_arr_slice *_tao_slice);
+  static _m_un_arr_slice *_m_un_arr_dup (_m_un_arr_slice const *_tao_slice);
 
-  static void _m_un_arr_copy (_m_un_arr_slice *_tao_to, const _m_un_arr_slice *_tao_from);
+  static void _m_un_arr_copy (_m_un_arr_slice *_tao_to, _m_un_arr_slice const *_tao_from);
 
   void m_un_arr (_m_un_arr);
   _m_un_arr_slice * m_un_arr () const; // get method
@@ -345,9 +340,9 @@ public:
 
   static void _m_anon_long_array_free (_m_anon_long_array_slice *_tao_slice);
 
-  static _m_anon_long_array_slice *_m_anon_long_array_dup (const _m_anon_long_array_slice *_tao_slice);
+  static _m_anon_long_array_slice *_m_anon_long_array_dup (_m_anon_long_array_slice const *_tao_slice);
 
-  static void _m_anon_long_array_copy (_m_anon_long_array_slice *_tao_to, const _m_anon_long_array_slice *_tao_from);
+  static void _m_anon_long_array_copy (_m_anon_long_array_slice *_tao_to, _m_anon_long_array_slice const *_tao_from);
 
   void m_anon_long_array (_m_anon_long_array);
   _m_anon_long_array_slice * m_anon_long_array () const; // get method
@@ -389,7 +384,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -404,7 +399,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::Element>
+  class Arg_Traits<::Element>
     : public
         Var_Size_Arg_Traits_T<
             ::Element,
@@ -414,7 +409,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::Element::ValueUnion>
+  class Arg_Traits<::Element::ValueUnion>
     : public
         Var_Size_Arg_Traits_T<
             ::Element::ValueUnion,
@@ -424,7 +419,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::NamedLongArray_tag>
+  class Arg_Traits<::NamedLongArray_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::NamedLongArray_var,
@@ -435,7 +430,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::decl_heavy_union>
+  class Arg_Traits<::decl_heavy_union>
     : public
         Fixed_Size_Arg_Traits_T<
             ::decl_heavy_union,
@@ -445,7 +440,7 @@ namespace TAO
   };
 
   template<>
-  class Arg_Traits< ::decl_heavy_union::which>
+  class Arg_Traits<::decl_heavy_union::which>
     : public
         Basic_Arg_Traits_T<
             ::decl_heavy_union::which,
@@ -566,8 +561,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, const NamedLongArray_forany &);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, NamedLongArray_forany &);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, NamedLongArray_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, NamedLongArray_forany &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -584,7 +579,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, decl_heavy_union::which);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, decl_heavy_union::which &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, decl_heavy_union::which &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -592,7 +587,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, decl_heavy_union::en);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, decl_heavy_union::en &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, decl_heavy_union::en &);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -615,11 +610,11 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    Element::ValueUnion::_tao_seq_Element_ValueUnion_ const &_tao_sequence);
+  TAO_OutputCDR &strm,
+  Element::ValueUnion::_tao_seq_Element_ValueUnion_ const &_tao_sequence);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    Element::ValueUnion::_tao_seq_Element_ValueUnion_ &_tao_sequence);
+  TAO_InputCDR &strm,
+  Element::ValueUnion::_tao_seq_Element_ValueUnion_ &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -627,7 +622,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::NamedLongArray_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ::NamedLongArray_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::NamedLongArray_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -655,7 +650,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_union::_m_en_arr_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_union::_m_en_arr_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_union::_m_en_arr_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -669,7 +664,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_union::_m_st_arr_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_union::_m_st_arr_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_union::_m_st_arr_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -683,14 +678,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_union::_m_un_arr_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_union::_m_un_arr_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_union::_m_un_arr_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const decl_heavy_union::_m_anon_long_array_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, decl_heavy_union::_m_anon_long_array_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, decl_heavy_union::_m_anon_long_array_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

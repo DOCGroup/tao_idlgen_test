@@ -23,6 +23,7 @@
  **/
 
 #include "Bug_2350_RegressionC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
@@ -44,7 +45,6 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "Bug_2350_RegressionC.inl"
@@ -82,10 +82,10 @@ something::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<something *> (_tao_excp);
 }
 
-const something *
+something const *
 something::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const something *> (_tao_excp);
+  return dynamic_cast<something const *> (_tao_excp);
 }
 
 ::CORBA::Exception *something::_alloc ()
@@ -132,7 +132,7 @@ void something::_tao_decode (TAO_InputCDR &cdr)
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_something = nullptr;
+    _tao_fields_something {};
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -154,7 +154,7 @@ static TAO::TypeCode::Struct_Field<
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_user_ExceptionHolder[] =
       {
-        { "a", &CORBA::_tc_long }
+        { "a", std::addressof (CORBA::_tc_long) }
       };
 
 static TAO::TypeCode::Struct<
@@ -173,9 +173,7 @@ _tao_tc_user_ExceptionHolder (
 
 ::CORBA::TypeCode_ptr const _tc_user_ExceptionHolder = std::addressof(_tao_tc_user_ExceptionHolder);
 
-void
-user_ExceptionHolder::_tao_any_destructor (
-    void *_tao_void_pointer)
+void user_ExceptionHolder::_tao_any_destructor (void *_tao_void_pointer)
 {
   user_ExceptionHolder *tmp = static_cast<user_ExceptionHolder *> (_tao_void_pointer);
   delete tmp;
@@ -204,7 +202,7 @@ TAO::Objref_Traits<Bug_2350_Regression>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Bug_2350_Regression>::marshal (const Bug_2350_Regression_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Bug_2350_Regression>::marshal (Bug_2350_Regression_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -213,15 +211,15 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 void
 Bug_2350_Regression::Bug_2350_Regression_excep (
-  const ::user_ExceptionHolder & a)
+  ::user_ExceptionHolder const & a)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::user_ExceptionHolder>::in_arg_val _tao_a (a);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::user_ExceptionHolder>::in_arg_val _tao_a (a);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -260,7 +258,7 @@ Bug_2350_Regression::Bug_2350_Regression_excep (
 void
 Bug_2350_Regression::sendc_Bug_2350_Regression_excep (
   ::AMI_Bug_2350_RegressionHandler_ptr ami_handler,
-  const ::user_ExceptionHolder & a)
+  ::user_ExceptionHolder const & a)
 {
   if (!this->is_evaluated ())
     {
@@ -268,7 +266,7 @@ Bug_2350_Regression::sendc_Bug_2350_Regression_excep (
     }
 
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::user_ExceptionHolder>::in_arg_val _tao_a (a);
+  TAO::Arg_Traits<::user_ExceptionHolder>::in_arg_val _tao_a (a);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -336,10 +334,9 @@ Bug_2350_Regression::_tao_release (Bug_2350_Regression_ptr obj)
 }
 
 ::CORBA::Boolean
-Bug_2350_Regression::_is_a (const char *value)
+Bug_2350_Regression::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:Bug_2350_Regression:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:Bug_2350_Regression:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
@@ -350,17 +347,17 @@ Bug_2350_Regression::_is_a (const char *value)
     }
 }
 
-const char* Bug_2350_Regression::_interface_repository_id () const
+char const *Bug_2350_Regression::_interface_repository_id () const
 {
   return "IDL:Bug_2350_Regression:1.0";
 }
 
-const char* Bug_2350_Regression::_desc_repository_id ()
+char const *Bug_2350_Regression::_desc_repository_id ()
 {
   return "IDL:Bug_2350_Regression:1.0";
 }
 
-const char* Bug_2350_Regression::_desc_interface_name ()
+char const *Bug_2350_Regression::_desc_interface_name ()
 {
   return "Bug_2350_Regression";
 }
@@ -378,7 +375,7 @@ static TAO::TypeCode::Objref<char const *,
     "Bug_2350_Regression");
 
 ::CORBA::TypeCode_ptr const _tc_Bug_2350_Regression = std::addressof(_tao_tc_Bug_2350_Regression);
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Bug_2350_RegressionExceptionHolder = nullptr;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_AMH_Bug_2350_RegressionExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -388,7 +385,7 @@ static TAO::TypeCode::Value<char const *,
     "IDL:AMH_Bug_2350_RegressionExceptionHolder:1.0",
     "AMH_Bug_2350_RegressionExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_AMH_Bug_2350_RegressionExceptionHolder,
     0);
 
@@ -534,14 +531,14 @@ AMH_Bug_2350_RegressionExceptionHolder::_tao_unmarshal (
 void
 AMH_Bug_2350_RegressionExceptionHolder::raise_Bug_2350_Regression_excep ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
 void
 AMH_Bug_2350_RegressionExceptionHolder::raise_sendc_Bug_2350_Regression_excep ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
 
@@ -568,7 +565,7 @@ TAO::Objref_Traits<AMH_Bug_2350_RegressionResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_Bug_2350_RegressionResponseHandler>::marshal (const AMH_Bug_2350_RegressionResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_Bug_2350_RegressionResponseHandler>::marshal (AMH_Bug_2350_RegressionResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -622,10 +619,9 @@ AMH_Bug_2350_RegressionResponseHandler::_tao_release (AMH_Bug_2350_RegressionRes
 }
 
 ::CORBA::Boolean
-AMH_Bug_2350_RegressionResponseHandler::_is_a (const char *value)
+AMH_Bug_2350_RegressionResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:AMH_Bug_2350_RegressionResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:AMH_Bug_2350_RegressionResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
@@ -637,17 +633,17 @@ AMH_Bug_2350_RegressionResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* AMH_Bug_2350_RegressionResponseHandler::_interface_repository_id () const
+char const *AMH_Bug_2350_RegressionResponseHandler::_interface_repository_id () const
 {
   return "IDL:AMH_Bug_2350_RegressionResponseHandler:1.0";
 }
 
-const char* AMH_Bug_2350_RegressionResponseHandler::_desc_repository_id ()
+char const *AMH_Bug_2350_RegressionResponseHandler::_desc_repository_id ()
 {
   return "IDL:AMH_Bug_2350_RegressionResponseHandler:1.0";
 }
 
-const char* AMH_Bug_2350_RegressionResponseHandler::_desc_interface_name ()
+char const *AMH_Bug_2350_RegressionResponseHandler::_desc_interface_name ()
 {
   return "AMH_Bug_2350_RegressionResponseHandler";
 }
@@ -689,7 +685,7 @@ TAO::Objref_Traits<AMI_Bug_2350_RegressionHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_Bug_2350_RegressionHandler>::marshal (const AMI_Bug_2350_RegressionHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_Bug_2350_RegressionHandler>::marshal (AMI_Bug_2350_RegressionHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -704,7 +700,7 @@ AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep ()
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -817,8 +813,8 @@ AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep (
       ::CORBA::Object::tao_object_initialize (this);
     }
 
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -899,10 +895,9 @@ AMI_Bug_2350_RegressionHandler::_tao_release (AMI_Bug_2350_RegressionHandler_ptr
 }
 
 ::CORBA::Boolean
-AMI_Bug_2350_RegressionHandler::_is_a (const char *value)
+AMI_Bug_2350_RegressionHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:AMI_Bug_2350_RegressionHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
@@ -914,17 +909,17 @@ AMI_Bug_2350_RegressionHandler::_is_a (const char *value)
     }
 }
 
-const char* AMI_Bug_2350_RegressionHandler::_interface_repository_id () const
+char const *AMI_Bug_2350_RegressionHandler::_interface_repository_id () const
 {
   return "IDL:AMI_Bug_2350_RegressionHandler:1.0";
 }
 
-const char* AMI_Bug_2350_RegressionHandler::_desc_repository_id ()
+char const *AMI_Bug_2350_RegressionHandler::_desc_repository_id ()
 {
   return "IDL:AMI_Bug_2350_RegressionHandler:1.0";
 }
 
-const char* AMI_Bug_2350_RegressionHandler::_desc_interface_name ()
+char const *AMI_Bug_2350_RegressionHandler::_desc_interface_name ()
 {
   return "AMI_Bug_2350_RegressionHandler";
 }
@@ -992,7 +987,7 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const something &_tao_elem)
+  something const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<something>::insert_copy (
     _tao_any,
@@ -1015,8 +1010,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const something *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  something const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<something>::extract (
     _tao_any,
@@ -1035,7 +1030,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::user_ExceptionHolder const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::user_ExceptionHolder>::insert_copy (
+  TAO::Any_Dual_Impl_T<::user_ExceptionHolder>::insert_copy (
     _tao_any,
     ::user_ExceptionHolder::_tao_any_destructor,
     _tc_user_ExceptionHolder,
@@ -1047,7 +1042,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::user_ExceptionHolder *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::user_ExceptionHolder>::insert (
+  TAO::Any_Dual_Impl_T<::user_ExceptionHolder>::insert (
     _tao_any,
     ::user_ExceptionHolder::_tao_any_destructor,
     _tc_user_ExceptionHolder,
@@ -1059,7 +1054,7 @@ void operator<<= (
   ::CORBA::Any const &_tao_any,
   ::user_ExceptionHolder const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::user_ExceptionHolder>::extract (
+  return TAO::Any_Dual_Impl_T<::user_ExceptionHolder>::extract (
     _tao_any,
     ::user_ExceptionHolder::_tao_any_destructor,
     _tc_user_ExceptionHolder,
@@ -1112,7 +1107,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Bug_2350_Regression_ptr &_tao_elem)
 {
   return
@@ -1254,7 +1249,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMH_Bug_2350_RegressionResponseHandler_ptr &_tao_elem)
 {
   return
@@ -1312,7 +1307,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     AMI_Bug_2350_RegressionHandler_ptr &_tao_elem)
 {
   return
@@ -1330,7 +1325,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const something &_tao_aggregate)
+    something const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -1371,7 +1366,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Bug_2350_Regression_ptr _tao_objref)
+    Bug_2350_Regression_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1389,7 +1384,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::Bug_2350_Regression>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::Bug_2350_Regression>::unchecked_narrow (obj.in ());
 
   return true;
 }
@@ -1422,7 +1417,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const AMH_Bug_2350_RegressionExceptionHolder *_tao_valuetype)
+    AMH_Bug_2350_RegressionExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -1463,7 +1458,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const AMI_Bug_2350_RegressionHandler_ptr _tao_objref)
+    AMI_Bug_2350_RegressionHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -1481,7 +1476,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     }
 
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::AMI_Bug_2350_RegressionHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::AMI_Bug_2350_RegressionHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }

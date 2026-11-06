@@ -104,10 +104,10 @@ public:
   static hello_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static hello_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -128,9 +128,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  hello (const hello &) = delete;
+  hello (hello const &) = delete;
   hello (hello &&) = delete;
-  hello &operator= (const hello &) = delete;
+  hello &operator= (hello const &) = delete;
   hello &operator= (hello &&) = delete;
 };
 
@@ -182,8 +182,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_helloExceptionHolder (const AMH_helloExceptionHolder &);
-  void operator= (const AMH_helloExceptionHolder &);
+  AMH_helloExceptionHolder (AMH_helloExceptionHolder const &);
+  void operator= (AMH_helloExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -244,10 +244,10 @@ public:
   static AMH_helloResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_helloResponseHandler_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -258,9 +258,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_helloResponseHandler (const AMH_helloResponseHandler &) = delete;
+  AMH_helloResponseHandler (AMH_helloResponseHandler const &) = delete;
   AMH_helloResponseHandler (AMH_helloResponseHandler &&) = delete;
-  AMH_helloResponseHandler &operator= (const AMH_helloResponseHandler &) = delete;
+  AMH_helloResponseHandler &operator= (AMH_helloResponseHandler const &) = delete;
   AMH_helloResponseHandler &operator= (AMH_helloResponseHandler &&) = delete;
 };
 
@@ -295,10 +295,10 @@ public:
   static AMI_helloHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_helloHandler_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -319,9 +319,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_helloHandler (const AMI_helloHandler &) = delete;
+  AMI_helloHandler (AMI_helloHandler const &) = delete;
   AMI_helloHandler (AMI_helloHandler &&) = delete;
-  AMI_helloHandler &operator= (const AMI_helloHandler &) = delete;
+  AMI_helloHandler &operator= (AMI_helloHandler const &) = delete;
   AMI_helloHandler &operator= (AMI_helloHandler &&) = delete;
 };
 using FuBar = char *;
@@ -355,15 +355,15 @@ class TAO_IDL_TEST_STUB_Export Riot : public ::CORBA::UserException
 public:
 
   Riot ();
-  Riot (const Riot &);
+  Riot (Riot const &);
   ~Riot () override = default;
 
-  Riot &operator= (const Riot &);
+  Riot &operator= (Riot const &);
 
   static void _tao_any_destructor (void *);
 
   static Riot *_downcast (::CORBA::Exception *);
-  static const Riot *_downcast (::CORBA::Exception const *);
+  static Riot const *_downcast (::CORBA::Exception const *);
 
   static ::CORBA::Exception *_alloc ();
 
@@ -410,10 +410,10 @@ public:
   static goodbye_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static goodbye_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -434,9 +434,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  goodbye (const goodbye &) = delete;
+  goodbye (goodbye const &) = delete;
   goodbye (goodbye &&) = delete;
-  goodbye &operator= (const goodbye &) = delete;
+  goodbye &operator= (goodbye const &) = delete;
   goodbye &operator= (goodbye &&) = delete;
 };
 
@@ -488,8 +488,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_goodbyeExceptionHolder (const AMH_goodbyeExceptionHolder &);
-  void operator= (const AMH_goodbyeExceptionHolder &);
+  AMH_goodbyeExceptionHolder (AMH_goodbyeExceptionHolder const &);
+  void operator= (AMH_goodbyeExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -550,10 +550,10 @@ public:
   static AMH_goodbyeResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_goodbyeResponseHandler_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -564,9 +564,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_goodbyeResponseHandler (const AMH_goodbyeResponseHandler &) = delete;
+  AMH_goodbyeResponseHandler (AMH_goodbyeResponseHandler const &) = delete;
   AMH_goodbyeResponseHandler (AMH_goodbyeResponseHandler &&) = delete;
-  AMH_goodbyeResponseHandler &operator= (const AMH_goodbyeResponseHandler &) = delete;
+  AMH_goodbyeResponseHandler &operator= (AMH_goodbyeResponseHandler const &) = delete;
   AMH_goodbyeResponseHandler &operator= (AMH_goodbyeResponseHandler &&) = delete;
 };
 
@@ -601,10 +601,10 @@ public:
   static AMI_goodbyeHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_goodbyeHandler_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -625,9 +625,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_goodbyeHandler (const AMI_goodbyeHandler &) = delete;
+  AMI_goodbyeHandler (AMI_goodbyeHandler const &) = delete;
   AMI_goodbyeHandler (AMI_goodbyeHandler &&) = delete;
-  AMI_goodbyeHandler &operator= (const AMI_goodbyeHandler &) = delete;
+  AMI_goodbyeHandler &operator= (AMI_goodbyeHandler const &) = delete;
   AMI_goodbyeHandler &operator= (AMI_goodbyeHandler &&) = delete;
 };
 namespace A
@@ -638,15 +638,15 @@ namespace A
   public:
 
     my_exception ();
-    my_exception (const my_exception &);
+    my_exception (my_exception const &);
     ~my_exception () override = default;
 
-    my_exception &operator= (const my_exception &);
+    my_exception &operator= (my_exception const &);
 
     static void _tao_any_destructor (void *);
 
     static my_exception *_downcast (::CORBA::Exception *);
-    static const my_exception *_downcast (::CORBA::Exception const *);
+    static my_exception const *_downcast (::CORBA::Exception const *);
 
     static ::CORBA::Exception *_alloc ();
 
@@ -697,10 +697,10 @@ namespace salutation
     static sayonara_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static sayonara_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -721,9 +721,9 @@ namespace salutation
 
   private:
     // Private and unimplemented for concrete interfaces.
-    sayonara (const sayonara &) = delete;
+    sayonara (sayonara const &) = delete;
     sayonara (sayonara &&) = delete;
-    sayonara &operator= (const sayonara &) = delete;
+    sayonara &operator= (sayonara const &) = delete;
     sayonara &operator= (sayonara &&) = delete;
   };
 
@@ -775,8 +775,8 @@ namespace salutation
     ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
   private:
-    AMH_sayonaraExceptionHolder (const AMH_sayonaraExceptionHolder &);
-    void operator= (const AMH_sayonaraExceptionHolder &);
+    AMH_sayonaraExceptionHolder (AMH_sayonaraExceptionHolder const &);
+    void operator= (AMH_sayonaraExceptionHolder const &);
 
     ::CORBA::Exception *exception;
 
@@ -837,10 +837,10 @@ namespace salutation
     static AMH_sayonaraResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMH_sayonaraResponseHandler_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -851,9 +851,9 @@ namespace salutation
 
   private:
     // Private and unimplemented for concrete interfaces.
-    AMH_sayonaraResponseHandler (const AMH_sayonaraResponseHandler &) = delete;
+    AMH_sayonaraResponseHandler (AMH_sayonaraResponseHandler const &) = delete;
     AMH_sayonaraResponseHandler (AMH_sayonaraResponseHandler &&) = delete;
-    AMH_sayonaraResponseHandler &operator= (const AMH_sayonaraResponseHandler &) = delete;
+    AMH_sayonaraResponseHandler &operator= (AMH_sayonaraResponseHandler const &) = delete;
     AMH_sayonaraResponseHandler &operator= (AMH_sayonaraResponseHandler &&) = delete;
   };
 
@@ -888,10 +888,10 @@ namespace salutation
     static AMI_sayonaraHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_sayonaraHandler_ptr _nil ();
 
-    ::CORBA::Boolean _is_a (const char *type_id) override;
-    const char* _interface_repository_id () const override;
-    static const char* _desc_repository_id ();
-    static const char* _desc_interface_name ();
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    static char const *_desc_repository_id ();
+    static char const *_desc_interface_name ();
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
   protected:
@@ -912,9 +912,9 @@ namespace salutation
 
   private:
     // Private and unimplemented for concrete interfaces.
-    AMI_sayonaraHandler (const AMI_sayonaraHandler &) = delete;
+    AMI_sayonaraHandler (AMI_sayonaraHandler const &) = delete;
     AMI_sayonaraHandler (AMI_sayonaraHandler &&) = delete;
-    AMI_sayonaraHandler &operator= (const AMI_sayonaraHandler &) = delete;
+    AMI_sayonaraHandler &operator= (AMI_sayonaraHandler const &) = delete;
     AMI_sayonaraHandler &operator= (AMI_sayonaraHandler &&) = delete;
   };
 
@@ -953,10 +953,10 @@ public:
   static ciao_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static ciao_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -977,9 +977,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  ciao (const ciao &) = delete;
+  ciao (ciao const &) = delete;
   ciao (ciao &&) = delete;
-  ciao &operator= (const ciao &) = delete;
+  ciao &operator= (ciao const &) = delete;
   ciao &operator= (ciao &&) = delete;
 };
 
@@ -1031,8 +1031,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_ciaoExceptionHolder (const AMH_ciaoExceptionHolder &);
-  void operator= (const AMH_ciaoExceptionHolder &);
+  AMH_ciaoExceptionHolder (AMH_ciaoExceptionHolder const &);
+  void operator= (AMH_ciaoExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -1093,10 +1093,10 @@ public:
   static AMH_ciaoResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_ciaoResponseHandler_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -1107,9 +1107,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_ciaoResponseHandler (const AMH_ciaoResponseHandler &) = delete;
+  AMH_ciaoResponseHandler (AMH_ciaoResponseHandler const &) = delete;
   AMH_ciaoResponseHandler (AMH_ciaoResponseHandler &&) = delete;
-  AMH_ciaoResponseHandler &operator= (const AMH_ciaoResponseHandler &) = delete;
+  AMH_ciaoResponseHandler &operator= (AMH_ciaoResponseHandler const &) = delete;
   AMH_ciaoResponseHandler &operator= (AMH_ciaoResponseHandler &&) = delete;
 };
 
@@ -1144,10 +1144,10 @@ public:
   static AMI_ciaoHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_ciaoHandler_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -1168,9 +1168,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_ciaoHandler (const AMI_ciaoHandler &) = delete;
+  AMI_ciaoHandler (AMI_ciaoHandler const &) = delete;
   AMI_ciaoHandler (AMI_ciaoHandler &&) = delete;
-  AMI_ciaoHandler &operator= (const AMI_ciaoHandler &) = delete;
+  AMI_ciaoHandler &operator= (AMI_ciaoHandler const &) = delete;
   AMI_ciaoHandler &operator= (AMI_ciaoHandler &&) = delete;
 };
 
@@ -1194,10 +1194,10 @@ public:
   static aloha_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static aloha_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -1218,9 +1218,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  aloha (const aloha &) = delete;
+  aloha (aloha const &) = delete;
   aloha (aloha &&) = delete;
-  aloha &operator= (const aloha &) = delete;
+  aloha &operator= (aloha const &) = delete;
   aloha &operator= (aloha &&) = delete;
 };
 
@@ -1272,8 +1272,8 @@ protected:
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  AMH_alohaExceptionHolder (const AMH_alohaExceptionHolder &);
-  void operator= (const AMH_alohaExceptionHolder &);
+  AMH_alohaExceptionHolder (AMH_alohaExceptionHolder const &);
+  void operator= (AMH_alohaExceptionHolder const &);
 
   ::CORBA::Exception *exception;
 
@@ -1334,10 +1334,10 @@ public:
   static AMH_alohaResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_alohaResponseHandler_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -1348,9 +1348,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMH_alohaResponseHandler (const AMH_alohaResponseHandler &) = delete;
+  AMH_alohaResponseHandler (AMH_alohaResponseHandler const &) = delete;
   AMH_alohaResponseHandler (AMH_alohaResponseHandler &&) = delete;
-  AMH_alohaResponseHandler &operator= (const AMH_alohaResponseHandler &) = delete;
+  AMH_alohaResponseHandler &operator= (AMH_alohaResponseHandler const &) = delete;
   AMH_alohaResponseHandler &operator= (AMH_alohaResponseHandler &&) = delete;
 };
 
@@ -1385,10 +1385,10 @@ public:
   static AMI_alohaHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_alohaHandler_ptr _nil ();
 
-  ::CORBA::Boolean _is_a (const char *type_id) override;
-  const char* _interface_repository_id () const override;
-  static const char* _desc_repository_id ();
-  static const char* _desc_interface_name ();
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
   ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
@@ -1409,9 +1409,9 @@ protected:
 
 private:
   // Private and unimplemented for concrete interfaces.
-  AMI_alohaHandler (const AMI_alohaHandler &) = delete;
+  AMI_alohaHandler (AMI_alohaHandler const &) = delete;
   AMI_alohaHandler (AMI_alohaHandler &&) = delete;
-  AMI_alohaHandler &operator= (const AMI_alohaHandler &) = delete;
+  AMI_alohaHandler &operator= (AMI_alohaHandler const &) = delete;
   AMI_alohaHandler &operator= (AMI_alohaHandler &&) = delete;
 };
 namespace DCPS_Test
@@ -1444,7 +1444,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -1462,7 +1462,7 @@ namespace TAO
 #define _HELLO__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::hello>
+  class  Arg_Traits<::hello>
     : public Object_Arg_Traits_T<
         ::hello_ptr,
         ::hello_var,
@@ -1478,7 +1478,7 @@ namespace TAO
 #define _AMH_HELLOEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_helloExceptionHolder>
+  class Arg_Traits<::AMH_helloExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_helloExceptionHolder *,
@@ -1496,7 +1496,7 @@ namespace TAO
 #define _AMI_HELLOHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_helloHandler>
+  class  Arg_Traits<::AMI_helloHandler>
     : public Object_Arg_Traits_T<
         ::AMI_helloHandler_ptr,
         ::AMI_helloHandler_var,
@@ -1509,7 +1509,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::ClusterFu>
+  class Arg_Traits<::ClusterFu>
     : public
         Basic_Arg_Traits_T<
             ::ClusterFu,
@@ -1522,7 +1522,7 @@ namespace TAO
 #define _ALOHA__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::aloha>
+  class  Arg_Traits<::aloha>
     : public Object_Arg_Traits_T<
         ::aloha_ptr,
         ::aloha_var,
@@ -1538,7 +1538,7 @@ namespace TAO
 #define _GOODBYE__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::goodbye>
+  class  Arg_Traits<::goodbye>
     : public Object_Arg_Traits_T<
         ::goodbye_ptr,
         ::goodbye_var,
@@ -1554,7 +1554,7 @@ namespace TAO
 #define _AMH_GOODBYEEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_goodbyeExceptionHolder>
+  class Arg_Traits<::AMH_goodbyeExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_goodbyeExceptionHolder *,
@@ -1572,7 +1572,7 @@ namespace TAO
 #define _AMI_GOODBYEHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_goodbyeHandler>
+  class  Arg_Traits<::AMI_goodbyeHandler>
     : public Object_Arg_Traits_T<
         ::AMI_goodbyeHandler_ptr,
         ::AMI_goodbyeHandler_var,
@@ -1588,7 +1588,7 @@ namespace TAO
 #define _SALUTATION_SAYONARA__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::salutation::sayonara>
+  class  Arg_Traits<::salutation::sayonara>
     : public Object_Arg_Traits_T<
         ::salutation::sayonara_ptr,
         ::salutation::sayonara_var,
@@ -1604,7 +1604,7 @@ namespace TAO
 #define _SALUTATION_AMH_SAYONARAEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::salutation::AMH_sayonaraExceptionHolder>
+  class Arg_Traits<::salutation::AMH_sayonaraExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::salutation::AMH_sayonaraExceptionHolder *,
@@ -1622,7 +1622,7 @@ namespace TAO
 #define _SALUTATION_AMI_SAYONARAHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::salutation::AMI_sayonaraHandler>
+  class  Arg_Traits<::salutation::AMI_sayonaraHandler>
     : public Object_Arg_Traits_T<
         ::salutation::AMI_sayonaraHandler_ptr,
         ::salutation::AMI_sayonaraHandler_var,
@@ -1638,7 +1638,7 @@ namespace TAO
 #define _CIAO__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::ciao>
+  class  Arg_Traits<::ciao>
     : public Object_Arg_Traits_T<
         ::ciao_ptr,
         ::ciao_var,
@@ -1654,7 +1654,7 @@ namespace TAO
 #define _AMH_CIAOEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_ciaoExceptionHolder>
+  class Arg_Traits<::AMH_ciaoExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_ciaoExceptionHolder *,
@@ -1672,7 +1672,7 @@ namespace TAO
 #define _AMI_CIAOHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_ciaoHandler>
+  class  Arg_Traits<::AMI_ciaoHandler>
     : public Object_Arg_Traits_T<
         ::AMI_ciaoHandler_ptr,
         ::AMI_ciaoHandler_var,
@@ -1688,7 +1688,7 @@ namespace TAO
 #define _AMH_ALOHAEXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::AMH_alohaExceptionHolder>
+  class Arg_Traits<::AMH_alohaExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::AMH_alohaExceptionHolder *,
@@ -1706,7 +1706,7 @@ namespace TAO
 #define _AMI_ALOHAHANDLER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::AMI_alohaHandler>
+  class  Arg_Traits<::AMI_alohaHandler>
     : public Object_Arg_Traits_T<
         ::AMI_alohaHandler_ptr,
         ::AMI_alohaHandler_var,
@@ -1719,7 +1719,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::DCPS_Test::Sample>
+  class Arg_Traits<::DCPS_Test::Sample>
     : public
         Fixed_Size_Arg_Traits_T<
             ::DCPS_Test::Sample,
@@ -1745,11 +1745,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_helloExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_helloExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_helloExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_helloExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1773,11 +1771,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_goodbyeExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_goodbyeExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_goodbyeExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_goodbyeExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1803,11 +1799,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__salutation_AMH_sayonaraExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__salutation_AMH_sayonaraExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__salutation_AMH_sayonaraExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__salutation_AMH_sayonaraExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1832,11 +1826,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_ciaoExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_ciaoExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_ciaoExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_ciaoExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1860,11 +1852,9 @@ public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean
-  _tao_marshal__AMH_alohaExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__AMH_alohaExceptionHolder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean
-  _tao_unmarshal__AMH_alohaExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__AMH_alohaExceptionHolder (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -1884,7 +1874,7 @@ namespace TAO
 #define _HELLO__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::hello>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::hello>
   {
     static ::hello_ptr duplicate (::hello_ptr p);
     static void release (::hello_ptr p);
@@ -1911,7 +1901,7 @@ namespace TAO
 #define _AMH_HELLORESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_helloResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_helloResponseHandler>
   {
     static ::AMH_helloResponseHandler_ptr duplicate (::AMH_helloResponseHandler_ptr p);
     static void release (::AMH_helloResponseHandler_ptr p);
@@ -1925,7 +1915,7 @@ namespace TAO
 #define _AMI_HELLOHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_helloHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_helloHandler>
   {
     static ::AMI_helloHandler_ptr duplicate (::AMI_helloHandler_ptr p);
     static void release (::AMI_helloHandler_ptr p);
@@ -1939,7 +1929,7 @@ namespace TAO
 #define _GOODBYE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::goodbye>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::goodbye>
   {
     static ::goodbye_ptr duplicate (::goodbye_ptr p);
     static void release (::goodbye_ptr p);
@@ -1966,7 +1956,7 @@ namespace TAO
 #define _AMH_GOODBYERESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_goodbyeResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_goodbyeResponseHandler>
   {
     static ::AMH_goodbyeResponseHandler_ptr duplicate (::AMH_goodbyeResponseHandler_ptr p);
     static void release (::AMH_goodbyeResponseHandler_ptr p);
@@ -1980,7 +1970,7 @@ namespace TAO
 #define _AMI_GOODBYEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_goodbyeHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_goodbyeHandler>
   {
     static ::AMI_goodbyeHandler_ptr duplicate (::AMI_goodbyeHandler_ptr p);
     static void release (::AMI_goodbyeHandler_ptr p);
@@ -1994,7 +1984,7 @@ namespace TAO
 #define _SALUTATION_SAYONARA__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::salutation::sayonara>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::salutation::sayonara>
   {
     static ::salutation::sayonara_ptr duplicate (::salutation::sayonara_ptr p);
     static void release (::salutation::sayonara_ptr p);
@@ -2021,7 +2011,7 @@ namespace TAO
 #define _SALUTATION_AMH_SAYONARARESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::salutation::AMH_sayonaraResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::salutation::AMH_sayonaraResponseHandler>
   {
     static ::salutation::AMH_sayonaraResponseHandler_ptr duplicate (::salutation::AMH_sayonaraResponseHandler_ptr p);
     static void release (::salutation::AMH_sayonaraResponseHandler_ptr p);
@@ -2035,7 +2025,7 @@ namespace TAO
 #define _SALUTATION_AMI_SAYONARAHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::salutation::AMI_sayonaraHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::salutation::AMI_sayonaraHandler>
   {
     static ::salutation::AMI_sayonaraHandler_ptr duplicate (::salutation::AMI_sayonaraHandler_ptr p);
     static void release (::salutation::AMI_sayonaraHandler_ptr p);
@@ -2049,7 +2039,7 @@ namespace TAO
 #define _CIAO__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::ciao>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::ciao>
   {
     static ::ciao_ptr duplicate (::ciao_ptr p);
     static void release (::ciao_ptr p);
@@ -2076,7 +2066,7 @@ namespace TAO
 #define _AMH_CIAORESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_ciaoResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_ciaoResponseHandler>
   {
     static ::AMH_ciaoResponseHandler_ptr duplicate (::AMH_ciaoResponseHandler_ptr p);
     static void release (::AMH_ciaoResponseHandler_ptr p);
@@ -2090,7 +2080,7 @@ namespace TAO
 #define _AMI_CIAOHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_ciaoHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_ciaoHandler>
   {
     static ::AMI_ciaoHandler_ptr duplicate (::AMI_ciaoHandler_ptr p);
     static void release (::AMI_ciaoHandler_ptr p);
@@ -2104,7 +2094,7 @@ namespace TAO
 #define _ALOHA__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::aloha>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::aloha>
   {
     static ::aloha_ptr duplicate (::aloha_ptr p);
     static void release (::aloha_ptr p);
@@ -2131,7 +2121,7 @@ namespace TAO
 #define _AMH_ALOHARESPONSEHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMH_alohaResponseHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_alohaResponseHandler>
   {
     static ::AMH_alohaResponseHandler_ptr duplicate (::AMH_alohaResponseHandler_ptr p);
     static void release (::AMH_alohaResponseHandler_ptr p);
@@ -2145,7 +2135,7 @@ namespace TAO
 #define _AMI_ALOHAHANDLER__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::AMI_alohaHandler>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_alohaHandler>
   {
     static ::AMI_alohaHandler_ptr duplicate (::AMI_alohaHandler_ptr p);
     static void release (::AMI_alohaHandler_ptr p);
@@ -2159,7 +2149,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const hello_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, hello_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, hello_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2175,14 +2165,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_helloExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_helloExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_helloExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_helloHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMI_helloHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_helloHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2196,14 +2186,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Riot &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Riot const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Riot &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const goodbye_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, goodbye_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, goodbye_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2219,28 +2209,28 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_goodbyeExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_goodbyeExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_goodbyeExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_goodbyeHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMI_goodbyeHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_goodbyeHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const A::my_exception &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::my_exception const &);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, A::my_exception &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const salutation::sayonara_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, salutation::sayonara_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, salutation::sayonara_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2256,21 +2246,21 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const salutation::AMH_sayonaraExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, salutation::AMH_sayonaraExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, salutation::AMH_sayonaraExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const salutation::AMI_sayonaraHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, salutation::AMI_sayonaraHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, salutation::AMI_sayonaraHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const ciao_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, ciao_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ciao_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2286,21 +2276,21 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_ciaoExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_ciaoExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_ciaoExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_ciaoHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMI_ciaoHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_ciaoHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const aloha_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, aloha_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, aloha_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -2316,14 +2306,14 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMH_alohaExceptionHolder *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_alohaExceptionHolder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_alohaExceptionHolder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const AMI_alohaHandler_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMI_alohaHandler_ptr const);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_alohaHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

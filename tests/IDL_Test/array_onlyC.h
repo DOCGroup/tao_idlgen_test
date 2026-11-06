@@ -58,14 +58,9 @@ using TEST_TYPE = ::CORBA::Char[10];
 using TEST_TYPE_slice = ::CORBA::Char;
 struct TEST_TYPE_tag {};
 
-using TEST_TYPE_var =
-  TAO_FixedArray_Var_T<
-      TEST_TYPE,
-      TEST_TYPE_slice,
-      TEST_TYPE_tag
-    >;
+using TEST_TYPE_var = TAO_FixedArray_Var_T<TEST_TYPE, TEST_TYPE_slice, TEST_TYPE_tag>;
 
-  using TEST_TYPE_out = TEST_TYPE;
+using TEST_TYPE_out = TEST_TYPE;
 
 using TEST_TYPE_forany = TAO_Array_Forany_T<TEST_TYPE, TEST_TYPE_slice, TEST_TYPE_tag>;
 
@@ -73,9 +68,9 @@ TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *TEST_TYPE_alloc ();
 
 TAO_IDL_TEST_STUB_Export void TEST_TYPE_free (TEST_TYPE_slice *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *TEST_TYPE_dup (const TEST_TYPE_slice *_tao_slice);
+TAO_IDL_TEST_STUB_Export TEST_TYPE_slice *TEST_TYPE_dup (TEST_TYPE_slice const *_tao_slice);
 
-TAO_IDL_TEST_STUB_Export void TEST_TYPE_copy (TEST_TYPE_slice *_tao_to, const TEST_TYPE_slice *_tao_from);
+TAO_IDL_TEST_STUB_Export void TEST_TYPE_copy (TEST_TYPE_slice *_tao_to, TEST_TYPE_slice const *_tao_from);
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -87,7 +82,7 @@ namespace TAO
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -102,7 +97,7 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits< ::TEST_TYPE_tag>
+  class Arg_Traits<::TEST_TYPE_tag>
     : public
         Fixed_Array_Arg_Traits_T<
             ::TEST_TYPE_var,
@@ -141,7 +136,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, const ::TEST_TYPE_forany &_tao_array);
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ::TEST_TYPE_forany const &_tao_array);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::TEST_TYPE_forany &_tao_array);
 
 TAO_END_VERSIONED_NAMESPACE_DECL

@@ -636,7 +636,7 @@ TAO::Array_Traits<AttributeTester::string_1_forany>::free (
 ACE_INLINE
 AttributeTester::string_1_slice *
 TAO::Array_Traits<AttributeTester::string_1_forany>::dup (
-    const AttributeTester::string_1_slice * _tao_slice)
+    AttributeTester::string_1_slice const * _tao_slice)
 {
   return AttributeTester::string_1_dup (_tao_slice);
 }
@@ -645,7 +645,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<AttributeTester::string_1_forany>::copy (
     AttributeTester::string_1_slice * _tao_to,
-    const AttributeTester::string_1_slice * _tao_from)
+    AttributeTester::string_1_slice const * _tao_from)
 {
   AttributeTester::string_1_copy (_tao_to, _tao_from);
 }
@@ -730,7 +730,7 @@ TAO::Array_Traits<ParamMod::ParameterTester::object_array_type_forany>::free (
 ACE_INLINE
 ParamMod::ParameterTester::object_array_type_slice *
 TAO::Array_Traits<ParamMod::ParameterTester::object_array_type_forany>::dup (
-    const ParamMod::ParameterTester::object_array_type_slice * _tao_slice)
+    ParamMod::ParameterTester::object_array_type_slice const * _tao_slice)
 {
   return ParamMod::ParameterTester::object_array_type_dup (_tao_slice);
 }
@@ -739,7 +739,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<ParamMod::ParameterTester::object_array_type_forany>::copy (
     ParamMod::ParameterTester::object_array_type_slice * _tao_to,
-    const ParamMod::ParameterTester::object_array_type_slice * _tao_from)
+    ParamMod::ParameterTester::object_array_type_slice const * _tao_from)
 {
   ParamMod::ParameterTester::object_array_type_copy (_tao_to, _tao_from);
 }
