@@ -117,8 +117,7 @@ public:
     void _tao_encode (TAO_OutputCDR &cdr) const override;
     void _tao_decode (TAO_InputCDR &cdr) override;
 
-    Oops (
-        char const * _tao_reason);
+    Oops (char const * _tao_reason);
   };
 
   virtual ::CORBA::Short method (
@@ -205,7 +204,7 @@ public:
     ~TAO_Test_Smart_Proxy_Base ();
     TAO_Stub *_stubobj () const override;
     TAO_Stub *_stubobj () override;
-      ::CORBA::Short method (
+    ::CORBA::Short method (
     ::CORBA::Short boo) override;
     void shutdown () override;
   protected:
