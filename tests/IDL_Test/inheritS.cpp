@@ -63,8 +63,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_one_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_AMH_one_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_AMH_one_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -170,11 +170,9 @@ POA_OldInherit::AMH_one::op_one_skel (
 
 ::CORBA::Boolean POA_OldInherit::AMH_one::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::AMH_one::_interface_repository_id () const
@@ -212,8 +210,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_one_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_one_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_one_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -277,34 +275,18 @@ TAO_OldInherit_one_Perfect_Hash_OpTable::lookup (char const *str, std::size_t le
 
 static TAO_OldInherit_one_Perfect_Hash_OpTable tao_OldInherit_one_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldInherit::_TAO_one_Direct_Proxy_Impl::~_TAO_one_Direct_Proxy_Impl ()
-{
-}
+POA_OldInherit::_TAO_one_Direct_Proxy_Impl::~_TAO_one_Direct_Proxy_Impl () = default;
 
 void
-POA_OldInherit::_TAO_one_Direct_Proxy_Impl::op_one (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+POA_OldInherit::_TAO_one_Direct_Proxy_Impl::op_one (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_OldInherit::one_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::one_ptr> (servant);
+  POA_OldInherit::one_ptr _tao_ptr = dynamic_cast<POA_OldInherit::one_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->op_one (
-      );
+  _tao_ptr->op_one ();
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldInherit::one::one ()
 {
@@ -365,11 +347,9 @@ void POA_OldInherit::one::op_one_skel (
 
 ::CORBA::Boolean POA_OldInherit::one::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::one::_interface_repository_id () const
@@ -428,8 +408,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -493,52 +473,35 @@ TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable::lookup (char const *str, std
 
 static TAO_OldInherit_AMI_oneHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_oneHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::~_TAO_AMI_oneHandler_Direct_Proxy_Impl ()
-{
-}
+POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::~_TAO_AMI_oneHandler_Direct_Proxy_Impl () = default;
 
 void
-POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::op_one (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::op_one (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_OldInherit::AMI_oneHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::AMI_oneHandler_ptr> (servant);
+  POA_OldInherit::AMI_oneHandler_ptr _tao_ptr = dynamic_cast<POA_OldInherit::AMI_oneHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->op_one (
-      );
+  _tao_ptr->op_one ();
 }
 
 void
 POA_OldInherit::_TAO_AMI_oneHandler_Direct_Proxy_Impl::op_one_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_OldInherit::AMI_oneHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::AMI_oneHandler_ptr> (servant);
+  POA_OldInherit::AMI_oneHandler_ptr _tao_ptr = dynamic_cast<POA_OldInherit::AMI_oneHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op_one_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldInherit::AMI_oneHandler::AMI_oneHandler ()
 {
@@ -669,12 +632,10 @@ void POA_OldInherit::AMI_oneHandler::op_one_excep_skel (
 
 ::CORBA::Boolean POA_OldInherit::AMI_oneHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::AMI_oneHandler::_interface_repository_id () const
@@ -712,8 +673,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_two_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_AMH_two_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_AMH_two_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -820,12 +781,10 @@ POA_OldInherit::AMH_two::op_two_skel (
 
 ::CORBA::Boolean POA_OldInherit::AMH_two::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::AMH_two::_interface_repository_id () const
@@ -863,8 +822,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_two_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_two_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_two_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -929,34 +888,18 @@ TAO_OldInherit_two_Perfect_Hash_OpTable::lookup (char const *str, std::size_t le
 
 static TAO_OldInherit_two_Perfect_Hash_OpTable tao_OldInherit_two_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldInherit::_TAO_two_Direct_Proxy_Impl::~_TAO_two_Direct_Proxy_Impl ()
-{
-}
+POA_OldInherit::_TAO_two_Direct_Proxy_Impl::~_TAO_two_Direct_Proxy_Impl () = default;
 
 void
-POA_OldInherit::_TAO_two_Direct_Proxy_Impl::op_two (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+POA_OldInherit::_TAO_two_Direct_Proxy_Impl::op_two (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_OldInherit::two_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::two_ptr> (servant);
+  POA_OldInherit::two_ptr _tao_ptr = dynamic_cast<POA_OldInherit::two_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->op_two (
-      );
+  _tao_ptr->op_two ();
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldInherit::two::two ()
 {
@@ -1017,12 +960,10 @@ void POA_OldInherit::two::op_two_skel (
 
 ::CORBA::Boolean POA_OldInherit::two::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::two::_interface_repository_id () const
@@ -1081,8 +1022,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -1172,52 +1113,35 @@ TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable::lookup (char const *str, std
 
 static TAO_OldInherit_AMI_twoHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_twoHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::~_TAO_AMI_twoHandler_Direct_Proxy_Impl ()
-{
-}
+POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::~_TAO_AMI_twoHandler_Direct_Proxy_Impl () = default;
 
 void
-POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::op_two (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::op_two (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_OldInherit::AMI_twoHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::AMI_twoHandler_ptr> (servant);
+  POA_OldInherit::AMI_twoHandler_ptr _tao_ptr = dynamic_cast<POA_OldInherit::AMI_twoHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->op_two (
-      );
+  _tao_ptr->op_two ();
 }
 
 void
 POA_OldInherit::_TAO_AMI_twoHandler_Direct_Proxy_Impl::op_two_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_OldInherit::AMI_twoHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::AMI_twoHandler_ptr> (servant);
+  POA_OldInherit::AMI_twoHandler_ptr _tao_ptr = dynamic_cast<POA_OldInherit::AMI_twoHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op_two_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldInherit::AMI_twoHandler::AMI_twoHandler ()
 {
@@ -1348,13 +1272,11 @@ void POA_OldInherit::AMI_twoHandler::op_two_excep_skel (
 
 ::CORBA::Boolean POA_OldInherit::AMI_twoHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::AMI_twoHandler::_interface_repository_id () const
@@ -1392,8 +1314,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_three_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_AMH_three_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_AMH_three_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -1502,12 +1424,10 @@ POA_OldInherit::AMH_three::op_three_skel (
 
 ::CORBA::Boolean POA_OldInherit::AMH_three::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::AMH_three::_interface_repository_id () const
@@ -1545,8 +1465,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_three_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_three_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_three_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -1613,34 +1533,18 @@ TAO_OldInherit_three_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
 
 static TAO_OldInherit_three_Perfect_Hash_OpTable tao_OldInherit_three_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldInherit::_TAO_three_Direct_Proxy_Impl::~_TAO_three_Direct_Proxy_Impl ()
-{
-}
+POA_OldInherit::_TAO_three_Direct_Proxy_Impl::~_TAO_three_Direct_Proxy_Impl () = default;
 
 void
-POA_OldInherit::_TAO_three_Direct_Proxy_Impl::op_three (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+POA_OldInherit::_TAO_three_Direct_Proxy_Impl::op_three (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_OldInherit::three_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::three_ptr> (servant);
+  POA_OldInherit::three_ptr _tao_ptr = dynamic_cast<POA_OldInherit::three_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->op_three (
-      );
+  _tao_ptr->op_three ();
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldInherit::three::three ()
 {
@@ -1701,12 +1605,10 @@ void POA_OldInherit::three::op_three_skel (
 
 ::CORBA::Boolean POA_OldInherit::three::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::three::_interface_repository_id () const
@@ -1765,8 +1667,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -1836,52 +1738,35 @@ TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable::lookup (char const *str, s
 
 static TAO_OldInherit_AMI_threeHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_threeHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::~_TAO_AMI_threeHandler_Direct_Proxy_Impl ()
-{
-}
+POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::~_TAO_AMI_threeHandler_Direct_Proxy_Impl () = default;
 
 void
-POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::op_three (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::op_three (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_OldInherit::AMI_threeHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::AMI_threeHandler_ptr> (servant);
+  POA_OldInherit::AMI_threeHandler_ptr _tao_ptr = dynamic_cast<POA_OldInherit::AMI_threeHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->op_three (
-      );
+  _tao_ptr->op_three ();
 }
 
 void
 POA_OldInherit::_TAO_AMI_threeHandler_Direct_Proxy_Impl::op_three_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_OldInherit::AMI_threeHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::AMI_threeHandler_ptr> (servant);
+  POA_OldInherit::AMI_threeHandler_ptr _tao_ptr = dynamic_cast<POA_OldInherit::AMI_threeHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op_three_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldInherit::AMI_threeHandler::AMI_threeHandler ()
 {
@@ -2012,13 +1897,11 @@ void POA_OldInherit::AMI_threeHandler::op_three_excep_skel (
 
 ::CORBA::Boolean POA_OldInherit::AMI_threeHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::AMI_threeHandler::_interface_repository_id () const
@@ -2056,8 +1939,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_four_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_AMH_four_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_AMH_four_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -2168,14 +2051,12 @@ POA_OldInherit::AMH_four::op_four_skel (
 
 ::CORBA::Boolean POA_OldInherit::AMH_four::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::AMH_four::_interface_repository_id () const
@@ -2213,8 +2094,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_four_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_four_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_four_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -2283,34 +2164,18 @@ TAO_OldInherit_four_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
 
 static TAO_OldInherit_four_Perfect_Hash_OpTable tao_OldInherit_four_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldInherit::_TAO_four_Direct_Proxy_Impl::~_TAO_four_Direct_Proxy_Impl ()
-{
-}
+POA_OldInherit::_TAO_four_Direct_Proxy_Impl::~_TAO_four_Direct_Proxy_Impl () = default;
 
 void
-POA_OldInherit::_TAO_four_Direct_Proxy_Impl::op_four (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+POA_OldInherit::_TAO_four_Direct_Proxy_Impl::op_four (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_OldInherit::four_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::four_ptr> (servant);
+  POA_OldInherit::four_ptr _tao_ptr = dynamic_cast<POA_OldInherit::four_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->op_four (
-      );
+  _tao_ptr->op_four ();
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldInherit::four::four ()
 {
@@ -2371,14 +2236,12 @@ void POA_OldInherit::four::op_four_skel (
 
 ::CORBA::Boolean POA_OldInherit::four::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::four::_interface_repository_id () const
@@ -2437,8 +2300,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -2533,52 +2396,35 @@ TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable::lookup (char const *str, st
 
 static TAO_OldInherit_AMI_fourHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_fourHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::~_TAO_AMI_fourHandler_Direct_Proxy_Impl ()
-{
-}
+POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::~_TAO_AMI_fourHandler_Direct_Proxy_Impl () = default;
 
 void
-POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::op_four (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::op_four (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_OldInherit::AMI_fourHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::AMI_fourHandler_ptr> (servant);
+  POA_OldInherit::AMI_fourHandler_ptr _tao_ptr = dynamic_cast<POA_OldInherit::AMI_fourHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->op_four (
-      );
+  _tao_ptr->op_four ();
 }
 
 void
 POA_OldInherit::_TAO_AMI_fourHandler_Direct_Proxy_Impl::op_four_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_OldInherit::AMI_fourHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::AMI_fourHandler_ptr> (servant);
+  POA_OldInherit::AMI_fourHandler_ptr _tao_ptr = dynamic_cast<POA_OldInherit::AMI_fourHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op_four_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldInherit::AMI_fourHandler::AMI_fourHandler ()
 {
@@ -2709,15 +2555,13 @@ void POA_OldInherit::AMI_fourHandler::op_four_excep_skel (
 
 ::CORBA::Boolean POA_OldInherit::AMI_fourHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_fourHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_fourHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::AMI_fourHandler::_interface_repository_id () const
@@ -2755,8 +2599,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMH_five_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_AMH_five_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_AMH_five_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -2867,15 +2711,13 @@ POA_OldInherit::AMH_five::op_five_skel (
 
 ::CORBA::Boolean POA_OldInherit::AMH_five::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/five:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/five:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::AMH_five::_interface_repository_id () const
@@ -2913,8 +2755,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_five_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_five_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_five_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -2983,34 +2825,18 @@ TAO_OldInherit_five_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
 
 static TAO_OldInherit_five_Perfect_Hash_OpTable tao_OldInherit_five_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldInherit::_TAO_five_Direct_Proxy_Impl::~_TAO_five_Direct_Proxy_Impl ()
-{
-}
+POA_OldInherit::_TAO_five_Direct_Proxy_Impl::~_TAO_five_Direct_Proxy_Impl () = default;
 
 void
-POA_OldInherit::_TAO_five_Direct_Proxy_Impl::op_five (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+POA_OldInherit::_TAO_five_Direct_Proxy_Impl::op_five (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_OldInherit::five_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::five_ptr> (servant);
+  POA_OldInherit::five_ptr _tao_ptr = dynamic_cast<POA_OldInherit::five_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->op_five (
-      );
+  _tao_ptr->op_five ();
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldInherit::five::five ()
 {
@@ -3071,15 +2897,13 @@ void POA_OldInherit::five::op_five_skel (
 
 ::CORBA::Boolean POA_OldInherit::five::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/five:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldInherit/one:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/two:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/three:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/four:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/five:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::five::_interface_repository_id () const
@@ -3138,8 +2962,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -3236,52 +3060,35 @@ TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable::lookup (char const *str, st
 
 static TAO_OldInherit_AMI_fiveHandler_Perfect_Hash_OpTable tao_OldInherit_AMI_fiveHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::~_TAO_AMI_fiveHandler_Direct_Proxy_Impl ()
-{
-}
+POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::~_TAO_AMI_fiveHandler_Direct_Proxy_Impl () = default;
 
 void
-POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::op_five (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::op_five (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_OldInherit::AMI_fiveHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::AMI_fiveHandler_ptr> (servant);
+  POA_OldInherit::AMI_fiveHandler_ptr _tao_ptr = dynamic_cast<POA_OldInherit::AMI_fiveHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->op_five (
-      );
+  _tao_ptr->op_five ();
 }
 
 void
 POA_OldInherit::_TAO_AMI_fiveHandler_Direct_Proxy_Impl::op_five_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_OldInherit::AMI_fiveHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldInherit::AMI_fiveHandler_ptr> (servant);
+  POA_OldInherit::AMI_fiveHandler_ptr _tao_ptr = dynamic_cast<POA_OldInherit::AMI_fiveHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op_five_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldInherit::AMI_fiveHandler::AMI_fiveHandler ()
 {
@@ -3412,16 +3219,14 @@ void POA_OldInherit::AMI_fiveHandler::op_five_excep_skel (
 
 ::CORBA::Boolean POA_OldInherit::AMI_fiveHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_fourHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldInherit/AMI_fiveHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_oneHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_twoHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_threeHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_fourHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldInherit/AMI_fiveHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldInherit::AMI_fiveHandler::_interface_repository_id () const

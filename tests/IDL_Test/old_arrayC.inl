@@ -445,18 +445,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ACE_INLINE
 OldArray::A_i::A_i (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldArray::A_i::A_i (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldArray::A_i::A_i (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -473,18 +468,13 @@ OldArray::AMH_A_iExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 OldArray::AMI_A_iHandler::AMI_A_iHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldArray::AMI_A_iHandler::AMI_A_iHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldArray::AMI_A_iHandler::AMI_A_iHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

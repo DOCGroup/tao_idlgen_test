@@ -56,8 +56,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Test_Hello_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_Test_Hello_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Test_Hello_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -145,8 +145,7 @@ namespace POA_Test
       TAO::SArg_Traits<char *>::ret_arg_type retval =
         static_cast<TAO::SArg_Traits<char *>::ret_val *> (this->args_[0])->arg ();
 
-      retval =
-        this->servant_->get_string ();
+      retval = this->servant_->get_string ();
     }
 
   private:
@@ -242,11 +241,9 @@ void POA_Test::Hello::shutdown_skel (
 
 ::CORBA::Boolean POA_Test::Hello::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:Test/Hello:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:Test/Hello:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_Test::Hello::_interface_repository_id () const

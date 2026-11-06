@@ -315,9 +315,7 @@ namespace All_Anon
 
     // The static operations.
     static anon_bd_string_test_ptr _duplicate (anon_bd_string_test_ptr obj);
-
     static void _tao_release (anon_bd_string_test_ptr obj);
-
     static anon_bd_string_test_ptr _narrow (::CORBA::Object_ptr obj);
     static anon_bd_string_test_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static anon_bd_string_test_ptr _nil ();
@@ -387,15 +385,14 @@ namespace All_Anon
 
     // Non-local interface only.
     anon_bd_string_test (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~anon_bd_string_test () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     anon_bd_string_test (anon_bd_string_test const &) = delete;
     anon_bd_string_test (anon_bd_string_test &&) = delete;
     anon_bd_string_test &operator= (anon_bd_string_test const &) = delete;
@@ -568,9 +565,7 @@ public:
 
   // The static operations.
   static AMH_anon_bd_string_testResponseHandler_ptr _duplicate (AMH_anon_bd_string_testResponseHandler_ptr obj);
-
   static void _tao_release (AMH_anon_bd_string_testResponseHandler_ptr obj);
-
   static AMH_anon_bd_string_testResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_anon_bd_string_testResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_anon_bd_string_testResponseHandler_ptr _nil ();
@@ -632,7 +627,6 @@ protected:
   ~AMH_anon_bd_string_testResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_anon_bd_string_testResponseHandler (AMH_anon_bd_string_testResponseHandler const &) = delete;
   AMH_anon_bd_string_testResponseHandler (AMH_anon_bd_string_testResponseHandler &&) = delete;
   AMH_anon_bd_string_testResponseHandler &operator= (AMH_anon_bd_string_testResponseHandler const &) = delete;
@@ -651,7 +645,6 @@ using AMI_anon_bd_string_testHandler_out = TAO_Objref_Out_T<AMI_anon_bd_string_t
 
 class TAO_IDL_TEST_STUB_Export AMI_anon_bd_string_testHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_anon_bd_string_testHandler>;
@@ -663,9 +656,7 @@ public:
 
   // The static operations.
   static AMI_anon_bd_string_testHandler_ptr _duplicate (AMI_anon_bd_string_testHandler_ptr obj);
-
   static void _tao_release (AMI_anon_bd_string_testHandler_ptr obj);
-
   static AMI_anon_bd_string_testHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_anon_bd_string_testHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_anon_bd_string_testHandler_ptr _nil ();
@@ -777,15 +768,14 @@ protected:
 
   // Non-local interface only.
   AMI_anon_bd_string_testHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_anon_bd_string_testHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_anon_bd_string_testHandler (AMI_anon_bd_string_testHandler const &) = delete;
   AMI_anon_bd_string_testHandler (AMI_anon_bd_string_testHandler &&) = delete;
   AMI_anon_bd_string_testHandler &operator= (AMI_anon_bd_string_testHandler const &) = delete;

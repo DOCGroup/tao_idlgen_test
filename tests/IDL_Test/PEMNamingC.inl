@@ -24,18 +24,13 @@
 
 ACE_INLINE
 Plesk::Naming::ObjectResolver::ObjectResolver (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-Plesk::Naming::ObjectResolver::ObjectResolver (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+Plesk::Naming::ObjectResolver::ObjectResolver (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,18 +47,13 @@ Plesk::Naming::AMH_ObjectResolverExceptionHolder::_tao_obv_static_repository_id 
 
 ACE_INLINE
 Plesk::Naming::AMI_ObjectResolverHandler::AMI_ObjectResolverHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-Plesk::Naming::AMI_ObjectResolverHandler::AMI_ObjectResolverHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+Plesk::Naming::AMI_ObjectResolverHandler::AMI_ObjectResolverHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

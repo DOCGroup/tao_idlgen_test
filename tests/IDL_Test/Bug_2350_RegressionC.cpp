@@ -50,16 +50,12 @@
 #include "Bug_2350_RegressionC.inl"
 #endif /* !defined INLINE */
 something::something ()
-  : ::CORBA::UserException (
-        "IDL:something:1.0",
-        "something")
+  : ::CORBA::UserException ("IDL:something:1.0", "something")
 {
 }
 
 something::something (const ::something &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
 }
 
@@ -202,7 +198,7 @@ TAO::Objref_Traits<Bug_2350_Regression>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Bug_2350_Regression>::marshal (Bug_2350_Regression_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Bug_2350_Regression>::marshal (Bug_2350_Regression_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -223,8 +219,8 @@ Bug_2350_Regression::Bug_2350_Regression_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_a)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_a)
     };
 
   static TAO::Exception_Data
@@ -246,7 +242,6 @@ Bug_2350_Regression::Bug_2350_Regression_excep (
       "Bug_2350_Regression_excep",
       25,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -270,8 +265,8 @@ Bug_2350_Regression::sendc_Bug_2350_Regression_excep (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_a)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_a)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -337,7 +332,7 @@ Bug_2350_Regression::_tao_release (Bug_2350_Regression_ptr obj)
 Bug_2350_Regression::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Bug_2350_Regression:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -565,7 +560,7 @@ TAO::Objref_Traits<AMH_Bug_2350_RegressionResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_Bug_2350_RegressionResponseHandler>::marshal (AMH_Bug_2350_RegressionResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_Bug_2350_RegressionResponseHandler>::marshal (AMH_Bug_2350_RegressionResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -586,14 +581,14 @@ AMH_Bug_2350_RegressionResponseHandler_ptr
 AMH_Bug_2350_RegressionResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_Bug_2350_RegressionResponseHandler::_duplicate (
-      dynamic_cast<AMH_Bug_2350_RegressionResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_Bug_2350_RegressionResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_Bug_2350_RegressionResponseHandler_ptr
 AMH_Bug_2350_RegressionResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_Bug_2350_RegressionResponseHandler::_duplicate (
-      dynamic_cast<AMH_Bug_2350_RegressionResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_Bug_2350_RegressionResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_Bug_2350_RegressionResponseHandler_ptr
@@ -622,8 +617,8 @@ AMH_Bug_2350_RegressionResponseHandler::_tao_release (AMH_Bug_2350_RegressionRes
 AMH_Bug_2350_RegressionResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_Bug_2350_RegressionResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -685,7 +680,7 @@ TAO::Objref_Traits<AMI_Bug_2350_RegressionHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_Bug_2350_RegressionHandler>::marshal (AMI_Bug_2350_RegressionHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_Bug_2350_RegressionHandler>::marshal (AMI_Bug_2350_RegressionHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -704,7 +699,7 @@ AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   static TAO::Exception_Data
@@ -726,8 +721,7 @@ AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep ()
       "Bug_2350_Regression_excep",
       25,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -818,8 +812,8 @@ AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   static TAO::Exception_Data
@@ -841,7 +835,6 @@ AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep (
       "Bug_2350_Regression_excep_excep",
       31,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -898,8 +891,8 @@ AMI_Bug_2350_RegressionHandler::_tao_release (AMI_Bug_2350_RegressionHandler_ptr
 AMI_Bug_2350_RegressionHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_Bug_2350_RegressionHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:AMI_Bug_2350_RegressionHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }

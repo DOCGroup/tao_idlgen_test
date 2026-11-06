@@ -63,8 +63,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_seqTest_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_seqTest_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_seqTest_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -179,11 +179,9 @@ POA_AMH_seqTest::send_dozen_skel (
 
 ::CORBA::Boolean POA_AMH_seqTest::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:seqTest:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:seqTest:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_seqTest::_interface_repository_id () const
@@ -221,8 +219,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_seqTest_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_seqTest_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_seqTest_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -286,35 +284,22 @@ TAO_seqTest_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_seqTest_Perfect_Hash_OpTable tao_seqTest_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_seqTest_Direct_Proxy_Impl::~_TAO_seqTest_Direct_Proxy_Impl ()
-{
-}
+_TAO_seqTest_Direct_Proxy_Impl::~_TAO_seqTest_Direct_Proxy_Impl () = default;
 
 void
-_TAO_seqTest_Direct_Proxy_Impl::send_dozen (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_seqTest_Direct_Proxy_Impl::send_dozen (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_seqTest_ptr _tao_ptr =
-    dynamic_cast<POA_seqTest_ptr> (servant);
+  POA_seqTest_ptr _tao_ptr = dynamic_cast<POA_seqTest_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::seqTest::dozens>::inout_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->send_dozen (
-        ((TAO::Arg_Traits<::seqTest::dozens>::inout_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_seqTest::POA_seqTest ()
 {
@@ -389,11 +374,9 @@ void POA_seqTest::send_dozen_skel (
 
 ::CORBA::Boolean POA_seqTest::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:seqTest:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:seqTest:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_seqTest::_interface_repository_id () const
@@ -460,8 +443,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_seqTestHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_seqTestHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_seqTestHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -526,53 +509,37 @@ TAO_AMI_seqTestHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_
 
 static TAO_AMI_seqTestHandler_Perfect_Hash_OpTable tao_AMI_seqTestHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_seqTestHandler_Direct_Proxy_Impl::~_TAO_AMI_seqTestHandler_Direct_Proxy_Impl ()
-{
-}
+_TAO_AMI_seqTestHandler_Direct_Proxy_Impl::~_TAO_AMI_seqTestHandler_Direct_Proxy_Impl () = default;
 
 void
-_TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_seqTestHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_seqTestHandler_ptr> (servant);
+  POA_AMI_seqTestHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_seqTestHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::seqTest::dozens>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->send_dozen (
-        ((TAO::Arg_Traits<::seqTest::dozens>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
-_TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_seqTestHandler_Direct_Proxy_Impl::send_dozen_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_seqTestHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_seqTestHandler_ptr> (servant);
+  POA_AMI_seqTestHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_seqTestHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->send_dozen_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_AMI_seqTestHandler::POA_AMI_seqTestHandler ()
 {
@@ -713,12 +680,10 @@ void POA_AMI_seqTestHandler::send_dozen_excep_skel (
 
 ::CORBA::Boolean POA_AMI_seqTestHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_seqTestHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_seqTestHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_seqTestHandler::_interface_repository_id () const

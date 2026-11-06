@@ -27,18 +27,13 @@
 
 ACE_INLINE
 scope_test::i_scope_test::i_scope_test (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-scope_test::i_scope_test::i_scope_test (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+scope_test::i_scope_test::i_scope_test (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -55,18 +50,13 @@ scope_test::AMH_i_scope_testExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -147,18 +137,13 @@ mod2::fwd::un::full_mem () const
 
 ACE_INLINE
 mod2::fwd::fwd (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-mod2::fwd::fwd (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+mod2::fwd::fwd (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -175,18 +160,13 @@ mod2::AMH_fwdExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 mod2::AMI_fwdHandler::AMI_fwdHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-mod2::AMI_fwdHandler::AMI_fwdHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+mod2::AMI_fwdHandler::AMI_fwdHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

@@ -645,7 +645,7 @@ TAO::Objref_Traits<TestSeq>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<TestSeq>::marshal (TestSeq_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<TestSeq>::marshal (TestSeq_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -664,7 +664,7 @@ TestSeq::fattr ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -674,8 +674,7 @@ TestSeq::fattr ()
       "_get_fattr",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -698,8 +697,8 @@ TestSeq::fattr (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_fattr)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_fattr)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -709,7 +708,6 @@ TestSeq::fattr (
       "_set_fattr",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -784,8 +782,8 @@ TestSeq::sendc_set_fattr (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_fattr)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_fattr)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -877,7 +875,7 @@ TestSeq::_tao_release (TestSeq_ptr obj)
 TestSeq::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:TestSeq:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1119,7 +1117,7 @@ TAO::Objref_Traits<AMH_TestSeqResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_TestSeqResponseHandler>::marshal (AMH_TestSeqResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_TestSeqResponseHandler>::marshal (AMH_TestSeqResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1140,14 +1138,14 @@ AMH_TestSeqResponseHandler_ptr
 AMH_TestSeqResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_TestSeqResponseHandler::_duplicate (
-      dynamic_cast<AMH_TestSeqResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_TestSeqResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_TestSeqResponseHandler_ptr
 AMH_TestSeqResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_TestSeqResponseHandler::_duplicate (
-      dynamic_cast<AMH_TestSeqResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_TestSeqResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_TestSeqResponseHandler_ptr
@@ -1176,8 +1174,8 @@ AMH_TestSeqResponseHandler::_tao_release (AMH_TestSeqResponseHandler_ptr obj)
 AMH_TestSeqResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_TestSeqResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1239,7 +1237,7 @@ TAO::Objref_Traits<AMI_TestSeqHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_TestSeqHandler>::marshal (AMI_TestSeqHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_TestSeqHandler>::marshal (AMI_TestSeqHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1260,8 +1258,8 @@ AMI_TestSeqHandler::get_fattr (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1271,7 +1269,6 @@ AMI_TestSeqHandler::get_fattr (
       "get_fattr",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1353,8 +1350,8 @@ AMI_TestSeqHandler::get_fattr_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1364,7 +1361,6 @@ AMI_TestSeqHandler::get_fattr_excep (
       "get_fattr_excep",
       15,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1381,7 +1377,7 @@ AMI_TestSeqHandler::set_fattr ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1391,8 +1387,7 @@ AMI_TestSeqHandler::set_fattr ()
       "set_fattr",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -1468,8 +1463,8 @@ AMI_TestSeqHandler::set_fattr_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1479,7 +1474,6 @@ AMI_TestSeqHandler::set_fattr_excep (
       "set_fattr_excep",
       15,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1533,8 +1527,8 @@ AMI_TestSeqHandler::_tao_release (AMI_TestSeqHandler_ptr obj)
 AMI_TestSeqHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_TestSeqHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:AMI_TestSeqHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }

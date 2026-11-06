@@ -214,28 +214,17 @@ public:
   virtual ::Test::Group * getGroup () = 0;
 
   static void getGroup_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_Test_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_Test_Direct_Proxy_Impl ();
-  static void
-  getGroup (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void getGroup (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_TAO_AMH_TestResponseHandler;
 using POA_TAO_AMH_TestResponseHandler_ptr = POA_TAO_AMH_TestResponseHandler *;
@@ -286,40 +275,26 @@ public:
     ::Test::Group const & ami_return_val) = 0;
 
   static void getGroup_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void getGroup_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void getGroup_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_TestHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_TestHandler_Direct_Proxy_Impl ();
-  static void
-  getGroup (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  getGroup_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void getGroup (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void getGroup_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 #include "Bug_2619_RegressionS_T.h"
 

@@ -345,18 +345,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ACE_INLINE
 TestModule::TestInterface::TestInterface (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-TestModule::TestInterface::TestInterface (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+TestModule::TestInterface::TestInterface (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -373,36 +368,26 @@ TestModule::AMH_TestInterfaceExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 TestModule::AMI_TestInterfaceHandler::AMI_TestInterfaceHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-TestModule::AMI_TestInterfaceHandler::AMI_TestInterfaceHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+TestModule::AMI_TestInterfaceHandler::AMI_TestInterfaceHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 bug_2124::Foo::Foo (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-bug_2124::Foo::Foo (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+bug_2124::Foo::Foo (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -419,36 +404,26 @@ bug_2124::AMH_FooExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 bug_2124::AMI_FooHandler::AMI_FooHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-bug_2124::AMI_FooHandler::AMI_FooHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+bug_2124::AMI_FooHandler::AMI_FooHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 bug_2122::One::Whatever::Whatever (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-bug_2122::One::Whatever::Whatever (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+bug_2122::One::Whatever::Whatever (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -465,36 +440,26 @@ bug_2122::One::AMH_WhateverExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 bug_2122::One::AMI_WhateverHandler::AMI_WhateverHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-bug_2122::One::AMI_WhateverHandler::AMI_WhateverHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+bug_2122::One::AMI_WhateverHandler::AMI_WhateverHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 bug_2122::Two::WhoCares::WhoCares (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-bug_2122::Two::WhoCares::WhoCares (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+bug_2122::Two::WhoCares::WhoCares (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -511,36 +476,26 @@ bug_2122::Two::AMH_WhoCaresExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 bug_2122::Two::AMI_WhoCaresHandler::AMI_WhoCaresHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-bug_2122::Two::AMI_WhoCaresHandler::AMI_WhoCaresHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+bug_2122::Two::AMI_WhoCaresHandler::AMI_WhoCaresHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 bug_2122::Three::WhoCares::WhoCares (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-bug_2122::Three::WhoCares::WhoCares (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+bug_2122::Three::WhoCares::WhoCares (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -557,18 +512,13 @@ bug_2122::Three::AMH_WhoCaresExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 bug_2122::Three::AMI_WhoCaresHandler::AMI_WhoCaresHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-bug_2122::Three::AMI_WhoCaresHandler::AMI_WhoCaresHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+bug_2122::Three::AMI_WhoCaresHandler::AMI_WhoCaresHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

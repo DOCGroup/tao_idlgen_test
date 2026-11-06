@@ -231,28 +231,17 @@ public:
     ::seqTest::dozens & bouquets) = 0;
 
   static void send_dozen_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_seqTest_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_seqTest_Direct_Proxy_Impl ();
-  static void
-  send_dozen (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void send_dozen (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_TAO_AMH_seqTestResponseHandler;
 using POA_TAO_AMH_seqTestResponseHandler_ptr = POA_TAO_AMH_seqTestResponseHandler *;
@@ -303,40 +292,26 @@ public:
     ::seqTest::dozens const & bouquets) = 0;
 
   static void send_dozen_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void send_dozen_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void send_dozen_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_seqTestHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_seqTestHandler_Direct_Proxy_Impl ();
-  static void
-  send_dozen (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  send_dozen_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void send_dozen (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void send_dozen_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 #include "sequence_anonymousS_T.h"
 

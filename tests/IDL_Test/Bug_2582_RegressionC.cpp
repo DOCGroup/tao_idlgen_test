@@ -128,7 +128,7 @@ TAO::Objref_Traits<FieldDevice_T>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<FieldDevice_T>::marshal (FieldDevice_T_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<FieldDevice_T>::marshal (FieldDevice_T_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -147,7 +147,7 @@ FieldDevice_T::getEncodingID ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -157,8 +157,7 @@ FieldDevice_T::getEncodingID ()
       "getEncodingID",
       13,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -179,7 +178,7 @@ FieldDevice_T::getEncoding ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -189,8 +188,7 @@ FieldDevice_T::getEncoding ()
       "getEncoding",
       11,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -300,7 +298,7 @@ FieldDevice_T::_tao_release (FieldDevice_T_ptr obj)
 FieldDevice_T::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:FieldDevice_T:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -542,7 +540,7 @@ TAO::Objref_Traits<AMH_FieldDevice_TResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_FieldDevice_TResponseHandler>::marshal (AMH_FieldDevice_TResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_FieldDevice_TResponseHandler>::marshal (AMH_FieldDevice_TResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -563,14 +561,14 @@ AMH_FieldDevice_TResponseHandler_ptr
 AMH_FieldDevice_TResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_FieldDevice_TResponseHandler::_duplicate (
-      dynamic_cast<AMH_FieldDevice_TResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_FieldDevice_TResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_FieldDevice_TResponseHandler_ptr
 AMH_FieldDevice_TResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_FieldDevice_TResponseHandler::_duplicate (
-      dynamic_cast<AMH_FieldDevice_TResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_FieldDevice_TResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_FieldDevice_TResponseHandler_ptr
@@ -599,8 +597,8 @@ AMH_FieldDevice_TResponseHandler::_tao_release (AMH_FieldDevice_TResponseHandler
 AMH_FieldDevice_TResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_FieldDevice_TResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -662,7 +660,7 @@ TAO::Objref_Traits<AMI_FieldDevice_THandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_FieldDevice_THandler>::marshal (AMI_FieldDevice_THandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_FieldDevice_THandler>::marshal (AMI_FieldDevice_THandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -683,8 +681,8 @@ AMI_FieldDevice_THandler::getEncodingID (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -694,7 +692,6 @@ AMI_FieldDevice_THandler::getEncodingID (
       "getEncodingID",
       13,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -776,8 +773,8 @@ AMI_FieldDevice_THandler::getEncodingID_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -787,7 +784,6 @@ AMI_FieldDevice_THandler::getEncodingID_excep (
       "getEncodingID_excep",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -806,8 +802,8 @@ AMI_FieldDevice_THandler::getEncoding (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -817,7 +813,6 @@ AMI_FieldDevice_THandler::getEncoding (
       "getEncoding",
       11,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -899,8 +894,8 @@ AMI_FieldDevice_THandler::getEncoding_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -910,7 +905,6 @@ AMI_FieldDevice_THandler::getEncoding_excep (
       "getEncoding_excep",
       17,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -964,8 +958,8 @@ AMI_FieldDevice_THandler::_tao_release (AMI_FieldDevice_THandler_ptr obj)
 AMI_FieldDevice_THandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_FieldDevice_THandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:AMI_FieldDevice_THandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1356,8 +1350,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, EncodingID_T & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {

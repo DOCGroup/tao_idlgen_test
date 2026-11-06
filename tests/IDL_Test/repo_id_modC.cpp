@@ -57,7 +57,7 @@ TAO::Objref_Traits<gleep::schmooze>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::schmooze>::marshal (gleep::schmooze_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::schmooze>::marshal (gleep::schmooze_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -78,14 +78,14 @@ gleep::schmooze_ptr
 gleep::schmooze::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schmooze::_duplicate (
-      dynamic_cast<schmooze_ptr> (_tao_objref));
+    dynamic_cast<schmooze_ptr> (_tao_objref));
 }
 
 gleep::schmooze_ptr
 gleep::schmooze::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schmooze::_duplicate (
-      dynamic_cast<schmooze_ptr> (_tao_objref));
+    dynamic_cast<schmooze_ptr> (_tao_objref));
 }
 
 gleep::schmooze_ptr
@@ -114,8 +114,8 @@ gleep::schmooze::_tao_release (schmooze_ptr obj)
 gleep::schmooze::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:gleep_prefix/gleep/schmooze:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -169,7 +169,7 @@ TAO::Objref_Traits<gleep::schmeer>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::schmeer>::marshal (gleep::schmeer_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::schmeer>::marshal (gleep::schmeer_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -190,14 +190,14 @@ gleep::schmeer_ptr
 gleep::schmeer::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schmeer::_duplicate (
-      dynamic_cast<schmeer_ptr> (_tao_objref));
+    dynamic_cast<schmeer_ptr> (_tao_objref));
 }
 
 gleep::schmeer_ptr
 gleep::schmeer::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schmeer::_duplicate (
-      dynamic_cast<schmeer_ptr> (_tao_objref));
+    dynamic_cast<schmeer_ptr> (_tao_objref));
 }
 
 gleep::schmeer_ptr
@@ -226,8 +226,8 @@ gleep::schmeer::_tao_release (schmeer_ptr obj)
 gleep::schmeer::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:gleep_prefix/gleep/schmeer:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -281,7 +281,7 @@ TAO::Objref_Traits<gleep::schlemiel>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::schlemiel>::marshal (gleep::schlemiel_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::schlemiel>::marshal (gleep::schlemiel_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -302,14 +302,14 @@ gleep::schlemiel_ptr
 gleep::schlemiel::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schlemiel::_duplicate (
-      dynamic_cast<schlemiel_ptr> (_tao_objref));
+    dynamic_cast<schlemiel_ptr> (_tao_objref));
 }
 
 gleep::schlemiel_ptr
 gleep::schlemiel::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schlemiel::_duplicate (
-      dynamic_cast<schlemiel_ptr> (_tao_objref));
+    dynamic_cast<schlemiel_ptr> (_tao_objref));
 }
 
 gleep::schlemiel_ptr
@@ -338,8 +338,8 @@ gleep::schlemiel::_tao_release (schlemiel_ptr obj)
 gleep::schlemiel::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:gleep_prefix/gleep/schlemiel:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -393,7 +393,7 @@ TAO::Objref_Traits<gleep::spilkis>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::spilkis>::marshal (gleep::spilkis_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::spilkis>::marshal (gleep::spilkis_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -414,14 +414,14 @@ gleep::spilkis_ptr
 gleep::spilkis::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return spilkis::_duplicate (
-      dynamic_cast<spilkis_ptr> (_tao_objref));
+    dynamic_cast<spilkis_ptr> (_tao_objref));
 }
 
 gleep::spilkis_ptr
 gleep::spilkis::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return spilkis::_duplicate (
-      dynamic_cast<spilkis_ptr> (_tao_objref));
+    dynamic_cast<spilkis_ptr> (_tao_objref));
 }
 
 gleep::spilkis_ptr
@@ -450,8 +450,8 @@ gleep::spilkis::_tao_release (spilkis_ptr obj)
 gleep::spilkis::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:gleep_prefix/gleep/spilkis:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -505,7 +505,7 @@ TAO::Objref_Traits<gleep::floop::schmuck>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::floop::schmuck>::marshal (gleep::floop::schmuck_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::floop::schmuck>::marshal (gleep::floop::schmuck_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -526,14 +526,14 @@ gleep::floop::schmuck_ptr
 gleep::floop::schmuck::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schmuck::_duplicate (
-      dynamic_cast<schmuck_ptr> (_tao_objref));
+    dynamic_cast<schmuck_ptr> (_tao_objref));
 }
 
 gleep::floop::schmuck_ptr
 gleep::floop::schmuck::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schmuck::_duplicate (
-      dynamic_cast<schmuck_ptr> (_tao_objref));
+    dynamic_cast<schmuck_ptr> (_tao_objref));
 }
 
 gleep::floop::schmuck_ptr
@@ -562,8 +562,8 @@ gleep::floop::schmuck::_tao_release (schmuck_ptr obj)
 gleep::floop::schmuck::_is_a (char const *value)
 {
   if (std::strcmp (value, "ABRA:cadabra/hocus/pocus:1.23") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -617,7 +617,7 @@ TAO::Objref_Traits<gleep::floop::schmendrick>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::floop::schmendrick>::marshal (gleep::floop::schmendrick_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::floop::schmendrick>::marshal (gleep::floop::schmendrick_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -638,14 +638,14 @@ gleep::floop::schmendrick_ptr
 gleep::floop::schmendrick::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schmendrick::_duplicate (
-      dynamic_cast<schmendrick_ptr> (_tao_objref));
+    dynamic_cast<schmendrick_ptr> (_tao_objref));
 }
 
 gleep::floop::schmendrick_ptr
 gleep::floop::schmendrick::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schmendrick::_duplicate (
-      dynamic_cast<schmendrick_ptr> (_tao_objref));
+    dynamic_cast<schmendrick_ptr> (_tao_objref));
 }
 
 gleep::floop::schmendrick_ptr
@@ -674,8 +674,8 @@ gleep::floop::schmendrick::_tao_release (schmendrick_ptr obj)
 gleep::floop::schmendrick::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:floop_prefix/gleep/floop/schmendrick:524.23") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -729,7 +729,7 @@ TAO::Objref_Traits<gleep::floop::verklempt::schlemazel>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::floop::verklempt::schlemazel>::marshal (gleep::floop::verklempt::schlemazel_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::floop::verklempt::schlemazel>::marshal (gleep::floop::verklempt::schlemazel_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -750,14 +750,14 @@ gleep::floop::verklempt::schlemazel_ptr
 gleep::floop::verklempt::schlemazel::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schlemazel::_duplicate (
-      dynamic_cast<schlemazel_ptr> (_tao_objref));
+    dynamic_cast<schlemazel_ptr> (_tao_objref));
 }
 
 gleep::floop::verklempt::schlemazel_ptr
 gleep::floop::verklempt::schlemazel::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schlemazel::_duplicate (
-      dynamic_cast<schlemazel_ptr> (_tao_objref));
+    dynamic_cast<schlemazel_ptr> (_tao_objref));
 }
 
 gleep::floop::verklempt::schlemazel_ptr
@@ -786,8 +786,8 @@ gleep::floop::verklempt::schlemazel::_tao_release (schlemazel_ptr obj)
 gleep::floop::verklempt::schlemazel::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:verklempt_prefix/gleep/floop/verklempt/schlemazel:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -841,7 +841,7 @@ TAO::Objref_Traits<gleep::schmegegging>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::schmegegging>::marshal (gleep::schmegegging_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::schmegegging>::marshal (gleep::schmegegging_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -862,14 +862,14 @@ gleep::schmegegging_ptr
 gleep::schmegegging::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schmegegging::_duplicate (
-      dynamic_cast<schmegegging_ptr> (_tao_objref));
+    dynamic_cast<schmegegging_ptr> (_tao_objref));
 }
 
 gleep::schmegegging_ptr
 gleep::schmegegging::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return schmegegging::_duplicate (
-      dynamic_cast<schmegegging_ptr> (_tao_objref));
+    dynamic_cast<schmegegging_ptr> (_tao_objref));
 }
 
 gleep::schmegegging_ptr
@@ -898,8 +898,8 @@ gleep::schmegegging::_tao_release (schmegegging_ptr obj)
 gleep::schmegegging::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:gleep_prefix/gleep/schmegegging:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }

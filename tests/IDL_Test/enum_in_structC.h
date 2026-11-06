@@ -265,8 +265,7 @@ public:
   void _tao_encode (TAO_OutputCDR &cdr) const override;
   void _tao_decode (TAO_InputCDR &cdr) override;
 
-  ErrorException (
-      ReasonCode _tao_reason);
+  ErrorException (ReasonCode _tao_reason);
 
   ::CORBA::TypeCode_ptr _tao_type () const override;
 };

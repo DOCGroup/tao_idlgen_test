@@ -141,9 +141,7 @@ public:
 
   // The static operations.
   static Bug_2350_Regression_ptr _duplicate (Bug_2350_Regression_ptr obj);
-
   static void _tao_release (Bug_2350_Regression_ptr obj);
-
   static Bug_2350_Regression_ptr _narrow (::CORBA::Object_ptr obj);
   static Bug_2350_Regression_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static Bug_2350_Regression_ptr _nil ();
@@ -170,15 +168,14 @@ protected:
 
   // Non-local interface only.
   Bug_2350_Regression (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~Bug_2350_Regression () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   Bug_2350_Regression (Bug_2350_Regression const &) = delete;
   Bug_2350_Regression (Bug_2350_Regression &&) = delete;
   Bug_2350_Regression &operator= (Bug_2350_Regression const &) = delete;
@@ -283,9 +280,7 @@ public:
 
   // The static operations.
   static AMH_Bug_2350_RegressionResponseHandler_ptr _duplicate (AMH_Bug_2350_RegressionResponseHandler_ptr obj);
-
   static void _tao_release (AMH_Bug_2350_RegressionResponseHandler_ptr obj);
-
   static AMH_Bug_2350_RegressionResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_Bug_2350_RegressionResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_Bug_2350_RegressionResponseHandler_ptr _nil ();
@@ -308,7 +303,6 @@ protected:
   ~AMH_Bug_2350_RegressionResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_Bug_2350_RegressionResponseHandler (AMH_Bug_2350_RegressionResponseHandler const &) = delete;
   AMH_Bug_2350_RegressionResponseHandler (AMH_Bug_2350_RegressionResponseHandler &&) = delete;
   AMH_Bug_2350_RegressionResponseHandler &operator= (AMH_Bug_2350_RegressionResponseHandler const &) = delete;
@@ -328,7 +322,6 @@ using AMI_Bug_2350_RegressionHandler_out = TAO_Objref_Out_T<AMI_Bug_2350_Regress
 
 class TAO_IDL_TEST_STUB_Export AMI_Bug_2350_RegressionHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_Bug_2350_RegressionHandler>;
@@ -340,9 +333,7 @@ public:
 
   // The static operations.
   static AMI_Bug_2350_RegressionHandler_ptr _duplicate (AMI_Bug_2350_RegressionHandler_ptr obj);
-
   static void _tao_release (AMI_Bug_2350_RegressionHandler_ptr obj);
-
   static AMI_Bug_2350_RegressionHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_Bug_2350_RegressionHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_Bug_2350_RegressionHandler_ptr _nil ();
@@ -373,15 +364,14 @@ protected:
 
   // Non-local interface only.
   AMI_Bug_2350_RegressionHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_Bug_2350_RegressionHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_Bug_2350_RegressionHandler (AMI_Bug_2350_RegressionHandler const &) = delete;
   AMI_Bug_2350_RegressionHandler (AMI_Bug_2350_RegressionHandler &&) = delete;
   AMI_Bug_2350_RegressionHandler &operator= (AMI_Bug_2350_RegressionHandler const &) = delete;

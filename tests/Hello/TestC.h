@@ -86,9 +86,7 @@ namespace Test
 
     // The static operations.
     static Hello_ptr _duplicate (Hello_ptr obj);
-
     static void _tao_release (Hello_ptr obj);
-
     static Hello_ptr _narrow (::CORBA::Object_ptr obj);
     static Hello_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static Hello_ptr _nil ();
@@ -110,15 +108,14 @@ namespace Test
 
     // Non-local interface only.
     Hello (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~Hello () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     Hello (Hello const &) = delete;
     Hello (Hello &&) = delete;
     Hello &operator= (Hello const &) = delete;
@@ -176,8 +173,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::Hello_ptr const);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::Hello_ptr &);
+::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::Hello_ptr const);
+::CORBA::Boolean operator>> (TAO_InputCDR &, Test::Hello_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

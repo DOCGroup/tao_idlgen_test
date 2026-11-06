@@ -63,8 +63,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_simple_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_simple_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_simple_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -183,11 +183,9 @@ POA_AMH_simple::op_skel (
 
 ::CORBA::Boolean POA_AMH_simple::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:simple:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:simple:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_simple::_interface_repository_id () const
@@ -225,8 +223,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_simple_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_simple_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_simple_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -291,38 +289,30 @@ TAO_simple_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_simple_Perfect_Hash_OpTable tao_simple_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_simple_Direct_Proxy_Impl::~_TAO_simple_Direct_Proxy_Impl ()
-{
-}
+_TAO_simple_Direct_Proxy_Impl::~_TAO_simple_Direct_Proxy_Impl () = default;
 
 void
-_TAO_simple_Direct_Proxy_Impl::op (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_simple_Direct_Proxy_Impl::op (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_simple_ptr _tao_ptr =
-    dynamic_cast<POA_simple_ptr> (servant);
+  POA_simple_ptr _tao_ptr = dynamic_cast<POA_simple_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_retval_type = TAO::Arg_Traits<::CORBA::Long>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  using _tao_arg_1_type = TAO::Arg_Traits<::CORBA::Long>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::simple>::out_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::CORBA::Long>::inout_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
-  ((TAO::Arg_Traits<::CORBA::Long>::ret_val *) args[0])->arg () =
-    _tao_ptr->op (
-          ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::simple>::out_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::CORBA::Long>::inout_arg_val *) args[3])->arg ()
-        );
+  _tao_retval->arg () = _tao_ptr->op (
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_simple::POA_simple ()
 {
@@ -341,11 +331,9 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
-        this->operation_details_,
-        this->args_);
-
+    TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
+      this->operation_details_,
+      this->args_);
     TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
       TAO::Portable_Server::get_in_arg<::CORBA::Long> (
         this->operation_details_,
@@ -428,11 +416,9 @@ void POA_simple::op_skel (
 
 ::CORBA::Boolean POA_simple::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:simple:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:simple:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_simple::_interface_repository_id () const
@@ -503,8 +489,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_simpleHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_simpleHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_simpleHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -571,55 +557,43 @@ TAO_AMI_simpleHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t
 
 static TAO_AMI_simpleHandler_Perfect_Hash_OpTable tao_AMI_simpleHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_simpleHandler_Direct_Proxy_Impl::~_TAO_AMI_simpleHandler_Direct_Proxy_Impl ()
-{
-}
+_TAO_AMI_simpleHandler_Direct_Proxy_Impl::~_TAO_AMI_simpleHandler_Direct_Proxy_Impl () = default;
 
 void
-_TAO_AMI_simpleHandler_Direct_Proxy_Impl::op (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_simpleHandler_Direct_Proxy_Impl::op (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_simpleHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_simpleHandler_ptr> (servant);
+  POA_AMI_simpleHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_simpleHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::CORBA::Long>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::simple>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::CORBA::Long>::in_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
   _tao_ptr->op (
-        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::simple>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[3])->arg ()
-      );
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
 
 void
-_TAO_AMI_simpleHandler_Direct_Proxy_Impl::op_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_simpleHandler_Direct_Proxy_Impl::op_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_simpleHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_simpleHandler_ptr> (servant);
+  POA_AMI_simpleHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_simpleHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_AMI_simpleHandler::POA_AMI_simpleHandler ()
 {
@@ -809,12 +783,10 @@ void POA_AMI_simpleHandler::op_excep_skel (
 
 ::CORBA::Boolean POA_AMI_simpleHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_simpleHandler::_interface_repository_id () const
@@ -852,8 +824,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_simple2_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_simple2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_simple2_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -973,12 +945,10 @@ POA_AMH_simple2::op2_skel (
 
 ::CORBA::Boolean POA_AMH_simple2::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:simple:1.0") == 0 ||
-      std::strcmp (value, "IDL:simple2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:simple:1.0") == 0 ||
+    std::strcmp (value, "IDL:simple2:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_simple2::_interface_repository_id () const
@@ -1016,8 +986,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_simple2_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_simple2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_simple2_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -1083,38 +1053,30 @@ TAO_simple2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_simple2_Perfect_Hash_OpTable tao_simple2_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_simple2_Direct_Proxy_Impl::~_TAO_simple2_Direct_Proxy_Impl ()
-{
-}
+_TAO_simple2_Direct_Proxy_Impl::~_TAO_simple2_Direct_Proxy_Impl () = default;
 
 void
-_TAO_simple2_Direct_Proxy_Impl::op2 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_simple2_Direct_Proxy_Impl::op2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_simple2_ptr _tao_ptr =
-    dynamic_cast<POA_simple2_ptr> (servant);
+  POA_simple2_ptr _tao_ptr = dynamic_cast<POA_simple2_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_retval_type = TAO::Arg_Traits<::CORBA::Long>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  using _tao_arg_1_type = TAO::Arg_Traits<::CORBA::Long>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::simple>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::simple2>::out_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
-  ((TAO::Arg_Traits<::CORBA::Long>::ret_val *) args[0])->arg () =
-    _tao_ptr->op2 (
-          ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::simple>::in_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::simple2>::out_arg_val *) args[3])->arg ()
-        );
+  _tao_retval->arg () = _tao_ptr->op2 (
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_simple2::POA_simple2 ()
 {
@@ -1133,11 +1095,9 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
-        this->operation_details_,
-        this->args_);
-
+    TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
+      this->operation_details_,
+      this->args_);
     TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
       TAO::Portable_Server::get_in_arg<::CORBA::Long> (
         this->operation_details_,
@@ -1220,12 +1180,10 @@ void POA_simple2::op2_skel (
 
 ::CORBA::Boolean POA_simple2::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:simple:1.0") == 0 ||
-      std::strcmp (value, "IDL:simple2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:simple:1.0") == 0 ||
+    std::strcmp (value, "IDL:simple2:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_simple2::_interface_repository_id () const
@@ -1294,8 +1252,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_simple2Handler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_simple2Handler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_simple2Handler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -1363,54 +1321,40 @@ TAO_AMI_simple2Handler_Perfect_Hash_OpTable::lookup (char const *str, std::size_
 
 static TAO_AMI_simple2Handler_Perfect_Hash_OpTable tao_AMI_simple2Handler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_simple2Handler_Direct_Proxy_Impl::~_TAO_AMI_simple2Handler_Direct_Proxy_Impl ()
-{
-}
+_TAO_AMI_simple2Handler_Direct_Proxy_Impl::~_TAO_AMI_simple2Handler_Direct_Proxy_Impl () = default;
 
 void
-_TAO_AMI_simple2Handler_Direct_Proxy_Impl::op2 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_simple2Handler_Direct_Proxy_Impl::op2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_simple2Handler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_simple2Handler_ptr> (servant);
+  POA_AMI_simple2Handler_ptr _tao_ptr = dynamic_cast<POA_AMI_simple2Handler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::CORBA::Long>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::simple2>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
 
   _tao_ptr->op2 (
-        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::simple2>::in_arg_val *) args[2])->arg ()
-      );
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg ());
 }
 
 void
-_TAO_AMI_simple2Handler_Direct_Proxy_Impl::op2_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_simple2Handler_Direct_Proxy_Impl::op2_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_simple2Handler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_simple2Handler_ptr> (servant);
+  POA_AMI_simple2Handler_ptr _tao_ptr = dynamic_cast<POA_AMI_simple2Handler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op2_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_AMI_simple2Handler::POA_AMI_simple2Handler ()
 {
@@ -1591,13 +1535,11 @@ void POA_AMI_simple2Handler::op2_excep_skel (
 
 ::CORBA::Boolean POA_AMI_simple2Handler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_simple2Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_simple2Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_simple2Handler::_interface_repository_id () const

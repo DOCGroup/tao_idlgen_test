@@ -56,8 +56,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Simple_Server_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_Simple_Server_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Simple_Server_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -140,13 +140,10 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::ACE_InputCDR::to_boolean>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::ACE_InputCDR::to_boolean> (
-        this->operation_details_,
-        this->args_);
-
-    retval =
-      this->servant_->print_status ();
+    TAO::SArg_Traits<::ACE_InputCDR::to_boolean>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::ACE_InputCDR::to_boolean> (
+      this->operation_details_,
+      this->args_);
+    retval = this->servant_->print_status ();
   }
 
 private:
@@ -241,11 +238,9 @@ void POA_Simple_Server::shutdown_skel (
 
 ::CORBA::Boolean POA_Simple_Server::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:Simple_Server:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:Simple_Server:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_Simple_Server::_interface_repository_id () const

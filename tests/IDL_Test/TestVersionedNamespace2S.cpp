@@ -62,8 +62,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_AMH_LI_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M1_AMH_LI_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_M1_AMH_LI_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -179,11 +179,9 @@ POA_M1::AMH_LI::op_skel (
 
 ::CORBA::Boolean POA_M1::AMH_LI::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M1::AMH_LI::_interface_repository_id () const
@@ -221,8 +219,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_LI_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M1_LI_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_M1_LI_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -364,11 +362,9 @@ void POA_M1::LI::op_skel (
 
 ::CORBA::Boolean POA_M1::LI::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M1::LI::_interface_repository_id () const
@@ -427,8 +423,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_AMH_L2_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M1_AMH_L2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_M1_AMH_L2_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -544,11 +540,9 @@ POA_M1::AMH_L2::op_skel (
 
 ::CORBA::Boolean POA_M1::AMH_L2::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M1/L2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M1/L2:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M1::AMH_L2::_interface_repository_id () const
@@ -586,8 +580,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M1_L2_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M1_L2_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_M1_L2_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -729,11 +723,9 @@ void POA_M1::L2::op_skel (
 
 ::CORBA::Boolean POA_M1::L2::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M1/L2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M1/L2:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M1::L2::_interface_repository_id () const
@@ -792,8 +784,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_M2_M3_AMH_L3_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -909,11 +901,9 @@ POA_M2::M3::AMH_L3::op_skel (
 
 ::CORBA::Boolean POA_M2::M3::AMH_L3::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M2/M3/L3:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M2/M3/L3:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M2::M3::AMH_L3::_interface_repository_id () const
@@ -951,8 +941,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_L3_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M2_M3_L3_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_M2_M3_L3_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -1098,11 +1088,9 @@ void POA_M2::M3::L3::op_skel (
 
 ::CORBA::Boolean POA_M2::M3::L3::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M2/M3/L3:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M2/M3/L3:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M2::M3::L3::_interface_repository_id () const
@@ -1161,8 +1149,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_M2_M3_AMH_L4_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -1278,11 +1266,9 @@ POA_M2::M3::AMH_L4::op_skel (
 
 ::CORBA::Boolean POA_M2::M3::AMH_L4::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M2/M3/L4:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M2/M3/L4:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M2::M3::AMH_L4::_interface_repository_id () const
@@ -1320,8 +1306,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_M2_M3_L4_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_M2_M3_L4_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_M2_M3_L4_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -1474,11 +1460,9 @@ void POA_M2::M3::L4::op_skel (
 
 ::CORBA::Boolean POA_M2::M3::L4::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M2/M3/L4:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M2/M3/L4:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M2::M3::L4::_interface_repository_id () const

@@ -29,18 +29,13 @@ BEGIN_USER_VERSIONED_NAMESPACE
 
 ACE_INLINE
 M1::LI::LI (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-M1::LI::LI (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+M1::LI::LI (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -57,18 +52,13 @@ M1::AMH_LIExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 M1::L2::L2 (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-M1::L2::L2 (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+M1::L2::L2 (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -248,18 +238,13 @@ M1::V::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 M2::M3::L3::L3 (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-M2::M3::L3::L3 (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+M2::M3::L3::L3 (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -276,18 +261,13 @@ M2::M3::AMH_L3ExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 M2::M3::L4::L4 (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-M2::M3::L4::L4 (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+M2::M3::L4::L4 (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

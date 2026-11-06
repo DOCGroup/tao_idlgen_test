@@ -98,9 +98,7 @@ namespace A
 
     // The static operations.
     static B_ptr _duplicate (B_ptr obj);
-
     static void _tao_release (B_ptr obj);
-
     static B_ptr _narrow (::CORBA::Object_ptr obj);
     static B_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static B_ptr _nil ();
@@ -120,15 +118,14 @@ namespace A
 
     // Non-local interface only.
     B (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~B () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     B (B const &) = delete;
     B (B &&) = delete;
     B &operator= (B const &) = delete;
@@ -240,9 +237,7 @@ namespace A
 
     // The static operations.
     static AMH_BResponseHandler_ptr _duplicate (AMH_BResponseHandler_ptr obj);
-
     static void _tao_release (AMH_BResponseHandler_ptr obj);
-
     static AMH_BResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMH_BResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMH_BResponseHandler_ptr _nil ();
@@ -260,7 +255,6 @@ namespace A
     ~AMH_BResponseHandler () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMH_BResponseHandler (AMH_BResponseHandler const &) = delete;
     AMH_BResponseHandler (AMH_BResponseHandler &&) = delete;
     AMH_BResponseHandler &operator= (AMH_BResponseHandler const &) = delete;
@@ -280,7 +274,6 @@ namespace A
 
   class TAO_IDL_TEST_STUB_Export AMI_BHandler
     : public virtual ::Messaging::ReplyHandler
-
   {
   public:
     friend class TAO::Narrow_Utils<AMI_BHandler>;
@@ -292,9 +285,7 @@ namespace A
 
     // The static operations.
     static AMI_BHandler_ptr _duplicate (AMI_BHandler_ptr obj);
-
     static void _tao_release (AMI_BHandler_ptr obj);
-
     static AMI_BHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_BHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_BHandler_ptr _nil ();
@@ -314,15 +305,14 @@ namespace A
 
     // Non-local interface only.
     AMI_BHandler (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~AMI_BHandler () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMI_BHandler (AMI_BHandler const &) = delete;
     AMI_BHandler (AMI_BHandler &&) = delete;
     AMI_BHandler &operator= (AMI_BHandler const &) = delete;
@@ -356,9 +346,7 @@ namespace A
 
     // The static operations.
     static C_ptr _duplicate (C_ptr obj);
-
     static void _tao_release (C_ptr obj);
-
     static C_ptr _narrow (::CORBA::Object_ptr obj);
     static C_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static C_ptr _nil ();
@@ -385,15 +373,14 @@ namespace A
 
     // Non-local interface only.
     C (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~C () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     C (C const &) = delete;
     C (C &&) = delete;
     C &operator= (C const &) = delete;
@@ -498,9 +485,7 @@ public:
 
   // The static operations.
   static AMH_CResponseHandler_ptr _duplicate (AMH_CResponseHandler_ptr obj);
-
   static void _tao_release (AMH_CResponseHandler_ptr obj);
-
   static AMH_CResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_CResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_CResponseHandler_ptr _nil ();
@@ -523,7 +508,6 @@ protected:
   ~AMH_CResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_CResponseHandler (AMH_CResponseHandler const &) = delete;
   AMH_CResponseHandler (AMH_CResponseHandler &&) = delete;
   AMH_CResponseHandler &operator= (AMH_CResponseHandler const &) = delete;
@@ -543,7 +527,6 @@ using AMI_CHandler_out = TAO_Objref_Out_T<AMI_CHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_CHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_CHandler>;
@@ -555,9 +538,7 @@ public:
 
   // The static operations.
   static AMI_CHandler_ptr _duplicate (AMI_CHandler_ptr obj);
-
   static void _tao_release (AMI_CHandler_ptr obj);
-
   static AMI_CHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_CHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_CHandler_ptr _nil ();
@@ -588,15 +569,14 @@ protected:
 
   // Non-local interface only.
   AMI_CHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_CHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_CHandler (AMI_CHandler const &) = delete;
   AMI_CHandler (AMI_CHandler &&) = delete;
   AMI_CHandler &operator= (AMI_CHandler const &) = delete;

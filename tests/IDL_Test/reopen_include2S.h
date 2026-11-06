@@ -212,28 +212,17 @@ namespace POA_A
     virtual char * getX2 () = 0;
 
     static void getX2_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class TAO_IDL_TEST_STUB_Export _TAO_X2_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_X2_Direct_Proxy_Impl ();
-    static void
-    getX2 (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void getX2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class TAO_AMH_X2ResponseHandler;
   using TAO_AMH_X2ResponseHandler_ptr = TAO_AMH_X2ResponseHandler *;
@@ -284,40 +273,26 @@ namespace POA_A
       char const * ami_return_val) = 0;
 
     static void getX2_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void getX2_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
     static void getX2_excep_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class TAO_IDL_TEST_STUB_Export _TAO_AMI_X2Handler_Direct_Proxy_Impl
     : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_AMI_X2Handler_Direct_Proxy_Impl ();
-    static void
-    getX2 (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-    static void
-    getX2_excep (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void getX2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+    static void getX2_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
 } // module A::B
 

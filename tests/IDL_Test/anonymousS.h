@@ -584,102 +584,70 @@ public:
   virtual char * TestFunc () = 0;
 
   static void TestFunc_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual char * TestFunc2 () = 0;
 
   static void TestFunc2_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual char * TestFunc3 () = 0;
 
   static void TestFunc3_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual char * TestFunc23 () = 0;
 
   static void TestFunc23_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc4 (
     char const * inarg) = 0;
 
   static void TestFunc4_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc41 (
     char const * inarg) = 0;
 
   static void TestFunc41_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc42 (
     char const * inarg) = 0;
 
   static void TestFunc42_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc43 (
     char const * inarg) = 0;
 
   static void TestFunc43_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_anon_bd_string_test_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_anon_bd_string_test_Direct_Proxy_Impl ();
-  static void
-  TestFunc (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc2 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc3 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc23 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc4 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc41 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc42 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc43 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void TestFunc (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc3 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc23 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc4 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc41 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc42 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc43 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class TAO_AMH_anon_bd_string_testResponseHandler;
 using TAO_AMH_anon_bd_string_testResponseHandler_ptr = TAO_AMH_anon_bd_string_testResponseHandler *;
@@ -754,190 +722,134 @@ public:
     char const * ami_return_val) = 0;
 
   static void TestFunc_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void TestFunc_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc2 (
     char const * ami_return_val) = 0;
 
   static void TestFunc2_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc2_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void TestFunc2_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc3 (
     char const * ami_return_val) = 0;
 
   static void TestFunc3_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc3_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void TestFunc3_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc23 (
     char const * ami_return_val) = 0;
 
   static void TestFunc23_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc23_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void TestFunc23_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc4 () = 0;
 
   static void TestFunc4_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc4_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void TestFunc4_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc41 () = 0;
 
   static void TestFunc41_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc41_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void TestFunc41_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc42 () = 0;
 
   static void TestFunc42_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc42_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void TestFunc42_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc43 () = 0;
 
   static void TestFunc43_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void TestFunc43_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void TestFunc43_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl ();
-  static void
-  TestFunc (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc2 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc2_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc3 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc3_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc23 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc23_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc4 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc4_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc41 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc41_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc42 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc42_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc43 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  TestFunc43_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void TestFunc (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc2_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc3 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc3_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc23 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc23_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc4 (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+  static void TestFunc4_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc41 (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+  static void TestFunc41_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc42 (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+  static void TestFunc42_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void TestFunc43 (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+  static void TestFunc43_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 } // module All_Anon
 namespace POA_Second

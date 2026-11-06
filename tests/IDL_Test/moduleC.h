@@ -98,9 +98,7 @@ namespace mod1
 
       // The static operations.
       static ex1_ptr _duplicate (ex1_ptr obj);
-
       static void _tao_release (ex1_ptr obj);
-
       static ex1_ptr _narrow (::CORBA::Object_ptr obj);
       static ex1_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static ex1_ptr _nil ();
@@ -144,15 +142,14 @@ namespace mod1
 
       // Non-local interface only.
       ex1 (
-          TAO_Stub *objref,
-          ::CORBA::Boolean _tao_collocated = false,
-          TAO_Abstract_ServantBase *servant = nullptr,
-          TAO_ORB_Core *orb_core = nullptr);
+        TAO_Stub *objref,
+        ::CORBA::Boolean _tao_collocated = false,
+        TAO_Abstract_ServantBase *servant = nullptr,
+        TAO_ORB_Core *orb_core = nullptr);
 
       ~ex1 () override = default;
 
     private:
-      // Private and unimplemented for concrete interfaces.
       ex1 (ex1 const &) = delete;
       ex1 (ex1 &&) = delete;
       ex1 &operator= (ex1 const &) = delete;
@@ -285,9 +282,7 @@ public:
 
   // The static operations.
   static AMH_ex1ResponseHandler_ptr _duplicate (AMH_ex1ResponseHandler_ptr obj);
-
   static void _tao_release (AMH_ex1ResponseHandler_ptr obj);
-
   static AMH_ex1ResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_ex1ResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_ex1ResponseHandler_ptr _nil ();
@@ -328,7 +323,6 @@ protected:
   ~AMH_ex1ResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_ex1ResponseHandler (AMH_ex1ResponseHandler const &) = delete;
   AMH_ex1ResponseHandler (AMH_ex1ResponseHandler &&) = delete;
   AMH_ex1ResponseHandler &operator= (AMH_ex1ResponseHandler const &) = delete;
@@ -347,7 +341,6 @@ using AMI_ex1Handler_out = TAO_Objref_Out_T<AMI_ex1Handler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_ex1Handler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_ex1Handler>;
@@ -359,9 +352,7 @@ public:
 
   // The static operations.
   static AMI_ex1Handler_ptr _duplicate (AMI_ex1Handler_ptr obj);
-
   static void _tao_release (AMI_ex1Handler_ptr obj);
-
   static AMI_ex1Handler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_ex1Handler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_ex1Handler_ptr _nil ();
@@ -428,15 +419,14 @@ protected:
 
   // Non-local interface only.
   AMI_ex1Handler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_ex1Handler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_ex1Handler (AMI_ex1Handler const &) = delete;
   AMI_ex1Handler (AMI_ex1Handler &&) = delete;
   AMI_ex1Handler &operator= (AMI_ex1Handler const &) = delete;
@@ -458,7 +448,6 @@ using ex2_out = TAO_Objref_Out_T<ex2>;
 
 class TAO_IDL_TEST_STUB_Export ex2
   : public virtual ::mod1::mod2::ex1
-
 {
 public:
   friend class TAO::Narrow_Utils<ex2>;
@@ -470,9 +459,7 @@ public:
 
   // The static operations.
   static ex2_ptr _duplicate (ex2_ptr obj);
-
   static void _tao_release (ex2_ptr obj);
-
   static ex2_ptr _narrow (::CORBA::Object_ptr obj);
   static ex2_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static ex2_ptr _nil ();
@@ -512,15 +499,14 @@ protected:
 
   // Non-local interface only.
   ex2 (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~ex2 () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   ex2 (ex2 const &) = delete;
   ex2 (ex2 &&) = delete;
   ex2 &operator= (ex2 const &) = delete;
@@ -643,9 +629,7 @@ public:
 
   // The static operations.
   static AMH_ex2ResponseHandler_ptr _duplicate (AMH_ex2ResponseHandler_ptr obj);
-
   static void _tao_release (AMH_ex2ResponseHandler_ptr obj);
-
   static AMH_ex2ResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_ex2ResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_ex2ResponseHandler_ptr _nil ();
@@ -681,7 +665,6 @@ protected:
   ~AMH_ex2ResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_ex2ResponseHandler (AMH_ex2ResponseHandler const &) = delete;
   AMH_ex2ResponseHandler (AMH_ex2ResponseHandler &&) = delete;
   AMH_ex2ResponseHandler &operator= (AMH_ex2ResponseHandler const &) = delete;
@@ -700,7 +683,6 @@ using AMI_ex2Handler_out = TAO_Objref_Out_T<AMI_ex2Handler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_ex2Handler
   : public virtual ::mod1::mod2::AMI_ex1Handler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_ex2Handler>;
@@ -712,9 +694,7 @@ public:
 
   // The static operations.
   static AMI_ex2Handler_ptr _duplicate (AMI_ex2Handler_ptr obj);
-
   static void _tao_release (AMI_ex2Handler_ptr obj);
-
   static AMI_ex2Handler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_ex2Handler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_ex2Handler_ptr _nil ();
@@ -770,15 +750,14 @@ protected:
 
   // Non-local interface only.
   AMI_ex2Handler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_ex2Handler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_ex2Handler (AMI_ex2Handler const &) = delete;
   AMI_ex2Handler (AMI_ex2Handler &&) = delete;
   AMI_ex2Handler &operator= (AMI_ex2Handler const &) = delete;

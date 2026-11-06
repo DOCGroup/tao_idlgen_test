@@ -131,9 +131,7 @@ namespace A
 
       // The static operations.
       static X2_ptr _duplicate (X2_ptr obj);
-
       static void _tao_release (X2_ptr obj);
-
       static X2_ptr _narrow (::CORBA::Object_ptr obj);
       static X2_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static X2_ptr _nil ();
@@ -158,15 +156,14 @@ namespace A
 
       // Non-local interface only.
       X2 (
-          TAO_Stub *objref,
-          ::CORBA::Boolean _tao_collocated = false,
-          TAO_Abstract_ServantBase *servant = nullptr,
-          TAO_ORB_Core *orb_core = nullptr);
+        TAO_Stub *objref,
+        ::CORBA::Boolean _tao_collocated = false,
+        TAO_Abstract_ServantBase *servant = nullptr,
+        TAO_ORB_Core *orb_core = nullptr);
 
       ~X2 () override = default;
 
     private:
-      // Private and unimplemented for concrete interfaces.
       X2 (X2 const &) = delete;
       X2 (X2 &&) = delete;
       X2 &operator= (X2 const &) = delete;
@@ -271,9 +268,7 @@ public:
 
   // The static operations.
   static AMH_X2ResponseHandler_ptr _duplicate (AMH_X2ResponseHandler_ptr obj);
-
   static void _tao_release (AMH_X2ResponseHandler_ptr obj);
-
   static AMH_X2ResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_X2ResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_X2ResponseHandler_ptr _nil ();
@@ -297,7 +292,6 @@ protected:
   ~AMH_X2ResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_X2ResponseHandler (AMH_X2ResponseHandler const &) = delete;
   AMH_X2ResponseHandler (AMH_X2ResponseHandler &&) = delete;
   AMH_X2ResponseHandler &operator= (AMH_X2ResponseHandler const &) = delete;
@@ -317,7 +311,6 @@ using AMI_X2Handler_out = TAO_Objref_Out_T<AMI_X2Handler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_X2Handler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_X2Handler>;
@@ -329,9 +322,7 @@ public:
 
   // The static operations.
   static AMI_X2Handler_ptr _duplicate (AMI_X2Handler_ptr obj);
-
   static void _tao_release (AMI_X2Handler_ptr obj);
-
   static AMI_X2Handler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_X2Handler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_X2Handler_ptr _nil ();
@@ -363,15 +354,14 @@ protected:
 
   // Non-local interface only.
   AMI_X2Handler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_X2Handler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_X2Handler (AMI_X2Handler const &) = delete;
   AMI_X2Handler (AMI_X2Handler &&) = delete;
   AMI_X2Handler &operator= (AMI_X2Handler const &) = delete;
