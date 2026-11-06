@@ -191,9 +191,7 @@ public:
 
   // The static operations.
   static Test_ptr _duplicate (Test_ptr obj);
-
   static void _tao_release (Test_ptr obj);
-
   static Test_ptr _narrow (::CORBA::Object_ptr obj);
   static Test_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static Test_ptr _nil ();
@@ -222,15 +220,14 @@ protected:
 
   // Non-local interface only.
   Test (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~Test () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   Test (Test const &) = delete;
   Test (Test &&) = delete;
   Test &operator= (Test const &) = delete;
@@ -335,9 +332,7 @@ public:
 
   // The static operations.
   static AMH_TestResponseHandler_ptr _duplicate (AMH_TestResponseHandler_ptr obj);
-
   static void _tao_release (AMH_TestResponseHandler_ptr obj);
-
   static AMH_TestResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_TestResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_TestResponseHandler_ptr _nil ();
@@ -361,7 +356,6 @@ protected:
   ~AMH_TestResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_TestResponseHandler (AMH_TestResponseHandler const &) = delete;
   AMH_TestResponseHandler (AMH_TestResponseHandler &&) = delete;
   AMH_TestResponseHandler &operator= (AMH_TestResponseHandler const &) = delete;
@@ -381,7 +375,6 @@ using AMI_TestHandler_out = TAO_Objref_Out_T<AMI_TestHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_TestHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_TestHandler>;
@@ -393,9 +386,7 @@ public:
 
   // The static operations.
   static AMI_TestHandler_ptr _duplicate (AMI_TestHandler_ptr obj);
-
   static void _tao_release (AMI_TestHandler_ptr obj);
-
   static AMI_TestHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_TestHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_TestHandler_ptr _nil ();
@@ -427,15 +418,14 @@ protected:
 
   // Non-local interface only.
   AMI_TestHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_TestHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_TestHandler (AMI_TestHandler const &) = delete;
   AMI_TestHandler (AMI_TestHandler &&) = delete;
   AMI_TestHandler &operator= (AMI_TestHandler const &) = delete;

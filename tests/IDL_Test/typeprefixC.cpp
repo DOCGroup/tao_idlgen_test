@@ -69,7 +69,7 @@ TAO::Objref_Traits<A::B>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::B>::marshal (A::B_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::B>::marshal (A::B_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -124,7 +124,7 @@ A::B::_tao_release (B_ptr obj)
 A::B::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:TAO/A/B:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -376,7 +376,7 @@ TAO::Objref_Traits<A::AMH_BResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::AMH_BResponseHandler>::marshal (A::AMH_BResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::AMH_BResponseHandler>::marshal (A::AMH_BResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -397,14 +397,14 @@ A::AMH_BResponseHandler_ptr
 A::AMH_BResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_BResponseHandler::_duplicate (
-      dynamic_cast<AMH_BResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_BResponseHandler_ptr> (_tao_objref));
 }
 
 A::AMH_BResponseHandler_ptr
 A::AMH_BResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_BResponseHandler::_duplicate (
-      dynamic_cast<AMH_BResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_BResponseHandler_ptr> (_tao_objref));
 }
 
 A::AMH_BResponseHandler_ptr
@@ -433,8 +433,8 @@ A::AMH_BResponseHandler::_tao_release (AMH_BResponseHandler_ptr obj)
 A::AMH_BResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:TAO/A/AMH_BResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -499,7 +499,7 @@ TAO::Objref_Traits<A::AMI_BHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::AMI_BHandler>::marshal (A::AMI_BHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::AMI_BHandler>::marshal (A::AMI_BHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -554,8 +554,8 @@ A::AMI_BHandler::_tao_release (AMI_BHandler_ptr obj)
 A::AMI_BHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:TAO/A/AMI_BHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:TAO/A/AMI_BHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -620,7 +620,7 @@ TAO::Objref_Traits<A::C>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::C>::marshal (A::C_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::C>::marshal (A::C_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -641,8 +641,8 @@ A::C::op (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_a)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_a)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -652,7 +652,6 @@ A::C::op (
       "op",
       2,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -673,8 +672,8 @@ A::C::sendc_op (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_a)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_a)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -740,7 +739,7 @@ A::C::_tao_release (C_ptr obj)
 A::C::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:TAO/A/C:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -974,7 +973,7 @@ TAO::Objref_Traits<A::AMH_CResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::AMH_CResponseHandler>::marshal (A::AMH_CResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::AMH_CResponseHandler>::marshal (A::AMH_CResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -995,14 +994,14 @@ A::AMH_CResponseHandler_ptr
 A::AMH_CResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_CResponseHandler::_duplicate (
-      dynamic_cast<AMH_CResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_CResponseHandler_ptr> (_tao_objref));
 }
 
 A::AMH_CResponseHandler_ptr
 A::AMH_CResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_CResponseHandler::_duplicate (
-      dynamic_cast<AMH_CResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_CResponseHandler_ptr> (_tao_objref));
 }
 
 A::AMH_CResponseHandler_ptr
@@ -1031,8 +1030,8 @@ A::AMH_CResponseHandler::_tao_release (AMH_CResponseHandler_ptr obj)
 A::AMH_CResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:TAO/A/AMH_CResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1097,7 +1096,7 @@ TAO::Objref_Traits<A::AMI_CHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::AMI_CHandler>::marshal (A::AMI_CHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::AMI_CHandler>::marshal (A::AMI_CHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1116,7 +1115,7 @@ A::AMI_CHandler::op ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1126,8 +1125,7 @@ A::AMI_CHandler::op ()
       "op",
       2,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -1203,8 +1201,8 @@ A::AMI_CHandler::op_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1214,7 +1212,6 @@ A::AMI_CHandler::op_excep (
       "op_excep",
       8,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1268,8 +1265,8 @@ A::AMI_CHandler::_tao_release (AMI_CHandler_ptr obj)
 A::AMI_CHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:TAO/A/AMI_CHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:TAO/A/AMI_CHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }

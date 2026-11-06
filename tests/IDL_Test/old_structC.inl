@@ -72,18 +72,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ACE_INLINE
 foo1::foo1 (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-foo1::foo1 (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+foo1::foo1 (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -100,36 +95,26 @@ AMH_foo1ExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 AMI_foo1Handler::AMI_foo1Handler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-AMI_foo1Handler::AMI_foo1Handler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+AMI_foo1Handler::AMI_foo1Handler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 foo2::foo2 (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-foo2::foo2 (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+foo2::foo2 (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -146,18 +131,13 @@ AMH_foo2ExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 AMI_foo2Handler::AMI_foo2Handler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-AMI_foo2Handler::AMI_foo2Handler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+AMI_foo2Handler::AMI_foo2Handler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

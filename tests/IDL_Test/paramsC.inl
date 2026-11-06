@@ -24,18 +24,13 @@
 
 ACE_INLINE
 foo::bar::fooBar::fooBar (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-foo::bar::fooBar::fooBar (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+foo::bar::fooBar::fooBar (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,18 +47,13 @@ foo::bar::AMH_fooBarExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 foo::bar::AMI_fooBarHandler::AMI_fooBarHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-foo::bar::AMI_fooBarHandler::AMI_fooBarHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+foo::bar::AMI_fooBarHandler::AMI_fooBarHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

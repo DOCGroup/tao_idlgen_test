@@ -24,18 +24,13 @@
 
 ACE_INLINE
 Simple_Server::Simple_Server (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-Simple_Server::Simple_Server (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+Simple_Server::Simple_Server (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

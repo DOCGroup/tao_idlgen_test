@@ -475,11 +475,9 @@ POA_All_Anon::AMH_anon_bd_string_test::TestFunc43_skel (
 
 ::CORBA::Boolean POA_All_Anon::AMH_anon_bd_string_test::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:All_Anon/anon_bd_string_test:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:All_Anon/anon_bd_string_test:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_All_Anon::AMH_anon_bd_string_test::_interface_repository_id () const
@@ -613,161 +611,135 @@ TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (char const *str, 
 
 static TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable tao_All_Anon_anon_bd_string_test_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::~_TAO_anon_bd_string_test_Direct_Proxy_Impl ()
-{
-}
+POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::~_TAO_anon_bd_string_test_Direct_Proxy_Impl () = default;
 
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
+  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr = dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  ((TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc>::ret_val *) args[0])->arg () =
-    _tao_ptr->TestFunc (
-        );
+  using _tao_retval_type = TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  _tao_retval->arg () = _tao_ptr->TestFunc ();
 }
 
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc2 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
+  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr = dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  ((TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc2>::ret_val *) args[0])->arg () =
-    _tao_ptr->TestFunc2 (
-        );
+  using _tao_retval_type = TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc2>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  _tao_retval->arg () = _tao_ptr->TestFunc2 ();
 }
 
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc3 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
+  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr = dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  ((TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc3>::ret_val *) args[0])->arg () =
-    _tao_ptr->TestFunc3 (
-        );
+  using _tao_retval_type = TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc3>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  _tao_retval->arg () = _tao_ptr->TestFunc3 ();
 }
 
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc23 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
+  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr = dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  ((TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc23>::ret_val *) args[0])->arg () =
-    _tao_ptr->TestFunc23 (
-        );
+  using _tao_retval_type = TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc23>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  _tao_retval->arg () = _tao_ptr->TestFunc23 ();
 }
 
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc4 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
+  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr = dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc4_inarg>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc4 (
-        ((TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc4_inarg>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc41 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
+  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr = dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc41_inarg>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc41 (
-        ((TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc41_inarg>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc42 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
+  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr = dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc42_inarg>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc42 (
-        ((TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc42_inarg>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_anon_bd_string_test_Direct_Proxy_Impl::TestFunc43 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr =
-    dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
+  POA_All_Anon::anon_bd_string_test_ptr _tao_ptr = dynamic_cast<POA_All_Anon::anon_bd_string_test_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc43_inarg>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc43 (
-        ((TAO::Arg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc43_inarg>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_All_Anon::anon_bd_string_test::anon_bd_string_test ()
 {
@@ -789,13 +761,10 @@ namespace POA_All_Anon
 
     void execute () override
     {
-      TAO::SArg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::TAO::All_Anon_anon_bd_string_test_TestFunc> (
-          this->operation_details_,
-          this->args_);
-
-      retval =
-        this->servant_->TestFunc ();
+      TAO::SArg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::TAO::All_Anon_anon_bd_string_test_TestFunc> (
+        this->operation_details_,
+        this->args_);
+      retval = this->servant_->TestFunc ();
     }
 
   private:
@@ -856,13 +825,10 @@ namespace POA_All_Anon
 
     void execute () override
     {
-      TAO::SArg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc2>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::TAO::All_Anon_anon_bd_string_test_TestFunc2> (
-          this->operation_details_,
-          this->args_);
-
-      retval =
-        this->servant_->TestFunc2 ();
+      TAO::SArg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc2>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::TAO::All_Anon_anon_bd_string_test_TestFunc2> (
+        this->operation_details_,
+        this->args_);
+      retval = this->servant_->TestFunc2 ();
     }
 
   private:
@@ -923,13 +889,10 @@ namespace POA_All_Anon
 
     void execute () override
     {
-      TAO::SArg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc3>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::TAO::All_Anon_anon_bd_string_test_TestFunc3> (
-          this->operation_details_,
-          this->args_);
-
-      retval =
-        this->servant_->TestFunc3 ();
+      TAO::SArg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc3>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::TAO::All_Anon_anon_bd_string_test_TestFunc3> (
+        this->operation_details_,
+        this->args_);
+      retval = this->servant_->TestFunc3 ();
     }
 
   private:
@@ -990,13 +953,10 @@ namespace POA_All_Anon
 
     void execute () override
     {
-      TAO::SArg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc23>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::TAO::All_Anon_anon_bd_string_test_TestFunc23> (
-          this->operation_details_,
-          this->args_);
-
-      retval =
-        this->servant_->TestFunc23 ();
+      TAO::SArg_Traits<::TAO::All_Anon_anon_bd_string_test_TestFunc23>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::TAO::All_Anon_anon_bd_string_test_TestFunc23> (
+        this->operation_details_,
+        this->args_);
+      retval = this->servant_->TestFunc23 ();
     }
 
   private:
@@ -1324,11 +1284,9 @@ void POA_All_Anon::anon_bd_string_test::TestFunc43_skel (
 
 ::CORBA::Boolean POA_All_Anon::anon_bd_string_test::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:All_Anon/anon_bd_string_test:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:All_Anon/anon_bd_string_test:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_All_Anon::anon_bd_string_test::_interface_repository_id () const
@@ -1663,19 +1621,12 @@ TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (char c
 
 static TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable tao_All_Anon_AMI_anon_bd_string_testHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::~_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl ()
-{
-}
+POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::~_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl () = default;
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1683,17 +1634,17 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc (
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc_ami_return_val>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc (
-        ((TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc_ami_return_val>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1701,17 +1652,17 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc_ex
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc2 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1719,17 +1670,17 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc2 (
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc2_ami_return_val>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc2 (
-        ((TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc2_ami_return_val>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc2_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1737,17 +1688,17 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc2_e
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc2_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc3 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1755,17 +1706,17 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc3 (
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc3_ami_return_val>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc3 (
-        ((TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc3_ami_return_val>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc3_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1773,17 +1724,17 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc3_e
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc3_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc23 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1791,17 +1742,17 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc23 
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc23_ami_return_val>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc23 (
-        ((TAO::Arg_Traits<::TAO::All_Anon_AMI_anon_bd_string_testHandler_TestFunc23_ami_return_val>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc23_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1809,17 +1760,17 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc23_
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc23_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc4 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1827,16 +1778,13 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc4 (
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->TestFunc4 (
-      );
+  _tao_ptr->TestFunc4 ();
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc4_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1844,17 +1792,17 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc4_e
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc4_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc41 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1862,16 +1810,13 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc41 
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->TestFunc41 (
-      );
+  _tao_ptr->TestFunc41 ();
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc41_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1879,17 +1824,17 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc41_
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc41_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc42 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1897,16 +1842,13 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc42 
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->TestFunc42 (
-      );
+  _tao_ptr->TestFunc42 ();
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc42_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1914,17 +1856,17 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc42_
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc42_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1932,16 +1874,13 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43 
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->TestFunc43 (
-      );
+  _tao_ptr->TestFunc43 ();
 }
 
 void
 POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_All_Anon::AMI_anon_bd_string_testHandler_ptr _tao_ptr =
     dynamic_cast<POA_All_Anon::AMI_anon_bd_string_testHandler_ptr> (servant);
@@ -1949,15 +1888,12 @@ POA_All_Anon::_TAO_AMI_anon_bd_string_testHandler_Direct_Proxy_Impl::TestFunc43_
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->TestFunc43_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler ()
 {
@@ -3014,12 +2950,10 @@ void POA_All_Anon::AMI_anon_bd_string_testHandler::TestFunc43_excep_skel (
 
 ::CORBA::Boolean POA_All_Anon::AMI_anon_bd_string_testHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:All_Anon/AMI_anon_bd_string_testHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:All_Anon/AMI_anon_bd_string_testHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_All_Anon::AMI_anon_bd_string_testHandler::_interface_repository_id () const

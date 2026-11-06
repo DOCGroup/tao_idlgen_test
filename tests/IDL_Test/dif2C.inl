@@ -24,18 +24,13 @@
 
 ACE_INLINE
 OldDif2::ex1::ex1 (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldDif2::ex1::ex1 (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldDif2::ex1::ex1 (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,36 +47,26 @@ OldDif2::AMH_ex1ExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 OldDif2::AMI_ex1Handler::AMI_ex1Handler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldDif2::AMI_ex1Handler::AMI_ex1Handler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldDif2::AMI_ex1Handler::AMI_ex1Handler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 OldDif2::ex2::ex2 (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldDif2::ex2::ex2 (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldDif2::ex2::ex2 (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -98,36 +83,26 @@ OldDif2::AMH_ex2ExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 OldDif2::AMI_ex2Handler::AMI_ex2Handler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldDif2::AMI_ex2Handler::AMI_ex2Handler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldDif2::AMI_ex2Handler::AMI_ex2Handler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 OldDif2::ex3::ex3 (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldDif2::ex3::ex3 (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldDif2::ex3::ex3 (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -144,36 +119,26 @@ OldDif2::AMH_ex3ExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 OldDif2::AMI_ex3Handler::AMI_ex3Handler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldDif2::AMI_ex3Handler::AMI_ex3Handler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldDif2::AMI_ex3Handler::AMI_ex3Handler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 OldDif2::ex4::ex4 (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldDif2::ex4::ex4 (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldDif2::ex4::ex4 (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -190,18 +155,13 @@ OldDif2::AMH_ex4ExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 OldDif2::AMI_ex4Handler::AMI_ex4Handler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldDif2::AMI_ex4Handler::AMI_ex4Handler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldDif2::AMI_ex4Handler::AMI_ex4Handler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

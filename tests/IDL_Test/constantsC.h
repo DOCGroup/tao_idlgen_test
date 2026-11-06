@@ -205,9 +205,7 @@ namespace ClassConstants
 
     // The static operations.
     static Iface_ptr _duplicate (Iface_ptr obj);
-
     static void _tao_release (Iface_ptr obj);
-
     static Iface_ptr _narrow (::CORBA::Object_ptr obj);
     static Iface_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static Iface_ptr _nil ();
@@ -237,15 +235,14 @@ namespace ClassConstants
 
     // Non-local interface only.
     Iface (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~Iface () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     Iface (Iface const &) = delete;
     Iface (Iface &&) = delete;
     Iface &operator= (Iface const &) = delete;
@@ -355,9 +352,7 @@ namespace ClassConstants
 
     // The static operations.
     static AMH_IfaceResponseHandler_ptr _duplicate (AMH_IfaceResponseHandler_ptr obj);
-
     static void _tao_release (AMH_IfaceResponseHandler_ptr obj);
-
     static AMH_IfaceResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMH_IfaceResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMH_IfaceResponseHandler_ptr _nil ();
@@ -375,7 +370,6 @@ namespace ClassConstants
     ~AMH_IfaceResponseHandler () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMH_IfaceResponseHandler (AMH_IfaceResponseHandler const &) = delete;
     AMH_IfaceResponseHandler (AMH_IfaceResponseHandler &&) = delete;
     AMH_IfaceResponseHandler &operator= (AMH_IfaceResponseHandler const &) = delete;
@@ -394,7 +388,6 @@ namespace ClassConstants
 
   class TAO_IDL_TEST_STUB_Export AMI_IfaceHandler
     : public virtual ::Messaging::ReplyHandler
-
   {
   public:
     friend class TAO::Narrow_Utils<AMI_IfaceHandler>;
@@ -406,9 +399,7 @@ namespace ClassConstants
 
     // The static operations.
     static AMI_IfaceHandler_ptr _duplicate (AMI_IfaceHandler_ptr obj);
-
     static void _tao_release (AMI_IfaceHandler_ptr obj);
-
     static AMI_IfaceHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_IfaceHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_IfaceHandler_ptr _nil ();
@@ -428,15 +419,14 @@ namespace ClassConstants
 
     // Non-local interface only.
     AMI_IfaceHandler (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~AMI_IfaceHandler () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMI_IfaceHandler (AMI_IfaceHandler const &) = delete;
     AMI_IfaceHandler (AMI_IfaceHandler &&) = delete;
     AMI_IfaceHandler &operator= (AMI_IfaceHandler const &) = delete;

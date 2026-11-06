@@ -24,18 +24,13 @@
 
 ACE_INLINE
 ClassConstants::Iface::Iface (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-ClassConstants::Iface::Iface (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+ClassConstants::Iface::Iface (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,18 +47,13 @@ ClassConstants::AMH_IfaceExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

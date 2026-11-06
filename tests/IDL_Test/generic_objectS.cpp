@@ -183,11 +183,9 @@ POA_AMH_generic::op_skel (
 
 ::CORBA::Boolean POA_AMH_generic::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:generic:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:generic:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_generic::_interface_repository_id () const
@@ -291,38 +289,30 @@ TAO_generic_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_generic_Perfect_Hash_OpTable tao_generic_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_generic_Direct_Proxy_Impl::~_TAO_generic_Direct_Proxy_Impl ()
-{
-}
+_TAO_generic_Direct_Proxy_Impl::~_TAO_generic_Direct_Proxy_Impl () = default;
 
 void
-_TAO_generic_Direct_Proxy_Impl::op (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_generic_Direct_Proxy_Impl::op (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_generic_ptr _tao_ptr =
-    dynamic_cast<POA_generic_ptr> (servant);
+  POA_generic_ptr _tao_ptr = dynamic_cast<POA_generic_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_retval_type = TAO::Arg_Traits<::CORBA::Object>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  using _tao_arg_1_type = TAO::Arg_Traits<::CORBA::Object>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::CORBA::Object>::inout_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::CORBA::Object>::out_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
-  ((TAO::Arg_Traits<::CORBA::Object>::ret_val *) args[0])->arg () =
-    _tao_ptr->op (
-          ((TAO::Arg_Traits<::CORBA::Object>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::CORBA::Object>::inout_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::CORBA::Object>::out_arg_val *) args[3])->arg ()
-        );
+  _tao_retval->arg () = _tao_ptr->op (
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_generic::POA_generic ()
 {
@@ -341,11 +331,9 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::CORBA::Object>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::CORBA::Object> (
-        this->operation_details_,
-        this->args_);
-
+    TAO::SArg_Traits<::CORBA::Object>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::CORBA::Object> (
+      this->operation_details_,
+      this->args_);
     TAO::SArg_Traits<::CORBA::Object>::in_arg_type arg_1 =
       TAO::Portable_Server::get_in_arg<::CORBA::Object> (
         this->operation_details_,
@@ -421,11 +409,9 @@ void POA_generic::op_skel (
 
 ::CORBA::Boolean POA_generic::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:generic:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:generic:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_generic::_interface_repository_id () const
@@ -564,55 +550,43 @@ TAO_AMI_genericHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_
 
 static TAO_AMI_genericHandler_Perfect_Hash_OpTable tao_AMI_genericHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_genericHandler_Direct_Proxy_Impl::~_TAO_AMI_genericHandler_Direct_Proxy_Impl ()
-{
-}
+_TAO_AMI_genericHandler_Direct_Proxy_Impl::~_TAO_AMI_genericHandler_Direct_Proxy_Impl () = default;
 
 void
-_TAO_AMI_genericHandler_Direct_Proxy_Impl::op (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_genericHandler_Direct_Proxy_Impl::op (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_genericHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_genericHandler_ptr> (servant);
+  POA_AMI_genericHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_genericHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::CORBA::Object>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::CORBA::Object>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::CORBA::Object>::in_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
   _tao_ptr->op (
-        ((TAO::Arg_Traits<::CORBA::Object>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::CORBA::Object>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits<::CORBA::Object>::in_arg_val *) args[3])->arg ()
-      );
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
 
 void
-_TAO_AMI_genericHandler_Direct_Proxy_Impl::op_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_genericHandler_Direct_Proxy_Impl::op_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_genericHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_genericHandler_ptr> (servant);
+  POA_AMI_genericHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_genericHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_AMI_genericHandler::POA_AMI_genericHandler ()
 {
@@ -771,12 +745,10 @@ void POA_AMI_genericHandler::op_excep_skel (
 
 ::CORBA::Boolean POA_AMI_genericHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_genericHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_genericHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_genericHandler::_interface_repository_id () const

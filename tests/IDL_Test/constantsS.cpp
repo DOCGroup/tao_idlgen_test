@@ -134,11 +134,9 @@ POA_ClassConstants::AMH_Iface::AMH_Iface ()
 
 ::CORBA::Boolean POA_ClassConstants::AMH_Iface::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:ClassConstants/Iface:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:ClassConstants/Iface:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_ClassConstants::AMH_Iface::_interface_repository_id () const
@@ -240,17 +238,7 @@ TAO_ClassConstants_Iface_Perfect_Hash_OpTable::lookup (char const *str, std::siz
 
 static TAO_ClassConstants_Iface_Perfect_Hash_OpTable tao_ClassConstants_Iface_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_ClassConstants::_TAO_Iface_Direct_Proxy_Impl::~_TAO_Iface_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+POA_ClassConstants::_TAO_Iface_Direct_Proxy_Impl::~_TAO_Iface_Direct_Proxy_Impl () = default;
 
 POA_ClassConstants::Iface::Iface ()
 {
@@ -259,11 +247,9 @@ POA_ClassConstants::Iface::Iface ()
 
 ::CORBA::Boolean POA_ClassConstants::Iface::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:ClassConstants/Iface:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:ClassConstants/Iface:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_ClassConstants::Iface::_interface_repository_id () const
@@ -365,17 +351,7 @@ TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable::lookup (char const *st
 
 static TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable tao_ClassConstants_AMI_IfaceHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_ClassConstants::_TAO_AMI_IfaceHandler_Direct_Proxy_Impl::~_TAO_AMI_IfaceHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+POA_ClassConstants::_TAO_AMI_IfaceHandler_Direct_Proxy_Impl::~_TAO_AMI_IfaceHandler_Direct_Proxy_Impl () = default;
 
 POA_ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler ()
   : TAO_ServantBase ()
@@ -385,12 +361,10 @@ POA_ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler ()
 
 ::CORBA::Boolean POA_ClassConstants::AMI_IfaceHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:ClassConstants/AMI_IfaceHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:ClassConstants/AMI_IfaceHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_ClassConstants::AMI_IfaceHandler::_interface_repository_id () const

@@ -135,11 +135,9 @@ POA_scope_test::AMH_i_scope_test::AMH_i_scope_test ()
 
 ::CORBA::Boolean POA_scope_test::AMH_i_scope_test::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:scope_test/i_scope_test:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:scope_test/i_scope_test:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_scope_test::AMH_i_scope_test::_interface_repository_id () const
@@ -241,17 +239,7 @@ TAO_scope_test_i_scope_test_Perfect_Hash_OpTable::lookup (char const *str, std::
 
 static TAO_scope_test_i_scope_test_Perfect_Hash_OpTable tao_scope_test_i_scope_test_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_scope_test::_TAO_i_scope_test_Direct_Proxy_Impl::~_TAO_i_scope_test_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+POA_scope_test::_TAO_i_scope_test_Direct_Proxy_Impl::~_TAO_i_scope_test_Direct_Proxy_Impl () = default;
 
 POA_scope_test::i_scope_test::i_scope_test ()
   : TAO_ServantBase ()
@@ -261,11 +249,9 @@ POA_scope_test::i_scope_test::i_scope_test ()
 
 ::CORBA::Boolean POA_scope_test::i_scope_test::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:scope_test/i_scope_test:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:scope_test/i_scope_test:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_scope_test::i_scope_test::_interface_repository_id () const
@@ -367,17 +353,7 @@ TAO_scope_test_AMI_i_scope_testHandler_Perfect_Hash_OpTable::lookup (char const 
 
 static TAO_scope_test_AMI_i_scope_testHandler_Perfect_Hash_OpTable tao_scope_test_AMI_i_scope_testHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_scope_test::_TAO_AMI_i_scope_testHandler_Direct_Proxy_Impl::~_TAO_AMI_i_scope_testHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+POA_scope_test::_TAO_AMI_i_scope_testHandler_Direct_Proxy_Impl::~_TAO_AMI_i_scope_testHandler_Direct_Proxy_Impl () = default;
 
 POA_scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler ()
   : TAO_ServantBase ()
@@ -387,12 +363,10 @@ POA_scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler ()
 
 ::CORBA::Boolean POA_scope_test::AMI_i_scope_testHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:scope_test/AMI_i_scope_testHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:scope_test/AMI_i_scope_testHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_scope_test::AMI_i_scope_testHandler::_interface_repository_id () const
@@ -656,11 +630,9 @@ POA_mod2::AMH_fwd::op_skel (
 
 ::CORBA::Boolean POA_mod2::AMH_fwd::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:mod2/fwd:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:mod2/fwd:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_mod2::AMH_fwd::_interface_repository_id () const
@@ -788,74 +760,58 @@ TAO_mod2_fwd_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_mod2_fwd_Perfect_Hash_OpTable tao_mod2_fwd_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_mod2::_TAO_fwd_Direct_Proxy_Impl::~_TAO_fwd_Direct_Proxy_Impl ()
-{
-}
+POA_mod2::_TAO_fwd_Direct_Proxy_Impl::~_TAO_fwd_Direct_Proxy_Impl () = default;
 
 void
-POA_mod2::_TAO_fwd_Direct_Proxy_Impl::_get_attr (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_mod2::_TAO_fwd_Direct_Proxy_Impl::_get_attr (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_mod2::fwd_ptr _tao_ptr =
-    dynamic_cast<POA_mod2::fwd_ptr> (servant);
+  POA_mod2::fwd_ptr _tao_ptr = dynamic_cast<POA_mod2::fwd_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  ((TAO::Arg_Traits<char *>::ret_val *) args[0])->arg () =
-    _tao_ptr->attr (
-        );
+  using _tao_retval_type = TAO::Arg_Traits<char *>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  _tao_retval->arg () = _tao_ptr->attr ();
 }
 
 void
-POA_mod2::_TAO_fwd_Direct_Proxy_Impl::_set_attr (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_mod2::_TAO_fwd_Direct_Proxy_Impl::_set_attr (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_mod2::fwd_ptr _tao_ptr =
-    dynamic_cast<POA_mod2::fwd_ptr> (servant);
+  POA_mod2::fwd_ptr _tao_ptr = dynamic_cast<POA_mod2::fwd_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<char *>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->attr (
-        ((TAO::Arg_Traits<char *>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
-POA_mod2::_TAO_fwd_Direct_Proxy_Impl::op (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_mod2::_TAO_fwd_Direct_Proxy_Impl::op (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_mod2::fwd_ptr _tao_ptr =
-    dynamic_cast<POA_mod2::fwd_ptr> (servant);
+  POA_mod2::fwd_ptr _tao_ptr = dynamic_cast<POA_mod2::fwd_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_retval_type = TAO::Arg_Traits<::mod2::full>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  using _tao_arg_1_type = TAO::Arg_Traits<::mod2::full>::inout_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::mod2::fwd::un>::inout_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::mod2::fwd::full_seq>::inout_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
-  ((TAO::Arg_Traits<::mod2::full>::ret_val *) args[0])->arg () =
-    _tao_ptr->op (
-          ((TAO::Arg_Traits<::mod2::full>::inout_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::mod2::fwd::un>::inout_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::mod2::fwd::full_seq>::inout_arg_val *) args[3])->arg ()
-        );
+  _tao_retval->arg () = _tao_ptr->op (
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_mod2::fwd::fwd ()
 {
@@ -877,13 +833,10 @@ namespace POA_mod2
 
     void execute () override
     {
-      TAO::SArg_Traits<char *>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<char *> (
-          this->operation_details_,
-          this->args_);
-
-      retval =
-        this->servant_->attr ();
+      TAO::SArg_Traits<char *>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<char *> (
+        this->operation_details_,
+        this->args_);
+      retval = this->servant_->attr ();
     }
 
   private:
@@ -1014,11 +967,9 @@ namespace POA_mod2
 
     void execute () override
     {
-      TAO::SArg_Traits<::mod2::full>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::mod2::full> (
-          this->operation_details_,
-          this->args_);
-
+      TAO::SArg_Traits<::mod2::full>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::mod2::full> (
+        this->operation_details_,
+        this->args_);
       TAO::SArg_Traits<::mod2::full>::inout_arg_type arg_1 =
         TAO::Portable_Server::get_inout_arg<::mod2::full> (
           this->operation_details_,
@@ -1102,11 +1053,9 @@ void POA_mod2::fwd::op_skel (
 
 ::CORBA::Boolean POA_mod2::fwd::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:mod2/fwd:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:mod2/fwd:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_mod2::fwd::_interface_repository_id () const
@@ -1300,127 +1249,106 @@ TAO_mod2_AMI_fwdHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size
 
 static TAO_mod2_AMI_fwdHandler_Perfect_Hash_OpTable tao_mod2_AMI_fwdHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::~_TAO_AMI_fwdHandler_Direct_Proxy_Impl ()
-{
-}
+POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::~_TAO_AMI_fwdHandler_Direct_Proxy_Impl () = default;
 
 void
-POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::get_attr (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::get_attr (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_mod2::AMI_fwdHandler_ptr _tao_ptr =
-    dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
+  POA_mod2::AMI_fwdHandler_ptr _tao_ptr = dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<char *>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->get_attr (
-        ((TAO::Arg_Traits<char *>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::get_attr_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_mod2::AMI_fwdHandler_ptr _tao_ptr =
-    dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
+  POA_mod2::AMI_fwdHandler_ptr _tao_ptr = dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->get_attr_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
-POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::set_attr (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::set_attr (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_mod2::AMI_fwdHandler_ptr _tao_ptr =
-    dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
+  POA_mod2::AMI_fwdHandler_ptr _tao_ptr = dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->set_attr (
-      );
+  _tao_ptr->set_attr ();
 }
 
 void
 POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::set_attr_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_mod2::AMI_fwdHandler_ptr _tao_ptr =
-    dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
+  POA_mod2::AMI_fwdHandler_ptr _tao_ptr = dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->set_attr_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
-POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::op (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::op (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_mod2::AMI_fwdHandler_ptr _tao_ptr =
-    dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
+  POA_mod2::AMI_fwdHandler_ptr _tao_ptr = dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::mod2::full>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::mod2::full>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::mod2::fwd::un>::in_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
+  using _tao_arg_4_type = TAO::Arg_Traits<::mod2::fwd::full_seq>::in_arg_val;
+  _tao_arg_4_type * const _tao_arg_4 = static_cast<_tao_arg_4_type *> (args[4]);
 
   _tao_ptr->op (
-        ((TAO::Arg_Traits<::mod2::full>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::mod2::full>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits<::mod2::fwd::un>::in_arg_val *) args[3])->arg (),
-        ((TAO::Arg_Traits<::mod2::fwd::full_seq>::in_arg_val *) args[4])->arg ()
-      );
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg (),
+    _tao_arg_4->arg ());
 }
 
 void
-POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::op_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_mod2::_TAO_AMI_fwdHandler_Direct_Proxy_Impl::op_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_mod2::AMI_fwdHandler_ptr _tao_ptr =
-    dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
+  POA_mod2::AMI_fwdHandler_ptr _tao_ptr = dynamic_cast<POA_mod2::AMI_fwdHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_mod2::AMI_fwdHandler::AMI_fwdHandler ()
 {
@@ -1889,12 +1817,10 @@ void POA_mod2::AMI_fwdHandler::op_excep_skel (
 
 ::CORBA::Boolean POA_mod2::AMI_fwdHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:mod2/AMI_fwdHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:mod2/AMI_fwdHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_mod2::AMI_fwdHandler::_interface_repository_id () const

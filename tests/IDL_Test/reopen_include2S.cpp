@@ -171,11 +171,9 @@ POA_A::B::AMH_X2::getX2_skel (
 
 ::CORBA::Boolean POA_A::B::AMH_X2::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:A/B/X2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:A/B/X2:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_A::B::AMH_X2::_interface_repository_id () const
@@ -279,35 +277,20 @@ TAO_A_B_X2_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_A_B_X2_Perfect_Hash_OpTable tao_A_B_X2_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_A::B::_TAO_X2_Direct_Proxy_Impl::~_TAO_X2_Direct_Proxy_Impl ()
-{
-}
+POA_A::B::_TAO_X2_Direct_Proxy_Impl::~_TAO_X2_Direct_Proxy_Impl () = default;
 
 void
-POA_A::B::_TAO_X2_Direct_Proxy_Impl::getX2 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_A::B::_TAO_X2_Direct_Proxy_Impl::getX2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_A::B::X2_ptr _tao_ptr =
-    dynamic_cast<POA_A::B::X2_ptr> (servant);
+  POA_A::B::X2_ptr _tao_ptr = dynamic_cast<POA_A::B::X2_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  ((TAO::Arg_Traits<char *>::ret_val *) args[0])->arg () =
-    _tao_ptr->getX2 (
-        );
+  using _tao_retval_type = TAO::Arg_Traits<char *>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  _tao_retval->arg () = _tao_ptr->getX2 ();
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_A::B::X2::X2 ()
 {
@@ -332,13 +315,10 @@ namespace POA_A
 
       void execute () override
       {
-        TAO::SArg_Traits<char *>::ret_arg_type retval =
-          TAO::Portable_Server::get_ret_arg<char *> (
-            this->operation_details_,
-            this->args_);
-
-        retval =
-          this->servant_->getX2 ();
+        TAO::SArg_Traits<char *>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<char *> (
+          this->operation_details_,
+          this->args_);
+        retval = this->servant_->getX2 ();
       }
 
     private:
@@ -387,11 +367,9 @@ void POA_A::B::X2::getX2_skel (
 
 ::CORBA::Boolean POA_A::B::X2::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:A/B/X2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:A/B/X2:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_A::B::X2::_interface_repository_id () const
@@ -525,53 +503,37 @@ TAO_A_B_AMI_X2Handler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t
 
 static TAO_A_B_AMI_X2Handler_Perfect_Hash_OpTable tao_A_B_AMI_X2Handler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_A::B::_TAO_AMI_X2Handler_Direct_Proxy_Impl::~_TAO_AMI_X2Handler_Direct_Proxy_Impl ()
-{
-}
+POA_A::B::_TAO_AMI_X2Handler_Direct_Proxy_Impl::~_TAO_AMI_X2Handler_Direct_Proxy_Impl () = default;
 
 void
-POA_A::B::_TAO_AMI_X2Handler_Direct_Proxy_Impl::getX2 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_A::B::_TAO_AMI_X2Handler_Direct_Proxy_Impl::getX2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_A::B::AMI_X2Handler_ptr _tao_ptr =
-    dynamic_cast<POA_A::B::AMI_X2Handler_ptr> (servant);
+  POA_A::B::AMI_X2Handler_ptr _tao_ptr = dynamic_cast<POA_A::B::AMI_X2Handler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<char *>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->getX2 (
-        ((TAO::Arg_Traits<char *>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
-POA_A::B::_TAO_AMI_X2Handler_Direct_Proxy_Impl::getX2_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_A::B::_TAO_AMI_X2Handler_Direct_Proxy_Impl::getX2_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_A::B::AMI_X2Handler_ptr _tao_ptr =
-    dynamic_cast<POA_A::B::AMI_X2Handler_ptr> (servant);
+  POA_A::B::AMI_X2Handler_ptr _tao_ptr = dynamic_cast<POA_A::B::AMI_X2Handler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->getX2_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_A::B::AMI_X2Handler::AMI_X2Handler ()
 {
@@ -728,12 +690,10 @@ void POA_A::B::AMI_X2Handler::getX2_excep_skel (
 
 ::CORBA::Boolean POA_A::B::AMI_X2Handler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:A/B/AMI_X2Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:A/B/AMI_X2Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_A::B::AMI_X2Handler::_interface_repository_id () const

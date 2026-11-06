@@ -180,15 +180,15 @@ public:
     ::Test::Timestamp send_time) = 0;
 
   static void test_method_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void shutdown () = 0;
 
   static void shutdown_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
 class TAO_AMH_RoundtripResponseHandler;
 using TAO_AMH_RoundtripResponseHandler_ptr = TAO_AMH_RoundtripResponseHandler *;

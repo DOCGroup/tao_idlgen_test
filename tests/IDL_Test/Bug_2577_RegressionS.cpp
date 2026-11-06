@@ -171,11 +171,9 @@ POA_AMH_User_T::getLoginTime_skel (
 
 ::CORBA::Boolean POA_AMH_User_T::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:User_T:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:User_T:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_User_T::_interface_repository_id () const
@@ -279,35 +277,20 @@ TAO_User_T_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_User_T_Perfect_Hash_OpTable tao_User_T_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_User_T_Direct_Proxy_Impl::~_TAO_User_T_Direct_Proxy_Impl ()
-{
-}
+_TAO_User_T_Direct_Proxy_Impl::~_TAO_User_T_Direct_Proxy_Impl () = default;
 
 void
-_TAO_User_T_Direct_Proxy_Impl::getLoginTime (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_User_T_Direct_Proxy_Impl::getLoginTime (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_User_T_ptr _tao_ptr =
-    dynamic_cast<POA_User_T_ptr> (servant);
+  POA_User_T_ptr _tao_ptr = dynamic_cast<POA_User_T_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  ((TAO::Arg_Traits<::DateTime_T>::ret_val *) args[0])->arg () =
-    _tao_ptr->getLoginTime (
-        );
+  using _tao_retval_type = TAO::Arg_Traits<::DateTime_T>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  _tao_retval->arg () = _tao_ptr->getLoginTime ();
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_User_T::POA_User_T ()
 {
@@ -326,13 +309,10 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::DateTime_T>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::DateTime_T> (
-        this->operation_details_,
-        this->args_);
-
-    retval =
-      this->servant_->getLoginTime ();
+    TAO::SArg_Traits<::DateTime_T>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::DateTime_T> (
+      this->operation_details_,
+      this->args_);
+    retval = this->servant_->getLoginTime ();
   }
 
 private:
@@ -379,11 +359,9 @@ void POA_User_T::getLoginTime_skel (
 
 ::CORBA::Boolean POA_User_T::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:User_T:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:User_T:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_User_T::_interface_repository_id () const
@@ -517,53 +495,37 @@ TAO_AMI_User_THandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t
 
 static TAO_AMI_User_THandler_Perfect_Hash_OpTable tao_AMI_User_THandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_User_THandler_Direct_Proxy_Impl::~_TAO_AMI_User_THandler_Direct_Proxy_Impl ()
-{
-}
+_TAO_AMI_User_THandler_Direct_Proxy_Impl::~_TAO_AMI_User_THandler_Direct_Proxy_Impl () = default;
 
 void
-_TAO_AMI_User_THandler_Direct_Proxy_Impl::getLoginTime (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_User_THandler_Direct_Proxy_Impl::getLoginTime (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_User_THandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_User_THandler_ptr> (servant);
+  POA_AMI_User_THandler_ptr _tao_ptr = dynamic_cast<POA_AMI_User_THandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::DateTime_T>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->getLoginTime (
-        ((TAO::Arg_Traits<::DateTime_T>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
-_TAO_AMI_User_THandler_Direct_Proxy_Impl::getLoginTime_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_User_THandler_Direct_Proxy_Impl::getLoginTime_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_User_THandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_User_THandler_ptr> (servant);
+  POA_AMI_User_THandler_ptr _tao_ptr = dynamic_cast<POA_AMI_User_THandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->getLoginTime_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_AMI_User_THandler::POA_AMI_User_THandler ()
 {
@@ -704,12 +666,10 @@ void POA_AMI_User_THandler::getLoginTime_excep_skel (
 
 ::CORBA::Boolean POA_AMI_User_THandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_User_THandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_User_THandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_User_THandler::_interface_repository_id () const

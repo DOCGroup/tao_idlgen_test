@@ -145,8 +145,7 @@ namespace POA_Test
       TAO::SArg_Traits<char *>::ret_arg_type retval =
         static_cast<TAO::SArg_Traits<char *>::ret_val *> (this->args_[0])->arg ();
 
-      retval =
-        this->servant_->get_string ();
+      retval = this->servant_->get_string ();
     }
 
   private:
@@ -242,11 +241,9 @@ void POA_Test::Hello::shutdown_skel (
 
 ::CORBA::Boolean POA_Test::Hello::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:Test/Hello:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:Test/Hello:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_Test::Hello::_interface_repository_id () const

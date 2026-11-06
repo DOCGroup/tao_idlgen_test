@@ -256,18 +256,13 @@ OldUnion::Foo2::y ()
 
 ACE_INLINE
 OldUnion::a::a (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldUnion::a::a (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldUnion::a::a (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -284,18 +279,13 @@ OldUnion::AMH_aExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 OldUnion::AMI_aHandler::AMI_aHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldUnion::AMI_aHandler::AMI_aHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldUnion::AMI_aHandler::AMI_aHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

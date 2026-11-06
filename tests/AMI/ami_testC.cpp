@@ -55,25 +55,19 @@
 A::DidTheRightThing::DidTheRightThing (
     ::CORBA::Long _tao_id,
     char const * _tao_whatDidTheRightThing)
-  : ::CORBA::UserException (
-        "IDL:A/DidTheRightThing:1.0",
-        "DidTheRightThing")
+  : ::CORBA::UserException ("IDL:A/DidTheRightThing:1.0", "DidTheRightThing")
 {
   this->id = _tao_id;
   this->whatDidTheRightThing = ::CORBA::string_dup (_tao_whatDidTheRightThing);
 }
 
 A::DidTheRightThing::DidTheRightThing ()
-  : ::CORBA::UserException (
-        "IDL:A/DidTheRightThing:1.0",
-        "DidTheRightThing")
+  : ::CORBA::UserException ("IDL:A/DidTheRightThing:1.0", "DidTheRightThing")
 {
 }
 
 A::DidTheRightThing::DidTheRightThing (const ::A::DidTheRightThing &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->id = _tao_excp.id;
   this->whatDidTheRightThing = ::CORBA::string_dup (_tao_excp.whatDidTheRightThing.in ());
@@ -198,7 +192,7 @@ TAO::Objref_Traits<A::AMI_Test>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::AMI_Test>::marshal (A::AMI_Test_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::AMI_Test>::marshal (A::AMI_Test_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -223,10 +217,10 @@ A::AMI_Test::foo (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_out_l),
-      std::addressof(_tao_in_l),
-      std::addressof(_tao_in_str)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_out_l),
+      std::addressof (_tao_in_l),
+      std::addressof (_tao_in_str)
     };
 
   static TAO::Exception_Data
@@ -248,7 +242,6 @@ A::AMI_Test::foo (
       "foo",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -270,7 +263,7 @@ A::AMI_Test::yadda ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -280,8 +273,7 @@ A::AMI_Test::yadda ()
       "_get_yadda",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -304,8 +296,8 @@ A::AMI_Test::yadda (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_yadda)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_yadda)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -315,7 +307,6 @@ A::AMI_Test::yadda (
       "_set_yadda",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -332,7 +323,7 @@ A::AMI_Test::shutdown ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -363,8 +354,8 @@ A::AMI_Test::inout_arg_test (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_str)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_str)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -374,7 +365,6 @@ A::AMI_Test::inout_arg_test (
       "inout_arg_test",
       14,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -397,9 +387,9 @@ A::AMI_Test::sendc_foo (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_in_l),
-      std::addressof(_tao_in_str)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_in_l),
+      std::addressof (_tao_in_str)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -432,8 +422,8 @@ A::AMI_Test::sendc_set_yadda (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_yadda)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_yadda)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -492,8 +482,8 @@ A::AMI_Test::sendc_inout_arg_test (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_str)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_str)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -559,7 +549,7 @@ A::AMI_Test::_tao_release (AMI_Test_ptr obj)
 A::AMI_Test::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:A/AMI_Test:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -614,7 +604,7 @@ TAO::Objref_Traits<A::AMI_AMI_TestHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::AMI_AMI_TestHandler>::marshal (A::AMI_AMI_TestHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::AMI_AMI_TestHandler>::marshal (A::AMI_AMI_TestHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -637,9 +627,9 @@ A::AMI_AMI_TestHandler::foo (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_out_l)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_out_l)
     };
 
   static TAO::Exception_Data
@@ -661,7 +651,6 @@ A::AMI_AMI_TestHandler::foo (
       "foo",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -762,8 +751,8 @@ A::AMI_AMI_TestHandler::foo_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   static TAO::Exception_Data
@@ -785,7 +774,6 @@ A::AMI_AMI_TestHandler::foo_excep (
       "foo_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -807,8 +795,8 @@ A::AMI_AMI_TestHandler::get_yadda (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -818,7 +806,6 @@ A::AMI_AMI_TestHandler::get_yadda (
       "get_yadda",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -900,8 +887,8 @@ A::AMI_AMI_TestHandler::get_yadda_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -911,7 +898,6 @@ A::AMI_AMI_TestHandler::get_yadda_excep (
       "get_yadda_excep",
       15,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -928,7 +914,7 @@ A::AMI_AMI_TestHandler::set_yadda ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -938,8 +924,7 @@ A::AMI_AMI_TestHandler::set_yadda ()
       "set_yadda",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -1015,8 +1000,8 @@ A::AMI_AMI_TestHandler::set_yadda_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1026,7 +1011,6 @@ A::AMI_AMI_TestHandler::set_yadda_excep (
       "set_yadda_excep",
       15,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1045,8 +1029,8 @@ A::AMI_AMI_TestHandler::inout_arg_test (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_str)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_str)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1056,7 +1040,6 @@ A::AMI_AMI_TestHandler::inout_arg_test (
       "inout_arg_test",
       14,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1138,8 +1121,8 @@ A::AMI_AMI_TestHandler::inout_arg_test_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1149,7 +1132,6 @@ A::AMI_AMI_TestHandler::inout_arg_test_excep (
       "inout_arg_test_excep",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1203,8 +1185,8 @@ A::AMI_AMI_TestHandler::_tao_release (AMI_AMI_TestHandler_ptr obj)
 A::AMI_AMI_TestHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:A/AMI_AMI_TestHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:A/AMI_AMI_TestHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1259,7 +1241,7 @@ TAO::Objref_Traits<A::Test_Child>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::Test_Child>::marshal (A::Test_Child_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::Test_Child>::marshal (A::Test_Child_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1278,7 +1260,7 @@ A::Test_Child::child_op ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1288,8 +1270,7 @@ A::Test_Child::child_op ()
       "child_op",
       8,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -1371,8 +1352,8 @@ A::Test_Child::_tao_release (Test_Child_ptr obj)
 A::Test_Child::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:A/AMI_Test:1.0") == 0 ||
-      std::strcmp (value, "IDL:A/Test_Child:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:A/Test_Child:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1427,7 +1408,7 @@ TAO::Objref_Traits<A::AMI_Test_ChildHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<A::AMI_Test_ChildHandler>::marshal (A::AMI_Test_ChildHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<A::AMI_Test_ChildHandler>::marshal (A::AMI_Test_ChildHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1446,7 +1427,7 @@ A::AMI_Test_ChildHandler::child_op ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1456,8 +1437,7 @@ A::AMI_Test_ChildHandler::child_op ()
       "child_op",
       8,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -1533,8 +1513,8 @@ A::AMI_Test_ChildHandler::child_op_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1544,7 +1524,6 @@ A::AMI_Test_ChildHandler::child_op_excep (
       "child_op_excep",
       14,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1598,9 +1577,9 @@ A::AMI_Test_ChildHandler::_tao_release (AMI_Test_ChildHandler_ptr obj)
 A::AMI_Test_ChildHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:A/AMI_AMI_TestHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:A/AMI_Test_ChildHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:A/AMI_AMI_TestHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:A/AMI_Test_ChildHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }

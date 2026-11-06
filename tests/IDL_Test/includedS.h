@@ -326,19 +326,11 @@ namespace POA_RootModule
     char const *_interface_repository_id () const override;
   };
 
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
-
   class TAO_IDL_TEST_STUB_Export _TAO_ParentIF_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_ParentIF_Direct_Proxy_Impl ();
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class TAO_AMH_ParentIFResponseHandler;
   using TAO_AMH_ParentIFResponseHandler_ptr = TAO_AMH_ParentIFResponseHandler *;
@@ -383,20 +375,12 @@ namespace POA_RootModule
     char const *_interface_repository_id () const override;
   };
 
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
-
   class TAO_IDL_TEST_STUB_Export _TAO_AMI_ParentIFHandler_Direct_Proxy_Impl
     : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_AMI_ParentIFHandler_Direct_Proxy_Impl ();
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
 } // module RootModule::SUBMODULE1
 
@@ -456,19 +440,11 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_AAA_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AAA_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_TAO_AMH_AAAResponseHandler;
 using POA_TAO_AMH_AAAResponseHandler_ptr = POA_TAO_AMH_AAAResponseHandler *;
@@ -513,20 +489,12 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_AAAHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_AAAHandler_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 #include "includedS_T.h"
 

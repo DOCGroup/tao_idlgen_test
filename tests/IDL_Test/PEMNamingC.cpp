@@ -189,9 +189,7 @@ Plesk::ExSystem::ExSystem (
     char const * _tao_errmsg,
     Plesk::TPropertyList const & _tao_props,
     Plesk::TBool _tao_transient)
-  : ::CORBA::UserException (
-        "IDL:Plesk/ExSystem:1.0",
-        "ExSystem")
+  : ::CORBA::UserException ("IDL:Plesk/ExSystem:1.0", "ExSystem")
 {
   this->module_id = ::CORBA::string_dup (_tao_module_id);
   this->extype_id = _tao_extype_id;
@@ -203,16 +201,12 @@ Plesk::ExSystem::ExSystem (
 }
 
 Plesk::ExSystem::ExSystem ()
-  : ::CORBA::UserException (
-        "IDL:Plesk/ExSystem:1.0",
-        "ExSystem")
+  : ::CORBA::UserException ("IDL:Plesk/ExSystem:1.0", "ExSystem")
 {
 }
 
 Plesk::ExSystem::ExSystem (const ::Plesk::ExSystem &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->module_id = ::CORBA::string_dup (_tao_excp.module_id.in ());
   this->extype_id = _tao_excp.extype_id;
@@ -389,7 +383,7 @@ TAO::Objref_Traits<Plesk::Naming::ObjectResolver>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Plesk::Naming::ObjectResolver>::marshal (Plesk::Naming::ObjectResolver_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Plesk::Naming::ObjectResolver>::marshal (Plesk::Naming::ObjectResolver_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -412,9 +406,9 @@ Plesk::Naming::ObjectResolver::resolve (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_service_type),
-      std::addressof(_tao_sc_id)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_service_type),
+      std::addressof (_tao_sc_id)
     };
 
   static TAO::Exception_Data
@@ -436,7 +430,6 @@ Plesk::Naming::ObjectResolver::resolve (
       "resolve",
       7,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -464,10 +457,10 @@ Plesk::Naming::ObjectResolver::resolve_sc (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_service_type),
-      std::addressof(_tao_version),
-      std::addressof(_tao_sc_id)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_service_type),
+      std::addressof (_tao_version),
+      std::addressof (_tao_sc_id)
     };
 
   static TAO::Exception_Data
@@ -489,7 +482,6 @@ Plesk::Naming::ObjectResolver::resolve_sc (
       "resolve_sc",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -517,9 +509,9 @@ Plesk::Naming::ObjectResolver::sendc_resolve (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_service_type),
-      std::addressof(_tao_sc_id)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_service_type),
+      std::addressof (_tao_sc_id)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -556,10 +548,10 @@ Plesk::Naming::ObjectResolver::sendc_resolve_sc (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_service_type),
-      std::addressof(_tao_version),
-      std::addressof(_tao_sc_id)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_service_type),
+      std::addressof (_tao_version),
+      std::addressof (_tao_sc_id)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -625,7 +617,7 @@ Plesk::Naming::ObjectResolver::_tao_release (ObjectResolver_ptr obj)
 Plesk::Naming::ObjectResolver::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Plesk/Naming/ObjectResolver:1.2") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -881,7 +873,7 @@ TAO::Objref_Traits<Plesk::Naming::AMH_ObjectResolverResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Plesk::Naming::AMH_ObjectResolverResponseHandler>::marshal (Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Plesk::Naming::AMH_ObjectResolverResponseHandler>::marshal (Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -902,14 +894,14 @@ Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr
 Plesk::Naming::AMH_ObjectResolverResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_ObjectResolverResponseHandler::_duplicate (
-      dynamic_cast<AMH_ObjectResolverResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_ObjectResolverResponseHandler_ptr> (_tao_objref));
 }
 
 Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr
 Plesk::Naming::AMH_ObjectResolverResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_ObjectResolverResponseHandler::_duplicate (
-      dynamic_cast<AMH_ObjectResolverResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_ObjectResolverResponseHandler_ptr> (_tao_objref));
 }
 
 Plesk::Naming::AMH_ObjectResolverResponseHandler_ptr
@@ -938,8 +930,8 @@ Plesk::Naming::AMH_ObjectResolverResponseHandler::_tao_release (AMH_ObjectResolv
 Plesk::Naming::AMH_ObjectResolverResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Plesk/Naming/AMH_ObjectResolverResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1008,7 +1000,7 @@ TAO::Objref_Traits<Plesk::Naming::AMI_ObjectResolverHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Plesk::Naming::AMI_ObjectResolverHandler>::marshal (Plesk::Naming::AMI_ObjectResolverHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Plesk::Naming::AMI_ObjectResolverHandler>::marshal (Plesk::Naming::AMI_ObjectResolverHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1031,9 +1023,9 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_sc_id)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_sc_id)
     };
 
   static TAO::Exception_Data
@@ -1055,7 +1047,6 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve (
       "resolve",
       7,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -1156,8 +1147,8 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   static TAO::Exception_Data
@@ -1179,7 +1170,6 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve_excep (
       "resolve_excep",
       13,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -1203,9 +1193,9 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_sc_id)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_sc_id)
     };
 
   static TAO::Exception_Data
@@ -1227,7 +1217,6 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc (
       "resolve_sc",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -1328,8 +1317,8 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   static TAO::Exception_Data
@@ -1351,7 +1340,6 @@ Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep (
       "resolve_sc_excep",
       16,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -1408,8 +1396,8 @@ Plesk::Naming::AMI_ObjectResolverHandler::_tao_release (AMI_ObjectResolverHandle
 Plesk::Naming::AMI_ObjectResolverHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }

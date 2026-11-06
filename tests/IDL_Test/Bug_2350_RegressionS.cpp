@@ -180,11 +180,9 @@ POA_AMH_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
 
 ::CORBA::Boolean POA_AMH_Bug_2350_Regression::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:Bug_2350_Regression:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:Bug_2350_Regression:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_Bug_2350_Regression::_interface_repository_id () const
@@ -288,35 +286,24 @@ TAO_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (char const *str, std::size
 
 static TAO_Bug_2350_Regression_Perfect_Hash_OpTable tao_Bug_2350_Regression_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_Bug_2350_Regression_Direct_Proxy_Impl::~_TAO_Bug_2350_Regression_Direct_Proxy_Impl ()
-{
-}
+_TAO_Bug_2350_Regression_Direct_Proxy_Impl::~_TAO_Bug_2350_Regression_Direct_Proxy_Impl () = default;
 
 void
 _TAO_Bug_2350_Regression_Direct_Proxy_Impl::Bug_2350_Regression_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_Bug_2350_Regression_ptr _tao_ptr =
-    dynamic_cast<POA_Bug_2350_Regression_ptr> (servant);
+  POA_Bug_2350_Regression_ptr _tao_ptr = dynamic_cast<POA_Bug_2350_Regression_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::user_ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->Bug_2350_Regression_excep (
-        ((TAO::Arg_Traits<::user_ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_Bug_2350_Regression::POA_Bug_2350_Regression ()
 {
@@ -398,11 +385,9 @@ void POA_Bug_2350_Regression::Bug_2350_Regression_excep_skel (
 
 ::CORBA::Boolean POA_Bug_2350_Regression::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:Bug_2350_Regression:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:Bug_2350_Regression:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_Bug_2350_Regression::_interface_repository_id () const
@@ -529,52 +514,37 @@ TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::lookup (char const *str
 
 static TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable tao_AMI_Bug_2350_RegressionHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::~_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl ()
-{
-}
+_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::~_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl () = default;
 
 void
 _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **)
 {
-  POA_AMI_Bug_2350_RegressionHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_Bug_2350_RegressionHandler_ptr> (servant);
+  POA_AMI_Bug_2350_RegressionHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_Bug_2350_RegressionHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->Bug_2350_Regression_excep (
-      );
+  _tao_ptr->Bug_2350_Regression_excep ();
 }
 
 void
 _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl::Bug_2350_Regression_excep_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_AMI_Bug_2350_RegressionHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_Bug_2350_RegressionHandler_ptr> (servant);
+  POA_AMI_Bug_2350_RegressionHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_Bug_2350_RegressionHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->Bug_2350_Regression_excep_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_AMI_Bug_2350_RegressionHandler::POA_AMI_Bug_2350_RegressionHandler ()
 {
@@ -728,12 +698,10 @@ void POA_AMI_Bug_2350_RegressionHandler::Bug_2350_Regression_excep_excep_skel (
 
 ::CORBA::Boolean POA_AMI_Bug_2350_RegressionHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_Bug_2350_RegressionHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_Bug_2350_RegressionHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_Bug_2350_RegressionHandler::_interface_repository_id () const

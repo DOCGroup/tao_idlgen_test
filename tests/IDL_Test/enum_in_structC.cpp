@@ -500,24 +500,18 @@ static TAO::TypeCode::Enum<char const *,
 
 ErrorException::ErrorException (
     ErrorException::ReasonCode _tao_reason)
-  : ::CORBA::UserException (
-        "IDL:ErrorException:1.0",
-        "ErrorException")
+  : ::CORBA::UserException ("IDL:ErrorException:1.0", "ErrorException")
 {
   this->reason = _tao_reason;
 }
 
 ErrorException::ErrorException ()
-  : ::CORBA::UserException (
-        "IDL:ErrorException:1.0",
-        "ErrorException")
+  : ::CORBA::UserException ("IDL:ErrorException:1.0", "ErrorException")
 {
 }
 
 ErrorException::ErrorException (const ::ErrorException &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->reason = _tao_excp.reason;
 }

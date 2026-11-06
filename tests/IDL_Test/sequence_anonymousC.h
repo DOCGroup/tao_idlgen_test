@@ -101,9 +101,7 @@ public:
 
   // The static operations.
   static seqTest_ptr _duplicate (seqTest_ptr obj);
-
   static void _tao_release (seqTest_ptr obj);
-
   static seqTest_ptr _narrow (::CORBA::Object_ptr obj);
   static seqTest_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static seqTest_ptr _nil ();
@@ -164,15 +162,14 @@ protected:
 
   // Non-local interface only.
   seqTest (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~seqTest () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   seqTest (seqTest const &) = delete;
   seqTest (seqTest &&) = delete;
   seqTest &operator= (seqTest const &) = delete;
@@ -277,9 +274,7 @@ public:
 
   // The static operations.
   static AMH_seqTestResponseHandler_ptr _duplicate (AMH_seqTestResponseHandler_ptr obj);
-
   static void _tao_release (AMH_seqTestResponseHandler_ptr obj);
-
   static AMH_seqTestResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_seqTestResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_seqTestResponseHandler_ptr _nil ();
@@ -303,7 +298,6 @@ protected:
   ~AMH_seqTestResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_seqTestResponseHandler (AMH_seqTestResponseHandler const &) = delete;
   AMH_seqTestResponseHandler (AMH_seqTestResponseHandler &&) = delete;
   AMH_seqTestResponseHandler &operator= (AMH_seqTestResponseHandler const &) = delete;
@@ -323,7 +317,6 @@ using AMI_seqTestHandler_out = TAO_Objref_Out_T<AMI_seqTestHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_seqTestHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_seqTestHandler>;
@@ -335,9 +328,7 @@ public:
 
   // The static operations.
   static AMI_seqTestHandler_ptr _duplicate (AMI_seqTestHandler_ptr obj);
-
   static void _tao_release (AMI_seqTestHandler_ptr obj);
-
   static AMI_seqTestHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_seqTestHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_seqTestHandler_ptr _nil ();
@@ -369,15 +360,14 @@ protected:
 
   // Non-local interface only.
   AMI_seqTestHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_seqTestHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_seqTestHandler (AMI_seqTestHandler const &) = delete;
   AMI_seqTestHandler (AMI_seqTestHandler &&) = delete;
   AMI_seqTestHandler &operator= (AMI_seqTestHandler const &) = delete;

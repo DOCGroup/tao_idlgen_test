@@ -134,11 +134,9 @@ POA_AMH_iface::POA_AMH_iface ()
 
 ::CORBA::Boolean POA_AMH_iface::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:iface:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:iface:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_iface::_interface_repository_id () const
@@ -240,17 +238,7 @@ TAO_iface_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_iface_Perfect_Hash_OpTable tao_iface_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_iface_Direct_Proxy_Impl::~_TAO_iface_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_iface_Direct_Proxy_Impl::~_TAO_iface_Direct_Proxy_Impl () = default;
 
 POA_iface::POA_iface ()
 {
@@ -259,11 +247,9 @@ POA_iface::POA_iface ()
 
 ::CORBA::Boolean POA_iface::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:iface:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:iface:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_iface::_interface_repository_id () const
@@ -365,17 +351,7 @@ TAO_AMI_ifaceHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
 
 static TAO_AMI_ifaceHandler_Perfect_Hash_OpTable tao_AMI_ifaceHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_ifaceHandler_Direct_Proxy_Impl::~_TAO_AMI_ifaceHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_AMI_ifaceHandler_Direct_Proxy_Impl::~_TAO_AMI_ifaceHandler_Direct_Proxy_Impl () = default;
 
 POA_AMI_ifaceHandler::POA_AMI_ifaceHandler ()
   : TAO_ServantBase ()
@@ -385,12 +361,10 @@ POA_AMI_ifaceHandler::POA_AMI_ifaceHandler ()
 
 ::CORBA::Boolean POA_AMI_ifaceHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_ifaceHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_ifaceHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_ifaceHandler::_interface_repository_id () const
@@ -545,11 +519,9 @@ POA_AMH_MyInt::op_skel (
 
 ::CORBA::Boolean POA_AMH_MyInt::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:MyInt:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:MyInt:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_MyInt::_interface_repository_id () const
@@ -653,36 +625,24 @@ TAO_MyInt_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_MyInt_Perfect_Hash_OpTable tao_MyInt_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_MyInt_Direct_Proxy_Impl::~_TAO_MyInt_Direct_Proxy_Impl ()
-{
-}
+_TAO_MyInt_Direct_Proxy_Impl::~_TAO_MyInt_Direct_Proxy_Impl () = default;
 
 void
-_TAO_MyInt_Direct_Proxy_Impl::op (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_MyInt_Direct_Proxy_Impl::op (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_MyInt_ptr _tao_ptr =
-    dynamic_cast<POA_MyInt_ptr> (servant);
+  POA_MyInt_ptr _tao_ptr = dynamic_cast<POA_MyInt_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_retval_type = TAO::Arg_Traits<::A::MyStructA>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  using _tao_arg_1_type = TAO::Arg_Traits<::A::MyStructA>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
-  ((TAO::Arg_Traits<::A::MyStructA>::ret_val *) args[0])->arg () =
-    _tao_ptr->op (
-          ((TAO::Arg_Traits<::A::MyStructA>::in_arg_val *) args[1])->arg ()
-        );
+  _tao_retval->arg () = _tao_ptr->op (
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_MyInt::POA_MyInt ()
 {
@@ -701,11 +661,9 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::A::MyStructA>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::A::MyStructA> (
-        this->operation_details_,
-        this->args_);
-
+    TAO::SArg_Traits<::A::MyStructA>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::A::MyStructA> (
+      this->operation_details_,
+      this->args_);
     TAO::SArg_Traits<::A::MyStructA>::in_arg_type arg_1 =
       TAO::Portable_Server::get_in_arg<::A::MyStructA> (
         this->operation_details_,
@@ -763,11 +721,9 @@ void POA_MyInt::op_skel (
 
 ::CORBA::Boolean POA_MyInt::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:MyInt:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:MyInt:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_MyInt::_interface_repository_id () const
@@ -902,53 +858,37 @@ TAO_AMI_MyIntHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
 
 static TAO_AMI_MyIntHandler_Perfect_Hash_OpTable tao_AMI_MyIntHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_MyIntHandler_Direct_Proxy_Impl::~_TAO_AMI_MyIntHandler_Direct_Proxy_Impl ()
-{
-}
+_TAO_AMI_MyIntHandler_Direct_Proxy_Impl::~_TAO_AMI_MyIntHandler_Direct_Proxy_Impl () = default;
 
 void
-_TAO_AMI_MyIntHandler_Direct_Proxy_Impl::op (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_MyIntHandler_Direct_Proxy_Impl::op (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_MyIntHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_MyIntHandler_ptr> (servant);
+  POA_AMI_MyIntHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_MyIntHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::A::MyStructA>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op (
-        ((TAO::Arg_Traits<::A::MyStructA>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
-_TAO_AMI_MyIntHandler_Direct_Proxy_Impl::op_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_MyIntHandler_Direct_Proxy_Impl::op_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_MyIntHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_MyIntHandler_ptr> (servant);
+  POA_AMI_MyIntHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_MyIntHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_AMI_MyIntHandler::POA_AMI_MyIntHandler ()
 {
@@ -1089,12 +1029,10 @@ void POA_AMI_MyIntHandler::op_excep_skel (
 
 ::CORBA::Boolean POA_AMI_MyIntHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_MyIntHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_MyIntHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_MyIntHandler::_interface_repository_id () const
@@ -1203,12 +1141,10 @@ POA_RootModule::SUBMODULE1::AMH_ChildIF::AMH_ChildIF ()
 
 ::CORBA::Boolean POA_RootModule::SUBMODULE1::AMH_ChildIF::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:RootModule/SUBMODULE1/ParentIF:1.0") == 0 ||
-      std::strcmp (value, "IDL:RootModule/SUBMODULE1/ChildIF:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:RootModule/SUBMODULE1/ParentIF:1.0") == 0 ||
+    std::strcmp (value, "IDL:RootModule/SUBMODULE1/ChildIF:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_RootModule::SUBMODULE1::AMH_ChildIF::_interface_repository_id () const
@@ -1310,17 +1246,7 @@ TAO_RootModule_SUBMODULE1_ChildIF_Perfect_Hash_OpTable::lookup (char const *str,
 
 static TAO_RootModule_SUBMODULE1_ChildIF_Perfect_Hash_OpTable tao_RootModule_SUBMODULE1_ChildIF_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_RootModule::SUBMODULE1::_TAO_ChildIF_Direct_Proxy_Impl::~_TAO_ChildIF_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+POA_RootModule::SUBMODULE1::_TAO_ChildIF_Direct_Proxy_Impl::~_TAO_ChildIF_Direct_Proxy_Impl () = default;
 
 POA_RootModule::SUBMODULE1::ChildIF::ChildIF ()
 {
@@ -1329,12 +1255,10 @@ POA_RootModule::SUBMODULE1::ChildIF::ChildIF ()
 
 ::CORBA::Boolean POA_RootModule::SUBMODULE1::ChildIF::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:RootModule/SUBMODULE1/ParentIF:1.0") == 0 ||
-      std::strcmp (value, "IDL:RootModule/SUBMODULE1/ChildIF:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:RootModule/SUBMODULE1/ParentIF:1.0") == 0 ||
+    std::strcmp (value, "IDL:RootModule/SUBMODULE1/ChildIF:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_RootModule::SUBMODULE1::ChildIF::_interface_repository_id () const
@@ -1436,17 +1360,7 @@ TAO_RootModule_SUBMODULE1_AMI_ChildIFHandler_Perfect_Hash_OpTable::lookup (char 
 
 static TAO_RootModule_SUBMODULE1_AMI_ChildIFHandler_Perfect_Hash_OpTable tao_RootModule_SUBMODULE1_AMI_ChildIFHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_RootModule::SUBMODULE1::_TAO_AMI_ChildIFHandler_Direct_Proxy_Impl::~_TAO_AMI_ChildIFHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+POA_RootModule::SUBMODULE1::_TAO_AMI_ChildIFHandler_Direct_Proxy_Impl::~_TAO_AMI_ChildIFHandler_Direct_Proxy_Impl () = default;
 
 POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::AMI_ChildIFHandler ()
   : TAO_ServantBase ()
@@ -1456,13 +1370,11 @@ POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::AMI_ChildIFHandler ()
 
 ::CORBA::Boolean POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:RootModule/SUBMODULE1/AMI_ParentIFHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:RootModule/SUBMODULE1/AMI_ChildIFHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:RootModule/SUBMODULE1/AMI_ParentIFHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:RootModule/SUBMODULE1/AMI_ChildIFHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_RootModule::SUBMODULE1::AMI_ChildIFHandler::_interface_repository_id () const
@@ -1571,11 +1483,9 @@ POA_AMH_B::POA_AMH_B ()
 
 ::CORBA::Boolean POA_AMH_B::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:B:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:B:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_B::_interface_repository_id () const
@@ -1677,17 +1587,7 @@ TAO_B_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_B_Perfect_Hash_OpTable tao_B_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_B_Direct_Proxy_Impl::~_TAO_B_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_B_Direct_Proxy_Impl::~_TAO_B_Direct_Proxy_Impl () = default;
 
 POA_B::POA_B ()
 {
@@ -1696,11 +1596,9 @@ POA_B::POA_B ()
 
 ::CORBA::Boolean POA_B::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:B:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:B:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_B::_interface_repository_id () const
@@ -1802,17 +1700,7 @@ TAO_AMI_BHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_AMI_BHandler_Perfect_Hash_OpTable tao_AMI_BHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_BHandler_Direct_Proxy_Impl::~_TAO_AMI_BHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_AMI_BHandler_Direct_Proxy_Impl::~_TAO_AMI_BHandler_Direct_Proxy_Impl () = default;
 
 POA_AMI_BHandler::POA_AMI_BHandler ()
   : TAO_ServantBase ()
@@ -1822,12 +1710,10 @@ POA_AMI_BHandler::POA_AMI_BHandler ()
 
 ::CORBA::Boolean POA_AMI_BHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_BHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_BHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_BHandler::_interface_repository_id () const

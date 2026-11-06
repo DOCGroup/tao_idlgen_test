@@ -170,11 +170,9 @@ namespace POA_A
 
     void execute () override
     {
-      TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
-          this->operation_details_,
-          this->args_);
-
+      TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
+        this->operation_details_,
+        this->args_);
       TAO::SArg_Traits<::CORBA::Long>::out_arg_type arg_1 =
         TAO::Portable_Server::get_out_arg<::CORBA::Long> (
           this->operation_details_,
@@ -271,13 +269,10 @@ namespace POA_A
 
     void execute () override
     {
-      TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
-          this->operation_details_,
-          this->args_);
-
-      retval =
-        this->servant_->yadda ();
+      TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
+        this->operation_details_,
+        this->args_);
+      retval = this->servant_->yadda ();
     }
 
   private:
@@ -517,11 +512,9 @@ void POA_A::AMI_Test::inout_arg_test_skel (
 
 ::CORBA::Boolean POA_A::AMI_Test::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:A/AMI_Test:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:A/AMI_Test:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_A::AMI_Test::_interface_repository_id () const
@@ -1223,12 +1216,10 @@ void POA_A::AMI_AMI_TestHandler::inout_arg_test_excep_skel (
 
 ::CORBA::Boolean POA_A::AMI_AMI_TestHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:A/AMI_AMI_TestHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:A/AMI_AMI_TestHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_A::AMI_AMI_TestHandler::_interface_repository_id () const
@@ -1418,12 +1409,10 @@ void POA_A::Test_Child::child_op_skel (
 
 ::CORBA::Boolean POA_A::Test_Child::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:A/AMI_Test:1.0") == 0 ||
-      std::strcmp (value, "IDL:A/Test_Child:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:A/AMI_Test:1.0") == 0 ||
+    std::strcmp (value, "IDL:A/Test_Child:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_A::Test_Child::_interface_repository_id () const
@@ -1667,13 +1656,11 @@ void POA_A::AMI_Test_ChildHandler::child_op_excep_skel (
 
 ::CORBA::Boolean POA_A::AMI_Test_ChildHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:A/AMI_AMI_TestHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:A/AMI_Test_ChildHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:A/AMI_AMI_TestHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:A/AMI_Test_ChildHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_A::AMI_Test_ChildHandler::_interface_repository_id () const

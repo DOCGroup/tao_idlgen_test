@@ -214,28 +214,17 @@ public:
   virtual ::DateTime_T getLoginTime () = 0;
 
   static void getLoginTime_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_User_T_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_User_T_Direct_Proxy_Impl ();
-  static void
-  getLoginTime (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void getLoginTime (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_TAO_AMH_User_TResponseHandler;
 using POA_TAO_AMH_User_TResponseHandler_ptr = POA_TAO_AMH_User_TResponseHandler *;
@@ -286,40 +275,26 @@ public:
     ::DateTime_T const & ami_return_val) = 0;
 
   static void getLoginTime_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void getLoginTime_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void getLoginTime_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_User_THandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_User_THandler_Direct_Proxy_Impl ();
-  static void
-  getLoginTime (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  getLoginTime_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void getLoginTime (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void getLoginTime_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 #include "Bug_2577_RegressionS_T.h"
 

@@ -159,9 +159,7 @@ namespace Hello
 
     // The static operations.
     static MyFoo_ptr _duplicate (MyFoo_ptr obj);
-
     static void _tao_release (MyFoo_ptr obj);
-
     static MyFoo_ptr _narrow (::CORBA::Object_ptr obj);
     static MyFoo_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static MyFoo_ptr _nil ();
@@ -234,15 +232,14 @@ namespace Hello
 
     // Non-local interface only.
     MyFoo (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~MyFoo () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     MyFoo (MyFoo const &) = delete;
     MyFoo (MyFoo &&) = delete;
     MyFoo &operator= (MyFoo const &) = delete;
@@ -427,9 +424,7 @@ public:
 
   // The static operations.
   static AMH_MyFooResponseHandler_ptr _duplicate (AMH_MyFooResponseHandler_ptr obj);
-
   static void _tao_release (AMH_MyFooResponseHandler_ptr obj);
-
   static AMH_MyFooResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_MyFooResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_MyFooResponseHandler_ptr _nil ();
@@ -497,7 +492,6 @@ protected:
   ~AMH_MyFooResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_MyFooResponseHandler (AMH_MyFooResponseHandler const &) = delete;
   AMH_MyFooResponseHandler (AMH_MyFooResponseHandler &&) = delete;
   AMH_MyFooResponseHandler &operator= (AMH_MyFooResponseHandler const &) = delete;
@@ -517,7 +511,6 @@ using AMI_MyFooHandler_out = TAO_Objref_Out_T<AMI_MyFooHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_MyFooHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_MyFooHandler>;
@@ -529,9 +522,7 @@ public:
 
   // The static operations.
   static AMI_MyFooHandler_ptr _duplicate (AMI_MyFooHandler_ptr obj);
-
   static void _tao_release (AMI_MyFooHandler_ptr obj);
-
   static AMI_MyFooHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_MyFooHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_MyFooHandler_ptr _nil ();
@@ -655,15 +646,14 @@ protected:
 
   // Non-local interface only.
   AMI_MyFooHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_MyFooHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_MyFooHandler (AMI_MyFooHandler const &) = delete;
   AMI_MyFooHandler (AMI_MyFooHandler &&) = delete;
   AMI_MyFooHandler &operator= (AMI_MyFooHandler const &) = delete;

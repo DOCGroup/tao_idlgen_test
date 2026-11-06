@@ -135,11 +135,9 @@ POA_AMH_hello::POA_AMH_hello ()
 
 ::CORBA::Boolean POA_AMH_hello::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:anvil.com/hello:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:anvil.com/hello:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_hello::_interface_repository_id () const
@@ -241,17 +239,7 @@ TAO_hello_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_hello_Perfect_Hash_OpTable tao_hello_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_hello_Direct_Proxy_Impl::~_TAO_hello_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_hello_Direct_Proxy_Impl::~_TAO_hello_Direct_Proxy_Impl () = default;
 
 POA_hello::POA_hello ()
   : TAO_ServantBase ()
@@ -261,11 +249,9 @@ POA_hello::POA_hello ()
 
 ::CORBA::Boolean POA_hello::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:anvil.com/hello:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:anvil.com/hello:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_hello::_interface_repository_id () const
@@ -367,17 +353,7 @@ TAO_AMI_helloHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
 
 static TAO_AMI_helloHandler_Perfect_Hash_OpTable tao_AMI_helloHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_helloHandler_Direct_Proxy_Impl::~_TAO_AMI_helloHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_AMI_helloHandler_Direct_Proxy_Impl::~_TAO_AMI_helloHandler_Direct_Proxy_Impl () = default;
 
 POA_AMI_helloHandler::POA_AMI_helloHandler ()
   : TAO_ServantBase ()
@@ -387,12 +363,10 @@ POA_AMI_helloHandler::POA_AMI_helloHandler ()
 
 ::CORBA::Boolean POA_AMI_helloHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:anvil.com/AMI_helloHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:anvil.com/AMI_helloHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_helloHandler::_interface_repository_id () const
@@ -502,11 +476,9 @@ POA_AMH_goodbye::POA_AMH_goodbye ()
 
 ::CORBA::Boolean POA_AMH_goodbye::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:anvil.com/goodbye:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:anvil.com/goodbye:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_goodbye::_interface_repository_id () const
@@ -608,17 +580,7 @@ TAO_goodbye_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_goodbye_Perfect_Hash_OpTable tao_goodbye_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_goodbye_Direct_Proxy_Impl::~_TAO_goodbye_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_goodbye_Direct_Proxy_Impl::~_TAO_goodbye_Direct_Proxy_Impl () = default;
 
 POA_goodbye::POA_goodbye ()
   : TAO_ServantBase ()
@@ -628,11 +590,9 @@ POA_goodbye::POA_goodbye ()
 
 ::CORBA::Boolean POA_goodbye::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:anvil.com/goodbye:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:anvil.com/goodbye:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_goodbye::_interface_repository_id () const
@@ -734,17 +694,7 @@ TAO_AMI_goodbyeHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_
 
 static TAO_AMI_goodbyeHandler_Perfect_Hash_OpTable tao_AMI_goodbyeHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_goodbyeHandler_Direct_Proxy_Impl::~_TAO_AMI_goodbyeHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_AMI_goodbyeHandler_Direct_Proxy_Impl::~_TAO_AMI_goodbyeHandler_Direct_Proxy_Impl () = default;
 
 POA_AMI_goodbyeHandler::POA_AMI_goodbyeHandler ()
   : TAO_ServantBase ()
@@ -754,12 +704,10 @@ POA_AMI_goodbyeHandler::POA_AMI_goodbyeHandler ()
 
 ::CORBA::Boolean POA_AMI_goodbyeHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:anvil.com/AMI_goodbyeHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:anvil.com/AMI_goodbyeHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_goodbyeHandler::_interface_repository_id () const
@@ -869,11 +817,9 @@ POA_salutation::AMH_sayonara::AMH_sayonara ()
 
 ::CORBA::Boolean POA_salutation::AMH_sayonara::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:hammer.com/salutation/sayonara:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:hammer.com/salutation/sayonara:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_salutation::AMH_sayonara::_interface_repository_id () const
@@ -975,17 +921,7 @@ TAO_salutation_sayonara_Perfect_Hash_OpTable::lookup (char const *str, std::size
 
 static TAO_salutation_sayonara_Perfect_Hash_OpTable tao_salutation_sayonara_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_salutation::_TAO_sayonara_Direct_Proxy_Impl::~_TAO_sayonara_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+POA_salutation::_TAO_sayonara_Direct_Proxy_Impl::~_TAO_sayonara_Direct_Proxy_Impl () = default;
 
 POA_salutation::sayonara::sayonara ()
   : TAO_ServantBase ()
@@ -995,11 +931,9 @@ POA_salutation::sayonara::sayonara ()
 
 ::CORBA::Boolean POA_salutation::sayonara::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:hammer.com/salutation/sayonara:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:hammer.com/salutation/sayonara:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_salutation::sayonara::_interface_repository_id () const
@@ -1101,17 +1035,7 @@ TAO_salutation_AMI_sayonaraHandler_Perfect_Hash_OpTable::lookup (char const *str
 
 static TAO_salutation_AMI_sayonaraHandler_Perfect_Hash_OpTable tao_salutation_AMI_sayonaraHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_salutation::_TAO_AMI_sayonaraHandler_Direct_Proxy_Impl::~_TAO_AMI_sayonaraHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+POA_salutation::_TAO_AMI_sayonaraHandler_Direct_Proxy_Impl::~_TAO_AMI_sayonaraHandler_Direct_Proxy_Impl () = default;
 
 POA_salutation::AMI_sayonaraHandler::AMI_sayonaraHandler ()
   : TAO_ServantBase ()
@@ -1121,12 +1045,10 @@ POA_salutation::AMI_sayonaraHandler::AMI_sayonaraHandler ()
 
 ::CORBA::Boolean POA_salutation::AMI_sayonaraHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:hammer.com/salutation/AMI_sayonaraHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:hammer.com/salutation/AMI_sayonaraHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_salutation::AMI_sayonaraHandler::_interface_repository_id () const
@@ -1236,11 +1158,9 @@ POA_AMH_ciao::POA_AMH_ciao ()
 
 ::CORBA::Boolean POA_AMH_ciao::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:anvil.com/ciao:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:anvil.com/ciao:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_ciao::_interface_repository_id () const
@@ -1342,17 +1262,7 @@ TAO_ciao_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_ciao_Perfect_Hash_OpTable tao_ciao_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_ciao_Direct_Proxy_Impl::~_TAO_ciao_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_ciao_Direct_Proxy_Impl::~_TAO_ciao_Direct_Proxy_Impl () = default;
 
 POA_ciao::POA_ciao ()
   : TAO_ServantBase ()
@@ -1362,11 +1272,9 @@ POA_ciao::POA_ciao ()
 
 ::CORBA::Boolean POA_ciao::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:anvil.com/ciao:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:anvil.com/ciao:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_ciao::_interface_repository_id () const
@@ -1468,17 +1376,7 @@ TAO_AMI_ciaoHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
 
 static TAO_AMI_ciaoHandler_Perfect_Hash_OpTable tao_AMI_ciaoHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_ciaoHandler_Direct_Proxy_Impl::~_TAO_AMI_ciaoHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_AMI_ciaoHandler_Direct_Proxy_Impl::~_TAO_AMI_ciaoHandler_Direct_Proxy_Impl () = default;
 
 POA_AMI_ciaoHandler::POA_AMI_ciaoHandler ()
   : TAO_ServantBase ()
@@ -1488,12 +1386,10 @@ POA_AMI_ciaoHandler::POA_AMI_ciaoHandler ()
 
 ::CORBA::Boolean POA_AMI_ciaoHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:anvil.com/AMI_ciaoHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:anvil.com/AMI_ciaoHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_ciaoHandler::_interface_repository_id () const
@@ -1603,11 +1499,9 @@ POA_AMH_aloha::POA_AMH_aloha ()
 
 ::CORBA::Boolean POA_AMH_aloha::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:anvil.com/aloha:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:anvil.com/aloha:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_aloha::_interface_repository_id () const
@@ -1709,17 +1603,7 @@ TAO_aloha_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_aloha_Perfect_Hash_OpTable tao_aloha_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_aloha_Direct_Proxy_Impl::~_TAO_aloha_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_aloha_Direct_Proxy_Impl::~_TAO_aloha_Direct_Proxy_Impl () = default;
 
 POA_aloha::POA_aloha ()
   : TAO_ServantBase ()
@@ -1729,11 +1613,9 @@ POA_aloha::POA_aloha ()
 
 ::CORBA::Boolean POA_aloha::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:anvil.com/aloha:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:anvil.com/aloha:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_aloha::_interface_repository_id () const
@@ -1835,17 +1717,7 @@ TAO_AMI_alohaHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
 
 static TAO_AMI_alohaHandler_Perfect_Hash_OpTable tao_AMI_alohaHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_alohaHandler_Direct_Proxy_Impl::~_TAO_AMI_alohaHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_AMI_alohaHandler_Direct_Proxy_Impl::~_TAO_AMI_alohaHandler_Direct_Proxy_Impl () = default;
 
 POA_AMI_alohaHandler::POA_AMI_alohaHandler ()
   : TAO_ServantBase ()
@@ -1855,12 +1727,10 @@ POA_AMI_alohaHandler::POA_AMI_alohaHandler ()
 
 ::CORBA::Boolean POA_AMI_alohaHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:anvil.com/AMI_alohaHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:anvil.com/AMI_alohaHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_alohaHandler::_interface_repository_id () const

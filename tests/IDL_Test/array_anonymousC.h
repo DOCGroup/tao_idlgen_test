@@ -99,9 +99,7 @@ public:
 
   // The static operations.
   static tdef_ptr _duplicate (tdef_ptr obj);
-
   static void _tao_release (tdef_ptr obj);
-
   static tdef_ptr _narrow (::CORBA::Object_ptr obj);
   static tdef_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static tdef_ptr _nil ();
@@ -174,15 +172,14 @@ protected:
 
   // Non-local interface only.
   tdef (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~tdef () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   tdef (tdef const &) = delete;
   tdef (tdef &&) = delete;
   tdef &operator= (tdef const &) = delete;
@@ -294,9 +291,7 @@ public:
 
   // The static operations.
   static AMH_tdefResponseHandler_ptr _duplicate (AMH_tdefResponseHandler_ptr obj);
-
   static void _tao_release (AMH_tdefResponseHandler_ptr obj);
-
   static AMH_tdefResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_tdefResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_tdefResponseHandler_ptr _nil ();
@@ -314,7 +309,6 @@ protected:
   ~AMH_tdefResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_tdefResponseHandler (AMH_tdefResponseHandler const &) = delete;
   AMH_tdefResponseHandler (AMH_tdefResponseHandler &&) = delete;
   AMH_tdefResponseHandler &operator= (AMH_tdefResponseHandler const &) = delete;
@@ -334,7 +328,6 @@ using AMI_tdefHandler_out = TAO_Objref_Out_T<AMI_tdefHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_tdefHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_tdefHandler>;
@@ -346,9 +339,7 @@ public:
 
   // The static operations.
   static AMI_tdefHandler_ptr _duplicate (AMI_tdefHandler_ptr obj);
-
   static void _tao_release (AMI_tdefHandler_ptr obj);
-
   static AMI_tdefHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_tdefHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_tdefHandler_ptr _nil ();
@@ -368,15 +359,14 @@ protected:
 
   // Non-local interface only.
   AMI_tdefHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_tdefHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_tdefHandler (AMI_tdefHandler const &) = delete;
   AMI_tdefHandler (AMI_tdefHandler &&) = delete;
   AMI_tdefHandler &operator= (AMI_tdefHandler const &) = delete;

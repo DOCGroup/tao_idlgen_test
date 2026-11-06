@@ -228,28 +228,17 @@ namespace POA_OldConstants
       ::OldConstants::M::A::N & z) = 0;
 
     static void foo_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class TAO_IDL_TEST_STUB_Export _TAO_A_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_A_Direct_Proxy_Impl ();
-    static void
-    foo (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void foo (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class TAO_AMH_AResponseHandler;
   using TAO_AMH_AResponseHandler_ptr = TAO_AMH_AResponseHandler *;
@@ -304,40 +293,26 @@ namespace POA_OldConstants
       ::OldConstants::M::A::N z) = 0;
 
     static void foo_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void foo_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
     static void foo_excep_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class TAO_IDL_TEST_STUB_Export _TAO_AMI_AHandler_Direct_Proxy_Impl
     : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_AMI_AHandler_Direct_Proxy_Impl ();
-    static void
-    foo (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-    static void
-    foo_excep (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void foo (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+    static void foo_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
 } // module OldConstants::M
 

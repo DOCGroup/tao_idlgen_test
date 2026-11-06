@@ -24,18 +24,13 @@
 
 ACE_INLINE
 Bug_2350_Regression::Bug_2350_Regression (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-Bug_2350_Regression::Bug_2350_Regression (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+Bug_2350_Regression::Bug_2350_Regression (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,18 +47,13 @@ AMH_Bug_2350_RegressionExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 AMI_Bug_2350_RegressionHandler::AMI_Bug_2350_RegressionHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-AMI_Bug_2350_RegressionHandler::AMI_Bug_2350_RegressionHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+AMI_Bug_2350_RegressionHandler::AMI_Bug_2350_RegressionHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }

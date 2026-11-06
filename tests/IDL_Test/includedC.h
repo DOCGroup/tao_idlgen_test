@@ -392,9 +392,7 @@ namespace RootModule
 
       // The static operations.
       static ParentIF_ptr _duplicate (ParentIF_ptr obj);
-
       static void _tao_release (ParentIF_ptr obj);
-
       static ParentIF_ptr _narrow (::CORBA::Object_ptr obj);
       static ParentIF_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static ParentIF_ptr _nil ();
@@ -423,15 +421,14 @@ namespace RootModule
 
       // Non-local interface only.
       ParentIF (
-          TAO_Stub *objref,
-          ::CORBA::Boolean _tao_collocated = false,
-          TAO_Abstract_ServantBase *servant = nullptr,
-          TAO_ORB_Core *orb_core = nullptr);
+        TAO_Stub *objref,
+        ::CORBA::Boolean _tao_collocated = false,
+        TAO_Abstract_ServantBase *servant = nullptr,
+        TAO_ORB_Core *orb_core = nullptr);
 
       ~ParentIF () override = default;
 
     private:
-      // Private and unimplemented for concrete interfaces.
       ParentIF (ParentIF const &) = delete;
       ParentIF (ParentIF &&) = delete;
       ParentIF &operator= (ParentIF const &) = delete;
@@ -543,9 +540,7 @@ namespace RootModule
 
       // The static operations.
       static AMH_ParentIFResponseHandler_ptr _duplicate (AMH_ParentIFResponseHandler_ptr obj);
-
       static void _tao_release (AMH_ParentIFResponseHandler_ptr obj);
-
       static AMH_ParentIFResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
       static AMH_ParentIFResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static AMH_ParentIFResponseHandler_ptr _nil ();
@@ -563,7 +558,6 @@ namespace RootModule
       ~AMH_ParentIFResponseHandler () override = default;
 
     private:
-      // Private and unimplemented for concrete interfaces.
       AMH_ParentIFResponseHandler (AMH_ParentIFResponseHandler const &) = delete;
       AMH_ParentIFResponseHandler (AMH_ParentIFResponseHandler &&) = delete;
       AMH_ParentIFResponseHandler &operator= (AMH_ParentIFResponseHandler const &) = delete;
@@ -583,7 +577,6 @@ namespace RootModule
 
     class TAO_IDL_TEST_STUB_Export AMI_ParentIFHandler
       : public virtual ::Messaging::ReplyHandler
-
     {
     public:
       friend class TAO::Narrow_Utils<AMI_ParentIFHandler>;
@@ -595,9 +588,7 @@ namespace RootModule
 
       // The static operations.
       static AMI_ParentIFHandler_ptr _duplicate (AMI_ParentIFHandler_ptr obj);
-
       static void _tao_release (AMI_ParentIFHandler_ptr obj);
-
       static AMI_ParentIFHandler_ptr _narrow (::CORBA::Object_ptr obj);
       static AMI_ParentIFHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static AMI_ParentIFHandler_ptr _nil ();
@@ -617,15 +608,14 @@ namespace RootModule
 
       // Non-local interface only.
       AMI_ParentIFHandler (
-          TAO_Stub *objref,
-          ::CORBA::Boolean _tao_collocated = false,
-          TAO_Abstract_ServantBase *servant = nullptr,
-          TAO_ORB_Core *orb_core = nullptr);
+        TAO_Stub *objref,
+        ::CORBA::Boolean _tao_collocated = false,
+        TAO_Abstract_ServantBase *servant = nullptr,
+        TAO_ORB_Core *orb_core = nullptr);
 
       ~AMI_ParentIFHandler () override = default;
 
     private:
-      // Private and unimplemented for concrete interfaces.
       AMI_ParentIFHandler (AMI_ParentIFHandler const &) = delete;
       AMI_ParentIFHandler (AMI_ParentIFHandler &&) = delete;
       AMI_ParentIFHandler &operator= (AMI_ParentIFHandler const &) = delete;
@@ -663,9 +653,7 @@ public:
 
   // The static operations.
   static AAA_ptr _duplicate (AAA_ptr obj);
-
   static void _tao_release (AAA_ptr obj);
-
   static AAA_ptr _narrow (::CORBA::Object_ptr obj);
   static AAA_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AAA_ptr _nil ();
@@ -688,15 +676,14 @@ protected:
 
   // Non-local interface only.
   AAA (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AAA () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AAA (AAA const &) = delete;
   AAA (AAA &&) = delete;
   AAA &operator= (AAA const &) = delete;
@@ -808,9 +795,7 @@ public:
 
   // The static operations.
   static AMH_AAAResponseHandler_ptr _duplicate (AMH_AAAResponseHandler_ptr obj);
-
   static void _tao_release (AMH_AAAResponseHandler_ptr obj);
-
   static AMH_AAAResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_AAAResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_AAAResponseHandler_ptr _nil ();
@@ -828,7 +813,6 @@ protected:
   ~AMH_AAAResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_AAAResponseHandler (AMH_AAAResponseHandler const &) = delete;
   AMH_AAAResponseHandler (AMH_AAAResponseHandler &&) = delete;
   AMH_AAAResponseHandler &operator= (AMH_AAAResponseHandler const &) = delete;
@@ -848,7 +832,6 @@ using AMI_AAAHandler_out = TAO_Objref_Out_T<AMI_AAAHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_AAAHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_AAAHandler>;
@@ -860,9 +843,7 @@ public:
 
   // The static operations.
   static AMI_AAAHandler_ptr _duplicate (AMI_AAAHandler_ptr obj);
-
   static void _tao_release (AMI_AAAHandler_ptr obj);
-
   static AMI_AAAHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_AAAHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_AAAHandler_ptr _nil ();
@@ -882,15 +863,14 @@ protected:
 
   // Non-local interface only.
   AMI_AAAHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_AAAHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_AAAHandler (AMI_AAAHandler const &) = delete;
   AMI_AAAHandler (AMI_AAAHandler &&) = delete;
   AMI_AAAHandler &operator= (AMI_AAAHandler const &) = delete;

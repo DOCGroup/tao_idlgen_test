@@ -215,9 +215,7 @@ namespace Test
 
     // The static operations.
     static Roundtrip_ptr _duplicate (Roundtrip_ptr obj);
-
     static void _tao_release (Roundtrip_ptr obj);
-
     static Roundtrip_ptr _narrow (::CORBA::Object_ptr obj);
     static Roundtrip_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static Roundtrip_ptr _nil ();
@@ -240,15 +238,14 @@ namespace Test
 
     // Non-local interface only.
     Roundtrip (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~Roundtrip () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     Roundtrip (Roundtrip const &) = delete;
     Roundtrip (Roundtrip &&) = delete;
     Roundtrip &operator= (Roundtrip const &) = delete;
@@ -350,9 +347,7 @@ public:
 
   // The static operations.
   static AMH_RoundtripResponseHandler_ptr _duplicate (AMH_RoundtripResponseHandler_ptr obj);
-
   static void _tao_release (AMH_RoundtripResponseHandler_ptr obj);
-
   static AMH_RoundtripResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_RoundtripResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_RoundtripResponseHandler_ptr _nil ();
@@ -379,7 +374,6 @@ protected:
   ~AMH_RoundtripResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_RoundtripResponseHandler (AMH_RoundtripResponseHandler const &) = delete;
   AMH_RoundtripResponseHandler (AMH_RoundtripResponseHandler &&) = delete;
   AMH_RoundtripResponseHandler &operator= (AMH_RoundtripResponseHandler const &) = delete;
@@ -646,8 +640,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::Roundtrip_ptr const);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::Roundtrip_ptr &);
+::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::Roundtrip_ptr const);
+::CORBA::Boolean operator>> (TAO_InputCDR &, Test::Roundtrip_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

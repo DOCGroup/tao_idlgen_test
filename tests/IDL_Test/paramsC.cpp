@@ -142,7 +142,7 @@ TAO::Objref_Traits<foo::bar::fooBar>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<foo::bar::fooBar>::marshal (foo::bar::fooBar_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<foo::bar::fooBar>::marshal (foo::bar::fooBar_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -167,10 +167,10 @@ foo::bar::fooBar::getDate (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_a),
-      std::addressof(_tao_b),
-      std::addressof(_tao_c)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_a),
+      std::addressof (_tao_b),
+      std::addressof (_tao_c)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -180,7 +180,6 @@ foo::bar::fooBar::getDate (
       "getDate",
       7,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -205,9 +204,9 @@ foo::bar::fooBar::sendc_getDate (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_a),
-      std::addressof(_tao_b)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_a),
+      std::addressof (_tao_b)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -273,7 +272,7 @@ foo::bar::fooBar::_tao_release (fooBar_ptr obj)
 foo::bar::fooBar::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:foo/bar/fooBar:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -515,7 +514,7 @@ TAO::Objref_Traits<foo::bar::AMH_fooBarResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<foo::bar::AMH_fooBarResponseHandler>::marshal (foo::bar::AMH_fooBarResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<foo::bar::AMH_fooBarResponseHandler>::marshal (foo::bar::AMH_fooBarResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -536,14 +535,14 @@ foo::bar::AMH_fooBarResponseHandler_ptr
 foo::bar::AMH_fooBarResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_fooBarResponseHandler::_duplicate (
-      dynamic_cast<AMH_fooBarResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_fooBarResponseHandler_ptr> (_tao_objref));
 }
 
 foo::bar::AMH_fooBarResponseHandler_ptr
 foo::bar::AMH_fooBarResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_fooBarResponseHandler::_duplicate (
-      dynamic_cast<AMH_fooBarResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_fooBarResponseHandler_ptr> (_tao_objref));
 }
 
 foo::bar::AMH_fooBarResponseHandler_ptr
@@ -572,8 +571,8 @@ foo::bar::AMH_fooBarResponseHandler::_tao_release (AMH_fooBarResponseHandler_ptr
 foo::bar::AMH_fooBarResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:foo/bar/AMH_fooBarResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -642,7 +641,7 @@ TAO::Objref_Traits<foo::bar::AMI_fooBarHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<foo::bar::AMI_fooBarHandler>::marshal (foo::bar::AMI_fooBarHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<foo::bar::AMI_fooBarHandler>::marshal (foo::bar::AMI_fooBarHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -667,10 +666,10 @@ foo::bar::AMI_fooBarHandler::getDate (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_b),
-      std::addressof(_tao_c)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_b),
+      std::addressof (_tao_c)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -680,7 +679,6 @@ foo::bar::AMI_fooBarHandler::getDate (
       "getDate",
       7,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -770,8 +768,8 @@ foo::bar::AMI_fooBarHandler::getDate_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -781,7 +779,6 @@ foo::bar::AMI_fooBarHandler::getDate_excep (
       "getDate_excep",
       13,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -835,8 +832,8 @@ foo::bar::AMI_fooBarHandler::_tao_release (AMI_fooBarHandler_ptr obj)
 foo::bar::AMI_fooBarHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:foo/bar/AMI_fooBarHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:foo/bar/AMI_fooBarHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }

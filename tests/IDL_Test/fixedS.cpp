@@ -239,11 +239,9 @@ POA_FixedPoint::AMH_FixedOperations::_set_rate_skel (
 
 ::CORBA::Boolean POA_FixedPoint::AMH_FixedOperations::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:FixedPoint/FixedOperations:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:FixedPoint/FixedOperations:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_FixedPoint::AMH_FixedOperations::_interface_repository_id () const
@@ -370,53 +368,39 @@ TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str, st
 
 static TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable tao_FixedPoint_FixedOperations_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::~_TAO_FixedOperations_Direct_Proxy_Impl ()
-{
-}
+POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::~_TAO_FixedOperations_Direct_Proxy_Impl () = default;
 
 void
 POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_get_rate (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_FixedPoint::FixedOperations_ptr _tao_ptr =
-    dynamic_cast<POA_FixedPoint::FixedOperations_ptr> (servant);
+  POA_FixedPoint::FixedOperations_ptr _tao_ptr = dynamic_cast<POA_FixedPoint::FixedOperations_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  ((TAO::Arg_Traits<::ACE_CDR::Fixed>::ret_val *) args[0])->arg () =
-    _tao_ptr->rate (
-        );
+  using _tao_retval_type = TAO::Arg_Traits<::ACE_CDR::Fixed>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  _tao_retval->arg () = _tao_ptr->rate ();
 }
 
 void
 POA_FixedPoint::_TAO_FixedOperations_Direct_Proxy_Impl::_set_rate (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_FixedPoint::FixedOperations_ptr _tao_ptr =
-    dynamic_cast<POA_FixedPoint::FixedOperations_ptr> (servant);
+  POA_FixedPoint::FixedOperations_ptr _tao_ptr = dynamic_cast<POA_FixedPoint::FixedOperations_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::ACE_CDR::Fixed>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->rate (
-        ((TAO::Arg_Traits<::ACE_CDR::Fixed>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_FixedPoint::FixedOperations::FixedOperations ()
 {
@@ -438,13 +422,10 @@ namespace POA_FixedPoint
 
     void execute () override
     {
-      TAO::SArg_Traits<::ACE_CDR::Fixed>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::ACE_CDR::Fixed> (
-          this->operation_details_,
-          this->args_);
-
-      retval =
-        this->servant_->rate ();
+      TAO::SArg_Traits<::ACE_CDR::Fixed>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::ACE_CDR::Fixed> (
+        this->operation_details_,
+        this->args_);
+      retval = this->servant_->rate ();
     }
 
   private:
@@ -562,11 +543,9 @@ void POA_FixedPoint::FixedOperations::_set_rate_skel (
 
 ::CORBA::Boolean POA_FixedPoint::FixedOperations::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:FixedPoint/FixedOperations:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:FixedPoint/FixedOperations:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_FixedPoint::FixedOperations::_interface_repository_id () const
@@ -724,19 +703,12 @@ TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::lookup (char con
 
 static TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable tao_FixedPoint_AMI_FixedOperationsHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::~_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl ()
-{
-}
+POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::~_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl () = default;
 
 void
 POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_FixedPoint::AMI_FixedOperationsHandler_ptr _tao_ptr =
     dynamic_cast<POA_FixedPoint::AMI_FixedOperationsHandler_ptr> (servant);
@@ -744,17 +716,17 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate (
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::ACE_CDR::Fixed>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->get_rate (
-        ((TAO::Arg_Traits<::ACE_CDR::Fixed>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_FixedPoint::AMI_FixedOperationsHandler_ptr _tao_ptr =
     dynamic_cast<POA_FixedPoint::AMI_FixedOperationsHandler_ptr> (servant);
@@ -762,17 +734,17 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::get_rate_exce
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->get_rate_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::set_rate (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **)
 {
   POA_FixedPoint::AMI_FixedOperationsHandler_ptr _tao_ptr =
     dynamic_cast<POA_FixedPoint::AMI_FixedOperationsHandler_ptr> (servant);
@@ -780,16 +752,13 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::set_rate (
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->set_rate (
-      );
+  _tao_ptr->set_rate ();
 }
 
 void
 POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::set_rate_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_FixedPoint::AMI_FixedOperationsHandler_ptr _tao_ptr =
     dynamic_cast<POA_FixedPoint::AMI_FixedOperationsHandler_ptr> (servant);
@@ -797,15 +766,12 @@ POA_FixedPoint::_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl::set_rate_exce
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->set_rate_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_FixedPoint::AMI_FixedOperationsHandler::AMI_FixedOperationsHandler ()
 {
@@ -1076,12 +1042,10 @@ void POA_FixedPoint::AMI_FixedOperationsHandler::set_rate_excep_skel (
 
 ::CORBA::Boolean POA_FixedPoint::AMI_FixedOperationsHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:FixedPoint/AMI_FixedOperationsHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_FixedPoint::AMI_FixedOperationsHandler::_interface_repository_id () const

@@ -80,9 +80,7 @@ namespace gleep
 
     // The static operations.
     static schmooze_ptr _duplicate (schmooze_ptr obj);
-
     static void _tao_release (schmooze_ptr obj);
-
     static schmooze_ptr _narrow (::CORBA::Object_ptr obj);
     static schmooze_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmooze_ptr _nil ();
@@ -100,7 +98,6 @@ namespace gleep
     ~schmooze () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     schmooze (schmooze const &) = delete;
     schmooze (schmooze &&) = delete;
     schmooze &operator= (schmooze const &) = delete;
@@ -136,9 +133,7 @@ namespace gleep
 
     // The static operations.
     static schmeer_ptr _duplicate (schmeer_ptr obj);
-
     static void _tao_release (schmeer_ptr obj);
-
     static schmeer_ptr _narrow (::CORBA::Object_ptr obj);
     static schmeer_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmeer_ptr _nil ();
@@ -156,7 +151,6 @@ namespace gleep
     ~schmeer () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     schmeer (schmeer const &) = delete;
     schmeer (schmeer &&) = delete;
     schmeer &operator= (schmeer const &) = delete;
@@ -192,9 +186,7 @@ namespace gleep
 
     // The static operations.
     static schlemiel_ptr _duplicate (schlemiel_ptr obj);
-
     static void _tao_release (schlemiel_ptr obj);
-
     static schlemiel_ptr _narrow (::CORBA::Object_ptr obj);
     static schlemiel_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schlemiel_ptr _nil ();
@@ -212,7 +204,6 @@ namespace gleep
     ~schlemiel () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     schlemiel (schlemiel const &) = delete;
     schlemiel (schlemiel &&) = delete;
     schlemiel &operator= (schlemiel const &) = delete;
@@ -248,9 +239,7 @@ namespace gleep
 
     // The static operations.
     static spilkis_ptr _duplicate (spilkis_ptr obj);
-
     static void _tao_release (spilkis_ptr obj);
-
     static spilkis_ptr _narrow (::CORBA::Object_ptr obj);
     static spilkis_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static spilkis_ptr _nil ();
@@ -268,7 +257,6 @@ namespace gleep
     ~spilkis () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     spilkis (spilkis const &) = delete;
     spilkis (spilkis &&) = delete;
     spilkis &operator= (spilkis const &) = delete;
@@ -302,9 +290,7 @@ namespace gleep
 
       // The static operations.
       static schmuck_ptr _duplicate (schmuck_ptr obj);
-
       static void _tao_release (schmuck_ptr obj);
-
       static schmuck_ptr _narrow (::CORBA::Object_ptr obj);
       static schmuck_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static schmuck_ptr _nil ();
@@ -322,7 +308,6 @@ namespace gleep
       ~schmuck () override = default;
 
     private:
-      // Private and unimplemented for concrete interfaces.
       schmuck (schmuck const &) = delete;
       schmuck (schmuck &&) = delete;
       schmuck &operator= (schmuck const &) = delete;
@@ -354,9 +339,7 @@ namespace gleep
 
       // The static operations.
       static schmendrick_ptr _duplicate (schmendrick_ptr obj);
-
       static void _tao_release (schmendrick_ptr obj);
-
       static schmendrick_ptr _narrow (::CORBA::Object_ptr obj);
       static schmendrick_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static schmendrick_ptr _nil ();
@@ -374,7 +357,6 @@ namespace gleep
       ~schmendrick () override = default;
 
     private:
-      // Private and unimplemented for concrete interfaces.
       schmendrick (schmendrick const &) = delete;
       schmendrick (schmendrick &&) = delete;
       schmendrick &operator= (schmendrick const &) = delete;
@@ -408,9 +390,7 @@ namespace gleep
 
         // The static operations.
         static schlemazel_ptr _duplicate (schlemazel_ptr obj);
-
         static void _tao_release (schlemazel_ptr obj);
-
         static schlemazel_ptr _narrow (::CORBA::Object_ptr obj);
         static schlemazel_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
         static schlemazel_ptr _nil ();
@@ -428,7 +408,6 @@ namespace gleep
         ~schlemazel () override = default;
 
       private:
-        // Private and unimplemented for concrete interfaces.
         schlemazel (schlemazel const &) = delete;
         schlemazel (schlemazel &&) = delete;
         schlemazel &operator= (schlemazel const &) = delete;
@@ -464,9 +443,7 @@ namespace gleep
 
     // The static operations.
     static schmegegging_ptr _duplicate (schmegegging_ptr obj);
-
     static void _tao_release (schmegegging_ptr obj);
-
     static schmegegging_ptr _narrow (::CORBA::Object_ptr obj);
     static schmegegging_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static schmegegging_ptr _nil ();
@@ -484,7 +461,6 @@ namespace gleep
     ~schmegegging () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     schmegegging (schmegegging const &) = delete;
     schmegegging (schmegegging &&) = delete;
     schmegegging &operator= (schmegegging const &) = delete;

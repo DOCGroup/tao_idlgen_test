@@ -179,11 +179,9 @@ POA_M1::AMH_LI::op_skel (
 
 ::CORBA::Boolean POA_M1::AMH_LI::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M1::AMH_LI::_interface_repository_id () const
@@ -364,11 +362,9 @@ void POA_M1::LI::op_skel (
 
 ::CORBA::Boolean POA_M1::LI::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M1::LI::_interface_repository_id () const
@@ -544,11 +540,9 @@ POA_M1::AMH_L2::op_skel (
 
 ::CORBA::Boolean POA_M1::AMH_L2::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M1/L2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M1/L2:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M1::AMH_L2::_interface_repository_id () const
@@ -729,11 +723,9 @@ void POA_M1::L2::op_skel (
 
 ::CORBA::Boolean POA_M1::L2::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M1/L2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M1/L2:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M1::L2::_interface_repository_id () const
@@ -909,11 +901,9 @@ POA_M2::M3::AMH_L3::op_skel (
 
 ::CORBA::Boolean POA_M2::M3::AMH_L3::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M2/M3/L3:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M2/M3/L3:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M2::M3::AMH_L3::_interface_repository_id () const
@@ -1098,11 +1088,9 @@ void POA_M2::M3::L3::op_skel (
 
 ::CORBA::Boolean POA_M2::M3::L3::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M2/M3/L3:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M2/M3/L3:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M2::M3::L3::_interface_repository_id () const
@@ -1278,11 +1266,9 @@ POA_M2::M3::AMH_L4::op_skel (
 
 ::CORBA::Boolean POA_M2::M3::AMH_L4::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M2/M3/L4:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M2/M3/L4:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M2::M3::AMH_L4::_interface_repository_id () const
@@ -1474,11 +1460,9 @@ void POA_M2::M3::L4::op_skel (
 
 ::CORBA::Boolean POA_M2::M3::L4::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:M2/M3/L4:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:M2/M3/L4:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_M2::M3::L4::_interface_repository_id () const

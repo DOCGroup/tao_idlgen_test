@@ -188,11 +188,9 @@ POA_AMH_array_args::all_arrays_skel (
 
 ::CORBA::Boolean POA_AMH_array_args::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:array_args:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:array_args:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_array_args::_interface_repository_id () const
@@ -295,36 +293,25 @@ TAO_array_args_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_array_args_Perfect_Hash_OpTable tao_array_args_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_array_args_Direct_Proxy_Impl::~_TAO_array_args_Direct_Proxy_Impl ()
-{
-}
+_TAO_array_args_Direct_Proxy_Impl::~_TAO_array_args_Direct_Proxy_Impl () = default;
 
 void
-_TAO_array_args_Direct_Proxy_Impl::all_arrays (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_array_args_Direct_Proxy_Impl::all_arrays (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_array_args_ptr _tao_ptr =
-    dynamic_cast<POA_array_args_ptr> (servant);
+  POA_array_args_ptr _tao_ptr = dynamic_cast<POA_array_args_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::oa1_tag>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::oa2_tag>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
 
   _tao_ptr->all_arrays (
-        ((TAO::Arg_Traits<::oa1_tag>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::oa2_tag>::in_arg_val *) args[2])->arg ()
-      );
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_array_args::POA_array_args ()
 {
@@ -408,11 +395,9 @@ void POA_array_args::all_arrays_skel (
 
 ::CORBA::Boolean POA_array_args::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:array_args:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:array_args:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_array_args::_interface_repository_id () const
@@ -537,52 +522,33 @@ TAO_AMI_array_argsHandler_Perfect_Hash_OpTable::lookup (char const *str, std::si
 
 static TAO_AMI_array_argsHandler_Perfect_Hash_OpTable tao_AMI_array_argsHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_array_argsHandler_Direct_Proxy_Impl::~_TAO_AMI_array_argsHandler_Direct_Proxy_Impl ()
-{
-}
+_TAO_AMI_array_argsHandler_Direct_Proxy_Impl::~_TAO_AMI_array_argsHandler_Direct_Proxy_Impl () = default;
 
 void
-_TAO_AMI_array_argsHandler_Direct_Proxy_Impl::all_arrays (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+_TAO_AMI_array_argsHandler_Direct_Proxy_Impl::all_arrays (TAO_Abstract_ServantBase *servant, TAO::Argument **)
 {
-  POA_AMI_array_argsHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_array_argsHandler_ptr> (servant);
+  POA_AMI_array_argsHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_array_argsHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->all_arrays (
-      );
+  _tao_ptr->all_arrays ();
 }
 
 void
-_TAO_AMI_array_argsHandler_Direct_Proxy_Impl::all_arrays_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_array_argsHandler_Direct_Proxy_Impl::all_arrays_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_array_argsHandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_array_argsHandler_ptr> (servant);
+  POA_AMI_array_argsHandler_ptr _tao_ptr = dynamic_cast<POA_AMI_array_argsHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->all_arrays_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_AMI_array_argsHandler::POA_AMI_array_argsHandler ()
 {
@@ -705,12 +671,10 @@ void POA_AMI_array_argsHandler::all_arrays_excep_skel (
 
 ::CORBA::Boolean POA_AMI_array_argsHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_array_argsHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_array_argsHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_array_argsHandler::_interface_repository_id () const
@@ -819,11 +783,9 @@ POA_AMH_testdata::POA_AMH_testdata ()
 
 ::CORBA::Boolean POA_AMH_testdata::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:testdata:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:testdata:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_testdata::_interface_repository_id () const
@@ -925,17 +887,7 @@ TAO_testdata_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_testdata_Perfect_Hash_OpTable tao_testdata_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_testdata_Direct_Proxy_Impl::~_TAO_testdata_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_testdata_Direct_Proxy_Impl::~_TAO_testdata_Direct_Proxy_Impl () = default;
 
 POA_testdata::POA_testdata ()
 {
@@ -944,11 +896,9 @@ POA_testdata::POA_testdata ()
 
 ::CORBA::Boolean POA_testdata::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:testdata:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:testdata:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_testdata::_interface_repository_id () const
@@ -1050,17 +1000,7 @@ TAO_AMI_testdataHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size
 
 static TAO_AMI_testdataHandler_Perfect_Hash_OpTable tao_AMI_testdataHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_testdataHandler_Direct_Proxy_Impl::~_TAO_AMI_testdataHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_AMI_testdataHandler_Direct_Proxy_Impl::~_TAO_AMI_testdataHandler_Direct_Proxy_Impl () = default;
 
 POA_AMI_testdataHandler::POA_AMI_testdataHandler ()
   : TAO_ServantBase ()
@@ -1070,12 +1010,10 @@ POA_AMI_testdataHandler::POA_AMI_testdataHandler ()
 
 ::CORBA::Boolean POA_AMI_testdataHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_testdataHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_testdataHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_testdataHandler::_interface_repository_id () const
@@ -1220,11 +1158,9 @@ POA_arraytest::AMH_MyTest::test_method_skel (
 
 ::CORBA::Boolean POA_arraytest::AMH_MyTest::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:arraytest/MyTest:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:arraytest/MyTest:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_arraytest::AMH_MyTest::_interface_repository_id () const
@@ -1327,35 +1263,22 @@ TAO_arraytest_MyTest_Perfect_Hash_OpTable::lookup (char const *str, std::size_t 
 
 static TAO_arraytest_MyTest_Perfect_Hash_OpTable tao_arraytest_MyTest_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_arraytest::_TAO_MyTest_Direct_Proxy_Impl::~_TAO_MyTest_Direct_Proxy_Impl ()
-{
-}
+POA_arraytest::_TAO_MyTest_Direct_Proxy_Impl::~_TAO_MyTest_Direct_Proxy_Impl () = default;
 
 void
-POA_arraytest::_TAO_MyTest_Direct_Proxy_Impl::test_method (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_arraytest::_TAO_MyTest_Direct_Proxy_Impl::test_method (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_arraytest::MyTest_ptr _tao_ptr =
-    dynamic_cast<POA_arraytest::MyTest_ptr> (servant);
+  POA_arraytest::MyTest_ptr _tao_ptr = dynamic_cast<POA_arraytest::MyTest_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::arraytest::myvec2_tag>::out_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->test_method (
-        ((TAO::Arg_Traits<::arraytest::myvec2_tag>::out_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_arraytest::MyTest::MyTest ()
 {
@@ -1434,11 +1357,9 @@ void POA_arraytest::MyTest::test_method_skel (
 
 ::CORBA::Boolean POA_arraytest::MyTest::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:arraytest/MyTest:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:arraytest/MyTest:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_arraytest::MyTest::_interface_repository_id () const
@@ -1572,53 +1493,41 @@ TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable::lookup (char const *str, s
 
 static TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable tao_arraytest_AMI_MyTestHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::~_TAO_AMI_MyTestHandler_Direct_Proxy_Impl ()
-{
-}
+POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::~_TAO_AMI_MyTestHandler_Direct_Proxy_Impl () = default;
 
 void
 POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::test_method (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_arraytest::AMI_MyTestHandler_ptr _tao_ptr =
-    dynamic_cast<POA_arraytest::AMI_MyTestHandler_ptr> (servant);
+  POA_arraytest::AMI_MyTestHandler_ptr _tao_ptr = dynamic_cast<POA_arraytest::AMI_MyTestHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::arraytest::myvec2_tag>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->test_method (
-        ((TAO::Arg_Traits<::arraytest::myvec2_tag>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_arraytest::_TAO_AMI_MyTestHandler_Direct_Proxy_Impl::test_method_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_arraytest::AMI_MyTestHandler_ptr _tao_ptr =
-    dynamic_cast<POA_arraytest::AMI_MyTestHandler_ptr> (servant);
+  POA_arraytest::AMI_MyTestHandler_ptr _tao_ptr = dynamic_cast<POA_arraytest::AMI_MyTestHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->test_method_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_arraytest::AMI_MyTestHandler::AMI_MyTestHandler ()
 {
@@ -1767,12 +1676,10 @@ void POA_arraytest::AMI_MyTestHandler::test_method_excep_skel (
 
 ::CORBA::Boolean POA_arraytest::AMI_MyTestHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:arraytest/AMI_MyTestHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:arraytest/AMI_MyTestHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_arraytest::AMI_MyTestHandler::_interface_repository_id () const

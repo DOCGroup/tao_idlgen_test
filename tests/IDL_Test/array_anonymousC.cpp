@@ -72,7 +72,7 @@ TAO::Objref_Traits<tdef>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<tdef>::marshal (tdef_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<tdef>::marshal (tdef_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -297,7 +297,7 @@ tdef::_tao_release (tdef_ptr obj)
 tdef::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:tdef:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -543,7 +543,7 @@ TAO::Objref_Traits<AMH_tdefResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_tdefResponseHandler>::marshal (AMH_tdefResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_tdefResponseHandler>::marshal (AMH_tdefResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -564,14 +564,14 @@ AMH_tdefResponseHandler_ptr
 AMH_tdefResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_tdefResponseHandler::_duplicate (
-      dynamic_cast<AMH_tdefResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_tdefResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_tdefResponseHandler_ptr
 AMH_tdefResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_tdefResponseHandler::_duplicate (
-      dynamic_cast<AMH_tdefResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_tdefResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_tdefResponseHandler_ptr
@@ -600,8 +600,8 @@ AMH_tdefResponseHandler::_tao_release (AMH_tdefResponseHandler_ptr obj)
 AMH_tdefResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_tdefResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -663,7 +663,7 @@ TAO::Objref_Traits<AMI_tdefHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_tdefHandler>::marshal (AMI_tdefHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_tdefHandler>::marshal (AMI_tdefHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -718,8 +718,8 @@ AMI_tdefHandler::_tao_release (AMI_tdefHandler_ptr obj)
 AMI_tdefHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_tdefHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:AMI_tdefHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }

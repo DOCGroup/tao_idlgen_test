@@ -148,25 +148,19 @@ void myfoostruct::_tao_any_destructor (void *_tao_void_pointer)
 nasty::nasty (
     char const * _tao_id,
     myfoostruct const & _tao_rec_info)
-  : ::CORBA::UserException (
-        "IDL:nasty:1.0",
-        "nasty")
+  : ::CORBA::UserException ("IDL:nasty:1.0", "nasty")
 {
   this->id = ::CORBA::string_dup (_tao_id);
   this->rec_info = _tao_rec_info;
 }
 
 nasty::nasty ()
-  : ::CORBA::UserException (
-        "IDL:nasty:1.0",
-        "nasty")
+  : ::CORBA::UserException ("IDL:nasty:1.0", "nasty")
 {
 }
 
 nasty::nasty (const ::nasty &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->id = ::CORBA::string_dup (_tao_excp.id.in ());
   this->rec_info = _tao_excp.rec_info;
@@ -346,7 +340,7 @@ TAO::Objref_Traits<seqLocal>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<seqLocal>::marshal (seqLocal_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<seqLocal>::marshal (seqLocal_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -367,14 +361,14 @@ seqLocal_ptr
 seqLocal::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return seqLocal::_duplicate (
-      dynamic_cast<seqLocal_ptr> (_tao_objref));
+    dynamic_cast<seqLocal_ptr> (_tao_objref));
 }
 
 seqLocal_ptr
 seqLocal::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return seqLocal::_duplicate (
-      dynamic_cast<seqLocal_ptr> (_tao_objref));
+    dynamic_cast<seqLocal_ptr> (_tao_objref));
 }
 
 seqLocal_ptr
@@ -403,8 +397,8 @@ seqLocal::_tao_release (seqLocal_ptr obj)
 seqLocal::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:seqLocal:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }

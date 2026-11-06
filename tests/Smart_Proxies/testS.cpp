@@ -140,11 +140,9 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::CORBA::Short>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::CORBA::Short> (
-        this->operation_details_,
-        this->args_);
-
+    TAO::SArg_Traits<::CORBA::Short>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::CORBA::Short> (
+      this->operation_details_,
+      this->args_);
     TAO::SArg_Traits<::CORBA::Short>::in_arg_type arg_1 =
       TAO::Portable_Server::get_in_arg<::CORBA::Short> (
         this->operation_details_,
@@ -250,11 +248,9 @@ void POA_Test::shutdown_skel (
 
 ::CORBA::Boolean POA_Test::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:Test:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:Test:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_Test::_interface_repository_id () const

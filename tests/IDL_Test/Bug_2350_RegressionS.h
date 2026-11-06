@@ -199,28 +199,17 @@ public:
     ::user_ExceptionHolder const & a) = 0;
 
   static void Bug_2350_Regression_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_Bug_2350_Regression_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_Bug_2350_Regression_Direct_Proxy_Impl ();
-  static void
-  Bug_2350_Regression_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void Bug_2350_Regression_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_TAO_AMH_Bug_2350_RegressionResponseHandler;
 using POA_TAO_AMH_Bug_2350_RegressionResponseHandler_ptr = POA_TAO_AMH_Bug_2350_RegressionResponseHandler *;
@@ -269,40 +258,26 @@ public:
   virtual void Bug_2350_Regression_excep () = 0;
 
   static void Bug_2350_Regression_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void Bug_2350_Regression_excep_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void Bug_2350_Regression_excep_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl ();
-  static void
-  Bug_2350_Regression_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  Bug_2350_Regression_excep_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void Bug_2350_Regression_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+  static void Bug_2350_Regression_excep_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 #include "Bug_2350_RegressionS_T.h"
 

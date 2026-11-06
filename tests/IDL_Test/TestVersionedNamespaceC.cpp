@@ -95,7 +95,7 @@ TAO::Objref_Traits<M1::LI>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<M1::LI>::marshal (M1::LI_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<M1::LI>::marshal (M1::LI_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -111,14 +111,14 @@ M1::LI_ptr
 M1::LI::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return LI::_duplicate (
-      dynamic_cast<LI_ptr> (_tao_objref));
+    dynamic_cast<LI_ptr> (_tao_objref));
 }
 
 M1::LI_ptr
 M1::LI::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return LI::_duplicate (
-      dynamic_cast<LI_ptr> (_tao_objref));
+    dynamic_cast<LI_ptr> (_tao_objref));
 }
 
 M1::LI_ptr
@@ -147,8 +147,8 @@ M1::LI::_tao_release (LI_ptr obj)
 M1::LI::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }

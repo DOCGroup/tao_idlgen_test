@@ -233,11 +233,9 @@ POA_Plesk::Naming::AMH_ObjectResolver::resolve_sc_skel (
 
 ::CORBA::Boolean POA_Plesk::Naming::AMH_ObjectResolver::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:Plesk/Naming/ObjectResolver:1.2") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:Plesk/Naming/ObjectResolver:1.2") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_Plesk::Naming::AMH_ObjectResolver::_interface_repository_id () const
@@ -342,58 +340,54 @@ TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable::lookup (char const *str, s
 
 static TAO_Plesk_Naming_ObjectResolver_Perfect_Hash_OpTable tao_Plesk_Naming_ObjectResolver_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::~_TAO_ObjectResolver_Direct_Proxy_Impl ()
-{
-}
+POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::~_TAO_ObjectResolver_Direct_Proxy_Impl () = default;
 
 void
 POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_Plesk::Naming::ObjectResolver_ptr _tao_ptr =
-    dynamic_cast<POA_Plesk::Naming::ObjectResolver_ptr> (servant);
+  POA_Plesk::Naming::ObjectResolver_ptr _tao_ptr = dynamic_cast<POA_Plesk::Naming::ObjectResolver_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_retval_type = TAO::Arg_Traits<::CORBA::Object>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  using _tao_arg_1_type = TAO::Arg_Traits<char *>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::CORBA::Long>::inout_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
 
-  ((TAO::Arg_Traits<::CORBA::Object>::ret_val *) args[0])->arg () =
-    _tao_ptr->resolve (
-          ((TAO::Arg_Traits<char *>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::CORBA::Long>::inout_arg_val *) args[2])->arg ()
-        );
+  _tao_retval->arg () = _tao_ptr->resolve (
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg ());
 }
 
 void
 POA_Plesk::Naming::_TAO_ObjectResolver_Direct_Proxy_Impl::resolve_sc (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_Plesk::Naming::ObjectResolver_ptr _tao_ptr =
-    dynamic_cast<POA_Plesk::Naming::ObjectResolver_ptr> (servant);
+  POA_Plesk::Naming::ObjectResolver_ptr _tao_ptr = dynamic_cast<POA_Plesk::Naming::ObjectResolver_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_retval_type = TAO::Arg_Traits<::CORBA::Object>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  using _tao_arg_1_type = TAO::Arg_Traits<char *>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<char *>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::CORBA::Long>::inout_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
-  ((TAO::Arg_Traits<::CORBA::Object>::ret_val *) args[0])->arg () =
-    _tao_ptr->resolve_sc (
-          ((TAO::Arg_Traits<char *>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<char *>::in_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::CORBA::Long>::inout_arg_val *) args[3])->arg ()
-        );
+  _tao_retval->arg () = _tao_ptr->resolve_sc (
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_Plesk::Naming::ObjectResolver::ObjectResolver ()
 {
@@ -418,11 +412,9 @@ namespace POA_Plesk
 
       void execute () override
       {
-        TAO::SArg_Traits<::CORBA::Object>::ret_arg_type retval =
-          TAO::Portable_Server::get_ret_arg<::CORBA::Object> (
-            this->operation_details_,
-            this->args_);
-
+        TAO::SArg_Traits<::CORBA::Object>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::CORBA::Object> (
+          this->operation_details_,
+          this->args_);
         TAO::SArg_Traits<char *>::in_arg_type arg_1 =
           TAO::Portable_Server::get_in_arg<char *> (
             this->operation_details_,
@@ -514,11 +506,9 @@ namespace POA_Plesk
 
       void execute () override
       {
-        TAO::SArg_Traits<::CORBA::Object>::ret_arg_type retval =
-          TAO::Portable_Server::get_ret_arg<::CORBA::Object> (
-            this->operation_details_,
-            this->args_);
-
+        TAO::SArg_Traits<::CORBA::Object>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::CORBA::Object> (
+          this->operation_details_,
+          this->args_);
         TAO::SArg_Traits<char *>::in_arg_type arg_1 =
           TAO::Portable_Server::get_in_arg<char *> (
             this->operation_details_,
@@ -603,11 +593,9 @@ void POA_Plesk::Naming::ObjectResolver::resolve_sc_skel (
 
 ::CORBA::Boolean POA_Plesk::Naming::ObjectResolver::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:Plesk/Naming/ObjectResolver:1.2") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:Plesk/Naming/ObjectResolver:1.2") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_Plesk::Naming::ObjectResolver::_interface_repository_id () const
@@ -776,19 +764,12 @@ TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable::lookup (char co
 
 static TAO_Plesk_Naming_AMI_ObjectResolverHandler_Perfect_Hash_OpTable tao_Plesk_Naming_AMI_ObjectResolverHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::~_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl ()
-{
-}
+POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::~_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl () = default;
 
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_Plesk::Naming::AMI_ObjectResolverHandler_ptr _tao_ptr =
     dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler_ptr> (servant);
@@ -796,18 +777,20 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve (
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::CORBA::Object>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::CORBA::Long>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
 
   _tao_ptr->resolve (
-        ((TAO::Arg_Traits<::CORBA::Object>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[2])->arg ()
-      );
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg ());
 }
 
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_Plesk::Naming::AMI_ObjectResolverHandler_ptr _tao_ptr =
     dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler_ptr> (servant);
@@ -815,17 +798,17 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_exc
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->resolve_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_Plesk::Naming::AMI_ObjectResolverHandler_ptr _tao_ptr =
     dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler_ptr> (servant);
@@ -833,18 +816,20 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc 
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::CORBA::Object>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::CORBA::Long>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
 
   _tao_ptr->resolve_sc (
-        ((TAO::Arg_Traits<::CORBA::Object>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::CORBA::Long>::in_arg_val *) args[2])->arg ()
-      );
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg ());
 }
 
 void
 POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
   POA_Plesk::Naming::AMI_ObjectResolverHandler_ptr _tao_ptr =
     dynamic_cast<POA_Plesk::Naming::AMI_ObjectResolverHandler_ptr> (servant);
@@ -852,15 +837,12 @@ POA_Plesk::Naming::_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl::resolve_sc_
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->resolve_sc_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_Plesk::Naming::AMI_ObjectResolverHandler::AMI_ObjectResolverHandler ()
 {
@@ -1245,12 +1227,10 @@ void POA_Plesk::Naming::AMI_ObjectResolverHandler::resolve_sc_excep_skel (
 
 ::CORBA::Boolean POA_Plesk::Naming::AMI_ObjectResolverHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:Plesk/Naming/AMI_ObjectResolverHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_Plesk::Naming::AMI_ObjectResolverHandler::_interface_repository_id () const

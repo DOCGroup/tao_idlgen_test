@@ -358,9 +358,9 @@ public:
     ::M1::S1 const & s) = 0;
 
   static void op_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
 class TAO_AMH_LIResponseHandler;
 using TAO_AMH_LIResponseHandler_ptr = TAO_AMH_LIResponseHandler *;
@@ -440,9 +440,9 @@ public:
     ::M1::S1 const & s) = 0;
 
   static void op_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
 class TAO_AMH_L2ResponseHandler;
 using TAO_AMH_L2ResponseHandler_ptr = TAO_AMH_L2ResponseHandler *;
@@ -530,9 +530,9 @@ namespace POA_M2
       ::M2::M3::S2 const & s) = 0;
 
     static void op_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
   class TAO_AMH_L3ResponseHandler;
   using TAO_AMH_L3ResponseHandler_ptr = TAO_AMH_L3ResponseHandler *;
@@ -612,9 +612,9 @@ public:
     ::M2::M3::S2 const & s) = 0;
 
   static void op_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
 class TAO_AMH_L4ResponseHandler;
 using TAO_AMH_L4ResponseHandler_ptr = TAO_AMH_L4ResponseHandler *;

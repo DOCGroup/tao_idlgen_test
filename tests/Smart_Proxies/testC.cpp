@@ -58,7 +58,7 @@ TAO::Objref_Traits<Test>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test>::marshal (Test_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test>::marshal (Test_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -67,24 +67,18 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 Test::Oops::Oops (
     char const * _tao_reason)
-  : ::CORBA::UserException (
-        "IDL:Test/Oops:1.0",
-        "Oops")
+  : ::CORBA::UserException ("IDL:Test/Oops:1.0", "Oops")
 {
   this->reason = ::CORBA::string_dup (_tao_reason);
 }
 
 Test::Oops::Oops ()
-  : ::CORBA::UserException (
-        "IDL:Test/Oops:1.0",
-        "Oops")
+  : ::CORBA::UserException ("IDL:Test/Oops:1.0", "Oops")
 {
 }
 
 Test::Oops::Oops (const ::Test::Oops &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->reason = ::CORBA::string_dup (_tao_excp.reason.in ());
 }
@@ -159,8 +153,8 @@ Test::method (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_boo)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_boo)
     };
 
   static TAO::Exception_Data
@@ -182,7 +176,6 @@ Test::method (
       "method",
       6,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -204,7 +197,7 @@ Test::shutdown ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -228,17 +221,14 @@ Test::Test ()
 Test_ptr
 Test::_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Test *proxy = TAO::Narrow_Utils<Test>::narrow (
-      _tao_objref,
-      "IDL:Test:1.0");
+  Test *proxy = TAO::Narrow_Utils<Test>::narrow (_tao_objref, "IDL:Test:1.0");
   return TAO_Test_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
 Test_ptr
 Test::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Test *proxy = TAO::Narrow_Utils<Test>::unchecked_narrow (
-      _tao_objref);
+  Test *proxy = TAO::Narrow_Utils<Test>::unchecked_narrow (_tao_objref);
   return TAO_Test_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
@@ -268,7 +258,7 @@ Test::_tao_release (Test_ptr obj)
 Test::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Test:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -294,22 +284,13 @@ TAO_Test_Default_Proxy_Factory::TAO_Test_Default_Proxy_Factory (bool permanent)
   TAO_Test_PROXY_FACTORY_ADAPTER::instance ()->register_proxy_factory (this, permanent);
 }
 
-TAO_Test_Default_Proxy_Factory::~TAO_Test_Default_Proxy_Factory ()
-{
-}
-
 Test_ptr
 TAO_Test_Default_Proxy_Factory::create_proxy (::Test_ptr proxy)
 {
   return proxy;
 }
 
-TAO_Test_Proxy_Factory_Adapter::TAO_Test_Proxy_Factory_Adapter ()
-  : proxy_factory_ (nullptr),
-    one_shot_factory_ (false),
-    disable_factory_ (false)
-{
-}
+TAO_Test_Default_Proxy_Factory::~TAO_Test_Default_Proxy_Factory () = default;
 
 TAO_Test_Proxy_Factory_Adapter::~TAO_Test_Proxy_Factory_Adapter ()
 {
@@ -321,13 +302,7 @@ void
 TAO_Test_Proxy_Factory_Adapter::register_proxy_factory (
   TAO_Test_Default_Proxy_Factory *df, bool one_shot_factory)
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   // Remove any existing <proxy_factory_> and replace with the new one.
   this->unregister_proxy_factory ();
@@ -338,20 +313,13 @@ TAO_Test_Proxy_Factory_Adapter::register_proxy_factory (
 void
 TAO_Test_Proxy_Factory_Adapter::unregister_proxy_factory ()
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   if (this->one_shot_factory_)
     {
       this->disable_factory_ = true;
     }
-
-  if (this->one_shot_factory_ == false && this->proxy_factory_ != nullptr)
+  else
     {
       delete this->proxy_factory_;
       this->proxy_factory_ = nullptr;
@@ -359,12 +327,9 @@ TAO_Test_Proxy_Factory_Adapter::unregister_proxy_factory ()
 }
 
 Test_ptr
-TAO_Test_Proxy_Factory_Adapter::create_proxy (
-    ::Test_ptr proxy
-  )
+TAO_Test_Proxy_Factory_Adapter::create_proxy (::Test_ptr proxy)
 {
-  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon,
-    this->lock_, nullptr));
+  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_, nullptr));
 
   // To take care of those <unchecked_narrow> methods where we
   // want to override the smart proxy factory if there exists one.
@@ -376,20 +341,13 @@ TAO_Test_Proxy_Factory_Adapter::create_proxy (
 
   // Verify that an <proxy_factory_> is available else make one.
   if (!this->proxy_factory_)
-    ACE_NEW_RETURN (this->proxy_factory_,
-        TAO_Test_Default_Proxy_Factory (0),
-         nullptr);
-
+    {
+      ACE_NEW_RETURN (this->proxy_factory_, TAO_Test_Default_Proxy_Factory (false), nullptr);
+    }
   return this->proxy_factory_->create_proxy (proxy);
 }
 
-TAO_Test_Smart_Proxy_Base::TAO_Test_Smart_Proxy_Base ()
-{
-}
-
-TAO_Test_Smart_Proxy_Base::~TAO_Test_Smart_Proxy_Base ()
-{
-}
+TAO_Test_Smart_Proxy_Base::~TAO_Test_Smart_Proxy_Base () = default;
 
 TAO_Stub *
 TAO_Test_Smart_Proxy_Base::_stubobj () const
@@ -403,31 +361,28 @@ TAO_Test_Smart_Proxy_Base::_stubobj ()
   return this->base_proxy_->_stubobj ();
 }
 
-::CORBA::Short TAO_Test_Smart_Proxy_Base::method  (
-  ::CORBA::Short boo){
+::CORBA::Short
+TAO_Test_Smart_Proxy_Base::method (
+  ::CORBA::Short boo)
+{
   return this->get_proxy ()->method (
-
-      boo
-    );
-
+    boo);
 }
 
-void TAO_Test_Smart_Proxy_Base::shutdown  (){
-  this->get_proxy ()->shutdown (
-
-    );
-
+void
+TAO_Test_Smart_Proxy_Base::shutdown ()
+{
+  this->get_proxy ()->shutdown ();
 }
 
 Test_ptr
 TAO_Test_Smart_Proxy_Base::get_proxy ()
-
 {
   // Obtain the real proxy stored in <base_proxy_>
   if (CORBA::is_nil (this->proxy_.in ()))
     {
-       // Verify whether factory is one-shot, if so disable
-       // factory temporarily or not else remove.
+      // Verify whether factory is one-shot, if so disable
+      // factory temporarily or not else remove.
       TAO_Test_PROXY_FACTORY_ADAPTER::instance ()->unregister_proxy_factory ();
       this->proxy_ = ::Test::_narrow (this->base_proxy_.in ());
     }

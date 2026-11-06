@@ -24,18 +24,13 @@
 
 ACE_INLINE
 FixedPoint::FixedOperations::FixedOperations (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-FixedPoint::FixedOperations::FixedOperations (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+FixedPoint::FixedOperations::FixedOperations (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,18 +47,13 @@ FixedPoint::AMH_FixedOperationsExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 FixedPoint::AMI_FixedOperationsHandler::AMI_FixedOperationsHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-FixedPoint::AMI_FixedOperationsHandler::AMI_FixedOperationsHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+FixedPoint::AMI_FixedOperationsHandler::AMI_FixedOperationsHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
